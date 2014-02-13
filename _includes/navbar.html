@@ -1,6 +1,7 @@
 <div class="navbar">
   <ul>
     <li><a href="/">Home</a>
+    <li><a href="about.html">About</a>
     {% for node in site.pages %}
       {% if node.navbar != false %}
       <li><a href="{{node.url}}">{{node.title}}</a>
