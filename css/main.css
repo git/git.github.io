@@ -1,0 +1,23 @@
+body {
+  background-color: #333333;
+  font-family: sans-serif;
+}
+
+.site {
+  text-align: left;
+  width: 42em;
+  margin: 0 auto;
+  padding: 0 2em 0 2em;
+  border: solid black 1px;
+  background-color: #cccccc;
+  float: left;
+}
+
+.navbar {
+  float: left;
+  text-align: left;
+  width: 20em;
+  margin-right: 10px;
+  border: solid black 1px;
+  background-color: #cccccc;
+}
