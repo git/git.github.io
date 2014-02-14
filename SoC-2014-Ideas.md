@@ -55,3 +55,20 @@ off an on-disk database store).
  - Language: C
  - Difficulty: medium
  - Prospective mentors: Michael Haggerty / Vicent Martí
+
+## Replace object loading/writing layer by libgit2
+
+Git reads objects from storage (loose and packed) through functions in
+`sha1_file.c`.  Most commands only require very simple, opaque read and
+write access to the object storage.  As a weatherballoon, show that it
+is feasible to use libgit2 `git_odb_*` routines for these simple callers.
+
+Aim for passing the git test suite using `git_odb_*` object storage
+access, except for tests that verify behavior in the face of storage
+corruption, replacement objects, alternate storage locations, and
+similar quirks.  Of course it is even better if you pass the test suite
+without exception.
+
+ - Language: C
+ - Difficulty: hard
+ - Possible mentors: Thomas Rast and Vicent Martí
