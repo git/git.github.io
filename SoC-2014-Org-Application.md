@@ -52,25 +52,32 @@ git@vger.kernel.org
 
 Yes (we participated before)
 
-## Further questions
+## Why is your organization applying to participate in Google Summer of Code 2014? What do you hope to gain by participating?
 
-We can't go further in the application process without a backup admin
-registered. I grabbed the following question list from the GSoC FAQ (so
-it may not be complete).
+With the exception of 2013, Git has participated in GSoC every year
+since 2007. We have appreciated not only the code contributions, but
+also the increased project visibility and the addition of new long-term
+contributors. We also believe strongly in helping students become
+comfortable contributing to open source in general, even if they do not
+remain involved with Git itself.
 
-### What criteria did you use to select the mentors? Please be as specific as possible.
+## How many potential mentors do you have for this year's program? What criteria did you use to select them?
+
+We have 7 mentors related to specific projects, and a number of people
+in both the git-core and libgit2 projects who are available to help
+assist or backup mentors.
 
 All mentors are volunteers for the specific projects that they can
 contribute the most to (i.e., ones that meet their interests and
 abilities). All mentors are active contributors within the Git
-development community.
+development community, and well-known to the project leadership.
 
 Active contributors are defined to be those who have submitted and have
 had accepted into a shipped release a substantial amount of code, where
 substantial is defined to be equal to or larger than what might be
 expected of a student working on a Google Summer of Code project.
 
-### What is your plan for dealing with disappearing students? Please be as specific as possible.
+## What is your plan for dealing with disappearing students?
 
 We think that the most important part of GSoC is integrating the student
 into the normal communication channels used by other project
@@ -86,7 +93,7 @@ Once they do disappear, we'll obviously try to contact them and find out
 what's going on. But ultimately, non-communication is grounds for a
 failing evaluation, regardless of any code produced.
 
-### What is your plan for dealing with disappearing mentors? Please be as specific as possible.
+## What is your plan for dealing with disappearing mentors?
 
 Most of our projects have more than one mentor available. In the
 unlikely event that a mentor disappears during the summer, another
@@ -95,7 +102,7 @@ the list, there's a good chance that another mentor (or the community at
 large) can pick up the slack. We try to keep the "bus factor" low for
 regular development, and we should do it for mentors, too.
 
-### What steps will you take to encourage students to interact with your project's community before, during and after the program?
+## What steps will you take to encourage students to interact with your project's community before, and during the program?
 
 Students will be required to join the main development mailiing list and
 post their patches for discussion. All current contributors already do
@@ -128,16 +135,16 @@ and ideas to the mailing list, and to discuss them on #git.  Many
 developers either already hold "office-hours" on IRC, or have agreed to
 do so during the GSoC period.
 
-### Are you a new organization who has a Googler or other organization to vouch for you? If so, please list their name(s) here.
+## Are you a new organization who has a Googler or other organization to vouch for you? If so, please list their name(s) here.
 
 N/A
 
-### Are you an established or larger organization who would like to vouch for a new organization applying this year? If so, please list their name(s) here.
+## Are you an established or larger organization who would like to vouch for a new organization applying this year? If so, please list their name(s) here.
 
 N/A
 
 
-### What will you do to encourage that your accepted students stick with the project after Google Summer of Code concludes?
+## What will you do to encourage that your accepted students stick with the project after Google Summer of Code concludes?
 
 Ultimately we have no leverage over the students after they leave, so
 the best we can do is to help them form habits of interaction that they
@@ -149,3 +156,69 @@ Instead, we'd prefer to get the student involved in the day-to-day of
 interacting on the mailing list, reviewing code, and commenting on other
 people's ideas and problems. Those are things they can continue to do
 after GSoC ends, and those discussions can often spur more coding.
+
+## If you chose "veteran" in the organization profile dropdown, please summarize your involvement and the successes and challenges of your participation. Please also list your pass/fail rate for each year.
+
+Git has participated in GSoC every year since 2007, with the exception
+of 2013, typically mentoring 2-5 students each year. Our mentors have
+always been active contributors within the community. The students
+typically did not have a prior relationship with the community, though
+in one case we took on a student who had previously contributed patches.
+
+Of the 23 projects we have mentored, 18 have resulted in success. In
+many cases, the code has been merged and is in daily use in git. In some
+cases, the code was spun off into its own project (e.g., the
+git-statistics project in 2008 ended up as a separate project). In other
+cases, the implementations, while never merged into mainline git, served
+(or continue to serve) as the basis for discussion and advancement of
+certain features (e.g., 2008's GitTorrent project and 2009's svn
+interaction improvements). The libgit2 project, which has been the
+subject of multiple GSoC projects, has gone from being an unusable
+skeleton to a thriving ecosystem, with bindings in Objective-C, Python,
+Ruby, C#, Lua, and more. While much of the work on libgit2 and its
+bindings were not done through GSoC, the GSoC projects were instrumental
+in getting the library to a point that attracted outside interest.
+
+But most important has been the development of students into open source
+contributors. In almost every project, even those whose ultimate goals
+did not end up merged into mainline git, students ended up contributing
+related commits to git. Furthermore, we have had success with retaining
+members in the community. Close to half of our successful students
+continued contributing in the year after their GSoC involvement, and the
+student from our 2010 libgit2 project has essentially become the project
+maintainer.
+
+One of the biggest challenges has been integrating students into the
+public development process, and especially convincing them to produce
+and publish work continually throughout the period. While we have had
+several students turn into long-term members, just as many disappear
+after GSoC. And while many projects have been successful, we often have
+difficulty integrating them into mainline git when the results are
+dumped on the community at the end.
+
+This challenge led to us discussing in 2013 the scope of our projects,
+how we select students, and how we encourage them to interact through
+the summer.  This discussion was still going last February. Rather than
+try to rush through a GSoC application, we decided instead to take the
+year off and consider these issues. This led to a panel at our Git-Merge
+conference in May, and an on-list discussion in October. The partial
+conclusions of which are:
+
+  1. Looking at the numbers, we actually do not do that badly.
+
+  2. We should probably be making the project scopes a bit smaller, and
+     spending more time getting students involved in day-to-day
+     activities like review and discussion on list, even when they
+     aren't necessarily part of their specific projects.
+
+Here is a summary of our completed/failed projects per year, along with
+the number of retained contributors (where "retained" is calculated by
+finding contributors which continued to participate on the mailing list
+a year or more after their GSoC period ended):
+
+ - 2007: 2 success, 1 failure, 1 student retained
+ - 2008: 4 success, 2 failure, 3 students retained
+ - 2009: 1 success, 1 failure, 0 students retained
+ - 2010: 3 success, 1 failure, 3 students retained
+ - 2011: 5 success, 0 failure, 4 students retained
+ - 2012: 3 success, 0 failure, 2 students retained
