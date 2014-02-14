@@ -11,7 +11,7 @@ Git
 
 ## Admin / Backup
 
-peff? / spearce? / trast?
+peff / trast
 
 ## Description
 
