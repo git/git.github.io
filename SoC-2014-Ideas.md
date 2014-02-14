@@ -72,3 +72,30 @@ without exception.
  - Language: C
  - Difficulty: hard
  - Possible mentors: Thomas Rast and Vicent Martí
+
+## Invent new conflict style
+
+As an alternative to the diff3 conflict style, invent a conflict style
+that shows the original unpatched segment along with the raw patch text.
+The user can then apply the patch by hand.
+
+ - Language: C
+ - Difficulty: hard
+ - Possible mentors: Ramkumar Ramachandra
+
+## Improve triangular workflow support
+
+It is common in the git world to have a "triangular" workflow in which
+commits are fetched from an upstream repository to the local
+repository, and then pushed up to a personal publishing point. This
+workflow is missing some convenience features, and there are many
+possible projects in this area.
+
+For example, `@{publish}` is a feature like `@{upstream}`, showing the
+state of the publish-point in the case of triangular workflows.
+Implement this while sharing code with git-push, and polish it until the
+prompt shows publish-state.
+
+ - Language: C, Shell
+ - Difficulty: medium
+ - Possible mentors: Ramkumar Ramachandra
