@@ -105,3 +105,25 @@ shared with other files that are cleaned automatically, like lockfiles.
  - Language: C
  - Difficulty: easy
  - Possible mentors: Jeff King
+
+## `git-bisect` improvements
+
+The student will become familiar with the `git-bisect` command and
+implement many small-to-medium fixes. Two examples:
+
+  - an oft-requested feature is for `bisect` to swap the `good` and
+    `bad` labels or to give them alternate names (for finding a fix
+    rather than a regression). While this seems simple at the outset,
+    there are many subtleties. The student will need to read and
+    understand previous proposals in this area.
+
+  - in some cases, `git bisect` may test too many merge bases, thus
+    slowing down the bisection (making it closer to linear than
+    logarithmic).
+
+Students proposing projects in this area will be expected to communicate
+with the Git community and include specific projects in their proposal.
+
+ - Language: C, Shell
+ - Difficulty: easy
+ - Possible mentors: Christian Couder
