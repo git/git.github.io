@@ -89,7 +89,7 @@ prompt shows publish-state.
 
  - Language: C, Shell
  - Difficulty: medium
- - Possible mentors: Ramkumar Ramachandra
+ - Possible mentors: Jeff King / Ramkumar Ramachandra
 
 ## Refactor tempfile handling
 
