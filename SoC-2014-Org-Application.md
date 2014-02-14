@@ -30,11 +30,7 @@ GPLv2
 
 ## Logo URL
 
-<img src="http://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
-     width=65 height=65 alt="Git Logo">
-
-They've asked that the image be 65x65 or smaller, so we probably need to shrink this and put
-it somewhere.
+![Git Logo](/images/logo.png)
 
 ## Ideas list
 
