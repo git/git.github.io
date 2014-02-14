@@ -90,3 +90,18 @@ prompt shows publish-state.
  - Language: C, Shell
  - Difficulty: medium
  - Possible mentors: Ramkumar Ramachandra
+
+## Refactor tempfile handling
+
+When performing operations that fail, git typically writes to a
+temporary file and then atomically moves it into place. During failures,
+some of these temporary files may be left in place. This is convenient
+for forensics, but inconvenient when the files are very large
+(especially if the operation failed due to running out of disk space).
+Refactor the handling of temporary packs and object files so that they
+can optionally be cleaned up automatically. The implementation should be
+shared with other files that are cleaned automatically, like lockfiles.
+
+ - Language: C
+ - Difficulty: easy
+ - Possible mentors: Jeff King
