@@ -99,7 +99,7 @@ Most of our projects have more than one mentor available. In the
 unlikely event that a mentor disappears during the summer, another
 mentor can step in. By keeping student progress public and reviewed on
 the list, there's a good chance that another mentor (or the community at
-large) can pick up the slack. We try to keep the "bus factor" low for
+large) can pick up the slack. We try to keep the "bus factor" high for
 regular development, and we should do it for mentors, too.
 
 ## What steps will you take to encourage students to interact with your project's community before, and during the program?
