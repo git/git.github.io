@@ -162,3 +162,35 @@ make decisions about updates in the callbacks instead of script hooks.
 - Language: C
 - Difficulty: medium
 - Possible mentors: Carlos Martín / Ed Thomson
+
+## History repair tools
+
+Sometimes git objects contain malformed or undesirable data. E.g.,
+broken author emails, skewed dates, trees with duplicate filenames are
+all malformed from git's perspective. Something like non-valid or
+non-normalized UTF-8 in pathnames is not an error, but may violate
+project policy.
+
+Because git's data model is additive, fixing these problems requires
+rewriting history to create new objects. Doing this with the current
+toolset is possible, but requires a high degree of specialized
+knowledge, and often requires running the slow and arcane `git
+filter-branch`.
+
+There are several possible improvements that can be made in this area,
+including:
+
+ - increase `git fsck` coverage of git data errors
+ - teach `git fsck` to optionally note policy problems (like UTF8)
+ - teach `hash-object` to perform stricter, fsck-like checks
+ - write a tool to convert `fsck` errors into fixed `git replace` objects
+ - write a tool to rewrite history based on `git replace`, cementing
+   replacement objects into place
+
+A successful project would not have to hit each of these points, but
+should aim for producing a coherent workflow for non-experts to diagnose
+and repair broken history.
+
+ - Language: C, optional choice of scripting language
+ - Difficulty: medium
+ - Possible mentors: Jeff King / Michael Haggerty
