@@ -144,3 +144,21 @@ formatting, and use it consistently in the three commands.
  - Language: C
  - Difficulty: medium
  - Possible mentors: Jeff King
+ 
+## Git server framework in libgit2
+
+Libgit2 has support for the client side of the negotiation, but it's missing
+server-side capabilities. We wouldn't want to simply reimplement `upload-pack`
+or `receive-pack` but instead create the framework that takes care of the protocol
+details and calls to user code for
+
+- listing references
+- deciding whether an update is acceptable
+- possibly more
+
+which would allow e.g. limiting which references are shown to a particular user or
+make decisions about updates in the callbacks instead of script hooks.
+
+- Language: C
+- Difficulty: medium
+- Possible mentors: Carlos Martín / Ed Thomson
