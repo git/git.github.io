@@ -68,3 +68,24 @@ suitable.  Just remember to keep the change small!  It is much better
 to finish a small but complete patch than to try something too
 ambitious and not get it done.
 
+1.  Rewrite `git-compat-util.h:skip_prefix()` as a loop, so that it
+    doesn't have to scan through the `prefix` string twice.
+
+2.  Change `branch.c:install_branch_config()` to use `skip_prefix()`.
+
+3.  In `branch.c:setup_tracking()`, figure out where the magic number
+    `1024 - 7 - 7 - 1` comes from.  (Looking through the commit
+    history might help.)  If the check involving the number is still
+    necessary, document where the number comes from.  If the check is
+    no longer necessary, explain why and delete the check.
+
+4.  Rewrite `bulk-checkin.c:finish_bulk_checkin()` to use a `strbuf`
+    for handling `packname`, and explain why this is useful.  Also
+    check if the first argument of
+    `pack-write.c:finish_tmp_packfile()` can be made const.
+
+5.  Change `bundle.c:add_to_ref_list()` to use `hashcpy()`.  See if
+    you can find other places where `hashcpy()` should be used instead
+    of `memcpy()`.
+
+6.  Change `bundle.c:add_to_ref_list()` to use `ALLOC_GROW()`.
