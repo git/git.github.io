@@ -3,13 +3,27 @@ layout: default
 title: SoC 2014 Ideas
 ---
 
-This is the idea page for Summer of Code 2014.
+This is the idea page for Summer of Code 2014 for Git and libgit2.
 
-**Students**: Please consider these ideas as a starting point for
-generating a proposal. However, we are also happy to receive proposals
-for independent ideas related to Git.
+## About applying for SoC with the Git project
 
-## Pack bitmap support for libgit2
+It is strongly recommended that students who want to apply to the Git
+project for the Summer of Code 2014 complete a tiny, code-related
+"microproject" as part of their application.  Please refer to our
+[guidelines and suggestions for microprojects](http://git.github.io/SoC-2014-Microprojects.html)
+for more information.  Completing a microproject is not a strict
+requirement, but we will definitely give more attention to applicants
+who do so.  Doing a microprojects will also help get you started in
+the Git project and help you judge whether *you* want to work with
+*us*.
+
+## Summer of code main project ideas
+
+**Students**: Please consider these ideas as starting points for
+generating proposals.  We are also more than happy to receive
+proposals for other ideas related to Git or libgit2.
+
+### Pack bitmap support for libgit2
 
 Vicent Martí and Jeff King have open-sourced a patchset that implements
 JGit's pack-bitmap optimization on Core Git. Ironically enough, even
@@ -24,7 +38,7 @@ operations using bitmaps.
  - Difficulty: medium
  - Prospective mentors: Vicent Martí / Jeff King
 
-## Abstracted reference backends in Git
+### Abstracted reference backends in Git
 
 libgit2 supports a C API to customize the way that the library interacts
 with the reference store when reading and writing references. There is
@@ -47,7 +61,7 @@ off an on-disk database store).
  - Difficulty: medium
  - Prospective mentors: Michael Haggerty / Vicent Martí
 
-## Replace object loading/writing layer by libgit2
+### Replace object loading/writing layer by libgit2
 
 Git reads objects from storage (loose and packed) through functions in
 `sha1_file.c`.  Most commands only require very simple, opaque read and
@@ -64,7 +78,7 @@ without exception.
  - Difficulty: hard
  - Possible mentors: Thomas Rast and Vicent Martí
 
-## Invent new conflict style
+### Invent new conflict style
 
 As an alternative to the diff3 conflict style, invent a conflict style
 that shows the original unpatched segment along with the raw patch text.
@@ -74,7 +88,7 @@ The user can then apply the patch by hand.
  - Difficulty: hard
  - Possible mentors: Ramkumar Ramachandra
 
-## Improve triangular workflow support
+### Improve triangular workflow support
 
 It is common in the git world to have a "triangular" workflow in which
 commits are fetched from an upstream repository to the local
@@ -91,7 +105,7 @@ prompt shows publish-state.
  - Difficulty: medium
  - Possible mentors: Jeff King / Ramkumar Ramachandra
 
-## Refactor tempfile handling
+### Refactor tempfile handling
 
 When performing operations that fail, git typically writes to a
 temporary file and then atomically moves it into place. During failures,
@@ -106,7 +120,7 @@ shared with other files that are cleaned automatically, like lockfiles.
  - Difficulty: easy
  - Possible mentors: Jeff King
 
-## `git-bisect` improvements
+### `git-bisect` improvements
 
 The student will become familiar with the `git-bisect` command and
 implement many small-to-medium fixes. Two examples:
@@ -128,7 +142,7 @@ with the Git community and include specific projects in their proposal.
  - Difficulty: easy
  - Possible mentors: Christian Couder
 
-## Unifying `git branch -l`, `git tag -l`, and `git for-each-ref`
+### Unifying `git branch -l`, `git tag -l`, and `git for-each-ref`
 
 These three commands are all about selecting a subset of a repository's
 refs, and then printing the result. However, the implementations are not
@@ -145,7 +159,7 @@ formatting, and use it consistently in the three commands.
  - Difficulty: medium
  - Possible mentors: Jeff King
  
-## Git server framework in libgit2
+### Git server framework in libgit2
 
 Libgit2 has support for the client side of the negotiation, but it's missing
 server-side capabilities. We wouldn't want to simply reimplement `upload-pack`
@@ -163,7 +177,7 @@ make decisions about updates in the callbacks instead of script hooks.
 - Difficulty: medium
 - Possible mentors: Carlos Martín / Ed Thomson
 
-## History repair tools
+### History repair tools
 
 Sometimes git objects contain malformed or undesirable data. E.g.,
 broken author emails, skewed dates, trees with duplicate filenames are
