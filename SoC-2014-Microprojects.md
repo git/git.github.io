@@ -91,4 +91,6 @@ too ambitious and not get it done.
     you can find other places where `hashcpy()` should be used instead
     of `memcpy()`.
 
-6.  Change `bundle.c:add_to_ref_list()` to use `ALLOC_GROW()`.
+6.  Change `bundle.c:add_to_ref_list()` to use `ALLOC_GROW()`.  See if
+    you can find other places that would benefit from a similar
+    change.
