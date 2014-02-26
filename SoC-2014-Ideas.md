@@ -194,3 +194,64 @@ and repair broken history.
  - Language: C, optional choice of scripting language
  - Difficulty: medium
  - Possible mentors: Jeff King / Michael Haggerty
+
+## Line options for `git rebase --interactive`
+
+One of the more powerful features in Git is the command `git rebase
+--interactive`, which allows recent commits to be reordered, squashed
+together, or even revised completely.  The command creates a todo list
+and opens it in an editor.  The original todo list might look like:
+
+    pick deadbee Implement feature XXX
+    pick c0ffeee The oneline of the next commit
+    pick 01a01a0 This change is questionable
+    pick f1a5c00 Fix to feature XXX
+    pick deadbab The oneline of the commit after
+
+The user can edit the list to make changes to the history, for example
+to
+
+    pick deadbee Implement feature XXX
+    squash f1a5c00 Fix to feature XXX
+    exec make
+    edit c0ffeee The oneline of the next commit
+    pick deadbab The oneline of the commit after
+
+This would cause commits `deadbee` and `f1a5c00` to be squashed
+together into one commit followed by running `make` to test-compile
+the results, delete commit `01a01a0` altogether, and stop after
+committing commit `c0ffeee` to allow the user to make changes.
+
+It would be nice to support more flexibility in the todo-list commands
+by allowing the commands to take options.  Maybe
+
+* Convert a commit into a merge commit:
+
+      pick -p c0ffeee -p e1ee712 deadbab The oneline of the commit after
+
+* After squashing two commits, add a "Signed-off-by" line to the
+  commit log message:
+
+    pick deadbee Implement feature XXX
+    squash --signoff f1a5c00 Fix to feature XXX
+
+  or GPG-sign a commit:
+
+    pick --gpg-sign=<keyid> deadbee Implement feature XXX
+
+* Reset the author of the commit to the current user or a specified
+  user:
+
+    pick --reset-author deadbee Implement feature XXX
+    pick --author="A U Thor <author@example.com>" deadbab The oneline of the commit after
+
+The goal of this project would be (1) to add the infrastructure for
+handling options on todo-list lines, and (2) implement some concrete
+options.  A big part of the difficulty of this project is that `git
+rebase --interactive` is implemented via a sparsely-commented shell
+script.  Adding comments and cleaning up the script as you go would be
+very welcome.
+
+ - Language: sh
+ - Difficulty: medium
+ - Possible mentors: Michael Haggerty
