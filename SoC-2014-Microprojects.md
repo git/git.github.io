@@ -11,11 +11,28 @@ to the Git project as part of their application.  Think of these
 microprojects as the "Hello, world" of getting involved with the Git
 project; the coding aspect of the change can be almost trivial, but to
 make the change the student has to become familiar with many of the
-practical aspects of working on the Git project:
+practical aspects of working on the Git project.
 
-* Downloading the source code: clone the repository using the
-  [Git via Git](http://git-scm.com/downloads) instructions and read
-  the `README` file.
+Consider [a sample email
+thread](http://thread.gmane.org/gmane.comp.version-control.git/239068),
+which shows how a developer proposed a change and a patch to implement
+it.  The problem being solved, the design of the proposed solution,
+and the implementation of that design were all reviewed and discussed,
+and after several iterations an improved version of the patch was
+accepted into our codebase.  As a GSoC student, you will be playing
+the role of the developer and engaging in a similar discussion.  Get
+familar with the flow, need for clarity on both sides (i.e. you need
+to clearly defend your design, and need to ask clarifications when
+questions/suggestions you are offered are not clear enough), the pace
+at which the discussion takes place, and the general tone of the
+discussion, to learn what is expected of you.
+
+To complete a microproject, you will have to go through approximately
+the following steps:
+
+* Download the source code: clone the repository using the [Git via
+  Git](http://git-scm.com/downloads) instructions and read the
+  `README` file.
 
 * Build the source code: this is described in the file `INSTALL`.
 
@@ -26,12 +43,13 @@ practical aspects of working on the Git project:
 * Read about the process for submitting patches to Git: this is
   described in `Documentation/SubmittingPatches`.
 
-* **Making the actual change.**  (Funny, this is the only part they
-  teach you about in college.)
+* **Make the actual change.** (Funny, this is the only part they teach
+  you about in college.)
 
-* Run the test suite: this is described in the file `t/README`.  (If
-  you have added new functionality, you should also add tests, but
-  most microprojects will not add new functionality.)
+* Run the test suite and make sure it passes 100%: this is described
+  in the file `t/README`.  (If you have added new functionality, you
+  should also add new tests, but most microprojects will not add new
+  functionality.)
 
 * Commit your change.  Surprise: we use Git for that, so you will need
   to gain at least
@@ -44,7 +62,9 @@ practical aspects of working on the Git project:
 
 * Submit your change to the Git mailing list.  For this step you
   probably want to use the commands `git format-patch` and `git
-  send-email`.
+  send-email`.  Make sure that your email is formatted correctly: send
+  a test version of the email to yourself and see if you can apply it
+  to your repository using `git am`.
 
 * Expect feedback, criticism, suggestions, etc. from the mailing list.
 
