@@ -84,6 +84,16 @@ When you submit your patch, please mention that you plan to apply for
 the GSoC.  This will ensure that we take special care not to overlook
 your application among the large pile of others.
 
+Students: Please attempt only **ONE** microproject.  We want quality,
+not quantity!  (Also, it takes work to collect the ideas, and it would
+be nice to have enough microprojects for everybody.)  If you've
+already done a microproject and are itching to do more, then get
+involved in other ways, like finding and fixing other problems in the
+code, or improving the documentation or code comments, or helping to
+review other people's patches on the mailing list, or answering
+questions on the mailing list or in IRC, or writing new tests, etc.,
+etc.  In short, start doing things that other Git developers do!
+
 ## Ideas for microprojects
 
 The following are just ideas.  Any small code-related change would be
