@@ -241,23 +241,31 @@ by allowing the commands to take options.  Maybe
 
 * Convert a commit into a merge commit:
 
-      pick -p c0ffeee -p e1ee712 deadbab The oneline of the commit after
+  ```
+  pick -p c0ffeee -p e1ee712 deadbab The oneline of the commit after
+  ```
 
 * After squashing two commits, add a "Signed-off-by" line to the
   commit log message:
 
-      pick deadbee Implement feature XXX
-      squash --signoff f1a5c00 Fix to feature XXX
+  ```
+  pick deadbee Implement feature XXX
+  squash --signoff f1a5c00 Fix to feature XXX
+  ```
 
   or GPG-sign a commit:
 
-      pick --gpg-sign=<keyid> deadbee Implement feature XXX
+  ```
+  pick --gpg-sign=<keyid> deadbee Implement feature XXX
+  ```
 
 * Reset the author of the commit to the current user or a specified
   user:
 
-      pick --reset-author deadbee Implement feature XXX
-      pick --author="A U Thor <author@example.com>" deadbab The oneline of the commit after
+  ```
+  pick --reset-author deadbee Implement feature XXX
+  pick --author="A U Thor <author@example.com>" deadbab The oneline of the commit after
+  ```
 
 See [this
 discussion](http://thread.gmane.org/gmane.comp.version-control.git/242701)
