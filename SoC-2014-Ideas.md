@@ -232,18 +232,22 @@ by allowing the commands to take options.  Maybe
 * After squashing two commits, add a "Signed-off-by" line to the
   commit log message:
 
-    pick deadbee Implement feature XXX
-    squash --signoff f1a5c00 Fix to feature XXX
+      pick deadbee Implement feature XXX
+      squash --signoff f1a5c00 Fix to feature XXX
 
   or GPG-sign a commit:
 
-    pick --gpg-sign=<keyid> deadbee Implement feature XXX
+      pick --gpg-sign=<keyid> deadbee Implement feature XXX
 
 * Reset the author of the commit to the current user or a specified
   user:
 
-    pick --reset-author deadbee Implement feature XXX
-    pick --author="A U Thor <author@example.com>" deadbab The oneline of the commit after
+      pick --reset-author deadbee Implement feature XXX
+      pick --author="A U Thor <author@example.com>" deadbab The oneline of the commit after
+
+See [this
+discussion](http://thread.gmane.org/gmane.comp.version-control.git/242701)
+on the mailing list for more related ideas.
 
 The goal of this project would be (1) to add the infrastructure for
 handling options on todo-list lines, and (2) implement some concrete
