@@ -13,7 +13,7 @@ project for the Summer of Code 2014 complete a tiny, code-related
 [guidelines and suggestions for microprojects](http://git.github.io/SoC-2014-Microprojects.html)
 for more information.  Completing a microproject is not a strict
 requirement, but we will definitely give more attention to applicants
-who do so.  Doing a microprojects will also help get you started in
+who do so.  Doing a microproject will also help get you started in
 the Git project and help you judge whether *you* want to work with
 *us*.
 
