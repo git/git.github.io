@@ -146,3 +146,7 @@ too ambitious and not get it done.
 10. <s>Rewrite `commit.c:record_author_date()` to use `skip_prefix()`.
     Are there other places in this file where `skip_prefix()` would be
     more readable than `starts_with()`?</s> **taken**
+
+11. Find places where we scan a string twice unnecessarily, once with
+    `strchr()` and then with `strlen()`, and rewrite such a pattern
+    using `strchrnul()` as appropriate.
