@@ -101,33 +101,37 @@ suitable.  Just remember to keep the change small!  It is much better
 for you to finish a small but complete change than to try something
 too ambitious and not get it done.
 
-1.  Rewrite `git-compat-util.h:skip_prefix()` as a loop, so that it
-    doesn't have to scan through the `prefix` string twice.
+1.  ~~Rewrite `git-compat-util.h:skip_prefix()` as a loop, so that it
+    doesn't have to scan through the `prefix` string twice.~~
+    **taken**
 
-2.  Change `branch.c:install_branch_config()` to use `skip_prefix()`.
+2.  ~~Change `branch.c:install_branch_config()` to use
+    `skip_prefix()`.~~ **taken**
 
-3.  In `branch.c:setup_tracking()`, figure out where the magic number
-    `1024 - 7 - 7 - 1` comes from.  (Looking through the commit
+3.  ~~In `branch.c:setup_tracking()`, figure out where the magic
+    number `1024 - 7 - 7 - 1` comes from.  (Looking through the commit
     history might help.)  If the check involving the number is still
     necessary, document where the number comes from.  If the check is
-    no longer necessary, explain why and delete the check.
+    no longer necessary, explain why and delete the check.~~ **taken**
 
-4.  Rewrite `bulk-checkin.c:finish_bulk_checkin()` to use a `strbuf`
+4.  ~~Rewrite `bulk-checkin.c:finish_bulk_checkin()` to use a `strbuf`
     for handling `packname`, and explain why this is useful.  Also
     check if the first argument of
-    `pack-write.c:finish_tmp_packfile()` can be made const.
+    `pack-write.c:finish_tmp_packfile()` can be made const.~~
+    **taken**
 
-5.  Change `bundle.c:add_to_ref_list()` to use `hashcpy()`.  See if
+5.  ~~Change `bundle.c:add_to_ref_list()` to use `hashcpy()`.  See if
     you can find other places where `hashcpy()` should be used instead
-    of `memcpy()`.
+    of `memcpy()`.~~ **taken**
 
-6.  Change `bundle.c:add_to_ref_list()` to use `ALLOC_GROW()`.  See if
-    you can find other places that would benefit from a similar
-    change.
+6.  ~~Change `bundle.c:add_to_ref_list()` to use `ALLOC_GROW()`.  See
+    if you can find other places that would benefit from a similar
+    change.~~ **taken**
 
-7.  Write a function `strbuf_write_or_die()` and use it instead of
+7.  ~~Write a function `strbuf_write_or_die()` and use it instead of
     `write_or_die(fd, buf.buf, buf.len)` in all of the places you can
-    find.
+    find.~~ **taken** (and it turns out that the mailing list didn't
+    like this idea)
 
 8.  In `branch.c:install_branch_config()`, can the long chain of `if`
     statements be simplified?  Would it make sense to make the code
@@ -135,10 +139,10 @@ too ambitious and not get it done.
     `_()` is used for internationalization and limits the possibility
     of gluing strings together.
 
-9.  Could `commit.c:commit_graft_pos()` use one of the general-purpose
+9.  ~~Could `commit.c:commit_graft_pos()` use one of the general-purpose
     bisection functions like `sha1_pos()` or `sha1_entry_pos()`?  Are
-    there other places that could do so?
+    there other places that could do so?~~ **taken**
 
-10. Rewrite `commit.c:record_author_date()` to use `skip_prefix()`.
+10. ~~Rewrite `commit.c:record_author_date()` to use `skip_prefix()`.
     Are there other places in this file where `skip_prefix()` would be
-    more readable than `starts_with()`?
+    more readable than `starts_with()`?~~ **taken**
