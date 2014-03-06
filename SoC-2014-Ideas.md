@@ -298,11 +298,15 @@ This goal of this project is to make configuration work as follows:
   appropriate data structure in memory.
 
 * Change `git_config()` to iterate through the pre-read values in
-  memory rather than re-reading the configuration files.
+  memory rather than re-reading the configuration files.  This
+  function should remain backwards-compatible with the old
+  implementation so that callers don't have to all be rewritten at
+  once.
 
-* Add new API calls that allow the cache to be inquired easily and
-  efficiently.  Rewrite other functions like `git_config_int()` to be
-  cache-aware.
+* Add new API functions that allow the cache to be inquired easily and
+  efficiently.  Add helper functions to retrieve configuration values
+  of various types (string, integer, boolean, etc.) from the cache by
+  name.
 
 * Rewrite callers to use the new API wherever possible.
 
@@ -311,8 +315,10 @@ like `git_config_early()` and `git_config_from_file()`, as well as how
 to invalidate the cache correctly in the case that the configuration
 is changed while `git` is executing.
 
-See
-[this mailing list thread](http://article.gmane.org/gmane.comp.version-control.git/242952)
+See [this mailing list
+thread](http://article.gmane.org/gmane.comp.version-control.git/242952)
+and [this
+email](http://article.gmane.org/gmane.comp.version-control.git/243542)
 for some discussion about this and related ideas.
 
  - Language: C
