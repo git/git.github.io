@@ -366,7 +366,9 @@ section even though it is empty, or to delete the comment along with
 the section.  Very likely there will be some obvious patterns when
 everybody agrees that an empty section can be deleted, and other, more
 controversial cases where you will have to reach a consensus on the
-mailing list about what should be done.
+mailing list about what should be done.  See [this mailing list
+thread](http://thread.gmane.org/gmane.comp.version-control.git/219505)
+for some discussion.
 
  - Language: C
  - Difficulty: medium
