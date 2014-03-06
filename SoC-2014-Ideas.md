@@ -281,3 +281,40 @@ very welcome.
  - Language: sh
  - Difficulty: medium
  - Possible mentors: Michael Haggerty
+
+### git configuration API improvements
+
+There are many places in Git that need to read a configuration value.
+Currently, each such site calls `git_config()`, which reads and parses
+the configuration files every time that it is called.  This is
+wasteful, because it results in the configuration files being
+processed multiple times during a single `git` invocation.  It also
+prevents the implementation of potential new features, like adding
+syntax to allow a configuration file to unset a previously-set value.
+
+This goal of this project is to make configuration work as follows:
+
+* Read the configuration from files once and cache the results in an
+  appropriate data structure in memory.
+
+* Change `git_config()` to iterate through the pre-read values in
+  memory rather than re-reading the configuration files.
+
+* Add new API calls that allow the cache to be inquired easily and
+  efficiently.  Rewrite other functions like `git_config_int()` to be
+  cache-aware.
+
+* Rewrite callers to use the new API wherever possible.
+
+You will need to consider how to handle other config API entry points
+like `git_config_early()` and `git_config_from_file()`, as well as how
+to invalidate the cache correctly in the case that the configuration
+is changed while `git` is executing.
+
+See
+[this mailing list thread](http://article.gmane.org/gmane.comp.version-control.git/242952)
+for some discussion about this and related ideas.
+
+ - Language: C
+ - Difficulty: medium
+ - Possible mentors: Michael Haggerty, Matthieu Moy, Jeff King
