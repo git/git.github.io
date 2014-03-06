@@ -281,3 +281,95 @@ very welcome.
  - Language: sh
  - Difficulty: medium
  - Possible mentors: Michael Haggerty
+
+### `git config` improvements
+
+This project proposes the following two improvements to `git config`.
+Please note that this project has a significant "political" component
+to it, because some of the details of the features will be
+controversial.
+
+#### Unsetting configuration options
+
+Some Git configuration options have an effect by their mere existence.
+(I.e., setting the option to "false" or the empty string is different
+than leaving it unset altogether.)  Also, some configuration options
+can take multiple values.
+
+However, there is no way for an option file to "unset" an option--that
+is, to change the option back to "unset".  This is awkward, because
+configuration values are read from various places (`/etc/gitconfig`,
+`~/.config/git/config` or `~/.gitconfig`, and `$GIT_DIR/config`, plus
+perhaps files that are included by other configuration files).
+Therefore, if an option is set in one of the earlier files, there is
+no way for it to be unset in a later one.  The unwanted option might
+have even been set in a file like `/etc/gitconfig` that the user
+doesn't have permission to modify.
+
+It would be nice to have a syntax that can be used to unset any
+previously-defined values for an option.  Perhaps
+
+    [section "subsection"]
+            !option
+
+The above is currently currently a syntax error that causes Git to
+terminate, so some thought has to go into a transition plan for
+enabling this feature.  Maybe a syntax has to be invented that
+conforms to the current format, like
+
+    [unset]
+            name = section.subsection.option
+
+Because options are currently processed as they are read, this change
+will require the code that reads options files to be changed
+significantly.
+
+Leave yourself a lot of time to attain a consensus on the mailing list
+about how this can be done while retaining reasonable backwards
+compatibility.
+
+#### Tidy configuration files
+
+When a configuration file is repeatedly modified, often garbage is
+left behind.  For example, after
+
+    git config my.option true
+    git config --unset my.option
+    git config my.option true
+    git config --unset my.option
+
+the bottom of the configuration file is left with the useless lines
+
+    [my]
+    [my]
+
+It would be nice to clean up such garbage when rewriting the
+configuration file.  This project is a bit tricky because of the
+possible presence of comments.  For example, what if an empty section
+looks like this:
+
+    [my]
+            # This section is for my own private settings
+
+or this:
+
+    [my]
+    # This section is for my own private settings
+
+or this:
+
+    # This section is for my own private settings:
+    [my]
+
+?  In some such cases it might be desireable either to retain the
+section even though it is empty, or to delete the comment along with
+the section.  Very likely there will be some obvious patterns when
+everybody agrees that an empty section can be deleted, and other, more
+controversial cases where you will have to reach a consensus on the
+mailing list about what should be done.  See [this mailing list
+thread](http://thread.gmane.org/gmane.comp.version-control.git/219505)
+for some discussion.
+
+ - Language: C
+ - Difficulty: medium
+ - Possible mentors: Michael Haggerty
