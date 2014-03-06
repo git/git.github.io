@@ -317,4 +317,4 @@ for some discussion about this and related ideas.
 
  - Language: C
  - Difficulty: medium
- - Possible mentors: Michael Haggerty, Matthieu Moy
+ - Possible mentors: Michael Haggerty, Matthieu Moy, Jeff King
