@@ -153,8 +153,8 @@ too ambitious and not get it done.
 
 12. Currently in order to disallow the `--[no]-xxx` form of a
     command-line option, we have to initialize the option's full
-    `struct option` explicitly.  It'd be nice to have a set of OPT_*
-    macros with PARSE_OPT_NONEG set.  Find and update all `struct
+    `struct option` explicitly.  It'd be nice to have a set of `OPT_*`
+    macros with `PARSE_OPT_NONEG` set.  Find and update all `struct
     option []` declarations with the new macros (including ones that
     should never accept `--no-xxx` form, but do anyway).  *Warning:
     this is more a milliproject than a microproject.*
