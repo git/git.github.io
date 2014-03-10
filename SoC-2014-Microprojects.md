@@ -13,6 +13,12 @@ project; the coding aspect of the change can be almost trivial, but to
 make the change the student has to become familiar with many of the
 practical aspects of working on the Git project.
 
+*NOTE: Students who plan to work on libgit2, which is also under the
+Git umbrella in the Google Summer of Code, should refer to [the
+libgit2 list of
+projects](https://github.com/libgit2/libgit2/blob/development/PROJECTS.md)
+rather than the list below.*
+
 Consider [a sample email
 thread](http://thread.gmane.org/gmane.comp.version-control.git/239068),
 which shows how a developer proposed a change and a patch to implement
