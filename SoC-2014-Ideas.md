@@ -40,26 +40,7 @@ operations using bitmaps.
 
 ### Abstracted reference backends in Git
 
-libgit2 supports a C API to customize the way that the library interacts
-with the reference store when reading and writing references. There is
-no such abstraction in Core Git, and hence Git is only able to access
-references that are stored in the default format (either loose or in the
-packed-refs format).
-
-The packed-refs format has many problems, including race conditions,
-lack of transactional semantics, and performance issues on repositories
-with many refs.  It is however unfeasible to migrate away from it unless
-we could support both the current packed-refs backend and a prospective
-new implementation simultaneously, through an abstracted API.
-
-The goal of this SoC project is to refactor the existing references API
-of Core Git in order to support pluggable reference backends, with the
-eventual goal of implementing a race-free reference store (e.g., based
-off an on-disk database store).
-
- - Language: C
- - Difficulty: medium
- - Prospective mentors: Michael Haggerty / Vicent Martí
+**Removed**.  Michael Haggerty is already working on this.
 
 ### Replace object loading/writing layer by libgit2
 
