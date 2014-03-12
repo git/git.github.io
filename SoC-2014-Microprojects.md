@@ -157,10 +157,11 @@ too ambitious and not get it done.
     `strchr()` and then with `strlen()`, and rewrite these sites using
     `strchrnul()` when appropriate.
 
-12. Currently in order to disallow the `--[no]-xxx` form of a
+12. <s>Currently in order to disallow the `--[no]-xxx` form of a
     command-line option, we have to initialize the option's full
     `struct option` explicitly.  It'd be nice to have a set of `OPT_*`
     macros with `PARSE_OPT_NONEG` set.  Find and update all `struct
     option []` declarations with the new macros (including ones that
-    should never accept `--no-xxx` form, but do anyway).  *Warning:
-    this is more a milliproject than a microproject.*
+    should never accept `--no-xxx` form, but do anyway).</s> **Not
+    recommended.  This is more a milliproject than a microproject, and
+    the mailing list wasn't so enthusiastic about the idea anyway.**
