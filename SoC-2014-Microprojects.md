@@ -165,3 +165,22 @@ too ambitious and not get it done.
     should never accept `--no-xxx` form, but do anyway).</s> **Not
     recommended.  This is more a milliproject than a microproject, and
     the mailing list wasn't so enthusiastic about the idea anyway.**
+
+13. Rewrite `diff-no-index.c:read_directory()` to use
+    `is_dot_or_dotdot()`.  Try to find other sites that can use that
+    function.
+
+14. Change `fetch-pack.c:filter_refs()` to use `starts_with()` instead
+    of `memcmp()`.  Try to find other sites that could be rewritten
+    similarly.
+
+15. Rewrite `fsck.c:fsck_commit()` to use `starts_with()` and/or
+    `skip_prefix()`.
+
+16. Rewrite `builtin/add.c:run_add_interactive()` to use `struct
+    argv_array`.
+
+17. Find one or more bugs, inefficiencies, or unconventional code
+    patterns in `builtin/apply.c:fuzzy_matchlines()` and fix them.
+    (There are enough microprojects in this function for several
+    students.)
