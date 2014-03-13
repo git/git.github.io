@@ -184,3 +184,29 @@ too ambitious and not get it done.
     patterns in `builtin/apply.c:fuzzy_matchlines()` and fix them.
     (There are enough microprojects in this function for several
     students.)
+
+18. "VAR=VAL command" is sufficient to run 'command' with environment
+    variable VAR set to value VAL without affecting the environment of
+    the shell itself.  But the same does not work with a shell
+    function (most notably, "test_must_fail").  So, in our test suite,
+    we implement subshell invocations in multiple lines like this:
+
+    ```
+    ... &&
+    (
+            VAR=VAL &&
+            export VAR &&
+            test_must_fail git command
+    ) &&
+    ...
+    ```
+
+    But that could be expressed as
+
+    ```
+    ... &&
+    test_must_fail env VAR=VAL git comand &&
+    ...
+    ```
+
+    Find and shorten such constructs in existing test scripts.
