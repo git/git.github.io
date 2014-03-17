@@ -205,7 +205,7 @@ too ambitious and not get it done.
 
     ```
     ... &&
-    test_must_fail env VAR=VAL git comand &&
+    test_must_fail env VAR=VAL git command &&
     ...
     ```
 
