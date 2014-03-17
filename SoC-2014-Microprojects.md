@@ -139,11 +139,11 @@ too ambitious and not get it done.
     find.</s> **taken** (and it turns out that the mailing list didn't
     like this idea)
 
-8.  In `branch.c:install_branch_config()`, can the long chain of `if`
+8.  <s>In `branch.c:install_branch_config()`, can the long chain of `if`
     statements be simplified?  Would it make sense to make the code
     table-driven?  Don't forget that the strangely-named function
     `_()` is used for internationalization and limits the possibility
-    of gluing strings together.
+    of gluing strings together.</s> **taken**
 
 9.  <s>Could `commit.c:commit_graft_pos()` use one of the general-purpose
     bisection functions like `sha1_pos()` or `sha1_entry_pos()`?  Are
