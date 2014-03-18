@@ -153,9 +153,9 @@ too ambitious and not get it done.
     Are there other places in this file where `skip_prefix()` would be
     more readable than `starts_with()`?</s> **taken**
 
-11. Find places where we scan a string twice unnecessarily, once with
+11. <s>Find places where we scan a string twice unnecessarily, once with
     `strchr()` and then with `strlen()`, and rewrite these sites using
-    `strchrnul()` when appropriate.
+    `strchrnul()` when appropriate.</s> **taken**
 
 12. <s>Currently in order to disallow the `--[no]-xxx` form of a
     command-line option, we have to initialize the option's full
@@ -177,8 +177,8 @@ too ambitious and not get it done.
 15. Rewrite `fsck.c:fsck_commit()` to use `starts_with()` and/or
     `skip_prefix()`.
 
-16. Rewrite `builtin/add.c:run_add_interactive()` to use `struct
-    argv_array`.
+16. <s>Rewrite `builtin/add.c:run_add_interactive()` to use `struct
+    argv_array`.</s> **taken**
 
 17. Find one or more bugs, inefficiencies, or unconventional code
     patterns in `builtin/apply.c:fuzzy_matchlines()` and fix them.
