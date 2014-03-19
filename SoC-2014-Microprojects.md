@@ -166,9 +166,9 @@ too ambitious and not get it done.
     recommended.  This is more a milliproject than a microproject, and
     the mailing list wasn't so enthusiastic about the idea anyway.**
 
-13. Rewrite `diff-no-index.c:read_directory()` to use
+13. <s>Rewrite `diff-no-index.c:read_directory()` to use
     `is_dot_or_dotdot()`.  Try to find other sites that can use that
-    function.
+    function.</s> **solved**
 
 14. Change `fetch-pack.c:filter_refs()` to use `starts_with()` instead
     of `memcmp()`.  Try to find other sites that could be rewritten
@@ -185,7 +185,7 @@ too ambitious and not get it done.
     (There are enough microprojects in this function for several
     students.)
 
-18. "VAR=VAL command" is sufficient to run 'command' with environment
+18. <s>"VAR=VAL command" is sufficient to run 'command' with environment
     variable VAR set to value VAL without affecting the environment of
     the shell itself.  But the same does not work with a shell
     function (most notably, "test_must_fail").  So, in our test suite,
@@ -209,4 +209,4 @@ too ambitious and not get it done.
     ...
     ```
 
-    Find and shorten such constructs in existing test scripts.
+    Find and shorten such constructs in existing test scripts.</s> **solved**
