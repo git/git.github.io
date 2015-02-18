@@ -58,7 +58,7 @@ Yes (we participated before)
 
 ## If you chose "veteran" in the organization profile dropdown, please summarize your involvement and the successes and challenges of your participation. Please also list your pass/fail rate for each year.
 
-*TODO* possibly needs updating for 2015. Surely could manage to be less wordy?
+**TODO** possibly needs updating for 2015. Surely could manage to be less wordy?
 
 Git has participated in GSoC every year since 2007, with the exception
 of 2013, typically mentoring 2-5 students each year. Our mentors have
@@ -126,7 +126,7 @@ a year or more after their GSoC period ended):
 
 ## Why is your organization applying to participate in Google Summer of Code 2015? What do you hope to gain by participating?
 
-*TODO* needs review for 2015
+**TODO** needs review for 2015
 
 With the exception of 2013, Git has participated in GSoC every year
 since 2007. We have appreciated not only the code contributions, but
@@ -137,7 +137,7 @@ remain involved with Git itself.
 
 ## How many potential mentors do you have for this year's program? What criteria did you use to select them?
 
-*TODO* needs review and certainly number updates for 2015
+**TODO** needs review and certainly number updates for 2015
 
 We have 7 mentors related to specific projects, and a number of people
 in both the git-core and libgit2 projects who are available to help
@@ -155,7 +155,7 @@ expected of a student working on a Google Summer of Code project.
 
 ## What is your plan for dealing with disappearing students?
 
-*TODO* needs review for 2015
+**TODO** needs review for 2015
 
 We think that the most important part of GSoC is integrating the student
 into the normal communication channels used by other project
@@ -173,7 +173,7 @@ failing evaluation, regardless of any code produced.
 
 ## What is your plan for dealing with disappearing mentors?
 
-*TODO* needs review for 2015
+**TODO** needs review for 2015
 
 Most of our projects have more than one mentor available. In the
 unlikely event that a mentor disappears during the summer, another
@@ -184,7 +184,7 @@ regular development, and we should do it for mentors, too.
 
 ## What steps will you take to encourage students to interact with your project's community before, and during the program?
 
-*TODO* needs review for 2015
+**TODO** needs review for 2015
 
 Students will be required to join the main development mailiing list and
 post their patches for discussion. All current contributors already do

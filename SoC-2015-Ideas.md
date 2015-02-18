@@ -22,4 +22,4 @@ process.
 generating proposals.  We are also more than happy to receive
 proposals for other ideas related to Git or libgit2.
 
-*TODO* add entries :)
+**TODO** add entries :)
