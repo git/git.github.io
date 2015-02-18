@@ -107,4 +107,24 @@ suitable.  Just remember to keep the change small!  It is much better
 for you to finish a small but complete change than to try something
 too ambitious and not get it done.
 
-**TODO** add entries
+### Make "git -C '' cmd" not to barf.
+
+Instead, make it just like "cd ''", which is a no-op that silently
+succeeds.  Cf. $gmane/258109
+
+### Allow "-" as a short-hand for "@{-1}" in more places.
+
+Pick one command that operates on branch names.  Teach it the "-"
+shorthand that stands for "the branch we were previously on", like we
+did for "git merge -" sometime after we introduced "git checkout -".
+Cf. $gmane/230828
+
+### Make "git diff --no-index $directory $file" DWIM better.
+
+"git diff --no-index $directory $directory/$file" is obviously what
+the user wanted.
+
+### Forbid "log --graph --no-walk"
+
+Because --graph is about connected history while --no-walk is about
+discrete points.  Cf. $gmane/216083
