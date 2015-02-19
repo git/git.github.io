@@ -135,3 +135,45 @@ the user wanted.
 
 Because --graph is about connected history while --no-walk is about
 discrete points.  Cf. $gmane/216083
+
+### Move ~/.git-credentials and ~/.git-credential-cache to ~/.config/git
+
+Most of git dotfiles can be located, at the user's option, in
+~/.<file> or in ~/.config/git/<file>, following the [XDG
+standard](http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html).
+~/.git-credentials and ~/.git-credential-cache are still hardcoded as
+~/.<file>, and should allow using the XDG directory layout too
+(~/.git-credentials could be allowed as ~/.config/git/credential and
+~/.git-credential-cache could be allowed as ~/.cache/git/credential,
+possibly modified by $XDG_CONFIG_HOME and $XDG_CACHE_HOME).
+
+Each of these files can be a microproject of its own. The suggested
+approach is:
+
+* See how XDG was implemented for other files (run "git log --grep
+  XDG" in Git's source code) and read the XDG specification.
+
+* Implement and test the new behavior, without breaking compatibility
+  with the old behavior.
+
+* Update the documentation
+
+### Add configuration options for some commonly used command-line options
+
+This includes:
+
+* git am -3
+
+* git am -c
+
+Some people always run the command with these options, and would
+prefer to be able to activate them by default in ~/.gitconfig.
+
+### Add more builtin patterns for userdiff
+
+"git diff" shows the function name corresponding to each hunk after
+the @@ ... @@ line. For common languages (C, HTML, Ada, Matlab, ...),
+the way to find the function name is built-in Git's source code as
+regular expressions (see userdiff.c). A few languages are common
+enough to deserve a built-in driver, but are not yet recognized. For
+example, CSS, shell.
