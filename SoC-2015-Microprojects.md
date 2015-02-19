@@ -119,6 +119,13 @@ shorthand that stands for "the branch we were previously on", like we
 did for "git merge -" sometime after we introduced "git checkout -".
 Cf. $gmane/230828
 
+### Use unsigned integral type for collection of bits.
+
+Pick one field of a structure that (1) is of signed integral type and (2) is
+used as a collection of multiple bits. Discuss if there is a good reason
+why it has to be a signed integral field and change it to an unsigned
+type otherwise.  Cf. $gmane/263751
+
 ### Make "git diff --no-index $directory $file" DWIM better.
 
 "git diff --no-index $directory $directory/$file" is obviously what
