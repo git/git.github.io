@@ -25,12 +25,12 @@ proposals for other ideas related to Git or libgit2.
 ### Tighten configuration and hook execution based on the file ownership.
 
 In addition to what we discussed, I think files named by include.path
-should be honored without checking the ownership.  Cf. http://article.gmane.org/gmane.comp.version-control.git/243628
+should be honored without checking the ownership.  Cf. <http://article.gmane.org/gmane.comp.version-control.git/243628>
 
 ### "git apply --fix-mta-corruption".
 
 Takes eol attributes into account to correct lossage/addition of CR at
-the end of line, with updates to "am".  Cf. http://article.gmane.org/gmane.comp.version-control.git/257445
+the end of line, with updates to "am".  Cf. <http://article.gmane.org/gmane.comp.version-control.git/257445>
 
 ### git bisect improvements
 
@@ -56,27 +56,27 @@ than defining "fixed"/"unfixed" as aliases for "bad"/"good".
 
 A patch for this feature was sent to the mailing list in this thread a
 few years ago by Dscho:
-http://thread.gmane.org/gmane.comp.version-control.git/86063
+<http://thread.gmane.org/gmane.comp.version-control.git/86063>
 
 Unfortunately there were some problems with the patch and no one tried
 to fix them. So the same problem/suggestion is often reported on the
 mailing list, for example:
 
-    http://thread.gmane.org/gmane.comp.version-control.git/165141
-    http://thread.gmane.org/gmane.comp.version-control.git/170113
-    http://thread.gmane.org/gmane.comp.version-control.git/182398
+    <http://thread.gmane.org/gmane.comp.version-control.git/165141>
+    <http://thread.gmane.org/gmane.comp.version-control.git/170113>
+    <http://thread.gmane.org/gmane.comp.version-control.git/182398>
 
 A patch series to let "old/new" be used instead of "good/bad" was
 started here:
 
-http://thread.gmane.org/gmane.comp.version-control.git/199758/focus=199869
+<http://thread.gmane.org/gmane.comp.version-control.git/199758/focus=199869>
 
 There is still work to be done to complete it.
 
 Note than another feature with the name "git bisect fix" was suggested
 to do something else:
 
-http://thread.gmane.org/gmane.comp.version-control.git/169026
+<http://thread.gmane.org/gmane.comp.version-control.git/169026>
 
 Since there have already been discussions and patches, the remaining
 work is probably less than a GSoC, so this project should be grouped
@@ -106,15 +106,15 @@ formatting, and use it consistently in the three commands.
 "git config", when removing the last variable in a section, leaves an
 empty section header behind. Anybody who wants to improve this needs
 to consider ramifications of leaving or removing comments.
-Cf. http://article.gmane.org/gmane.comp.version-control.git/219524
+Cf. <http://article.gmane.org/gmane.comp.version-control.git/219524>
 
 ### "git fetch --deepen"?
 
-Cf. http://article.gmane.org/gmane.comp.version-control.git/213180 http://article.gmane.org/gmane.comp.version-control.git/212950
+Cf. <http://article.gmane.org/gmane.comp.version-control.git/213180> <http://article.gmane.org/gmane.comp.version-control.git/212950>
 
 ### Introduce threading to checkout codepath, possibly helping Windows folks.
 
-Cf. http://article.gmane.org/gmane.comp.version-control.git/235874
+Cf. <http://article.gmane.org/gmane.comp.version-control.git/235874>
 
 ### Be nicer to the user on tracked/untracked merge conflicts
 
