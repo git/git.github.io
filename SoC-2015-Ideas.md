@@ -34,13 +34,56 @@ should be honored without checking the ownership.  Cf. $gmane/243628
 Takes eol attributes into account to correct lossage/addition of CR at
 the end of line, with updates to "am".  Cf. $gmane/257445
 
-### "git bisect --first-parent".
+### git bisect improvements
+
+#### "git bisect --first-parent".
 
 When your project is strictly "new features are merged into trunk,
 never the other way around", it is handy to be able to first find
 a merge on the trunk that merged a topic to point fingers at when
 a bug appears, instead of having to drill down to the individual
 commit on the faulty side branch.
+
+#### "git bisect fixed/unfixed"
+
+"git bisect" is initially meant to find regressions (i.e. the new code
+is bad, and the old one used to work). The opposite may happen too:
+look for the commit which fixed a bug. It is already possible using
+"git bisect", but the user has to type "good" to mean "the bug is
+there" and "bad" to mean "the bug is fixed", which isn't convenient.
+
+It would be nice to allow the user to explicitely say "git bisect
+fixed" and "git bisect unfixed" instead. It is actually much harder
+than defining "fixed"/"unfixed" as aliases for "bad"/"good".
+
+A patch for this feature was sent to the mailing list in this thread a
+few years ago by Dscho:
+http://thread.gmane.org/gmane.comp.version-control.git/86063
+
+Unfortunately there were some problems with the patch and no one tried
+to fix them. So the same problem/suggestion is often reported on the
+mailing list, for example:
+
+    http://thread.gmane.org/gmane.comp.version-control.git/165141
+    http://thread.gmane.org/gmane.comp.version-control.git/170113
+    http://thread.gmane.org/gmane.comp.version-control.git/182398
+
+A patch series to let "old/new" be used instead of "good/bad" was
+started here:
+
+http://thread.gmane.org/gmane.comp.version-control.git/199758/focus=199869
+
+There is still work to be done to complete it.
+
+Note than another feature with the name "git bisect fix" was suggested
+to do something else:
+
+http://thread.gmane.org/gmane.comp.version-control.git/169026
+
+Since there have already been discussions and patches, the remaining
+work is probably less than a GSoC, so this project should be grouped
+with another one (like git bisect --first-parent) to make a full GSoC
+proposal.
 
 ### Unifying `git branch -l`, `git tag -l`, and `git for-each-ref`
 
