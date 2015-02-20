@@ -62,9 +62,9 @@ Unfortunately there were some problems with the patch and no one tried
 to fix them. So the same problem/suggestion is often reported on the
 mailing list, for example:
 
-    <http://thread.gmane.org/gmane.comp.version-control.git/165141>
-    <http://thread.gmane.org/gmane.comp.version-control.git/170113>
-    <http://thread.gmane.org/gmane.comp.version-control.git/182398>
+ - <http://thread.gmane.org/gmane.comp.version-control.git/165141>
+ - <http://thread.gmane.org/gmane.comp.version-control.git/170113>
+ - <http://thread.gmane.org/gmane.comp.version-control.git/182398>
 
 A patch series to let "old/new" be used instead of "good/bad" was
 started here:
