@@ -117,3 +117,30 @@ Cf. $gmane/213180 $gmane/212950
 ### Introduce threading to checkout codepath, possibly helping Windows folks.
 
 Cf. $gmane/235874
+
+### Be nicer to the user on tracked/untracked merge conflicts
+
+When merging a commit which has tracked files with the same name as
+local untracked files, Git refuses to proceed. It could be nice to:
+
+ - Accept the situation without conflict when the tracked file has the
+   exact same content as the local untracked file (which would become
+   tracked). No data is lost, nothing can be committed accidentally.
+
+ - Possibly, for fast-forward merges, if a local files belongs to the
+   index but not to the last commit, attempt a merge between the
+   upstream version and the local one (resulting in the same content
+   as if the file had just been committed, but without introducing an
+   extra commit).
+
+Recent versions SVN do something similar: on update, it considers
+added but not committed files like normal tracked files, and attempts
+a merge of the upstream version with the local one (which always
+succeeds when the files have identical content). Attempting a merge
+for non-fast forward cases would probably not make sense: it would mix
+changes coming from the merge with other changes that do not come from
+a commit.
+
+One difficulty with this project is to identify uncontroversial cases
+(where Git should merge without complaining) and all the possible
+corner-cases.
