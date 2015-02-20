@@ -22,8 +22,6 @@ process.
 generating proposals.  We are also more than happy to receive
 proposals for other ideas related to Git or libgit2.
 
-**TODO** add entries :)
-
 ### Tighten configuration and hook execution based on the file ownership.
 
 In addition to what we discussed, I think files named by include.path
