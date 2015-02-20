@@ -58,15 +58,13 @@ Yes (we participated before)
 
 ## If you chose "veteran" in the organization profile dropdown, please summarize your involvement and the successes and challenges of your participation. Please also list your pass/fail rate for each year.
 
-**TODO** possibly needs updating for 2015. Surely could manage to be less wordy?
-
 Git has participated in GSoC every year since 2007, with the exception
 of 2013, typically mentoring 2-5 students each year. Our mentors have
 always been active contributors within the community. The students
 typically did not have a prior relationship with the community, though
 in one case we took on a student who had previously contributed patches.
 
-Of the 23 projects we have mentored, 18 have resulted in success. In
+Of the 26 projects we have mentored, 20 have resulted in success. In
 many cases, the code has been merged and is in daily use in git. In some
 cases, the code was spun off into its own project (e.g., the
 git-statistics project in 2008 ended up as a separate project). In other
@@ -97,20 +95,25 @@ after GSoC. And while many projects have been successful, we often have
 difficulty integrating them into mainline git when the results are
 dumped on the community at the end.
 
-This challenge led to us discussing in 2013 the scope of our projects,
-how we select students, and how we encourage them to interact through
-the summer.  This discussion was still going last February. Rather than
-try to rush through a GSoC application, we decided instead to take the
-year off and consider these issues. This led to a panel at our Git-Merge
-conference in May, and an on-list discussion in October. The partial
-conclusions of which are:
+We took 2013 off from GSoC in order to discuss issues of project scopes,
+student selection, and our interaction strategies (the discussion didn't
+take all year, of course, but it heated up right around application
+time, so we skipped a year rather than rush into an application).
+In 2014, we tried a few things:
 
-  1. Looking at the numbers, we actually do not do that badly.
+  1. Reducing the project scope to focus more on interactions rather
+     than a flashy project.
 
-  2. We should probably be making the project scopes a bit smaller, and
-     spending more time getting students involved in day-to-day
-     activities like review and discussion on list, even when they
-     aren't necessarily part of their specific projects.
+  2. Requiring students to complete a "microproject" as part of the
+     application process, to get them involved early in the day-to-day
+     workings of the community (and also to give us more information on
+     them).
+
+The projects for 2014 did seem to go smoothly, with merged code and one
+of the students contributing related fixes over the past 6 months. We
+did fail one student at the mid-term, but that is because he was
+essentially a no-show. We don't consider than an interesting indicator
+for how the changes went.
 
 Here is a summary of our completed/failed projects per year, along with
 the number of retained contributors (where "retained" is calculated by
@@ -123,10 +126,9 @@ a year or more after their GSoC period ended):
  - 2010: 3 success, 1 failure, 3 students retained
  - 2011: 5 success, 0 failure, 4 students retained
  - 2012: 3 success, 0 failure, 2 students retained
+ - 2014: 2 success, 1 failure, 1 student retained
 
 ## Why is your organization applying to participate in Google Summer of Code 2015? What do you hope to gain by participating?
-
-**TODO** needs review for 2015
 
 With the exception of 2013, Git has participated in GSoC every year
 since 2007. We have appreciated not only the code contributions, but
@@ -137,11 +139,9 @@ remain involved with Git itself.
 
 ## How many potential mentors do you have for this year's program? What criteria did you use to select them?
 
-**TODO** needs review and certainly number updates for 2015
-
-We have 7 mentors related to specific projects, and a number of people
-in both the git-core and libgit2 projects who are available to help
-assist or backup mentors.
+We have 3 potential mentors this year. This is a smaller number than in
+previous years, and we expect to take a correspondingly smaller number
+of projects (probably only 1 or 2).
 
 All mentors are volunteers for the specific projects that they can
 contribute the most to (i.e., ones that meet their interests and
@@ -154,8 +154,6 @@ substantial is defined to be equal to or larger than what might be
 expected of a student working on a Google Summer of Code project.
 
 ## What is your plan for dealing with disappearing students?
-
-**TODO** needs review for 2015
 
 We think that the most important part of GSoC is integrating the student
 into the normal communication channels used by other project
@@ -173,23 +171,19 @@ failing evaluation, regardless of any code produced.
 
 ## What is your plan for dealing with disappearing mentors?
 
-**TODO** needs review for 2015
-
-Most of our projects have more than one mentor available. In the
-unlikely event that a mentor disappears during the summer, another
-mentor can step in. By keeping student progress public and reviewed on
+We plan to take fewer projects than we have as mentors, so that the
+remainder can act as backups. Most of our projects can be mentored by
+any of the mentors, and by keeping student progress public and reviewed on
 the list, there's a good chance that another mentor (or the community at
 large) can pick up the slack. We try to keep the "bus factor" high for
 regular development, and we should do it for mentors, too.
 
 ## What steps will you take to encourage students to interact with your project's community before, and during the program?
 
-**TODO** needs review for 2015
-
 Students will be required to join the main development mailiing list and
 post their patches for discussion. All current contributors already do
 this, so students will be able to see experienced hands performing the
-same tasks and learn by example. We also feel that the list based
+same tasks and learn by example. We also feel that the list-based
 discussions will help the student to become and stay a member of the
 community.
 
