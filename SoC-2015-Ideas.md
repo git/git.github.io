@@ -25,12 +25,12 @@ proposals for other ideas related to Git or libgit2.
 ### Tighten configuration and hook execution based on the file ownership.
 
 In addition to what we discussed, I think files named by include.path
-should be honored without checking the ownership.  Cf. $gmane/243628
+should be honored without checking the ownership.  Cf. http://article.gmane.org/gmane.comp.version-control.git/243628
 
 ### "git apply --fix-mta-corruption".
 
 Takes eol attributes into account to correct lossage/addition of CR at
-the end of line, with updates to "am".  Cf. $gmane/257445
+the end of line, with updates to "am".  Cf. http://article.gmane.org/gmane.comp.version-control.git/257445
 
 ### git bisect improvements
 
@@ -106,15 +106,15 @@ formatting, and use it consistently in the three commands.
 "git config", when removing the last variable in a section, leaves an
 empty section header behind. Anybody who wants to improve this needs
 to consider ramifications of leaving or removing comments.
-Cf. $gmane/219524
+Cf. http://article.gmane.org/gmane.comp.version-control.git/219524
 
 ### "git fetch --deepen"?
 
-Cf. $gmane/213180 $gmane/212950
+Cf. http://article.gmane.org/gmane.comp.version-control.git/213180 http://article.gmane.org/gmane.comp.version-control.git/212950
 
 ### Introduce threading to checkout codepath, possibly helping Windows folks.
 
-Cf. $gmane/235874
+Cf. http://article.gmane.org/gmane.comp.version-control.git/235874
 
 ### Be nicer to the user on tracked/untracked merge conflicts
 
