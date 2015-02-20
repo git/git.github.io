@@ -158,13 +158,15 @@ approach is:
 
 * Update the documentation
 
+Even though the amount of code to write is small, these projects
+involve a lot of prior work to understand the specification and deal
+with all potential corner-cases.
+
 ### Add configuration options for some commonly used command-line options
 
 This includes:
 
 * git am -3
-
-* git am -c
 
 Some people always run the command with these options, and would
 prefer to be able to activate them by default in ~/.gitconfig.
@@ -177,3 +179,5 @@ the way to find the function name is built-in Git's source code as
 regular expressions (see userdiff.c). A few languages are common
 enough to deserve a built-in driver, but are not yet recognized. For
 example, CSS, shell.
+
+This project requires a very good knowledge of regular expressions.
