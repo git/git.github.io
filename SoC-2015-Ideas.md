@@ -34,6 +34,10 @@ the end of line, with updates to "am".  Cf. <http://article.gmane.org/gmane.comp
 
 ### git bisect improvements
 
+ - Language: C, shell (bash)
+ - Difficulty: medium
+ - Possible mentors: Matthieu Moy, Christian Couder
+
 #### "git bisect --first-parent".
 
 When your project is strictly "new features are merged into trunk,
