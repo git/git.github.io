@@ -142,3 +142,15 @@ a commit.
 One difficulty with this project is to identify uncontroversial cases
 (where Git should merge without complaining) and all the possible
 corner-cases.
+
+### Convert scripts to builtins
+
+Many components of Git are still in the form of shell and Perl scripts.
+While this is an excellent choice as long as the functionality is
+improved, it causes problems in production code – in particular on
+multiple platforms, e.g. Windows (think: POSIX-to-Windows path
+conversion issues).
+
+The idea of this project is to dive into the Git source code and
+convert, say, `git-add--interactive.perl` and/or `git stash` into
+proper C code, making it a so-called "built-in".
