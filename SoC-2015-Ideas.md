@@ -156,5 +156,8 @@ multiple platforms, e.g. Windows (think: POSIX-to-Windows path
 conversion issues).
 
 The idea of this project is to dive into the Git source code and
-convert, say, `git-add--interactive.perl` and/or `git stash` into
-proper C code, making it a so-called "built-in".
+convert a couple of shell and/or Perl scripts into portable and
+performant C code, making it a so-called "built-in".
+
+The plan is to start with something small, such as `git-pull.sh` to
+get into the groove, and then advance to more complex scripts.
