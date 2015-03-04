@@ -16,6 +16,10 @@ way for us to get experience with applicants, but it will also help
 applicants become familiar with Git's development and submission
 process.
 
+Please, include link(s) to the mailing-list discussion(s) related to
+your microproject in your application (e.g. linking to
+[gmane](http://news.gmane.org/gmane.comp.version-control.git)).
+
 ## Summer of code main project ideas
 
 **Students**: Please consider these ideas as starting points for
