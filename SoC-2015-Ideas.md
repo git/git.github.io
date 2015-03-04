@@ -44,7 +44,7 @@ When your project is strictly "new features are merged into trunk,
 never the other way around", it is handy to be able to first find
 a merge on the trunk that merged a topic to point fingers at when
 a bug appears, instead of having to drill down to the individual
-commit on the faulty side branch.
+commit on the faulty side branch. Cf.  <http://thread.gmane.org/gmane.comp.version-control.git/264661/focus=264720>
 
 #### "git bisect fixed/unfixed"
 
