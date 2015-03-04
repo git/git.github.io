@@ -20,6 +20,11 @@ Please, include link(s) to the mailing-list discussion(s) related to
 your microproject in your application (e.g. linking to
 [gmane](http://news.gmane.org/gmane.comp.version-control.git)).
 
+## Note about the number of slots
+
+In 2015, the Git organization has very limited mentoring capacity.
+We will probably be able to accept 2 students only this year.
+
 ## Summer of code main project ideas
 
 **Students**: Please consider these ideas as starting points for
