@@ -16,9 +16,22 @@ way for us to get experience with applicants, but it will also help
 applicants become familiar with Git's development and submission
 process.
 
+Also, working in Git project is not only about writing your own
+patches. Constructively critiquing design and implementation of
+patches by other people is also an important skill you need to learn
+in order to effectively collaborate with others. So, if you have time
+and inclination, it would be beneficial to read and understand other
+applicants' patches (or any other patch submitted to the mailing-list),
+think if you agree that the problem they are trying to solve is worth
+solving, the approach they are taking is the best way (or if you think
+of a better way to solve it), etc., and respond to their patches with
+the result of your thinking as a review.
+
 Please, include link(s) to the mailing-list discussion(s) related to
 your microproject in your application (e.g. linking to
-[gmane](http://news.gmane.org/gmane.comp.version-control.git)).
+[gmane](http://news.gmane.org/gmane.comp.version-control.git)). If you
+participate in the review of other patches, then you may also include
+links to discussions that would support your application.
 
 ## Note about the number of slots
 
