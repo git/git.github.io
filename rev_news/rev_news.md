@@ -37,10 +37,13 @@ an abbreviation of "reviews". It is probably better to have a name
 that is not too tied to a particular schedule or a particular kind of
 news.
 
-## Who would write or contribute to it
+## Who would write or contribute to it?
 
 A few editors would be expected to write most of it, especially the
 parts about reviews and support. But everyone would be welcome to
 contribute using pull requests.
+
+The news letter would be prepared on https://github.com/git/git.github.io
+and published on https://git.github.io and perhaps elsewhere too.
 
 
