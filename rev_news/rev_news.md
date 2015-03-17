@@ -5,7 +5,7 @@ title: Git Rev News
 
 This is a page to explain what Git Rev News could be.
 
-## Promoting reviewers and helpers
+## Promote reviewers and helpers
 
 The main goal of Git Rev News would be to promote the work of people
 reviewing patches and doing user support on the Git mailing list.
