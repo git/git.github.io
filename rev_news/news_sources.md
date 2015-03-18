@@ -26,10 +26,10 @@ Some ideas on where we can go to gather Git Rev News material.
 * Git community on Google+
 * ...
 
-### Process
+# Process
 
-* For every upcoming issue, post a mail/thread to the Git dev list asking
-  if there's anything anyone want included in the upcoming issue.
+* For every upcoming edition, post a mail/thread to the Git dev list asking
+  if there's anything anyone want included in the upcoming edition.
 * Also, post an issue on github.com/git/news asking for 
   comments/contributions from the community as a whole (anyone can 
   comment on this issue).
