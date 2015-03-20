@@ -7,15 +7,15 @@ Some ideas on where we can go to gather Git Rev News material.
 
 ## Mailing lists
 
-* Git dev
-* Git for Windows
+* [Git dev](http://thread.gmane.org/gmane.comp.version-control.git/)
+* [Git for Windows](https://groups.google.com/forum/#!forum/msysgit)
 * JGit 
 * libgit2 (and friends)
 * ...
 
 ## Blogs (the RSS-feeds can be aggregated into one shared resource)
 
-* Junio's blog
+* [Junio's blog](http://git-blame.blogspot.com/)
 * Company blogs of GitHub, BitBucket, GitLab, etc.
 * ...
 
