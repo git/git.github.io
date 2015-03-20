@@ -43,7 +43,7 @@ A few editors would be expected to write most of it, especially the
 parts about reviews and support. But everyone would be welcome to
 contribute using pull requests.
 
-The news letter would be prepared on https://github.com/git/git.github.io
-and published on https://git.github.io and perhaps elsewhere too.
+The news letter would be prepared on [GitHub](https://github.com/git/git.github.io)
+and published on (git.github.io)[https://git.github.io] and perhaps elsewhere too.
 
 
