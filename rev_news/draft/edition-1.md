@@ -3,7 +3,7 @@
 
 [Git Rev News](http://git.github.io/rev_news/rev_news.html) is written
 collaboratively on [GitHub](https://github.com/git/git.github.io) by
-volonteers. Feel free to help by sending [pull
+volunteers. Feel free to help by sending [pull
 requests](https://github.com/git/git.github.io/pulls) or opening
 [issues](https://github.com/git/git.github.io/issues)!
 
@@ -16,7 +16,7 @@ requests](https://github.com/git/git.github.io/pulls) or opening
 Paul Tan, who will probably apply to be a [Google Summer of Code
 (GSoC)](https://developers.google.com/open-source/soc/) student for
 Git this year, anticipated the start of the GSoC and sent a patch to
-rewrite git-pull.sh as a builtin.
+rewrite git-pull.sh as a built-in.
 
 Indeed as stated in [the GSoC idea
 page](http://git.github.io/SoC-2015-Ideas.html):
@@ -38,13 +38,13 @@ so-called "built-in".
 ```
 
 It appeared that two developers, Duy Nguyen and Stephen Robin, had
-already worked on converting git-pull.sh into a builtin in the
+already worked on converting git-pull.sh into a built-in in the
 past. This happens quite often, so it is a good idea before starting
 to develop something in Git, to search and ask around.
 
-Dscho, also called Johannes Schindelin, our Git for Windows expert,
-thanked Paul for the very detailed and well researched comments in his
-patch and commented a bit on the benefits of this kind of work:
+Johannes "Dscho" Schindelin, one of the Git for Windows developers, 
+thanked Paul for the very detailed and well researched comments in 
+his patch and commented a bit on the benefits of this kind of work:
 
 ```
 > on Windows the runtime fell from 8m 25s to 1m 3s.
@@ -63,7 +63,7 @@ possible. It also makes reviewing easier if the first step is an almost one-to-o
 Plus, it is rewarding to have concise steps that can be completed in a timely manner.
 ```
 
-About improving the test suite, Matthieu Moy suggested:
+Regarding the test suite, Matthieu Moy suggested:
 
 ```
 > Ideally, I think the solution is to
@@ -81,19 +81,19 @@ they do, add a failing test that passes again once you uncomment the
 code.
 ```
 
-And Junio also reviewed some parts of the patch.
+Junio also reviewed some parts of the patch.
 
 * [Forbid "log --graph --no-walk"](http://thread.gmane.org/gmane.comp.version-control.git/264899/)
 
-Dongcan Jiang who will also probably apply to be a GSoC student for
-Git this year, sent a patch to prevent `git log` to be used with both
+Dongcan Jiang, who will also probably apply to be a GSoC student for
+Git this year, sent a patch to prevent `git log` from being used with both
 the `--graph` and the `--no-walk` option. He sent this patch because
 the Git community asks potential students to work on a
 [microproject](http://git.github.io/SoC-2015-Microprojects.html) to
-make sure that they can properly work with the community.
+make sure that they can work properly with the community.
 
 Eric Sunshine made some good general suggestions that are often made
-on incoming patchs:
+on incoming patches:
 
 ```
 > Forbid "log --graph --no-walk
@@ -125,7 +125,7 @@ Also, such a change should be accompanied by new test(s).
 
 René Scharfe and Junio also suggested some improvements especially in the code.
 
-And Junio explained the interesting behavior of `git show` depending
+Junio also explained the interesting behavior of `git show` depending
 on the arguments it is given:
 
 ```
@@ -138,15 +138,14 @@ discrete point(s).
 
 * [Git with Lader logic](http://thread.gmane.org/gmane.comp.version-control.git/265679/)
  
-Users or potential users are sometimes wondering on the Git mailing
-list if they can use Git to manage special content. Fortunately it
-looks like the Git mailing list is read by many experts in different
+People often ask the Git mailing list whether they can use Git to manage
+special content. Fortunately, the list is monitored by many experts in different
 domains who can often provide specific answers.
 
 This time Bharat Suvarna asked about [PLC
 programs](http://en.wikipedia.org/wiki/Programmable_logic_controller)
 
-Kevin D gave the usual non specific answer:
+Kevin D gave the usual non-specific answer:
 
 ```
 Although git is not very picky about the contents, it is optimized to
@@ -175,10 +174,10 @@ functions as I expect whatever PLC system you are using does not have git
 built-in.
 ```
 
-Doug Kelly also gave interesting specific information and pointed to a
+Doug Kelly also gave some interesting specific information and pointed to a
 web site more information.
 
-Thank you guys for these helpful answers!
+Thank you all for these helpful answers!
 
 ## Misc Git News
 
@@ -194,8 +193,8 @@ you find this kind of improvements useful.
 
 * [Git Merge 2015](http://git-merge.com/), The Conference for the Git
 Community, will take place on April 8th & 9th in Paris, France, thanks
-to GitHub and the sponsors. If you are a Git developer and need travel or other assistance to go
-there, please contact Peff.
+to GitHub and the sponsors. If you are a Git developer and need travel 
+or other assistance to go there, please contact Peff.
 
 ### Companies
 
