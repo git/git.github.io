@@ -1,5 +1,5 @@
 
-Welcome to the first edition of Git Rev News!
+## Welcome to the first edition of Git Rev News!
 
 [Git Rev News](http://git.github.io/rev_news/rev_news.html) is written
 collaboratively on [GitHub](https://github.com/git/git.github.io) by
@@ -194,9 +194,7 @@ you find this kind of improvements useful.
 
 * [Git Merge 2015](http://git-merge.com/), The Conference for the Git
 Community, will take place on April 8th & 9th in Paris, France, thanks
-to GitHub and the sponsors.
-
-If you are a Git developer and need travel or other assistance to go
+to GitHub and the sponsors. If you are a Git developer and need travel or other assistance to go
 there, please contact Peff.
 
 ### Companies
