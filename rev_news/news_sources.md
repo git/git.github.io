@@ -9,21 +9,21 @@ Some ideas on where we can go to gather Git Rev News material.
 
 * [Git dev](http://thread.gmane.org/gmane.comp.version-control.git/)
 * [Git for Windows](https://groups.google.com/forum/#!forum/msysgit)
-* JGit 
-* libgit2 (and friends)
+* [JGit](https://dev.eclipse.org/mailman/listinfo/jgit-dev)
+* [libgit2](https://libgit2.github.com/) (and [friends](https://github.com/libgit2))
 * ...
 
 ## Blogs (the RSS-feeds can be aggregated into one shared resource)
 
 * [Junio's blog](http://git-blame.blogspot.com/)
-* Company blogs of GitHub, BitBucket, GitLab, etc.
+* Company blogs of [GitHub](https://github.com/blog), [BitBucket](https://blog.bitbucket.org/), [GitLab](https://about.gitlab.com/blog/), etc.
 * ...
 
 ## Forums
 
-* Hacker News (can be monitored using Google Alerts)
-* Reddit/git (offers RSS)
-* Git community on Google+
+* [Hacker News](https://news.ycombinator.com/) (can be monitored using Google Alerts or [searched](https://hn.algolia.com/?query=git&sort=byPopularity&prefix=false&page=0&dateRange=last24h&type=story))
+* [Reddit/git](http://www.reddit.com/r/git) (offers RSS)
+* [Git community on Google+](https://plus.google.com/communities/112688280189071733518)
 * ...
 
 # Process
