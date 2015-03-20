@@ -19,11 +19,12 @@ Some ideas on where we can go to gather Git Rev News material.
 * Company blogs of [GitHub](https://github.com/blog), [BitBucket](https://blog.bitbucket.org/), [GitLab](https://about.gitlab.com/blog/), etc.
 * ...
 
-## Forums
+## Forums/news
 
 * [Hacker News](https://news.ycombinator.com/) (can be monitored using Google Alerts or [searched](https://hn.algolia.com/?query=git&sort=byPopularity&prefix=false&page=0&dateRange=last24h&type=story))
 * [Reddit/git](http://www.reddit.com/r/git) (offers RSS)
 * [Git community on Google+](https://plus.google.com/communities/112688280189071733518)
+* [The Changelog/Git](http://thechangelog.com/tagged/git/)
 * ...
 
 # Process
