@@ -184,7 +184,7 @@ Thank you guys for these helpful answers!
 
 ### Developers
 
-* David Kastrup <dak <at> gnu.org> previously reimplemented significant
+* David Kastrup (dak at gnu.org) previously reimplemented significant
 parts of "git blame" for a vast gain in performance with complex
 histories and large files. As working on free software is his sole
 source of income, please consider contributing to his remuneration if
