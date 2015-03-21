@@ -197,6 +197,7 @@ to GitHub and the sponsors. If you are a Git developer and need travel
 or other assistance to go there, please contact Peff, aka
 Jeff King &lt;<peff@peff.net>&gt;.
 
-### Companies
 
+## Credits
 
+This edition of Git Rev Notes was assembled by Christian Couder &lt;<christian.couder@gmail.com>&gt; and Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;.
