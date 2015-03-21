@@ -194,7 +194,7 @@ you find this kind of improvements useful.
 * [Git Merge 2015](http://git-merge.com/), The Conference for the Git
 Community, will take place on April 8th & 9th in Paris, France, thanks
 to GitHub and the sponsors. If you are a Git developer and need travel 
-or other assistance to go there, please contact Peff.
+or other assistance to go there, please contact Peff, aka Jeff King.
 
 ### Companies
 
