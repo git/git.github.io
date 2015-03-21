@@ -197,6 +197,17 @@ to GitHub and the sponsors. If you are a Git developer and need travel
 or other assistance to go there, please contact Peff, aka
 Jeff King &lt;<peff@peff.net>&gt;.
 
+### From outside the list
+
+* Google Code [announced their shutdown](http://google-opensource.blogspot.de/2015/03/farewell-to-google-code.html), offering all remaining projects easy migration to Git/GitHub. 
+* Nava Whiteford wrote a popular article on the [Most common Git screwups/questions and solutions](http://41j.com/blog/2015/02/common-git-screwupsquestions-solutions/).
+* An older but related resource: [Flight rules for Git](https://github.com/k88hudson/git-flight-rules). 
+* Commandline GUI-tool *tig* [version 1.2 was released released](http://article.gmane.org/gmane.comp.version-control.git/265298).
+* An [interview with Git book "Git in Practice" author, Mike McQuaid](http://www.infoq.com/articles/interview-Mike-McQuaid-git-practice).
+* Speaking of Git books, there's  a new one on the way: [Git Essentials](https://www.packtpub.com/application-development/git-essentials).
+* And there's [a new video course out on mastering Git](https://www.packtpub.com/application-development/mastering-git-video). The author was just interviewed on....
+* [The latest episode of GitMinutes](http://episodes.gitminutes.com/2015/03/gitminutes-33-thom-parkin-on-mastering.html).
+* Here's a [Git hook](https://github.com/naholyr/github-todos/wiki/Full-presentation) which will automatically turn new TODOs into tasks in your issue tracker (if you use GitHub issues).
 
 ## Credits
 
