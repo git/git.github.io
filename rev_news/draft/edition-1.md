@@ -2,7 +2,7 @@
 ## Git Rev News: Edition 1 (March 25th, 2015)
 
 Welcome to the first edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
-a montly digest of all things Git, written collaboratively 
+a monthly digest of all things Git, written collaboratively 
 on [GitHub](https://github.com/git/git.github.io) by volunteers. 
 
 Our goal is to aggregate and communicate
@@ -216,6 +216,8 @@ Jeff King &lt;<peff@peff.net>&gt;.
 * And there's [a new video course out on mastering Git](https://www.packtpub.com/application-development/mastering-git-video). The author was just interviewed on....
 * The [latest episode of the podcast  GitMinutes](http://episodes.gitminutes.com/2015/03/gitminutes-33-thom-parkin-on-mastering.html), about mastering Git.
 * Here's a [Git hook](https://github.com/naholyr/github-todos/wiki/Full-presentation) which will automatically turn new TODOs into tasks in your issue tracker (if you use GitHub issues).
+* Both [GitLab](https://about.gitlab.com/2015/03/19/omnibus-gitlab-openssl-security-release/) and [BitBucket](https://blog.bitbucket.org/2015/03/19/openssl-security-advisory/) recently posted advisories on recent SSH vulnerabilities. Make 
+sure that your Git or otherwise SSH-based services are not affected!
 
 ## Credits
 
