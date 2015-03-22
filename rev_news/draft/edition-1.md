@@ -1,11 +1,19 @@
 
-## Welcome to the first edition of Git Rev News!
+## Git Rev News: Edition 1 (March 25th, 2015)
 
-[Git Rev News](http://git.github.io/rev_news/rev_news.html) is written
-collaboratively on [GitHub](https://github.com/git/git.github.io) by
-volunteers. Feel free to help by sending [pull
+Welcome to the first edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
+a montly digest of all things Git, written collaboratively 
+on [GitHub](https://github.com/git/git.github.io) by volunteers. 
+
+Our goal is to aggregate and communicate
+the activities on the [Git developers' mailig list](mailto:git@vger.kernel.org)
+in a format that the wider tech community can follow
+and understand. In addition, we'll link to all the interesting Git-related
+articles, tools and projects we come across.
+
+Tips us or contribute news by sending [pull
 requests](https://github.com/git/git.github.io/pulls) or opening
-[issues](https://github.com/git/git.github.io/issues)!
+[issues](https://github.com/git/git.github.io/issues).
 
 ## Reviews & Support
 
