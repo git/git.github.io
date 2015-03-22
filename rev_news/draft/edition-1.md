@@ -6,7 +6,7 @@ a monthly digest of all things Git, written collaboratively
 on [GitHub](https://github.com/git/git.github.io) by volunteers. 
 
 Our goal is to aggregate and communicate
-the activities on the [Git developers' mailig list](mailto:git@vger.kernel.org)
+the activities on the [Git developers' mailing list](mailto:git@vger.kernel.org)
 in a format that the wider tech community can follow
 and understand. In addition, we'll link to all the interesting Git-related
 articles, tools and projects we come across.
