@@ -211,4 +211,4 @@ Jeff King &lt;<peff@peff.net>&gt;.
 
 ## Credits
 
-This edition of Git Rev Notes was assembled by Christian Couder &lt;<christian.couder@gmail.com>&gt; and Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;.
+This edition of Git Rev Notes was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt; and Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;.
