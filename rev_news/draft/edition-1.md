@@ -89,8 +89,6 @@ they do, add a failing test that passes again once you uncomment the
 code.
 ```
 
-Junio also reviewed some parts of the patch.
-
 * [Forbid "log --graph --no-walk"](http://thread.gmane.org/gmane.comp.version-control.git/264899/)
 
 Dongcan Jiang, who will also probably apply to be a GSoC student for
