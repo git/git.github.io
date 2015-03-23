@@ -160,7 +160,7 @@ command about a connected history.  Otherwise, it is a command about
 discrete point(s).
 ```
 
-* [War on broken &&-chain](http://thread.gmane.org/gmane.comp.version-control.git/265874)
+* [War on broken &&-chain](http://thread.gmane.org/gmane.comp.version-control.git/265874) (*written by Junio C Hamano*)
 
 We often see review comments on test scripts that points out a
 breakage in the &&-chain, but what does that mean?
