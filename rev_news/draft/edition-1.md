@@ -8,7 +8,7 @@ on [GitHub](https://github.com/git/git.github.io) by volunteers.
 Our goal is to aggregate and communicate
 some of the activities on the [Git mailing list](mailto:git@vger.kernel.org)
 in a format that the wider tech community can follow
-and understand. In addition, we'll link to all the interesting Git-related
+and understand. In addition, we'll link to some of the interesting Git-related
 articles, tools and projects we come across.
 
 This edition covers what happened during the month of March 2015.
