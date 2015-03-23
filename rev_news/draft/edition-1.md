@@ -239,4 +239,4 @@ sure that your Git or otherwise SSH-based services are not affected!
 
 ## Credits
 
-This edition of Git Rev Notes was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;, Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Junio Hamano.
+This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;, Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Junio Hamano.
