@@ -26,7 +26,7 @@ requests](https://github.com/git/git.github.io/pulls) or opening
 In a discussion started by Christian Couder, Michael J Gruber noted
 that there are three classes of Git developers, and it is hard for
 people who are not already sponsored by corporations to work on Git
-not as a hobbist, but as a means to gain either monetarily or build
+not as a hobbyist, but as a means to gain either monetarily or build
 reputation.
 
 Later in the thread, Christian volunteered to start a newsletter (this
