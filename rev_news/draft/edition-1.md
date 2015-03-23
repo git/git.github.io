@@ -15,7 +15,25 @@ Tips us or contribute news by sending [pull
 requests](https://github.com/git/git.github.io/pulls) or opening
 [issues](https://github.com/git/git.github.io/issues).
 
-## Reviews & Support
+## Discussions
+
+### General
+
+* [Promoting Git developers](http://thread.gmane.org/gmane.comp.version-control.git/265165)
+
+In a discussion started by Christian Couder, Michael J Gruber noted
+that there are three classes of Git developers, and it is hard for
+people who are not already sponsored by corporations to work on Git
+not as a hobbist, but as a means to gain either monetarily or build
+reputation.
+
+Later in the thread, Christian volunteered to start a newsletter (this
+newsletter!) to summarize and publicise works by participants and
+Thomas Ferris Nicolaisen, who runs a popular podcast GitMinutes,
+offered to help.
+
+Also, it was decided that release notes will list new and returning
+contributors and thank for their help for each release.
 
 ### Reviews
 
