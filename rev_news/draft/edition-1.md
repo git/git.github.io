@@ -13,7 +13,7 @@ articles, tools and projects we come across.
 
 This edition covers what happened during the month of March 2015.
 
-Tips us or contribute news by sending [pull
+You can contribute to the upcoming edition by sending [pull
 requests](https://github.com/git/git.github.io/pulls) or opening
 [issues](https://github.com/git/git.github.io/issues).
 
