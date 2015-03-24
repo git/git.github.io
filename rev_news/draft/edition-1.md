@@ -267,12 +267,46 @@ to GitHub and the sponsors. If you are a Git developer and need travel
 or other assistance to go there, please contact Peff, aka
 Jeff King &lt;<peff@peff.net>&gt;.
 
+### Releases
+
+* [Git v.2.3.2](http://permalink.gmane.org/gmane.linux.kernel/1902789), March 6th.
+```
+The latest maintenance release Git v2.3.2 is now available at
+the usual places.
+```
+* [Commandline GUI-tool *tig* version 1.2](http://article.gmane.org/gmane.comp.version-control.git/265298), March 11th:
+```
+I just released version 2.1 of Tig which brings a lot of improvements to speed
+up usage in large repositories such as the Linux kernel repo (see improvements
+related to #310, #324, #350, and #368). Else this release brings minor
+improvements across the board plus a fair amount of bug fixes.
+```
+* [NodeGit 0.3.0](https://github.com/nodegit/nodegit/releases/tag/v0.3.0), March 13th:
+```
+Updated to libgit2 v0.22.1. This release contains breaking API changes. Most 
+noteworthy is the change to how certificate errors are handled during authentication.
+
+For more details check out the change log: http://www.nodegit.org/changelog/#v0-3-0
+```
+* [Git v.2.3.3](http://permalink.gmane.org/gmane.linux.kernel/1908634), March 14th:
+```
+The latest maintenance release Git v2.3.3 is now available at
+the usual places.  It is comprised of 26 non-merge commits since
+v2.3.2, contributed by 11 people, 1 of which is a new contributor.
+```
+* [Git v2.3.4](http://permalink.gmane.org/gmane.linux.kernel/1915412), March 23rd:
+```
+The latest maintenance release Git v2.3.4 is now available at the
+usual places.  It is comprised of 22 non-merge commits since v2.3.3,
+contributed by 9 people, 1 of which is a new face.  All these fixes
+have already been in the 'master' branch for some time.
+```
+
 ### From outside the list
 
 * Google Code [announced their shutdown](http://google-opensource.blogspot.de/2015/03/farewell-to-google-code.html), offering all remaining projects easy migration to Git/GitHub. 
 * Nava Whiteford wrote a popular article on the [most common Git screwups/questions and solutions](http://41j.com/blog/2015/02/common-git-screwupsquestions-solutions/).
 * An older but related resource: [Flight rules for Git](https://github.com/k88hudson/git-flight-rules). 
-* Commandline GUI-tool *tig* [version 1.2 was  released](http://article.gmane.org/gmane.comp.version-control.git/265298).
 * An [interview with Git book "Git in Practice" author, Mike McQuaid](http://www.infoq.com/articles/interview-Mike-McQuaid-git-practice).
 * Speaking of Git books, there's  a new one on the way: [Git Essentials](https://www.packtpub.com/application-development/git-essentials).
 * And there's [a new video course out on mastering Git](https://www.packtpub.com/application-development/mastering-git-video). The author was just interviewed on....
