@@ -161,6 +161,49 @@ command about a connected history.  Otherwise, it is a command about
 discrete point(s).
 ```
 
+* [War on broken &&-chain](http://thread.gmane.org/gmane.comp.version-control.git/265874) (*written by Junio C Hamano*)
+
+We often see review comments on test scripts that points out a
+breakage in the &&-chain, but what does that mean?
+
+When you have a test that looks like this:
+
+```
+test_expect_success 'frotz and nitfol work' '
+	git frotz
+	git nitfol
+'
+```
+
+the test framework will not detect even if the `frotz` command
+exits with a non-zero error status.  A test must be written like
+this instead:
+
+```
+test_expect_success 'frotz and nitfol work' '
+	git frotz &&
+	git nitfol
+'
+```
+
+Jeff resurrected a clever idea, which was first floated by Jonathan
+Nieder in October 2013, to automate detection of such an issue.  The
+idea is to try running the test body with this magic string prefixed:
+`(exit 117) &&`.  If everything is properly chained together with `&&`
+in the test, running such a test will exit with error code 117 (and
+the important assumption is that error code is unused elsewhere). If
+on the other hand, if there is an breakage, the test prefixed with the
+magic string would either succeed or fail with a code different from
+117.  His work caught many real test breakages but fortunately it was
+found that no command being tested was failing ;-)
+
+As the variety of platforms each developer has access to and the time
+each developer has to test Git on them is inevitably limited, broken
+&&-chains in some tests that Jeff didn't run were expected to be
+caught by others.  Torsten Bögershausen did find one in a test that
+runs only on a case insensitive filesystem a few days later.
+
+
 ### Support
 
 * [Git with Lader logic](http://thread.gmane.org/gmane.comp.version-control.git/265679/)
