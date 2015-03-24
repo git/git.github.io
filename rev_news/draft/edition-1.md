@@ -21,7 +21,7 @@ requests](https://github.com/git/git.github.io/pulls) or opening
 
 ### General
 
-* [Promoting Git developers](http://thread.gmane.org/gmane.comp.version-control.git/265165)
+* [Promoting Git developers](http://thread.gmane.org/gmane.comp.version-control.git/265165)  (*written by Junio C Hamano*)
 
 Following up to a message from David Kastrup, a discussion was initiated
 by Christian Couder where Michael J Gruber noted
