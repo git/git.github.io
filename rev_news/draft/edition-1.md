@@ -267,6 +267,34 @@ to GitHub and the sponsors. If you are a Git developer and need travel
 or other assistance to go there, please contact Peff, aka
 Jeff King &lt;<peff@peff.net>&gt;.
 
+### Releases
+
+* [Git v.2.3.2](http://permalink.gmane.org/gmane.linux.kernel/1902789), March 6th.
+```
+The latest maintenance release Git v2.3.2 is now available at
+the usual places.
+```
+* [NodeGit 0.3.0](https://github.com/nodegit/nodegit/releases/tag/v0.3.0), March 13th:
+```
+Updated to libgit2 v0.22.1. This release contains breaking API changes. Most 
+noteworthy is the change to how certificate errors are handled during authentication.
+
+For more details check out the change log: http://www.nodegit.org/changelog/#v0-3-0
+```
+* [Git v.2.3.3](http://permalink.gmane.org/gmane.linux.kernel/1908634), March 14th:
+```
+The latest maintenance release Git v2.3.3 is now available at
+the usual places.  It is comprised of 26 non-merge commits since
+v2.3.2, contributed by 11 people, 1 of which is a new contributor.
+```
+* [Git v2.3.4](http://permalink.gmane.org/gmane.linux.kernel/1915412), March 23rd:
+```
+The latest maintenance release Git v2.3.4 is now available at the
+usual places.  It is comprised of 22 non-merge commits since v2.3.3,
+contributed by 9 people, 1 of which is a new face.  All these fixes
+have already been in the 'master' branch for some time.
+```
+
 ### From outside the list
 
 * Google Code [announced their shutdown](http://google-opensource.blogspot.de/2015/03/farewell-to-google-code.html), offering all remaining projects easy migration to Git/GitHub. 
