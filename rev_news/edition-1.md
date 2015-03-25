@@ -1,3 +1,7 @@
+---
+layout: default
+title: Git Rev News Edition 1 (March 25th, 2015)
+---
 
 ## Git Rev News: Edition 1 (March 25th, 2015)
 
