@@ -17,21 +17,17 @@ You can contribute to the upcoming edition by sending [pull
 requests](https://github.com/git/git.github.io/pulls) or opening
 [issues](https://github.com/git/git.github.io/issues).
 
-## Discussions
+## From the mailing list
 
 ### General
 
-
 ### Reviews
 
-
 ### Support
-
 
 ## Misc Git News
 
 ### Developers
-
 
 ### Events
 
@@ -44,7 +40,7 @@ Jeff King &lt;<peff@peff.net>&gt;.
 ### Releases
 
 
-### From outside the list
+### Other news
 
 
 ## Credits
