@@ -280,7 +280,7 @@ The latest maintenance release Git v2.3.2 is now available at
 the usual places.
 ```
 
-* [Commandline GUI-tool *tig* version 1.2](http://article.gmane.org/gmane.comp.version-control.git/265298), March 11th:
+* [Commandline GUI-tool *tig* version 2.1](http://article.gmane.org/gmane.comp.version-control.git/265298), March 11th:
 
 ```
 I just released version 2.1 of Tig which brings a lot of improvements to speed
