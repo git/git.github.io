@@ -1,2 +1,4 @@
 name: Git Developer Pages
 markdown: redcarpet
+gems:
+  - jekyll-redirect-from

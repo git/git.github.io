@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Git Rev News Edition 1 (March 25th, 2015)
+redirect_from: "/rev_news/"
 ---
 
 ## Git Rev News: Edition 1 (March 25th, 2015)
