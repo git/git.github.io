@@ -1,9 +1,12 @@
 ---
 layout: default
 title: Git Rev News
+redirect_from: "/rev_news/"
 ---
 
-This is a page to explain what Git Rev News could be.
+{% for post in site.posts %}
+  {% include news_item.html %}
+{% endfor %}
 
 ## Promote reviewers and helpers
 

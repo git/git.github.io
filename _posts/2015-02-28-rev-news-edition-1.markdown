@@ -1,7 +1,9 @@
 ---
-layout: default
 title: Git Rev News Edition 1 (March 25th, 2015)
-redirect_from: "/rev_news/"
+layout: news_item
+date: 2015-02-26 21:06:51 -0800
+author: chriscool
+categories: [community]
 ---
 
 ## Git Rev News: Edition 1 (March 25th, 2015)
