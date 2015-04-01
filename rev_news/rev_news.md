@@ -2,10 +2,15 @@
 layout: default
 title: Git Rev News
 ---
+ 
+# Subscribe
 
-{% for post in site.posts %}
-  {% include news_item.html %}
-{% endfor %}
+So far the only way to subscribe to Git Rev News is by
+[RSS/atom](/feed.xml).
+
+# About Git Rev News
+
+We created this news source for the following reasons:
 
 ## Promote reviewers and helpers
 
