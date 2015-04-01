@@ -2,4 +2,4 @@ name: Git Developer Pages
 markdown: redcarpet
 gems:
   - jekyll-redirect-from
-permalink: /news/:year/:month/:day/:title/
+permalink: /rev_news/:year/:month/:day/:title/
