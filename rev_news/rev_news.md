@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Git Rev News
-redirect_from: "/rev_news/"
 ---
 
 {% for post in site.posts %}
