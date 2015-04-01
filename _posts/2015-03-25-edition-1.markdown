@@ -1,9 +1,10 @@
 ---
 title: Git Rev News Edition 1 (March 25th, 2015)
-layout: news_item
-date: 2015-02-26 21:06:51 -0800
+layout: default
+date: 2015-03-25 21:06:51 -0800
 author: chriscool
-categories: [community]
+redirect_from: "/rev_news/edition-1.html"
+categories: [news]
 ---
 
 ## Git Rev News: Edition 1 (March 25th, 2015)
