@@ -1,12 +1,11 @@
 ---
-title: Git Rev News Edition 1 (March 25th, 2015)
 layout: default
-date: 2015-03-25 21:06:51 +0100
-author: chriscool
-categories: [news]
+title: Git Rev News Edition 1 (March 25th, 2015)
+navbar: false
 ---
 
 ## Git Rev News: Edition 1 (March 25th, 2015)
+
 
 Welcome to the first edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
 a digest of all things Git, written collaboratively 
@@ -334,3 +333,4 @@ Make sure that your Git or otherwise OpenSSL-based services are not affected!
 ## Credits
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt; and Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; with help from Junio Hamano, Matthieu Moy, Jeff King, David Kastrup, Stefan Beller and Alex Vandiver.
+
