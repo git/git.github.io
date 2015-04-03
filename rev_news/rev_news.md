@@ -2,8 +2,18 @@
 layout: default
 title: Git Rev News
 ---
+ 
+# Subscribe
 
-This is a page to explain what Git Rev News could be.
+You can find a listing of all previous episodes on the [Git Rev News
+Archive](/rev_news/) page.
+
+So far the only way to subscribe to Git Rev News is by
+[RSS/atom](/feed.xml).
+
+# About Git Rev News
+
+We created this news source for the following reasons:
 
 ## Promote reviewers and helpers
 
