@@ -19,11 +19,6 @@ git@vger.kernel.org if appropriate).
   `/usr/bin/ruby` and `/usr/bin/gem` with their v2 options)
 * `sudo gem install bundler`
 * Clone this repo
-* If I haven't committed the Gemfile yet, create it with these lines:
-```
-source 'https://rubygems.org'
-gem 'github-pages'
-```
 * `sudo apt-get install zlib1g-dev` # ref [1]
 * `bundle install`
 * `bundle exec jekyll serve`
