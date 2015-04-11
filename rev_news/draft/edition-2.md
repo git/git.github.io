@@ -23,6 +23,39 @@ requests](https://github.com/git/git.github.io/pulls) or opening
 
 ### General
 
+* [10 years of fun](https://docs.google.com/presentation/d/1sc1xsG9vrRahcckD8WwYeK355SvQH7NSchKH07icJtk/pub)
+
+At the Git Merge 2015, Junio Hamano started the Contributor
+Summit by giving a presentation called "10 years of fun with Git" and
+saying that he wanted to take advantage of the 10th anniversary to
+thank the contributors.
+
+He showed how the first initial revision of Git, created on the 7th of
+April 2015 by Linus, looks like, and compared it to a recent
+revision. Though its size is around 0.2% of the size of a recent
+revision, the initial revision is enough to start using Git.
+
+An interesting question is then "Who made today's Git?" and to answer
+that question Junio gave the results of many different queries.
+
+For example to get a commit count sorted by author and excluding merge
+commits, one can use:
+
+```
+git shortlog --no-merges -n -s v2.4.0-rc0
+```
+
+With the results of each such query, Junio gave insights about how we
+can interpret the results, told about caveats that might apply, and
+also took time to thank the people who appear in these results.
+
+Towards the end of the presentation he also told about people who
+didn't appear in the results: bug reporters, feature wishers,
+reviewers and mentors, alternative implementors and porters, trainers
+and evangelists. And he assigned to this news letter the tasks of
+talking about and thanking them all ;-)
+
+
 ### Reviews
 
 ### Support
