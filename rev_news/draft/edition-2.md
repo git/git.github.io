@@ -1,5 +1,5 @@
 
-## Git Rev News: Edition 2 (April ???, 2015)
+## Git Rev News: Edition 2 (April 15, 2015), 10 years of Git & Git Merge 2015!
 
 Welcome to the second edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
 a digest of all things Git, written collaboratively
@@ -11,7 +11,9 @@ in a format that the wider tech community can follow
 and understand. In addition, we'll link to some of the interesting Git-related
 articles, tools and projects we come across.
 
-This edition covers what happened during ???.
+This special edition covers Git's 10th anniversary and
+the [Git Merge](git-merge.com) on April 8 and 9 in Paris, France,
+where many Git fans celebrated this anniversary. 
 
 You can contribute to the upcoming edition by sending [pull
 requests](https://github.com/git/git.github.io/pulls) or opening
