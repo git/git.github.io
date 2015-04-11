@@ -55,6 +55,39 @@ reviewers and mentors, alternative implementors and porters, trainers
 and evangelists. And he assigned to this news letter the tasks of
 talking about and thanking them all ;-)
 
+* [Git Large File Storage](https://git-lfs.github.com/)
+
+At the Git Merge 2015, Rick Olson, a developer working for GitHub also
+known as @technoweenie, gave a presentation about Git Large File
+Storage (Git LFS).
+
+On the Git Merge web site the name of the presentation is "Building a
+Git Extension with First Principles" probably because GitHub didn't
+want to announce Git LFS a long time before the conference. In fact it
+was announced [first on The GitHub Blog](https://github.com/blog/1986-announcing-git-large-file-storage-lfs)
+the day before the presentation.
+
+Rick started by explaining the reasons why such an extension was
+needed, namely that Git starts to suck with large binary file
+objects. For example it takes longer and longer to clone a repo that
+has more and more of such objects.
+
+Then he told that GitHub did some user experience research with a
+diverse team of users with this problem. They also experimented with
+existing solutions like `git media` and `git annex`.
+
+Rick then detailed [the solution that was
+implemented](https://github.com/github/git-lfs/blob/master/docs/spec.md)
+using the Go language, and how it can be used, with commands like:
+
+```
+git lfs init
+git lfs track "*.zip"
+git lfs push
+```
+
+Remote configuration, the server side, the Git LFS API and authentication were also
+covered. And in the end Rick talked about some ideas for improvements.
 
 ### Reviews
 
