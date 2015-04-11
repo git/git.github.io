@@ -73,7 +73,36 @@ resources emerged from the event:
 
 ### Media
 
-
+* 10 years ago, [Linus' first ever mention of what would become Git
+  ](https://news.ycombinator.com/item?id=9264088)
+* As Google Code shuts down, the [Vim project decides moving to Git/GitHub
+  ](https://news.ycombinator.com/item?id=9263193)
+* [Nice, SVG-based Git cheat sheet
+  ](https://rawgit.com/pastjean/git-cheat-sheet/master/git-cheat-sheet.svg)
+* Mary Rose Cook has written an essay on [Git from the inside out
+  ](http://maryrosecook.com/blog/post/git-from-the-inside-out)
+* A similar article from last year: [Git from the Bottom Up
+  ](https://jwiegley.github.io/git-from-the-bottom-up/), by John Wiegley
+* With Git Merge 2015 taking place in Paris, coincidentally the [French Civil
+  Code is now on GitHub](https://github.com/steeve/france.code-civil)
+* Øyvind A. Holm has generated statistics on the [relative growth of Git repos
+  vs. other source control systems](https://github.com/sunny256/openhub-repositories)
+* A [Git Style Guide](https://github.com/agis-/git-style-guide) by Agis
+  Anastasopoulos
+* linux.com's Linus interview, on [10 years of Git
+  ](http://www.linux.com/news/featured-blogs/185-jennifer-cloer/821541-10-years-of-git-an-interview-with-git-creator-linus-torvalds)
+* Continuing their celebration, a whole series of Git Success Stories have been
+  published on linux.com:
+  * Wine Maintainer [Alexandre Julliard](https://www.linux.com/news/featured-blogs/200-libby-clark/822789-git-success-stories-and-tips-from-wine-maintainer-alexandre-julliard)
+  * Puppet Labs' [Michael Stahnke](https://www.linux.com/news/featured-blogs/200-libby-clark/822555-git-success-stories-and-tips-from-puppet-labs-michael-stahnke)
+  * Tor Chief Architect [Nick Mathewson](https://www.linux.com/news/featured-blogs/200-libby-clark/822528-git-success-stories-and-tips-from-tors-chief-architect-nick-mathewson)
+  * Drupal Core Committer [Angie Byron](https://www.linux.com/news/featured-blogs/200-libby-clark/822227-git-success-stories-and-tips-from-drupal-core-committer-angie-byron)
+  * Qt Maintainer [Thiago Macieira](https://www.linux.com/news/featured-blogs/200-libby-clark/821948-git-success-stories-and-tips-from-qt-maintainer-thiago-macieira)
+  * KVM Maintainer [Paolo Bonzini](https://www.linux.com/news/featured-blogs/200-libby-clark/821899-git-success-stories-and-tips-from-kvm-maintainer-paolo-bonzini)
+* Some [hefty discussion is going on regarding the new Git Large File Storage](
+    https://news.ycombinator.com/item?id=9343021), announced [by GitHub
+    ](https://github.com/blog/1986-announcing-git-large-file-storage-lfs) during
+    [Git Merge 2015](http://git-merge.com/)
 ## Credits
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;, Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt; with help from ???.
