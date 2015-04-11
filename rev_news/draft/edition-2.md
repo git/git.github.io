@@ -12,14 +12,14 @@ and understand. In addition, we'll link to some of the interesting Git-related
 articles, tools and projects we come across.
 
 This special edition covers Git's 10th anniversary and
-the [Git Merge](git-merge.com) on April 8 and 9 in Paris, France,
+the [Git Merge 2015](git-merge.com) on April 8th & 9th in Paris, France,
 where many Git fans celebrated this anniversary. 
 
 You can contribute to the upcoming edition by sending [pull
 requests](https://github.com/git/git.github.io/pulls) or opening
 [issues](https://github.com/git/git.github.io/issues).
 
-## From the mailing list
+## Discussions
 
 ### General
 
@@ -27,9 +27,9 @@ requests](https://github.com/git/git.github.io/pulls) or opening
 
 ### Support
 
-## Misc Git News
+## Releases
 
-### Developers
+## Other News
 
 ### Events
 
@@ -38,12 +38,9 @@ Community, took place on April 8th & 9th in Paris, France. The following
 resources emerged from the event:
   * TODO: Link to YouTube videos of recorded talks?
 
-### Releases
-
-
-### Other news
+### Media
 
 
 ## Credits
 
-This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt; and Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; with help from ???.
+This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;, Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt; with help from ???.
