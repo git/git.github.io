@@ -189,8 +189,6 @@ GitHub with sponsorship from Microsoft and Atlassian. Scott Chacon (GitHub),
 wearing a beautiful suit, was the master of ceremony on the 9th of April, while
 Chris Kelly and other GitHub people had organized everything.
 Thanks to them and the sponsors for this great time!
-The following resources emerged from the event:
-  * TODO: Link to YouTube videos of recorded talks?
 
 ### Media
 
