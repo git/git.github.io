@@ -171,6 +171,9 @@ Eventually Rasmus Villemoes suggested using
 when POSIX 2008 is supported and so far this looks like a workable
 solution.
 
+Anyway it is interesting to see that on the Git mailing list as well as
+at the Git Merge conference a lot of people and companies are very
+interested in making Git fast for big repositories.
 
 ### Support
 
