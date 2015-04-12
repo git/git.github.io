@@ -536,7 +536,6 @@ h1 small {
 h2 {
   font-size: 18px;
   line-height: 44px;
-  color: #f14e32;
   font-weight: bold;
   margin-top: 20px;
 }
@@ -553,8 +552,7 @@ h2 small {
 
 h3 {
   line-height: 33px;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 18px;
 }
 
 h3 small {
