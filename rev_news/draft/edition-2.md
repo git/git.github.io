@@ -18,9 +18,10 @@ in a format that the wider tech community can follow
 and understand. In addition, we'll link to some of the interesting Git-related
 articles, tools and projects we come across.
 
-This special edition covers Git's 10th anniversary and the [Git Merge
-2015](http://git-merge.com/) held on April 8th & 9th in Paris, France, where many Git
-fans celebrated this anniversary.
+This special edition covers Git's 10th year of existence, as well as the
+[Git Merge](http://git-merge.com) conference held on April 8th & 9th in Paris,
+France. Git developers and users alike came together to celebrate the
+anniversary, and to discuss the current challenges of using and scaling Git.
 
 You can contribute to the upcoming edition by sending [pull
 requests](https://github.com/git/git.github.io/pulls) or opening
