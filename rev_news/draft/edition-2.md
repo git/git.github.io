@@ -186,6 +186,46 @@ working on making Git fast for big repositories.
 
 ## Releases
 
+* [First release candidate for Git 2.4](http://git-blame.blogspot.de/2015/04/first-release-candidate-for-git-24.html),
+  April 2nd.
+
+> Please give it a good beating so that we can ship a successful v2.4 final at
+> around the end of the month without regressions compared to v2.3 series.
+
+* [Git 2.3.5 for Windows Release Candidate 8](https://github.com/git-for-windows/git/releases/tag/v2.3.5.windows.8),
+  April 10th.
+
+> During the really exciting Git Merge conference, the Git for Windows
+> developers had the opportunity to meet and we managed to whip out a *really*
+> early beta of the upcoming Git for Windows 2.x series.
+> Please keep in mind that we not only changed our entire development
+> environment, but that this change also affects end user installations quite a
+> bit [...]
+
+[More about Git 2.x for Windows release candiates here](https://groups.google.com/d/msg/msysgit/T2CgyhMA6fw/rXpofh9waA4J).
+Brendan Forster put together this [Beta Testers Guide](https://gist.github.com/shiftkey/add6975be2687d8731ae).
+
+* [libgit2 v0.22.2 Maintenance Release](https://github.com/libgit2/libgit2/releases/tag/v0.22.2),
+  March 24th.
+
+> The following fixes have been backported to this maintenance release. [...]
+> All users of the library are encouraged to update.
+
+* [tig-2.1.1](http://article.gmane.org/gmane.comp.version-control.git/266979), April 9th
+
+> Finally, files (or blobs) can now be searched using the new GitHub-inspired
+> [file finder](https://asciinema.org/a/18525) (press 'f' to launch it).﻿
+
+
+* [GitLab 7.9.3 CE, EE and GitLab CI 7.9.3](https://about.gitlab.com/2015/04/08/gitlab-7-9-3-released/),
+  April 8th.
+
+* [Kallithea 0.2](http://lists.sfconservancy.org/pipermail/kallithea-general/2015q2/000579.html), April 10th
+
+> Kallithea 0.2 has been released. Kallithea is a GPLv3 source code management
+> software for web-based hosting of Mercurial and Git repositories.
+
+
 ## Other News
 
 ### Events
