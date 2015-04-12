@@ -11,9 +11,9 @@ in a format that the wider tech community can follow
 and understand. In addition, we'll link to some of the interesting Git-related
 articles, tools and projects we come across.
 
-This special edition covers Git's 10th anniversary and
-the [Git Merge 2015](git-merge.com) on April 8th & 9th in Paris, France,
-where many Git fans celebrated this anniversary. 
+This special edition covers Git's 10th anniversary and the [Git Merge
+2015](git-merge.com) held on April 8th & 9th in Paris, France, where many Git
+fans celebrated this anniversary.
 
 You can contribute to the upcoming edition by sending [pull
 requests](https://github.com/git/git.github.io/pulls) or opening
@@ -25,15 +25,14 @@ requests](https://github.com/git/git.github.io/pulls) or opening
 
 * [10 years of fun](https://docs.google.com/presentation/d/1sc1xsG9vrRahcckD8WwYeK355SvQH7NSchKH07icJtk/pub)
 
-At the Git Merge 2015, Junio Hamano started the Contributor
-Summit by giving a presentation called "10 years of fun with Git" and
-saying that he wanted to take advantage of the 10th anniversary to
-thank the contributors.
+At the Git Merge 2015, Junio Hamano started the Contributor Summit by giving a
+presentation titled "10 years of fun with Git" and saying that he wanted to
+take advantage of the 10th anniversary to thank the contributors.
 
-He showed how the first initial revision of Git, created on the 7th of
-April 2015 by Linus, looks like, and compared it to a recent
-revision. Though its size is around 0.2% of the size of a recent
-revision, the initial revision is enough to start using Git.
+He showed how the first initial revision of Git - created on the 7th of April
+2015 by Linus - looked like and compared it to a recent revision. Though the
+size of the project was around 0.2% of the size of a recent revision, the
+initial code was already enough to be usable.
 
 An interesting question is then "Who made today's Git?" and to answer
 that question Junio gave the results of many different queries.
@@ -85,8 +84,18 @@ git lfs track "*.zip"
 git lfs push
 ```
 
-Remote configuration, the server side, the Git LFS API and authentication were also
-covered. And in the end Rick talked about some ideas for improvements.
+Remote configuration, the server side, the Git LFS API and authentication were
+also covered. And in the end Rick talked about some ideas for improvements.
+
+* Git Large Object Research
+
+It's interesting and encouraging to see how there has been a recent interest by the community to tackle some of Git scaling issues. At Git Merge 2016 [John Garcia](https://twitter.com/bitbucketeer) from Atlassian also presented some research and a prototype tool to handle large binary files.
+
+The tool hasn't been released yet but showed interesting features like
+[progressive history
+retention](https://twitter.com/tarkasteve/status/586180588245229569), file
+locking, abstracted support for "dumb" storage back ends (like sshfs, samba,
+NFS, Amazon S3 ...) and chunking for resumable downloads.
 
 ### Reviews
 
