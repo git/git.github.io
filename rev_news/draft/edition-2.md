@@ -163,8 +163,8 @@ said that it would be very inefficient too, and that there are no good
 NUL safe function to read from a file descriptor.
 
 Junio wondered if it would be worth it to have callers that need to
-handle NUL characters to pass a flag, so that the default
-implementation would still be fast.
+handle NUL characters pass a flag, so that the default implementation
+would still be fast.
 
 Eventually Rasmus Villemoes suggested using
 [getdelim()](http://pubs.opengroup.org/stage7tc1/functions/getdelim.html)
@@ -172,8 +172,8 @@ when POSIX 2008 is supported and so far this looks like a workable
 solution.
 
 Anyway it is interesting to see that on the Git mailing list as well as
-at the Git Merge conference a lot of people and companies are very
-interested in making Git fast for big repositories.
+at the Git Merge conference a lot of great developers and companies are
+working on making Git fast for big repositories.
 
 ### Support
 
