@@ -1,4 +1,11 @@
-
+---
+title: Git Rev News Edition 2 (April 15th, 2015)
+layout: default
+date: 2015-04-5 21:06:51 +0100
+author: chriscool
+categories: [news]
+navbar: false
+---
 ## Git Rev News: Edition 2 (April 15, 2015), 10 years of Git & Git Merge 2015!
 
 Welcome to the second edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
