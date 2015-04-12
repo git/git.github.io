@@ -100,8 +100,12 @@ covered. And in the end Rick talked about some ideas for improvements.
 ### Events
 
 * [Git Merge 2015](http://git-merge.com/), The Conference for the Git
-Community, took place on April 8th & 9th in Paris, France. The following
-resources emerged from the event:
+Community, took place on April 8th & 9th in Paris, France. It was presented by
+GitHub with sponsorship from Microsoft and Atlassian. Scott Chacon (GitHub),
+wearing a beautiful suit, was the master of ceremony on the 9th of April, while
+Chris Kelly and other GitHub people had organized everything.
+Thanks to them and the sponsors for this great time!
+The following resources emerged from the event:
   * TODO: Link to YouTube videos of recorded talks?
 
 ### Media
