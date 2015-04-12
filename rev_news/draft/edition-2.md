@@ -136,6 +136,7 @@ resources emerged from the event:
     https://news.ycombinator.com/item?id=9343021), announced [by GitHub
     ](https://github.com/blog/1986-announcing-git-large-file-storage-lfs) during
     [Git Merge 2015](http://git-merge.com/)
+
 ## Credits
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;, Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt; with help from ???.
