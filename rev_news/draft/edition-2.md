@@ -33,48 +33,48 @@ requests](https://github.com/git/git.github.io/pulls) or opening
 
 * [10 years of fun](https://docs.google.com/presentation/d/1sc1xsG9vrRahcckD8WwYeK355SvQH7NSchKH07icJtk/pub)
 
-At the Git Merge 2015, Junio Hamano started the Contributor Summit by giving a
-presentation titled "10 years of fun with Git" and saying that he wanted to
+At the Git Merge 2015, Junio Hamano started off the Contributor Summit with a
+presentation titled "10 years of fun with Git", saying that he wanted to
 take advantage of the 10th anniversary to thank the contributors.
 
 He showed how the first initial revision of Git - created on the 7th of April
-2015 by Linus - looked like and compared it to a recent revision. Though the
-size of the project was around 0.2% of the size of a recent revision, the
-initial code was already enough to be usable.
+2015 by Linus - looked like, and compared it to a recent revision. Although the
+size of the first implementation was only about 0.2% of its current size, the
+initial code was already functional.
 
-An interesting question is then "Who made today's Git?" and to answer
-that question Junio gave the results of many different queries.
+The interesting question that followed was "Who made today's Git?" and Junio
+went through multiple Git queries offering different answers for this.
 
-For example to get a commit count sorted by author and excluding merge
+As an example, to get a commit count sorted by author, excluding merge
 commits, one can use:
 
 ```
 git shortlog --no-merges -n -s v2.4.0-rc0
 ```
 
-With the results of each such query, Junio gave insights about how we
-can interpret the results, told about caveats that might apply, and
-also took time to thank the people who appear in these results.
+With the results of each query, Junio gave insights about how we
+can interpret the results, mentioned the caveats that might apply, and he
+also took time to thank the people who appeared in these results.
 
-Towards the end of the presentation he also told about people who
-didn't appear in the results: bug reporters, feature wishers,
+Towards the end of the presentation he also mentioned the people who
+don't appear in the results: bug reporters, feature wishers,
 reviewers and mentors, alternative implementors and porters, trainers
-and evangelists. And he assigned to this news letter the huge task of
-talking about and thanking them all ;-)
+and evangelists. He assigned to this very news-letter the huge task of
+talking about, and thanking them all ;-)
 
 * [Git Large File Storage](https://git-lfs.github.com/)
 
-At the Git Merge 2015, Rick Olson, a developer working for GitHub also
-known as @technoweenie, gave a presentation about Git Large File
-Storage (Git LFS), a new git extension to manage big files.
+At the Git Merge 2015, [Rick Olson](https://github.com/technoweenie), a
+developer working for GitHub, gave a presentation about Git Large File
+Storage (Git LFS), a new git extension for managing big files.
 
-On the Git Merge web site the name of the presentation is "Building a
-Git Extension with First Principles" probably because GitHub didn't
-want to announce Git LFS a long time before the conference. In fact it
+On the Git Merge web site, the name of the presentation was "Building a
+Git Extension with First Principles", probably because GitHub didn't
+want to announce Git LFS in the time before the conference. In fact, it
 was announced [first on The GitHub Blog](https://github.com/blog/1986-announcing-git-large-file-storage-lfs)
 the day before Rick's presentation.
 
-Rick started by explaining the reasons why such an extension was
+Rick started off by explaining the reasons why such an extension was
 needed, namely that Git "starts to suck with large binary file
 objects". For example it takes longer and longer to clone a repo that
 has more and more of such objects.
