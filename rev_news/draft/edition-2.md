@@ -99,6 +99,79 @@ NFS, Amazon S3 ...) and chunking for resumable downloads.
 
 ### Reviews
 
+* [Speeding up strbuf_getwholeline()](http://thread.gmane.org/gmane.comp.version-control.git/266789/focus=266796)
+
+Jeff King, alias Peff, posted a patch series to address speed
+regressions when accessing the packed-refs file. This lead to
+discussions about ways to speed up reading lines in a file.
+
+The packed-ref file has been created a long time ago to speed up
+dealing with refs. The original way to store refs, which is called the
+"loosed ref" format uses one file per ref to store its content and is
+still often used by git. But when the number of refs increases, it
+becomes much faster to have as much information as possible in a
+single file. That's the purpose of the packed-ref file.
+
+Peff discovered that one of his own commit that switched from fgets()
+to strbuf_getwholeline() to read the packed-ref file was in part
+responsible for a big slowdown.
+
+strbuf_getwholeline() is part of the Git strbuf API that is used for a
+lot of string related functions. And strbuf_getwholeline() used the
+getc() function to get each character one by one until the end of each
+line, like this:
+
+```
+while ((ch = getc(fp)) != EOF) {
+	...
+	if (ch == '\n')
+		break;
+}
+```
+
+But it appears that it isn't very efficient. It is also problematic to
+use fgets() inside strbuf_getwholeline() as strbuf_getwholeline() is
+used in some parts of the Git codebase to read lines that can contain
+the NUL character and fgets() would not read after the NUL. (And yeah
+working around that is not easy either.)
+
+So Peff came up with the following explanation and solution to the
+problem:
+
+> strbuf_getwholeline calls getc in a tight loop. On modern
+> libc implementations, the stdio code locks the handle for
+> every operation, which means we are paying a significant
+> overhead. We can get around this by locking the handle for
+> the whole loop and using the unlocked variant.
+
+His patch does basically:
+
+```
++	flockfile(fp);
++	while ((ch = getc_unlocked(fp)) != EOF) {
+		...
+ 		if (ch == '\n')
+ 			break;
+ 	}
++	funlockfile(fp);
+```
+
+Duy Nguyen suggested instead to avoid any FILE* interface and either
+mmap the entire file, or read (with bufferring) from a file
+descriptor, as Git already does to read the index-pack file. But Peff
+said that it would be very inefficient too, and that there are no good
+NUL safe function to read from a file descriptor.
+
+Junio wondered if it would be worth it to have callers that need to
+handle NUL characters to pass a flag, so that the default
+implementation would still be fast.
+
+Eventually Rasmus Villemoes suggested using
+[getdelim()](http://pubs.opengroup.org/stage7tc1/functions/getdelim.html)
+when POSIX 2008 is supported and so far this looks like a workable
+solution.
+
+
 ### Support
 
 ## Releases
