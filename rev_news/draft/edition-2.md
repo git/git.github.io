@@ -19,7 +19,7 @@ and understand. In addition, we'll link to some of the interesting Git-related
 articles, tools and projects we come across.
 
 This special edition covers Git's 10th anniversary and the [Git Merge
-2015](git-merge.com) held on April 8th & 9th in Paris, France, where many Git
+2015](http://git-merge.com/) held on April 8th & 9th in Paris, France, where many Git
 fans celebrated this anniversary.
 
 You can contribute to the upcoming edition by sending [pull
