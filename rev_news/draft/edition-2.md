@@ -38,7 +38,7 @@ presentation titled "10 years of fun with Git", saying that he wanted to
 take advantage of the 10th anniversary to thank the contributors.
 
 He showed how the first initial revision of Git - created on the 7th of April
-2015 by Linus - looked like, and compared it to a recent revision. Although the
+2005 by Linus - looked like, and compared it to a recent revision. Although the
 size of the first implementation was only about 0.2% of its current size, the
 initial code was already functional.
 
