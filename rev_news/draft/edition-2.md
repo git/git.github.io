@@ -84,12 +84,16 @@ diverse team of users having this problem. They also experimented with
 existing solutions like `git media` and `git annex`.
 
 Rick then detailed [the solution that was implemented](https://github.com/github/git-lfs/blob/master/docs/spec.md)
-using the Go language, and how it can be used, with commands like:
+using the Go language, and how it can be used. For example:
 
 ```
-git lfs init
-git lfs track "*.zip"
-git lfs push
+$ git lfs init
+$ git lfs track "*.zip"
+$ git add otherfile.zip
+$ git commit -m "add otherfile.zip"
+$ git push origin
+Uploading somefile.zip
+...
 ```
 
 Remote configuration, the server side, the Git LFS API and authentication were
