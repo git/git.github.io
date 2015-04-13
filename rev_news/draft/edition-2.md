@@ -35,7 +35,7 @@ requests](https://github.com/git/git.github.io/pulls) or opening
 
 At the Git Merge 2015, Junio Hamano started off the Contributor Summit with a
 presentation titled "10 years of fun with Git", saying that he wanted to
-take advantage of the 10th anniversary to thank the contributors.
+take the opportunity of the 10th anniversary to thank the contributors.
 
 He showed how the first initial revision of Git - created on the 7th of April
 2015 by Linus - looked like, and compared it to a recent revision. Although the
