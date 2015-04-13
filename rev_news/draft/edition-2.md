@@ -190,8 +190,9 @@ working on making Git fast for big repositories.
 * [First release candidate for Git 2.4](http://git-blame.blogspot.de/2015/04/first-release-candidate-for-git-24.html),
   April 2nd.
 
-> Please give it a good beating so that we can ship a successful v2.4 final at
-> around the end of the month without regressions compared to v2.3 series.
+> Please test it thoroughly so that we can ship a successful v2.4 final at
+> the end of the month without the regressions we experienced in the v2.3
+> series.
 
 * [Git 2.3.5 for Windows Release Candidate 8](https://github.com/git-for-windows/git/releases/tag/v2.3.5.windows.8),
   April 10th.
