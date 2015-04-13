@@ -121,11 +121,11 @@ becomes much faster to have as much information as possible in a
 single file. That's the purpose of the packed-ref file.
 
 Peff discovered that one of his own commit that switched from fgets()
-to strbuf_getwholeline() to read the packed-ref file was in part
+to strbuf\_getwholeline() to read the packed-ref file was in part
 responsible for a big slowdown.
 
-strbuf_getwholeline() is part of the Git strbuf API that is used for a
-lot of string related functions. And strbuf_getwholeline() used the
+strbuf\_getwholeline() is part of the Git strbuf API that is used for a
+lot of string related functions. And strbuf\_getwholeline() used the
 getc() function to get each character one by one until the end of each
 line, like this:
 
@@ -138,7 +138,7 @@ while ((ch = getc(fp)) != EOF) {
 ```
 
 But it appears that it isn't very efficient. It is also problematic to
-use fgets() inside strbuf_getwholeline() as strbuf_getwholeline() is
+use fgets() inside strbuf\_getwholeline() as strbuf\_getwholeline() is
 used in some parts of the Git codebase to read lines that can contain
 the NUL character and fgets() would not read after the NUL. (And yeah
 working around that is not easy either.)
