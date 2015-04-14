@@ -99,7 +99,7 @@ Uploading somefile.zip
 Remote configuration, the server side, the Git LFS API and authentication were
 also covered. And in the end Rick talked about some ideas for improvements.
 
-* Git Large Object Research
+* [Git Large Object Research](http://www.slideshare.net/fezzik02/git-large-object-binaries-concepts-and-directions)
 
 It's interesting and encouraging to see how there has been a recent interest by the community to tackle some of Git scaling issues. At Git Merge 2015 [John Garcia](https://twitter.com/bitbucketeer) from Atlassian also presented some research and a prototype tool to handle large binary files.
 
