@@ -8,8 +8,9 @@ title: Git Rev News
 You can find a listing of all previous episodes on the [Git Rev News
 Archive](/rev_news/) page.
 
-So far the only way to subscribe to Git Rev News is by
-[RSS/atom](/feed.xml).
+Subscribe to Git Rev News by [RSS/atom](/feed.xml) or by signing up to the
+[Email Newsletter](http://eepurl.com/bjP2WT) (Or see side bar for easy to fill
+form).
 
 # About Git Rev News
 
