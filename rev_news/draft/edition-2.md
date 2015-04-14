@@ -202,6 +202,8 @@ series.
 * [Git 2.3.5 for Windows Release Candidate 8](https://github.com/git-for-windows/git/releases/tag/v2.3.5.windows.8),
   April 10th.
 
+[More about Git 2.x for Windows release candiates here](https://groups.google.com/d/msg/msysgit/T2CgyhMA6fw/rXpofh9waA4J).
+
 > During the really exciting Git Merge conference, the Git for Windows
 > developers had the opportunity to meet and we managed to whip out a *really*
 > early beta of the upcoming Git for Windows 2.x series.
@@ -209,7 +211,6 @@ series.
 > environment, but that this change also affects end user installations quite a
 > bit [...]
 
-[More about Git 2.x for Windows release candiates here](https://groups.google.com/d/msg/msysgit/T2CgyhMA6fw/rXpofh9waA4J).
 Brendan Forster put together this [Beta Testers Guide](https://gist.github.com/shiftkey/add6975be2687d8731ae).
 
 * [libgit2 v0.22.2 Maintenance Release](https://github.com/libgit2/libgit2/releases/tag/v0.22.2),
