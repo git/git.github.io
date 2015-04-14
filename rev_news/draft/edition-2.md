@@ -119,8 +119,8 @@ discussions about ways to speed up reading lines in a file.
 
 The packed-ref file has been created a long time ago to speed up
 dealing with refs. The original way to store refs, which is called the
-"loosed ref" format uses one file per ref to store its content and is
-still often used by git. But when the number of refs increases, it
+"loose ref" format uses one file per ref to store its content and is
+used by git for newly created refs. But when the number of refs increases, it
 becomes much faster to have as much information as possible in a
 single file. That's the purpose of the packed-ref file.
 
