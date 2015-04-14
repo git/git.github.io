@@ -256,6 +256,7 @@ Thanks to them and the sponsors for this great time!
   * Drupal Core Committer [Angie Byron](https://www.linux.com/news/featured-blogs/200-libby-clark/822227-git-success-stories-and-tips-from-drupal-core-committer-angie-byron)
   * Qt Maintainer [Thiago Macieira](https://www.linux.com/news/featured-blogs/200-libby-clark/821948-git-success-stories-and-tips-from-qt-maintainer-thiago-macieira)
   * KVM Maintainer [Paolo Bonzini](https://www.linux.com/news/featured-blogs/200-libby-clark/821899-git-success-stories-and-tips-from-kvm-maintainer-paolo-bonzini)
+  * Ceph Creator [Sage Weil](https://www.linux.com/news/featured-blogs/200-libby-clark/823164-git-success-stories-and-tips-from-ceph-creator-sage-weil)
 * Junio warmed up to Git Merge by actively blogging the last month:
   * [Fun with Non-Fast-Forward](http://git-blame.blogspot.de/2015/03/fun-with-non-fast-forward.html)
   * [Git 2.4 will hopefully be a "product quality" release](http://git-blame.blogspot.de/2015/03/git-24-will-hopefully-be-product.html)
