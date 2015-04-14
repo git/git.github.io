@@ -7,7 +7,7 @@ Some ideas on where we can go to gather Git Rev News material.
 
 ## Mailing lists
 
-* [Git dev](http://thread.gmane.org/gmane.comp.version-control.git/)
+* [Git mailing list](http://thread.gmane.org/gmane.comp.version-control.git/)
 * [Git for Windows](https://groups.google.com/forum/#!forum/msysgit)
 * [JGit](https://dev.eclipse.org/mailman/listinfo/jgit-dev)
 * [libgit2](https://libgit2.github.com/) (and [friends](https://github.com/libgit2))
