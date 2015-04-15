@@ -286,4 +286,4 @@ Thanks to them and the sponsors for this great time!
 
 ## Credits
 
-This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;, Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt; with help from ???.
+This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;, Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt; with help from Junio Hamano, Emma Jane Hogbin Westby, Andrew Ardill, Rick Olson, Johannes Schindelin and Jeff King.
