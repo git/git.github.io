@@ -1,0 +1,289 @@
+---
+title: Git Rev News Edition 2 (April 15th, 2015)
+layout: default
+date: 2015-04-5 21:06:51 +0100
+author: chriscool
+categories: [news]
+navbar: false
+---
+## Git Rev News: Edition 2 (April 15, 2015), 10 years of Git & Git Merge 2015!
+
+Welcome to the second edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
+a digest of all things Git, written collaboratively
+on [GitHub](https://github.com/git/git.github.io) by volunteers.
+
+Our goal is to aggregate and communicate
+some of the activities on the [Git mailing list](mailto:git@vger.kernel.org)
+in a format that the wider tech community can follow
+and understand. In addition, we'll link to some of the interesting Git-related
+articles, tools and projects we come across.
+
+This special edition covers Git's 10th year of existence, as well as the
+[Git Merge](http://git-merge.com) conference held on April 8th & 9th in Paris,
+France. Git developers and users alike came together to celebrate the
+anniversary, and to discuss the current challenges of using and scaling Git.
+
+You can contribute to the upcoming edition by sending [pull
+requests](https://github.com/git/git.github.io/pulls) or opening
+[issues](https://github.com/git/git.github.io/issues).
+
+## Discussions
+
+### General
+
+* [10 years of fun](https://docs.google.com/presentation/d/1sc1xsG9vrRahcckD8WwYeK355SvQH7NSchKH07icJtk/pub)
+
+At the Git Merge 2015, Junio Hamano started off the Contributor Summit with a
+presentation titled "10 years of fun with Git", saying that he wanted to
+take the opportunity of the 10th anniversary to thank the contributors.
+
+He showed how the first initial revision of Git - created on the 7th of April
+2005 by Linus - looked like, and compared it to a recent revision. Although the
+size of the first implementation was only about 0.2% of its current size, the
+initial code was already functional.
+
+The interesting question that followed was "Who made today's Git?" and Junio
+went through multiple Git queries offering different answers for this.
+
+As an example, to get a commit count sorted by author, excluding merge
+commits, one can use:
+
+```
+git shortlog --no-merges -n -s v2.4.0-rc0
+```
+
+With the results of each query, Junio gave insights about how we
+can interpret the results, mentioned the caveats that might apply, and he
+also took time to thank the people who appeared in these results.
+
+Towards the end of the presentation he also mentioned the people who
+don't appear in the results: bug reporters, feature wishers,
+reviewers and mentors, alternative implementors and porters, trainers
+and evangelists. He assigned to this very news-letter the huge task of
+talking about, and thanking them all ;-)
+
+* [Git Large File Storage](https://git-lfs.github.com/)
+
+At the Git Merge 2015, [Rick Olson](https://github.com/technoweenie), a
+developer working for GitHub, gave a presentation about Git Large File
+Storage (Git LFS), a new git extension for managing big files.
+
+On the Git Merge web site, the name of the presentation was "Building a
+Git Extension with First Principles", probably because GitHub didn't
+want to announce Git LFS in the time before the conference. In fact, it
+was announced [first on The GitHub Blog](https://github.com/blog/1986-announcing-git-large-file-storage-lfs)
+the day before Rick's presentation.
+
+Rick started off by explaining the reasons why such an extension was
+needed, namely that Git "starts to suck with large binary file
+objects". For example it takes longer and longer to clone a repo that
+has more and more of such objects.
+
+Then he told that GitHub did some user experience research with a
+diverse team of users having this problem. They also experimented with
+existing solutions like `git media` and `git annex`.
+
+Rick then detailed [the solution that was implemented](https://github.com/github/git-lfs/blob/master/docs/spec.md)
+using the Go language, and how it can be used. For example:
+
+```
+$ git lfs init
+$ git lfs track "*.zip"
+$ git add otherfile.zip
+$ git commit -m "add otherfile.zip"
+$ git push origin
+Uploading somefile.zip
+...
+```
+
+Remote configuration, the server side, the Git LFS API and authentication were
+also covered. And in the end Rick talked about some ideas for improvements.
+
+* [Git Large Object Research](http://www.slideshare.net/fezzik02/git-large-object-binaries-concepts-and-directions)
+
+It's interesting and encouraging to see how there has been a recent interest by the community to tackle some of Git scaling issues. At Git Merge 2015 [John Garcia](https://twitter.com/bitbucketeer) from Atlassian also presented some research and a prototype tool to handle large binary files.
+
+The tool hasn't been released yet but showed interesting features like
+[progressive history
+retention](https://twitter.com/tarkasteve/status/586180588245229569), file
+locking, abstracted support for "dumb" storage back ends (like sshfs, samba,
+NFS, Amazon S3 ...) and chunking for resumable downloads.
+
+### Reviews
+
+* [Speeding up strbuf_getwholeline()](http://thread.gmane.org/gmane.comp.version-control.git/266789/focus=266796)
+
+Jeff King, alias Peff, posted a patch series to address speed
+regressions when accessing the packed-refs file. This lead to
+discussions about ways to speed up reading lines in a file.
+
+The packed-ref file has been created a long time ago to speed up
+dealing with refs. The original way to store refs, which is called the
+"loose ref" format uses one file per ref to store its content and is
+used by git for newly created refs. But when the number of refs increases, it
+becomes much faster to have as much information as possible in a
+single file. That's the purpose of the packed-ref file.
+
+Peff discovered that one of his own commit that switched from fgets()
+to strbuf\_getwholeline() to read the packed-ref file was in part
+responsible for a big slowdown.
+
+strbuf\_getwholeline() is part of the Git strbuf API that is used for a
+lot of string related functions. And strbuf\_getwholeline() used the
+getc() function to get each character one by one until the end of each
+line, like this:
+
+```
+while ((ch = getc(fp)) != EOF) {
+	...
+	if (ch == '\n')
+		break;
+}
+```
+
+But it appears that it isn't very efficient. It is also problematic to
+use fgets() inside strbuf\_getwholeline() as strbuf\_getwholeline() is
+used in some parts of the Git codebase to read lines that can contain
+the NUL character and fgets() would not read after the NUL. (And yeah
+working around that is not easy either.)
+
+So Peff came up with the following explanation and solution to the
+problem:
+
+> strbuf_getwholeline calls getc in a tight loop. On modern
+> libc implementations, the stdio code locks the handle for
+> every operation, which means we are paying a significant
+> overhead. We can get around this by locking the handle for
+> the whole loop and using the unlocked variant.
+
+His patch does basically:
+
+```
++	flockfile(fp);
++	while ((ch = getc_unlocked(fp)) != EOF) {
+		...
+ 		if (ch == '\n')
+ 			break;
+ 	}
++	funlockfile(fp);
+```
+
+Duy Nguyen suggested instead to avoid any FILE* interface and either
+mmap the entire file, or read (with bufferring) from a file
+descriptor, as Git already does to read the index-pack file. But Peff
+said that it would be very inefficient too, and that there are no good
+NUL safe function to read from a file descriptor.
+
+Junio wondered if it would be worth it to have callers that need to
+handle NUL characters pass a flag, so that the default implementation
+would still be fast.
+
+Eventually Rasmus Villemoes suggested using
+[getdelim()](http://pubs.opengroup.org/stage7tc1/functions/getdelim.html)
+when POSIX 2008 is supported and so far this looks like a workable
+solution.
+
+Anyway it is interesting to see that on the Git mailing list as well as
+at the Git Merge conference a lot of great developers and companies are
+working on making Git fast for big repositories.
+
+### Support
+
+## Releases
+
+* [First release candidate for Git 2.4](http://git-blame.blogspot.de/2015/04/first-release-candidate-for-git-24.html),
+  April 2nd.
+
+Paraphrasing Junio,  
+please test it thoroughly so that we can ship a successful v2.4 final at
+the end of the month without the regressions we experienced in the v2.3
+series.
+
+* [Git 2.3.5 for Windows Release Candidate 8](https://github.com/git-for-windows/git/releases/tag/v2.3.5.windows.8),
+  April 10th.
+
+[More about Git 2.x for Windows release candiates here](https://groups.google.com/d/msg/msysgit/T2CgyhMA6fw/rXpofh9waA4J).
+
+> During the really exciting Git Merge conference, the Git for Windows
+> developers had the opportunity to meet and we managed to whip out a *really*
+> early beta of the upcoming Git for Windows 2.x series.
+> Please keep in mind that we not only changed our entire development
+> environment, but that this change also affects end user installations quite a
+> bit [...]
+
+Brendan Forster put together this [Beta Testers Guide](https://gist.github.com/shiftkey/add6975be2687d8731ae).
+
+* [libgit2 v0.22.2 Maintenance Release](https://github.com/libgit2/libgit2/releases/tag/v0.22.2),
+  March 24th.
+
+> The following fixes have been backported to this maintenance release. [...]
+> All users of the library are encouraged to update.
+
+* [tig-2.1.1](http://article.gmane.org/gmane.comp.version-control.git/266979), April 9th
+
+> Finally, files (or blobs) can now be searched using the new GitHub-inspired
+> [file finder](https://asciinema.org/a/18525) (press 'f' to launch it).﻿
+
+
+* [GitLab 7.9.3 CE, EE and GitLab CI 7.9.3](https://about.gitlab.com/2015/04/08/gitlab-7-9-3-released/),
+  April 8th.
+
+* [Kallithea 0.2](http://lists.sfconservancy.org/pipermail/kallithea-general/2015q2/000579.html), April 10th
+
+> Kallithea 0.2 has been released. Kallithea is a GPLv3 source code management
+> software for web-based hosting of Mercurial and Git repositories.
+
+
+## Other News
+
+### Events
+
+* [Git Merge 2015](http://git-merge.com/), The Conference for the Git
+Community, took place on April 8th & 9th in Paris, France. It was presented by
+GitHub with sponsorship from Microsoft and Atlassian. Scott Chacon (GitHub),
+wearing a beautiful suit, was the master of ceremony on the 9th of April, while
+Chris Kelly and other GitHub people had organized everything.
+Thanks to them and the sponsors for this great time!
+
+### Media
+
+* Ten years ago, [Linus' first ever mention of what would become Git](https://news.ycombinator.com/item?id=9264088)
+* linux.com's Linus interview, on [10 years of Git](http://www.linux.com/news/featured-blogs/185-jennifer-cloer/821541-10-years-of-git-an-interview-with-git-creator-linus-torvalds)
+* Continuing their celebration, a whole series of Git-related interviews have
+  been published on linux.com:
+  * Wine Maintainer [Alexandre Julliard](https://www.linux.com/news/featured-blogs/200-libby-clark/822789-git-success-stories-and-tips-from-wine-maintainer-alexandre-julliard)
+  * Puppet Labs' [Michael Stahnke](https://www.linux.com/news/featured-blogs/200-libby-clark/822555-git-success-stories-and-tips-from-puppet-labs-michael-stahnke)
+  * Tor Chief Architect [Nick Mathewson](https://www.linux.com/news/featured-blogs/200-libby-clark/822528-git-success-stories-and-tips-from-tors-chief-architect-nick-mathewson)
+  * Drupal Core Committer [Angie Byron](https://www.linux.com/news/featured-blogs/200-libby-clark/822227-git-success-stories-and-tips-from-drupal-core-committer-angie-byron)
+  * Qt Maintainer [Thiago Macieira](https://www.linux.com/news/featured-blogs/200-libby-clark/821948-git-success-stories-and-tips-from-qt-maintainer-thiago-macieira)
+  * KVM Maintainer [Paolo Bonzini](https://www.linux.com/news/featured-blogs/200-libby-clark/821899-git-success-stories-and-tips-from-kvm-maintainer-paolo-bonzini)
+  * Ceph Creator [Sage Weil](https://www.linux.com/news/featured-blogs/200-libby-clark/823164-git-success-stories-and-tips-from-ceph-creator-sage-weil)
+* Junio warmed up to Git Merge by actively blogging the last month:
+  * [Fun with Non-Fast-Forward](http://git-blame.blogspot.de/2015/03/fun-with-non-fast-forward.html)
+  * [Git 2.4 will hopefully be a "product quality" release](http://git-blame.blogspot.de/2015/03/git-24-will-hopefully-be-product.html)
+  * [Stats from recent Git releases](http://git-blame.blogspot.de/2015/03/stats-from-recent-git-releases.html)
+  * [His thoughts on this very newsletter](http://git-blame.blogspot.de/2015/03/git-rev-news.html)
+* Atlassian noted the 10 year anniversary by producing [this visualization of
+  Git's history](https://www.atlassian.com/git/articles/10-years-of-git/)
+* With Git Merge 2015 taking place in Paris, coincidentally the [French Civil
+  Code is now on GitHub](https://github.com/steeve/france.code-civil)
+* Øyvind A. Holm has generated statistics on the [relative growth of Git repos
+  vs. other source control systems](https://github.com/sunny256/openhub-repositories)
+* As Google Code shuts down, the [Vim project decides moving to Git/GitHub
+  ](https://news.ycombinator.com/item?id=9263193)
+* [Nice, SVG-based Git cheat sheet
+  ](https://rawgit.com/pastjean/git-cheat-sheet/master/git-cheat-sheet.svg)
+* Mary Rose Cook has written an essay on [Git from the inside out
+  ](http://maryrosecook.com/blog/post/git-from-the-inside-out)
+* A similar article from last year: [Git from the Bottom Up
+  ](https://jwiegley.github.io/git-from-the-bottom-up/), by John Wiegley
+* A [Git Style Guide](https://github.com/agis-/git-style-guide) by Agis
+  Anastasopoulos
+* Some [hefty discussion is going on regarding the new Git Large File Storage](
+    https://news.ycombinator.com/item?id=9343021), announced [by GitHub
+    ](https://github.com/blog/1986-announcing-git-large-file-storage-lfs) during
+    [Git Merge 2015](http://git-merge.com/)
+
+## Credits
+
+This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;, Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt; with help from Junio Hamano, Emma Jane Hogbin Westby, Andrew Ardill, Rick Olson, Johannes Schindelin and Jeff King.
