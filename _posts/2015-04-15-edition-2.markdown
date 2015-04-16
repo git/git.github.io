@@ -187,8 +187,6 @@ Anyway it is interesting to see that on the Git mailing list as well as
 at the Git Merge conference a lot of great developers and companies are
 working on making Git fast for big repositories.
 
-### Support
-
 ## Releases
 
 * [First release candidate for Git 2.4](http://git-blame.blogspot.de/2015/04/first-release-candidate-for-git-24.html),
