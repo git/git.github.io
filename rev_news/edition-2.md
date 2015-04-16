@@ -202,7 +202,7 @@ series.
 * [Git 2.3.5 for Windows Release Candidate 8](https://github.com/git-for-windows/git/releases/tag/v2.3.5.windows.8),
   April 10th.
 
-[More about Git 2.x for Windows release candiates here](https://groups.google.com/d/msg/msysgit/T2CgyhMA6fw/rXpofh9waA4J).
+[More about Git 2.x for Windows release candidates here](https://groups.google.com/d/msg/msysgit/T2CgyhMA6fw/rXpofh9waA4J).
 
 > During the really exciting Git Merge conference, the Git for Windows
 > developers had the opportunity to meet and we managed to whip out a *really*
