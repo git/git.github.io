@@ -27,7 +27,7 @@ covered.
 
 ## Help people learn about Git development
 
-By reading Git Rev News people could learn about Git developement and
+By reading Git Rev News people could learn about Git development and
 become interested in participating in it.
 
 ## Propagate misc Git news
@@ -36,7 +36,7 @@ A lot of interesting things around Git happen outside the Git mailing
 list and might be worth propagating to show how vibrant the Git
 community and its ecosystem are.
 
-Also Git developers might have some personnal (like getting maried,
+Also Git developers might have some personal (like getting married,
 having a child, ...) or professional (looking for a Git related job or
 freelance mission) information they want to share.
 
