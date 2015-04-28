@@ -1,4 +1,4 @@
-## Git Rev News: Edition 3 (May ???, 2015)
+## Git Rev News: Edition 3 (May 13, 2015)
 
 Welcome to the second edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
 a digest of all things Git, written collaboratively
