@@ -53,7 +53,7 @@ requests](https://github.com/git/git.github.io/pulls) or opening
 * [first aid git](http://ricardofilipe.com/projects/firstaidgit/), a searchable collection of the most frequently asked Git questions
 * [libgit2 got rid of the OpenSSL binding on OSX](https://github.com/libgit2/libgit2/pull/2997)
 * [7 Pro Tips For Using Git from Fedora Developers](http://www.linux.com/news/featured-blogs/200-libby-clark/825032-7-pro-tips-for-using-git-from-fedora-developers), by Libby Clark at linux.com
-* [A cryptic crossword themed around Git](http://thorehusfeldt.net/2015/04/03/conflicting-git-merge-runs-for-several-minutes-35/), by Thore Husfeldhttps://developer.atlassian.com/blog/2015/04/git-merge-2015-wrap/t
+* [A cryptic crossword themed around Git](http://thorehusfeldt.net/2015/04/03/conflicting-git-merge-runs-for-several-minutes-35/), by Thore Husfeld
 * [Notes from Git Contributor Summit (Git Merge 2015)](https://developer.atlassian.com/blog/2015/04/git-merge-2015-wrap/) from our own editor Nicola (at Atlassian)
 * [Git Merge 2015 Reviewed](https://netguru.co/blog/git-merge-2015-review), by Jakub Naliwajek at netguru
 
