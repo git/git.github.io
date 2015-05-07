@@ -50,7 +50,7 @@ requests](https://github.com/git/git.github.io/pulls) or opening
 * Refer to a future commit sha1 in your commit message using [git-time-travel](https://github.com/hundt/git-time-travel)
 * [Legit](http://www.git-legit.org/) is a complementary command-line interface for Git, optimized for workflow simplicity.
 * [What's coming in Git 2.4.0](https://lwn.net/Articles/639582/?), by Nathan Willis at LWN.net
-* [first aid git], a searchable collection of the most frequently asked Git questions
+* [first aid git](http://ricardofilipe.com/projects/firstaidgit/), a searchable collection of the most frequently asked Git questions
 * [libgit2 got rid of the OpenSSL binding on OSX](https://github.com/libgit2/libgit2/pull/2997)
 * [7 Pro Tips For Using Git from Fedora Developers](http://www.linux.com/news/featured-blogs/200-libby-clark/825032-7-pro-tips-for-using-git-from-fedora-developers), by Libby Clark at linux.com
 * [A cryptic crossword themed around Git](http://thorehusfeldt.net/2015/04/03/conflicting-git-merge-runs-for-several-minutes-35/), by Thore Husfeldhttps://developer.atlassian.com/blog/2015/04/git-merge-2015-wrap/t
