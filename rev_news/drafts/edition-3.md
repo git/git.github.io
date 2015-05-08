@@ -6,7 +6,7 @@ subscribe see [the Git Rev News page](http://git.github.io/rev_news/rev_news.htm
 
 This edition still covers Git's 10th year of existence, as well as the
 [Git Merge](http://git-merge.com) conference held on April 8th & 9th in Paris,
-France and also some discussions since the end of March.
+France, and also some discussions since the end of March.
 
 ## Discussions
 
