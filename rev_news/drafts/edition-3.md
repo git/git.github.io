@@ -29,7 +29,25 @@ requests](https://github.com/git/git.github.io/pulls) or opening
 
 ### Support
 
-[git ls-files wildcard behavior considered harmful](http://thread.gmane.org/gmane.comp.version-control.git/266486/)
+* [gitk won't show notes?](http://thread.gmane.org/gmane.comp.version-control.git/266662/)
+
+Phillip Susi had trouble getting gitk to show notes. Michael J. Gruber
+tried to help him, but it didn't work when adding a note while gitk is
+running even when using F5 or Shift-F5 that should refresh the
+display. Michael found that:
+
+> Apparently, gitk rereads the refs but not commits it has read already -
+> and the commit reading includes the notes lookup.
+
+and decided to `cc the master`. The master is Paulus aka Paul
+Mackerras who created gitk ten years ago and has been maintaining
+since that time.
+
+Paul agreed that indeed works need to be done to fix this problem. He
+asked if `git notes list` is the best way to find out all the current
+notes, and Johan Herland who developed `git notes` answered yes.
+
+* [git ls-files wildcard behavior considered harmful](http://thread.gmane.org/gmane.comp.version-control.git/266486/)
 
 Joey Hess who is developing [git-annex](https://git-annex.branchable.com/) was surprised by how
 `git ls-files` expands wildcard characters like `*[]` and the fact that escaping these characters
