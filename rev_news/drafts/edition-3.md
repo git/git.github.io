@@ -52,19 +52,21 @@ Joey Hess who is developing [git-annex](https://git-annex.branchable.com/) was s
 `git ls-files` expands wildcard characters like `*[]` and the fact that escaping these characters
 using a backslash character `\` makes it impossible to only list files in a directory:
 
-> While normally ls-files would recurse, slash-escaped wildcard characters in the
-> directory name prevent recursion.
->
-> joey@darkstar:~/tmp/aaa>git ls-files 'foo[d]'
-> foo[d]/subfile
-> food
-> joey@darkstar:~/tmp/aaa>git ls-files 'foo\[d\]'
-> joey@darkstar:~/tmp/aaa>
->
-> The above example shows a case where it's impossible to get ls-files
-> to only list files in a directory and not other files that match the
-> wildcard. This seems like it must be a bug, and it means it's impossible
-> to reliably work around the wildcard expansion behavior.
+```
+While normally ls-files would recurse, slash-escaped wildcard characters in the
+directory name prevent recursion.
+
+joey@darkstar:~/tmp/aaa>git ls-files 'foo[d]'
+foo[d]/subfile
+food
+joey@darkstar:~/tmp/aaa>git ls-files 'foo\[d\]'
+joey@darkstar:~/tmp/aaa>
+
+The above example shows a case where it's impossible to get ls-files
+to only list files in a directory and not other files that match the
+wildcard. This seems like it must be a bug, and it means it's impossible
+to reliably work around the wildcard expansion behavior.
+```
 
 Duy Nguyen, Jeff King and Jonathan Nieder replied that there are ways
 to tell Git to interpret no character as a wildcard. The
