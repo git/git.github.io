@@ -1,14 +1,8 @@
 ## Git Rev News: Edition 3 (May 13, 2015)
 
 Welcome to the third edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
-a digest of all things Git, written collaboratively
-on [GitHub](https://github.com/git/git.github.io) by volunteers.
-
-Our goal is to aggregate and communicate
-some of the activities on the [Git mailing list](mailto:git@vger.kernel.org)
-in a format that the wider tech community can follow
-and understand. In addition, we'll link to some of the interesting Git-related
-articles, tools and projects we come across.
+a digest of all things Git. For our goals, the archives, the way we work, how to contribute or to
+subscribe see [the Git Rev News page](http://git.github.io/rev_news/rev_news.html) on http://git.github.io.
 
 This edition still covers Git's 10th year of existence, as well as the
 [Git Merge](http://git-merge.com) conference held on April 8th & 9th in Paris,
