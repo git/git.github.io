@@ -1,6 +1,6 @@
 ## Git Rev News: Edition 3 (May 13, 2015)
 
-Welcome to the second edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
+Welcome to the third edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
 a digest of all things Git, written collaboratively
 on [GitHub](https://github.com/git/git.github.io) by volunteers.
 
@@ -12,8 +12,7 @@ articles, tools and projects we come across.
 
 This edition still covers Git's 10th year of existence, as well as the
 [Git Merge](http://git-merge.com) conference held on April 8th & 9th in Paris,
-France. Git developers and users alike came together to celebrate the
-anniversary, and to discuss the current challenges of using and scaling Git.
+France and also some discussions since the end of March.
 
 You can contribute to the upcoming edition by sending [pull
 requests](https://github.com/git/git.github.io/pulls) or opening
