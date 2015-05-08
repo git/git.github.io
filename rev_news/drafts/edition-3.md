@@ -39,8 +39,15 @@ requests](https://github.com/git/git.github.io/pulls) or opening
 
 ## Other News
 
-### Events
+### Job Offer
 
+Booking.com is willing to pay a Git developer on a contract basis to
+work on Git scalability issues. If you are interested please contact
+Ævar Arnfjörð Bjarmason &lt;<avarab@gmail.com>&gt;.
+
+<!---
+### Events
+-->
 
 
 ### Media
