@@ -79,8 +79,8 @@ display. Michael found that:
 > Apparently, gitk rereads the refs but not commits it has read already -
 > and the commit reading includes the notes lookup.
 
-and decided to `cc the master`. The master is Paulus aka Paul
-Mackerras who created gitk ten years ago and has been maintaining
+and decided to "cc the master". The master is Paulus aka Paul
+Mackerras who created gitk ten years ago and has been maintaining it
 since that time.
 
 Paul agreed that indeed works need to be done to fix this problem. He
