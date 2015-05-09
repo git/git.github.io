@@ -63,6 +63,48 @@ videos, blog posts and other materials available from her
 [gitforteams GitHub repo](https://github.com/emmajane/gitforteams), and also in an
 [upcoming Git for Teams of One or More book](http://gitforteams.com/books/).
 
+* [Git + Software Freedom Conservancy Overview](http://thread.gmane.org/gmane.comp.version-control.git/267077/)
+
+At the Contributor Summit that was part of the [Git Merge 2015](http://git-merge.com),
+Jeff King, aka Peff, gave a presentation about the status of Git as a
+[Software Freedom Conservancy (SFC)](https://sfconservancy.org/) project.
+
+Git is a [member project of the SFC since 2010](http://thread.gmane.org/gmane.comp.version-control.git/159722/).
+This gives some legal status to "The Git Project" and makes it possible for it
+to handle money (around $19,000), hold domain names (git-scm.com, git-scm.org) and
+[the "Git" trademark](https://git-scm.com/trademark), and own a Mac!
+
+The decisions related to those assets or The Git Project itself are
+made by agreement of the benevolent-committee-for-life, made of Junio
+Hamano, Jeff King and Shawn Pearce. They are limited because The
+Project does not own any copyright on the code and has no power
+over the technical side of the project. Also the decisions must
+support FLOSS aspects of the project.
+
+And anyway ideas about how to use the assets or make changes to The
+Git Project should be discussed on the list because the committee
+wants to represent the will of the community.
+
+That's why after the Contributor Summit Peff posted the source code of
+his slides on the list, asking for suggestions about what to do, like
+he did after his presentation at the Summit.
+
+One question is what the Project should do with its money. It comes
+from donations on the web site, the Google Summer of Code (GSoC),
+Amazon affiliate links and book royalties, and some of it goes to
+helping developers travel to the GSoC mentor summit, and a few other
+things.
+
+So Peff talked a bit about some half baked ideas he has to spend the
+money, like participating in the
+[Outreach Program for Women, now known as Outreachy](https://www.gnome.org/outreachy/)
+or giving it to the SFC or other organisations.
+
+At the Summit though, Git developers mostly talked about how to make
+it possible for companies to fund developers working on Git. And on
+the mailing list so far there has not been much discussions about
+possible changes to the current situation.
+
 
 ### Reviews
 
