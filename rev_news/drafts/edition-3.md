@@ -137,7 +137,7 @@ work on Git scalability issues. If you are interested please contact
 [GSoC 2015: 2 accepted proposals](http://thread.gmane.org/gmane.comp.version-control.git/267878)
 
 For a long time Git has been participating in [the Google Summer of Code](http://www.google-melange.com/gsoc/document/show/gsoc_program/google/gsoc2015/about_page).
-This summer 2 students mentored by some Git developers will work on improving Git and will receive a stipend from Google.
+This summer two students, Paul Tan and Karthik Nayak, mentored by four experienced Git developers, Johannes Schindelin, Stefan Beller, Matthieu Moy and Christian Couder, will work on improving Git and will receive a stipend from Google.
 
 
 ### Media
