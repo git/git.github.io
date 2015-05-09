@@ -12,6 +12,61 @@ France, and also some discussions since the end of March.
 
 ### General
 
+* [Teaching People Git](https://speakerdeck.com/emmajane/teaching-people-git)
+
+At the [Git Merge 2015](http://git-merge.com) Emma Jane Hogbin Westby
+gave a presentation about her experience teaching Git to adults. As a
+long time version control teacher, she has found that the usual ways to
+teach people Git don't work well.
+
+One of the reason is that Git is complex, so people have to learn a
+lot before a simple "Hello world!" with Git makes sense. Also people
+use Git to support their work, Git is not what they do.
+
+Another reason is that it is difficult for adults to
+learn. Learning is a bit terrifying for them.
+
+There are ways to make it easier for them to learn though. The theory
+about adult education called
+[andragogy](http://en.wikipedia.org/wiki/Andragogy) gives six insights
+about how to motivate them.
+
+Based on these insights and other theories like constructivism and
+Bloom's taxonomy, Emma Jane developed new ways of teaching Git and
+version control.
+
+She found that a good way is to start by trying to solve real
+problems using ideas, not Git commands or tools first.
+
+As a lot of problems around version control are social anyway, it is
+useful to teach teamwork first.
+
+So she starts by asking people to describe their role in the
+organisation, who they are working with and how, what are their tasks,
+their workflows, how they manage branches, what are their tools,
+infrastructure and constrains. This can be done using pens, papers and
+colors.
+
+When people are documenting everything, which is anyway a good thing,
+then Git commands can be introduced in the context in which they are
+useful. For example as people are drawing boxes and arrows on
+diagrams, they can be teached the `git clone`, `git push` and other
+Git commands that can be associated with the code sharing arrows.
+
+Teaching this way makes people 'build' their knowledge, talk to each
+other about their workflows and visualy document their use of
+Git.
+
+This whole process makes Git more accessible and friendly, which is
+Emma Jane's goal.
+
+She shares this goal in articles, like
+[this one which is an article version of her talk](http://24ways.org/2013/git-for-grownups/), in
+videos, blog posts and other materials available from her
+[Git for Teams web site](http://gitforteams.com/) or her
+[gitforteams GitHub repo](https://github.com/emmajane/gitforteams), and also in an
+[upcoming Git for Teams of One or More book](http://gitforteams.com/books/).
+
 
 ### Reviews
 
