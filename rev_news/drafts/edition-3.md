@@ -21,25 +21,21 @@ teach people Git don't work well.
 
 One of the reason is that Git is complex, so people have to learn a
 lot before a simple "Hello world!" with Git makes sense. Also people
-use Git to support their work, Git is not what they do.
-
-Another reason is that it is difficult for adults to
-learn. Learning is a bit terrifying for them.
+use Git to support their work, Git is not what they do. Another reason
+is that it is difficult for adults to learn. Learning is a bit
+terrifying for them.
 
 There are ways to make it easier for them to learn though. The theory
 about adult education called
 [andragogy](http://en.wikipedia.org/wiki/Andragogy) gives six insights
-about how to motivate them.
+about how to motivate them. Based on these insights and other theories
+like constructivism and Bloom's taxonomy, Emma Jane developed new ways
+of teaching Git and version control.
 
-Based on these insights and other theories like constructivism and
-Bloom's taxonomy, Emma Jane developed new ways of teaching Git and
-version control.
-
-She found that a good way is to start by trying to solve real
-problems using ideas, not Git commands or tools first.
-
-As a lot of problems around version control are social anyway, it is
-useful to teach teamwork first.
+She found that a good way is to start by trying to solve real problems
+using ideas, not Git commands or tools first. As a lot of problems
+around version control are social anyway, it is useful to teach
+teamwork first.
 
 So she starts by asking people to describe their role in the
 organisation, who they are working with and how, what are their tasks,
