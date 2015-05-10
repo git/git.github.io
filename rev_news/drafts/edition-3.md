@@ -95,8 +95,8 @@ Amazon affiliate links and book royalties. Some of this money goes to
 helping developers travel to the GSoC mentor summit, and a few other
 things.
 
-Peff talked a bit about some half baked ideas he has to spend the
-money, like participating in the
+Peff talked a bit about what he calls "half baked ideas" he has to
+spend the money, like participating in the
 [Outreach Program for Women, now known as Outreachy](https://www.gnome.org/outreachy/)
 or giving it to the SFC or other organisations.
 
