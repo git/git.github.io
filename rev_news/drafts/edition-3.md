@@ -108,6 +108,18 @@ possible changes to the current situation.
 
 ### Reviews
 
+* ["cat-file --allow-unknown-type"](http://thread.gmane.org/gmane.comp.version-control.git/268262)
+
+The 10th iteration of this series, by a GSoC student, have been polished sufficiently and
+was merged to the 'next' branch. Its test script led to a [discovery and fix of a bug](http://thread.gmane.org/gmane.comp.version-control.git/268306)
+in "hash-object --literally".
+
+* ["git help" reorganisation](http://thread.gmane.org/gmane.comp.version-control.git/268348)
+
+((summarise the topic here--I'm a bit too distracted right now, sorry))
+Later Emma [weighed in](http://thread.gmane.org/gmane.comp.version-control.git/268348/focus=268525)
+with her experience in teaching Git to people, which is a valuable piece of input.
+
 
 ### Support
 
@@ -157,6 +169,14 @@ to tell Git to interpret no character as a wildcard. The
 environment variable have been created especially for this purpose and
 it is a good idea to use them in script or tools, like GitHub is doing
 on their servers.
+
+* [No longer builds with NO_IPV6?](http://thread.gmane.org/gmane.comp.version-control.git/268406)
+
+((summarise the topic here--I'm a bit too distracted right now, sorry))
+This led to fix in "daemon.c", but more importantly, NO_CURL, NO_EXPAT
+configurations were found not to pass the test suite, and these have
+quickly been fixed. The maintainer now has a nightly cron job to try
+building and testing a few selected configurations.
 
 ## Releases
 
