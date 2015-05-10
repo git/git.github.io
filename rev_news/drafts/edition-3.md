@@ -100,9 +100,10 @@ money, like participating in the
 [Outreach Program for Women, now known as Outreachy](https://www.gnome.org/outreachy/)
 or giving it to the SFC or other organisations.
 
-At the Summit there was discussion about how to make it possible for
-companies to fund developers working on Git. Since the Summit, there has
-not been much discussion about possible changes to the current situation.
+At the Summit after Peff's presentation, Git developers mostly talked about
+how to make it possible for companies to fund developers working on Git,
+and since the Summit, there has not been much discussion on the mailing list
+about possible changes to the current situation.
 
 ### Reviews
 
