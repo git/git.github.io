@@ -22,8 +22,9 @@ teach people Git don't work well.
 One of the reason is that Git is complex, so people have to learn a
 lot before a simple "Hello world!" with Git makes sense. Also people
 use Git to support their work, Git is not what they do. Another reason
-is that it is difficult for adults to learn. Learning is a bit
-terrifying for them.
+is that it is difficult for adults to learn because of all the other
+pressures which are put on them by life. Learning is a bit terrifying
+for them.
 
 There are ways to make it easier for them to learn though. The theory
 about adult education called
@@ -32,10 +33,10 @@ about how to motivate them. Based on these insights and other theories
 like constructivism and Bloom's taxonomy, Emma Jane developed new ways
 of teaching Git and version control.
 
-She found that a good way is to start by trying to solve real problems
-using ideas, not Git commands or tools first. As a lot of problems
-around version control are social anyway, it is useful to teach
-teamwork first.
+She found that a good way is to start by trying to solve the
+learner's own real problems using ideas, not Git commands or tools
+first. As a lot of problems around version control are social
+anyway, it is useful to teach teamwork first.
 
 So she starts by asking people to describe their role in the
 organisation, who they are working with and how, what are their tasks,
@@ -43,11 +44,12 @@ their workflows, how they manage branches, what are their tools,
 infrastructure and constrains. This can be done using pens, papers and
 colors.
 
-When people are documenting everything, which is anyway a good thing,
-then Git commands can be introduced in the context in which they are
-useful. For example as people are drawing boxes and arrows on
-diagrams, they can be teached the `git clone`, `git push` and other
-Git commands that can be associated with the code sharing arrows.
+When people have finished documenting everything, which is anyway a
+good thing, then Git commands can be introduced in the context in
+which they are useful. For example as people are drawing boxes and
+arrows on diagrams, they can be teached the `git clone`, `git push`
+and other Git commands that can be associated with the code sharing
+arrows.
 
 Teaching this way makes people 'build' their knowledge, talk to each
 other about their workflows and visualy document their use of
@@ -74,37 +76,33 @@ This gives some legal status to "The Git Project" and makes it possible for it
 to handle money (around $19,000), hold domain names (git-scm.com, git-scm.org) and
 [the "Git" trademark](https://git-scm.com/trademark), and own a Mac!
 
-The decisions related to those assets or The Git Project itself are
+The decisions related to those assets and The Git Project itself are
 made by agreement of the benevolent-committee-for-life, made of Junio
-Hamano, Jeff King and Shawn Pearce. They are limited because The
+Hamano, Jeff King and Shawn Pearce. The committee is limited because The
 Project does not own any copyright on the code and has no power
 over the technical side of the project. Also the decisions must
 support FLOSS aspects of the project.
 
-And anyway ideas about how to use the assets or make changes to The
-Git Project should be discussed on the list because the committee
-wants to represent the will of the community.
+Ideas about how to use the assets or make changes to The Git Project
+should be discussed on the list because the committee wants to represent
+the will of the community. That's why after the Contributor Summit Peff
+posted the source code of his slides on the list, asking for suggestions
+about what to do, like he did after his presentation at the Summit.
 
-That's why after the Contributor Summit Peff posted the source code of
-his slides on the list, asking for suggestions about what to do, like
-he did after his presentation at the Summit.
-
-One question is what the Project should do with its money. It comes
-from donations on the web site, the Google Summer of Code (GSoC),
-Amazon affiliate links and book royalties, and some of it goes to
+One question is: what should The Project do with its money? The money
+comes from donations on the web site, the Google Summer of Code (GSoC),
+Amazon affiliate links and book royalties. Some of this money goes to
 helping developers travel to the GSoC mentor summit, and a few other
 things.
 
-So Peff talked a bit about some half baked ideas he has to spend the
+Peff talked a bit about some half baked ideas he has to spend the
 money, like participating in the
 [Outreach Program for Women, now known as Outreachy](https://www.gnome.org/outreachy/)
 or giving it to the SFC or other organisations.
 
-At the Summit though, Git developers mostly talked about how to make
-it possible for companies to fund developers working on Git. And on
-the mailing list so far there has not been much discussions about
-possible changes to the current situation.
-
+At the Summit there was discussion about how to make it possible for
+companies to fund developers working on Git. Since the Summit, there has
+not been much discussion about possible changes to the current situation.
 
 ### Reviews
 
