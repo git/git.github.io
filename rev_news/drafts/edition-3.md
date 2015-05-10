@@ -198,11 +198,16 @@ on their servers.
 
 * [No longer builds with NO_IPV6?](http://thread.gmane.org/gmane.comp.version-control.git/268406)
 
-((summarise the topic here--I'm a bit too distracted right now, sorry))
-This led to fix in "daemon.c", but more importantly, NO_CURL, NO_EXPAT
-configurations were found not to pass the test suite, and these have
-quickly been fixed. The maintainer now has a nightly cron job to try
-building and testing a few selected configurations.
+Eduardo Espejo found that Git does not compile anymore when using the
+NO_IPV6 configuration switch. And it is not the first time that
+[someone finds out that Git such a NO_IPV6 breakage](http://thread.gmane.org/gmane.comp.version-control.git/28033/).
+
+This time Junio Hamano, the Git maintainer, fixed the breakage in
+"daemon.c", but more importantly found that NO_CURL and NO_EXPAT
+configurations did not to pass the test suite.
+So helped by Jeff King [he quickly fixed that too](http://thread.gmane.org/gmane.comp.version-control.git/268467/).
+And now he has a nightly cron job to try building
+and testing a few selected configurations.
 
 ## Releases
 
