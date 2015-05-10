@@ -110,9 +110,16 @@ possible changes to the current situation.
 
 * ["cat-file --allow-unknown-type"](http://thread.gmane.org/gmane.comp.version-control.git/268262)
 
-The 10th iteration of this series, by a GSoC student, have been polished sufficiently and
-was merged to the 'next' branch. Its test script led to a [discovery and fix of a bug](http://thread.gmane.org/gmane.comp.version-control.git/268306)
+Karthik Nayak, a Google Summer of Code student, has been working for
+some months on developing the `--allow-unknown-type` option for `git cat-file`.
+
+He has been help by Eric Sunshine, Phil Hord, Jeff King and
+Junio Hamano, and, along the development, improving the test script led
+to a [discovery and fix of a bug](http://thread.gmane.org/gmane.comp.version-control.git/268306)
 in "hash-object --literally".
+
+The 10th iteration of his patch series was merged to the 'next' branch
+and will probably appear in the next git release.
 
 * ["git help" reorganisation](http://thread.gmane.org/gmane.comp.version-control.git/268348)
 
