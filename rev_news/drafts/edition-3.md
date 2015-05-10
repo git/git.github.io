@@ -113,8 +113,8 @@ possible changes to the current situation.
 Karthik Nayak, a Google Summer of Code student, has been working for
 some months on developing the `--allow-unknown-type` option for `git cat-file`.
 
-He has been helped by Eric Sunshine, Ramsay Jones, Phil Hord, Jeff King and
-Junio Hamano, and, along the development, improving the test script led
+He has been helped by Eric Sunshine, Ramsay Jones, Phil Hord, Charles Bailey, David Turner, Duy Nguyen,
+Jeff King and Junio Hamano, and, along the development, improving the test script led
 to a [discovery and fix of a bug](http://thread.gmane.org/gmane.comp.version-control.git/268306)
 in "hash-object --literally".
 
@@ -225,4 +225,6 @@ This summer two students, Paul Tan and Karthik Nayak, mentored by four experienc
 
 ## Credits
 
-This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;, Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt; with help from ???.
+This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;,
+Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt;
+with help from Junio Hamano, Emma Jane Hogbin Westby and Jeff King.
