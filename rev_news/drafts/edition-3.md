@@ -118,8 +118,8 @@ Jeff King and Junio Hamano, and, along the development, improving the test scrip
 to a [discovery and fix of a bug](http://thread.gmane.org/gmane.comp.version-control.git/268306)
 in "hash-object --literally".
 
-The 10th iteration of his patch series was merged to the 'next' branch
-and will probably appear in the next git release.
+The 10th iteration of his patch series was merged to the 'next' branch,
+so the new option will probably appear in the next git release.
 
 * ["git help" reorganisation](http://thread.gmane.org/gmane.comp.version-control.git/268348)
 
