@@ -113,7 +113,7 @@ possible changes to the current situation.
 Karthik Nayak, a Google Summer of Code student, has been working for
 some months on developing the `--allow-unknown-type` option for `git cat-file`.
 
-He has been help by Eric Sunshine, Ramsay Jones, Phil Hord, Jeff King and
+He has been helped by Eric Sunshine, Ramsay Jones, Phil Hord, Jeff King and
 Junio Hamano, and, along the development, improving the test script led
 to a [discovery and fix of a bug](http://thread.gmane.org/gmane.comp.version-control.git/268306)
 in "hash-object --literally".
@@ -124,7 +124,7 @@ and will probably appear in the next git release.
 * ["git help" reorganisation](http://thread.gmane.org/gmane.comp.version-control.git/268348)
 
 ((summarise the topic here--I'm a bit too distracted right now, sorry))
-Later Emma [weighed in](http://thread.gmane.org/gmane.comp.version-control.git/268348/focus=268525)
+Later Emma Jane [weighed in](http://thread.gmane.org/gmane.comp.version-control.git/268348/focus=268525)
 with her experience in teaching Git to people, which is a valuable piece of input.
 
 
