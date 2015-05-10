@@ -123,9 +123,28 @@ so the new option will probably appear in the next git release.
 
 * ["git help" reorganisation](http://thread.gmane.org/gmane.comp.version-control.git/268348)
 
-((summarise the topic here--I'm a bit too distracted right now, sorry))
-Later Emma Jane [weighed in](http://thread.gmane.org/gmane.comp.version-control.git/268348/focus=268525)
-with her experience in teaching Git to people, which is a valuable piece of input.
+Sébastien Guimmara started working on improving the output of `git help`.
+
+The current output lists "the most commonly used git commands" in
+alphabetical order. For a long time people have been saying that it is
+probably not the best way to help users find the git command they
+need, and that it would be better to group commands by topic. So
+Sébastien's work is very welcome.
+
+Unfortunately git developers can have different views on how to group
+commands together. So it can be difficult for them to agree on such
+kind of changes. Long discussions because of small personnal
+preferences - we call that bikesheedding - can sometimes go on for a
+while.
+
+In the case of Sébastien's patch series, many developers helped or got
+involved in the discussions: Eric Sunshine, Junio Hamano, Stefan
+Beller, Matthieu Moy, Johannes Schindelin, Johannes Sixt. Emma Jane Hogbin Westby
+also [weighed in](http://thread.gmane.org/gmane.comp.version-control.git/268348/focus=268525)
+with her experience in teaching Git to people, which is a valuable
+piece of input.
+
+We will see how it goes and if some improvements are merged.
 
 
 ### Support
