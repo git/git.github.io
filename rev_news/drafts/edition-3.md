@@ -210,10 +210,13 @@ and testing a few selected configurations.
 
 ## Releases
 
-* [Git v2.4.0](http://article.gmane.org/gmane.linux.kernel/1941812), April 30th
+* [Gerrit 2.11](https://gerrit-documentation.storage.googleapis.com/ReleaseNotes/ReleaseNotes-2.11.html), April 17th
+* [GitLab 7.10](https://about.gitlab.com/2015/04/22/gitlab-7-10-released/), April 22nd
+* [objective-git 0.8.1](https://github.com/libgit2/objective-git/releases/tag/0.8.1), April 23rd
 * [git-extras 3.0.0](https://github.com/tj/git-extras/releases/tag/3.0.0), April 27th
 * [JGit and EGit 3.7.1](https://dev.eclipse.org/mhonarc/lists/egit-dev/msg03865.html), April 27th
-* [GitLab 7.10](https://about.gitlab.com/2015/04/22/gitlab-7-10-released/), April 22nd 
+* [Git v2.4.0](http://article.gmane.org/gmane.linux.kernel/1941812), April 30th
+* [nodegit v0.4.0](https://github.com/nodegit/nodegit/releases/tag/v0.4.0), May 7th
 
 
 ## Other News
