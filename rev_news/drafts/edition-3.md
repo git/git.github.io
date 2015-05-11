@@ -79,7 +79,7 @@ to handle money (around $19,000), hold domain names (git-scm.com, git-scm.org) a
 The decisions related to those assets and The Git Project itself are
 made by agreement of the benevolent-committee-for-life, made of Junio
 Hamano, Jeff King and Shawn Pearce. The committee is limited because The
-Project does not own any copyright on the code and has no power
+Git Project does not own any copyright on the code and has no power
 over the technical side of the project. Also the decisions must
 support FLOSS aspects of the project.
 
