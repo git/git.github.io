@@ -210,12 +210,25 @@ and testing a few selected configurations.
 
 ## Releases
 
-* [Gerrit 2.11](https://gerrit-documentation.storage.googleapis.com/ReleaseNotes/ReleaseNotes-2.11.html), April 17th
+* [Git v2.4.0](http://article.gmane.org/gmane.linux.kernel/1941812), April 30th
+
+> The latest feature release Git v2.4.0 is now available at the
+> usual places.  It is comprised of 426 non-merge commits since
+> v2.3.0, contributed by 76 people, 25 of which are new faces.
+
+You can find more information about this release down in the Media section of the newsletter.
+
+* [Gerrit 2.11](https://groups.google.com/d/msg/repo-discuss/hPbetnfBkm4/wycZSSFdAswJ), April 17th
+
+> Includes a range of new features, like inline editing in the browser, and many improvements in the change screen UI
+
 * [GitLab 7.10](https://about.gitlab.com/2015/04/22/gitlab-7-10-released/), April 22nd
+
+> Besides bug fixes and performance improvements, you can now import your code from Google Code, quickly invite your colleagues and friends to GitLab and set default Git Hooks for everyone.
+
 * [objective-git 0.8.1](https://github.com/libgit2/objective-git/releases/tag/0.8.1), April 23rd
 * [git-extras 3.0.0](https://github.com/tj/git-extras/releases/tag/3.0.0), April 27th
 * [JGit and EGit 3.7.1](https://dev.eclipse.org/mhonarc/lists/egit-dev/msg03865.html), April 27th
-* [Git v2.4.0](http://article.gmane.org/gmane.linux.kernel/1941812), April 30th
 * [nodegit v0.4.0](https://github.com/nodegit/nodegit/releases/tag/v0.4.0), May 7th
 
 
