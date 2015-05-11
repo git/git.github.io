@@ -237,17 +237,43 @@ This summer two students, Paul Tan and Karthik Nayak, mentored by four experienc
 
 ### Media
 
-* [Git Resources for Visual Learners](https://changelog.com/git-resources-for-visual-learners/)
-* [--force considered harmful; understanding git's --force-with-lease](https://developer.atlassian.com/blog/2015/04/force-with-lease/) by Steve Smith at Atlassian
-* Refer to a future commit sha1 in your commit message using [git-time-travel](https://github.com/hundt/git-time-travel)
-* [Legit](http://www.git-legit.org/) is a complementary command-line interface for Git, optimized for workflow simplicity.
+__Related to Git 2.4__
+
 * [What's coming in Git 2.4.0](https://lwn.net/Articles/639582/?), by Nathan Willis at LWN.net
-* [first aid git](http://ricardofilipe.com/projects/firstaidgit/), a searchable collection of the most frequently asked Git questions
+* [Git 2.4 — atomic pushes, push to deploy, and more](https://github.com/blog/1994-git-2-4-atomic-pushes-push-to-deploy-and-more), a great explanation by GitHub's Michael Haggerty
+
+__In the aftermath of Git-Merge 2015__
+
+* [Git Merge 2015 Reviewed](https://netguru.co/blog/git-merge-2015-review), by Jakub Naliwajek at netguru
+* [GitMinutes #35: Git Merge 2015 Part 1](http://episodes.gitminutes.com/2015/05/gitminutes-35-git-merge-2015-part-1.html), the first of five podcast episodes from Git-Merge
+* [Notes from Git Contributor Summit (Git Merge 2015)](https://developer.atlassian.com/blog/2015/04/git-merge-2015-wrap/) from our own editor Nicola (at Atlassian)
+
+__Various__
+
+* [Fun with failing cherry-pick](http://git-blame.blogspot.com/2015/04/fun-with-failing-cherry-pick.html), by Git's maintainer, Junio C Hamano
 * [libgit2 got rid of the OpenSSL binding on OSX](https://github.com/libgit2/libgit2/pull/2997)
+* [Git Resources for Visual Learners](https://changelog.com/git-resources-for-visual-learners/), neat collection from TheChangelog
+* [--force considered harmful; understanding git's --force-with-lease](https://developer.atlassian.com/blog/2015/04/force-with-lease/) by Steve Smith at Atlassian
 * [7 Pro Tips For Using Git from Fedora Developers](http://www.linux.com/news/featured-blogs/200-libby-clark/825032-7-pro-tips-for-using-git-from-fedora-developers), by Libby Clark at linux.com
 * [A cryptic crossword themed around Git](http://thorehusfeldt.net/2015/04/03/conflicting-git-merge-runs-for-several-minutes-35/), by Thore Husfeld
-* [Notes from Git Contributor Summit (Git Merge 2015)](https://developer.atlassian.com/blog/2015/04/git-merge-2015-wrap/) from our own editor Nicola (at Atlassian)
-* [Git Merge 2015 Reviewed](https://netguru.co/blog/git-merge-2015-review), by Jakub Naliwajek at netguru
+* [Be aware of your git stashes](http://depressiverobot.com/2015/05/08/stash-aware.html), pro-tip by Marvin Frommhold
+* [Git Commits are Not Transactions](http://godd2.blogspot.de/2015/05/git-commits-are-not-transactions.html), blogpost by Dominic Muller
+* [A git horror story: faking provenance with a loose nonce](https://developer.atlassian.com/blog/2015/05/git-horror-story-loose-nonces/), by Tim Pettersen at Atlassian
+* [The Elements of Commit Style](http://mcandre.gitbooks.io/elements-of-commit-style/), a tiny "Git-book" for improving commit style, by Andrew Pennebaker
+* [Protected branches in Deveo 2.9.0](http://blog.deveo.com/protected-branches-in-devo-2-9-0/), from Ilmari Kontulainen on their company blog
+
+__Git tools and sites__
+
+* [Gerrit is now available in Docker containers](http://gitenterprise.me/2015/04/30/no-more-tears-with-gerrit-code-review-thanks-to-docker/) from GerritForge/GitEnterprise
+* [first aid git](http://ricardofilipe.com/projects/firstaidgit/), a searchable collection of the most frequently asked Git questions
+* [Legit](http://www.git-legit.org/) is a complementary command-line interface for Git, optimized for workflow simplicity.
+* [multi-commit](https://github.com/jonathanewerner/multi-commit), a python tool for staging hunks and assigning them to multiple future commits
+* [cig](https://github.com/stevenjack/cig) checks all your git repos, reporting if any of them have changes or need to be pushed
+* Similarly: [checkgit](https://github.com/ga7g08/CheckGit) is a gtk-based script to provide visual status of Git repositories
+* Refer to a future commit sha1 in your commit message using [git-time-travel](https://github.com/hundt/git-time-travel)
+* [The Ubuntu-related forge Launchpad is now offering Git hosting](http://blog.launchpad.net/general/git-code-hosting-beta)
+* [GitHub Extension for Visual Studio](https://visualstudio.github.com/)
+
 
 ## Credits
 
