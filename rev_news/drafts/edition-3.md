@@ -257,6 +257,7 @@ __Related to Git 2.4__
 
 __In the aftermath of Git-Merge 2015__
 
+* [The recorded talks from Git Merge](https://www.youtube.com/playlist?list=PL0lo9MOBetEFDjSJ-QTlgsBEHpd6XnaA-) are now available online
 * [Git Merge 2015 Reviewed](https://netguru.co/blog/git-merge-2015-review), by Jakub Naliwajek at netguru
 * [GitMinutes #35: Git Merge 2015 Part 1](http://episodes.gitminutes.com/2015/05/gitminutes-35-git-merge-2015-part-1.html), the first of five podcast episodes from Git-Merge
 * [Notes from Git Contributor Summit (Git Merge 2015)](https://developer.atlassian.com/blog/2015/04/git-merge-2015-wrap/) from our own editor Nicola (at Atlassian)
