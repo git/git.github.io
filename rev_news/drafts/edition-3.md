@@ -76,14 +76,14 @@ This gives some legal status to "The Git Project" and makes it possible for it
 to handle money (around $19,000), hold domain names (git-scm.com, git-scm.org) and
 [the "Git" trademark](https://git-scm.com/trademark), and own a Mac!
 
-The decisions related to those assets and The Git Project itself are
+The decisions related to those assets and the project itself are
 made by agreement of the benevolent-committee-for-life, made of Junio
 Hamano, Jeff King and Shawn Pearce. The committee is limited because The
 Project does not own any copyright on the code and has no power
 over the technical side of the project. Also the decisions must
 support FLOSS aspects of the project.
 
-Ideas about how to use the assets or make changes to The Git Project
+Ideas about how to use the assets or make changes to the project
 should be discussed on the list because the committee wants to represent
 the will of the community. That's why after the Contributor Summit Peff
 posted the source code of his slides on the list, asking for suggestions
