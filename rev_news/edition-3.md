@@ -98,7 +98,7 @@ the will of the community. That's why after the Contributor Summit Peff
 posted the source code of his slides on the list, asking for suggestions
 about what to do, like he did after his presentation at the Summit.
 
-One question is: what should The Project do with its money? The money
+One question is: what should the project do with its money? The money
 comes from donations on the web site, the Google Summer of Code (GSoC),
 Amazon affiliate links and book royalties. Some of this money goes to
 helping developers travel to the GSoC mentor summit, and a few other
@@ -124,7 +124,7 @@ some months on developing the `--allow-unknown-type` option for `git cat-file`.
 He has been helped by Eric Sunshine, Ramsay Jones, Phil Hord, Charles Bailey, David Turner, Duy Nguyen,
 Jeff King and Junio Hamano, and, along the development, improving the test script led
 to a [discovery and fix of a bug](http://thread.gmane.org/gmane.comp.version-control.git/268306)
-in "hash-object --literally".
+in `hash-object --literally`.
 
 The 10th iteration of his patch series was merged to the 'next' branch,
 so the new option will probably appear in the next git release.
@@ -207,11 +207,11 @@ on their servers.
 * [No longer builds with NO_IPV6?](http://thread.gmane.org/gmane.comp.version-control.git/268406)
 
 Eduardo Espejo found that Git does not compile anymore when using the
-NO_IPV6 configuration switch. And it is not the first time that
-[someone finds out that Git such a NO_IPV6 breakage](http://thread.gmane.org/gmane.comp.version-control.git/28033/).
+`NO_IPV6` configuration switch. And it is not the first time that
+[someone finds out that Git such a `NO_IPV6` breakage](http://thread.gmane.org/gmane.comp.version-control.git/28033/).
 
 This time Junio Hamano, the Git maintainer, fixed the breakage in
-"daemon.c", but more importantly found that NO_CURL and NO_EXPAT
+"daemon.c", but more importantly found that `NO_CURL` and `NO_EXPAT`
 configurations did not to pass the test suite.
 So helped by Jeff King [he quickly fixed that too](http://thread.gmane.org/gmane.comp.version-control.git/268467/).
 And now he has a nightly cron job to try building
