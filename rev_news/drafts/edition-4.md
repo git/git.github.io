@@ -13,7 +13,7 @@ Welcome to the fourth edition of [Git Rev News](http://git.github.io/rev_news/re
 a digest of all things Git. For our goals, the archives, the way we work, how to contribute or to
 subscribe see [the Git Rev News page](http://git.github.io/rev_news/rev_news.html) on http://git.github.io.
 
-This edition still covers ???
+This edition covers ???
 
 ## Discussions
 
