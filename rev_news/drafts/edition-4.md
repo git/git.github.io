@@ -1,3 +1,12 @@
+---
+title: Git Rev News Edition 4 (???, 2015)
+layout: default
+date: 2015-06-13 21:06:51 +0100
+author: chriscool
+categories: [news]
+navbar: false
+---
+
 ## Git Rev News: Edition 4 (???)
 
 Welcome to the fourth edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
