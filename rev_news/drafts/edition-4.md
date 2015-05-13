@@ -48,4 +48,4 @@ This edition still covers ???
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt;
-with help from Junio Hamano, Emma Jane Hogbin Westby and Jeff King.
+with help from ???.
