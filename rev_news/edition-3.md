@@ -1,3 +1,12 @@
+---
+title: Git Rev News Edition 3 (May 13th, 2015)
+layout: default
+date: 2015-05-13 21:06:51 +0100
+author: chriscool
+categories: [news]
+navbar: false
+---
+
 ## Git Rev News: Edition 3 (May 13, 2015)
 
 Welcome to the third edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
