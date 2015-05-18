@@ -26,7 +26,5 @@ git@vger.kernel.org if appropriate).
 
 Based on https://help.github.com/articles/using-jekyll-with-pages/
 
-I better copy the above into the repo's README at some point.
-
 [1] http://www.nokogiri.org/tutorials/installing_nokogiri.html#ubuntu___debian
 
