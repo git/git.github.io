@@ -1,19 +1,19 @@
 ---
-title: Git Rev News Edition 4 (???, 2015)
+title: Git Rev News Edition 4 (June 3rd, 2015)
 layout: default
-date: 2015-06-13 21:06:51 +0100
+date: 2015-06-03 21:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 4 (???)
+## Git Rev News: Edition 4 (June 3rd, 2015)
 
 Welcome to the fourth edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
 a digest of all things Git. For our goals, the archives, the way we work, how to contribute or to
 subscribe see [the Git Rev News page](http://git.github.io/rev_news/rev_news.html) on http://git.github.io.
 
-This edition covers ???
+This edition covers what happened during the month of May 2015.
 
 ## Discussions
 
