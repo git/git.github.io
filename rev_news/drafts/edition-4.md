@@ -25,9 +25,41 @@ This edition covers what happened during the month of May 2015.
 ### Reviews
 -->
 
-<!---
+
 ### Support
--->
+
+* [git pack protocol question: sideband responses in case of errors?](http://thread.gmane.org/gmane.comp.version-control.git/268949)
+
+Christian Halstrick said that he sometimes get "invalid channel 101"
+errors when pushing over HTTP using a JGit client.
+
+He had already greatly debugged the problem which appears when quotas
+on the filesystem prevent the Git server to store a big packfile. The
+server then sends back a packet line "0013error: ..." to the client,
+but the client think that sideband communication should still be used,
+so it interprets the "e" from "error" as a channel number. The ascii
+code of "e", which is 101 in decimal, is the reason why the error is
+"invalid channel 101".
+
+Christian asked a few questions to get more information about when
+sideband communication should happen and how a server should respond
+in case of error.
+
+As Shawn Pearce had developed both the Smart HTTP protocol, which is
+now the most commonly used HTTP protocol by Git clients and servers,
+and JGit, the implementation of Git in Java, he answered those
+questions with a lot of details and further nailed down the problem:
+
+> The bug here is JGit's ReceivePack/BaseReceivePack code not setting
+> up the side-band-64k early enough for this failure report to be
+> wrapped in it.
+
+And Shawn concluded with the following:
+
+> FWIW I am glad you found this. I have been chasing this bug for
+> years but couldn't really pin it down to anything. If its the "pack
+> won't fit on local disk due to disk full" condition that narrows
+> down the offending section of JGit considerably.
 
 
 ## Releases
