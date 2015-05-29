@@ -67,6 +67,14 @@ And Shawn concluded with the following:
 
 ## Other News
 
+* [git-multimail](https://github.com/git-multimail/git-multimail) got
+  a new co-maintainer, and is active again after a long period of
+  inactivity. [A summary of the recent
+  activity](http://thread.gmane.org/gmane.comp.version-control.git/270239)
+  was posted on the Git mailing-list. A 1.1 release is expected in
+  June. Don't hesitate to join the fun and help by reviewing
+  pull-requests or submitting new ones!
+
 <!---
 ### Event
 -->
