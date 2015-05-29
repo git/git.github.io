@@ -61,7 +61,7 @@ And Shawn concluded with the following:
 > won't fit on local disk due to disk full" condition that narrows
 > down the offending section of JGit considerably.
 
-* ["git commit --date" does not behave well?](http://thread.gmane.org/gmane.comp.version-control.git/269832)
+* ["git commit --date" does not behave well?](http://thread.gmane.org/gmane.comp.version-control.git/269832) (*written by Junio C Hamano*)
 
 Bastien Traverse was having trouble lying the date when creating a commit
 with the `--date` parameter to `git commit` command.  He tried various
