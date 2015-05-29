@@ -61,6 +61,21 @@ And Shawn concluded with the following:
 > won't fit on local disk due to disk full" condition that narrows
 > down the offending section of JGit considerably.
 
+* ["git commit --date" does not behave well?](http://thread.gmane.org/gmane.comp.version-control.git/269832)
+
+Bastien Traverse was having trouble lying the date when creating a commit
+with the `--date` parameter to `git commit` command.  He tried various
+formats, e.g. `git commit --amend --date="2015-05-21 16∶31 +0200"` 
+and got the date right but not the hours and minutes.
+
+Peff tried to reproduce it (as the `--date=<string>` parsing was recently
+corrected, there was a possibility of regression), but he couldn't. It
+turns out that the input Bastien was feeding did not have the right "colon".
+
+> Your "colon" is actually UTF-8 for code point U+2236 ("RATIO"). So git's
+> date parser does not recognize it, and punts to approxidate(), which
+> does all manner of crazy guessing trying to figure out what you meant.
+
 
 ## Releases
 
