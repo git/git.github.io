@@ -79,16 +79,18 @@ turns out that the input Bastien was feeding did not have the right "colon".
 
 ## Releases
 
+* [git-multimail resurected!]() (*written by Matthieu Moy*)
 
-## Other News
-
-* [git-multimail](https://github.com/git-multimail/git-multimail) got
+  [git-multimail](https://github.com/git-multimail/git-multimail) got
   a new co-maintainer, and is active again after a long period of
   inactivity. [A summary of the recent
   activity](http://thread.gmane.org/gmane.comp.version-control.git/270239)
   was posted on the Git mailing-list. A 1.1 release is expected in
   June. Don't hesitate to join the fun and help by reviewing
   pull-requests or submitting new ones!
+
+
+## Other News
 
 <!---
 ### Event
