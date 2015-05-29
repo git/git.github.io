@@ -105,4 +105,4 @@ turns out that the input Bastien was feeding did not have the right "colon".
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt;
-with help from ???.
+with help from Junio C Hamano, Matthieu Moy.
