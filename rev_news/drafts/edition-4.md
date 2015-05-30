@@ -101,10 +101,32 @@ He thought that as the owner of the official Git repository it would
 be irresponsible for him to grant submitGit the authorization it asks
 for. Roberto though [fixed this issue](https://github.com/rtyley/submitgit/pull/3) a few days later.
 
-<!---
 ### Reviews
--->
 
+* [clean/smudge empty contents](http://thread.gmane.org/gmane.comp.version-control.git/269050)
+
+Jim Hill noticed that Git issues an error message saying that copy_fd() was given a bad
+file descriptor when clean/smudge filters is fed an file with empty contents, found that
+the problem was caused because an in-memory contents that was empty was passed (by mistake)
+as `NULL`, instead of an empty string `""` in this codepath, but the `NULL` was used as a
+signal to tell Git to instead read from a given file descriptor. The fix was trivially
+correct and was applied.
+
+The new test script, however, exhibited a flaky behaviour. Sometimes it passed, sometimes
+it saw EPIPE. Peff observed:
+
+> Hmm, I thought we turned off SIGPIPE when writing to filters these days.
+> Looks like we still complain if we get EPIPE, though. I feel like it
+> should be the filter's business whether it wants to consume all of the
+> input or not[1], and we should only be checking its exit status.
+>
+> [1] As a practical example, consider a file format that has a lot of
+>    cruft at the end. The clean filter would want to read only to the
+>    start of the cruft, and then stop for reasons of efficiency.
+ 
+The discussion lead to
+an [enhancement](http://thread.gmane.org/gmane.comp.version-control.git/269050/focus=269383)
+to allow clean/smudge filters to quit before reading their input fully.
 
 ### Support
 
