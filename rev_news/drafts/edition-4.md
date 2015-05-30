@@ -66,7 +66,7 @@ discussion, Stefan Beller summerized the discussions at the [Git Merge
 > Unfortunately nobody stepped up to actually do the work, yet :(
 
 A few days later, Roberto Tyley, who is the author of
-[the BFG repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/)
+[the BFG repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/),
 replied to Stefan's email [by announcing submitGit](http://thread.gmane.org/gmane.comp.version-control.git/269699):
 
 > Hello, I'm stepping up to do that work :) Or at least, I'm implementing a
