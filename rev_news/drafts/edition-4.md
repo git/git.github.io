@@ -17,9 +17,89 @@ This edition covers what happened during the month of May 2015.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [submitGit for patch submission](http://thread.gmane.org/gmane.comp.version-control.git/269699/)
+
+At the [Git Merge 2015](http://git-merge.com/) during the Contributor
+Summit, there were discussions about how to help people send patches
+to the Git mailing list.
+
+Properly sending patches to the mailing list is not easy in the first
+place because email clients these days tend to heavily reformat the
+content they send. This reformating, which can include word-wraping
+the text, making it quoted-printable, adding MIME parts or replacing
+tabs with spaces, will in most cases prevent any inlined patch sent to
+the Git mailing list to be applied or even reviewed.
+
+That's why the SubmittingPatches documentation file has [a long
+explanation to help people send patches](https://github.com/git/git/blob/master/Documentation/SubmittingPatches#L137)
+which starts with:
+
+> Learn to use format-patch and send-email if possible.  These commands
+> are optimized for the workflow of sending patches, avoiding many ways
+> your existing e-mail client that is optimized for "multipart/*" mime
+> type e-mails to corrupt and render your patches unusable.
+
+[git send-email](http://git-scm.com/docs/git-send-email) is indeed the
+best way to send emails to the mailing list once it has been properly
+configured. The problem is that it is not very easy to configure to
+say the least, especially on Windows.
+
+[A recent discussion on the mailing
+list](http://thread.gmane.org/gmane.comp.version-control.git/268000/)
+shows how difficult it can be even for developers to find a way to
+properly send a patch to the mailing list. Toward the end of the
+discussion, Stefan Beller summerized the discussions at the [Git Merge
+2015](http://git-merge.com/) this way:
+
+> This workflow discussion was a topic at the GitMerge2015 conference,
+> and there are essentially 2 groups, those who know how to send email
+> and those who complain about it. A solution was agreed on by nearly all
+> of the contributors. It would be awesome to have a git-to-email proxy,
+> such that you could do a git push <proxy> master:refs/for/mailinglist
+> and this proxy would convert the push into sending patch series to the
+> mailing list. It could even convert the following discussion back into
+> comments (on Github?) but as a first step we'd want to try out a one
+> way proxy.
+>
+> Unfortunately nobody stepped up to actually do the work, yet :(
+
+A few days later, Roberto Tyley, who is the author of
+[the BFG repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/)
+replied to Stefan's email [by announcing submitGit](http://thread.gmane.org/gmane.comp.version-control.git/269699):
+
+> Hello, I'm stepping up to do that work :) Or at least, I'm implementing a
+> one-way GitHub PR -> Mailing list tool, called submitGit:
+>
+> https://submitgit.herokuapp.com/
+>
+> Here's what a user does:
+>
+> * create a PR on https://github.com/git/git
+> * logs into https://submitgit.herokuapp.com/ with GitHub auth
+> * selects their PR on https://submitgit.herokuapp.com/git/git/pulls
+> * gets submitGit to email the PR as patches to themselves, in order to
+> check it looks ok
+> * when they're ready, get submitGit to send it to the mailing list on
+> their behalf
+>
+> All discussion of the patch *stays* on the mailing list - I'm not
+> attempting to change anything about the Git community process, other
+> than make it easier for a wider group people to submit patches to the
+> list.
+
+This announce was met with a lot of enthousiasm from the community,
+especially from the [Git for Windows](https://msysgit.github.io/)
+developers.
+
+Junio Hamano, the Git maintainer, liked it a lot too and wanted to try
+it. Unfortunately he found that the application, which uses GitHub
+authentication,
+[requires too much authorization](http://thread.gmane.org/gmane.comp.version-control.git/269733).
+He thought that as the owner of the official Git repository it would
+be irresponsible for him to grant submitGit the authorization it asks
+for. Roberto though [fixed this issue](https://github.com/rtyley/submitgit/pull/3) a few days later.
 
 <!---
 ### Reviews
@@ -30,7 +110,7 @@ This edition covers what happened during the month of May 2015.
 
 * [git pack protocol question: sideband responses in case of errors?](http://thread.gmane.org/gmane.comp.version-control.git/268949)
 
-Christian Halstrick said that he sometimes get "invalid channel 101"
+Christian Halstrick said that he sometimes gets "invalid channel 101"
 errors when pushing over HTTP using a JGit client.
 
 He had already greatly debugged the problem which appears when quotas
@@ -102,7 +182,6 @@ turns out that the input Bastien was feeding did not have the right "colon".
 
 
 ## Credits
-
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt;
-with help from Junio C Hamano, Matthieu Moy.
+with help from Junio C Hamano and Matthieu Moy.
