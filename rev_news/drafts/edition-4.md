@@ -169,6 +169,16 @@ turns out that the input Bastien was feeding did not have the right "colon".
   June. Don't hesitate to join the fun and help by reviewing
   pull-requests or submitting new ones!
 
+* Git [2.3.8](http://article.gmane.org/gmane.comp.version-control.git/268828) (final for 2.3.x series for now)
+
+* Git [2.4.1 and 2.4.2](http://git-blame.blogspot.com/2015/05/git-241-and-242.html) maintenance releases.
+
+  Together with Git 2.3.8, `git commit --date=now` now works correctly in timezones that honor
+  daylight-saving-time, fixing a 
+  breakage [Linus noticed](http://thread.gmane.org/gmane.comp.version-control.git/267183).
+
+* [Git for Windows 2.x preview](http://article.gmane.org/gmane.comp.version-control.msysgit/21601)
+
 
 ## Other News
 
