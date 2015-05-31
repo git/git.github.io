@@ -89,7 +89,7 @@ replied to Stefan's email [by announcing submitGit](http://thread.gmane.org/gman
 > than make it easier for a wider group people to submit patches to the
 > list.
 
-This announce was met with a lot of enthousiasm from the community,
+This announce was met with a lot of enthusiasm from the community,
 especially from the [Git for Windows](https://msysgit.github.io/)
 developers.
 
