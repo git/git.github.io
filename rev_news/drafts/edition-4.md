@@ -94,12 +94,11 @@ especially from the [Git for Windows](https://msysgit.github.io/)
 developers.
 
 Junio Hamano, the Git maintainer, liked it a lot too and wanted to try
-it. Unfortunately he found that the application, which uses GitHub
-authentication,
-[requires too much authorization](http://thread.gmane.org/gmane.comp.version-control.git/269733).
-He thought that as the owner of the official Git repository it would
-be irresponsible for him to grant submitGit the authorization it asks
-for. Roberto [fixed this issue](https://github.com/rtyley/submitgit/pull/3) a few days later.
+it, but the application, which uses GitHub authentication,
+[requires too much authorization](http://thread.gmane.org/gmane.comp.version-control.git/269733),
+which made it risky and made him uncomfortable to try it out.
+Roberto [fixed this issue](https://github.com/rtyley/submitgit/pull/3) quickly.
+It it now safe to use this service, and aspiring contributors are encouraged to try it out.
 
 * git-multimail resurrected! (*written by Matthieu Moy*)
 
