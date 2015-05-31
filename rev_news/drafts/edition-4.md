@@ -10,8 +10,8 @@ navbar: false
 ## Git Rev News: Edition 4 (June 3rd, 2015)
 
 Welcome to the fourth edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
-a digest of all things Git. For our goals, the archives, the way we work, how to contribute or to
-subscribe see [the Git Rev News page](http://git.github.io/rev_news/rev_news.html) on [git.github.io](http://git.github.io).
+a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
+subscribe, see [the Git Rev News page](http://git.github.io/rev_news/rev_news.html) on [git.github.io](http://git.github.io).
 
 This edition covers what happened during the month of May 2015.
 
@@ -21,13 +21,13 @@ This edition covers what happened during the month of May 2015.
 
 * [submitGit for patch submission](http://thread.gmane.org/gmane.comp.version-control.git/269699/)
 
-At the [Git Merge 2015](http://git-merge.com/) during the Contributor
+At the [Git Merge 2015](http://git-merge.com/) conference, during the Contributor
 Summit, there were discussions about how to help people send patches
 to the Git mailing list.
 
 Properly sending patches to the mailing list is not easy in the first
 place because email clients these days tend to heavily reformat the
-content they send. This reformating, which can include word-wraping
+content they send. This reformatting, which may include word-wrapping
 the text, making it quoted-printable, adding MIME parts or replacing
 tabs with spaces, will in most cases prevent any inlined patch sent to
 the Git mailing list to be applied or even reviewed.
@@ -50,7 +50,7 @@ say the least, especially on Windows.
 list](http://thread.gmane.org/gmane.comp.version-control.git/268000/)
 shows how difficult it can be even for developers to find a way to
 properly send a patch to the mailing list. Toward the end of the
-discussion, Stefan Beller summerized the discussions at the [Git Merge
+discussion, Stefan Beller summarized the discussions at [Git Merge
 2015](http://git-merge.com/) this way:
 
 > This workflow discussion was a topic at the GitMerge2015 conference,
@@ -89,7 +89,7 @@ replied to Stefan's email [by announcing submitGit](http://thread.gmane.org/gman
 > than make it easier for a wider group people to submit patches to the
 > list.
 
-This announce was met with a lot of enthousiasm from the community,
+This announcement was met with a lot of enthusiasm from the community,
 especially from the [Git for Windows](https://msysgit.github.io/)
 developers.
 
@@ -99,14 +99,14 @@ authentication,
 [requires too much authorization](http://thread.gmane.org/gmane.comp.version-control.git/269733).
 He thought that as the owner of the official Git repository it would
 be irresponsible for him to grant submitGit the authorization it asks
-for. Roberto though [fixed this issue](https://github.com/rtyley/submitgit/pull/3) a few days later.
+for. Roberto [fixed this issue](https://github.com/rtyley/submitgit/pull/3) a few days later.
 
 
 ### Reviews
 
 * [sha1_file: pass empty buffer to index empty file](http://thread.gmane.org/gmane.comp.version-control.git/269050)
 
-Jim Hill posted a bug fix patch along with a test case. The bug was
+Jim Hill posted a bugfix patch along with a test case. The bug was
 that a NULL pointer was passed instead of an empty string when
 filtering an empty file. This generated an error on stderr but `git
 add` succeeded anyway.
@@ -127,7 +127,7 @@ before reading their input fully. Junio then decided to
 Christian Halstrick said that he sometimes gets "invalid channel 101"
 errors when pushing over HTTP using a JGit client.
 
-He had already greatly debugged the problem which appears when quotas
+He had already deeply debugged the problem which appears when quotas
 on the filesystem prevent the Git server to store a big packfile. The
 server then sends back a packet line "0013error: ..." to the client,
 but the client think that sideband communication should still be used,
@@ -157,7 +157,7 @@ And Shawn concluded with the following:
 
 * ["git commit --date" does not behave well?](http://thread.gmane.org/gmane.comp.version-control.git/269832) (*written by Junio C Hamano*)
 
-Bastien Traverse was having trouble lying the date when creating a commit
+Bastien Traverse was having trouble specifying the date when creating a commit
 with the `--date` parameter to `git commit` command.  He tried various
 formats, e.g. `git commit --amend --date="2015-05-21 16∶31 +0200"` 
 and got the date right but not the hours and minutes.
@@ -173,7 +173,7 @@ turns out that the input Bastien was feeding did not have the right "colon".
 
 ## Releases
 
-* [git-multimail resurected!]() (*written by Matthieu Moy*)
+* [git-multimail resurrected!]() (*written by Matthieu Moy*)
 
   [git-multimail](https://github.com/git-multimail/git-multimail) got
   a new co-maintainer, and is active again after a long period of
@@ -196,6 +196,7 @@ turns out that the input Bastien was feeding did not have the right "colon".
 
 
 ## Credits
+
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt;
 with help from Junio C Hamano and Matthieu Moy.
