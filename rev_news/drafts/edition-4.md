@@ -101,6 +101,15 @@ He thought that as the owner of the official Git repository it would
 be irresponsible for him to grant submitGit the authorization it asks
 for. Roberto [fixed this issue](https://github.com/rtyley/submitgit/pull/3) a few days later.
 
+* git-multimail resurrected! (*written by Matthieu Moy*)
+
+  [git-multimail](https://github.com/git-multimail/git-multimail) got
+  a new co-maintainer, and is active again after a long period of
+  inactivity. [A summary of the recent
+  activity](http://thread.gmane.org/gmane.comp.version-control.git/270239)
+  was posted on the Git mailing-list. A 1.1 release is expected in
+  June. Don't hesitate to join the fun and help by reviewing
+  pull-requests or submitting new ones!
 
 ### Reviews
 
@@ -172,16 +181,6 @@ turns out that the input Bastien was feeding did not have the right "colon".
 
 
 ## Releases
-
-* git-multimail resurrected! (*written by Matthieu Moy*)
-
-  [git-multimail](https://github.com/git-multimail/git-multimail) got
-  a new co-maintainer, and is active again after a long period of
-  inactivity. [A summary of the recent
-  activity](http://thread.gmane.org/gmane.comp.version-control.git/270239)
-  was posted on the Git mailing-list. A 1.1 release is expected in
-  June. Don't hesitate to join the fun and help by reviewing
-  pull-requests or submitting new ones!
 
 * Git 2.4.1 and 2.4.2 was released recently. Project maintainer Junio [took to his blog to describe the changes in detail](http://git-blame.blogspot.com/2015/05/git-241-and-242.html).
 * GitLab shipped version [7.11.4](https://about.gitlab.com/2015/05/28/gitlab-7-dot-11-dot-4-released/) on top of the major [7.11](https://about.gitlab.com/2015/05/22/gitlab-7-11-released/) release. They also announced [a new GitLab logo](https://about.gitlab.com/2015/05/18/a-new-gitlab-logo/).
