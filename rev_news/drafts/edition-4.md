@@ -173,7 +173,7 @@ turns out that the input Bastien was feeding did not have the right "colon".
 
 ## Releases
 
-* [git-multimail resurrected!]() (*written by Matthieu Moy*)
+* git-multimail resurrected! (*written by Matthieu Moy*)
 
   [git-multimail](https://github.com/git-multimail/git-multimail) got
   a new co-maintainer, and is active again after a long period of
@@ -183,6 +183,10 @@ turns out that the input Bastien was feeding did not have the right "colon".
   June. Don't hesitate to join the fun and help by reviewing
   pull-requests or submitting new ones!
 
+* Git 2.4.1 and 2.4.2 was released recently. Project maintainer Junio [took to his blog to describe the changes in detail](http://git-blame.blogspot.com/2015/05/git-241-and-242.html).
+* GitLab shipped version [7.11.4](https://about.gitlab.com/2015/05/28/gitlab-7-dot-11-dot-4-released/) on top of the major [7.11](https://about.gitlab.com/2015/05/22/gitlab-7-11-released/) release. They also announced [a new GitLab logo](https://about.gitlab.com/2015/05/18/a-new-gitlab-logo/).
+* [Rugged 0.22.2](https://github.com/libgit2/rugged/releases/tag/v0.22.2) was released, bumping their libgit2 version.
+
 
 ## Other News
 
@@ -190,10 +194,39 @@ turns out that the input Bastien was feeding did not have the right "colon".
 ### Event
 -->
 
-<!---
 ### Media
--->
 
+
+__Various__
+  
+* Seasoned Git contributor [Jonathan Nieder received full committer status on the JGit project](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg02895.html)
+* GitHub now has an official [Engineering Blog](http://githubengineering.com)
+* [GitMinutes #36: Git Merge 2015 Part
+2](http://episodes.gitminutes.com/2015/05/gitminutes-36-git-merge-2015-part-2.html),
+another podcast episode from the conferencere (out of a total of 5)
+
+__Light reading__
+
+* [A statistician's initial experiences of Git/GitHub](http://thestatsgeek.com/2015/05/16/a-statisticians-initial-experiences-of-gitgithub/), by Jonathan Bartlett
+* [The power of Git subtree](https://developer.atlassian.com/blog/2015/05/the-power-of-git-subtree/), by our own Nicola Paolucci
+* [Advantages of Monolithic Version Control](http://danluu.com/monorepo/), by Dan Luu
+* [My Global Git Commit Template](http://ericjmritz.name/2015/05/27/my-global-git-commit-template/), by Eric James Michael Ritz
+
+__Git tools and sites__
+
+* [gittorrent](http://blog.printf.net/articles/2015/05/29/announcing-gittorrent-a-decentralized-github/), a decentralized GitHub approach using the BitTorrent protocol
+* [Infocalypse](http://draketo.de/english/freenet/real-life-infocalypse) gives you fully decentralized Github with real anonymity, using only free software
+* [Meat!](https://getmeat.io/), a new Git hosting platform challenger
+* [git-hub](https://github.com/ingydotnet/git-hub), GitHub commandline interface written in bash, similar to the venerable, and identically named..
+* [hub](https://hub.github.com/), which is written in [<del>Ruby</del> Go](https://github.com/github/hub/issues/475)
+* [Timeglass](https://github.com/timeglass/glass), automated time tracking for Git repositories
+* [multigit](https://github.com/capr/multigit), layered git repositories
+* [WDX_GitCommander](https://github.com/Darthholi/WDX_GitCommander), Git plugin for Total Commander
+* [git-migrate](https://github.com/afshinm/git-migrate), a simple shell script to move Git repositories from one server to another
+* [git-hooks](https://github.com/juanpabloaj/git-hooks) shows useful example hooks by language and hook name. Still quite empty, but interesting
+* [GitCop](https://gitcop.com/) offers automitic inspection of commit messages pushed to GitHub 
+* [Gitgest](https://github.com/ccidral/gitgest), a bash script that emails git commit digests in HTML format
+* [git-sham](https://bitbucket.org/tpettersen/git-sham) manipulates the `GIT_COMMITTER_DATE` of the most recent commit until the SHA matches a particular pattern :)
 
 ## Credits
 
