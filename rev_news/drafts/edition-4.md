@@ -112,21 +112,30 @@ It it now safe to use this service, and aspiring contributors are encouraged to 
 
 ### Reviews
 
-* [sha1_file: pass empty buffer to index empty file](http://thread.gmane.org/gmane.comp.version-control.git/269050)
+* [clean/smudge empty contents](http://thread.gmane.org/gmane.comp.version-control.git/269050)
 
-Jim Hill posted a bugfix patch along with a test case. The bug was
-that a NULL pointer was passed instead of an empty string when
-filtering an empty file. This generated an error on stderr but `git
-add` succeeded anyway.
+Jim Hill noticed that Git issues an error message saying that copy_fd() was given a bad
+file descriptor when clean/smudge filters is fed an file with empty contents, found that
+the problem was caused because an in-memory contents that was empty was passed (by mistake)
+as `NULL`, instead of an empty string `""` in this codepath, but the `NULL` was used as a
+signal to tell Git to instead read from a given file descriptor. The fix was trivially
+correct and was applied.
 
-Junio Hamano acknowledged that it was a good fix, and that by the way
-the fact that `git add` succeeded despite the error was another bug.
+The new test script, however, exhibited a flaky behaviour. Sometimes it passed, sometimes
+it saw EPIPE. Peff observed:
 
-Jim replied that he has found more than one other bug and provided
-more test cases. Junio reviewed the new tests along with Jeff King,
-who suggested that clean/smudge filters could be allowed to quit
-before reading their input fully. Junio then decided to
-[implement this suggestion](http://thread.gmane.org/gmane.comp.version-control.git/269050/focus=269383).
+> Hmm, I thought we turned off SIGPIPE when writing to filters these days.
+> Looks like we still complain if we get EPIPE, though. I feel like it
+> should be the filter's business whether it wants to consume all of the
+> input or not[1], and we should only be checking its exit status.
+>
+> [1] As a practical example, consider a file format that has a lot of
+>    cruft at the end. The clean filter would want to read only to the
+>    start of the cruft, and then stop for reasons of efficiency.
+
+The discussion lead to
+an [enhancement](http://thread.gmane.org/gmane.comp.version-control.git/269050/focus=269383)
+to allow clean/smudge filters to quit before reading their input fully.
 
 ### Support
 
