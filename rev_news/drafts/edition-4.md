@@ -101,10 +101,24 @@ He thought that as the owner of the official Git repository it would
 be irresponsible for him to grant submitGit the authorization it asks
 for. Roberto though [fixed this issue](https://github.com/rtyley/submitgit/pull/3) a few days later.
 
-<!---
-### Reviews
--->
 
+### Reviews
+
+* [sha1_file: pass empty buffer to index empty file](http://thread.gmane.org/gmane.comp.version-control.git/269050)
+
+Jim Hill posted a bug fix patch along with a test case. The bug was
+that a NULL pointer was passed instead of an empty string when
+filtering an empty file. This generated an error on stderr but `git
+add` succeeded anyway.
+
+Junio Hamano acknowledged that it was a good fix, and that by the way
+the fact that `git add` succeeded despite the error was another bug.
+
+Jim replied that he has found more than one other bug and provided
+more test cases. Junio reviewed the new tests along with Jeff King,
+who suggested that clean/smudge filters could be allowed to quit
+before reading their input fully. Junio then decided to
+[implement this suggestion](http://thread.gmane.org/gmane.comp.version-control.git/269050/focus=269383).
 
 ### Support
 
