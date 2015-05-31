@@ -11,7 +11,7 @@ navbar: false
 
 Welcome to the fourth edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
 a digest of all things Git. For our goals, the archives, the way we work, how to contribute or to
-subscribe see [the Git Rev News page](http://git.github.io/rev_news/rev_news.html) on http://git.github.io.
+subscribe see [the Git Rev News page](http://git.github.io/rev_news/rev_news.html) on [git.github.io](http://git.github.io).
 
 This edition covers what happened during the month of May 2015.
 
