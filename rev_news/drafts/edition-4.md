@@ -100,7 +100,7 @@ which made it risky and made him uncomfortable to try it out.
 Roberto [fixed this issue](https://github.com/rtyley/submitgit/pull/3) quickly.
 It it now safe to use this service, and aspiring contributors are encouraged to try it out.
 
-* git-multimail resurrected! (*written by Matthieu Moy*)
+* [git-multimail resurrected!](http://thread.gmane.org/gmane.comp.version-control.git/270239) (*written by Matthieu Moy*)
 
   [git-multimail](https://github.com/git-multimail/git-multimail) got
   a new co-maintainer, and is active again after a long period of
