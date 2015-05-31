@@ -112,7 +112,7 @@ It it now safe to use this service, and aspiring contributors are encouraged to 
 
 ### Reviews
 
-* [clean/smudge empty contents](http://thread.gmane.org/gmane.comp.version-control.git/269050)
+* [clean/smudge empty contents](http://thread.gmane.org/gmane.comp.version-control.git/269050) (*written by Junio C Hamano*)
 
 Jim Hill noticed that Git issues an error message saying that copy_fd() was given a bad
 file descriptor when clean/smudge filters is fed an file with empty contents, found that
