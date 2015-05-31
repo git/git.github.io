@@ -29,8 +29,8 @@ Properly sending patches to the mailing list is not easy in the first
 place because email clients these days tend to heavily reformat the
 content they send. This reformatting, which may include word-wrapping
 the text, making it quoted-printable, adding MIME parts or replacing
-tabs with spaces, will in most cases prevent any inlined patch sent to
-the Git mailing list to be applied or even reviewed.
+tabs with spaces, will in most cases makes inlined patches sent to
+the Git mailing list impossible to apply or even review.
 
 That's why the SubmittingPatches documentation file has [a long
 explanation to help people send patches](https://github.com/git/git/blob/master/Documentation/SubmittingPatches#L137)
