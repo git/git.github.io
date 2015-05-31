@@ -189,13 +189,6 @@ turns out that the input Bastien was feeding did not have the right "colon".
 
 ## Other News
 
-<!---
-### Event
--->
-
-### Media
-
-
 __Various__
   
 * Seasoned Git contributor [Jonathan Nieder received full committer status on the JGit project](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg02895.html)
