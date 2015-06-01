@@ -91,14 +91,14 @@ replied to Stefan's email [by announcing submitGit](http://thread.gmane.org/gman
 
 This announcement was met with a lot of enthusiasm from the community,
 especially from the [Git for Windows](https://msysgit.github.io/)
-developers.
+developers. Junio Hamano, the Git maintainer, also liked the idea and pointed out that
+submitGit would be usable for an even wider audience if it only required
+[a narrower scope of GitHub authorization](http://thread.gmane.org/gmane.comp.version-control.git/269733),
+which [submitGit was updated to reflect a few days
+later](https://github.com/rtyley/submitgit/pull/3) - improvements are still coming!
 
-Junio Hamano, the Git maintainer, liked it a lot too and wanted to try
-it, but the application, which uses GitHub authentication,
-[requires too much authorization](http://thread.gmane.org/gmane.comp.version-control.git/269733),
-which made it risky and made him uncomfortable to try it out.
-Roberto [fixed this issue](https://github.com/rtyley/submitgit/pull/3) quickly.
-It it now safe to use this service, and aspiring contributors are encouraged to try it out.
+Aspiring contributors are encouraged to try submitGit out, and provide feedback
+on the mailing list or on the project's [GitHub issues](https://github.com/rtyley/submitgit/issues).
 
 * [git-multimail resurrected!](http://thread.gmane.org/gmane.comp.version-control.git/270239) (*written by Matthieu Moy*)
 
