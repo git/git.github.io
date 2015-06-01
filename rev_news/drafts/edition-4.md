@@ -144,13 +144,13 @@ to allow clean/smudge filters to quit before reading their input fully.
 Christian Halstrick said that he sometimes gets "invalid channel 101"
 errors when pushing over HTTP using a JGit client.
 
-He had already deeply debugged the problem which appears when quotas
-on the filesystem prevent the Git server to store a big packfile. The
-server then sends back a packet line "0013error: ..." to the client,
-but the client think that sideband communication should still be used,
-so it interprets the "e" from "error" as a channel number. The ascii
-code of "e", which is 101 in decimal, is the reason why the error is
-"invalid channel 101".
+He had already debugged the problem and noticed it only appeared when
+quotas on the filesystem prevented the Git server from storing a big
+packfile. In these cases, the server sends back a packet line
+"0013error: ..." to the client; but the client, thinking the sideband
+communication should still be used, interprets the "e" from "error"
+as a channel number. The ascii code of "e", which is 101 in
+decimal, is the reason why the error is "invalid channel 101".
 
 Christian asked a few questions to get more information about when
 sideband communication should happen and how a server should respond
