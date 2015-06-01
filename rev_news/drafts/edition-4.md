@@ -190,12 +190,7 @@ turns out that the input Bastien was feeding did not have the right "colon".
 
 ## Releases
 
-* Git 2.4.1 and 2.4.2 was released recently. Project maintainer Junio [took to his blog to describe the changes in detail](http://git-blame.blogspot.com/2015/05/git-241-and-242.html).
-* GitLab shipped version [7.11.4](https://about.gitlab.com/2015/05/28/gitlab-7-dot-11-dot-4-released/) on top of the major [7.11](https://about.gitlab.com/2015/05/22/gitlab-7-11-released/) release. They also announced [a new GitLab logo](https://about.gitlab.com/2015/05/18/a-new-gitlab-logo/).
-* [Rugged 0.22.2](https://github.com/libgit2/rugged/releases/tag/v0.22.2) was released, bumping their libgit2 version.
-
 * Git [2.3.8](http://article.gmane.org/gmane.comp.version-control.git/268828) (final for 2.3.x series for now)
-
 * Git [2.4.1 and 2.4.2](http://git-blame.blogspot.com/2015/05/git-241-and-242.html) maintenance releases.
 
   Together with Git 2.3.8, `git commit --date=now` now works correctly in timezones that honor
@@ -203,6 +198,20 @@ turns out that the input Bastien was feeding did not have the right "colon".
   breakage [Linus noticed](http://thread.gmane.org/gmane.comp.version-control.git/267183).
 
 * [Git for Windows 2.x preview](http://article.gmane.org/gmane.comp.version-control.msysgit/21601)
+
+We are nearing the Git 2.x release for Windows. Project maintainer, Johannes Schindelin, wrote the following:
+
+> There are 32-bit and 64-bit versions both of regular installers and portable installers ("portable"
+> meaning that they are .7z archives that can be unpacked anywhere and run in place, without any need for
+> running an installer).
+>
+> My projected time line is to hammer out the last kinks until Friday, and then continue after a one-week
+> leave, if needed, and then finally retire msysGit and start the official 2.x release cycle of Git for Windows.
+
+Other releases:
+
+* GitLab shipped version [7.11.4](https://about.gitlab.com/2015/05/28/gitlab-7-dot-11-dot-4-released/) on top of the major [7.11](https://about.gitlab.com/2015/05/22/gitlab-7-11-released/) release. They also announced [a new GitLab logo](https://about.gitlab.com/2015/05/18/a-new-gitlab-logo/).
+* [Rugged 0.22.2](https://github.com/libgit2/rugged/releases/tag/v0.22.2) was released, bumping their libgit2 version.
 
 
 ## Other News
