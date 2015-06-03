@@ -251,4 +251,4 @@ __Git tools and sites__
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt;
-with help from Junio C Hamano, Matthieu Moy and Emma Jane.
+with help from Junio C Hamano, Matthieu Moy, Emma Jane Hogbin Westby, Roberto Tyley and Mikachu.
