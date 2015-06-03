@@ -243,7 +243,7 @@ __Git tools and sites__
 * [WDX_GitCommander](https://github.com/Darthholi/WDX_GitCommander), Git plugin for Total Commander
 * [git-migrate](https://github.com/afshinm/git-migrate), a simple shell script to move Git repositories from one server to another
 * [git-hooks](https://github.com/juanpabloaj/git-hooks) shows useful example hooks by language and hook name. Still quite empty, but interesting
-* [GitCop](https://gitcop.com/) offers automitic inspection of commit messages pushed to GitHub 
+* [GitCop](https://gitcop.com/) offers automatic inspection of commit messages pushed to GitHub
 * [Gitgest](https://github.com/ccidral/gitgest), a bash script that emails git commit digests in HTML format
 * [git-sham](https://bitbucket.org/tpettersen/git-sham) manipulates the `GIT_COMMITTER_DATE` of the most recent commit until the SHA matches a particular pattern :)
 
