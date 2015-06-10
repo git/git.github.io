@@ -22,7 +22,6 @@ time, mark, audio, video {
 body {
   font-family: sans-serif;
   line-height: 1;
-  margin: 2em;
   font-size: 14px;
   line-height: 22px;
   font-family: "adelle", Georgia, "Times New Roman", serif;
@@ -32,17 +31,28 @@ body {
 
 .site {
   text-align: left;
-  width: 42em;
-  margin: 0 auto;
-  padding: 0 2em 0 2em;
+  padding: 2em 2em 0;
   float: left;
+  flex: 1;
 }
 
 .navbar {
   float: left;
   text-align: left;
   width: 20em;
-  margin-right: 10px;
+  padding: 2em;
+}
+
+@media (max-width: 700px) {
+  body {
+    flex-direction:column;
+  }
+
+  .navbar {
+    width: 100%;
+  
+    order: 2;
+}
 }
 
 ol, ul {
@@ -81,6 +91,11 @@ body {
   line-height: 22px;
   font-family: "adelle", Georgia, "Times New Roman", serif;
   color: #4e443c;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .windows.chrome body,
@@ -1481,11 +1496,6 @@ pre.sh_sourceCode .sh_value {
   font-style: normal;
 }
 
-
-body {
-}
-
-
 .windows.chrome body *,
 .windows.ie8 body * {
   font-family: Georgia, "Times New Roman", serif !important;
@@ -1601,6 +1611,7 @@ header a.button h3 {
 p {
   color: #6b5d52;
   margin-bottom: 15px;
+  word-wrap: break-word;
 }
 
 #front-main p {
