@@ -30,10 +30,13 @@ body {
 }
 
 .site {
-  text-align: left;
-  padding: 2em 2em 0;
-  float: left;
-  flex: 1;
+    text-align: left;
+    padding: 2em 2em 0;
+    float: left;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 .navbar {
@@ -47,20 +50,42 @@ body {
     background-color: #a09a93;
     text-align: right;
     padding: 0.3em 2em;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
     order: 1;
     display: none;
 }
 
+#wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  max-width: 940px;
+}
+
 @media (max-width: 700px) {
     #wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     .site {
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+        -ms-flex-order: 2;
         order: 2;
     }
     .navbar {
         width: 100%;
-        order: 3;
+        -webkit-box-ordinal-group:4;
+        -webkit-order:3;
+        -ms-flex-order:3;
+        order:3;
     }
     #menuLinkBar {
         display: block;
@@ -1508,13 +1533,6 @@ pre.sh_sourceCode .sh_value {
 .windows.chrome body *,
 .windows.ie8 body * {
   font-family: Georgia, "Times New Roman", serif !important;
-}
-
-
-#wrapper {
-  display: flex;
-  margin: 0 auto;
-  max-width: 940px;
 }
 
 header {
