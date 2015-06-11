@@ -91,14 +91,14 @@ replied to Stefan's email [by announcing submitGit](http://thread.gmane.org/gman
 
 This announcement was met with a lot of enthusiasm from the community,
 especially from the [Git for Windows](https://msysgit.github.io/)
-developers.
+developers. Junio Hamano, the Git maintainer, also liked the idea and pointed out that
+submitGit would be usable for an even wider audience if it only required
+[a narrower scope of GitHub authorization](http://thread.gmane.org/gmane.comp.version-control.git/269733),
+which [submitGit was updated to reflect a few days
+later](https://github.com/rtyley/submitgit/pull/3) - improvements are still coming!
 
-Junio Hamano, the Git maintainer, liked it a lot too and wanted to try
-it, but the application, which uses GitHub authentication,
-[requires too much authorization](http://thread.gmane.org/gmane.comp.version-control.git/269733),
-which made it risky and made him uncomfortable to try it out.
-Roberto [fixed this issue](https://github.com/rtyley/submitgit/pull/3) quickly.
-It it now safe to use this service, and aspiring contributors are encouraged to try it out.
+Aspiring contributors are encouraged to try submitGit out, and provide feedback
+on the mailing list or on the project's [GitHub issues](https://github.com/rtyley/submitgit/issues).
 
 * [git-multimail resurrected!](http://thread.gmane.org/gmane.comp.version-control.git/270239) (*written by Matthieu Moy*)
 
@@ -144,13 +144,13 @@ to allow clean/smudge filters to quit before reading their input fully.
 Christian Halstrick said that he sometimes gets "invalid channel 101"
 errors when pushing over HTTP using a JGit client.
 
-He had already deeply debugged the problem which appears when quotas
-on the filesystem prevent the Git server to store a big packfile. The
-server then sends back a packet line "0013error: ..." to the client,
-but the client think that sideband communication should still be used,
-so it interprets the "e" from "error" as a channel number. The ascii
-code of "e", which is 101 in decimal, is the reason why the error is
-"invalid channel 101".
+He had already debugged the problem and noticed it only appeared when
+quotas on the filesystem prevented the Git server from storing a big
+packfile. In these cases, the server sends back a packet line
+"0013error: ..." to the client; but the client, thinking the sideband
+communication should still be used, interprets the "e" from "error"
+as a channel number. The ascii code of "e", which is 101 in
+decimal, is the reason why the error is "invalid channel 101".
 
 Christian asked a few questions to get more information about when
 sideband communication should happen and how a server should respond
@@ -243,7 +243,7 @@ __Git tools and sites__
 * [WDX_GitCommander](https://github.com/Darthholi/WDX_GitCommander), Git plugin for Total Commander
 * [git-migrate](https://github.com/afshinm/git-migrate), a simple shell script to move Git repositories from one server to another
 * [git-hooks](https://github.com/juanpabloaj/git-hooks) shows useful example hooks by language and hook name. Still quite empty, but interesting
-* [GitCop](https://gitcop.com/) offers automitic inspection of commit messages pushed to GitHub 
+* [GitCop](https://gitcop.com/) offers automatic inspection of commit messages pushed to GitHub
 * [Gitgest](https://github.com/ccidral/gitgest), a bash script that emails git commit digests in HTML format
 * [git-sham](https://bitbucket.org/tpettersen/git-sham) manipulates the `GIT_COMMITTER_DATE` of the most recent commit until the SHA matches a particular pattern :)
 
@@ -251,4 +251,4 @@ __Git tools and sites__
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt;
-with help from Junio C Hamano and Matthieu Moy.
+with help from Junio C Hamano, Matthieu Moy, Emma Jane Hogbin Westby, Roberto Tyley and Mikachu.
