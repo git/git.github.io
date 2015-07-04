@@ -22,10 +22,49 @@ This edition covers what happened during the month of June 2015.
 -->
 
 
-<!---
-### Reviews
--->
 
+### Reviews
+
+* [warning when charset conversion did not happen due to iconv compiled out](http://thread.gmane.org/gmane.comp.version-control.git/270952/)
+
+Max Kirillov proposed a patch to warn when a conversion from a
+character set to another character set could not happen because iconv
+has not been compiled into Git.
+
+Iconv is one of the few C libraries that people can compile either in
+or out of Git. Most of the time though they choose to compile it in,
+because it makes it possible to convert text, like commit messages,
+between character sets, as long, of course, as the requested character
+sets are installed on the system.
+
+Junio replied to Max's patch with:
+
+> I actually am OK if the user gets exactly the same warning between
+> the two cases:
+>
+> - iconv failed to convert in the real reencode_string_len()
+>
+> - we compiled out iconv() and real conversion was asked.
+>
+> and this patch is about the latter; I do not think it is reasonable
+> to give noise only for the latter but not for the former.
+
+and later he explained:
+
+> After all, if you had to convert between UTF-8 and ISO-2022-JP, the
+> latter of which your system does not support, whether you use
+> iconv-disabled build of Git or iconv-enabled build of Git, we pass
+> the bytestream through, right?  Your patch gives warning for the
+> former (which is a good starting point if we want to warn "user
+> expected them to be converted, we didn't" case) but does not do
+> anything to the latter, even though users of the iconv-disabled
+> build is more likely to be aware of the potential issue (and are
+> likely to be willing to accept that) than the ones with
+> iconv-enabled build that runs on a system that cannot convert the
+> specific encoding.
+
+Hopefully Max will send an updated patch that will take Junio's
+suggestion into account.
 
 <!---
 ### Support
