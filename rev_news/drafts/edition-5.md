@@ -25,7 +25,7 @@ This edition covers what happened during the month of June 2015.
 
 ### Reviews
 
-* [warning when charset conversion did not happen due to iconv compiled out](http://thread.gmane.org/gmane.comp.version-control.git/270952/)
+* [Warning when charset conversion did not happen due to iconv compiled out](http://thread.gmane.org/gmane.comp.version-control.git/270952/)
 
 Max Kirillov proposed a patch to warn when a conversion from a
 character set to another character set could not happen because iconv
