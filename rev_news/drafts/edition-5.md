@@ -9,7 +9,7 @@ navbar: false
 
 ## Git Rev News: Edition 5 (July 8th, 2015)
 
-Welcome to the fourth edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
+Welcome to the fifth edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](http://git.github.io/rev_news/rev_news.html) on [git.github.io](http://git.github.io).
 
