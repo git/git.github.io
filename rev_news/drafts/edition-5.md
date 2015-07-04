@@ -74,10 +74,63 @@ and later he explained:
 Hopefully Max will send an updated patch that will take Junio's
 suggestion into account.
 
-<!---
-### Support
--->
 
+### Support
+
+* [Several date related issues](http://search.gmane.org/?query=several+date+related+issues&group=gmane.comp.version-control.git)
+
+Rigth now `git log` supports the following date related otions:
+
+```
+--date-order
+
+--author-date-order
+
+--date=(relative|local|default|iso|iso-strict|rfc|short|raw)
+```
+
+But H.Merijn Brand noticed two problems with those options.
+
+First he found that dates shown by `git log --date=local` do not
+respect the LC_TIME locale configuration.
+
+Jeff King, aka Peff, replied:
+
+> Right, we use our own routines for formatting the dates, and not
+> strftime. And it probably should stay that way in general, as git's
+> output is often meant to be parsed.
+>
+> That being said, I do not think it would be wrong to have a date-mode
+> that just showed strftime("%c"), or some other arbitrary strftime
+> string. You could then set log.date as appropriate for human
+> consumption.
+
+To that H.Merijn suggested the implementation of the following options
+`--date=lc`, `--date=lc_time` and `--date=locale`.
+
+The second issue was that `git log` with either `--date-order` or
+`--author-date-order` does not order the commit by date.
+
+To that Peff replied:
+
+> Correct. The documentation says:
+>
+>    --date-order
+>      Show no parents before all of its children are shown, but otherwise
+>      show commits in the commit timestamp order.
+>
+> [...]
+>
+> There is not a simple way to show commits in arbitrary order without
+> respect to parentage. I think you'd have to do something like:
+>
+>   git log --format='%at %H' |
+>   sort -rn |
+>   cut -d' ' -f2 |
+>   git log --stdin --no-walk
+
+And H.Merijn said that the option names are misleading, and suggested
+a gitk option for Peff's script.
 
 ## Releases
 
