@@ -37,6 +37,14 @@ because it makes it possible to convert text, like commit messages,
 between character sets, as long, of course, as the requested character
 sets are installed on the system.
 
+For example when one uses [git-am](http://git-scm.com/docs/git-am) to
+create a commit from a patch sent in an email,
+[git-mailinfo](http://git-scm.com/docs/git-mailinfo) is called to
+extract from the email the information needed to create the
+commit. When doing that git-mailinfo also by default tries to use
+iconv to convert the commit message, the author name and the author
+email from the email encoding to UTF-8.
+
 Junio replied to Max's patch with:
 
 > I actually am OK if the user gets exactly the same warning between
