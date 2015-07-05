@@ -77,6 +77,69 @@ suggestion into account.
 
 ### Support
 
+* [Visualizing merge conflicts after the fact](http://thread.gmane.org/gmane.comp.version-control.git/271738)
+
+Eric Raible reported the following:
+
+> Upon returning from a vacation, I was looking at what people had been
+> up to, and discovered on merge in which a colleague had resolved a merge
+> incorrectly.  It turns out that he has pushed *many* merges over the past
+> year which had conflicts in my code, and now I don't trust any of them.
+>
+> So naturally I want to check each of them for correctness.
+>
+> I know about "git log -p -cc SHA -- path", but it really doesn't
+> show just the conflicts so there's just too much noise in that output.
+>
+> I use kdiff3 to resolve conflicts, so I'm looking for a way to
+> visualize these already-resolved conflicts with that tool.
+
+Johannes Schindelin, aka Dscho, suggested the following shell script
+to recreate the merge conflicts and then compare the resulting commit
+with the existing one:
+
+```bash
+mergecommit=$1
+
+# probably should verify that the working directory is clean, yadda yadda
+
+# recreate merge conflicts on an unnamed branch (Git speak: detached HEAD)
+git checkout $mergecommit^
+git merge $mergecommit^2 ||
+die "This merge did not have any problem!"
+
+# compare to the actual resolution as per the merge commit
+git diff $mergecommit
+```
+
+Michael J Gruber replied to Dscho that, as we often get this type of
+request, it might be a good idea to better support the above.
+
+Junio Hamano then pointed to
+[a patch series from last September by Thomas Rast](http://thread.gmane.org/gmane.comp.version-control.git/256591)
+that implements a new `--remerge-diff` option for `git log` to show
+what a conflict resolution changed. Unfotunately, though the feature
+looks promising at least to Michael, it looks like some more work is
+needed to properly integrate this feature into Git.
+
+Dscho, when he originally replied to Eric, also suggested the
+following command to list all the merge commits created by one
+colleague in the current branch:
+
+```bash
+git rev-list --author="My Colleague" --parents HEAD |
+sed -n 's/ .* .*//p'
+```
+
+And Michael noticed that using the `--merges` option would be better
+than using `sed` to filter the merge commits. Something like the
+following could do it:
+
+```bash
+git rev-list --author="My Colleague" --parents --merges HEAD
+```
+
+
 * [Several date related issues](http://thread.gmane.org/gmane.comp.version-control.git/272658)
 
 Rigth now `git log` supports the following date related otions:
