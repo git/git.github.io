@@ -259,9 +259,9 @@ __Light reading__
 
 __Git tools and sites__
 
-* [GitKraken is an "intuitive git client that doesn't suck"](http://www.gitkraken.com/)
-* ["The Git interface you've been missingall your life"](http://gitup.co/)
-* [An all new, unified GitHub desktop (not released at the time of writing)](https://desktop.github.com/)
+* [GitKraken](http://www.gitkraken.com/), an "intuitive git client that doesn't suck" (request an invite for a beta release)
+* [GitUp](http://gitup.co/), "the Git interface you've been missing all your life" (pre-release available, free to download and use)
+* [GitHub Desktop](https://desktop.github.com/), "an all new, unified GitHub desktop" (sign up for a sneak peek)
 * [ASFMirror is a collection of, and a guide for projects that are move from SourceForge to GitHub.](https://a-sf-mirror.github.io/)
 * [Rewind: A small library of handy git analysis scripts roughly inspired by Gary Bernhardt's Destroy All Software screencasts](https://github.com/gilesbowkett/rewind)
 * [Run meld or any git difftool to interactively stage changes. git-meld-index runs meld -- or any other git difftool (kdiff3, diffuse, etc.) -- to allow you to interactively stage changes to the git index (also known as the git staging area).](https://github.com/jjlee/git-meld-index)
