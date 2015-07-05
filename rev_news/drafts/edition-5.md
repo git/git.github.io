@@ -77,7 +77,7 @@ suggestion into account.
 
 ### Support
 
-* [Several date related issues](http://search.gmane.org/?query=several+date+related+issues&group=gmane.comp.version-control.git)
+* [Several date related issues](http://thread.gmane.org/gmane.comp.version-control.git/272658)
 
 Rigth now `git log` supports the following date related otions:
 
@@ -132,6 +132,16 @@ To that Peff replied:
 
 And H.Merijn said that the option names are misleading, and suggested
 a gitk option for Peff's script.
+
+It looks like no gitk option has been developed yet for the above, but
+Peff sent [a patch series](http://thread.gmane.org/gmane.comp.version-control.git/272695)
+to implement `--date=format:...` which can produce the same output as the
+`--date=...` options H.Merijn suggested about his first issue.
+
+As Peff's patch series uses [strftime()](http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html)
+to process the format passed in `--date=format:...`, a discussion
+about how to manage a potential strftime() failure when it is passed a
+bogus format ensued.
 
 ## Releases
 
