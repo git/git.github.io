@@ -264,7 +264,7 @@ __Git tools and sites__
 * [GitHub Desktop](https://desktop.github.com/), "an all new, unified GitHub desktop" (sign up for a sneak peek)
 * [ASFMirror](https://a-sf-mirror.github.io/), a collection of, and a guide for projects that are to move from SourceForge to GitHub
 * [Rewind](https://github.com/gilesbowkett/rewind), a small library of handy git analysis scripts roughly inspired by Gary Bernhardt's Destroy All Software screencasts (no license stated)
-* [git-meld-index](https://github.com/jjlee/git-meld-index), run meld or any git difftool to interactively stage changes. git-meld-index runs meld -- or any other git difftool (kdiff3, diffuse, etc.) -- to allow you to interactively stage changes to the git index (also known as the git staging area).
+* [git-meld-index](https://github.com/jjlee/git-meld-index), run meld or any git difftool (kdiff3, diffuse, etc) to interactively stage changes (GPLv2)
 * [Gogs (Go Git Service)](http://gogs.io/docs/intro/), a painless self-hosted Git Service written in Go (MIT licensed)
 * [Integrating GIT commit flow with your own editor with ease. FastCommit focuses on the commit flow for improving the development cycle.](https://github.com/c9s/FastCommit)
 * ['git inject' is a git alias (see code at the bottom). It is similar to 'git commit --amend', but it allows you to 'inject' your changes into commits further back in history (using 'rebase').](https://news.ycombinator.com/item?id=9705690)
