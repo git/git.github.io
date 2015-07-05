@@ -108,8 +108,9 @@ Jeff King, aka Peff, replied:
 To that H.Merijn suggested the implementation of the following options
 `--date=lc`, `--date=lc_time` and `--date=locale`.
 
-The second issue was that `git log` with either `--date-order` or
-`--author-date-order` does not order the commit by date.
+The second issue H.Merijn reported was that `git log` with either
+`--date-order` or `--author-date-order` does not order the commit by
+date.
 
 To that Peff replied:
 
