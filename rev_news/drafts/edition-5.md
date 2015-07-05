@@ -292,26 +292,25 @@ and Paul is working on [porting git-pull from shell to C](https://github.com/pyo
 and on [porting git-am from shell to C too](https://github.com/pyokagan/git/commits/pt/builtin-am).
 
 
-* [This Git repository contains the ~300 metro stations from Paris, by Vincent Barbaresi](https://github.com/vbarbaresi/MetroGit )
-* [In this presentation Christian Couder will use examples from the development of IPFS, a new hypermedia protocol, and Git itself to show how to take advantage of all the test related features and techniques that Git provides and develops.](http://lccocc2015.sched.org/event/4c3e8531fd6cdd920807df23c5277400 )
-* [Second version of the terminal based game that teaches users git commands](https://github.com/git-game/git-game-v2 )
-* [YouTube talk by Richard Hipp - Git: Just Say No. A critical view from the competition.](https://www.youtube.com/watch?feature=player_detailpage&v=ghtpJnrdgbo#t=119 )
-
+* [MetroGit](https://github.com/vbarbaresi/MetroGit) - This Git repository contains the ~300 metro stations from Paris. , by Vincent Barbaresi
+* In [this presentation](http://lccocc2015.sched.org/event/4c3e8531fd6cdd920807df23c5277400) Christian Couder will use examples from the development of IPFS, a new hypermedia protocol, and Git itself to show how to take advantage of all the test related features and techniques that Git provides and develops.
+* [git-game-v2](https://github.com/git-game/git-game-v2) - Second version of the terminal based game that teaches users git commands
+* [Git: Just Say No](https://www.youtube.com/watch?feature=player_detailpage&v=ghtpJnrdgbo#t=119) - YouTube talk by Richard Hipp. A critical view from the competition
 
 __Light reading__
 
-* [Fun with "git blame -s"](http://git-blame.blogspot.de/2015/06/fun-with-git-blame-s.html)
-* [Keeping a clean git history, by Mat McLoughlin](http://mat-mcloughlin.net/2015/06/27/keeping-a-clean-git-history/)
-* [Improving on Git Flow: Code Reviews, by Doug Turnbull](http://opensourceconnections.com/blog/2015/06/29/improving-on-git-flow-code-reviews/)
-* [What to know before transitioning your team to Git, an interview with Emma Jane Hogbin Westby by Rikki Endsley](http://opensource.com/business/15/7/interview-emma-jane-hogbin-westby-git)
-* [A git choose-your-own-adventure! by Seth Robertson](https://sethrobertson.github.io/GitFixUm/fixup.html)
-* [Utter Disregard for Git Commit History, by Zach Holman](http://zachholman.com/posts/git-commit-history/)
-* [How to undo (almost) anything with Git, by Joshua Wehner](https://github.com/blog/2019-how-to-undo-almost-anything-with-git)
-* [Ask HN: How do you version control your microservices?](https://news.ycombinator.com/item?id=9705098)
-* [Auto-squashing Git Commits, by George Brocklehurst ](https://robots.thoughtbot.com/autosquashing-git-commits)
-* [Unpacking Git packfiles, by Aditya Mukerjee (OK, maybe not _that_ light reading, this one)](https://codewords.recurse.com/issues/three/unpacking-git-packfiles/)
-* [How to manage Git workflow and stay sane, by Armağan Amcalar](https://medium.com/@dashersw/how-to-manage-git-workflow-and-stay-sane-e32405e9dbf0)
-* [GitHub takes a closer look at Europe ](https://github.com/blog/2023-a-closer-look-at-europe)
+* [Fun with "git blame -s"](http://git-blame.blogspot.de/2015/06/fun-with-git-blame-s.html), blogpost by Junio C Hamano
+* [Keeping a clean git history](http://mat-mcloughlin.net/2015/06/27/keeping-a-clean-git-history/), by Mat McLoughlin
+* [Improving on Git Flow: Code Reviews](http://opensourceconnections.com/blog/2015/06/29/improving-on-git-flow-code-reviews/), by Doug Turnbull
+* [What to know before transitioning your team to Git](http://opensource.com/business/15/7/interview-emma-jane-hogbin-westby-git), an interview with Emma Jane Hogbin Westby by Rikki Endsley
+* [A git choose-your-own-adventure!](https://sethrobertson.github.io/GitFixUm/fixup.html), by Seth Robertson
+* [Utter Disregard for Git Commit History](http://zachholman.com/posts/git-commit-history/), by Zach Holman
+* [How to undo (almost) anything with Git](https://github.com/blog/2019-how-to-undo-almost-anything-with-git), by Joshua Wehner
+* Ask HN: [How do you version control your microservices?](https://news.ycombinator.com/item?id=9705098)
+* [Auto-squashing Git Commits](https://robots.thoughtbot.com/autosquashing-git-commits), by George Brocklehurst
+* [Unpacking Git packfiles](https://codewords.recurse.com/issues/three/unpacking-git-packfiles/), by Aditya Mukerjee (OK, maybe not _that_ light reading, this one)
+* [How to manage Git workflow and stay sane](https://medium.com/@dashersw/how-to-manage-git-workflow-and-stay-sane-e32405e9dbf0), by Armağan Amcalar
+* GitHub takes a [closer look at Europe](https://github.com/blog/2023-a-closer-look-at-europe)
 
 __Git tools and sites__
 
