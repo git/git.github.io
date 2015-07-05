@@ -208,7 +208,7 @@ bogus format ensued.
 
 ## Releases
 
-* [git-multimail](https://github.com/git-multimail/git-multimail) [1.1.0](https://github.com/git-multimail/git-multimail/releases/tag/1.1.0) was released. git-multimail is a tool to send notification emails for pushes to a git repository. It is also available in the `contrib/hooks/multimail/` directory of Git's source tree (version 1.1.0 will be distributed with Git 2.5).
+* [git-multimail](https://github.com/git-multimail/git-multimail) [1.1.0](https://github.com/git-multimail/git-multimail/releases/tag/1.1.0) and [1.1.1](https://github.com/git-multimail/git-multimail/releases/tag/1.1.1) were released. git-multimail is a tool to send notification emails for pushes to a git repository. It is also available in the `contrib/hooks/multimail/` directory of Git's source tree (the new version will be distributed with Git 2.5).
 
 * [Git for Windows 2.4.4.2 Release Notes](https://github.com/git-for-windows/build-extra/blob/fd821c12f/installer/ReleaseNotes.md)
 * [Git for Windows 2.4.5.1 Release Notes](https://github.com/git-for-windows/build-extra/blob/125ac3d8e/installer/ReleaseNotes.md)
