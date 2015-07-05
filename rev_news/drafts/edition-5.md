@@ -262,10 +262,10 @@ __Git tools and sites__
 * [GitKraken](http://www.gitkraken.com/), an "intuitive git client that doesn't suck" (request an invite for a beta release)
 * [GitUp](http://gitup.co/), "the Git interface you've been missing all your life" (pre-release available, free to download and use)
 * [GitHub Desktop](https://desktop.github.com/), "an all new, unified GitHub desktop" (sign up for a sneak peek)
-* [ASFMirror is a collection of, and a guide for projects that are move from SourceForge to GitHub.](https://a-sf-mirror.github.io/)
-* [Rewind: A small library of handy git analysis scripts roughly inspired by Gary Bernhardt's Destroy All Software screencasts](https://github.com/gilesbowkett/rewind)
-* [Run meld or any git difftool to interactively stage changes. git-meld-index runs meld -- or any other git difftool (kdiff3, diffuse, etc.) -- to allow you to interactively stage changes to the git index (also known as the git staging area).](https://github.com/jjlee/git-meld-index)
-* [Gogs(Go Git Service) is a painless self-hosted Git Service written in Go.](http://gogs.io/docs/intro/)
+* [ASFMirror](https://a-sf-mirror.github.io/), a collection of, and a guide for projects that are to move from SourceForge to GitHub
+* [Rewind](https://github.com/gilesbowkett/rewind), a small library of handy git analysis scripts roughly inspired by Gary Bernhardt's Destroy All Software screencasts (no license stated)
+* [git-meld-index](https://github.com/jjlee/git-meld-index), run meld or any git difftool to interactively stage changes. git-meld-index runs meld -- or any other git difftool (kdiff3, diffuse, etc.) -- to allow you to interactively stage changes to the git index (also known as the git staging area).
+* [Gogs (Go Git Service)](http://gogs.io/docs/intro/), a painless self-hosted Git Service written in Go (MIT licensed)
 * [Integrating GIT commit flow with your own editor with ease. FastCommit focuses on the commit flow for improving the development cycle.](https://github.com/c9s/FastCommit)
 * ['git inject' is a git alias (see code at the bottom). It is similar to 'git commit --amend', but it allows you to 'inject' your changes into commits further back in history (using 'rebase').](https://news.ycombinator.com/item?id=9705690)
 * [Shell library to test your Unix tools like Git does ](http://mlafeldt.github.com/sharness)
