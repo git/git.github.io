@@ -43,7 +43,7 @@ change to `git prune` led to a
 that concluded that worktree-related maintenance functionality doesn't
 belong in `git prune`.
 
-Consequently, Nguyá»…n ThÃ¡i Ngá»c Duy submitted a
+Consequently, Nguyễn Thái Ngọc Duy submitted a
 [patch](http://thread.gmane.org/gmane.comp.version-control.git/272949)
 which introduces a new `git worktree` command, and relocates `git prune
 --worktrees` functionality to `git worktree prune`.
