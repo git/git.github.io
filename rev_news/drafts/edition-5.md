@@ -118,7 +118,7 @@ request, it might be a good idea to better support the above.
 Junio Hamano then pointed to
 [a patch series from last September by Thomas Rast](http://thread.gmane.org/gmane.comp.version-control.git/256591)
 that implements a new `--remerge-diff` option for `git log` to show
-what a conflict resolution changed. Unfotunately, though the feature
+what a conflict resolution changed. Unfortunately, though the feature
 looks promising at least to Michael, it looks like some more work is
 needed to properly integrate this feature into Git.
 
@@ -142,7 +142,7 @@ git rev-list --author="My Colleague" --parents --merges HEAD
 
 * [Several date related issues](http://thread.gmane.org/gmane.comp.version-control.git/272658)
 
-Rigth now `git log` supports the following date related otions:
+Right now `git log` supports the following date related options:
 
 ```
 --date-order
