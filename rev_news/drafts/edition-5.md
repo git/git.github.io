@@ -206,6 +206,63 @@ to process the format passed in `--date=format:...`, a discussion
 about how to manage a potential strftime() failure when it is passed a
 bogus format ensued.
 
+
+* Linked-worktrees
+
+The linked-worktree facility allows multiple working directories to share a
+single repository, with (typically) a different branch checked out in each
+worktree. Introduced more than half a year ago to provide integrated and
+platform-agnostic support for similar functionality long supplied by the
+Unix-only and somewhat fragile `contrib/git-new-workdir` script,
+linked-worktrees recently migrated to the *master* branch, but is not
+yet part of any release.
+
+Creation of linked-worktrees is accomplished via `git checkout --to <path>
+<branch>`, and cleanup of leftover administrative files, after `<path>` is
+deleted, is done with `git prune --worktrees`. However, a recent unrelated
+change to `git prune` led to a
+[discussion](http://article.gmane.org/gmane.comp.version-control.git/272546)
+that concluded that worktree-related maintenance functionality doesn't
+belong in `git prune`.
+
+Consequently, Nguyá»…n ThÃ¡i Ngá»c Duy submitted a
+[patch](http://thread.gmane.org/gmane.comp.version-control.git/272949)
+which introduces a new `git worktree` command, and relocates `git prune
+--worktrees` functionality to `git worktree prune`.
+
+Eric Sunshine then further fleshed out `git worktree` with a
+[patch](http://article.gmane.org/gmane.comp.version-control.git/273032)
+which relocates `git checkout --to` functionality to `git worktree new`.
+A lengthy
+[discussion](http://thread.gmane.org/gmane.comp.version-control.git/273032)
+ensued, which eventually led to a second version, consisting of [23
+patches](http://thread.gmane.org/gmane.comp.version-control.git/273316),
+and which names the command `git worktree add`, rather than `git worktree
+new`, and gives the documentation some needed attention.
+
+Aside from documentation updates, several other user-visible changes arrive
+with the second version. For instance, while preparing worktree-creation
+functionality for the move from `git checkout` to `git worktree`, Eric
+discovered and fixed a bug where `git checkout --to <path> HEAD~1` would
+instead incorrectly checkout `HEAD~2` at `<path>`.
+
+The second version also introduces convenience enhancements.  In
+particular, the `<branch>` in `git worktree add <path> <branch>`, is now
+optional. When omitted, a new branch is created automatically based upon
+`<path>`, as if `-b $(basename <path>)` had been provided (where `-b
+<new-branch>` creates a new branch). For example, given `git worktree add
+../hotfix`, a new branch named *hotfix* is created and checked out into new
+worktree `../hotfix`, as if `git worktree -b hotfix ../hotfix HEAD` had
+been specified.
+
+Finally, the question was
+[raised](http://article.gmane.org/gmane.comp.version-control.git/273107)
+whether `git checkout --ignore-other-worktrees` should be retired and `git
+checkout --force` overloaded to subsume its duties, however, Junio was [not
+thrilled](http://article.gmane.org/gmane.comp.version-control.git/273108)
+by the idea.
+
+
 ## Releases
 
 * [git-multimail](https://github.com/git-multimail/git-multimail) [1.1.0](https://github.com/git-multimail/git-multimail/releases/tag/1.1.0) was released. git-multimail is a tool to send notification emails for pushes to a git repository. It is also available in the `contrib/hooks/multimail/` directory of Git's source tree (version 1.1.0 will be distributed with Git 2.5).
@@ -282,5 +339,6 @@ __Git tools and sites__
 ## Credits
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;,
-Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt;
+Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt;,
+and Eric Sunshine &lt;<sunshine@sunshineco.com>&gt;,
 with help from Junio C Hamano, Matthieu Moy and Johannes Schindelin.
