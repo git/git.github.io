@@ -207,7 +207,7 @@ about how to manage a potential strftime() failure when it is passed a
 bogus format ensued.
 
 
-* Linked-worktrees
+* [New `git worktree` command](http://thread.gmane.org/gmane.comp.version-control.git/272949)
 
 The linked-worktree facility allows multiple working directories to share a
 single repository, with (typically) a different branch checked out in each
@@ -221,7 +221,7 @@ Creation of linked-worktrees is accomplished via `git checkout --to <path>
 <branch>`, and cleanup of leftover administrative files, after `<path>` is
 deleted, is done with `git prune --worktrees`. However, a recent unrelated
 change to `git prune` led to a
-[discussion](http://article.gmane.org/gmane.comp.version-control.git/272546)
+[discussion](http://thread.gmane.org/gmane.comp.version-control.git/272447/focus=272546)
 that concluded that worktree-related maintenance functionality doesn't
 belong in `git prune`.
 
