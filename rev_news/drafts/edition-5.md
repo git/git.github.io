@@ -17,10 +17,19 @@ This edition covers what happened during the month of June 2015.
 
 ## Discussions
 
-<!---
 ### General
--->
 
+* Ensimag students working on Git (*written by Matthieu Moy*)
+
+As part of a school project, Antoine DELAITE, Remi GALAN ALFONSO, Remi LESPINET, Guillaume PAGES and Louis-Alexandre STUBER, from [Ensimag](http://ensimag.grenoble-inp.fr/), contributed to Git. As a warm-up, they implemented a `am.threeWay` configuration variable to have `git am` use `-3` by default (will be in Git 2.5). Some patch series are being polished to allow `git bisect` to use an arbitrary pair of terms instead of `good` and `bad`, an improved management of list of addresses and aliases in the `--to`, `--cc` and `--bcc` options of `git send-email`, a more verbose output for `git status` when ran during a `rebase -i` session, and a safety feature for `git rebase` to avoid dropping lines by mistake in the todo-list.
+
+* Google Summer of Code midterm evaluations
+
+Both of the Git project [Google Summer of Code](http://www.google-melange.com/gsoc/document/show/gsoc_program/google/gsoc2015/about_page)
+students, Paul Tan and Karthik Nayak have passed the midterm evaluation and are doing well. Karthik is working on
+[unifying the implementations of `git branch -l`, `git tag -l`, and `git for-each-ref`](https://github.com/KarthikNayak/git/commits/ref_filter)
+and Paul is working on [porting git-pull from shell to C](https://github.com/pyokagan/git/commits/pt/builtin-pull)
+and on [porting git-am from shell to C too](https://github.com/pyokagan/git/commits/pt/builtin-am).
 
 
 ### Reviews
@@ -262,15 +271,6 @@ to process the format passed in `--date=format:...`, a discussion
 about how to manage a potential strftime() failure when it is passed a
 bogus format ensued.
 
-### Other 
-
-* As part of a school project, Antoine DELAITE, Remi GALAN ALFONSO, Remi LESPINET, Guillaume PAGES and Louis-Alexandre STUBER, from [Ensimag](http://ensimag.grenoble-inp.fr/), contributed to Git. As a warm-up, they implemented a `am.threeWay` configuration variable to have `git am` use `-3` by default (will be in Git 2.5). Some patch series are being polished to allow `git bisect` to use an arbitrary pair of terms instead of `good` and `bad`, an improved management of list of addresses and aliases in the `--to`, `--cc` and `--bcc` options of `git send-email`, a more verbose output for `git status` when ran during a `rebase -i` session, and a safety feature for `git rebase` to avoid dropping lines by mistake in the todo-list.
-
-* Both of the Git project [Google Summer of Code](http://www.google-melange.com/gsoc/document/show/gsoc_program/google/gsoc2015/about_page)
-students, Paul Tan and Karthik Nayak have passed the midterm evaluation and are doing well. Karthik is working on
-[unifying the implementations of `git branch -l`, `git tag -l`, and `git for-each-ref`](https://github.com/KarthikNayak/git/commits/ref_filter)
-and Paul is working on [porting git-pull from shell to C](https://github.com/pyokagan/git/commits/pt/builtin-pull)
-and on [porting git-am from shell to C too](https://github.com/pyokagan/git/commits/pt/builtin-am).
 
 ## Releases
 
