@@ -45,7 +45,7 @@ commit. When doing that git-mailinfo also by default tries to use
 iconv to convert the commit message, the author name and the author
 email from the email encoding to UTF-8.
 
-Junio replied to Max's patch with:
+Junio Hamano, the Git maintainer, replied to Max's patch with:
 
 > I actually am OK if the user gets exactly the same warning between
 > the two cases:
@@ -57,7 +57,7 @@ Junio replied to Max's patch with:
 > and this patch is about the latter; I do not think it is reasonable
 > to give noise only for the latter but not for the former.
 
-and later he explained:
+and later Junio explained:
 
 > After all, if you had to convert between UTF-8 and ISO-2022-JP, the
 > latter of which your system does not support, whether you use
