@@ -207,7 +207,7 @@ about how to manage a potential strftime() failure when it is passed a
 bogus format ensued.
 
 
-* [New `git worktree` command](http://thread.gmane.org/gmane.comp.version-control.git/272949)
+* [New `git worktree` command](http://thread.gmane.org/gmane.comp.version-control.git/272949) (*written by Eric Sunshine*)
 
 The linked-worktree facility allows multiple working directories to share a
 single repository, with (typically) a different branch checked out in each
@@ -339,6 +339,5 @@ __Git tools and sites__
 ## Credits
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;,
-Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt;,
-and Eric Sunshine &lt;<sunshine@sunshineco.com>&gt;,
-with help from Junio C Hamano, Matthieu Moy and Johannes Schindelin.
+Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt;,
+with help from Eric Sunshine &lt;<sunshine@sunshineco.com>&gt;, Junio C Hamano, Matthieu Moy and Johannes Schindelin.
