@@ -35,12 +35,13 @@ Unix-only and somewhat fragile `contrib/git-new-workdir` script,
 linked-worktrees recently migrated to the *master* branch, but is not
 yet part of any release.
 
-Creation of linked-worktrees is accomplished via `git checkout --to <path>
-<branch>`, and cleanup of leftover administrative files, after `<path>` is
-deleted, is done with `git prune --worktrees`. However, a recent unrelated
-change to `git prune` led to a
+As originally implemented, creation of linked-worktrees was accomplished
+via `git checkout --to <path> <branch>`, and cleanup of leftover
+administrative files after manual deletion of `<path>` was done with `git
+prune --worktrees`. However, a recent unrelated change to `git prune` led
+to a
 [discussion](http://thread.gmane.org/gmane.comp.version-control.git/272447/focus=272546)
-that concluded that worktree-related maintenance functionality doesn't
+that concluded that worktree-related maintenance functionality didn't
 belong in `git prune`.
 
 Consequently, Nguyễn Thái Ngọc Duy submitted a
