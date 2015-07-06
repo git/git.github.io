@@ -330,9 +330,9 @@ __Git tools and sites__
 * [Gitgo](https://github.com/ChimeraCoder/gitgo/), Go functions for interacting with Git repositories. Unlike libgit2, which is written in C, Gitgo is written in pure Go (no license)
 * [Gkv](https://github.com/ybur-yug/gkv), a simple git wrapper that allows you to use it as a kv store (WTFPL license)
 * [gitlogchat](https://github.com/oflisback/gitlogchat), a "minimalistic git log based chat" (MIT license)
-* [Gipeda the Git Performance Dashboard](https://github.com/nomeata/gipeda)
-* [Handling large files in git via symlinks](https://github.com/cdunn2001/git-sym)
-* [Pulla lets you pull code into all folder containing git projects ](https://github.com/shubhamchaudhary/pulla)
+* [Gipeda](https://github.com/nomeata/gipeda), "the Git Performance Dashboard" (MIT license)
+* [git-sym](https://github.com/cdunn2001/git-sym), "handling large files in git via symlinks" (MIT license)
+* [Pulla](https://github.com/shubhamchaudhary/pulla), "lets you pull code into all folder containing git projects" (GPLv3 license)
 
 
 ## Credits
