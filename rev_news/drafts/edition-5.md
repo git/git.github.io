@@ -323,7 +323,7 @@ __Git tools and sites__
 * [git-meld-index](https://github.com/jjlee/git-meld-index), run meld or any git difftool (kdiff3, diffuse, etc) to interactively stage changes (GPLv2 license)
 * [Gogs (Go Git Service)](http://gogs.io/docs/intro/), a painless self-hosted Git Service written in Go (MIT license)
 * [FastCommit](https://github.com/c9s/FastCommit), "integrating GIT commit flow with your own editor with ease", focuses on the commit flow for improving the development cycle (only a README with a screenshot for now)
-* [git inject](https://news.ycombinator.com/item?id=9705690), a git alias, similar to `git commit --amend`, but it allows you to 'inject' your changes into commits further back in history (using 'rebase')
+* [git inject](https://news.ycombinator.com/item?id=9705690), a git alias, similar to `git commit --amend`, but it allows you to 'inject' your changes into commits further back in history using `git rebase` (no license)
 * [Sharness](http://mlafeldt.github.com/sharness), a portable shell library, extracted from Git in 2011, to test your Unix tools like Git does (GPLv2 license)
 * [Git Flow support in Eclipse](http://eclipsesource.com/blogs/2015/06/22/git-flow-top-eclipse-mars-feature-3/), "with Eclipse Mars, there is now support for Git Flow directly from Eclipse" (Eclipse Public License v1.0)
 * [Google Cloud Source Repositories](https://cloud.google.com/tools/cloud-repositories/), new Git repository hosting features on the Google Cloud Platform (free beta up to 500MB)
