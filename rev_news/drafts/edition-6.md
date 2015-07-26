@@ -51,9 +51,11 @@ Olaf thanked John, but said that the output from the above command is
 rather useless. Andreas Schwab asked why and explained how to read the
 output:
 
-> > - static void init_vp_index(struct vmbus_channel *channel, uuid_le *type_guid)
-> >  -static u32 get_vp_index(const uuid_le *type_guid)
-> > ++static void init_vp_index(struct vmbus_channel *channel, const uuid_le *type_guid)
+> ```
+> - static void init_vp_index(struct vmbus_channel *channel, uuid_le *type_guid)
+>  -static u32 get_vp_index(const uuid_le *type_guid)
+> ++static void init_vp_index(struct vmbus_channel *channel, const uuid_le *type_guid)
+> ```
 >
 > One branch renamed get_vp_index to init_vp_index, the other branch added
 > the const attribute.  This hunk combines both changes.
