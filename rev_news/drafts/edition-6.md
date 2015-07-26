@@ -27,6 +27,73 @@ This edition covers what happened during the month of July 2015.
 
 ### Support
 
+* [git log fails to show all changes for a file](http://thread.gmane.org/gmane.comp.version-control.git/273937)
+
+Working on the Linux kernel, Olaf Hering wondered why the following
+command does not show all the commits that modified a function in the
+given file:
+
+```
+git log -p -M --stat -- drivers/hv/channel_mgmt.c
+```
+
+and asked for a command that could show them all.
+
+John Keeping replied that the change not shown by the above command
+was added in an evil merge and suggested the following command, which
+adds `--cc`, instead:
+
+```
+git log -p -M --stat --cc -- drivers/hv/channel_mgmt.c
+```
+
+Olaf thanked John, but said that the output from the above command is
+rather useless. Andreas Schwab asked why and explained how to read the
+output:
+
+> > - static void init_vp_index(struct vmbus_channel *channel, uuid_le *type_guid)
+> >  -static u32 get_vp_index(const uuid_le *type_guid)
+> > ++static void init_vp_index(struct vmbus_channel *channel, const uuid_le *type_guid)
+>
+> One branch renamed get_vp_index to init_vp_index, the other branch added
+> the const attribute.  This hunk combines both changes.
+
+Then Linus Torvalds explained the situation this way:
+
+> That's not an evil merge. That's just a regular merge. One side had
+> changed the argument to "const":
+>
+>  - 1b9d48f2a579 ("hyper-v: make uuid_le const")
+>
+> while the other side had renamed the function and added an argument,
+> and changed the return type:
+>
+>  - d3ba720dd58c ("Drivers: hv: Eliminate the channel spinlock in the
+> callback path")
+>
+> an "evil merge" is something that makes changes that came from neither
+> side and aren't actually resolving a conflict.
+
+Linus then started a discussion about wether the `-p` option in `git
+log` should imply `--cc`:
+
+> That said, I do wonder if we should just make "-p" imply "--cc". Right
+> now we have the kind of odd situation that "git log -p" doesn't show
+> merge patches, but "git show <cmit>" does show them. And you kind of
+> have to know a lot about git to know the "--cc" option.
+
+Linus, Junio and Jeff Kind tried to find a sensible way to improve on
+this, but in the end it looks like nothing will be done as the new
+behavior might have some drawbacks. Junio concluded the thread with:
+
+> It just is that '-p', that clearly stands for 'patch' but does more
+> than 'patch' to produce something that cannot be fed to 'apply' by
+> defaulting to '--cc', makes me hesitate.  By making it a lot more
+> convenient for experienced people who understand these issues, I
+> have this suspicion that it would make the options less orthgonal
+> and harder to explain to new people.
+
+
 * [Git tag: pre-receive hook issue](http://thread.gmane.org/gmane.comp.version-control.git/274095)
 
 Gaurav Chhabra reported that in his company they have [a script
