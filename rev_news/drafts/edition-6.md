@@ -200,20 +200,46 @@ Gaurav thanked Junio and Jake for their support.
 
 ## Releases
 
+* Git 2.5 is out! We'll leave it to the project maintainer, Junio C. Hamano, to [tell us what is new](http://git-blame.blogspot.de/2015/07/git-25.html). More elaborate release notes can be found [in the source](https://github.com/git/git/blob/master/Documentation/RelNotes/2.5.0.txt).
+* GitLab keeps knocking out new versions, they're recently reached [7.13.2](https://about.gitlab.com/2015/07/28/gitlab-7-dot-13-dot-2-released/) in their stable train on top of the latest [7.13](https://about.gitlab.com/2015/07/22/gitlab-7-13-released/), displaying their new logo. 
+* libgit2 v0.23.0 [is out](https://github.com/libgit2/libgit2/releases/tag/v0.23.0) with a wide range of improvements.
+* Following the libgit2 release, Rugged was quick to follow suit with their own [v0.23.0](https://github.com/libgit2/rugged/releases/tag/v0.23.0), while objective-git reached [0.8.7](https://github.com/libgit2/objective-git/releases/tag/0.8.7), and pygit2 reached [v0.22.1](https://github.com/libgit2/pygit2/releases/tag/v0.22.1).
+
  
 ## Other News
 
-__Various__
-
-
 __Light reading__
 
+* A few days ago marked [the 10th anniversary of Junio becoming the maintainer](https://plus.google.com/u/0/+JunioCHamano/posts/EchiBhdBfQa) of the Git project. Congratulations!
+* GitHub, probably the biggest Git hosting provider in the world, [raised $ 250 million](http://techcrunch.com/2015/07/29/github-raises-250m-series-b-round-to-take-risks/) in order "to accelerate growth and expand its sales and engineering team" and "to allow us to think bigger and take larger risks".
+* For similar sounding reasons, GitLab [raised $ 1.5 million in a seed round](https://about.gitlab.com/2015/07/09/1.5M-raised-in-seed-funding-for-gitlab-to-accelerate-growth-and-expand-operations/) for their open source hosting option.
+* We were all shocked to find out that [one in every 600 websites has .git exposed](http://www.jamiembrown.com/blog/one-in-every-600-websites-has-git-exposed/), as shared by Jamie Brown.
+* The notorious Git mastermind of StackOverflow, VonC, explains [how to make use of the new `git worktree add` command that arrived with Git 2.5.
+* Ilmari Kontulainen of Deveo provides us with a [current rundown of options for storing large files with(out) Git](http://blog.deveo.com/storing-large-binary-files-in-git-repositories/).
+* Dealing with Git Merge Revisions, or [Zen and the Art of Git Chainsaw Maintenance](http://blog.jdwyah.com/2015/07/dealing-with-git-merge-revisions.html), by Jeff Dwyer.
+* Jim Moore shared a quick tip on [how to view a deleted file in Git](http://blog.mooregreatsoftware.com/2013/12/13/viewing-deleted-git-content/).
+* The not so light reading title this month is 'A Case of Computational Thinking: The Subtle Effect of Hidden Dependencies on the User Experience of Version Control', [a research paper from Google](https://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/42942.pdf) on the usability of version control systems
+* We'll never get tired of the awesomeness of `git bisect`, so here is Kruno Knego [giving beginners a fresh introduction](http://krunoknego.com/2015/07/14/git-bisect/).
+* Apparently Magit is such a great Git UI, that it's worth switching to Emacs just to get at it. Here's Nathan Willis [explaining what Magit 2.1 is all about](http://lwn.net/Articles/649535/) (to be honest, this section was staged using Vim/fugitive, sorry).
+* Another use-case for the under-used Git notes: [marking test suite successes](http://who-t.blogspot.de/2015/07/using-git-notes-for-marking-test-suite.html), by Peter Hutterer.
+* Don’t Fear the Rebase: [Git Garbage Collection and You](http://blog.carbonfive.com/2015/07/01/dont-fear-the-rebase-git-garbage-collection-and-you/), Chris Svenningsen helps us roll back after losing changes.
+* The most commonly used (citation needed) [git tips and tricks](http://git.io/git-tips)
+* Many of us think working with patch files is hard. Alexander Ross shows [why this need not be the case](http://aross.se/2015/06/22/create-and-apply-git-patch-files.html).
 
 __Git tools and sites__
 
+* There aren't enough great visual Git tools around. [Git for DiffPlug](https://www.kickstarter.com/projects/diffplug/git-for-diffplug) is a Kickstarter that aims to change this. Interestingly, it's [based on JGit](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg02942.html).
+* Here's an LWN article on [Gogs](http://lwn.net/Articles/650145/), which claims to be A painless self-hosted Git service.
+* [mingit](https://github.com/evansendra/mingit) is an extremely minified alias for git commands with tab completion.
+* [AWS CodeCommit](https://aws.amazon.com/blogs/aws/now-available-aws-codecommit/) is Amazon's fresh attempt at providing Git hosting.
+* [GitCompound](https://github.com/grzesiek/git_compound) allows you to compose your project using git repositories and Ruby tasks.
+* Dan Feldman from Artifactory explains [how to use Artifactory to store Git LFS resources](http://www.jfrog.com/blog/use-the-right-tool-for-the-job-git-lfs-with-artifactory/). Might this be the first non-GitHub company announcing their support for Git LFS?
+* Atlassian has relaunched their Git knowledge portal under the motto [Getting Git Right](https://www.atlassian.com/git/).
+* [git-bottle](https://github.com/da-x/git-bottle) proposes to be a better stash.
+* [gig](https://github.com/hackrslab/gig) is a command-line tool for quickly setting up .gitignore files. See also [gitignore.io](https://www.gitignore.io/).
+*
 
 ## Credits
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;,
-Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt;,
-with help from XXX.
+Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt;.
