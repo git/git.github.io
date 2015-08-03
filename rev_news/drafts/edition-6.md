@@ -84,7 +84,7 @@ log` should imply `--cc`:
 > merge patches, but "git show <cmit>" does show them. And you kind of
 > have to know a lot about git to know the "--cc" option.
 
-Linus, Junio and Jeff Kind tried to find a sensible way to improve on
+Linus, Junio and Jeff King tried to find a sensible way to improve on
 this, but in the end it looks like nothing will be done as the new
 behavior might have some drawbacks. Junio concluded the thread with:
 
