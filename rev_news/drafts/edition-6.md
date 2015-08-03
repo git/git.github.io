@@ -200,7 +200,13 @@ Gaurav thanked Junio and Jake for their support.
 
 ## Releases
 
-* Git 2.5 is out! We'll leave it to the project maintainer, Junio C. Hamano, to [tell us what is new](http://git-blame.blogspot.de/2015/07/git-25.html). More elaborate release notes can be found [in the source](https://github.com/git/git/blob/master/Documentation/RelNotes/2.5.0.txt).
+* Git 2.5 is out! The project maintainer, Junio C. Hamano, has [shared his thoughts on the release at his blog](http://git-blame.blogspot.de/2015/07/git-25.html). Git 2.5 is packed full of new features, and includes contributions from 21 new contributors. In his post, Junio describes how `git help` has changed:
+
+> One interesting change is to git help. We now list commands, grouped by the situation in which you would want to use them. This came from discussion on usability, inspired by one of the talks at GitMerge conference we had in spring.
+
+He goes on to talk about some of his favourite new features included in the release, such as a new short hand `branch@{push}` that "denotes the remote-tracking branch that tracks the branch at the remote the branch would be pushed to", and a new option `--ws-error-highlight` that can be used with `git diff` and friends to show whitespace breakages in deleted and context lines.
+
+Be sure to see the post for more on the new features, or checkout the [release notes in the source](https://github.com/git/git/blob/master/Documentation/RelNotes/2.5.0.txt) for all the nitty gritty details.
 * GitLab keeps knocking out new versions, they're recently reached [7.13.2](https://about.gitlab.com/2015/07/28/gitlab-7-dot-13-dot-2-released/) in their stable train on top of the latest [7.13](https://about.gitlab.com/2015/07/22/gitlab-7-13-released/), displaying their new logo. 
 * libgit2 v0.23.0 [is out](https://github.com/libgit2/libgit2/releases/tag/v0.23.0) with a wide range of improvements.
 * Following the libgit2 release, Rugged was quick to follow suit with their own [v0.23.0](https://github.com/libgit2/rugged/releases/tag/v0.23.0), while objective-git reached [0.8.7](https://github.com/libgit2/objective-git/releases/tag/0.8.7), and pygit2 reached [v0.22.1](https://github.com/libgit2/pygit2/releases/tag/v0.22.1).
