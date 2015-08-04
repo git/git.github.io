@@ -17,6 +17,45 @@ This edition covers what happened during the month of July 2015.
 
 ## Discussions
 
+### Did you know?
+
+Did you know that the [Linux kernel](https://www.kernel.org) you clone normally
+contains only a part of its entire history? If you need access to its
+uninterrupted evolution since the first commit you have to "graft" a few
+separate repositories together chronologically. 
+
+Git has a local - per-repository - mechanism to change and specify explicitly
+the parent of existing commits: These are called Grafts. In a repository they
+are defined in a file called "`.git/info/grafts`" (check the [Git repository
+layout manpage for details](http://www.kernel.org/pub/software/scm/git/docs/gitrepository-layout.html)).
+
+From the [Git Wiki](https://git.wiki.kernel.org/index.php/GraftPoint):
+
+> When Linus started using Git for maintaining his kernel tree there didn't
+> exist any tools to convert the old kernel history. Later, when the old kernel
+> history was imported into Git from the bkcvs gateway, grafts was created as a
+> method for making it possible to tie the two different repositories together.
+
+To re-assemble the complete kernel history these three repositories are needed:
+
+- [torvalds/linux](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git)
+- [tglx/history](https://git.kernel.org/pub/scm/linux/kernel/git/tglx/history.git)
+- [davej/history](https://git.kernel.org/pub/scm/linux/kernel/git/davej/history.git)
+
+The syntax of the Grafts file in "`.git/info/grafts`" is simple: each line
+lists a commit and it's fake parent using the `SHA-1` identifiers. So to
+re-assemble the full history of the Linux kernel add the following grafts to
+`.git/info/grafts`:
+
+```
+1da177e4c3f41524e886b7f1b8a0c1fc7321cac2 e7e173af42dbf37b1d946f9ee00219cb3b2bea6a
+7a2deb32924142696b8174cdf9b38cd72a11fc96 379a6be1eedb84ae0d476afbc4b4070383681178
+```
+
+With these grafts, you can get a complete and continuous history of the kernel
+since 0.01. Read the rest of the article on grafts and `git replace` in
+Nicola's [just published piece](https://developer.atlassian.com/blog/2015/08/grafting-earlier-history-with-git/).
+
 <!---
 ### General
 -->
