@@ -244,6 +244,19 @@ to properly check in the hook that a ref being updated is a tag:
 
 Gaurav thanked Junio and Jake for their support.
 
+----
+Before we move on to the link section of this edition, we want to make a
+"call-to-arms" for people reading the Git mailing list. We didn't
+get enough material in this edition on what was really discussed on
+the list the last month. In order to to be the window into the Git
+community that we set out to be, we need your help.
+
+So please, the next time you read through an interesting discussion on
+the mailing list, note down a few lines about it and
+[share them with us](http://git.github.io/rev_news/rev_news.html).
+
+----
+
 ## Releases
 
 * Git 2.5 (see above)!
