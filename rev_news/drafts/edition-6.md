@@ -1,13 +1,13 @@
 ---
-title: Git Rev News Edition 6 (XXX, 2015)
+title: Git Rev News Edition 6 (August 5th, 2015)
 layout: default
-date: 2015-08-05 21:06:51 +0100
+date: 2015-08-05 23:26:51 +0100
 author: tfnico
 categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 6 (August 5h, 2015)
+## Git Rev News: Edition 6 (August 5th, 2015)
 
 Welcome to the sixth edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
