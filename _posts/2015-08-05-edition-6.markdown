@@ -273,7 +273,7 @@ __Light reading__
 * GitHub, probably the biggest Git hosting provider in the world, [raised $ 250 million](http://techcrunch.com/2015/07/29/github-raises-250m-series-b-round-to-take-risks/) in order "to accelerate growth and expand its sales and engineering team" and "to allow us to think bigger and take larger risks".
 * For similar sounding reasons, GitLab [raised $ 1.5 million in a seed round](https://about.gitlab.com/2015/07/09/1.5M-raised-in-seed-funding-for-gitlab-to-accelerate-growth-and-expand-operations/) for their open source hosting option.
 * We were all shocked to find out that [one in every 600 websites has .git exposed](http://www.jamiembrown.com/blog/one-in-every-600-websites-has-git-exposed/), as shared by Jamie Brown.
-* The notorious Git mastermind of StackOverflow, VonC, explains [how to make use of the new `git worktree add` command that arrived with Git 2.5.
+* The notorious Git mastermind of StackOverflow, VonC, explains how to make use of the new `git worktree add` command that arrived with Git 2.5.
 * Ilmari Kontulainen of Deveo provides us with a [current rundown of options for storing large files with(out) Git](http://blog.deveo.com/storing-large-binary-files-in-git-repositories/).
 * Dealing with Git Merge Revisions, or [Zen and the Art of Git Chainsaw Maintenance](http://blog.jdwyah.com/2015/07/dealing-with-git-merge-revisions.html), by Jeff Dwyer.
 * Jim Moore shared a quick tip on [how to view a deleted file in Git](http://blog.mooregreatsoftware.com/2013/12/13/viewing-deleted-git-content/).
