@@ -271,10 +271,11 @@ __Light reading__
 * Don’t Fear the Rebase: [Git Garbage Collection and You](http://blog.carbonfive.com/2015/07/01/dont-fear-the-rebase-git-garbage-collection-and-you/), Chris Svenningsen helps us roll back after losing changes.
 * The most commonly used (citation needed) [git tips and tricks](http://git.io/git-tips)
 * Many of us think working with patch files is hard. Alexander Ross shows [why this need not be the case](http://aross.se/2015/06/22/create-and-apply-git-patch-files.html).
+* [git from scratch](http://www.gitfromscratch.com/) is a tutorial for non-programmers and command-line-avoiders who want to get into Git, using DiffPlug (see next link).
 
 __Git tools and sites__
 
-* There aren't enough great visual Git tools around. [Git for DiffPlug](https://www.kickstarter.com/projects/diffplug/git-for-diffplug) is a Kickstarter that aims to change this. Interestingly, it's [based on JGit](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg02942.html).
+* There aren't enough great visual Git tools around. [Git for DiffPlug](https://www.kickstarter.com/projects/diffplug/git-for-diffplug) is a Kickstarter that aims to change this. Interestingly, it's [based on JGit](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg02944.html), and the creators have proposed a VCS-agnostic diff-API, [OpenDiff](https://github.com/diffplug/opendiff).
 * Here's an LWN article on [Gogs](http://lwn.net/Articles/650145/), which claims to be A painless self-hosted Git service.
 * [mingit](https://github.com/evansendra/mingit) is an extremely minified alias for git commands with tab completion.
 * [AWS CodeCommit](https://aws.amazon.com/blogs/aws/now-available-aws-codecommit/) is Amazon's fresh attempt at providing Git hosting.
