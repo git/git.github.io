@@ -9,7 +9,7 @@ navbar: false
 
 ## Git Rev News: Edition 7 (XXX, 2015)
 
-Welcome to the sixth edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
+Welcome to the 7th edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](http://git.github.io/rev_news/rev_news.html) on [git.github.io](http://git.github.io).
 
