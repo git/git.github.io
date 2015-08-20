@@ -31,6 +31,7 @@ This edition covers what happened during the month of July 2015.
 
 ## Releases
 
+* Git for Windows 2.5.0 [was released](http://article.gmane.org/gmane.comp.version-control.msysgit/21805). It is the first release based on Git 2.x, the first release based on [MSys2](https://msys.github.io/) and the first release dropping the *-preview* suffix.
 
 ## Other News
 
