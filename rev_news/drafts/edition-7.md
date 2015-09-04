@@ -73,6 +73,15 @@ every platform.
 
 __Various__
 
+* Johannes Schindelin, aka Dscho, wrote
+  [a personal note](http://thread.gmane.org/gmane.comp.version-control.git/277194)
+  to the list explaining that since mid-August he has been working
+  full time for Microsoft on Git for Windows. He has already been the
+  Git for Windows maintainer in his spare time since the beginning of
+  this project, as well as a Git developer for more than 10 years, but
+  now he is as he says "really excited to join the club of Git
+  developers who get paid to work on Git as part of their day-jobs".
+  Congratulations to him!
 
 __Light reading__
 
