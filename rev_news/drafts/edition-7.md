@@ -21,7 +21,7 @@ This edition covers what happened during the month of August 2015.
 ### General
 -->
 
-### Google Summer of code Wrap Up
+### Google Summer of code Wrap Up (*written by Matthieu Moy*)
 
 Both of the Git project Google Summer of Code students, Paul Tan and
 Karthik Nayak have passed the final evaluation.
@@ -237,4 +237,4 @@ __Git tools and sites__
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt;,
-with help from XXX.
+with help from Matthieu Moy.
