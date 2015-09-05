@@ -136,6 +136,69 @@ and the fun will continue long after the GSoC :-).
 
 ### Reviews
 
+* [refs lmdb backend](http://thread.gmane.org/gmane.comp.version-control.git/277138)
+
+Last June, David Turner, who is working for Twitter, sent to the list a message titled
+"[RFC/Pull Request: Refs db backend](http://thread.gmane.org/gmane.comp.version-control.git/272438)"
+that started with:
+
+> I've revived and modified Ronnie Sahlberg's work on the refs db backend.
+
+Ronnie Sahlberg, working for Google, had sent last year some emails about
+[an experimental TDB backend](http://thread.gmane.org/gmane.comp.version-control.git/252582/) and
+[pluggable backends](http://thread.gmane.org/gmane.comp.version-control.git/254829/)
+he had developed to store git refs. Unfortunately his work was too experimental and had not been merged.
+
+This is interesting work because Git gets slower when the number of
+refs in a repositories is getting really big, as its packed-refs
+backend is file based and had not been designed to handle a huge
+number of refs. That's why a lot of prominent Git developers, like
+Jeff King, Shawn Pearce, Michael Haggerty, Stefan Beller, Duy Nguyen
+and Junio Hamano were interested by David's announcement last June and
+some details it contained like:
+
+> The db backend runs git for-each-ref about 30% faster than the files
+> backend with fully-packed refs on a repo with ~120k refs. It's also
+> about 4x faster than using fully-unpacked refs. In addition, and
+> perhaps more importantly, it avoids case-conflict issues on OS X.
+
+One difference between Ronnie's and David's work is that David chose
+LMDB instead of TDB for the new database backend. David explained that
+with:
+
+> The advantage of tdb is that it's smaller (~125k). The disadvantages are
+> that tdb is hard to build on OS X.  It's also not in homebrew. So lmdb
+> seemed simpler.
+
+Since June, David, helped by many reviewers like Eric Sunshine, Johan
+Herland, Michael Haggerty, Jacob Keller, Duy Nguyen, Stefan Beller,
+Johannes Sixt, Philip Oakley and Junio has worked on many related
+improvements, that are very helpful to advance this topic. That's why
+[the last version of his patch series](http://thread.gmane.org/gmane.comp.version-control.git/277138)
+contains the following:
+
+> This series depends on at least the following topics in pu:
+> dt/refs-bisection
+> dt/refs-pseudo
+> dt/reflog-tests
+> kn/for-each-tag (...)
+
+It also contains the following interesting bits:
+
+> Also, now per-worktree refs live in the filesystem.
+
+(...)
+
+> As Michael Haggerty suggested, I'm now using struct ref_transaction as
+> a base struct for the ref transaction structs.
+
+This shows that David's series is using very recent improvements by
+other developers in the Git codebase.
+
+Hopefully, we can expect that, with those new ref backends, users will
+be able to benefit soon from a huge amount of ground work that has
+been done during the last few years.
+
 * [t5004: test ZIP archives with many entries](http://thread.gmane.org/gmane.comp.version-control.git/275682/focus=276393)
 
 Johannes Schauer reported that git-archive does not use the zip64
