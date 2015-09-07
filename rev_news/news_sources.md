@@ -3,6 +3,8 @@ layout: default
 title: Git Rev News Sources
 ---
 
+# Sources
+
 Some ideas on where we can go to gather Git Rev News material.
 
 ## Mailing lists
