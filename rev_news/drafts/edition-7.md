@@ -295,8 +295,35 @@ __Various__
 
 __Light reading__
 
+* [Using git to manage vacations in a large distributed team](http://blog.scrapinghub.com/2015/06/08/git-for-managing-vacations/), by Pablo Hoffman at Scrapinghub.
+* [Git as a Document Format](https://realm.io/news/altconf-wil-shipley-git-document-format/),
+  a talk by Wil Shipley.
+* [Building maintainable step-by-step tutorials with Git](http://info.meteor.com/blog/step-by-step-tutorials-with-git) by Sashko Stubailo from Meteor.
+* [Git branches considered harmful](https://jaxenter.com/git-branches-considered-harmful-119237.html),
+  by Pieter Hintjens.
+* [Git and GitHub Hacks](http://ponyfoo.com/articles/git-github-hacks), by Nicolas Bevacqua.
+* [Better Commit Messages with a .gitmessage Template](https://robots.thoughtbot.com/better-commit-messages-with-a-gitmessage-template), by Matt Summer.
+* [Git rocks: Getting started with Git](http://git.rocks/getting-started/), an
+  interactive tutorial.
 
 __Git tools and sites__
+
+* [Git Town](http://www.git-town.com/index.html) offers a higher level,
+  workflow-oriented command line interface.
+* [Git-it (desktop version)](https://github.com/jlord/git-it-electron)
+  is an app that teaches you Git/GitHub on the command line.
+* [git-radar](https://github.com/michaeldfallen/git-radar) is a command
+  line prompt add-in that offers quite a lot of features.
+* [What are the best Git clients for Mac?](http://www.slant.co/topics/465/~what-are-the-best-git-clients-for-mac-os-x) - an interactive discussion/poll.
+* [GitHub Desktop](https://github.com/blog/2046-github-desktop-is-now-available),
+  a new generation of their GUI software for OS X and Windows.
+* [GitUp](https://github.com/git-up/GitUp) is a Git GUI based on
+  [GitUpKit](https://github.com/git-up/GitUp#gitupkit) - the
+  latter lets you build your very own custom Git UI.
+* [Pullbox](https://github.com/prashanthellina/pullbox) is a simple Dropbox
+  replacement based on Git.
+
+
 
 
 ## Credits
