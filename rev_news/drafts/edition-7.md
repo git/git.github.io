@@ -277,6 +277,7 @@ to migrate Perforce repos that contains big files.
 * Git for Windows 2.5.0 [was released](http://article.gmane.org/gmane.comp.version-control.msysgit/21805). It is the first release based on Git 2.x, the first release based on [MSys2](https://msys2.github.io/) and the first release dropping the *-preview* suffix.
 * Git 2.5.1 [was released](http://thread.gmane.org/gmane.linux.kernel/2028843).
 * Git for Windows 2.5.1 [was released soon after that](http://article.gmane.org/gmane.comp.version-control.git/276857).
+* git-multimail [1.2 Alpha 1 was released](https://github.com/git-multimail/git-multimail/releases/tag/1.2.a1). Please, report bugs and give feedback on new features before the final release.
 
 ## Other News
 
