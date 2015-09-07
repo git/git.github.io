@@ -278,6 +278,10 @@ to migrate Perforce repos that contains big files.
 * Git 2.5.1 [was released](http://thread.gmane.org/gmane.linux.kernel/2028843).
 * Git for Windows 2.5.1 [was released soon after that](http://article.gmane.org/gmane.comp.version-control.git/276857).
 * git-multimail [1.2 Alpha 1 was released](https://github.com/git-multimail/git-multimail/releases/tag/1.2.a1). Please, report bugs and give feedback on new features before the final release.
+* GitLab [7.14](https://about.gitlab.com/2015/08/22/gitlab-7-14-released/)
+  and [7.14.1 was released](https://about.gitlab.com/2015/08/25/gitlab-7-dot-14-dot-1-released/).
+* libgit2 backported some fixes into a [v0.23.2 Maintenance Release](https://github.com/libgit2/libgit2/releases/tag/v0.23.2).
+
 
 ## Other News
 
@@ -305,6 +309,9 @@ __Light reading__
 * [Better Commit Messages with a .gitmessage Template](https://robots.thoughtbot.com/better-commit-messages-with-a-gitmessage-template), by Matt Summer.
 * [Git rocks: Getting started with Git](http://git.rocks/getting-started/), an
   interactive tutorial.
+* [Blinking Commits](http://blog.annharter.com/2015/08/12/blinking-commits.html),
+  if you ever needed a blinking commit message.
+* YouTube celebrity, Day[9], recently took some minutes to [explain Git](https://www.youtube.com/watch?v=CPAIBmtH9xQ&feature=youtu.be&t=131://www.youtube.com/watch?v=CPAIBmtH9xQ&feature=youtu.be&t=1311) on his popular gaming channel.
 
 __Git tools and sites__
 
@@ -322,8 +329,10 @@ __Git tools and sites__
   latter lets you build your very own custom Git UI.
 * [Pullbox](https://github.com/prashanthellina/pullbox) is a simple Dropbox
   replacement based on Git.
-
-
+* [fit-commit](https://github.com/m1foley/fit-commit), a Git hook that makes
+  sure your commit messages are good.
+* [Gitana](http://modeling-languages.com/gitana-a-sql-based-git-repository-inspector/): a SQL-based Git Repository Inspector
+* [git-fresh](https://github.com/imsky/git-fresh), a single command for keeping your repo fresh.
 
 
 ## Credits
