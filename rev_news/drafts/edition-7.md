@@ -272,6 +272,80 @@ to migrate Perforce repos that contains big files.
 ### Support
 -->
 
+## Developer Spotlight: Eric Sunshine
+
+Q. Who are you and how did you get involved in open-source software?
+
+A. I'm an old-time developer who has been giving away software and
+source code I've written ever since I learned to program -- before
+readily-available Internet access, and long before the World Wide Web
+existed. Many of my projects -- at least the ones which weren't worth
+porting forward -- are as long-dead as the platforms and operating
+systems for which they were written.
+
+Q. How did your introduction to Git come about?
+
+A. I may have seen a periodic reference to Git here and there, but
+what really brought it to my attention was
+[a 2007 post](http://www.cmsmadesimple.org/2007/09/13/using-git-for-core-development/) by Ted Kulp
+which talked about Git's distributed nature, painless branching,
+offline capability, and full local history. As a long-time RCS, CVS,
+and Subversion user, I was intrigued, and decided to learn about Git,
+but failed utterly. Partly this was due to Git tutorials I read being
+aimed at people already at least somewhat familiar with the concept of
+distributed version control, thus not really explaining it, and, as a
+long-time centralized version control user, I had difficulty grasping
+it. The tutorials also glossed over the Git "index", thus making it
+difficult to understand its purpose or significance. Finally, Git
+terminology, such as "plumbing", "porcelain", "rebasing", and "cherry
+picking", which had no analog in other version control systems, or in
+my general experience, seemed genuinely opaque. This situation
+remained unchanged until late 2008 when I decided to try again.
+Watching a video of [a Git talk](https://youtu.be/4XpnKHJAok8) at Google by Linus Torvalds,
+followed by [one](https://youtu.be/8dhZ9BXQgc4) by Randal Schwartz, and reading improved tutorials
+helped me finally get a grip on distributed version control and Git
+itself.
+
+Q. How did you get involved in Git project itself?
+
+A. Once I learned and began using Git, I quickly came to appreciate
+its underlying architecture, the thoughtfulness which went into its
+design, and how it enabled me to create sharp, well focused commits in
+a way that other VCS's had not (or actively discouraged), as well as
+the ability to organize and polish history locally. Consequently, I
+joined the project, not because I wanted a shiny new feature or a bug
+fixed, but rather because I wanted to do my part to contribute back to
+a project from which I was benefitting. My participation takes the
+form of doing code reviews of submitted patches, diagnosing and fixing
+bugs, and adding or enhancing a feature here and there. My hope,
+particularly with the code reviews, has been to take some of the load
+off the shoulders of other regular project members.
+
+Q. What are your favorite Git features?
+
+A. My two favorite features are (1) the ability to stage changes in
+the index with precision to create sharp, well focused commits, and
+(2) interactive rebase for (repeatedly) refining a series of commits
+until I'm happy with the history they represent. More generally, given
+Git's easy branching and built-in safety mechanisms, I appreciate the
+freedom it gives me to work on many changes at once (when necessary)
+without worrying about those changes clobbering one other.
+
+Q. What is your preferred Git development model?
+
+A. I'm partial to the mailing list approach used by the Git project
+itself, since all important information -- discussions, patches, bug
+reports -- are available in a centralized location (my mailbox) with
+no effort on my part.  This allows for a more streamlined experience
+than if I have to actively seek out the information by consulting
+forums, bug trackers, and patch review websites. Moreover, the mailing
+list development model allows use of email-related tools best suited
+for the person and task, whereas web-based tools are often difficult
+to use, feature-poor, and sometimes outright crippled. I also
+appreciate the Git project's heavy emphasis well-engineered solutions,
+quality commit messages, and well-organized, highly focused patches.
+
+
 ## Releases
 
 * Git for Windows 2.5.0 [was released](http://article.gmane.org/gmane.comp.version-control.msysgit/21805). It is the first release based on Git 2.x, the first release based on [MSys2](https://msys2.github.io/) and the first release dropping the *-preview* suffix.
@@ -339,4 +413,4 @@ __Git tools and sites__
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt;,
-with help from Matthieu Moy and Johannes Schindelin.
+with help from Matthieu Moy, Eric Sunshine and Johannes Schindelin.
