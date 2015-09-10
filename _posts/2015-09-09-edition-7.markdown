@@ -385,7 +385,7 @@ __Light reading__
   interactive tutorial.
 * [Blinking Commits](http://blog.annharter.com/2015/08/12/blinking-commits.html),
   if you ever needed a blinking commit message.
-* A YouTube celebrity called "Day[9]" recently took some minutes to [explain Git](https://www.youtube.com/watch?v=CPAIBmtH9xQ&feature=youtu.be&t=131://www.youtube.com/watch?v=CPAIBmtH9xQ&feature=youtu.be&t=1311) on his popular gaming channel.
+* A YouTube celebrity called "Day[9]" recently took some minutes to [explain Git](https://www.youtube.com/watch?v=CPAIBmtH9xQ&t=21m51s) on his popular gaming channel.
 
 __Git tools and sites__
 
