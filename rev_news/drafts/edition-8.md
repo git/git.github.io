@@ -21,9 +21,64 @@ This edition covers what happened during the month of September 2015.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [Add Travis CI support](http://git.661346.n2.nabble.com/RFC-PATCH-v1-Add-Travis-CI-support-tt7640334.html)
+
+Lars Schneider wrote that to avoid breaking tests in the future he
+configured Travis-CI to run all Git tests including git-p4 and git-lfs
+tests on both Ubuntu and MacOS using gcc and clang.
+
+If his config was enabled on https://github.com/git/git then the
+status of all official branches and all pull requests could be known
+by any contributor for free.
+
+Junio, the Git maintainer, replied that the last time he looked at it,
+Travis wanted write access to the repository, and that for security
+reason he could not allow that.
+
+Dennis Kaarsemaker replied with the following:
+
+> It does not need write access to the git data, only to auxiliary
+> GitHub data: commit status and deployment status (where it can put
+> "this commit failed tests"), repository hooks (to set up build
+> triggers), team membership (ro) and email addresses (ro).
+
+And then people started discussing if it would be better for Travis to
+be configured only on a fork of git/git and about the annoyance that
+emails sent by Travis might be.
+
+Roberto Tyley, the author of submitGit, then talked about possible
+enhancement to the submitGit workflow if Travis or another CI system
+are set up, like enabling sending a patch email to the Git mailing
+list only after the test results are available.
+
+And then Matthieu Moy explained the benefits for everyone like this:
+
+> The very nice thing with Travis-CI is that it does not only test the
+> repository's branches, but also all pull-requests. So, if it is
+> activated on git/git, it will become possible to have a flow like
+> 
+> 1) User pushes to his own repo, sends a pull-request,
+> 
+> 2) Travis-CI notices the pull-request and builds it (no action needed
+>    from anyone),
+> 
+> 3) Once the build is finished, the user can use e.g. SubmitGit to
+>    actually submit the code.
+> 
+> This has real benefits for the submitter (know if your code is broken
+> early), for the reviewers (things like "you have a def-after-use" would
+> be noticed by a computer before human beings start spending time on the
+> review), and for you (some issues noticed before a topic enters pu).
+> 
+> There's no extra work for the user at all compared to the standard
+> pull-request flow (nothing to do, just submit a PR), and a one-time
+> setup for the project.
+
+This appear to have convinced Junio of the value of a CI tool linked
+to git/git, so an interesting way to test patchs will perhaps be
+available soon to Git developers.
 
 <!---
 ### Support
