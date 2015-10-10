@@ -83,9 +83,41 @@ to git/git, and Lars has since posted
 so an interesting way to test patchs will perhaps be available soon
 to Git developers.
 
-<!---
+
 ### Support
--->
+
+* [2.6.0: Comment in rebase instruction has become too rigid](http://thread.gmane.org/gmane.comp.version-control.git/278824)
+
+Shortly after git version 2.6.0 was released, Nazri Ramliy noticed
+that:
+
+> the format of the comment lines in a rebase instruction sheet has
+> become stricter - it could no longer begin with spaces or tabs. The
+> comment char ("#" for example) has to appear on the first column.
+
+and that this change broke his script.
+
+As Matthieu Moy found out, the cause of the regression was a patch to
+pre check the rebase instruction sheet before starting an interactive
+rebase. The goal of this pre checking patch was to avoid discovering a
+syntax error in the instruction sheet in the middle of a rebase.
+
+Matthieu then posted [a patch to fix the regression](http://thread.gmane.org/gmane.comp.version-control.git/278841)
+based on a suggestion by Junio Hamano. Matthieu's patch just
+prefilters the instruction sheet by piping it through
+`sed 's/^[[:space:]]*//'`.
+
+But Junio replied that Matthieu's patch would fix one aspect of the
+problems caused by the pre checking patch. There could be more
+problems as the pre checking code is different from the actual parsing
+when the instruction sheet is processed. Junio also said he was
+tempted to revert the pre checking patch, but he provided a patch to
+fix the problem anyway by using the same code in both the pre checking
+step and the actual parsing.
+
+Matthieu agreed that Junio's patch was the way to go, and after a few
+more patches and emails, they agreed on a solution.
+
 
 ## Developer Spotlight: Luke Diamand
 
