@@ -48,10 +48,11 @@ And then people started discussing if it would be better for Travis to
 be configured only on a fork of git/git and about the annoyance that
 emails sent by Travis might be.
 
-Roberto Tyley, the author of submitGit, then talked about possible
-enhancement to the submitGit workflow if Travis or another CI system
-are set up, like enabling sending a patch email to the Git mailing
-list only after the test results are available.
+Roberto Tyley, the author of [submitGit](https://submitgit.herokuapp.com/),
+then talked about possible enhancement to the submitGit workflow if
+Travis or another CI system are set up, like enabling sending a patch
+email to the Git mailing list only after the test results are
+available.
 
 And then Matthieu Moy explained the benefits for everyone like this:
 
