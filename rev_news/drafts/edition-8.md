@@ -23,7 +23,7 @@ This edition covers what happened during the month of September 2015.
 
 ### Reviews
 
-* [Add Travis CI support](http://git.661346.n2.nabble.com/RFC-PATCH-v1-Add-Travis-CI-support-tt7640334.html)
+* [Add Travis CI support](http://thread.gmane.org/gmane.comp.version-control.git/278633)
 
 Lars Schneider wrote that to avoid breaking tests in the future he
 configured Travis-CI to run all Git tests including git-p4 and git-lfs
@@ -77,8 +77,10 @@ And then Matthieu Moy explained the benefits for everyone like this:
 > setup for the project.
 
 This appear to have convinced Junio of the value of a CI tool linked
-to git/git, so an interesting way to test patchs will perhaps be
-available soon to Git developers.
+to git/git, and Lars has since posted
+[a version 2 of his patches](http://thread.gmane.org/gmane.comp.version-control.git/279011),
+so an interesting way to test patchs will perhaps be available soon
+to Git developers.
 
 <!---
 ### Support
