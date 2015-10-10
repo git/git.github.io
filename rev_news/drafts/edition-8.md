@@ -218,17 +218,50 @@ I only found this recently, it's just brilliant. Thank you, whoever it was put t
 
 ## Releases
 
+* Git 2.6 is out! We'll let [Michael Haggerty](https://github.com/blog/2066-git-2-6-including-flexible-fsck-and-improved-status) do the writing on what's in there.
+* Quickly following suit is [Git for Windows 2.6](https://groups.google.com/d/msg/git-for-windows/KlGdFmJO7lg/oPmo3YyJCAAJ) (and [2.6.1](https://github.com/git-for-windows/git/releases/tag/v2.6.1.windows.1) soon after)
+* [jgit and egit 4.1](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg02976.html) with lots of improvements
+* libgit2 [0.23.3](https://github.com/libgit2/libgit2/releases/tag/v0.23.3) maintenance release, and from its posse:
+  * nodegit [0.5.0](https://github.com/nodegit/nodegit/releases/tag/v0.5.0] yolo release :)
+  * objective-git [0.8.8](https://github.com/libgit2/objective-git/releases/tag/0.8.8)
+  * pygit [0.23.1](https://github.com/libgit2/pygit2/releases/tag/v0.23.1)
+  * rugged [0.23.3](https://github.com/libgit2/rugged/releases/tag/v0.23.3)
+* [GitLab 8.0](https://about.gitlab.com/2015/09/22/gitlab-8-0-released/) with lots of new stuff, including built-in CI server
+* GitHub released [Git Large File Storage (LFS) 1.0](https://github.com/blog/2069-git-large-file-storage-v1-0)
+
 
 ## Other News
 
 __Various__
 
+* The GitMinutes podcast finally published the last episode from the Git-Merge conference. Here are all five parts in a neat overview:
+  * [part 1](http://episodes.gitminutes.com/2015/05/gitminutes-35-git-merge-2015-part-1.html) with Matthieu Moy (Git, GSoC), Christian Couder (Git), Carlos Martín Nieto (libgit2)
+  * [part 2](http://episodes.gitminutes.com/2015/05/gitminutes-36-git-merge-2015-part-2.html) with Arthur Schreiber (Rugged), Junio Hamano (Git), Vicent Marti (GitHub)
+  * [part 3](http://episodes.gitminutes.com/2015/06/gitminutes-37-git-merge-2015-part-3.html) with Stefan Beller (Git/Google), Robert van Haaren, Ævar Arnfjörð Bjarmason (Git/booking.com)
+  * [part 4](http://episodes.gitminutes.com/2015/07/gitminutes-38-git-merge-2015-part-4.html) with Roberto Tyley (BFG), Nicola Paolucci (Atlassian), Jameson Miller (Microsoft)
+  * [part 5](http://episodes.gitminutes.com/2015/10/gitminutes-39-git-merge-2015-part-5.html) with Alexandra Tritz (BlaBlaCar), Rick Olson (GitHub/LFS), Jeff King (Git)
+* [semgit](https://github.com/semgit/semgit-spec-repository-naming) - Specification for Semantic Git Repository Naming 
+* [The Motivation for a Monolithic Codebase](https://www.youtube.com/watch?v=W71BTkUbdqE), a recorded talk by Rachel Potvin of Google
+* For those who didn't catch last week's Git meme rolling through the intertubes: [In case of fire..](https://twitter.com/andygrunwald/status/650205624307838976/photo/1)
+* On the same day as the 1.0 release, Atlassian's Steve Streeting [explains how they've chosen to continue their own large file efforts together with LFS](https://developer.atlassian.com/blog/2015/10/contributing-to-git-lfs/)
 
 __Light reading__
 
+* [19 Tips For Everyday Git Use](http://www.alexkras.com/19-git-tips-for-everyday-use/), by Alex Kras
+* [Adding ssh support to the Visual Studio 2015 Git plug-in](http://randomswdev.blogspot.it/2015/07/adding-ssh-support-to-visual-studio.html), by Bernardo Pastorelli
+* [Some of git internals](http://yurichev.com/blog/git/), a hands-on dig through the Git internals by Dennis Yurichev
+* [Display Random Git Tips in Your Terminal](http://ericjmritz.name/2015/09/29/display-random-git-tips-in-your-terminal/), by Eric James Michael Ritz
+* [Simplified Git Flow](http://geshan.com.np/blog/2015/09/how-to-use-simplified-gitflow-branching-model-video/), by Geshan Manandhar
 
 __Git tools and sites__
 
+* [git-nerps](https://github.com/mk-fg/git-nerps) - Tool to encrypt and manage selected files (or parts of files) in a Git repository. See also the [blog post](http://blog.fraggod.net/2015/09/01/transparent-and-easy-encryption-for-files-in-git-repositories.html) by its creator, Mike Kazantsev.
+* [git-ftp](http://git-ftp.github.io/git-ftp/) - Git powered FTP client written as shell script
+* [git-punish](http://git-punish.io/) - more for fun than anything else, this is a shortcut for runnig git blame and posting it's output to [git-punish.io](http://git-punish.io)
+* [git:ghost](http://gitghost.org/) -  Publish posts to your Ghost blog using git
+* [Helix GitSwarm](http://www.perforce.com/downloads/helix-gitswarm) - a joint effort between Perforce and GitLab
+* [Tower's resources for learning Git](http://www.git-tower.com/learn/) - not sure if this is new, but it hasn't been in our newsletter yet.
+* Atlassian BitBucket Server is [the new name for Stash](http://blog.bitbucket.org/2015/09/22/1-in-3-fortune-500-companies-agree-bitbucket-is-the-git-solution-for-professional-teams/), their on-premise Git repo manager software.
 
 ## Credits
 
