@@ -44,9 +44,11 @@ Dennis Kaarsemaker replied with the following:
 > "this commit failed tests"), repository hooks (to set up build
 > triggers), team membership (ro) and email addresses (ro).
 
-And then people started discussing if it would be better for Travis to
-be configured only on a fork of git/git and about the annoyance that
-emails sent by Travis might be.
+Then a lot of long time members of the community, like Jeff King,
+Johannes Schindelin, Shawn Pearce, Stefan Beller, Roberto Tyley, Luke
+Diamand and Sebastian Schuberth, started discussing if it would be
+better for Travis to be configured only on a fork of git/git and about
+the annoyance that emails sent by Travis might be.
 
 Roberto Tyley, the author of [submitGit](https://submitgit.herokuapp.com/),
 then talked about possible enhancement to the submitGit workflow if
