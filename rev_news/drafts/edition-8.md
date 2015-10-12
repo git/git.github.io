@@ -229,6 +229,7 @@ I only found this recently, it's just brilliant. Thank you, whoever it was put t
 * [GitLab 8.0](https://about.gitlab.com/2015/09/22/gitlab-8-0-released/) with lots of new stuff, including built-in CI server
 * GitHub released [Git Large File Storage (LFS) 1.0](https://github.com/blog/2069-git-large-file-storage-v1-0)
 * BFG [1.12.5](https://github.com/rtyley/bfg-repo-cleaner/releases/tag/v1.12.5) adds support for converting a repo's history into the new Git LFS format, so even _old_ files in Git history can be transferred into Git LFS, reducing repository size.
+* git-multimail [1.2.0](https://github.com/git-multimail/git-multimail/releases/tag/1.2.0) adds among others the possibility to filter out branches for which no emails should be sent, HTML colored emails, Gerrit and Atlassian BitBucket Server support.
 
 
 ## Other News
