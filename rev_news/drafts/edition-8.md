@@ -237,6 +237,15 @@ I only found this recently, it's just brilliant. Thank you, whoever it was put t
 
 ## Other News
 
+__Updates__
+
+* [Since we talked about it last month](http://git.github.io/rev_news/2015/09/09/edition-7/) David Turner
+submitted [a new patch series](http://thread.gmane.org/gmane.comp.version-control.git/278757) of his work on
+alternate ref backends. This work is being reviewed by Michael Haggerty, Junio, and others. The ultimate goal 
+is still to allow a lmdb-based backend, which should be faster and have fewer issues on
+case-insensitive filesystems than the traditional files-based backend. This work is sponsored by
+Twitter.
+
 __Various__
 
 * The GitMinutes podcast finally published the last episode from the Git-Merge conference. Here are all five parts in a neat overview:
