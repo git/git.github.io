@@ -228,6 +228,7 @@ I only found this recently, it's just brilliant. Thank you, whoever it was put t
   * rugged [0.23.3](https://github.com/libgit2/rugged/releases/tag/v0.23.3)
 * [GitLab 8.0](https://about.gitlab.com/2015/09/22/gitlab-8-0-released/) with lots of new stuff, including built-in CI server
 * GitHub released [Git Large File Storage (LFS) 1.0](https://github.com/blog/2069-git-large-file-storage-v1-0)
+* Microsoft announced that [Visual Studio Online Git repositories now support Git-LFS](http://blogs.msdn.com/b/visualstudioalm/archive/2015/10/01/announcing-git-lfs-on-all-vso-git-repos.aspx)
 * BFG [1.12.5](https://github.com/rtyley/bfg-repo-cleaner/releases/tag/v1.12.5) adds support for converting a repo's history into the new Git LFS format, so even _old_ files in Git history can be transferred into Git LFS, reducing repository size.
 * git-multimail [1.2.0](https://github.com/git-multimail/git-multimail/releases/tag/1.2.0) adds among others the possibility to filter out branches for which no emails should be sent, HTML colored emails, Gerrit and Atlassian BitBucket Server support.
 
