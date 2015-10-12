@@ -81,7 +81,9 @@ And then Matthieu Moy explained the benefits for everyone like this:
 
 This appear to have convinced Junio of the value of a CI tool linked
 to git/git, and Lars has since posted
-[a version 2 of his patches](http://thread.gmane.org/gmane.comp.version-control.git/279011),
+[a version 2](http://thread.gmane.org/gmane.comp.version-control.git/279011)
+and [a version 3 of his
+patches](http://thread.gmane.org/gmane.comp.version-control.git/279348),
 so an interesting way to test patchs will perhaps be available soon
 to Git developers.
 
