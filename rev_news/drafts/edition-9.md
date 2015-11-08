@@ -21,10 +21,40 @@ This edition covers what happened during the month of October 2015.
 ### General
 -->
 
-<!---
 ### Reviews
--->
 
+* [Expose the submodule parallelism to the user](http://thread.gmane.org/gmane.comp.version-control.git/280284)
+
+Stefan Beller started posting patch series to "finish the on going
+efforts of parallelizing submodule network traffic".
+
+This followed
+[previous work by Stefan](http://thread.gmane.org/gmane.comp.version-control.git/277705/)
+to make it possible to launch many git submodule fetches in parallel.
+
+What is interesting is that a few weeks before posting the first
+version of his patch series, Stefan had been involved in a
+[discussion](http://thread.gmane.org/gmane.comp.version-control.git/279712/)
+that was started by Kannan Goundan who asked if it would be possible
+to "Make 'git checkout' automatically update submodules?".
+
+In this previous discussion Stefan pointed Kannan to the following wiki:
+
+https://github.com/jlehmann/git-submod-enhancements/wiki
+
+that contains a lot of information about submodule implementation
+including pointers to some current developments that have not been
+posted to the mailing list yet. This wiki had indeed been maintained
+since September 2010 by Jens Lehmann and Heiko Voigt who have been
+working for a long time on git submodule.
+
+When Stefan posted his patch series, it attracted the attention of
+many reviewers like Eric Sunshine, Ramsay Jones, Jonathan Nieder and
+Junio Hamano. As usual the reviewers made sensible suggestions and
+Stefan soon posted another version of his patch series.
+
+Hopefully the tremendous work by Stefan and the reviewers will soon
+make it possible to have improved submodule performance.
 
 ### Support
 
