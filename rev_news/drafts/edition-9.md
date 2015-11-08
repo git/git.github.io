@@ -92,17 +92,39 @@ Karsten's detailed emails as a reference for future work.
 
 ## Releases
 
+* Git, following some intermediate releases, is now at [2.6.3](http://article.gmane.org/gmane.comp.version-control.git/280947/)
+* Git for Windows, similarly is now at [2.6.2](https://groups.google.com/d/msg/git-for-windows/R4xTgOfFu3Q/vex656-JBQAJ)
+* GitLab shipped several times in the last month, leaving their latest version at
+  [8.1.3](https://about.gitlab.com/2015/11/06/gitlab-8-dot-1-dot-3-released/), after the major
+  [8.1](https://about.gitlab.com/2015/10/22/gitlab-8-1-released/) release. They also celebrated their
+  [millionth download](https://about.gitlab.com/2015/10/29/one-million-downloads-of-gitlab/).
+* GitHub shipped the [2.4](https://github.com/blog/2076-github-enterprise-2-4-is-now-available) version of their Enterprise software.
 
 ## Other News
 
-__Various__
-
-
 __Light reading__
 
+* [Fun with recreating an evil merge](http://git-blame.blogspot.de/2015/10/fun-with-recreating-evil-merge.html), by Junio Hamano
+* [Git Concurrency in GitHub Desktop](http://githubengineering.com/git-concurrency-in-github-desktop/), by Amy Palamountain
+* [Monorepos in Git](https://developer.atlassian.com/blog/2015/10/monorepos-in-git/?p), by Stefan Saasen
+* [Monotone, Git, Linus and Marty McFly](http://webiphany.com/2015/10/21/monotone-git-linus-and-marty-mcfly.html), by Chris Dawson
+* [Git Back to the Future](https://fifthsurprise.wordpress.com/2014/02/19/git-back-to-the-future/), by Kevin Chang
+* [GitHub’s Large File Storage is no panacea for Open Source](https://medium.com/@megastep/github-s-large-file-storage-is-no-panacea-for-open-source-quite-the-opposite-12c0e16a9a91), by Stéphane Peter
+* [Six cool features of the Git 2.x series](https://developer.atlassian.com/blog/2015/10/cool-features-git-2.x/), by our own Nicola Paolucci
+* [Git freebase](http://ericrie.se/blog/git-freebase/), by Eric Riese
+* [The git's guide to git: Bisect](http://rkoutnik.com/articles/The-gits-guide-to-git-Bisect.html), by Randall Koutnik
+* [Don't include configs in your git repos](http://blog.eatonphil.com/2015-10-27/dont-include-configs-in-your-git-repos) by Phil Eaton
+* [Using Git to Manage Todos](http://jezenthomas.com/using-git-to-manage-todos/), by Jezen Thomas
+* [Fixing Stupid Mistakes in Git Pull Requests](http://developer.telerik.com/featured/fixing-stupid-mistakes-in-git-pull-requests/), by TJ VanToll
 
 __Git tools and sites__
 
+* [Git Extras](https://github.com/tj/git-extras) - a set of extra command line Git utilities.
+* [Delta](http://delta.octavore.com/) - a command-line utility for text diffs.
+* [Pijul](https://pijul.org/) - actually a competing VCS! But still interesting.
+* [ParallelGit](http://beijunyi.github.io/ParallelGit) - wraps JGit to provide "a more friendly API".
+* [Git Dependency Manager](http://git-dependency-manager.info/) - a language-agnostic "dependency manager". It aims to serve as a submodules replacement and provides advanced options for managing versions of nested Git repositories.
+* [Quack](https://github.com/Autodesk/quack) - another Git-based dependency manager.
 
 ## Credits
 
