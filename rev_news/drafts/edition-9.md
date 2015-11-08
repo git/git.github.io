@@ -125,7 +125,8 @@ __Git tools and sites__
 * [ParallelGit](http://beijunyi.github.io/ParallelGit) - wraps JGit to provide "a more friendly API".
 * [Git Dependency Manager](http://git-dependency-manager.info/) - a language-agnostic "dependency manager". It aims to serve as a submodules replacement and provides advanced options for managing versions of nested Git repositories.
 * [Quack](https://github.com/Autodesk/quack) - another Git-based dependency manager.
-
+* [git-svnsync](http://git-svnsync.gforge.inria.fr/) - a bi-directional server-side synchronisation tool between a git and a subversion repository
+ 
 ## Credits
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;,
