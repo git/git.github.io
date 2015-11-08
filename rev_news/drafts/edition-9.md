@@ -38,11 +38,8 @@ version of his patch series, Stefan had been involved in a
 that was started by Kannan Goundan who asked if it would be possible
 to "Make 'git checkout' automatically update submodules?".
 
-In this previous discussion Stefan pointed Kannan to the following wiki:
-
-https://github.com/jlehmann/git-submod-enhancements/wiki
-
-that contains a lot of information about submodule implementation
+In this previous discussion Stefan pointed Kannan to [a wiki
+that contains a lot of information about submodule implementation](https://github.com/jlehmann/git-submod-enhancements/wiki)
 including pointers to some current developments that have not been
 posted to the mailing list yet. This wiki had indeed been maintained
 since September 2010 by Jens Lehmann and Heiko Voigt who have been
