@@ -38,11 +38,8 @@ version of his patch series, Stefan had been involved in a
 that was started by Kannan Goundan who asked if it would be possible
 to "Make 'git checkout' automatically update submodules?".
 
-In this previous discussion Stefan pointed Kannan to the following wiki:
-
-https://github.com/jlehmann/git-submod-enhancements/wiki
-
-that contains a lot of information about submodule implementation
+In this previous discussion Stefan pointed Kannan to [a wiki
+that contains a lot of information about submodule implementation](https://github.com/jlehmann/git-submod-enhancements/wiki)
 including pointers to some current developments that have not been
 posted to the mailing list yet. This wiki had indeed been maintained
 since September 2010 by Jens Lehmann and Heiko Voigt who have been
@@ -69,36 +66,29 @@ with the following:
 > without USE_NSEC, libgit2 compiled with and without USE_NSEC, JGit
 > executed in different Java implementations...).
 
-He then listed and detailed some interesting "Notable file time facts"
+He listed and detailed some interesting "Notable file time facts"
 about how file time is implemented in Linux, Windows, Java and the
 different Git implementations (git, libgit2 and JGit).
 
-After that Karsten described 4 problems he found that are related to
-the above facts. The problems are:
+Karsten noted 4 problems related to the above facts. These are:
 
-- Problem 1: Failure to detect racy files (without USE_NSEC)
-- Problem 2: Failure to detect racy files (mixed USE_NSEC)
-- Problem 3: Failure to detect racy files with core.checkStat=minima
-- Problem 4: Performance issues with mixed file time resolutions
+- 1: Failure to detect racy files (without USE_NSEC)
+- 2: Failure to detect racy files (mixed USE_NSEC)
+- 3: Failure to detect racy files with core.checkStat=minima
+- 4: Performance issues with mixed file time resolutions
 
-And then Karsten suggests 4 possible solutions with sometimes some
-variants like 1a. and 1b. that could address the problems. This was
-all very detailed and well written.
-
-Moreover Karsten followed up a few days later with one RFC patch
+Kartsen proceeded to suggest several possible solutions for these, all
+detailed and well written. A few days later he followed up with an 
+RFC patch
 called "read-cache: fix file time comparisons with different
 precisions" to take care of some of the problem he described.
 
-Junio Hamano, the Git maintainer and Johannes Schindelin looked
-respectively at the solutions and at the RFC patch proposed by
-Karsten. They found it sensible.
+Junio Hamano and Johannes Schindelin both reviewed the
+suggested solutions as well as the RFC patch, and found it all sensible.
 
-Unfortunately it looks like that Karsten's patch has not been merged
-yet. Maybe because it has not been submited as a non RFC patch yet.
-
-Hopefully at one point some progress will be made in this area, and
-anyway Karsten's detailed emails can serve as a reference for futur
-work.
+There is still some way to go, as the patch has not been merged
+yet. Hopefully some progress will be made in this area soon, using
+Karsten's detailed emails as a reference for future work.
 
 ## Releases
 
