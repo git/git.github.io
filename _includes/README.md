@@ -15,8 +15,7 @@ git@vger.kernel.org if appropriate).
 
 # Development
 
-* Make sure you've got ruby2 (packages are available, have to replace
-  `/usr/bin/ruby` and `/usr/bin/gem` with their v2 options)
+* Make sure you've got ruby2 with dev-packages installed
 * `sudo gem install bundler`
 * Clone this repo
 * `sudo apt-get install zlib1g-dev` # ref [1]
