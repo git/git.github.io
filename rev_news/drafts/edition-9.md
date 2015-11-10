@@ -53,8 +53,10 @@ Stefan soon posted another version of his patch series.
 Hopefully the tremendous work by Stefan and the reviewers will soon
 make it possible to have improved submodule performance.
 
-This weekend there was the GerritSummit, which is held annually. In a
-discussion Martin Fick pointed out, that parallelism may hurt the user.
+On Saturday November 7th and Sunday November 8th there was the
+[GerritSummit](https://gerrit.googlesource.com/summit/2015/+/HEAD/sat.md),
+which is held annually. In a discussion Martin Fick pointed out, that
+parallelism may hurt the user.
 As he was using `repo -j 8` to sync many git repos down to disk, the
 following disk operations took longer than expected as the repos were
 not written to disk in a linear fashion.
