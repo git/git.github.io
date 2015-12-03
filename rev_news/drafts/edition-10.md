@@ -1,5 +1,5 @@
 ---
-title: Git Rev News Edition 10 (XXX, 2015)
+title: Git Rev News Edition 10 (December 9th, 2015)
 layout: default
 date: 2015-12-09 21:06:51 +0100
 author: chriscool
@@ -7,7 +7,7 @@ categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 10 (XXX, 2015)
+## Git Rev News: Edition 10 (December 9th, 2015)
 
 Welcome to the 9th edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
