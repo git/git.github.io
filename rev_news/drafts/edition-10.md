@@ -21,9 +21,36 @@ This edition covers what happened during the month of November 2015.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [clean: new option --exclude-from](http://thread.gmane.org/gmane.comp.version-control.git/281762)
+
+James Rouzier sent a patch to add a new `--exclude-from=<file>` option
+to `git clean`. It looked quite straightforward, but as often Eric
+Sunshine found many small things that could be improved upon. James
+and Eric then agreed on what should be done, and it looked that a
+clear roadmap had been set for this new feature.
+
+That's when Jeff King, alias Peff, wrote the following:
+
+> Lots of commands care about excludes (e.g., "add", "status").
+> 
+> Should this perhaps be an option to the main "git" to append to the set
+> of excludes?
+> 
+> You can kind-of do this already with:
+> 
+>   git -c core.excludesfile=/path/to/whatever clean ...
+> 
+> but of course you might be using core.excludesfile already. I wonder if
+> that config option should take multiple values and respect all of them,
+> rather than last-one-wins.
+
+This started a discussion between Junio Hamano, the git maintainer,
+and Peff about how exclude files should be specified to commands.
+
+It is a complex topic because there are already different ways to pass
+an exclude file, for example there is also `.git/info/exclude`.
 
 <!---
 ### Support
