@@ -50,7 +50,49 @@ This started a discussion between Junio Hamano, the git maintainer,
 and Peff about how exclude files should be specified to commands.
 
 It is a complex topic because there are already different ways to pass
-an exclude file, for example there is also `.git/info/exclude`.
+an exclude file, for example there is also `.git/info/exclude`. And
+there is the question of how the option should be passed to sub
+commands.
+
+In the end it appears not clear if the patch will be accepted.
+
+* [remote-http(s): Support SOCKS proxies](http://thread.gmane.org/gmane.comp.version-control.git/280191)
+
+In a patch series called
+["Miscellaneous platform-independent patches from Git for Windows"](http://thread.gmane.org/gmane.comp.version-control.git/280190/)
+Johannes Schindelin, alias Dscho, sent a patch from Pat Thoyts that adds SOCKS proxies support to Git:
+
+> With this patch we properly support SOCKS proxies, configured e.g. like
+> this:
+> 
+> 	git config http.proxy socks5://192.168.67.1:32767
+> 
+> Without this patch, Git mistakenly tries to use SOCKS proxies as if they
+> were HTTP proxies, resulting in a error message like:
+> 
+> 	fatal: unable to access 'http://.../': Proxy CONNECT aborted
+> 
+> This patch was required to work behind a faulty AP and scraped from
+> http://stackoverflow.com/questions/15227130/#15228479 and guarded with
+> an appropriate cURL version check by Johannes Schindelin.
+
+The last paragraph made Junio Hamano wonder "What is the licensing
+status of the original at SO?"
+
+James McCoy answered that [according to Stackoverflow](https://stackoverflow.com/help/licensing)
+"all user contributions are licensed under Creative Commons Attribution-Share Alike".
+
+Unfortunately as Junio replied, the Creative Commons Attribution-Share
+Alike, alias BY-SA, does not mesh well with GPLv2 tat Git uses. That's
+why Dscho asked Pat if he could give his Signed-off-by mention,
+which would mean that he agrees to relicense his work under the GPLv2.
+
+Junio after consulting the Git projet lawyers replied that asking Pat
+was indeed the best thing to do.
+
+Ten days later Pat eventually gave his Signed-off-by which fixed the
+problem.
+
 
 <!---
 ### Support
