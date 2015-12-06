@@ -87,7 +87,7 @@ Alike, alias BY-SA, does not mesh well with GPLv2 that Git uses. That's
 why Dscho asked Pat if he could give his Signed-off-by mention,
 which would mean that he agrees to relicense his work under the GPLv2.
 
-Junio, after consulting the Git project lawyers, replied that asking Pat
+Junio, after consulting his IP lawyer friends, replied that asking Pat
 was indeed the best thing to do.
 
 Ten days later Pat eventually gave his Signed-off-by which fixed the
