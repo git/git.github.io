@@ -28,7 +28,7 @@ This edition covers what happened during the month of November 2015.
 James Rouzier sent a patch to add a new `--exclude-from=<file>` option
 to `git clean`. It looked quite straightforward, but as often Eric
 Sunshine found many small things that could be improved upon. James
-and Eric then agreed on what should be done, and it looked that a
+and Eric then agreed on what should be done, and it looked like a
 clear roadmap had been set for this new feature.
 
 That's when Jeff King, alias Peff, wrote the following:
@@ -54,7 +54,7 @@ an exclude file, for example there is also `.git/info/exclude`. And
 there is the question of how the option should be passed to sub
 commands.
 
-In the end it appears not clear if the patch will be accepted.
+In the end it is not clear if the patch will be accepted.
 
 * [remote-http(s): Support SOCKS proxies](http://thread.gmane.org/gmane.comp.version-control.git/280191)
 
@@ -83,11 +83,11 @@ James McCoy answered that [according to Stackoverflow](https://stackoverflow.com
 "all user contributions are licensed under Creative Commons Attribution-Share Alike".
 
 Unfortunately as Junio replied, the Creative Commons Attribution-Share
-Alike, alias BY-SA, does not mesh well with GPLv2 tat Git uses. That's
+Alike, alias BY-SA, does not mesh well with GPLv2 that Git uses. That's
 why Dscho asked Pat if he could give his Signed-off-by mention,
 which would mean that he agrees to relicense his work under the GPLv2.
 
-Junio after consulting the Git projet lawyers replied that asking Pat
+Junio, after consulting the Git project lawyers, replied that asking Pat
 was indeed the best thing to do.
 
 Ten days later Pat eventually gave his Signed-off-by which fixed the
