@@ -100,16 +100,32 @@ problem.
 
 ## Releases
 
+* Git for Windows catches up with regular Git again, reaching [2.6.3](https://groups.google.com/forum/#!topic/git-for-windows/YcGky36RLUM) (with improved Notepad support!)
+* GitLab: The latest minor release is [8.2.2](https://about.gitlab.com/2015/12/02/gitlab-8-dot-2-dot-2-released/). Their latest major release, [8.2](https://about.gitlab.com/2015/11/23/announcing-git-lfs-support-in-gitlab/) features Git LFS support among other things.
+* JGit/EGit shipped [4.1.1](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03004.html)
+* libgit2 maintenance released [0.23.4](https://github.com/libgit2/libgit2/releases/tag/v0.23.4)
 
 ## Other News
 
 __Various__
 
+* The GerritForge blog posted a summary of [the Gerrit User Summit & Hackathon 2015](http://gitenterprise.me/2015/11/16/gerrit-user-summit-hackathon-2015/)
+* Atlassian's Steve Smith did [a talk at Devvox 2015 about "Getting out of trouble by understanding Git"](https://www.youtube.com/watch?v=sevc6668cQ0)
 
 __Light reading__
 
+* An oldie but goldie, [A Git Horror Story: Repository Integrity With Signed Commits](https://mikegerwitz.com/papers/git-horror-story), by Mike Gerwitz
+* Another one I haven't seen before: [Git source code review: Diff Algorithms](http://fabiensanglard.net/git_code_review/diff.php), by Fabian Sanglard
+* Short: [Using strace to figure out how git push over SSH works](http://kamalmarhubi.com/blog/2015/11/21/using-strace-to-figure-out-how-git-push-over-ssh-works/), by Kamal Marhubi
+* [How to manage large binary files in Git with Git LFS and Artifactory](http://blog.deveo.com/how-to-manage-large-binary-files-with-git-git-lfs-and-artifactory/), by Deveo's Ilmari Kontulainen
+* Some [Git Tips](https://viget.com/extend/git-tips) by Ryan Foster
+
 
 __Git tools and sites__
+
+* [git-fastclone](https://github.com/square/git-fastclone), "git clone --recursive on steroids" from Square
+* [gertty](https://github.com/openstack/gertty), a console interface to Gerrit Code Review
+* [git-identify](https://github.com/ConnorAtherton/git-identify), if you do commits with different identities
 
 
 ## Credits
