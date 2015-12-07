@@ -98,6 +98,58 @@ problem.
 ### Support
 -->
 
+## Developer Spotlight: Stefan Beller
+
+* Who are you, and what do you do?
+
+I write Git/Gerrit code for a living at Google. I started coding when I
+was 10 years old with a tool called GameMaker for DOS. As I did not
+know how to version my games back then, deep down in my digital life
+(http://www.xkcd.com/1360/), I admit having folders called v1, v2, v3.
+
+* What would you name your most important contribution to Git?
+
+I think all the patches I contributed using various static code analysis
+tools. These were small issues such as memory leaks each, but as a
+whole they made Git better. Which also leads to answering the next
+question ...
+
+* What are you doing on the Git project these days, and why?
+
+I started diving into Submodule Code lately. The first patches
+which just landed in origin/master don't do a lot, except making
+submodules a little faster by rewriting shell in C. This is
+the same approach as I had in the previous question, looking
+for stuff under the hood and improving there, is usually not controversial,
+so a good thing to start out with when exploring new areas of code.
+
+* If you could get a team of expert developers to work full time on
+something in Git for a full year, what would it be?
+
+I would ask the experts for a Git protocol version 2 as that
+makes repositories with lots of refs go smoothly over the wire.
+For example every time you fetch git.git today from
+https://github.com/gitster/git/,
+more than 100kB are sent over the wire and most of it is moot.
+A fetch today and a fetch a week ago would only differ in 5kB in
+these first 100kB sent over the wire.
+While Git as maintained by Junio has more refs than the usual
+repository (currently 1626 refs), there are other projects which are
+even larger than Git itself in the ref space.
+
+* If you could remove something from Git without worrying about
+backwards compatibility, what would it be?
+
+I think I just point at
+http://stevelosh.com/blog/2013/04/git-koans/#the-hobgoblin
+where the subtle inconsistencies are put into a spotlight.
+
+* What is your favourite Git-related tool/library, outside of Git itself?
+
+I did use only Git itself, no third party tools otherwise until recently.
+Now I am into Gerrit a bit for reviewing changes before it's too late.
+
+
 ## Releases
 
 * Git for Windows catches up with regular Git again, reaching [2.6.3](https://groups.google.com/forum/#!topic/git-for-windows/YcGky36RLUM) (with improved Notepad support!)
