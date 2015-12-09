@@ -171,6 +171,7 @@ __Light reading__
 * Short: [Using strace to figure out how git push over SSH works](http://kamalmarhubi.com/blog/2015/11/21/using-strace-to-figure-out-how-git-push-over-ssh-works/), by Kamal Marhubi
 * [How to manage large binary files in Git with Git LFS and Artifactory](http://blog.deveo.com/how-to-manage-large-binary-files-with-git-git-lfs-and-artifactory/), by Deveo's Ilmari Kontulainen
 * Some [Git Tips](https://viget.com/extend/git-tips) by Ryan Foster
+* [From Perforce to Git: Source code migration lessons learned](http://www.ustream.tv/recorded/74637923) (video), by Lars Schneider
 
 
 __Git tools and sites__
