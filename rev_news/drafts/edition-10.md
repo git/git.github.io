@@ -163,6 +163,8 @@ __Various__
 
 * The GerritForge blog posted a summary of [the Gerrit User Summit & Hackathon 2015](http://gitenterprise.me/2015/11/16/gerrit-user-summit-hackathon-2015/)
 * Atlassian's Steve Smith did [a talk at Devvox 2015 about "Getting out of trouble by understanding Git"](https://www.youtube.com/watch?v=sevc6668cQ0)
+* Autodesk's [Lars Schneider](https://github.com/larsxschneider) did [a talk at GitHub Universe 2015 about Perforce to Git migrations](http://www.ustream.tv/recorded/74637923)
+
 
 __Light reading__
 
