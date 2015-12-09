@@ -163,6 +163,8 @@ __Various__
 
 * The GerritForge blog posted a summary of [the Gerrit User Summit & Hackathon 2015](http://gitenterprise.me/2015/11/16/gerrit-user-summit-hackathon-2015/)
 * Atlassian's Steve Smith did [a talk at Devvox 2015 about "Getting out of trouble by understanding Git"](https://www.youtube.com/watch?v=sevc6668cQ0)
+* Autodesk's [Lars Schneider](https://github.com/larsxschneider) did [a talk at GitHub Universe 2015 about Perforce to Git migrations](http://www.ustream.tv/recorded/74637923)
+
 
 __Light reading__
 
@@ -171,7 +173,6 @@ __Light reading__
 * Short: [Using strace to figure out how git push over SSH works](http://kamalmarhubi.com/blog/2015/11/21/using-strace-to-figure-out-how-git-push-over-ssh-works/), by Kamal Marhubi
 * [How to manage large binary files in Git with Git LFS and Artifactory](http://blog.deveo.com/how-to-manage-large-binary-files-with-git-git-lfs-and-artifactory/), by Deveo's Ilmari Kontulainen
 * Some [Git Tips](https://viget.com/extend/git-tips) by Ryan Foster
-* [From Perforce to Git: Source code migration lessons learned](http://www.ustream.tv/recorded/74637923) (video), by Lars Schneider
 
 
 __Git tools and sites__
