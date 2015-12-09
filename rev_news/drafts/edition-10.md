@@ -178,6 +178,7 @@ __Git tools and sites__
 * [git-fastclone](https://github.com/square/git-fastclone), "git clone --recursive on steroids" from Square
 * [gertty](https://github.com/openstack/gertty), a console interface to Gerrit Code Review
 * [git-identify](https://github.com/ConnorAtherton/git-identify), if you do commits with different identities
+* [ShowInGitHub](https://github.com/larsxschneider/ShowInGitHub), Xcode plugin that opens the Github/BitBucket page of a source code line
 
 
 ## Credits
