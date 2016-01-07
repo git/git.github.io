@@ -36,6 +36,7 @@ This edition covers what happened during the month of December 2015.
 
 __Various__
 
+* Jeff King [announced that GitHub is organizing another Git Merge conference](article.gmane.org/gmane.comp.version-control.git/282634/) for the beginning of April 2016 with a Git Developer Summit, and asked for people interested in coming to the Summit to tell him.
 
 __Light reading__
 
