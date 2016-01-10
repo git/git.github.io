@@ -65,6 +65,7 @@ __Light reading__
 * [New Year, new Git release](https://github.com/blog/2094-new-year-new-git-release), by GitHub's Michael Haggerty
 * A bit late, but here's how could have [learned Git over the holidays](http://vanwilson.info/2015/12/the-12-days-of-git-learn-git-over-the-holidays/), by Van Wilson
 * The authors of the German Git book have decided to make it [freely available online](http://gitbu.ch/index.html)
+* [Doing Git Flow in Node](http://blog.smith-kyle.com/git-flow-with-node/), by Kyle Smith
 
 
 __Git tools and sites__
@@ -74,6 +75,7 @@ __Git tools and sites__
 * [git-panda](http://wdm0006.github.io/git-pandas/) wraps around gitpython for creating pandas dataframes (data analysis in Python)
 * [Git Core Trainer](https://github.com/ianmiell/shutit-git-trainer), an automated and interactive git trainer, built using Docker and ShutIt
 * [quack](https://github.com/Autodesk/quack) offers to "reuse Git modules in smart way"
+* [Trident](http://somerobots.com/trident.html) looks like a nice iOS Git client
 
 ## Credits
 
