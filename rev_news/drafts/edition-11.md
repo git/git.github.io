@@ -21,9 +21,59 @@ This edition covers what happened during the month of December 2015.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [RefTree: Alternate ref backend](http://thread.gmane.org/gmane.comp.version-control.git/282677/)
+
+Shawn Pearce, who is one of the main Git, JGit and Gerrit
+contributors, sent an email about a new ref storage backend saying:
+
+> I started playing around with the idea of storing references directly
+> in Git. Exploiting the GITLINK tree entry, we can associate a name to
+> any SHA-1.
+
+and:
+
+> By exploiting Git to store Git, we get a reflog for free...
+
+It's interesting because there has been a lot of work during the past
+years to develop news ways to store refs. Especially there has been
+[attemps to store refs in databases like LMDB](http://thread.gmane.org/gmane.comp.version-control.git/277138), that have been covered in
+[Git Rev News edition 7](https://git.github.io/rev_news/2015/09/09/edition-7/).
+
+This new approach tries to store refs using git's own object database
+that already stores blobs, trees, commits and tags.
+
+It uses so called "gitlink" which are special tree entries that are
+used by [git submodules](https://git-scm.com/docs/git-submodule) to
+refer to commits in their host git repository.
+
+Following some comments by Junio, Shawn agreed that his implementation
+has some hacks to handle "HEAD", which is a special ref, and to handle
+the fact that gitlinks were made to only point to commits, not tags.
+
+Michael Haggerty wondered if the negociation phase that happens when
+doing a 'git fetch' could be sped up by such an implementation. This
+started a discussion between Shawn, Junio and Michael about how the
+"refs/" hierarchy could be improved.
+
+Jeff King discussed with Shawn some other aspects like the reflog and
+reachability, and Shawn mentioned other advantages:
+
+> One advantage of this format is deleted branches can retain a reflog
+> post deletion. Another is you can trivially copy the reflog using
+> native Git to another system for backup purposes. Or fetch it over the
+> network to inspect locally. So a shared group server could be
+> exporting its reflog, you can fetch it and review locally what
+> happened to branches without logging into the shared server.
+
+> Another advantage of this format over LMDB or TDB or whatever is Git
+> already understands it. The tools already understand it. Plumbing can
+> inspect and repair things. You can reflog the reflog using traditional
+> reflog...
+
+And it looks like Shawn has a bigger plan but don't want to tell us
+too much for now.
 
 <!---
 ### Support
