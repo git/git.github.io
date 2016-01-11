@@ -75,6 +75,45 @@ reachability, and Shawn mentioned other advantages:
 And it looks like Shawn has a bigger plan but don't want to tell us
 too much for now.
 
+* [Split .git/config in multiple worktree setup](http://thread.gmane.org/gmane.comp.version-control.git/281906/)
+
+Duy Nguyen sent a patch series that restarted
+[previous work he had already done](http://thread.gmane.org/gmane.comp.version-control.git/266520)
+on splitting config options in two different sets. Some that are
+specific to each worktree and some that are not.
+
+There are two pattern lists. One is a default pattern list built into
+the git binary, and the other one in ".git/info/config.worktree" is a
+user writable pattern list. Those two pattern lists are merged
+internaly to specify which config options are worktree specific.
+
+The worktree specific config options should then be put in
+".git/worktrees/NAME/config.worktree" where NAME is a specific
+worktree's name, while the other config options still stay in
+".git/config".
+
+Eric Sunshine reviewed the patch series and as always asked pertinent
+questions on the naming of files, the code and the tests.
+
+Max Kirillov first suggested the following:
+
+> Now there are extensions support, would it make sense to
+> mark repositories which use per-worktree config with an
+> extension?
+
+Max is refered to the extension mechanism that has been released in
+the brand new Git 2.7.0 and that
+[was mentioned in some places](http://lwn.net/Articles/668163/).
+
+And Duy liked the idea of adding an extension for per-worktree config.
+
+Max on the other hand said that having a default pattern list built
+into the git binary could be confusing for users and could be
+difficult to extend, but Duy and Junio didn't agree with that.
+
+From the following discussion, it looks like it is a complex issue to
+design something that is backward and forward compatible.
+
 <!---
 ### Support
 -->
