@@ -1,7 +1,7 @@
 ---
 title: Git Rev News Edition 11 (January 13th, 2016)
 layout: default
-date: 2016-01-06 21:06:51 +0100
+date: 2016-01-13 21:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
