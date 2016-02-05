@@ -27,7 +27,7 @@ This edition covers what happened during the month of January 2016.
 
 ### Support
 
-* [clones over rsync broken?]()
+* [clones over rsync broken?](http://thread.gmane.org/gmane.comp.version-control.git/285099/)
 
 Eric Wong, a long time git developer and the original git-svn author,
 reported that he couldn't use the rsync protocol anymore to clone:
