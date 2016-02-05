@@ -25,11 +25,75 @@ This edition covers what happened during the month of January 2016.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [clones over rsync broken?]()
+
+Eric Wong, a long time git developer and the original git-svn author,
+reported that he couldn't use the rsync protocol anymore to clone:
+
+> I have not used rsync remotes in ages, but I was working on the
+> patch for -4/-6 support and decided to test it against rsync.kernel.org
+> 
+> Cloning git.git takes forever and failed with:
+> 
+> $ git clone rsync://rsync.kernel.org/pub/scm/git/git.git
+> Checking connectivity... fatal: bad object ecdc6d8612df80e871ed34bb6c3b01b20b0b82e6
+> fatal: remote did not send all necessary objects
+
+Jeff King, alias Peff, replied that the "rsync transport blindly pulls
+all of the data over, with no idea that it doesn't need most of it",
+and as there are "over 95,000 unreachable loose objects consuming a
+gigabyte" in the cloned repository. This explains why Eric's clone
+took forever.
+
+But it also didn't work for Eric with smaller repositories and with
+quite old versions of Git like 1.7.10.4. To that Peff replied that in
+the rsync code "we blindly concatenate the list of loose refs and
+packed refs" which has never been the right thing to do. And this
+explains why the clones always fail with rsync. Peff found that this
+has been broken since 2007, which is why it doesn't work even with old
+git versions.
+
+Peff also investigated different ways to fix it but concluded:
+
+> ...git-over-rsync is just an awful protocol. Nobody should be
+> using it. Having looked at it in more detail, I'm more in favor than
+> ever of removing it.
+
+and then sent a patch to "drop support for git-over-rsync". Ths patch,
+on top of explaning the above, contains:
+
+> We never made an official deprecation notice in the release
+> notes for git's rsync protocol, but the tutorial has marked
+> it as such since 914328a (Update tutorial., 2005-08-30).
+> And on the mailing list as far back as Oct 2005, we can find
+> Junio mentioning it as having "been deprecated for quite
+> some time."... So it was old news then; cogito had
+> deprecated the transport in July of 2005... (though it did
+> come back briefly when Linus broke git-http-pull!).
+>
+> Of course some people professed their love of rsync through
+> 2006, but Linus clarified in his usual gentle manner...:
+> 
+>  > Thanks!  This is why I still use rsync, even though
+>  > everybody and their mother tells me "Linus says rsync is
+>  > deprecated."
+>
+>  No. You're using rsync because you're actively doing
+>  something _wrong_.
+> 
+> The deprecation sentiment was reinforced in 2008, with a
+> mention that cloning via rsync is broken (with no fix)...
+> 
+> Even the commit porting rsync over to C from shell (cd547b4)
+> lists it as deprecated! So between the 10 years of informal
+> warnings, and the fact that it has been severely broken
+> since 2007, it's probably safe to simply remove it without
+> further deprecation warnings.
 
 ## Releases
+
 
 
 ## Other News
