@@ -76,12 +76,12 @@ on top of explaning the above, contains:
 > Of course some people professed their love of rsync through
 > 2006, but Linus clarified in his usual gentle manner...:
 > 
->  > Thanks!  This is why I still use rsync, even though
->  > everybody and their mother tells me "Linus says rsync is
->  > deprecated."
->
->  No. You're using rsync because you're actively doing
->  something _wrong_.
+> > > Thanks!  This is why I still use rsync, even though
+> > > everybody and their mother tells me "Linus says rsync is
+> > > deprecated."
+> > 
+> > No. You're using rsync because you're actively doing
+> > something _wrong_.
 > 
 > The deprecation sentiment was reinforced in 2008, with a
 > mention that cloning via rsync is broken (with no fix)...
