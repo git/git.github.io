@@ -96,8 +96,8 @@ Peff also investigated different ways to fix it but concluded:
 > using it. Having looked at it in more detail, I'm more in favor than
 > ever of removing it.
 
-and then sent a patch to "drop support for git-over-rsync". Ths patch,
-on top of explaning the above, contains:
+and then sent a patch to "drop support for git-over-rsync". This
+patch, on top of explaning the above, contains:
 
 > We never made an official deprecation notice in the release
 > notes for git's rsync protocol, but the tutorial has marked
