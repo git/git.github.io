@@ -45,17 +45,17 @@ Gummerer, Ramsay Jones, and also a bit by Howard Chu the LMDB author.
 
 Some suggestions were about:
 
-- [avoiding "extern" in C source](http://thread.gmane.org/gmane.comp.version-control.git/282020)
+- [avoiding "extern" in C source](http://thread.gmane.org/gmane.comp.version-control.git/282020),
 - [splitting functions](http://thread.gmane.org/gmane.comp.version-control.git/282924),
 - [config options](http://thread.gmane.org/gmane.comp.version-control.git/281925),
 - [indenting using tabs instead of spaces](http://thread.gmane.org/gmane.comp.version-control.git/281925),
 - [option naming](http://thread.gmane.org/gmane.comp.version-control.git/282934),
-- [using argv_array_* functions](http://thread.gmane.org/gmane.comp.version-control.git/282952)
-- [using pointers to functions](http://thread.gmane.org/gmane.comp.version-control.git/282923)
-- [typedef and pointers](http://thread.gmane.org/gmane.comp.version-control.git/282699)
-- [naming call back functions](http://thread.gmane.org/gmane.comp.version-control.git/283936)
+- [using argv_array_* functions](http://thread.gmane.org/gmane.comp.version-control.git/282952),
+- [using pointers to functions](http://thread.gmane.org/gmane.comp.version-control.git/282923),
+- [typedef and pointers](http://thread.gmane.org/gmane.comp.version-control.git/282699),
+- [naming call back functions](http://thread.gmane.org/gmane.comp.version-control.git/283936),
 - [avoiding strcpy()](http://thread.gmane.org/gmane.comp.version-control.git/284091),
-- [strings and memory leaks](http://thread.gmane.org/gmane.comp.version-control.git/284170)
+- [strings and memory leaks](http://thread.gmane.org/gmane.comp.version-control.git/284170).
 
 So the interest in this work is still big and makes it likely that it
 will bear fruits hopefully soon.
