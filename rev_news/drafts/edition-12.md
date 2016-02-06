@@ -21,9 +21,44 @@ This edition covers what happened during the month of January 2016.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [refs backend rebase on pu](http://thread.gmane.org/gmane.comp.version-control.git/284036/)
+
+David Turner, who works for Twitter, recently sent new versions of his
+work to add a database backend to store Git refs:
+
+- [v1 "LMDB refs backend atop pre-vtable"](http://thread.gmane.org/gmane.comp.version-control.git/281925/)
+- [v2 "refs backend reroll"](http://thread.gmane.org/gmane.comp.version-control.git/283739/)
+- [v3 "refs backend rebase on pu"](http://thread.gmane.org/gmane.comp.version-control.git/284036/)
+- [v4 "refs backend"](http://thread.gmane.org/gmane.comp.version-control.git/285604/)
+
+This work was started a long time ago by Ronnie Sahlberg, working for
+Google, and has already been reported about in
+[Git Rev News edition 7](http://git.github.io/rev_news/2015/09/09/edition-7/).
+
+These last patch series have again been reviewed or commented on by a
+lot of experienced Git developers, like Junio Hamano, Michael
+Haggerty, Duy Nguyen, Shawn Pearce, Jonathan Nieder, Eric Sunshine,
+David Aguilar, Ronnie Sahlberg, Jeff King, Szeder Gábor, Thomas
+Gummerer, Ramsay Jones, and also a bit by Howard Chu the LMDB author.
+
+Some suggestions were about:
+
+- [avoiding "extern" in C source](http://thread.gmane.org/gmane.comp.version-control.git/282020)
+- [splitting functions](http://thread.gmane.org/gmane.comp.version-control.git/282924),
+- [config options](http://thread.gmane.org/gmane.comp.version-control.git/281925),
+- [indenting using tabs instead of spaces](http://thread.gmane.org/gmane.comp.version-control.git/281925),
+- [option naming](http://thread.gmane.org/gmane.comp.version-control.git/282934),
+- [using argv_array_* functions](http://thread.gmane.org/gmane.comp.version-control.git/282952)
+- [using pointers to functions](http://thread.gmane.org/gmane.comp.version-control.git/282923)
+- [typedef and pointers](http://thread.gmane.org/gmane.comp.version-control.git/282699)
+- [naming call back functions](http://thread.gmane.org/gmane.comp.version-control.git/283936)
+- [avoiding strcpy()](http://thread.gmane.org/gmane.comp.version-control.git/284091),
+- [strings and memory leaks](http://thread.gmane.org/gmane.comp.version-control.git/284170)
+
+So the interest in this work is still big and makes it likely that it
+will bear fruits hopefully soon.
 
 ### Support
 
