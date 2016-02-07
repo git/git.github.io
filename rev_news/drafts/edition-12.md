@@ -129,7 +129,9 @@ patch, on top of explaning the above, contains:
 
 ## Releases
 
-
+* On January 4th, 2016, [Git 2.7.0 was released](http://article.gmane.org/gmane.linux.kernel/2118402), and a day later, [Git for Windows followed suite](http://article.gmane.org/gmane.comp.version-control.git/283383).
+* On February 2nd, 2016, Git for Windows published [version 2.7.0(2)](http://article.gmane.org/gmane.comp.version-control.git/285282) primarily to address [complaints by web browsers about "unsigned" installers](https://github.com/git-for-windows/git/issues/592).
+* On February 6th, 2016, [Git 2.7.1 was released](http://article.gmane.org/gmane.comp.version-control.git/285657), followed by [Git for Windows 2.7.1](http://article.gmane.org/gmane.comp.version-control.git/285699) on the same day.
 
 ## Other News
 
