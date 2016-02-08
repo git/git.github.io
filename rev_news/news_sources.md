@@ -44,5 +44,6 @@ For every upcoming edition, do the following:
 * When the time comes to release the edition, move the edition.md file
   into some designated publishing directory, so it appears in
   the feed on git.github.io/rev_news/.
+* When adding links, this is a great tool: [chitsaou/copy-as-markdown](https://github.com/chitsaou/copy-as-markdown/)
 
 Some inspiration/ideas here perhaps: http://thechangelog.com/trello-as-a-cms/
