@@ -132,17 +132,33 @@ patch, on top of explaning the above, contains:
 * On January 4th, 2016, [Git 2.7.0 was released](http://article.gmane.org/gmane.linux.kernel/2118402), and a day later, [Git for Windows followed suite](http://article.gmane.org/gmane.comp.version-control.git/283383).
 * On February 2nd, 2016, Git for Windows published [version 2.7.0(2)](http://article.gmane.org/gmane.comp.version-control.git/285282) primarily to address [complaints by web browsers about "unsigned" installers](https://github.com/git-for-windows/git/issues/592).
 * On February 6th, 2016, [Git 2.7.1 was released](http://article.gmane.org/gmane.comp.version-control.git/285657), followed by [Git for Windows 2.7.1](http://article.gmane.org/gmane.comp.version-control.git/285699) on the same day.
+* [Release v0.24.0b12 · libgit2/rugged](https://github.com/libgit2/rugged/releases/tag/v0.24.0b12)
+* [Release v0.11.0 · nodegit/nodegit](https://github.com/nodegit/nodegit/releases/tag/v0.11.0)
+* [JGit/EGit Release 4.2](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03087.html)
+* [GitLab's 50th Release: 8.4](https://about.gitlab.com/2016/01/22/gitlab-8-4-released/)
 
 ## Other News
 
 __Various__
 
+* [Git Merge 2016 Call for Speakers](https://docs.google.com/forms/d/1Oq9VLULWbmMUf2zeMEYKQs9xwb5VmE2D2dnPEvpTTqc/viewform?edit_requested=true)
+* [dear-github: An open letter to GitHub from the maintainers of open source projects](https://github.com/dear-github/dear-github)
+* [The history behind the decision to move Python to GitHub - Brett Cannon](http://www.snarky.ca/the-history-behind-the-decision-to-move-python-to-github)
+* [Mercurial's author, Matt Mackall, is moving on after 10 years of leading the project](https://www.mercurial-scm.org/wiki/mpm/transition)
+* [unix-history-repo: Continuous Unix commit history from 1972 until today](https://github.com/dspinellis/unix-history-repo)
 
 __Light reading__
 
+* [Deployment strategy with git - Marco Bunge](http://www.marco-bunge.com/2016/01/26/deployment-strategy-with-git/)
+* [a discussion on git integrity - from the binary-transparency Google Group](https://groups.google.com/forum/#!topic/binary-transparency/f-BI4o8HZW0)
+* [Learn Enough Git to Be Dangerous - Michael Hartl](http://www.learnenough.com/git-tutorial)
 
 __Git tools and sites__
 
+* [Gitcolony | The next generation of pull requests](https://www.gitcolony.com/?ref=cmang)
+* [ben174/git-draw: Allows you to draw in your github heatmap](https://github.com/ben174/git-draw)
+* [primiano/git-gdrive: git-gdrive: format-patch / am over Google Drive](https://github.com/primiano/git-gdrive)
+* [awesome-git-addons: A curated list of addons that extends git cli](https://github.com/stevemao/awesome-git-addons)
 
 ## Credits
 
