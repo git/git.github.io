@@ -127,6 +127,62 @@ patch, on top of explaning the above, contains:
 > since 2007, it's probably safe to simply remove it without
 > further deprecation warnings.
 
+## Developer Spotlight: Thomas Gummerer
+
+* Who are you, and what do you do?
+
+I'm an occasional contributor to Git. Originally I got involved with
+the Git community during the Google Summer of Code in 2012. I recently
+finished my masters degree, and will be starting a new job in about a
+month.
+
+* What would you name your most important contribution to Git?
+
+I haven't really made any big contributions to Git, but rather the
+occasional bug fix and some small features. Many of my contributions
+are around the index, as that's the first thing I worked on in Git for
+my Google Summer of Code project in 2012.
+
+* What are you doing on the Git project these days, and why?
+
+Most recently I helped reviewing the LMDB backend patch series by
+David Turner. As I didn't know much about the refs code before reading
+through the series I thought the introduction of a new backend would
+be a good way to learn more about that part of Git. Other recent work
+includes a patch series to add an option to show symrefs in `git
+ls-remote` and another patch series allowing `git grep` to fall back
+to `git grep --no-index`, if it is executed outside of a git
+repository. In addition to improving a project I use daily, I get to
+learn from more experienced developers with each patch series I'm
+sending.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+One thing I particularly like about Git is how almost every operation
+can be reversed in some way, if the user knows how to. Recovering from
+such operations can however often be difficult, especially for someone
+who does not know the ins and outs of Git. I think it would be great
+to have some kind of `git undo` command, that can undo the last, or
+last few operations in the repository.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+I don't think I would remove any feature in particular, but it would
+be nice to improve the consistency in the user interface. These
+inconsistencies make using Git harder and often confusing for new
+users.
+
+* What is your favourite Git-related tool/library, outside of Git itself?
+
+From a contributor perspective I find
+[Thomas Rast's tbdiff](https://github.com/trast/tbdiff) very useful.
+I use it mostly to compare an older version of a patch series to a new
+version I'm about to send and to see if all the review comments are
+addressed.
+
+
 ## Releases
 
 * On January 4th, 2016, [Git 2.7.0 was released](http://article.gmane.org/gmane.linux.kernel/2118402), and a day later, [Git for Windows followed suite](http://article.gmane.org/gmane.comp.version-control.git/283383).
