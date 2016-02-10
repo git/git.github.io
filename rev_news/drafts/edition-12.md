@@ -197,7 +197,7 @@ addressed.
 
 __Various__
 
-* [Git Merge 2016 Call for Speakers](https://docs.google.com/forms/d/1Oq9VLULWbmMUf2zeMEYKQs9xwb5VmE2D2dnPEvpTTqc/viewform?edit_requested=true)
+* [Git Merge 2016 on April 5th 2016](http://git-merge.com/) and [Git Developer Summit on April 4th 2016](http://thread.gmane.org/gmane.comp.version-control.git/285270) in New York City USA have been officially announced.
 * [dear-github: An open letter to GitHub from the maintainers of open source projects](https://github.com/dear-github/dear-github)
 * [The history behind the decision to move Python to GitHub - Brett Cannon](http://www.snarky.ca/the-history-behind-the-decision-to-move-python-to-github)
 * [Mercurial's author, Matt Mackall, is moving on after 10 years of leading the project](https://www.mercurial-scm.org/wiki/mpm/transition)
