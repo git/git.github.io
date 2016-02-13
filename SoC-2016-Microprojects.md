@@ -1,12 +1,12 @@
 ---
 layout: default
-title: SoC 2015 Applicant Microprojects
+title: SoC 2016 Applicant Microprojects
 ---
 
 ## Introduction
 
 It is strongly recommended that students who want to apply to the Git
-project for the Summer of Code 2015 submit a small code-related patch
+project for the Summer of Code 2016 submit a small code-related patch
 to the Git project as part of their application.  Think of these
 microprojects as the "Hello, world" of getting involved with the Git
 project; the coding aspect of the change can be almost trivial, but to
