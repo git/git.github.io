@@ -68,46 +68,35 @@ a merge on the trunk that merged a topic to point fingers at when
 a bug appears, instead of having to drill down to the individual
 commit on the faulty side branch. Cf.  <http://thread.gmane.org/gmane.comp.version-control.git/264661/focus=264720>
 
-#### "git bisect fixed/unfixed"
+#### Improve "git bisect terms"
 
 "git bisect" is initially meant to find regressions (i.e. the new code
 is bad, and the old one used to work). The opposite may happen too:
-look for the commit which fixed a bug. It is already possible using
-"git bisect", but the user has to type "good" to mean "the bug is
-there" and "bad" to mean "the bug is fixed", which isn't convenient.
+look for the commit which fixed a bug. This is why "git bisect terms"
+was added in Git 2.7. Still, when starting the bisection, the user has
+to know which behavior is the "new" one and which is the "old" one.
+This may not be obvious when comparing two commits which have no
+direct ancestry relation.
 
-It would be nice to allow the user to explicitely say "git bisect
-fixed" and "git bisect unfixed" instead. It is actually much harder
-than defining "fixed"/"unfixed" as aliases for "bad"/"good".
+For example, commit A is 'fast', commit B is 'slow'. If neither commit
+is an ancestor of the other, then Git will test the common ancestor
+(say, C) of A and B. If C is 'fast' then we now know that we're
+looking for a transition from 'fast' to 'slow' between C and B. If C
+is 'slow', then we are looking for a transition from 'slow' to 'fast'
+between C and A. Currently, in this situation, Git will stop with an
+error message if 'fast' is the new term, 'slow' the old one, and if C
+is 'fast'. Instead of failing, it could offer the user to reverse the
+terms and continue the bisection.
 
-A patch for this feature was sent to the mailing list in this thread a
-few years ago by Dscho:
-<http://thread.gmane.org/gmane.comp.version-control.git/86063>
+See discussion on the subject here:
+http://thread.gmane.org/gmane.comp.version-control.git/272792/focus=272869
 
-Unfortunately there were some problems with the patch and no one tried
-to fix them. So the same problem/suggestion is often reported on the
-mailing list, for example:
-
- - <http://thread.gmane.org/gmane.comp.version-control.git/165141>
- - <http://thread.gmane.org/gmane.comp.version-control.git/170113>
- - <http://thread.gmane.org/gmane.comp.version-control.git/182398>
-
-A patch series to let "old/new" be used instead of "good/bad" was
-started here:
-
-<http://thread.gmane.org/gmane.comp.version-control.git/199758/focus=199869>
-
-There is still work to be done to complete it.
-
-Note than another feature with the name "git bisect fix" was suggested
-to do something else:
-
-<http://thread.gmane.org/gmane.comp.version-control.git/169026>
-
-Since there have already been discussions and patches, the remaining
-work is probably less than a GSoC, so this project should be grouped
-with another one (like git bisect --first-parent) to make a full GSoC
-proposal.
+The change is controversial, hence a substantial part of the project
+would be to define what is the right behavior (should it be activated
+by default? what should be configurable and how? ...). Technically,
+the project is probably less than what would be expected for a GSoC
+hence it should be grouped with another one (typically another
+bisect-related idea).
 
 ### Unifying `git branch -l`, `git tag -l`, and `git for-each-ref`
 
