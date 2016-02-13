@@ -152,5 +152,7 @@ The idea of this project is to dive into the Git source code and
 convert a couple of shell and/or Perl scripts into portable and
 performant C code, making it a so-called "built-in".
 
-The plan is to start with something small, such as `git-pull.sh` to
-get into the groove, and then advance to more complex scripts.
+(Un)fortunately, the easy-to-port scripts like `git-pull.sh` are
+already ported by now. It is still possible to start with something
+small by porting portions of existing shell-scripts to C using a C
+helper inside the existing shell-script.
