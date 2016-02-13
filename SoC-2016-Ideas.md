@@ -98,24 +98,6 @@ the project is probably less than what would be expected for a GSoC
 hence it should be grouped with another one (typically another
 bisect-related idea).
 
-### Unifying `git branch -l`, `git tag -l`, and `git for-each-ref`
-
-These three commands are all about selecting a subset of a repository's
-refs, and then printing the result. However, the implementations are not
-shared. Some commands know selection options the others do not
-(e.g., `--contains`, `--merged`), and others know formatting options the
-others do not (e.g., `for-each-ref`'s `--format`).
-
-There have been experimental patches to unify the selection process, and
-some discussion on unifying the formatting. Based on this previous work,
-factor out a common library which can cleanly handle both selection and
-formatting, and use it consistently in the three commands.
-
- - Language: C
- - Difficulty: medium
- - Possible mentors: Jeff King
-
-
 ### "git config --unset" improvement
 
 "git config", when removing the last variable in a section, leaves an
