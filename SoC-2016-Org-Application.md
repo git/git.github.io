@@ -141,6 +141,26 @@ regular development, and we should do it for mentors, too.
 
 ## How will you help your students stay on schedule to complete their projects?
 
+There are several ways to do this, and they have been successful in
+the past:
+
+* Prepare students to submit patches before they started. We use a
+  microproject system prior to the student application where students
+  must submit at least a patch, and respond to reviews. This means
+  that on day 1 of their project, students already know how long
+  review cycles are, and how important it is to work with the
+  mailing-list.
+
+* Split the work into small patch series. Even if the first patch
+  series are only preparatory steps that do not bring a real added
+  value to Git, it is important to get them merged as early as
+  possible. Even if the project is not "completed", useful pieces of
+  code are validated all along the project.
+
+* Work on-list as much as possible. Students are really integrated in
+  the community, and even if they sometimes interact in private with
+  their mentors, most of the work is done publicly.
+
 ## How will you get your students involved in your community during GSoC?
 
 Students will be required to join the main development mailing list and
@@ -210,13 +230,22 @@ a year or more after their GSoC period ended):
  - 2010: 3 success, 1 failure, 3 students retained
  - 2011: 5 success, 0 failure, 4 students retained
  - 2012: 3 success, 0 failure, 2 students retained
- - 2014: 2 success, 1 failure, 1 student retained
+ - 2014: 2 success, 1 failure, 0 students retained
+ - 2015: 2 success, 0 failure, 2 students retained
 
 ### If your org has applied for GSoC before but not been accepted, select the years:
 
+None.
+
 ## Are you part of a foundation/umbrella organization?
 
+No
+
 ## What year was your project started?
+
+2005
+
+## Anything else we should know (optional)?
 
 # Remarks on the current state of the application
 
@@ -224,3 +253,10 @@ The 2015 application had a question "If you chose "veteran" in the
 organization profile dropdown, please summarize your involvement and
 the successes and challenges of your participation. Please also list
 your pass/fail rate for each year." with a very detailed answer.
+
+Question "How will you help your students stay on schedule to complete
+their projects?" is new. Proof-reading is particularly appreciated.
+
+I (Matthieu) have written "no" for foundation/umbrella organization,
+but I don't know if this would count as "Yes" if we accept libgit2
+projects.
