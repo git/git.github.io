@@ -94,7 +94,8 @@ There is also an IRC channel: <http://git-scm.com/community>.
 ## Why does your org want to participate in Google Summer of Code?
 
 With the exception of 2013, Git has participated in GSoC every year
-since 2007. We have appreciated not only the code contributions, but
+since 2007. We have appreciated not only the code contributions (both
+new features and internal refactoring to reduce the maintenance effort), but
 also the increased project visibility and the addition of new long-term
 contributors. We also believe strongly in helping students become
 comfortable contributing to open source in general, even if they do not
@@ -102,9 +103,9 @@ remain involved with Git itself.
 
 ## How many potential mentors have agreed to mentor this year?
 
-We have 3 potential mentors this year. This is a smaller number than in
+We have 5 potential mentors this year. This is a smaller number than in
 previous years, and we expect to take a correspondingly smaller number
-of projects (probably only 1 or 2).
+of projects (probably only 2).
 
 All mentors are volunteers for the specific projects that they can
 contribute the most to (i.e., ones that meet their interests and
@@ -132,8 +133,9 @@ Once they do disappear, we'll obviously try to contact them and find out
 what's going on. But ultimately, non-communication is grounds for a
 failing evaluation, regardless of any code produced.
 
-We plan to take fewer projects than we have as mentors, so that the
-remainder can act as backups. Most of our projects can be mentored by
+We plan to take fewer projects than we have as mentors. We usually
+have two co-mentors per students, so that one mentor being unavailable
+would have a limited impact on the project. Most of our projects can be mentored by
 any of the mentors, and by keeping student progress public and reviewed on
 the list, there's a good chance that another mentor (or the community at
 large) can pick up the slack. We try to keep the "bus factor" high for
@@ -157,10 +159,6 @@ the past:
   possible. Even if the project is not "completed", useful pieces of
   code are validated all along the project.
 
-* Work on-list as much as possible. Students are really integrated in
-  the community, and even if they sometimes interact in private with
-  their mentors, most of the work is done publicly.
-
 ## How will you get your students involved in your community during GSoC?
 
 Students will be required to join the main development mailing list and
@@ -170,7 +168,7 @@ same tasks and learn by example. We also feel that the list-based
 discussions will help the student to become and stay a member of the
 community.
 
-The traffic on the list is focused around Git feature development. We
+The traffic on the list is focused around Git development. We
 expect the students to stay current by at least skimming the messages,
 and participating in discussions that are close to their area of work.
 
