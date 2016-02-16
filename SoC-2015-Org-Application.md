@@ -127,6 +127,7 @@ a year or more after their GSoC period ended):
  - 2011: 5 success, 0 failure, 4 students retained
  - 2012: 3 success, 0 failure, 2 students retained
  - 2014: 2 success, 1 failure, 1 student retained
+ - 2015: 2 success, 0 failure, 1 student retained
 
 ## Why is your organization applying to participate in Google Summer of Code 2015? What do you hope to gain by participating?
 
