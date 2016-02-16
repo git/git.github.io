@@ -169,3 +169,9 @@ This project requires a very good knowledge of regular expressions.
 
 git tag --contains <id> prints the whole help text if <id> is invalid.
 It should only show the error message instead. Cf. $gmane/284328
+
+### Make upload-pack and receive-pack use the parse-options api
+
+These still use a hand-rolled option parser, which can be replaced by
+using the parse-options api.  Each of these files can be a
+microproject of its own.
