@@ -147,9 +147,7 @@ with all potential corner-cases.
 
 ### Add configuration options for some commonly used command-line options
 
-This includes:
-
-* git am -3
+Many have already been added (e.g. "git am -3" in e97a5e7).
 
 Some people always run the command with these options, and would
 prefer to be able to activate them by default in ~/.gitconfig.
