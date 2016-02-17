@@ -49,7 +49,7 @@ proposals for other ideas related to Git or libgit2.
 In addition to what we discussed, I think files named by include.path
 should be honored without checking the ownership.  Cf. <http://article.gmane.org/gmane.comp.version-control.git/243628>
 
-### "git apply --fix-mta-corruption".
+### Implement `git apply --fix-mta-corruption`
 
 Takes eol attributes into account to correct lossage/addition of CR at
 the end of line, with updates to "am".  Cf. <http://article.gmane.org/gmane.comp.version-control.git/257445>
@@ -60,7 +60,7 @@ the end of line, with updates to "am".  Cf. <http://article.gmane.org/gmane.comp
  - Difficulty: medium
  - Possible mentors: Matthieu Moy, Christian Couder
 
-#### "git bisect --first-parent".
+#### Implement `git bisect --first-parent`.
 
 When your project is strictly "new features are merged into trunk,
 never the other way around", it is handy to be able to first find
@@ -68,7 +68,7 @@ a merge on the trunk that merged a topic to point fingers at when
 a bug appears, instead of having to drill down to the individual
 commit on the faulty side branch. Cf.  <http://thread.gmane.org/gmane.comp.version-control.git/264661/focus=264720>
 
-#### Improve "git bisect terms"
+#### Improve `git bisect terms`
 
 "git bisect" is initially meant to find regressions (i.e. the new code
 is bad, and the old one used to work). The opposite may happen too:
@@ -124,10 +124,10 @@ This would need:
 
 * libification of read_rebase_todolist/abbrev_sha1_in_line
 
-* Introduction of a new internal command like git-rebase--helper (see
-  bisect--helper for a prior example) that call it
+* Introduction of a new internal command like `git-rebase--helper` (see
+  `bisect--helper` for a prior example) that call it
 
-* Use it from git-rebase--interactive.sh
+* Use it from `git-rebase--interactive.sh`
 
 This would open the door to other uses of C within "rebase -i", and
 possibly a step-by-step port of the shell code to C in the long run.
@@ -135,7 +135,7 @@ possibly a step-by-step port of the shell code to C in the long run.
 This is a relatively small project that should be combined with
 another one to give a proper GSoC project.
 
-### "git config --unset" improvement
+### `git config --unset` improvement
 
 "git config", when removing the last variable in a section, leaves an
 empty section header behind. Anybody who wants to improve this needs
