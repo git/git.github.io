@@ -142,10 +142,6 @@ empty section header behind. Anybody who wants to improve this needs
 to consider ramifications of leaving or removing comments.
 Cf. <http://article.gmane.org/gmane.comp.version-control.git/219524>
 
-### "git fetch --deepen"?
-
-Cf. <http://article.gmane.org/gmane.comp.version-control.git/213180> <http://article.gmane.org/gmane.comp.version-control.git/212950>
-
 ### Introduce threading to checkout codepath, possibly helping Windows folks.
 
 Cf. <http://article.gmane.org/gmane.comp.version-control.git/235874>
