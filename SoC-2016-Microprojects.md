@@ -107,11 +107,6 @@ suitable.  Just remember to keep the change small!  It is much better
 for you to finish a small but complete change than to try something
 too ambitious and not get it done.
 
-### Make "git -C '' cmd" not to barf.
-
-Instead, make it just like "cd ''", which is a no-op that silently
-succeeds.  Cf. $gmane/258109
-
 ### Allow "-" as a short-hand for "@{-1}" in more places.
 
 Pick one command that operates on branch names.  Teach it the "-"
@@ -126,29 +121,17 @@ used as a collection of multiple bits. Discuss if there is a good reason
 why it has to be a signed integral field and change it to an unsigned
 type otherwise.  Cf. $gmane/263751
 
-### Make "git diff --no-index $directory $file" DWIM better.
-
-"git diff --no-index $directory $directory/$file" is obviously what
-the user wanted.
-
-### Forbid "log --graph --no-walk"
-
-Because --graph is about connected history while --no-walk is about
-discrete points.  Cf. $gmane/216083
-
-### Move ~/.git-credentials and ~/.git-credential-cache to ~/.config/git
+### Move ~/.git-credential-cache to ~/.config/git
 
 Most of git dotfiles can be located, at the user's option, in
-~/.<file> or in ~/.config/git/<file>, following the [XDG
-standard](http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html).
-~/.git-credentials and ~/.git-credential-cache are still hardcoded as
-~/.<file>, and should allow using the XDG directory layout too
-(~/.git-credentials could be allowed as ~/.config/git/credential and
-~/.git-credential-cache could be allowed as ~/.cache/git/credential,
-possibly modified by $XDG_CONFIG_HOME and $XDG_CACHE_HOME).
+~/.<file> or in ~/.config/git/<file>, following the
+[XDG standard](http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html).
+~/.git-credential-cache is still hardcoded as ~/.git-credential-cache,
+but should allow using the XDG directory layout too as
+~/.cache/git/credential, possibly modified by $XDG_CONFIG_HOME and
+$XDG_CACHE_HOME).
 
-Each of these files can be a microproject of its own. The suggested
-approach is:
+The suggested approach is:
 
 * See how XDG was implemented for other files (run "git log --grep
   XDG" in Git's source code) and read the XDG specification.
@@ -181,3 +164,14 @@ enough to deserve a built-in driver, but are not yet recognized. For
 example, CSS, shell.
 
 This project requires a very good knowledge of regular expressions.
+
+### Make "git tag --contains <id>" less chatty if <id> is invalid
+
+git tag --contains <id> prints the whole help text if <id> is invalid.
+It should only show the error message instead. Cf. $gmane/284328
+
+### Make upload-pack and receive-pack use the parse-options api
+
+These still use a hand-rolled option parser, which can be replaced by
+using the parse-options api.  Each of these files can be a
+microproject of its own.
