@@ -98,6 +98,43 @@ the project is probably less than what would be expected for a GSoC
 hence it should be grouped with another one (typically another
 bisect-related idea).
 
+### "git rebase" improvements
+
+#### "git status" during non-interactive rebase
+
+Since 84e6fb9 (status: give more information during rebase -i,
+2015-07-06), "git status" gives some useful information like
+previously applied and next commits when an interactive rebase is
+stopped. The same could be done for non-interactive rebase.
+
+This is a small project that can be a used as a warm-up (perhaps:
+"extended warm-up"?) before tackling another one.
+
+#### Port parts of "git rebase" to a C helper
+
+Some pieces of code are currently duplicated between `wt-status.c` and
+`git-rebase--interactive.sh` (read_rebase_todolist/abbrev_sha1_in_line
+in C and expand_todo_ids/collapse_todo_ids in shell). It would be nice
+to let the shell version use directly the C version through a C helper
+to reduce code duplication and increase consistency (we've already
+been hit by subtle difference between different versions of a
+`git-rebase-todo` file ...).
+
+This would need:
+
+* libification of read_rebase_todolist/abbrev_sha1_in_line
+
+* Introduction of a new internal command like git-rebase--helper (see
+  bisect--helper for a prior example) that call it
+
+* Use it from git-rebase--interactive.sh
+
+This would open the door to other uses of C within "rebase -i", and
+possibly a step-by-step port of the shell code to C in the long run.
+
+This is a relatively small project that should be combined with
+another one to give a proper GSoC project.
+
 ### "git config --unset" improvement
 
 "git config", when removing the last variable in a section, leaves an
