@@ -173,3 +173,104 @@ It should only show the error message instead. Cf. $gmane/284328
 These still use a hand-rolled option parser, which can be replaced by
 using the parse-options api.  Each of these files can be a
 microproject of its own.
+
+
+### Git Beginner
+
+Git is an incredible powerful tool with lots of different commands that 
+offer a variety of ways to approach source control management. Naturally
+every way has advantages and disadvantages which a seasoned user can
+carefully consider and out weight against each other. However, many new
+users of Git are unable to cope with this variety, at least initially.
+If they run into a problem they likely search the Internet and find
+a StackOverflow answer instructing them to run a certain Git commands
+to solve their problems. A rushed user (aren't we all?) might run these
+commands without reading the docs which might makes the problem worse.
+
+The core of this micro project is to evaluate with a running prototype
+if it is possible to implement a "Git Beginner Mode". The mode shall be
+activated with the config "core.isbeginner" by Git users who prefer
+this safety net (default should be false).
+
+If this mode is enabled then Git shall refuse to run the following
+commands if issued by the users (some commands are used by Git
+internally and there they need to run regardless of the 
+"core.isbeginner" config)
+
+```
+git rebase
+git reset --hard
+git clean -f
+git gc --prune=now --aggressive
+git push -f
+```
+
+This list can and should be extend by the student. The goal is to 
+find the minimal necessary subset of Git commands to successfully 
+perform source control management. Seasoned Git users most likely
+disagree with this list as it would restrict them from working
+efficiently with Git (e.g. by maintaining a nice history using 
+`rebase`). However, these users are not the target audience. The target
+audience are beginners that want or need to use Git and want to
+stay out of trouble.
+
+### Git remote whitelist/blacklist
+
+Git beginners are easily confused by the distributed nature of Git.
+One source of confusion are Git remotes, especially if there are 
+multiple ones. This is a potentially big thread to cooperations
+as Git beginners might push changes to a public remote such as
+github.com instead of the private company Git server.
+
+This micro project is about to implement a Git remote whitelist
+and blacklist using Git config.
+
+Whitelist example:
+```
+[remote]
+    default = deny
+    message = "Are you sure you're not pushing company code?"
+    allowed = http://whitelisted-hosting.org
+    allowed = http://git-hosting.org/whitelisted-org
+    allowed = http://git-hosting.org/org/whitelisted-repo
+```
+
+Blacklist example:
+```
+[remote]
+    default = allow    
+    denied = http://denied-hosting.com
+```
+
+If a user wants to push changes to a blacklisted remote then the `push`
+command would print a generic error. If a `remote.message` is defined
+then this message would be shown in addition.
+
+
+### Git Travis CI improvements
+
+Automated testing is an important safety net for complex software such
+as Git. This micro project is about to improve the Git Travis CI
+integration.
+
+Here are a few improvement ideas to get started:
+
+* install CVS on the build machines to run t94?? and t96?? tests
+* install SVN on the build machines to run t91?? tests
+* install Apache Web Server to run 5539, 5550, and 5561
+* investigate if it is possible to run t1509 root worktree test
+* investigate if it is possible to add jgit to run t5310
+* investigate why GIT_TEST_LONG=YesPlease does not work on TravisCI
+* investigate if we can use pylint to analyze the git-p4 Python code
+* investigate if we can trigger Coverity static code analysis for the Git master
+  branch (hint: Stefan Beller already looked into this) - start here:
+  https://scan.coverity.com/travis_ci
+* investigate if we can run Clang static code analysis
+* generate Git Travis CI statistics (e.g. how long dues a build run, which
+  tests fail the most often etc.) - use this as starting point:
+  https://scribu.github.io/travis-stats/#git/git
+* investigate if it makes sense to run t/perf tests
+
+This list can and should be extend by the student.
+
+
