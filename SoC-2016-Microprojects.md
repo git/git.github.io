@@ -178,6 +178,58 @@ These still use a hand-rolled option parser, which can be replaced by
 using the parse-options api.  Each of these files can be a
 microproject of its own.
 
+### Git CI Improvements 1
+
+Automated testing is an important safety net for complex software such
+as Git. This micro project is about to improve the Git Travis CI
+integration.
+
+Investigate if we can trigger Coverity static code analysis for the Git
+master and maint branch (hint: Stefan Beller already looked into this).
+Start here: https://scan.coverity.com/travis_ci
+
+### Git CI Improvements 2
+
+Automated testing is an important safety net for complex software such
+as Git. This micro project is about to improve the Git Travis CI
+integration.
+
+Investigate if we can enable and run Clang static code analysis for the
+master and maint branch.
+
+### Git CI Improvements 3
+
+Automated testing is an important safety net for complex software such
+as Git. This micro project is about to improve the Git Travis CI
+integration.
+
+Investigate if we can use pylint to analyze the git-p4 Python code.
+
+### Git CI Improvements 4
+
+Automated testing is an important safety net for complex software such
+as Git. This micro project is about to improve the Git Travis CI
+integration.
+
+* install CVS on the build machines to run t94?? and t96?? tests
+* install SVN on the build machines to run t91?? tests
+* install Apache Web Server to run 5539, 5550, and 5561
+
+### Git CI Improvements 5
+
+Automated testing is an important safety net for complex software such
+as Git. This micro project is about to improve the Git Travis CI
+integration.
+
+Git's test suit is huge and over time we have seen some flaky test.
+Build a web page that analyzes the Travis CI test results and prints
+the test that fail most often. Use this implementation as starting point:
+https://scribu.github.io/travis-stats/#git/git
+
+After you have done this look at the randomly failing tests and try to
+figure out why they fail. See [here](https://travis-ci.org/git/git/jobs/108417904) 
+for an example of such a test failure.
+
 ### Teach "git pull --rebase" the "--[no-]autostash" option
 
 Although since 53c76dc0 git-pull understands the "rebase.autoStash"
