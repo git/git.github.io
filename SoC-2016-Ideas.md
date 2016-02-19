@@ -191,3 +191,38 @@ performant C code, making it a so-called "built-in".
 already ported by now. It is still possible to start with something
 small by porting portions of existing shell-scripts to C using a C
 helper inside the existing shell-script.
+
+### Port packfile creation optimisations to libgit2
+
+Libgit2 has an implementation of pack-objects (copied from git) which
+does support multi-threading but not some of the other capabilities
+which the git implementation does like re-using deltas or copying
+compressed data from one packfile to another.
+
+This would involve looking at the code in git to copy over
+optimisations as well as figuring out what parts of libgit2 should be
+changed to accomodate these new capabilities.
+
+- Language: C
+- Difficulty: medium
+- Possible mentors: Carlos Martín / Ed Thomson
+
+### Git server framework in libgit2
+
+Libgit2 has support for the client side of the negotiation, but it's
+missing server-side capabilities. We wouldn't want to simply
+reimplement `upload-pack` or `receive-pack` as function calls, but
+instead create the framework that takes care of the protocol details
+and calls to user code for
+
+ * pushing bytes to and from the network
+ * deciding which references to advertise
+ * deciding whether an update is acceptable
+ * possibly more
+
+which would allow e.g. limiting which references are shown to a particular user or
+make decisions about updates in callbacks instead of script hooks.
+
+- Language: C
+- Difficulty: medium
+- Possible mentors: Carlos Martín / Ed Thomson
