@@ -17,7 +17,7 @@ fast, scalable, distributed revision control system
 
 ## Logo
 
-![Git Logo](/images/logo.png)
+![Git Logo](/images/Git-Logo-1788C.png)
 
 ## Primary Open Source License
 
@@ -55,6 +55,11 @@ Many large and successful projects use Git, including the Linux
 Kernel, Perl, Eclipse, Gnome, KDE, Qt, Ruby on Rails, Android,
 PostgreSQL, Debian, and X.org.
 
+This organisation covers projects for
+[Git](https://github.com/git/git) itself. Students may also propose
+projects related to [libgit2](http://libgit2.github.io/). Other
+git-based software or services are not covered by this organization.
+
 ## Application Instructions
 
 ```
@@ -79,7 +84,7 @@ You can also use these to designate "sub-organizations" if you are an
 umbrella organization.
 ```
 
-new feature, refactoring
+new feature, refactoring, libgit2
 
 ## IRC Channel, Mailing List, or Email
 
