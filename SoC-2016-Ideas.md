@@ -33,6 +33,10 @@ your microproject in your application (e.g. linking to
 participate in the review of other patches, then you may also include
 links to discussions that would support your application.
 
+Students are strongly encourraged to send drafts of their proposal on
+the mailing-list before submitting it officially to GSoC to get
+feedback from the community.
+
 ## Note about the number of slots
 
 In 2016, the Git organization has very limited mentoring capacity.
