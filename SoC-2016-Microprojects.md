@@ -218,7 +218,7 @@ stay out of trouble.
 
 Git beginners are easily confused by the distributed nature of Git.
 One source of confusion are Git remotes, especially if there are 
-multiple ones. This is a potentially big thread to cooperations
+multiple ones. This is a potentially big threat to cooperations
 as Git beginners might push changes to a public remote such as
 github.com instead of the private company Git server.
 
