@@ -205,7 +205,7 @@ a StackOverflow answer instructing them to run a certain Git commands
 to solve their problems. A rushed user (aren't we all?) might run these
 commands without reading the docs which might makes the problem worse.
 
-The core of this micro project is to evaluate with a running prototype
+The core of this project is to evaluate with a running prototype
 if it is possible to implement a "Git Beginner Mode". The mode shall be
 activated with the config "core.isbeginner" by Git users who prefer
 this safety net (default should be false).
@@ -237,7 +237,7 @@ multiple ones. This is a potentially big threat to cooperations
 as Git beginners might push changes to a public remote such as
 github.com instead of the private company Git server.
 
-This micro project is about to implement a Git remote whitelist
+This project is about to implement a Git remote whitelist
 and blacklist using Git config.
 
 Whitelist example:
