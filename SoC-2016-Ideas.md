@@ -263,6 +263,16 @@ git push -f
 
 This list can and should be extended by the student.
 
+Note that this project is not technically difficult, it requires a
+deep understanding of Git: how each command is meant to be used, what
+are the potential dangers, ... Reaching a solution that effectively
+protects beginners without harming anyone is much harder than it
+seems. See for example [this
+thread](http://thread.gmane.org/gmane.comp.version-control.git/285893/focus=286614)
+for example potential objections. If chosen, this project should be
+discussed in depth on the list before and after the student
+application.
+
 ### Git remote whitelist/blacklist
 
 Git beginners are easily confused by the distributed nature of Git.
