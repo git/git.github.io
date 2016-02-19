@@ -147,6 +147,10 @@ with all potential corner-cases.
 
 ### Add configuration options for some commonly used command-line options
 
+This includes:
+
+* git commit -v
+
 Many have already been added (e.g. "git am -3" in e97a5e7).
 
 Some people always run the command with these options, and would
@@ -224,3 +228,10 @@ https://scribu.github.io/travis-stats/#git/git
 
 After you have done this look at the randomly failing tests and try to
 figure out why they fail. See [here](https://travis-ci.org/git/git/jobs/108417904) for an example of such a test failure
+
+### Teach "git pull --rebase" the "--[no-]autostash" option
+
+Although since 53c76dc0 git-pull understands the "rebase.autoStash"
+configuration option, it currently does not support the corresponding
+"--[no-]autostash" command-line switch. Teach git-pull to accept this
+command-line switch and pass it to git-rebase. Cf. $gmane/283557

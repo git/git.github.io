@@ -17,7 +17,7 @@ fast, scalable, distributed revision control system
 
 ## Logo
 
-![Git Logo](/images/logo.png)
+![Git Logo](/images/Git-Logo-1788C.png)
 
 ## Primary Open Source License
 
@@ -55,6 +55,11 @@ Many large and successful projects use Git, including the Linux
 Kernel, Perl, Eclipse, Gnome, KDE, Qt, Ruby on Rails, Android,
 PostgreSQL, Debian, and X.org.
 
+This organization covers projects for
+[Git](https://github.com/git/git) itself. Students may also propose
+projects related to [libgit2](http://libgit2.github.io/). Other
+git-based software or services are not covered by this organization.
+
 ## Application Instructions
 
 ```
@@ -79,7 +84,7 @@ You can also use these to designate "sub-organizations" if you are an
 umbrella organization.
 ```
 
-new feature, refactoring
+new feature, refactoring, libgit2
 
 ## IRC Channel, Mailing List, or Email
 
@@ -103,6 +108,11 @@ remain involved with Git itself.
 
 ## How many potential mentors have agreed to mentor this year?
 
+dropdown list => 1-5.
+
+Text below unused:
+
+```
 We have 5 potential mentors this year. This is a smaller number than in
 previous years, and we expect to take a correspondingly smaller number
 of projects (probably only 2).
@@ -116,32 +126,38 @@ Active contributors are defined to be those who have submitted and have
 had accepted into a shipped release a substantial amount of code, where
 substantial is defined to be equal to or larger than what might be
 expected of a student working on a Google Summer of Code project.
+```
 
 ## How will you keep mentors engaged with their students?
 
-We think that the most important part of GSoC is integrating the student
-into the normal communication channels used by other project
-participants. We don't expect regular developers to go silent for 3
-months and then dump 10,000 lines of code on us to review, and we don't
-want students to do that to us either. The first step in dealing with
-disappearing students is to make sure they are engaging with the
-community on design and code issues, and reaching small milestones on
-the way to the project. Then if they do disappear, we know quickly and
-can react, rather than being surprised at the end.
+```
+1000 characters.
+```
 
-Once they do disappear, we'll obviously try to contact them and find out
+We think that the most important part of GSoC is integrating the
+student into the normal communication channels used by other project
+members. The first step in dealing with disappearing students is to
+make sure they are engaging with the community on design and code
+issues, and reaching small milestones on the way to the project. Then
+if they do disappear, we know quickly and can react, rather than being
+surprised at the end.
+
+If they do disappear, we'll obviously contact them and find out
 what's going on. But ultimately, non-communication is grounds for a
 failing evaluation, regardless of any code produced.
 
 We plan to take fewer projects than we have as mentors. We usually
 have two co-mentors per students, so that one mentor being unavailable
-would have a limited impact on the project. Most of our projects can be mentored by
-any of the mentors, and by keeping student progress public and reviewed on
-the list, there's a good chance that another mentor (or the community at
-large) can pick up the slack. We try to keep the "bus factor" high for
-regular development, and we should do it for mentors, too.
+would have a limited impact on the project. Most of our projects can
+be mentored by any of the mentors, and by keeping student progress
+public and reviewed on-list, another mentor (or the community at
+large) can pick up the slack if needed.
 
 ## How will you help your students stay on schedule to complete their projects?
+
+```
+1000 characters.
+```
 
 There are several ways to do this, and they have been successful in
 the past:
@@ -153,44 +169,50 @@ the past:
   review cycles are, and how important it is to work with the
   mailing-list.
 
-* Split the work into small patch series. Even if the first patch
-  series are only preparatory steps that do not bring a real added
-  value to Git, it is important to get them merged as early as
-  possible. Even if the project is not "completed", useful pieces of
-  code are validated all along the project.
+* Split the work into small patch series. We don't expect regular
+  developers to go silent for 3 months and then dump 10,000 lines of
+  code on us to review, and we don't want students to do that to us
+  either. Even if the first patch series are only preparatory steps
+  that do not bring a real added value to Git, it is important to get
+  them merged as early as possible. Even if the project is not
+  "completed", useful pieces of code are validated all along the
+  project.
 
 ## How will you get your students involved in your community during GSoC?
 
-Students will be required to join the main development mailing list and
-post their patches for discussion. All current contributors already do
-this, so students will be able to see experienced hands performing the
-same tasks and learn by example. We also feel that the list-based
-discussions will help the student to become and stay a member of the
-community.
+```
+1000 characters.
+```
+
+Students will be required to join the main development mailing list
+and post their patches for discussion (in addition to posting their
+work as a Git repository on a publicly available server). All current
+contributors already do this, so students will be able to see
+experienced hands performing the same tasks and learn by example. We
+also feel that the list-based discussions will help the student to
+become and stay a member of the community.
+
+Mentors will also exchange direct email with students on at least a
+weekly basis. Students will be required to provide weekly progress
+reports back to their mentors, so that mentors are aware of the
+current difficulties. Progress reports give the mentors a chance to
+provide suggestions for problem resolution back to the student.
+
+Frequent email and IRC interaction with mentors and other developers
+will be strongly encouraged by suggesting students post their questions
+and ideas to the mailing list, and to discuss them on #git.
+
+```
+Unused text (did not fit the characters limit):
+
 
 The traffic on the list is focused around Git development. We
 expect the students to stay current by at least skimming the messages,
 and participating in discussions that are close to their area of work.
 
-Students will also be required to post their work as a Git repository on
-a publicly available server so that their works-in-progress will be
-available for everyone to review. However, as patch review typically
-happens on the mailing list, we expect that to be the main venue for
-review of the students' work.
-
-Mentors will also exchange direct email with students on at least a
-weekly basis, if not more frequently. Students will be required to
-provide weekly progress reports back to their mentors, so that mentors
-are aware of the tasks that a student might be stuck on or are having
-difficulty with. The intent of the progress reports
-is to give the mentors a chance to provide suggestions for problem
-resolution back to the student.
-
-Frequent email and IRC interaction with mentors and other developers
-will be strongly encouraged by suggesting students post their questions
-and ideas to the mailing list, and to discuss them on #git.  Many
-developers either already hold "office-hours" on IRC, or have agreed to
-do so during the GSoC period.
+Many developers either already hold "office-hours" on IRC, or have
+agreed to do so during the GSoC period.
+```
 
 ## How will you keep students involved with your community after GSoC?
 
@@ -217,19 +239,22 @@ Every year since 2007 except 2013.
 
 ### What is your success/fail rate per year?
 
-Here is a summary of our completed/failed projects per year, along with
-the number of retained contributors (where "retained" is calculated by
-finding contributors which continued to participate on the mailing list
-a year or more after their GSoC period ended):
+```
+500 characters
+```
 
- - 2007: 2 success, 1 failure, 1 student retained
- - 2008: 4 success, 2 failure, 3 students retained
- - 2009: 1 success, 1 failure, 0 students retained
- - 2010: 3 success, 1 failure, 3 students retained
- - 2011: 5 success, 0 failure, 4 students retained
- - 2012: 3 success, 0 failure, 2 students retained
- - 2014: 2 success, 1 failure, 0 students retained
- - 2015: 2 success, 0 failure, 2 students retained
+Here is a summary of our projects per year, along with the number of
+retained contributors (where "retained" means "still participating on
+the mailing list a year or more after their GSoC"):
+
+ - 2007: 2 pass, 1 fail, 1 retained
+ - 2008: 4 pass, 2 fail, 3 retained
+ - 2009: 1 pass, 1 fail, 0 retained
+ - 2010: 3 pass, 1 fail, 3 retained
+ - 2011: 5 pass, 0 fail, 4 retained
+ - 2012: 3 pass, 0 fail, 2 retained
+ - 2014: 2 pass, 1 fail, 0 retained
+ - 2015: 2 pass, 0 fail, 2 retained
 
 ### If your org has applied for GSoC before but not been accepted, select the years:
 
@@ -244,6 +269,10 @@ No
 2005
 
 ## Anything else we should know (optional)?
+
+We wrote a blog post after last year's GSoC which was not published on
+Google's blog, but the text is available here:
+https://git.github.io/rev_news/2015/09/09/edition-7/
 
 # Remarks on the current state of the application
 

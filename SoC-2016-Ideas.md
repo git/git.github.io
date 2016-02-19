@@ -41,8 +41,10 @@ We will probably be able to accept 2 students only this year.
 ## Summer of code main project ideas
 
 **Students**: Please consider these ideas as starting points for
-generating proposals.  We are also more than happy to receive
-proposals for other ideas related to Git or libgit2.
+generating proposals. We are also more than happy to receive proposals
+for other ideas related to Git or libgit2. For libgit2, please see
+[the libgit2 list of
+projects](https://github.com/libgit2/libgit2/blob/development/PROJECTS.md).
 
 ### Tighten configuration and hook execution based on the file ownership.
 
