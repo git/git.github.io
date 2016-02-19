@@ -227,7 +227,7 @@ git gc --prune=now --aggressive
 git push -f
 ```
 
-This list can and should be extend by the student.
+This list can and should be extended by the student.
 
 ### Git remote whitelist/blacklist
 
