@@ -227,7 +227,8 @@ the test that fail most often. Use this implementation as starting point:
 https://scribu.github.io/travis-stats/#git/git
 
 After you have done this look at the randomly failing tests and try to
-figure out why they fail. See [here](https://travis-ci.org/git/git/jobs/108417904) for an example of such a test failure
+figure out why they fail. See [here](https://travis-ci.org/git/git/jobs/108417904) 
+for an example of such a test failure.
 
 ### Teach "git pull --rebase" the "--[no-]autostash" option
 
