@@ -191,3 +191,72 @@ performant C code, making it a so-called "built-in".
 already ported by now. It is still possible to start with something
 small by porting portions of existing shell-scripts to C using a C
 helper inside the existing shell-script.
+
+
+### Git Beginner
+
+Git is an incredible powerful tool with lots of different commands that 
+offer a variety of ways to approach source control management. Naturally
+every way has advantages and disadvantages which a seasoned user can
+carefully consider and out weight against each other. However, many new
+users of Git are unable to cope with this variety, at least initially.
+If they run into a problem they likely search the Internet and find
+a StackOverflow answer instructing them to run a certain Git commands
+to solve their problems. A rushed user (aren't we all?) might run these
+commands without reading the docs which might makes the problem worse.
+
+The core of this project is to evaluate with a running prototype
+if it is possible to implement a "Git Beginner Mode". The mode shall be
+activated with the config "core.isbeginner" by Git users who prefer
+this safety net (default should be false).
+
+If this mode is enabled then Git shall print a warning message before
+running a potentially destructive command. In addition to the warning
+Git shall print a command that would reverse the operation if possible.
+Most of the information to reverse an operation is already available
+via git reflog. However, the task here is to make this information 
+more easily accessible to Git beginners.
+
+The following commands should be guarded with this mechanism:
+
+```
+git rebase
+git reset --hard
+git clean -f
+git gc --prune=now --aggressive
+git push -f
+```
+
+This list can and should be extended by the student.
+
+### Git remote whitelist/blacklist
+
+Git beginners are easily confused by the distributed nature of Git.
+One source of confusion are Git remotes, especially if there are 
+multiple ones. This is a potentially big threat to cooperations
+as Git beginners might push changes to a public remote such as
+github.com instead of the private company Git server.
+
+This project is about to implement a Git remote whitelist
+and blacklist using Git config.
+
+Whitelist example:
+```
+[remote]
+    default = deny
+    message = "Are you sure you're not pushing company code?"
+    allowed = http://whitelisted-hosting.org
+    allowed = http://git-hosting.org/whitelisted-org
+    allowed = http://git-hosting.org/org/whitelisted-repo
+```
+
+Blacklist example:
+```
+[remote]
+    default = allow    
+    denied = http://denied-hosting.com
+```
+
+If a user wants to push changes to a blacklisted remote then the `push`
+command would print a generic error. If a `remote.message` is defined
+then this message would be shown in addition.
