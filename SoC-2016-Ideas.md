@@ -227,14 +227,7 @@ git gc --prune=now --aggressive
 git push -f
 ```
 
-This list can and should be extend by the student. The goal is to 
-find the minimal necessary subset of Git commands to successfully 
-perform source control management. Seasoned Git users most likely
-disagree with this list as it would restrict them from working
-efficiently with Git (e.g. by maintaining a nice history using 
-`rebase`). However, these users are not the target audience. The target
-audience are beginners that want or need to use Git and want to
-stay out of trouble.
+This list can and should be extend by the student.
 
 ### Git remote whitelist/blacklist
 
