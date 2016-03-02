@@ -144,8 +144,8 @@ $XDG_CACHE_HOME).
 
 The suggested approach is:
 
-* See how XDG was implemented for other files (run "git log --grep
-  XDG" in Git's source code) and read the XDG specification.
+* See how XDG was implemented for other files (run "`git log --grep
+  XDG`" in Git's source code) and read the XDG specification.
 
 * Implement and test the new behavior, without breaking compatibility
   with the old behavior.
@@ -178,9 +178,9 @@ example, CSS, shell.
 
 This project requires a very good knowledge of regular expressions.
 
-### Make "git tag --contains <id>" less chatty if <id> is invalid
+### Make "`git tag --contains <id>`" less chatty if <id> is invalid
 
-git tag --contains <id> prints the whole help text if <id> is invalid.
+git tag `--contains` <id> prints the whole help text if <id> is invalid.
 It should only show the error message instead. Cf. $gmane/284328
 
 ### Make upload-pack and receive-pack use the parse-options api
@@ -241,9 +241,9 @@ After you have done this look at the randomly failing tests and try to
 figure out why they fail. See [here](https://travis-ci.org/git/git/jobs/108417904) 
 for an example of such a test failure.
 
-### Teach "git pull --rebase" the "--[no-]autostash" option
+### Teach "`git pull --rebase`" the "`--[no-]autostash`" option
 
 Although since 53c76dc0 git-pull understands the "rebase.autoStash"
 configuration option, it currently does not support the corresponding
-"--[no-]autostash" command-line switch. Teach git-pull to accept this
+"`--[no-]autostash`" command-line switch. Teach git-pull to accept this
 command-line switch and pass it to git-rebase. Cf. $gmane/283557
