@@ -289,6 +289,7 @@ This project is about to implement a Git remote whitelist
 and blacklist using Git config.
 
 Whitelist example:
+
 ```
 [remote]
     default = deny
@@ -299,6 +300,7 @@ Whitelist example:
 ```
 
 Blacklist example:
+
 ```
 [remote]
     default = allow    
