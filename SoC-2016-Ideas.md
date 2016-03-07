@@ -291,18 +291,18 @@ and blacklist using Git config.
 Whitelist example:
 ```
 [remote]
-    default = deny
-    message = "Are you sure you're not pushing company code?"
-    allowed = http://whitelisted-hosting.org
-    allowed = http://git-hosting.org/whitelisted-org
-    allowed = http://git-hosting.org/org/whitelisted-repo
+default = deny
+message = "Are you sure you're not pushing company code?"
+allowed = http://whitelisted-hosting.org
+allowed = http://git-hosting.org/whitelisted-org
+allowed = http://git-hosting.org/org/whitelisted-repo
 ```
 
 Blacklist example:
 ```
 [remote]
-    default = allow    
-    denied = http://denied-hosting.com
+default = allow
+denied = http://denied-hosting.com
 ```
 
 If a user wants to push changes to a blacklisted remote then the `push`
