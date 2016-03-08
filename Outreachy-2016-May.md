@@ -14,7 +14,7 @@ Outreachy, which will run from May 23, 2016 to August 23, 2016.  Note
 that Git is also participating in Google Summer of Code during the same
 period. Eligible individuals may apply for both programs (see this
 [FAQ](https://wiki.gnome.org/action/show/Outreachy?action=show&redirect=OutreachProgramForWomen#Is_Google_Summer_of_Code_right_for_you.3F)
-for details.
+for details).
 
 ## How to Apply
 
