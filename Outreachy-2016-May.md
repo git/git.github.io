@@ -11,7 +11,7 @@ find out more about the program at its [homepage](https://www.gnome.org/outreach
 
 This is the landing page for Git's participation in Round 12 of
 Outreachy, which will run from May 23, 2016 to August 23, 2016.  Note
-that Git is also participating in Google Summer of Code during the same
+that Git is also participating in [Google Summer of Code](https://summerofcode.withgoogle.com/organizations/6343374437089280/) during the same
 period. Eligible individuals may apply for both programs (see this
 [FAQ](https://wiki.gnome.org/action/show/Outreachy?action=show&redirect=OutreachProgramForWomen#Is_Google_Summer_of_Code_right_for_you.3F)
 for details).
