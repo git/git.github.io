@@ -172,6 +172,21 @@ One nice outcome of this patch series though is that error messages
 when there are problems in the config can now tell more precisely
 where the problems come from.
 
+* [add DEVELOPER makefile knob to check for acknowledged warnings](http://thread.gmane.org/gmane.comp.version-control.git/287345)
+
+Jeff King noted in a [review](http://thread.gmane.org/gmane.comp.version-control.git/285553/focus=285568) 
+that *git style doesn't allow declaration-after-statement*. Thereupon
+Lars Schneider posted a [patch](http://thread.gmane.org/gmane.comp.version-control.git/285752) 
+to check for this warning in the TravisCI build. In the review of this 
+patch Jeff [suggested](http://thread.gmane.org/gmane.comp.version-control.git/285752/focus=285761)
+to codify the knowledge about the warnings into an optional Makefile knob 
+called "DEVELOPER". Lars combined the warnings that [Junio and Jeff](http://thread.gmane.org/gmane.comp.version-control.git/285752/focus=285761) care about and posted a revised version of the [patch](http://thread.gmane.org/gmane.comp.version-control.git/287345).
+
+Git developers with a reasonably modern compiler can now compile Git with 
+`DEVELOPER=1 make` or set the flag once for all make executions with 
+`echo DEVELOPER=1 >>config.mak` to ensure their patches are clear of all 
+compiler warnings that the Git project cares about.
+
 <!---
 ### Support
 -->
