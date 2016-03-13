@@ -17,9 +17,102 @@ This edition covers what happened during the month of February 2016.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [RFC: Resumable clone based on hybrid "smart" and "dumb" HTTP](http://thread.gmane.org/gmane.comp.version-control.git/285921/)
+
+It is a well known problem that `git clone` is not resumable. If the
+connection comes down during a clone, the clone has to be restarted
+from scratch.
+
+A work around that is often suggested is to use `git bundle` first, then
+to rsync that bundle and eventually to clone using the rsync'ed bundle. Some
+tools [like gitolite](http://thread.gmane.org/gmane.comp.version-control.git/235040/) have even been making it easier to support that.
+
+There was also at one point in 2011
+[a patch series](http://thread.gmane.org/gmane.comp.version-control.git/185196/)
+to improve the support of this kind of clone workflow internally.
+
+And for some time this was thought of as just a small manpower problem. A
+few month of dedicated work by anyone could probably fix that. It was
+even proposed as a Google Summer of Code (GSoC) project.
+
+Over time though Git developers realized that it was not so easy
+because some very careful design was needed, and it was removed from
+the list of possible GSoC projects.
+
+So it was very exciting to see a number of new proposals pop up on the
+list during the last few months.
+
+It started on February 5 with
+[a "Resumable clone revisited, proof of concept" patch series by Duy Nguyen](http://thread.gmane.org/gmane.comp.version-control.git/that/)
+where he wrote:
+
+> I was reminded by LWN about this. Annoyed in fact because it's
+> called a bug while it looks more like an elephant.
+
+and pointing to [a LWN.net article](https://lwn.net/Articles/674392/)
+that reports about
+[Sarah Sharp speaking at the SCALE 14x conference](https://www.socallinuxexpo.org/scale/14x/presentations/improving-diversity-maslows-hierarchy-needs):
+"she noted that Git still does not support interrupting and resuming
+download operations, which is an important bug to fix."
+
+Then on February 10 Shawn Pearce sent
+[an 'RFC: Resumable clone based on hybrid "smart" and "dumb" HTTP' proposal](http://thread.gmane.org/gmane.comp.version-control.git/285921/)
+that he had discussed internally with other people at Google where he works.
+
+This was followed on March 2 by
+[an email called "Resumable git clone?"](thread.gmane.org/gmane.comp.version-control.git/288088/)
+from Josh Triplett, a well known Linux Kernel developer, who asked:
+
+> In a discussion elsewhere, Al Viro suggested taking the partial pack
+> received so far, repairing any truncation, indexing the objects it
+> contains, and then re-running clone and not having to fetch those
+> objects.  This may also require extending receive-pack's protocol for
+> determining objects the recipient already has, as the partial pack may
+> not have a consistent set of reachable objects.
+>
+> Before starting down the path of developing patches for this, does the
+> approach seem potentially reasonable?
+
+Josh talks about Al Viro who is another well known Linux Kernel
+developer, and it's interesting to see Linux Kernel developers
+interested again in taking part in Git development. It reminds some
+old timers about the "good old time".
+
+All these proposals have been discussed by many important Git
+developers and reviewers like Stefan Beller, Junio Hamano, Johannes
+Schindelin, Jonathan Nieder, Eric Sunshine, Jeff King, Elia Pinto.
+
+About Shawn's proposal there was also an interesting potential
+security issue called out by Blake Burkhart. And other people like
+Bhavik Bavishi and Konstantin Ryabitsev also took part of the
+discussion following Josh's email.
+
+From the last discussions about Josh's email, it appeared that Git
+developers favored Shawn's proposal over others, and maybe that
+Shawn's proposal was going to be worked on soon.
+
+Then on March 5 Kevin Wern sent
+[an email called "Resumable clone"](thread.gmane.org/gmane.comp.version-control.git/288306/),
+where he said he began looking at relevant code to start working on it, and he asked:
+
+> Is someone working on this currently?  Are there any things I should
+> know moving forward?  Is there a certain way I should break
+> down/organize the feature when writing patches?
+
+Duy answered that "Resumable clone is happening." And pointed to
+[some preparation work](http://thread.gmane.org/gmane.comp.version-control.git/288205/focus=288222)
+by Junio Hamano [going on](http://thread.gmane.org/gmane.comp.version-control.git/288080/focus=288150).
+Junio by the way answered with
+[a very long email](http://thread.gmane.org/gmane.comp.version-control.git/288306/focus=288317)
+that contains "a rough and still slushy outline" of what remains to be
+done. This was then discussed and explained further.
+
+It is not clear if Shawn's proposal and Josh's email were inspired by
+Sarah Sharp's remark, and LWN.net's report about it, but anyway it
+looks like hopefully this old and annoying problem is going to be
+fixed not too far away into the future.
 
 ### Reviews
 
