@@ -277,6 +277,10 @@ for example potential objections. If chosen, this project should be
 discussed in depth on the list before and after the student
 application.
 
+- Language: C, shell (bash)
+- Difficulty: hard
+- Possible mentors: Lars Schneider
+
 ### Git remote whitelist/blacklist
 
 Git beginners are easily confused by the distributed nature of Git.
@@ -310,3 +314,7 @@ Blacklist example:
 If a user wants to push changes to a blacklisted remote then the `push`
 command would print a generic error. If a `remote.message` is defined
 then this message would be shown in addition.
+
+- Language: C, shell (bash)
+- Difficulty: medium
+- Possible mentors: Lars Schneider
