@@ -51,7 +51,7 @@ where he wrote:
 > I was reminded by LWN about this. Annoyed in fact because it's
 > called a bug while it looks more like an elephant.
 
-and pointing to [a LWN.net article](https://lwn.net/Articles/674392/)
+and pointed to [a LWN.net article](https://lwn.net/Articles/674392/)
 that reports about
 [Sarah Sharp speaking at the SCALE 14x conference](https://www.socallinuxexpo.org/scale/14x/presentations/improving-diversity-maslows-hierarchy-needs):
 "she noted that Git still does not support interrupting and resuming
