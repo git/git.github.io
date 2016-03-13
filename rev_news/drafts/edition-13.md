@@ -120,57 +120,55 @@ fixed not too far away into the future.
 
 For some time Lars Schneider has been sending versions of a short
 patch series to make it possible to see where a config option comes
-from:
+from ([v1](http://thread.gmane.org/gmane.comp.version-control.git/285553/), [v2](http://thread.gmane.org/gmane.comp.version-control.git/285894/), [v3](http://thread.gmane.org/gmane.comp.version-control.git/286110/), [v4](http://thread.gmane.org/gmane.comp.version-control.git/286197/), [v5](http://thread.gmane.org/gmane.comp.version-control.git/286485/), [v6](http://thread.gmane.org/gmane.comp.version-control.git/286672/)):
 
-- [v1](http://thread.gmane.org/gmane.comp.version-control.git/285553/)
-- [v2](http://thread.gmane.org/gmane.comp.version-control.git/285894/)
-- [v3](http://thread.gmane.org/gmane.comp.version-control.git/286110/)
-- [v4](http://thread.gmane.org/gmane.comp.version-control.git/286197/)
-- [v5](http://thread.gmane.org/gmane.comp.version-control.git/286485/)
-- [v6](http://thread.gmane.org/gmane.comp.version-control.git/286672/)
+```
+$ git config --list --show-origin
+file:/Users/john/.gitconfig user.email=john@doe.com
+file:/Users/john/.gitconfig alias.co=checkout
+file:.git/config    remote.origin.url=https://repos/myrepo.git
+```
 
-Version 1 was itself based on a previous patch by Jeff King.
+Lars started this patch series with an [RFC](http://thread.gmane.org/gmane.comp.version-control.git/285246)
+whereupon Jeff King pointed him to a [previous discussion](http://thread.gmane.org/gmane.comp.version-control.git/190027/focus=190267)
+about the same idea. Jeff also posted his initial implementation which
+Lars' v1 was based on.
 
-The new feature could be useful because config options can be set in
-many ways. The usual way is to use one of the config files:
+The new feature can be useful because config options can be set in
+different locations and sometimes it is hard to find where a 
+specific config was defined. Usually a config is defined in one of the 
+following files:
 
 - the ".git/config" file at the root of the working directory,
 - the user's "~/.gitconfig" file,
 - the user's "~/.config/git/config" file, or
 - a system wide "/etc/gitconfig" file.
 
-But the exact paths of the above files depend on how git was compiled
+The exact paths of the above files depend on how git was compiled
 and on the values of at least the GIT_CONFIG, GIT_CONFIG_NOSYSTEM,
 GIT_DIR and XDG_CONFIG_HOME environment variables.
 
-Also config values can also be set on the command line using the 'git
--c' option, like `git -c <key>=<value> config ...`. Or they can be
-read from another file using the 'config -f' option, like `git config
--f <file> ...`, or from the standard input. They can also be included
-from another file by using a "include.path = <path>" directive in a
-config file.
+In addition config values can be set on the command line (`git -c <key>=<value> config ...`),
+from another file (`git config -f <file> ...`), from standard input (`git config < ...`), or 
+even from a blob (`git config --blob=a9d9f9`). A config file can also 
+include another config file by using the "include.path = <path>" 
+directive.
 
-As can be seen in the above threads, even if it seems simple, there
-are a lot of details to get right. These details include the name of
-the option. This was discussed by Sebastian Schuberth, Jeff King,
-Ramsay Jones, Mike Rappazzo and Junio Hamano. So the name was changed
-to '--show-origin'.
+Although the implementation itself was straightforward many details around
+the naming required a thoughtful discussion by Sebastian Schuberth, Jeff King,
+Ramsay Jones, Mike Rappazzo and Junio Hamano. Eventually the list agreed
+on the config option name '--show-origin' and the prefixes 'file', 
+'command line', 'standard input' and 'blob' for the different config types.
 
-Other details that were discussed are about the format of the output
-in special cases, like when the 'git -c' option is used, or when the
-'config -f' option is used, or when config is read from the standard
-input.
-
-The `git config` option also has a lot of different modes depending on
-which options it is passed, so it was discussed with which other
-options it is ok to pass '--show-origin'.
+The `git config` option also has a number of different modes (`--get`, `--list`, ...) 
+and it was discussed which of them should be supported by '--show-origin'.
 
 Many details in the code and tests where also discussed by Eric
 Sunshine, Johannes Schindelin, Johannes Sixt, Jeff, Ramsay and Junio.
 
-One nice outcome of this patch series though is that error messages
-when there are problems in the config can now tell more precisely
-where the problems come from.
+One nice side effect of this patch series is that in case of a config error 
+Git can now tell more precisely from what type of config the error originates 
+from (e.g. `standard input` or `file`).
 
 <!---
 ### Support
