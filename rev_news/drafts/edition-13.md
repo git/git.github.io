@@ -178,17 +178,56 @@ where the problems come from.
 
 ## Releases
 
+The last month we saw some maintenance releases of Git, along with some RCs of the upcoming 2.8:
+
+* [Git v2.7.3](https://lkml.org/lkml/2016/3/10/612)
+* [Git for Windows 2.7.2](https://github.com/git-for-windows/git/releases/tag/v2.7.2.windows.1)
+* [Git v2.8.0-rc2](http://article.gmane.org/gmane.linux.kernel/2174436) 
+
+And then there was a significant, albeit humbly versioned new libgit2, which dominoed through its wrapper projects:
+
+* [Release libgit2 v0.24.0 · libgit2/libgit2](https://github.com/libgit2/libgit2/releases/tag/v0.24.0)
+* [Release Rugged v0.24.0 · libgit2/rugged](https://github.com/libgit2/rugged/releases/tag/v0.24.0)
+* [Release v0.24.0 · libgit2/pygit2](https://github.com/libgit2/pygit2/releases/tag/v0.24.0)
+* [Release 0.11.0: Merge pull request #559 from libgit2/piet/write-merge-conflicted-files · libgit2/objective-git](https://github.com/libgit2/objective-git/releases/tag/0.11.0)
+* [Release LibGit2Sharp v0.22 · libgit2/libgit2sharp](https://github.com/libgit2/libgit2sharp/releases/tag/v0.22)
+* [Release v0.11.9 · nodegit/nodegit](https://github.com/nodegit/nodegit/releases/tag/v0.11.9)
+
+Other releases:
+
+* [GitLab major release 8.5](https://about.gitlab.com/2016/02/22/gitlab-8-5-released/), with patches up to [8.5.5](https://about.gitlab.com/2016/03/10/gitlab-8-dot-5-dot-5-released/)
+* [Magit 2.5](http://emacsair.me/2016/02/10/magit-2.5)
 
 ## Other News
 
 __Various__
 
+* [My git aliases](http://kamalmarhubi.com/blog/2016/02/29/my-git-aliases/), by Kamal Marhubi
+* [Here's a band you can book with a pull request](https://github.com/rawfunkmaharishi/rawfunkmaharishi.github.io/blob/master/gigs/_posts/HOW_TO_BOOK_THE_BAND.md)
+* [Git Cheatsheet](http://satanas.io/cheatsheets/git/), by Wil Alvarez
+* [GitHub responds to the Open Source Maintainers "dear-github" letter](https://github.com/dear-github/dear-github/pull/115)
+* [A presentation showing off Git as a roleplay: Git Dance](https://www.youtube.com/watch?v=cyMl6PNm5ts)
+* [And another Git Dance](https://www.youtube.com/watch?v=8hgNe8Q6kZE)
+
 
 __Light reading__
 
+* [Don't "Push" Your Pull Requests](https://www.igvita.com/2011/12/19/dont-push-your-pull-requests/), by Ilya Grigorik
+* [Git rebase and the golden rule explained](https://medium.freecodecamp.com/git-rebase-and-the-golden-rule-explained-70715eccc372#.93ok9bhsw), by Pierre de Wulf
+* [GitHub Workflow (used by Frameworks team at BBC News)](http://www.integralist.co.uk/posts/github-workflow.html)
+* [Write, Review, Merge, Publish: Phabricator Review Workflow](https://secure.phabricator.com/phame/post/view/766/write_review_merge_publish_phabricator_review_workflow/)
+* [A succesful Git branching model considered harmful](https://barro.github.io/2016/02/a-succesful-git-branching-model-considered-harmful/), by Jussi Judin
+* [Versioning a Microservice System with git](https://opencredo.com/versioning-a-microservice-system-with-git/), by David Borsos
+* [Understanding git for real by exploring the .git directory](https://medium.freecodecamp.com/understanding-git-for-real-by-exploring-the-git-directory-1e079c15b807#.r1v5tvtqn), also by Pierre de Wulf
+* [A Grip On Git: A Simple, Visual Git Tutorial](https://agripongit.vincenttunru.com/), by Vincent Tunru
 
 __Git tools and sites__
 
+* [InfoQ: Google Kick-Starts Git Ketch: A Fault-Tolerant Git Management System](http://www.infoq.com/news/2016/02/google-kick-starts-git-ketch)
+* [diff-so-fancy: Good-lookin' diffs with diff-highlight and more](https://github.com/so-fancy/diff-so-fancy)
+* [git-blameall](http://1dan.org/git-blameall/)
+* [Go-git – low-level and extensible Git client library in Go](https://github.com/src-d/go-git)
+* [New version of Atlassian SourceTree is out](http://blog.sourcetreeapp.com/2016/02/22/sourcetree-update-atlassian-account-git-lfs-support-ui-refresh-and-more/)
 
 ## Credits
 
