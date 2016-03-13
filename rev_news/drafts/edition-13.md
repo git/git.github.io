@@ -45,7 +45,7 @@ So it was very exciting to see a number of new proposals pop up on the
 list during the last few months.
 
 It started on February 5 with
-[a "Resumable clone revisited, proof of concept" patch series by Duy Nguyen](http://thread.gmane.org/gmane.comp.version-control.git/that/)
+[a "Resumable clone revisited, proof of concept" patch series by Duy Nguyen](http://thread.gmane.org/gmane.comp.version-control.git/285555/)
 where he wrote:
 
 > I was reminded by LWN about this. Annoyed in fact because it's
@@ -62,7 +62,7 @@ Then on February 10 Shawn Pearce sent
 that he had discussed internally with other people at Google where he works.
 
 This was followed on March 2 by
-[an email called "Resumable git clone?"](thread.gmane.org/gmane.comp.version-control.git/288088/)
+[an email called "Resumable git clone?"](http://thread.gmane.org/gmane.comp.version-control.git/288088/)
 from Josh Triplett, a well known Linux Kernel developer, who asked:
 
 > In a discussion elsewhere, Al Viro suggested taking the partial pack
@@ -94,7 +94,7 @@ developers favored Shawn's proposal over others, and maybe that
 Shawn's proposal was going to be worked on soon.
 
 Then on March 5 Kevin Wern sent
-[an email called "Resumable clone"](thread.gmane.org/gmane.comp.version-control.git/288306/),
+[an email called "Resumable clone"](http://thread.gmane.org/gmane.comp.version-control.git/288306/),
 where he said he began looking at relevant code to start working on it, and he asked:
 
 > Is someone working on this currently?  Are there any things I should
