@@ -318,3 +318,19 @@ then this message would be shown in addition.
 - Language: C, shell (bash)
 - Difficulty: medium
 - Possible mentors: Lars Schneider
+
+### RFC 3986 conform URL rewrites
+
+Git can be instructed to rewrite URLs using the `url.<someURL>.insteadOf`
+config option. Although host names are defined as case insensitive in 
+section 3.2.2 of [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt) Git
+config does not respect this and considers the entire URL as case sensitive.
+
+The goal of this project is to implement [Git URL rewrites](https://github.com/git/git/blob/ed9067f705aa51819c7dfff7e4190dd267beaf5d/remote.c#L209-L234) in a way that conforms to RFC 3986. Using [urlmatch.c](https://github.com/git/git/blob/master/urlmatch.c)
+is a possible way to approach the implementation.
+
+See previous discussions on the mailing list [here](http://thread.gmane.org/gmane.comp.version-control.git/282256).
+
+- Language: C
+- Difficulty: medium
+- Possible mentors: Lars Schneider
