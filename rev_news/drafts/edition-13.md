@@ -183,7 +183,7 @@ One nice outcome of this patch series though is that error messages
 when there are problems in the config can now tell more precisely
 where the problems come from.
 
-* [add DEVELOPER makefile knob to check for acknowledged warnings](http://thread.gmane.org/gmane.comp.version-control.git/287345)
+* [add DEVELOPER makefile knob to check for acknowledged warnings](http://thread.gmane.org/gmane.comp.version-control.git/287345)  (*written by Lars Schneider*)
 
 Jeff King noted in a [review](http://thread.gmane.org/gmane.comp.version-control.git/285553/focus=285568) 
 that *git style doesn't allow declaration-after-statement*. Thereupon
@@ -259,4 +259,4 @@ __Git tools and sites__
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt;,
-with help from Junio Hamano and Josh Triplett.
+with help from Lars Schneider, Junio Hamano and Josh Triplett.
