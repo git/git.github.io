@@ -21,23 +21,30 @@ This edition covers what happened during the month of February 2016.
 
 * [RFC: Resumable clone based on hybrid "smart" and "dumb" HTTP](http://thread.gmane.org/gmane.comp.version-control.git/285921/)
 
-It is a well known problem that `git clone` is not resumable. If the
+It is a widely known problem that `git clone` is not resumable. If the
 connection comes down during a clone, the clone has to be restarted
 from scratch.
 
-A work around that is often suggested is to use `git bundle` first, then
-to rsync that bundle and eventually to clone using the rsync'ed bundle. Some
-tools [like gitolite](http://thread.gmane.org/gmane.comp.version-control.git/235040/) have even been making it easier to support that.
+A work around that is often suggested and used is to first create a
+bundle using `git bundle`, to rsync that bundle, then to clone from
+the rsync'ed bundle and eventually to fetch what is missing from the
+remote git repository. Some tools
+[like gitolite](http://thread.gmane.org/gmane.comp.version-control.git/235040/) or
+[the "repo" tool that is used by AOSP](https://source.android.com/source/using-repo.html)
+and some websites
+[like kernel.org](https://www.kernel.org/)
+have even been making it easier to support that.
 
 There was also at one point in 2011
 [a patch series](http://thread.gmane.org/gmane.comp.version-control.git/185196/)
 to improve the support of this kind of clone workflow internally.
 
-And for some time this was thought of as just a small manpower problem. A
-few month of dedicated work by anyone could probably fix that. It was
-even proposed as a Google Summer of Code (GSoC) project.
+And for some time this was thought of by some Git developers as just a
+small manpower problem. A few month of dedicated work by anyone could
+probably fix that. It was even proposed as a Google Summer of Code
+(GSoC) project.
 
-Over time though Git developers realized that it was not so easy
+Over time though the community realized that it was not so easy
 because some very careful design was needed, and it was removed from
 the list of possible GSoC projects.
 
@@ -80,18 +87,22 @@ developer, and it's interesting to see Linux Kernel developers
 interested again in taking part in Git development. It reminds some
 old timers about the "good old time".
 
-All these proposals have been discussed by many important Git
-developers and reviewers like Stefan Beller, Junio Hamano, Johannes
-Schindelin, Jonathan Nieder, Eric Sunshine, Jeff King, Elia Pinto.
+All these proposals have been discussed by many regular Git developers
+and reviewers like Stefan Beller, Junio Hamano, Johannes Schindelin,
+Jonathan Nieder, Eric Sunshine, Jeff King, Elia Pinto.
 
-About Shawn's proposal there was also an interesting potential
-security issue called out by Blake Burkhart. And other people like
-Bhavik Bavishi and Konstantin Ryabitsev also took part of the
-discussion following Josh's email.
+About Shawn's proposal Blake Burkhart reminded the community that the
+implementation has to keep in mind that it would introduce potential
+security issue if Shawn's proposal is done carelessly. And other
+people like Bhavik Bavishi and Konstantin Ryabitsev also took part in
+the discussion following Josh's email.
 
 From the last discussions about Josh's email, it appeared that Git
-developers favored Shawn's proposal over others, and maybe that
-Shawn's proposal was going to be worked on soon.
+developers favored Shawn's proposal over others, though Shawn's
+proposal could benefit from implementing parts of Al's and Josh's
+proposal too. So the plan seemed to be that Shawn's proposal was going
+to be worked on soon, and then later some optimizations from Al and
+Josh could be implemented on top of it.
 
 Then on March 5 Kevin Wern sent
 [an email called "Resumable clone"](http://thread.gmane.org/gmane.comp.version-control.git/288306/),
@@ -248,4 +259,4 @@ __Git tools and sites__
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt;,
-with help from Josh Triplett.
+with help from Junio Hamano and Josh Triplett.
