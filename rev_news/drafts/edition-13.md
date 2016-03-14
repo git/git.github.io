@@ -202,6 +202,64 @@ compiler warnings that the Git project cares about.
 ### Support
 -->
 
+## Developer Spotlight: Sebastian Schuberth
+
+* Who are you, and what do you do?
+
+I'm a passionate software engineer with a wide range of interests and
+focus on quality, but I'm particularly interested in cross-platform
+development. As a techie I'm always trying to look over the rim of a
+tea cup to learn something new. Since a while, I got more and more
+interested in taking build automation to the extreme and helping other
+developers to get the most out of Git, their other tools, and CI.
+Also, I consider myself sort of a Git Evangelist, promoting the use of
+Git and teaching it to people where ever I can.
+
+* What would you name your most important contribution to Git?
+
+My contributions so far have mostly revolved around running Git on
+Windows, which is why only small portions of my work are visible
+upstream. I guess my most important contribution so far is the Git for
+Windows installer, which I started about 7 years ago. It gave a face
+to Git on Windows and lowered the hurdle for Windows developers to
+give Git a try.
+
+* What are you doing on the Git project these days, and why?
+
+Recently, I've not been contributing much to Git, neither to upstream
+nor the Windows port. This is mostly due to time constraints, my
+choice of programming languages I (currently) like to work with, and
+also personal dissensions. Instead, I focus on other tools in the Git
+ecosystem, like JGit and Gerrit.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+Wow, that's a very temping idea :-) There are many small nuisances
+that deserve to be addressed, but if I was to name a single big topic,
+I'd say Git should be rewritten as a library, probably by just using
+libgit2 and making the CLI a thin wrapper around it. As a side effect
+this would mean to implement all of Git in C, and not use any Shell /
+Perl / Python scripts anymore, which both improves performance and
+portability.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+There's not one big thing that comes to my mind, but I believe a
+general clean-up of legacy code, deprecated command line options and
+wording in the docs could help :-)
+
+* What is your favourite Git-related tool/library, outside of Git
+  itself?
+
+If I think about which Git-related tool has added the most value to
+code I work on in terms of code quality, that would certainly be
+Gerrit. It's UI is not the nicest, but gitk / git gui users will
+hardly notice ;-) And even in the GitHub-times Gerrit is vastly
+superior in the information it can display, like diffs between
+different iterations of patches.
+
 ## Releases
 
 The last month we saw some maintenance releases of Git, along with some RCs of the upcoming 2.8:
