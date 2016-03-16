@@ -7,7 +7,7 @@ navbar: false
 ## Git Rev News: Edition 1 (March 25th, 2015)
 
 
-Welcome to the first edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
+Welcome to the first edition of [Git Rev News](http://git.github.io/rev_news/rev_news/),
 a digest of all things Git, written collaboratively 
 on [GitHub](https://github.com/git/git.github.io) by volunteers. 
 
