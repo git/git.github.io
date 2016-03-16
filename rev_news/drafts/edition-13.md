@@ -40,7 +40,7 @@ There was also at one point in 2011
 to improve the support of this kind of clone workflow internally.
 
 And for some time this was thought of by some Git developers as just a
-small manpower problem. A few month of dedicated work by anyone could
+small manpower problem. A few months of dedicated work by anyone could
 probably fix that. It was even proposed as a Google Summer of Code
 (GSoC) project.
 
