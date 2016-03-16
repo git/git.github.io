@@ -19,7 +19,7 @@ Subscribe to Git Rev News by [RSS/atom](/feed.xml) or by signing up for the
 
 ## Archives
 
-You can find a listing of all previous editions on the [Git Rev News Archive](/rev_news/archive.html) page.
+You can find a listing of all previous editions on the [Git Rev News Archive](/rev_news/archive/) page.
 
 ## Contribute
 
