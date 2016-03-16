@@ -265,7 +265,7 @@ different iterations of patches.
 The last month we saw some maintenance releases of Git, along with some RCs of the upcoming 2.8:
 
 * [Git v2.7.3](https://lkml.org/lkml/2016/3/10/612)
-* [Git for Windows 2.7.2](https://github.com/git-for-windows/git/releases/tag/v2.7.2.windows.1)
+* [Git for Windows 2.7.3](https://github.com/git-for-windows/git/releases/tag/v2.7.3.windows.1)
 * [Git v2.8.0-rc2](http://article.gmane.org/gmane.linux.kernel/2174436) 
 
 And then there was a significant, albeit humbly versioned new libgit2, which dominoed through its wrapper projects:
