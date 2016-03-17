@@ -94,8 +94,7 @@ error message if 'fast' is the new term, 'slow' the old one, and if C
 is 'fast'. Instead of failing, it could offer the user to reverse the
 terms and continue the bisection.
 
-See discussion on the subject here:
-http://thread.gmane.org/gmane.comp.version-control.git/272792/focus=272869
+See discussion on the subject [here](http://thread.gmane.org/gmane.comp.version-control.git/272792/focus=272869).
 
 The change is controversial, hence a substantial part of the project
 would be to define what is the right behavior (should it be activated
