@@ -247,3 +247,46 @@ Although since 53c76dc0 git-pull understands the "rebase.autoStash"
 configuration option, it currently does not support the corresponding
 "`--[no-]autostash`" command-line switch. Teach git-pull to accept this
 command-line switch and pass it to git-rebase. Cf. $gmane/283557
+
+## How to find other ideas for microprojects
+
+If you don't like for some reason the above microprojects or if you
+just want more choice, you may find other ideas for microprojects by
+searching the mailing list or the code base itself. In the code base
+you could search the code itself or the tests (in the "t" directory).
+
+When you find something you are interested to work on, please ask
+first on the mailing list if it's worth doing and if it's appropriate
+for a microproject before starting to work on what you find. Even if
+it looks straitforward, there could be hidden reasons why it is too
+difficult or just innappropriate.
+
+### Searching the code base itself
+
+Your best bet is probably to search for strings like "FIXME", "TODO",
+"NEEDSWORK", or maybe "NEED-WORK", and "BUG".
+
+### Searching the tests
+
+Tests are in the "t" directory and can be run by launching "make" in
+this directory. Doing that you will see that there are a number of
+tests that are marked with "# TODO known breakage", like for example:
+
+"not ok 28 - git checkout -f: replace submodule with a directory must fail # TODO known breakage
+
+These tests start with "test_expect_failure" instead of
+"test_expect_success". They document that something is not working as
+it should perhaps be working. And it might be an interesting
+microproject to fix that.
+
+You could also check if some commands have no test for some of their
+options and it could be an interesting microproject to add a test for
+one of those options.
+
+### Searching the mailing list
+
+You can search the mailing list for words like "low hanging fruit", or
+"low-hanging fruits", "hint, hint", "later", "we should", "I plan
+to"...
+
+
