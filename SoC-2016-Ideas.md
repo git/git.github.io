@@ -104,6 +104,14 @@ the project is probably less than what would be expected for a GSoC
 hence it should be grouped with another one (typically another
 bisect-related idea).
 
+#### Convert "git-bisect.sh" to a builtin
+
+"git-bisect.sh" is already using `git bisect--helper` for some
+functionality. More features could be moved one by one into `git
+bisect--helper` by porting them from shell to C until both
+"git-bisect.sh" and "builtin/bisect--helper.c" could be fully replaced
+by "builtin/bisect.c".
+
 ### "git rebase" improvements
 
 #### "git status" during non-interactive rebase
