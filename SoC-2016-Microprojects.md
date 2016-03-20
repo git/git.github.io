@@ -279,6 +279,11 @@ These tests start with "test_expect_failure" instead of
 it should perhaps be working. And it might be an interesting
 microproject to fix that.
 
+Note that it is especially wise to first search the mailing list and
+then ask on the list before working on one of these
+"test_expect_failure", because if we bothered to document a failure
+but not fix it, that is often because the fix is non-trivial.
+
 You could also check if some commands have no test for some of their
 options and it could be an interesting microproject to add a test for
 one of those options.
