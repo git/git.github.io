@@ -132,7 +132,7 @@ used as a collection of multiple bits. Discuss if there is a good reason
 why it has to be a signed integral field and change it to an unsigned
 type otherwise.  Cf. $gmane/263751
 
-### Move ~/.git-credential-cache to ~/.config/git
+### Move ~/.git-credential-cache to ~/.cache/git
 
 Most of git dotfiles can be located, at the user's option, in
 ~/.<file> or in ~/.config/git/<file>, following the
