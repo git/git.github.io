@@ -7,6 +7,9 @@ This is the idea page for Summer of Code 2016 for Git and libgit2.
 
 ## About applying for SoC with the Git project
 
+*Please read this section completely before reading the idea list
+ below.*
+
 It is required that students who want to apply to the Git
 project for the Summer of Code 2016 complete a tiny, code-related
 "microproject" as part of their application.  Please refer to our
