@@ -46,9 +46,20 @@ your microproject in your application (e.g. linking to
 participate in the review of other patches, then you may also include
 links to discussions that would support your application.
 
-Students are strongly encourraged to send drafts of their proposal on
+Students must send drafts of their proposal on
 the mailing-list before submitting it officially to GSoC to get
-feedback from the community.
+feedback from the community. They are strongly encourraged to publish a
+draft on the official GSoC website *and* post it to the mailing list
+for discussion.
+
+In summary, all applicants must (not necessarily in this order):
+
+* Complete a [microproject](http://git.github.io/SoC-2016-Microprojects).
+
+* Write a detailed application explaining their project.
+
+* Discuss their project by posting drafts of their application on the
+  mailing-list long before the deadline.
 
 ## Note about the number of slots
 
