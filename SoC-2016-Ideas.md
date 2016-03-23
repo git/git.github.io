@@ -19,6 +19,16 @@ way for us to get experience with applicants, but it will also help
 applicants become familiar with Git's development and submission
 process.
 
+A complete GSoC application should include a presentation of yourself
+(include any argument that may convince mentors that you are able to
+complete the project) and detailed explanations about your project.
+Ideas below are just ... ideas! The list is not exhaustive, and more
+importantly each idea only includes a summary of what is to be done.
+An application must include detailed plans on the design, timeline ...
+A typical application takes several pages. You should already have read
+[the GSoC Student Guide](http://write.flossmanuals.net/gsocstudentguide/writing-a-proposal/)
+by now, but re-read it if needed.
+
 Also, working in Git project is not only about writing your own
 patches. Constructively critiquing design and implementation of
 patches by other people is also an important skill you need to learn
