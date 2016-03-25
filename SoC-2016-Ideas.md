@@ -17,7 +17,7 @@ applicants become familiar with Git's development and submission
 process.
 
 Also, working in Git project is not only about writing your own
-patches. Constructively critiquing design and implementation of
+patches. Constructively criticizing design and implementation of
 patches by other people is also an important skill you need to learn
 in order to effectively collaborate with others. So, if you have time
 and inclination, it would be beneficial to read and understand other
