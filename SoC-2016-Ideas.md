@@ -70,6 +70,27 @@ In summary, all applicants must (not necessarily in this order):
 * Discuss their project by posting drafts of their application on the
   mailing-list long before the deadline.
 
+In your application, it is a good idea to:
+
+* Include link(s) to the mailing-list discussion(s) related to the
+  project you chose in your application, for example previous
+  discussions or patch series about the topic. There might be
+  interesting discussions about the topics that are several year old.
+  It is also a good idea to summarize them.
+
+* Include link(s) to the mailing-list discussion(s) related to the
+  previous drafts of your application itself.
+
+* Include link(s) to the mailing-list discussion(s) related to your
+  microproject.
+
+* Include what is suggested in
+  [the GSoC Student Guide](http://write.flossmanuals.net/gsocstudentguide/writing-a-proposal/)
+
+([gmane](http://news.gmane.org/gmane.comp.version-control.git) can be
+used for searching the mailing list and linking to previous
+discussions.)
+
 ## Note about the number of slots
 
 In 2016, the Git organization has very limited mentoring capacity.
