@@ -7,6 +7,9 @@ This is the idea page for Summer of Code 2016 for Git and libgit2.
 
 ## About applying for SoC with the Git project
 
+*Please read this section completely before reading the idea list
+ below.*
+
 It is required that students who want to apply to the Git
 project for the Summer of Code 2016 complete a tiny, code-related
 "microproject" as part of their application.  Please refer to our
@@ -15,6 +18,16 @@ for more information. Completing a microproject is not only an important
 way for us to get experience with applicants, but it will also help
 applicants become familiar with Git's development and submission
 process.
+
+A complete GSoC application should include a presentation of yourself
+(include any argument that may convince mentors that you are able to
+complete the project) and detailed explanations about your project.
+Ideas below are just ... ideas! The list is not exhaustive, and more
+importantly each idea only includes a summary of what is to be done.
+An application must include detailed plans on the design, timeline ...
+A typical application takes several pages. You should already have read
+[the GSoC Student Guide](http://write.flossmanuals.net/gsocstudentguide/writing-a-proposal/)
+by now, but re-read it if needed.
 
 Also, working in Git project is not only about writing your own
 patches. Constructively critiquing design and implementation of
@@ -33,9 +46,50 @@ your microproject in your application (e.g. linking to
 participate in the review of other patches, then you may also include
 links to discussions that would support your application.
 
-Students are strongly encourraged to send drafts of their proposal on
-the mailing-list before submitting it officially to GSoC to get
-feedback from the community.
+Students must send drafts of their proposal on the mailing-list before
+submitting it officially to GSoC to get feedback from the
+community. They are strongly encourraged to publish a draft on the
+official GSoC website *and* post it to the mailing list for
+discussion.
+
+Getting your proposal right can follow the same process as usual patch
+submission for Git, as described in the
+[microprojects](http://git.github.io/SoC-2016-Microprojects) page and
+in `Documentation/SubmittingPatches` in Git's source code. It is also
+expected that you will send several versions of your draft, responding
+to comments on the list. If you are not sure about your proposal, you
+can discuss that in the same email where you introduce yourself or in
+separate emails. Please use "[GSoC]" at the beginning of such emails.
+
+In summary, all applicants must (not necessarily in this order):
+
+* Complete a [microproject](http://git.github.io/SoC-2016-Microprojects).
+
+* Write a detailed application explaining their project.
+
+* Discuss their project by posting drafts of their application on the
+  mailing-list long before the deadline.
+
+In your application, it is a good idea to:
+
+* Include link(s) to the mailing-list discussion(s) related to the
+  project you chose in your application, for example previous
+  discussions or patch series about the topic. There might be
+  interesting discussions about the topics that are several year old.
+  It is also a good idea to summarize them.
+
+* Include link(s) to the mailing-list discussion(s) related to the
+  previous drafts of your application itself.
+
+* Include link(s) to the mailing-list discussion(s) related to your
+  microproject.
+
+* Include what is suggested in
+  [the GSoC Student Guide](http://write.flossmanuals.net/gsocstudentguide/writing-a-proposal/)
+
+([gmane](http://news.gmane.org/gmane.comp.version-control.git) can be
+used for searching the mailing list and linking to previous
+discussions.)
 
 ## Note about the number of slots
 

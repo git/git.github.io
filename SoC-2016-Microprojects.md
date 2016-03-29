@@ -19,6 +19,18 @@ libgit2 list of
 projects](https://github.com/libgit2/libgit2/blob/master/PROJECTS.md)
 rather than the list below.*
 
+Git development is based on sending successive versions of patches or
+patch series to the mailing list until they are considered good and
+correct by the reviewers and Junio Hamano, the maintainer, who will
+merge them. This process usually takes quite some time. By sending
+drafts of your microproject patches to the
+mailing list long before the deadline, you can show us that you are
+willing and able to work well using the Git development process.
+
+It is *expected* that what you send will need several rounds of
+reviews and discussions. If you are not sure at all about a patch you can
+put "[RFC/PATCH]" at the beginning of its subject.
+
 Consider [a sample email
 thread](http://thread.gmane.org/gmane.comp.version-control.git/239068),
 which shows how a developer proposed a change and a patch to implement
