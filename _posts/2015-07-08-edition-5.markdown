@@ -77,11 +77,11 @@ instead incorrectly checkout `HEAD~2` at `<path>`.
 The second version also introduces convenience enhancements.  In
 particular, the `<branch>` in `git worktree add <path> <branch>`, is now
 optional. When omitted, a new branch is created automatically based upon
-`<path>`, as if `-b $(basename <path>)` had been provided (where `-b
-<new-branch>` creates a new branch). For example, given `git worktree add
-../hotfix`, a new branch named *hotfix* is created and checked out into new
-worktree `../hotfix`, as if `git worktree -b hotfix ../hotfix HEAD` had
-been specified.
+`<path>`, as if `-b $(basename <path>)` had been provided (where
+`-b <new-branch>` creates a new branch). For example, given
+`git worktree add ../hotfix`, a new branch named *hotfix* is created and
+checked out into new worktree `../hotfix`, as if
+`git worktree -b hotfix ../hotfix HEAD` had been specified.
 
 Finally, the question was
 [raised](http://article.gmane.org/gmane.comp.version-control.git/273107)
