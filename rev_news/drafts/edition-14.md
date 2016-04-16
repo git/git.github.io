@@ -96,7 +96,113 @@ might require some admin rights.
 The recently merged effort on improving the untracked cache in the
 index was also mentionned.
 
+* [Linux Kernel Development - Going Faster Than You Think](https://github.com/gregkh/kernel-development)
 
+The [Git Merge conference](http://git-merge.com/) happened this year
+on April 5th at [New World Stages](http://newworldstages.com/) in New
+York City, USA.
+
+The first presentation of [the packed schedule](http://git-merge.com/#schedule)
+was given by [Greg Kroah-Hartman](https://en.wikipedia.org/wiki/Greg_Kroah-Hartman)
+and was about how the Linux Kernel developers are using Git.
+
+(The slides are available in
+[Greg's Github repo for this presentation](https://github.com/gregkh/kernel-development)
+either in
+[pdf format](https://github.com/gregkh/kernel-development/blob/master/kernel-git.pdf) or in
+[odp format](https://github.com/gregkh/kernel-development/blob/master/kernel-git.odp).)
+
+Greg works at the [Linux Foundation](http://www.linuxfoundation.org/).
+He is the maintainer of the Kernel '-stable' branches and of many
+subsystems like USB.
+
+He said that the Linux Kernel is made of more than 21 million lines of
+code in more than 53 000 files. Everything is in the tree. Driver are
+one third of the size. Nearly 4000 developers and around 400 companies
+are involved.
+
+This makes the Linux Kernel the largest software project ever.
+
+Around 10 000 lines are added, 5300 lines are removed and 1800 lines
+are modified, everyday!
+
+That's on average 7.8 changes per hour accross the whole tree with 5%
+in the core, 10% in the networking subsystem and 55% in the drivers.
+
+This goes against any previously thought methodology for stable
+software. And things are going faster and faster.
+
+Things are going so fast that it costs money to keep your code outside
+the kernel.
+
+There is a new release every 2.5 months, so if your code get rejected
+you have to wait 2 months before it can be in the next release. This
+is very predictable.
+
+The release cycle is made of a two week long "merge window" and then
+some "rc" releases one per week. During the "merge window", code is
+merged from subsystem maintainers. The "rc" releases, "rc-1", "rc-2",
+... , "rc-7" are bug fixes only. Once all major bugs and regressions
+are fixed a release is made and the cyce starts over with a ne merge
+window.
+
+For "stable" kernels that Greg maintains, they are forked from Linux
+releases. Commits have to go in Linus' tree first before Greg will
+accept them. It should be the identical patch as what is in Linus'
+tree and it should be bug fixes only or new device ids. The Linux
+distributions usually run from "stable" kernels.
+
+The "longterm" kernel is maintained for 2 years. Current "longterm"
+kernels are 3.14, 4.1 and 4.4.
+
+This works well for many companies. But sometimes maintaining a kernel
+for 2 years is not enough. Japan is converting all its infrastructure
+to Linux and people want some kernels maintained for 20 years.
+
+The patches sent for inclusion into the Kernel should be standalone.
+None of them should break the build. One half to one third of the
+patches get accepted. They should be obvious, broken down in the
+smallest possible patches and every change should be correct.
+
+This puts work on the developer's shoulders. But that's on purpose
+because there are much more developers than maintainers. There are
+1000 maintainers but only around 700 are active.
+
+To reach the maintainers, patches should be sent to the relevant
+mailing list, like the usb mailing list or the scsi mailing list.
+Andrew Morton reads the lkml mailing list.
+
+The email format should be plain text. It's old school but works very
+very well. The Developer's Certificate of Origin (DCO) is used to
+ensure that people have the right to submit a patch. This is the same
+as what Git does.
+
+After a patch has been reviewed by a file or driver maintainer, the
+maintainer will add his own "Signed-off-by" and will send it to a
+subsystem maintainer.
+
+There are around 200 subsystem maintainers. They have their own trees
+on git.kernel.org.
+
+Every night the "linux-next" is created from these 200 trees and is
+built and boot tested on different platforms.
+
+Andrew Morton uses quilt to maintain his "-mm" kernels made from
+patches picked by himself from the lkml mailing list or elsewhere.
+
+A couple years ago Kernel developers realized that nobody actually
+tested the kernel.
+
+There is now a 0 day bot that run tests and static analysis tools,
+like coccinelle or sparse, automatically on all the kernel trees. It
+tests all the commits. It has a script that writes patches for common
+problems. The bot also picks patches from mailing lists to test them.
+
+When a new merge window opens, the subsystem maintainers and Andrew
+Morton send what they think is ready to Linus, so he can merge it. The
+rule is that what is sent to Linus should have already been in
+linux-next. 10 000 to 11 000 patches are usually merged in the 2 week
+long merge window.
 
 <!--- ### Reviews -->
 
