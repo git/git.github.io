@@ -21,7 +21,7 @@ at the Git Merge conference on April 5 2016.
 
 ### General
 
-* Discussions at the Git Contributor Summit, part 1
+* Discussions at the Git Contributor Summit, part 1, about big repos and big files
 
 The Git Contributor Summit happened on April 4th at the panoramic
 rooftop bar of
@@ -95,6 +95,8 @@ might require some admin rights.
 
 The recently merged effort on improving the untracked cache in the
 index was also mentionned.
+
+
 
 <!--- ### Reviews -->
 
