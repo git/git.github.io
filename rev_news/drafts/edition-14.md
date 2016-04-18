@@ -220,16 +220,51 @@ about how the 0 day bot could be used.
 
 ## Releases
 
+* [ANNOUNCE Git v2.8.0](http://article.gmane.org/gmane.linux.kernel/2185094)
+* [ANNOUNCE Git v2.8.1 and call for help to make rpmbuild users](http://article.gmane.org/gmane.linux.kernel/2189878)
+* [Release Git for Windows 2.8.0 · git-for-windows/git](https://github.com/git-for-windows/git/releases/tag/v2.8.0.windows.1)
+* [Release Git for Windows 2.8.1 · git-for-windows/git](https://github.com/git-for-windows/git/releases/tag/v2.8.1.windows.1)
+* [Release 0.12.0 · libgit2/objective-git](https://github.com/libgit2/objective-git/releases/tag/0.12.0)
+* [Release libgit2 v0.24.1 Maintenance Release](https://github.com/libgit2/libgit2/releases/tag/v0.24.1)
+* [Release v0.12.2 · nodegit/nodegit](https://github.com/nodegit/nodegit/releases/tag/v0.12.2)
+* [JGit/EGit Release 4.3.0.201604071810-r](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03124.html)
+* [GitLab 8.6 released](https://about.gitlab.com/2016/03/22/gitlab-8-6-released/)
+* [GitLab 8.6.6 released](https://about.gitlab.com/2016/04/15/gitlab-8-dot-6-dot-6-released/)
+* [GitKraken 1.1.0 Release Notes](https://www.gitkraken.com/release-notes)
 
 ## Other News
 
 __Various__
 
+* Git's creator on the stage: [Linus Torvalds: The mind behind Linux (TED Talk)](http://www.ted.com/talks/linus_torvalds_the_mind_behind_linux)
+* Ever fewer Git hosting options: [GitEnt-scm.com Farewell](https://gitenterprise.me/2016/03/29/gitent-scm-com-farewell/)
+* One of the relatively cryptic new Git features, untrackedCache, explained on [Hacker News](https://news.ycombinator.com/item?id=11388479)
+* Lots of discussion on CocoaPods using GitHub as their storage backend the last weeks: [Issue #4989 · CocoaPods/CocoaPods](https://github.com/CocoaPods/CocoaPods/issues/4989#issuecomment-193772935)
 
-__Light reading__
+__Light reading (for Git rookies)__
 
+* A journeyman's notes on introducing Git: [Git Escapades](https://git-escapades.ghost.io/starting-the-escapade/)
+* Some nice tips on workflows in this little [Git bible](https://gist.github.com/dmglab/8402579)
+* [3 Git Productivity Hacks](http://blog.scoutapp.com/articles/2016/04/12/3-git-productivity-hacks)
+* [Git Hot Tips](http://wesbos.com/git-hot-tips/) from Wes Bos
+
+__Slightly heavier reading__
+
+* [Introducing DGit - GitHub Engineering](http://githubengineering.com/introducing-dgit/)
+* [Intense discussion of the new GitHub squash feature on Hacker News](https://news.ycombinator.com/item?id=11407289)
+* [GPG signature verification](https://github.com/blog/2144-gpg-signature-verification)
+* [Step-by-step guide on how to create a GPG key on keybase.io, adding it to a local GPG setup and use it with Git and GitHub.](https://github.com/pstadler/keybase-gpg-github)
+* Security hole found in Git: [Remote Code Execution in all git versions (client + server) \< 2.7.4: CVE-2016-2324, CVE-2016‑2315](https://ma.ttias.be/remote-code-execution-git-versions-client-server-2-7-1-cve-2016-2324-cve-2016-2315/)
+* [Abandoning Gitflow and GitHub in favour of Gerrit](http://www.beepsend.com/2016/04/05/abandoning-gitflow-github-favour-gerrit/)
+* [Git 2.8 explained on the GitHub blog](https://github.com/blog/2131-git-2-8-has-been-released)
 
 __Git tools and sites__
+
+* [git-time-machine: Atom package that allows you to travel back in commit history](https://github.com/littlebee/git-time-machine)
+* [s3git.org git for cloud storage](http://s3git.org/)
+* [kamranahmedse/git-standup: Recall what you did on the last working day](https://github.com/kamranahmedse/git-standup)
+* [rtfpessoa/diff2html-cli: Simple Diff to Html CLI](https://github.com/rtfpessoa/diff2html-cli)
+* [pair, a git author tool](https://corner.squareup.com/2016/04/pair-a-git-author-tool.html)
 
 
 ## Credits
