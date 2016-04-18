@@ -31,10 +31,10 @@ The whole bar had been reserved by GitHub for the Summit from 10am to
 
 Around 20 developers attended. Drinks were provided, and food was
 served during the lunch break. Afterwards GitHub also invited
-attendants to a diner at a nearby Italian restaurant.
+attendants to a dinner at a nearby Italian restaurant.
 
-As usual it was an unconference. Attendants interested to discuss a
-topic wrote it on a board or voted on the board for it.
+As usual it was an unconference. Attendants interested in discussing a
+topic wrote it on a board, where everyone could vote for it.
 
 The topics that attracted most votes were about performance on big
 repositories.
@@ -44,13 +44,12 @@ git commands, like for example `git log`, depends linearly on the
 number of refs in the repository.
 
 One possible solution to this problem would be to use some kind of
-binary search algorithm to looks up refs, but it's not so easy because
-replace refs in 'refs/replace/' should anyway all be read and also
-because with the current backend some stat(2) calls are needed to
-check if there are loose refs.
+binary search algorithm to look up refs. Unfortunately that is not easy, as
+replaced refs in 'refs/replace/' must all be read, and additionally the current implementation
+of the backend requires some stat(2) calls to check if there are any loose refs.
 
 This problem should at least partially be solved with the current work
-going on to implement other ref backends, especially a
+going on to implement additional ref backends, especially a
 [lmdb](http://symas.com/mdb/) based one.
 
 (This work on an lmdb based ref backend has been reported on in
@@ -58,29 +57,29 @@ going on to implement other ref backends, especially a
 [Git Rev News edition 7](http://git.github.io/rev_news/2015/09/09/edition-7/).)
 
 From there the discussion switched to the case sensitiveness of ref
-names and the different problems created by having ref names that
+names, and the different problems created by having ref names that
 should also be proper filenames: slow filesystems like NTFS, unicode
 normalizing filesystems like HFS+, file/directory collisions, reflog
-deletion...
+deletion, and more.
 
-It was then mentioned that the tree object lookup could be speed up,
-but it would require a more efficient packfile format.
+It was also mentioned that the tree object lookup could be sped up,
+but that it would require a more efficient packfile format.
 
 The current effort to implement an `index-helper` daemon to speed up
 index reading was also described.
 
-Then some time was spent discussing large objects. There are objects
-that can be stored locally, other that cannot. This means that for
-example doing something like rsync that manages chunk of files might
-not always be possible.
+Then some time was spent discussing large objects. Some objects
+are able to be stored locally, while others are not. This means that
+doing something similar to rsync, where it manages chunks of files,
+might not always be possible.
 
-About Git LFS that is now offered by at least GitHub and Microsoft,
+Git LFS is now offered by at least GitHub and Microsoft, however
 there are still a number of problems with it from a user
-perspective. First it is not shipped with Git. Another one is that it
-is not easy to know which files should go into it.
+perspective. For example, it is not shipped with Git, and it is not always
+easy to know which files should go into it.
 
-Also it looks like the filters that are used by git LFS to trigger big
-file downloads are executed sequencially which is not good for
+It also looks like the filters used by Git LFS to trigger big
+file downloads are executed sequentially, which is not good for
 performance.
 
 This made people mention potential problems with parallelizing
@@ -88,13 +87,13 @@ This made people mention potential problems with parallelizing
 
 One possibility to improve on Git LFS would be to create another kind
 of backend for git objects that would be optimized for large files and
-would sit along loose objects and packfiles.
+would sit alongside loose objects and packfiles.
 
-Then the subject switched to possible ways to speed up git status. The
+The subject next switched to possible ways of speeding up `git status`. The
 `index-helper` daemon effort was described again, as it can use
 [the watchman library](https://facebook.github.io/watchman/) to
-efficiently monitor the working tree for changes. The watchman service
-must be run manually for now though. And running daemons on Windows
+efficiently monitor the working tree for changes. Unfortunately, the watchman service
+must be run manually for now, and running daemons on Windows
 might require some admin rights.
 
 The recently merged effort on improving the untracked cache in the
@@ -121,65 +120,65 @@ He is the maintainer of the Kernel '-stable' branches and of many
 subsystems like USB.
 
 He said that the Linux Kernel is made of more than 21 million lines of
-code in more than 53 000 files. Everything is in the tree. Driver are
-one third of the size. Nearly 4000 developers and around 400 companies
+code, in more than 53 000 files. Everything is in the tree, and drivers account
+for around one third of the size. Nearly 4000 developers and around 400 companies
 are involved.
 
 This makes the Linux Kernel the largest software project ever.
 
-Around 10 000 lines are added, 5300 lines are removed and 1800 lines
+Around 10 000 lines are added, 5300 lines are removed, and 1800 lines
 are modified, everyday!
 
 That's on average 7.8 changes per hour accross the whole tree with 5%
-in the core, 10% in the networking subsystem and 55% in the drivers.
+in the core, 10% in the networking subsystem, and 55% in the drivers.
 
 This goes against any previously thought methodology for stable
-software. And things are going faster and faster.
+software development, and things are only getting faster and faster.
 
 Things are going so fast that it costs money to keep your code outside
 the kernel.
 
-There is a new release every 2.5 months, so if your code get rejected
+There is a new release every 2.5 months, so if your code is rejected
 you have to wait 2 months before it can be in the next release. This
 is very predictable.
 
 The release cycle is made of a two week long "merge window" and then
-some "rc" releases one per week. During the "merge window", code is
+some "rc" releases - one per week. During the "merge window", code is
 merged from subsystem maintainers. The "rc" releases, "rc-1", "rc-2",
 ... , "rc-7" are bug fixes only. Once all major bugs and regressions
-are fixed a release is made and the cyce starts over with a ne merge
+are fixed a release is made and the cycle starts over with a new merge
 window.
 
 For "stable" kernels that Greg maintains, they are forked from Linux
 releases. Commits have to go in Linus' tree first before Greg will
-accept them. It should be the identical patch as what is in Linus'
-tree and it should be bug fixes only or new device ids. The Linux
-distributions usually run from "stable" kernels.
+accept them. It should be the same identical patch as what is in
+Linus' tree, and it should be "bug fixes only" or new device ids. The
+Linux distributions usually run from "stable" kernels.
 
-The "longterm" kernel is maintained for 2 years. Current "longterm"
+The "longterm" kernels are maintained for 2 years. Current "longterm"
 kernels are 3.14, 4.1 and 4.4.
 
-This works well for many companies. But sometimes maintaining a kernel
+This works well for many companies, but sometimes maintaining a kernel
 for 2 years is not enough. Japan is converting all its infrastructure
-to Linux and people want some kernels maintained for 20 years.
+to Linux, and people want some kernels maintained for 20 years.
 
 The patches sent for inclusion into the Kernel should be standalone.
-None of them should break the build. One half to one third of the
-patches get accepted. They should be obvious, broken down in the
-smallest possible patches and every change should be correct.
+None of them should break the build. Each patch set should be obvious,
+broken down into the smallest reasonable patches, and every change
+should be correct. One half to one third of submitted patches get accepted. 
 
-This puts work on the developer's shoulders. But that's on purpose
-because there are much more developers than maintainers. There are
-1000 maintainers but only around 700 are active.
+This puts work on the developer's shoulders. But that's on purpose,
+because there are many more developers than maintainers. There are
+1000 maintainers, but only around 700 are active.
 
 To reach the maintainers, patches should be sent to the relevant
 mailing list, like the usb mailing list or the scsi mailing list.
 Andrew Morton reads the lkml mailing list.
 
-The email format should be plain text. It's old school but works very
+The email format should be plain text. It's old school but works very,
 very well. The Developer's Certificate of Origin (DCO) is used to
 ensure that people have the right to submit a patch. This is the same
-as what Git does.
+process that Git uses.
 
 After a patch has been reviewed by a file or driver maintainer, the
 maintainer will add his own "Signed-off-by" and will send it to a
@@ -194,13 +193,13 @@ built and boot tested on different platforms.
 Andrew Morton uses quilt to maintain his "-mm" kernels made from
 patches picked by himself from the lkml mailing list or elsewhere.
 
-A couple years ago Kernel developers realized that nobody actually
+A couple of years ago, Kernel developers realized that nobody actually
 tested the kernel.
 
-There is now a 0 day bot that run tests and static analysis tools,
+To address this, there is now a "0 day bot" that run tests and static analysis tools,
 like coccinelle or sparse, automatically on all the kernel trees. It
-tests all the commits. It has a script that writes patches for common
-problems. The bot also picks patches from mailing lists to test them.
+tests every comment, and has a script that writes patches for common
+problems. The bot also picks patches from the mailing lists to test.
 
 When a new merge window opens, the subsystem maintainers and Andrew
 Morton send what they think is ready to Linus, so he can merge it. The
