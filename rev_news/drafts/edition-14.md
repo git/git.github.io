@@ -132,7 +132,7 @@ are modified, everyday!
 That's on average 7.8 changes per hour accross the whole tree with 5%
 in the core, 10% in the networking subsystem, and 55% in the drivers.
 
-This goes against all previous methodologies for stable
+This goes against any previously thought methodology for stable
 software development, and things are only getting faster and faster.
 
 Things are going so fast that it costs money to keep your code outside
@@ -151,9 +151,9 @@ window.
 
 For "stable" kernels that Greg maintains, they are forked from Linux
 releases. Commits have to go in Linus' tree first before Greg will
-accept them. It should be the same identical patch as what is in Linus'
-tree, and it should only contain bug fixes or new device ids. The Linux
-distributions usually run from "stable" kernels.
+accept them. It should be the same identical patch as what is in
+Linus' tree, and it should be "bug fixes only" or new device ids. The
+Linux distributions usually run from "stable" kernels.
 
 The "longterm" kernels are maintained for 2 years. Current "longterm"
 kernels are 3.14, 4.1 and 4.4.
@@ -167,8 +167,8 @@ None of them should break the build. Each patch set should be obvious,
 broken down into the smallest reasonable patches, and every change
 should be correct. One half to one third of submitted patches get accepted. 
 
-This puts most of the work on the developer's shoulders. That's on purpose,
-as there are many more developers than maintainers. There are
+This puts work on the developer's shoulders. But that's on purpose,
+because there are many more developers than maintainers. There are
 1000 maintainers, but only around 700 are active.
 
 To reach the maintainers, patches should be sent to the relevant
