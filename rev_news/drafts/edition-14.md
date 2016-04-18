@@ -208,6 +208,11 @@ rule is that what is sent to Linus should have already been in
 linux-next. 10 000 to 11 000 patches are usually merged in the 2 week
 long merge window.
 
+Following Greg's talk, Stefan Beller asked on the mailing list if Greg
+could put the Git developers in touch with the 0 day bot developers
+and [a discussion started](http://thread.gmane.org/gmane.comp.version-control.git/291242/)
+about how the 0 day bot could be used.
+
 <!--- ### Reviews -->
 
 <!---
