@@ -53,6 +53,10 @@ This problem should at least partially be solved with the current work
 going on to implement other ref backends, especially a
 [lmdb](http://symas.com/mdb/) based one.
 
+(This work on an lmdb based ref backend has been reported on in
+[Git Rev News edition 12](http://git.github.io/rev_news/2016/02/10/edition-12/) and
+[Git Rev News edition 7](http://git.github.io/rev_news/2015/09/09/edition-7/).)
+
 From there the discussion switched to the case sensitiveness of ref
 names and the different problems created by having ref names that
 should also be proper filenames: slow filesystems like NTFS, unicode
