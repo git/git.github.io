@@ -38,12 +38,13 @@ For every upcoming edition, do the following:
 * Create a new edition-[number].md file in some draft directory.
 * Post a mail/thread to the Git dev list asking if
   there's anything anyone wants included in the upcoming edition.
-* Post an issue in this GitHub repository asking for 
+* Post an issue in this GitHub repository asking for
   comments/contributions - anyone can comment on this, or send pull-
   requests for editing the edition.md file.
 * When the time comes to release the edition, move the edition.md file
   into some designated publishing directory, so it appears in
   the feed on git.github.io/rev_news/.
+* Thomas collects links using [diigo](https://www.diigo.com/user/Tfnico/gitrevnews).
 * When adding links, this is a great tool: [chitsaou/copy-as-markdown](https://github.com/chitsaou/copy-as-markdown/)
 
 Some inspiration/ideas here perhaps: http://thechangelog.com/trello-as-a-cms/
