@@ -247,6 +247,7 @@ __Light reading (for Git rookies)__
 * Some nice tips on workflows in this little [Git bible](https://gist.github.com/dmglab/8402579)
 * [3 Git Productivity Hacks](http://blog.scoutapp.com/articles/2016/04/12/3-git-productivity-hacks)
 * [Git Hot Tips](http://wesbos.com/git-hot-tips/) from Wes Bos
+* [What's new in Git for Windows 2.8?](https://blogs.msdn.microsoft.com/visualstudioalm/2016/03/31/whats-new-in-git-for-windows-2-8/)
 
 __Slightly heavier reading__
 
