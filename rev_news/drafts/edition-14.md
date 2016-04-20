@@ -214,6 +214,64 @@ about how the 0 day bot could be used.
 
 <!--- ### Reviews -->
 
+
+## Developer Spotlight: Johannes Sixt
+
+* Who are you, and what do you do?
+
+I am a seasoned software engineer. Professionally, I work on Windows
+most of the time and develop software in C++. At home, I am operating
+only Linux and contribute to various Open Source projects. Most
+prominently, KDbg (http://www.kdbg.org/), a GUI around the debugger
+GDB, is my child.
+
+* What would you name your most important contribution to Git?
+
+I was the first one to present a working and usable Git on Windows. By
+this I mean git.exe, the program, not the package Git for Windows
+(which is another great achievement, but it is not mine). Of course,
+it was possible to operate Git on Windows using Cygwin before my
+contribution. But the Cygwin runtime is such a thick layer between the
+POSIX and Windows APIs that file operations are very, very slow. My
+goal was to make git.exe a native Windows program and considerably
+faster. And that is it today when we talk about "Git for Windows".
+
+* What are you doing on the Git project these days, and why?
+
+In our software shop, we use Git a lot. That is sufficient motivation
+to keep an eye on its development. These days I'm doing mostly
+janitory work to keep Git working on Windows.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+Port Git to C++. When done right, there would not be any worries about
+memory leaks, chatty error messages, extra function parameters to
+choose whether a library function should return or die on error. Code
+could be written much shorter. Librarification would be achieved in a
+natural way. Subsequently, turning shell scripts into built-in
+commands would become much easier. For example, you wouldn't even have
+to ask "does the git-apply machinery clean up after itself
+sufficiently so that we can call it multiple times from one program?"
+(Yes, it would do so automatically.)
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+I have learned to live with Git's quirks. Therefore, it's difficult to
+find something that is really an obstacle for me. But with an eye on
+newcomers, I think I would pick the term "cache" and its variants as a
+candidate for removal.
+
+(Oh, it looks like I'm in good company of Matthieu Moy, who thinks likewise.)
+
+* What is your favourite Git-related tool/library, outside of Git itself?
+
+I think I work exclusively with git-core tools (if you count in
+git-gui and gitk). The closest that comes to mind that are both
+"related" and "favourite" are Meld and Winmerge when driven by
+git-difftool and git-mergetool.
+
 <!---
 ### Support
 -->
