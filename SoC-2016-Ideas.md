@@ -94,7 +94,7 @@ discussions.)
 ## Note about the number of slots
 
 In 2016, the Git organization has very limited mentoring capacity.
-We will probably be able to accept 2 students only this year.
+These days we usually accept between 0 and 2 students per year.
 
 ## Summer of code main project ideas
 
