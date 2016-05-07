@@ -45,7 +45,7 @@ trademark policy on git-scm.org is used to decide if those trademarks
 are approved or not.
 
 Another activity is related to defending the license which is the
-GPL. There have been some vendors who distributed Git with some
+GPLv2. There have been some vendors who distributed Git with some
 changes, but did not provide the source code of the Git version they
 distributed. For now it has been possible to resolve these cases, but
 it is not completely clear if some vendors currently fullfill all
@@ -53,6 +53,23 @@ their obligations. In case some developers who contributed to Git
 wants to take a close look at what the vendors are doing, the SFC can
 help them.
 
+After that SubmitGit was discussed as well as ways to make it easier
+for people who are not yet Git developers to contribute. TravisCI
+which can be used to automatically test pull requests that are
+submitted on GitHub was also discussed at the same time.
+
+It appeared that it would be good to also be able to test pull
+requests on Windows machines but TravisCI doesn't support Windows
+yet. To help on this GitLab CEO, Sytse Sijbrandij, offered to let the
+project use GitLab CI which supports Linux, OSX and Windows.
+
+Various subjects were then discussed a bit, like case insensitive
+refnames and filenames, submodules and Git on Celph which is a file
+system for computer clusters.
+
+A mix of long time and quite new Git contributors, along with people
+from Git related projects and companies attended. Overall it was a
+very pleasant event.
 
 <!---
 ### Reviews
