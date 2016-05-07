@@ -70,8 +70,8 @@ refnames and filenames, submodules and Git on Celph which is a file
 system for computer clusters.
 
 A mix of long time and quite new Git contributors, along with people
-from Git related projects and companies attended. Overall it was a
-very pleasant event.
+from Git related projects and companies attended. The atmosphere was
+relaxed and informal. Overall it was a very pleasant event.
 
 <!---
 ### Reviews
@@ -87,6 +87,7 @@ very pleasant event.
 ## Other News
 
 __Various__
+
 
 
 __Light reading__
