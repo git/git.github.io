@@ -73,6 +73,13 @@ A mix of long time and quite new Git contributors, along with people
 from Git related projects and companies attended. The atmosphere was
 relaxed and informal. Overall it was a very pleasant event.
 
+* [GSoC 2016](http://thread.gmane.org/gmane.comp.version-control.git/292308/)
+
+This year only one student, Pranit Bauva, will participate in the
+Google Summer of Code 2016 under the Git project. He will work on
+incrementaly rewriting in C the parts of "git bisect" that are still
+in shell. He will be mentored by Lars Schneider and Christian Couder.
+
 <!---
 ### Reviews
 -->
