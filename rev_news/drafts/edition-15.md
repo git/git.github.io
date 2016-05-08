@@ -62,8 +62,8 @@ submitted on GitHub was also discussed at the same time.
 
 It appeared that it would be good to also be able to test pull
 requests on Windows machines but TravisCI doesn't support Windows
-yet. To help on this GitLab CEO, Sytse Sijbrandij, offered to let the
-project use GitLab CI which supports Linux, OSX and Windows.
+yet. To help on this GitLab CEO, Sytse "Sid" Sijbrandij, offered to
+let the project use GitLab CI which supports Linux, OSX and Windows.
 
 Various subjects were then discussed a bit, like case insensitive
 refnames and filenames, submodules and Git on Celph which is a file
