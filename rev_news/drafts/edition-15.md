@@ -177,18 +177,41 @@ in shell. He will be mentored by Lars Schneider and Christian Couder.
 
 ## Releases
 
+* [Git 2.8.2](http://article.gmane.org/gmane.comp.version-control.git/293059/)
+* [Git for Windows 2.8.2](https://groups.google.com/d/msg/git-for-windows/-Jur6cdjMjE/m02wl_qCCQAJ)
+* [libgit2/rugged v0.25.0b2](https://github.com/libgit2/rugged/releases/tag/v0.25.0b2)
+* [libgit2/nodegit v0.13.0](https://github.com/nodegit/nodegit/releases/tag/v0.13.0)
+* [JGit/EGit 4.3.1](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03139.html)
+* [GitLab 8.7](https://about.gitlab.com/2016/04/22/gitlab-8-7-released/) and patches up to [8.7.3](https://about.gitlab.com/2016/05/06/gitlab-8-dot-7-dot-3-released/)
 
 ## Other News
 
 __Various__
 
-
+* [Fun with a new feature in recent Git](https://git-blame.blogspot.de/2016/05/fun-with-new-feature-in-recent-git.html) by Junio C Hamano
+* [4200 miles, 5GBs, 1 min: cloning with mirrors and Git LFS](http://blogs.atlassian.com/2016/04/bitbucket-data-center-smart-mirroring-with-git-lfs-support/) from Atlassian's Kelvin Yap
+* [GitHub: Import repositories with large files](https://github.com/blog/2163-import-repositories-with-large-files), by Jonathan Hoyt
+* [Git Tips, Tricks and Workflows](http://www.fullstackradio.com/41) from the Full Stack Radio podcast epsiode 41, featuring Jason McCreary
+* [One Commit. One Change.](https://medium.com/@fagnerbrack/one-commit-one-change-3d10b10cebbf#.1zqmjhd8q) by Fagner Brack
+* [Fast-Forward and parent reversal](http://dwim.me/2016/01/11/fast-foward-and-parent-reversal.html) by Carlos Martín Nieto
+* An interesting way of collecting your Git tricks using the [Gingko App](https://gingkoapp.com/git-notes)
+* [How to recover lost files added to Git but not committed](http://blog.plover.com/2016/04/16/) by Mark Dominus
+* [An Effective Git And Org-Mode Based Workflow For Reproducible Research](https://hal.inria.fr/hal-01112795/document) (PDF)
 
 __Light reading__
 
+* [Git-101-tutorial](http://ianmiell.github.io/git-101-tutorial/) by Ian Miell
+* [Go upgrade Xcode. Fix your git security hole.](http://rachelbythebay.com/w/2016/05/05/xcode/)
+* [12 advanced Git commands I wish my co-workers would know](http://www.askaswiss.com/2016/01/12-useful-advanced-git-commands.html), by Michael Beyeler
+* [Maintaining a consistent linear history for git...](http://devblog.nestoria.com/post/98892582763/maintaining-a-consistent-linear-history-for-git) by David Lowe of Nestoria
+* [Shared repositories in Git](http://emi.gd/blog/git-submodules/) by Emilia Szymańska
 
 __Git tools and sites__
 
+* [GitJunction](http://gitjunction.com/) - a collection of Git tutorials
+* [sobolevn/git-secret: A bash-tool to store your private data inside a git repository.](https://github.com/sobolevn/git-secret)
+* [git-remote-dropbox](http://www.anishathalye.com/2015/08/19/git-remote-dropbox/) by Anish Athalye
+* [anishathalye/git-remote-dropbox: bridge between Git and Dropbox](https://github.com/anishathalye/git-remote-dropbox)
 
 ## Credits
 
