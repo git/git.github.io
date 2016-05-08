@@ -73,6 +73,34 @@ A mix of long time and quite new Git contributors, along with people
 from Git related projects and companies attended. The atmosphere was
 relaxed and informal. Overall it was a very pleasant event.
 
+* [20 Tricks with Git and Shell](https://speakerdeck.com/nibalizer/20-tricks-with-git-and-bash)
+
+At the [Git Merge conference](http://git-merge.com/) on April 5th 2016
+at [New World Stages](http://newworldstages.com/) in New York City,
+USA, Spencer Krum, who works for IBM in Portland and appears to be a
+big fan of the
+[SFC (Software Freedom Conservancy)](https://sfconservancy.org/), gave
+an interesting and fast-paced presentation about some shell and Git
+command line tricks.
+
+Some of the tricks he showed are available in his
+['bash-tricks' GitHub repository](https://github.com/nibalizer/bash-tricks).
+
+The presentation started with simple shell aliases like `alias
+sl='ls'` to cope with typos and `alias g='git'` to reduce typing, then
+a bit more complex ones to avoid typing common arguments like `alias
+gprom='git push origin master'` and `alias pydoc='python -m pydoc'`,
+until validation aliases like:
+
+```
+alias yamlcheck='python -c "import sys, yaml as y; y.safe_load(open(sys.argv[1]))"'
+```
+
+Then Spencer told about customized prompts for git, filesystems or
+tools, and about git config aliases.
+
+
+
 * [GSoC 2016](http://thread.gmane.org/gmane.comp.version-control.git/292308/)
 
 This year only one student, Pranit Bauva, will participate in the
