@@ -96,10 +96,69 @@ until validation aliases like:
 alias yamlcheck='python -c "import sys, yaml as y; y.safe_load(open(sys.argv[1]))"'
 ```
 
-Then Spencer told about customized prompts for git, filesystems or
-tools, and about git config aliases.
+Then Spencer spoke about customized prompts for git, filesystems and
+tools, and about git config aliases, for example:
 
+```
+[alias]
+	sgrep = "!f() { git submodule foreach \"git grep '$1'; true \"
+			| grep -B 1 \"$1\"; }; f"
+```
 
+After that came functions. Some were general like:
+
+```
+# Get to the top of a git tree
+cdp () {
+
+  TEMP_PWD=`pwd`
+  while ! [ -d .git ]; do
+  cd ..
+  done
+  OLDPWD=$TEMP_PWD
+
+}
+```
+
+Others were related to Gerrit or GitHub:
+
+```
+# Check out a Pull request from github
+function pr() {
+  id=$1
+  if [ -z $id ]; then
+      echo "Need Pull request number as argument"
+      return 1
+  fi
+  git fetch origin pull/${id}/head:pr_${id}
+  git checkout pr_${id}
+}
+```
+
+In the end Spencer showed how to combine multiple small features to
+get something interesting. First vim can be started at a given line by
+giving the line in a +[num] argument, for example `vim +24`, then one
+can get the previous command typed on the command line using
+`history | tail -n 2 | head -1`, and finally one can use `git grep -n XXX`
+to get a grep result from Git with a line number.
+
+These 3 small tricks can be used in the following big one:
+
+```
+# Have vim inspect command history
+vim () {
+    last_command=$(history | tail -n 2 | head -n 1)
+    if [[ $last_command =~ 'git grep' ]] && [[ "$*" =~ :[0-9]+:$ ]]; then
+        line_number=$(echo $* | awk -F: '{print $(NF-1)}')
+        /usr/bin/vim +${line_number} ${*%:${line_number}:}
+    else
+        /usr/bin/vim "$@"
+    fi
+}
+```
+
+That makes vim open file "foo" at line "X" if one uses `vim foo:X`
+just after having run `git grep`.
 
 * [GSoC 2016](http://thread.gmane.org/gmane.comp.version-control.git/292308/)
 
