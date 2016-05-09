@@ -113,13 +113,11 @@ After that came functions. Some were general like:
 ```
 # Get to the top of a git tree
 cdp () {
-
   TEMP_PWD=`pwd`
   while ! [ -d .git ]; do
   cd ..
   done
   OLDPWD=$TEMP_PWD
-
 }
 ```
 
