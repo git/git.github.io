@@ -190,11 +190,11 @@ anyone using a medium to large repo.
 * What are you doing on the Git project these days, and why?
 
 I'm working on a few different things:
-  - Alternate ref backends (storing refs in a database)
-  - Reviewing protocol v2 patches (and, perhaps, adding new protocol
-  capabilities allowing single-branch fetches to be more efficient)
-  - The index-helper and watchman support for faster status on large
-  repositories
+    - Alternate ref backends (storing refs in a database)
+    - Reviewing protocol v2 patches (and, perhaps, adding new protocol
+    capabilities allowing single-branch fetches to be more efficient)
+    - The index-helper and watchman support for faster status on large
+    repositories
 
 * If you could get a team of expert developers to work full time on
 something in Git for a full year, what would it be?
