@@ -137,11 +137,11 @@ function pr() {
 ```
 
 In the end Spencer showed how to combine multiple small features to
-get something interesting. First vim can be started at a given line by
-giving the line in a +[num] argument, for example `vim +24`, then one
-can get the previous command typed on the command line using
-`history | tail -n 2 | head -1`, and finally one can use `git grep -n XXX`
-to get a grep result from Git with a line number.
+get something interesting. Take the following 3 tricks:
+
+* Vim can be started at a given line by giving the line in a +[num] argument, for example `vim +24`
+* The previous command typed on the command line can be obtained using `history | tail -n 2 | head -1`
+* `git grep -n XXX` will show a grep result from Git with a line number
 
 These 3 small tricks can be used in the following big one:
 
