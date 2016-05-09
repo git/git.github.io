@@ -98,8 +98,9 @@ until validation aliases like:
 alias yamlcheck='python -c "import sys, yaml as y; y.safe_load(open(sys.argv[1]))"'
 ```
 
-Then Spencer spoke about customized prompts for git, filesystems and
-tools, and about git config aliases, for example:
+Spencer then spoke about customized prompts for git, filesystems and
+tools, and about git config aliases. For example, this alias that makes
+grepping through your submodules easy:
 
 ```
 [alias]
