@@ -28,10 +28,10 @@ Git Merge conference on April 5 2016.
 At the Git Contributor Summit on April 4th, just after the lunch
 break, the state of the participation of the Git project in the Google
 Summer of Code (GSoC) and Outreachy were briefly mentioned. Jeff King,
-alias Peff, then talked about the state of the Git project as part of
-the [Software Freedom Conservancy (SFC)](https://sfconservancy.org/).
+alias Peff, then talked about the state of the Git project as a member of
+[Software Freedom Conservancy](https://sfconservancy.org/).
 
-Git is one of the SFC Member Projects. The SFC manages the legal and
+Git is one of Conservancy's Member Projects. Conservancy manages the legal and
 administrative aspects of the Git project, and also manages Git's
 money, which amounts to around $20000. This money comes mostly from
 donations made on git-scm.org, GSoC mentor stipends, and book
@@ -39,7 +39,7 @@ royalties. The money has been used in the past to pay for some
 developers to travel to conferences like Git Merge, and may be used in
 the future to pay Outreachy student stipends.
 
-The governance of the Git project as part of the SFC is in the hands
+The governance of the Git project as part of Conservancy is in the hands
 of Junio Hamano, Shawn Pearce, and Jeff King. The main activity of the
 governance consists in handling trademark issues related to the "Git"
 trademark that the project owns.
@@ -54,7 +54,7 @@ Git with some changes, but without providing the source code for the Git version
 were distributing. So far it has been possible to resolve these cases, but
 it is not completely clear if all vendors are currently fullfilling all of
 their obligations. If any developers who have contributed to Git
-want to take a closer look at what the vendors are doing, the SFC are
+want to take a closer look at what the vendors are doing, Conservancy is
 able to help them.
 
 After that SubmitGit was discussed as well as ways to make it easier
@@ -80,8 +80,8 @@ relaxed and informal. Overall it was a very pleasant event.
 At the [Git Merge conference](http://git-merge.com/) on April 5th 2016
 at [New World Stages](http://newworldstages.com/) in New York City,
 USA, Spencer Krum, who works for IBM in Portland and appears to be a
-big fan of the
-[SFC (Software Freedom Conservancy)](https://sfconservancy.org/), gave
+big fan of
+[Software Freedom Conservancy](https://sfconservancy.org/), gave
 an interesting and fast-paced presentation about some shell and Git
 command line tricks.
 
