@@ -91,7 +91,7 @@ Some of the tricks he showed are available in his
 The presentation started with simple shell aliases like `alias
 sl='ls'` to cope with typos and `alias g='git'` to reduce typing, then
 a bit more complex ones to avoid typing common arguments like `alias
-gprom='git push origin master'` and `alias pydoc='python -m pydoc'`,
+gpom='git push origin master'` and `alias pydoc='python -m pydoc'`,
 until validation aliases like:
 
 ```
