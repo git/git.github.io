@@ -167,6 +167,64 @@ Google Summer of Code 2016 under the Git project. He will work on
 incrementaly rewriting in C the parts of "git bisect" that are still
 in shell. He will be mentored by Lars Schneider and Christian Couder.
 
+## Developer Spotlight: David Turner
+
+* Who are you, what do you do and why were you at the Git Merge?
+
+I am a free software developer (and occasional board game designer). I
+currently work on developer tools at Twitter.  My focus is on making
+Git faster.  I was at Git Merge and the Git Core Contributors Summit to
+meet other Git developers.  I really enjoyed meeting you and the other
+contributors.
+
+* What would you name your most important contribution to Git?
+
+My most important contribution was probably ensuring that cache-trees
+are written on checkout and commit (from 2014).  I've done a bunch of
+work since then on refs, the index-helper, and fixed a few really weird
+bugs (http range requests might be the weirdest).  But most of the
+performance work I have done is still in-progress.  The cache-tree fix
+has been in git since I think 2.2, and it affects daily performance for
+anyone using a medium to large repo.
+
+* What are you doing on the Git project these days, and why?
+
+I'm working on a few different things:
+- Alternate ref backends (storing refs in a database)
+- Reviewing protocol v2 patches (and, perhaps, adding new protocol
+capabilities allowing single-branch fetches to be more efficient)
+- The index-helper and watchman support for faster status on large
+repositories
+
+* If you could get a team of expert developers to work full time on
+something in Git for a full year, what would it be?
+
+I would rewrite all index access code to only look a the relevant
+portions of the index.  Right now, many Git commands scan the entire
+index, which does not scale well.  It would be much better if git
+status and related commands ran in O(number of changes) instead of
+O(size of repository).  This would be a major effort, but the end
+result would be a much faster Git.
+
+* If you could remove something from Git without worrying about
+backwards compatibility, what would it be?
+
+I would completely redesign the UX.  For instance, the famous
+"git checkout $branch" vs "git checkout -b" vs "git checkout $filename"
+confusion could be completely eliminated by using a different verb for
+each of these things.
+
+My work focuses on performance because that is what I enjoy and am good
+at.  But I think UX work is often more important, and I wish that there
+were a way to correct some historical UX decisions.
+
+* What is your favourite Git-related tool/library, outside of Git
+itself?
+
+Michael Haggerty just showed me [git tbdiff](https://github.com/trast/tbdiff),
+which is very useful when rebasing a large patch series.  I also have to mention
+[git shamend](http://www.daniellesucher.com/2014/05/08/git-shamend/).
+
 <!---
 ### Reviews
 -->
