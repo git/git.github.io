@@ -23,6 +23,8 @@ Git Merge conference on April 5 2016.
 
 * Discussions at the Git Contributor Summit, part 2, about misc topics
 
+*Read part 1 in [Git Rev News Edition 14](http://git.github.io/rev_news/2016/04/20/edition-14/)* 
+
 At the Git Contributor Summit on April 4th, just after the lunch
 break, the state of the participation of the Git project in the Google
 Summer of Code (GSoC) and Outreachy was briefly mentioned, then Jeff
