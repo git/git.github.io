@@ -248,6 +248,7 @@ which is very useful when rebasing a large patch series.  I also have to mention
 
 __Various__
 
+* BitKeeper, the inspiration for Git and Mercurial, [was released as Open Source](https://users.bitkeeper.org/t/bk-7-2ce-released-2016-05-09/93) (see also the discussion on [Hacker News](https://news.ycombinator.com/item?id=11667494) as well as [Linux Weekly News](https://lwn.net/Articles/686896/)).
 * [Fun with a new feature in recent Git](https://git-blame.blogspot.de/2016/05/fun-with-new-feature-in-recent-git.html) by Junio C Hamano
 * [4200 miles, 5GBs, 1 min: cloning with mirrors and Git LFS](http://blogs.atlassian.com/2016/04/bitbucket-data-center-smart-mirroring-with-git-lfs-support/) from Atlassian's Kelvin Yap
 * [GitHub: Import repositories with large files](https://github.com/blog/2163-import-repositories-with-large-files), by Jonathan Hoyt
