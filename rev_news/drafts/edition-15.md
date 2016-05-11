@@ -23,54 +23,56 @@ Git Merge conference on April 5 2016.
 
 * Discussions at the Git Contributor Summit, part 2, about misc topics
 
+*Read part 1 in [Git Rev News Edition 14](http://git.github.io/rev_news/2016/04/20/edition-14/)* 
+
 At the Git Contributor Summit on April 4th, just after the lunch
 break, the state of the participation of the Git project in the Google
-Summer of Code (GSoC) and Outreachy was briefly mentioned, then Jeff
-King, alias Peff, talked about the state of the Git project as part of
-the [Software Freedom Conservancy (SFC)](https://sfconservancy.org/).
+Summer of Code (GSoC) and Outreachy were briefly mentioned. Jeff King,
+alias Peff, then talked about the state of the Git project as a member of
+[Software Freedom Conservancy](https://sfconservancy.org/).
 
-Git is one of the SFC Member Projects. The SFC manages the legal and
-administrative aspects of the Git project. The SFC also manages Git's
+Git is one of Conservancy's Member Projects. Conservancy manages the legal and
+administrative aspects of the Git project, and also manages Git's
 money, which amounts to around $20000. This money comes mostly from
-donations made on git-scm.org, GSoC mentor stipends and book
+donations made on git-scm.org, GSoC mentor stipends, and book
 royalties. The money has been used in the past to pay for some
-developers to travel to conferences like Git Merge. It may be used in
+developers to travel to conferences like Git Merge, and may be used in
 the future to pay Outreachy student stipends.
 
-The governance of the Git project as part of the SFC is in the hands
-of Junio Hamano, Shawn Pearce and Jeff King. The main activity of the
+The governance of the Git project as part of Conservancy is in the hands
+of Junio Hamano, Shawn Pearce, and Jeff King. The main activity of the
 governance consists in handling trademark issues related to the "Git"
 trademark that the project owns.
 
-There are a number of projects who call themselves Git XXX and the
+There are a number of projects who call themselves "Git XXX" and the
 trademark policy on git-scm.org is used to decide if those trademarks
 are approved or not.
 
-Another activity is related to defending the license which is the
-GPLv2. There have been some vendors who distributed Git with some
-changes, but did not provide the source code of the Git version they
-distributed. For now it has been possible to resolve these cases, but
-it is not completely clear if some vendors currently fullfill all
-their obligations. In case some developers who contributed to Git
-wants to take a close look at what the vendors are doing, the SFC can
-help them.
+Another activity is related to defending the license, which is the
+GPLv2. For example, there have previously been vendors distributing
+Git with some changes, but without providing the source code for the Git version they
+were distributing. So far it has been possible to resolve these cases, but
+it is not completely clear if all vendors are currently fullfilling all of
+their obligations. If any developers who have contributed to Git
+want to take a closer look at what the vendors are doing, Conservancy is
+able to help them.
 
 After that SubmitGit was discussed as well as ways to make it easier
-for people who are not yet Git developers to contribute. TravisCI
+for people who are not yet Git developers to contribute. TravisCI,
 which can be used to automatically test pull requests that are
-submitted on GitHub was also discussed at the same time.
+submitted on GitHub, was also discussed at the same time.
 
 It appeared that it would be good to also be able to test pull
-requests on Windows machines but TravisCI doesn't support Windows
-yet. To help on this GitLab CEO, Sytse "Sid" Sijbrandij, offered to
-let the project use GitLab CI which supports Linux, OSX and Windows.
+requests on Windows machines, but TravisCI doesn't support Windows
+yet. To help on this GitLab CEO Sytse "Sid" Sijbrandij offered to
+let the project use GitLab CI, which supports Linux, OSX, and Windows.
 
 Various subjects were then discussed a bit, like case insensitive
-refnames and filenames, submodules and Git on Celph which is a file
+refnames and filenames, submodules, and Git on Celph, which is a file
 system for computer clusters.
 
 A mix of long time and quite new Git contributors, along with people
-from Git related projects and companies attended. The atmosphere was
+from Git related projects and companies, attended. The atmosphere was
 relaxed and informal. Overall it was a very pleasant event.
 
 * [20 Tricks with Git and Shell](https://speakerdeck.com/nibalizer/20-tricks-with-git-and-bash)
@@ -78,8 +80,8 @@ relaxed and informal. Overall it was a very pleasant event.
 At the [Git Merge conference](http://git-merge.com/) on April 5th 2016
 at [New World Stages](http://newworldstages.com/) in New York City,
 USA, Spencer Krum, who works for IBM in Portland and appears to be a
-big fan of the
-[SFC (Software Freedom Conservancy)](https://sfconservancy.org/), gave
+big fan of
+[Software Freedom Conservancy](https://sfconservancy.org/), gave
 an interesting and fast-paced presentation about some shell and Git
 command line tricks.
 
@@ -89,15 +91,16 @@ Some of the tricks he showed are available in his
 The presentation started with simple shell aliases like `alias
 sl='ls'` to cope with typos and `alias g='git'` to reduce typing, then
 a bit more complex ones to avoid typing common arguments like `alias
-gprom='git push origin master'` and `alias pydoc='python -m pydoc'`,
+gpom='git push origin master'` and `alias pydoc='python -m pydoc'`,
 until validation aliases like:
 
 ```
 alias yamlcheck='python -c "import sys, yaml as y; y.safe_load(open(sys.argv[1]))"'
 ```
 
-Then Spencer spoke about customized prompts for git, filesystems and
-tools, and about git config aliases, for example:
+Spencer then spoke about customized prompts for git, filesystems and
+tools, and about git config aliases. For example, this alias that makes
+grepping through your submodules easy:
 
 ```
 [alias]
@@ -110,13 +113,11 @@ After that came functions. Some were general like:
 ```
 # Get to the top of a git tree
 cdp () {
-
   TEMP_PWD=`pwd`
   while ! [ -d .git ]; do
   cd ..
   done
   OLDPWD=$TEMP_PWD
-
 }
 ```
 
@@ -136,11 +137,11 @@ function pr() {
 ```
 
 In the end Spencer showed how to combine multiple small features to
-get something interesting. First vim can be started at a given line by
-giving the line in a +[num] argument, for example `vim +24`, then one
-can get the previous command typed on the command line using
-`history | tail -n 2 | head -1`, and finally one can use `git grep -n XXX`
-to get a grep result from Git with a line number.
+get something interesting. Take the following 3 tricks:
+
+* Vim can be started at a given line by giving the line in a +[num] argument, for example `vim +24`
+* The previous command typed on the command line can be obtained using `history | tail -n 2 | head -1`
+* `git grep -n XXX` will show a grep result from Git with a line number
 
 These 3 small tricks can be used in the following big one:
 
