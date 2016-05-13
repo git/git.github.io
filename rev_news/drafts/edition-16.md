@@ -31,7 +31,8 @@ This edition covers what happened during the month of May 2016.
 
 ## Releases
 
-* git-multimail [1.3.0 was released](https://github.com/git-multimail/git-multimail/releases/tag/1.3.0)
+* git-multimail [1.3.0](https://github.com/git-multimail/git-multimail/releases/tag/1.3.0) and
+  [1.3.1](https://github.com/git-multimail/git-multimail/releases/tag/1.3.1) were released,
   with a focus on options to customize emails, more documentation and
   a few SMTP-related improvements.
 
