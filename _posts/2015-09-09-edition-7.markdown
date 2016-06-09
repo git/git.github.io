@@ -9,9 +9,9 @@ navbar: false
 
 ## Git Rev News: Edition 7 (September 9th, 2015)
 
-Welcome to the 7th edition of [Git Rev News](http://git.github.io/rev_news/rev_news/),
+Welcome to the 7th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
-subscribe, see [the Git Rev News page](http://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
+subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](https://git.github.io).
 
 This edition covers what happened during the month of August 2015.
 
@@ -123,7 +123,7 @@ effect if it breaks is.
 Reading the students proposals and resume is rarely sufficient to
 really evaluate their skills, which makes the risk particularly hard
 to evaluate. Since 2014, we've been using
-[microprojects](http://git.github.io/SoC-2015-Microprojects.html) to
+[microprojects](https://git.github.io/SoC-2015-Microprojects.html) to
 select students. This turned out to be very efficient, both at
 identifying good (or bad) applicants, but also at giving students a
 glimpse of what "contributing to Git" means. Student get an idea of

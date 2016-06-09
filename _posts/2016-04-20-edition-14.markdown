@@ -9,9 +9,9 @@ navbar: false
 
 ## Git Rev News: Edition 14 (April 20th, 2016)
 
-Welcome to the 14th edition of [Git Rev News](http://git.github.io/rev_news/rev_news/),
+Welcome to the 14th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
-subscribe, see [the Git Rev News page](http://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
+subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](https://git.github.io).
 
 This edition covers what happened during the month of March 2016 and
 also what happened at the Git Contributor Summit on April 4 2016 and
@@ -53,8 +53,8 @@ going on to implement additional ref backends, especially a
 [lmdb](http://symas.com/mdb/) based one.
 
 (This work on an lmdb based ref backend has been reported on in
-[Git Rev News edition 12](http://git.github.io/rev_news/2016/02/10/edition-12/) and
-[Git Rev News edition 7](http://git.github.io/rev_news/2015/09/09/edition-7/).)
+[Git Rev News edition 12](https://git.github.io/rev_news/2016/02/10/edition-12/) and
+[Git Rev News edition 7](https://git.github.io/rev_news/2015/09/09/edition-7/).)
 
 From there the discussion switched to the case sensitiveness of ref
 names, and the different problems created by having ref names that

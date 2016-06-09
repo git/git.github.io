@@ -9,9 +9,9 @@ navbar: false
 
 ## Git Rev News: Edition 8 (October 14th, 2015)
 
-Welcome to the 8th edition of [Git Rev News](http://git.github.io/rev_news/rev_news/),
+Welcome to the 8th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
-subscribe, see [the Git Rev News page](http://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
+subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](https://git.github.io).
 
 This edition covers what happened during the month of September 2015.
 
@@ -239,7 +239,7 @@ I only found this recently, it's just brilliant. Thank you, whoever it was put t
 
 __Updates__
 
-* [Since we talked about it last month](http://git.github.io/rev_news/2015/09/09/edition-7/) David Turner
+* [Since we talked about it last month](https://git.github.io/rev_news/2015/09/09/edition-7/) David Turner
 submitted [a new patch series](http://thread.gmane.org/gmane.comp.version-control.git/278757) of his work on
 alternate ref backends. This work is being reviewed by Michael Haggerty, Junio, and others. The ultimate goal 
 is still to allow a lmdb-based backend, which should be faster and have fewer issues on

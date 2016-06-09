@@ -9,9 +9,9 @@ navbar: false
 
 ## Git Rev News: Edition 15 (May 11th, 2016)
 
-Welcome to the 15th edition of [Git Rev News](http://git.github.io/rev_news/rev_news/),
+Welcome to the 15th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
-subscribe, see [the Git Rev News page](http://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
+subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](https://git.github.io).
 
 This edition covers what happened during the month of April 2016,
 especially at the Git Contributor Summit on April 4 2016 and at the
@@ -23,7 +23,7 @@ Git Merge conference on April 5 2016.
 
 * Discussions at the Git Contributor Summit, part 2, about misc topics
 
-*Read part 1 in [Git Rev News Edition 14](http://git.github.io/rev_news/2016/04/20/edition-14/)* 
+*Read part 1 in [Git Rev News Edition 14](https://git.github.io/rev_news/2016/04/20/edition-14/)* 
 
 At the Git Contributor Summit on April 4th, just after the lunch
 break, the state of the participation of the Git project in the Google
