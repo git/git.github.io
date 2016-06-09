@@ -8,7 +8,7 @@ categories: [news]
 
 ## Git Rev News: Edition 1 (March 25th, 2015)
 
-Welcome to the first edition of [Git Rev News](http://git.github.io/rev_news/rev_news/),
+Welcome to the first edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git, written collaboratively 
 on [GitHub](https://github.com/git/git.github.io) by volunteers. 
 
@@ -55,7 +55,7 @@ Git this year, anticipated the start of the GSoC and sent a patch to
 rewrite git-pull.sh as a built-in.
 
 Indeed as stated in [the GSoC idea
-page](http://git.github.io/SoC-2015-Ideas.html):
+page](https://git.github.io/SoC-2015-Ideas.html):
 
 
 > Many components of Git are still in the form of shell and Perl
@@ -117,7 +117,7 @@ Dongcan Jiang, who will also probably apply to be a GSoC student for
 Git this year, sent a patch to prevent `git log` from being used with both
 the `--graph` and the `--no-walk` option. He sent this patch because
 the Git community asks potential students to work on a
-[microproject](http://git.github.io/SoC-2015-Microprojects.html) to
+[microproject](https://git.github.io/SoC-2015-Microprojects.html) to
 make sure that they can work properly with the community.
 
 Eric Sunshine made some good general suggestions that are often made

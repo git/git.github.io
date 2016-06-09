@@ -37,7 +37,7 @@ version control, dvcs
 
 ## Ideas List
 
-<http://git.github.io/SoC-2016-Ideas/>
+<https://git.github.io/SoC-2016-Ideas/>
 
 ## Short Description (180 chars max)
 
@@ -69,7 +69,7 @@ template or tips for their proposals. May include limited Markdown.
 ```
 
 Please read the "About applying for SoC with the Git project" section
-in the ideas page: http://git.github.io/SoC-2016-Ideas/
+in the ideas page: https://git.github.io/SoC-2016-Ideas/
 
 The primary way to contact the Git community is through the Git
 mailing list git@vger.kernel.org. Please discuss your application on

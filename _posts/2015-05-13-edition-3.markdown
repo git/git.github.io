@@ -9,9 +9,9 @@ navbar: false
 
 ## Git Rev News: Edition 3 (May 13, 2015)
 
-Welcome to the third edition of [Git Rev News](http://git.github.io/rev_news/rev_news/),
+Welcome to the third edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, how to contribute or to
-subscribe see [the Git Rev News page](http://git.github.io/rev_news/rev_news/) on http://git.github.io.
+subscribe see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on https://git.github.io.
 
 This edition still covers Git's 10th year of existence, as well as the
 [Git Merge](http://git-merge.com) conference held on April 8th & 9th in Paris,

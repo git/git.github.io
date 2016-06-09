@@ -13,7 +13,7 @@ This is the idea page for Summer of Code 2016 for Git and libgit2.
 It is required that students who want to apply to the Git
 project for the Summer of Code 2016 complete a tiny, code-related
 "microproject" as part of their application.  Please refer to our
-[guidelines and suggestions for microprojects](http://git.github.io/SoC-2016-Microprojects)
+[guidelines and suggestions for microprojects](https://git.github.io/SoC-2016-Microprojects)
 for more information. Completing a microproject is not only an important
 way for us to get experience with applicants, but it will also help
 applicants become familiar with Git's development and submission
@@ -54,7 +54,7 @@ discussion.
 
 Getting your proposal right can follow the same process as usual patch
 submission for Git, as described in the
-[microprojects](http://git.github.io/SoC-2016-Microprojects) page and
+[microprojects](https://git.github.io/SoC-2016-Microprojects) page and
 in `Documentation/SubmittingPatches` in Git's source code. It is also
 expected that you will send several versions of your draft, responding
 to comments on the list. If you are not sure about your proposal, you
@@ -63,7 +63,7 @@ separate emails. Please use "[GSoC]" at the beginning of such emails.
 
 In summary, all applicants must (not necessarily in this order):
 
-* Complete a [microproject](http://git.github.io/SoC-2016-Microprojects).
+* Complete a [microproject](https://git.github.io/SoC-2016-Microprojects).
 
 * Write a detailed application explaining their project.
 

@@ -8,7 +8,7 @@ navbar: false
 ---
 ## Git Rev News: Edition 2 (April 15, 2015), 10 years of Git & Git Merge 2015!
 
-Welcome to the second edition of [Git Rev News](http://git.github.io/rev_news/rev_news/),
+Welcome to the second edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git, written collaboratively
 on [GitHub](https://github.com/git/git.github.io) by volunteers.
 
