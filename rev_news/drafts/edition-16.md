@@ -25,7 +25,7 @@ Joey Hess, who is the [git-annex](https://git-annex.branchable.com/)
 main developer and maintainer, sent an email with some suggestions to
 extend smudge/clean filters.
 
-So called Smudge/clean filters can be used to automatically perform
+Smudge/clean filters can be used to automatically perform
 transformations on the content when it is checked into Git or out of
 it. This can be used for example to perform keyword substitution like
 Subversion or CVS allows with keywords named '$Id$', '$Rev$' or
