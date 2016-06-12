@@ -19,6 +19,22 @@ This edition covers what happened during the month of May 2016.
 
 ### General
 
+* Ensimag students contributing to Git
+
+Attracted by the Open Source world, we, eight French students from [Grenoble INP - Ensimag](http://ensimag.grenoble-inp.fr), are having their first experience in contributing to an Open Source software by joining the Git community for a 4-week school project. It was a great opportunity to participate in a useful non-academic project and to practice what we’ve learned at school.
+
+To get to know the Git community, we started with simple improvements: using `-` as a shortcut for `@{-1}` for `git worktree add`, adding CSS pattern for `git diff ` and using the parser API for `git  upload-pack`. Part of the job was also to start discussions on different subjects: how to setup a Triangular Workflow, about the consistency of the documentation and its readability concerning literals... 
+
+One of our main work was to implement a feature that allows to easily reply to a given email with the `git send-email` command: it populates appropriate header (`To:` / `Cc:` / …) and cites the given message body. Another one was to add the symmetrical of `git push --set-upstream` to `git pull`. We also worked on a deny policy to prevent accidental pushes to unwanted remote using a blacklist/whitelist list feature. Some of us improved the strbuf API by using stack-allocated memory instead of heap-allocated to avoid malloc and free.
+
+It was a great experience to face real practical issues when it comes to developing a software with thousands other developers all around the world. We’ve learned a lot about rigor and communication which really were at the center of our work. Maybe we’ll see each other again on the mailing list since some of us are willing to finish the patch they were working on and possibly continue the adventure.
+
+We also all wanted to thank Git folks for the time they spent reviewing our patches and helping us.
+
+But for sure, launching a git command will never feel the same ;-)
+
+*(written by François BEUTIN, Jordan DE GEA, William DUCLOT, Samuel GROOT, Erwan MATHONIERE, Antoine QUERU, Simon RABOURG and Tom RUSSELLO)*
+
 * [proposal for extending smudge/clean filters with raw file access](http://thread.gmane.org/gmane.comp.version-control.git/294425)
 
 Joey Hess, who is the [git-annex](https://git-annex.branchable.com/)
