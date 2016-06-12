@@ -154,6 +154,58 @@ not even be a '.git' directory.
 The conclusion from the thread is that unfortunately it looks like
 there is no simple solution to avoid this kind of problems for now.
 
+## Developer Spotlight: Duy Nguyen
+
+* Who are you, and what do you do?
+
+I became a Linux user since 2001 or so when I bought myself a Red Hat
+CD to celebrate joining the university. I was a GNOME Vietnamese
+translator for about ten years before giving up for lack of free time,
+and a Gentoo developer for four or five years (giving up for the same
+reason). By day I'm a software developer working mostly in telecom
+area.
+
+* What would you name your most important contribution to Git?
+
+It's been 10 years and I don't have very good memory. But I guess I
+would name it sparse checkout. It's far from perfect, but I'm working
+on that.
+
+* What are you doing on the Git project these days, and why?
+
+I'm still scratching my own itches and trying to push changes back in
+git.git so I don't have to maintain them separately. They are "git
+worktree move", dealing with the shared $GIT_DIR/config file in
+multiple worktrees, diff rename annotation, a builtin version of
+diff-highlight script, to name a few. There are some more challenging
+work like narrow clone or pack version 4, which is just fun to do.
+Though "fun" sometimes translates to "headache".
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+I don't know :-) I don't see far ahead in the future of Git because
+I'm mostly busy dealing with my own unhappiness with some aspect of
+Git. But if I could, maybe rewrite Git from scratch? On a smaller
+scale, we still have problems with "big numbers" in Git, may it be the
+number of refs, of files in a working tree, of objects to transfer or
+the size of an object... We know how to deal with some of these
+already and a dedicated expert team could help make it happen much
+faster.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+Hmm.. there are lots of things I want to replace if backward
+compatibility is thrown out of the window, but removing...no, probably
+none.
+
+* What is your favourite Git-related tool/library, outside of Git itself?
+
+None. If it's good and related to Git, I try to integrate it in Git
+itself so I don't have extra dependencies :)
+
+
 ## Releases
 
 * git-multimail [1.3.0](https://github.com/git-multimail/git-multimail/releases/tag/1.3.0) and
