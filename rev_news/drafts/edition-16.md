@@ -68,9 +68,91 @@ names "clean-from-fs" and "smudge-to-fs" have been suggested for them.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [http://thread.gmane.org/gmane.comp.version-control.git/295135](Odd Difference Between Windows Git and Standard Git)
+
+Jon Forrest sent an email about a `git status` behavior he sees on
+Windows, which is different than on Linux on a repository that is
+shared between the two environments. On Windows it looks like "every
+.pdf file and some .png files are modified".
+
+Torsten Bögershausen, who has been working on Windows compatibility
+lately, especially related to line ending, first asked Jon some basic
+questions:
+
+```
+What does
+git diff
+say ?
+
+What does
+git config -l | grep core
+say ?
+
+And what does
+git ls-files --eol
+say?
+```
+
+As Jon answered:
+
+```
+old mode 100755
+new mode 100644
+```
+
+Torsten replied:
+
+```
+So the solution is to run
+git config core.filemode false
+```
+
+Jon replied:
+
+```
+This worked perfectly!
+
+I wonder if this should be the default for Git for Windows.
+```
+
+To which Torsten replied:
+
+```
+It is.
+But you need to clone the repo under Windows.
+
+I probably submit a patch some day, that core.filemode will be ignored
+under Windows.
+```
+
+From further discussions, it appeared that, when cloning a repo or
+when using `git init`, we probe to see if the executable bit "sticks"
+to the files and we set the 'core.filemode' config variable
+accordingly. That works well, but we don't probe at other times, so it
+doesn't work well for repos that are shared using a network filesystem
+or Dropbox.
+
+To try to fix that, Torsten suggested a patch so that the
+'core.filemode' setting is ignored under Windows. The problem with
+that, is that dictating "for all eternity that Git for Windows cannot
+determine the executable bit" might not be a good long term strategy,
+as "who knows for certain?".
+
+Johannes Schindelin, the Git for Windows maintainer, suggested making
+the default 'core.filemode' setting platform-dependent. This last
+solution is already used for end of line setting. But it doesn't fix
+the problem when a repo created on Linux, where 'core.filemode' has
+been automatically set to true at init time, is shared.
+
+Another solution would be to probe more often than just when cloning
+or using `git init`, but it appears that we don't want to do that for
+each command and it is not clear how to easily probe when there might
+not even be a '.git' directory.
+
+The conclusion from the thread is that unfortunately it looks like
+there is no simple solution to avoid this kind of problems for now.
 
 ## Releases
 
