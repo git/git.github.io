@@ -247,9 +247,10 @@ itself so I don't have extra dependencies :)
 
 ## Releases
 
-* Git [2.8.3](http://article.gmane.org/gmane.comp.version-control.git/295081) and [2.8.4](http://article.gmane.org/gmane.linux.kernel/2236998).
-* Git for Windows [2.8.3](https://groups.google.com/forum/#!topic/git-for-windows/P008PLusCxw) and [2.8.4](https://groups.google.com/forum/#!topic/git-for-windows/LtFxynlPdAc).
-* Git release candidates [2.9.0-rc0](http://article.gmane.org/gmane.comp.version-control.git/295407), [2.9.0-rc1](http://article.gmane.org/gmane.linux.kernel/2231742) and [2.9.0-rc2](http://article.gmane.org/gmane.linux.kernel/2236999).
+* Git [2.9.0](http://article.gmane.org/gmane.linux.kernel/2242820) (major release).
+* Git for Windows [2.9.0](http://article.gmane.org/gmane.comp.version-control.git/297287) (major release).
+* Git [2.8.3](http://article.gmane.org/gmane.comp.version-control.git/295081) and [2.8.4](http://article.gmane.org/gmane.linux.kernel/2236998) (bugfix releases).
+* Git for Windows [2.8.3](https://groups.google.com/forum/#!topic/git-for-windows/P008PLusCxw) and [2.8.4](https://groups.google.com/forum/#!topic/git-for-windows/LtFxynlPdAc) (bugfix releases).
 * git-multimail [1.3.0](https://github.com/git-multimail/git-multimail/releases/tag/1.3.0) and
   [1.3.1](https://github.com/git-multimail/git-multimail/releases/tag/1.3.1) were released,
   with a focus on options to customize emails, more documentation and
