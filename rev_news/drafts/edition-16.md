@@ -255,17 +255,41 @@ itself so I don't have extra dependencies :)
   [1.3.1](https://github.com/git-multimail/git-multimail/releases/tag/1.3.1) were released,
   with a focus on options to customize emails, more documentation and
   a few SMTP-related improvements.
+* libgit2/nodegit [v0.13.2](https://github.com/nodegit/nodegit/releases/tag/v0.13.2)
+* libgit2/rugged [v0.25.0b4](https://github.com/libgit2/rugged/releases/tag/v0.25.0b4)
+* GitLab [8.8](https://about.gitlab.com/2016/05/22/gitlab-8-8-released/) with Pipelines and .gitignore templates, patched up to [8.8.4](https://about.gitlab.com/2016/06/09/gitlab-8-dot-8-dot-4-released/)
+* Deveo [3.10](http://blog.deveo.com/whats-new-in-deveo-3-10/)
 
 ## Other News
 
 __Various__
 
+* [Git 2.9 has been released](https://github.com/blog/2188-git-2-9-has-been-released) by Peff
+* [Rebase a Pull Request without access on the Fork](https://medium.com/@p.tournaris/git-rebase-a-pull-request-without-access-on-the-fork-a4189bac81b9) told by Pavlos-Petros Tournaris
+* Some really cool new Git subcommands from Adam Spiers: [new git splice subcommand for non interactive branch splicing](http://article.gmane.org/gmane.comp.version-control.git/295755) 
+* [Who Needs Git When You Got ZFS?](http://zef.me/blog/6023/who-needs-git-when-you-got-zfs) Zef Hemel asks. We do, but ZFS is still interesting.
+* [Easily Adding Meta Information to Git Branches](https://iinteractive.com/notebook/2016/05/25/git-mo-meta.html) by Yanick Champoux
+* [Display git branch in Windows command prompt](https://www.nu42.com/2016/05/display-git-branch-windows-command-prompt.html) in the simplest way, by A. Sinan Unur
+* [Solutions to useful git scenarios](http://masukomi.org/talks/git_tips_talk), a presentation? Mindmap? By Kay Rhodes
+* [git-tips/tips: Most commonly used git tips and tricks](https://github.com/git-tips/tips) - not sure if we shared this one before
 
-__Light reading__
+__Some challenging ideas__
+
+* [Subversion vs. Git: Myths and Facts](https://svnvsgit.com)
+* [Unorthodocs: Abandon your DVCS and Return to Sanity](https://bitquabit.com/post/unorthodocs-abandon-your-dvcs-and-return-to-sanity)
 
 
 __Git tools and sites__
 
+* [Git Trident is an iOS client for GitLab and GitHub](http://somerobots.com)
+* [splitsh/lite: Split your monorepo into many repos](https://github.com/splitsh/lite)
+* [donnemartin/gitsome: A Supercharged Git/Shell Autocompleter with GitHub Integration.](https://github.com/donnemartin/gitsome)
+* [kovetskiy/manul: The madness vendoring utility for Golang programs](https://github.com/kovetskiy/manul)
+* [buunguyen/octotree: Code tree for GitHub and GitLab](https://github.com/buunguyen/octotree)
+* [git squash-check](http://rwilcox.tumblr.com/post/144980240814/git-squash-check)
+* [reenhanced/gitreflow: automates your pull request workflow](https://github.com/reenhanced/gitreflow)
+* [Fork - a fast and friendly git client for Mac](https://git-fork.com/)
+* [karandesai-96/yolog: Beautify your Git Logs](https://github.com/karandesai-96/yolog)
 
 ## Credits
 
