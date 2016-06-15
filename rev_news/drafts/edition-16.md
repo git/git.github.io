@@ -299,6 +299,5 @@ __Git tools and sites__
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Nicola Paolucci &lt;<npaolucci@atlassian.com>&gt;,
-with help from Duy Nguyen, Matthieu Moy, François Beutin, Jordan de
-Gea, William Duclot, Samuel Groot, Erwan Mathoniere, Antoine Queru,
-Simon Rabourg and Tom Russello.
+with help from Duy Nguyen, Matthieu Moy, Johannes Schindelin, Jeff King, Junio Hamano, François Beutin,
+Jordan de Gea, William Duclot, Samuel Groot, Erwan Mathoniere, Antoine Queru, Simon Rabourg and Tom Russello.
