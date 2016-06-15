@@ -268,6 +268,7 @@ itself so I don't have extra dependencies :)
 __Various__
 
 * [Git 2.9 has been released](https://github.com/blog/2188-git-2-9-has-been-released) by Peff
+* [New "Mastering Git" book](https://www.packtpub.com/application-development/mastering-git) by long time Git contributor Jakub Narębski
 * [Rebase a Pull Request without access on the Fork](https://medium.com/@p.tournaris/git-rebase-a-pull-request-without-access-on-the-fork-a4189bac81b9) told by Pavlos-Petros Tournaris
 * Some really cool new Git subcommands from Adam Spiers: [new git splice subcommand for non interactive branch splicing](http://article.gmane.org/gmane.comp.version-control.git/295755) 
 * [Who Needs Git When You Got ZFS?](http://zef.me/blog/6023/who-needs-git-when-you-got-zfs) Zef Hemel asks. We do, but ZFS is still interesting.
