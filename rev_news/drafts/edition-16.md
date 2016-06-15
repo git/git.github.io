@@ -255,6 +255,9 @@ itself so I don't have extra dependencies :)
   [1.3.1](https://github.com/git-multimail/git-multimail/releases/tag/1.3.1) were released,
   with a focus on options to customize emails, more documentation and
   a few SMTP-related improvements.
+* Sharness [1.0.0](https://github.com/chriscool/sharness/releases/tag/v1.0.0),
+  a shell library to test your tools like Git does, was released and
+  [announced on the mailing list](http://thread.gmane.org/gmane.comp.version-control.git/297324).
 * libgit2/nodegit [v0.13.2](https://github.com/nodegit/nodegit/releases/tag/v0.13.2)
 * libgit2/rugged [v0.25.0b4](https://github.com/libgit2/rugged/releases/tag/v0.25.0b4)
 * GitLab [8.8](https://about.gitlab.com/2016/05/22/gitlab-8-8-released/) with Pipelines and .gitignore templates, patched up to [8.8.4](https://about.gitlab.com/2016/06/09/gitlab-8-dot-8-dot-4-released/)
