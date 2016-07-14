@@ -1,13 +1,13 @@
 ---
-title: Git Rev News Edition 17 (XXX, 2016)
+title: Git Rev News Edition 17 (July 20th, 2016)
 layout: default
-date: 2016-07-13 21:06:51 +0100
+date: 2016-07-20 21:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 17 (XXX, 2016)
+## Git Rev News: Edition 17 (July 20th, 2016)
 
 Welcome to the 17th edition of [Git Rev News](http://git.github.io/rev_news/rev_news.html),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
