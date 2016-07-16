@@ -36,6 +36,7 @@ This edition covers what happened during the month of June 2016.
 
 __Various__
 
+* [New archives of the Git Mailing list have been announced](http://thread.gmane.org/gmane.comp.version-control.git/299195/) by Eric Wong.
 
 __Light reading__
 
