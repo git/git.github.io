@@ -37,6 +37,7 @@ This edition covers what happened during the month of June 2016.
 __Various__
 
 * [New archives of the Git Mailing list have been announced](http://thread.gmane.org/gmane.comp.version-control.git/299195/) by Eric Wong.
+* [An RFC about questions for "Git User's Survey 2016" has been posted](http://thread.gmane.org/gmane.comp.version-control.git/299032/) by Jakub Narębski.
 
 __Light reading__
 
