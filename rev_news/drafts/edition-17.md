@@ -21,9 +21,86 @@ This edition covers what happened during the month of June 2016.
 ### General
 -->
 
-<!---
+
 ### Reviews
--->
+
+* [contrib/subtree: Remove --annotate](http://thread.gmane.org/gmane.comp.version-control.git/283340/)
+
+Last January David Greene, who maintains git-subtree.sh, sent
+[a patch series](http://thread.gmane.org/gmane.comp.version-control.git/283268/)
+to remove the `--annotate` option from `git subtree` and then
+[a version 2 of this patch series](http://thread.gmane.org/gmane.comp.version-control.git/283340/).
+
+This came after previous work to add `--unannotate` some years ago
+[in 2012](http://thread.gmane.org/gmane.comp.version-control.git/207341/) and
+[in 2013](http://thread.gmane.org/gmane.comp.version-control.git/212954/focus=212961).
+
+The reason why adding `--unannotate` has not been pursued is that it
+is "difficult to define due to the numerous ways one might want to
+specify how to edit commit messages". And `--annotate` is now
+considered not well suited to rewriting commit messages compared to
+other existing tools like `filter-branch`, `rebase -i` and
+`commit --amend` that can be used afterwards.
+
+Junio replied that the above is usually not a good enough reason to
+remove a feature unless it can be shown that nobody is using it.
+
+David then explained that he doesn't know how much `--annotate` is
+used, but that he is willing to first deprecate it and then after some
+time remove it.
+
+He also explained that he is also working on a few other things "that
+will involve slight semantic changes" and that he has a plan to move
+`git subtree` out of the `contrib` subdirectory of the Git source tree
+where it is currently and into the main area where there are all the
+non contrib Git commands.
+
+This move would possibly in the end move some of the maintenance
+burden of `git subtree` from David to all the Git developers and
+ultimately Junio, but David said that the changes he was planning
+would remove some maintainance burden.
+
+Junio agreed to the removal of `--annotate` and in another mail
+detailed the historical purpose of the `contrib` area and what is
+expected from code in this area:
+
+> The contrib/ area was created back when Git was still young and we
+> felt that it would be beneficial for building the community if
+> contributions to non-core part were also included, encouraging
+> developers whose strength are not necessarily in the core part to
+> participate in various design-level discussions to grow the
+> community faster.  Back then, we felt that an obscure standalone
+> project outside Git that would help the Git-life of users have a
+> much better chance of surviving (and eventually be polished) if we
+> had them bundled, even if the code quality and stability were
+> sub-par.
+>
+> Those young days are long gone.  A standalone tool that aims to help
+> users' Git-life would not just survive but flourish with much more
+> certainty, as long as the tool is good.  We have enough Git users to
+> rely on words-of-mouth these days to ensure their success.
+>
+> That is why I am very hesitant to add new things to contrib/ these
+> days.  It is very welcome thought that you are working on improving
+> subtree, and eventually moving it out of contrib/.  From the point
+> of view of the project, either moving up (to be part of the git core
+> proper) or moving out (to become an independent project) is far more
+> preferreable than the status quo so far that was staying in contrib/
+> (without seeing much changes and slowly but steadily bitrotting).
+>
+> If the aspiration is to move up to exit, then the quality and
+> stability expectation is basically the same as stuff in core, and we
+> need to strive to keep it stable and high quality.
+
+Recently David replied to the above:
+
+> This is the strategy I was planning to pursue.  After extensive
+> experience with git-subtree and some local enhancements I have in
+> real-world work, I am convinced it is a great complementary tool to
+> git-submodule.  It seems odd to me to have one in core and one not.
+
+And David also detailled some of the work he plans to do on `git
+subtree`.
 
 ### Support
 
