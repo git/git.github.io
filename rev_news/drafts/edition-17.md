@@ -151,6 +151,11 @@ And Jakub Narębski detailed the "loose" and the "packed" format.
 
 * Git [2.9.1](http://article.gmane.org/gmane.linux.kernel/2263540) (major release), followed by Git [2.9.2](http://article.gmane.org/gmane.linux.kernel/2267451) that fixes a regression on 32-bit and on Windows.
 * Git for Windows [2.9.2](http://article.gmane.org/gmane.comp.version-control.git/299684) (major release, skipping 2.9.1).
+* [nodegit/nodegit v0.15.1](https://github.com/nodegit/nodegit/releases/tag/v0.15.1)
+* [libgit2/pygit2 v0.24.1](https://github.com/libgit2/pygit2/releases/tag/v0.24.1)
+* [JGit/EGit Release 4.4.1](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03176.html)
+* [GitLab 8.9](https://about.gitlab.com/2016/06/22/gitlab-8-9-released/) and patches until [8.9.6](https://about.gitlab.com/2016/07/11/gitlab-8-dot-9-dot-6-released/)
+
 
 ## Other News
 
@@ -163,9 +168,21 @@ __Light reading__
 
 * [You should not blindly copy/paste `git clone` instructions from random websites](http://thejh.net/misc/website-terminal-copy-paste) by Jann Horn.
 * [To push, to pull- to fetch, perchance to commit. Aye, there's the rub](https://github.com/ipfs/js-ipfs-examples/issues/1#issuecomment-229005498) by Richard Littauer.
+* [A tutorial on how to use git submodule to share a model across multiple applications](https://github.com/NebuPookins/git-submodule-tutorial) by NebuPookins
+* [The Power of Git - Forge'it](https://blog.4ge.it/the-power-of-git/) by Caner Candan
+* [twenty years of free software -- part 7 git-annex](http://joeyh.name/blog/entry/twenty_years_of_free_software_--_part_7_git-annex/) a note from Joey Hess
+* [On the Matter of Beautiful git Diffs](http://nathanleclaire.com/blog/2016/06/28/on-the-matter-of-beautiful-git-diffs/) by Nathan LeClaire
+* [git fixup: --amend for older commits](https://blog.filippo.io/git-fixup-amending-an-older-commit/) by Filippo Valsorda
+* [Why Google Stores Billions of Lines of Code in a Single Repository](http://m.cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext) by Rachel Potvin and Josh Levenberg 
+* [Parallelize Development Using Git Worktrees](https://spin.atomicobject.com/2016/06/26/parallelize-development-git-worktrees/) by Brian Vanderwal
+* [Permanently Remove Any Record of a File From git](https://chrisshort.net/permanently-remove-any-record-of-a-file-from-git/) by Chris Short
+
 
 __Git tools and sites__
 
+* [Cycligent GIT TOOL](https://www.cycligent.com/git-tool)
+* [Mango: Git completely decentralised — Medium](https://medium.com/@alexberegszaszi/mango-git-completely-decentralised-7aef8bcbcfe6#.g2shzuxlp)
+* [karandesai-96/yolog: Beautify your Git Logs](https://github.com/karandesai-96/yolog)
 
 ## Credits
 
