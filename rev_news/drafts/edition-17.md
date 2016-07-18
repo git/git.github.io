@@ -161,6 +161,8 @@ __Various__
 
 __Light reading__
 
+* [You should not blindly copy/paste `git clone` instructions from random websites](http://thejh.net/misc/website-terminal-copy-paste) by Jann Horn.
+* [To push, to pull- to fetch, perchance to commit. Aye, there's the rub](https://github.com/ipfs/js-ipfs-examples/issues/1#issuecomment-229005498) by Richard Littauer.
 
 __Git tools and sites__
 
