@@ -149,6 +149,8 @@ And Jakub Narębski detailed the "loose" and the "packed" format.
 
 ## Releases
 
+* Git [2.9.1](http://article.gmane.org/gmane.linux.kernel/2263540) (major release), followed by Git [2.9.2](http://article.gmane.org/gmane.linux.kernel/2267451) that fixes a regression on 32-bit and on Windows.
+* Git for Windows [2.9.2](http://article.gmane.org/gmane.comp.version-control.git/299684) (major release, skipping 2.9.1).
 
 ## Other News
 
