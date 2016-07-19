@@ -55,7 +55,7 @@ will involve slight semantic changes" and that he has a plan to move
 where it is currently and into the main area where there are all the
 non contrib Git commands.
 
-This move would possibly in the end move some of the maintenance
+This change would possibly in the end move some of the maintenance
 burden of `git subtree` from David to all the Git developers and
 ultimately Junio, but David said that the changes he was planning
 would remove some maintainance burden.
