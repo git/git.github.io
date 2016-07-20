@@ -58,7 +58,7 @@ non contrib Git commands.
 This change would possibly in the end move some of the maintenance
 burden of `git subtree` from David to all the Git developers and
 ultimately Junio, but David said that the changes he was planning
-would remove some maintainance burden.
+would remove some maintenance burden.
 
 Junio agreed to the removal of `--annotate` and in another mail
 detailed the historical purpose of the `contrib` area and what is
