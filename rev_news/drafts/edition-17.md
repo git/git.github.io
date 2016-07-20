@@ -147,6 +147,143 @@ objects already makes things efficient:
 
 And Jakub Narębski detailed the "loose" and the "packed" format.
 
+
+## Developer Spotlight: Jakub Narębski
+
+* Who are you and what do you do?
+
+I'm an occasional contributor to Git, and an unofficial gitweb maintainer;
+a physicist turned to compute science. One of first programs that I wrote
+was a computer simulation. Currently I am working at the
+[Nicolaus Copernicus University in Toruń](http://www.umk.pl/en/). There, among other things,
+I teach Git to students, as a part of their coursework.
+
+I have created, announced and analysed annual Git User's Surveys from
+2007 till 2012 (all except the first one). You can find their results on the
+[Git Wiki](https://git.wiki.kernel.org/index.php/GitSurvey2012). This year I plan on restarting the survey.
+
+I am also the author of the [Mastering Git](https://www.packtpub.com/application-development/mastering-git) book published by Packt.
+
+* What is your book about and why did you write it?
+
+The goal of the "Mastering Git" book is to help readers get an expert-level
+proficiency with modern Git. I wanted to pass the information about
+the advanced use of Git, pass my knowledge about it,
+and improve their understanding of Git behavior. The idea was
+to show useful features (like for example the `git stash` command)
+together with explanation on how they work, to attain a deeper understanding,
+allowing Git users to be able to create their own solutions for their problems
+(like for example extracting file changes from the stash),
+based on this understanding of Git, instead of having to rely on ready recipes.
+
+This book would be not created without Packt. They have found me thanks to
+my contributions on StackOverflow and asked for authoring the book on Git
+targeting advanced usage, to follow theirs
+[Git: Version Control for Everyone](https://git-blame.blogspot.com/2013/02/git-version-control-for-everyone.html).
+They were very helpful; this was my first such big work.
+
+* How did your introduction to Git and involvement in Git project itself came about?
+
+I have followed Git development from the very beginning of its creation, on
+then existing and now defunct KernelTrap and Kernel Traffic sites (and the only
+one existing issue of Git Traffic). From there I have moved to looking
+on the Git mailing list. Git was so much easier to use and understand than CVS (and RCS)
+that I was using then for version control: easy branching, switching branches,
+merging, checking out older versions (remember sticky tags and dates?),
+atomic commits, peer-to-peer workflows,...
+
+My very first contribution to Git was an update to gitweb's README in 2006...
+and that's how I came to be, a bit of time later, an unofficial gitweb
+maintainer ;-)
+
+* What would you name your most important contribution to Git?
+
+Certainly my biggest contribution in terms of lines of code, number of commits
+and number of patch reviews was my refactoring of gitweb, making it easier
+to develop and maintain, while still providing a simple install path;
+and providing it with a documentation
+([gitweb(1)](https://git.github.io/htmldocs/gitweb.html),
+[gitweb.conf(5)](https://git.github.io/htmldocs/gitweb.conf.html)). An
+important to me contribution
+was adding a configure script for automatic build configuration.
+
+In terms of impact on Git's user friendliness and usability were probably
+(the few) improvements to the documentation.
+
+* What are you doing on the Git project these days, and why?
+
+Recently, I've not been contributing much to Git.
+I have now returned to the Git mailing list after a long hiatus. I am
+currently working and construction and then doing Git User's Survey 2016.
+The survey is preliminary planned for the month of September. Therefore
+if you want to point it into specific direction, give it certain
+focus, or include
+a particular question, now it's time to speak. I think it is important avenue
+to hear the voice of Git users, to help make Git better for all various use
+cases. Also it serves as a nice way to advertise Git capabilities...
+
+I keep reviewing gitweb patches. My TODO list for gitweb is quite long;
+I hope to shorten it some.
+
+* If you could get a team of expert developers to work full time on something in Git for a full year, what would it be?
+
+Improving further performance on big repositories would be nice (large
+number of file, large binary files, long history, large amount of branches,
+tags, replacements and notes). I'd like for it to go through and borrow
+ideas from other Git implementations and from other version control
+systems. The addition of compressed bitmap indices first to JGit,
+then to core-git to speed up cloning shows that there might be good
+ideas on how to speed up reachability and least common ancestor
+(also known as merge base in Git) queries in computer science papers.
+
+One hard problem in Git that would probably need such team of experts for
+a full year is resumable clone / resumable fetching. It is something that
+people want to have, but it turns out it is something really hard to implement
+reasonably. It can be worked around by using git bundles, which hopefully
+be automated and standarized; but it is still a workaround, not a solution.
+
+* If you could remove something from Git without worrying about backwards compatibility, what would it be?
+
+I would make remote-tracking refs fully qualified, that is use for
+example `refs/remotes/<remote>/heads/<branch>`. This would make
+it easier to fetch remote-local tags, to fetch replacements, notes,
+stashes, etc.
+
+I would also redo and redesign user interface of Git commands.
+The bottom-up, "worse is better" approach creates superior features,
+but it all too often results in inconsistent and inferior UI. It would
+be good to have consistent rules for using commands, subcommands
+and options. Currently it is a bit of historical mess; some features
+use command options, some subcommands. Some commands are
+narrow in scope, some have many different (and weakly related)
+modes of operation.
+
+* What are your favorite Git features?
+
+My favorite features are (1) the explicit staging area, which allows
+disentangling changes to be in the next commit from the state of
+the working directory, and which allows splitting commits with
+an interactive rebase, and (2) reflogs, which saved me from my
+mistakes in handling Git many, many times.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+Some time ago I have been using intensively a patch management tool
+named [StGit](http://procode.org/stgit/) (Stacked Git). Nowadays I use interactive rebase for nearly
+the same purpose, that is cleaning up a series of changes before sending
+the new version upstream for the review. It is a bit more cumbersome to
+use, but interactive rebase is a built in feature.
+
+I work mostly with git core tools (with the Git itself), sometimes using
+IDE integration with Git, or a graphical commit tool for easier interactive
+add. As an administrator, I love [Gitolite](http://gitolite.com/) --- it allows easy creation of
+repositories and repository access management, without the need to
+bother sysadmins
+
+One tool that looks interesting, and which I would like to try out,
+but didn't have an occasion to use, is the [git-imerge](https://github.com/mhagger/git-imerge).
+
+
 ## Releases
 
 * Git [2.9.1](http://article.gmane.org/gmane.linux.kernel/2263540) (major release), followed by Git [2.9.2](http://article.gmane.org/gmane.linux.kernel/2267451) that fixes a regression on 32-bit and on Windows.
