@@ -314,7 +314,7 @@ __Light reading__
 * [Parallelize Development Using Git Worktrees](https://spin.atomicobject.com/2016/06/26/parallelize-development-git-worktrees/) by Brian Vanderwal.
 * [Permanently Remove Any Record of a File From git](https://chrisshort.net/permanently-remove-any-record-of-a-file-from-git/) by Chris Short.
 * [Common Git Scenarios"](http://www.masukomi.org/talks/git_tips_talk/#/step-1) an interactive presentation by Masukomi A.K.A. Kay Rhodes.
-* [Making open source data more available](https://github.com/blog/2201-making-open-source-data-more-available) by Arfon Smith for GitHub.
+* [Making open source data more available](https://github.com/blog/2201-making-open-source-data-more-available) by Arfon Smith for GitHub, announcing 3TB+ BigQuery [dataset of GitHub activity in open source repositories](https://cloud.google.com/bigquery/public-data/github).
 
 
 __Git tools and sites__
