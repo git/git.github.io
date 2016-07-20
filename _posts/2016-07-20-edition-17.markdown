@@ -286,8 +286,8 @@ but didn't have an occasion to use, is the [git-imerge](https://github.com/mhagg
 
 ## Releases
 
-* Git [2.9.1](http://article.gmane.org/gmane.linux.kernel/2263540) (major release), followed by Git [2.9.2](http://article.gmane.org/gmane.linux.kernel/2267451) that fixes a regression on 32-bit and on Windows.
-* Git for Windows [2.9.2](http://article.gmane.org/gmane.comp.version-control.git/299684) (major release, skipping 2.9.1).
+* Git [2.9.1](http://article.gmane.org/gmane.linux.kernel/2263540) (maintenance release), followed by Git [2.9.2](http://article.gmane.org/gmane.linux.kernel/2267451) that fixes a regression on 32-bit and on Windows.
+* Git for Windows [2.9.2](http://article.gmane.org/gmane.comp.version-control.git/299684) (maintenance release, skipping 2.9.1).
 * [nodegit/nodegit v0.15.1](https://github.com/nodegit/nodegit/releases/tag/v0.15.1)
 * [libgit2/pygit2 v0.24.1](https://github.com/libgit2/pygit2/releases/tag/v0.24.1)
 * [JGit/EGit Release 4.4.1](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03176.html)
