@@ -39,6 +39,7 @@ __Various__
 
 __Light reading__
 
+* [A slightly delayed write-up of Git Merge 2016 by Roberto Tyley of the Guardian](https://www.theguardian.com/info/developer-blog/2016/jul/02/git-merge-2016)
 
 __Git tools and sites__
 
