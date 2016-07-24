@@ -36,6 +36,7 @@ This edition covers what happened during the month of July 2016.
 
 __Various__
 
+* A ["Reedited" version](https://github.com/nobozo/progit2) of [*Pro Git 2nd Edition*](https://github.com/progit/progit2) by Jon Forrest
 
 __Light reading__
 
