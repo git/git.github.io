@@ -41,6 +41,7 @@ __Various__
 __Light reading__
 
 * [A slightly delayed write-up of Git Merge 2016 by Roberto Tyley of the Guardian](https://www.theguardian.com/info/developer-blog/2016/jul/02/git-merge-2016)
+* [Mango: Git completely decentralised](https://medium.com/@alexberegszaszi/mango-git-completely-decentralised-7aef8bcbcfe6)  by Alex Beregszaszi.
 
 __Git tools and sites__
 
