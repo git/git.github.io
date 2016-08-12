@@ -45,6 +45,7 @@ __Light reading__
 
 __Git tools and sites__
 
+* Gmane (a mailing list archive that was used heavily by some Git developers) [shut down its web site](https://lars.ingebrigtsen.no/2016/07/28/the-end-of-gmane/comment-page-1/#comment-13502).
 
 ## Credits
 
