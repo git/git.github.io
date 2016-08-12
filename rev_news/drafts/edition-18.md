@@ -31,6 +31,7 @@ This edition covers what happened during the month of July 2016.
 
 ## Releases
 
+* Jonas Fonseca [announced tig 2.2](https://public-inbox.org/git/CAFuPQ1%2Bi6BFRH%3D6HUWzDgM7J%2BhL_3hUNv5-4mjjGm%3Dh-YWVuzg%40mail.gmail.com/).
 
 ## Other News
 
