@@ -87,9 +87,48 @@ One especially interesting sub thread was started by Jakub with
 Hopefully all this work will eventually be merged and result in great
 improvements for some important Git use cases.
 
-<!---
 ### Support
--->
+
+* [Find a topic branch containing a commit](https://public-inbox.org/git/CACsJy8CMnywB8AdmLxB8LnsznHrMTieoezhaQS=2r1pnM8ONZA@mail.gmail.com/)
+
+Duy asked on the mailing list:
+
+> Before I start doing anything silly because I don't know it can
+> already be done without waving my C wand like a mad man...
+>
+> I often do this: find a commit of interest, the commit itself is not
+> enough so I need a full patch series to figure out what's going, so I
+> fire up "git log --graph --oneline" and manually search that commit
+> and trace back to the merge point, then I can "git log --patch". Is
+> there an automatic way to accomplish that? Something like "git branch
+> --contains" (or "git merge --contains")?
+>
+> PS. Sometimes I wish we could optionally save cover letter in the
+> merge commit. Sometimes the "big plan" is hard to see by reading
+> individual commit messages.
+
+Saving the cover letter of a patch series - which is patch 0 in the
+series, but is not a real patch, so is not applied - is by the way a
+different topic that
+[reappeared on the list recently](https://public-inbox.org/git/CA+P7+xpHDGY5RTR8ntrABdxqM6b4V9dndS68=kV1+1Ym1N6YKw@mail.gmail.com/)
+and was also discussed following the
+[annoucement by Josh Triplett of his new git-series tool](https://public-inbox.org/git/20160729064055.GB25331@x/).
+
+To the main question about finding the topic branch containing a
+commit, Stefan Beller suggested using
+[Michael Haggerty's git-when-merged](https://github.com/mhagger/git-when-merged).
+
+Duy was happy with this tool, but would have liked an option to show
+all the commits in a topic branch, for example something that would do
+a `git log` from the merge base to the merge point. He also asked
+Michael if he had any plan to port it to C and integrate it into Git.
+
+Michael replied the next day that he had made
+[a pull request, which has since be merged, for the new option](https://github.com/mhagger/git-when-merged/pull/13),
+but that he had no plan to port it to C.
+
+Junio also asked for a way to get a more human readable result for
+example by running `git show` on the merge commit.
 
 ## Releases
 
