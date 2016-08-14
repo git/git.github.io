@@ -125,9 +125,9 @@ Michael if he had any plan to port it to C and integrate it into Git.
 
 Michael replied the next day that he had made
 [a pull request, which has since be merged, for the new option](https://github.com/mhagger/git-when-merged/pull/13),
-but that he had no plan to port it to C.
+but that he had no plan to port it to C and integrate it into Git.
 
-Junio also asked for a way to get a more human readable result for
+Junio also suggested a way to get a more human readable result for
 example by running `git show` on the merge commit.
 
 ## Releases
