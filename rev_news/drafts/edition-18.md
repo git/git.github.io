@@ -21,9 +21,71 @@ This edition covers what happened during the month of July 2016.
 ### General
 -->
 
-<!---
+
 ### Reviews
--->
+
+* [Git filter protocol](https://public-inbox.org/git/20160810130411.12419-1-larsxschneider%40gmail.com/)
+
+Lars Schneider recently sent version 5 of his "Git filter protocol"
+patch series. The goal of this series is to avoid launching a new
+clean/smudge filter process for each file that should be filtered.
+
+Only one filter process per Git command should be launched, and this
+process should communicate with the Git command using Lars' new filter
+protocol.
+
+This would make Git faster when a large number of files has to
+be filtered and when the startup time of a filter process is not
+insignificant.
+
+Lars wants especially to speed up Git-LFS, as Git-LFS works using a
+clean/smudge filter to send or get the large files to and from the
+special Git-LFS storage, so he also wrote
+[a pull request that implements a filter process for Git-LFS](https://github.com/github/git-lfs/pull/1382)
+and that uses his new filter protocol.
+
+On this pull request, Lars reports the following results when
+switching branches on OSX with 12,000 Git LFS files:
+
+```
+Default Git:                      6m2.979s + 0m1.310s = 364s
+Git and Git LFS with stream filter support: 0m2.528s + 0m2.280s = 5s
+```
+
+He says that with his filter protocol the operation is almost 70 times
+faster and that he expect "even more dramatic results on Windows", as
+launching a new process is usually slower on Windows.
+
+When he started working on this, Lars first sent emails to the mailing
+list to get information about
+[filter driver code](https://public-inbox.org/git/67D9AC88-550E-4549-9AFD-2401B70B363B%40gmail.com/)
+and explanations about
+[the fact that clean filter is executed 12 times for 3 files](https://public-inbox.org/git/1469134747-26785-1-git-send-email-larsxschneider%40gmail.com/).
+
+The discussion following his first email involved Junio Hamano, Jeff
+King alias Peff, Torsten Bögershausen and Jakub Narębski, and led to
+explanations and then interesting design discussions.
+
+The discussion following Lars' second email prompted Peff to send
+[a patch to fix some useless clean filter invocations](https://public-inbox.org/git/20160722152753.GA6859%40sigill.intra.peff.net/).
+
+Following those discussions Lars sent the following versions of his patch series:
+
+- [v1](https://public-inbox.org/git/20160722154900.19477-1-larsxschneider%40gmail.com/),
+- [v2](https://public-inbox.org/git/20160727000605.49982-1-larsxschneider%40gmail.com/),
+- [v3](https://public-inbox.org/git/20160729233801.82844-1-larsxschneider%40gmail.com/),
+- [v4](https://public-inbox.org/git/20160803164225.46355-1-larsxschneider%40gmail.com/),
+- [v5](https://public-inbox.org/git/20160810130411.12419-1-larsxschneider%40gmail.com/)
+
+These series were reviewed or involved a large number of Git
+developers, like Ramsay Jones, Remi Galan Alfonso, Eric Wong, Duy
+Nguyen, Johannes Sixt, Stefan Beller, Junio, Peff, Torsten, Jakub.
+
+One especially interesting sub thread was started by Jakub with
+[a long email about "Designing the filter process protocol"](https://public-inbox.org/git/607c07fe-5b6f-fd67-13e1-705020c267ee%40gmail.com/).
+
+Hopefully all this work will eventually be merged and result in great
+improvements for some important Git use cases.
 
 <!---
 ### Support
