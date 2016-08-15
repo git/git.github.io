@@ -154,6 +154,7 @@ __Git tools and sites__
 [It allows](https://public-inbox.org/design_www.html) looking up
 existing Gmane links using their Gmane id with URLs like
 `http://public-inbox.org/git/?q=gmane:123456`.
+* Josh Triplett [announced](https://public-inbox.org/git/20160729064055.GB25331@x/) a new git tool, [git-series](https://github.com/git-series/git-series/), to manage patch series with git, tracking the "history of history". git series tracks changes to the patch series over time, including rebases and other non-fast-forwarding changes. git series also tracks a cover letter for the patch series, formats the series for email, and prepares pull requests. This makes it easier to collaborate on a patch series, distribution package, backport, or any other development process that includes rebasing or non-fast-forward development. Josh plans to give a [presentation about git-series at LinuxCon North America](http://sched.co/7JVs).
 
 ## Credits
 
