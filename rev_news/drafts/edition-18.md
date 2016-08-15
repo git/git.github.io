@@ -132,18 +132,24 @@ example by running `git show` on the merge commit.
 
 ## Releases
 
-* Jonas Fonseca [announced tig 2.2](https://public-inbox.org/git/CAFuPQ1%2Bi6BFRH%3D6HUWzDgM7J%2BhL_3hUNv5-4mjjGm%3Dh-YWVuzg%40mail.gmail.com/).
+
+* Jonas Fonseca [announced tig 2.2](https://public-inbox.org/git/CAFuPQ1%2Bi6BFRH%3D6HUWzDgM7J%2BhL_3hUNv5-4mjjGm%3Dh-YWVuzg%40mail.gmail.com/), see also the [release page](https://github.com/jonas/tig/releases/tag/tig-2.2)
+* [GitLab 8.10](https://about.gitlab.com/2016/07/22/gitlab-8-10-released/) through [8.10.3](https://about.gitlab.com/2016/08/01/gitlab-8-dot-10-dot-3-released/)
+* [GitHub Enterprise 2.7](https://github.com/blog/2214-github-enterprise-2-7-is-now-available-with-enhanced-security-and-more-powerful-apis)
 
 ## Other News
 
 __Various__
 
-* A ["Reedited" version](https://github.com/nobozo/progit2) of [*Pro Git 2nd Edition*](https://github.com/progit/progit2) by Jon Forrest.
+* A ["Reedited" version](https://github.com/nobozo/progit2) of [*Pro Git 2nd Edition*](https://github.com/progit/progit2) by Jon Forrest
+* Author of git-annex, Joey Hess has [launched a Patreon page to support continued development on his open source projects](https://www.patreon.com/joeyh)
 
 __Light reading__
 
-* A [slightly delayed write-up of Git Merge 2016](https://www.theguardian.com/info/developer-blog/2016/jul/02/git-merge-2016) by Roberto Tyley of the Guardian.
-* [Mango: Git completely decentralised](https://medium.com/@alexberegszaszi/mango-git-completely-decentralised-7aef8bcbcfe6) by Alex Beregszaszi.
+* A [slightly delayed write-up of Git Merge 2016](https://www.theguardian.com/info/developer-blog/2016/jul/02/git-merge-2016) by Roberto Tyley of the Guardian
+* [Mango: Git completely decentralised](https://medium.com/@alexberegszaszi/mango-git-completely-decentralised-7aef8bcbcfe6) by Alex Beregszaszi
+* Max Heiber explains [How I Messed Up Our Repo and Ideas for Improving Git UX](https://medium.com/@maxheiber/how-i-messed-up-our-repo-and-ideas-for-improving-git-ux-e248d9e27e79#.hb10x5w10)
+* [Demystifying Git internals](https://medium.com/@pawan_rawal/demystifying-git-internals-a004f0425a70#.l34w4zy60), by Pawan Rawal
 
 __Git tools and sites__
 
@@ -155,6 +161,10 @@ __Git tools and sites__
 existing Gmane links using their Gmane id with URLs like
 `http://public-inbox.org/git/?q=gmane:123456`.
 * Josh Triplett [announced](https://public-inbox.org/git/20160729064055.GB25331@x/) a new git tool, [git-series](https://github.com/git-series/git-series/), to manage patch series with git, tracking the "history of history". git series tracks changes to the patch series over time, including rebases and other non-fast-forwarding changes. git series also tracks a cover letter for the patch series, formats the series for email, and prepares pull requests. This makes it easier to collaborate on a patch series, distribution package, backport, or any other development process that includes rebasing or non-fast-forward development. Josh plans to give a [presentation about git-series at LinuxCon North America](http://sched.co/7JVs).
+* GitSense looks like an interesting service to provide [Git Analytics and Search](https://gitsense.com/insight?c=bitbucket:gitsense/contexts:gs_contexts::default.ccf)
+* [git-confirm](https://github.com/pimterry/git-confirm) is a nice little Git hook to catch placeholders and temporary changes
+* [git-time-metric](https://github.com/git-time-metric/gtm): Simple, seamless, lightweight time tracking for Git
+* Resolve git conflicts within Atom using the package [merge-conflicts](https://atom.io/packages/merge-conflicts)
 
 ## Credits
 
