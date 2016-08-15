@@ -130,6 +130,76 @@ but that he had no plan to port it to C and integrate it into Git.
 Junio also suggested a way to get a more human readable result for
 example by running `git show` on the merge commit.
 
+## Developer Spotlight: Lars Schneider
+
+* Who are you and what do you do?
+
+I am a software engineer living in Berlin, Germany. Currently, I am the technical
+lead for a team that helps 4000+ Autodesk engineers to adopt Git as their main
+source control system. This is a challenging but also very interesting task as
+I am constantly confronted with all kinds of problems that Git users run into.
+Fortunately, Autodesk allows me to spend part of my time addressing these problems
+and contribute possible solutions back to the community.
+
+* What would you name your most important contribution to Git?
+
+Autodesk has lots and lots of Perforce repositories with 20+ years of history.
+We are gradually moving them to Git and during this process I try to constantly
+improve the "git-p4" migration tool. I managed to get quite a number of patches
+upstream already but there are still more in my local queue :-)
+
+However, I am most proud about an indirect contribution to Git. I helped the
+Git community to setup Git CI builds for OSX and Linux on Travis CI. This makes
+it really easy to ensure that new patches build without errors and cause no
+test failures on all major platforms and compilers. Casual contributors can
+create Pull Requests containing their patches against https://github.com/git/git
+and 20min later they would know if their patches pass all checks. This way a
+contributor can ensure that no precious reviewer time is wasted with broken
+patches.
+
+* What are you doing on the Git project these days, and why?
+
+I am working on an improved Git filter protocol. Git filters are a great
+mechanism to transparently modify repository content on commit and checkout.
+Amongst other things it is used to adjust platform specific line endings, to
+cleanup tab/whitespaces issues, to encrypt content, and to handle large files
+outside of the Git repository (e.g. via
+[git-annex](https://git-annex.branchable.com/) or
+[Git LFS](https://git-lfs.github.com/)).
+
+The problem with the current protocol is that a filter process is invoked for
+each individual file. If you have a large number of files, then you start an equally
+large number of processes. This gets slow quickly and therefore I am working
+on a patch series that reuses a single filter process for all files in the lifetime of a
+Git process.
+
+* If you could get a team of expert developers to work full time on
+something in Git for a full year, what would it be?
+
+First, we would improve the Travis CI setup and add Windows to the platforms
+that are constantly tested. Afterwards we would join forces with David Turner,
+Ben Peart, and Duy Nguyen and improve the Git performance for repositories
+that contain a very large number of files.
+
+* If you could remove something from Git without worrying about
+backwards compatibility, what would it be?
+
+I would not remove anything, but I would try to improve the UX. Unfortunately,
+modifying the UX of Git core commands is incredible hard as these commands are
+also used in a lot of scripts that we cannot break.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+A couple of years ago I wrote [ShowInGitHub](https://github.com/larsxschneider/ShowInGitHub),
+a plugin that helps you to jump from a specific line of code in Xcode to the
+same line on Github. It was my favorite Git tool during my iOS developer days.
+
+More recently I got really excited about [Git LFS](https://git-lfs.github.com/).
+Granted, Git LFS breaks one of Git's core features as LFS repositories are by default
+not distributed anymore. However, Git LFS is a pragmatic solution to a huge problem
+that many Git users face if they need to store large media assets or integration test
+data along with their source code.
+
 ## Releases
 
 
