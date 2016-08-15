@@ -147,7 +147,13 @@ __Light reading__
 
 __Git tools and sites__
 
-* Gmane (a mailing list archive that was used heavily by some Git developers) [shut down its web site](https://lars.ingebrigtsen.no/2016/07/28/the-end-of-gmane/comment-page-1/#comment-13502).
+* Gmane (a mailing list archive that was used heavily by some Git developers)
+[shut down its web site](https://lars.ingebrigtsen.no/2016/07/28/the-end-of-gmane/comment-page-1/#comment-13502).
+* [public-inbox](https://public-inbox.org/), which is under heavy developement by Eric Wong, has
+[a git archive](https://public-inbox.org/git/) that is now used a lot instead of Gmane.
+[It allows](https://public-inbox.org/design_www.html) looking up
+existing Gmane links using their Gmane id with URLs like
+`http://public-inbox.org/git/?q=gmane:123456`.
 
 ## Credits
 
