@@ -149,7 +149,7 @@ improve the "git-p4" migration tool. I managed to get quite a number of patches
 upstream already but there are still more in my local queue :-)
 
 However, I am most proud of an indirect contribution to Git. I helped the
-Git community set up Git CI builds for OSX and Linux on Travis CI. This makes
+Git community set up Git [CI builds for OSX and Linux on Travis CI](https://travis-ci.org/git/git/branches). This makes
 it really easy to ensure that new patches build without errors and cause no
 test failures on all major platforms and compilers. Casual contributors can
 create Pull Requests containing their patches against https://github.com/git/git
