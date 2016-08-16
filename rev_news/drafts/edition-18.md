@@ -112,7 +112,7 @@ series, but is not a real patch, so is not applied - is by the way a
 different topic that
 [reappeared on the list recently](https://public-inbox.org/git/CA+P7+xpHDGY5RTR8ntrABdxqM6b4V9dndS68=kV1+1Ym1N6YKw@mail.gmail.com/)
 and was also discussed following the
-[annoucement by Josh Triplett of his new git-series tool](https://public-inbox.org/git/20160729064055.GB25331@x/).
+[announcement by Josh Triplett of his new git-series tool](https://public-inbox.org/git/20160729064055.GB25331@x/).
 
 To the main question about finding the topic branch containing a
 commit, Stefan Beller suggested using
