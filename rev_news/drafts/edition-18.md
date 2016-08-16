@@ -34,7 +34,7 @@ Only one filter process per Git command should be launched, and this
 process should communicate with the Git command using Lars' new filter
 protocol.
 
-This would make Git faster when a large number of files has to
+This would make Git faster when a large number of files have to
 be filtered and when the startup time of a filter process is not
 insignificant.
 
@@ -48,13 +48,13 @@ On this pull request, Lars reports the following results when
 switching branches on OSX with 12,000 Git LFS files:
 
 ```
-Default Git:                      6m2.979s + 0m1.310s = 364s
-Git and Git LFS with stream filter support: 0m2.528s + 0m2.280s = 5s
+Default Git and Git LFS:                      6m2.979s + 0m1.310s = 364s
+Git and Git LFS with filter protocol support: 0m2.528s + 0m2.280s = 5s
 ```
 
 He says that with his filter protocol the operation is almost 70 times
-faster and that he expect "even more dramatic results on Windows", as
-launching a new process is usually slower on Windows.
+faster in this particular use case and that he expects "even more dramatic
+results on Windows", as launching a new process is usually slower on Windows.
 
 When he started working on this, Lars first sent emails to the mailing
 list to get information about
