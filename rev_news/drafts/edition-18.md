@@ -135,11 +135,11 @@ example by running `git show` on the merge commit.
 * Who are you and what do you do?
 
 I am a software engineer living in Berlin, Germany. Currently, I am the technical
-lead for a team that helps 4000+ Autodesk engineers to adopt Git as their main
+lead for a team that helps 4000+ Autodesk engineers adopt Git as their main
 source control system. This is a challenging but also very interesting task as
 I am constantly confronted with all kinds of problems that Git users run into.
 Fortunately, Autodesk allows me to spend part of my time addressing these problems
-and contribute possible solutions back to the community.
+and contributing possible solutions back to the community.
 
 * What would you name your most important contribution to Git?
 
@@ -148,8 +148,8 @@ We are gradually moving them to Git and during this process I try to constantly
 improve the "git-p4" migration tool. I managed to get quite a number of patches
 upstream already but there are still more in my local queue :-)
 
-However, I am most proud about an indirect contribution to Git. I helped the
-Git community to setup Git CI builds for OSX and Linux on Travis CI. This makes
+However, I am most proud of an indirect contribution to Git. I helped the
+Git community set up Git CI builds for OSX and Linux on Travis CI. This makes
 it really easy to ensure that new patches build without errors and cause no
 test failures on all major platforms and compilers. Casual contributors can
 create Pull Requests containing their patches against https://github.com/git/git
