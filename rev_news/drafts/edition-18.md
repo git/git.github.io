@@ -212,7 +212,7 @@ data along with their source code.
 __Various__
 
 * A ["Reedited" version](https://github.com/nobozo/progit2) of [*Pro Git 2nd Edition*](https://github.com/progit/progit2) by Jon Forrest
-* Author of git-annex, Joey Hess has [launched a Patreon page to support continued development on his open source projects](https://www.patreon.com/joeyh)
+* Author of [git-annex](https://git-annex.branchable.com/), Joey Hess has [launched a Patreon page to support continued development on his open source projects](https://www.patreon.com/joeyh)
 
 __Light reading__
 
