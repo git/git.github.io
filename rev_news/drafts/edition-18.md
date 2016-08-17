@@ -221,6 +221,7 @@ __Light reading__
 * Max Heiber explains [How I Messed Up Our Repo and Ideas for Improving Git UX](https://medium.com/@maxheiber/how-i-messed-up-our-repo-and-ideas-for-improving-git-ux-e248d9e27e79#.hb10x5w10)
 * [Demystifying Git internals](https://medium.com/@pawan_rawal/demystifying-git-internals-a004f0425a70#.l34w4zy60), by Pawan Rawal
 * [Version control: Effective use, issues and thoughts, from a gamedev perspective](http://www.what-could-possibly-go-wrong.com/version-control/), by Ashley Davis
+* [Setup Keybase.io, GPG & Git to sign commits on GitHub](https://github.com/pstadler/keybase-gpg-github) (and for Git), a gist by Patrick Stadler
 
 __Git tools and sites__
 
