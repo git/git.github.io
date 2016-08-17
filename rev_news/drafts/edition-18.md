@@ -224,7 +224,7 @@ __Light reading__
 __Git tools and sites__
 
 * Gmane (a mailing list archive that was used heavily by some Git developers)
-[shut down its web site](https://lars.ingebrigtsen.no/2016/07/28/the-end-of-gmane/comment-page-1/#comment-13502).
+[shut down its web site](https://lars.ingebrigtsen.no/2016/07/28/the-end-of-gmane/comment-page-1/#comment-13502).  This issue was covered in the ["Ingebrigtsen: The End of Gmane?"](https://lwn.net/Articles/695695/) short note on LWN.net, which got included in the  ["Announcements" section of LWN.net Weekly Edition for August 4, 2016](http://lwn.net/Articles/695980/); comments there mention that threaded view in Gmane web interface had no equal in other mail archive sites.  There is also [Alternatives to mid.gmane.org?](https://public-inbox.org/git/%3C481D1EE2-6A66-418F-AB28-95947BBF3680@gmail.com%3E/) thread, listing among others [MARC.info](https://marc.info/?l=git) and public-inbox.  [A note from the maintainer](https://public-inbox.org/git/%3Cxmqq1t1twymf.fsf@gitster.mtv.corp.google.com%3E/) got updated in light of this change.
 * [public-inbox](https://public-inbox.org/), which is under heavy developement by Eric Wong, has
 [a git archive](https://public-inbox.org/git/) that is now used a lot instead of Gmane.
 [It allows](https://public-inbox.org/design_www.html) looking up
