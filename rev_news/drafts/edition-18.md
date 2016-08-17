@@ -220,6 +220,7 @@ __Light reading__
 * [Mango: Git completely decentralised](https://medium.com/@alexberegszaszi/mango-git-completely-decentralised-7aef8bcbcfe6) by Alex Beregszaszi
 * Max Heiber explains [How I Messed Up Our Repo and Ideas for Improving Git UX](https://medium.com/@maxheiber/how-i-messed-up-our-repo-and-ideas-for-improving-git-ux-e248d9e27e79#.hb10x5w10)
 * [Demystifying Git internals](https://medium.com/@pawan_rawal/demystifying-git-internals-a004f0425a70#.l34w4zy60), by Pawan Rawal
+* [Version control: Effective use, issues and thoughts, from a gamedev perspective](http://www.what-could-possibly-go-wrong.com/version-control/), by Ashley Davis
 
 __Git tools and sites__
 
