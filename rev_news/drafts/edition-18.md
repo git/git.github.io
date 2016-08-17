@@ -202,10 +202,10 @@ data along with their source code.
 
 ## Releases
 
-
 * Jonas Fonseca [announced tig 2.2](https://public-inbox.org/git/CAFuPQ1%2Bi6BFRH%3D6HUWzDgM7J%2BhL_3hUNv5-4mjjGm%3Dh-YWVuzg%40mail.gmail.com/), see also the [release page](https://github.com/jonas/tig/releases/tag/tig-2.2)
 * [GitLab 8.10](https://about.gitlab.com/2016/07/22/gitlab-8-10-released/) through [8.10.3](https://about.gitlab.com/2016/08/01/gitlab-8-dot-10-dot-3-released/)
 * [GitHub Enterprise 2.7](https://github.com/blog/2214-github-enterprise-2-7-is-now-available-with-enhanced-security-and-more-powerful-apis)
+* Matthieu Moy [announced git-multimail 1.4.0](http://public-inbox.org/git/20160817064116.18399-1-Matthieu.Moy@imag.fr/)
 
 ## Other News
 
