@@ -241,4 +241,4 @@ existing Gmane links using their Gmane id with URLs like
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt; and
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;, with help from Lars Schneider,
-Johannes Schindelin, Roberto Tyley and Josh Triplett.
+Johannes Schindelin, Roberto Tyley, Jakub Narębski and Josh Triplett.
