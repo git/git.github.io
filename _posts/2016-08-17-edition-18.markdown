@@ -204,7 +204,7 @@ data along with their source code.
 
 * [Git 2.10.0-rc0](https://public-inbox.org/git/xmqqfuq7j7cw.fsf@gitster.mtv.corp.google.com/)
 * [Git 2.9.3](https://public-inbox.org/git/xmqq37m9wymv.fsf@gitster.mtv.corp.google.com/) 
-* [Git for Windows 2.9.3](https://public-inbox.org/git/alpine.DEB.2.20.1608131214070.4924@virtualbox/)
+* [Git for Windows 2.9.3](https://github.com/git-for-windows/git/releases/tag/v2.9.3.windows.1)
 * Jonas Fonseca [announced tig 2.2](https://public-inbox.org/git/CAFuPQ1%2Bi6BFRH%3D6HUWzDgM7J%2BhL_3hUNv5-4mjjGm%3Dh-YWVuzg%40mail.gmail.com/), see also the [release page](https://github.com/jonas/tig/releases/tag/tig-2.2)
 * [GitLab 8.10](https://about.gitlab.com/2016/07/22/gitlab-8-10-released/) through [8.10.3](https://about.gitlab.com/2016/08/01/gitlab-8-dot-10-dot-3-released/)
 * [GitHub Enterprise 2.7](https://github.com/blog/2214-github-enterprise-2-7-is-now-available-with-enhanced-security-and-more-powerful-apis)
