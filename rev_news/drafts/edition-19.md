@@ -1,13 +1,13 @@
 ---
-title: Git Rev News Edition 19 (XXX, 2016)
+title: Git Rev News Edition 19 (September 14th, 2016)
 layout: default
-date: 2016-09-17 12:06:51 +0100
+date: 2016-09-14 12:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 19 (XXX, 2016)
+## Git Rev News: Edition 19 (September 14th, 2016)
 
 Welcome to the 19th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
