@@ -241,9 +241,44 @@ North America it will happen in Los Angeles, September 11-13. Perhaps
 the name change hints that it could become an even more relevant place
 for Git related presentations.
 
-<!---
 ### Reviews
--->
+
+* [Use header data patch ids for rebase to avoid loading file content](http://public-inbox.org/git/20160729161920.3792-1-kcwillford@gmail.com/)
+
+One of the improvements in the just released Git v2.10 is an
+optimization of the patch id mechanism implemented by Kevin Willford
+helped by Johannes Schindelin, alias Dscho, as Kevin and Dscho are
+colleagues working for Microsoft.
+
+The patch id mechanism is used for example by `git rebase` to avoid
+trying to rebase commits that have been already integrated. This is
+done by computing a finger print of each commit called "patch id" and
+comparing the patch ids of the commits on the two sides of the rebase.
+
+Kevin started by sending
+[a patch called "Use path comparison for patch ids before the file content"](https://public-inbox.org/git/20160714201758.13180-1-kcwillford@gmail.com/).
+
+The idea behind his patch is that, to compare commits, it should be
+simpler to first look which files are changed by the commits, before
+looking at their content. If the files changed by two commits are
+different, there is no need to look at what is changed exactly to tell
+that the commits are different.
+
+So instead of computing a patch id made from the content of a commit,
+it is more efficient to compute a patch id based on the files that are
+changed and only if necessary compute another patch id based on the
+content that is changed. This makes `git rebase` 1% to 6% faster.
+
+Junio Hamano agreed that it was a good idea and suggested some
+improvements. Dscho also commented and suggested other improvements
+including to split the patch.
+
+A few weeks later Kevin sent
+[a version 2](http://public-inbox.org/git/20160729161920.3792-1-kcwillford@gmail.com/)
+in the form of a 4 patch series.
+
+There were some discussions around a few related issues but in the end
+the patch series got merged.
 
 <!---
 ### Support
