@@ -241,6 +241,24 @@ North America it will happen in Los Angeles, September 11-13. Perhaps
 the name change hints that it could become an even more relevant place
 for Git related presentations.
 
+* [Google Summer of Code 2016](https://summerofcode.withgoogle.com/) Wrap Up
+
+There was only one student, [Pranit Bauva](https://github.com/pranitbauva1997/),
+mentored by Lars Schneider and Christian Couder, who participated this
+year in the Google Summer of Code. Matthieu Moy and Jeff King were the
+GSoC administrators for the Git project.
+
+Pranit has been working on an "Incremental rewrite of git-bisect"
+which goal was to port parts of the `git bisect` command from shell to
+C code.
+
+Pranit wrote
+[a report about his work](https://docs.google.com/document/d/1Uir0a8cRYlWANuzoU4iTDtEvPukvtTJcC_dB3KJUgqM/edit#heading=h.mipx2w79za4f)
+and uploaded
+[the last version of the patches he wrote before the end of the GSoC](https://drive.google.com/drive/folders/0B2SBIDYEkAaiV2xhNWZNSUdWOVE).
+
+Pranit passed the GSoC final evaluation.
+
 ### Reviews
 
 * [Use header data patch ids for rebase to avoid loading file content](http://public-inbox.org/git/20160729161920.3792-1-kcwillford@gmail.com/)
