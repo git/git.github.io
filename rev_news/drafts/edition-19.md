@@ -233,10 +233,13 @@ is really effective to play with a repository.
 git-series has been the project he used to learn how to use Rust. As
 it is still a very young language, he had to submit patches to the
 libgit2 Rust bindings and to a few other Rust libraries to make them
-do what he needed.
+do what he needed. But it was really fun experience especially because
+he didn't have to deal with memory management.
 
-It was really fun experience especially because he didn't have to deal
-with memory management.
+Next year the "LinuxCon" will be renamed "Open Source Summit" and in
+North America it will happen in Los Angeles, September 11-13. Perhaps
+the name change hints that it could become an even more significant
+place for Git related presentations.
 
 <!---
 ### Reviews
