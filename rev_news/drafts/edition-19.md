@@ -51,7 +51,7 @@ You have to keep it, because people can tell you that they liked
 better what your previous version did, and because some people are
 actually interested in the real history of your code.
 
-You could use the reflog to keep it, but it is effemeral by default
+You could use the reflog to keep it, but it is ephemeral by default
 and it is not easy to push or pull. You could also dig an email from
 your sent-mail folder or a mailing list archive.
 
@@ -61,7 +61,7 @@ but we need more than that, we need the history of history.
 `git submodule` could be used to track that but people generally have
 a bad experience with `git submodule`. It's also possible to manage
 patches outside Git. There are tools like for example quilt that can
-be used for this purpose, but then you loose the power of working with
+be used for this purpose, but then you lose the power of working with
 Git.
 
 Another possibility is to use branches with version names like
@@ -85,7 +85,7 @@ rebasing stacks of patches sitting on top of upstream code.
 the history of a patch series, and also tracks its cover letter and its
 base.
 
-Then josh gave a demo.
+Then Josh gave a demo.
 
 To create a series called "feature" based on v4.7, you would run for
 example:
@@ -184,14 +184,14 @@ git-series.
 
 He found on multiple occasions that avoiding to need big errors
 messages was a good strategy. Often a long and complex error messages
-suggested he migth have a design flaw, so he redesigned to make the
+suggested he might have a design flaw, so he redesigned to make the
 error impossible.
 
 One example of that is what happens when we detach from a series or
 check out a new series with uncommited changes. First he had designed
 git-series to use only one staged and working version for a
 repository, so in this case he would have needed an error message to
-explain that you could loose some data and perhaps something like
+explain that you could lose some data and perhaps something like
 `git series checkout --force` to checkout anyway.
 
 Then he realized that if each series had its own working and staged
@@ -361,4 +361,4 @@ __Git tools and sites__
 ## Credits
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt; and
-Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;, with help from Brian M. Carlson.
+Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;, with help from Brian M. Carlson and Josh Triplett.
