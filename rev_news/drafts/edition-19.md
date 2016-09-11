@@ -284,6 +284,66 @@ the patch series got merged.
 ### Support
 -->
 
+## Developer Spotlight: Brian M. Carlson
+
+* Who are you and what do you do?
+
+I'm a software developer living in Houston, Texas, US.  I've long been
+involved in the FLOSS community, mostly with one-off patches,
+documentation improvements, and other maintenance-related work.  I'm a
+polyglot programmer, and I contribute to Asciidoctor, among other
+projects.  I also enjoy biking and writing in my spare time.
+
+Professionally, I'm a developer with cPanel.  There I do maintenance
+work on our product and development tools, manage alternating releases,
+advise on security design, and of course maintain the copy of Git we use
+internally and ship to customers.  I also perform some training for
+developers, QA, and documentation folk on how to use Git and how to use
+it more effectively.
+
+* What would you name your most important contribution to Git?
+
+One of the things I've really enjoyed doing is making Git work better
+over HTTP with Kerberos.  I use Kerberos for my internal network
+infrastructure at home, and Git has gone from not working at all to
+being very robust and reliable using Kerberos authentication.  There are
+still some usability issues we can improve on, though.
+
+* What are you doing on the Git project these days, and why?
+
+Most of my time is spent on converting the code to use a structure for
+object identifiers (hashes) instead of one-off arrays everywhere.  This
+improves the quality and maintainability of the code, and it also makes
+it easier to switch to a different hash than SHA-1.  Depending on the
+hash that's chosen, we could also potentially improve the performance of
+Git as a result of that work as well.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+One thing I know is a pain point for a lot of people is very large
+repositories, whether that's in terms of number or size of files, total
+repository size, or number of references.  I've personally had to
+troubleshoot some of those problems, and I'd love to get some additional
+improvements in that area to make Git perform better and use less space.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+I think I'd remove the dumb HTTP and FTP support.  It tends to perform
+really badly, requires per-repository server-side configuration to get
+right, and complicates the smart HTTP protocol code.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+To be honest, it's zsh's built-in vcs_info functionality.  It
+automatically detects what branch I'm on, if I'm in the middle of an
+operation like a rebase or cherry-pick, and whether changes are staged
+or not, as well as providing pretty good completion.  It works with a
+wide variety of Git versions and of course has the scope of features
+you'd expect from zsh.
+
+
 ## Releases
 
 
@@ -301,4 +361,4 @@ __Git tools and sites__
 ## Credits
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt; and
-Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;, with help from XXX.
+Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;, with help from Brian M. Carlson.
