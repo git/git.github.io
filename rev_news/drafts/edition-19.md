@@ -238,8 +238,8 @@ he didn't have to deal with memory management.
 
 Next year the "LinuxCon" will be renamed "Open Source Summit" and in
 North America it will happen in Los Angeles, September 11-13. Perhaps
-the name change hints that it could become an even more significant
-place for Git related presentations.
+the name change hints that it could become an even more relevant place
+for Git related presentations.
 
 <!---
 ### Reviews
