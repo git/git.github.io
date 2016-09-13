@@ -394,6 +394,7 @@ you'd expect from zsh.
 
 ## Other News
 
+* [Git User's Survey 2016](https://survs.com/survey/3cop1kt5eg) is out!
 * GitLab elaborates on their new round of founding in the [GitLab Master Plan](https://about.gitlab.com/2016/09/13/gitlab-master-plan/)
 * [Gmane has a new maintainer](http://lwn.net/Articles/699704/), which is good because we have a lot of old links pointing to Gmane in previous editions.
 
