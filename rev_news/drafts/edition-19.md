@@ -384,20 +384,39 @@ you'd expect from zsh.
 
 ## Releases
 
+* [Git 2.10](https://public-inbox.org/git/xmqqtwdxsp5q.fsf@gitster.mtv.corp.google.com/)
+* [Git 2.10 overview from Peff@GitHub](https://github.com/blog/2242-git-2-10-has-been-released)
+* [Git for Windows 2.10](https://github.com/git-for-windows/git/releases/tag/v2.10.0.windows.1)
+* [Git for Windows 2.10 overview from Dscho@Microsoft](https://blogs.msdn.microsoft.com/visualstudioalm/2016/09/03/whats-new-in-git-for-windows-2-10/)
+* [libgit2/rugged v0.25.0b8](https://github.com/libgit2/rugged/releases/tag/v0.25.0b8)
+* [GitLab 8.11](https://about.gitlab.com/2016/08/22/gitlab-8-11-released/) through [8.11.5 ](https://about.gitlab.com/2016/09/07/gitlab-8-dot-11-dot-5-released/)
+* GUI tool [GitKraken v1.6](https://blog.axosoft.com/2016/09/12/gitkraken-v1-6/)
 
 ## Other News
 
-__Various__
+* GitLab elaborates on their new round of founding in the [GitLab Master Plan](https://about.gitlab.com/2016/09/13/gitlab-master-plan/)
+* [Gmane has a new maintainer](http://lwn.net/Articles/699704/), which is good because we have a lot of old links pointing to Gmane in previous editions.
+
+__Git tips and tricks__
+* [Oh, shit, git!](http://ohshitgit.com/) by Katie Sylor-Miller
+* [Git Hot Tips](http://wesbos.com/git-hot-tips/) by Wes Bos
+* [Git diff tips and tricks](https://blog.twobucks.co/git-diff-tips-and-tricks/) by Hrvoje Šimić
 
 
 __Light reading__
-
+* [Git - Basic hygiene of working with repository](http://www.allinmobile.co/git-basic-hygiene-of-working-with-repository/) by Luke Konior
 
 __Git tools and sites__
-* [Git CI stats](https://larsxschneider.github.io/git-ci-stats/) - List all commits of a given branch and visualize the CI status, CI execution time, and failing test 
-
+* [Git CI stats](https://larsxschneider.github.io/git-ci-stats/) - List all commits of a given branch and visualize the CI status, CI execution time, and failing test
+* [git-fiddle: Edit commit messages, authors and timestamps during git-rebase](https://github.com/felixSchl/git-fiddle)
+* [SparkleShare - Self hosted, instant, secure file sync](https://www.sparkleshare.org/) based on Git
+* [git-clean: A Command Line Tool written in Rust for cleaning up local and remote Git branches](https://github.com/mcasper/git-clean)
+* [Fork - a fast and friendly git client for Mac](https://git-fork.com/)
+* [GitHeat](http://www.mustafa-s.com/Githeat/) - Interactive heatmaps for your git repositories
+* [Git Undo](http://megakemp.com/2016/08/25/git-undo/) is a neat little alias for getting stuff out of the reflog
+* [literate-git: Render hierarchical git repositories into HTML](https://github.com/bennorth/literate-git/) - see a demo of it [here](http://www.redfrontdoor.org/20160813-literate-git-demo/index.html)
 
 ## Credits
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt; and
-Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;, with help from Brian M. Carlson and Josh Triplett.
+Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;, with help from Brian M. Carlson, Jakub Narębski and Josh Triplett.
