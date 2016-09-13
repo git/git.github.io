@@ -259,6 +259,26 @@ and uploaded
 
 Pranit passed the GSoC final evaluation.
 
+* Thank you Nicola and call for help!
+
+From the beginning in March 2015, Nicola Paolucci helped set up the
+infrastructure for Git Rev News, especially MailChimp to send Git Rev
+News as an email to people who subscribed to receive it this way, and
+a number of miscellaneous improvements.
+
+Unfortunately, as he has been lacking bandwidth to work on Git Rev
+News recently, he asked to be de-installed from being an editor. So we
+are now only two, while there is more and more to do to have a
+relevant, vibrant and entertaining news letter for the Git Community.
+
+That's why we are thanking Nicola for his help, and looking for other
+people to join our small Git Rev News editor team.
+
+There is no need to even know Git well for that. It's possible to
+participate by just proofreading articles for example. Please contact
+us (see our emails at the bottom) if you are interested.
+
+
 ### Reviews
 
 * [Use header data patch ids for rebase to avoid loading file content](http://public-inbox.org/git/20160729161920.3792-1-kcwillford@gmail.com/)
