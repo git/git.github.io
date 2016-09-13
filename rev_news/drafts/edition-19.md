@@ -394,6 +394,7 @@ __Light reading__
 
 
 __Git tools and sites__
+* [Git CI stats](https://larsxschneider.github.io/git-ci-stats/) - List all commits of a given branch and visualize the CI status, CI execution time, and failing test 
 
 
 ## Credits
