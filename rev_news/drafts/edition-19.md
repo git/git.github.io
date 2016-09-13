@@ -398,15 +398,18 @@ you'd expect from zsh.
 * [Gmane has a new maintainer](http://lwn.net/Articles/699704/), which is good because we have a lot of old links pointing to Gmane in previous editions.
 
 __Git tips and tricks__
+
 * [Oh, shit, git!](http://ohshitgit.com/) by Katie Sylor-Miller
 * [Git Hot Tips](http://wesbos.com/git-hot-tips/) by Wes Bos
 * [Git diff tips and tricks](https://blog.twobucks.co/git-diff-tips-and-tricks/) by Hrvoje Šimić
 
 
 __Light reading__
+
 * [Git - Basic hygiene of working with repository](http://www.allinmobile.co/git-basic-hygiene-of-working-with-repository/) by Luke Konior
 
 __Git tools and sites__
+
 * [Git CI stats](https://larsxschneider.github.io/git-ci-stats/) - List all commits of a given branch and visualize the CI status, CI execution time, and failing test
 * [git-fiddle: Edit commit messages, authors and timestamps during git-rebase](https://github.com/felixSchl/git-fiddle)
 * [SparkleShare - Self hosted, instant, secure file sync](https://www.sparkleshare.org/) based on Git
