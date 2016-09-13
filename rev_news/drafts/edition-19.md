@@ -259,6 +259,59 @@ and uploaded
 
 Pranit passed the GSoC final evaluation.
 
+* **[Git User's Survey 2016](https://survs.com/survey/3cop1kt5eg)** is open till **20 October 2016**
+
+This year we will see the return of Git User's Survey (the last one was
+in 2012).  The goal of the survey is mainly to help to understand who is
+using Git, how and why.
+
+The results will be published to the Git wiki on the
+[GitSurvey2016](https://git.wiki.kernel.org/index.php/GitSurvey2016)
+page and discussed on the git mailing list.
+
+The survey would be open from **12 September** to **20 October 2016**.
+
+Beside getting information on how people use Git, what are their pain
+points, and what they want from Git (which might be different from what
+Git developers think it is), the [survey has also educational purpose,
+and includes a bit of advertisement](https://public-inbox.org/git/577E6F32.7020007%40gmail.com/)
+(brief note about this
+was in [#17](https://git.github.io/rev_news/2016/07/20/edition-17/)).
+For example question about tools used or one about features used teaches
+what is available (and which might had been not known).
+
+The questions were prepared with the help of Eric Wong and Andrew Adrill;
+the [[RFC] Proposed questions for "Git User's Survey 2016"](http://public-inbox.org/git/91a2ffbe-a73b-fbb9-96da-9aea4d439e5a@gmail.com/t/)
+thread and its subthreads was posted to solicite feedback.
+
+The survey was announced first on Git mailing list in
+[[ANNOUNCE] Git User's Survey 2016](http://public-inbox.org/git/de39c03d-e84e-8e45-69cb-a2e01fd25df2@gmail.com/) thread.
+At request to survey administrator, Jakub Narębski, (as response to the
+announcement email), one can get a separate channel in survey, with
+a separate survey URL, so that responses from a particular site
+or an organization could be split out.  Some companies already
+got their customized survey URLs.
+
+It should be noted that the result of the survey need to be taken with
+a bit of caution.  As Johannes Schindelin [reminded us](http://public-inbox.org/git/alpine.DEB.2.20.1609091503410.129229@virtualbox/),
+many professional developers that use Git would be too busy to take the
+survey.  Though hopefully the fact that you can fill it bit by bit
+(from the same computer), instead of having to fill it whole at once,
+would help.  Taking 30 minutes or more at once may be a problem,
+taking 10 times a 3 minutes at once may not be...
+
+There is also alternate version of the survey (alternate channel),
+which does not require cookies or JavaScript, and is fully anonymous,
+but it doesn't allow one to go back to response and edit it:
+https://tinyurl.com/GitSurvey2016-anon
+
+***A bit of history:*** First "GIT user survey" was [announced](http://public-inbox.org/git/4d8e3fd30606240918m6b452314m6514b5e5fc86f147@mail.gmail.com/)
+and created in 2006; its results can be found at [GitSurvey2006](https://git.wiki.kernel.org/index.php/GitSurvey2006)
+page on Git Wiki.  So this year's survey is 10th anniversary
+of the first one.  Since 2008 the Git User's Survey was hosted on
+[Survs.com](https://survs.com) (then beta), thanks to generocity
+of the site, who provides with recurring premium annual plan.
+
 * Thank you Nicola and call for help!
 
 From the beginning in March 2015, Nicola Paolucci helped set up the
@@ -277,7 +330,6 @@ people to join our small Git Rev News editor team.
 There is no need to even know Git well for that. It's possible to
 participate by just proofreading articles for example. Please contact
 us (see our emails at the bottom) if you are interested.
-
 
 ### Reviews
 
@@ -394,7 +446,6 @@ you'd expect from zsh.
 
 ## Other News
 
-* [Git User's Survey 2016](https://survs.com/survey/3cop1kt5eg) is out!
 * GitLab elaborates on their new round of founding in the [GitLab Master Plan](https://about.gitlab.com/2016/09/13/gitlab-master-plan/)
 * [Gmane has a new maintainer](http://lwn.net/Articles/699704/), which is good because we have a lot of old links pointing to Gmane in previous editions.
 
