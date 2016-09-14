@@ -397,13 +397,13 @@ you'd expect from zsh.
 * [Git User's Survey 2016](https://survs.com/survey/3cop1kt5eg) is out!
 * GitLab elaborates on their new round of founding in the [GitLab Master Plan](https://about.gitlab.com/2016/09/13/gitlab-master-plan/)
 * [Gmane has a new maintainer](http://lwn.net/Articles/699704/), which is good because we have a lot of old links pointing to Gmane in previous editions.
+* Jon Loeliger [got enlisted](https://public-inbox.org/git/E1bhKNo-0005m2-5z@mylo.jdl.com/) to help run a [Miniconference on Git](https://www.linuxplumbersconf.org/2016/git-microconference-accepted-into-lpc-2016/) at Linux Plumber Conference
 
 __Git tips and tricks__
 
 * [Oh, shit, git!](http://ohshitgit.com/) by Katie Sylor-Miller
 * [Git Hot Tips](http://wesbos.com/git-hot-tips/) by Wes Bos
 * [Git diff tips and tricks](https://blog.twobucks.co/git-diff-tips-and-tricks/) by Hrvoje Šimić
-
 
 __Light reading__
 
