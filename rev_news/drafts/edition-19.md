@@ -282,7 +282,7 @@ what is available (and which might had been not known).
 
 The questions were prepared with the help of Eric Wong and Andrew Adrill;
 the [[RFC] Proposed questions for "Git User's Survey 2016"](http://public-inbox.org/git/91a2ffbe-a73b-fbb9-96da-9aea4d439e5a@gmail.com/t/)
-thread and its subthreads was posted to solicite feedback.
+thread and its sub-threads was posted to solicit feedback.
 
 The survey was announced first on Git mailing list in
 [[ANNOUNCE] Git User's Survey 2016](http://public-inbox.org/git/de39c03d-e84e-8e45-69cb-a2e01fd25df2@gmail.com/) thread.
@@ -309,7 +309,7 @@ https://tinyurl.com/GitSurvey2016-anon
 and created in 2006; its results can be found at [GitSurvey2006](https://git.wiki.kernel.org/index.php/GitSurvey2006)
 page on Git Wiki.  So this year's survey is 10th anniversary
 of the first one.  Since 2008 the Git User's Survey was hosted on
-[Survs.com](https://survs.com) (then beta), thanks to generocity
+[Survs.com](https://survs.com) (then beta), thanks to generosity
 of the site, who provides with recurring premium annual plan.
 
 * Thank you Nicola and call for help!
