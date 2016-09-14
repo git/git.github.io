@@ -259,7 +259,7 @@ and uploaded
 
 Pranit passed the GSoC final evaluation.
 
-* **[Git User's Survey 2016](https://survs.com/survey/3cop1kt5eg)** is open till **20 October 2016**
+* **[Git User's Survey 2016](https://survs.com/survey/3cop1kt5eg)** is open till **20 October 2016** (*written by Jakub Narębski*)
 
 This year we will see the return of Git User's Survey (the last one was
 in 2012).  The goal of the survey is mainly to help to understand who is
