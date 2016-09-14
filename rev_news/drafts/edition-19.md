@@ -36,8 +36,8 @@ One of the most attended was Josh's presentation
 [video](https://www.youtube.com/watch?v=68XsuXlWiWU&index=23&list=PLGeM09tlguZQyemL0Y5CdpEFrBs-hGGM8))
 about git-series. Josh had already
 [announced git-series on the mailing list](https://public-inbox.org/git/20160729064055.GB25331@x/)
-which had generated some amount of dicussion about how the different
-efforts to store more data and metadata related to patch series using
+which had generated some amount of discussion about how the different
+efforts to store more data and meta-data related to patch series using
 git itself could collaborate.
 
 In his talk Josh started by explaining the problems with the current
@@ -75,10 +75,10 @@ series from.
 
 They also don't solve the problem of collaboration. One rule of
 collaboration is to never rewrite published history, but then how do
-you collaborate on history that needs rewritting?
+you collaborate on history that needs rewriting?
 
 Emailing patches back and forth is not a good solution for some kinds
-of work like backporting a feature, preparing a distribution package,
+of work like back-porting a feature, preparing a distribution package,
 rebasing stacks of patches sitting on top of upstream code.
 
 'git-series' has been developed to fix all those problems. It tracks
@@ -106,7 +106,7 @@ git series status
 ->
 -> Initial series commit
 -> Changes not staged for commit:
-->   (use "git series add <file>..." to update what will be commited)
+->   (use "git series add <file>..." to update what will be committed)
 ->
 ->         Added:         base
 ->         Added:         base
@@ -168,8 +168,8 @@ traversing the commits.
 
 Josh then gave more "minor details" about how it works.
 
-Your current branch is refered by HEAD and the current series is
-refered by refs/SHEAD, in which 'refs/' is needed for reachability.
+Your current branch is referred by HEAD and the current series is
+referred by refs/SHEAD, in which 'refs/' is needed for reachability.
 
 The working and staged states are respectively in:
 
@@ -177,7 +177,7 @@ The working and staged states are respectively in:
   - refs/git-series-internals/staged/feature
 
 which both points to temporary commits. This is needed for
-reachability of a not yet commited cover letter.
+reachability of a not yet committed cover letter.
 
 Then Josh talked about his experience designing and developing
 git-series.
@@ -188,7 +188,7 @@ suggested he might have a design flaw, so he redesigned to make the
 error impossible.
 
 One example of that is what happens when we detach from a series or
-check out a new series with uncommited changes. First he had designed
+check out a new series with uncommitted changes. First he had designed
 git-series to use only one staged and working version for a
 repository, so in this case he would have needed an error message to
 explain that you could lose some data and perhaps something like
@@ -199,7 +199,7 @@ version there would be no need for such an error message and for a
 force option.
 
 Another example is what happens when you have created a new series and
-made some change to it, but have not yet commited anything, and you
+made some change to it, but have not yet committed anything, and you
 want to detach from it or checkout a new series.
 
 Git has the notion of an "unborn branch", as, when you create a repo,
@@ -467,7 +467,7 @@ __Git tools and sites__
 * [SparkleShare - Self hosted, instant, secure file sync](https://www.sparkleshare.org/) based on Git
 * [git-clean: A Command Line Tool written in Rust for cleaning up local and remote Git branches](https://github.com/mcasper/git-clean)
 * [Fork - a fast and friendly git client for Mac](https://git-fork.com/)
-* [GitHeat](http://www.mustafa-s.com/Githeat/) - Interactive heatmaps for your git repositories
+* [GitHeat](http://www.mustafa-s.com/Githeat/) - Interactive heat-maps for your git repositories
 * [Git Undo](http://megakemp.com/2016/08/25/git-undo/) is a neat little alias for getting stuff out of the reflog
 * [literate-git: Render hierarchical git repositories into HTML](https://github.com/bennorth/literate-git/) - see a demo of it [here](http://www.redfrontdoor.org/20160813-literate-git-demo/index.html)
 
