@@ -462,7 +462,7 @@ __Light reading__
 
 __Git tools and sites__
 
-* [Git CI stats](https://larsxschneider.github.io/git-ci-stats/) - List all commits of a given branch and visualize the CI status, CI execution time, and failing test
+* [Git CI stats](https://larsxschneider.github.io/git-ci-stats/) - shows the Travis CI build charts for the Git project itself, including result, build time and test results for every single commit.
 * [git-fiddle: Edit commit messages, authors and timestamps during git-rebase](https://github.com/felixSchl/git-fiddle)
 * [SparkleShare - Self hosted, instant, secure file sync](https://www.sparkleshare.org/) based on Git
 * [git-clean: A Command Line Tool written in Rust for cleaning up local and remote Git branches](https://github.com/mcasper/git-clean)
