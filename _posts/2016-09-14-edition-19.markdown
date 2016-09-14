@@ -29,7 +29,7 @@ from August 22 to August 24, and they happened to be recorded:
   - [Versions All the Way Down: Versioning Commits and Patches with Git-Series by Josh Triplett, Intel](https://www.youtube.com/watch?v=68XsuXlWiWU&index=23&list=PLGeM09tlguZQyemL0Y5CdpEFrBs-hGGM8).
   - [Tracking Huge Files with Git LFS by Tim Pettersen, Atlassian](https://www.youtube.com/watch?v=yuKAV5cCcTw&list=PLGeM09tlguZQyemL0Y5CdpEFrBs-hGGM8&index=24).
   - [Terrible Ideas in Git by Corey Quinn, FutureAdvisor](https://www.youtube.com/watch?v=Wr7ulql0Exo&index=25&list=PLGeM09tlguZQyemL0Y5CdpEFrBs-hGGM8).
-  - [Git and Testing by your own Christian Couder](https://www.youtube.com/watch?v=TcgyVWBg8EQ&list=PLGeM09tlguZQyemL0Y5CdpEFrBs-hGGM8&index=26)
+  - [Git and Testing by your own Christian Couder](https://www.youtube.com/watch?v=TcgyVWBg8EQ&list=PLGeM09tlguZQyemL0Y5CdpEFrBs-hGGM8&index=26).
 
 One of the most attended was Josh's presentation
 ([slides](http://events.linuxfoundation.org/sites/events/files/slides/git-series.pdf),
