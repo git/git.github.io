@@ -276,7 +276,7 @@ people to join our small Git Rev News editor team.
 
 There is no need to even know Git well for that. It's possible to
 participate by just proofreading articles for example. Please contact
-us (see our emails at the bottom) if you are interested.
+us (see our emails [at the bottom](#credits)) if you are interested.
 
 
 ### Reviews
