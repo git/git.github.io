@@ -474,4 +474,5 @@ __Git tools and sites__
 ## Credits
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt; and
-Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;, with help from Brian M. Carlson, Jakub Narębski and Josh Triplett.
+Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;, with help from Brian M. Carlson, Jakub Narębski,
+Lars Schneider and Josh Triplett.
