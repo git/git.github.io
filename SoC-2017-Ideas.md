@@ -109,7 +109,7 @@ of the list and
 
  - Language: C, shell (bash)
  - Difficulty: medium
- - Possible mentors: Matthieu Moy, Christian Couder
+ - Possible mentors: Christian Couder, ????
 
 #### Implement `git bisect --first-parent`.
 
@@ -119,6 +119,11 @@ a merge on the trunk that merged a topic to point fingers at when
 a bug appears, instead of having to drill down to the individual
 commit on the faulty side branch. Cf.  <http://thread.gmane.org/gmane.comp.version-control.git/264661/focus=264720>
 
+#### Fix some git bisect bugs
+
+In some cases, `git bisect` may test too many merge bases, thus
+slowing down the bisection (making it closer to linear than
+logarithmic).
 
 
 ### Convert scripts to builtins
@@ -138,3 +143,22 @@ already ported by now. It is still possible to start with something
 small by porting portions of existing shell-scripts to C using a C
 helper inside the existing shell-script.
 
+
+### Convert interactive rebase to C
+
+The goal is to move toward an interactive rebase fully in C as described in
+[Dscho 's answer to Jakub](http://public-inbox.org/git/alpine.DEB.2.20.1609021432070.129229@virtualbox/)
+
+
+### `git log --oneline` improvements
+
+See discussion in:
+
+https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t
+
+
+### Improvements to `git name-rev` or `git for-each-ref` or `git log --stdin --no-walk` or `git cat-file --batch-check`
+
+The goal is to better format object related information as discussed in:
+
+https://public-inbox.org/git/CA+P7+xr4ZNCCJkS0=yR-FNu+MrL60YX-+Wsz9L_5LCNhnY_d=A@mail.gmail.com/
