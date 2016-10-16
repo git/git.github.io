@@ -159,17 +159,17 @@ added at different times for different reasons. The man methods was
 first added because "historically git was a set of shell scripts named
 git-*, so each stood alone".
 
-The --help was the result from "the modern `git <cmd>' approach, with
-every command normally having -h and --help options for short form
+The &dash;&dash;help was the result from "the modern `git <cmd>` approach, with
+every command normally having &dash;h and &dash;&dash;help options for short form
 usage and long form man pages". Meanwhile "a `git help <cmd>` command
 was created" which "allowed selection of display type, so that on
-Unix/Linux man was the norm, while an --html (or --web) option is
+Unix/Linux man was the norm, while an &dash;&dash;html (or &dash;&dash;web) option is
 available for those who like the pretty browser view".
 
 Your own Christian Couder chimed in saying that `git help` makes it
 possible to teach people one command that will do something sensible
 on every system, and that it also "provides more configurability and
-more features like its -a and -g options".
+more features like its &dash;a and &dash;g options".
 
 Jakub Narębski added that there are also help pages that are about
 "concepts (gitcli, gitrevisions, githooks, gitrepository-layout,
