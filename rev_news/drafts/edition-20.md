@@ -133,9 +133,9 @@ Andrew Johnson asked on the mailing list:
 
 > While reading Pro Git 2nd Ed. I came across these three methods:
 >
-> $ git help <verb>
-> $ git <verb> --help
-> $ man git-<verb>
+> $ git help &lt;verb&gt;<br>
+> $ git &lt;verb&gt; &dash;&dash;help<br>
+> $ man git&dash;&lt;verb&gt;<br>
 >
 > I tested all three to confirm they were equivalent.
 >
@@ -146,11 +146,11 @@ Andrew Johnson asked on the mailing list:
 Fredrik Gustafsson was the first to answer. He first said that the
 three commands are not actually equivalent on Windows as:
 
-> $ man git-<verb>
+> $ man git&dash;&lt;verb&gt;
 >
 > does not work and
 >
-> $ git help <verb>
+> $ git help &lt;verb&gt;
 >
 > opens a webbrowser instead of a man page.
 
