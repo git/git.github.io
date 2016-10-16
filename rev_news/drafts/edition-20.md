@@ -125,9 +125,69 @@ satisfying to see that they are the result of building on top of
 previous work over the years by GSoC students, mentors and reviewers.
 
 
-<!---
 ### Support
--->
+
+* [Why are there multiple ways to get the manual in Git?](https://public-inbox.org/git/CAM_5GX48gDAZSvAWnxO5n8uhYf8vmfAJ88_31_ewsQxyPfF7iA@mail.gmail.com/)
+
+Andrew Johnson asked on the mailing list:
+
+> While reading Pro Git 2nd Ed. I came across these three methods:
+>
+> $ git help <verb>
+> $ git <verb> --help
+> $ man git-<verb>
+>
+> I tested all three to confirm they were equivalent.
+>
+> What was the motivation behind the complication, if any? I presume
+> most developers would not provide multiple commands that do the same
+> thing for absolutely no reason, so I led myself to ask this question.
+
+Fredrik Gustafsson was the first to answer. He first said that the
+three commands are not actually equivalent on Windows as:
+
+> $ man git-<verb>
+>
+> does not work and
+>
+> $ git help <verb>
+>
+> opens a webbrowser instead of a man page.
+
+Philip Oakley then answered that the three different methods were
+added at different times for different reasons. The man methods was
+first added because "historically git was a set of shell scripts named
+git-*, so each stood alone".
+
+The --help was the result from "the modern `git <cmd>' approach, with
+every command normally having -h and --help options for short form
+usage and long form man pages". Meanwhile "a `git help <cmd>` command
+was created" which "allowed selection of display type, so that on
+Unix/Linux man was the norm, while an --html (or --web) option is
+available for those who like the pretty browser view".
+
+Your own Christian Couder chimed in saying that `git help` makes it
+possible to teach people one command that will do something sensible
+on every system, and that it also "provides more configurability and
+more features like its -a and -g options".
+
+Jakub Narębski added that there are also help pages that are about
+"concepts (gitcli, gitrevisions, githooks, gitrepository-layout,
+gitglossary), or about files (gitignore, gitattributes, to some extent
+githooks)" and they are "only accessible with `git help <concept>` or,
+on OS with installed 'man', also `man <gitconcept>`".
+
+Philip replied to the above saying that "`git revisions --help` does
+work", but Junio Hamano clarified things by saying that this was a bug
+that had been recently fixed.
+
+It would indeed seem wrong to have `git <concept> --help` working, as
+concepts are not the same things as commands.
+
+Anyway this shows that it is not so simple to design a good help
+system, especially one that is both full featured on different
+platforms and looking simple to users.
+
 
 ## Releases
 
