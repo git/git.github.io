@@ -193,21 +193,44 @@ platforms and looking simple to users.
 
 * [Git 2.10.1](https://public-inbox.org/git/xmqqvax93w1c.fsf@gitster.mtv.corp.google.com/)
 * [Git for Windows 2.10.1](https://github.com/git-for-windows/git/releases/tag/v2.10.1.windows.1)
+* [libgit2 v0.24.2 Maintenance Release](https://github.com/libgit2/libgit2/releases/tag/v0.24.2)
+* [libgit2/rugged v0.25.0b10](https://github.com/libgit2/rugged/releases/tag/v0.25.0b10)
+* [GitLab 8.12](https://about.gitlab.com/2016/09/22/gitlab-8-12-released/) released and patched up to [8.12.7](https://about.gitlab.com/2016/10/17/gitlab-8-dot-12-dot-7-released/)
 
 
 ## Other News
 
 __Various__
 
+* Here is [git-test-repository: A Git repository full of special cases, for testing purposes](https://github.com/book/git-test-repository) - very handy when you're testing out a new a new Git GUI or repository manager.
+* [A Visual Git Reference](http://marklodato.github.io/visual-git-guide/index-en.html) by Mark Lodato
+* [Automate Git and Upgrade Your Battle Station With a Custom Peripheral](https://hackaday.com/2016/09/13/automate-git-and-upgrade-your-battle-station-with-a-custom-peripheral/) by Gerrit Coetzee
+* [Command equivalents in Git, Mercurial, and Subversion](http://blog.deveo.com/list-of-equivalent-commands-in-git-mercurial-and-svn/) by Antti Kirmanen
+* [GitHub Classroom as Textbook and Workbook](https://blog.skilstak.io/github-as-text-book-and-work-book-828ffada9542#.vy1vivkrq) by Rob Muhlestein
+* [Gerrit Summit 2016 is coming](https://gitenterprise.me/2016/10/10/gerrit-summit-2016-is-coming/)
 
 __Light reading__
+
 * [What is a "large" Git repository?](http://larsxschneider.github.io/2016/09/21/large-git-repos) by Lars Schneider
+* [Purposes, Concepts, Misfits, and a Redesign of Git](http://neverworkintheory.org/2016/09/30/rethinking-git.html) is a research paper, here discussed by Greg Wilson. It lead to a [discussion on the Git mailing list](https://public-inbox.org/git/ce42f934-4a94-fa29-cff0-5ebb0f004eb5@gmail.com/T/#e95875b7940512b432ab2e29b3dd50ca448df9720).
+* [Gitless](http://gitless.com/) is the experimental reworking of Git based on the research in the previous link
+* [Poking around /usr/lib/git-core](http://kamalmarhubi.com/blog/2016/10/07/git-core/) by Kamal Marhubi
+* [Lesser known Git commands](https://hackernoon.com/lesser-known-git-commands-151a1918a60#.jwubgvjwe) by Tim Pettersen
 
 
 __Git tools and sites__
 
+* [gittup.org](http://gittup.org/gittup/) is a Linux distribution based on Git and Tup
+* [git-stacktrace: Easily figure out which git commit caused a given stacktrace](https://github.com/pinterest/git-stacktrace)
+* [Legit (Git Workflow for Humans)](http://www.git-legit.org/)
+* [Tower for Windows - Public Beta has Started](https://www.git-tower.com/blog/tower-for-windows-public-beta/)
+* [Git-Repo The ultimate utility for managing services](http://i.got.nothing.to/code/on/git-repo:_the_utility_for_services/)
+* [patchwork](http://jk.ozlabs.org/projects/patchwork/) - a web-based patch tracking system designed to facilitate the contribution and management of contributions to an open-source project.
+* [ripgrep](http://blog.burntsushi.net/ripgrep/) is arguably the fastest grep-replacement out there, and it respects your .gitignore files.
+* [GitPitch](https://about.gitlab.com/2016/10/03/gitpitch-slideshow-presentations-for-developers-on-gitlab/) from GitLab lets you create slideshow presentations in Markdown and host them in a Git repository.
 
 ## Credits
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt; and
-Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;, with help from XXX.
+Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;, with help from Jakub Narębski, Johannes Schindelin
+and Lars Schneider.
