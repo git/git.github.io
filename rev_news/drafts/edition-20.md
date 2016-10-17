@@ -198,6 +198,7 @@ __Various__
 
 
 __Light reading__
+* [What is a "large" Git repository?](http://larsxschneider.github.io/2016/09/21/large-git-repos) by Lars Schneider
 
 
 __Git tools and sites__
