@@ -191,6 +191,9 @@ platforms and looking simple to users.
 
 ## Releases
 
+* [Git 2.10.1](https://public-inbox.org/git/xmqqvax93w1c.fsf@gitster.mtv.corp.google.com/)
+* [Git for Windows 2.10.1](https://github.com/git-for-windows/git/releases/tag/v2.10.1.windows.1)
+
 
 ## Other News
 
