@@ -189,6 +189,55 @@ system, especially one that is both full featured on different
 platforms and looking simple to users.
 
 
+## Developer Spotlight: Dennis Kaarsemaker
+
+* Who are you and what do you do?
+
+I'm Dennis Kaarsemaker, I do scalability and security things for
+Booking.com, part of which includes hacking on our git infrastructure
+together with Ævar Arnfjörð Bjarmason. I also maintain
+perl5.git.perl.org and do a lot of user support.
+
+* What would you name your most important contribution to Git?
+
+Spending a lot of time in #git and #github on freenode solving people's
+git problems. Occasionally this leads to bug reports or even patches,
+but mostly I'm trying to create make users understand git and make them
+smile.
+
+* What are you doing on the Git project these days, and why?
+
+Besides user support, I do read the mailing-list and try to review
+patches or pick up smaller bugs as time permits. Time however is scarce
+with a fearless 14 month old girl crawling around the house trying to
+get into trouble :)
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+If I had a team of developers, their core focus would be scalability
+for very big repositories. Things like a protocol that is efficient
+with hundreds of thousands of refs and can be load-balanced properly, or
+more efficient storage for refs, external files and other data. Or a
+peer to peer continuous sync protocol for the object store.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+Oh, if only I could remove submodules. They're almost universally used
+for the wrong reason, are easy to get confused about and use wrong, and
+they complicate many parts of git.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+Definitely GitHub. I appreciate that Git is made for distributed
+version control, and regularly use it in that way; but the social
+benefits of having a single place to discover, maintain and collaborate
+on projects that GitHub offers really helps in getting the most out of
+my open source experience. I even made a command line API client for
+Github, GitLab and BitBucket :)
+
+
 ## Releases
 
 * [Git 2.10.1](https://public-inbox.org/git/xmqqvax93w1c.fsf@gitster.mtv.corp.google.com/)
