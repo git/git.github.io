@@ -124,6 +124,29 @@ around the sequencer are of course very nice. It is interesting and
 satisfying to see that they are the result of building on top of
 previous work over the years by GSoC students, mentors and reviewers.
 
+Dscho wrote about making _interactive rebase_ much faster in the
+blog post [What’s new in Git for Windows 2.10?](https://blogs.msdn.microsoft.com/visualstudioalm/2016/09/03/whats-new-in-git-for-windows-2-10/)
+(linked to in previous Git Rev News), repeating and extending information
+from above-mentioned answer.  Among others, he wrote how can he be sure
+that the code is ready:
+
+> The answer: I verified it. Inspired by [GitHub’s blog post on their
+> Scientist library](http://githubengineering.com/scientist/), I taught
+> my personal Git version to cross-validate each and every interactive
+> rebase that I performed since the middle of May. That is, each and every
+> interactive rebase I ran was first performed using the original shell
+> script, then using the `git rebase--helper`, and then the results were
+> confirmed to be identical (modulo time stamps).
+
+And further:
+
+> Full disclosure: the cross-validation did find three regressions that
+> were not caught by the regression test suite (which I have subsequently
+> adjusted to test for those issues, of course). So it was worth the effort.
+
+One can find which regressions were there in the [followup on git mailing list](http://public-inbox.org/git/alpine.DEB.2.20.1609111010440.129229@virtualbox/).
+It is interesting to find the use of the [Scientist library](https://github.com/github/scientist)
+for ensuring the quality of Git code refactoring.
 
 ### Support
 
