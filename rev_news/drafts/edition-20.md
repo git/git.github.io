@@ -202,7 +202,7 @@ platforms and looking simple to users.
 
 __Various__
 
-* Here is [git-test-repository: A Git repository full of special cases, for testing purposes](https://github.com/book/git-test-repository) - very handy when you're testing out a new a new Git GUI or repository manager.
+* Here is [git-test-repository: A Git repository full of special cases, for testing purposes](https://github.com/book/git-test-repository) - very handy when you're testing out a new Git GUI or repository manager.
 * [A Visual Git Reference](http://marklodato.github.io/visual-git-guide/index-en.html) by Mark Lodato
 * [Automate Git and Upgrade Your Battle Station With a Custom Peripheral](https://hackaday.com/2016/09/13/automate-git-and-upgrade-your-battle-station-with-a-custom-peripheral/) by Gerrit Coetzee
 * [Command equivalents in Git, Mercurial, and Subversion](http://blog.deveo.com/list-of-equivalent-commands-in-git-mercurial-and-svn/) by Antti Kirmanen
