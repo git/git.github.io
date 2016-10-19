@@ -24,7 +24,7 @@ This edition covers what happened during the month of September 2016.
 
 ### Reviews
 
-* [Changing the default for "core.abbrev"?](http://public-inbox.org/git/CA+55aFy0_pwtFOYS1Tmnxipw9ZkRNCQHmoYyegO00pjMiZQfbg@mail.gmail.com/)
+* [Changing the default for "core.abbrev"?](http://public-inbox.org/git/CA+55aFy0_pwtFOYS1Tmnxipw9ZkRNCQHmoYyegO00pjMiZQfbg@mail.gmail.com/) (*written by Jakub Narębski*)
 
 Linus Torvalds asked for increasing the default value for number of
 characters in SHA-1 abbreviations.  The `default_abbrev = 7` was
@@ -325,5 +325,5 @@ __Git tools and sites__
 ## Credits
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt; and
-Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;, with help from Jakub Narębski, Johannes Schindelin
-and Lars Schneider.
+Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;, with help from Jakub Narębski, Johannes Schindelin,
+Lars Schneider and Jeff King.
