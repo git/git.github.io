@@ -189,6 +189,42 @@ One can find which regressions were there in the [followup on git mailing list](
 It is interesting to find the use of the [Scientist library](https://github.com/github/scientist)
 for ensuring the quality of Git code refactoring.
 
+* [[PATCH/RFC] git log --oneline alternative with dates, times and initials](https://public-inbox.org/git/git-log-times@mackyle-at-gmail-com/) (*written by Jakub Narębski*)
+
+Kyle J. McKay had have been wanting a compact one line output format that
+included dates, times and initials, and is compatible with `--graph`.
+
+```
+  === 2015-09-17 ===
+* ee6ad5f4 12:16 jch (tag: v2.5.3) Git 2.5.3
+  === 2015-09-09 ===
+* b9d66899 14:22 js  am --skip/--abort: merge HEAD/ORIG_HEAD tree into index
+|   === 2015-09-04 ===
+| * 27ea6f85 10:46 jch (tag: v2.5.2) Git 2.5.2
+* 74b67638 10:36 jch (tag: v2.4.9) Git 2.4.9
+                     ..........
+* ecad27cf 10:32 jch (tag: v2.3.9) Git 2.3.9
+```
+
+![see above](https://gist.githubusercontent.com/mackyle/4c33e4802a8269b3f200f2c00352ce6a/raw/815de4ef4142e13ac0b5c7b55112afdf13391eee/git-log-times.gif "git log-times --graph --date-order --decorate --no-merges -n 5 v2.5.3")
+
+To have all this, Kyle proposed `git-log-times` script for `contrib/`.
+
+Jeff King was surprised to see this as a separate script, and proposed a
+[patch series](https://public-inbox.org/git/20160929083315.vwb3aurwbyjwlkjn@sigill.intra.peff.net/)
+adding support for features like `--commit-header` option for `git log`,
+making it possible to come close to what `git-log-times` provided.
+
+Junio Hamano [reminded](https://public-inbox.org/git/xmqqy42afvy1.fsf@gitster.mtv.corp.google.com/)
+that `contrib/` area is not the place for random git-related things.
+
+> Unlike the earlier days of Git, if a custom command that uses Git is
+> very userful, it can live its own life and flourish within the much
+> larger Git userbase we have these days.
+
+The proposed script was then therefore published as
+**[git-log-compact](https://mackyle.github.io/git-log-compact/)** project.
+
 
 ### Support
 
