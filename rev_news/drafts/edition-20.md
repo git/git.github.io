@@ -292,6 +292,7 @@ Github, GitLab and BitBucket :)
 __Events__
 
 * [Git User's Survey 2016](https://survs.com/survey/3cop1kt5eg) ends soon, on 20 October 2016
+* [Gerrit Summit 2016 is coming](https://gitenterprise.me/2016/10/10/gerrit-summit-2016-is-coming/)
 
 __Various__
 
@@ -300,7 +301,6 @@ __Various__
 * [Automate Git and Upgrade Your Battle Station With a Custom Peripheral](https://hackaday.com/2016/09/13/automate-git-and-upgrade-your-battle-station-with-a-custom-peripheral/) by Gerrit Coetzee
 * [Command equivalents in Git, Mercurial, and Subversion](http://blog.deveo.com/list-of-equivalent-commands-in-git-mercurial-and-svn/) by Antti Kirmanen
 * [GitHub Classroom as Textbook and Workbook](https://blog.skilstak.io/github-as-text-book-and-work-book-828ffada9542#.vy1vivkrq) by Rob Muhlestein
-* [Gerrit Summit 2016 is coming](https://gitenterprise.me/2016/10/10/gerrit-summit-2016-is-coming/)
 
 __Light reading__
 
@@ -309,6 +309,7 @@ __Light reading__
 * [Gitless](http://gitless.com/) is the experimental reworking of Git based on the research in the previous link
 * [Poking around /usr/lib/git-core](http://kamalmarhubi.com/blog/2016/10/07/git-core/) by Kamal Marhubi
 * [Lesser known Git commands](https://hackernoon.com/lesser-known-git-commands-151a1918a60#.jwubgvjwe) by Tim Pettersen
+* [Why kernel development still uses email](http://lwn.net/Articles/702177/) by Jonathan Corbet
 
 
 __Git tools and sites__
