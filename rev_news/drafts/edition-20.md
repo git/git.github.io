@@ -24,6 +24,46 @@ This edition covers what happened during the month of September 2016.
 
 ### Reviews
 
+* [Changing the default for "core.abbrev"?](http://public-inbox.org/git/CA+55aFy0_pwtFOYS1Tmnxipw9ZkRNCQHmoYyegO00pjMiZQfbg@mail.gmail.com/)
+
+Linus Torvalds asked for increasing the default value for number of
+characters in SHA-1 abbreviations.  The `default_abbrev = 7` was
+reasonable at early days of Git, but the project of size of the
+Linux kernel needs `git config --global core.abbrev 12`; while Git
+will extend the seven hex digits until the object name is unique,
+that only reflects the *current* situation in the repository. It gets
+annoying when a commit message has a short git ID that is no longer
+unique a few months later when one needs to go back and try to figure
+out what went wrong in that commit.
+
+Jeff King, alias Peff, answered the *"it gets annoying"* part in the
+[[PATCH 0/10] helping people resolve ambiguous sha1s](https://public-inbox.org/git/20160926115720.p2yb22lcq37gboon@sigill.intra.peff.net/)
+patch series (merged in [66c22ba6](https://git.kernel.org/cgit/git/git.git/commit/?id=66c22ba6fbe0724ecce3d82611ff0ec5c2b0255f)).
+This patch series taught Git to help in the situation where only
+ambiguous shortened identifier is available, by listing the SHA-1s
+of the objects it found, along with a few bits of information that
+may help the user decide which one they meant.
+
+>       $ git rev-parse b2e1
+>       error: short SHA1 b2e1 is ambiguous
+>       hint: The candidates are:
+>        hint:   b2e1196 tag v2.8.0-rc1
+>        hint:   b2e11d1 tree
+>        hint:   b2e1632 commit 2007-11-14 - Merge branch 'bs/maint-commit-options'
+>        hint:   b2e1759 blob
+>        hint:   b2e18954 blob
+>        hint:   b2e1895c blob
+
+The problem of Git providing SHA-1 abbreviation which would soon be
+invalid was solved in different way than proposed by Linus.  Instead
+of increasing the default abbrev length for all projects, making abbrevs
+longer and more unwieldy also for small projects that don't need it,
+Peff [proposed](https://public-inbox.org/git/20160929092204.eod2cvtrqg5whu6h@sigill.intra.peff.net/)
+to make default abbrev length be dynamically based on the number of objects
+in the repository.  Linus sent [rough implementation](https://public-inbox.org/git/CA+55aFwbCNiF0nDppZ5SuRcZwc9kNvKYzgyd_bR8Ut8XRW_p4Q@mail.gmail.com/)
+of this idea, which after a few iterations (and cleanups of related code)
+got merged into 'next' as [bb188d00f7](https://github.com/git/git/commit/bb188d00f7).
+
 * [Prepare the sequencer for the upcoming rebase -i patches](http://public-inbox.org/git/cover.1472457609.git.johannes.schindelin@gmx.de/)
 
 Johannes Schindelin, alias Dscho, is the maintainer of Git for
