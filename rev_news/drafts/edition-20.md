@@ -28,8 +28,8 @@ This edition covers what happened during the month of September 2016.
 
 Linus Torvalds asked for increasing the default value for number of
 characters in SHA-1 abbreviations.  The `default_abbrev = 7` was
-reasonable at early days of Git, but the project of size of the
-Linux kernel needs `git config --global core.abbrev 12`; while Git
+reasonable in the early days of Git, but a project of the size of the
+Linux kernel needs `git config --global core.abbrev 12`. While Git
 will extend the seven hex digits until the object name is unique,
 that only reflects the *current* situation in the repository. It gets
 annoying when a commit message has a short git ID that is no longer
