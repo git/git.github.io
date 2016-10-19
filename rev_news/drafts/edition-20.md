@@ -249,6 +249,10 @@ Github, GitLab and BitBucket :)
 
 ## Other News
 
+__Events__
+
+* [Git User's Survey 2016](https://survs.com/survey/3cop1kt5eg) ends soon, on 20 October 2016
+
 __Various__
 
 * Here is [git-test-repository: A Git repository full of special cases, for testing purposes](https://github.com/book/git-test-repository) - very handy when you're testing out a new Git GUI or repository manager.
