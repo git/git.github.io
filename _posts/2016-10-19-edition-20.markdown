@@ -46,12 +46,12 @@ may help the user decide which one they meant.
 >       $ git rev-parse b2e1
 >       error: short SHA1 b2e1 is ambiguous
 >       hint: The candidates are:
->        hint:   b2e1196 tag v2.8.0-rc1
->        hint:   b2e11d1 tree
->        hint:   b2e1632 commit 2007-11-14 - Merge branch 'bs/maint-commit-options'
->        hint:   b2e1759 blob
->        hint:   b2e18954 blob
->        hint:   b2e1895c blob
+>       hint:   b2e1196 tag v2.8.0-rc1
+>       hint:   b2e11d1 tree
+>       hint:   b2e1632 commit 2007-11-14 - Merge branch 'bs/maint-commit-options'
+>       hint:   b2e1759 blob
+>       hint:   b2e18954 blob
+>       hint:   b2e1895c blob
 
 The problem of Git providing SHA-1 abbreviation which would soon be
 invalid was solved in different way than proposed by Linus.  Instead
