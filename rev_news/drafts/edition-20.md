@@ -164,11 +164,13 @@ around the sequencer are of course very nice. It is interesting and
 satisfying to see that they are the result of building on top of
 previous work over the years by GSoC students, mentors and reviewers.
 
-Dscho wrote about making _interactive rebase_ much faster in the
-blog post [What’s new in Git for Windows 2.10?](https://blogs.msdn.microsoft.com/visualstudioalm/2016/09/03/whats-new-in-git-for-windows-2-10/)
+* [What’s new in Git for Windows 2.10?](https://blogs.msdn.microsoft.com/visualstudioalm/2016/09/03/whats-new-in-git-for-windows-2-10/) (*written by Jakub Narębski*)
+
+Dscho wrote about making _interactive rebase_ much faster in a recent
+[blog post](https://blogs.msdn.microsoft.com/visualstudioalm/2016/09/03/whats-new-in-git-for-windows-2-10/)
 (linked to in previous Git Rev News), repeating and extending information
-from above-mentioned answer.  Among others, he wrote how can he be sure
-that the code is ready:
+from his answer mentioned in the above article. Among others, he wrote
+how can he be sure that the code is ready:
 
 > The answer: I verified it. Inspired by [GitHub’s blog post on their
 > Scientist library](http://githubengineering.com/scientist/), I taught
@@ -187,6 +189,7 @@ And further:
 One can find which regressions were there in the [followup on git mailing list](http://public-inbox.org/git/alpine.DEB.2.20.1609111010440.129229@virtualbox/).
 It is interesting to find the use of the [Scientist library](https://github.com/github/scientist)
 for ensuring the quality of Git code refactoring.
+
 
 ### Support
 
