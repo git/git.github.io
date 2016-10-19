@@ -17,9 +17,56 @@ This edition covers what happened during the month of September 2016.
 
 ## Discussions
 
-<!---
+
 ### General
--->
+
+* [Regression: git no longer works with musl libc's regex impl](https://public-inbox.org/git/20161004150848.GA7949@brightrain.aerifal.cx/)
+
+Rich Felker complained that compiling Git with [musl libc](https://www.musl-libc.org/)
+no longer works out of the box (that is, without setting the `NO_REGEX`
+build configuration variable) after commit [2f895225](https://github.com/git/git/commit/2f8952250a84313b74f96abb7b035874854cf202).
+The proposed workaround unfortunately didn't work on Windows, as pointed
+out by Jeff King and Johannes Schindelin.
+
+There was a bit of derail about which are main Git platforms, and whether
+Git code should be able to rely on POSIX features.  Jakub Narębski reminded
+that [CodingGuidelines](https://github.com/git/git/blob/master/Documentation/CodingGuidelines#L4)
+specifically state that:
+
+> - Most importantly, we never say "It's in POSIX; we'll happily
+>   ignore your needs should your system not conform to it."
+>   We live in the real world.
+>
+> - However, we often say "Let's stay away from that construct,
+>   it's not even in POSIX".
+>
+> - In spite of the above two rules, we sometimes say "Although
+>   this is not in POSIX, it (is so convenient | makes the code
+>   much more readable | has other good characteristics) and
+>   practically all the platforms we care about support it, so
+>   let's use it".
+
+The commit in question, making Git require to use regexp engine with
+`REG_STARTEND` support, while providing fallback implementation
+(turned on with `NO_REGEX`), matches 3rd point in the list above.  This
+extension to `regexec()`, introduced by the NetBSD project, is present
+in all major regex implementation... though not in musl.
+
+There was yet another proposed fix for the problem, namely adding
+padding so that end of mmap-ed file doesn't fall on the page boundary,
+if regex implementation doesn't support `REG_STARTEND`.  One one hand,
+the workaround relied on undocumented (but sane) assumptions about
+operating system behavior, on the other hand it was faster than the
+workaround in original patch, that is copying contents to NUL-terminated
+buffer.  Nevertheless, any workaround would mean additional code that
+needs to be maintained, and it was not accepted.
+
+Also, it turned out that `configure` script detects if regex engine
+support `REG_STARTEND` and sets `NO_REGEX` if necessary, it was just
+badly described.  It was [since corrected](https://github.com/git/git/commit/842a516cb02a53cf0291ff67ed6f8517966345c0).
+
+Though Git doesn't yet set `NO_REGEX` automatically based on information
+from `uname`.
 
 
 ### Reviews
