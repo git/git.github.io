@@ -93,7 +93,7 @@ discussions.)
 
 ## Note about the number of slots
 
-In 2016, the Git organization has very limited mentoring capacity.
+In 2017, the Git organization has very limited mentoring capacity.
 These days we usually accept between 0 and 2 students per year.
 
 ## Summer of code main project ideas
