@@ -38,7 +38,9 @@ __Various__
 
 
 __Light reading__
-
+ 
+* A poem [written in Git](https://mobile.twitter.com/craig552uk/status/793131545989087232)
+([repo URL](https://github.com/craig552uk/git-poem)).
 
 __Git tools and sites__
 
