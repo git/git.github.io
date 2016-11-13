@@ -240,6 +240,8 @@ builds.
 
 __Various__
 
+* A [Google Summer of Code 2016 blog post round-up](https://opensource.googleblog.com/2016/11/google-summer-of-code-2016-blog-posts.html)
+on the [Google Open Source Blog](https://opensource.googleblog.com/) quotes an article from the previous Git Rev News edition.
 
 __Light reading__
  
