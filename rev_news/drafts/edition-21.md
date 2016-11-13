@@ -316,4 +316,4 @@ __Git tools and sites__
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Jakub Narębski &lt;<jnareb@gmail.com>&gt;
-with help from Jacob Keller.
+with help from Jacob Keller and Johannes Schindelin.
