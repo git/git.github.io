@@ -115,6 +115,122 @@ all configurations.
 ### Support
 -->
 
+
+## Developer Spotlight: Jacob Keller, alias Jake
+
+* Who are you and what do you do?
+
+My name is Jake, I'm an avid contributor to various open source
+projects. I currently work for Intel doing Linux network programming
+for their 10GbE/40GbE Ethernet networking driver. I have contributed
+to Git to help resolve specific issues I've had in the past, and
+continue to contribute as I like to give back to the communities that
+I depend on as a software developer.
+
+* What would you name your most important contribution to Git?
+
+I would say my most important contribution was modifying the refspec
+globs for fetching to allow globbing past / (slash) boundaries.
+However, the largest contribution is probably the diff
+--submodule=inline-diff format for displaying the full diff between a
+submodule change.
+
+* What are you doing on the Git project these days, and why?
+
+Currently I have mostly spent time trying to find areas where my
+review could be helpful. There are a few projects I wouldn't mind
+working on, but as my employer has not hired me directly to work on
+Git, that limits the amount of time that I spend during work hours.
+I'm certainly open to new opportunities to contribute in the future.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+Hmm. This is a tough question. I think the biggest things I would work
+towards is implementing something like git-series as a core part of
+git, at the very least providing the tools needed to make storing the
+meta-history easier. For example, using git series today is pretty
+good, but I often mess up and use regular git commands to look at
+branches or status, and it can tend to make the experience very
+brittle. Additionally there is the effort to implement gitrefs for
+storing reach ability information about objects. Having this sort of
+tool built into git would allow more commands and areas to recognize
+them easily, making the entire experience much smoother.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+Honestly? I would re-write much of the interface to be more
+consistent, removing aspects which aren't consistent with some of our
+more modern design. A good example, was a colleague of mine who is not
+very fluent in git recently tried to checkout a new branch from our
+main remote, and ended up doing something like:
+
+$ git branch -a
+# copy the "remotes/origin/branch"
+$ git checkout <copied text>
+
+which unfortunately didn't actually end up doing what she had
+intended. She then accidentally included commits into a release tag
+without realizing they weren't on that particular branch. These sort
+of pain points exist in a lot of places. Most of the time, they exist
+because the tool provides additional express ability and power at some
+expense of cost. It may also be simply a documentation issue.
+
+However, there are many warts on the user interface that I would love
+to be able to deprecate and remove as they cause issues for co-workers
+who are new to Git. I love using Git, and I think the extra tools that
+we have created are very beneficial, but I have many coworkers who
+haven't gotten over that initial road block.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+I think right now it is git-series. I have also extensively used
+Stacked Git in the past. Both of these tools help to manage a patch
+series, and this is something that I think core git is currently
+lacking in.
+
+* What are your favorite Git features?
+
+Definitely interactive addition, and the ability to rebase local
+history. Ever since I realized that I could re-write history, I have
+changed my development model to develop and commit fast, then re-write
+to look good later. Additionally, I aim to make my work easily
+bisectable, since I have used git-bisect "run" to varying degrees of
+success. The number of times that I've tried to do some history
+archeology and ended up on a "Import from CVS" commit that meant
+nothing to my issue, has led me to heavily make use of tools to make
+my history as presentable as possible.
+
+* What is your preferred Git development model?
+
+I think pull-requests, with avid local rebasing and squashing of
+commits. Followed shortly by the use of a tool like Gerrit or a
+mailing list for review.
+
+* How did you get involved in the Git project?
+
+So, at my job, we used to use CVS to store our project history. We
+have a lot of tooling around this history, including build servers. We
+eventually migrated to Git, but one of the funny things that we did
+carried over. When you have to compare to "versions" in  CVS, the only
+reasonable way to do so is to tag, since tags are the only thing
+combining multiple files together.
+
+So, the people who migrated tools for Git decided that Git builds
+would create the same style of tags of the form
+"tag_<YYMMDD>_<HHMMSS>, which are these ridiculous tags that we need
+for CVS comparing of different build versions.
+
+I tried to make them change the tool, but they refused. I found out
+that I could exclude certain refs when fetching, by not fetching tags
+and instead fetching specific "refs/tags/*". However, this would still
+fetch all these tags I didn't care about. So I modified Git to allow
+using * with less than a full section, so I could say fetch
+"refs/tags/driver-*" which would fetch human readable tags that were
+meaningful without fetching hundreds of tags created by nightly
+builds.
+
 ## Releases
 
 
@@ -135,4 +251,4 @@ __Git tools and sites__
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Jakub Narębski &lt;<jnareb@gmail.com>&gt;
-with help from XXX.
+with help from Jacob Keller.
