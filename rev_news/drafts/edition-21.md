@@ -111,9 +111,70 @@ all configurations.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [Expanding Includes in .gitignore](https://public-inbox.org/git/80919456-7563-2c16-ba23-ce4fcc2777de@pelly.co/)
+
+Aaron Pelly asked for a new feature on the mailing list:
+
+> I want git to be able to include, in its gitignore files, sub-files of
+> ignores or have it understand a directory of ignore files. Or both.
+
+He wanted to be able to pull from https://github.com/github/gitignore
+and "include relevant bits project by project and/or system wide",
+without having to "update many projects manually if that, or any other,
+repo changes".
+
+And after discussing possible implementations, he asked:
+
+> I would like to know the desirability/practicality/stupidity of such a
+> feature as I believe it is within my skillset to implement it.
+
+Stefan Beller suggested to (sym)link .git/info/exclude to an up to
+date version of the gitignore repo as a hack. But Aaron said he would
+still need to copy stuff from one file to another by hand as there
+would be sections that are project, language, editor, machine,
+whatever, specific.
+
+Then Alexei Lozovsky, Jacob Keller, Jeff King, Duy Nguyen and Aaron
+discussed possible implementations. One possibility was to add
+"include" directives in .gitignore files, but that was considered
+complex and dangerous.
+
+The other possibility, favored by the reviewers, was to add either
+".gitignore.d" or ".git/info/exclude.d" directories that would contain
+many files. The content of those files would be concatenated by Git to
+get the actual information about what should be ignored.
+
+Jacob Keller, alias Jake, said that the reading of files in such a
+directory should "exclude reading .git or other hidden files in some
+documented manor so as to avoid problems when linking to a git
+directory for its contents".
+
+Jeff King, alias Peff, said that the ".git/info/exclude.d" approach
+could be implement without any changes by doing:
+
+```
+  path=.git/info/exclude
+  cat $path.d/* >$path
+```
+
+and if we actually implement something like that, then
+
+```
+  cd .git/info
+  git clone /my/exclude/repo exclude ;# or exclude.d
+```
+
+should work.
+
+Duy replied that there could be complications with negative patterns
+though.
+
+Junio Hamano wrote that he does "not see the point of making in-tree
+.gitignore to a forest of .gitignore.d/ at all, compatibility
+complications is not worth even thinking about". But it looks like the
+possibility of having a ".git/info/exclude.d" directory is still open.
 
 
 ## Developer Spotlight: Jacob Keller, alias Jake
