@@ -166,9 +166,11 @@ more modern design. A good example, was a colleague of mine who is not
 very fluent in git recently tried to checkout a new branch from our
 main remote, and ended up doing something like:
 
+```
 $ git branch -a
 # copy the "remotes/origin/branch"
 $ git checkout <copied text>
+```
 
 which unfortunately didn't actually end up doing what she had
 intended. She then accidentally included commits into a release tag
