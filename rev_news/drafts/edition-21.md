@@ -76,11 +76,12 @@ the GitLab Enterprise Edition, which is not open source.
 
 The last Git related talk called "Git/Gerrit" had been planned by the
 Google team and was given by Shawn Pearce. Shawn used to work on Git a
-lot, and has created JGit, EGit and [Gerrit](https://www.gerritcodereview.com/).
-He is now leading a four people team at Google working on version
-control related things. Stefan Beller and Jonathan Nieder, who have
-been contributing to Git for a long time, as well as Jonathan Tan, who
-started contributing more recently, are part of his team.
+lot, and has created JGit, EGit and
+[Gerrit](https://www.gerritcodereview.com/). He is now leading a
+large team at Google working on version control related things. Four
+members of his team have been contributing to Git. Stefan Beller and
+Jonathan Nieder have been contributing for a long time, while Brandon
+Williams and Jonathan Tan started contributing more recently.
 
 In his talk, Shawn described how Git has been developing a big test
 suite since it's beginning in 2005 and that it's "worth its weight
