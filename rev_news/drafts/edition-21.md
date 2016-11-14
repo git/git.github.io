@@ -9,7 +9,7 @@ navbar: false
 
 ## Git Rev News: Edition 21 (November 16th, 2016)
 
-Welcome to the 21th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
+Welcome to the 21st edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
@@ -28,7 +28,7 @@ Sunnyvale California from October 29th to October 30th.
 298 mentors from 149 organizations attended the event. There were some
 talks that had been planned by the GSoC team at Google to talk mostly
 about the past GSoC and the future one. But most of the event was
-orginized in an "unconference" style by the mentors who were there.
+organized in an "unconference" style by the mentors who were there.
 
 The first "unconference" style Git related talk was led by
 [Brendan Forster](https://github.com/shiftkey) and
@@ -70,7 +70,7 @@ also appears that Canadian universities are now required to host their
 software on servers located in Canada, which excludes GitHub, so some
 universities there have started to setup solutions.
 
-People mentioned that [GitLab-CE](https://gitlab.com/gitlab-org/gitlab-ce),
+People mentioned that [GitLab-CE](https://gitlab.com/gitlab-org/gitlab-ce/),
 the GitLab Community Edition, was a good solution for them, but others
 were not happy that there is [GitLab-EE](https://gitlab.com/gitlab-org/gitlab-ee/),
 the GitLab Enterprise Edition, which is not open source.
@@ -94,7 +94,7 @@ On the contrary Shawn said that he started Gerrit in 2008, but they
 didn't really test its REST API until 2013, and didn't do any UI tests
 until 2016, "shame on me".
 
-For a long time Gerrit tests rellied on "monkeys testing everything"
+For a long time Gerrit tests relied on "monkeys testing everything"
 and there were a lot of regressions. It was hard to get confidence on
 releases.
 
@@ -263,7 +263,7 @@ changed my development model to develop and commit fast, then re-write
 to look good later. Additionally, I aim to make my work easily
 bisectable, since I have used git-bisect "run" to varying degrees of
 success. The number of times that I've tried to do some history
-archeology and ended up on a "Import from CVS" commit that meant
+archeology and ended up on an "Import from CVS" commit that meant
 nothing to my issue, has led me to heavily make use of tools to make
 my history as presentable as possible.
 
