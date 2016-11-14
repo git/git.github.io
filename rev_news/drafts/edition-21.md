@@ -298,6 +298,14 @@ builds.
 
 ## Releases
 
+* [Git v2.10.2](https://public-inbox.org/git/xmqqd1ijwu3s.fsf@gitster.mtv.corp.google.com/)
+* [Git for Windows 2.10.2](https://public-inbox.org/git/alpine.DEB.2.20.1611022158140.3108@virtualbox/)
+* [Git v2.11.0-rc1](https://public-inbox.org/git/xmqqbmxl1tsb.fsf@gitster.mtv.corp.google.com/)
+* [Prerelease: Git for Windows v2.11.0-rc0](https://public-inbox.org/git/alpine.DEB.2.20.1611051025030.3108@virtualbox/)
+* [libgit2 v0.24.3 Maintenance Release](https://github.com/libgit2/libgit2/releases/tag/v0.24.3)
+* [libgit2/pygit2 v0.24.2](https://github.com/libgit2/pygit2/releases/tag/v0.24.2)
+* [GitHub Enterprise 2.8](https://github.com/blog/2280-github-enterprise-2-8-is-now-available-with-code-review-project-management-tools-and-jupyter-notebook-rendering)
+* [GitLab 8.13](https://about.gitlab.com/2016/10/22/gitlab-8-13-released/) through [8.13.5](https://about.gitlab.com/2016/11/09/gitlab-8-dot-13-dot-5-released/)
 
 ## Other News
 
@@ -305,14 +313,20 @@ __Various__
 
 * A [Google Summer of Code 2016 blog post round-up](https://opensource.googleblog.com/2016/11/google-summer-of-code-2016-blog-posts.html)
 on the [Google Open Source Blog](https://opensource.googleblog.com/) quotes an article from the previous Git Rev News edition.
+* [GitLab's 2016 Global Developer Survey Report](https://page.gitlab.com/2016-Developer-Survey_2016-Developer-Survey.html)
+* [GitHub iterates through the most popular open source projects on their service](https://github.com/blog/2268-top-open-source-launches-on-github)
 
 __Light reading__
- 
-* A poem [written in Git](https://mobile.twitter.com/craig552uk/status/793131545989087232)
-([repo URL](https://github.com/craig552uk/git-poem)).
+
+* A poem [written in Git](https://mobile.twitter.com/craig552uk/status/793131545989087232) ([repo URL](https://github.com/craig552uk/git-poem)).
+* GitLab show off a workflow based on some of their new features [in this overview](https://about.gitlab.com/2016/10/25/gitlab-workflow-an-overview/).
+* [What’s wrong with Git? A conceptual design analysis](https://blog.acolyer.org/2016/10/24/whats-wrong-with-git-a-conceptual-design-analysis/) - another summary of a research paper mentioned in the previous edition, by Adrian Colyer.
+* [GitKraken and Fantasy Football FTW](https://blog.axosoft.com/2016/09/29/git-for-fantasy-football/)
+* From the competition: [Facebook provided the Mercurial community an update on how they are using it internally](https://groups.google.com/forum/#!topic/mozilla.dev.version-control/nh4fITFlEMk), some interesting ideas in there for sure.
 
 __Git tools and sites__
 
+* [Git-Repo: CLI utility to manage Git services from your workspace](https://github.com/guyzmo/git-repo)
 
 ## Credits
 
