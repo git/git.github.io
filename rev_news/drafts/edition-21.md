@@ -215,10 +215,11 @@ git, at the very least providing the tools needed to make storing the
 meta-history easier. For example, using git series today is pretty
 good, but I often mess up and use regular git commands to look at
 branches or status, and it can tend to make the experience very
-brittle. Additionally there is the effort to implement gitrefs for
-storing reach ability information about objects. Having this sort of
-tool built into git would allow more commands and areas to recognize
-them easily, making the entire experience much smoother.
+brittle. Additionally there is the effort to implement
+[gitrefs](https://public-inbox.org/git/xmqqa8dfdt6y.fsf@gitster.mtv.corp.google.com/)
+for storing reachability information about objects. Having this sort
+of tool built into git would allow more commands and areas to
+recognize them easily, making the entire experience much smoother.
 
 * If you could remove something from Git without worrying about
   backwards compatibility, what would it be?
@@ -332,4 +333,4 @@ __Git tools and sites__
 
 This edition of Git Rev News was curated by Christian Couder &lt;<christian.couder@gmail.com>&gt;
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt; and Jakub Narębski &lt;<jnareb@gmail.com>&gt;
-with help from Jacob Keller and Johannes Schindelin.
+with help from Jacob Keller, Johannes Schindelin and Markus Jansen.
