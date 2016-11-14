@@ -38,10 +38,11 @@ don't like about GitHub.
 
 Most of the GitHub features discussed were related to GitHub pages and
 to discussion threads in issues and pull requests. Parker, who is also
-the [Jekyll](http://jekyllrb.com/) maintainer, said that GitHub was
-planning to release a number of new features in those areas soon, but
-he said he was not allowed to talk about those features and when they
-would be released in more details.
+the [Jekyll](http://jekyllrb.com/) maintainer, often replied to
+requests by saying "you'll be happy... soon". So it looked like GitHub
+has been working on a number of new features in those areas and has
+been planning to release some of them soon, though Parker said he
+couldn't promise anything concrete.
 
 Some people specifically asked if it would be possible to have a
 better integration between email and discussion threads in issues and
