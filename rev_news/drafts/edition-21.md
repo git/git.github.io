@@ -332,6 +332,11 @@ __Light reading__
 * [GitKraken and Fantasy Football FTW](https://blog.axosoft.com/2016/09/29/git-for-fantasy-football/)
 * From the competition: [Facebook provided the Mercurial community an update on how they are using it internally](https://groups.google.com/forum/#!topic/mozilla.dev.version-control/nh4fITFlEMk), some interesting ideas in there for sure.
 
+__Watching__
+
+* [Tips & Tricks: Gotta Git Them All – GitHub Universe 2016](http://www.codechannels.com/video/github/git/tips-tricks-gotta-git-them-all-github-universe-2016/) on CodeChannels, published on September 28, 2016 by GitHub
+* [How to become a Git power user](https://www.youtube.com/watch?v=RPvXWYdpbAs&feature=youtu.be&t=35s), a webinar by Deveo, streamed live on 10 Nov 2016 on YouTube
+
 __Git tools and sites__
 
 * [Git-Repo: CLI utility to manage Git services from your workspace](https://github.com/guyzmo/git-repo)
