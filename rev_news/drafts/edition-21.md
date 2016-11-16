@@ -312,12 +312,19 @@ builds.
 
 __Various__
 
-* The [Git Merge 2017](http://git-merge.com/) will happen in Brussels on February 2nd (workshops) and 3rd (conference). For those considering a presentation, the [CfP](https://cfp.githubapp.com/events/git-merge-2017) deadline is November 21st 12:00am PST. For (S)CM/Open Source/conference addicts, the [FOSDEM](https://fosdem.org/2017/) (Brussels, February 4th and 5th) and the [Config Management Camp](http://cfgmgmtcamp.eu/gent-2017/) (Ghent, February 6th and 7th) provide additional fora.
-* There will be a [Contributor's Summit](http://public-inbox.org/git/20161025162829.jcy6fmnmdjual6io@sigill.intra.peff.net/) on the first day of Git Merge (February 2nd). This is a small, informal meeting of people who are involved in the development of Git or related tools.
 * A [Google Summer of Code 2016 blog post round-up](https://opensource.googleblog.com/2016/11/google-summer-of-code-2016-blog-posts.html)
 on the [Google Open Source Blog](https://opensource.googleblog.com/) quotes an article from the previous Git Rev News edition.
 * [GitLab's 2016 Global Developer Survey Report](https://page.gitlab.com/2016-Developer-Survey_2016-Developer-Survey.html)
 * [GitHub iterates through the most popular open source projects on their service](https://github.com/blog/2268-top-open-source-launches-on-github)
+* [DevFreeBooks](https://devfreebooks.github.io) includes a section on [free Git books](https://devfreebooks.github.io/git/); the site itself is hosted on GitHub Pages, and you can submit other free books [via Google Forms](https://docs.google.com/forms/d/e/1FAIpQLSeXsmlLo3S7lJF82LGTOMoMpA4vg_T38Ez47gQoU6P6KaFwQg/viewform) or via pull request
+* [Kliment Petrov's dev-log](https://github.com/KleoPetroff/dev-log) includes section with [Git-related links](https://github.com/KleoPetroff/dev-log/blob/master/source/git.md)
+* [10 free resources to learn how to use git](http://blog.davidecoppola.com/2016/11/10-free-resources-to-learn-how-to-use-git/) by Davide Coppola
+
+__Events__
+
+* Git User's Survey 2016 has been closed on 22 October 2016; you can find [Report from Git User's Survey 2016](https://survs.com/report/nz2odu1spl) on [GitSurvey2016](https://git.wiki.kernel.org/index.php/GitSurvey2016) Git Wiki page.
+* The [Git Merge 2017](http://git-merge.com/) will happen in Brussels on February 2nd (workshops) and 3rd (conference). For those considering a presentation, the [CfP](https://cfp.githubapp.com/events/git-merge-2017) deadline is November 21st 12:00am PST. For (S)CM/Open Source/conference addicts, the [FOSDEM](https://fosdem.org/2017/) (Brussels, February 4th and 5th) and the [Config Management Camp](http://cfgmgmtcamp.eu/gent-2017/) (Ghent, February 6th and 7th) provide additional fora.
+* There will be a [Contributor's Summit](http://public-inbox.org/git/20161025162829.jcy6fmnmdjual6io@sigill.intra.peff.net/) on the first day of Git Merge (February 2nd). This is a small, informal meeting of people who are involved in the development of Git or related tools.
 
 __Light reading__
 
@@ -326,10 +333,23 @@ __Light reading__
 * [What’s wrong with Git? A conceptual design analysis](https://blog.acolyer.org/2016/10/24/whats-wrong-with-git-a-conceptual-design-analysis/) - another summary of a research paper mentioned in the previous edition, by Adrian Colyer.
 * [GitKraken and Fantasy Football FTW](https://blog.axosoft.com/2016/09/29/git-for-fantasy-football/)
 * From the competition: [Facebook provided the Mercurial community an update on how they are using it internally](https://groups.google.com/forum/#!topic/mozilla.dev.version-control/nh4fITFlEMk), some interesting ideas in there for sure.
+* [Group maintainership models](http://lwn.net/Articles/705228/) article on LWN.net, a report from [2016 Kernel Summit](http://lwn.net/Articles/KernelSummit2016/)
+* [Git from the inside out](https://codewords.recurse.com/issues/two/git-from-the-inside-out) by Mary Rose Cook (with a very nice visualization schema), from March 2015
+* [Understanding Git Conceptually](https://www.sbf5.com/~cduan/technical/git/) tutorial by Charles Duan
+* [Large Git Repositories](http://larsxschneider.github.io/2016/09/21/large-git-repos) by Lars Schneider, about different types of "large" repositories, and how one can handle them in Git
+* [How to traverse a git repository using libgit2 and C++](http://blog.davidecoppola.com/2016/10/how-to-traverse-git-repository-using-libgit2-and-cpp/) by Davide Coppola
+
+__Watching__
+
+* [Tips & Tricks: Gotta Git Them All – GitHub Universe 2016](http://www.codechannels.com/video/github/git/tips-tricks-gotta-git-them-all-github-universe-2016/) on CodeChannels, published on September 28, 2016 by GitHub
+* [How to become a Git power user](https://www.youtube.com/watch?v=RPvXWYdpbAs&feature=youtu.be&t=35s), a webinar by Deveo, streamed live on 10 Nov 2016 on YouTube
 
 __Git tools and sites__
 
 * [Git-Repo: CLI utility to manage Git services from your workspace](https://github.com/guyzmo/git-repo)
+* [Git Tower, a git client, is available for Windows](https://www.git-tower.com/windows/)
+* [git-blamed](http://melpa.org/#/git-blamed) - Emacs minor mode for _incremental_ blame for Git; a part of <https://github.com/tsgates/git-emacs>
+* [Gitian: a secure source-control oriented software distribution method for trusted binaries](http://gitian.org/)
 
 ## Credits
 
