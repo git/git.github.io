@@ -331,6 +331,11 @@ __Light reading__
 * [What’s wrong with Git? A conceptual design analysis](https://blog.acolyer.org/2016/10/24/whats-wrong-with-git-a-conceptual-design-analysis/) - another summary of a research paper mentioned in the previous edition, by Adrian Colyer.
 * [GitKraken and Fantasy Football FTW](https://blog.axosoft.com/2016/09/29/git-for-fantasy-football/)
 * From the competition: [Facebook provided the Mercurial community an update on how they are using it internally](https://groups.google.com/forum/#!topic/mozilla.dev.version-control/nh4fITFlEMk), some interesting ideas in there for sure.
+* [Group maintainership models](http://lwn.net/Articles/705228/) article on LWN.net, a report from [2016 Kernel Summit](http://lwn.net/Articles/KernelSummit2016/)
+* [Git from the inside out](https://codewords.recurse.com/issues/two/git-from-the-inside-out) by Mary Rose Cook (with a very nice visualization schema), from March 2015
+* [Understanding Git Conceptually](https://www.sbf5.com/~cduan/technical/git/) tutorial by Charles Duan
+* [Large Git Repositories](http://larsxschneider.github.io/2016/09/21/large-git-repos) by Lars Schneider, about different types of "large" repositories, and how one can handle them in Git
+* [How to traverse a git repository using libgit2 and C++](http://blog.davidecoppola.com/2016/10/how-to-traverse-git-repository-using-libgit2-and-cpp/) by Davide Coppola
 
 __Watching__
 
