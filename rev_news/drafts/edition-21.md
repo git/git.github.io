@@ -333,6 +333,9 @@ __Light reading__
 __Git tools and sites__
 
 * [Git-Repo: CLI utility to manage Git services from your workspace](https://github.com/guyzmo/git-repo)
+* [Git Tower, a git client, is available for Windows](https://www.git-tower.com/windows/)
+* [git-blamed](http://melpa.org/#/git-blamed) - Emacs minor mode for _incremental_ blame for Git; a part of <https://github.com/tsgates/git-emacs>
+* [Gitian: a secure source-control oriented software distribution method for trusted binaries](http://gitian.org/)
 
 ## Credits
 
