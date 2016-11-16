@@ -316,6 +316,8 @@ __Various__
 on the [Google Open Source Blog](https://opensource.googleblog.com/) quotes an article from the previous Git Rev News edition.
 * [GitLab's 2016 Global Developer Survey Report](https://page.gitlab.com/2016-Developer-Survey_2016-Developer-Survey.html)
 * [GitHub iterates through the most popular open source projects on their service](https://github.com/blog/2268-top-open-source-launches-on-github)
+* [DevFreeBooks](https://devfreebooks.github.io) includes a section on [free Git books](https://devfreebooks.github.io/git/); the site itself is hosted on GitHub Pages, and you can submit other free books [via Google Forms](https://docs.google.com/forms/d/e/1FAIpQLSeXsmlLo3S7lJF82LGTOMoMpA4vg_T38Ez47gQoU6P6KaFwQg/viewform) or via pull request
+* [Kliment Petrov's dev-log](https://github.com/KleoPetroff/dev-log) includes section with [Git-related links](https://github.com/KleoPetroff/dev-log/blob/master/source/git.md)
 
 __Events__
 
