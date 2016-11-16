@@ -302,7 +302,7 @@ builds.
 * [Git v2.10.2](https://public-inbox.org/git/xmqqd1ijwu3s.fsf@gitster.mtv.corp.google.com/)
 * [Git for Windows 2.10.2](https://public-inbox.org/git/alpine.DEB.2.20.1611022158140.3108@virtualbox/)
 * [Git v2.11.0-rc1](https://public-inbox.org/git/xmqqbmxl1tsb.fsf@gitster.mtv.corp.google.com/)
-* [Prerelease: Git for Windows v2.11.0-rc0](https://public-inbox.org/git/alpine.DEB.2.20.1611051025030.3108@virtualbox/)
+* Prerelease: Git for Windows [v2.11.0-rc0](https://public-inbox.org/git/alpine.DEB.2.20.1611051025030.3108@virtualbox/), [v2.11.0-rc1](https://github.com/git-for-windows/git/releases/tag/v2.11.0-rc1.windows.1)
 * [libgit2 v0.24.3 Maintenance Release](https://github.com/libgit2/libgit2/releases/tag/v0.24.3)
 * [libgit2/pygit2 v0.24.2](https://github.com/libgit2/pygit2/releases/tag/v0.24.2)
 * [GitHub Enterprise 2.8](https://github.com/blog/2280-github-enterprise-2-8-is-now-available-with-code-review-project-management-tools-and-jupyter-notebook-rendering)
