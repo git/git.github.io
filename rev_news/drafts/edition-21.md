@@ -322,6 +322,7 @@ on the [Google Open Source Blog](https://opensource.googleblog.com/) quotes an a
 
 __Events__
 
+* Git User's Survey 2016 has been closed on 22 October 2016; you can find [Report from Git User's Survey 2016](https://survs.com/report/nz2odu1spl) on [GitSurvey2016](https://git.wiki.kernel.org/index.php/GitSurvey2016) Git Wiki page.
 * The [Git Merge 2017](http://git-merge.com/) will happen in Brussels on February 2nd (workshops) and 3rd (conference). For those considering a presentation, the [CfP](https://cfp.githubapp.com/events/git-merge-2017) deadline is November 21st 12:00am PST. For (S)CM/Open Source/conference addicts, the [FOSDEM](https://fosdem.org/2017/) (Brussels, February 4th and 5th) and the [Config Management Camp](http://cfgmgmtcamp.eu/gent-2017/) (Ghent, February 6th and 7th) provide additional fora.
 * There will be a [Contributor's Summit](http://public-inbox.org/git/20161025162829.jcy6fmnmdjual6io@sigill.intra.peff.net/) on the first day of Git Merge (February 2nd). This is a small, informal meeting of people who are involved in the development of Git or related tools.
 
