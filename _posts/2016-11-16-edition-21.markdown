@@ -194,8 +194,8 @@ I depend on as a software developer.
 
 I would say my most important contribution was modifying the refspec
 globs for fetching to allow globbing past / (slash) boundaries.
-However, the largest contribution is probably the diff
---submodule=inline-diff format for displaying the full diff between a
+However, the largest contribution is probably the `diff
+--submodule=inline-diff` format for displaying the full diff between a
 submodule change.
 
 * What are you doing on the Git project these days, and why?
@@ -285,15 +285,15 @@ combining multiple files together.
 
 So, the people who migrated tools for Git decided that Git builds
 would create the same style of tags of the form
-"tag_<YYMMDD>_<HHMMSS>, which are these ridiculous tags that we need
+"`tag_<YYMMDD>_<HHMMSS>`", which are these ridiculous tags that we need
 for CVS comparing of different build versions.
 
 I tried to make them change the tool, but they refused. I found out
 that I could exclude certain refs when fetching, by not fetching tags
-and instead fetching specific "refs/tags/*". However, this would still
+and instead fetching specific "refs/tags/\*". However, this would still
 fetch all these tags I didn't care about. So I modified Git to allow
 using * with less than a full section, so I could say fetch
-"refs/tags/driver-*" which would fetch human readable tags that were
+"refs/tags/driver-\*" which would fetch human readable tags that were
 meaningful without fetching hundreds of tags created by nightly
 builds.
 
