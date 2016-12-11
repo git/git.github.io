@@ -141,8 +141,10 @@ opt-in to the original behavior".
 Peff and Junio reviewed the patches and found them mostly good, though
 they suggested some small improvements.
 
-It looks likely then that this area of Git will improve in the next
-feature version.
+David has since posted
+[new patches](https://public-inbox.org/git/20161129093807.24637-1-davvid@gmail.com/)
+that have been found "sensible", so it looks likely then that this
+area of Git will improve in the next feature version.
 
 
 ## Releases
