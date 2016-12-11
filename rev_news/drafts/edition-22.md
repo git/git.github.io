@@ -91,6 +91,60 @@ algorithms, and that Git developers provide them with new advanced
 options to play with before hopefully improving the default
 algorithms.
 
+* [trustExitCode doesn't apply to vimdiff mergetool](https://public-inbox.org/git/CAD03jn5PAZcFeesaq2osjo7cYd1frWZeN0odNqTh+AMxSEmLgQ@mail.gmail.com/)
+
+Dun Peal wrote that he is using vimdiff as his mergetool, and has the
+'mergetool.vimdiff.trustExitCode' configuration option set to 'true'
+in his ~/.gitconfig file. Nervertheless when he makes vimdiff exit
+with code 1 (to mean failure), Git still acts as if the merge has
+succeeded.
+
+From the documentation of 'mergetool.vimdiff.trustExitCode' he
+expected that with such an exit code Git would consider that the merge
+hasn't been successful.
+
+Jeff King, alias Peff, replied that the configuration variable "is
+used only for a 'user' tool, not for the builtin tool profiles". And,
+while vimdiff has a builtin tool profile, Peff suggested a workaround
+that configured vimdiff as a user tool.
+
+Dun then wrote that he would find more sensible that by default Git
+would rely on the exit code from the tool, and that he hopes the
+developers change this default, or at least let users override it for
+the builtin invocations.
+
+Peff replied:
+
+> Yeah, I'm inclined to agree. But like I said, I'm not too familiar with
+> this area, so maybe there are subtle things I'm missing.
+
+Junio Hamano later explained that "some tools are known to give unusable
+exit codes, so we ignore their exit codes by default."
+
+As Peff had said that he doesn't use mergetools, Dun also asked:
+
+> Finally, if you're not using mergetools, how do you resolve conflicts?
+
+Peff replied that he just edits the conflicted sections in vim and
+uses [git-jump](https://github.com/git/git/tree/master/contrib/git-jump).
+
+In the meantime, David Aguilar, who previously contributing a lot to
+mergetool, sent a patch to allow "tools to opt-in to
+trustExitCode=true". He warned though that for tkdiff and kdiff3, his
+patch has "a subtle change in behavior, but not one that should be
+problematic."
+
+So David later sent another patch that "allow tools to advertise their
+own default value for trustExitCode, so that users do not need to
+opt-in to the original behavior".
+
+Peff and Junio reviewed the patches and found them mostly good, though
+they suggested some small improvements.
+
+It looks likely then that this area of Git will improve in the next
+feature version.
+
+
 ## Releases
 
 
