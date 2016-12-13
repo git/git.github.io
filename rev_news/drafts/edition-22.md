@@ -151,95 +151,94 @@ area of Git will improve in the next feature version.
 
 * Who are you and what do you do?
 
-I'm a software developer living in Los Angeles, CA. I work at
-[Walt Disney Animation Studios](https://www.disneyanimation.com/)
-where I [develop tools](https://www.engadget.com/2016/03/04/fur-technology-makes-zootopias-bunnies-believable/)
-that are used for creating computer-generated animated films.
+  I'm a software developer living in Los Angeles, CA. I work at
+  [Walt Disney Animation Studios](https://www.disneyanimation.com/)
+  where I [develop tools](https://www.engadget.com/2016/03/04/fur-technology-makes-zootopias-bunnies-believable/)
+  that are used for creating computer-generated animated films.
 
-    * [My Github page](https://github.com/davvid)
-    * [My IMDB page](http://www.imdb.com/name/nm2143013/)
+  - [My Github page](https://github.com/davvid)
+  - [My IMDB page](http://www.imdb.com/name/nm2143013/)
 
-WDAS is a Linux shop. When I started there in 2004 we were using an
-SCM system that was slow and not too easy to use, so there was a desire
-to find a better solution. Git started to gain momentum just as we were
-looking to reimagine our development workflow, so I took a bet on Git.
+  WDAS is a Linux shop. When I started there in 2004 we were using an
+  SCM system that was slow and not too easy to use, so there was a desire
+  to find a better solution. Git started to gain momentum just as we were
+  looking to reimagine our development workflow, so I took a bet on Git.
 
-We started migrating the studio's software teams to Git in 2008, and I
-soon became the person you'd find in git.txt as described in xkcd/1597.
+  We started migrating the studio's software teams to Git in 2008, and I
+  soon became the person you'd find in git.txt as described in xkcd/1597.
 
 * What would you name your most important contribution to Git?
 
-Within the Git project itself, my most important contributions are the
-addition of "git difftool" and on-going maintenance of its sibling
-"git mergetool" merge-resolution helper tool.
+  Within the Git project itself, my most important contributions are the
+  addition of "git difftool" and on-going maintenance of its sibling
+  "git mergetool" merge-resolution helper tool.
 
-`git difftool` is a natural extension of Git's rich diff capabilities.
-difftool was created when a co-worker suggested that Git needed better
-tools for inspecting changes, and that they preferred visual tools such
-as tkdiff and xxdiff. I had hacked together a script that we were using
-daily at work, so I
-[shared it](http://public-inbox.org/git/20081226013021.GA15414@gmail.com/)
-with the mailing list. Folks almost immediately started suggesting
-improvements. `git difftool` matured in contrib/ for a few months and
-became part of Git's core toolset in v1.6.3.
+  `git difftool` is a natural extension of Git's rich diff capabilities.
+  difftool was created when a co-worker suggested that Git needed better
+  tools for inspecting changes, and that they preferred visual tools such
+  as tkdiff and xxdiff. I had hacked together a script that we were using
+  daily at work, so I
+  [shared it](http://public-inbox.org/git/20081226013021.GA15414@gmail.com/)
+  with the mailing list. Folks almost immediately started suggesting
+  improvements. `git difftool` matured in contrib/ for a few months and
+  became part of Git's core toolset in v1.6.3.
 
 * What are you doing on the Git project these days, and why?
 
-I still help maintain and review code related to difftool and mergetool.
-When users report issues I always try to distill the problem down into a
-testcase, add it to Git's test suite, and come up with a patch to
-fix the problem.
+  I still help maintain and review code related to difftool and mergetool.
+  When users report issues I always try to distill the problem down into a
+  testcase, add it to Git's test suite, and come up with a patch to
+  fix the problem.
 
-Outside of the Git project, but still within the Git community,
-I wrote and continue to maintain
-[Git Cola](https://github.com/git-cola/git-cola), a free and
-cross-platform graphical user interface for Git that was designed around
-my unix-centric, keyboard-focused user interface sensibilities.
-I still improve and add new features to Git Cola when time permits.
+  Outside of the Git project, but still within the Git community,
+  I wrote and continue to maintain
+  [Git Cola](https://github.com/git-cola/git-cola), a free and
+  cross-platform graphical user interface for Git that was designed around
+  my unix-centric, keyboard-focused user interface sensibilities.
+  I still improve and add new features to Git Cola when time permits.
 
-Git has helped me immensely in my daily workflow so I think it's
-important to contribute back in any way I can.
+  Git has helped me immensely in my daily workflow so I think it's
+  important to contribute back in any way I can.
 
 * If you could get a team of expert developers to work full time on
   something in Git for a full year, what would it be?
 
-I would like to see a focus on scalability and better support for working
-with large files and repositories. There are existing projects in this
-area that would benefit from help:
+  I would like to see a focus on scalability and better support for working
+  with large files and repositories. There are existing projects in this
+  area that would benefit from help:
 
-    * pluggable ref backends
-    * git-annex
-    * watchman support
+  - pluggable ref backends
+  - git-annex
+  - watchman support
 
 * If you could remove something from Git without worrying about
   backwards compatibility, what would it be?
 
-From a usability angle,
-  `git reset --{soft,mixed,merge,keep,hard}`
-is a lot to understand for beginners.
+  From a usability angle, `git reset --{soft,mixed,merge,keep,hard}`
+  is a lot to understand for beginners.
 
-I always thought it would be good for Git to fully adopt the
-"staging area" metaphor instead of its traditional "index" and "cache"
-jargon, but I would not go so far as to remove support for old flags.
-At most, I'd stop advertising them in the documentation, but would
-still support them.  Backwards compatibility is a big deal in Git.
+  I always thought it would be good for Git to fully adopt the
+  "staging area" metaphor instead of its traditional "index" and "cache"
+  jargon, but I would not go so far as to remove support for old flags.
+  At most, I'd stop advertising them in the documentation, but would
+  still support them.  Backwards compatibility is a big deal in Git.
 
-Lower hanging fruit:
+  Lower hanging fruit:
 
-color.ui could default to auto.
-log.decorate could default to short.
-rebase.autostash and rebase.autosquash could default to true.
+  - color.ui could default to auto.
+  - log.decorate could default to short.
+  - rebase.autostash and rebase.autosquash could default to true.
 
 * What is your favorite Git-related tool/library, outside of Git itself?
 
-[Git Cola](https://github.com/git-cola/git-cola) ;-)
+  [Git Cola](https://github.com/git-cola/git-cola) ;-)
 
-A few more of my favorites are,
+  A few more of my favorites are,
 
-    * Git's shell completions and prompt (contrib/completion/ in git.git)
-    * [vim-fugitive](https://github.com/tpope/vim-fugitive)
-    * [gitolite](http://gitolite.com/gitolite/)
-    * [git-annex](http://git-annex.branchable.com/)
+  - Git's shell completions and prompt (contrib/completion/ in git.git)
+  - [vim-fugitive](https://github.com/tpope/vim-fugitive)
+  - [gitolite](http://gitolite.com/gitolite/)
+  - [git-annex](http://git-annex.branchable.com/)
 
 
 ## Releases
