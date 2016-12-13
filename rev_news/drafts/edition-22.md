@@ -243,17 +243,36 @@ area of Git will improve in the next feature version.
 
 ## Releases
 
+* [What’s new in Git 2.11?](https://hackernoon.com/whats-new-in-git-2-11-64860aea6c4f#.dzf3wjhco) by Atlassian's Tim Pettersen
+* [What's new in Git 2.11](http://blog.deveo.com/whats-new-in-git-2-11/) from Deveo's Ilmari Kontulainen
+* [Git 2.11 has been released](https://github.com/blog/2288-git-2-11-has-been-released) by GitHub's Peff
+* [tig-2.2.1](https://github.com/jonas/tig/releases/tag/tig-2.2.1)
+* [libgit2 v0.25.0 RC1](https://github.com/libgit2/libgit2/releases/tag/v0.25.0-rc1)
+* [jgit-dev approaching 4.6 release](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03236.html)
+* [GitLab 8.14](https://about.gitlab.com/2016/11/22/gitlab-8-14-released/) with patches to [8.14.4, 8.13.9, and 8.12.12](https://about.gitlab.com/2016/12/08/gitlab-8-dot-14-dot-4-released/)
 
 ## Other News
 
 __Various__
 
+* [Git Merge 2017 tickets are now available](https://github.com/blog/2287-git-merge-2017-tickets-are-now-available)
+* [Gerrit User Summit 2016 Report](https://gitenterprise.me/2016/11/23/gerrit-user-summit-2016-report/)
 
 __Light reading__
 
+* [Protect our Git Repos, Stop Foxtrots Now!](https://developer.atlassian.com/blog/2016/04/stop-foxtrots-now/)
+* [Git Tips & Tricks from GitLab](https://about.gitlab.com/2016/12/08/git-tips-and-tricks/)
+* [Git tips & tricks for everyday use](https://jeroenthora.be/post/git-tips-and-tricks-for-everyday-use) by Jeroen Thora
+* [What is Git? From Visual Studio](https://www.visualstudio.com/learn/what-is-git/)
+* [Restoring accidental git force push overwrite on GitHub if you don't have the needed commits locally](http://dieter.plaetinck.be/post/restoring-accidental-git-force-push-overwrite-on-github-if-dont-have-needed-commits-locally/) by Dieter Plaetinck
+* [The half-life of code & the ship of Theseus](https://erikbern.com/2016/12/05/the-half-life-of-code.html) by Erik Bernhardsson
+* [Scaling Up JGit - a "classic" presentation from EclipseCon 2013.pdf](https://www.eclipsecon.org/2013/sites/eclipsecon.org.2013/files/Scaling%20Up%20JGit%20-%20EclipseCon%202013.pdf)
+* [Resolve simple merge conflicts on GitHub](https://github.com/blog/2293-resolve-simple-merge-conflicts-on-github)
 
 __Git tools and sites__
 
+* [New Git repository manager: GitPlex](https://www.pmease.com/gitplex)
+* [git-hours: Estimate time spent on a git repository](https://github.com/kimmobrunfeldt/git-hours)
 
 ## Credits
 
