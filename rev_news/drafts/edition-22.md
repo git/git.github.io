@@ -59,7 +59,7 @@ this new compaction heuristic is doing) is found at
 But Jeff King, alias Peff, who works with Michael for GitHub, replied
 that the above 'compaction heuristic' is about "the 'old' attempt at a
 similar feature from v2.9. The 'new' one goes by the name
-'--indent-heuristic' (and 'diff.indentHeuristic' in the config).
+'--indent-heuristic' (and 'diff.indentHeuristic' in the config)".
 
 Peff added that "more discussion about how it works" can be found in
 the commit message of
@@ -68,8 +68,8 @@ the commit message of
 This commit message indeed looks impressive and shows that a lot of
 work has been going on for a long time to improve the diff
 heuristics. It can make one wonder if Git developers are soon going to
-use artificial intelligence algorithms to train a neural networks to
-give the best possible diffs.
+use artificial intelligence algorithms to train a neural network to
+yield the best possible diffs.
 
 Anyway Jacob Keller also answered saying that the config option is
 undocumented and that:
@@ -81,7 +81,7 @@ undocumented and that:
 > So long term you will not need any special knobs to benefit.
 
 Peff agreed that "it is not the default in v2.11, but it probably
-will become so in a future version."
+will become so in a future version".
 
 Later in the [GitHub blog post about the v2.11 release](https://github.com/blog/2288-git-2-11-has-been-released),
 Peff mentioned this new (undocumented but testable) feature.
@@ -96,12 +96,12 @@ algorithms.
 Dun Peal wrote that he is using vimdiff as his mergetool, and has the
 'mergetool.vimdiff.trustExitCode' configuration option set to 'true'
 in his ~/.gitconfig file. Nervertheless when he makes vimdiff exit
-with code 1 (to mean failure), Git still acts as if the merge has
+with code 1 (to mean failure), Git still acts as if the merge had
 succeeded.
 
 From the documentation of 'mergetool.vimdiff.trustExitCode' he
 expected that with such an exit code Git would consider that the merge
-hasn't been successful.
+hadn't been successful.
 
 Jeff King, alias Peff, replied that the configuration variable "is
 used only for a 'user' tool, not for the builtin tool profiles". And,
@@ -119,7 +119,7 @@ Peff replied:
 > this area, so maybe there are subtle things I'm missing.
 
 Junio Hamano later explained that "some tools are known to give unusable
-exit codes, so we ignore their exit codes by default."
+exit codes, so we ignore their exit codes by default".
 
 As Peff had said that he doesn't use mergetools, Dun also asked:
 
@@ -128,13 +128,13 @@ As Peff had said that he doesn't use mergetools, Dun also asked:
 Peff replied that he just edits the conflicted sections in vim and
 uses [git-jump](https://github.com/git/git/tree/master/contrib/git-jump).
 
-In the meantime, David Aguilar, who previously contributing a lot to
+In the meantime, David Aguilar, who has previously contributed a lot to
 mergetool, sent a patch to allow "tools to opt-in to
 trustExitCode=true". He warned though that for tkdiff and kdiff3, his
 patch has "a subtle change in behavior, but not one that should be
-problematic."
+problematic".
 
-So David later sent another patch that "allow tools to advertise their
+Later, David sent another patch that "allow tools to advertise their
 own default value for trustExitCode, so that users do not need to
 opt-in to the original behavior".
 
@@ -143,7 +143,7 @@ they suggested some small improvements.
 
 David has since posted
 [new patches](https://public-inbox.org/git/20161129093807.24637-1-davvid@gmail.com/)
-that have been found "sensible", so it looks likely then that this
+that have been found "sensible", so it looks very likely that this
 area of Git will improve in the next feature version.
 
 
