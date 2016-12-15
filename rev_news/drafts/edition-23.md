@@ -33,6 +33,9 @@ This edition covers what happened during the month of December 2016.
 
 
 ## Other News
+__Events__
+ * [Git Merge 2017: the full agenda is now live](https://github.com/blog/2294-git-merge-2017-the-full-agenda-is-now-live)
+
 
 __Various__
 
