@@ -44,6 +44,7 @@ __Light reading__
 
 
 __Git tools and sites__
+ * [qit ql - A git query language](https://github.com/cloudson/gitql)
 
 
 ## Credits
