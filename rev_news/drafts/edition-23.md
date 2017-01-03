@@ -31,6 +31,7 @@ This edition covers what happened during the month of December 2016.
 
 ## Releases
 
+ * [What's new in Git for Windows 2.11?](https://blogs.msdn.microsoft.com/visualstudioalm/2016/12/01/whats-new-in-git-for-windows-2-11/) (this slipped through the net of RevNews #22)
 
 ## Other News
 __Events__
