@@ -86,7 +86,7 @@ significant overhead. Even the regular `git rebase` would do that as
 `git am` had been implemented by launching `git apply` on each of the
 patches.
 
-The overhead is especially big on Windows were creating a new process
+The overhead is especially big on Windows where creating a new process
 is quite slow, but even on other OSes it requires setting up
 everything from scratch, then reading the index from disk, and then,
 after performing some changes, writing the index back to the disk.
