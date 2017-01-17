@@ -154,11 +154,11 @@ The goal is to move toward an interactive rebase fully in C as described in
 
 See discussion in:
 
-https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t
+[https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t](https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t)
 
 
 ### Improvements to `git name-rev` or `git for-each-ref` or `git log --stdin --no-walk` or `git cat-file --batch-check`
 
 The goal is to better format object related information as discussed in:
 
-https://public-inbox.org/git/CA+P7+xr4ZNCCJkS0=yR-FNu+MrL60YX-+Wsz9L_5LCNhnY_d=A@mail.gmail.com/
+[https://public-inbox.org/git/CA+P7+xr4ZNCCJkS0=yR-FNu+MrL60YX-+Wsz9L_5LCNhnY_d=A@mail.gmail.com/](https://public-inbox.org/git/CA+P7+xr4ZNCCJkS0=yR-FNu+MrL60YX-+Wsz9L_5LCNhnY_d=A@mail.gmail.com/)
