@@ -151,7 +151,7 @@ __Light reading__
 __Git tools and sites__
  * [qit ql - A git query language](https://github.com/cloudson/gitql)
  * [Git Repo Analysis - Scripts to identify possible culprits for slow/large repositories](https://github.com/larsxschneider/git-repo-analysis)
-
+ * [git-test - A script for running automated tests across some commits and keeping track of the results](http://public-inbox.org/git/1341c01a-aca7-699c-c53a-28d048614bfe@alum.mit.edu/)
 
 ## Credits
 
