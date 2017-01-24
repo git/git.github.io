@@ -131,7 +131,29 @@ As there has been no further discussion on this and removing
 "format.signOff" does not look simple nor user friendly, the current
 situation, which is a bit ackward, may last for a long time.
 
-<!--- ### Support -->
+
+### Support
+
+* [Rebasing multiple branches at once](https://public-inbox.org/git/20161231081433.3zo6lrsjsu2qho4u@glandium.org/)
+
+Mike Hommey asked whether `git rebase` should be enhanced to support
+rebasing multiple branches at once, or if it should go in a separate
+tool.
+
+Junio Hamano mentioned workaround people are using (for specific example
+Mike described in original post), while explaining its limitations.
+
+> What people seem to do is to teach [one] branch [...] that
+> its upstream is the [other] local branch [...], so that they can
+> be lazy when rebasing a branch that knows its upstream.
+
+Jeff King wrote about own personal [meta/rebase](https://github.com/peff/git/blob/meta/rebase)
+tool, using a topological sort to order rebases, which solves Mike's
+problem.  Johannes Sixt reminded us about the `git-garden-shears` tool
+that Johannes Schindelin posted to git mailing list in
+[Git garden shears, was Re: [PATCH 13/22] sequencer: remember the onelines when parsing the todo file](https://public-inbox.org/git/alpine.DEB.2.20.1609111027330.129229@virtualbox/).
+
+
 
 ## Releases
 
