@@ -135,7 +135,7 @@ situation, which is a bit ackward, may last for a long time.
 
 ## Releases
 
- * [What's new in Git for Windows 2.11?](https://blogs.msdn.microsoft.com/visualstudioalm/2016/12/01/whats-new-in-git-for-windows-2-11/) (this slipped through the net of RevNews #22)
+* [What's new in Git for Windows 2.11?](https://blogs.msdn.microsoft.com/visualstudioalm/2016/12/01/whats-new-in-git-for-windows-2-11/) (this slipped through the net of RevNews #22)
 * [rugged v0.25.1.1](https://github.com/libgit2/rugged/releases/tag/v0.25.1.1)
 * [pygit v0.25.0](https://github.com/libgit2/pygit2/releases/tag/v0.25.0)
 * [LibGit2Sharp v0.23.1](https://github.com/libgit2/libgit2sharp/releases/tag/v0.23.1)
@@ -147,22 +147,27 @@ situation, which is a bit ackward, may last for a long time.
 
 __Events__
 
- * [Git Merge 2017: the full agenda is now live](https://github.com/blog/2294-git-merge-2017-the-full-agenda-is-now-live)
+* [Git Merge 2017: the full agenda is now live](https://github.com/blog/2294-git-merge-2017-the-full-agenda-is-now-live)
 
 __Light reading__
 
+* [Git in 2016](https://hackernoon.com/git-in-2016-fad96ae22a15#.hyxehnc7l)
 * [When to make a Git Commit](https://dev.to/gonedark/when-to-make-a-git-commit)
 * [The next billion programmers (won’t use Git)](https://medium.com/@gerstenzang/the-next-billion-programmers-wont-use-git-5e8b0ea57886#.xg5ptwuoe)
 * [submodules vs. subtrees](https://andrey.nering.com.br/2016/git-submodules-vs-subtrees/)
 * [The Universe of Discourse : Another Git catastrophe cleaned up](http://blog.plover.com/prog/git-tastrophe.html)
 * [Your Git Log Should Tell A Story](http://www.mokacoding.com/blog/your-git-log-should-tell-a-story/)
 * [How git-mediate made me stop fearing merge conflicts](https://medium.com/@yairchu/how-git-mediate-made-me-stop-fearing-merge-conflicts-and-start-treating-them-like-an-easy-game-of-a2c71b919984#.b52n3ysjw)
+* [Changing history, or How to Git pretty](http://justinhileman.info/article/changing-history/)
+* [Bash Shortcuts to Enhance Your Git Workflow](https://medium.freecodecamp.com/bash-shortcuts-to-enhance-your-git-workflow-5107d64ea0ff#.pza61nb9p)
+* [Writing git hooks with Git::Hooks](http://perladvent.org/2016/2016-12-07.html) from Perl Advent Calendar 2016
+* [How we made diff pages three times faster](https://githubengineering.com/how-we-made-diff-pages-3x-faster/) on GitHub Engineering blog
 
 __Git tools and sites__
 
- * [qit ql - A git query language](https://github.com/cloudson/gitql)
- * [Git Repo Analysis - Scripts to identify possible culprits for slow/large repositories](https://github.com/larsxschneider/git-repo-analysis)
- * [git-test - A script for running automated tests across some commits and keeping track of the results](http://public-inbox.org/git/1341c01a-aca7-699c-c53a-28d048614bfe@alum.mit.edu/)
+* [qit ql - A git query language](https://github.com/cloudson/gitql)
+* [Git Repo Analysis - Scripts to identify possible culprits for slow/large repositories](https://github.com/larsxschneider/git-repo-analysis)
+* [git-test - A script for running automated tests across some commits and keeping track of the results](http://public-inbox.org/git/1341c01a-aca7-699c-c53a-28d048614bfe@alum.mit.edu/)
 * [git-quick-stats - access various statistics in git repository](https://github.com/arzzen/git-quick-stats/)
 * [git-map - execute git commands in multiple Git repositories](https://github.com/icefox/git-map)
 * [git-snap-commit - take snapshots of your index.html as it changes from time to time](https://github.com/mnafees/git-snap-commit)
@@ -172,6 +177,10 @@ __Git tools and sites__
 * [Archaeology Tool DeepGit](http://www.syntevo.com/deepgit/)
 * [Gitea](https://gitea.io/en-US/) is a community managed fork of Gogs, a lightweight code hosting solution written in Go.
 * [git-mediate - a tool resolving trivial conflicts](https://github.com/Peaker/git-mediate)
+* [Viz - Visualize GitHub's Newest, Most Popular Repos](http://donnemartin.com/viz/)
+* [Fac](http://physics.oregonstate.edu/~roundyd/fac/) is a general-purpose build system ensuring that all source files are added to a (git) repo
+* [Bisectable](https://github.com/perl6/whateverable/wiki/Bisectable) is IRC bot on #perl6 helping to find *when* something was broken in Perl6 (Rakudo) codebase
+* [Easily clean up a team's remote git branches](http://blogs.perl.org/users/ovid/2016/11/easily-clean-up-a-teams-remote-git-branches.html)
 
 ## Credits
 
