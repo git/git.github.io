@@ -171,6 +171,7 @@ __Git tools and sites__
 * [truffleHog - searches through git repositories for high entropy strings](https://github.com/dxa4481/truffleHog)
 * [Archaeology Tool DeepGit](http://www.syntevo.com/deepgit/)
 * [Gitea](https://gitea.io/en-US/) is a community managed fork of Gogs, a lightweight code hosting solution written in Go.
+* [git-mediate - a tool resolving trivial conflicts](https://github.com/Peaker/git-mediate)
 
 ## Credits
 
