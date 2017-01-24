@@ -57,7 +57,7 @@ Following these events, Stefan sent a separate
 [patch to remove git-convert-objects from the 'contrib' directory](https://public-inbox.org/git/20161228180205.29213-1-sbeller@google.com/).
 This other tool "originally named git-convert-cache, was used in early
 2005 to convert to a new repository format, e.g. adding an author
-date."
+date".
 
 Philip Oakley also recently sent a small
 [patch series to update the git-gui and gitk documentation](https://public-inbox.org/git/20170112213240.7972-1-philipoakley@iee.org/)
@@ -70,7 +70,7 @@ So it looks like a spring cleanup is indeed happening.
 
 * [am: add am.signoff add config variable](https://public-inbox.org/git/1482946838-28779-1-git-send-email-ehabkost@redhat.com/)
 
-Eduardo Habkost sent a short patch to add a "am.signoff" configuration
+Eduardo Habkost sent a short patch to add an "am.signoff" configuration
 option to `git am`. This option would automatically add a
 "Signed-off-by: author name <author_email@address>" line to the end of
 the commit message, when `git am` creates a commit.
@@ -127,9 +127,9 @@ Stefan then came up with a many steps plan to remove "format.signOff",
 while saying he is not fully convinced it is bad, as he finds
 "format.signoff" *very* useful.
 
-As there has been no further discussion on this and removing
+As there has been no further discussion on this, and removing
 "format.signOff" does not look simple nor user friendly, the current
-situation, which is a bit ackward, may last for a long time.
+situation, which is a bit awkward, may last for a long time.
 
 <!--- ### Support -->
 
@@ -141,7 +141,7 @@ situation, which is a bit ackward, may last for a long time.
 * [LibGit2Sharp v0.23.1](https://github.com/libgit2/libgit2sharp/releases/tag/v0.23.1)
 * [libgit2 v0.25.1](https://github.com/libgit2/libgit2/releases/tag/v0.25.1)
 * [JGit / EGit Release 4.6.0](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03245.html)
-* [GitLab 8.16 ](https://about.gitlab.com/2017/01/22/gitlab-8-16-released/) through security releases [8.16.1, 8.15.5, 8.14.7, and 8.13.12](https://about.gitlab.com/2017/01/23/gitlab-8-dot-16-dot-1-security-release/)
+* [GitLab 8.16](https://about.gitlab.com/2017/01/22/gitlab-8-16-released/) through security releases [8.16.1, 8.15.5, 8.14.7, and 8.13.12](https://about.gitlab.com/2017/01/23/gitlab-8-dot-16-dot-1-security-release/)
 
 ## Other News
 
@@ -154,13 +154,13 @@ __Light reading__
 * [When to make a Git Commit](https://dev.to/gonedark/when-to-make-a-git-commit)
 * [The next billion programmers (won’t use Git)](https://medium.com/@gerstenzang/the-next-billion-programmers-wont-use-git-5e8b0ea57886#.xg5ptwuoe)
 * [submodules vs. subtrees](https://andrey.nering.com.br/2016/git-submodules-vs-subtrees/)
-* [The Universe of Discourse : Another Git catastrophe cleaned up](http://blog.plover.com/prog/git-tastrophe.html)
+* [The Universe of Discourse: Another Git catastrophe cleaned up](http://blog.plover.com/prog/git-tastrophe.html)
 * [Your Git Log Should Tell A Story](http://www.mokacoding.com/blog/your-git-log-should-tell-a-story/)
 * [How git-mediate made me stop fearing merge conflicts](https://medium.com/@yairchu/how-git-mediate-made-me-stop-fearing-merge-conflicts-and-start-treating-them-like-an-easy-game-of-a2c71b919984#.b52n3ysjw)
 
 __Git tools and sites__
 
- * [qit ql - A git query language](https://github.com/cloudson/gitql)
+ * [Gitql - A git query language](https://github.com/cloudson/gitql)
  * [Git Repo Analysis - Scripts to identify possible culprits for slow/large repositories](https://github.com/larsxschneider/git-repo-analysis)
  * [git-test - A script for running automated tests across some commits and keeping track of the results](http://public-inbox.org/git/1341c01a-aca7-699c-c53a-28d048614bfe@alum.mit.edu/)
 * [git-quick-stats - access various statistics in git repository](https://github.com/arzzen/git-quick-stats/)
@@ -177,6 +177,6 @@ __Git tools and sites__
 This edition of Git Rev News was curated by
 Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;,
-Jakub Narębski &lt;<jnareb@gmail.com>&gt; and
-Markus Jansen &lt;<mja@jansen-preisler.de>&gt;
-with help from Lars Schneider, XXX.
+Jakub Narębski &lt;<jnareb@gmail.com>&gt;, and
+Markus Jansen &lt;<mja@jansen-preisler.de>&gt;,
+with help from Lars Schneider &lt;<larsxschneider@gmail.com>&gt;.
