@@ -162,19 +162,19 @@ After a bit of back and forth to clarify where this test failure
 occurs, and what it was caused by, it turned out that the problem was
 caused by the use of the [musl][] library for providing the regex functionality.
 Specifically, the test suite was expecting `regcomp()` to complain
-about "\x{2b}" while trying to check that "git grep -P -E" overrides
-the "-P" [PCRE][] option with "-E", which should not accept the "\x"
+about `\x{2b}` while trying to check that `git grep -P -E` overrides
+the `-P` [PCRE][] option with `-E`, which should not accept the `\x`
 regex extension.
-Unlike the standard POSIX libc, [musl][] has implemented "\x"
-the same way as [PCRE][], which unexpectedly causes "git grep -E"
+Unlike the standard POSIX libc, [musl][] has implemented `\x`
+the same way as [PCRE][], which unexpectedly causes `git grep -E`
 to understand the regex, and thus the test to fail.
 
-POSIX simply declares the "\x" regex construct as "undefined",
+POSIX simply declares the `\x` regex construct as "undefined",
 which leaves implementations such as [musl][] and [PCRE][]
 free to extend the standard if they choose; as a consequence,
 one should not rely on whatever assumption in this direction.
-Jeff King, alias Peff, found that "[\d]" strictly matches a literal "\" or "d"
-in POSIX ERE, but behaves like "[0-9]" in [PCRE][]. 
+Jeff King, alias Peff, found that `[\d]` strictly matches a literal `\\` or `d`
+in POSIX ERE, but behaves like `[0-9]` in [PCRE][]. 
 POSIX implementations are not free to change this behaviour,
 so we should be able to rely on it.
 Peff finally fixed the test suite in [[PATCH] t7810: avoid assumption about invalid regex syntax](https://public-inbox.org/git/20170111111055.j3hgijpaabvy6kyg@sigill.intra.peff.net/) accordingly.
