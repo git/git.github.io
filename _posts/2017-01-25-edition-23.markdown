@@ -156,31 +156,40 @@ that Johannes Schindelin posted to git mailing list in
 * [Test failures when Git is built with libpcre and grep is built without it](https://public-inbox.org/git/58688C9F.4000605@adelielinux.org/)
 
 A. Wilcox ([awilfox][]) wrote that an attempt to package Git for a new Linux
-distribution ([Adélie Linux][]) had run into test failure in PowerPC builder
-used.  After a bit of back and forth to clarify where this test failure
+distribution ([Adélie Linux][]) with their PowerPC builder had run 
+into a failure while running the test suite. 
+After a bit of back and forth to clarify where this test failure
 occurs, and what it was caused by, it turned out that the problem was
-with use of [musl][] library, which is providing the libc regex.  Or rather
-with the fact that test suite was expecting `regcomp()` to complain
-about "\x{2b}", when checking "-P -E" overrides the pcre option with "-E".
-But "\x{2b}", which is valid in PCRE, is simply not defined by POSIX
-(for basic or extended regular expression), so musl was not wrong in
-extending the standard.
+caused by the use of the [musl][] library for providing the regex functionality.
+Specifically, the test suite was expecting `regcomp()` to complain
+about "\x{2b}" while trying to check that "git grep -P -E" overrides
+the "-P" [PCRE][] option with "-E", which should not accept the "\x"
+regex extension.
+Unlike the standard POSIX libc, [musl][] has implemented "\x"
+the same way as [PCRE][], which unexpectedly causes "git grep -E"
+to understand the regex, and thus the test to fail.
 
-Jeff King fixed the testsuite in [[PATCH] t7810: avoid assumption about invalid regex syntax](https://public-inbox.org/git/20170111111055.j3hgijpaabvy6kyg@sigill.intra.peff.net/).
-He found is that "[\d]" matches a literal "\" or "d" in ERE,
-but behaves like "[0-9]" in PCRE.  Moreover, implementations are not free
-to change this according to POSIX.
+POSIX simply declares the "\x" regex construct as "undefined",
+which leaves implementations such as [musl][] and [PCRE][]
+free to extend the standard if they choose; as a consequence,
+one should not rely on whatever assumption in this direction.
+Jeff King, alias Peff, found that "[\d]" strictly matches a literal "\" or "d"
+in POSIX ERE, but behaves like "[0-9]" in [PCRE][]. 
+POSIX implementations are not free to change this behaviour,
+so we should be able to rely on it.
+Peff finally fixed the test suite in [[PATCH] t7810: avoid assumption about invalid regex syntax](https://public-inbox.org/git/20170111111055.j3hgijpaabvy6kyg@sigill.intra.peff.net/) accordingly.
 
 Anyway, recent versions of Git won't build with musl's regex at all,
-because it doesn't support the non-standard `REG_STARTEND` that Git
-rely on since [b7d36ffca (regex: use regexec_buf(), 2016-09-21)](https://git.kernel.org/cgit/git/git.git/commit/?id=b7d36ffca), but
-the build would fall back to regex code included in Git (`NO_REGEX`).
-Here's hoping that more regex-support libraries, including musl, would
-implement this extension...
+because it doesn't support the non-standard `REG_STARTEND` which Git
+relies on since [b7d36ffca (regex: use regexec_buf(), 2016-09-21)](https://git.kernel.org/cgit/git/git.git/commit/?id=b7d36ffca).
+In this case, the build would fall back to regex code included in Git (`NO_REGEX`).
+We hope that more regex support libraries, including musl,
+will implement this extension one day...
 
 [awilfox]: https://github.com/awilfox
 [Adélie Linux]: http://adelielinux.org
 [musl]: https://www.musl-libc.org/
+[PCRE]: http://pcre.org/
 
 
 ## Releases
