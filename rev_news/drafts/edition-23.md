@@ -153,6 +153,34 @@ problem.  Johannes Sixt reminded us about the `git-garden-shears` tool
 that Johannes Schindelin posted to git mailing list in
 [Git garden shears, was Re: [PATCH 13/22] sequencer: remember the onelines when parsing the todo file](https://public-inbox.org/git/alpine.DEB.2.20.1609111027330.129229@virtualbox/).
 
+* [Test failures when Git is built with libpcre and grep is built without it](https://public-inbox.org/git/58688C9F.4000605@adelielinux.org/)
+
+A. Wilcox ([awilfox][]) wrote that an attempt to package Git for a new Linux
+distribution ([Adélie Linux][]) had run into test failure in PowerPC builder
+used.  After a bit of back and forth to clarify where this test failure
+occurs, and what it was caused by, it turned out that the problem was
+with use of [musl][] library, which is providing the libc regex.  Or rather
+with the fact that test suite was expecting `regcomp()` to complain
+about "\x{2b}", when checking "-P -E" overrides the pcre option with "-E".
+But "\x{2b}", which is valid in PCRE, is simply not defined by POSIX
+(for basic or extended regular expression), so musl was not wrong in
+extending the standard.
+
+Jeff King fixed the testsuite in [[PATCH] t7810: avoid assumption about invalid regex syntax](https://public-inbox.org/git/20170111111055.j3hgijpaabvy6kyg@sigill.intra.peff.net/).
+He found is that "[\d]" matches a literal "\" or "d" in ERE,
+but behaves like "[0-9]" in PCRE.  Moreover, implementations are not free
+to change this according to POSIX.
+
+Anyway, recent versions of Git won't build with musl's regex at all,
+because it doesn't support the non-standard `REG_STARTEND` that Git
+rely on since [b7d36ffca (regex: use regexec_buf(), 2016-09-21)](https://git.kernel.org/cgit/git/git.git/commit/?id=b7d36ffca), but
+the build would fall back to regex code included in Git (`NO_REGEX`).
+Here's hoping that more regex-support libraries, including musl, would
+implement this extension...
+
+[awilfox]: https://github.com/awilfox
+[Adélie Linux]: http://adelielinux.org
+[musl]: https://www.musl-libc.org/
 
 
 ## Releases
