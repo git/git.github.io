@@ -158,6 +158,7 @@ that Johannes Schindelin posted to git mailing list in
 ## Releases
 
 * [What's new in Git for Windows 2.11?](https://blogs.msdn.microsoft.com/visualstudioalm/2016/12/01/whats-new-in-git-for-windows-2-11/) (this slipped through the net of RevNews #22)
+* Git for Windows [version v2.11.0(3)](https://github.com/git-for-windows/git/releases/tag/v2.11.0.windows.3) was released
 * [rugged v0.25.1.1](https://github.com/libgit2/rugged/releases/tag/v0.25.1.1)
 * [pygit v0.25.0](https://github.com/libgit2/pygit2/releases/tag/v0.25.0)
 * [LibGit2Sharp v0.23.1](https://github.com/libgit2/libgit2sharp/releases/tag/v0.23.1)
