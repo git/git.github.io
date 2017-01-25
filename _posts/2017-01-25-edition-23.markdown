@@ -173,7 +173,7 @@ POSIX simply declares the `\x` regex construct as "undefined",
 which leaves implementations such as [musl][] and [PCRE][]
 free to extend the standard if they choose; as a consequence,
 one should not rely on whatever assumption in this direction.
-Jeff King, alias Peff, found that `[\d]` strictly matches a literal `\\` or `d`
+Jeff King, alias Peff, found that `[\d]` strictly matches a literal `\` or `d`
 in POSIX ERE, but behaves like `[0-9]` in [PCRE][]. 
 POSIX implementations are not free to change this behaviour,
 so we should be able to rely on it.
