@@ -162,3 +162,60 @@ See discussion in:
 The goal is to better format object related information as discussed in:
 
 [https://public-inbox.org/git/CA+P7+xr4ZNCCJkS0=yR-FNu+MrL60YX-+Wsz9L_5LCNhnY_d=A@mail.gmail.com/](https://public-inbox.org/git/CA+P7+xr4ZNCCJkS0=yR-FNu+MrL60YX-+Wsz9L_5LCNhnY_d=A@mail.gmail.com/)
+
+### Submodule related work:
+
+* Cleanup our test suite.  Do not use a repo itself as a submodule for itself
+  (Search for "git submodule add ./. <name>")
+
+* Fix the ./ bug for submodule URL handling.
+  (c.f. https://public-inbox.org/git/20161021235939.20792-4-sbeller@google.com/)
+
+* Teach "git -C <submodule-path> status" in an un-populated submodule
+  to report the submodule being un-populated, do not fall back to the
+  superproject.
+
+* "git -C sub add ." might behave just like "git add sub"
+
+* Teach "git log -- <path/into/submodule/and/further>" to behave
+  like "git -C <path/into/submodule> log -- <and/further>
+
+* git archive(/bundle) to have a --recurse-submodules flag to
+  include the submodule contents.
+
+* Convert a submodule subcommand to C (c.f. 3604242f080a8,
+  submodule: port init from shell to C, 2016-04-15)
+  I'd propose to go for "foreach" first, as that will
+  have most performance impact and is one of the shortest
+
+* (Advanced datastructure knowledge required?)
+  Protect submodule from gc-ing interesting HEADS.
+  Given that the the modules file has a ‘branch’ field, we may want checkout
+  to have the ability to checkout the branch specified in this ‘branch’ field.
+  This can be especially useful when making a brand new branch in the
+  superproject which can then make corresponding branches in the submodules.
+  Or if we are tracking a particular branch, we can checkout that branch
+  (given HEAD of that branch is pointing to the same SHA1 that is checked
+  into the superproject).  This may be needed to avoid unintended garbage
+  collection of commits in the submodules which aren’t reachable by the
+  standard refs/branches.
+
+* (Advanced understanding of usability:)
+  Design and implement an "overlay" for .gitmodules as a ref.
+  To get submodules to usable state, you need to configure a lot. To aid with
+  this the file ".gitmodules" in the repository provides some defaults that
+  are copied to the actual config e.g. in "git submodule init".
+  These defaults are not always the right choice (e.g. when working in a
+  large organisation, you may have an internal git mirror site, that
+  you rather want to clone/fetch from; This can be helped with by configuring
+  e.g. url."<pattern>".insteadOf; But generally this is a pain for users; this
+  large organisation could provide such a configuration as a ref as well,
+  which has higher priority than the .gitmodules file, but lower priority
+  than the .git/config file.)
+
+### Discourage pushing annotated tag to a branch ref
+  If I run
+
+    git push origin v1.0:refs/heads/master
+
+  and v1.0 is an annotated tag, then I probably meant v1.0^{commit}, not ^{tag}.
