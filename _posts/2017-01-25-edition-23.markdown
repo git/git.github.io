@@ -214,7 +214,7 @@ __Light reading__
 * [Git in 2016](https://hackernoon.com/git-in-2016-fad96ae22a15#.hyxehnc7l)
 * [When to make a Git Commit](https://dev.to/gonedark/when-to-make-a-git-commit)
 * [The next billion programmers (won’t use Git)](https://medium.com/@gerstenzang/the-next-billion-programmers-wont-use-git-5e8b0ea57886#.xg5ptwuoe)
-* [submodules vs. subtrees](https://andrey.nering.com.br/2016/git-submodules-vs-subtrees/)
+* [Git: submodules vs. subtrees](https://andrey.nering.com.br/2016/git-submodules-vs-subtrees/)
 * [The Universe of Discourse: Another Git catastrophe cleaned up](http://blog.plover.com/prog/git-tastrophe.html)
 * [Your Git Log Should Tell A Story](http://www.mokacoding.com/blog/your-git-log-should-tell-a-story/)
 * [How git-mediate made me stop fearing merge conflicts](https://medium.com/@yairchu/how-git-mediate-made-me-stop-fearing-merge-conflicts-and-start-treating-them-like-an-easy-game-of-a2c71b919984#.b52n3ysjw)
