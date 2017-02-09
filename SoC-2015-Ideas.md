@@ -1,6 +1,7 @@
 ---
 layout: default
 title: SoC 2015 Ideas
+navbar: false
 ---
 
 This is the idea page for Summer of Code 2015 for Git and libgit2.

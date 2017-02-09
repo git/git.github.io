@@ -1,6 +1,7 @@
 ---
 layout: default
 title: SoC 2015 Applicant Microprojects
+navbar: false
 ---
 
 ## Introduction
