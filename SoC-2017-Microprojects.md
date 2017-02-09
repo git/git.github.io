@@ -144,6 +144,7 @@ This project requires a very good knowledge of regular expressions.
 ### Make "`git tag --contains <id>`" less chatty if `<id>` is invalid
 
 `git tag --contains <id>` prints the whole help text if `<id>` is invalid.
+It should only show the error message instead. [[thread](https://public-inbox.org/git/20160118215433.GB24136@sigill.intra.peff.net)]
 
 ### Git CI Improvements 1
 
@@ -208,14 +209,14 @@ for example.
 Pick one command that operates on branch names.  Teach it the "-"
 shorthand that stands for "the branch we were previously on", like we
 did for "git merge -" sometime after we introduced "git checkout -".
-Cf. $gmane/230828
+[[thread](https://public-inbox.org/git/7vppuewl6h.fsf@alter.siamese.dyndns.org)]
 
 ### Use unsigned integral type for collection of bits.
 
 Pick one field of a structure that (1) is of signed integral type and (2) is
 used as a collection of multiple bits. Discuss if there is a good reason
 why it has to be a signed integral field and change it to an unsigned
-type otherwise.  Cf. $gmane/263751
+type otherwise.  [[thread](https://public-inbox.org/git/xmqqsiebrlez.fsf@gitster.dls.corp.google.com)]
 
 ### Move `~/.git-credential-cache` to `~/.cache/git`
 
