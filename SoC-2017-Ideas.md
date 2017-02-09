@@ -156,6 +156,8 @@ See discussion in:
 
 [https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t](https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t)
 
+ - Difficulty: medium
+ - Possible mentors: Christian Couder, ????
 
 ### Improvements to `git name-rev` or `git for-each-ref` or `git log --stdin --no-walk` or `git cat-file --batch-check`
 
