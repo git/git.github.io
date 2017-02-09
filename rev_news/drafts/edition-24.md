@@ -52,8 +52,8 @@ attempts (configure && make..., on a system with libs without headers,
 no root). So I went with Mercurial since I was getting into Python
 anyway. Only to be confused by hg's mantra "to clone is to branch and to
 branch is to clone" when there were two commands "clone" and "branch"
-which did something completely different and - in the case of the latter
-- not very useful, it appeared to me. (hg has the more useful
+which did something completely different and - in the case of the latter -
+not very useful, it appeared to me. (hg has the more useful
 "bookmarks" these days.)
 
 In the end, it was the branch concept and the tone on the respective
@@ -85,13 +85,13 @@ participate more actively in the Git mailing list.
 * If you could get a team of expert developers to work full time on
 something in Git for a full year, what would it be?
 
-- refs namespace: have tags, notes, replace etc. under remotes/<remote>
-with proper merging so that those features learn to fly; requires a
-transition plan
+  - refs namespace: have tags, notes, replace etc. under
+    remotes/<remote> with proper merging so that those features learn
+    to fly; requires a transition plan
 
-- rework the UI and make it less surprising: e.g. unify short option
-names, introduce pseudorefs for the index and worktree and the like;
-requires a transition plan
+  - rework the UI and make it less surprising: e.g. unify short option
+    names, introduce pseudorefs for the index and worktree and the
+    like; requires a transition plan
 
 * If you could remove something from Git without worrying about
 backwards compatibility, what would it be?
@@ -100,8 +100,8 @@ I would do the above without the need for a transition plan :)
 
 * What is your favorite Git-related tool/library, outside of Git itself?
 
-anything that makes textconv fly (unoconv, pdftotext); tig when "log
---graph" is ambiguous; I should use tig more ;)
+Anything that makes textconv fly (unoconv, pdftotext); tig when
+`log --graph` is ambiguous; I should use tig more ;)
 
 ## Releases
 
