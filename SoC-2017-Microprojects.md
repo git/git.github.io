@@ -218,15 +218,16 @@ used as a collection of multiple bits. Discuss if there is a good reason
 why it has to be a signed integral field and change it to an unsigned
 type otherwise.  Cf. $gmane/263751
 
-### Move ~/.git-credential-cache to ~/.cache/git
+### Move `~/.git-credential-cache` to `~/.cache/git`
 
 Most of git dotfiles can be located, at the user's option, in
-~/.<file> or in ~/.config/git/<file>, following the
+`~/.<file>` or in `~/.config/git/<file>`, following the
 [XDG standard](http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html).
-~/.git-credential-cache is still hardcoded as ~/.git-credential-cache,
+`~/.git-credential-cache` is still hardcoded as
+`~/.git-credential-cache`,
 but should allow using the XDG directory layout too as
-~/.cache/git/credential, possibly modified by $XDG_CONFIG_HOME and
-$XDG_CACHE_HOME).
+`~/.cache/git/credential`, possibly modified by `$XDG_CONFIG_HOME` and
+`$XDG_CACHE_HOME`).
 
 The suggested approach is:
 
