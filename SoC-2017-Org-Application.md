@@ -255,6 +255,7 @@ the mailing list a year or more after their GSoC"):
  - 2012: 3 pass, 0 fail, 2 retained
  - 2014: 2 pass, 1 fail, 0 retained
  - 2015: 2 pass, 0 fail, 2 retained
+ - 2016: 1 pass, 0 fail, 1 retained
 
 ### If your org has applied for GSoC before but not been accepted, select the years:
 
