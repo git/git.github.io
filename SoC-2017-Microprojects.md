@@ -141,10 +141,9 @@ example, shell.
 
 This project requires a very good knowledge of regular expressions.
 
-### Make "`git tag --contains <id>`" less chatty if <id> is invalid
+### Make "`git tag --contains <id>`" less chatty if `<id>` is invalid
 
-git tag `--contains` <id> prints the whole help text if <id> is invalid.
-It should only show the error message instead. Cf. $gmane/284328
+`git tag --contains <id>` prints the whole help text if `<id>` is invalid.
 
 ### Git CI Improvements 1
 
