@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Outreachy May 2016
+navbar: false
 ---
 
 # Outreachy May 2016
