@@ -1,9 +1,9 @@
 ---
 layout: default
-title: SoC 2016 Organization Application
+title: SoC 2017 Organization Application
 ---
 
-This is a draft of git's application to Google's Summer of Code 2016.
+This is a draft of git's application to Google's Summer of Code 2017.
 
 # Git Profile
 
@@ -37,7 +37,7 @@ version control, dvcs
 
 ## Ideas List
 
-<https://git.github.io/SoC-2016-Ideas/>
+<https://git.github.io/SoC-2017-Ideas/>
 
 ## Short Description (180 chars max)
 
@@ -69,7 +69,7 @@ template or tips for their proposals. May include limited Markdown.
 ```
 
 Please read the "About applying for SoC with the Git project" section
-in the ideas page: https://git.github.io/SoC-2016-Ideas/
+in the ideas page: https://git.github.io/SoC-2017-Ideas/
 
 The primary way to contact the Git community is through the Git
 mailing list git@vger.kernel.org. Please discuss your application on
@@ -94,7 +94,7 @@ instructions.
 
 There is also an IRC channel: <http://git-scm.com/community>.
 
-# 2016 Application Form
+# 2017 Application Form
 
 ## Why does your org want to participate in Google Summer of Code?
 
