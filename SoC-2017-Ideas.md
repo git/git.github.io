@@ -109,7 +109,7 @@ of the list and
 
  - Language: C, shell (bash)
  - Difficulty: medium
- - Possible mentors: Christian Couder, ????
+ - Possible mentors: Christian Couder, Johannes Schindelin, Stefan Beller
 
 #### Implement `git bisect --first-parent`.
 
@@ -127,6 +127,10 @@ logarithmic).
 
 
 ### Convert scripts to builtins
+
+ - Language: C, shell (bash), possibly Perl
+ - Difficulty: hard
+ - Possible mentors: Johannes Schindelin, Stefan Beller, Christian Couder
 
 Many components of Git are still in the form of shell and Perl scripts.
 While this is an excellent choice as long as the functionality is
@@ -146,26 +150,39 @@ helper inside the existing shell-script.
 
 ### Convert interactive rebase to C
 
+ - Language: C, shell (bash)
+ - Difficulty: hard
+ - Possible mentors: Johannes Schindelin, Stefan Beller, Christian Couder
+
 The goal is to move toward an interactive rebase fully in C as described in
 [Dscho 's answer to Jakub](http://public-inbox.org/git/alpine.DEB.2.20.1609021432070.129229@virtualbox/)
 
 
 ### `git log --oneline` improvements
 
+ - Language: C, shell (bash)
+ - Difficulty: medium
+ - Possible mentors: Christian Couder, Johannes Schindelin, Stefan Beller
+
 See discussion in:
 
 [https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t](https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t)
 
- - Difficulty: medium
- - Possible mentors: Christian Couder, ????
-
 ### Improvements to `git name-rev` or `git for-each-ref` or `git log --stdin --no-walk` or `git cat-file --batch-check`
+
+ - Language: C, shell (bash)
+ - Difficulty: medium
+ - Possible mentors: Christian Couder, Johannes Schindelin, Stefan Beller
 
 The goal is to better format object related information as discussed in:
 
 [https://public-inbox.org/git/CA+P7+xr4ZNCCJkS0=yR-FNu+MrL60YX-+Wsz9L_5LCNhnY_d=A@mail.gmail.com/](https://public-inbox.org/git/CA+P7+xr4ZNCCJkS0=yR-FNu+MrL60YX-+Wsz9L_5LCNhnY_d=A@mail.gmail.com/)
 
 ### Submodule related work:
+
+ - Language: C, shell (bash)
+ - Difficulty: medium
+ - Possible mentors: Stefan Beller, Christian Couder
 
 * Cleanup our test suite.  Do not use a repo itself as a submodule for itself
   (Search for "git submodule add ./. <name>")
@@ -216,7 +233,12 @@ The goal is to better format object related information as discussed in:
   than the .git/config file.)
 
 ### Discourage pushing annotated tag to a branch ref
-  If I run
+
+ - Language: C, shell (bash)
+ - Difficulty: medium
+ - Possible mentors: Stefan Beller, Johannes Schindelin, Christian Couder
+
+  If I run:
 
     git push origin v1.0:refs/heads/master
 
