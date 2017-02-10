@@ -3,7 +3,7 @@ layout: default
 title: SoC 2017 Ideas
 ---
 
-This is the idea page for Summer of Code 2017 for Git and libgit2.
+This is the idea page for Summer of Code 2017 for Git.
 
 ## About applying for SoC with the Git project
 
@@ -100,9 +100,7 @@ These days we usually accept between 0 and 2 students per year.
 
 **Students**: Please consider these ideas as starting points for
 generating proposals. We are also more than happy to receive proposals
-for other ideas related to Git or libgit2. For libgit2, see the bottom
-of the list and
-[the libgit2 list of projects](https://github.com/libgit2/libgit2/blob/master/PROJECTS.md).
+for other ideas related to Git.
 
 
 ### git bisect improvements
