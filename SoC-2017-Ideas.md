@@ -152,7 +152,7 @@ The goal is to move toward an interactive rebase fully in C as described in
 
 See discussion in:
 
-[https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t](https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t)
+<https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t>
 
  - Difficulty: medium
  - Possible mentors: Christian Couder, ????
@@ -161,7 +161,7 @@ See discussion in:
 
 The goal is to better format object related information as discussed in:
 
-[https://public-inbox.org/git/CA+P7+xr4ZNCCJkS0=yR-FNu+MrL60YX-+Wsz9L_5LCNhnY_d=A@mail.gmail.com/](https://public-inbox.org/git/CA+P7+xr4ZNCCJkS0=yR-FNu+MrL60YX-+Wsz9L_5LCNhnY_d=A@mail.gmail.com/)
+<https://public-inbox.org/git/CA+P7+xr4ZNCCJkS0=yR-FNu+MrL60YX-+Wsz9L_5LCNhnY_d=A@mail.gmail.com/>
 
 ### Submodule related work:
 
@@ -169,7 +169,7 @@ The goal is to better format object related information as discussed in:
   (Search for "`git submodule add ./. <name>`")
 
 * Fix the ./ bug for submodule URL handling.
-  (c.f. https://public-inbox.org/git/20161021235939.20792-4-sbeller@google.com/)
+  (c.f. <https://public-inbox.org/git/20161021235939.20792-4-sbeller@google.com/>)
 
 * Teach "`git -C <submodule-path> status`" in an un-populated submodule
   to report the submodule being un-populated, do not fall back to the
