@@ -113,6 +113,7 @@ __Events__
 * [We’ll be at Git Merge 2017!](https://blog.bitbucket.org/2017/02/01/well-git-merge-2017/) on Bitbucket Blog
 * [Report from Git Merge 2017](http://www.praqma.com/stories/work-on-git-merge-2017/) by Lars Kruse, _Praqma_
 * [Git Merge 2017 – what you missed](https://blog.recast.ai/git-merge-2017/) on Recast.AI Blog
+* [Review – Git Merge 2017](http://neoshops.de/2017/02/04/review-git-merge-2017/) - short impressions by Carmen Bremen, Magento freelancer
 
 __Various__
 
