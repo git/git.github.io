@@ -166,21 +166,21 @@ The goal is to better format object related information as discussed in:
 ### Submodule related work:
 
 * Cleanup our test suite.  Do not use a repo itself as a submodule for itself
-  (Search for "git submodule add ./. <name>")
+  (Search for "`git submodule add ./. <name>`")
 
 * Fix the ./ bug for submodule URL handling.
   (c.f. https://public-inbox.org/git/20161021235939.20792-4-sbeller@google.com/)
 
-* Teach "git -C <submodule-path> status" in an un-populated submodule
+* Teach "`git -C <submodule-path> status`" in an un-populated submodule
   to report the submodule being un-populated, do not fall back to the
   superproject.
 
-* "git -C sub add ." might behave just like "git add sub"
+* "`git -C sub add .`" might behave just like "`git add sub`"
 
-* Teach "git log -- <path/into/submodule/and/further>" to behave
-  like "git -C <path/into/submodule> log -- <and/further>
+* Teach "`git log -- <path/into/submodule/and/further>`" to behave
+  like "`git -C <path/into/submodule> log -- <and/further>`"
 
-* git archive(/bundle) to have a --recurse-submodules flag to
+* git archive(/bundle) to have a `--recurse-submodules` flag to
   include the submodule contents.
 
 * Convert a submodule subcommand to C (c.f. 3604242f080a8,
@@ -204,16 +204,17 @@ The goal is to better format object related information as discussed in:
   Design and implement an "overlay" for .gitmodules as a ref.
   To get submodules to usable state, you need to configure a lot. To aid with
   this the file ".gitmodules" in the repository provides some defaults that
-  are copied to the actual config e.g. in "git submodule init".
+  are copied to the actual config e.g. in "`git submodule init`".
   These defaults are not always the right choice (e.g. when working in a
   large organisation, you may have an internal git mirror site, that
   you rather want to clone/fetch from; This can be helped with by configuring
-  e.g. url."<pattern>".insteadOf; But generally this is a pain for users; this
+  e.g. `url."<pattern>".insteadOf`; But generally this is a pain for users; this
   large organisation could provide such a configuration as a ref as well,
   which has higher priority than the .gitmodules file, but lower priority
   than the .git/config file.)
 
 ### Discourage pushing annotated tag to a branch ref
+
   If I run
 
     git push origin v1.0:refs/heads/master
