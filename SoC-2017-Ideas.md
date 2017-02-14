@@ -119,8 +119,8 @@ commit on the faulty side branch.
 
 See:
 
-<https://public-inbox.org/git/20150304053333.GA9584@peff.net/>
-<https://public-inbox.org/git/4D3CDDF9.6080405@intel.com/>
+  - <https://public-inbox.org/git/20150304053333.GA9584@peff.net/>
+  - <https://public-inbox.org/git/4D3CDDF9.6080405@intel.com/>
 
 Searching the mailing list for "bisect --first-parent" might be
 helpful too.
@@ -133,7 +133,7 @@ logarithmic).
 
 See:
 
-<https://public-inbox.org/git/alpine.DEB.2.20.1702101241210.3496@virtualbox/>
+  - <https://public-inbox.org/git/alpine.DEB.2.20.1702101241210.3496@virtualbox/>
 
 
 ### Convert scripts to builtins
