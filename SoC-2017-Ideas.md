@@ -115,13 +115,25 @@ When your project is strictly "new features are merged into trunk,
 never the other way around", it is handy to be able to first find
 a merge on the trunk that merged a topic to point fingers at when
 a bug appears, instead of having to drill down to the individual
-commit on the faulty side branch. Cf.  <http://public-inbox.org/git/20150304053333.GA9584@peff.net/>
+commit on the faulty side branch.
+
+See:
+
+<https://public-inbox.org/git/20150304053333.GA9584@peff.net/>
+<https://public-inbox.org/git/4D3CDDF9.6080405@intel.com/>
+
+Searching the mailing list for "bisect --first-parent" might be
+helpful too.
 
 #### Fix some git bisect bugs
 
 In some cases, `git bisect` may test too many merge bases, thus
 slowing down the bisection (making it closer to linear than
 logarithmic).
+
+See:
+
+<https://public-inbox.org/git/alpine.DEB.2.20.1702101241210.3496@virtualbox/>
 
 
 ### Convert scripts to builtins
