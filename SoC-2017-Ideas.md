@@ -3,7 +3,7 @@ layout: default
 title: SoC 2017 Ideas
 ---
 
-This is the idea page for Summer of Code 2017 for Git and libgit2.
+This is the idea page for Summer of Code 2017 for Git.
 
 ## About applying for SoC with the Git project
 
@@ -100,9 +100,7 @@ These days we usually accept between 0 and 2 students per year.
 
 **Students**: Please consider these ideas as starting points for
 generating proposals. We are also more than happy to receive proposals
-for other ideas related to Git or libgit2. For libgit2, see the bottom
-of the list and
-[the libgit2 list of projects](https://github.com/libgit2/libgit2/blob/master/PROJECTS.md).
+for other ideas related to Git.
 
 
 ### git bisect improvements
@@ -117,13 +115,25 @@ When your project is strictly "new features are merged into trunk,
 never the other way around", it is handy to be able to first find
 a merge on the trunk that merged a topic to point fingers at when
 a bug appears, instead of having to drill down to the individual
-commit on the faulty side branch. Cf.  <http://public-inbox.org/git/20150304053333.GA9584@peff.net/>
+commit on the faulty side branch.
+
+See:
+
+  - <https://public-inbox.org/git/20150304053333.GA9584@peff.net/>
+  - <https://public-inbox.org/git/4D3CDDF9.6080405@intel.com/>
+
+Searching the mailing list for "bisect --first-parent" might be
+helpful too.
 
 #### Fix some git bisect bugs
 
 In some cases, `git bisect` may test too many merge bases, thus
 slowing down the bisection (making it closer to linear than
 logarithmic).
+
+See:
+
+  - <https://public-inbox.org/git/alpine.DEB.2.20.1702101241210.3496@virtualbox/>
 
 
 ### Convert scripts to builtins
@@ -166,7 +176,7 @@ The goal is to move toward an interactive rebase fully in C as described in
 
 See discussion in:
 
-[https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t](https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t)
+<https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t>
 
 ### Improvements to `git name-rev` or `git for-each-ref` or `git log --stdin --no-walk` or `git cat-file --batch-check`
 
@@ -176,7 +186,7 @@ See discussion in:
 
 The goal is to better format object related information as discussed in:
 
-[https://public-inbox.org/git/CA+P7+xr4ZNCCJkS0=yR-FNu+MrL60YX-+Wsz9L_5LCNhnY_d=A@mail.gmail.com/](https://public-inbox.org/git/CA+P7+xr4ZNCCJkS0=yR-FNu+MrL60YX-+Wsz9L_5LCNhnY_d=A@mail.gmail.com/)
+<https://public-inbox.org/git/CA+P7+xr4ZNCCJkS0=yR-FNu+MrL60YX-+Wsz9L_5LCNhnY_d=A@mail.gmail.com/>
 
 ### Submodule related work:
 
@@ -185,21 +195,21 @@ The goal is to better format object related information as discussed in:
  - Possible mentors: Stefan Beller, Christian Couder
 
 * Cleanup our test suite.  Do not use a repo itself as a submodule for itself
-  (Search for "git submodule add ./. <name>")
+  (Search for "`git submodule add ./. <name>`")
 
 * Fix the ./ bug for submodule URL handling.
-  (c.f. https://public-inbox.org/git/20161021235939.20792-4-sbeller@google.com/)
+  (c.f. <https://public-inbox.org/git/20161021235939.20792-4-sbeller@google.com/>)
 
-* Teach "git -C <submodule-path> status" in an un-populated submodule
+* Teach "`git -C <submodule-path> status`" in an un-populated submodule
   to report the submodule being un-populated, do not fall back to the
   superproject.
 
-* "git -C sub add ." might behave just like "git add sub"
+* "`git -C sub add .`" might behave just like "`git add sub`"
 
-* Teach "git log -- <path/into/submodule/and/further>" to behave
-  like "git -C <path/into/submodule> log -- <and/further>
+* Teach "`git log -- <path/into/submodule/and/further>`" to behave
+  like "`git -C <path/into/submodule> log -- <and/further>`"
 
-* git archive(/bundle) to have a --recurse-submodules flag to
+* git archive(/bundle) to have a `--recurse-submodules` flag to
   include the submodule contents.
 
 * Convert a submodule subcommand to C (c.f. 3604242f080a8,
@@ -223,11 +233,11 @@ The goal is to better format object related information as discussed in:
   Design and implement an "overlay" for .gitmodules as a ref.
   To get submodules to usable state, you need to configure a lot. To aid with
   this the file ".gitmodules" in the repository provides some defaults that
-  are copied to the actual config e.g. in "git submodule init".
+  are copied to the actual config e.g. in "`git submodule init`".
   These defaults are not always the right choice (e.g. when working in a
   large organisation, you may have an internal git mirror site, that
   you rather want to clone/fetch from; This can be helped with by configuring
-  e.g. url."<pattern>".insteadOf; But generally this is a pain for users; this
+  e.g. `url."<pattern>".insteadOf`; But generally this is a pain for users; this
   large organisation could provide such a configuration as a ref as well,
   which has higher priority than the .gitmodules file, but lower priority
   than the .git/config file.)
@@ -238,8 +248,8 @@ The goal is to better format object related information as discussed in:
  - Difficulty: medium
  - Possible mentors: Stefan Beller, Johannes Schindelin, Christian Couder
 
-  If I run:
+If I run:
 
     git push origin v1.0:refs/heads/master
 
-  and v1.0 is an annotated tag, then I probably meant v1.0^{commit}, not ^{tag}.
+and v1.0 is an annotated tag, then I probably meant v1.0^{commit}, not ^{tag}.

@@ -48,7 +48,7 @@ clear: I could not have done this without a version control system; and
 I needed something else (a vcs with actual merges, to say the least).
 
 Git had some geek appeal, but I couldn't get it to compile on my first
-attempts (configure && make..., on a system with libs without headers,
+attempts (`configure && make...`, on a system with libs without headers,
 no root). So I went with Mercurial since I was getting into Python
 anyway. Only to be confused by hg's mantra "to clone is to branch and to
 branch is to clone" when there were two commands "clone" and "branch"
@@ -58,7 +58,7 @@ not very useful, it appeared to me. (hg has the more useful
 
 In the end, it was the branch concept and the tone on the respective
 mailing lists at that time that drove me to Git. I had learned not to
-use "configure" for git by now, and have been compiling it happily ever
+use "configure" for Git by now, and have been compiling it happily ever
 after.
 
 * What would you name your most important contribution to Git?
@@ -86,7 +86,7 @@ participate more actively in the Git mailing list.
 something in Git for a full year, what would it be?
 
   - refs namespace: have tags, notes, replace etc. under
-    remotes/<remote> with proper merging so that those features learn
+    `remotes/<remote>` with proper merging so that those features learn
     to fly; requires a transition plan
 
   - rework the UI and make it less surprising: e.g. unify short option
@@ -107,6 +107,13 @@ Anything that makes textconv fly (unoconv, pdftotext); tig when
 
 
 ## Other News
+
+__Events__
+* [Git Merge 2017 recap](https://github.com/blog/2317-git-merge-2017-recap) on GitHub Blog
+* [We’ll be at Git Merge 2017!](https://blog.bitbucket.org/2017/02/01/well-git-merge-2017/) on Bitbucket Blog
+* [Report from Git Merge 2017](http://www.praqma.com/stories/work-on-git-merge-2017/) by Lars Kruse, _Praqma_
+* [Git Merge 2017 – what you missed](https://blog.recast.ai/git-merge-2017/) on Recast.AI Blog
+* [Review – Git Merge 2017](http://neoshops.de/2017/02/04/review-git-merge-2017/) - short impressions by Carmen Bremen, Magento freelancer
 
 __Various__
 

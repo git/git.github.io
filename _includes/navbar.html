@@ -3,7 +3,7 @@
     <li><a href="/">Home</a>
     <li><a href="/about">About</a>
     {% for node in site.pages reversed %}
-      {% if node.navbar != false and node.title != "" %}
+      {% if node.navbar != false and node.title %}
       <li><a href="{{node.url}}">{{node.title}}</a>
       {% endif %}
     {% endfor %}
