@@ -133,7 +133,7 @@ ___Git Core Contributor Summit___
 While both Lars's and Ed's blogs listed above very nicely express
 the great atmosphere at the summit, here are the unconference's agenda items:
 
-* Erik [XXX] presented Atlassian's "clone bundles" approch, which had been 
+* Erik van Zijst presented Atlassian's "clone bundles" approch, which had been
 added to Mercurial some years ago, was later included in BitBucket.
     * Atlassian would like to add it to Git, but would like to discuss the approach first.
     * The main motivation for this feature are CPU and I/O usage on the server side.
@@ -151,9 +151,9 @@ added to Mercurial some years ago, was later included in BitBucket.
 * Peff presented a "1 minute version" of the current status of the Software Freedom Conservancy;
 financial details available on the mailing list.
     * The SFC acquired git-scm.com, maintained by Peff.
-    * Most effort is spent on training and /policy work.
+    * Most effort is spent on trademark/policy work.
 
-* Christian Couder and AEnvar [XXX] presented "Big repos".
+* Christian Couder and Ævar Bjarmason presented "Big repos".
     * The topic is very related to the „references database“ item below, 
     and deals with improved rebase / staging (split index).
     * The main idea is to make the git client faster for some index related operations (that is, `git status`).
@@ -176,7 +176,7 @@ financial details available on the mailing list.
     * Johannes Schindelin remarked that offloading such issues to tools like Gerrit looks suboptimal.
     * The topic was concluded with a short disucssion on git bisect with submodules.
 
-* Jakob [XXX] presented the Gitlab soltuion for Gitaly, aka „Git RPC“.
+* Jacob Vosmaer presented the Gitlab soltuion for Gitaly, aka „Git RPC“.
     * Gitlab tries to get away from NFS, and would like to see a LRU disk cache,
     as the NFS cache not good enough for heavy use.
     * The question is how far only Gitlab is affected (vs. the general community).
@@ -215,7 +215,7 @@ financial details available on the mailing list.
     Johannes emphazied his willingness to establish tools which help to improve the situation.
     It was mentioned that code/commit notes should point to mailing list where appropriate.
 
-* Carlos [XXX] presented the state of the references database, to get them away from the file system.
+* Carlos Martín Nieto presented the state of the references database, to get them away from the file system.
     * A recurring problem seems to be that usable databases do not have a Java implementation (e.g. lmdb last tried);
     this would help GitHub but still have the potential  to split the Git coummunity.
     * According to Peff, Git currently reads the whole packref file into memory –
@@ -225,7 +225,7 @@ financial details available on the mailing list.
     * At present, not all race conditions fixed yet. The final solution should be portable to jgit / libgit2.
     * After the efforts of David Turner, there is now an appropriate ref API within Git.
 
-* Brendon [XXX] presented the gitignore „spec“.
+* Brendan Forster presented the gitignore „spec“.
     * The goal is to be more standardized and robust (that is, understandable).
     * Docs should be more structured.
     * One problem is that different implementations of Git, and other tools use gitignore, but implement the stuff differently.
