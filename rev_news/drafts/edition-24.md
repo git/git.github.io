@@ -53,7 +53,7 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
 
 		* The solution is experienced as more efficient, but no real statistics / conclusions for real world repos are available yet.
 
-	* Jeff King, alias Peff, presented a "1 minute version" of the current status of the Software Freedom Conservancy; financial details available on the mailing list.
+	* Jeff King, alias Peff, presented a "1 minute version" of the current status of the Software Freedom Conservancy; details available [on the mailing list](http://public-inbox.org/git/20170202024501.57hrw4657tsqerqq@sigill.intra.peff.net/). (See also the next article in this edition of Git Rev News.)
 
 		* The SFC acquired git-scm.com, maintained by Peff.
 
