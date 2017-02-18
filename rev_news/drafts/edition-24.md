@@ -166,6 +166,57 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
 		* Planned Open Source Hackathons in London and New York in April/May. The intent is to get some stuff in on that day, also recruitment of future contributors. Libgit2 should perhaps be included there. Appropriate contributors should be on board guiding the process.
 
 
+* [Git / Software Freedom Conservancy status report](http://public-inbox.org/git/20170202024501.57hrw4657tsqerqq@sigill.intra.peff.net/)
+
+At the previous Git Contributor Summits which were also part of the
+previous Git Merge conferences, Jeff King, alias Peff, used to give a
+talk about the status of the Git project as part of the
+[Software Freedom Conservancy](https://sfconservancy.org/).
+
+It used to be a detailed talk about the different aspects of what the
+Git "Project Leadership Committee" (PLC) which represents Git in
+the Conservancy and the Conservancy itself are doing.
+
+This is an important report as the PLC consists only of Junio Hamano,
+Shawn Pearce, and Peff, so most the community otherwise doesn't know
+what happens in some areas of the Git project, like legal and money
+related things.
+
+This year, though, Peff sent detailed reports in emails to the mailing
+list just before the Contributor Summit, and at the Summit his one
+minute long talk consisted in refering everyone to these emails.
+
+The [main report](http://public-inbox.org/git/20170202024501.57hrw4657tsqerqq@sigill.intra.peff.net/)
+gives a bit of background, and then details the financials of the project.
+There is not a lot of news there, as the Git project is not much
+interested in raising fund as it has not a lot of expenses.
+The main report also talks a bit about mentoring, but for the git-scm.com domain
+and trademark activities, it refers to separate emails that Peff sent
+at around the same time as the main one.
+
+The ["git-scm.com status report" email](http://public-inbox.org/git/20170202023349.7fopb3a6pc6dkcmd@sigill.intra.peff.net/)
+is indeed quite long and informative. It was surprising to learn that
+the Git project got control of the git-scm.com and git-scm.org domains
+and the associated web site this year, and interesting to know what
+technologies and hosting services the web site has been using.
+
+This report was then [posted and discussed](https://news.ycombinator.com/item?id=13554065)
+on Hacker News. This in turn seems to have attracted a number of new people toward the project.
+Some of them replied to Peff's email and proposed to help him maintain
+and improve the web site.
+
+Other people seem to have been the reason why Peff subsequently sent an email about
+[Software Freedom Conservancy donations](http://public-inbox.org/git/20170208183444.wlk4vjveg7cmmi5a@sigill.intra.peff.net/)
+telling that "a lot of people offered financial assistance" and that
+"we _don't_ have a dire need for money to keep hosting the site", and
+pointing people back to the main report he previously sent, as well as
+suggesting people donate directly to [Conservancy's general fund](https://sfconservancy.org/donate/)
+or [become Conservancy Supporters](https://sfconservancy.org/supporter/).
+
+The email that Peff sent about
+["Git trademark status and policy"](http://public-inbox.org/git/20170202022655.2jwvudhvo4hmueaw@sigill.intra.peff.net/)
+had also a lot of interesting details, but has not attracted much public interest.
+
 <!---
 ### Reviews
 -->
