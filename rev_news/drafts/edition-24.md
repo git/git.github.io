@@ -22,18 +22,18 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
 
 * Git Contributor Summit
 
-The [Git Merge 2017](http://git-merge.com) conference took place in
-Brussels on February 2nd (workshops and contributor summit) and 3rd
-(main conference day). Quite some of the attendees seamlessly joined
-the [FOSDEM](https://fosdem.org/2017/) think tank right after the Git
-Merge afterparty. For those interested in the "runtime side of life",
-the [Config Management Camp](http://cfgmgmtcamp.eu) in Ghent offered
-yet another 2 days to get exhausted.
+  The [Git Merge 2017](http://git-merge.com) conference took place in
+  Brussels on February 2nd (workshops and contributor summit) and 3rd
+  (main conference day). Quite some of the attendees seamlessly joined
+  the [FOSDEM](https://fosdem.org/2017/) think tank right after the
+  Git Merge afterparty. For those interested in the "runtime side of
+  life", the [Config Management Camp](http://cfgmgmtcamp.eu) in Ghent
+  offered yet another 2 days to get exhausted.
 
-On February 2nd, as part of the Git Merge, a Git Contributor Summit
-had been organized. While both Lars Kruse's and Ed Thomson's blogs
-listed in the "Events" section below very nicely express the great
-atmosphere at the summit, here are the unconference's agenda items:
+  On February 2nd, as part of the Git Merge, a Git Contributor Summit
+  had been organized. While both Lars Kruse's and Ed Thomson's blogs
+  listed in the "Events" section below very nicely express the great
+  atmosphere at the summit, here are the unconference's agenda items:
 
 	* Erik van Zijst presented Atlassian's "clone bundles" approach, which had been added to Mercurial some years ago, was later included in BitBucket.
 
