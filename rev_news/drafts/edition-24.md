@@ -1,13 +1,13 @@
 ---
-title: Git Rev News Edition 24 (XXX, 2017)
+title: Git Rev News Edition 24 (February 22nd, 2017)
 layout: default
-date: 2017-02-15 12:06:51 +0100
+date: 2017-02-22 12:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 24 (XXX, 2017)
+## Git Rev News: Edition 24 (February 22nd, 2017)
 
 Welcome to the 24th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
