@@ -316,6 +316,7 @@ Apparently, an increasing number of excellent bloggers attented the conference:
 * [Review – Git Merge 2017](http://neoshops.de/2017/02/04/review-git-merge-2017/) - short impressions by Carmen Bremen, Magento freelancer
 * [Git Merge 2017](http://hryniuk.pl/post/git-merge-2017/), a short read from Łukasz Hryniuk
 * [The Git Contributor Summit](https://www.edwardthomson.com/blog/git_contributor_summit.html) - Ed Thomson's impressions
+* [Git Merge and FOSDEM 2017!](https://sfconservancy.org/blog/2017/feb/17/git-merge-fosdem/) by Karen Sandler from the Software Freedom Conservancy
 
 __Various__
 
