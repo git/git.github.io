@@ -35,33 +35,19 @@ had been organized. While both Lars Kruse's and Ed Thomson's blogs
 listed in the "Events" section below very nicely express the great
 atmosphere at the summit, here are the unconference's agenda items:
 
-  * Erik van Zijst presented Atlassian's "clone bundles" approach,
-    which had been added to Mercurial some years ago, was later
-    included in BitBucket.
-    * Atlassian would like to add it to Git, but would like to discuss
-      the approach first.
-    * The main motivation for this feature are CPU and I/O usage on
-      the server side.
-    * The feature would be good for large collections fo repos,
-      e.g. the set for Android; the Google "repo" tool would be an
-      alternative.
-    * One Alternative would be the design of the Git protocol version
-      2, with capabilities negociation first.
-    * Jeff King, alias Peff, suggested to keep the solution as simple
-      as possible (as an example, a sliced history etc. would be nice
-      to have, but things could get quite complicated).
-    * At present, the Atlassian client is a script mimicing `git clone`,
-      while a proper solution would involve the Git client.
-    * Peff expressed his willingness to help Atlassian on this
-      subject.
-    * The solution is experienced as more efficient, but no real
-      statistics / conclusions for real world repos are available yet.
+    * Erik van Zijst presented Atlassian's "clone bundles" approach, which had been added to Mercurial some years ago, was later included in BitBucket.
+        * Atlassian would like to add it to Git, but would like to discuss the approach first.
+        * The main motivation for this feature are CPU and I/O usage on the server side.
+        * The feature would be good for large collections fo repos, e.g. the set for Android; the Google "repo" tool would be an alternative.
+        * One Alternative would be the design of the Git protocol version 2, with capabilities negociation first.
+        * Jeff King, alias Peff, suggested to keep the solution as simple as possible (as an example, a sliced history etc. would be nice to have, but things could get quite complicated).
+        * At present, the Atlassian client is a script mimicing `git clone`, while a proper solution would involve the Git client.
+        * Peff expressed his willingness to help Atlassian on this subject.
+        * The solution is experienced as more efficient, but no real statistics / conclusions for real world repos are available yet.
 
-  * Jeff King, alias Peff, presented a "1 minute version" of the
-    current status of the Software Freedom Conservancy; financial
-    details available on the mailing list.
-    * The SFC acquired git-scm.com, maintained by Peff.
-    * Most effort is spent on trademark/policy work.
+    * Jeff King, alias Peff, presented a "1 minute version" of the current status of the Software Freedom Conservancy; financial details available on the mailing list.
+        * The SFC acquired git-scm.com, maintained by Peff.
+        * Most effort is spent on trademark/policy work.
 
   * Christian Couder and Ævar Bjarmason presented "Big repos".
     * The topic is very related to the „references database“ item
