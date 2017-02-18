@@ -39,6 +39,8 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
 
 		* Atlassian would like to add it to Git, but would like to discuss the approach first.
 
+		* Stefan Saasen had sent [an email about it](http://public-inbox.org/git/CADoxLGPFgF7W4XJzt0X+xFJDoN6RmfFGx_96MO9GPSSOjDK0EQ@mail.gmail.com/) a few days before the Summit.
+
 		* The main motivation for this feature are CPU and I/O usage on the server side.
 
 		* The feature would be good for large collections fo repos, e.g. the set for Android; the Google "repo" tool would be an alternative.
@@ -46,6 +48,8 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
 		* One Alternative would be the design of the Git protocol version 2, with capabilities negociation first.
 
 		* Jeff King, alias Peff, suggested to keep the solution as simple as possible (as an example, a sliced history etc. would be nice to have, but things could get quite complicated).
+
+		* One downside is that it could take twice the disk space, if the bundle is not generated on the fly.
 
 		* At present, the Atlassian client is a script mimicing `git clone`, while a proper solution would involve the Git client.
 
