@@ -31,9 +31,12 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
   offered yet another 2 days to get exhausted.
 
   On February 2nd, as part of the Git Merge, a Git Contributor Summit
-  had been organized. While both Lars Kruse's and Ed Thomson's blogs
-  listed in the "Events" section below very nicely express the great
-  atmosphere at the summit, here are the unconference's agenda items:
+  had been organized. While both Lars Kruse's and Ed Thomson's blogs,
+  listed in the "Events" section below, very nicely express the great
+  atmosphere at the summit, and Johannes Schindelin, alias Dscho,
+  [sent](http://public-inbox.org/git/alpine.DEB.2.20.1702021007460.3496@virtualbox/)
+  a [collaborative report](https://docs.google.com/document/d/1KDoSn4btbK5VJCVld32he29U0pUeFGhpFxyx9ZJDDB0/edit)
+  written by the contributors, here are the unconference's agenda items:
 
 	* Erik van Zijst presented Atlassian's "clone bundles"
           approach, which had been added to Mercurial some years ago,
