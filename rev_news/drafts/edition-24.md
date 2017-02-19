@@ -35,29 +35,51 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
   listed in the "Events" section below very nicely express the great
   atmosphere at the summit, here are the unconference's agenda items:
 
-	* Erik van Zijst presented Atlassian's "clone bundles" approach, which had been added to Mercurial some years ago, was later included in BitBucket.
+	* Erik van Zijst presented Atlassian's "clone bundles"
+          approach, which had been added to Mercurial some years ago,
+          was later included in BitBucket.
 
-		* Atlassian would like to add it to Git, but would like to discuss the approach first.
+		* Atlassian would like to add it to Git, but would
+                  like to discuss the approach first.
 
-		* Stefan Saasen had sent [an email about it](http://public-inbox.org/git/CADoxLGPFgF7W4XJzt0X+xFJDoN6RmfFGx_96MO9GPSSOjDK0EQ@mail.gmail.com/) a few days before the Summit.
+		* Stefan Saasen had sent
+		  [an email about it](http://public-inbox.org/git/CADoxLGPFgF7W4XJzt0X+xFJDoN6RmfFGx_96MO9GPSSOjDK0EQ@mail.gmail.com/)
+		  a few days before the Summit.
 
-		* The main motivation for this feature are CPU and I/O usage on the server side.
+		* The main motivation for this feature are CPU and I/O
+                  usage on the server side.
 
-		* The feature would be good for large collections fo repos, e.g. the set for Android; the Google "repo" tool would be an alternative.
+		* The feature would be good for large collections fo
+                  repos, e.g. the set for Android; the Google "repo"
+                  tool would be an alternative.
 
-		* One Alternative would be the design of the Git protocol version 2, with capabilities negociation first.
+		* One Alternative would be the design of the Git
+                  protocol version 2, with capabilities negociation
+                  first.
 
-		* Jeff King, alias Peff, suggested to keep the solution as simple as possible (as an example, a sliced history etc. would be nice to have, but things could get quite complicated).
+		* Jeff King, alias Peff, suggested to keep the
+                  solution as simple as possible (as an example, a
+                  sliced history etc. would be nice to have, but
+                  things could get quite complicated).
 
-		* One downside is that it could take twice the disk space, if the bundle is not generated on the fly.
+		* One downside is that it could take twice the disk
+                  space, if the bundle is not generated on the fly.
 
-		* At present, the Atlassian client is a script mimicing `git clone`, while a proper solution would involve the Git client.
+		* At present, the Atlassian client is a script
+                  mimicing `git clone`, while a proper solution would
+                  involve the Git client.
 
-		* Peff expressed his willingness to help Atlassian on this subject.
+		* Peff expressed his willingness to help Atlassian on
+                  this subject.
 
-		* The solution is experienced as more efficient, but no real statistics / conclusions for real world repos are available yet.
+		* The solution is experienced as more efficient, but
+                  no real statistics / conclusions for real world
+                  repos are available yet.
 
-	* Jeff King, alias Peff, presented a "1 minute version" of the current status of the Software Freedom Conservancy; details available [on the mailing list](http://public-inbox.org/git/20170202024501.57hrw4657tsqerqq@sigill.intra.peff.net/). (See also the next article in this edition of Git Rev News.)
+	* Jeff King, alias Peff, presented a "1 minute version" of the
+          current status of the Software Freedom Conservancy; details
+          available [on the mailing list](http://public-inbox.org/git/20170202024501.57hrw4657tsqerqq@sigill.intra.peff.net/).
+	  (See also the next article in this edition of Git Rev News.)
 
 		* The SFC acquired git-scm.com, maintained by Peff.
 
@@ -65,62 +87,121 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
 
 	* Christian Couder and Ævar Bjarmason presented "Big repos".
 
-		* The topic is very related to the „references database“ item below, and deals with improved rebase / staging (split index).
+		* The topic is very related to the „references database“
+		  item below, and deals with improved rebase / staging
+		  (split index).
 
-		* The main idea is to make the git client faster for some index related operations (that is, `git status`).
+		* The main idea is to make the git client faster for
+                  some index related operations (that is, `git status`).
 
-		* Some work on a daemon for file system notifications in the background (inotify) has been done by Duy Nguyen and David Turner, and was planned to rework, but the present contributor is at present busy with other things.
+		* Some work on a daemon for file system notifications
+                  in the background (inotify) has been done by Duy
+                  Nguyen and David Turner, and was planned to rework,
+                  but the present contributor is at present busy with
+                  other things.
 
-		* On Windows, there is no inotify feature available (also applies to some Unix flavours).
+		* On Windows, there is no inotify feature available
+                  (also applies to some Unix flavours).
 
-		* Some discussion arose whether the Windows journal feature or [Watchman](https://facebook.github.io/watchman/) was the appropriate road to follow.
+		* Some discussion arose whether the Windows journal
+                  feature or
+                  [Watchman](https://facebook.github.io/watchman/) was
+                  the appropriate road to follow.
 
-	The participants with really large repos shared their experience.
+	The participants with really large repos shared their
+	experience.
 
 	* Stefan Beller presented the `git submodule` state.
 
-		* Instead of `git submodules`, Android with its 1000 Git repos uses the `repo` tool; the Android repositories are somewhat unrelated, and most contributors just work in 1 or 2 repos.
+		* Instead of `git submodules`, Android with its 1000
+                  Git repos uses the `repo` tool; the Android
+                  repositories are somewhat unrelated, and most
+                  contributors just work in 1 or 2 repos.
 
-		* Regarding submodules, actually the fetch is parallelized, checkout is being worked on, next are worktree and submodules.
+		* Regarding submodules, actually the fetch is
+                  parallelized, checkout is being worked on, next are
+                  worktree and submodules.
 
-		* Inside Git, there is no real module awareness for submodules yet, so each and every Git module needs to be made „submodule ready“.
+		* Inside Git, there is no real module awareness for
+                  submodules yet, so each and every Git module needs
+                  to be made „submodule ready“.
 
-		* At present, one Git process is spawned for each repo, which is quite slow on Windows.
+		* At present, one Git process is spawned for each
+                  repo, which is quite slow on Windows.
 
-		* The submodules design is considered not to be optimal yet; as an example, subsets are not possible.
+		* The submodules design is considered not to be
+                  optimal yet; as an example, subsets are not
+                  possible.
 
-		* Within Gerrit, project changes lead to superproject changes, which might collide, and end up in superproject merge conflict mess.
+		* Within Gerrit, project changes lead to superproject
+                  changes, which might collide, and end up in
+                  superproject merge conflict mess.
 
-		* David Turner considered merge conflict helpers for submodules.
+		* David Turner considered merge conflict helpers for
+                  submodules.
 
-		* Johannes Schindelin remarked that offloading such issues to tools like Gerrit looks suboptimal.
+		* Johannes Schindelin remarked that offloading such
+                  issues to tools like Gerrit looks suboptimal.
 
-		* The topic was concluded with a short disucssion on git bisect with submodules.
+		* The topic was concluded with a short disucssion on
+                  git bisect with submodules.
 
-	* Jacob Vosmaer presented the Gitlab solution for Gitaly, aka „Git RPC“.
+	* Jacob Vosmaer presented the Gitlab solution for Gitaly, aka
+          „Git RPC“.
 
-		* Gitlab tries to get away from NFS, and would like to see a LRU disk cache, as the NFS cache not good enough for heavy use.
+		* Gitlab tries to get away from NFS, and would like to
+                  see a LRU disk cache, as the NFS cache not good
+                  enough for heavy use.
 
-		* The question is how far only Gitlab is affected (vs. the general community).
+		* The question is how far only Gitlab is affected
+                  (vs. the general community).
 
 		* Use case example are bad refs and storing diffs.
 
-		* The work on the Git cache started, but is stalled at present; it will be MIT licensed (uses both Git and Mercurial code).
+		* The work on the Git cache started, but is stalled at
+                  present; it will be MIT licensed (uses both Git and
+                  Mercurial code).
 
-	* Johannes Schindelin presented "Better tools for reviews and contributions".
+	* Johannes Schindelin presented "Better tools for reviews and
+          contributions".
 
-		* The mailing list currently drops contributions via mailers which produce HTML or mixed code. It is too difficult for people to supply patches by mail; the “once tested and then should work" approach (“and then everybody failing is stupid”) is considered simply wrong. One of the rejected clients is Microsoft Outlook, the other is gmail, the main problem being the handling of white space. Perhaps some tool might help with transmitting code corrections with white space. In general, patches would be better attached to mails than just placed inline.
+		* The mailing list currently drops contributions via
+                  mailers which produce HTML or mixed code. It is too
+                  difficult for people to supply patches by mail; the
+                  “once tested and then should work" approach (“and
+                  then everybody failing is stupid”) is considered
+                  simply wrong. One of the rejected clients is
+                  Microsoft Outlook, the other is gmail, the main
+                  problem being the handling of white space. Perhaps
+                  some tool might help with transmitting code
+                  corrections with white space. In general, patches
+                  would be better attached to mails than just placed
+                  inline.
 
-		* It is problematic to follow long threads (e.g. one thread stalling for 8 months), while the state of patches discussed is
-      sometimes unclear.
+		* It is problematic to follow long threads (e.g. one
+                  thread stalling for 8 months), while the state of
+                  patches discussed is sometimes unclear.
 
-		* The “what’s cooking” emails are just sent to the mailing list, but not to the people being mentioned in the email. At present, the “what’s cooking” email is mostly generated in an automated way from the ToDo branch using a very specialized Scala (?) framework.
+		* The “what’s cooking” emails are just sent to the
+                  mailing list, but not to the people being mentioned
+                  in the email. At present, the “what’s cooking” email
+                  is mostly generated in an automated way from the
+                  ToDo branch using a very specialized Scala (?)
+                  framework.
 
-		* Is there a way to get from the mail client directly into the mentioned source code?
+		* Is there a way to get from the mail client directly
+                  into the mentioned source code?
 
-		* The Git terminology is sometimes strange, the Git glossary is hard to find, and can be improved; using terms only the email community uses does not improve readability for others outside the list “inhabitants”.
+		* The Git terminology is sometimes strange, the Git
+                  glossary is hard to find, and can be improved; using
+                  terms only the email community uses does not improve
+                  readability for others outside the list
+                  “inhabitants”.
 
-		* Johannes regularly submits other peoples’ patches, and would like to see better tool support for this use case. Peff asked whether we need different terms, or better concepts?
+		* Johannes regularly submits other peoples’ patches,
+                  and would like to see better tool support for this
+                  use case. Peff asked whether we need different
+                  terms, or better concepts?
 
 	Regarding patches, the maintainer decides when an where they are merged / implemented.
 	The maintainer workflow may prevent us from just using Github PRs.
@@ -131,35 +212,59 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
 	Johannes emphazied his willingness to establish tools which help to improve the situation.
 	It was mentioned that code/commit notes should point to mailing list where appropriate.
 
-	* Carlos Martín Nieto presented the state of the references database, to get them away from the file system.
+	* Carlos Martín Nieto presented the state of the references
+          database, to get them away from the file system.
 
-		* A recurring problem seems to be that usable databases do not have a Java implementation (e.g. lmdb last tried); this would help GitHub but still have the potential  to split the Git coummunity.
+		* A recurring problem seems to be that usable
+                  databases do not have a Java implementation
+                  (e.g. lmdb last tried); this would help GitHub but
+                  still have the potential to split the Git
+                  coummunity.
 
-		* According to Peff, Git currently reads the whole packref file into memory – mmap could help but would need a lot of refactoring.
+		* According to Peff, Git currently reads the whole
+                  packref file into memory – mmap could help but would
+                  need a lot of refactoring.
 
-		* An important question is whether it is a client or a Github hosting problem; some workflows could cause unhealthy numbers of refs on a client, too.
+		* An important question is whether it is a client or a
+                  Github hosting problem; some workflows could cause
+                  unhealthy numbers of refs on a client, too.
 
-		* At present, not all race conditions fixed yet. The final solution should be portable to jgit / libgit2.
+		* At present, not all race conditions fixed yet. The
+                  final solution should be portable to jgit / libgit2.
 
-		* After the efforts of David Turner, there is now an appropriate ref API within Git.
+		* After the efforts of David Turner, there is now an
+                  appropriate ref API within Git.
 
 	* Brendan Forster presented the gitignore „spec“.
 
-		* The goal is to be more standardized and robust (that is, understandable).
+		* The goal is to be more standardized and robust (that
+                  is, understandable).
 
 		* Docs should be more structured.
 
-		* One problem is that different implementations of Git, and other tools use gitignore, but implement the stuff differently.
+		* One problem is that different implementations of
+                  Git, and other tools use gitignore, but implement
+                  the stuff differently.
 
-		* An interesting question would be if we could have a common minimal implementation of gitignore in a generally reusable library.
+		* An interesting question would be if we could have a
+                  common minimal implementation of gitignore in a
+                  generally reusable library.
 
-		* Git attributes has similar problems (reading attributes from files in the Index is a nightmare, in some case with read / change / read / change / read sequences (or the like) involved).
+		* Git attributes has similar problems (reading
+                  attributes from files in the Index is a nightmare,
+                  in some case with read / change / read / change /
+                  read sequences (or the like) involved).
 
-	* Josh Triplett presented "Git commit refs, tag refs, and compatibility (future of git-series)".
+	* Josh Triplett presented "Git commit refs, tag refs, and
+          compatibility (future of git-series)".
 
-		* Junio has suggested a different type of Git refs (in-tree, like hardlinks).
+		* Junio has suggested a different type of Git refs
+                  (in-tree, like hardlinks).
 
-		* Compatibility: support old clients / libgit either on repo level, or unless an operation hits an object type unknown for the old version (the latter being more complicated).
+		* Compatibility: support old clients / libgit either
+                  on repo level, or unless an operation hits an object
+                  type unknown for the old version (the latter being
+                  more complicated).
 
 		* Use cases should be implemented as easy as possible.
 
@@ -167,7 +272,12 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
 
 	* Other topics:
 
-		* Planned Open Source Hackathons in London and New York in April/May. The intent is to get some stuff in on that day, also recruitment of future contributors. Libgit2 should perhaps be included there. Appropriate contributors should be on board guiding the process.
+		* Planned Open Source Hackathons in London and New
+                  York in April/May. The intent is to get some stuff
+                  in on that day, also recruitment of future
+                  contributors. Libgit2 should perhaps be included
+                  there. Appropriate contributors should be on board
+                  guiding the process.
 
 
 * [Git / Software Freedom Conservancy status report](http://public-inbox.org/git/20170202024501.57hrw4657tsqerqq@sigill.intra.peff.net/)
