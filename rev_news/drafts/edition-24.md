@@ -204,8 +204,9 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
 		* Is there a way to get from the mail client directly
                   into the mentioned source code?
 
-		* The Git terminology is sometimes strange, the Git
-                  glossary is hard to find, and can be improved; using
+		* The Git terminology is sometimes strange ("outside this
+                  room, *nobody* uses the term 're-roll'"), the Git
+                  glossary is hard to find, and could be improved; using
                   terms only the email community uses does not improve
                   readability for others outside the list
                   “inhabitants”.
