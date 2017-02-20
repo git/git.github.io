@@ -52,7 +52,7 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
 		* The main motivation for this feature are CPU and I/O
                   usage on the server side.
 
-		* The feature would be good for large collections fo
+		* The feature would be good for large collections of
                   repos, e.g. the set for Android; the Google "repo"
                   tool would be an alternative.
 
