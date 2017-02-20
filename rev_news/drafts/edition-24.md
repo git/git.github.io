@@ -56,7 +56,7 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
                   repos, e.g. the set for Android; the Google "repo"
                   tool would be an alternative.
 
-		* One Alternative would be the design of the Git
+		* One alternative would be the design of the Git
                   protocol version 2, with capabilities negociation
                   first.
 
