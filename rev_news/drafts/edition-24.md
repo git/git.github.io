@@ -189,8 +189,8 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
                   mailing list, but not to the people being mentioned
                   in the email. At present, the “what’s cooking” email
                   is mostly generated in an automated way from the
-                  ToDo branch using a very specialized Scala (?)
-                  framework.
+                  [`todo` branch](https://github.com/git/git/commits/todo)
+                  using a special-purpose shell scripts.
 
 		* Is there a way to get from the mail client directly
                   into the mentioned source code?
