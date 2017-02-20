@@ -57,7 +57,7 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
                   tool would be an alternative.
 
 		* One alternative would be the design of the Git
-                  protocol version 2, with capabilities negociation
+                  protocol version 2, with capabilities negotiation
                   first.
 
 		* Jeff King, alias Peff, suggested to keep the
