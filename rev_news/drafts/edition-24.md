@@ -14,7 +14,7 @@ a digest of all things Git. For our goals, the archives, the way we work, and ho
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
 This edition covers what happened during the month of January 2017 and
-the [Git Merge 2017](http://git-merge.com/) conference that happenend on February 2nd and 3rd 2017 in Brussel.
+the [Git Merge 2017](http://git-merge.com/) conference that happenend on February 2nd and 3rd 2017 in Brussels.
 
 ## Discussions
 
