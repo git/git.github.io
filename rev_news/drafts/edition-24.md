@@ -99,8 +99,8 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
 
 		* Some work on a daemon for file system notifications
                   in the background (inotify) has been done by Duy
-                  Nguyen and David Turner, and was planned to rework,
-                  but the present contributor is at present busy with
+                  Nguyen and David Turner, and a rework was planned,
+                  but the present contributor is currently busy with
                   other things.
 
 		* On Windows, there is no inotify feature available
