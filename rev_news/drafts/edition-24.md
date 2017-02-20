@@ -428,6 +428,8 @@ Anything that makes textconv fly (unoconv, pdftotext); tig when
 
 ## Releases
 
+* Git [v2.11.1](https://github.com/git/git/blob/v2.11.1/Documentation/RelNotes/2.11.1.txt) was released
+* Git for Windows [v2.11.1](https://github.com/git-for-windows/git/releases/tag/v2.11.1.windows.1) was released
 
 ## Other News
 
