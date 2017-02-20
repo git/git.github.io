@@ -185,12 +185,13 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
                   thread stalling for 8 months), while the state of
                   patches discussed is sometimes unclear.
 
-		* The “what’s cooking” emails are just sent to the
-                  mailing list, but not to the people being mentioned
-                  in the email. At present, the “what’s cooking” email
-                  is mostly generated in an automated way from the
-                  [`todo` branch](https://github.com/git/git/commits/todo)
-                  using a special-purpose shell scripts.
+		* The [“What’s cooking” emails](https://github.com/git/git/blob/v2.11.1/Documentation/SubmittingPatches#L384-L386)
+                  are sent only to the mailing list, but none of the original
+                  contributors are Cc:ed in that email. At present, the
+                  “what’s cooking” email is mostly generated in an automated
+                  way from the [`todo`
+                  branch](https://github.com/git/git/commits/todo) using
+                  special-purpose shell scripts.
 
 		* Is there a way to get from the mail client directly
                   into the mentioned source code?
