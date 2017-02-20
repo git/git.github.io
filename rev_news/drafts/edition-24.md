@@ -222,7 +222,7 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
 	independently of what the author intended.
 	A longer discussion arose around this subject; Stefan Beller mentioned that a similar problem
 	appeared in the Linux Kernel world (especially on the Intel side).
-	Johannes emphazied his willingness to establish tools which help to improve the situation.
+	Johannes emphazised his willingness to establish tools which help to improve the situation.
 	It was mentioned that code/commit notes should point to mailing list where appropriate.
 
 	* Carlos Martín Nieto presented the state of the references
