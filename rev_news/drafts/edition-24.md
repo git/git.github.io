@@ -69,7 +69,7 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
                   space if the bundle is not generated on the fly.
 
 		* At present, the Atlassian client is a script
-                  mimicing `git clone`, while a proper solution would
+                  mimicking `git clone`, while a proper solution would
                   involve the Git client.
 
 		* Peff expressed his willingness to help Atlassian on
