@@ -171,8 +171,8 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
 		* The mailing list currently drops contributions via
                   mailers which produce HTML or mixed code. It is too
                   difficult for people to supply patches by mail; the
-                  “once tested and then should work" approach (“and
-                  then everybody failing is stupid”) is considered
+                  “it worked for me, should work for others, too" approach
+                  (“and then everybody failing is stupid”) is considered
                   simply wrong. One of the rejected clients is
                   Microsoft Outlook, the other is gmail, the main
                   problem being the handling of white space. Perhaps
