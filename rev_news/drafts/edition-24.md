@@ -66,7 +66,7 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
                   things could get quite complicated).
 
 		* One downside is that it could take twice the disk
-                  space, if the bundle is not generated on the fly.
+                  space if the bundle is not generated on the fly.
 
 		* At present, the Atlassian client is a script
                   mimicing `git clone`, while a proper solution would
