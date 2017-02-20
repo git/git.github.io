@@ -165,8 +165,8 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
                   present; it will be MIT licensed (uses both Git and
                   Mercurial code).
 
-	* Johannes Schindelin presented "Better tools for reviews and
-          contributions".
+	* Johannes Schindelin started a braingstorming session about
+          "Better tools for reviews and contributions".
 
 		* The mailing list currently drops contributions via
                   mailers which produce HTML or mixed code. It is too
