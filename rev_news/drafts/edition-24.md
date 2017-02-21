@@ -117,7 +117,7 @@ the [Git Merge 2017](http://git-merge.com/) conference which happened in Brussel
 	* Stefan Beller presented the `git submodule` state.
 
 		* Instead of `git submodules`, Android with its 1000
-                  Git repos uses the `repo` tool; the Android
+                  Git repos uses the [`repo`][repo] tool; the Android
                   repositories are somewhat unrelated, and most
                   contributors just work in 1 or 2 repos.
 
@@ -147,9 +147,9 @@ the [Git Merge 2017](http://git-merge.com/) conference which happened in Brussel
                   issues to tools like Gerrit looks suboptimal.
 
 		* The topic was concluded with a short discussion on
-                  git bisect with submodules.
+                  `git bisect` with submodules.
 
-	* Jacob Vosmaer presented the GitLab solution for Gitaly, aka
+	* Jacob Vosmaer presented the GitLab solution for [Gitaly][], aka
           „Git RPC“.
 
 		* GitLab tries to get away from NFS, and would like to
@@ -234,7 +234,7 @@ the [Git Merge 2017](http://git-merge.com/) conference which happened in Brussel
 
 		* A recurring problem seems to be that usable
                   databases do not have a Java implementation
-                  (e.g. lmdb last tried); this would help GitHub but
+                  (e.g. [lmdb][] last tried); this would help GitHub but
                   still have the potential to split the Git
                   community.
 
@@ -273,7 +273,7 @@ the [Git Merge 2017](http://git-merge.com/) conference which happened in Brussel
                   read sequences (or the like) involved).
 
 	* Josh Triplett presented "Git commit refs, tag refs, and
-          compatibility (future of git-series)".
+          compatibility (future of [git-series][])".
 
 		* Junio has suggested a different type of Git refs
                   (in-tree, like hard links).
@@ -296,6 +296,10 @@ the [Git Merge 2017](http://git-merge.com/) conference which happened in Brussel
                   there. Appropriate contributors should be on board
                   guiding the process.
 
+[repo]: https://code.google.com/p/git-repo/ "repo - The multiple repository tool"
+[Gitaly]: https://gitlab.com/gitlab-org/gitaly/
+[lmdb]: https://symas.com/offerings/lightning-memory-mapped-database/ "Lightning Memory-mapped Database"
+[git-series]: https://github.com/git-series/git-series "git-series: Track changes to a patch series over time"
 
 * [Git / Software Freedom Conservancy status report](http://public-inbox.org/git/20170202024501.57hrw4657tsqerqq@sigill.intra.peff.net/)
 
