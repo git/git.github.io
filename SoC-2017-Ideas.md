@@ -174,9 +174,10 @@ The goal is to move toward an interactive rebase fully in C as described in
  - Difficulty: medium
  - Possible mentors: Christian Couder, Johannes Schindelin, Stefan Beller
 
-See discussion in:
+See discussions in:
 
 <https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t>
+<http://public-inbox.org/git/CA+55aFwT2HUBzZO8Gpt9tHoJtdRxv9oe3TDoSH5jcEOixRNBXg@mail.gmail.com/>
 
 ### Improvements to `git name-rev` or `git for-each-ref` or `git log --stdin --no-walk` or `git cat-file --batch-check`
 
