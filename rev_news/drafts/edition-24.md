@@ -220,8 +220,11 @@ the [Git Merge 2017](http://git-merge.com/) conference which happened in Brussel
 	The maintainer workflow may prevent us from just using Github Pull Requests.
 	Whether to merge or rebase is then finally a manual decision of the maintainer,
 	independently of what the author intended.
-	A longer discussion arose around this subject; Stefan Beller mentioned that a similar problem
-	appeared in the Linux Kernel world (especially on the Intel side).
+	A longer discussion arose around this subject; Stefan Beller
+	mentioned that a similar problem appeared in the Linux Kernel
+	world (especially on the Intel side), and now the Kernel
+	community says "it can be ok to attach patches if you cannot
+	do otherwise".
 	Johannes emphasized his willingness to establish tools which help to improve the situation.
 	It was mentioned that code/commit notes should point to mailing list where appropriate.
         Josh Triplett steered the discussion toward distributed review tools, and mentioned that
