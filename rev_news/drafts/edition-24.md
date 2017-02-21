@@ -14,7 +14,7 @@ a digest of all things Git. For our goals, the archives, the way we work, and ho
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
 This edition covers what happened during the month of January 2017 and
-the [Git Merge 2017](http://git-merge.com/) conference that happenend on February 2nd and 3rd 2017 in Brussels.
+the [Git Merge 2017](http://git-merge.com/) conference which happened in Brussels on February 2nd and 3rd 2017.
 
 ## Discussions
 
@@ -26,7 +26,7 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
   Brussels on February 2nd (workshops and contributor summit) and 3rd
   (main conference day). Quite some of the attendees seamlessly joined
   the [FOSDEM](https://fosdem.org/2017/) think tank right after the
-  Git Merge afterparty. For those interested in the "runtime side of
+  Git Merge after-party. For those interested in the "runtime side of
   life", the [Config Management Camp](http://cfgmgmtcamp.eu) in Ghent
   offered yet another 2 days to get exhausted.
 
@@ -40,7 +40,7 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
 
 	* Erik van Zijst presented Atlassian's "clone bundles"
           approach, which had been added to Mercurial some years ago,
-          was later included in BitBucket.
+          was later included in Bitbucket.
 
 		* Atlassian would like to add it to Git, but would
                   like to discuss the approach first.
@@ -146,17 +146,17 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
 		* Johannes Schindelin remarked that offloading such
                   issues to tools like Gerrit looks suboptimal.
 
-		* The topic was concluded with a short disucssion on
+		* The topic was concluded with a short discussion on
                   git bisect with submodules.
 
-	* Jacob Vosmaer presented the Gitlab solution for Gitaly, aka
+	* Jacob Vosmaer presented the GitLab solution for Gitaly, aka
           „Git RPC“.
 
-		* Gitlab tries to get away from NFS, and would like to
+		* GitLab tries to get away from NFS, and would like to
                   see a LRU disk cache, as the NFS cache not good
                   enough for heavy use.
 
-		* The question is how far only Gitlab is affected
+		* The question is how far only GitLab is affected
                   (vs. the general community).
 
 		* Use case example are bad refs and storing diffs.
@@ -165,7 +165,7 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
                   present; it will be MIT licensed (uses both Git and
                   Mercurial code).
 
-	* Johannes Schindelin started a braingstorming session about
+	* Johannes Schindelin started a brainstorming session about
           "Better tools for reviews and contributions".
 
 		* The mailing list currently drops contributions via
@@ -174,7 +174,7 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
                   “it worked for me, should work for others, too" approach
                   (“and then everybody failing is stupid”) is considered
                   simply wrong. One of the rejected clients is
-                  Microsoft Outlook, the other is gmail, the main
+                  Microsoft Outlook, the other is Gmail, the main
                   problem being the handling of white space. Perhaps
                   some tool might help with transmitting code
                   corrections with white space. In general, patches
@@ -217,14 +217,16 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
                   terms, or better concepts?
 
 	Regarding patches, the maintainer decides when an where they are merged / implemented.
-	The maintainer workflow may prevent us from just using Github PRs.
+	The maintainer workflow may prevent us from just using GitHub PRs.
 	Whether to merge or rebase is then finally a manual decision of the maintainer,
 	independently of what the author intended.
 	A longer discussion arose around this subject; Stefan Beller mentioned that a similar problem
 	appeared in the Linux Kernel world (especially on the Intel side).
-	Johannes emphazised his willingness to establish tools which help to improve the situation.
+	Johannes emphasized his willingness to establish tools which help to improve the situation.
 	It was mentioned that code/commit notes should point to mailing list where appropriate.
-        Josh Triplett steered the discussion toward distributed review tools, and mentioned that there is already a data format for that purpose: ReviewDB. This format, however, would need to be extended to allow for addressing the issues raised in the discussion.
+        Josh Triplett steered the discussion toward distributed review tools, and mentioned that
+        there is already a data format for that purpose: ReviewDB. This format, however,
+        would need to be extended to allow for addressing the issues raised in the discussion.
 
 	* Carlos Martín Nieto presented the state of the references
           database, to get them away from the file system.
@@ -233,18 +235,18 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
                   databases do not have a Java implementation
                   (e.g. lmdb last tried); this would help GitHub but
                   still have the potential to split the Git
-                  coummunity.
+                  community.
 
 		* According to Peff, Git currently reads the whole
                   packref file into memory – mmap could help but would
                   need a lot of refactoring.
 
 		* An important question is whether it is a client or a
-                  Github hosting problem; some workflows could cause
+                  GitHub hosting problem; some workflows could cause
                   unhealthy numbers of refs on a client, too.
 
 		* At present, not all race conditions fixed yet. The
-                  final solution should be portable to jgit / libgit2.
+                  final solution should be portable to JGit / libgit2.
 
 		* After the efforts of David Turner, there is now an
                   appropriate ref API within Git.
@@ -273,7 +275,7 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
           compatibility (future of git-series)".
 
 		* Junio has suggested a different type of Git refs
-                  (in-tree, like hardlinks).
+                  (in-tree, like hard links).
 
 		* Compatibility: support old clients / libgit either
                   on repo level, or unless an operation hits an object
@@ -312,7 +314,7 @@ related things.
 
 This year, though, Peff sent detailed reports in emails to the mailing
 list just before the Contributor Summit, and at the Summit his one
-minute long talk consisted in refering everyone to these emails.
+minute long talk consisted in referring everyone to these emails.
 
 The [main report](http://public-inbox.org/git/20170202024501.57hrw4657tsqerqq@sigill.intra.peff.net/)
 gives a bit of background, and then details the financials of the project.
@@ -368,34 +370,34 @@ of the same medal.
 For a larger project with multiple moving parts (habilitation thesis) I
 had used Subversion (that thesis started before git). It made two things
 clear: I could not have done this without a version control system; and
-I needed something else (a vcs with actual merges, to say the least).
+I needed something else (a VCS with actual merges, to say the least).
 
 Git had some geek appeal, but I couldn't get it to compile on my first
 attempts (`configure && make...`, on a system with libs without headers,
 no root). So I went with Mercurial since I was getting into Python
-anyway. Only to be confused by hg's mantra "to clone is to branch and to
-branch is to clone" when there were two commands "clone" and "branch"
+anyway. Only to be confused by Hg's mantra "to clone is to branch and to
+branch is to clone" when there were two commands `clone` and `branch`
 which did something completely different and - in the case of the latter -
-not very useful, it appeared to me. (hg has the more useful
+not very useful, it appeared to me. (Hg has the more useful
 "bookmarks" these days.)
 
 In the end, it was the branch concept and the tone on the respective
 mailing lists at that time that drove me to Git. I had learned not to
-use "configure" for Git by now, and have been compiling it happily ever
+use `configure` for Git by now, and have been compiling it happily ever
 after.
 
 * What would you name your most important contribution to Git?
 
 There is no single big topic. Mostly, I try to make Git easier and less
 surprising to use by doing stuff here and there. The rev-list options
-"--min-parent", "--max-parent" and "--cherry-mark" were fun to do. I
+`--min-parent`, `--max-parent` and `--cherry-mark` were fun to do. I
 also consider "--textconv" a killer feature and was very successful in
 getting Peff to do most things in that area that I wanted to have, and
 did a few things "myself" - which is really the wrong term, given how
 collaborative our development on git.git is.
 
-Strangely, I was involved in several gpg-related things. I do not use
-signed tags nor signed commits myself, but I care about gpg and about
+Strangely, I was involved in several GPG-related things. I do not use
+signed tags nor signed commits myself, but I care about GPG and about
 git making the right calls when it comes to notions like "trust" etc.
 
 * What are you doing on the Git project these days, and why?
@@ -423,8 +425,8 @@ I would do the above without the need for a transition plan :)
 
 * What is your favorite Git-related tool/library, outside of Git itself?
 
-Anything that makes textconv fly (unoconv, pdftotext); tig when
-`log --graph` is ambiguous; I should use tig more ;)
+Anything that makes `textconv` fly (`unoconv`, `pdftotext`); `tig` when
+`log --graph` is ambiguous; I should use `tig` more ;)
 
 ## Releases
 
@@ -447,6 +449,7 @@ Apparently, an increasing number of excellent bloggers attend the conference:
 * [Git Merge 2017](http://hryniuk.pl/post/git-merge-2017/), a short read from Łukasz Hryniuk
 * [The Git Contributor Summit](https://www.edwardthomson.com/blog/git_contributor_summit.html) - Ed Thomson's impressions
 * [Git Merge and FOSDEM 2017!](https://sfconservancy.org/blog/2017/feb/17/git-merge-fosdem/) by Karen Sandler from the Software Freedom Conservancy
+* [Git Contributor Summit collaborative report](https://docs.google.com/document/d/1KDoSn4btbK5VJCVld32he29U0pUeFGhpFxyx9ZJDDB0/edit) by Johannes Schindelin and other contributors
 
 __Various__
 
