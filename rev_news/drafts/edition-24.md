@@ -185,11 +185,11 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
                   thread stalling for 8 months), while the state of
                   patches discussed is sometimes unclear.
 
-                * Often, reviewers' suggestions are lost in the clutter
+		* Often, reviewers' suggestions are lost in the clutter
                   of the mailing list threads, and no tool helps us to
                   catch those issues.
 
-                * It happens from time to time that the latest iteration
+		* It happens from time to time that the latest iteration
                   of a patch series was not picked up before merging to
                   `master`, and we have no tools that help us prevent that.
 
