@@ -198,9 +198,8 @@ the [Git Merge 2017](http://git-merge.com/) conference which happened in Brussel
                   are sent only to the mailing list, but none of the original
                   contributors are Cc:ed in that email. At present, the
                   “what’s cooking” email is mostly generated in an automated
-                  way from the [`todo`
-                  branch](https://github.com/git/git/commits/todo) using
-                  special-purpose shell scripts.
+                  way from the [`todo` branch](https://github.com/git/git/commits/todo)
+                  using special-purpose shell scripts.
 
 		* Is there a way to get from the mail client directly
                   into the mentioned source code?
@@ -217,8 +216,8 @@ the [Git Merge 2017](http://git-merge.com/) conference which happened in Brussel
                   use case. Peff asked whether we need different
                   terms, or better concepts?
 
-	Regarding patches, the maintainer decides when an where they are merged / implemented.
-	The maintainer workflow may prevent us from just using GitHub PRs.
+	Regarding patches, the maintainer decides when and where they are merged / implemented.
+	The maintainer workflow may prevent us from just using Github Pull Requests.
 	Whether to merge or rebase is then finally a manual decision of the maintainer,
 	independently of what the author intended.
 	A longer discussion arose around this subject; Stefan Beller mentioned that a similar problem
