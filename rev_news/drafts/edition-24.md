@@ -431,7 +431,12 @@ Anything that makes `textconv` fly (`unoconv`, `pdftotext`); `tig` when
 ## Releases
 
 * Git [v2.11.1](https://github.com/git/git/blob/v2.11.1/Documentation/RelNotes/2.11.1.txt) was released
+* Git [v2.12.0-rc0](https://public-inbox.org/git/xmqqtw8bdjtf.fsf@gitster.mtv.corp.google.com/)
 * Git for Windows [v2.11.1](https://github.com/git-for-windows/git/releases/tag/v2.11.1.windows.1) was released
+* libgit2/rugged [v0.26.0b2](https://github.com/libgit2/rugged/releases/tag/v0.26.0b2)
+* nodegit [v0.17.0](https://github.com/nodegit/nodegit/releases/tag/v0.17.0)
+* GitLab [8.15.7 - 8.14.10 ](https://about.gitlab.com/2017/02/16/gitlab-8-dot-15-dot-7-security-release/) and [8.16.6](https://about.gitlab.com/2017/02/17/gitlab-8-dot-16-dot-6-released/)
+* GitKraken [v2.0](https://blog.axosoft.com/2017/01/25/gitkraken-v2/)
 
 ## Other News
 
@@ -453,12 +458,21 @@ Apparently, an increasing number of excellent bloggers attend the conference:
 
 __Various__
 
+* Extensive ebook on [Trunk Based Development](https://trunkbaseddevelopment.com/)
+* [Scaling Git (and some back story)](https://blogs.msdn.microsoft.com/bharry/2017/02/03/scaling-git-and-some-back-story/) by Brian Harry
 
 __Light reading__
 
+* A bit old, but here is [Linus Torvalds about properly formatted commit messages](https://github.com/torvalds/subsurface-for-dirk/commit/b6590150d68df528efd40c889ba6eea476b39873)
+* [Mind-blowing git tips for beginners](https://zabanaa.github.io/notes/mind-blowing-git-tips.html)
 
 __Git tools and sites__
 
+* [Microsoft's GVFS (Git Virtual File System)](https://blogs.msdn.microsoft.com/visualstudioalm/2017/02/03/announcing-gvfs-git-virtual-file-system/)
+* [Overview - pagure - Pagure](https://pagure.io/pagure) - a git-centered forge, python based using pygit2
+* Not a Git tool, but an interesting challenger on the DVCS arena: [Pijul](https://pijul.org/)
+* [json-git: A pure JS local Git to versionize any JSON](https://github.com/RobinBressan/json-git)
+* [git-recall: Handy tool to easily recall what you've done](https://github.com/Fakerr/git-recall)
 
 ## Credits
 
