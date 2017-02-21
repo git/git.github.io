@@ -460,19 +460,30 @@ __Various__
 
 * Extensive ebook on [Trunk Based Development](https://trunkbaseddevelopment.com/)
 * [Scaling Git (and some back story)](https://blogs.msdn.microsoft.com/bharry/2017/02/03/scaling-git-and-some-back-story/) by Brian Harry
+* [How to run a Google Summer of Code project on GitHub](https://github.com/blog/2312-how-to-run-a-google-summer-of-code-project-on-github)
 
 __Light reading__
 
 * A bit old, but here is [Linus Torvalds about properly formatted commit messages](https://github.com/torvalds/subsurface-for-dirk/commit/b6590150d68df528efd40c889ba6eea476b39873)
+  * Also quite old [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
 * [Mind-blowing git tips for beginners](https://zabanaa.github.io/notes/mind-blowing-git-tips.html)
+* [The Biggest and Weirdest Commits in Linux Kernel Git History](https://www.destroyallsoftware.com/blog/2017/the-biggest-and-weirdest-commits-in-linux-kernel-git-history)
+* [Top ten pull request review mistakes](https://blog.scottnonnenberg.com/top-ten-pull-request-review-mistakes/) by Scott Nonnenberg
+* [The next billion programmers (won’t use Git)](https://medium.com/@gerstenzang/the-next-billion-programmers-wont-use-git-5e8b0ea57886#.qt9zcct4k) by Sam Gerstenzang
 
 __Git tools and sites__
 
 * [Microsoft's GVFS (Git Virtual File System)](https://blogs.msdn.microsoft.com/visualstudioalm/2017/02/03/announcing-gvfs-git-virtual-file-system/)
+  * ArsTechnica wrote about it in [Microsoft hosts the Windows source in a monstrous 300GB Git repository](https://arstechnica.com/information-technology/2017/02/microsoft-hosts-the-windows-source-in-a-monstrous-300gb-git-repository/)
+  * [Git Virtual File System](https://github.com/Microsoft/GVFS) on GitHub
 * [Overview - pagure - Pagure](https://pagure.io/pagure) - a git-centered forge, python based using pygit2
 * Not a Git tool, but an interesting challenger on the DVCS arena: [Pijul](https://pijul.org/)
+* [**RawGit** serves raw files directly from GitHub with proper **Content-Type** headers](http://rawgit.com/)
 * [json-git: A pure JS local Git to versionize any JSON](https://github.com/RobinBressan/json-git)
+* [go-git: A highly extensible Git implementation in pure Go](https://github.com/src-d/go-git)
 * [git-recall: Handy tool to easily recall what you've done](https://github.com/Fakerr/git-recall)
+* [Git List Helper](https://github.com/larsxschneider/git-list-helper) - A few helpers to interact with the Git mailing list
+
 
 ## Credits
 
