@@ -14,7 +14,7 @@ a digest of all things Git. For our goals, the archives, the way we work, and ho
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
 This edition covers what happened during the month of January 2017 and
-the [Git Merge 2017](http://git-merge.com/) conference that happenend on February 2nd and 3rd 2017 in Brussel.
+the [Git Merge 2017](http://git-merge.com/) conference that happenend on February 2nd and 3rd 2017 in Brussels.
 
 ## Discussions
 
@@ -52,12 +52,12 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
 		* The main motivation for this feature are CPU and I/O
                   usage on the server side.
 
-		* The feature would be good for large collections fo
+		* The feature would be good for large collections of
                   repos, e.g. the set for Android; the Google "repo"
                   tool would be an alternative.
 
-		* One Alternative would be the design of the Git
-                  protocol version 2, with capabilities negociation
+		* One alternative would be the design of the Git
+                  protocol version 2, with capabilities negotiation
                   first.
 
 		* Jeff King, alias Peff, suggested to keep the
@@ -66,10 +66,10 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
                   things could get quite complicated).
 
 		* One downside is that it could take twice the disk
-                  space, if the bundle is not generated on the fly.
+                  space if the bundle is not generated on the fly.
 
 		* At present, the Atlassian client is a script
-                  mimicing `git clone`, while a proper solution would
+                  mimicking `git clone`, while a proper solution would
                   involve the Git client.
 
 		* Peff expressed his willingness to help Atlassian on
@@ -99,8 +99,8 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
 
 		* Some work on a daemon for file system notifications
                   in the background (inotify) has been done by Duy
-                  Nguyen and David Turner, and was planned to rework,
-                  but the present contributor is at present busy with
+                  Nguyen and David Turner, and a rework was planned,
+                  but the present contributor is currently busy with
                   other things.
 
 		* On Windows, there is no inotify feature available
@@ -165,14 +165,14 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
                   present; it will be MIT licensed (uses both Git and
                   Mercurial code).
 
-	* Johannes Schindelin presented "Better tools for reviews and
-          contributions".
+	* Johannes Schindelin started a braingstorming session about
+          "Better tools for reviews and contributions".
 
 		* The mailing list currently drops contributions via
                   mailers which produce HTML or mixed code. It is too
                   difficult for people to supply patches by mail; the
-                  “once tested and then should work" approach (“and
-                  then everybody failing is stupid”) is considered
+                  “it worked for me, should work for others, too" approach
+                  (“and then everybody failing is stupid”) is considered
                   simply wrong. One of the rejected clients is
                   Microsoft Outlook, the other is gmail, the main
                   problem being the handling of white space. Perhaps
@@ -185,18 +185,28 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
                   thread stalling for 8 months), while the state of
                   patches discussed is sometimes unclear.
 
-		* The “what’s cooking” emails are just sent to the
-                  mailing list, but not to the people being mentioned
-                  in the email. At present, the “what’s cooking” email
-                  is mostly generated in an automated way from the
-                  ToDo branch using a very specialized Scala (?)
-                  framework.
+                * Often, reviewers' suggestions are lost in the clutter
+                  of the mailing list threads, and no tool helps us to
+                  catch those issues.
+
+                * It happens from time to time that the latest iteration
+                  of a patch series was not picked up before merging to
+                  `master`, and we have no tools that help us prevent that.
+
+		* The [“What’s cooking” emails](https://github.com/git/git/blob/v2.11.1/Documentation/SubmittingPatches#L384-L386)
+                  are sent only to the mailing list, but none of the original
+                  contributors are Cc:ed in that email. At present, the
+                  “what’s cooking” email is mostly generated in an automated
+                  way from the [`todo`
+                  branch](https://github.com/git/git/commits/todo) using
+                  special-purpose shell scripts.
 
 		* Is there a way to get from the mail client directly
                   into the mentioned source code?
 
-		* The Git terminology is sometimes strange, the Git
-                  glossary is hard to find, and can be improved; using
+		* The Git terminology is sometimes strange ("outside this
+                  room, *nobody* uses the term 're-roll'"), the Git
+                  glossary is hard to find, and could be improved; using
                   terms only the email community uses does not improve
                   readability for others outside the list
                   “inhabitants”.
@@ -212,8 +222,9 @@ the [Git Merge 2017](http://git-merge.com/) conference that happenend on Februar
 	independently of what the author intended.
 	A longer discussion arose around this subject; Stefan Beller mentioned that a similar problem
 	appeared in the Linux Kernel world (especially on the Intel side).
-	Johannes emphazied his willingness to establish tools which help to improve the situation.
+	Johannes emphazised his willingness to establish tools which help to improve the situation.
 	It was mentioned that code/commit notes should point to mailing list where appropriate.
+        Josh Triplett steered the discussion toward distributed review tools, and mentioned that there is already a data format for that purpose: ReviewDB. This format, however, would need to be extended to allow for addressing the issues raised in the discussion.
 
 	* Carlos Martín Nieto presented the state of the references
           database, to get them away from the file system.
@@ -417,6 +428,8 @@ Anything that makes textconv fly (unoconv, pdftotext); tig when
 
 ## Releases
 
+* Git [v2.11.1](https://github.com/git/git/blob/v2.11.1/Documentation/RelNotes/2.11.1.txt) was released
+* Git for Windows [v2.11.1](https://github.com/git-for-windows/git/releases/tag/v2.11.1.windows.1) was released
 
 ## Other News
 
@@ -424,7 +437,7 @@ __Events__
 
 ___Git Merge 2017___
 
-Apparently, an increasing number of excellent bloggers attented the conference:
+Apparently, an increasing number of excellent bloggers attend the conference:
 
 * [Git Merge 2017 recap](https://github.com/blog/2317-git-merge-2017-recap) on GitHub Blog
 * [We’ll be at Git Merge 2017!](https://blog.bitbucket.org/2017/02/01/well-git-merge-2017/) on Bitbucket Blog
