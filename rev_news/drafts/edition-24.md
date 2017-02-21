@@ -166,7 +166,8 @@ the [Git Merge 2017](http://git-merge.com/) conference which happened in Brussel
                   Mercurial code).
 
 	* Johannes Schindelin started a brainstorming session about
-          "Better tools for reviews and contributions".
+          "Better tools for reviews and contributions"; see also
+		  his post [Clarification about "Better tooling for reviews", was Re: Google Doc about the Contributors' Summit](https://public-inbox.org/git/alpine.DEB.2.20.1702151215570.3496@virtualbox/)
 
 		* The mailing list currently drops contributions via
                   mailers which produce HTML or mixed code. It is too
