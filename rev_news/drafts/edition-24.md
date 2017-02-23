@@ -375,7 +375,7 @@ had also a lot of interesting details, but has not attracted much public interes
     fundraising. They give advise on licensing and trademark
     protections.  Git is one of SFC member projects.
 
-    Karens defibrillator is a metaphor for all the software out there
+    Karen's defibrillator is a metaphor for all the software out there
     that we rely on - as she said:
 
     > **We’re only as free as the software that we use.**
@@ -571,7 +571,7 @@ had also a lot of interesting details, but has not attracted much public interes
     is especially needed for the monorepos.  The feature is similar to
     Git's sparse checkout; the important difference is a far better
     UX.  Their implementation allows for example easy switching
-    beetwen pre-defined (via in-repository file with known format)
+    between pre-defined (via in-repository file with known format)
     sets of files, selected for well-defined tasks.  This is something
     worth porting to Git, to improve its sparse checkout feature.
 
@@ -596,7 +596,7 @@ had also a lot of interesting details, but has not attracted much public interes
     Facebook runs the latest stable Mercurial build and hereby catches
     a lot of Mercurial bugs before they hit others.  Not everything is
     contributed back to hg-core, mostly due to the fact that not all
-    contributions they make are backwards compatibile.
+    contributions they make are backward compatible.
 
 
   * Git LFS at Light Speed  
@@ -689,7 +689,7 @@ had also a lot of interesting details, but has not attracted much public interes
     beginning with subsequent numbers.
 
     Atlassian's Bitbucket has joined the Continuous Development (CD)
-    world for real, providing a lot of what services like Gitlab and
+    world for real, providing a lot of what services like GitLab and
     Travis are doing, called there "pipelines".  They have enabled
     [pipelines](https://bitbucket.org/product/features/pipelines)
     in Bitbucket - to allow you to build any branch.
@@ -697,7 +697,7 @@ had also a lot of interesting details, but has not attracted much public interes
     Tim expertly finishes by combining Bitbucket Pipeline with an
     alias, so he can do with it an equivalent of `git bisect` by just
     running all the steps in the bisect parallel - that is
-    bruteforcing tests.  All this without the need of involving the
+    brute-forcing tests.  All this without the need of involving the
     developer, at the cost of CPU time (though possibly not wallclock
     time, assuming sufficient parallelism and small number of commits
     to test).  The CPU time is worth less than developer's time.
@@ -716,7 +716,7 @@ had also a lot of interesting details, but has not attracted much public interes
     (among others time to switch and the amount of support, and the
     impedance mismatch between ClearCase and Git) and how they
     resolved them, plus some technical tips and insights.  The
-    solution choosen was to adjust ClearCase views one at a time, and
+    solution chosen was to adjust ClearCase views one at a time, and
     then dump content on new branches in Git.
 
 
@@ -724,7 +724,7 @@ had also a lot of interesting details, but has not attracted much public interes
     Meredith L. Patterson, _Mautinoa Technologies_
 
     Meredith shown how Git chosen as the underlying platform for
-    implementing a moneyless transaction exchange ledge system,
+    implementing a money-less transaction exchange ledge system,
     implemented as an actual monetary system in Sierra Leone, where
     _phone minutes_ is actually considered a viable FX currency, since
     otherwise the national bank would go bankrupt.
@@ -732,7 +732,7 @@ had also a lot of interesting details, but has not attracted much public interes
     Bitcoin and other blockchain-based distributed ledger systems are
     "gossip protocols", and require always-on Internet access, not
     available in much of Africa.  What is needed is a way to perform
-    transactions off-line, with later reconcilliation step.  This
+    transactions off-line, with later reconciliation step.  This
     means that the system needs to store timestamps in its
     blockchain... Meredith noticed that is what Git does!  The
     presented solution uses [ledger-cli][] / [hledger][]
@@ -751,7 +751,7 @@ had also a lot of interesting details, but has not attracted much public interes
 
     [source{d}](http://sourced.tech/) wants to clone all open-source
     projects from major Git hosting sites (17M repositories planned,
-    6M repositories archived), and then analyze all codehistory using
+    6M repositories archived), and then analyze all code history using
     AI techniques.
 
     For this they needed a special-purposes Git implementation.
@@ -812,7 +812,7 @@ had also a lot of interesting details, but has not attracted much public interes
     that added visual cues to highlight verification status of commits
     and tags.
 
-    The slides from this talk (and links to other related resoures are
+    The slides from this talk (and links to other related resources are
     available at [thorduri/git-merge-2017](https://github.com/thorduri/git-merge-2017)
     repository.
 
