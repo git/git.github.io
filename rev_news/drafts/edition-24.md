@@ -395,12 +395,12 @@ had also a lot of interesting details, but has not attracted much public interes
 
      * An everyday example is a community that is organizing commit
        wars; thousands of users committing to the same repo, at the
-       same time, so see who gets in:  
+       same time, so see who gets in:
        [commitwars/commitwars](https://github.com/commitwars/commitwars)
 
      * Another is repository hosting mirror of 9gag, with 365GB of
-       data, and 300-400MB pushed every 10 minutes:  
-	   [gambuzzi/gambuzzi.github.io](https://github.com/gambuzzi/gambuzzi.github.io)
+       data, and 300-400MB pushed every 10 minutes:
+       [gambuzzi/gambuzzi.github.io](https://github.com/gambuzzi/gambuzzi.github.io)
 
      * Others are just large networks:
        * [torvalds/linux](https://github.com/torvalds/linux) is forked
