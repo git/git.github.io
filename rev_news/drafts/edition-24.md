@@ -485,9 +485,9 @@ had also a lot of interesting details, but has not attracted much public interes
     Santiago Perez De Rosso, _Software Design Group, MIT_
 
     According to Santiago, Git is hard to learn and the documentation
-    is scary.  He presented one after another the slide with on-line
-    version of [Git documentation](https://www.kernel.org/pub/software/scm/git/docs/),
-    and the [fake Git-manpage generator](https://git-man-page-generator.lokaltog.net/).
+    is scary.  He presented one after another slides from an on-line
+    version of [the Git documentation](https://www.kernel.org/pub/software/scm/git/docs/),
+    and from [the fake Git-manpage generator](https://git-man-page-generator.lokaltog.net/).
     There was also a jokingly provoking slide on how commits can
     easily be represented as a manifold in a multi dimensional space.
 
@@ -495,7 +495,8 @@ had also a lot of interesting details, but has not attracted much public interes
     usability of Git, and experimenting with fundamental improvements
     to the Git experience.  In his talk, he covered a new theory of
     top-down design, focusing on the purposes and concepts underlying
-    software; the material expanding on [Purposes, Concepts, Misfits, and a Redesign of Git](http://people.csail.mit.edu/sperezde/pre-print-oopsla16.pdf)
+    software; the material expanding on
+    [Purposes, Concepts, Misfits, and a Redesign of Git](http://people.csail.mit.edu/sperezde/pre-print-oopsla16.pdf)
     paper - covered in [Git Rev News: Edition 20](https://git.github.io/rev_news/2016/10/19/edition-20/).
     Santiago showed the complexity of understanding concepts like
     _stash_, _detached head_, and _untracked files_, and how they
@@ -532,7 +533,7 @@ had also a lot of interesting details, but has not attracted much public interes
 
     She also wants everyone to use Git - writers, governments and
     school.  Git is more than a software; a concept, a way of
-    thinking, and because of that it can be used it outside the IT
+    thinking, and because of that it can be used outside the IT
     field.
 
 
