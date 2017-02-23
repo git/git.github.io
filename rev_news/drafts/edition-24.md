@@ -957,6 +957,8 @@ __Git tools and sites__
 * [go-git: A highly extensible Git implementation in pure Go](https://github.com/src-d/go-git)
 * [git-recall: Handy tool to easily recall what you've done](https://github.com/Fakerr/git-recall)
 * [Git List Helper](https://github.com/larsxschneider/git-list-helper) - A few helpers to interact with the Git mailing list
+* [The 2git conversion engine](http://www.2git.io/) - The 2git project is an SCM migration engine that enables you to migrate to git using a Groovy DSL
+* [reposurgeon](http://www.catb.org/esr/reposurgeon/) is a tool for editing version-control repository history (including [improving DVCS migration](http://www.catb.org/~esr/reposurgeon/dvcs-migration-guide.html), working with any version control system that can export and import git fast-import streams, and with Subversion dump files; source code repository [available on GitLab](https://gitlab.com/esr/reposurgeon))
 
 
 ## Credits
