@@ -656,11 +656,11 @@ had also a lot of interesting details, but has not attracted much public interes
     st` for `git status`.  It is also about reducing cognitive burden.
     Whenever you find yourself googling the same thing over and over
     (or browsing manpages, or searching StackOverflow) - you should
-    consider make an alias.
+    consider making an alias.
 
     As an example of the latter, Tim took us through the tour of four
-    different ways that you can create stash, and how that interacts
-    with the index and working directory.  The option names are not
+    different ways that you can create a stash, and how that interacts
+    with the index and the working directory. The option names are not
     easy to remember; because of the way they were developed there is
     no commonality of names between them.  Therefore he had made 3
     aliases, so that the more `a`s you have in your command the more
@@ -676,34 +676,34 @@ had also a lot of interesting details, but has not attracted much public interes
     lazy-standup = !git standup | say
     ```
 
-    Tim has also described how to create more involved aliases; how to
-    join more than one command together, and how to pass parameter to
-    inside of such pipeline.  He has shown both `sh -c '...' -` trick,
-    and immediately invoked shell function trick... while reminding us
-    that if alias gets too complicated it is better to just create a
-    new git command (by putting `git-sth` executable, for example a
-    shell script, in your PATH), rather that worrying about
-    appropriate escaping and quoting.
+    Tim also described how to create more involved aliases; how to
+    join more than one command together, and how to pass parameters to
+    the inside of such a pipeline.  He showed both the `sh -c '...' -`
+    trick and the immediately invoked shell function trick, while
+    reminding us that if an alias gets too complicated, it is better to
+    just create a new git command (by putting a `git-sth` executable
+    shell script, for example, in your PATH), rather that worrying
+    about appropriate escaping and quoting.
 
-    Tim has also presented an awesome, and very silly way, to spoof
+    Tim also presented an awesome, and very silly way, to spoof
     Git SHA-1’s with the help of emojis and raw processing power.  As
     an example with [git-sham](https://bitbucket.org/tpettersen/git-sham)
     you can make it so that subsequent commits have SHA-1 identifiers
     beginning with subsequent numbers.
 
     Atlassian's Bitbucket has joined the Continuous Development (CD)
-    world for real, providing a lot of what services like GitLab and
+    world for real, providing a lot services like those GitLab and
     Travis are doing, called there "pipelines".  They have enabled
     [pipelines](https://bitbucket.org/product/features/pipelines)
     in Bitbucket - to allow you to build any branch.
 
-    Tim expertly finishes by combining Bitbucket Pipeline with an
+    Tim expertly finished by combining Bitbucket Pipeline with an
     alias, so he can do with it an equivalent of `git bisect` by just
-    running all the steps in the bisect parallel - that is
+    running all the bisection steps in parallel - that is
     brute-forcing tests.  All this without the need to involve the
     developer, at the cost of CPU time (though possibly not wallclock
     time, assuming sufficient parallelism and small number of commits
-    to test).  The CPU time is worth less than developer's time.
+    to test).  The CPU time is worth less than the developer's time.
 
     You can find aliases used in this presentation in Tim's
     [git-aliases](https://bitbucket.org/tpettersen/git-aliases)
