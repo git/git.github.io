@@ -921,7 +921,8 @@ __Events__
 
 ___Git Merge 2017___
 
-Apparently, an increasing number of excellent bloggers attend the conference:
+Apparently, an increasing number of excellent bloggers attend the conference
+(this material was used in Git Merge 2017 general sessions writeup above):
 
 * [Git Merge 2017 recap](https://github.com/blog/2317-git-merge-2017-recap) on GitHub Blog
 * [We’ll be at Git Merge 2017!](https://blog.bitbucket.org/2017/02/01/well-git-merge-2017/) on Bitbucket Blog
