@@ -549,13 +549,13 @@ had also a lot of interesting details, but has not attracted much public interes
     on how they are using it internally was covered
     in [Git Rev News: Edition 21](https://git.github.io/rev_news/2016/11/16/edition-21/).)
 
-    The Facebook development environment composed of monorepos, no
+    The Facebook development environment is composed of monorepos, no
     feature branches, rebases and no merges, single commits per
     push.  They assume that all developers work online, that “_everyone
     commits on master_” (in order to overcome their tremendous size),
     and that “_every commit is pushed_”.  The size of their version
     control support team is very small compared to the large number of
-    developers they employ - therefore they need simple workflow, and
+    developers they employ - therefore they need a simple workflow, and
     the amount of time for teaching version control is limited.
 
     To solve the issue of push conflicts, they have implemented
@@ -635,8 +635,8 @@ had also a lot of interesting details, but has not attracted much public interes
     side of Git LFS.  Go was used as a language of choice for
     implementing it.  Here using the Scanner pattern in Go turned out
     to be a perfect match for the way Git plumbing passes information
-    to Git-LFS process on server.  He shared description of
-    refactoring performed to speed up the operation.
+    to the Git-LFS process on the server.  He shared a description of
+    the refactoring performed to speed up the operation.
 
     All this of course needed to be synchronized across different
     projects, different programming languages, and different
