@@ -926,8 +926,8 @@ Apparently, an increasing number of excellent bloggers attend the conference:
 * [Git Merge 2017 – what you missed](https://blog.recast.ai/git-merge-2017/) on Recast.AI Blog
 * [Review – Git Merge 2017](http://neoshops.de/2017/02/04/review-git-merge-2017/) - short impressions by Carmen Bremen, Magento freelancer
 * [Git Merge 2017](http://hryniuk.pl/post/git-merge-2017/), a short read from Łukasz Hryniuk
-* [The Git Contributor Summit](https://www.edwardthomson.com/blog/git_contributor_summit.html) - Ed Thomson's impressions
 * [Git Merge and FOSDEM 2017!](https://sfconservancy.org/blog/2017/feb/17/git-merge-fosdem/) by Karen Sandler from the Software Freedom Conservancy
+* [The Git Contributor Summit](https://www.edwardthomson.com/blog/git_contributor_summit.html) - Ed Thomson's impressions
 * [Git Contributor Summit collaborative report](https://docs.google.com/document/d/1KDoSn4btbK5VJCVld32he29U0pUeFGhpFxyx9ZJDDB0/edit) by Johannes Schindelin and other contributors
 
 __Various__
