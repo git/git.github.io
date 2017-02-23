@@ -699,7 +699,7 @@ had also a lot of interesting details, but has not attracted much public interes
     Tim expertly finishes by combining Bitbucket Pipeline with an
     alias, so he can do with it an equivalent of `git bisect` by just
     running all the steps in the bisect parallel - that is
-    brute-forcing tests.  All this without the need of involving the
+    brute-forcing tests.  All this without the need to involve the
     developer, at the cost of CPU time (though possibly not wallclock
     time, assuming sufficient parallelism and small number of commits
     to test).  The CPU time is worth less than developer's time.
@@ -798,7 +798,7 @@ had also a lot of interesting details, but has not attracted much public interes
   * "Trust But Verify"
     Thordur Bjornsson, _Yubico_
 
-    The last talk covered cover the details on how to
+    The last talk covered the details on how to
     cryptographically sign your work.  Thordur started with PGP
     fundamentals and best practices (among others the need for setting
     an expiration date of PGP keys, to one year at most).  Then he
@@ -807,7 +807,7 @@ had also a lot of interesting details, but has not attracted much public interes
     server) - though the concept of mergetags was missing from the
     talk.  Then Thordur described how to verify those signatures,
     explaining possible impacts (and the amount of work required), and
-    benefits to ones workflow.
+    benefits to one's workflow.
 
     As one way of verifying signatures, Thordur took a look at GitHub’s
     interface changes from [earlier this year](https://github.com/blog/2144-gpg-signature-verification)
