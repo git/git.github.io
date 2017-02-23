@@ -352,6 +352,475 @@ The email that Peff sent about
 ["Git trademark status and policy"](http://public-inbox.org/git/20170202022655.2jwvudhvo4hmueaw@sigill.intra.peff.net/)
 had also a lot of interesting details, but has not attracted much public interest.
 
+
+* Git Merge 2017 — General Sessions
+
+  * Intro & Welcome - Software Freedom Conservancy  
+    Karen Sandler, _Software Freedom Conservancy_
+
+    Karen wrote about her intro talk in [Git Merge and FOSDEM 2017!](https://sfconservancy.org/blog/2017/feb/17/git-merge-fosdem/):
+
+    > For me, FOSDEM this year started two days early with Git Merge, the annual Git conference. Git Merge is organized by GitHub, and so far in all three years of its organization the conference has donated the proceeds from ticket sales to Conservancy! I’d been hoping to get to Git Merge one of these years, so I was very excited with the organizing team asked me to do an talk introducing Conservancy.
+
+    > I got to kick off the conference, and introduced myself by explaining how investigating my heart condition and defibrillator caused me to become passionate about software freedom. I then delved into what Conservancy does and in particular talked about some of the work we’ve done with Git. The talk had a good impact, and all day long I was able to speak with people who were excited about Conservancy and thinking about the ethics of all of our software. It’s always especially thrilling to speak at our member projects’ conferences. I love meeting up with leadership committee members and also putting faces to the names that we see go by while monitoring the activities of our projects.
+
+    Karen has a pacemaker (implanted defibrillator) and was worried
+    about what software it runs on.  Everyone knows that software is
+    potentially buggy.  She asked to see the source code, but was
+    refused, as the software is proprietary.
+
+    That was the kick-off for starting
+    the [Software Freedom Conservancy](https://sfconservancy.org/).
+    The conservancy does legal work, handle foundations and
+    fundraising. They give advise on licensing and trademark
+    protections.  Git is one of SFC member projects.
+
+    Karens defibrillator is a metaphor for all the software out there
+    that we rely on - as she said:
+
+    > **We’re only as free as the software that we use.**
+
+
+  * Top Ten Worst Repositories to host on GitHub  
+    Carlos Martin Nieto, _GitHub_
+
+    Carlos give insights into some of the challenges that GitHub meets
+    when hosting their 14 million user infrastructure. What makes repo
+    "the worst" varies: a huge amount of files, data, forks, tags,
+    contributors or pushes.
+
+    Here are some of the worst Carlos showcased:
+
+     * An everyday example is a community that is organizing commit
+       wars; thousands of users committing to the same repo, at the
+       same time, so see who gets in:  
+       [commitwars/commitwars](https://github.com/commitwars/commitwars)
+
+     * Another is repository hosting mirror of 9gag, with 365GB of
+       data, and 300-400MB pushed every 10 minutes:  
+	   [gambuzzi/gambuzzi.github.io](https://github.com/gambuzzi/gambuzzi.github.io)
+
+     * Others are just large networks:
+       * [torvalds/linux](https://github.com/torvalds/linux) is forked
+         16K times; note that it also shows "∞ contributors".
+       * [octocat/Spoon-Knife](https://github.com/octocat/Spoon-Knife)
+         is GitHub's sample repo, used to illustrate what forking is
+         all about - it’s forked 88K times
+       * [barryclark/jekyll-now](https://github.com/barryclark/jekyll-now),
+         where each fork is someone’s website, forked 13K times
+
+     * There are projects that are just large, with long history
+       and/or large number of files,
+       like [torvalds/linux](https://github.com/torvalds/linux), with
+       42GB data on disk.
+
+     * Other just go to the extreme with the use of GitHub-based
+       workflow, that is with extensive use of pull-requests and
+       issues, like [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+       with 24K pull requests in total, and 5K+ open issues, plus 12K
+       closed
+
+     * Some have just large number of commits,
+       like [CocoaPods/Specs](https://github.com/CocoaPods/Specs) –
+       160K commits; though it is nothing on Linux, with 650K commits.
+
+    Carlos has this to say about first two:
+
+    > Please don't
+
+
+  * Scaling Git at Microsoft  
+    Saeed Noursalehi, _Microsoft_
+
+    Saeed talked about scaling Git at Microsoft with more that 30K
+    developers.  When they started with the [humongous Windows repository](https://arstechnica.com/information-technology/2017/02/microsoft-hosts-the-windows-source-in-a-monstrous-300gb-git-repository/)
+    it would literally take (almost) days to clone the repository.
+    Git's assumptions generally work well for reasonable
+    repositories - but it is still a problem to be solved.
+    It was beyond help of Git LFS and similar solutions.
+
+    They have implemented [GVFS - Git Virtual File System](https://blogs.msdn.microsoft.com/visualstudioalm/2017/02/03/announcing-gvfs-git-virtual-file-system/);
+    which is an [open-source project](https://github.com/Microsoft/GVFS),
+    just released by Microsoft.  This helped them a lot with this
+    Windows repo:
+
+    > Git experience on Windows repo (with GVFS)
+    >
+    >   ~~12 hrs~~ 5 mins    - clone  
+    >   ~~3 hrs~~ 30 secs    - checkout  
+    >   ~~8 mins~~ 4 secs    - status  
+    >   ~~30 mins~~ 13 secs  - commit
+
+    GVFS is basically a file system driver combined with a read-object
+    hook in Git, and a persistent daemon process driving said hook.
+    The read-object hook is a new concept that Microsoft has
+    introduced to Git.  This solution allows for (their fork of) Git
+    to populate files and download objects (commits, trees, blobs) on
+    demand.
+
+    Saeed started a live demo on a VSO.  He has shown how the files
+    got populated ("hydrated"), that is their content downloaded, on
+    first access (on first use).  You could also see live the
+    JSON-based protocol used to communicate with GVFS daemon
+    (service).
+
+    The trees doesn’t grow in to the skies - when asked about
+    searching globally in your repo - answer was “_Yes, that will
+    still be very painful_”.  Browsing history was also a problem, as
+    it would "hydrate" objects; though in Q&amp;A session there was a
+    suggestion of running `git log` on server, like for centralized
+    version control systems.
+
+    Currently GVFS is limited to MS Windows, and requires hacked Git.
+    Microsoft also cares about other platforms: the message is “_We’re
+    hiring - especially if you know file systems on Mac and Linux_”.
+    Microsoft is also working on core Git integration: see the
+    discussion in thread started by Bob Peart
+    [[RFC] Add support for downloading blobs on demand](https://public-inbox.org/git/20170113155253.1644-1-benpeart@microsoft.com/).
+
+
+  * What’s Wrong With Git?  
+    Santiago Perez De Rosso, _Software Design Group, MIT_
+
+    According to Santiago, Git is hard to learn and the documentation
+    is scary.  He presented one after another the slide with on-line
+    version of [Git documentation](https://www.kernel.org/pub/software/scm/git/docs/),
+    and the [fake Git-manpage generator](https://git-man-page-generator.lokaltog.net/).
+    There was also a jokingly provoking slide on how commits can
+    easily be represented as a manifold in a multi dimensional space.
+
+    In his PhD work, Santiago has been surveying user response to the
+    usability of Git, and experimenting with fundamental improvements
+    to the Git experience.  In his talk, he covered a new theory of
+    top-down design, focusing on the purposes and concepts underlying
+    software; the material expanding on [Purposes, Concepts, Misfits, and a Redesign of Git](http://people.csail.mit.edu/sperezde/pre-print-oopsla16.pdf)
+    paper - covered in [Git Rev News: Edition 20](https://git.github.io/rev_news/2016/10/19/edition-20/).
+    Santiago showed the complexity of understanding concepts like
+    _stash_, _detached head_, and _untracked files_, and how they
+    relate (or not) to concepts and purposes of an VCS.
+
+    In his experiment of improving Git usage, he
+    presented [Gitless](http://gitless.com/), an experimental version
+    control system built on top of Git (also covered in edition 20).
+    In this DVCS, a branch includes it’s working dir, so dirty files
+    never prevent a branch switch. Other similar changes were made to
+    the other identified confusing topics. Gitless was then used to
+    run parallel experiments with non-expert and expert Git users to
+    compare how learning Gitless compared to Git.
+
+    Gitless was just an experiment, but Santiago suggested that the
+    world might be ready for new VCSs, or at least a new porcelain or
+    GUI on top of Git, based on this research.
+
+
+  * Git: The Tool Loved and (sometimes) Feared  
+    Caren Garcia, _BazaarVoice_
+
+    Caren was sharing her experiences teaching Git.  According to
+    Caren, Git conflicts induces panic states in students. The command
+    order confuses them, but they love the utility of having
+    everything in Git.
+
+    Caren recommends the web site [OhShitGit](http://ohshitgit.com/)
+    the get help to get out of panic situations.  There is always a
+    possibility of screwing up, and this site would help you to figure
+    how to fix your mistakes.  (This site was covered in
+    [Git Rev News: Edition 19](https://git.github.io/rev_news/2016/10/19/edition-19/))).
+    Her students has had great success using Git CLI for learning Git.
+
+    She also wants everyone to use Git - writers, governments and
+    school.  Git is more than a software; a concept, a way of
+    thinking, and because of that it can be used it outside the IT
+    field.
+
+
+  * Scaling Mercurial at Facebook: Insights from the Other Side  
+    Durham Goode, _Facebook_
+
+    Durham talked about how Mercurial (Hg) has been scaled at
+    Facebook, and about the way software version control is organized
+    there.  (Reasons for choosing Mercurial can be found in
+    [Scaling Mercurial at Facebook](https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook/)
+    blog post from 2014 by Durham Goode and Siddharth P. Agarwal;
+    [an update](https://groups.google.com/forum/#!topic/mozilla.dev.version-control/nh4fITFlEMk)
+    on how they are using it internally was covered
+    in [Git Rev News: Edition 21](https://git.github.io/rev_news/2016/11/16/edition-21/).)
+
+    The Facebook development environment composed of monorepos, no
+    feature branches, rebases and no merges, single commits per
+    push.  They assume that all developers work online, that “_everyone
+    commits on master_” (in order to overcome their tremendous size),
+    and that “_every commit is pushed_”.  The size of their version
+    control support team is very small compared to the large number of
+    developers they employ - therefore they need simple workflow, and
+    the amount of time for teaching version control is limited.
+
+    To solve the issue of push conflicts, they have implemented
+    `PushRebase`, which basically allows the server to perform your
+    rebase for you in some conditions, eliminating the problem of push
+    being rejected because the local repository is not up to date
+    (someone pushed first).
+
+    They tend to assume their developers are online; thus they
+    implemented `InifinityPush`, which assures that every commit ever
+    is pushed (helped with new scalable way of storing data).  This
+    solves many problems of error recovery.
+
+    The implementation (fork) of Mercurial that Facebook uses allows
+    to check out only part of the code that is actually needed.  This
+    is especially needed for the monorepos.  The feature is similar to
+    Git's sparse checkout; the important difference is a far better
+    UX.  Their implementation allows for example easy switching
+    beetwen pre-defined (via in-repository file with known format)
+    sets of files, selected for well-defined tasks.  This is something
+    worth porting to Git, to improve its sparse checkout feature.
+
+    The question of User Experience (UX) is very important for
+    Facebook.  Durham asks: “_Why isn’t the default behavior of the
+    git log useful? - Why do we all have to go through hoops to
+    customize the log enough to make it useful?_”.  They have made
+    `SmartLog`, which allows to see only useful commits for a given
+    developers.  It also allows to easily recover for instance commits
+    that are not reachable from any branches, without need for extra
+    knowledge and to reach for any advanced features.  This is
+    something worth borrowing; [git-log-compact](https://mackyle.github.io/git-log-compact/)
+    is a project that implements something similar (covered in detail
+    by [Git Rev News: Edition 20](https://git.github.io/rev_news/2016/10/19/edition-20/)).
+
+    Durham has emphasized the need to focus on the UX, the need to
+    enable new users to do power user moves. He uses `hg unamend` and
+    `hg uncommit` as good examples for that.
+
+    At the end, the critical crowd asked “_Why isn't this Open
+    Source_” to which the one acceptable answer came… “_It is!_”.
+    Facebook runs the latest stable Mercurial build and hereby catches
+    a lot of Mercurial bugs before they hit others.  Not everything is
+    contributed back to hg-core, mostly due to the fact that not all
+    contributions they make are backwards compatibile.
+
+
+  * Git LFS at Light Speed  
+    Lars Schneider, _Autodesk_ and Taylor Blau, _GitHub_
+
+    This was a two part presentation, about a way to dramatically
+    improve performance in a popular Git extension - LFS (Large File
+    Storage) - that required changes in both Git Core, and the
+    extension itself.
+
+    In first part Lars walked through how to contribute to Git.  You
+    can find description of (part of) his experience, namely
+    developing and reviewing the "Git filter protocol" feature, in
+    [Git Rev News: Edition 18](https://git.github.io/rev_news/2016/08/17/edition-18/).
+    "Developer Spotlight: Lars Schneider" can be also found in this
+    edition.
+
+    It’s not just about implementing the feature; it needs to be
+    documented, and tested as well.  The commit message should be
+    self-contained, meaning among others that you need no external
+    dependencies to figure out what the commit does.  There are many
+    steps that one has to go through, and for such far reaching
+    feature (with the need for backward compatibility) also usually
+    many iterations.  As an example of the friction in this approach,
+    Lars gave us the example: this patch series gave a very hefty
+    performance improvement... and it took him 6 months and 380 emails
+    to get it approved.
+
+    > Git is used by millions all over the world, you don’t want to be
+    > the one breaking it.
+
+    In second part Taylor took over to talk a bit about the server
+    side of Git LFS.  Go was used as a language of choice for
+    implementing it.  Here using the Scanner pattern in Go turned out
+    to be a perfect match for the way Git plumbing passes information
+    to Git-LFS process on server.  He shared description of
+    refactoring performed to speed up the operation.
+
+    All this of course needed to be synchronized across different
+    projects, different programming languages, and different
+    developers.
+
+    At the end, Taylor shared the ideas for next steps for Git-LFS
+    server, namely: Promise capability, file-path exchange, and work
+    on figuring out how to make Git-LFS even faster.
+
+
+  * Git Aliases of the Gods!  
+    Tim Pettersen, _Atlassian_
+
+    Aliases are not just about saving time and keystrokes, though as
+    Tim said the most basic and common example of using aliases is to
+    create shortcuts, for example `git co` for `git commit`, or `git
+    st` for `git status`.  It is also about reducing cognitive burden.
+    Whenever you find yourself googling the same thing over and over
+    (or browsing manpages, or searching StackOverflow) - you should
+    consider make an alias.
+
+    As an example of the latter, Tim took us through the tour of four
+    different ways that you can create stash, and how that interacts
+    with the index and working directory.  The option names are not
+    easy to remember; because of the way they were developed there is
+    no commonality of names between them.  Therefore he had made 3
+    aliases, so that the more `a`s you have in your command the more
+    you stash: `stsh`, `stash`, `staash` and `staaash`.
+
+    He created a funny alias called `standup` and `lazy standup`:
+    ```INI
+    [alias]
+    standup = !git log --all \
+                       --author=$USER \
+                       --since='9am yesterday' \
+                       --format=%s
+    lazy-standup = !git standup | say
+    ```
+
+    Tim has also described how to create more involved aliases; how to
+    join more than one command together, and how to pass parameter to
+    inside of such pipeline.  He has shown both `sh -c '...' -` trick,
+    and immediately invoked shell function trick... while reminding us
+    that if alias gets too complicated it is better to just create a
+    new git command (by putting `git-sth` executable, for example a
+    shell script, in your PATH), rather that worrying about
+    appropriate escaping and quoting.
+
+    Tim has also presented an awesome, and very silly way, to spoof
+    Git SHA-1’s with the help of emojis and raw processing power.  As
+    an example with [git-sham](https://bitbucket.org/tpettersen/git-sham)
+    you can make it so that subsequent commits have SHA-1 identifiers
+    beginning with subsequent numbers.
+
+    Atlassian's Bitbucket has joined the Continuous Development (CD)
+    world for real, providing a lot of what services like Gitlab and
+    Travis are doing, called there "pipelines".  They have enabled
+    [pipelines](https://bitbucket.org/product/features/pipelines)
+    in Bitbucket - to allow you to build any branch.
+
+    Tim expertly finishes by combining Bitbucket Pipeline with an
+    alias, so he can do with it an equivalent of `git bisect` by just
+    running all the steps in the bisect parallel - that is
+    bruteforcing tests.  All this without the need of involving the
+    developer, at the cost of CPU time (though possibly not wallclock
+    time, assuming sufficient parallelism and small number of commits
+    to test).  The CPU time is worth less than developer's time.
+
+    You can find aliases used in this presentation in Tim's
+    [git-aliases](https://bitbucket.org/tpettersen/git-aliases)
+    repository.  (MediaWiki has also a
+    [wiki page with the list of useful aliases](https://www.mediawiki.org/wiki/Git/aliases).)
+
+
+  * Lightning Talk / Lessons Learned: Transforming from ClearCase to Git  
+    Tamir Gefen, _ALMtoolbox_
+
+    This lightning talk presented a case study on moving to Git from
+    IBM Rational ClearCase.  Tamir has described challenges they faced
+    (among others time to switch and the amount of support, and the
+    impedance mismatch between ClearCase and Git) and how they
+    resolved them, plus some technical tips and insights.  The
+    solution choosen was to adjust ClearCase views one at a time, and
+    then dump content on new branches in Git.
+
+
+  * Lightning Talk / Git: The Original Blockchain  
+    Meredith L. Patterson, _Mautinoa Technologies_
+
+    Meredith shown how Git chosen as the underlying platform for
+    implementing a moneyless transaction exchange ledge system,
+    implemented as an actual monetary system in Sierra Leone, where
+    _phone minutes_ is actually considered a viable FX currency, since
+    otherwise the national bank would go bankrupt.
+
+    Bitcoin and other blockchain-based distributed ledger systems are
+    "gossip protocols", and require always-on Internet access, not
+    available in much of Africa.  What is needed is a way to perform
+    transactions off-line, with later reconcilliation step.  This
+    means that the system needs to store timestamps in its
+    blockchain... Meredith noticed that is what Git does!  The
+    presented solution uses [ledger-cli][] / [hledger][]
+    [plain text accounting][plaintextaccounting] format as a format
+    for storing transactions, Git commits for blockchain, remotes as
+    wallets / accounts, and GPG keys with short expiration dates for
+    signing.
+
+    This shows how technologies, such as Git, that do one thing well
+    can change the world by doing the thing they do well in unexpected
+    places.
+
+
+  * Lightning Talk / go-git: A Pure Go Implementation of Git  
+    Santiago M. Mola, _source(d)_
+
+    [source{d}](http://sourced.tech/) wants to clone all open-source
+    projects from major Git hosting sites (17M repositories planned,
+    6M repositories archived), and then analyze all codehistory using
+    AI techniques.
+
+    For this they needed a special-purposes Git implementation.
+    Santiago introduced [go-git](https://github.com/src-d/go-git)
+    project, a Git library written entirely in Go, designed to be
+    developer-friendly and highly extensible.  He has shared some of
+    source{d} use cases, and also problems storing (archiving) such a
+    large number of repositories, many of which are forks.
+
+
+  * Git for Pair Programming  
+    Cornelius Schumacher, _SUSE Linux_
+
+    Cornelius started the presentation by describing in detail the
+    pair programming workflow; why it is used, and how it is done.
+    The important issue is that in this workflow commit has more than
+    one author - developers often change even during writing of a
+    commit message.  Pairs are not forever; the pairing change quite
+    often.
+
+    He described the solution used by the
+    [git-duet](https://github.com/git-duet/git-duet), which utilizes
+    committer and author to show the identity of both contributors in
+    the pair, optionally rotating them.  This tool has its advantages
+    and disadvantages; among others it is less useful for mob
+    programming.
+
+    Cornelius then went into details with the multiple authors problem
+    using anything from emails, commit messages and headers.  The
+    sketch of a proposed solution and discussion how Git could get
+    native support for pair programming can be found on git mailing
+    list as
+    [[RFC] Proof of concept: Support multiple authors](https://public-inbox.org/git/1485713194-11782-1-git-send-email-schumacher@kde.org/).
+    The thread didn't end in an accepted solution, though when one
+    would be created it would most probably follow the
+    [Junio's advice](https://public-inbox.org/git/xmqqinowuvd7.fsf@gitster.mtv.corp.google.com/)
+    there of utilizing "Co-Authored-by: " trailers in the commit
+    message, and extending `git shortlog` and other commands as
+    needed.
+
+
+  * Trust But Verify  
+    Thordur Bjornsson, _Yubico_
+
+    The last talk covered cover the details on how to
+    cryptographically sign your work.  Thordur started with PGP
+    fundamentals and best practices (among others the need for setting
+    an expiration date of PGP keys, to one year at most).  Then he
+    went through what can get signed in Git: commits (including merge
+    commits), tags and pushes (the last requiring help from the
+    server) - though the concept of mergetags was missing from the
+    talk.  Then Thordur described how to verify those signatures,
+    explaining possible impacts (and the amount of work required), and
+    benefits to ones workflow.
+
+    As one way of verifying signatures, Thordur took a look at GitHub’s
+    interface changes from [earlier this year](https://github.com/blog/2144-gpg-signature-verification)
+    that added visual cues to highlight verification status of commits
+    and tags.
+
+    The slides from this talk (and links to other related resoures are
+    available at [thorduri/git-merge-2017](https://github.com/thorduri/git-merge-2017)
+    repository.
+
+
+[ledger-cli]: http://www.ledger-cli.org/
+[hledger]: http://hledger.org/
+[plaintextaccounting]: http://plaintextaccounting.org/
+
 <!---
 ### Reviews
 -->
