@@ -771,25 +771,25 @@ had also a lot of interesting details, but has not attracted much public interes
     Cornelius started the presentation by describing in detail the
     pair programming workflow; why it is used, and how it is done.
     The important issue is that in this workflow commit has more than
-    one author - developers often change even during writing of a
+    one author - developers often change even during the writing of a
     commit message.  Pairs are not forever; the pairing change quite
     often.
 
     He described the solution used by the
-    [git-duet](https://github.com/git-duet/git-duet), which utilizes
+    [git-duet](https://github.com/git-duet/git-duet) project, which utilizes
     committer and author to show the identity of both contributors in
     the pair, optionally rotating them.  This tool has its advantages
     and disadvantages; among others it is less useful for mob
     programming.
 
-    Cornelius then went into details with the multiple authors problem
+    Cornelius then went into details of the multiple authors problem
     using anything from emails, commit messages and headers.  The
     sketch of a proposed solution and discussion how Git could get
     native support for pair programming can be found on git mailing
     list as
     [[RFC] Proof of concept: Support multiple authors](https://public-inbox.org/git/1485713194-11782-1-git-send-email-schumacher@kde.org/).
     The thread didn't end in an accepted solution, though when one
-    would be created it would most probably follow the
+    would be created it would most probably follow
     [Junio's advice](https://public-inbox.org/git/xmqqinowuvd7.fsf@gitster.mtv.corp.google.com/)
     there of utilizing "Co-Authored-by: " trailers in the commit
     message, and extending `git shortlog` and other commands as
