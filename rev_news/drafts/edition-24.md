@@ -715,7 +715,7 @@ had also a lot of interesting details, but has not attracted much public interes
     Tamir Gefen, _ALMtoolbox_
 
     This lightning talk presented a case study on moving to Git from
-    IBM Rational ClearCase.  Tamir has described challenges they faced
+    IBM Rational ClearCase.  Tamir described challenges they faced
     (among others time to switch and the amount of support, and the
     impedance mismatch between ClearCase and Git) and how they
     resolved them, plus some technical tips and insights.  The
@@ -726,9 +726,9 @@ had also a lot of interesting details, but has not attracted much public interes
   * "Lightning Talk / Git: The Original Blockchain"
     Meredith L. Patterson, _Mautinoa Technologies_
 
-    Meredith shown how Git chosen as the underlying platform for
-    implementing a money-less transaction exchange ledge system,
-    implemented as an actual monetary system in Sierra Leone, where
+    Meredith showed how Git was chosen as the underlying platform for
+    implementing a money-less transaction exchange ledge system.
+    This implemented an actual monetary system in Sierra Leone, where
     _phone minutes_ is actually considered a viable FX currency, since
     otherwise the national bank would go bankrupt.
 
@@ -737,8 +737,8 @@ had also a lot of interesting details, but has not attracted much public interes
     available in much of Africa.  What is needed is a way to perform
     transactions off-line, with later reconciliation step.  This
     means that the system needs to store timestamps in its
-    blockchain... Meredith noticed that is what Git does!  The
-    presented solution uses [ledger-cli][] / [hledger][]
+    blockchain... Meredith noticed that this is what Git does!  The
+    presented solution uses a [ledger-cli][] / [hledger][]
     [plain text accounting][plaintextaccounting] format as a format
     for storing transactions, Git commits for blockchain, remotes as
     wallets / accounts, and GPG keys with short expiration dates for
@@ -758,9 +758,9 @@ had also a lot of interesting details, but has not attracted much public interes
     AI techniques.
 
     For this they needed a special-purposes Git implementation.
-    Santiago introduced [go-git](https://github.com/src-d/go-git)
+    Santiago introduced the [go-git](https://github.com/src-d/go-git)
     project, a Git library written entirely in Go, designed to be
-    developer-friendly and highly extensible.  He has shared some of
+    developer-friendly and highly extensible.  He shared some of
     source{d} use cases, and also problems storing (archiving) such a
     large number of repositories, many of which are forks.
 
