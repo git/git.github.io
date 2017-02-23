@@ -355,7 +355,7 @@ had also a lot of interesting details, but has not attracted much public interes
 
 * Git Merge 2017 — General Sessions
 
-  * Intro & Welcome - Software Freedom Conservancy  
+  * "Intro & Welcome - Software Freedom Conservancy"  
     Karen Sandler, _Software Freedom Conservancy_
 
     Karen wrote about her intro talk in [Git Merge and FOSDEM 2017!](https://sfconservancy.org/blog/2017/feb/17/git-merge-fosdem/):
@@ -381,7 +381,7 @@ had also a lot of interesting details, but has not attracted much public interes
     > **We’re only as free as the software that we use.**
 
 
-  * Top Ten Worst Repositories to host on GitHub  
+  * "Top Ten Worst Repositories to host on GitHub"  
     Carlos Martin Nieto, _GitHub_
 
     Carlos give insights into some of the challenges that GitHub meets
@@ -429,7 +429,7 @@ had also a lot of interesting details, but has not attracted much public interes
     > Please don't
 
 
-  * Scaling Git at Microsoft  
+  * "Scaling Git at Microsoft"  
     Saeed Noursalehi, _Microsoft_
 
     Saeed talked about scaling Git at Microsoft with more that 30K
@@ -479,7 +479,7 @@ had also a lot of interesting details, but has not attracted much public interes
     [[RFC] Add support for downloading blobs on demand](https://public-inbox.org/git/20170113155253.1644-1-benpeart@microsoft.com/).
 
 
-  * What’s Wrong With Git?  
+  * "What’s Wrong With Git?"  
     Santiago Perez De Rosso, _Software Design Group, MIT_
 
     According to Santiago, Git is hard to learn and the documentation
@@ -513,7 +513,7 @@ had also a lot of interesting details, but has not attracted much public interes
     GUI on top of Git, based on this research.
 
 
-  * Git: The Tool Loved and (sometimes) Feared  
+  * "Git: The Tool Loved and (sometimes) Feared"  
     Caren Garcia, _BazaarVoice_
 
     Caren was sharing her experiences teaching Git.  According to
@@ -534,7 +534,7 @@ had also a lot of interesting details, but has not attracted much public interes
     field.
 
 
-  * Scaling Mercurial at Facebook: Insights from the Other Side  
+  * "Scaling Mercurial at Facebook: Insights from the Other Side"  
     Durham Goode, _Facebook_
 
     Durham talked about how Mercurial (Hg) has been scaled at
@@ -599,7 +599,7 @@ had also a lot of interesting details, but has not attracted much public interes
     contributions they make are backward compatible.
 
 
-  * Git LFS at Light Speed  
+  * "Git LFS at Light Speed"  
     Lars Schneider, _Autodesk_ and Taylor Blau, _GitHub_
 
     This was a two part presentation, about a way to dramatically
@@ -644,7 +644,7 @@ had also a lot of interesting details, but has not attracted much public interes
     on figuring out how to make Git-LFS even faster.
 
 
-  * Git Aliases of the Gods!  
+  * "Git Aliases of the Gods!"  
     Tim Pettersen, _Atlassian_
 
     Aliases are not just about saving time and keystrokes, though as
@@ -708,7 +708,7 @@ had also a lot of interesting details, but has not attracted much public interes
     [wiki page with the list of useful aliases](https://www.mediawiki.org/wiki/Git/aliases).)
 
 
-  * Lightning Talk / Lessons Learned: Transforming from ClearCase to Git  
+  * "Lightning Talk / Lessons Learned: Transforming from ClearCase to Git"  
     Tamir Gefen, _ALMtoolbox_
 
     This lightning talk presented a case study on moving to Git from
@@ -720,7 +720,7 @@ had also a lot of interesting details, but has not attracted much public interes
     then dump content on new branches in Git.
 
 
-  * Lightning Talk / Git: The Original Blockchain  
+  * "Lightning Talk / Git: The Original Blockchain"  
     Meredith L. Patterson, _Mautinoa Technologies_
 
     Meredith shown how Git chosen as the underlying platform for
@@ -746,7 +746,7 @@ had also a lot of interesting details, but has not attracted much public interes
     places.
 
 
-  * Lightning Talk / go-git: A Pure Go Implementation of Git  
+  * "Lightning Talk / go-git: A Pure Go Implementation of Git"  
     Santiago M. Mola, _source(d)_
 
     [source{d}](http://sourced.tech/) wants to clone all open-source
@@ -762,7 +762,7 @@ had also a lot of interesting details, but has not attracted much public interes
     large number of repositories, many of which are forks.
 
 
-  * Git for Pair Programming  
+  * "Git for Pair Programming"  
     Cornelius Schumacher, _SUSE Linux_
 
     Cornelius started the presentation by describing in detail the
@@ -793,7 +793,7 @@ had also a lot of interesting details, but has not attracted much public interes
     needed.
 
 
-  * Trust But Verify  
+  * "Trust But Verify"  
     Thordur Bjornsson, _Yubico_
 
     The last talk covered cover the details on how to
