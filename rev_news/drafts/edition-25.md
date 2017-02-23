@@ -36,6 +36,7 @@ This edition covers what happened during the month of February 2017.
 
 __Various__
 
+* CWI Institute Amsterdam and Google presented [a practical technique for generating SHA-1 collisions](https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html)
 
 __Light reading__
 
