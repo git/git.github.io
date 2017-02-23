@@ -812,7 +812,7 @@ had also a lot of interesting details, but has not attracted much public interes
 
     As one way of verifying signatures, Thordur took a look at GitHub’s
     interface changes from [earlier this year](https://github.com/blog/2144-gpg-signature-verification)
-    that added visual cues to highlight verification status of commits
+    that added visual cues to highlight the verification status of commits
     and tags.
 
     The slides from this talk (and links to other related resources are
