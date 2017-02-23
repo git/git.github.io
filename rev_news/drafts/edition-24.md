@@ -217,7 +217,7 @@ the [Git Merge 2017](http://git-merge.com/) conference which happened in Brussel
                   terms, or better concepts?
 
 	Regarding patches, the maintainer decides when and where they are merged / implemented.
-	The maintainer workflow may prevent us from just using Github Pull Requests.
+	The maintainer workflow may prevent us from just using GitHub Pull Requests.
 	Whether to merge or rebase is then finally a manual decision of the maintainer,
 	independently of what the author intended.
 	A longer discussion arose around this subject; Stefan Beller
