@@ -420,7 +420,7 @@ had also a lot of interesting details, but has not attracted much public interes
        workflow, that is with extensive use of pull-requests and
        issues, like [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
        with 24K pull requests in total, and 5K+ open issues, plus 12K
-       closed
+       closed.
 
      * Some have just large number of commits,
        like [CocoaPods/Specs](https://github.com/CocoaPods/Specs) –
