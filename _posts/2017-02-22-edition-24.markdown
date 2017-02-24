@@ -477,7 +477,7 @@ had also a lot of interesting details, but has not attracted much public interes
     Microsoft also cares about other platforms: the message is “_We’re
     hiring - especially if you know file systems on Mac and Linux_”.
     Microsoft is also working on core Git integration: see the
-    discussion in thread started by Bob Peart
+    discussion in thread started by Ben Peart
     [[RFC] Add support for downloading blobs on demand](https://public-inbox.org/git/20170113155253.1644-1-benpeart@microsoft.com/).
 
 
