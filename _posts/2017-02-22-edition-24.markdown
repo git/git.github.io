@@ -500,7 +500,7 @@ had also a lot of interesting details, but has not attracted much public interes
     paper - covered in [Git Rev News: Edition 20](https://git.github.io/rev_news/2016/10/19/edition-20/).
     Santiago showed the complexity of understanding concepts like
     _stash_, _detached head_, and _untracked files_, and how they
-    relate (or not) to concepts and purposes of an VCS.
+    relate (or not) to concepts and purposes of a VCS.
 
     In his experiment of improving Git usage, he
     presented [Gitless](http://gitless.com/), an experimental version
@@ -574,7 +574,7 @@ had also a lot of interesting details, but has not attracted much public interes
     is especially needed for the monorepos.  The feature is similar to
     Git's sparse checkout; the important difference is a far better
     UX.  Their implementation allows for example easy switching
-    between pre-defined (via in-repository file with known format)
+    between predefined (via in-repository file with known format)
     sets of files, selected for well-defined tasks.  This is something
     worth porting to Git, to improve its sparse checkout feature.
 
