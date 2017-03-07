@@ -25,8 +25,7 @@ It is *expected* that what you send will need several rounds of
 reviews and discussions. If you are not sure at all about a patch you can
 put "[RFC/PATCH]" at the beginning of its subject.
 
-Consider [a sample email
-thread](http://public-inbox.org/git/1386590745-4412-1-git-send-email-t.gummerer@gmail.com/T/#u),
+Consider [a sample email thread](http://public-inbox.org/git/1386590745-4412-1-git-send-email-t.gummerer@gmail.com/T/#u),
 which shows how a developer proposed a change and a patch to implement
 it.  The problem being solved, the design of the proposed solution,
 and the implementation of that design were all reviewed and discussed,
@@ -54,6 +53,10 @@ the following steps:
 
 * Read about the process for submitting patches to Git: this is
   described in `Documentation/SubmittingPatches`.
+
+* Select a microproject and check that it has not yet been taken or
+  discussed by searching the mailing list.
+  [Public Inbox](http://public-inbox.org/git/) is your friend.
 
 * **Make the actual change.** (Funny, this is the only part they teach
   you about in college.)
@@ -87,7 +90,8 @@ the following steps:
   probably want to use the commands `git format-patch` and `git
   send-email`.  Make sure that your email is formatted correctly: send
   a test version of the email to yourself and see if you can apply it
-  to your repository using `git am`.
+  to your repository using `git am`.  Alternatively you may use
+  [submitGit](https://submitgit.herokuapp.com/).
 
 * Expect feedback, criticism, suggestions, etc. from the mailing list.
 
