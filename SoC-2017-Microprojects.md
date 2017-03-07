@@ -13,12 +13,6 @@ project; the coding aspect of the change can be almost trivial, but to
 make the change the student has to become familiar with many of the
 practical aspects of working on the Git project.
 
-*NOTE: Students who plan to work on libgit2, which is also under the
-Git umbrella in the Google Summer of Code, should refer to [the
-libgit2 list of
-projects](https://github.com/libgit2/libgit2/blob/master/PROJECTS.md)
-rather than the list below.*
-
 Git development is based on sending successive versions of patches or
 patch series to the mailing list until they are considered good and
 correct by the reviewers and Junio Hamano, the maintainer, who will
