@@ -202,12 +202,6 @@ See the commit
 [c6f44e1da5](https://github.com/git/git/commit/c6f44e1da5e88e34)
 for example.
 
-### Allow "-" as a short-hand for "@{-1}" in more places.
-
-Pick one command that operates on branch names.  Teach it the "-"
-shorthand that stands for "the branch we were previously on", like we
-did for "git merge -" sometime after we introduced "git checkout -".
-[[thread](https://public-inbox.org/git/7vppuewl6h.fsf@alter.siamese.dyndns.org)]
 
 ### Use unsigned integral type for collection of bits.
 
