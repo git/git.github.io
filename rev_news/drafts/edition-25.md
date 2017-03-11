@@ -39,7 +39,7 @@ __Various__
 * CWI Institute Amsterdam and Google presented [a practical technique for generating SHA-1 collisions](https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html)
 
 * Dennis Kaarsemaker [provides daily snapshots of git's master and next tree](http://public-inbox.org/git/1488208102.10235.3.camel@kaarsemaker.net/)
-  as packages for Ubuntu, Debian, Fedora and CentOS on launchpad and OpenSUSE build service:
+  as packages for Ubuntu, Debian, Fedora and CentOS on Launchpad and OpenSUSE build service:
    - [master on Launchpad](https://launchpad.net/~dennis/+archive/ubuntu/git-master)
    - [next on Launchpad](https://launchpad.net/~dennis/+archive/ubuntu/git-next)
    - [master on OpenSUSE](https://build.opensuse.org/project/show/home:seveas:git-master)
