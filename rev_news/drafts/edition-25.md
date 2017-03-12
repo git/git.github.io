@@ -86,9 +86,70 @@ there:
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [body-CC-comment regression](https://public-inbox.org/git/20170216174924.GB2625@localhost/)
+
+Johan Hovold noticed that `git send-email` in Git v2.10.2 does not
+accept anymore patches with a commit message that contain lines like:
+
+  Cc: <stable@vger.kernel.org>	# 4.4
+
+It looks like it parses the above as "stable@vger.kernel.org#4.4" and
+then aborts.
+
+Researching the problem, Johan found
+[a mailing list thread](https://public-inbox.org/git/vpqmvi8n71g.fsf@anie.imag.fr/)
+which resulted in some "fixes" that seem to be the root cause of the
+problem.
+
+He also wrote that the format of the line that trigger the problem
+"has been documented at least since 2009" in the linux kernel and "has
+been supported by git since 2012". It is used to tag commits that
+should be backported into the "stable" linux kernel versions.
+
+Johan then asked for a way for Git to revert to the old behavior.
+
+Junio replied by wondering if installing the Mail::Address Perl module
+would make `git send-email` work by avoiding the
+"non-parsing-but-paste-address-looking-things-together code" that it
+uses when Mail::Address is not installed. But Johan replied that it
+doesn't work.
+
+Matthieu Moy, who worked on the patch that is responsible for the
+problem, replied that "a proper fix is far from obvious", because we
+want our own parser to work as Mail::Address does and we don't want to
+regress for people who want to get back two email addresses from lines
+like:
+
+  Cc: <foo@example.com> # , <boz@example.com>
+
+In another email Matthieu anyway suggested that we use our own parser
+all the time as "we now have something essentially as good as
+Mail::Address, and changing our parser to discard anything after ">"
+in the email address. Matthieu's email also contained a patch
+implementing this last change.
+
+Johan agreed with Matthieu's plan, tested the patch and found that it
+worked. Unfortunately he found another breakage when the
+--suppress-cc=self option is used if more than one email address in
+each line are allowed.
+
+It looked like the discussion was going to continue for some time, but
+Linus replied to Matthieu saying that Cc lines in commit messages are
+not like Cc lines in email headers, and concluding with:
+
+> So this notion that the bottom of the commit message is some email
+> header crap is WRONG.
+>
+> Stop it. It caused bugs. It's wrong. Don't do it.
+
+In the end, after Junio discussed possible breakages with Matthieu's
+patch, Matthieu agreed that it was safer to just revert to not
+accepting many email addresses in the Cc lines. Junio then accepted a
+patch that Johan had sent doing that. The patch has since been merged
+to the "next" branch, so it is very likely to appear in the next Git
+release. Let's just hope that noone will complain about it.
 
 ## Releases
 
