@@ -97,7 +97,11 @@ there:
 
 __Various__
 
-* CWI Institute Amsterdam and Google presented [a practical technique for generating SHA-1 collisions](https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html)
+* This year Git [was accepted again](http://public-inbox.org/git/CAP8UFD1+Yn8W3YXF6Wn3=7Kiim9h6WtK7cqDu1G0uF8+CuORQg@mail.gmail.com/) as
+[one of organizations in GSoC 2017](https://summerofcode.withgoogle.com/organizations/5465129203269632/).
+Students started to work on [microprojects](https://git.github.io/SoC-2017-Microprojects/).
+
+* CWI Institute Amsterdam and Google presented [a practical technique for generating SHA-1 collisions](https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html).
 
 * Dennis Kaarsemaker [provides daily snapshots of git's master and next tree](http://public-inbox.org/git/1488208102.10235.3.camel@kaarsemaker.net/)
   as packages for Ubuntu, Debian, Fedora and CentOS on Launchpad and OpenSUSE build service:
