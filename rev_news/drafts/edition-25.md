@@ -112,9 +112,19 @@ Students started to work on [microprojects](https://git.github.io/SoC-2017-Micro
 
 __Light reading__
 
+* O'Reilly Radar: [How to use pull requests to improve your code reviews](https://www.oreilly.com/ideas/how-to-use-pull-requests-to-improve-your-code-reviews) by Brent Beer and Peter Bell;  
+  advertising that you can find more in their [Introducing GitHub](http://shop.oreilly.com/product/0636920067634.do) book (also [on Safari Books Online](https://www.safaribooksonline.com/library/view/introducing-github/9781491949801/))
+
+* The Myers diff algorithm: [part 1](https://blog.jcoglan.com/2017/02/12/the-myers-diff-algorithm-part-1/), [part 2](https://blog.jcoglan.com/2017/02/15/the-myers-diff-algorithm-part-2/), [part 3](https://blog.jcoglan.com/2017/02/17/the-myers-diff-algorithm-part-3/) by James Coglan;  
+  this was part of his ongoing work on a book explaining the internals of Git through implementation: [Building Git](https://building-git.launchrock.com/)
+
+* [Learn Version Control with Git: A step-by-step course for the complete beginner](https://www.git-tower.com/learn/git/ebook/) ebook by Tobias Günther _(Git Tower GUI)_: [free online book](https://www.git-tower.com/learn/git/ebook/en/command-line/introduction) and [video course](https://www.git-tower.com/learn/git/videos) (partially free)
+
 
 __Git tools and sites__
 
+* [Gitly](https://gitly.io/), a new git hosting service
+* [Terminals Are Sexy: A curated list of Terminal frameworks, plugins & resources for CLI lovers.](https://github.com/k4m4/terminals-are-sexy) includes list of shell prompts for Git
 
 ## Credits
 
