@@ -30,7 +30,7 @@ annotated tags).
 performed as well as ways and [code](https://github.com/cr-marcstevens/sha1collisiondetection)
 to detect such a collision attack was published at the same time.
 
-This generated a lot of news article related to Git and SHA-1 in many
+This generated a lot of news articles related to Git and SHA-1 in many
 places like for example LWN.net:
 
   - [Linus on Git and SHA-1 [LWN.net]](https://lwn.net/Articles/715621/)
