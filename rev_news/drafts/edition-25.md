@@ -124,11 +124,13 @@ like:
 
   Cc: <foo@example.com> # , <boz@example.com>
 
+as this has been working since September 2015.
+
 In another email Matthieu anyway suggested that we use our own parser
 all the time as "we now have something essentially as good as
 Mail::Address, and changing our parser to discard anything after ">"
 in the email address. Matthieu's email also contained a patch
-implementing this last change.
+implementing the later change.
 
 Johan agreed with Matthieu's plan, tested the patch and found that it
 worked. Unfortunately he found another breakage when the
@@ -137,7 +139,8 @@ each line are allowed.
 
 It looked like the discussion was going to continue for some time, but
 Linus replied to Matthieu saying that Cc lines in commit messages are
-not like Cc lines in email headers, and concluding with:
+not like Cc lines in email headers, so we should not accept more than
+one email address in them, and concluding with:
 
 > So this notion that the bottom of the commit message is some email
 > header crap is WRONG.
