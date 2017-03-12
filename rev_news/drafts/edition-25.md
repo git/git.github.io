@@ -109,7 +109,7 @@ should be backported into the "stable" Linux kernel versions.
 
 Johan then asked for a way for Git to revert to the old behavior.
 
-Junio wondered if installing the Mail::Address Perl module
+Junio wondered if installing the [Mail::Address](http://search.cpan.org/search?query=Mail%3A%3AAddress&mode=module) Perl module
 would make `git send-email` work by avoiding the
 "non-parsing-but-paste-address-looking-things-together code" that Git
 uses when Mail::Address is not installed. Johan replied that it
