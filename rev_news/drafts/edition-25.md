@@ -21,51 +21,51 @@ This edition covers what happened during the month of February 2017.
 
 * [SHA1 collisions found](https://public-inbox.org/git/20170223164306.spg2avxzukkggrpb@kitenet.net/)
 
-On February 23rd it was [announced publicly](https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html)
+On February 23rd it was [publicly announced](https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html)
 that a collision had been found against SHA-1, the cryptographic hash
 function that Git uses to identify Git objects (blobs, trees, commits,
 annotated tags).
 
-[Details](https://shattered.it/) about the collision found, how it was
-performed as well as ways and [code](https://github.com/cr-marcstevens/sha1collisiondetection)
-to detect such a collision attack was published at the same time.
+[Details](https://shattered.it/) about the collision, how it was
+performed, as well as algorithms and [code](https://github.com/cr-marcstevens/sha1collisiondetection)
+to detect such a collision attack were published simultaneously.
 
-This generated a lot of news articles related to Git and SHA-1 in many
-places like for example LWN.net:
+This caused numerous news articles related to Git and SHA-1 in many
+places, for example LWN.net:
 
-  - [Linus on Git and SHA-1 [LWN.net]](https://lwn.net/Articles/715621/)
-  - [Moving Git past SHA-1 [LWN.net]](https://lwn.net/Articles/715716/)
+  - [Linus on Git and SHA-1 \[LWN.net\]](https://lwn.net/Articles/715621/)
+  - [Moving Git past SHA-1 \[LWN.net\]](https://lwn.net/Articles/715716/)
 
 as well as many discussions on the mailing list.
 
-There have been also patch series flowing around and plans to move Git
+There have also been patch series flowing around. Moreover, plans to move Git
 away from SHA-1 have been shared and discussed.
 
 Linus Torvalds for example sent a
 [Typesafer git hash patch](https://public-inbox.org/git/CA+55aFxYs1zp2c-UPe8EfshNNOxRVxZ2H+ipsnG489NBsE+DLQ@mail.gmail.com/)
 as a first step on fixing SHA-1 implicit dependencies. This one big
-patch approach though is not consistent with the way Brian Carlson has
-been working for a long time on the same issue. And Junio Hamano has
-not yet commented on this patch. So for now it is not sure at all that
+patch approach, though, is not consistent with the way Brian Carlson has
+been working on the same issue for a long time. Junio Hamano has
+not commented on this patch yet. Hence, for the time being it is not sure at all that
 this topic will move much faster.
 
-There [has been work](http://public-inbox.org/git/20170223230536.tdmtsn46e4lnrimx@sigill.intra.peff.net/)
-also on integrating the code to detect a collision attack into a new
-SHA-1 implementation in Git. This work was started by Jeff King and
+[Some work on integrating](http://public-inbox.org/git/20170223230536.tdmtsn46e4lnrimx@sigill.intra.peff.net/)
+the code to detect a collision attack into a new
+SHA-1 implementation in Git was started by Jeff King and
 then [picked up by Linus](http://public-inbox.org/git/alpine.LFD.2.20.1702281621050.22202@i7.lan/).
 The original code was written by Marc Stevens, working for
 [CWI](https://www.cwi.nl/research-groups/Cryptology) and Dan Shumow,
-working for Microsoft, and interestingly both Marc and Dan chimed into the
+working for Microsoft. Interestingly, both Marc and Dan chimed into the
 discussion. Dan agreed to work on adaptations and performance
-improvements for Git and on upstreaming this work into the original
+improvements for Git, and on upstreaming this work into the original
 code base.
-Junio took part in the discussions too, and it looks like the
+Junio participated in the discussions, too, and it looks as if the
 resulting patch series could be merged for the next Git release.
 
-Among the plans to move Git away from SHA-1 that have been shared, one
-comes from Jonathan Nieder, Stefan Beller, Jonathan Tan and Brandon
-Williams who are all working in the same team at Google. The latest
-version of this plan is available on
+One of the plans to move Git away from SHA-1 was contributed by
+Jonathan Nieder, Stefan Beller, Jonathan Tan and Brandon
+Williams, who are all working in the same team at Google. The latest
+version of this plan is available in
 [a Google document](https://goo.gl/gh2Mzc) where it can be commented
 on. It has also been discussed in the following threads:
 
@@ -73,11 +73,10 @@ on. It has also been discussed in the following threads:
   - [RFC v3: Another proposed hash function transition plan](https://public-inbox.org/git/20170307001709.GC26789@aiede.mtv.corp.google.com/)
 
 [Another plan](http://public-inbox.org/git/22708.8913.864049.452252@chiark.greenend.org.uk/)
-was posted by Ian Jackson and also generated some discussion.
+was posted by Ian Jackson; it also generated some discussion.
 
 It's interesting to note that Git is not the only version control
-system to be affected by the issue. Here are a few related posts out
-there:
+system to be affected by the issue. Here are a few related posts:
 
   - [SHA1 and Mercurial security](https://www.mercurial-scm.org/wiki/mpm/SHA1), or why you shouldn't panic yet (Feb 2017)
   - [Subversion SHA1 Collision Problem Statement](http://blogs.collab.net/subversion/subversion-sha1-collision-problem-statement-prevention-remediation-options)
@@ -95,64 +94,65 @@ accept anymore patches with a commit message that contain lines like:
 
   Cc: <stable@vger.kernel.org>	# 4.4
 
-It looks like it parses the above as "stable@vger.kernel.org#4.4" and
+Apparently it parses the above as "stable@vger.kernel.org#4.4" and
 then aborts.
 
 Researching the problem, Johan found
 [a mailing list thread](https://public-inbox.org/git/vpqmvi8n71g.fsf@anie.imag.fr/)
-which resulted in some "fixes" that seem to be the root cause of the
+which resulted in some "fixes" which seem to be the root cause of the
 problem.
 
-He also wrote that the format of the line that trigger the problem
-"has been documented at least since 2009" in the linux kernel and "has
+He claimed the format of the line that trigger the problem
+"has been documented at least since 2009" in the Linux kernel and "has
 been supported by git since 2012". It is used to tag commits that
-should be backported into the "stable" linux kernel versions.
+should be backported into the "stable" Linux kernel versions.
 
 Johan then asked for a way for Git to revert to the old behavior.
 
-Junio replied by wondering if installing the Mail::Address Perl module
+Junio wondered if installing the Mail::Address Perl module
 would make `git send-email` work by avoiding the
-"non-parsing-but-paste-address-looking-things-together code" that it
-uses when Mail::Address is not installed. But Johan replied that it
+"non-parsing-but-paste-address-looking-things-together code" that Git
+uses when Mail::Address is not installed. Johan replied that it
 doesn't work.
 
 Matthieu Moy, who worked on the patch that is responsible for the
-problem, replied that "a proper fix is far from obvious", because we
-want our own parser to work as Mail::Address does and we don't want to
-regress for people who want to get back two email addresses from lines
-like:
+problem, remarked that "a proper fix is far from obvious", because we
+want our own parser to work the same way as Mail::Address does,
+and we don't want to regress for people who want to get back
+two email addresses from lines like:
 
   Cc: <foo@example.com> # , <boz@example.com>
 
 as this has been working since September 2015.
 
-In another email Matthieu anyway suggested that we use our own parser
-all the time as "we now have something essentially as good as
-Mail::Address, and changing our parser to discard anything after ">"
+Anyway, in another email Matthieu suggested that we should always use our
+own parser, as "we now have something essentially as good as
+Mail::Address", and changing our parser to discard anything after ">"
 in the email address. Matthieu's email also contained a patch
-implementing the later change.
+implementing the latter.
 
 Johan agreed with Matthieu's plan, tested the patch and found that it
 worked. Unfortunately he found another breakage when the
---suppress-cc=self option is used if more than one email address in
-each line are allowed.
+`--suppress-cc=self` option is used if more than one email address in
+each line is allowed.
 
-It looked like the discussion was going to continue for some time, but
-Linus replied to Matthieu saying that Cc lines in commit messages are
-not like Cc lines in email headers, so we should not accept more than
-one email address in them, and concluding with:
+It looked as if the discussion was going to continue for some time, but
+Linus replied to Matthieu stating that Cc: lines in commit messages are
+not like Cc: lines in email headers. Consequently, we should not accept
+more than one email address in them. He concluded as follows:
 
 > So this notion that the bottom of the commit message is some email
 > header crap is WRONG.
 >
 > Stop it. It caused bugs. It's wrong. Don't do it.
 
-In the end, after Junio discussed possible breakages with Matthieu's
+Finally, after Junio had discussed possible breakages with Matthieu's
 patch, Matthieu agreed that it was safer to just revert to not
-accepting many email addresses in the Cc lines. Junio then accepted a
-patch that Johan had sent doing that. The patch has since been merged
-to the "next" branch, so it is very likely to appear in the next Git
-release. Let's just hope that noone will complain about it.
+accepting many email addresses in the Cc: lines. Junio then accepted a
+patch submitted by Johan implementing this proposal.
+In the meantime, this patch was merged to the "next" branch,
+so it is very likely to appear in the next Git release.
+Let's just hope that no one will complain about it.
 
 ## Releases
 
