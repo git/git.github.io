@@ -92,6 +92,8 @@ there:
 
 ## Releases
 
+* Git LFS [v2.0.0](https://github.com/blog/2328-git-lfs-2-0-0-released) released
+* GitHub Enterprise [2.9](https://github.com/blog/2326-github-enterprise-2-9-is-here-with-pull-request-improvements-organization-wide-projects-and-google-cloud-platform-support)
 
 ## Other News
 
