@@ -99,7 +99,7 @@ then aborts.
 
 Researching the problem, Johan found
 [a mailing list thread](https://public-inbox.org/git/vpqmvi8n71g.fsf@anie.imag.fr/)
-which resulted in some "fixes" which seem to be the root cause of the
+which resulted in some "fixes" that seem to be the root cause of the
 problem.
 
 He claimed the format of the line that trigger the problem
