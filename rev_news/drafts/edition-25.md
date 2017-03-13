@@ -191,6 +191,7 @@ __Git tools and sites__
 
 * [Gitly](https://gitly.io/), a new git hosting service
 * [Terminals Are Sexy: A curated list of Terminal frameworks, plugins & resources for CLI lovers.](https://github.com/k4m4/terminals-are-sexy) includes list of shell prompts for Git
+* [Scotty](https://github.com/larsxschneider/scotty), a collection of helper scripts for GitHub Enterprise administrators
 
 ## Credits
 
