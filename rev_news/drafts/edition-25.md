@@ -176,6 +176,9 @@ Students started to work on [microprojects](https://git.github.io/SoC-2017-Micro
    - [master on OpenSUSE](https://build.opensuse.org/project/show/home:seveas:git-master)
    - [next on OpenSUSE](https://build.opensuse.org/project/show/home:seveas:git-next)
 
+* London has been chosen as [location of the Gerrit User Summit 2017](https://gitenterprise.me/2017/03/09/london-to-host-gerrit-user-summit-2017/). The 10th edition of the historical "GitTogether" at Google will take
+place for the first time in a different location, hosted by [SkillsMatter at CodeNode](https://www.google.com/maps/search/Skills+Matter+%7C+CodeNode,+10+South+Place,+London,+EC2M+7EB,+GB/@51.5185967,-0.0882515,17z/data=!3m1!4b1) from 30th Sep to 3rd of October.
+
 __Light reading__
 
 * O'Reilly Radar: [How to use pull requests to improve your code reviews](https://www.oreilly.com/ideas/how-to-use-pull-requests-to-improve-your-code-reviews) by Brent Beer and Peter Bell;  
