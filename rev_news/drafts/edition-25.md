@@ -159,6 +159,9 @@ Let's just hope that no one will complain about it.
 * Git [v2.12.0](http://public-inbox.org/git/xmqqd1e72xs5.fsf@gitster.mtv.corp.google.com/)
 * Git LFS [v2.0.0](https://github.com/blog/2328-git-lfs-2-0-0-released) released
 * GitHub Enterprise [2.9](https://github.com/blog/2326-github-enterprise-2-9-is-here-with-pull-request-improvements-organization-wide-projects-and-google-cloud-platform-support)
+* GitLab [8.17](https://about.gitlab.com/2017/02/22/gitlab-8-17-released/) through [8.17.3](https://about.gitlab.com/2017/03/10/gitlab-8-dot-17-dot-3-released/)
+* nodegit [v0.18.0](https://github.com/nodegit/nodegit/releases/tag/v0.18.0)
+* JGit / EGit [4.6.1.201703071140-r](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03301.html)
 
 ## Other News
 
