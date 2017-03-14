@@ -156,6 +156,7 @@ Let's just hope that no one will complain about it.
 
 ## Releases
 
+* Git [v2.12.0](http://public-inbox.org/git/xmqqd1e72xs5.fsf@gitster.mtv.corp.google.com/)
 * Git LFS [v2.0.0](https://github.com/blog/2328-git-lfs-2-0-0-released) released
 * GitHub Enterprise [2.9](https://github.com/blog/2326-github-enterprise-2-9-is-here-with-pull-request-improvements-organization-wide-projects-and-google-cloud-platform-support)
 
@@ -189,12 +190,24 @@ __Light reading__
 
 * [Learn Version Control with Git: A step-by-step course for the complete beginner](https://www.git-tower.com/learn/git/ebook/) ebook by Tobias Günther _(Git Tower GUI)_: [free online book](https://www.git-tower.com/learn/git/ebook/en/command-line/introduction) and [video course](https://www.git-tower.com/learn/git/videos) (partially free)
 
+* It appears that WikiLeaks has captured the super secret [Git Tips & Tricks](https://wikileaks.org/ciav7p1/cms/page_1179773.html) from the CIA!
+
+* In today's world of Github and other competing services, it’s easy to overlook how simple it is to [set up (unlimited) private repos on any network connected computer](https://www.alexkras.com/private-git-repository-on-any-computer/), as explained by Alex Kras
+
+* How to have a proper [Git client on Android](https://pedronveloso.com/proper-git-client-android/), by Pedro Veloso
+
+* Adding a SHA1 collision vulnerability test [hoses WebKit's source repository](https://news.ycombinator.com/item?id=13725093)
 
 __Git tools and sites__
 
 * [Gitly](https://gitly.io/), a new git hosting service
 * [Terminals Are Sexy: A curated list of Terminal frameworks, plugins & resources for CLI lovers.](https://github.com/k4m4/terminals-are-sexy) includes list of shell prompts for Git
 * [Scotty](https://github.com/larsxschneider/scotty), a collection of helper scripts for GitHub Enterprise administrators
+* [git-profile](https://github.com/zeeshanu/git-profile), a utility that helps you switch git configurations with ease
+* [GotGit](https://github.com/gotgit) is a book about Git in Chinese
+* If you use Composer to manage PHP dependencies, you may enjoy [composer-git-hooks](https://github.com/BrainMaestro/composer-git-hooks)
+* [git-secrets](https://github.com/awslabs/git-secrets) Prevents you from committing secrets and credentials into git repositories
+* [git-dit](https://github.com/neithernut/git-dit), a decentralized (proof-of-concept) issue tracker for Git
 
 ## Credits
 
