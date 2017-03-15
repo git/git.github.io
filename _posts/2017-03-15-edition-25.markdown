@@ -172,10 +172,11 @@ This edition covers what happened during the month of February 2017.
 __Various__
 
 * This year Git [was accepted again](http://public-inbox.org/git/CAP8UFD1+Yn8W3YXF6Wn3=7Kiim9h6WtK7cqDu1G0uF8+CuORQg@mail.gmail.com/) as
-[one of organizations in GSoC 2017](https://summerofcode.withgoogle.com/organizations/5465129203269632/).
-Students started to work on [microprojects](https://git.github.io/SoC-2017-Microprojects/).
+  [one of organizations in GSoC 2017](https://summerofcode.withgoogle.com/organizations/5465129203269632/).
+  Students started to work on [microprojects](https://git.github.io/SoC-2017-Microprojects/).
 
-* CWI Institute Amsterdam and Google presented [a practical technique for generating SHA-1 collisions](https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html).
+* CWI Institute Amsterdam and Google presented
+  [a practical technique for generating SHA-1 collisions](https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html).
 
 * Dennis Kaarsemaker [provides daily snapshots of git's master and next tree](http://public-inbox.org/git/1488208102.10235.3.camel@kaarsemaker.net/)
   as packages for Ubuntu, Debian, Fedora and CentOS on Launchpad and OpenSUSE build service:
@@ -184,8 +185,12 @@ Students started to work on [microprojects](https://git.github.io/SoC-2017-Micro
    - [master on OpenSUSE](https://build.opensuse.org/project/show/home:seveas:git-master)
    - [next on OpenSUSE](https://build.opensuse.org/project/show/home:seveas:git-next)
 
-* London has been chosen as [location of the Gerrit User Summit 2017](https://gitenterprise.me/2017/03/09/london-to-host-gerrit-user-summit-2017/). The 10th edition of the historical "GitTogether" at Google will take
-place for the first time in a different location, hosted by [SkillsMatter at CodeNode](https://www.google.com/maps/search/Skills+Matter+%7C+CodeNode,+10+South+Place,+London,+EC2M+7EB,+GB/@51.5185967,-0.0882515,17z/data=!3m1!4b1) from September 30th to October 3rd.
+* London has been chosen as
+  [location of the Gerrit User Summit 2017](https://gitenterprise.me/2017/03/09/london-to-host-gerrit-user-summit-2017/).
+  The 10th edition of the historical "GitTogether" at Google will take
+  place for the first time in a different location, hosted by
+  [SkillsMatter at CodeNode](https://www.google.com/maps/search/Skills+Matter+%7C+CodeNode,+10+South+Place,+London,+EC2M+7EB,+GB/@51.5185967,-0.0882515,17z/data=!3m1!4b1)
+  from September 30th to October 3rd.
 
 __Light reading__
 
