@@ -51,7 +51,9 @@ This edition covers what happened during the month of February 2017.
 
   [Some work on integrating](http://public-inbox.org/git/20170223230536.tdmtsn46e4lnrimx@sigill.intra.peff.net/)
   the code to detect a collision attack into a new
-  SHA-1 implementation in Git was started by Jeff King and
+  SHA-1 implementation in Git was started by Jeff King,
+  adding a `USE_SHA1DC` knob [to the Makefile](https://github.com/git/git/blob/beadf5ede3bfd3c1564af299b89c7c8474385247/Makefile#L145),
+  and
   then [picked up by Linus](http://public-inbox.org/git/alpine.LFD.2.20.1702281621050.22202@i7.lan/).
   The original code was written by Marc Stevens, working for
   [CWI](https://www.cwi.nl/research-groups/Cryptology) and Dan Shumow,
@@ -60,7 +62,8 @@ This edition covers what happened during the month of February 2017.
   improvements for Git, and on upstreaming this work into the original
   code base.
   Junio participated in the discussions, too, and it looks as if the
-  resulting patch series could be merged for the next Git release.
+  resulting patch series could be merged for the next Git release;
+  currently the 'jk/sha1dc' is in the 'pu' branch.
 
   One of the plans to move Git away from SHA-1 was contributed by
   Jonathan Nieder, Stefan Beller, Jonathan Tan and Brandon
