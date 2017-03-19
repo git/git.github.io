@@ -242,6 +242,14 @@ Many have already been added (e.g. "git am -3" in e97a5e7).
 Some people always run the command with these options, and would
 prefer to be able to activate them by default in ~/.gitconfig.
 
+### Use dir-iterator to avoid explicit recursive directory traversal
+
+Some places in git use raw API opendir/readdir/closedir to traverse a
+directory recursively, which usually involves function recursion. Now
+that we have `struct dir_iterator` (see dir-iterator.h), convert these
+to use the dir-iterator to simplify the code. Do only one conversion
+per microproject.
+
 ## How to find other ideas for microprojects
 
 If you don't like for some reason the above microprojects or if you
