@@ -254,3 +254,43 @@ If I run:
     git push origin v1.0:refs/heads/master
 
 and v1.0 is an annotated tag, then I probably meant v1.0^{commit}, not ^{tag}.
+
+### Speeding up reachability queries: generation numbers
+
+ - Language: C (implementation), any (prototype)
+ - Difficulty: medium to hard
+ - Possible mentors: Jakub Narębski, possibly Jeff King
+
+The goal is to create a helper structure to hold generation numbers
+(also known as node level) or other indices to speed up reachability
+queries, that is answering a question whether one commit (or other
+object) is reachable from another.  This would make `git log` queries,
+such as `git log A..B` faster.
+
+At minimum it would consist of a prototype that would help to find
+out how much performance improvement we can get out of this idea,
+and what is the cost of maintaining such information.
+
+### Speeding up reachability queries: bitmap indices
+
+ - Language: C (git) or Java (JGit), or any (prototype)
+ - Difficulty: medium to hard
+ - Possible mentors: Jakub Narębski, possibly Jeff King
+
+Nowadays Git uses bitmap index (if there is one) to speed up
+reachability queries, which leads to faster clone and fetch;
+you can read more about it at <http://githubengineering.com/counting-objects/>.
+It also began to be used to speed up `git log` queries.
+
+The idea of bitmap indices came to Git via JGit, Git
+implementation in Java. Both Git and JGit use the same file
+format for storing [compressed] bitmaps, but they use different
+heuristics (different rules) for selecting revisions which
+would have bitmap index. For each object that has associated
+bitmap, the bit at i-th position is on if and only if
+i-th object is reachable from it.
+
+The goal is to examine various heuristics, and what are
+their advantages (better performance) and disadvantages (more
+disk space) for different scenarios. One could for example
+compare Git and JGit heuristics.
