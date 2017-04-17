@@ -218,6 +218,9 @@ area for the foreseeable future.
 
 __Various__
 
+* Stefan Beller sent
+  ["[RFC PATCH] git-news: obtain latest news for your favorite VCS"](http://public-inbox.org/git/20170331235947.20010-1-sbeller@google.com/)
+  on April 1st :-)
 
 __Light reading__
 
