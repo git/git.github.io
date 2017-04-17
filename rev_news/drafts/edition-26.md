@@ -53,10 +53,10 @@ But Ævar replied that we also use OpenSSL in `git imap-send` for its
 TLS implementation, so it is not enough to use a different SHA-1
 implementation.
 
-About that Peff wrote that, when building with NO_OPENSSL, `git imap-send`
-uses the curl imap implementation instead of our custom imap
-implementation that can optionally use OpenSSL. Curl itself may be
-compiled to use either OpenSSL or GnuTLS.
+About that Jeff King, alias Peff, wrote that, when building with
+NO_OPENSSL, `git imap-send` uses the curl imap implementation instead
+of our custom imap implementation that can optionally use
+OpenSSL. Curl itself may be compiled to use either OpenSSL or GnuTLS.
 
 <!---
 ### Reviews
