@@ -205,10 +205,10 @@ But Jeff King, alias Peff, in turn replied to Bernhard, stressing that
 "the existing config option will have to stay" to avoid breaking
 existing "exotic" setups.
 
-Bernhard, Michael as well as Christian Neukirchen and Werner Koch, the
-lead GnuPG developer, further discussed some points, but in the end it
-doesn't look like things will change much in this area for the
-foreseeable future.
+Bernhard, Michael as well as Christian Neukirchen, Peter Lebbing and
+Werner Koch, the lead GnuPG developer, further discussed some points,
+but in the end it doesn't look like things will change much in this
+area for the foreseeable future.
 
 
 ## Releases
