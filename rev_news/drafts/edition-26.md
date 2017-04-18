@@ -213,6 +213,11 @@ area for the foreseeable future.
 
 ## Releases
 
+* Git [v2.12.2](http://public-inbox.org/git/xmqqa88a74pg.fsf@gitster.mtv.corp.google.com/)
+* Git for Windows [2.12.2](https://github.com/git-for-windows/git/releases/tag/v2.12.2.windows.1) and [2.12.2(2)](https://github.com/git-for-windows/git/releases/tag/v2.12.2.windows.2)
+* GitLab released a major [9.0](https://about.gitlab.com/2017/03/22/gitlab-9-0-released/) along with patches [9.0.4, 8.17.5, and 8.16.9](https://about.gitlab.com/2017/04/05/gitlab-9-dot-0-dot-4-security-release/)
+* [JGit / EGit Release 4.7](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03332.html) and [v4.5.2](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03333.html)
+* ObjectiveGit [0.13.0](https://github.com/libgit2/objective-git/releases/tag/0.13.0)
 
 ## Other News
 
@@ -221,12 +226,28 @@ __Various__
 * Stefan Beller sent
   ["[RFC PATCH] git-news: obtain latest news for your favorite VCS"](http://public-inbox.org/git/20170331235947.20010-1-sbeller@google.com/)
   on April 1st :-)
+* Microsoft is [Shutting down CodePlex](https://blogs.msdn.microsoft.com/bharry/2017/03/31/shutting-down-codeplex/)
+* [New novel: “git commit murder”](https://blather.michaelwlucas.com/archives/2913), by Michael Lucas
+* [Reinventing Git interface](http://tonsky.me/blog/reinventing-git-interface/), by Nikita Prokopov
 
 __Light reading__
 
+* [The beginning of Git supporting other hash algorithms](https://news.ycombinator.com/item?id=13906804), as discussed on Hacker News
+* [Better Git configuration](https://blog.scottnonnenberg.com/better-git-configuration/), by Scott Nonnenberg
+* [Using git bisect](https://dev.to/gonedark/using-git-bisect), by Jason McCreary
+* Longest answer for a Git question I've seen on StackOverflow here: [How to change the starting point of a branch?](http://stackoverflow.com/questions/38427050/how-to-change-the-starting-point-of-a-branch/38430972#38430972)
+* [How To Host Your Own Private Git Repositories](https://eklitzke.org/how-to-how-your-own-private-git-repositories), by Evan Klitzke
+* [Configure Git Pairs with Magit](http://www.danieldeaguiar.com/git-pair/), by Daniel De Aguiar
 
 __Git tools and sites__
 
+* [git-ssb: Decentralized git repo hosting and issue tracking on secure-scuttlebutt (SSB).](https://github.com/clehner/git-ssb)
+* [git-reverse.sh: Bash script to reverse a git repo.](https://github.com/gsylvie/git-reverse.sh)
+* [rebase-editor: Simple terminal based sequence editor for git interactive rebase.](https://github.com/sjurba/rebase-editor)
+* [git_local: A lightweight git command line wrapper in Ruby](https://github.com/GalvanizeOpenSource/git_local)
+* [git forget: cleanup your local git branches](https://tomschlick.com/2017/03/20/git-forget)
+* [omgf: Use Git Flow with ease](https://github.com/InternetGuru/omgf/)
+* [GitFinder - Git client for macOS with Finder integration](https://www.reddit.com/r/git/comments/5z73w3/gitfinder_git_client_for_macos_with_finder/)
 
 ## Credits
 
