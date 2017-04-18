@@ -54,8 +54,8 @@ TLS implementation, so it is not enough to use a different SHA-1
 implementation.
 
 About that Jeff King, alias Peff, wrote that, when building with
-NO_OPENSSL, `git imap-send` uses the curl imap implementation instead
-of our custom imap implementation that can optionally use
+NO_OPENSSL, `git imap-send` uses the curl IMAP implementation instead
+of our custom IMAP implementation that can optionally use
 OpenSSL. Curl itself may be compiled to use either OpenSSL or GnuTLS.
 
 <!---
@@ -72,7 +72,7 @@ mailing list in Cc, to suggest using libgpgme for interfacing to
 GnuPG, instead of using "an pipe-and-exec approach to running a GnuPG
 binary".
 
-He refered to the
+He referred to the
 [documentation of the "gpg.program" config option](https://github.com/git/git/blob/3bc53220cb2dcf709f7a027a3f526befd021d858/Documentation/config.txt#L1572-L1581)
 and warned that "the gpg command-line interface is not considered an
 official API to GnuPG by the GnuPG-devs and thus potentially
