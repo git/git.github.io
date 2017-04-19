@@ -229,6 +229,7 @@ __Various__
 * Microsoft is [Shutting down CodePlex](https://blogs.msdn.microsoft.com/bharry/2017/03/31/shutting-down-codeplex/)
 * [New novel: “git commit murder”](https://blather.michaelwlucas.com/archives/2913), by Michael Lucas
 * [Reinventing Git interface](http://tonsky.me/blog/reinventing-git-interface/), by Nikita Prokopov
+* [SHA-1 collision detection on GitHub.com](https://github.com/blog/2338-sha-1-collision-detection-on-github-com)
 
 __Light reading__
 
@@ -238,6 +239,10 @@ __Light reading__
 * Longest answer for a Git question I've seen on StackOverflow here: [How to change the starting point of a branch?](http://stackoverflow.com/questions/38427050/how-to-change-the-starting-point-of-a-branch/38430972#38430972)
 * [How To Host Your Own Private Git Repositories](https://eklitzke.org/how-to-how-your-own-private-git-repositories), by Evan Klitzke
 * [Configure Git Pairs with Magit](http://www.danieldeaguiar.com/git-pair/), by Daniel De Aguiar
+* [Adding Features to Git the Easy Way](https://blog.afoolishmanifesto.com/posts/adding-features-to-git-the-easy-way/), by fREW Schmidt (added by using the `git` wrapper; some of those features could have been implemented as hooks)
+* [Review, not Rocket Science](http://blog.ffwll.ch/2017/04/review-howto.html): Daniel Vetter discusses how to get people to review code
+* [In the bright new future of today](https://blog.ntpsec.org/2017/03/24/saved-history.html) - a history of using history, on NTPsec Project Blog
+* [How to use pull requests to improve your code reviews](https://www.oreilly.com/ideas/how-to-use-pull-requests-to-improve-your-code-reviews), by Brent Beer and Peter Bell
 
 __Git tools and sites__
 
@@ -248,6 +253,8 @@ __Git tools and sites__
 * [git forget: cleanup your local git branches](https://tomschlick.com/2017/03/20/git-forget)
 * [omgf: Use Git Flow with ease](https://github.com/InternetGuru/omgf/)
 * [GitFinder - Git client for macOS with Finder integration](https://www.reddit.com/r/git/comments/5z73w3/gitfinder_git_client_for_macos_with_finder/)
+* [Gitiles - A simple JGit repository browser](https://gerrit.googlesource.com/gitiles/)
+* [Diff Tools on Windows](https://www.git-tower.com/blog/diff-tools-windows/), by Tobias Günther, on Git Tower GUI tool blog
 
 ## Credits
 
