@@ -319,8 +319,8 @@ again.
 The Git datamodel is so much more flexible in theory than any of the
 Git clients out there allow for.
 
-Microsoft's made the first real step to advancing that with GVFS
-(https://github.com/Microsoft/GVFS). I'd have my hypothetical team
+Microsoft's made the first real step to advancing that with
+[GVFS](https://github.com/Microsoft/GVFS). I'd have my hypothetical team
 work on something like that, but on steroids.
 
 I.e. a git client/server pair that could trade off as much work
