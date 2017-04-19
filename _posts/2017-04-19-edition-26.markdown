@@ -214,8 +214,8 @@ area for the foreseeable future.
 
 * Who are you and what do you do?
 
-I'm a programmer currently working at Booking.com in Amsterdam since
-2010. I've worn a lot of hats there, but most of it's had to do with
+I'm a programmer currently working at Booking.com in Amsterdam since 2010.
+I've worn a lot of hats there, but most of it's had to do with
 core infrastructure, I'm currently a senior dev there in an SRE role.
 
 I'm originally from Iceland, self-taught, 31, got an 18 month old son
