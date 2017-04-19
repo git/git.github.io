@@ -119,7 +119,7 @@ explanations and examples.
 
 He concluded with:
 
-> Of course, maybe pgpme is a world first, and actually does read your
+> Of course, maybe gpgme is a world first, and actually does read your
 > .gnupg/config file trivially, and has all the gpg agent integration
 > that it picks up automatically, and allows various per-user
 > configurations, and all my worries are bogus.
@@ -129,7 +129,7 @@ He concluded with:
 About the "library versioning", Linus wrote:
 
 > I don't know why, but I've never *ever* met a library developer who
-> realized that libraries were all about stable API's, and the library
+> realized that libraries were all about stable APIs, and the library
 > users don't want to fight different versions.
 
 but Ted Ts'o replied to the above:
@@ -189,9 +189,9 @@ Bernhard then replied to each of the points Linus had raised. About
 
 and he concluded with:
 
-> Your concerns are understandable, I've seen similiar problems with "library vs
+> Your concerns are understandable, I've seen similar problems with "library vs
 > program" and the unix tools box approach gives a number of lessons on how to
-> losely couple components. Thanks again for taking the time and writing them
+> loosely couple components. Thanks again for taking the time and writing them
 > down. I've given you some pointers why gpgme indeed could be different and
 > may be an improvement for git (or other applications). I guess one of the
 > next steps would be for someone to look for specific points or try gpgme for
@@ -220,7 +220,7 @@ core infrastructure, I'm currently a senior dev there in an SRE role.
 
 I'm originally from Iceland, self-taught, 31, got an 18 month old son
 with my girlfriend, and a daughter on the way. My hobbies aside from
-programming include powerlifting.
+programming include power-lifting.
 
 Unlike a lot of self-taught programmers I started relatively late.  I
 had access to computers since I was a kid, but wasn't using them to
@@ -239,7 +239,7 @@ active editor on Wikipedia, both in Icelandic & English, and very
 interested in the free software movement. I taught myself a lot of
 topics by translating articles from English to Icelandic, and
 eventually started running bots to update Wikipedia itself. That led
-to needing to shellscript, use Perl, and eventually I started
+to needing to shell-script, use Perl, and eventually I started
 contributing to MediaWiki itself (the software that runs Wikipedia).
 
 Initially I mostly worked on translation-related code, mostly bugs
@@ -268,7 +268,7 @@ later, but someone else drove that effort.
 Definitely adding localization support. The git command-line client is
 translated to over 10 languages now. I don't use that feature myself,
 I wrote it because adding translation support was a very effective way
-to get to know the codebase, but hopefully that's very useful to many
+to get to know the code-base, but hopefully that's very useful to many
 users, particularly complete newbies.
 
 Jiang Xin gets all the credit for actually maintaining and
@@ -316,7 +316,7 @@ again.
 * If you could get a team of expert developers to work full time on
   something in Git for a full year, what would it be?
 
-The Git datamodel is so much more flexible in theory than any of the
+The Git data model is so much more flexible in theory than any of the
 Git clients out there allow for.
 
 Microsoft's made the first real step to advancing that with
