@@ -210,6 +210,153 @@ Werner Koch, the lead GnuPG developer, further discussed some points,
 but in the end it doesn't look like things will change much in this
 area for the foreseeable future.
 
+## Developer Spotlight: Ævar Arnfjörð Bjarmason
+
+* Who are you and what do you do?
+
+I'm a programmer currently working at Booking.com in Amsterdam since
+2010. I've worn a lot of hats there, but most of it's had to do with
+core infrastructure, I'm currently a senior dev there in an SRE role.
+
+I'm originally from Iceland, self-taught, 31, got an 18 month old son
+with my girlfriend, and a daughter on the way. My hobbies aside from
+programming include powerlifting.
+
+Unlike a lot of self-taught programmers I started relatively late.  I
+had access to computers since I was a kid, but wasn't using them to
+program. Mostly to play & tweak games (e.g. StarCraft map
+"programming").
+
+I eventually got tired of gaming, got a Gentoo Linux install CD from
+someone. It took me around a month and a half to install it. I only
+had access to some really old Mac monitor whose refresh configuration
+XFree86 didn't support, so I had to go from knowing nothing at all
+about Linux to debugging X bugs with intermittent Internet access
+before I could start X.
+
+I still wasn't doing any non-trivial programming, but I became a very
+active editor on Wikipedia, both in Icelandic & English, and very
+interested in the free software movement. I taught myself a lot of
+topics by translating articles from English to Icelandic, and
+eventually started running bots to update Wikipedia itself. That led
+to needing to shellscript, use Perl, and eventually I started
+contributing to MediaWiki itself (the software that runs Wikipedia).
+
+Initially I mostly worked on translation-related code, mostly bugs
+that hurt the Icelandic UX translation, but eventually became more
+interested in the core software itself. I worked on a lot of things,
+but the one most people will recognize is that I wrote the software
+plugin powering the "Notes and references" section at the bottom of
+pretty much every Wikipedia article.
+
+* How did you get started in Git development?
+
+This was back in 2010. I'd started my first software development job
+at f-prot.com and become mostly inactive in MediaWiki development, but
+I was very interested in source control & was involved with that at
+work. I added the `git commit --allow-empty-message` feature to use in
+snerp-vortex, a Subversion to Git migration script I was using to
+migrate the MediaWiki repository to Git.
+
+Shortly after that I started maintaining a mirror of the main
+MediaWiki Subversion repositories on Github using `git svn`. The
+MediaWiki project eventually did end up migrating to Git about a year
+later, but someone else drove that effort.
+
+* What would you name your most important contribution to Git?
+
+Definitely adding localization support. The git command-line client is
+translated to over 10 languages now. I don't use that feature myself,
+I wrote it because adding translation support was a very effective way
+to get to know the codebase, but hopefully that's very useful to many
+users, particularly complete newbies.
+
+Jiang Xin gets all the credit for actually maintaining and
+coordinating that effort, I just drive-by added the initial support.
+
+* What are you doing on the Git project these days, and why?
+
+I was quite active in 2010 & 2011 but had a long period of inactivity
+since then, and have only recently started submitting patches again:
+
+```
+$ git log --author=Ævar --date=format:%Y --pretty=format:%ad @{u}|sort|uniq -c
+        121 2010
+        152 2011
+          8 2012
+          1 2013
+          7 2016
+         29 2017
+```
+
+My main contribution for the last couple of years has been indirect.
+I'm one of the two main people responsible for the Git infrastructure
+at Booking.com (along with Dennis Kaarsemaker, interviewed in a
+[previous iteration of Git Rev News](https://git.github.io/rev_news/2016/10/19/edition-20/)).
+
+In late 2015 I made the case internally at Booking.com that we should
+contribute time directly to Git development, which we're doing by
+contracting Git performance to Christian Couder, who's maintaining
+this newsletter & doing this interview, and no I didn't put him up to
+interviewing me :)
+
+I manage that project at Booking.com, which mainly consists of
+occasionally touching base with Christian on what performance-related
+thing he and I think is worthwhile to do next.
+
+Then I send the occasional patches myself, mainly small isolated
+things to scratch this or that itch I personally run into, or that
+someone reports as a bothersome misfeature or bug at work.
+
+But to actually answer the question: Right now I have a series in the
+works to support PCRE v2, some other related fixes to `git grep`, and a
+couple of miscellaneous code cleanup submissions I need to pick up
+again.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+The Git datamodel is so much more flexible in theory than any of the
+Git clients out there allow for.
+
+Microsoft's made the first real step to advancing that with GVFS
+(https://github.com/Microsoft/GVFS). I'd have my hypothetical team
+work on something like that, but on steroids.
+
+I.e. a git client/server pair that could trade off as much work
+between the client & server as you wanted, and which could scale to
+cloning & working on something like the result of `git merge`-ing
+every single repository on GitHub into one ginormous project, with
+every command that needed to walk/search/checkout a large part of that
+set able to either download the data it needed locally or ask a server
+to produce the results it needed.
+
+* If you could remove something from Git without worrying about backwards compatibility, what would it be?
+
+Right now support for anything except PCRE regular expressions, but
+that's just because right now I'm hacking in PCRE v2 support to grep
+and supporting POSIX regexes going forward for some of the things I'd
+like to do is a pain.
+
+More generally, more than deprecating any one thing I think Git could
+really use deprecation cycles as part of its release process. I.e. we
+should make an exhaustive list of things we have now which suck, then
+at some point we break all of those, release v3.0, and start the
+process again by accumulating things we'll break in v4.0.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+The git-rebase.el plugin for Emacs, which is the the only non-core Git
+interface I use which I'd miss enough to personally write a
+replacement for myself if it didn't exist.
+
+It's sort of like a little `git add --interactive`, except for `git rebase`,
+which of course has an --interactive option already, but
+which isn't very interactive at all. It would be neat to add something
+like git-rebase.el to Git itself, but we'd have to call it
+`git rebase --actually-interactive`, which I brings us back to the backwards
+compatibility discussion.
+
 
 ## Releases
 
