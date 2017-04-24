@@ -36,6 +36,7 @@ This edition covers what happened during the month of April 2017.
 
 __Various__
 
+* [Dugite](https://github.com/desktop/dugite) - node.js bindings for Git
 
 __Light reading__
 
