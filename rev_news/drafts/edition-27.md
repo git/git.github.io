@@ -31,6 +31,9 @@ This edition covers what happened during the month of April 2017.
 
 ## Releases
 
+* [Git v2.13.0](https://github.com/git/git/blob/v2.13.0/Documentation/RelNotes/2.13.0.txt) (and [v2.12.3](https://github.com/git/git/blob/v2.12.3/Documentation/RelNotes/2.12.3.txt), [v2.11.2](https://github.com/git/git/blob/v2.11.2/Documentation/RelNotes/2.11.2.txt), [v2.10.3](https://github.com/git/git/blob/v2.10.3/Documentation/RelNotes/2.10.3.txt), [v2.9.4](https://github.com/git/git/blob/v2.9.4/Documentation/RelNotes/2.9.4.txt), [v2.8.5](https://github.com/git/git/blob/v2.8.5/Documentation/RelNotes/2.8.5.txt), [v2.7.5](https://github.com/git/git/blob/v2.7.5/Documentation/RelNotes/2.7.5.txt), [v2.6.7](https://github.com/git/git/blob/v2.6.7/Documentation/RelNotes/2.6.7.txt), [v2.5.6](https://github.com/git/git/blob/v2.5.6/Documentation/RelNotes/2.5.6.txt), and [v2.4.12](https://github.com/git/git/blob/v2.4.12/Documentation/RelNotes/2.4.12.txt)).
+* [Git for Windows v2.13.0](https://github.com/git-for-windows/git/releases/tag/v2.13.0.windows.1)
+* [tig 2.2.2](https://public-inbox.org/git/CAFuPQ1KSfKT+UKEdjcQ60sWL-yBGPWUZxhAAQ1AdrAr=VMdGfQ@mail.gmail.com/t/#u)
 
 ## Other News
 
