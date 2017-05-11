@@ -39,6 +39,8 @@ This edition covers what happened during the month of April 2017.
 
 __Various__
 
+* Prathamesh Chavan's ["Incremental rewrite of git-submodules" project](http://public-inbox.org/git/CAME+mvXtA6iZNfErTX5tYB-o-5xa1yesAG5h=iP_Z2_zL_kOnQ@mail.gmail.com/) has been accepted as part of the [Google Summer of Code 2017](https://developers.google.com/open-source/gsoc/). Prathamesh will be mentored by Stefan Beller and Christian Couder.
+* [Videos of the Git Merge 2017 presentations](https://www.youtube.com/playlist?list=PL0lo9MOBetEGRAJzoTCdco_fOKDfhqaOY) are now online.
 * [Dugite](https://github.com/desktop/dugite) - node.js bindings for Git
 
 __Light reading__
