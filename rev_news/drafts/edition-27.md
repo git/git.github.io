@@ -45,6 +45,7 @@ __Various__
 
 __Light reading__
 
+* [How the Creators of Git do Branching](https://hackernoon.com/how-the-creators-of-git-do-branches-e6fcc57270fb), by Raman Gupta
 
 __Git tools and sites__
 
