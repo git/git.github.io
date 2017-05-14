@@ -36,16 +36,16 @@ Carlos Pita sent an email to the Git mailing list starting with:
 > (including tons of music and books) and I noticed how slow
 > autocompletion has become for files in the index (say for git add).
 
-Then Carlos showed some changes to the `__git_index_files()` function in
-"git-completion.bash" that appear to speed up this function from 0.83
-seconds to 0.35 seconds in his repository.
+Then Carlos presented some changes to the `__git_index_files()`
+function in "git-completion.bash" that appear to speed up this
+function from 0.83 seconds to 0.35 seconds in his repository.
 
 In a latter email he suggested a further change that reduce the time
 further to only 0.08 seconds, that is 10 times faster than the
 original time.
 
-The changes he showed use `sed` instead of "a while-read-case-echo
-bash loop" though, and Carlos wondered if the Git developers wanted to
+The changes Carlos showed use `sed` instead of "a while-read-case-echo
+bash loop" though, and he wondered if the Git developers wanted to
 avoid depending on `sed`.
 
 Ævar Arnfjörð Bjarmason replied:
@@ -56,7 +56,7 @@ avoid depending on `sed`.
 and then encouraged Carlos to submit a patch with his improvements.
 
 Jacob Keller, alias Jake, seconded Ævar's opinion. Junio Hamano, the
-Git maintainer, agreed too "as long as the use of `sed` is in line
+Git maintainer, agreed, too -- "as long as the use of `sed` is in line
 with POSIX.1". Junio then suggested using sed's `-e` option instead of
 its `-r` to improve portability.
 
@@ -109,9 +109,9 @@ __Light reading__
 
 __Git tools and sites__
 
-* [GitPitch: Markdown Presentations For Everyone on GitHub, GitLab and Bitbucket](https://gitpitch.com/) ; it's introduction for then only GitLab was covered in [Git Rev News Edition 20](https://git.github.io/rev_news/2016/10/19/edition-20/)
-* [cregit](), a tool for helping to find and analyse code credits (unify identities, find contibution by token, extract metadata into SQLite database, etc.)
-  * [cregit: identifying contributors of source code](http://events.linuxfoundation.org/sites/events/files/slides/cregit-2.pdf), PDF slides from presentation by Daniel M German, Kate Stewart and Bram Adams
+* [GitPitch: Markdown Presentations For Everyone on GitHub, GitLab and Bitbucket](https://gitpitch.com/) ; its introduction for then only GitLab was covered in [Git Rev News Edition 20](https://git.github.io/rev_news/2016/10/19/edition-20/)
+* [cregit](https://github.com/cregit/cregit), a tool for helping to find and analyse code credits (unify identities, find contribution by token, extract metadata into a SQLite database, etc.)
+  * [cregit: identifying contributors of source code](http://events.linuxfoundation.org/sites/events/files/slides/cregit-2.pdf), PDF presentation slides by Daniel M German, Kate Stewart and Bram Adams
   * [Token-based authorship information from Git [LWN.net]](https://lwn.net/Articles/698425/) by Jake Edge, a report from  LinuxCon North America 2016 presentation by Daniel German
   * [cregit-Linux: how code gets into the kernel](https://cregit.linuxsources.org/), an example of use
 
