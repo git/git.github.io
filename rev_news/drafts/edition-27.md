@@ -32,11 +32,11 @@ This edition covers what happened during the month of April 2017.
 
 Carlos Pita sent an email to the Git mailing list starting with:
 
-> I'm currently using git annex to manage my entire file collection
+> I'm currently using 'git annex' to manage my entire file collection
 > (including tons of music and books) and I noticed how slow
 > autocompletion has become for files in the index (say for git add).
 
-Then Carlos showed some changes to the __git_index_files() function in
+Then Carlos showed some changes to the `__git_index_files()` function in
 "git-completion.bash" that appear to speed up this function from 0.83
 seconds to 0.35 seconds in his repository.
 
@@ -51,7 +51,7 @@ avoid depending on `sed`.
 Ævar Arnfjörð Bjarmason replied:
 
 > It's fine to depend on sed, these shell-scripts are POSIX compatible,
-> and so is sed, we use sed in a lot of the built-in shellscripts.
+> and so is sed, we use sed in a lot of the built-in shell scripts.
 
 and then encouraged Carlos to submit a patch with his improvements.
 
