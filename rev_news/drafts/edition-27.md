@@ -105,9 +105,15 @@ __Various__
 __Light reading__
 
 * [How the Creators of Git do Branching](https://hackernoon.com/how-the-creators-of-git-do-branches-e6fcc57270fb), by Raman Gupta
+* [Code Reviews Considered Harmful: 6 Signs Your Code Reviews are Toxic and Poisoning Your Team](https://hackernoon.com/code-reviews-considered-harmful-a4cc9b2323dc), by MTaylor
 
 __Git tools and sites__
 
+* [GitPitch: Markdown Presentations For Everyone on GitHub, GitLab and Bitbucket](https://gitpitch.com/) ; it's introduction for then only GitLab was covered in [Git Rev News Edition 20](https://git.github.io/rev_news/2016/10/19/edition-20/)
+* [cregit](), a tool for helping to find and analyse code credits (unify identities, find contibution by token, extract metadata into SQLite database, etc.)
+  * [cregit: identifying contributors of source code](http://events.linuxfoundation.org/sites/events/files/slides/cregit-2.pdf), PDF slides from presentation by Daniel M German, Kate Stewart and Bram Adams
+  * [Token-based authorship information from Git [LWN.net]](https://lwn.net/Articles/698425/) by Jake Edge, a report from  LinuxCon North America 2016 presentation by Daniel German
+  * [cregit-Linux: how code gets into the kernel](https://cregit.linuxsources.org/), an example of use
 
 ## Credits
 
