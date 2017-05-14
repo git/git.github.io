@@ -32,11 +32,11 @@ This edition covers what happened during the month of April 2017.
 
 Carlos Pita sent an email to the Git mailing list starting with:
 
-> I'm currently using git annex to manage my entire file collection
+> I'm currently using 'git annex' to manage my entire file collection
 > (including tons of music and books) and I noticed how slow
 > autocompletion has become for files in the index (say for git add).
 
-Then Carlos showed some changes to the __git_index_files() function in
+Then Carlos showed some changes to the `__git_index_files()` function in
 "git-completion.bash" that appear to speed up this function from 0.83
 seconds to 0.35 seconds in his repository.
 
@@ -51,7 +51,7 @@ avoid depending on `sed`.
 Ævar Arnfjörð Bjarmason replied:
 
 > It's fine to depend on sed, these shell-scripts are POSIX compatible,
-> and so is sed, we use sed in a lot of the built-in shellscripts.
+> and so is sed, we use sed in a lot of the built-in shell scripts.
 
 and then encouraged Carlos to submit a patch with his improvements.
 
@@ -88,23 +88,32 @@ some auto completion improvements soon.
 ## Releases
 
 * [Git v2.13.0](https://github.com/git/git/blob/v2.13.0/Documentation/RelNotes/2.13.0.txt) (and [v2.12.3](https://github.com/git/git/blob/v2.12.3/Documentation/RelNotes/2.12.3.txt), [v2.11.2](https://github.com/git/git/blob/v2.11.2/Documentation/RelNotes/2.11.2.txt), [v2.10.3](https://github.com/git/git/blob/v2.10.3/Documentation/RelNotes/2.10.3.txt), [v2.9.4](https://github.com/git/git/blob/v2.9.4/Documentation/RelNotes/2.9.4.txt), [v2.8.5](https://github.com/git/git/blob/v2.8.5/Documentation/RelNotes/2.8.5.txt), [v2.7.5](https://github.com/git/git/blob/v2.7.5/Documentation/RelNotes/2.7.5.txt), [v2.6.7](https://github.com/git/git/blob/v2.6.7/Documentation/RelNotes/2.6.7.txt), [v2.5.6](https://github.com/git/git/blob/v2.5.6/Documentation/RelNotes/2.5.6.txt), and [v2.4.12](https://github.com/git/git/blob/v2.4.12/Documentation/RelNotes/2.4.12.txt)).
+  * [Git 2.13 has been released](https://github.com/blog/2360-git-2-13-has-been-released) on GitHub Blog by peff
 * [Git for Windows v2.13.0](https://github.com/git-for-windows/git/releases/tag/v2.13.0.windows.1)
 * [tig 2.2.2](https://public-inbox.org/git/CAFuPQ1KSfKT+UKEdjcQ60sWL-yBGPWUZxhAAQ1AdrAr=VMdGfQ@mail.gmail.com/t/#u)
+* [Git LFS 2.1.0 released](https://github.com/blog/2353-git-lfs-2-1-0-released)
+* [What's new in Deveo 3.18?](http://blog.deveo.com/whats-new-in-deveo-3-18/)
 
 ## Other News
 
 __Various__
 
 * Prathamesh Chavan's ["Incremental rewrite of git-submodules" project](http://public-inbox.org/git/CAME+mvXtA6iZNfErTX5tYB-o-5xa1yesAG5h=iP_Z2_zL_kOnQ@mail.gmail.com/) has been accepted as part of the [Google Summer of Code 2017](https://developers.google.com/open-source/gsoc/). Prathamesh will be mentored by Stefan Beller and Christian Couder.
-* [Videos of the Git Merge 2017 presentations](https://www.youtube.com/playlist?list=PL0lo9MOBetEGRAJzoTCdco_fOKDfhqaOY) are now online.
+* [Videos of the Git Merge 2017 presentations](https://www.youtube.com/playlist?list=PL0lo9MOBetEGRAJzoTCdco_fOKDfhqaOY) are now online; this event was covered in [Git Rev News Edition 24](https://git.github.io/rev_news/2017/02/22/edition-24/).
 * [Dugite](https://github.com/desktop/dugite) - node.js bindings for Git
 
 __Light reading__
 
 * [How the Creators of Git do Branching](https://hackernoon.com/how-the-creators-of-git-do-branches-e6fcc57270fb), by Raman Gupta
+* [Code Reviews Considered Harmful: 6 Signs Your Code Reviews are Toxic and Poisoning Your Team](https://hackernoon.com/code-reviews-considered-harmful-a4cc9b2323dc), by MTaylor
 
 __Git tools and sites__
 
+* [GitPitch: Markdown Presentations For Everyone on GitHub, GitLab and Bitbucket](https://gitpitch.com/) ; it's introduction for then only GitLab was covered in [Git Rev News Edition 20](https://git.github.io/rev_news/2016/10/19/edition-20/)
+* [cregit](), a tool for helping to find and analyse code credits (unify identities, find contibution by token, extract metadata into SQLite database, etc.)
+  * [cregit: identifying contributors of source code](http://events.linuxfoundation.org/sites/events/files/slides/cregit-2.pdf), PDF slides from presentation by Daniel M German, Kate Stewart and Bram Adams
+  * [Token-based authorship information from Git [LWN.net]](https://lwn.net/Articles/698425/) by Jake Edge, a report from  LinuxCon North America 2016 presentation by Daniel German
+  * [cregit-Linux: how code gets into the kernel](https://cregit.linuxsources.org/), an example of use
 
 ## Credits
 
