@@ -74,9 +74,9 @@ In the meantime Dscho also sent a simpler looking implementation saying:
 > It may seem as a matter of taste, or maybe not: I prefer this without the
 > _swap_a_ptr (and I would also prefer not to use identifiers starting with
 > an underscore, as section 7.1.3 Reserved Identifiers of the C99 standard
-> says they are reserved):
+> says they are reserved)
 
-To the René replied:
+To the above René replied:
 
 > We can move the underscore to the end, but using a and b directly
 > will give surprising results if the parameters have side effects.
@@ -93,9 +93,9 @@ be rejected by compilers:
 >
 > Further, what would SWAP(a++, b) do? Swap a and b, and *then* increment a?
 
-René wrote that gcc and clang warn or error out in that last case, and
-Dscho further commented that anyway "it does not make much sense to
-support SWAP(a++, b), as it is confusing at best".
+René answered that gcc and clang warn or error out in that last case,
+and Dscho further commented that anyway "it does not make much sense
+to support SWAP(a++, b), as it is confusing at best".
 
 Brandon Williams then chimed in to suggest placing a comment at the
 definition of the macro to "disallow a side-effect operator in the
@@ -132,7 +132,7 @@ saying:
 > It would be trivially "optimized" out of the box, even when compiling with
 > Tiny C or in debug mode.
 
-The discussion further continued in February on a related topics like:
+The discussion further continued in February on related topics like:
 
 - git built using Tiny C not passing the test suite,
 - pros and cons of SIMPLE_SWAP(T, a, b), SWAP(a, b), SWAP(&a, &b) or no swap macro at all,
