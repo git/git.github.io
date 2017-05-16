@@ -212,8 +212,13 @@ some auto completion improvements soon.
   * [Git 2.13 has been released](https://github.com/blog/2360-git-2-13-has-been-released) on GitHub Blog by peff
 * [Git for Windows v2.13.0](https://github.com/git-for-windows/git/releases/tag/v2.13.0.windows.1)
 * [tig 2.2.2](https://public-inbox.org/git/CAFuPQ1KSfKT+UKEdjcQ60sWL-yBGPWUZxhAAQ1AdrAr=VMdGfQ@mail.gmail.com/t/#u)
+* [libgit2/pygit2 v0.25.1](https://github.com/libgit2/pygit2/releases/tag/v0.25.1)
+* [nodegit v0.19.0](https://github.com/nodegit/nodegit/releases/tag/v0.19.0)
 * [Git LFS 2.1.0 released](https://github.com/blog/2353-git-lfs-2-1-0-released)
 * [What's new in Deveo 3.18?](http://blog.deveo.com/whats-new-in-deveo-3-18/)
+* [GitLab 9.1](https://about.gitlab.com/2017/04/22/gitlab-9-1-released/), with minor releases [9.0.7, 8.17.6](https://about.gitlab.com/2017/05/08/gitlab-9-dot-1-dot-3-security-release/) and [9.1.4](https://about.gitlab.com/2017/05/15/gitlab-9-1-4-released/)
+* [Gerrit v2.14](https://gitenterprise.me/2017/05/09/gerrit-v2-14-brings-new-features-and-ux/)
+
 
 ## Other News
 
@@ -228,6 +233,9 @@ __Light reading__
 * [How the Creators of Git do Branching](https://hackernoon.com/how-the-creators-of-git-do-branches-e6fcc57270fb), by Raman Gupta
 * [Code Reviews Considered Harmful: 6 Signs Your Code Reviews are Toxic and Poisoning Your Team](https://hackernoon.com/code-reviews-considered-harmful-a4cc9b2323dc), by MTaylor
 * [Integrating Git in Atom](https://githubengineering.com/integrating-git-in-atom/) on GitHub Engineering blog (among others moving from using libgit2 to shelling out to git)
+* [Four Steps To Maintaining a Clean Git History](https://spin.atomicobject.com/2017/04/23/maintain-clean-git-history/), by Ryan Abel
+* [Plan Your Commits](https://dev.to/rpalo/plan-your-commits), by Ryan Palo
+* [Fear of Git](http://everyogi.in/misc/fear_of_git/), by Yogeswaran Thulasidoss
 
 __Git tools and sites__
 
@@ -235,6 +243,10 @@ __Git tools and sites__
 * [cregit](https://github.com/cregit/cregit), a tool for helping to find and analyse code credits (unify identities, find contribution by token, extract metadata into a SQLite database, etc.); this tool, unnamed at that time, was mentioned in [Git Rev News Edition 19](https://git.github.io/rev_news/2016/09/14/edition-19/) ([video](https://www.youtube.com/watch?v=iXZV5uAYMJI&index=4&list=PLGeM09tlguZQyemL0Y5CdpEFrBs-hGGM8 "'Who Authored the Kernel? Recovering Token-Level Authorship Information from Git' by Daniel German - YouTube"), [LWN article](https://lwn.net/Articles/698425/ "'Token-based authorship information from Git' by Jake Edge - LWN.net")) as a tool to recover token-based authorship information, among other reports from LinuxCon North America 2016.
   * [cregit: identifying contributors of source code](http://events.linuxfoundation.org/sites/events/files/slides/cregit-2.pdf), PDF presentation slides by Daniel M German, Kate Stewart and Bram Adams <!-- needed because the tool is seriously under-documented -->
   * [cregit-Linux: how code gets into the kernel](https://cregit.linuxsources.org/), an example of use
+* [git-tricks](https://github.com/razzius/git-tricks): Useful git commands and config
+* [git-follow](https://github.com/nickolasburr/git-follow): Follow lifetime changes of a pathspec through the history of a Git repository
+* [git-ddiff](https://github.com/cookiengineer/git-ddiff): a better git diff for humans with lack of memory
+
 
 ## Credits
 
