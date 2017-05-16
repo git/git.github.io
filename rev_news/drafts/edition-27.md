@@ -231,9 +231,8 @@ __Light reading__
 __Git tools and sites__
 
 * [GitPitch: Markdown Presentations For Everyone on GitHub, GitLab and Bitbucket](https://gitpitch.com/) ; its introduction for then only GitLab was covered in [Git Rev News Edition 20](https://git.github.io/rev_news/2016/10/19/edition-20/)
-* [cregit](https://github.com/cregit/cregit), a tool for helping to find and analyse code credits (unify identities, find contribution by token, extract metadata into a SQLite database, etc.)
-  * [cregit: identifying contributors of source code](http://events.linuxfoundation.org/sites/events/files/slides/cregit-2.pdf), PDF presentation slides by Daniel M German, Kate Stewart and Bram Adams
-  * [Token-based authorship information from Git [LWN.net]](https://lwn.net/Articles/698425/) by Jake Edge, a report from  LinuxCon North America 2016 presentation by Daniel German
+* [cregit](https://github.com/cregit/cregit), a tool for helping to find and analyse code credits (unify identities, find contribution by token, extract metadata into a SQLite database, etc.); this tool, unnamed at that time, was mentioned in [Git Rev News Edition 19](https://git.github.io/rev_news/2016/09/14/edition-19/) ([video](https://www.youtube.com/watch?v=iXZV5uAYMJI&index=4&list=PLGeM09tlguZQyemL0Y5CdpEFrBs-hGGM8 "'Who Authored the Kernel? Recovering Token-Level Authorship Information from Git' by Daniel German - YouTube"), [LWN article](https://lwn.net/Articles/698425/ "'Token-based authorship information from Git' by Jake Edge - LWN.net")) as a tool to recover token-based authorship information, among other reports from LinuxCon North America 2016.
+  * [cregit: identifying contributors of source code](http://events.linuxfoundation.org/sites/events/files/slides/cregit-2.pdf), PDF presentation slides by Daniel M German, Kate Stewart and Bram Adams <!-- needed because the tool is seriously underdocumented -->
   * [cregit-Linux: how code gets into the kernel](https://cregit.linuxsources.org/), an example of use
 
 ## Credits
