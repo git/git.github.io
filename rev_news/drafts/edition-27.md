@@ -227,6 +227,7 @@ __Light reading__
 
 * [How the Creators of Git do Branching](https://hackernoon.com/how-the-creators-of-git-do-branches-e6fcc57270fb), by Raman Gupta
 * [Code Reviews Considered Harmful: 6 Signs Your Code Reviews are Toxic and Poisoning Your Team](https://hackernoon.com/code-reviews-considered-harmful-a4cc9b2323dc), by MTaylor
+* [Integrating Git in Atom](https://githubengineering.com/integrating-git-in-atom/) on GitHub Engineering blog (among others moving from using libgit2 to shelling out to git)
 
 __Git tools and sites__
 
