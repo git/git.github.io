@@ -29,7 +29,7 @@ This edition covers what happened during the month of April 2017.
 At the end of last January, René Scharfe sent a 5 patch long patch
 series to the mailing list. The goal of this series was to make a swap
 macro available to the entire code base, and to use it to simplify
-exisiting code.
+existing code.
 
 As "exchanging the value of two variables requires declaring a
 temporary variable and repeating their names", the new macro would
@@ -37,7 +37,7 @@ swap the value of two variables, but "reduce repetition and hide the
 declaration of temporary variables".
 
 The actual implementation that René wanted to make globally available
-was the following:
+was the following one:
 
 ```
 #define SWAP(a, b) do {						\
@@ -101,7 +101,7 @@ Brandon Williams then chimed in to suggest placing a comment at the
 definition of the macro to "disallow a side-effect operator in the
 macro".
 
-To that René further noticed that while "SWAP(a++, ...) is caught by the
+In response René further noticed that while "SWAP(a++, ...) is caught by the
 compiler, SWAP(*a++, ...) works fine".
 
 The above in turn prompted Jeff King, alias Peff, to suggest having
@@ -109,8 +109,8 @@ the macro "take pointers-to-objects, making it look more like a real
 function (i.e., SWAP(&a, &b) instead of SWAP(a, b))". But Junio Hamano
 and Dscho were not sure that it would improve things.
 
-Meanwhile Dscho agreed that his commit that introduced such a macro in
-the first place was not a good idea:
+Meanwhile Dscho agreed that his commit, which introduced such a macro in
+the first place, was not a good idea:
 
 > The commit you quoted embarrasses me, and I have no excuse for it. I
 > would love to see that myswap() ugliness fixed by replacing it with a
@@ -127,7 +127,7 @@ Dscho then suggested a macro with a type parameter:
 #define SIMPLE_SWAP(T, a, b) do { T tmp_ = a; a = b; b = tmp_; } while (0)
 ```
 
-saying:
+stating:
 
 > It would be trivially "optimized" out of the box, even when compiling with
 > Tiny C or in debug mode.
@@ -232,7 +232,7 @@ __Git tools and sites__
 
 * [GitPitch: Markdown Presentations For Everyone on GitHub, GitLab and Bitbucket](https://gitpitch.com/) ; its introduction for then only GitLab was covered in [Git Rev News Edition 20](https://git.github.io/rev_news/2016/10/19/edition-20/)
 * [cregit](https://github.com/cregit/cregit), a tool for helping to find and analyse code credits (unify identities, find contribution by token, extract metadata into a SQLite database, etc.); this tool, unnamed at that time, was mentioned in [Git Rev News Edition 19](https://git.github.io/rev_news/2016/09/14/edition-19/) ([video](https://www.youtube.com/watch?v=iXZV5uAYMJI&index=4&list=PLGeM09tlguZQyemL0Y5CdpEFrBs-hGGM8 "'Who Authored the Kernel? Recovering Token-Level Authorship Information from Git' by Daniel German - YouTube"), [LWN article](https://lwn.net/Articles/698425/ "'Token-based authorship information from Git' by Jake Edge - LWN.net")) as a tool to recover token-based authorship information, among other reports from LinuxCon North America 2016.
-  * [cregit: identifying contributors of source code](http://events.linuxfoundation.org/sites/events/files/slides/cregit-2.pdf), PDF presentation slides by Daniel M German, Kate Stewart and Bram Adams <!-- needed because the tool is seriously underdocumented -->
+  * [cregit: identifying contributors of source code](http://events.linuxfoundation.org/sites/events/files/slides/cregit-2.pdf), PDF presentation slides by Daniel M German, Kate Stewart and Bram Adams <!-- needed because the tool is seriously under-documented -->
   * [cregit-Linux: how code gets into the kernel](https://cregit.linuxsources.org/), an example of use
 
 ## Credits
