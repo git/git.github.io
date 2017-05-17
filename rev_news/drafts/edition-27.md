@@ -206,6 +206,103 @@ Hannes agreed with Junio saying:
 The discussion stopped at that point, but hopefully it will lead to
 some auto completion improvements soon.
 
+## Developer Spotlight: René Scharfe
+
+* Who are you and what do you do?
+
+I'm a hobbyist programmer living in Bochum, Germany.  I learned
+programming in C mostly by reading Linux kernel diffs and trying to
+keep up with its mailing list.  Not long after Linus announced Git there
+in 2005 I started contributing patches.  In my day job as a DBA I
+started to actually use Git only this year.
+
+* What would you name your most important contribution to Git?
+
+Probably git-tar-tree, which later became git archive, had the highest
+impact.  It allows users to easily package their work for non-Git-users.
+And as my first patch it got me hooked!
+
+I'm also quite fond of the -W/--function-context options of git diff and
+git grep, even though they still get comments wrong.  Meaningful context
+(as opposed to a fixed number of lines) makes the most sense to me, but
+I don't know how widely these options are used when there are IDEs,
+websites like GitHub and tools like cscope.
+
+* What are you doing on the Git project these days, and why?
+
+There is a modest pile of cleanup patches fermenting on my PC that I'd
+like to get rid of.  Sometimes I get into a cleanup frenzy, but not all
+of the patches make sense on the next morning and some conflict with
+"real" changes in flight, so usually I don't send them right away.
+
+I'm creating semantic patches for some of them to let Coccinelle do the
+actual cleanup work, in the hope that the addressed issues are then
+basically fixed for good.  That could easily backfire if the automatic
+rules are wrong; so since there are not many others active in this area
+it may be a good idea to tread a bit more carefully here.
+
+I installed OpenBSD recently and found a few issues in our tests caused
+by limitations of that platform.  Similarly I saw a few issues on 32-bit
+Linux.  Expect some patches soonish.
+
+Eventually I'd like to find the time to improve handling of comments
+with --function-context (to show the comment before a function as part
+of its context) and for giving users better control over meta data (like
+time stamps) in git archive.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+If there wasn't already multiple such teams at work then I'd answer
+"whatever users need -- see Jakub's survey". :)
+
+The test suite and in particular the perf part could be improved.  The
+latter should indicate how reliable its results are.  A statistically
+significant number of measurements should be made -- three is probably
+not enough, but I'm really bad at statistics.  A higher number of runs
+would necessitate a lower complexity of the tests to keep the runtime
+bearable, which might be a bit tricky.
+
+In addition to (wall-clock and CPU) time it would be interesting to
+measure I/O and memory (allocations, peak usage).
+
+It would be nice if tests could be run automatically against repos with
+different shapes and sizes, and if the results would then indicate the
+how git scales per operation (e.g. a graph showing that log scales
+linearly with the number of commits).
+
+Or perhaps that's all a bit much and it would be better to add a
+performance log or warnings for operations that take longer than a
+few milliseconds.  And some place to aggregate them (voluntarily).
+
+In short: Better insight into git's performance profile and how it
+changes from version to version.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+The hard-coded use of SHA1, I guess.  Work is underway already, but
+the mentioned backward compatibility makes it tricky.
+
+And similarly I wish we wouldn't treat all-zero hashes specially.  The
+odds of a real object having that hash value may be negligible, but I
+feel it's untidy, like using 0 instead of NULL for a pointer..
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+Visual Studio Code supports Git out of the box and seems to be quite
+nice in general, but I only installed it this month.  Apart from that
+I don't use any Git-related tools.
+
+Not really related, but my favorite developer tool of the last months is
+Matt Godbolt's compiler explorer (https://godbolt.org/).  It makes it
+really easy to check the effect of optimizations across different
+compilers and their versions, and share the result.  E.g.
+[here you can see gcc removing a NULL check](https://godbolt.org/g/8H9pfJ)
+based on the fact that calls of memcpy(3) with a NULL pointer are
+undefined.  Fun!
+
+
 ## Releases
 
 * [Git v2.13.0](https://github.com/git/git/blob/v2.13.0/Documentation/RelNotes/2.13.0.txt) (and [v2.12.3](https://github.com/git/git/blob/v2.12.3/Documentation/RelNotes/2.12.3.txt), [v2.11.2](https://github.com/git/git/blob/v2.11.2/Documentation/RelNotes/2.11.2.txt), [v2.10.3](https://github.com/git/git/blob/v2.10.3/Documentation/RelNotes/2.10.3.txt), [v2.9.4](https://github.com/git/git/blob/v2.9.4/Documentation/RelNotes/2.9.4.txt), [v2.8.5](https://github.com/git/git/blob/v2.8.5/Documentation/RelNotes/2.8.5.txt), [v2.7.5](https://github.com/git/git/blob/v2.7.5/Documentation/RelNotes/2.7.5.txt), [v2.6.7](https://github.com/git/git/blob/v2.6.7/Documentation/RelNotes/2.6.7.txt), [v2.5.6](https://github.com/git/git/blob/v2.5.6/Documentation/RelNotes/2.5.6.txt), and [v2.4.12](https://github.com/git/git/blob/v2.4.12/Documentation/RelNotes/2.4.12.txt)).
