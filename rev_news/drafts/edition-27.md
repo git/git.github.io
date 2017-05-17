@@ -295,7 +295,7 @@ nice in general, but I only installed it this month.  Apart from that
 I don't use any Git-related tools.
 
 Not really related, but my favorite developer tool of the last months is
-Matt Godbolt's compiler explorer (https://godbolt.org/).  It makes it
+[Matt Godbolt's compiler explorer](https://godbolt.org/).  It makes it
 really easy to check the effect of optimizations across different
 compilers and their versions, and share the result.  E.g.
 [here you can see gcc removing a NULL check](https://godbolt.org/g/8H9pfJ)
