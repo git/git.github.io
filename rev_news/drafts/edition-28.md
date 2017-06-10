@@ -1,5 +1,5 @@
 ---
-title: Git Rev News Edition 28 (XXX, 2017)
+title: Git Rev News Edition 28 (June 14th, 2017)
 layout: default
 date: 2017-06-14 12:06:51 +0100
 author: chriscool
@@ -7,7 +7,7 @@ categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 28 (XXX, 2017)
+## Git Rev News: Edition 28 (June 14th, 2017)
 
 Welcome to the 28th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
