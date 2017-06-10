@@ -30,7 +30,7 @@ This edition covers what happened during the month of May 2017.
 
 * [git push recurse.submodules behavior changed in 2.13](http://public-inbox.org/git/CAE5=+KX57KM+6n9NpePw9KYPXFy7UH-WRgSwaJDnvRofYFXm7Q@mail.gmail.com/)
 
-John Sahid sent an email saying:
+John Shahid sent an email saying:
 
 > Currently with 2.13 you cannot run `git push --recurse-submodules=on-demand`
 > if the parent repo is on a different branch than the sub repos, e.g. parent
