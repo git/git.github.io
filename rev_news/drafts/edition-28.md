@@ -41,6 +41,8 @@ __Light reading__
 
 * [The largest Git repo on the planet](https://blogs.msdn.microsoft.com/bharry/2017/05/24/the-largest-git-repo-on-the-planet/)
 * [Beyond GVFS: more details on optimizing Git for large repositories](https://blogs.msdn.microsoft.com/visualstudioalm/2017/05/30/optimizing-git-beyond-gvfs/)
+* [Git’er done: SCM system keeps developers and projects on track](http://sdtimes.com/giter-done-scm-system-keeps-developers-projects-track/)
+  an SDTimes article
 
 __Git tools and sites__
 
