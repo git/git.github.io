@@ -99,6 +99,119 @@ much happened, so recently John replied to his own mail:
 > are. I'm happy to send a patch but I would like to get a consensus
 > first.
 
+* [git rebase regression: cannot pass a shell expression directly to --exec](http://public-inbox.org/git/CA+zRj8X3OoejQVhUHD9wvv60jpTEZy06qa0y7TtodfBa1q5bnA@mail.gmail.com/)
+
+Eric Rannaud emailed the mailing list:
+
+> It used to be possible to run a sequence like:
+>
+>   foo() { echo X; }
+>   export -f foo
+>   git rebase --exec foo HEAD~10
+>
+> Since upgrading to 2.13.0, I had to update my scripts to run:
+>
+>   git rebase --exec "bash -c foo" HEAD~10
+
+Eric had bisected this to a commit that switched
+[the interactive rebase to use the rebase--helper builtin](https://github.com/git/git/commit/18633e1a22a68bbe8e6311a1039d13ebbf6fd041).
+
+An interactive rebase is usually a rebase that is passed the `-i` or
+`--interactive` option, though the `--exec` option automatically
+switches on an interactive rebase too.
+
+The interactive rebase used to be implemented with a
+"git-rebase--interactive.sh" shell script, but, since the commit that
+Eric found, in most cases the interactive rebase would use the `git
+rebase--helper` builtin command.
+
+The `git rebase--helper` builtin command had been made by porting
+shell code from "git-rebase--interactive.sh" to C.
+
+Jeff King, alias Peff, replied to Eric that a `git rebase --exec STRING`
+command still uses a shell to run STRING, but that the behavior change
+may come from an optimization that was made in the prepare_shell_cmd()
+function in "run-command.c" to skip shell invocations for "simple"
+commands.
+
+So Peff asked Eric to add an extraneous semi-colon in the STRING part
+to confirm that the problem comes from the optimization, as, with a
+semi-colon in it, the STRING part would not be considered a "simple"
+command.
+
+Peff then explained that the optimization in prepare_shell_cmd() is
+quite old, but it affects `git rebase --exec` only now because it is
+now using C code. And this optimization fails only when people are
+using exported functions which is not so common, as not all shells
+support them.
+
+Peff also suggested, and later sent a patch, to look for BASH_FUNC_*
+in the environment and disable the optimization in this case, though
+that wouldn't work in all cases.
+
+Junio Hamano replied to Peff, describing Peff's analysis as
+"brilliant" and suggesting documenting the semi-colon trick.
+
+Peff agreed with Junio on documenting it along with the optimization
+to skip shell invocations for "simple" commands, if it was decided not
+to try to fix the problem.
+
+Meanwhile Johannes Schindelin, alias Dscho, who authored the patch
+that made the interactive rebase use the rebase--helper builtin,
+replied to Eric, saying that relying on exported functions to work in
+`git rebase --exec` was relying on an implementation detail.
+
+But Peff later disagreed with Dscho saying that the user "expected the
+user-provided `--exec` command to be run by a shell, which seems like
+a reasonable thing for Git to promise (and we already make a similar
+promise for most user-provided commands that we run)".
+
+Dscho also sent a long reply to Junio about the reason he has been
+working on porting shell scripts like "git-rebase--interactive.sh" to
+C, which contained the following:
+
+> But the real truth is: shell scripting is not portable.
+>
+> Shell scripting is never only shell scripting, of course. A quite
+> undocumented set of utilities is expected to be present for our scripts to
+> run, too: sed, awk, tr, cat, expr, just to name a few.
+>
+> It does not end there. For example, sed is not equal to sed. BSD sed has
+> different semantics than GNU sed, and we jump through hoops to try to
+> ensure that our shell scripts run with both versions.
+
+Eric then replied to Peff to "clarify if there was any doubt, the
+semicolon trick does indeed work fine". He also asked for consistency
+writing that with an exported foo function the current behavior was:
+
+```
+  git bisect run foo  # works
+  git bisect run 'foo;'  # doesn't work
+
+  git rebase --exec foo master^^  # fails
+  git rebase --exec 'foo;' master^^  # OK
+  git rebase --exec 'foo 1' master^^  # OK
+```
+
+In the meantime Jonathan Nieder, Brandon Williams and then Kevin Daudt
+chimed in to discuss with Peff and Eric a suggestion by Peff to
+"speculatively run `foo` without the shell, and if execve fails to
+find it, then fall back to running the shell". They also discussed a
+bit Peff's suggestion to look for BASH_FUNC_* in the environment, but
+it was clear that both of these solutions had a number of problems.
+
+Then Linus Torvalds chimed in too. He suggested to just lookup in
+$PATH for the first word passed in the `--exec` string, as this test
+is better than looking for special characters like semi-colons, to
+decide if we can avoid calling a shell.
+
+He also suggested using vfork() instead of fork() if we "really want
+to optimize the code that executes an external program (whether in
+shell or directly)".
+
+It looks like Linus' suggestions might be the best indeed, but it
+doesn't look like much has been done to implement them yet.
+
 ## Releases
 
 
