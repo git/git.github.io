@@ -219,6 +219,7 @@ doesn't look like much has been done to implement them yet.
 
 __Various__
 
+* [Gerrit User Summit 2017 registration is now open](https://gerritusersummit.eventbrite.com) and is hosted for the first time in Europe, London, 2-3rd October 2017.
 
 __Light reading__
 
