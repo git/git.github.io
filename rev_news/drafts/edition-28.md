@@ -212,6 +212,80 @@ shell or directly)".
 It looks like Linus' suggestions might be the best indeed, but it
 doesn't look like much has been done to implement them yet.
 
+## Developer Spotlight: Brandon Williams
+
+* Who are you and what do you do?
+
+I'm a Software Engineer currently working on a team at Google focused on
+improving git, particularly making git behave better on large
+repositories (both mono-repos and repositories with many submodules).
+
+Until about a year or so ago I never really thought I'd be a Software
+Engineer.  Back in high school I took a physics class and a simple C
+programming class and I became fascinated with circuits and how
+computers worked.  That led me to study Electrical Engineering during my
+undergrad followed by grad work in Computer Science focusing on Computer
+Architectures.  Due to that schooling, I had various jobs in
+micro-processor design, varying from doing post-silicon power
+characterization, to ASIC design developing hardware modules in Verilog,
+to being an Architect modeling different micro-architectures in
+simulation.
+
+Once I started at Google I pivoted my focus and now I'm a happy git
+contributor, though I still love discussing Computer Architecture!
+
+* What would you name your most important contribution to Git?
+
+Though I haven't been around the project long I think some of my most
+important contribution has been to add submodule support to ls-files and
+grep.
+
+* What are you doing on the Git project these days, and why?
+
+Most of my contributions (and Stefan's) are aimed at improving the
+submodule experience, which means adding submodule support to more and
+more git commands.  Adding that support to ls-files and grep was a bit
+challenging in that our code base isn't able to handle working on more
+than 1 repository at a time, so when you want to do any operation on a
+submodule you need to kick off a child-process to do the work for you.
+This ends up being very clunky to communicate needed information between
+the two processes, it would be so much easier if we could just operate
+on more than 1 repository in a single process.
+
+So I'm aiming to solve this issue by introducing a 'Repository Object'
+to git.  So instead of relying on global state, a reference to a 'struct
+repository' can be passed around allowing for multiple repositories to
+be open in a single process.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+One of the biggest pain points for working in git is the large amount of
+hard-coded or global state we have.  So I'd have a team work on
+redesigning large parts of the code base to make things more object
+oriented and to ensure there were good abstractions in place to
+facilitate changes down the line.  This way transitioning to a new
+hash function, for example, would be less painful.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+I'd like to drop anything that makes it difficult to scale git well with
+large repositories.  One big one that has been discussed is
+improving the protocol to drop the initial ref advertisement.
+Unfortunately a change like that has the potential for breaking lots of
+old git clients.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+I haven't really used any git-related tools besides git itself.  Though
+I have written a couple of tools myself to help with developing with
+git.  One to view and explore a blame layer in vim, one to apply patches
+to a local branch from my mail client, and one to print out some
+information about a stack of commits I'm working on.  I don't think any
+of my tools are particularly well written, but they've been able to get
+the job done.
+
 ## Releases
 
 * [Git v2.13.1](https://github.com/git/git/blob/v2.13.1/Documentation/RelNotes/2.13.1.txt)
@@ -232,7 +306,7 @@ __Light reading__
 * [Beyond GVFS: more details on optimizing Git for large repositories](https://blogs.msdn.microsoft.com/visualstudioalm/2017/05/30/optimizing-git-beyond-gvfs/)
 * [Windows switch to Git almost complete: 8,500 commits and 1,760 builds each day](https://arstechnica.com/information-technology/2017/05/90-of-windows-devs-now-using-git-creating-1760-windows-builds-per-day/)
 * [Git’er done: SCM system keeps developers and projects on track](http://sdtimes.com/giter-done-scm-system-keeps-developers-projects-track/)
-  an SDTimes article
+  an SD Times article
 * [Little Things I Like to Do with Git](https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/)
 
 __Git tools and sites__
@@ -248,4 +322,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt; and
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt;
-with help from XXX.
+with help from Brandon Williams.
