@@ -214,6 +214,8 @@ doesn't look like much has been done to implement them yet.
 
 ## Releases
 
+* [Git v2.13.1](https://github.com/git/git/blob/v2.13.1/Documentation/RelNotes/2.13.1.txt)
+* [Git for Windows v2.13.1](https://github.com/git-for-windows/git/releases/tag/v2.13.1.windows.1)
 * [What's new in Deveo 3.19](blog.deveo.com/whats-new-in-deveo-3-19/) (git hosting site)
 * [Git Tower 1.1.0 for Windows Release Notes](https://www.git-tower.com/windows/release-notes#1.1.0) (proprietary multiplatform Git GUI)
 * [Portable GitHub system "GitPrep 2.6" is released](http://blogs.perl.org/users/yuki_kimoto/2017/06/portable-github-system-gitprep-26-is-released---wiki-system-is-added-you-can-write-documentation.html) (opensource git hosting software, in Perl)
