@@ -214,6 +214,9 @@ doesn't look like much has been done to implement them yet.
 
 ## Releases
 
+* [What's new in Deveo 3.19](blog.deveo.com/whats-new-in-deveo-3-19/) (git hosting site)
+* [Git Tower 1.1.0 for Windows Release Notes](https://www.git-tower.com/windows/release-notes#1.1.0) (proprietary multiplatform Git GUI)
+* [Portable GitHub system "GitPrep 2.6" is released](http://blogs.perl.org/users/yuki_kimoto/2017/06/portable-github-system-gitprep-26-is-released---wiki-system-is-added-you-can-write-documentation.html) (opensource git hosting software, in Perl)
 
 ## Other News
 
@@ -225,11 +228,16 @@ __Light reading__
 
 * [The largest Git repo on the planet](https://blogs.msdn.microsoft.com/bharry/2017/05/24/the-largest-git-repo-on-the-planet/)
 * [Beyond GVFS: more details on optimizing Git for large repositories](https://blogs.msdn.microsoft.com/visualstudioalm/2017/05/30/optimizing-git-beyond-gvfs/)
+* [Windows switch to Git almost complete: 8,500 commits and 1,760 builds each day](https://arstechnica.com/information-technology/2017/05/90-of-windows-devs-now-using-git-creating-1760-windows-builds-per-day/)
 * [Git’er done: SCM system keeps developers and projects on track](http://sdtimes.com/giter-done-scm-system-keeps-developers-projects-track/)
   an SDTimes article
+* [Little Things I Like to Do with Git](https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/)
 
 __Git tools and sites__
 
+* [Gitorials: Tutorials as Git Repos](https://gitorials.com/) - a GitLab companion site site for publishing paid programming tutorials ($3 per tutorial with 70% going to the author); *note: the idea of a gitorial itself is not new*
+* [BlackBox](https://github.com/StackExchange/blackbox) - Safely store secrets in a VCS repo (i.e. Git, Mercurial, Subversion or Perforce)
+* [blurb](https://github.com/larryhastings/blurb) is a tool designed to rid CPython core development of the scourge of Misc/NEWS conflicts; an alternative to ChangeLog / NEWS merge driver
 
 ## Credits
 
