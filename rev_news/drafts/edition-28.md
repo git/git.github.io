@@ -293,6 +293,13 @@ the job done.
 * [What's new in Deveo 3.19](blog.deveo.com/whats-new-in-deveo-3-19/) (git hosting site)
 * [Git Tower 1.1.0 for Windows Release Notes](https://www.git-tower.com/windows/release-notes#1.1.0) (proprietary multiplatform Git GUI)
 * [Portable GitHub system "GitPrep 2.6" is released](http://blogs.perl.org/users/yuki_kimoto/2017/06/portable-github-system-gitprep-26-is-released---wiki-system-is-added-you-can-write-documentation.html) (opensource git hosting software, in Perl)
+* [JGit / EGit release 4.7.1.201706071930-r](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03360.html)
+* [Release review JGit/EGit 4.8](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03337.html)
+* [Release libgit2 v0.26.0 RC1](https://github.com/libgit2/libgit2/releases/tag/v0.26.0-rc1)
+* [GitHub Enterprise 2.10](https://github.com/blog/2373-introducing-github-enterprise-2-10-build-tools-with-the-new-github-graphql-api-organize-with-topics-and-level-up-your-project-management)
+* [GitLab 9.2](https://about.gitlab.com/2017/05/22/gitlab-9-2-released/) with patches for [9.2.5, 9.1.7, and 9.0.10](https://about.gitlab.com/2017/06/07/gitlab-9-dot-2-dot-5-security-release/)
+* [Bitbucket Server 5.1](https://www.atlassian.com/blog/bitbucket/bitbucket-server-5-1-signed-commits-and-more)
+
 
 ## Other News
 
@@ -308,12 +315,17 @@ __Light reading__
 * [Git’er done: SCM system keeps developers and projects on track](http://sdtimes.com/giter-done-scm-system-keeps-developers-projects-track/)
   an SD Times article
 * [Little Things I Like to Do with Git](https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/)
+* [Don't publicly expose .git or how we downloaded your website's sourcecode - An analysis of Alexa's 1M](https://en.internetwache.org/dont-publicly-expose-git-or-how-we-downloaded-your-websites-sourcecode-an-analysis-of-alexas-1m-28-07-2015/)
+* [Git as a NoSql database](https://www.kenneth-truyers.net/2016/10/13/git-nosql-database/) by Kenneth Truyers
 
 __Git tools and sites__
 
 * [Gitorials: Tutorials as Git Repos](https://gitorials.com/) - a GitLab companion site site for publishing paid programming tutorials ($3 per tutorial with 70% going to the author); *note: the idea of a gitorial itself is not new*
 * [BlackBox](https://github.com/StackExchange/blackbox) - Safely store secrets in a VCS repo (i.e. Git, Mercurial, Subversion or Perforce)
 * [blurb](https://github.com/larryhastings/blurb) is a tool designed to rid CPython core development of the scourge of Misc/NEWS conflicts; an alternative to ChangeLog / NEWS merge driver
+* [RefDiff](https://github.com/aserg-ufmg/refdiff) - A tool to compare different versions of Java source code to find refactoring changes between them
+* [git-all-secrets](https://github.com/anshumanbh/git-all-secrets) - A tool to capture all the git secrets by leveraging multiple open source git searching tools
+* [git-ddiff](https://github.com/cookiengineer/git-ddiff) - a better git diff for humans with lack of memory
 
 ## Credits
 
