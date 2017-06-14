@@ -319,7 +319,7 @@ __Light reading__
 
 __Git tools and sites__
 
-* [Gitorials: Tutorials as Git Repos](https://gitorials.com/) - a GitLab companion site site for publishing paid programming tutorials ($3 per tutorial with 70% going to the author); *note: the idea of a gitorial itself is not new*
+* [Gitorials: Tutorials as Git Repos](https://gitorials.com/) - a GitLab companion site for publishing paid programming tutorials ($3 per tutorial with 70% going to the author); *note: the idea of a gitorial itself is not new*
 * [BlackBox](https://github.com/StackExchange/blackbox) - Safely store secrets in a VCS repo (i.e. Git, Mercurial, Subversion or Perforce)
 * [blurb](https://github.com/larryhastings/blurb) is a tool designed to rid CPython core development of the scourge of Misc/NEWS conflicts; an alternative to ChangeLog / NEWS merge driver
 * [RefDiff](https://github.com/aserg-ufmg/refdiff) - A tool to compare different versions of Java source code to find refactoring changes between them
