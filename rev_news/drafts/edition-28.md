@@ -300,7 +300,6 @@ the job done.
 * [GitLab 9.2](https://about.gitlab.com/2017/05/22/gitlab-9-2-released/) with patches for [9.2.5, 9.1.7, and 9.0.10](https://about.gitlab.com/2017/06/07/gitlab-9-dot-2-dot-5-security-release/)
 * [Bitbucket Server 5.1](https://www.atlassian.com/blog/bitbucket/bitbucket-server-5-1-signed-commits-and-more)
 
-
 ## Other News
 
 __Various__
@@ -334,4 +333,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt; and
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt;
-with help from Brandon Williams.
+with help from Brandon Williams, Johannes Schindelin and Luca Milanesio.
