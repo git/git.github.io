@@ -37,6 +37,7 @@ This edition covers what happened during the month of June 2017.
 
 * [Git v2.13.2](https://github.com/git/git/blob/v2.13.2/Documentation/RelNotes/2.13.2.txt).
 * [Git for Windows v2.13.1(2)](https://github.com/git-for-windows/git/releases/tag/v2.13.1.windows.2) and [Git for Windows v2.13.2](https://github.com/git-for-windows/git/releases/tag/v2.13.2.windows.1).
+* [Git LFS 2.2.0 released](https://github.com/blog/2384-git-lfs-2-2-0-released)
 
 ## Other News
 
