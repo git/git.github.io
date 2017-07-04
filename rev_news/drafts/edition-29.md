@@ -42,6 +42,9 @@ This edition covers what happened during the month of June 2017.
 
 __Various__
 
+* [Simul - Version Control for Microsoft Word: Bringing the features of Git and GitHub to Microsoft Word](https://www.simuldocs.com/blog/ben-morris/version-control-for-microsoft-word)
+* [Elixir Cross Referencer: new way to browse kernel sources](http://free-electrons.com/blog/elixir/); source is available [on GitHub](https://github.com/free-electrons/elixir), Free Electrons [hosted Elixir service](http://elixir.free-electrons.com) provides reference for Linux, Busybox and U-Boot, replacing old LXR-based service
+* [Alioth moving toward pagure [LWN.net]](https://lwn.net/Articles/724986/) - [Alioth](https://alioth.debian.org/) is a server hosting Debian's source code version control systems, running [FusionForge](http://www.fusionforge.org/); [pagure](https://pagure.io/pagure) is a free-software "Git-centered forge" written in Python for the Fedora project
 
 __Light reading__
 
