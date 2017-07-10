@@ -49,6 +49,9 @@ __Various__
 
 __Light reading__
 
+* [Making a clutter-free git diff on Gettext translation files](https://medium.com/@rkz_io/making-a-clutter-free-git-diff-on-gettext-translation-files-9c0c1bb1d8aa) by Raphaël Kolm, on using `textconv` filter for `*.po` files
+* [Git Please: how to force push without being a jerk](https://medium.freecodecamp.org/git-please-a182f28efeb5) by Buddy Reno, about `--force-with-lease`
+* [Bash tips: easier git branch deleting](https://medium.com/@Gryff/bash-tips-easier-git-branch-deleting-d93da0f0acec) by Liam Griffin, on how to delete branch knowing only part of its name (though the solution itself could be improved)
 
 __Git tools and sites__
 
