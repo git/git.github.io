@@ -21,9 +21,158 @@ This edition covers what happened during the month of June 2017.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [[PATCH 00/31] repository object] (https://public-inbox.org/git/20170531214417.38857-1-bmwill@google.com/)
+
+Last month Brandon Williams sent a long patch series about a big
+internal refactoring of the Git code called "repository object".
+
+This work was based on an [RFC patch series](https://public-inbox.org/git/20170518232134.163059-1-bmwill@google.com/)
+he had sent in May that started with:
+
+> When I first started working on the git project I found it very
+> difficult to understand parts of the code base because of the
+> inherently global nature of our code.  It also made working on
+> submodules very difficult.  Since we can only open up a single
+> repository per process, you need to launch a child process in order
+> to process a submodule.  But you also need to be able to communicate
+> other stateful information to the children processes so that the
+> submodules know how best to format their output or match against a
+> pathspec...it ends up feeling like layering on hack after hack.
+> What I would really like to do, is to have the ability to have a
+> repository object so that I can open a submodule in-process.
+
+Brandon had worked previously on opening a submodule in-process in
+`git ls-files` which is "a pretty simple command and doesn't have
+*too* many dependencies", so he based his RFC patch series on this
+previous work.
+
+He finished the cover letter of his RFC patch series with the
+following:
+
+> This is still very much in a WIP state, though it does pass all
+> tests.  What I'm hoping for here is to get a discussion started
+> about the feasibility of a change like this and hopefully to get the
+> ball rolling.  Is this a direction we want to move in?  Is it worth
+> the pain?
+>
+> Thanks for taking the time to look at this and entertain my insane
+> ideas :)
+
+Many Git developers, like Jeff Hostetler, Ben Peart, Stefan Beller,
+Jacob Keller, Brian Carlson, Johannes Schindelin (alias Dscho), Jeff
+King (alias Peff), Duy Nguyen, Ævar Arnfjörð Bjarmason and Junio
+Hamano (the Git maintainer) commented and agreed that the patch series
+would improve things at least from a code readability point of view.
+
+There was even hope expressed that it could in the end bring the
+following benefits:
+
+* enabling of threading
+* submodules do not need to spawn processes
+* developer velocity going up by having less global state
+* avoiding really ugly hacks such as save_env_before_alias()
+* improving libgit.a to possibly make it compete with libgit2
+
+Following the above reaction from his RFC patch series, Brandon
+started the improved non RFC patch series with:
+
+> Given the vast interest expressed when I sent out my RFC series I
+> decided it would be worth it to invest more time to making a
+> repository object a reality.
+
+and:
+
+> The big difference from the RFC series is that I went through and
+> did the work to migrate key repository state from global variables in
+> 'environment.c' to being stored in a repository object itself.
+
+though there was also:
+
+> I do think that we need to be slightly cautious about moving global
+> state into the repository object though, I don't want 'struct repo'
+> to simply become a kitchen sink where everything gets dumped.  But
+> this is just a warning for the future.
+
+To the above Stefan Beller replied:
+
+> Or in other words:
+> You want to have another struct e.g. 'the_command_line_arguments',
+> which would carry the verbosity/color options for example as they
+> are not related to a repo object, but to the current command being
+> run?
+
+Brandon answered:
+
+> Yes exactly.  Library code that needs to operate on a repository would
+> then be able to take arguments like:
+>
+>   some_library_function(struct repo *repo, struct lib_opts *ops)
+>
+> Much like how the grep machinery takes a grep_opts struct.
+
+Dscho and Peff also participated in reviewing the series.
+
+Brandon then followed up with
+[a version 2 of the series](https://public-inbox.org/git/20170608234100.188529-1-bmwill@google.com/)
+which generated many discussions.
+
+Among them one was started by Jonathan Tan replying to the cover
+letter of the series:
+
+> I am concerned that "struct repository" will end up growing without
+> bounds as we store more and more repo-specific concerns in it. Could
+> it be restricted to just the fields populated by repo_init()?
+> repo_read_index() will then return the index itself, instead of using
+> "struct repository" as a cache. This means that code using
+> repo_read_index() will need to maintain its own variable holding the
+> returned index, but that is likely a positive - it's better for code to
+> just pass around the specific thing needed between functions anyway, as
+> opposed to passing a giant "struct repository" (which partially defeats
+> the purpose of eliminating the usage of globals).
+
+This was followed up by Peff who used the following example:
+
+  git config core.quotepath true
+  git -C submodule config core.quotepath false
+  git ls-files --recurse-submodules
+
+to say that "the repository object has to become a kitchen sink of
+sorts", because in a single process we'd need one copy of the
+quote_path_fully variable (associated with the core.quotepath config
+option) for each repo object.
+
+Brandon later replied to Peff saying that the config should be removed
+from the repository object:
+
+> what should happen is you pass a pair of objects to the ls-files
+> machinery (or any other command's machinery) (1) the repository
+> object being operated on and (2) an options struct which can be
+> configured based on the repository. So when recursing you can do
+> something like the following:
+>
+>   repo_init(submodule, path_to_submodule);
+>   configure_opts(sub_opts, submodule, super_opts)
+>   ls_files(submodule, sub_opts);
+
+To Stefan who suggested the same thing in another sub thread of the
+discussion, Peff replied:
+
+> Right, I think you could have a separate kitchen-sink struct that
+> isn't the "repo" one. But now you have to pass both of those around,
+> which is going to get cumbersome. Almost every function is going to
+> end up passing around the context struct.
+
+The v2 series also prompted Ævar to suggest a new macro to both free()
+and set to NULL a pointer variable, which generated a sub thread.
+
+Brandon then sent [a version 3](https://public-inbox.org/git/20170620191951.84791-1-bmwill@google.com/)
+and [a version 4](https://public-inbox.org/git/20170622184348.56497-1-bmwill@google.com/).
+
+These versions were reviewed by Jonathan Nieder, Jonathan Tan, Junio,
+Stefan and Jeff Hostetler, but the comment were small and technical,
+and version 4 got merged into master.
 
 <!---
 ### Support
