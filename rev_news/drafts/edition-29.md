@@ -23,7 +23,7 @@ This edition covers what happened during the month of June 2017.
 
 ### Reviews
 
-* [[PATCH 00/31] repository object] (https://public-inbox.org/git/20170531214417.38857-1-bmwill@google.com/)
+* [[PATCH 00/31] repository object](https://public-inbox.org/git/20170531214417.38857-1-bmwill@google.com/)
 
 Last month Brandon Williams sent a long patch series about a big
 internal refactoring of the Git code called "repository object".
@@ -39,7 +39,7 @@ he had sent in May that started with:
 > to process a submodule.  But you also need to be able to communicate
 > other stateful information to the children processes so that the
 > submodules know how best to format their output or match against a
-> pathspec...it ends up feeling like layering on hack after hack.
+> pathspec ... it ends up feeling like layering on hack after hack.
 > What I would really like to do, is to have the ability to have a
 > repository object so that I can open a submodule in-process.
 
@@ -66,14 +66,14 @@ King (alias Peff), Duy Nguyen, Ævar Arnfjörð Bjarmason and Junio
 Hamano (the Git maintainer) commented and agreed that the patch series
 would improve things at least from a code readability point of view.
 
-There was even hope expressed that it could in the end bring the
+There was even hope expressed that it could in the end yield the
 following benefits:
 
-* enabling of threading
-* submodules do not need to spawn processes
-* developer velocity going up by having less global state
-* avoiding really ugly hacks such as save_env_before_alias()
-* improving libgit.a to possibly make it compete with libgit2
+* enable threading
+* implement submodules without the need to spawn processes
+* increase developer velocity by diminishing the number of global states
+* avoid really ugly hacks such as `save_env_before_alias()`
+* improve libgit.a to possibly make it compete with libgit2
 
 Following the above reaction from his RFC patch series, Brandon
 started the improved non RFC patch series with:
@@ -134,13 +134,13 @@ letter of the series:
 
 This was followed up by Peff who used the following example:
 
-  git config core.quotepath true
-  git -C submodule config core.quotepath false
-  git ls-files --recurse-submodules
+    git config core.quotepath true
+    git -C submodule config core.quotepath false
+    git ls-files --recurse-submodules
 
 to say that "the repository object has to become a kitchen sink of
 sorts", because in a single process we'd need one copy of the
-quote_path_fully variable (associated with the core.quotepath config
+`quote_path_fully` variable (associated with the `core.quotepath` config
 option) for each repo object.
 
 Brandon later replied to Peff saying that the config should be removed
@@ -156,23 +156,23 @@ from the repository object:
 >   configure_opts(sub_opts, submodule, super_opts)
 >   ls_files(submodule, sub_opts);
 
-To Stefan who suggested the same thing in another sub thread of the
+To Stefan who suggested the same thing in another subthread of the
 discussion, Peff replied:
 
-> Right, I think you could have a separate kitchen-sink struct that
+> Right, I think you could have a separate kitchen sink struct that
 > isn't the "repo" one. But now you have to pass both of those around,
 > which is going to get cumbersome. Almost every function is going to
 > end up passing around the context struct.
 
-The v2 series also prompted Ævar to suggest a new macro to both free()
-and set to NULL a pointer variable, which generated a sub thread.
+The v2 series also prompted Ævar to suggest a new macro to both `free()`
+a pointer variable and set it to `NULL`, which generated a subthread.
 
 Brandon then sent [a version 3](https://public-inbox.org/git/20170620191951.84791-1-bmwill@google.com/)
 and [a version 4](https://public-inbox.org/git/20170622184348.56497-1-bmwill@google.com/).
 
 These versions were reviewed by Jonathan Nieder, Jonathan Tan, Junio,
-Stefan and Jeff Hostetler, but the comment were small and technical,
-and version 4 got merged into master.
+Stefan and Jeff Hostetler, but the comments were small and technical,
+so version 4 got merged into master.
 
 <!---
 ### Support
@@ -215,7 +215,7 @@ __Git tools and sites__
 
 * [gitiles](https://gerrit.googlesource.com/gitiles/): A simple browser for Git repositories from Google.
 * [GitNotifier](https://gitnotifier.io/) Get email notifications when someone stars or forks one of your GitHub repos and follows/unfollows you.
-* [gitsuggest](https://github.com/csurfer/gitsuggest): A tool to suggest github repositories based on the repositories you have shown interest in.
+* [gitsuggest](https://github.com/csurfer/gitsuggest): A tool to suggest GitHub repositories based on the repositories you have shown interest in.
 * [git-open](https://github.com/paulirish/git-open): Type `git open` to open the GitHub page or website for a repository in your browser.
 * [Ceruleum](https://github.com/alixander/Ceruleum): OSX app to track the changes to your code going towards your next commit.
 
