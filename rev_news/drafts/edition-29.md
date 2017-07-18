@@ -185,8 +185,15 @@ and version 4 got merged into master.
 ## Releases
 
 * [Git v2.13.2](https://github.com/git/git/blob/v2.13.2/Documentation/RelNotes/2.13.2.txt).
-* [Git for Windows v2.13.1(2)](https://github.com/git-for-windows/git/releases/tag/v2.13.1.windows.2) and [Git for Windows v2.13.2](https://github.com/git-for-windows/git/releases/tag/v2.13.2.windows.1).
+* [Git for Windows v2.13.1(2)](https://github.com/git-for-windows/git/releases/tag/v2.13.1.windows.2), [Git for Windows v2.13.2](https://github.com/git-for-windows/git/releases/tag/v2.13.2.windows.1) and 
+[Release Git for Windows 2.13.3](https://github.com/git-for-windows/git/releases/tag/v2.13.3.windows.1).
 * [Git LFS 2.2.0 released](https://github.com/blog/2384-git-lfs-2-2-0-released)
+* [libgit2 v0.26.0](https://github.com/libgit2/libgit2/releases/tag/v0.26.0)
+* [libgit2/rugged v0.26.0](https://github.com/libgit2/rugged/releases/tag/v0.26.0)
+* [libgit2/pygit2 v0.26.0](https://github.com/libgit2/pygit2/releases/tag/v0.26.0)
+* [libgit2/LibGit2Sharp v0.24](https://github.com/libgit2/libgit2sharp/releases/tag/v0.24)
+* [GitLab 9.3](https://about.gitlab.com/2017/06/22/gitlab-9-3-released/) through [Patch Release: 9.3.6](https://about.gitlab.com/2017/07/11/gitlab-9-dot-3-dot-6-released/)
+* [Bitbucket Server 5.2](https://blog.bitbucket.org/2017/07/18/bitbucket-server-5-2-compliance-meets-devops/)
 
 ## Other News
 
@@ -201,9 +208,16 @@ __Light reading__
 * [Making a clutter-free git diff on Gettext translation files](https://medium.com/@rkz_io/making-a-clutter-free-git-diff-on-gettext-translation-files-9c0c1bb1d8aa) by Raphaël Kolm, on using `textconv` filter for `*.po` files
 * [Git Please: how to force push without being a jerk](https://medium.freecodecamp.org/git-please-a182f28efeb5) by Buddy Reno, about `--force-with-lease`
 * [Bash tips: easier git branch deleting](https://medium.com/@Gryff/bash-tips-easier-git-branch-deleting-d93da0f0acec) by Liam Griffin, on how to delete branch knowing only part of its name (though the solution itself could be improved)
+* [Two Commits That Wrecked the User Experience of Git](https://redfin.engineering/two-commits-that-wrecked-the-user-experience-of-git-f0075b77eab1)
+* [Git Does Not Have Branches](https://hackernoon.com/git-does-not-have-branches-add468b5b4a0) by Omri Spector
 
 __Git tools and sites__
 
+* [gitiles](https://gerrit.googlesource.com/gitiles/): A simple browser for Git repositories from Google.
+* [GitNotifier](https://gitnotifier.io/) Get email notifications when someone stars or forks one of your GitHub repos and follows/unfollows you.
+* [gitsuggest](https://github.com/csurfer/gitsuggest): A tool to suggest github repositories based on the repositories you have shown interest in.
+* [git-open](https://github.com/paulirish/git-open): Type `git open` to open the GitHub page or website for a repository in your browser.
+* [Ceruleum](https://github.com/alixander/Ceruleum): OSX app to track the changes to your code going towards your next commit.
 
 ## Credits
 
