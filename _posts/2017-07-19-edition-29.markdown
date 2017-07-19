@@ -154,7 +154,7 @@ from the repository object:
 >
 > ```
 >   repo_init(submodule, path_to_submodule);
->   configure_opts(sub_opts, submodule, super_opts)
+>   configure_opts(sub_opts, submodule, super_opts);
 >   ls_files(submodule, sub_opts);
 > ```
 
