@@ -152,9 +152,11 @@ from the repository object:
 > configured based on the repository. So when recursing you can do
 > something like the following:
 >
+> ```
 >   repo_init(submodule, path_to_submodule);
 >   configure_opts(sub_opts, submodule, super_opts)
 >   ls_files(submodule, sub_opts);
+> ```
 
 To Stefan who suggested the same thing in another subthread of the
 discussion, Peff replied:
