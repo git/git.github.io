@@ -21,9 +21,241 @@ This edition covers what happened during the month of July 2017.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [reftable: new ref storage format](https://public-inbox.org/git/CAJo=hJtyof=HRy=2sLP0ng0uZ4=S-DpZ5dR1aF+VHVETKG20OQ@mail.gmail.com/)
+
+Shawn Pearce sent an email describing a new format to store refs. The
+email started with:
+
+> We've been having scaling problems with insane number of references
+> (>866k), so I started thinking a lot about improving ref storage.
+>
+> I've written a simple approach, and implemented it in JGit.
+> Performance is promising:
+>
+>   - 62M packed-refs compresses to 27M
+>   - 42.3 usec lookup
+
+This is not the first time that someone proposes a new format to store
+refs, and Shawn summarized a previous attempt by David Turner:
+
+> David Turner proposed [using LMDB](https://public-inbox.org/git/1455772670-21142-26-git-send-email-dturner@twopensource.com/), as LMDB is lightweight
+> (64k of runtime code) and GPL-compatible license.
+>
+> A downside of LMDB is its reliance on a single C implementation. This
+> makes embedding inside JGit (a popular reimplemenation of Git)
+> difficult, and hosting onto virtual storage (for JGit DFS) virtually
+> impossible.
+>
+> A common format that can be supported by all major Git implementations
+> (git-core, JGit, libgit2) is strongly preferred.
+
+Shawn also referenced a previous proposal, he had worked on:
+
+> [JGit Ketch](https://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03073.html) proposed [RefTree](https://public-inbox.org/git/CAJo=hJvnAPNAdDcAAwAvU9C4RVeQdoS3Ev9WTguHx4fD0V_nOg@mail.gmail.com/), an encoding of
+> references inside Git tree objects stored as part of the repository's
+> object database.
+
+He describes the reftable format like this:
+
+> A reftable file is a portable binary file format customized for
+> reference storage. References are sorted, enabling linear scans,
+> binary search lookup, and range scans.
+>
+> Storage in the file is organized into blocks.  Prefix compression
+> is used within a single block to reduce disk space.  Block size is
+> tunable by the writer.
+
+There are a lot more details in his email and the proposal looked very
+advanced.
+
+Jeff King, alias Peff, was the first to reply to Shawn. He reviewed
+the whole email and he summarized what he understood from Shawn's
+proposal:
+
+> The reftable file is a sequence of blocks, each of which contains a
+> finite set of heavily-compressed refs. You have to read each block
+> sequentially, but since they're a fixed size, that's still a
+> constant-time operation (I'm ignoring the "restarts" thing for now). You
+> find the right block by reading the index.
+
+One of his concern was about updating refs:
+
+> Updates are where things get dicier. It looks like you just write a new
+> partial reftable file with your updates. And then if there are N
+> reftables present, readers actually have to do a list-merge of the
+> results they get from all of them (where the results from reftable.5
+> trump ones from reftable.4).
+
+and another one was about reflogs:
+
+> One thing I didn't see is reflogs. They don't strictly have to be part
+> of a ref-storage solution. But they do still consume at least one inode
+> per ref in the current system.
+
+But overall Peff seemed happy with the performance and the idea.
+
+Stefan Beller replied to Peff. As Stefan works at Google with Shawn,
+he had already discussed the proposal and gave more details about some
+points Peff had commented on. He also suggested Shawn give "the whole
+thing in BNF format from top down" starting with:
+
+>   initial-block
+>   content-blocks*
+>   (index-block)
+>   footer
+
+Peff replied to Stefan about some points especially regarding gzip
+compression and agreed that "a high-level overview of the format would
+have been nice".
+
+Eric Wong then suggested using "an intrusive critbit tree" to store
+refs as it could save space and speed up searching for a SHA-1.
+
+Shawn replied to Stefan. He agreed about describing the format using
+BNF from top down. About gzip compression he showed some numbers and
+wrote:
+
+> The reftable format (for 64k block, 256 restart) is within spitting
+> distance (432 KiB) of a default level gzip of packed-refs. We can get
+> fast-lookup, and OK compression.
+
+Shawn also replied to Peff's first email. About reflog support, a
+short subthread of the discussion started where Dave Borowitz chimed
+in. The subthread concluded that the reftable format should indeed try
+to support reflog entries.
+
+About updating refs which was Peff's other big concern, Peff replied
+to Shawn suggesting that each reftable points to previous
+reftables. And then Shawn agreed that it "makes for a very safe atomic
+reader view".
+
+Peff eventually suggested to keep the list of reftables in a top-level
+pointer file, and to rewrite that pointer file on update.
+
+Johannes Sixt agreed with Peff concerns over updates in Shawn's
+initial proposal saying:
+
+> One of the failure modes is that on Windows a file cannot be deleted
+> while it is open in any process. It can happen that a compacting updater
+> wants to remove a reftable file that is still open in a reader.
+
+Michael Haggerty also replied to Shawn's initial proposal. Michael
+first asked if pseudorefs, like `HEAD`, `FETCH_HEAD`, should also be
+stored in reftables, or only the references under `refs/`.
+
+Micheal then commented on a lot of details. He suggested an algorithm
+so that reference repacking can be done without blocking other
+*writers*.
+
+Shawn replied to Michael. He agreed to use what the suggested
+algorithm to repack without blocking, but he was not sure about
+storing pseudo refs in reftables.
+
+Dave Borowitz and Junio Hamano, the Git maintainer, also commented on
+parts of this discussion.
+
+While the discussion was going on with Michael, Shawn posted a
+[second version](https://public-inbox.org/git/CAJo=hJtTp2eA3z9wW9cHo-nA7kK40vVThqh6inXpbCcqfdMP9g@mail.gmail.com/)
+of his proposal. It started with:
+
+> Biggest changes from the first proposal are:
+>
+> - reflog is now integrated into reftable
+> - block headers slightly different
+> - Peff's stack management idea is used
+> - Michael's compaction idea is used
+
+The structure of the files was also better documented using the BNF.
+
+Stefan was the first to reply, followed by Junio. Shawn then answered
+all of their comments. One point that Stefan and Junio both raised was
+how modification time was stored in the reflog.
+
+Initialy Shawned had planned to store them as seconds since the epoch
+in a 32 bit integer, but that wouldn't have worked after 2038. So
+Shawn agreed after also discussing with Michael to have them in an 8
+byte field storing microseconds since the epoch which will work
+"through year 9999".
+
+Ævar Arnfjörð Bjarmason though chimed in to suggest using 64 bit
+nanosecond resolution which would "only be good up until the year
+2554", but has other benefits like keeping a one-to-one mapping
+between file modification time and reflog entries and standardizing on
+fewer time formats.
+
+Shawn then posted [a third version](https://public-inbox.org/git/CAJo=hJvxWg2J-yRiCK3szux=eYM2ThjT0KWo-SFFOOc1RkxXzg@mail.gmail.com/)
+of his proposal starting with the following:
+
+> Significant changes from v2:
+> - efficient lookup by SHA-1 for allow-tip-sha1-in-want.
+> - type 0x4 for FETCH_HEAD, MERGE_HEAD.
+> - file size up (27.7 M in v1, 34.4 M in v3)
+>
+> The file size increase is due to lookup by SHA-1 support. By using
+> unique abbreviations its adding about 7 MiB to the file size for
+> 865,258 objects behind 866,456 refs. Average entry for this direction
+> costs 8 bytes, using a 6 byte/12 hex unique abbreviation.
+
+There were more comments from Stefan and Michael, which after short
+discussions resulted in improvements. So Shawn posted
+[a fourth version](https://public-inbox.org/git/CAJo=hJv7scc1L0_MdRkFeLAJGjYm2UkTFNOgj2e4+9Zj7KSiiQ@mail.gmail.com/)
+starting with:
+
+> Significant changes from v3:
+> - Incorporated Michael Haggerty's update_index concept for reflog.
+> - Explicitly documented log-only tables.
+>
+> - Magic changed to 'REFT'
+> - Symlinks now use type 0x3 with "ref: " prefix.
+> - Ref-like files (FETCH_HEAD, MERGE_HEAD) also use type 0x3.
+> - restart_count simplified, obj block_count simplified
+
+This round led to a lot of discussion. Michael proposed another format
+altogether. Junio commented on a few things and was worried about the
+impact of the new format on clients were reading a single ref
+currently need to open at most 2 files. Dave Borowitz asked about `git
+stash` implementation.
+
+Michael's proposal started a significant subthread where Peff, Junio
+and Dave chimed in.
+
+Shawn recently posted [a 5th version](https://public-inbox.org/git/CAJo=hJsOHF0KVmXvbSBiBgxq4zRdt7v7sj_GuKvcpbu8tkujFA@mail.gmail.com/)
+with the following changes:
+
+> Significant changes from v4:
+> - Supported Michael Haggerty's multi-level index.
+> - Restart table now appears at start of block, instead of end.
+> - The `restart_offset` is now 3-bytes, instead of 4-bytes.
+> - Footer stores `obj_id_len` abbreviation used by obj blocks.
+>
+> - Clarified log-only files can exist.
+> - Clarified use of `position` for byte in file, `offset` for byte in block.
+> - Clarified peeling, and reference name encoding as bag of bytes.
+> - Corrected extensions.reftable value to be `true`.
+
+The comments on this round were mostly about LMDB, as Ævar found a
+java binding that could be used. These discussions involved Peff,
+David Turner and Howard Chu, the Chief Architect of OpenLDAP and LMDB
+creator.
+
+It turned out that LMBD might not work well on NFS. Also Google (for
+which Shawn is working) needs something that can be virtualized onto a
+different filesystem in userspace and it looks like LMDB doesn't fit
+this requirement.
+
+So Shawn posted [a 6th version](https://public-inbox.org/git/CAJo=hJtg0PAVHT1phbArdra8+4LfnEEuaj3fBid==BXkZghi8g@mail.gmail.com/#r):
+
+> Changes from v5:
+> - extensions.refStorage = reftable is used to select this format.
+>
+> - Log records can be explicitly deleted (for refs/stash).
+> - Log records may use Michael Haggerty's chained idea to compress before zlib.
+>   This saved ~5.8% on one of my example repositories.
+
+There were a few comments by Stefan, Peff and Junio, but it looks like
+there is an overall agreement on the design at this point.
 
 <!---
 ### Support
