@@ -285,11 +285,13 @@ __Various__
 * [Drive Refactors with a Git Pre-Push Hook](http://gilesbowkett.blogspot.de/2017/08/drive-refactors-with-git-pre-push-hook.html), by Giles Bowkett
 * [Using Advanced Rebase Features for a Clean Repository](https://mtyurt.net/2017/08/08/git-using-advanced-rebase-features-for-a-clean-repository/), by M. Tarık Yurt
 * [Why Github can't host the Linux Kernel Community](http://blog.ffwll.ch/2017/08/github-why-cant-host-the-kernel.html), by Daniel Vetter
+* [A set of best practices for JavaScript projects: Git](https://github.com/wearehive/project-guidelines#git), from Hive
 
 __Light reading__
 
 * Visual Studio's resources for learning Git: [What is Git? Tutorials and Best Practices](https://www.visualstudio.com/learn-git/)
 * [15 Git Branch Command Examples to Create and Manage Branches](http://www.thegeekstuff.com/2017/06/git-branch/), by Ramesh Natarajan
+* [Patch review and message brokers](https://rwmj.wordpress.com/2017/07/06/patch-review-and-message-brokers/), by Richard WM Jones: creating multi-machine test framework for emailed patches, using RabbitMQ message broker
 
 __Git tools and sites__
 
@@ -298,7 +300,10 @@ __Git tools and sites__
 * [git-books](https://github.com/ghrst/git-books): All books (free and non-free) that have been ever published about Git
 * [Email2git](https://www.linux.com/blog/email2git-matching-linux-code-its-mailing-list-discussions): Matching Linux Code with its Mailing List Discussions
 * [Data Version Control](https://dataversioncontrol.com/): Make your data science projects reproducible and shareable
-* And a related article: [How to Version Control your Machine Learning task](https://medium.com/towards-data-science/how-to-version-control-your-machine-learning-task-cad74dce44c4), by Kumar Shridhar
+  * And a related article: [How to Version Control your Machine Learning task](https://medium.com/towards-data-science/how-to-version-control-your-machine-learning-task-cad74dce44c4), by Kumar Shridhar
+* [GitHub & BitBucket HTML Preview](http://htmlpreview.github.io/), given blob URL
+* [Pass: The Standard Unix Password Manager](https://www.passwordstore.org/); several commands rely on or provide additional functionality if the password store directory is also a git repository (done with `pass git init`), with commmunity-provided [git credential helper integration](https://github.com/languitar/pass-git-helper)
+* [exa - A modern replacement for ls](https://the.exa.website/) in Rust, with `--git` option to list each file's Git status
 
 ## Credits
 
