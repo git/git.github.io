@@ -261,9 +261,78 @@ there is an overall agreement on the design at this point.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Shawn Pearce
+
+* Who are you and what do you do?
+
+I am an open source developer who really loves working on developer
+tools. I like making others more happy and productive, making it that
+much easier for them to change the world.
+
+* What would you name your most important contribution to Git?
+
+Three things come to mind:  git fast-import, git gui, and the offshoot
+projects I started: libgit2, JGit, EGit, Gerrit Code Review. Sorry,
+it's hard to choose just one.
+
+git fast-import format became the lingua franca of version control
+systems, helping users to move history between CVS, Subversion, Hg,
+Bazaar, BitKeeper, and of course Git. I originally created the format
+to help Jon Smirl import the Mozilla repository from CVS into Git. It
+was so versatile that its adoption has exploded.
+
+git gui has stuck around as a compliment to the awesome gitk, helping
+users to manage their working directory. I wound up abandoning the
+project due to lack of time, but several others like Pat Thoyts
+stepped in and continued fixing bugs. I love open source. :)
+
+I'm most proud of establishing some offshoot projects: JGit, EGit and
+Gerrit Code Review. These are 3 separate open source projects in their
+own right, with their own communities of contributors and users.
+Gerrit Code Review in particular has seen a lot of adoption in the
+enterprise, and by only supporting Git, has certainly helped to bring
+Git into many organizations.
+
+* What are you doing on the Git project these days, and why?
+
+I spend most of my time on JGit and Gerrit Code Review, but this past
+month I started drafting a proposal for a new file format called
+reftable, which I hope will replace the existing $GIT_DIR/refs and
+$GIT_DIR/packed-refs with a more scalable format.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+This is a trick question! My $DAY_JOB at Google is to manage a team of
+developers who work on JGit, Gerrit Code Review, and of course
+git-core. Google has been investing in the Git ecosystem for many
+years, and we look forward to continuing our contributions.
+
+This year, part of my team has been working on two focus areas: git
+submodule improvements (Stefan Beller, Brandon Williams) and lazy
+clone (Jonathan Tan, Jonathan Nieder). For the latter project we've
+also been working with Ben Peart, and his co-workers at Microsoft.
+
+I'd like to see Git upgrade its hash function. SHA-1 has had a good
+run for us, but it's time to start thinking about the next decade.
+Jonathan Nieder has written an excellent proposal of how to make the
+transition. I think it's a matter of implementation effort at this
+point.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+The !*@!*! wire protocol. The server speaks first with an ASCII
+listing of all of its references is causing scaling bottlenecks for
+enterprise uses.
+
+There are plans afoot to fix this. Jeff "Peff" King has some ideas, as
+does Jonathan Tan.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+[Gerrit Code Review](https://www.gerritcodereview.com/), of course. :)
+
 
 ## Releases
 
