@@ -41,17 +41,17 @@ This is not the first time that someone proposes a new format to store
 refs, and Shawn summarized a previous attempt by David Turner:
 
 > David Turner proposed [using LMDB](https://public-inbox.org/git/1455772670-21142-26-git-send-email-dturner@twopensource.com/), as LMDB is lightweight
-> (64k of runtime code) and GPL-compatible license.
+> (64k of runtime code) and is licensed under a GPL-compatible license.
 >
 > A downside of LMDB is its reliance on a single C implementation. This
-> makes embedding inside JGit (a popular reimplemenation of Git)
+> makes embedding inside JGit (a popular reimplementation of Git)
 > difficult, and hosting onto virtual storage (for JGit DFS) virtually
 > impossible.
 >
 > A common format that can be supported by all major Git implementations
 > (git-core, JGit, libgit2) is strongly preferred.
 
-Shawn also referenced a previous proposal, he had worked on:
+Shawn also referenced a previous proposal he had worked on:
 
 > [JGit Ketch](https://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03073.html) proposed [RefTree](https://public-inbox.org/git/CAJo=hJvnAPNAdDcAAwAvU9C4RVeQdoS3Ev9WTguHx4fD0V_nOg@mail.gmail.com/), an encoding of
 > references inside Git tree objects stored as part of the repository's
@@ -102,7 +102,7 @@ points Peff had commented on. He also suggested Shawn give "the whole
 thing in BNF format from top down" starting with:
 
 >   initial-block
->   content-blocks*
+>   content-blocks\*
 >   (index-block)
 >   footer
 
@@ -118,8 +118,8 @@ BNF from top down. About gzip compression he showed some numbers and
 wrote:
 
 > The reftable format (for 64k block, 256 restart) is within spitting
-> distance (432 KiB) of a default level gzip of packed-refs. We can get
-> fast-lookup, and OK compression.
+> distance (432 KB) of a default level gzip of packed-refs. We can get
+> fast lookup, and OK compression.
 
 Shawn also replied to Peff's first email. About reflog support, a
 short subthread of the discussion started where Dave Borowitz chimed
@@ -173,7 +173,7 @@ Stefan was the first to reply, followed by Junio. Shawn then answered
 all of their comments. One point that Stefan and Junio both raised was
 how modification time was stored in the reflog.
 
-Initialy Shawned had planned to store them as seconds since the epoch
+Initially Shawn had planned to store them as seconds since the epoch
 in a 32 bit integer, but that wouldn't have worked after 2038. So
 Shawn agreed after also discussing with Michael to have them in an 8
 byte field storing microseconds since the epoch which will work
@@ -189,12 +189,13 @@ Shawn then posted [a third version](https://public-inbox.org/git/CAJo=hJvxWg2J-y
 of his proposal starting with the following:
 
 > Significant changes from v2:
+>
 > - efficient lookup by SHA-1 for allow-tip-sha1-in-want.
-> - type 0x4 for FETCH_HEAD, MERGE_HEAD.
+> - type 0x4 for `FETCH_HEAD`, `MERGE_HEAD`.
 > - file size up (27.7 M in v1, 34.4 M in v3)
 >
 > The file size increase is due to lookup by SHA-1 support. By using
-> unique abbreviations its adding about 7 MiB to the file size for
+> unique abbreviations its adding about 7 MB to the file size for
 > 865,258 objects behind 866,456 refs. Average entry for this direction
 > costs 8 bytes, using a 6 byte/12 hex unique abbreviation.
 
@@ -204,19 +205,19 @@ discussions resulted in improvements. So Shawn posted
 starting with:
 
 > Significant changes from v3:
+>
 > - Incorporated Michael Haggerty's update_index concept for reflog.
 > - Explicitly documented log-only tables.
->
-> - Magic changed to 'REFT'
-> - Symlinks now use type 0x3 with "ref: " prefix.
-> - Ref-like files (FETCH_HEAD, MERGE_HEAD) also use type 0x3.
-> - restart_count simplified, obj block_count simplified
+> - Magic changed to `'REFT'`
+> - Symlinks now use type 0x3 with `"ref: "` prefix.
+> - Ref-like files (`FETCH_HEAD`, `MERGE_HEAD`) also use type 0x3.
+> - `restart_count` simplified, obj `block_count` simplified
 
 This round led to a lot of discussion. Michael proposed another format
 altogether. Junio commented on a few things and was worried about the
 impact of the new format on clients were reading a single ref
-currently need to open at most 2 files. Dave Borowitz asked about `git
-stash` implementation.
+currently need to open at most 2 files. Dave Borowitz asked about the
+`git stash` implementation.
 
 Michael's proposal started a significant subthread where Peff, Junio
 and Dave chimed in.
@@ -225,31 +226,31 @@ Shawn recently posted [a 5th version](https://public-inbox.org/git/CAJo=hJsOHF0K
 with the following changes:
 
 > Significant changes from v4:
+>
 > - Supported Michael Haggerty's multi-level index.
 > - Restart table now appears at start of block, instead of end.
 > - The `restart_offset` is now 3-bytes, instead of 4-bytes.
 > - Footer stores `obj_id_len` abbreviation used by obj blocks.
->
 > - Clarified log-only files can exist.
 > - Clarified use of `position` for byte in file, `offset` for byte in block.
-> - Clarified peeling, and reference name encoding as bag of bytes.
+> - Clarified *peeling*, and reference name encoding as bag of bytes.
 > - Corrected extensions.reftable value to be `true`.
 
 The comments on this round were mostly about LMDB, as Ævar found a
-java binding that could be used. These discussions involved Peff,
+Java binding that could be used. These discussions involved Peff,
 David Turner and Howard Chu, the Chief Architect of OpenLDAP and LMDB
 creator.
 
-It turned out that LMBD might not work well on NFS. Also Google (for
+It turned out that LMDB might not work well on NFS. Also Google (for
 which Shawn is working) needs something that can be virtualized onto a
-different filesystem in userspace and it looks like LMDB doesn't fit
+different filesystem in user space, and it looks like LMDB doesn't fit
 this requirement.
 
 So Shawn posted [a 6th version](https://public-inbox.org/git/CAJo=hJtg0PAVHT1phbArdra8+4LfnEEuaj3fBid==BXkZghi8g@mail.gmail.com/#r):
 
 > Changes from v5:
-> - extensions.refStorage = reftable is used to select this format.
 >
+> - `extensions.refStorage = reftable` is used to select this format.
 > - Log records can be explicitly deleted (for refs/stash).
 > - Log records may use Michael Haggerty's chained idea to compress before zlib.
 >   This saved ~5.8% on one of my example repositories.
@@ -322,7 +323,7 @@ point.
 * If you could remove something from Git without worrying about
   backwards compatibility, what would it be?
 
-The !*@!*! wire protocol. The server speaks first with an ASCII
+The \!\*@\!\*\! wire protocol. The server speaks first with an ASCII
 listing of all of its references is causing scaling bottlenecks for
 enterprise uses.
 
