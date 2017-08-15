@@ -361,6 +361,7 @@ __Light reading__
 * Visual Studio's resources for learning Git: [What is Git? Tutorials and Best Practices](https://www.visualstudio.com/learn-git/)
 * [15 Git Branch Command Examples to Create and Manage Branches](http://www.thegeekstuff.com/2017/06/git-branch/), by Ramesh Natarajan
 * [Patch review and message brokers](https://rwmj.wordpress.com/2017/07/06/patch-review-and-message-brokers/), by Richard WM Jones: creating multi-machine test framework for emailed patches, using RabbitMQ message broker
+* [The Git Parable](http://tom.preston-werner.com/2009/05/19/the-git-parable.html), by Tom Preston-Werner (2009)
 
 __Git tools and sites__
 
