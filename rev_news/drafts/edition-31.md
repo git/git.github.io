@@ -46,6 +46,7 @@ __Light reading__
 
 __Git tools and sites__
 
+* [How to Integrate Git into Your Linux Desktop](https://www.linux.com/learn/intro-to-linux/2017/8/how-integrate-git-your-linux-desktop)
 
 ## Credits
 
