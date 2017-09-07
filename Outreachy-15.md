@@ -28,8 +28,8 @@ mailing list so that the community can benefit from the discussion.
 
 ## Mentors
 
- - Jeff King <peff@peff.net>
- - Christian Couder <christian.couder@gmail.com>
+ - Jeff King &lt;<peff@peff.net>&gt;
+ - Christian Couder &lt;<christian.couder@gmail.com>&gt;
 
 ## Project Ideas
 
