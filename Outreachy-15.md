@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Outreachy Round 15: September 2017
+title: "Outreachy Round 15: September 2017"
 navbar: false
 ---
 
@@ -81,7 +81,6 @@ to:
 
   - learn to interact with the community and identify smaller projects
     worth working on
-
   - complete a series of small projects, both from the list below and
     from bugs and ideas that come up on the mailing list
 
@@ -115,7 +114,7 @@ See:
   - <https://public-inbox.org/git/20150304053333.GA9584@peff.net/>
   - <https://public-inbox.org/git/4D3CDDF9.6080405@intel.com/>
 
-Searching the mailing list for "bisect --first-parent" might be
+Searching the mailing list for "bisect \-\-first-parent" might be
 helpful too.
 
 #### Fix some git bisect bugs
