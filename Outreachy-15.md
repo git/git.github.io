@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Outreachy Round 15: September 2017"
+title: Outreachy Round 15: September 2017
 navbar: false
 ---
 
