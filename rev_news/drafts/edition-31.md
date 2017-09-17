@@ -111,9 +111,41 @@ In the end it looks like most of the Git developers are either neutral
 or are happy with moving this topic forward, and an updated version of
 Brandon's patch has been merged in the "pu" (proposed updates) branch.
 
-<!---
+
 ### Reviews
--->
+
+* [pkt-line: re-'static'-ify buffer in packet_write_fmt_1()](https://public-inbox.org/git/20170827073732.546-1-martin.agren@gmail.com/)
+
+Martin Ågren sent a patch saying that a previous patch from October
+2016 has silently dropped static-ness of a buffer, so that we allocate
+and leak a buffer each time we call packet_write_fmt_gently().
+
+Jeff King, alias Peff, replied:
+
+> Ouch. So this means that git since v2.11 is basically leaking every
+> non-byte pack sent by upload-pack (so all of the ref advertisement and
+> want/have negotiation).
+
+Peff then agreed that Martin's patch "is a good fix for now as it
+takes as back to the pre-bug state".
+
+Lars Schneider also agreed with Martin's fix and asked him how he
+found the leak.
+
+Martin replied "Valgrind found it for me" and later explained that he
+had patched the Valgrind script, that can be used in the test suite to
+run tests under Valgrind, so that Valgrind is launched with the added
+"--leak-check=yes" option. Then he had slowly run the tests one after
+another under Valgrind adding items in a suppressions-list until he
+found the leak.
+
+Peff then took a look at finding and fixing some leaks too. He
+especially posted [a patch to use a static lock_file in the config](https://public-inbox.org/git/20170829185850.tfmjoa5u5sfuwpgi@sigill.intra.peff.net/)
+which started another thread about the limitations of the tempfile code.
+
+Stefan Beller and Junio Hamano also took part of the discussion. In
+the end it looks like the discussion at least started some effort to
+make it easier to check for and to fix memory leaks.
 
 <!---
 ### Support
