@@ -111,7 +111,6 @@ In the end it looks like most of the Git developers are either neutral
 or are happy with moving this topic forward, and an updated version of
 Brandon's patch has been merged in the "pu" (proposed updates) branch.
 
-
 ### Reviews
 
 * [pkt-line: re-'static'-ify buffer in packet_write_fmt_1()](https://public-inbox.org/git/20170827073732.546-1-martin.agren@gmail.com/)
@@ -167,6 +166,18 @@ __Light reading__
 
 
 __Git tools and sites__
+
+* [Magit](https://magit.vc), currently at [version 2.11](https://emacsair.me/2017/09/13/magit-2.11/),
+  is a Git user interface that is implemented as an Emacs package. It
+  is very popular among Emacs users and often considered to be one of
+  its killer features. Jonas Bernoulli, its maintainer, is currently
+  running a
+  [Kickstarter campaign](https://www.kickstarter.com/projects/1681258897/its-magit-the-magical-git-client)
+  to support his work for a year. One of the goals is to make
+  it more accessible to non-Emacs users. Many of the
+  [articles that he has published](https://emacsair.me/2017/09/01/campaign-articles)
+  when he launched the campaign are specifically for
+  non-Emacs users.
 
 * [How to Integrate Git into Your Linux Desktop](https://www.linux.com/learn/intro-to-linux/2017/8/how-integrate-git-your-linux-desktop)
 
