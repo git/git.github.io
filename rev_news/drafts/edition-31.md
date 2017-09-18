@@ -172,7 +172,7 @@ __Git tools and sites__
   is very popular among Emacs users and often considered to be one of
   its killer features. Jonas Bernoulli, its maintainer, is currently
   running a
-  [Kickstarter campaign](https://www.kickstarter.com/projects/1681258897/its-magit-the-magical-git-client)
+  [Kickstarter campaign](https://www.kickstarter.com/projects/1681258897/its-magit-the-magical-git-client?ref=bnkptt)
   to support his work for a year. One of the goals is to make
   it more accessible to non-Emacs users. Many of the
   [articles that he has published](https://emacsair.me/2017/09/01/campaign-articles)
