@@ -156,14 +156,24 @@ make it easier to check for and to fix memory leaks.
 
 ## Releases
 
+* [nodegit v0.20.2](https://github.com/nodegit/nodegit/releases/tag/v0.20.2)
+* [Git LFS 2.3.0](https://github.com/blog/2432-git-lfs-2-3-0-released)
+* [GitHub Enterprise 2.11](https://github.com/blog/2429-introducing-github-enterprise-2-11)
+* [GitLab 9.5](https://about.gitlab.com/2017/08/22/gitlab-9-5-released/) and patches [9.5.4, 9.4.6, and 9.3.11](https://about.gitlab.com/2017/09/07/gitlab-9-dot-5-dot-4-security-release/)
 
 ## Other News
 
 __Various__
 
+* [Gerrit User Summit 2017, 2-3 Oct, London](https://gitenterprise.me/2017/09/07/gerrit-user-summit-2017-2-3-oct-london/)
+* [Why you should stop using Git rebase](https://medium.com/@fredrikmorken/why-you-should-stop-using-git-rebase-5552bee4fed1), by Fredrik V. Mørken
+* [You're using git wrong](https://dpc.pw/blog/2017/08/youre-using-git-wrong/), by Dawid Ciężarkiewicz
 
 __Light reading__
 
+* [Tweak your Terminal for Git](https://dev.to/gonedark/tweak-your-terminal-for-git)
+* [Developer accidentally deletes 3 months of work with Visual Studio Code](https://news.ycombinator.com/item?id=15044264), interesting discussion from HackerNews
+* [How to recover dropped data from stash](https://opensource.com/article/17/8/recover-dropped-data-stash), by Jose Guilherme Vanz
 
 __Git tools and sites__
 
@@ -178,7 +188,9 @@ __Git tools and sites__
   [articles that he has published](https://emacsair.me/2017/09/01/campaign-articles)
   when he launched the campaign are specifically for
   non-Emacs users.
-
+* [Working Copy](https://workingcopyapp.com/) is a Git client for iOS
+* [GitHub for Unity](https://unity.github.com/) is an extension for the Unity game engine editor. They just released version [0.19-alpha](https://github.com/blog/2426-github-for-unity-0-19-alpha-released).
+* [tsrc](https://tankerapp.github.io/tsrc/) is a command-line tool that helps you manage several git repositories.
 * [How to Integrate Git into Your Linux Desktop](https://www.linux.com/learn/intro-to-linux/2017/8/how-integrate-git-your-linux-desktop)
 
 ## Credits
