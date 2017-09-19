@@ -30,11 +30,11 @@ would be nice to not have to worry about style when reviewing patches
 as that is something mechanical and best left to a machine (for the
 most part)", and also pointed [an email from a few years ago](https://public-inbox.org/git/20150121220903.GA10267@peff.net/)
 from Jeff King, alias Peff to add a new `git clang-format-diff`
-command to properly format patchs.
+command to properly format patches.
 
 He warned that, as "our code base isn't consistent", it is not
 possible "to come up with a config which matches" it, but said that he
-wants to "see how people feel" about this topic.
+wanted to "see how people feel" about this topic.
 
 Johannes Schindelin, alias Dscho, first reacted with:
 
@@ -57,27 +57,25 @@ He also suggested improving the documentation to "hint at how to use
 this formatting to just affect the patch that is currently worked on
 or rather a pre-commit hook".
 
-Brandon later agreed with improving the documentation once his patch
+Brandon later agreed to improve the documentation once his patch
 would not be an RFC anymore.
 
 Junio Hamano, the Git maintainer, thanked Brandon for compiling a
-sensible set of rule, though he stressed that developers should have
+sensible set of rules, though he stressed that developers should have
 "a shared notion of how these rules are to be used" to avoid
 "unpleasant consequences" like:
 
-    - "unwanted code churn on existing codebase, only for the sake of
-     satisfying the formatting rules"
-
-    - "far more style-only critique to patches posted on the list" by
-      readers "running the tool to nitpick other people's patches"
-
-    - when "human aesthetics judgement" is necessary to overrule
-      mechanical rule
+- "unwanted code churn on existing codebase, only for the sake of
+ satisfying the formatting rules"
+- "far more style-only critique to patches posted on the list" by
+  readers "running the tool to nitpick other people's patches"
+- when "human aesthetics judgement" is necessary to overrule
+  mechanical rules
 
 Junio also commented the content of the patch especially the
 "ColumnLimit: 80" settings to limit code lines to 80 columns where he
 repeated that it is "important to give a guideline on what to do when
-lines in your code goes over this limit".
+lines in your code exceed this limit".
 
 Brandon replied to Junio that the unwanted code churn "is an issue
 when you have an inconsistent code base such as ours" and that he
@@ -85,12 +83,12 @@ when you have an inconsistent code base such as ours" and that he
 eliminate style-only critiques".
 
 He also "would expect some of the penalties would need to be tweaked
-overtime before we rely too heavily on" the tool to avoid too many
+over time before we rely too heavily on" the tool to avoid too many
 cases where it conflicts with human aesthetics judgement.
 
 Junio and Brandon then further discussed some settings in the content
-of the patch. This led Junio to talk about the checkpatch.pl script
-from the Linux kernel project that he uses to automatically find
+of the patch. This led Junio to talk about the `checkpatch.pl` script
+from the Linux kernel project which he uses to automatically find
 problems in patches.
 
 Then Jeff King chimed saying that he stopped pursuing adding a new
@@ -100,8 +98,8 @@ code". He was also "worried that there would always be suggestions
 from the tool that we don't agree with (i.e., where the guiding
 principle is "do what is readable")".
 
-Jeff also mentioned "go fmt", which is used by the go language
-community, saying that "it seems to at least work for them".
+Jeff also mentioned `go fmt`, which is used by the Go language
+community, stating that "it seems to at least work for them".
 
 Ævar Arnfjörð Bjarmason, Ben Peart, Ramsay Jones, Brian Carlson and
 Jonathan Nieder also chimed in at some points to discuss the tools and
@@ -116,8 +114,8 @@ Brandon's patch has been merged in the "pu" (proposed updates) branch.
 * [pkt-line: re-'static'-ify buffer in packet_write_fmt_1()](https://public-inbox.org/git/20170827073732.546-1-martin.agren@gmail.com/)
 
 Martin Ågren sent a patch saying that a previous patch from October
-2016 has silently dropped static-ness of a buffer, so that we allocate
-and leak a buffer each time we call packet_write_fmt_gently().
+2016 had silently dropped static-ness of a buffer, so that we allocate
+and leak a buffer each time we call `packet_write_fmt_gently()`.
 
 Jeff King, alias Peff, replied:
 
@@ -131,18 +129,18 @@ takes as back to the pre-bug state".
 Lars Schneider also agreed with Martin's fix and asked him how he
 found the leak.
 
-Martin replied "Valgrind found it for me" and later explained that he
-had patched the Valgrind script, that can be used in the test suite to
+Martin replied "Valgrind found it for me", and later explained that he
+had patched the Valgrind script that can be used in the test suite to
 run tests under Valgrind, so that Valgrind is launched with the added
-"--leak-check=yes" option. Then he had slowly run the tests one after
-another under Valgrind adding items in a suppressions-list until he
+`--leak-check=yes` option. Then he had slowly run the tests one after
+another under Valgrind adding items in a suppression list until he
 found the leak.
 
-Peff then took a look at finding and fixing some leaks too. He
+Peff then took a look at finding and fixing some leaks, too. He
 especially posted [a patch to use a static lock_file in the config](https://public-inbox.org/git/20170829185850.tfmjoa5u5sfuwpgi@sigill.intra.peff.net/)
 which started another thread about the limitations of the tempfile code.
 
-Stefan Beller and Junio Hamano also took part of the discussion. In
+Stefan Beller and Junio Hamano also took part in the discussion. In
 the end it looks like the discussion at least started some effort to
 make it easier to check for and to fix memory leaks.
 
@@ -171,7 +169,7 @@ __Various__
 
 __Light reading__
 
-* [Tweak your Terminal for Git](https://dev.to/gonedark/tweak-your-terminal-for-git)
+* [Tweak your Terminal for Git](https://dev.to/gonedark/tweak-your-terminal-for-git), by Jason McCreary
 * [Developer accidentally deletes 3 months of work with Visual Studio Code](https://news.ycombinator.com/item?id=15044264), interesting discussion from HackerNews
 * [How to recover dropped data from stash](https://opensource.com/article/17/8/recover-dropped-data-stash), by Jose Guilherme Vanz
 
@@ -191,7 +189,7 @@ __Git tools and sites__
 * [Working Copy](https://workingcopyapp.com/) is a Git client for iOS
 * [GitHub for Unity](https://unity.github.com/) is an extension for the Unity game engine editor. They just released version [0.19-alpha](https://github.com/blog/2426-github-for-unity-0-19-alpha-released).
 * [tsrc](https://tankerapp.github.io/tsrc/) is a command-line tool that helps you manage several git repositories.
-* [How to Integrate Git into Your Linux Desktop](https://www.linux.com/learn/intro-to-linux/2017/8/how-integrate-git-your-linux-desktop)
+* [How to Integrate Git into Your Linux Desktop](https://www.linux.com/learn/intro-to-linux/2017/8/how-integrate-git-your-linux-desktop), by Jack Wallen
 
 ## Credits
 
