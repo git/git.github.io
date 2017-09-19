@@ -148,9 +148,34 @@ make it easier to check for and to fix memory leaks.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Ben Peart
+
+* Who are you and what do you do?
+
+I started programming professionally while completing my degree in Computer Science back in 1988.  I joined a startup for 6 years out of college and then joined Microsoft where I've been for the past 21 years.  All my professional programming has been in C/C++.  I've been an engineer, a lead, dev manager, PUM, GM and Architect.  About 10 years ago I went back to my first love of writing great software as an engineer/architect.
+
+I've had the opportunity to work on many interesting projects before git.  I spent a number of years working on Windows.  I was Architect for the Xbox One system OS for a few years and many other projects in between.  For the past 20 months or so I have been working on the Git Virtual File System (GVFS) which enables git to scale to the size of repos we have in our Windows and Office teams as well as many of our enterprise customers.
+
+* What would you name your most important contribution to Git?
+
+Probably delivering GVFS successfully and proving that git can be made to scale to huge repos.  Others had attempted this and given up so I'm pretty proud of this achievement.
+
+* What are you doing on the Git project these days, and why?
+
+For pragmatic reasons, we delivered GVFS via a separate process, file system filter driver and a fork of the git code (all open sourced but still a fork).  Our goal has been and continues to be that we take the core capabilities currently delivered via GVFS and make them integral features of git itself.  Ultimately, we'd like to get all of the scale enabling features into core git and no longer need a private fork.  I'm working on delivering that goal now.
+
+* If you could get a team of expert developers to work full time on something in Git for a full year, what would it be?
+
+Scale, scale, scale!  Too many git operations are either O(size of repo) or O(size of working directory).  That simply doesn't scale as things grow.  We need to push more and more for git to scale to O(size of what I care about).  For many operations that means O(# of modified files). 
+
+* If you could remove something from Git without worrying about backwards compatibility, what would it be?
+
+I'd replace the current index data structure with something more scalable.  Something sparse, hierarchical.  Something that can be incrementally read/written.  I'd probably split the "cache" features from the "staging" features as well.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+I'm a hard core command line interface guy so don't use much Git related beyond Git itself.  That said, I use Visual Studio as my editor/debugger, PerfView as my profiler, and Beyond Compare as my visual diff tool.  I also love using Visual Studio Online to review/approve pull requests.  
+
 
 ## Releases
 
@@ -197,5 +222,5 @@ This edition of Git Rev News was curated by
 Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt; and
-Markus Jansen &lt;<mja@jansen-preisler.de>&gt;
-with help from Jonas Bernoulli.
+Markus Jansen &lt;<mja@jansen-preisler.de>&gt;,
+with help from Jonas Bernoulli and Ben Peart.
