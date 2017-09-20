@@ -197,6 +197,7 @@ __Light reading__
 * [Tweak your Terminal for Git](https://dev.to/gonedark/tweak-your-terminal-for-git), by Jason McCreary
 * [Developer accidentally deletes 3 months of work with Visual Studio Code](https://news.ycombinator.com/item?id=15044264), interesting discussion from HackerNews
 * [How to recover dropped data from stash](https://opensource.com/article/17/8/recover-dropped-data-stash), by Jose Guilherme Vanz
+* [Mentoring: Your path to immortality.](https://opensource.com/article/17/8/mentoring-your-path-immortality) Secure your open source project's survival with these four tips for encouraging strong, active contributors.
 
 __Git tools and sites__
 
