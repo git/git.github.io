@@ -1,5 +1,5 @@
 ---
-title: Git Rev News Edition 32 (XXX, 2017)
+title: Git Rev News Edition 32 (October 11th, 2017)
 layout: default
 date: 2017-10-18 12:06:51 +0100
 author: chriscool
@@ -7,7 +7,7 @@ categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 32 (XXX, 2017)
+## Git Rev News: Edition 32 (October 11th, 2017)
 
 Welcome to the 32nd edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
