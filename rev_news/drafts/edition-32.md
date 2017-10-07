@@ -17,9 +17,24 @@ This edition covers what happened during the month of September 2017.
 
 ## Discussions
 
-<!---
+
 ### General
--->
+
+* [Google Summer of Code 2017](https://summerofcode.withgoogle.com/) Wrap Up
+
+There was only one student, [Prathamesh Chavan](https://github.com/pratham-pc/),
+mentored by Stefan Beller and Christian Couder, who participated this
+year in the Google Summer of Code. Matthieu Moy and Jeff King were the
+GSoC administrators for the Git project.
+
+Prathamesh has been working on an "Incremental rewrite of
+git-submodules" which goal was to port parts of the `git submodule`
+command from shell to C code.
+
+Prathamesh wrote
+[a report about his work](https://docs.google.com/document/d/1RmUvJBf4x8TI71Fltg8xWP-s7zkhz3bGPyEJMgRx91Y/edit).
+
+Prathamesh passed the GSoC final evaluation.
 
 <!---
 ### Reviews
