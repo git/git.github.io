@@ -179,9 +179,107 @@ in the message does not reject such hints stored outside baked-in data
 structure, which allows mistakes to be corrected without affecting the
 real history".
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Philip Oakley
+
+* Who are you and what do you do?
+
+I'm a design engineer working in defence electro-optics, and have been
+coding for nearly 50 years. I started at school with
+[hand punched Hollerith cards](https://calculating.files.wordpress.com/2014/01/ibm-port-a-punch-1.jpg)
+which were posted to Leeds University, and the print out returned a
+week later - careful coding was important! I coded in Forth and PL/1
+at university, along with most of the 8-bit microprocessors of the
+time. I touched Unix in the 80's, but since then it's mostly been work
+using Windows. Code has always been a support to my main work of
+"Engineering". More recently (last 5 years) I have been coding in C,
+Matlab, and MathCAD. Unfortunately the latter isn't that amenable to a
+VCS.
+
+I discovered Git in 2011 when I saw a blog post, and immediately
+realised that a tool that *distributed control to the user* was the
+holy grail I'd been looking for. Big engineering VCS systems are still
+rooted in the 1900's drawing office practices where protecting their
+one unique master drawing from spillages of India ink was
+everything. I was not, and still am not, allowed to quickly put code
+into that VCS. Meanwhile zero cost duplication meant we should now be
+using hash key verification, as shown by Git. The unique master is no
+more. And with Git I can quickly get back to where I was 10 minutes
+ago when developing code and exploring design concepts or data.
+
+* What would you name your most important contribution to Git?
+
+It probably has to be the trailer of `git help` that highlights that
+there are not only man pages for the commands, but also a set of
+guides for the various Git concepts, such as 'revisions'. As yet it
+doesn't allow all the guides to be listed - It's something I should
+get back to. I do try to make sure that any man page changes are
+included in patches - most folk read the man pages rather than the
+code, so keeping the two aligned is important..
+
+On the flip side, I hope my help in responding to some of the issue on
+Git for Windows has slightly eased the work of Dscho who has
+tirelessly supported and maintained that rather important port of Git
+to the wider world.
+
+* What are you doing on the Git project these days, and why?
+
+At the moment I'm trying to follow the Partial / Narrow clone work of
+Jonathan Tan and Ben Peart. I'm slightly concerned about how the
+perceived always-connected approach to lazy fetching will work for
+others. It's fine for a large managed environment, but for small scale
+users with un-reliable connections it may need a tweak to pre-specify
+what is narrowly downloaded/fetched, and how the gaps are shown in the
+user's worktree.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+It's been a long standing desire to find a way of allowing true Narrow
+clones (remember I work in a 'secure' defence environment). This where
+some server side hook would allow the enforcement of the partitioning
+of the worktree between parts the user is expected to be working on,
+and other independant areas they shouldn't be touching, so won't
+have. It would be as if the worktree was partitioned into separate
+'submodules' but with independence via the tree hashes, rather than
+using submodule commit hashes. Importantly, it should be possible for
+the user's local server repo (is there a word for this 'on-server
+personal fork'?) to also be a narrow clone, as distinct from the
+golden server which would alway a full width, and able to serve narrow
+packs.
+
+The other aspect of Git would be to include practical user examples on
+the man pages, making them more than just reference pages for those
+who already know what the pages mean.
+
+The one hypothetical fix I would love to find is the ideal word for
+the cache / index / staging area / manifest / out-box, which
+unfortunately has no equivalence in the regular world (that perfect
+replication issue again).
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+I don't notice what I don't use, however there's probably a lot of
+early-days cruft such as `show-branch` that could be dumped. A more
+difficult area is the `--assume-unchanged' (and similar) which is a
+very confused promise. There appears to be a lot of code that fails to
+distinguish expected promises by the user ("trust me, I'm a user"),
+rather than actual promises by Git (trust me I'm software). Getting
+rid (or at least very obviously documenting) of these misunderstood
+promises would help many!
+
+The other area is the hidden Git-Linux workflows that are embedded in
+the commands to catch the unwary, such as the recent discussion on the
+--merge-base forkpoint.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+I tend to stick to Git, the git-gui, and gitk, as the core VC
+tools. Between the viewer, the gui and the bash command line I can do
+all that I need. Coming from a Windows environment, I found most of
+the support tools there (e.g. TortoiseGit, GitExtensions) to be
+somewhat backward looking and lead to bad habits and
+misunderstandings.
 
 ## Releases
 
