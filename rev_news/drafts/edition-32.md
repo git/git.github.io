@@ -238,7 +238,7 @@ It's been a long standing desire to find a way of allowing true Narrow
 clones (remember I work in a 'secure' defence environment). This where
 some server side hook would allow the enforcement of the partitioning
 of the worktree between parts the user is expected to be working on,
-and other independant areas they shouldn't be touching, so won't
+and other independent areas they shouldn't be touching, so won't
 have. It would be as if the worktree was partitioned into separate
 'submodules' but with independence via the tree hashes, rather than
 using submodule commit hashes. Importantly, it should be possible for
@@ -261,7 +261,7 @@ replication issue again).
 
 I don't notice what I don't use, however there's probably a lot of
 early-days cruft such as `show-branch` that could be dumped. A more
-difficult area is the `--assume-unchanged' (and similar) which is a
+difficult area is the `--assume-unchanged` (and similar) which is a
 very confused promise. There appears to be a lot of code that fails to
 distinguish expected promises by the user ("trust me, I'm a user"),
 rather than actual promises by Git (trust me I'm software). Getting
@@ -269,8 +269,9 @@ rid (or at least very obviously documenting) of these misunderstood
 promises would help many!
 
 The other area is the hidden Git-Linux workflows that are embedded in
-the commands to catch the unwary, such as the recent discussion on the
---merge-base forkpoint.
+the commands to catch the unwary, such as the
+[recent discussion](https://public-inbox.org/git/xmqqa81njds0.fsf@gitster.mtv.corp.google.com/)
+on the `--fork-point` option of `git merge-base`.
 
 * What is your favorite Git-related tool/library, outside of Git itself?
 
