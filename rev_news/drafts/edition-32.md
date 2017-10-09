@@ -179,6 +179,107 @@ in the message does not reject such hints stored outside baked-in data
 structure, which allows mistakes to be corrected without affecting the
 real history".
 
+* [BUG in git diff-index](https://public-inbox.org/git/loom.20160331T143733-916@post.gmane.org/)
+
+In March 2016 Andy Lowry described what he believed to be a bug in
+`git diff-index`.  After creating a file and then touching it, `git
+diff-index` reports the file has changed, and reports "bogus
+destination SHA":
+
+```
+$ git diff-index HEAD
+:100644 100644 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
+0000000000000000000000000000000000000000 M    A
+```
+
+But then using `git diff` followed by `git diff-index` again reports
+no changes:
+
+```
+$ git diff
+$ git diff-index HEAD
+$
+```
+
+Carlos Martín Nieto first replied to Andy that "this is expected and
+matches the documentation".
+
+Indeed the `git diff-index` documentation tells that this command has
+2 different operating modes. The "cached" mode, when `--cached` is
+specified, makes Git trust the index file entirely. While the
+"non-cached" mode also shows files that don’t match the stat state as
+being "tentatively changed" using "the magic 'all-zero' sha1".
+
+Jeff King, alias Peff, also pointed to the same documentation and
+explained in more details how the command works and the historical
+background:
+
+> Back when diff-index was written, it was generally assumed that
+> scripts would refresh the index as their first operation, and then
+> proceed to do one or more operations like diff-index, which would
+> rely on the refresh from the first step.
+
+Peff wrote that running `git diff` does refresh the index, which is
+why Andy's last step shows no diff.
+
+Andy thanked Peff, but replied that he is after "a tree-to-filesystem
+comparison, regardless of index":
+
+> I've currently got a "diff" thrown in as a "work-around" before
+> "diff-index", but now I understand it's not a workaround at all. If
+> there's a better way to achieve what I'm after, I'd appreciate a
+> tip.
+
+Peff suggested using `git update-index --refresh` rather than `git
+diff` to just refresh the index.
+
+Andy appreciated this answer, though he described his use-case in
+details and asked:
+
+> So I think now that the script should do "update-index --refresh"
+> followed by "diff-index --quiet HEAD". Sound correct?
+
+Junio confirmed that:
+
+> Yes. That always been one of the kosher ways for any script to make
+> sure that the files in the working tree that are tracked have not
+> been modified relative to HEAD (assuming that the index matches
+> HEAD).
+
+and then described a few other "kosher ways" along with their
+benefits.
+
+Recently Marc Herbert then chimed into this 18 month old discussion
+adding the Linux kernel mailing list and a number of kernel developers
+in CC. Saying:
+
+> Too bad kernel/scripts/setlocalversion didn't get the memo
+
+Marc pointed to
+[a commit from 2013 in the Linux kernel repo](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=cdf2bc632ebc9ef51)
+that removes a `git update-index` call from the "setlocalversion"
+script. And he added that "this causes a spurious '-dirty' suffix when
+building from a directory copy".
+
+In the "PS:" part of his email Marc also wondered if there is a
+"robots.txt" file in https://public-inbox.org that blocks indexing the
+site contents as Google couldn't find the thread he was replying to on
+the site.
+
+Eric Wong, the creator and maintainer of public-inbox.org replied:
+
+> There's no blocks on public-inbox.org and I'm completely against
+> any sort of blocking/throttling. Maybe there's too many pages
+> to index?  Or the Message-IDs in URLs are too ugly/scary?  Not
+> sure what to do about that...
+>
+> Anyways, I just put up a robots.txt with Crawl-Delay: 1, since I
+> seem to recall crawlers use a more conservative delay by default:
+>
+> ==> https://public-inbox.org/robots.txt <==
+> User-Agent: *
+> Crawl-Delay: 1
+
 ## Developer Spotlight: Philip Oakley
 
 * Who are you and what do you do?
