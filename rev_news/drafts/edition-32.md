@@ -385,17 +385,32 @@ misunderstandings.
 
 ## Releases
 
+* [Git v2.15.0-rc0](https://public-inbox.org/git/xmqq7ewa87fw.fsf@gitster.mtv.corp.google.com/)
+* [Git v2.14.2](https://public-inbox.org/git/xmqqwp4m9ejl.fsf@gitster.mtv.corp.google.com/)
+* [Git v2.13.6 and others](https://public-inbox.org/git/xmqqy3p29ekj.fsf@gitster.mtv.corp.google.com/)
+* [Git for Windows 2.14.2](https://github.com/git-for-windows/git/releases/tag/v2.14.2.windows.1) and [2.14.2(2)](https://github.com/git-for-windows/git/releases/tag/v2.14.2.windows.2)
+* [JGit / EGit 4.9.0](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03430.html)
+* [GitLab 10.0](https://about.gitlab.com/2017/09/22/gitlab-10-0-released/) alongisde patches [9.5.8](https://about.gitlab.com/2017/10/04/gitlab-9-dot-5-dot-8-released/) through [10.0.3](https://about.gitlab.com/2017/10/05/gitlab-10-dot-0-dot-3-released/)
+* [Release tig-2.3.0](https://github.com/jonas/tig/releases/tag/tig-2.3.0)
 
 ## Other News
 
 __Various__
 
+* New podcast about Git: [All Things Git](http://www.allthingsgit.com/)
+* Old podcast: [GitMinutes #42: Erik from Atlassian on Clone Bundles](http://episodes.gitminutes.com/2017/09/gitminutes-42-erik-from-atlassian-on.html)
+* [GitMinutes #43: Johannes Schindelin on Contributing to Git](http://episodes.gitminutes.com/2017/10/gitminutes-43-johannes-schindelin-on.html)
+* Thomas Wolf has been [accepted as a JGit/EGit Committer](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03428.html)
 
 __Light reading__
 
+* [git git git git git](http://caiustheory.com/git-git-git-git-git/) from CaiusTheory.com
 
 __Git tools and sites__
 
+* [Keybase launches encrypted git](https://keybase.io/blog/encrypted-git-for-everyone)
+* [GitHub Desktop 1.0](https://github.com/blog/2437-announcing-github-desktop-1-0)
+* [GitHub Debug](https://githubengineering.com/github-debug/)
 
 ## Credits
 
