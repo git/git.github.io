@@ -28,7 +28,7 @@ year in the Google Summer of Code. Matthieu Moy and Jeff King were the
 GSoC administrators for the Git project.
 
 Prathamesh has been working on an "Incremental rewrite of
-git-submodules" which goal was to port parts of the `git submodule`
+git-submodules" whose goal was to port parts of the `git submodule`
 command from shell to C code.
 
 Prathamesh wrote
@@ -233,7 +233,7 @@ comparison, regardless of index":
 Peff suggested using `git update-index --refresh` rather than `git
 diff` to just refresh the index.
 
-Andy appreciated this answer, though he described his use-case in
+Andy appreciated this answer, though he described his use case in
 details and asked:
 
 > So I think now that the script should do "update-index --refresh"
@@ -312,7 +312,7 @@ ago when developing code and exploring design concepts or data.
 It probably has to be the trailer of `git help` that highlights that
 there are not only man pages for the commands, but also a set of
 guides for the various Git concepts, such as 'revisions'. As yet it
-doesn't allow all the guides to be listed - It's something I should
+doesn't allow all the guides to be listed - it's something I should
 get back to. I do try to make sure that any man page changes are
 included in patches - most folk read the man pages rather than the
 code, so keeping the two aligned is important..
@@ -328,7 +328,7 @@ At the moment I'm trying to follow the Partial / Narrow clone work of
 Jonathan Tan and Ben Peart. I'm slightly concerned about how the
 perceived always-connected approach to lazy fetching will work for
 others. It's fine for a large managed environment, but for small scale
-users with un-reliable connections it may need a tweak to pre-specify
+users with unreliable connections it may need a tweak to pre-specify
 what is narrowly downloaded/fetched, and how the gaps are shown in the
 user's worktree.
 
@@ -390,7 +390,7 @@ misunderstandings.
 * [Git v2.13.6 and others](https://public-inbox.org/git/xmqqy3p29ekj.fsf@gitster.mtv.corp.google.com/)
 * [Git for Windows 2.14.2](https://github.com/git-for-windows/git/releases/tag/v2.14.2.windows.1) and [2.14.2(2)](https://github.com/git-for-windows/git/releases/tag/v2.14.2.windows.2)
 * [JGit / EGit 4.9.0](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03430.html)
-* [GitLab 10.0](https://about.gitlab.com/2017/09/22/gitlab-10-0-released/) alongisde patches [9.5.8](https://about.gitlab.com/2017/10/04/gitlab-9-dot-5-dot-8-released/) through [10.0.3](https://about.gitlab.com/2017/10/05/gitlab-10-dot-0-dot-3-released/)
+* [GitLab 10.0](https://about.gitlab.com/2017/09/22/gitlab-10-0-released/) alongside patches [9.5.8](https://about.gitlab.com/2017/10/04/gitlab-9-dot-5-dot-8-released/) through [10.0.3](https://about.gitlab.com/2017/10/05/gitlab-10-dot-0-dot-3-released/)
 * [Release tig-2.3.0](https://github.com/jonas/tig/releases/tag/tig-2.3.0)
 * [Tower for Windows 1.2](https://www.git-tower.com/blog/tower-win-1-2)
 
@@ -405,10 +405,10 @@ __Various__
 
 __Light reading__
 
-* [Talk, don't Fork](https://medium.com/@larsxschneider/talk-dont-fork-743a1253b8d5) - On forking in companies.
+* [Talk, don't Fork](https://medium.com/@larsxschneider/talk-dont-fork-743a1253b8d5) - on forking in companies
 * [git git git git git](http://caiustheory.com/git-git-git-git-git/) from CaiusTheory.com
 * [Git, Graphs, and Software Engineering](http://third-bit.com/2017/09/30/git-graphs-and-engineering.html) - more of a call to action
-* [Self applicability](http://www.expressionsofchange.org/self-applicability/), and how this idea can be applied to Version Control - about immutablable record versus rewriting history
+* [Self applicability](http://www.expressionsofchange.org/self-applicability/), and how this idea can be applied to Version Control - about immutable record versus rewriting history
 
 __Git tools and sites__
 
