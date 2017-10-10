@@ -404,10 +404,12 @@ __Various__
 
 __Light reading__
 
+* [Talk, don't Fork](https://medium.com/@larsxschneider/talk-dont-fork-743a1253b8d5) - On forking in companies.
 * [git git git git git](http://caiustheory.com/git-git-git-git-git/) from CaiusTheory.com
 
 __Git tools and sites__
 
+* [Hubble Enterprise](https://github.com/autodesk/hubble) - Collaboration, usage, and health data visualization for GitHub Enterprise
 * [Keybase launches encrypted git](https://keybase.io/blog/encrypted-git-for-everyone)
 * [GitHub Desktop 1.0](https://github.com/blog/2437-announcing-github-desktop-1-0)
 * [GitHub Debug](https://githubengineering.com/github-debug/)
@@ -419,4 +421,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt; and
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt;
-with help from Philip Oakley.
+with help from Philip Oakley and Lars Schneider.
