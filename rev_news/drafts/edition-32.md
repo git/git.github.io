@@ -392,6 +392,7 @@ misunderstandings.
 * [JGit / EGit 4.9.0](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03430.html)
 * [GitLab 10.0](https://about.gitlab.com/2017/09/22/gitlab-10-0-released/) alongisde patches [9.5.8](https://about.gitlab.com/2017/10/04/gitlab-9-dot-5-dot-8-released/) through [10.0.3](https://about.gitlab.com/2017/10/05/gitlab-10-dot-0-dot-3-released/)
 * [Release tig-2.3.0](https://github.com/jonas/tig/releases/tag/tig-2.3.0)
+* [Tower for Windows 1.2](https://www.git-tower.com/blog/tower-win-1-2)
 
 ## Other News
 
@@ -406,6 +407,8 @@ __Light reading__
 
 * [Talk, don't Fork](https://medium.com/@larsxschneider/talk-dont-fork-743a1253b8d5) - On forking in companies.
 * [git git git git git](http://caiustheory.com/git-git-git-git-git/) from CaiusTheory.com
+* [Git, Graphs, and Software Engineering](http://third-bit.com/2017/09/30/git-graphs-and-engineering.html) - more of a call to action
+* [Self applicability](http://www.expressionsofchange.org/self-applicability/), and how this idea can be applied to Version Control - about immutablable record versus rewriting history
 
 __Git tools and sites__
 
@@ -413,6 +416,8 @@ __Git tools and sites__
 * [Keybase launches encrypted git](https://keybase.io/blog/encrypted-git-for-everyone)
 * [GitHub Desktop 1.0](https://github.com/blog/2437-announcing-github-desktop-1-0)
 * [GitHub Debug](https://githubengineering.com/github-debug/)
+* [It’s Magit! And you’re the magician!](http://endlessparentheses.com/it-s-magit-and-you-re-the-magician.html) by Artur Malabarba - [Magit](https://magit.vc/) is _A Git Porcelain inside Emacs_
+* [Linking commits to reviews [LWN.net]](https://lwn.net/Articles/734018/); the [email2git](https://github.com/alexcourouble/email2git) tool was presented in [Git Rev News #30](https://git.github.io/rev_news/2017/08/16/edition-30/)
 
 ## Credits
 
