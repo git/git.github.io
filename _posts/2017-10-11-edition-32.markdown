@@ -57,10 +57,10 @@ if Git better tracked what happens to files.
 
 So he suggested adding hints into the commit message like:
 
->    Tracking-hint: rename git-1.0.ebuild -> git-2.0.ebuild
->    Tracking-hint: recreate LICENSE.txt
->    Tracking-hint: split main.c -> main.c cmdline.c
->    Tracking-hint: merge linalg.py <- vector.py matrix.py
+>    Tracking-hint: rename git-1.0.ebuild -> git-2.0.ebuild  
+>    Tracking-hint: recreate LICENSE.txt  
+>    Tracking-hint: split main.c -> main.c cmdline.c  
+>    Tracking-hint: merge linalg.py <- vector.py matrix.py  
 
 Stefan Beller first replied that this "was discussed a couple of times
 on the mailing list (though not recently)" and pointed to
@@ -75,7 +75,7 @@ commit message. He wrote things like:
 and:
 
 > So, you really need to think of git as a filesystem. You can then
-> implement an SCM _on_top_of_it_ ...
+> implement an SCM \_on_top_of_it\_ ...
 
 and:
 
@@ -236,8 +236,8 @@ diff` to just refresh the index.
 Andy appreciated this answer, though he described his use case in
 details and asked:
 
-> So I think now that the script should do "update-index --refresh"
-> followed by "diff-index --quiet HEAD". Sound correct?
+> So I think now that the script should do "update-index \-\-refresh"
+> followed by "diff-index \-\-quiet HEAD". Sound correct?
 
 Junio confirmed that:
 
@@ -262,7 +262,7 @@ script. And he added that "this causes a spurious '-dirty' suffix when
 building from a directory copy".
 
 In the "PS:" part of his email Marc also wondered if there is a
-"robots.txt" file in https://public-inbox.org that blocks indexing the
+"robots.txt" file in <https://public-inbox.org> that blocks indexing the
 site contents as Google couldn't find the thread he was replying to on
 the site.
 
@@ -276,9 +276,9 @@ Eric Wong, the creator and maintainer of public-inbox.org replied:
 > Anyways, I just put up a robots.txt with Crawl-Delay: 1, since I
 > seem to recall crawlers use a more conservative delay by default:
 >
-> ==> https://public-inbox.org/robots.txt <==
-> User-Agent: *
-> Crawl-Delay: 1
+> ==> https://public-inbox.org/robots.txt <==  
+> User-Agent: *  
+> Crawl-Delay: 1  
 
 ## Developer Spotlight: Philip Oakley
 
