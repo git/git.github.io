@@ -1,7 +1,7 @@
 ---
 title: Git Rev News Edition 32 (October 11th, 2017)
 layout: default
-date: 2017-10-18 12:06:51 +0100
+date: 2017-10-11 09:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
