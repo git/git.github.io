@@ -40,9 +40,11 @@ This edition covers what happened during the month of October 2017.
 
 __Various__
 
+* A useful ["pre-flight list" for Git](https://github.com/k88hudson/git-flight-rules)
 
 __Light reading__
 
+* Two noteworthy tweets about Git: [even John McCormack struggles with Git](https://twitter.com/ID_AA_Carmack/status/929389759624916992?s=09), and [a suggestion that "Git is hard" should not be accepted as status quo](https://twitter.com/mcclure111/status/929408829485473792?s=09)
 
 __Git tools and sites__
 
