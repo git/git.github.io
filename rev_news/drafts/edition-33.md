@@ -41,6 +41,8 @@ This edition covers what happened during the month of October 2017.
 __Various__
 
 * A useful ["pre-flight list" for Git](https://github.com/k88hudson/git-flight-rules)
+* Microsoft and GitHub [cooperate on GVFS support](https://blogs.msdn.microsoft.com/devops/2017/11/15/updates-to-gvfs/) to help Git scale up to very large repositories.
+* A lot of Microsoft's documentation (including MSDN) moved to `docs.microsoft.com`, [accepting contributions via Pull Requests on GitHub](https://docs.microsoft.com/en-us/contribute/help-crr/help-content/contribute/contribute-how-to-write-workflows-minor).
 
 __Light reading__
 
