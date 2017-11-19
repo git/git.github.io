@@ -139,18 +139,31 @@ clear answer about what is best.
 
 ## Releases
 
+* Git [v2.15.0](https://public-inbox.org/git/xmqq60ax5fab.fsf@gitster.mtv.corp.google.com/)
+* Git for Windows [2.15.0](https://github.com/git-for-windows/git/releases/tag/v2.15.0.windows.1) and [v2.14.3](https://github.com/git-for-windows/git/releases/tag/v2.14.3)
+* nodegit [v0.20.3](https://github.com/nodegit/nodegit/releases/tag/v0.20.3)
+* Gerrit [2.15](https://gitenterprise.me/2017/11/15/gerrit-user-summit-whats-new-in-2-15/) a summary from the recent Gerrit User Summit
+* GitLab [10.1.4](https://about.gitlab.com/2017/11/15/gitlab-10-dot-1-dot-4-released/)
+
 ## Other News
+
 
 __Various__
 
 * A useful ["pre-flight list" for Git](https://github.com/k88hudson/git-flight-rules)
 * Microsoft and GitHub [cooperate on GVFS support](https://blogs.msdn.microsoft.com/devops/2017/11/15/updates-to-gvfs/) to help Git scale up to very large repositories.
 * A lot of Microsoft's documentation (including MSDN) moved to `docs.microsoft.com`, [accepting contributions via Pull Requests on GitHub](https://docs.microsoft.com/en-us/contribute/help-crr/help-content/contribute/contribute-how-to-write-workflows-minor).
+* 2 new episodes of the podcast All Things Git: [Git for Teams with Emma Jane Hogbin Westby](http://www.allthingsgit.com/episodes/git_for_teams_with_emma_jane_hogbin_westby.html) and [Learning Git and Human Factors with Sara Ford](http://www.allthingsgit.com/episodes/learning_git_and_human_factors_with_sara_ford.html)
+* [Git Magic](https://crypto.stanford.edu/~blynn/gitmagic/) is an extensive and great guide on Git by Ben Lynn. Also on his site, you'll find the interesting article...
+* [The git index race condition](http://www-cs-students.stanford.edu/~blynn/gg/race.html), also by Ben Lynn
 
 __Light reading__
 
 * Bloomberg recently hosted a [Git hackathon over a week-end in London](https://www.techatbloomberg.com/blog/git-sprint-weekend-bloomberg-london/)
 * Two noteworthy tweets about Git: [even John McCormack struggles with Git](https://twitter.com/ID_AA_Carmack/status/929389759624916992?s=09), and [a suggestion that "Git is hard" should not be accepted as status quo](https://twitter.com/mcclure111/status/929408829485473792?s=09)
+* [Welp, there go my Git signatures](http://karl.kornel.us/2017/10/welp-there-go-my-git-signatures/) due to the recently famous RoCa vulnerability, by Karl Kornel
+* [Exploding Git Repositories](https://kate.io/blog/git-bomb/) is a neat and interesting experiment by Kate Murphy
+* [Squash-merging and other problems with GitHub](https://blog.adamspiers.org/2017/08/16/squash-merging-and-other-problems-with-github/) by Adam Spiers
 
 __Git tools and sites__
 
