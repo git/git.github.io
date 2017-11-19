@@ -21,9 +21,53 @@ This edition covers what happened during the month of October 2017.
 ### General
 -->
 
-<!---
+
 ### Reviews
--->
+
+* [rebase: exec leaks GIT_DIR to environment](https://public-inbox.org/git/20171028000152.2760-1-jacob.e.keller@intel.com/)
+
+Jacob Keller sent a patch adding a test that fails. He wrote in the
+commit message that the git rebase interactive mode causes "exec"
+commands to be run with GIT_DIR set. And that now running a git
+command in a subdirectory fails because GIT_DIR=".git". He suspected
+the regression was introduced in some recent rebase--helper changes to
+speed up the interactive rebase and convert some shell scripts to C
+code.
+
+Johannes Schindelin, alias Dscho, replied to Jacob and suggested a fix
+as well as a number of improvements in Jacob's patch. He also asked if
+Jacob could take care of creating a proper patch for the fix. Jacob
+agreed with Dscho's comments and to create a proper patch.
+
+Phillip Wood then chimed to say that Dscho's suggested fix might not
+be right:
+
+> Just clearing GIT_DIR does not match the behavior of the shell version
+> (tested by passing -p to avoid rebase--helper) as that passes GIT_DIR to
+> exec commands if it has been explicitly set. I think that users that set
+> GIT_DIR on the command line would expect it to be propagated to exec
+> commands.
+
+At that point Junio Hamano, the Git maintainer, Jacob and Phillip
+started discussing the possible impact of the bug and if it was worth
+delaying the release to get a chance to properly test a fix for some
+time.
+
+Then Dscho gave an explanation about where the bug could come
+from:
+
+> when you look at git_dir_init in git-sh-setup, you will see that
+> Unix shell scripts explicitly get their GIT_DIR turned into an
+> absolute path.
+
+He then suggested a fix in the rebase--helper code in C that has
+replaced the shell code in git-sh-setup. The fix is about turning the
+content of the GIT_DIR environment variable into an absolute path
+before running the exec command.
+
+Jacob agreed again to create a proper patch from Dscho's fix and then
+sent [a patch with Dscho's fix](https://public-inbox.org/git/20171031230733.18949-1-jacob.e.keller@intel.com/).
+The patch has since been merged into the master branch.
 
 
 ### Support
