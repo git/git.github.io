@@ -25,16 +25,119 @@ This edition covers what happened during the month of October 2017.
 ### Reviews
 -->
 
-<!---
+
 ### Support
--->
+
+* [Consequences of CRLF in index?](https://public-inbox.org/git/D0A67AD8-2D63-4683-9F2A-20B0E8E65D4B@gmail.com/)
+
+Lars Schneider realized after migrating a large repository to Git that
+"all text files in the index of the repo have CRLF line endings". He
+then asked:
+
+> In general this seems not to be a problem  as the project is developed exclusively on Windows.
+>
+> However, I wonder if there are any "hidden consequences" of this setup?
+
+Jonathan Nieder answered:
+
+> There are no hidden consequences that I'm aware of. If you later
+> decide that you want to become a cross-platform project, then you may
+> want to switch to LF endings, in which case I suggest the "single
+> fixup commit" strategy.
+
+He suggested though to declare explicitely all the files as non text
+files in .gitattributes using the "-text" flag, so that Git will not be
+tempted to change line endings.
+
+Torsten Bögershausen agreed with Jonathan saying:
+
+> If you don't specify .gitattributes, then all people who have
+> core.autocrlf=true will suffer from a runtime penalty.
+
+because:
+
+> At each checkout Git needs to figure out that the file has CRLF in
+> the repo, so that there is no conversion done.
+
+and also:
+
+> Those who have "core.autocrlf=false" would produce commits with CRLF
+> for new files, and those developpers who have core.autocrlf=true would
+> produce files with LF in the index and CRLF in the worktree.  This may
+> (most probably will) cause confusion later, when things are pushed and
+> pulled.
+
+Lars thanked Jonathan for the idea of using the "-text" flag but
+wondered about its implications saying:
+
+> For whatever reason I always thought this is the way to tell
+> Git that a particular file is binary with the implication that
+> Git should not attempt to diff it.
+
+To this Jonathan replied:
+
+> No other implications.  You're thinking of "-diff".  There is also a
+> shortcut "binary" which simply means "-text -diff".
+
+Jonathan in his first email also asked his own related question:
+
+> I'd be interested to hear what happens when diff-ing across a line
+> ending fixup commit.  Is this an area where Git needs some
+> improvement?  "git merge" knows an -Xrenormalize option to deal with a
+> related problem --- it's possible that "git diff" needs to learn a
+> similar trick.
+
+To that, Torsten replied:
+
+> That is a tricky thing.
+> Sometimes you want to see the CLRF - LF as a diff, (represented as "^M"),
+> and sometimes not.
+
+Junio Hamano then also gave his "knee-jerk reaction" on this, saying
+that "the end user definitely wants to see preimage and postimage
+lines are different in such a commit by default, one side has and the
+other side lacks ^M at the end" and also that when one does not want
+to see those changes "one of the 'whitespace ignoring' options [...]
+may suffice, but if not, it should be easy to invent a new one".
+
+Junio then posted a sample patch to implement "--ignore-cr-at-eol".
+
+Stefan Beller reviewed this patch which was further improved by Junio
+and then discussed a few times, so that this new flag is likely to
+appear is the next Git release.
+
+A sub thread of the discussion started about making big changes to the
+xdiff code that was originally "borrowed" from a separate open source
+project. There was no clear result from this discussion though.
+
+Johannes Sixt also replied directly to Lars' first email:
+
+> I've been working on a project with CRLF in every source file for a
+> decade now. It's C++ source, and it isn't even Windows-only: when
+> checked out on Linux, there are CRs in the files, with no bad
+> consequences so far. GCC is happy with them.
+
+To that Johannes Schindelin, alias Dscho, replied:
+
+> I envy you for the blessing of such a clean C++ source that you do
+> not have any, say, Unix shell script in it.
+
+and posted an example showing "Unix shell not handling CR/LF gracefully".
+
+In a separate reply to Torsten's first email, Dscho also confirmed
+that completely switching off line ending conversions can give "around
+5-15% speed improvement".
+
+A discussion then started about the merits of having an entry like
+"*.sh text eol=lf" in the .gitattributes for shell scripts, compared
+to having Git change strictly no file. It appeared that there is no
+clear answer about what is best.
 
 <!---
 ## Developer Spotlight:
 -->
 
 ## Releases
-
 
 ## Other News
 
