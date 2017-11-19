@@ -50,6 +50,9 @@ __Light reading__
 
 __Git tools and sites__
 
+* [vimagit](https://github.com/jreybert/vimagit/) is a vim plugin
+  "inspired from magnificent emacs
+  [Magit](https://github.com/magit/magit) plugin".
 
 ## Credits
 
