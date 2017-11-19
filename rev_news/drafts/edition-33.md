@@ -46,6 +46,7 @@ __Various__
 
 __Light reading__
 
+* Bloomberg recently hosted a [Git hackathon over a week-end in London](https://www.techatbloomberg.com/blog/git-sprint-weekend-bloomberg-london/)
 * Two noteworthy tweets about Git: [even John McCormack struggles with Git](https://twitter.com/ID_AA_Carmack/status/929389759624916992?s=09), and [a suggestion that "Git is hard" should not be accepted as status quo](https://twitter.com/mcclure111/status/929408829485473792?s=09)
 
 __Git tools and sites__
