@@ -224,4 +224,5 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt; and
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt;
-with help from Johannes Schindelin and Luca Milanesio.
+with help from Johannes Schindelin, Luca Milanesio
+and Jérôme Reybert.
