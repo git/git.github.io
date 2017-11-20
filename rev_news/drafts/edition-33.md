@@ -177,9 +177,46 @@ A discussion then started about the merits of having an entry like
 to having Git change strictly no file. It appeared that there is no
 clear answer about what is best.
 
-<!---
-## Developer Spotlight:
--->
+
+## Developer Spotlight: Torsten Bögershausen
+
+* Who are you and what do you do?
+
+Originally a hardware developer, these days are filled with software
+development for embedded systems.
+
+* What would you name your most important contribution to Git?
+
+The precomposeunicode feature for Mac Os was an important thing to go
+cross-platform, but the Git users may have a different point of view.
+
+* What are you doing on the Git project these days, and why?
+
+The last years it was CRLF handling, also known as EOL or line ending.
+Mainly because I am using it myself.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+The Git code base is in a pretty good shape.
+Improve the on-disk or even over-the-wire protocol to include
+information if a file is binary or text with CRLF. (2 bits).
+Please let me know, when you have the team.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+`git checkout -b` is certainly good for experienced people,
+hard to understand for beginners.
+`git add -A` or `-all` is certainly my favorite thing to be removed...
+Don't accept commit messages which are not unicode any more.
+Remove the `core.autocrlf` from the code base, demand that people
+set up a `.gitattributes` file on Windows.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+Probably Gerrit, even if I like the pull-request workflow which allows
+people to collaborate.
 
 ## Releases
 
