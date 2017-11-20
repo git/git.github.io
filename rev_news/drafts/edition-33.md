@@ -194,6 +194,7 @@ clear answer about what is best.
 
 __Various__
 
+* Olga Telezhnaia's "Unifying Git's format languages" project has been accepted as part of the [December 2017 to March 2018 Outreachy internship round](https://www.outreachy.org/alums/). Olga will be mentored by Jeff King and Christian Couder.
 * A useful ["pre-flight list" for Git](https://github.com/k88hudson/git-flight-rules)
 * Microsoft and GitHub [cooperate on GVFS support](https://blogs.msdn.microsoft.com/devops/2017/11/15/updates-to-gvfs/) to help Git scale up to very large repositories.
 * A lot of Microsoft's documentation (including MSDN) moved to `docs.microsoft.com`, [accepting contributions via Pull Requests on GitHub](https://docs.microsoft.com/en-us/contribute/help-crr/help-content/contribute/contribute-how-to-write-workflows-minor).
