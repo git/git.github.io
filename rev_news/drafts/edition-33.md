@@ -201,6 +201,7 @@ __Various__
 * 2 new episodes of the podcast All Things Git: [Git for Teams with Emma Jane Hogbin Westby](http://www.allthingsgit.com/episodes/git_for_teams_with_emma_jane_hogbin_westby.html) and [Learning Git and Human Factors with Sara Ford](http://www.allthingsgit.com/episodes/learning_git_and_human_factors_with_sara_ford.html)
 * [Git Magic](https://crypto.stanford.edu/~blynn/gitmagic/) is an extensive and great guide on Git by Ben Lynn. Also on his site, you'll find the interesting article...
 * [The git index race condition](http://www-cs-students.stanford.edu/~blynn/gg/race.html), also by Ben Lynn
+* [Gerrit User Summit 2017 Talks going published on YouTube](http://tv.gerritforge.com), to allow everyone to stay up-to-date on what's new and what's coming on Gerrit in 2018.
 
 __Light reading__
 
