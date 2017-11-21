@@ -174,8 +174,9 @@ that completely switching off line ending conversions can give "around
 
 A discussion then started about the merits of having an entry like
 "*.sh text eol=lf" in the .gitattributes for shell scripts, compared
-to having Git change strictly no file. It appeared that there is no
-clear answer about what is best.
+to having Git change strictly no file. In the end it looks like such an
+entry could help, though there could be shell scripts that don't use the
+".sh" extension.
 
 
 ## Developer Spotlight: Torsten Bögershausen
