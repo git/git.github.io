@@ -234,25 +234,38 @@ __Various__
 * Olga Telezhnaia's "Unifying Git's format languages" project has been accepted as part of the [December 2017 to March 2018 Outreachy internship round](https://www.outreachy.org/alums/). Olga will be mentored by Jeff King and Christian Couder.
 * A useful ["pre-flight list" for Git](https://github.com/k88hudson/git-flight-rules)
 * Microsoft and GitHub [cooperate on GVFS support](https://blogs.msdn.microsoft.com/devops/2017/11/15/updates-to-gvfs/) to help Git scale up to very large repositories.
+  * [Microsoft and GitHub team up to take Git virtual file system to macOS, Linux](https://arstechnica.com/gadgets/2017/11/microsoft-and-github-team-up-to-take-git-virtual-file-system-to-macos-linux/) article on ArsTechnica
+  * The Atlassian Marketplace provides an [experimental add-on for Bitbucket for Git Virtual File System (GVFS)](https://confluence.atlassian.com/bitbucketserver/git-virtual-file-system-gvfs-939504980.html)
 * A lot of Microsoft's documentation (including MSDN) moved to `docs.microsoft.com`, [accepting contributions via Pull Requests on GitHub](https://docs.microsoft.com/en-us/contribute/help-crr/help-content/contribute/contribute-how-to-write-workflows-minor).
 * 2 new episodes of the podcast All Things Git: [Git for Teams with Emma Jane Hogbin Westby](http://www.allthingsgit.com/episodes/git_for_teams_with_emma_jane_hogbin_westby.html) and [Learning Git and Human Factors with Sara Ford](http://www.allthingsgit.com/episodes/learning_git_and_human_factors_with_sara_ford.html)
 * [Git Magic](https://crypto.stanford.edu/~blynn/gitmagic/) is an extensive and great guide on Git by Ben Lynn. Also on his site, you'll find the interesting article...
 * [The git index race condition](http://www-cs-students.stanford.edu/~blynn/gg/race.html), also by Ben Lynn
+* [Understanding Git (part 1) — Explain it Like I’m Five](https://hackernoon.com/understanding-git-fcffd87c15a3) by Kevin Cooper
 * [Gerrit User Summit 2017 Talks going published on YouTube](http://tv.gerritforge.com), to allow everyone to stay up-to-date on what's new and what's coming on Gerrit in 2018.
+* [How to you format your [GIT PULL] emails to Linus](https://www.mail-archive.com/kernelnewbies@kernelnewbies.org/msg17988.html) post by Greg Kroah-Hartman
 
 __Light reading__
 
 * Bloomberg recently hosted a [Git hackathon over a week-end in London](https://www.techatbloomberg.com/blog/git-sprint-weekend-bloomberg-london/)
 * Two noteworthy tweets about Git: [even John McCormack struggles with Git](https://twitter.com/ID_AA_Carmack/status/929389759624916992?s=09), and [a suggestion that "Git is hard" should not be accepted as status quo](https://twitter.com/mcclure111/status/929408829485473792?s=09)
-* [Welp, there go my Git signatures](http://karl.kornel.us/2017/10/welp-there-go-my-git-signatures/) due to the recently famous RoCa vulnerability, by Karl Kornel
+* [Welp, there go my Git signatures](http://karl.kornel.us/2017/10/welp-there-go-my-git-signatures/) due to the recently famous RoCA vulnerability, by Karl Kornel
 * [Exploding Git Repositories](https://kate.io/blog/git-bomb/) is a neat and interesting experiment by Kate Murphy
 * [Squash-merging and other problems with GitHub](https://blog.adamspiers.org/2017/08/16/squash-merging-and-other-problems-with-github/) by Adam Spiers
+* [A better way to look your git logs](https://medium.com/@bharatkulratan/a-better-way-to-look-your-git-logs-86abca5987b0) by Bharat Kul Ratan, follow-up to [A better git log](https://coderwall.com/p/euwpig/a-better-git-log) by Filipe Kiss
+* [Stretching Spokes](https://githubengineering.com/stretching-spokes/): GitHub’s Spokes system ([formerly DGit](https://githubengineering.com/introducing-dgit/)) stores multiple distributed copies of Git repositories. This article discusses how GitHub engineering team got Spokes replication to span widely separated datacenters.
+* [The day my Raspberry Pi failed at faking my GitHub activity](https://medium.com/@WebReflection/the-day-my-raspberry-pi-failed-at-faking-my-github-activity-5ed65d73dd06) on uselessness of "daily pushes to GitHub" metric for evaluating programmers
 
 __Git tools and sites__
 
 * [vimagit](https://github.com/jreybert/vimagit/) is a vim plugin
   "inspired from magnificent emacs
-  [Magit](https://github.com/magit/magit) plugin": review your diffs, stage by hunk or even by line and write your commit message from a single buffer.
+  [Magit](https://github.com/magit/magit) plugin":
+  review your diffs, stage by hunk or even by line and write your commit message from a single buffer.
+* [Why you should use Magit: a Git porcelain inside Emacs](https://blog.mojotech.com/why-you-should-use-magit-git-porcelain-inside-emacs/)
+* [run-when](https://github.com/zzarcon/run-when) - Run tasks based on "`git diff`" changes
+* [git-reviewers](https://github.com/albertyw/git-reviewers) is a tool to suggest code reviewers for your code depending on your diff
+* [fd](https://github.com/sharkdp/fd), a simple, fast and user-friendly alternative to `find`, which ignores by default patterns from your `.gitignore`
+* [GitHub introduces GitHub Debug service](https://githubengineering.com/github-debug/)
 
 ## Credits
 
