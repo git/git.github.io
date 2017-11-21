@@ -27,10 +27,10 @@ This edition covers what happened during the month of October 2017.
 * [rebase: exec leaks GIT_DIR to environment](https://public-inbox.org/git/20171028000152.2760-1-jacob.e.keller@intel.com/)
 
 Jacob Keller sent a patch adding a test that fails. He wrote in the
-commit message that the git rebase interactive mode causes "exec"
-commands to be run with GIT_DIR set. And that now running a git
-command in a subdirectory fails because GIT_DIR=".git". He suspected
-the regression was introduced in some recent rebase--helper changes to
+commit message that the "`git rebase`" interactive mode causes `exec`
+commands to be run with `GIT_DIR` set, and that afterwards running a git
+command in a subdirectory fails because `GIT_DIR=".git"`. He suspected
+the regression was introduced in some recent `rebase--helper` changes to
 speed up the interactive rebase and convert some shell scripts to C
 code.
 
@@ -39,13 +39,13 @@ as well as a number of improvements in Jacob's patch. He also asked if
 Jacob could take care of creating a proper patch for the fix. Jacob
 agreed with Dscho's comments and to create a proper patch.
 
-Phillip Wood then chimed to say that Dscho's suggested fix might not
+Phillip Wood then chimed in stating that Dscho's suggested fix might not
 be right:
 
-> Just clearing GIT_DIR does not match the behavior of the shell version
-> (tested by passing -p to avoid rebase--helper) as that passes GIT_DIR to
+> Just clearing `GIT_DIR` does not match the behavior of the shell version
+> (tested by passing `-p` to avoid `rebase--helper`) as that passes `GIT_DIR` to
 > exec commands if it has been explicitly set. I think that users that set
-> GIT_DIR on the command line would expect it to be propagated to exec
+> `GIT_DIR` on the command line would expect it to be propagated to `exec`
 > commands.
 
 At that point Junio Hamano, the Git maintainer, Jacob and Phillip
@@ -56,18 +56,18 @@ time.
 Then Dscho gave an explanation about where the bug could come
 from:
 
-> when you look at git_dir_init in git-sh-setup, you will see that
-> Unix shell scripts explicitly get their GIT_DIR turned into an
+> When you look at `git_dir_init` in `git-sh-setup`, you will see that
+> Unix shell scripts explicitly get their `GIT_DIR` turned into an
 > absolute path.
 
-He then suggested a fix in the rebase--helper code in C that has
-replaced the shell code in git-sh-setup. The fix is about turning the
-content of the GIT_DIR environment variable into an absolute path
-before running the exec command.
+He then suggested a fix in the `rebase--helper` code in C that has
+replaced the shell code in `git-sh-setup`. The fix is about turning the
+content of the `GIT_DIR` environment variable into an absolute path
+before running the `exec` command.
 
 Jacob agreed again to create a proper patch from Dscho's fix and then
 sent [a patch with Dscho's fix](https://public-inbox.org/git/20171031230733.18949-1-jacob.e.keller@intel.com/).
-The patch has since been merged into the master branch.
+The patch has subsequently been merged into the master branch.
 
 
 ### Support
@@ -90,13 +90,13 @@ Jonathan Nieder answered:
 > fixup commit" strategy.
 
 He suggested though to declare explicitely all the files as non text
-files in .gitattributes using the "-text" flag, so that Git will not be
+files in `.gitattributes` using the `-text` flag, so that Git will not be
 tempted to change line endings.
 
 Torsten Bögershausen agreed with Jonathan saying:
 
-> If you don't specify .gitattributes, then all people who have
-> core.autocrlf=true will suffer from a runtime penalty.
+> If you don't specify `.gitattributes`, then all people who have
+> `core.autocrlf=true` will suffer from a runtime penalty.
 
 because:
 
@@ -105,13 +105,13 @@ because:
 
 and also:
 
-> Those who have "core.autocrlf=false" would produce commits with CRLF
-> for new files, and those developpers who have core.autocrlf=true would
+> Those who have `core.autocrlf=false` would produce commits with CRLF
+> for new files, and those developpers who have `core.autocrlf=true` would
 > produce files with LF in the index and CRLF in the worktree.  This may
 > (most probably will) cause confusion later, when things are pushed and
 > pulled.
 
-Lars thanked Jonathan for the idea of using the "-text" flag but
+Lars thanked Jonathan for the idea of using the `-text` flag but
 wondered about its implications saying:
 
 > For whatever reason I always thought this is the way to tell
@@ -120,15 +120,15 @@ wondered about its implications saying:
 
 To this Jonathan replied:
 
-> No other implications.  You're thinking of "-diff".  There is also a
-> shortcut "binary" which simply means "-text -diff".
+> No other implications.  You're thinking of `-diff`.  There is also a
+> shortcut "`binary`" which simply means `-text -diff`.
 
 Jonathan in his first email also asked his own related question:
 
 > I'd be interested to hear what happens when diff-ing across a line
 > ending fixup commit.  Is this an area where Git needs some
-> improvement?  "git merge" knows an -Xrenormalize option to deal with a
-> related problem --- it's possible that "git diff" needs to learn a
+> improvement?  "`git merge`" knows an `-Xrenormalize` option to deal with a
+> related problem --- it's possible that "`git diff`" needs to learn a
 > similar trick.
 
 To that, Torsten replied:
@@ -144,14 +144,14 @@ other side lacks ^M at the end" and also that when one does not want
 to see those changes "one of the 'whitespace ignoring' options [...]
 may suffice, but if not, it should be easy to invent a new one".
 
-Junio then posted a sample patch to implement "--ignore-cr-at-eol".
+Junio then posted a sample patch to implement `--ignore-cr-at-eol`.
 
-Stefan Beller reviewed this patch which was further improved by Junio
+Stefan Beller reviewed this patch, which was further improved by Junio
 and then discussed a few times, so that this new flag is likely to
 appear is the next Git release.
 
 A sub thread of the discussion started about making big changes to the
-xdiff code that was originally "borrowed" from a separate open source
+`xdiff` code that was originally "borrowed" from a separate open source
 project. There was no clear result from this discussion though.
 
 Johannes Sixt also replied directly to Lars' first email:
@@ -173,10 +173,10 @@ that completely switching off line ending conversions can give "around
 5-15% speed improvement".
 
 A discussion then started about the merits of having an entry like
-"*.sh text eol=lf" in the .gitattributes for shell scripts, compared
+"`*.sh text eol=lf`" in the `.gitattributes` for shell scripts, compared
 to having Git change strictly no file. In the end it looks like such an
 entry could help, though there could be shell scripts that don't use the
-".sh" extension.
+`.sh` extension.
 
 
 ## Developer Spotlight: Torsten Bögershausen
@@ -201,15 +201,15 @@ Mainly because I am using it myself.
 
 The Git code base is in a pretty good shape.
 Improve the on-disk or even over-the-wire protocol to include
-information if a file is binary or text with CRLF. (2 bits).
+information if a file is binary or text with CRLF (2 bits).
 Please let me know, when you have the team.
 
 * If you could remove something from Git without worrying about
   backwards compatibility, what would it be?
 
-`git checkout -b` is certainly good for experienced people,
+"`git checkout -b`" is certainly good for experienced people,
 hard to understand for beginners.
-`git add -A` or `-all` is certainly my favorite thing to be removed...
+"`git add -A`" or `-all` is certainly my favorite thing to be removed...
 Don't accept commit messages which are not unicode any more.
 Remove the `core.autocrlf` from the code base, demand that people
 set up a `.gitattributes` file on Windows.
@@ -242,18 +242,18 @@ __Various__
 * [Git Magic](https://crypto.stanford.edu/~blynn/gitmagic/) is an extensive and great guide on Git by Ben Lynn. Also on his site, you'll find the interesting article...
 * [The git index race condition](http://www-cs-students.stanford.edu/~blynn/gg/race.html), also by Ben Lynn
 * [Understanding Git (part 1) — Explain it Like I’m Five](https://hackernoon.com/understanding-git-fcffd87c15a3) by Kevin Cooper
-* [Gerrit User Summit 2017 Talks going published on YouTube](http://tv.gerritforge.com), to allow everyone to stay up-to-date on what's new and what's coming on Gerrit in 2018.
+* [Gerrit User Summit 2017 Talks going published on YouTube](http://tv.gerritforge.com), to allow everyone to stay up-to-date on what's new and what's coming on Gerrit in 2018
 * [How to you format your [GIT PULL] emails to Linus](https://www.mail-archive.com/kernelnewbies@kernelnewbies.org/msg17988.html) post by Greg Kroah-Hartman
 
 __Light reading__
 
-* Bloomberg recently hosted a [Git hackathon over a week-end in London](https://www.techatbloomberg.com/blog/git-sprint-weekend-bloomberg-london/)
+* Bloomberg recently hosted a [Git hackathon over a weekend in London](https://www.techatbloomberg.com/blog/git-sprint-weekend-bloomberg-london/)
 * Two noteworthy tweets about Git: [even John McCormack struggles with Git](https://twitter.com/ID_AA_Carmack/status/929389759624916992?s=09), and [a suggestion that "Git is hard" should not be accepted as status quo](https://twitter.com/mcclure111/status/929408829485473792?s=09)
 * [Welp, there go my Git signatures](http://karl.kornel.us/2017/10/welp-there-go-my-git-signatures/) due to the recently famous RoCA vulnerability, by Karl Kornel
 * [Exploding Git Repositories](https://kate.io/blog/git-bomb/) is a neat and interesting experiment by Kate Murphy
 * [Squash-merging and other problems with GitHub](https://blog.adamspiers.org/2017/08/16/squash-merging-and-other-problems-with-github/) by Adam Spiers
 * [A better way to look your git logs](https://medium.com/@bharatkulratan/a-better-way-to-look-your-git-logs-86abca5987b0) by Bharat Kul Ratan, follow-up to [A better git log](https://coderwall.com/p/euwpig/a-better-git-log) by Filipe Kiss
-* [Stretching Spokes](https://githubengineering.com/stretching-spokes/): GitHub’s Spokes system ([formerly DGit](https://githubengineering.com/introducing-dgit/)) stores multiple distributed copies of Git repositories. This article discusses how GitHub engineering team got Spokes replication to span widely separated datacenters.
+* [Stretching Spokes](https://githubengineering.com/stretching-spokes/): GitHub’s Spokes system ([formerly DGit](https://githubengineering.com/introducing-dgit/)) stores multiple distributed copies of Git repositories; this article discusses how GitHub engineering team got Spokes replication to span widely separated datacenters
 * [The day my Raspberry Pi failed at faking my GitHub activity](https://medium.com/@WebReflection/the-day-my-raspberry-pi-failed-at-faking-my-github-activity-5ed65d73dd06) on uselessness of "daily pushes to GitHub" metric for evaluating programmers
 
 __Git tools and sites__
