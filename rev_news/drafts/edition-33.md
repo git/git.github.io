@@ -252,7 +252,7 @@ __Git tools and sites__
 
 * [vimagit](https://github.com/jreybert/vimagit/) is a vim plugin
   "inspired from magnificent emacs
-  [Magit](https://github.com/magit/magit) plugin".
+  [Magit](https://github.com/magit/magit) plugin": review your diffs, stage by hunk or even by line and write your commit message from a single buffer.
 
 ## Credits
 
