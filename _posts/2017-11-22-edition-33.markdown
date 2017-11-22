@@ -1,5 +1,5 @@
 ---
-title: Git Rev News Edition 33 (November 22th, 2017)
+title: Git Rev News Edition 33 (November 22nd, 2017)
 layout: default
 date: 2017-11-22 12:06:51 +0100
 author: chriscool
@@ -7,7 +7,7 @@ categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 33 (November 22th, 2017)
+## Git Rev News: Edition 33 (November 22nd, 2017)
 
 Welcome to the 33rd edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
