@@ -243,7 +243,7 @@ __Various__
 * [The git index race condition](http://www-cs-students.stanford.edu/~blynn/gg/race.html), also by Ben Lynn
 * [Understanding Git (part 1) — Explain it Like I’m Five](https://hackernoon.com/understanding-git-fcffd87c15a3) by Kevin Cooper
 * [Gerrit User Summit 2017 Talks going published on YouTube](http://tv.gerritforge.com), to allow everyone to stay up-to-date on what's new and what's coming on Gerrit in 2018
-* [How to you format your [GIT PULL] emails to Linus](https://www.mail-archive.com/kernelnewbies@kernelnewbies.org/msg17988.html) post by Greg Kroah-Hartman
+* [How do you format your [GIT PULL] emails to Linus](https://www.mail-archive.com/kernelnewbies@kernelnewbies.org/msg17988.html) post by Greg Kroah-Hartman
 
 __Light reading__
 
