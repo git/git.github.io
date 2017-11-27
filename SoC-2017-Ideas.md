@@ -70,19 +70,23 @@ In summary, all applicants must (not necessarily in this order):
 * Discuss their project by posting drafts of their application on the
   mailing-list long before the deadline.
 
-In your application, it is a good idea to:
+In your application, and in the discussions related to projects you
+are interested in, it is a good idea to:
 
 * Include link(s) to the mailing-list discussion(s) related to the
-  project you chose in your application, for example previous
-  discussions or patch series about the topic. There might be
-  interesting discussions about the topics that are several year old.
-  It is also a good idea to summarize them.
+  project you chose in your application or you are interested in, for
+  example previous discussions or patch series about the topic. There
+  might be interesting discussions about the topics that are several
+  year old. It is also a good idea to summarize them.
 
 * Include link(s) to the mailing-list discussion(s) related to the
   previous drafts of your application itself.
 
 * Include link(s) to the mailing-list discussion(s) related to your
-  microproject.
+  microproject. If your microproject patches have been merged, please
+  give the merge commits. Otherwise give their branch names and
+  current status in the last "What's cooking in git.git" email from
+  Junio.
 
 * Include what is suggested in
   [the GSoC Student Guide](http://write.flossmanuals.net/gsocstudentguide/writing-a-proposal/)
@@ -174,9 +178,10 @@ The goal is to move toward an interactive rebase fully in C as described in
  - Difficulty: medium
  - Possible mentors: Christian Couder, Johannes Schindelin, Stefan Beller
 
-See discussion in:
+See discussions in:
 
 <https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t>
+<http://public-inbox.org/git/CA+55aFwT2HUBzZO8Gpt9tHoJtdRxv9oe3TDoSH5jcEOixRNBXg@mail.gmail.com/>
 
 ### Improvements to `git name-rev` or `git for-each-ref` or `git log --stdin --no-walk` or `git cat-file --batch-check`
 
@@ -253,3 +258,43 @@ If I run:
     git push origin v1.0:refs/heads/master
 
 and v1.0 is an annotated tag, then I probably meant v1.0^{commit}, not ^{tag}.
+
+### Speeding up reachability queries: generation numbers
+
+ - Language: C (implementation), any (prototype)
+ - Difficulty: medium to hard
+ - Possible mentors: Jakub Narębski, possibly Jeff King
+
+The goal is to create a helper structure to hold generation numbers
+(also known as node level) or other indices to speed up reachability
+queries, that is answering a question whether one commit (or other
+object) is reachable from another.  This would make `git log` queries,
+such as `git log A..B` faster.
+
+At minimum it would consist of a prototype that would help to find
+out how much performance improvement we can get out of this idea,
+and what is the cost of maintaining such information.
+
+### Speeding up reachability queries: bitmap indices
+
+ - Language: C (git) or Java (JGit), or any (prototype)
+ - Difficulty: medium to hard
+ - Possible mentors: Jakub Narębski, possibly Jeff King
+
+Nowadays Git uses bitmap index (if there is one) to speed up
+reachability queries, which leads to faster clone and fetch;
+you can read more about it at <http://githubengineering.com/counting-objects/>.
+It also began to be used to speed up `git log` queries.
+
+The idea of bitmap indices came to Git via JGit, Git
+implementation in Java. Both Git and JGit use the same file
+format for storing [compressed] bitmaps, but they use different
+heuristics (different rules) for selecting revisions which
+would have bitmap index. For each object that has associated
+bitmap, the bit at i-th position is on if and only if
+i-th object is reachable from it.
+
+The goal is to examine various heuristics, and what are
+their advantages (better performance) and disadvantages (more
+disk space) for different scenarios. One could for example
+compare Git and JGit heuristics.

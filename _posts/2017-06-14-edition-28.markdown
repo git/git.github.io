@@ -1,0 +1,341 @@
+---
+title: Git Rev News Edition 28 (June 14th, 2017)
+layout: default
+date: 2017-06-14 12:06:51 +0100
+author: chriscool
+categories: [news]
+navbar: false
+---
+
+## Git Rev News: Edition 28 (June 14th, 2017)
+
+Welcome to the 28th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
+a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
+subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
+
+This edition covers what happened during the month of May 2017.
+
+## Discussions
+
+<!---
+### General
+-->
+
+<!---
+### Reviews
+-->
+
+
+### Support
+
+* [git push recurse.submodules behavior changed in 2.13](http://public-inbox.org/git/CAE5=+KX57KM+6n9NpePw9KYPXFy7UH-WRgSwaJDnvRofYFXm7Q@mail.gmail.com/)
+
+John Shahid sent an email saying:
+
+> Currently with 2.13 you cannot run `git push --recurse-submodules=on-demand`
+> if the parent repo is on a different branch than the sub repos, e.g. parent
+> repo is on "develop" and sub-repo on "master".
+
+John pointed to [a test case he had created](https://gist.github.com/jvshahid/b778702cc3d825c6887d2707e866a9c8)
+to show the problem, and he also had bisected it to
+[a recent commit by Brandon Williams](https://github.com/git/git/commit/06bf4ad1db92c32af38e16d9b7f928edbd647780)
+that teaches `git push --recurse-submodules` to recursively propagate
+the remote and refspec it is passed to the pushes performed in the
+submodules.
+
+Junio Hamano, the Git maintainer, couldn't tell from the report if the
+new behavior was a regression or a good thing, so he asked Brandon
+about his opinion on this.
+
+Stefan Beller then explained that before Brandon's patch, Git "just
+invoked `git push` in the submodule, assuming the user had setup a
+remote tracking branch and a push strategy such that `git push` would
+do the right thing".
+
+John then described in more details the previous behavior:
+
+> We have a parent repo on a branch called "develop" and a submodule on
+> a branch called "master". Prior to git version 2.13 if we had an
+> unpushed commit in the submodule and ran `git push origin develop --recurse-submodules=on-demand`
+> git would happily push the "develop" branch of the parent repo and the
+> "master" branch of the submodule
+
+and the new one:
+
+> After the change mentioned in my previous email, git would propagate
+> the refspec from the parent repo to the submodule, i.e. it would try
+> to push a branch called "develop" in the submodule which would error
+> since no branch with that name exist in the submodule.
+
+Brandon replied that:
+
+> Yeah my patches would definitely break that kind of workflow because
+> they assumed that if you actually provided a refspec + `--recurse` that
+> you would want it propagated down.
+
+Jonathan Nieder then replied to John's original email by explaining in
+details the context of Brandon's patch, the goal of many of the recent
+submodule patch series from Brandon and others being "to allow
+thinking of a repository as a single unit, including submodules, most
+of the time".
+
+Jonathan also asked John:
+
+> Can you say more about how this change affects you? Would you be able
+> to push without a refspec, or do you e.g. have scripting that was
+> relying on the existing loose behavior?
+
+John replied that he "loves the idea of having tools treat the repo as
+a unit", but he "thinks propagating the refspec when no refspec is
+passed on the CLI is very surprising action that should be corrected".
+
+He also wrote that pushing without a refspec would work for him (if no
+refspec is propagated).
+
+Unfortunately after that email at the end of May, it looks like not
+much happened, so recently John replied to his own mail:
+
+> bump. it's been a while and I'm still not clear what the next steps
+> are. I'm happy to send a patch but I would like to get a consensus
+> first.
+
+* [git rebase regression: cannot pass a shell expression directly to `--exec`](http://public-inbox.org/git/CA+zRj8X3OoejQVhUHD9wvv60jpTEZy06qa0y7TtodfBa1q5bnA@mail.gmail.com/)
+
+Eric Rannaud emailed the mailing list:
+
+> It used to be possible to run a sequence like:
+>
+> ``` sh
+>   foo() { echo X; }
+>   export -f foo
+>   git rebase --exec foo HEAD~10
+> ```
+>
+> Since upgrading to 2.13.0, I had to update my scripts to run:
+>
+> ``` sh
+>   git rebase --exec "bash -c foo" HEAD~10
+> ```
+
+Eric had bisected this to a commit that switched
+[the interactive rebase to use the rebase--helper builtin](https://github.com/git/git/commit/18633e1a22a68bbe8e6311a1039d13ebbf6fd041).
+
+An interactive rebase is usually a rebase that is passed the `-i` or
+`--interactive` option, though the `--exec` option automatically
+switches on an interactive rebase too.
+
+The interactive rebase used to be implemented with a
+"git-rebase--interactive.sh" shell script, but, since the commit that
+Eric found, in most cases the interactive rebase would use the `git
+rebase--helper` builtin command.
+
+The `git rebase--helper` builtin command had been made by porting
+shell code from "git-rebase--interactive.sh" to C.
+
+Jeff King, alias Peff, replied to Eric that a `git rebase --exec STRING`
+command still uses a shell to run STRING, but that the behavior change
+may come from an optimization that was made in the `prepare_shell_cmd()`
+function in "run-command.c" to skip shell invocations for "simple"
+commands.
+
+So Peff asked Eric to add an extraneous semi-colon in the STRING part
+to confirm that the problem comes from the optimization, as, with a
+semi-colon in it, the STRING part would not be considered a "simple"
+command.
+
+Peff then explained that the optimization in `prepare_shell_cmd()` is
+quite old, but it affects `git rebase --exec` only now because it is
+now using C code. And this optimization fails only when people are
+using exported functions which is not so common, as not all shells
+support them.
+
+Peff also suggested, and later sent a patch, to look for `BASH_FUNC_*`
+in the environment and disable the optimization in this case, though
+that wouldn't work in all cases.
+
+Junio Hamano replied to Peff, describing Peff's analysis as
+"brilliant" and suggesting documenting the semi-colon trick.
+
+Peff agreed with Junio on documenting it along with the optimization
+to skip shell invocations for "simple" commands, if it was decided not
+to try to fix the problem.
+
+Meanwhile Johannes Schindelin, alias Dscho, who authored the patch
+that made the interactive rebase use the rebase--helper builtin,
+replied to Eric, saying that relying on exported functions to work in
+`git rebase --exec` was relying on an implementation detail.
+
+But Peff later disagreed with Dscho saying that the user "expected the
+user-provided `--exec` command to be run by a shell, which seems like
+a reasonable thing for Git to promise (and we already make a similar
+promise for most user-provided commands that we run)".
+
+Dscho also sent a long reply to Junio about the reason he has been
+working on porting shell scripts like "git-rebase--interactive.sh" to
+C, which contained the following:
+
+> But the real truth is: shell scripting is not portable.
+>
+> Shell scripting is never only shell scripting, of course. A quite
+> undocumented set of utilities is expected to be present for our scripts to
+> run, too: sed, awk, tr, cat, expr, just to name a few.
+>
+> It does not end there. For example, sed is not equal to sed. BSD sed has
+> different semantics than GNU sed, and we jump through hoops to try to
+> ensure that our shell scripts run with both versions.
+
+Eric then replied to Peff to "clarify if there was any doubt, the
+semicolon trick does indeed work fine". He also asked for consistency
+writing that with an exported foo function the current behavior was:
+
+``` console
+  git bisect run foo     # works
+  git bisect run 'foo;'  # doesn't work
+
+  git rebase --exec foo master^^      # fails
+  git rebase --exec 'foo;' master^^   # OK
+  git rebase --exec 'foo 1' master^^  # OK
+```
+
+In the meantime Jonathan Nieder, Brandon Williams and then Kevin Daudt
+chimed in to discuss with Peff and Eric a suggestion by Peff to
+"speculatively run `foo` without the shell, and if execve fails to
+find it, then fall back to running the shell". They also discussed a
+bit Peff's suggestion to look for `BASH_FUNC_*` in the environment, but
+it was clear that both of these solutions had a number of problems.
+
+Then Linus Torvalds chimed in too. He suggested to just lookup in
+$PATH for the first word passed in the `--exec` string, as this test
+is better than looking for special characters like semi-colons, to
+decide if we can avoid calling a shell.
+
+He also suggested using `vfork()` instead of `fork()` if we "really want
+to optimize the code that executes an external program (whether in
+shell or directly)".
+
+It looks like Linus' suggestions might be the best indeed, but it
+doesn't look like much has been done to implement them yet.
+
+## Developer Spotlight: Brandon Williams
+
+* Who are you and what do you do?
+
+I'm a Software Engineer currently working on a team at Google focused on
+improving git, particularly making git behave better on large
+repositories (both mono-repos and repositories with many submodules).
+
+Until about a year or so ago I never really thought I'd be a Software
+Engineer.  Back in high school I took a physics class and a simple C
+programming class and I became fascinated with circuits and how
+computers worked.  That led me to study Electrical Engineering during my
+undergrad followed by grad work in Computer Science focusing on Computer
+Architectures.  Due to that schooling, I had various jobs in
+micro-processor design, varying from doing post-silicon power
+characterization, to ASIC design developing hardware modules in Verilog,
+to being an Architect modeling different micro-architectures in
+simulation.
+
+Once I started at Google I pivoted my focus and now I'm a happy git
+contributor, though I still love discussing Computer Architecture!
+
+* What would you name your most important contribution to Git?
+
+Though I haven't been around the project long I think some of my most
+important contribution has been to add submodule support to `ls-files` and
+`grep`.
+
+* What are you doing on the Git project these days, and why?
+
+Most of my contributions (and Stefan's) are aimed at improving the
+submodule experience, which means adding submodule support to more and
+more git commands.  Adding that support to `ls-files` and `grep` was a bit
+challenging in that our code base isn't able to handle working on more
+than 1 repository at a time, so when you want to do any operation on a
+submodule you need to kick off a child-process to do the work for you.
+This ends up being very clunky to communicate needed information between
+the two processes, it would be so much easier if we could just operate
+on more than 1 repository in a single process.
+
+So I'm aiming to solve this issue by introducing a 'Repository Object'
+to git.  So instead of relying on global state, a reference to a 'struct
+repository' can be passed around allowing for multiple repositories to
+be open in a single process.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+One of the biggest pain points for working in git is the large amount of
+hard-coded or global state we have.  So I'd have a team work on
+redesigning large parts of the code base to make things more object
+oriented and to ensure there were good abstractions in place to
+facilitate changes down the line.  This way transitioning to a new
+hash function, for example, would be less painful.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+I'd like to drop anything that makes it difficult to scale git well with
+large repositories.  One big one that has been discussed is
+improving the protocol to drop the initial ref advertisement.
+Unfortunately a change like that has the potential for breaking lots of
+old git clients.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+I haven't really used any git-related tools besides git itself.  Though
+I have written a couple of tools myself to help with developing with
+git.  One to view and explore a blame layer in vim, one to apply patches
+to a local branch from my mail client, and one to print out some
+information about a stack of commits I'm working on.  I don't think any
+of my tools are particularly well written, but they've been able to get
+the job done.
+
+## Releases
+
+* [Git v2.13.1](https://github.com/git/git/blob/v2.13.1/Documentation/RelNotes/2.13.1.txt)
+* [Git for Windows v2.13.1](https://github.com/git-for-windows/git/releases/tag/v2.13.1.windows.1)
+* [What's new in Deveo 3.19](blog.deveo.com/whats-new-in-deveo-3-19/) (git hosting site)
+* [Git Tower 1.1.0 for Windows Release Notes](https://www.git-tower.com/windows/release-notes#1.1.0) (proprietary multiplatform Git GUI)
+* [Portable GitHub system "GitPrep 2.6" is released](http://blogs.perl.org/users/yuki_kimoto/2017/06/portable-github-system-gitprep-26-is-released---wiki-system-is-added-you-can-write-documentation.html) (opensource git hosting software, in Perl)
+* [JGit / EGit release 4.7.1.201706071930-r](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03360.html)
+* [Release review JGit/EGit 4.8](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03337.html)
+* [Release libgit2 v0.26.0 RC1](https://github.com/libgit2/libgit2/releases/tag/v0.26.0-rc1)
+* [GitHub Enterprise 2.10](https://github.com/blog/2373-introducing-github-enterprise-2-10-build-tools-with-the-new-github-graphql-api-organize-with-topics-and-level-up-your-project-management)
+* [GitLab 9.2](https://about.gitlab.com/2017/05/22/gitlab-9-2-released/) with patches for [9.2.5, 9.1.7, and 9.0.10](https://about.gitlab.com/2017/06/07/gitlab-9-dot-2-dot-5-security-release/)
+* [Bitbucket Server 5.1](https://www.atlassian.com/blog/bitbucket/bitbucket-server-5-1-signed-commits-and-more)
+
+## Other News
+
+__Various__
+
+* [Gerrit User Summit 2017 registration is now open](https://gerritusersummit.eventbrite.com) and is hosted for the first time in Europe, London, 2-3rd October 2017.
+
+__Light reading__
+
+* [The largest Git repo on the planet](https://blogs.msdn.microsoft.com/bharry/2017/05/24/the-largest-git-repo-on-the-planet/)
+* [Beyond GVFS: more details on optimizing Git for large repositories](https://blogs.msdn.microsoft.com/visualstudioalm/2017/05/30/optimizing-git-beyond-gvfs/)
+* [Windows switch to Git almost complete: 8,500 commits and 1,760 builds each day](https://arstechnica.com/information-technology/2017/05/90-of-windows-devs-now-using-git-creating-1760-windows-builds-per-day/)
+* [Git’er done: SCM system keeps developers and projects on track](http://sdtimes.com/giter-done-scm-system-keeps-developers-projects-track/)
+  an SD Times article
+* [Little Things I Like to Do with Git](https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/)
+* [Don't publicly expose .git or how we downloaded your website's sourcecode - An analysis of Alexa's 1M](https://en.internetwache.org/dont-publicly-expose-git-or-how-we-downloaded-your-websites-sourcecode-an-analysis-of-alexas-1m-28-07-2015/)
+* [Git as a NoSql database](https://www.kenneth-truyers.net/2016/10/13/git-nosql-database/) by Kenneth Truyers
+
+__Git tools and sites__
+
+* [Gitorials: Tutorials as Git Repos](https://gitorials.com/) - a GitLab companion site for publishing paid programming tutorials ($3 per tutorial with 70% going to the author); *note: the idea of a gitorial itself is not new*
+* [BlackBox](https://github.com/StackExchange/blackbox) - Safely store secrets in a VCS repo (i.e. Git, Mercurial, Subversion or Perforce)
+* [blurb](https://github.com/larryhastings/blurb) is a tool designed to rid CPython core development of the scourge of Misc/NEWS conflicts; an alternative to ChangeLog / NEWS merge driver
+* [RefDiff](https://github.com/aserg-ufmg/refdiff) - A tool to compare different versions of Java source code to find refactoring changes between them
+* [git-all-secrets](https://github.com/anshumanbh/git-all-secrets) - A tool to capture all the git secrets by leveraging multiple open source git searching tools
+* [git-ddiff](https://github.com/cookiengineer/git-ddiff) - a better git diff for humans with lack of memory
+
+## Credits
+
+This edition of Git Rev News was curated by
+Christian Couder &lt;<christian.couder@gmail.com>&gt;,
+Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;,
+Jakub Narębski &lt;<jnareb@gmail.com>&gt; and
+Markus Jansen &lt;<mja@jansen-preisler.de>&gt;
+with help from Brandon Williams, Johannes Schindelin,
+Stefan Beller and Luca Milanesio.

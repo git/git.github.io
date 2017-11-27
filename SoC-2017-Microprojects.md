@@ -13,12 +13,6 @@ project; the coding aspect of the change can be almost trivial, but to
 make the change the student has to become familiar with many of the
 practical aspects of working on the Git project.
 
-*NOTE: Students who plan to work on libgit2, which is also under the
-Git umbrella in the Google Summer of Code, should refer to [the
-libgit2 list of
-projects](https://github.com/libgit2/libgit2/blob/master/PROJECTS.md)
-rather than the list below.*
-
 Git development is based on sending successive versions of patches or
 patch series to the mailing list until they are considered good and
 correct by the reviewers and Junio Hamano, the maintainer, who will
@@ -31,8 +25,7 @@ It is *expected* that what you send will need several rounds of
 reviews and discussions. If you are not sure at all about a patch you can
 put "[RFC/PATCH]" at the beginning of its subject.
 
-Consider [a sample email
-thread](http://public-inbox.org/git/1386590745-4412-1-git-send-email-t.gummerer@gmail.com/T/#u),
+Consider [a sample email thread](http://public-inbox.org/git/1386590745-4412-1-git-send-email-t.gummerer@gmail.com/T/#u),
 which shows how a developer proposed a change and a patch to implement
 it.  The problem being solved, the design of the proposed solution,
 and the implementation of that design were all reviewed and discussed,
@@ -60,6 +53,10 @@ the following steps:
 
 * Read about the process for submitting patches to Git: this is
   described in `Documentation/SubmittingPatches`.
+
+* Select a microproject and check that it has not yet been taken or
+  discussed by searching the mailing list.
+  [Public Inbox](http://public-inbox.org/git/) is your friend.
 
 * **Make the actual change.** (Funny, this is the only part they teach
   you about in college.)
@@ -93,7 +90,8 @@ the following steps:
   probably want to use the commands `git format-patch` and `git
   send-email`.  Make sure that your email is formatted correctly: send
   a test version of the email to yourself and see if you can apply it
-  to your repository using `git am`.
+  to your repository using `git am`.  Alternatively you may use
+  [submitGit](https://submitgit.herokuapp.com/).
 
 * Expect feedback, criticism, suggestions, etc. from the mailing list.
 
@@ -204,12 +202,6 @@ See the commit
 [c6f44e1da5](https://github.com/git/git/commit/c6f44e1da5e88e34)
 for example.
 
-### Allow "-" as a short-hand for "@{-1}" in more places.
-
-Pick one command that operates on branch names.  Teach it the "-"
-shorthand that stands for "the branch we were previously on", like we
-did for "git merge -" sometime after we introduced "git checkout -".
-[[thread](https://public-inbox.org/git/7vppuewl6h.fsf@alter.siamese.dyndns.org)]
 
 ### Use unsigned integral type for collection of bits.
 
@@ -249,6 +241,14 @@ Many have already been added (e.g. "git am -3" in e97a5e7).
 
 Some people always run the command with these options, and would
 prefer to be able to activate them by default in ~/.gitconfig.
+
+### Use dir-iterator to avoid explicit recursive directory traversal
+
+Some places in git use raw API opendir/readdir/closedir to traverse a
+directory recursively, which usually involves function recursion. Now
+that we have `struct dir_iterator` (see dir-iterator.h), convert these
+to use the dir-iterator to simplify the code. Do only one conversion
+per microproject.
 
 ## How to find other ideas for microprojects
 

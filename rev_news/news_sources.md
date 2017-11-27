@@ -9,7 +9,7 @@ Some ideas on where we can go to gather Git Rev News material.
 
 ## Mailing lists
 
-* [Git mailing list](http://thread.gmane.org/gmane.comp.version-control.git/)
+* [Git mailing list](https://public-inbox.org/git/)
 * [Git for Windows](https://groups.google.com/forum/#!forum/msysgit)
 * [JGit](https://dev.eclipse.org/mailman/listinfo/jgit-dev)
 * [libgit2](https://libgit2.github.com/) (and [friends](https://github.com/libgit2))
@@ -44,7 +44,10 @@ For every upcoming edition, do the following:
 * When the time comes to release the edition, move the edition.md file
   into some designated publishing directory, so it appears in
   the feed on git.github.io/rev_news/.
-* Thomas collects links using [diigo](https://www.diigo.com/user/Tfnico/gitrevnews).
-* When adding links, this is a great tool: [chitsaou/copy-as-markdown](https://github.com/chitsaou/copy-as-markdown/)
+* Announce the edition to the Git mailing list plus any social media channels you prefer.
+* Send the newsletter email (manual process using Mailchimp) - basically just copying the edition into MailChimp for publishing. Christian, Markus and Thomas should have account access.
 
-Some inspiration/ideas here perhaps: http://thechangelog.com/trello-as-a-cms/
+Links can be handily collected using a browser extension like [diigo](https://www.diigo.com/user/Tfnico/gitrevnews), but note that popular may be duplicated by other contributors.
+
+When adding links, this is a great tool: [chitsaou/copy-as-markdown](https://github.com/chitsaou/copy-as-markdown/)
+

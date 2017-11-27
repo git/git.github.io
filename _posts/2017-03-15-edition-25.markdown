@@ -1,0 +1,236 @@
+---
+title: Git Rev News Edition 25 (March 15th, 2017)
+layout: default
+date: 2017-03-15 12:06:51 +0100
+author: chriscool
+categories: [news]
+navbar: false
+---
+
+## Git Rev News: Edition 25 (March 15th, 2017)
+
+Welcome to the 25th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
+a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
+subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
+
+This edition covers what happened during the month of February 2017.
+
+## Discussions
+
+### General
+
+* [SHA1 collisions found](https://public-inbox.org/git/20170223164306.spg2avxzukkggrpb@kitenet.net/)
+
+  On February 23rd it was [publicly announced](https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html)
+  that a collision had been found against SHA-1, the cryptographic hash
+  function that Git uses to identify Git objects (blobs, trees, commits,
+  annotated tags).
+
+  [Details](https://shattered.it/) about the collision, how it was
+  performed, as well as algorithms and [code](https://github.com/cr-marcstevens/sha1collisiondetection)
+  to detect such a collision attack were published simultaneously.
+
+  This caused numerous news articles related to Git and SHA-1 in many
+  places, for example LWN.net:
+
+  - [Linus on Git and SHA-1 \[LWN.net\]](https://lwn.net/Articles/715621/)
+  - [Moving Git past SHA-1 \[LWN.net\]](https://lwn.net/Articles/715716/)
+
+  as well as many discussions on the mailing list.
+
+  There have also been patch series flowing around. Moreover, plans to move Git
+  away from SHA-1 have been shared and discussed.
+
+  Linus Torvalds for example sent a
+  [Typesafer git hash patch](https://public-inbox.org/git/CA+55aFxYs1zp2c-UPe8EfshNNOxRVxZ2H+ipsnG489NBsE+DLQ@mail.gmail.com/)
+  as a first step on fixing SHA-1 implicit dependencies. This one big
+  patch approach, though, is not consistent with the way Brian Carlson has
+  been working on the same issue for a long time. Junio Hamano has
+  not commented on this patch yet. Hence, for the time being it is not sure at all that
+  this topic will move much faster.
+
+  [Some work on integrating](http://public-inbox.org/git/20170223230536.tdmtsn46e4lnrimx@sigill.intra.peff.net/)
+  the code to detect a collision attack into a new
+  SHA-1 implementation in Git was started by Jeff King,
+  adding a `USE_SHA1DC` knob [to the Makefile](https://github.com/git/git/blob/beadf5ede3bfd3c1564af299b89c7c8474385247/Makefile#L145),
+  and
+  then [picked up by Linus](http://public-inbox.org/git/alpine.LFD.2.20.1702281621050.22202@i7.lan/).
+  The original code was written by Marc Stevens, working for
+  [CWI](https://www.cwi.nl/research-groups/Cryptology) and Dan Shumow,
+  working for Microsoft. Interestingly, both Marc and Dan chimed into the
+  discussion. Dan agreed to work on adaptations and performance
+  improvements for Git, and on upstreaming this work into the original
+  code base.
+  Junio participated in the discussions, too, and it looks as if the
+  resulting patch series could be merged for the next Git release;
+  currently the 'jk/sha1dc' is in the 'pu' branch.
+
+  One of the plans to move Git away from SHA-1 was contributed by
+  Jonathan Nieder, Stefan Beller, Jonathan Tan and Brandon
+  Williams, who are all working in the same team at Google. The latest
+  version of this plan is available in
+  [a Google document](https://goo.gl/gh2Mzc) where it can be commented
+  on. It has also been discussed in the following threads:
+
+  - [RFC: Another proposed hash function transition plan](https://public-inbox.org/git/20170304011251.GA26789@aiede.mtv.corp.google.com/)
+  - [RFC v3: Another proposed hash function transition plan](https://public-inbox.org/git/20170307001709.GC26789@aiede.mtv.corp.google.com/)
+
+  [Another plan](http://public-inbox.org/git/22708.8913.864049.452252@chiark.greenend.org.uk/)
+  was posted by Ian Jackson; it also generated some discussion.
+
+  It's interesting to note that Git is not the only version control
+  system to be affected by the issue. Here are a few related posts:
+
+  - [SHA1 and Mercurial security](https://www.mercurial-scm.org/wiki/mpm/SHA1), or why you shouldn't panic yet (Feb 2017)
+  - [Subversion SHA1 Collision Problem Statement](http://blogs.collab.net/subversion/subversion-sha1-collision-problem-statement-prevention-remediation-options)
+
+<!---
+### Reviews
+-->
+
+### Support
+
+* [body-CC-comment regression](https://public-inbox.org/git/20170216174924.GB2625@localhost/)
+
+  Johan Hovold noticed that `git send-email` in Git v2.10.2 does not
+  accept anymore patches with a commit message that contain lines like:
+
+  ```
+  Cc: <stable@vger.kernel.org>	# 4.4
+  ```
+
+  Apparently it parses the above as "stable@vger.kernel.org#4.4" and
+  then aborts.
+
+  Researching the problem, Johan found
+  [a mailing list thread](https://public-inbox.org/git/vpqmvi8n71g.fsf@anie.imag.fr/)
+  which resulted in some "fixes" that seem to be the root cause of the
+  problem.
+
+  He claimed the format of the line that trigger the problem
+  "has been documented at least since 2009" in the Linux kernel and "has
+  been supported by git since 2012". It is used to tag commits that
+  should be backported into the "stable" Linux kernel versions.
+
+  Johan then asked for a way for Git to revert to the old behavior.
+
+  Junio wondered if installing the [Mail::Address](http://search.cpan.org/search?query=Mail%3A%3AAddress&mode=module) Perl module
+  would make `git send-email` work by avoiding the
+  "non-parsing-but-paste-address-looking-things-together code" that Git
+  uses when Mail::Address is not installed. Johan replied that it
+  doesn't work.
+
+  Matthieu Moy, who worked on the patch that is responsible for the
+  problem, remarked that "a proper fix is far from obvious", because we
+  want our own parser to work the same way as Mail::Address does,
+  and we don't want to regress for people who want to get back
+  two email addresses from lines like:
+
+  ```
+  Cc: <foo@example.com> # , <boz@example.com>
+  ```
+
+  as this has been working since September 2015.
+
+  Anyway, in another email Matthieu suggested that we should always use our
+  own parser, as "we now have something essentially as good as
+  Mail::Address", and changing our parser to discard anything after ">"
+  in the email address. Matthieu's email also contained a patch
+  implementing the latter.
+
+  Johan agreed with Matthieu's plan, tested the patch and found that it
+  worked. Unfortunately he found another breakage when the
+  `--suppress-cc=self` option is used if more than one email address in
+  each line is allowed.
+
+  It looked as if the discussion was going to continue for some time, but
+  Linus replied to Matthieu stating that Cc: lines in commit messages are
+  not like Cc: lines in email headers. Consequently, we should not accept
+  more than one email address in them. He concluded as follows:
+
+  > So this notion that the bottom of the commit message is some email
+  > header crap is WRONG.
+  >
+  > Stop it. It caused bugs. It's wrong. Don't do it.
+
+  Finally, after Junio had discussed possible breakages with Matthieu's
+  patch, Matthieu agreed that it was safer to just revert to not
+  accepting many email addresses in the Cc: lines. Junio then accepted a
+  patch submitted by Johan implementing this proposal.
+  In the meantime, this patch was merged to the "next" branch,
+  so it is very likely to appear in the next Git release.
+  Let's just hope that no one will complain about it.
+
+## Releases
+
+* Git [v2.12.0](http://public-inbox.org/git/xmqqd1e72xs5.fsf@gitster.mtv.corp.google.com/)
+* Git LFS [v2.0.0](https://github.com/blog/2328-git-lfs-2-0-0-released) released
+* GitHub Enterprise [2.9](https://github.com/blog/2326-github-enterprise-2-9-is-here-with-pull-request-improvements-organization-wide-projects-and-google-cloud-platform-support)
+* GitLab [8.17](https://about.gitlab.com/2017/02/22/gitlab-8-17-released/) through [8.17.3](https://about.gitlab.com/2017/03/10/gitlab-8-dot-17-dot-3-released/)
+* nodegit [v0.18.0](https://github.com/nodegit/nodegit/releases/tag/v0.18.0)
+* JGit / EGit [4.6.1.201703071140-r](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03301.html)
+
+## Other News
+
+__Various__
+
+* This year Git [was accepted again](http://public-inbox.org/git/CAP8UFD1+Yn8W3YXF6Wn3=7Kiim9h6WtK7cqDu1G0uF8+CuORQg@mail.gmail.com/) as
+  [one of organizations in GSoC 2017](https://summerofcode.withgoogle.com/organizations/5465129203269632/).
+  Students started to work on [microprojects](https://git.github.io/SoC-2017-Microprojects/).
+
+* CWI Institute Amsterdam and Google presented
+  [a practical technique for generating SHA-1 collisions](https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html).
+
+* Dennis Kaarsemaker [provides daily snapshots of git's master and next tree](http://public-inbox.org/git/1488208102.10235.3.camel@kaarsemaker.net/)
+  as packages for Ubuntu, Debian, Fedora and CentOS on Launchpad and OpenSUSE build service:
+    - [master on Launchpad](https://launchpad.net/~dennis/+archive/ubuntu/git-master)
+    - [next on Launchpad](https://launchpad.net/~dennis/+archive/ubuntu/git-next)
+    - [master on OpenSUSE](https://build.opensuse.org/project/show/home:seveas:git-master)
+    - [next on OpenSUSE](https://build.opensuse.org/project/show/home:seveas:git-next)
+
+
+* London has been chosen as
+  [location of the Gerrit User Summit 2017](https://gitenterprise.me/2017/03/09/london-to-host-gerrit-user-summit-2017/).
+  The 10th edition of the historical "GitTogether" at Google will take
+  place for the first time in a different location, hosted by
+  [SkillsMatter at CodeNode](https://www.google.com/maps/search/Skills+Matter+%7C+CodeNode,+10+South+Place,+London,+EC2M+7EB,+GB/@51.5185967,-0.0882515,17z/data=!3m1!4b1)
+  from September 30th to October 3rd.
+
+__Light reading__
+
+* O'Reilly Radar: [How to use pull requests to improve your code reviews](https://www.oreilly.com/ideas/how-to-use-pull-requests-to-improve-your-code-reviews) by Brent Beer and Peter Bell;  
+  advertising that you can find more in their [Introducing GitHub](http://shop.oreilly.com/product/0636920067634.do) book (also [on Safari Books Online](https://www.safaribooksonline.com/library/view/introducing-github/9781491949801/))
+
+* The Myers diff algorithm: [part 1](https://blog.jcoglan.com/2017/02/12/the-myers-diff-algorithm-part-1/), [part 2](https://blog.jcoglan.com/2017/02/15/the-myers-diff-algorithm-part-2/), [part 3](https://blog.jcoglan.com/2017/02/17/the-myers-diff-algorithm-part-3/) by James Coglan;  
+  this was part of his ongoing work on a book explaining the internals of Git through implementation: [Building Git](https://building-git.launchrock.com/)
+
+* [Learn Version Control with Git: A step-by-step course for the complete beginner](https://www.git-tower.com/learn/git/ebook/) ebook by Tobias Günther _(Git Tower GUI)_: [free online book](https://www.git-tower.com/learn/git/ebook/en/command-line/introduction) and [video course](https://www.git-tower.com/learn/git/videos) (partially free)
+
+* It appears that WikiLeaks has captured the super secret [Git Tips & Tricks](https://wikileaks.org/ciav7p1/cms/page_1179773.html) from the CIA!
+
+* In today's world of Github and other competing services, it’s easy to overlook how simple it is to [set up (unlimited) private repos on any network connected computer](https://www.alexkras.com/private-git-repository-on-any-computer/), as explained by Alex Kras
+
+* How to have a proper [Git client on Android](https://pedronveloso.com/proper-git-client-android/), by Pedro Veloso
+
+* Adding a SHA1 collision vulnerability test [hoses WebKit's source repository](https://news.ycombinator.com/item?id=13725093)
+
+__Git tools and sites__
+
+* [Gitly](https://gitly.io/), a new git hosting service
+* [Terminals Are Sexy: A curated list of Terminal frameworks, plugins & resources for CLI lovers.](https://github.com/k4m4/terminals-are-sexy) includes list of shell prompts for Git
+* [Scotty](https://github.com/larsxschneider/scotty), a collection of helper scripts for GitHub Enterprise administrators
+* [git-profile](https://github.com/zeeshanu/git-profile), a utility that helps you switch git configurations with ease
+* [GotGit](https://github.com/gotgit) is a book about Git in Chinese
+* If you use Composer to manage PHP dependencies, you may enjoy [composer-git-hooks](https://github.com/BrainMaestro/composer-git-hooks)
+* [git-secrets](https://github.com/awslabs/git-secrets) Prevents you from committing secrets and credentials into git repositories
+* [git-dit](https://github.com/neithernut/git-dit), a decentralized (proof-of-concept) issue tracker for Git
+
+## Credits
+
+This edition of Git Rev News was curated by
+Christian Couder &lt;<christian.couder@gmail.com>&gt;,
+Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;,
+Jakub Narębski &lt;<jnareb@gmail.com>&gt; and
+Markus Jansen &lt;<mja@jansen-preisler.de>&gt;
+with help from Lars Schneider, Luca Milanesio
+and Junio Hamano.

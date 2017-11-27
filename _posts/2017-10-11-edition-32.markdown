@@ -1,0 +1,429 @@
+---
+title: Git Rev News Edition 32 (October 11th, 2017)
+layout: default
+date: 2017-10-11 09:06:51 +0100
+author: chriscool
+categories: [news]
+navbar: false
+---
+
+## Git Rev News: Edition 32 (October 11th, 2017)
+
+Welcome to the 32nd edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
+a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
+subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
+
+This edition covers what happened during the month of September 2017.
+
+## Discussions
+
+
+### General
+
+* [Google Summer of Code 2017](https://summerofcode.withgoogle.com/) Wrap Up
+
+There was only one student, [Prathamesh Chavan](https://github.com/pratham-pc/),
+mentored by Stefan Beller and Christian Couder, who participated this
+year in the Google Summer of Code. Matthieu Moy and Jeff King were the
+GSoC administrators for the Git project.
+
+Prathamesh has been working on an "Incremental rewrite of
+git-submodules" whose goal was to port parts of the `git submodule`
+command from shell to C code.
+
+Prathamesh wrote
+[a report about his work](https://docs.google.com/document/d/1RmUvJBf4x8TI71Fltg8xWP-s7zkhz3bGPyEJMgRx91Y/edit).
+
+Prathamesh passed the GSoC final evaluation.
+
+<!---
+### Reviews
+-->
+
+
+### Support
+
+* [[idea] File history tracking hints](https://public-inbox.org/git/CAOZF3=Ouvk8ccME+fXr_T=GL1j4Gx3Hgj3ao_-GQng-noeOubg@mail.gmail.com/)
+
+Pavel Kretov wrote to the mailing list:
+
+> Git, being "a stupid content tracker", doesn't try to keep an eye on
+> operations which happens to individual files; things like file renames
+> aren't recorded during commit, but heuristically detected later.
+
+and then stated that it would be "possible not only to do more
+accurate 'git blame', but also merge revisions with fewer conflicts"
+if Git better tracked what happens to files.
+
+So he suggested adding hints into the commit message like:
+
+>    Tracking-hint: rename git-1.0.ebuild -> git-2.0.ebuild  
+>    Tracking-hint: recreate LICENSE.txt  
+>    Tracking-hint: split main.c -> main.c cmdline.c  
+>    Tracking-hint: merge linalg.py <- vector.py matrix.py  
+
+Stefan Beller first replied that this "was discussed a couple of times
+on the mailing list (though not recently)" and pointed to
+[an old email from Linus Torvalds](https://public-inbox.org/git/Pine.LNX.4.58.0504141102430.7211@ppc970.osdl.org/).
+
+In this email from April 2005, when Git was a few week old, Linus
+rejected the idea of Git tracking renames in other places than the
+commit message. He wrote things like:
+
+> It's fundamentally the git notion of "content determines objects".
+
+and:
+
+> So, you really need to think of git as a filesystem. You can then
+> implement an SCM \_on_top_of_it\_ ...
+
+and:
+
+> So the git header is an "inode" in the git filesystem, and like an
+> inode it has a ctime and an mtime, and pointers to the data.
+
+and he concluded with:
+
+> There are too many messy SCM's out there that do not have a
+> "philosophy". Dammit, I'm not interested in creating another
+> one. This thing has a mental model, and we keep to that model.
+>
+> The reason UNIX is beautiful is that it has a mental model of
+> processes and files. Git has a mental model of objects and certain
+> very very limited relationships. The relationships git cares about
+> are encoded in the C files, the "extra crap" (like rename info) is
+> just that - stuff that random scripts wrote, and that is just
+> informational and not central to the model.
+
+Jacob Keller, alias Jake, replied to Stefan to summarize Linus'
+position in the old discussions.
+
+Jeff King replied to Pavel's initial email agreeing that optional
+annotations could be useful, but stressing that "there are some
+complications" like:
+
+> But of course somebody has to make those annotations. If we had a
+> tool to do it automatically, then we could apply the same tool at
+> run-time later.
+
+Igor Djordjevic also replied to Pavel pointing him to
+[another old email from Linus](https://public-inbox.org/git/Pine.LNX.4.58.0504150753440.7211@ppc970.osdl.org/)
+and [a discussion in April this year](https://public-inbox.org/git/xmqqr30qflk9.fsf@gitster.mtv.corp.google.com/)
+where Junio Hamano wrote that Linus' email was "one of the most
+important message in the list archive".
+
+In this email, from the same discussion as above, Linus concluded
+with:
+
+> In other words, I'm right. I'm always right, but sometimes I'm more
+> right than other times. And dammit, when I say "files don't matter",
+> I'm really really Right(tm).
+>
+> Please stop this "track files" crap. Git tracks _exactly_ what
+> matters, namely "collections of files". Nothing else is relevant,
+> and even _thinking_ that it is relevant only limits your
+> world-view. Notice how the notion of CVS "annotate" always
+> inevitably ends up limiting how people use it. I think it's a
+> totally useless piece of crap, and I've described something that I
+> think is a million times more useful, and it all fell out _exactly_
+> because I'm not limiting my thinking to the wrong model of the
+> world.
+
+Philip Oakley also replied directly to Pavel, suggesting him to use
+`git interpret-trailers` for standardising his hints locally (in his
+team / workplace) "to see how it goes and flesh out what works and
+what doesn't".
+
+Johannes Schindelin, alias Dscho, agreed with Philip and Pavel. He
+explained that "*everybody* who seriously worked on a massive code
+base has seen that rename detection fail in the most inopportune ways"
+and gave examples, especially this one:
+
+> when rename detection would matter most, like, really a lot, to lift
+> the burden of the human beings in front of the computer pouring over
+> hundreds of thousands of files moved from one directory tree to
+> another, that's exactly when Git's rename detection says that there
+> are too many files, here are my union rights, I am going home, good
+> luck to you.
+
+and concluded with:
+
+> So I totally like the idea of introducing hints, possibly as
+> trailers in the commit message (or as refs/notes/rename/* or
+> whatever) that can be picked up by Git versions that know about
+> them, and can be ignored by Git versions that insist on the rename
+> detection du jour. With a config option to control the behavior,
+> maybe, too.
+
+Philip replied to Dscho suggesting a list of possible hints:
+
+> So the hints could be (by type):
+> - template;licence;boiler-plate;standard;reference :: copy
+> - word-rename
+> - regex for word substitution changes (e.g. which chars are within 'Word-_0`)
+> - regex for white-space changes (i.e. which chars are considered whitespace.)
+> - move-dir path/glob spec
+> - move-file path/glob spec
+> (maybe list each 'group' of moves, so that once found the rest of the rename detection follows the group.)
+
+The discussion on this thread continued for a while also involving
+Jeff Hostetler, Stefan and Junio who wrote:
+
+> I actually like the idea to have a mechanism where the user can give
+> hint to influence, or instruction to dictate, how Git determines
+> "this old path moved to this new path" when comparing two trees.
+
+But he stated that "it is a non starter" to have hints "baked in the
+log message of a commit object", though "the principle Linus lays out
+in the message does not reject such hints stored outside baked-in data
+structure, which allows mistakes to be corrected without affecting the
+real history".
+
+* [BUG in git diff-index](https://public-inbox.org/git/loom.20160331T143733-916@post.gmane.org/)
+
+In March 2016 Andy Lowry described what he believed to be a bug in
+`git diff-index`.  After creating a file and then touching it, `git
+diff-index` reports the file has changed, and reports "bogus
+destination SHA":
+
+```
+$ git diff-index HEAD
+:100644 100644 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
+0000000000000000000000000000000000000000 M    A
+```
+
+But then using `git diff` followed by `git diff-index` again reports
+no changes:
+
+```
+$ git diff
+$ git diff-index HEAD
+$
+```
+
+Carlos Martín Nieto first replied to Andy that "this is expected and
+matches the documentation".
+
+Indeed the `git diff-index` documentation tells that this command has
+2 different operating modes. The "cached" mode, when `--cached` is
+specified, makes Git trust the index file entirely. While the
+"non-cached" mode also shows files that don’t match the stat state as
+being "tentatively changed" using "the magic 'all-zero' sha1".
+
+Jeff King, alias Peff, also pointed to the same documentation and
+explained in more details how the command works and the historical
+background:
+
+> Back when diff-index was written, it was generally assumed that
+> scripts would refresh the index as their first operation, and then
+> proceed to do one or more operations like diff-index, which would
+> rely on the refresh from the first step.
+
+Peff wrote that running `git diff` does refresh the index, which is
+why Andy's last step shows no diff.
+
+Andy thanked Peff, but replied that he is after "a tree-to-filesystem
+comparison, regardless of index":
+
+> I've currently got a "diff" thrown in as a "work-around" before
+> "diff-index", but now I understand it's not a workaround at all. If
+> there's a better way to achieve what I'm after, I'd appreciate a
+> tip.
+
+Peff suggested using `git update-index --refresh` rather than `git
+diff` to just refresh the index.
+
+Andy appreciated this answer, though he described his use case in
+details and asked:
+
+> So I think now that the script should do "update-index \-\-refresh"
+> followed by "diff-index \-\-quiet HEAD". Sound correct?
+
+Junio confirmed that:
+
+> Yes. That always been one of the kosher ways for any script to make
+> sure that the files in the working tree that are tracked have not
+> been modified relative to HEAD (assuming that the index matches
+> HEAD).
+
+and then described a few other "kosher ways" along with their
+benefits.
+
+Recently Marc Herbert then chimed into this 18 month old discussion
+adding the Linux kernel mailing list and a number of kernel developers
+in CC. Saying:
+
+> Too bad kernel/scripts/setlocalversion didn't get the memo
+
+Marc pointed to
+[a commit from 2013 in the Linux kernel repo](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=cdf2bc632ebc9ef51)
+that removes a `git update-index` call from the "setlocalversion"
+script. And he added that "this causes a spurious '-dirty' suffix when
+building from a directory copy".
+
+In the "PS:" part of his email Marc also wondered if there is a
+"robots.txt" file in <https://public-inbox.org> that blocks indexing the
+site contents as Google couldn't find the thread he was replying to on
+the site.
+
+Eric Wong, the creator and maintainer of public-inbox.org replied:
+
+> There's no blocks on public-inbox.org and I'm completely against
+> any sort of blocking/throttling. Maybe there's too many pages
+> to index?  Or the Message-IDs in URLs are too ugly/scary?  Not
+> sure what to do about that...
+>
+> Anyways, I just put up a robots.txt with Crawl-Delay: 1, since I
+> seem to recall crawlers use a more conservative delay by default:
+>
+> ==> https://public-inbox.org/robots.txt <==  
+> User-Agent: *  
+> Crawl-Delay: 1  
+
+## Developer Spotlight: Philip Oakley
+
+* Who are you and what do you do?
+
+I'm a design engineer working in defence electro-optics, and have been
+coding for nearly 50 years. I started at school with
+[hand punched Hollerith cards](https://calculating.files.wordpress.com/2014/01/ibm-port-a-punch-1.jpg)
+which were posted to Leeds University, and the print out returned a
+week later - careful coding was important! I coded in Forth and PL/1
+at university, along with most of the 8-bit microprocessors of the
+time. I touched Unix in the 80's, but since then it's mostly been work
+using Windows. Code has always been a support to my main work of
+"Engineering". More recently (last 5 years) I have been coding in C,
+Matlab, and MathCAD. Unfortunately the latter isn't that amenable to a
+VCS.
+
+I discovered Git in 2011 when I saw a blog post, and immediately
+realised that a tool that *distributed control to the user* was the
+holy grail I'd been looking for. Big engineering VCS systems are still
+rooted in the 1900's drawing office practices where protecting their
+one unique master drawing from spillages of India ink was
+everything. I was not, and still am not, allowed to quickly put code
+into that VCS. Meanwhile zero cost duplication meant we should now be
+using hash key verification, as shown by Git. The unique master is no
+more. And with Git I can quickly get back to where I was 10 minutes
+ago when developing code and exploring design concepts or data.
+
+* What would you name your most important contribution to Git?
+
+It probably has to be the trailer of `git help` that highlights that
+there are not only man pages for the commands, but also a set of
+guides for the various Git concepts, such as 'revisions'. As yet it
+doesn't allow all the guides to be listed - it's something I should
+get back to. I do try to make sure that any man page changes are
+included in patches - most folk read the man pages rather than the
+code, so keeping the two aligned is important..
+
+On the flip side, I hope my help in responding to some of the issue on
+Git for Windows has slightly eased the work of Dscho who has
+tirelessly supported and maintained that rather important port of Git
+to the wider world.
+
+* What are you doing on the Git project these days, and why?
+
+At the moment I'm trying to follow the Partial / Narrow clone work of
+Jonathan Tan and Ben Peart. I'm slightly concerned about how the
+perceived always-connected approach to lazy fetching will work for
+others. It's fine for a large managed environment, but for small scale
+users with unreliable connections it may need a tweak to pre-specify
+what is narrowly downloaded/fetched, and how the gaps are shown in the
+user's worktree.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+It's been a long standing desire to find a way of allowing true Narrow
+clones (remember I work in a 'secure' defence environment). This where
+some server side hook would allow the enforcement of the partitioning
+of the worktree between parts the user is expected to be working on,
+and other independent areas they shouldn't be touching, so won't
+have. It would be as if the worktree was partitioned into separate
+'submodules' but with independence via the tree hashes, rather than
+using submodule commit hashes. Importantly, it should be possible for
+the user's local server repo (is there a word for this 'on-server
+personal fork'?) to also be a narrow clone, as distinct from the
+golden server which would alway a full width, and able to serve narrow
+packs.
+
+The other aspect of Git would be to include practical user examples on
+the man pages, making them more than just reference pages for those
+who already know what the pages mean.
+
+The one hypothetical fix I would love to find is the ideal word for
+the cache / index / staging area / manifest / out-box, which
+unfortunately has no equivalence in the regular world (that perfect
+replication issue again).
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+I don't notice what I don't use, however there's probably a lot of
+early-days cruft such as `show-branch` that could be dumped. A more
+difficult area is the `--assume-unchanged` (and similar) which is a
+very confused promise. There appears to be a lot of code that fails to
+distinguish expected promises by the user ("trust me, I'm a user"),
+rather than actual promises by Git (trust me I'm software). Getting
+rid (or at least very obviously documenting) of these misunderstood
+promises would help many!
+
+The other area is the hidden Git-Linux workflows that are embedded in
+the commands to catch the unwary, such as the
+[recent discussion](https://public-inbox.org/git/xmqqa81njds0.fsf@gitster.mtv.corp.google.com/)
+on the `--fork-point` option of `git merge-base`.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+I tend to stick to Git, the git-gui, and gitk, as the core VC
+tools. Between the viewer, the gui and the bash command line I can do
+all that I need. Coming from a Windows environment, I found most of
+the support tools there (e.g. TortoiseGit, GitExtensions) to be
+somewhat backward looking and lead to bad habits and
+misunderstandings.
+
+## Releases
+
+* [Git v2.15.0-rc0](https://public-inbox.org/git/xmqq7ewa87fw.fsf@gitster.mtv.corp.google.com/)
+* [Git v2.14.2](https://public-inbox.org/git/xmqqwp4m9ejl.fsf@gitster.mtv.corp.google.com/)
+* [Git v2.13.6 and others](https://public-inbox.org/git/xmqqy3p29ekj.fsf@gitster.mtv.corp.google.com/)
+* [Git for Windows 2.14.2](https://github.com/git-for-windows/git/releases/tag/v2.14.2.windows.1) and [2.14.2(2)](https://github.com/git-for-windows/git/releases/tag/v2.14.2.windows.2)
+* [JGit / EGit 4.9.0](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03430.html)
+* [GitLab 10.0](https://about.gitlab.com/2017/09/22/gitlab-10-0-released/) alongside patches [9.5.8](https://about.gitlab.com/2017/10/04/gitlab-9-dot-5-dot-8-released/) through [10.0.3](https://about.gitlab.com/2017/10/05/gitlab-10-dot-0-dot-3-released/)
+* [Release tig-2.3.0](https://github.com/jonas/tig/releases/tag/tig-2.3.0)
+* [Tower for Windows 1.2](https://www.git-tower.com/blog/tower-win-1-2)
+
+## Other News
+
+__Various__
+
+* New podcast about Git: [All Things Git](http://www.allthingsgit.com/)
+* Old podcast: [GitMinutes #42: Erik from Atlassian on Clone Bundles](http://episodes.gitminutes.com/2017/09/gitminutes-42-erik-from-atlassian-on.html)
+* [GitMinutes #43: Johannes Schindelin on Contributing to Git](http://episodes.gitminutes.com/2017/10/gitminutes-43-johannes-schindelin-on.html)
+* Thomas Wolf has been [accepted as a JGit/EGit Committer](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03428.html)
+
+__Light reading__
+
+* [Talk, don't Fork](https://medium.com/@larsxschneider/talk-dont-fork-743a1253b8d5) - on forking in companies
+* [git git git git git](http://caiustheory.com/git-git-git-git-git/) from CaiusTheory.com
+* [Git, Graphs, and Software Engineering](http://third-bit.com/2017/09/30/git-graphs-and-engineering.html) - more of a call to action
+* [Self applicability](http://www.expressionsofchange.org/self-applicability/), and how this idea can be applied to Version Control - about immutable record versus rewriting history
+
+__Git tools and sites__
+
+* [Hubble Enterprise](https://github.com/autodesk/hubble) - Collaboration, usage, and health data visualization for GitHub Enterprise
+* [Keybase launches encrypted git](https://keybase.io/blog/encrypted-git-for-everyone)
+* [GitHub Desktop 1.0](https://github.com/blog/2437-announcing-github-desktop-1-0)
+* [GitHub Debug](https://githubengineering.com/github-debug/)
+* [It’s Magit! And you’re the magician!](http://endlessparentheses.com/it-s-magit-and-you-re-the-magician.html) by Artur Malabarba - [Magit](https://magit.vc/) is _A Git Porcelain inside Emacs_
+* [Linking commits to reviews [LWN.net]](https://lwn.net/Articles/734018/); the [email2git](https://github.com/alexcourouble/email2git) tool was presented in [Git Rev News #30](https://git.github.io/rev_news/2017/08/16/edition-30/)
+
+## Credits
+
+This edition of Git Rev News was curated by
+Christian Couder &lt;<christian.couder@gmail.com>&gt;,
+Thomas Ferris Nicolaisen &lt;<tfnico@gmail.com>&gt;,
+Jakub Narębski &lt;<jnareb@gmail.com>&gt; and
+Markus Jansen &lt;<mja@jansen-preisler.de>&gt;
+with help from Philip Oakley and Lars Schneider.
