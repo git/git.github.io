@@ -40,6 +40,7 @@ This edition covers what happened during the month of November 2017.
 
 __Various__
 
+* [Discussions on Hacker news](https://news.ycombinator.com/item?id=15819033) about [the hash transition plan](https://github.com/git/git/blob/master/Documentation/technical/hash-function-transition.txt).
 
 __Light reading__
 
