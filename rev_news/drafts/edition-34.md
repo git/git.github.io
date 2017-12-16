@@ -1,5 +1,5 @@
 ---
-title: Git Rev News Edition 34 (XXX, 2017)
+title: Git Rev News Edition 34 (December 20th, 2017)
 layout: default
 date: 2017-12-20 12:06:51 +0100
 author: chriscool
@@ -7,7 +7,7 @@ categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 34 (XXX, 2017)
+## Git Rev News: Edition 34 (December 20th, 2017)
 
 Welcome to the 34th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
