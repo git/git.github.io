@@ -17,9 +17,30 @@ This edition covers what happened during the month of November 2017.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* Thank you Thomas and call for help!
+
+From the beginning in March 2015, Thomas Ferris Nicolaisen very
+actively contributed to many aspects of Git Rev News. He especially
+was the main contributor and editor of the [Other News](#other news)
+and [Releases](#releases) sections. He also reviewed and merged a
+large number of pull requests and did a lot to improve Git Rev News in
+general.
+
+Unfortunately, as his daily work has been focusing on higher level
+things like agile and DevOps for some time, he asked to be
+de-installed from being an editor.
+
+As there is more and more to do to have a relevant, vibrant and
+entertaining news letter for the Git Community, we are thanking Thomas
+for his huge contribution, and looking for other people to join our
+small Git Rev News editor team.
+
+There is no need to even know Git well for that. It's possible to
+participate by just gathering articles about Git, or just checking
+which are the latest releases for example. Please contact us (see our
+emails [at the bottom](#credits)) if you are interested.
 
 <!---
 ### Reviews
