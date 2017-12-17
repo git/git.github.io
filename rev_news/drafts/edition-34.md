@@ -65,6 +65,8 @@ __Various__
 
 __Light reading__
 
+* Olga Telezhnaia, an [Outreachy](https://www.outreachy.org/) intern working on Git,
+  [is blogging about her experience](https://medium.com/@olyatelezhnaya).
 
 __Git tools and sites__
 
