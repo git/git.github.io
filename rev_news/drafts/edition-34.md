@@ -42,9 +42,56 @@ participate by just gathering articles about Git, or just checking
 which are the latest releases for example. Please contact us (see our
 emails [at the bottom](#credits)) if you are interested.
 
-<!---
 ### Reviews
--->
+
+* [[PATCH] config: added --expiry-date type support](https://public-inbox.org/git/0102015fb02bb5be-02c77f83-5a20-4ca1-8bab-5e9519cbd758-000000@eu-west-1.amazonses.com/)
+
+During the [Bloomberg hackathon in London November 11 - 12](https://www.techatbloomberg.com/blog/git-sprint-weekend-bloomberg-london/)
+Haaris Mehmood prepared a patch to add an `--expiry-date` option to
+`git config`, and then sent it to the mailing list.
+
+Kevin Daudt replied with usual advice to newcomers and the
+suggestion to look at the
+[SubmittingPatches documentation](https://github.com/git/git/blob/master/Documentation/SubmittingPatches).
+Kevin also noticed that a commit message that should explain the
+motivation for the patch was missing.
+
+Jeff King, alias Peff, replied to both Kevin and Haaris. Peff
+explained to the mailing list that the patch had been made to complete
+a task that was proposed during the hackathon, and that the patch has
+been submitted using [submitGit](https://submitgit.herokuapp.com/),
+and that there were explanations on the
+[merge request](https://github.com/git/git/pull/433) that Haaris had
+created to use submitGit.
+
+Peff also suggested more ways to improve the patch, and described the
+motivation for such a patch:
+
+> We do parse expiration dates from config in a few places, like
+> gc.reflogexpire, etc. There's no way for a script using git-config to do
+> the same (either adding an option specific to the script, or trying to
+> do some analysis on gc.reflogexpire)..
+
+Haaris replied to Peff saying about the hackathon "It was a pleasure
+meeting everyone and a great experience!", and discussing the
+suggestions to improve the patch.
+
+He then came up a few days later with a version 2 of the patch. A few
+more suggestions to improve it were discussed by Junio Hamano, Marc
+Branchaud and Christian Couder.
+
+Haaris sent a version 3 a few days later which was reviewed again by
+Junio who eventually agreed to queue the version 4 which has now been
+merged into the master branch.
+
+A discussion between Peff, Stefan Beller and Heiko Voigt followed for
+some time though. This was about clarifying why it is not a good idea,
+as Junio had told Haaris, for functions that parse config files to die
+in case of errors.
+
+It appears that those functions are also use to parse .gitmodules
+files and that these files are often commited into git repositories,
+so that these files are not always easy to fix if they are malformed.
 
 <!---
 ### Support
