@@ -168,9 +168,122 @@ include information like the error message and "legal" URL not
 containing brackets. Junio Hamano agreed with Eric, but it looks like
 Nicolas has not sent an updated patch yet.
 
-<!---
+
 ## Developer Spotlight:
--->
+
+* Who are you and what do you do?
+
+In my distant past I spent a long time in academia doing theoretical
+and computational physics. Around 2001, I switched to full-time
+software development. I currently work at GitHub, where I get to spend
+some of my time working on Git development and the rest keeping a
+large fraction of the world's Git repositories safe and
+performant. I'm from the U.S., but now live in Berlin with my wife and
+two kids.
+
+* How did you get involved in the Git project?
+
+My first exposure to Git was as a maintainer of
+[`cvs2svn`](http://cvs2svn.tigris.org/), a tool for migrating CVS
+repositories to Subversion. After working on that project for a while,
+I thought it would be nice to teach it how to convert CVS repositories
+to Git, too. Before that I had never even used Git.
+
+Soon I started contributing to Git itself, first by scratching my own
+itches (e.g., the `fixup` command in interactive rebase, `git
+check-attr --all`, `git multimail`, and `git diff` heuristics for
+producing better diffs).
+
+* What would you name your most important contribution to Git?
+
+At some point I was running `git filter-branch`, and I discovered
+that it had really terrible performance when processing a lot of
+references (branches and tags). That led me deeper and deeper into
+Git's code for storing references, and by now it is probably fair to
+say that I am the primary maintainer of that part of the code.
+
+For people who don't know, Git stores references in two ways:
+
+  * "Loose" references are stored under `.git/refs/`, as one small
+    file for each reference. These are very fast if you need to read
+    or update only a few references, but it is slow to read many loose
+    references.
+
+  * "Packed" references are stored in a big text file called
+    `.git/packed-refs`. It is quite fast to read all of the packed
+    references, but it is slow to change or delete a packed reference
+    because the whole file needs to be rewritten. And until recently,
+    to read even a single packed reference the whole file was read
+    into memory.
+
+Git tries to store active references as "loose" references and the
+rest as "packed" references. That's a decent compromise, but it has
+some corner cases with bad performance, and since it has to manage
+multiple files, it is quite tricky to avoid data races.
+
+I've done a lot to improve the performance of the references code and
+to support all-or-nothing reference update transactions. Along the way
+I've fixed a bunch of bugs and data races (hopefully without adding
+too many new ones).
+
+A big part of my work was abstracting out an internal references API
+and modularizing the code. That effort is now paying off by making it
+feasible to change fundamentally how references are handled. The first
+of these changes just shipped in Git 2.15: now the `packed-refs` file
+is mmapped to reduce memory usage, and only packed references that are
+needed are actually read. This should give a noticeable speedup for
+repositories with a lot of references, with another related speed
+boost coming in Git 2.16.
+
+* What are you doing on the Git project these days, and why?
+
+If I find some time, I hope to implement
+["reftables"](https://googlers.googlesource.com/sop/jgit/+/reftable/Documentation/technical/reftable.md),
+a new format for storing Git references, in Git. This would further
+improve reference-handling performance, even for repositories with a
+huge number of references.
+
+I'm also currently working on a little tool that computes various
+statistics about a Git repository, to warn users about questionable
+practices that might lead to performance problems. For example, many
+people don't realize that using Git to store a directory that has a
+huge number of entries can lead to terrible performance. It is far
+better to shard your files into multiple smaller, nested directories.
+This tool hasn't been open-sourced yet, but should be coming soon.
+
+* What is your favorite Git feature?
+
+The ability to rewrite history, hands down. Thorough code review is
+so hard that, in my opinion, code authors should do everything they
+can to make their code easy to read. Part of that is breaking changes
+down into logical, self-contained baby steps, and making it as obvious
+as possible that each step is correct. Nobody wants to read your
+stream of consciousness, including false trails and "Oops" commits.
+Git has tools, like `git rebase --interactive`, that let you revise
+your jumbled thoughts into a clear narrative. While I'm putting
+together a complicated patch series, I sometimes rebase it dozens of
+times before presenting it to the world. (And in the process I usually
+discover bugs in my own changes that—thank you Git!—the rest of the
+world never has to see.)
+
+If I encounter conflicts, I usually switch to my own tool,
+[`git-imerge`](https://github.com/mhagger/git-imerge). This breaks
+down complicated merge and rebase operations into smaller
+"incremental" merges that are done one after the other. This, in my
+opinion, makes merge conflicts easier to resolve.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+First I'd have them spend some time modularizing other parts of the
+Git codebase, adding docstrings, and improving internal libraries.
+After that, it'd be easier to implement useful user-facing changes,
+like making Git scale more gracefully to very large projects.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+I'd make the `git checkout` command do only one thing.
 
 ## Releases
 
