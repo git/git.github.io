@@ -169,7 +169,7 @@ containing brackets. Junio Hamano agreed with Eric, but it looks like
 Nicolas has not sent an updated patch yet.
 
 
-## Developer Spotlight:
+## Developer Spotlight: Michael Haggerty
 
 * Who are you and what do you do?
 
