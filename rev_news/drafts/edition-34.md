@@ -93,9 +93,80 @@ It appears that those functions are also use to parse .gitmodules
 files and that these files are often commited into git repositories,
 so that these files are not always easy to fix if they are malformed.
 
-<!---
 ### Support
--->
+
+* [imap-send with gmail: curl_easy_perform() failed: URL using bad/illegal format or missing URL](https://public-inbox.org/git/20171129171301.l3coiflkfyy533yz@NUC.localdomain/)
+
+Doron Behar asked for help about `git imap-send` which errored out
+when he tried to use it with Gmail:
+
+```
+Password for 'imaps://doron.behar@gmail.com@imap.gmail.com':
+sending 3 messages
+curl_easy_perform() failed: URL using bad/illegal format or missing URL
+```
+
+Doron thought that it would work better with `imap.user = doron.behar`
+instead of `imap.user = doron.behar@gmail.com` in his config file, but
+the error was the same.
+
+Replying to Doron Jonathan Nieder asked him a few questions, suggested that
+[a recent commit that makes Git use curl by default for imap](https://github.com/git/git/commit/dbba42bb32f2e896a5413d401c61a0022652fe2b)
+might be responsible for the regression, and put Nicolas Morey-Chaisemartin, the commit author, in CC.
+
+Jeff King, alias Peff, followed up by suggesting `--no-curl` as a
+possible work-around and `GIT_TRACE_CURL=1` to get more debug
+information.
+
+Peff warned that the trace output enabled by `GIT_TRACE_CURL=1` will
+contain the imap password though. He then sent a patch to redact auth
+information from the trace output, but wrote that the patch ended up
+being "a lot more complicated" than he would have liked.
+
+Nicolas Morey-Chaisemartin replied to Jonathan saying that Doron's
+`imap.folder = "[Gmail]/Drafts"` config option was causing the problem
+as it appeared to work when he used `%5BGmail%5D/Drafts` instead of
+`"[Gmail]/Drafts"`.
+
+He further explained:
+
+> curl is doing some fancy handling with brackets and braces. It make
+> sense for multiple FTP downloads like
+> ftp://ftp.numericals.com/file[1-100].txt, not in our case.  The curl
+> command line has a --globoff argument to disable this "regexp" support
+> and it seems to fix the gmail case.  However I couldn't find a way to
+> change this value through the API...
+
+Daniel Stenberg, the curl maintainer, replied to Nicolas that globbing
+isn't part of libcurl which 'actually "just" expects a plain old URL':
+
+> But with the risk of falling through the cracks into the rathole that
+> is "what is a URL" (I've blogged about the topic several times in the
+> past and I will surely do it again in the future):
+>
+> A "legal" URL (as per RFC 3986) does not contain brackets, such
+> symbols should be used URL encoded: %5B and %5D.
+>
+> This said: I don't know exactly why brackets cause a problem in this
+> case. It could still be worth digging into and see if libcurl could
+> deal with them better here...
+
+Nicolas replied that "It would make sense to have a way to ask libcurl
+to URI encode for us". But Daniel responded that using the existing
+curl_easy_escape() function, which URL encodes a string, would not
+work "on an entire existing URL or path since it would then also
+encode the slashes etc". Daniel suggested:
+
+> You want to encode the relevant pieces and then put them together
+> appropriately into the final URL...
+
+Nicolas recently sent [a patch](https://public-inbox.org/git/18c9478b-19fc-69f2-229f-67c05a42d4f5@suse.com/)
+to "URI encode the server folder string before passing it to libcurl".
+
+Eric Sunshine replied that the commit message could be expended to
+include information like the error message and "legal" URL not
+containing brackets. Junio Hamano agreed with Eric, but it looks like
+Nicolas has not sent an updated patch yet.
 
 <!---
 ## Developer Spotlight:
