@@ -179,7 +179,11 @@ Nicolas has not sent an updated patch yet.
 
 __Various__
 
-* [Discussions on Hacker news](https://news.ycombinator.com/item?id=15819033) about [the hash transition plan](https://github.com/git/git/blob/master/Documentation/technical/hash-function-transition.txt).
+* [The next Git Merge conference] will be on March 8 in Barcelona,
+  Spain. Hopefully there will be a contributor summit on March 7 at
+  the same venue.
+* [Discussions on Hacker News](https://news.ycombinator.com/item?id=15819033)
+  about [the hash transition plan](https://github.com/git/git/blob/master/Documentation/technical/hash-function-transition.txt).
 
 __Light reading__
 
