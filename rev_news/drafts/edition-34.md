@@ -305,6 +305,12 @@ __Light reading__
 
 __Git tools and sites__
 
+__Listening and watching__
+
+* [All Things Git podcast](http://allthingsgit.com/about.html) with Edward Thomson
+  and Martin Woodward release two new episodes in november. One on
+  Learning Git and Human factors with Sara Ford, and one about Github Universe 2017.
+
 
 ## Credits
 
