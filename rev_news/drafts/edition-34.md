@@ -33,7 +33,7 @@ things like agile and DevOps for some time, he asked to be
 de-installed from being an editor.
 
 As there is more and more to do to have a relevant, vibrant and
-entertaining news letter for the Git Community, we are thanking Thomas
+entertaining newsletter for the Git Community, we are thanking Thomas
 for his huge contribution, and looking for other people to join our
 small Git Rev News editor team.
 
@@ -163,7 +163,7 @@ encode the slashes etc". Daniel suggested:
 Nicolas recently sent [a patch](https://public-inbox.org/git/18c9478b-19fc-69f2-229f-67c05a42d4f5@suse.com/)
 to "URI encode the server folder string before passing it to libcurl".
 
-Eric Sunshine replied that the commit message could be expended to
+Eric Sunshine replied that the commit message could be expanded to
 include information like the error message and "legal" URL not
 containing brackets. Junio Hamano agreed with Eric, but it looks like
 Nicolas has not sent an updated patch yet.
