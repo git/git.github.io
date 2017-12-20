@@ -23,7 +23,7 @@ This edition covers what happened during the month of November 2017.
 
 From the beginning in March 2015, Thomas Ferris Nicolaisen very
 actively contributed to many aspects of Git Rev News. He especially
-was the main contributor and editor of the [Other News](#other news)
+was the main contributor and editor of the [Other News](#other%20news)
 and [Releases](#releases) sections. He also reviewed and merged a
 large number of pull requests and did a lot to improve Git Rev News in
 general.
