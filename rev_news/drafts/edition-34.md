@@ -314,6 +314,8 @@ __Light reading__
 * [Introducing container-diff, a tool for quickly comparing container images](https://opensource.googleblog.com/2017/11/container-diff-for-comparing-container-images.html), on Google Open Source Blog
 
 __Git tools and sites__
+
+* [A bug tracker for Git](https://crbug.com/git) based on [Monorail](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail) has been [announced by Jonathan Nieder](https://public-inbox.org/git/20171123011227.GM11671@aiede.mtv.corp.google.com/) who volonteered to triage bugs. Contact him if you want to help on this.
 * [git-undo-el](https://github.com/jwiegley/git-undo-el) -- a command for Emacs to regress or "undo" a region back through its Git history
 * [Magit Log for a File](http://irreal.org/blog/?p=6754); [Magit](https://magit.vc) is _A Git Porcelain inside Emacs_ and was mentioned multiple times in Git Rev News
 * [Tools for porting drivers [LWN.net]](https://lwn.net/Articles/739578/) by Jake Edge, describes [Prequel](http://prequel-pql.gforge.inria.fr/) tool (Patch Query Language) that mines the commit history of a code base, among others to help make both forward-porting and backporting drivers easier
