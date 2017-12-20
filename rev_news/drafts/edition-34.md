@@ -296,6 +296,13 @@ __Various__
 * [The next Git Merge conference](https://github.com/blog/2482-join-us-at-git-merge-2018-in-barcelona)
   will be on March 8 in Barcelona, Spain. Hopefully there will be a
   contributor summit on March 7 at the same venue.
+* Packt is doing every book for $5/€5 promo, which includes some books about Git, among others:
+  * [Git: Mastering Version Control](https://www.packtpub.com/application-development/git-mastering-version-control) course, which is composed of:
+    * [Git Essentials](https://www.packtpub.com/application-development/git-essentials)
+    * [Git Version Control Cookbook](https://www.packtpub.com/application-development/git-version-control-cookbook)
+    * [Mastering Git](https://www.packtpub.com/application-development/mastering-git)
+  * [Git Essentials, 2nd Edition](https://www.packtpub.com/application-development/git-essentials-second-edition)
+  * [Git: Version Control for Everyone](https://www.packtpub.com/application-development/git-version-control-everyone) (which was [reviewed](https://git-blame.blogspot.com/2013/02/git-version-control-for-everyone.html) by Junio C Hamano on his blog)
 * [Discussions on Hacker News](https://news.ycombinator.com/item?id=15819033)
   about [the hash transition plan](https://github.com/git/git/blob/master/Documentation/technical/hash-function-transition.txt).
 * [Protecting code integrity with PGP](https://github.com/lfit/itpol/blob/master/protecting-code-integrity.md) (beta),
