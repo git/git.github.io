@@ -44,7 +44,7 @@ emails [at the bottom](#credits)) if you are interested.
 
 ### Reviews
 
-* [[PATCH] config: added --expiry-date type support](https://public-inbox.org/git/0102015fb02bb5be-02c77f83-5a20-4ca1-8bab-5e9519cbd758-000000@eu-west-1.amazonses.com/)
+* [[PATCH] config: added \-\-expiry-date type support](https://public-inbox.org/git/0102015fb02bb5be-02c77f83-5a20-4ca1-8bab-5e9519cbd758-000000@eu-west-1.amazonses.com/)
 
 During the [Bloomberg hackathon in London November 11 - 12](https://www.techatbloomberg.com/blog/git-sprint-weekend-bloomberg-london/)
 Haaris Mehmood prepared a patch to add an `--expiry-date` option to
@@ -60,11 +60,11 @@ Jeff King, alias Peff, replied to both Kevin and Haaris. Peff
 explained to the mailing list that the patch had been made to complete
 a task that was proposed during the hackathon, and that the patch has
 been submitted using [submitGit](https://submitgit.herokuapp.com/),
-and that there were explanations on the
+and that there were explanations in the
 [merge request](https://github.com/git/git/pull/433) that Haaris had
-created to use submitGit.
+created with submitGit.
 
-Peff also suggested more ways to improve the patch, and described the
+Peff also suggested some ways to improve the patch, and described the
 motivation for such a patch:
 
 > We do parse expiration dates from config in a few places, like
@@ -89,8 +89,8 @@ some time though. This was about clarifying why it is not a good idea,
 as Junio had told Haaris, for functions that parse config files to die
 in case of errors.
 
-It appears that those functions are also use to parse .gitmodules
-files and that these files are often commited into git repositories,
+It appears that those functions are also used to parse `.gitmodules`
+files and that these files are often committed into Git repositories,
 so that these files are not always easy to fix if they are malformed.
 
 ### Support
@@ -115,11 +115,11 @@ Replying to Doron Jonathan Nieder asked him a few questions, suggested that
 might be responsible for the regression, and put Nicolas Morey-Chaisemartin, the commit author, in CC.
 
 Jeff King, alias Peff, followed up by suggesting `--no-curl` as a
-possible work-around and `GIT_TRACE_CURL=1` to get more debug
+possible workaround and `GIT_TRACE_CURL=1` to get more debug
 information.
 
 Peff warned that the trace output enabled by `GIT_TRACE_CURL=1` will
-contain the imap password though. He then sent a patch to redact auth
+contain the IMAP password though. He then sent a patch to redact auth
 information from the trace output, but wrote that the patch ended up
 being "a lot more complicated" than he would have liked.
 
@@ -133,12 +133,13 @@ He further explained:
 > curl is doing some fancy handling with brackets and braces. It make
 > sense for multiple FTP downloads like
 > ftp://ftp.numericals.com/file[1-100].txt, not in our case.  The curl
-> command line has a --globoff argument to disable this "regexp" support
+> command line has a \-\-globoff argument to disable this "regexp" support
 > and it seems to fix the gmail case.  However I couldn't find a way to
 > change this value through the API...
 
-Daniel Stenberg, the curl maintainer, replied to Nicolas that globbing
-isn't part of libcurl which 'actually "just" expects a plain old URL':
+Daniel Stenberg, the [curl](https://curl.haxx.se) maintainer, replied
+to Nicolas that globbing isn't part of libcurl which 'actually "just"
+expects a plain old URL':
 
 > But with the risk of falling through the cracks into the rathole that
 > is "what is a URL" (I've blogged about the topic several times in the
@@ -151,7 +152,7 @@ isn't part of libcurl which 'actually "just" expects a plain old URL':
 > case. It could still be worth digging into and see if libcurl could
 > deal with them better here...
 
-Nicolas replied that "It would make sense to have a way to ask libcurl
+Nicolas replied that "it would make sense to have a way to ask libcurl
 to URI encode for us". But Daniel responded that using the existing
 curl_easy_escape() function, which URL encodes a string, would not
 work "on an entire existing URL or path since it would then also
@@ -292,9 +293,9 @@ I'd make the `git checkout` command do only one thing.
 
 __Various__
 
-* [The next Git Merge conference] will be on March 8 in Barcelona,
-  Spain. Hopefully there will be a contributor summit on March 7 at
-  the same venue.
+* [The next Git Merge conference](https://github.com/blog/2482-join-us-at-git-merge-2018-in-barcelona)
+  will be on March 8 in Barcelona, Spain. Hopefully there will be a
+  contributor summit on March 7 at the same venue.
 * [Discussions on Hacker News](https://news.ycombinator.com/item?id=15819033)
   about [the hash transition plan](https://github.com/git/git/blob/master/Documentation/technical/hash-function-transition.txt).
 
@@ -308,8 +309,9 @@ __Git tools and sites__
 __Listening and watching__
 
 * [All Things Git podcast](http://allthingsgit.com/about.html) with Edward Thomson
-  and Martin Woodward release two new episodes in november. One on
-  Learning Git and Human factors with Sara Ford, and one about Github Universe 2017.
+  and Martin Woodward release two new episodes in November. One on
+  "Learning Git and Human factors" with Sara Ford, and one about
+  [Github Universe 2017](https://github.com/blog/2453-mission-report-github-universe-2017).
 
 
 ## Credits
