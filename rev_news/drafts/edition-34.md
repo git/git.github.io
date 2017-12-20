@@ -298,13 +298,25 @@ __Various__
   contributor summit on March 7 at the same venue.
 * [Discussions on Hacker News](https://news.ycombinator.com/item?id=15819033)
   about [the hash transition plan](https://github.com/git/git/blob/master/Documentation/technical/hash-function-transition.txt).
+* [Protecting code integrity with PGP](https://github.com/lfit/itpol/blob/master/protecting-code-integrity.md) (beta),
+  part of Useful IT Policies project
+* [Effortlessly maintain a high quality change log with Git notes](https://harrow.io/blog/effortlessly-maintain-a-high-quality-change-log-with-little-known-git-tricks/) by LeeHambley
+  * In Git Rev News #6 there was link to [Using git-notes for marking test suite successes](http://who-t.blogspot.de/2015/07/using-git-notes-for-marking-test-suite.html) article on the similar topic, by Peter Hutterer
+* [Welp, there go my Git signatures](http://karl.kornel.us/2017/10/welp-there-go-my-git-signatures/) by Karl Kornel, about what one can do about PGP signatures made with key affected by RoCA vulnerability
+  * [Solving the PGP Revocation Problem with OpenTimestamps for Git Commits](https://petertodd.org/2016/opentimestamps-git-integration) by Peter Todd
 
 __Light reading__
 
 * Olga Telezhnaia, an [Outreachy](https://www.outreachy.org/) intern working on Git,
   [is blogging about her experience](https://medium.com/@olyatelezhnaya).
+* [I Haskell a Git](http://vaibhavsagar.com/blog/2017/08/13/i-haskell-a-git/) by Vaibhav Sagar, on Git being functional like Haskell and on implementing Git in Haskell, sharing how Git looks like from the inside out
+* [Squash-merging and other problems with GitHub](https://blog.adamspiers.org/2017/08/16/squash-merging-and-other-problems-with-github/) by Adam Spiers, who posits that "squash before submitting a PR" policy is a poor-man's workaround for the lack of a real solution to the underlying problems
+* [Introducing container-diff, a tool for quickly comparing container images](https://opensource.googleblog.com/2017/11/container-diff-for-comparing-container-images.html), on Google Open Source Blog
 
 __Git tools and sites__
+* [git-undo-el](https://github.com/jwiegley/git-undo-el) -- a command for Emacs to regress or "undo" a region back through its Git history
+* [Magit Log for a File](http://irreal.org/blog/?p=6754); [Magit](https://magit.vc) is _A Git Porcelain inside Emacs_ and was mentioned multiple times in Git Rev News
+* [Tools for porting drivers [LWN.net]](https://lwn.net/Articles/739578/) by Jake Edge, describes [Prequel](http://prequel-pql.gforge.inria.fr/) tool (Patch Query Language) that mines the commit history of a code base, among others to help make both forward-porting and backporting drivers easier
 
 __Listening and watching__
 
