@@ -288,6 +288,12 @@ I'd make the `git checkout` command do only one thing.
 
 ## Releases
 
+* Git [2.15.1](https://public-inbox.org/git/xmqqo9nl6g1v.fsf@gitster.mtv.corp.google.com/)
+* Git for Windows [2.15.1](https://public-inbox.org/git/alpine.DEB.2.21.1.1711300238520.6482@virtualbox/) and [v2.15.1(2)](https://public-inbox.org/git/alpine.DEB.2.21.1.1711300245250.6482@virtualbox/)
+* tig [2.3.2](https://public-inbox.org/git/CAFuPQ1+JwRy11-NA=pRN38GHt5Bk+KswzYNTba=JRFoZZ62byA@mail.gmail.com/)
+* GitLab [10.2.5](https://about.gitlab.com/2017/12/18/gitlab-10-2-5-released/), [10.1.5 and 10.0.7](https://about.gitlab.com/2017/12/08/gitlab-10-dot-2-dot-4-security-release/)
+* GitHub Enterprise [2.12.1](https://enterprise.github.com/releases/2.12.1/notes)
+* Bitbucket Server [5.6](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-5-6-release-notes-939918647.html)
 
 ## Other News
 
