@@ -332,4 +332,4 @@ This edition of Git Rev News was curated by
 Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt; and
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt;
-with help from Michael Haggerty.
+with help from Michael Haggerty and Johan Abildskov.
