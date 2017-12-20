@@ -282,7 +282,7 @@ After that, it'd be easier to implement useful user-facing changes,
 like making Git scale more gracefully to very large projects.
 
 * If you could remove something from Git without worrying about
-  backwards compatibility, what would it be?
+  backward compatibility, what would it be?
 
 I'd make the `git checkout` command do only one thing.
 
@@ -313,7 +313,7 @@ __Various__
   about [the hash transition plan](https://github.com/git/git/blob/master/Documentation/technical/hash-function-transition.txt).
 * [Protecting code integrity with PGP](https://github.com/lfit/itpol/blob/master/protecting-code-integrity.md) (beta),
   part of Useful IT Policies project
-* [Effortlessly maintain a high quality change log with Git notes](https://harrow.io/blog/effortlessly-maintain-a-high-quality-change-log-with-little-known-git-tricks/) by LeeHambley
+* [Effortlessly maintain a high quality change log with Git notes](https://harrow.io/blog/effortlessly-maintain-a-high-quality-change-log-with-little-known-git-tricks/) by Lee Hambley
   * In Git Rev News #6 there was link to [Using git-notes for marking test suite successes](http://who-t.blogspot.de/2015/07/using-git-notes-for-marking-test-suite.html) article on the similar topic, by Peter Hutterer
 * [Welp, there go my Git signatures](http://karl.kornel.us/2017/10/welp-there-go-my-git-signatures/) by Karl Kornel, about what one can do about PGP signatures made with key affected by RoCA vulnerability
   * [Solving the PGP Revocation Problem with OpenTimestamps for Git Commits](https://petertodd.org/2016/opentimestamps-git-integration) by Peter Todd
@@ -328,17 +328,17 @@ __Light reading__
 
 __Git tools and sites__
 
-* [A bug tracker for Git](https://crbug.com/git) based on [Monorail](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail) has been [announced by Jonathan Nieder](https://public-inbox.org/git/20171123011227.GM11671@aiede.mtv.corp.google.com/) who volonteered to triage bugs. Contact him if you want to help on this.
+* [A bug tracker for Git](https://crbug.com/git) based on [Monorail](https://chromium.googlesource.com/infra/infra/+/master/appengine/monorail) has been [announced by Jonathan Nieder](https://public-inbox.org/git/20171123011227.GM11671@aiede.mtv.corp.google.com/) who volunteered to triage bugs. Contact him if you want to help on this.
 * [git-undo-el](https://github.com/jwiegley/git-undo-el) -- a command for Emacs to regress or "undo" a region back through its Git history
 * [Magit Log for a File](http://irreal.org/blog/?p=6754); [Magit](https://magit.vc) is _A Git Porcelain inside Emacs_ and was mentioned multiple times in Git Rev News
-* [Tools for porting drivers [LWN.net]](https://lwn.net/Articles/739578/) by Jake Edge, describes [Prequel](http://prequel-pql.gforge.inria.fr/) tool (Patch Query Language) that mines the commit history of a code base, among others to help make both forward-porting and backporting drivers easier
+* [Tools for porting drivers [LWN.net]](https://lwn.net/Articles/739578/) by Jake Edge, describes [Prequel](http://prequel-pql.gforge.inria.fr/) tool (Patch Query Language) that mines the commit history of a code base, among others to help make both forward-porting and back-porting drivers easier
 
 __Listening and watching__
 
 * [All Things Git podcast](http://allthingsgit.com/about.html) with Edward Thomson
   and Martin Woodward release two new episodes in November. One on
   "Learning Git and Human factors" with Sara Ford, and one about
-  [Github Universe 2017](https://github.com/blog/2453-mission-report-github-universe-2017).
+  [GitHub Universe 2017](https://github.com/blog/2453-mission-report-github-universe-2017).
 
 
 ## Credits
