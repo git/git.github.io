@@ -46,6 +46,7 @@ __Light reading__
 
 __Git tools and sites__
 
+* [GitPlex](https://www.gitplex.com/) a tool to "browse code in git repository like in IDE". 
 
 ## Credits
 
