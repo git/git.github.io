@@ -46,7 +46,8 @@ __Light reading__
 
 __Git tools and sites__
 
-* [GitPlex](https://www.gitplex.com/) a tool to "browse code in git repository like in IDE". 
+* [GitPlex](https://www.gitplex.com/) a tool to "browse code in git repository like in IDE".
+* [FAC](https://github.com/mkchoi212/fac) a command line tool to fix merge conflicts has been [discussed on Hacker News](https://news.ycombinator.com/item?id=16056271).
 
 ## Credits
 
