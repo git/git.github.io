@@ -86,13 +86,17 @@ umbrella organization.
 
 new feature, refactoring, libgit2
 
-## IRC Channel, Mailing List, or Email
+## Contact Methods
 
-Most of the development takes place on the git@vger.kernel.org
-mailing-list. See <http://vger.kernel.org/vger-lists.html#git> for
-instructions.
+```
+You must complete at least one of the following three contact options.
+```
 
-There is also an IRC channel: <http://git-scm.com/community>.
+Chat: http://git-scm.com/community
+
+Mailing List: http://git-scm.com/community
+
+General Email: git@vger.kernel.org
 
 # 2018 Application Form
 
@@ -262,13 +266,17 @@ the mailing list a year or more after their GSoC"):
 
 None.
 
-## Are you part of a foundation/umbrella organization?
+## Provide a reference (optional)
 
-No
+
 
 ## What year was your project started?
 
 2005
+
+## Where does your code live:
+
+http://github.com/git/git
 
 ## Anything else we should know (optional)?
 
