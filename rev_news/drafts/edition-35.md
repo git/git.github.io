@@ -104,6 +104,13 @@ script runs many times and there are conflicts.
 
 ## Releases
 
+* [Git v2.16.0-rc2](https://public-inbox.org/git/xmqqwp0nwwc6.fsf@gitster.mtv.corp.google.com/)
+* [Git v2.16.0-rc1](https://public-inbox.org/git/xmqqbmi7ano1.fsf@gitster.mtv.corp.google.com/)
+* [Git v2.16.0-rc0](https://public-inbox.org/git/xmqqfu7ui2af.fsf@gitster.mtv.corp.google.com/)
+* [Git for Windows v2.16.0-rc2](https://public-inbox.org/git/nycvar.QRO.7.76.6.1801131931550.31@ZVAVAG-6OXH6DA.rhebcr.pbec.zvpebfbsg.pbz/)
+* [GitHub Enterprise 2.12.2](https://enterprise.github.com/releases/2.12.2), [2.11.8](https://enterprise.github.com/releases/2.11.8), [2.10.14](https://enterprise.github.com/releases/2.10.14) and [2.9.19](https://enterprise.github.com/releases/2.9.19)
+* [GitLab 10.3](https://about.gitlab.com//2017/12/22/gitlab-10-3-released/) and then [10.3.1](https://about.gitlab.com//2017/12/27/gitlab-10-3-1-released/), [10.3.2](https://about.gitlab.com//2017/12/28/gitlab-10-3-2-released/) and [10.3.3](https://about.gitlab.com//2018/01/02/gitlab-10-3-3-released/)
+* Bitbucket Server [5.7](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-5-7-release-notes-939918798.html)
 
 ## Other News
 
