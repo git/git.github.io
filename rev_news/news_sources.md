@@ -45,7 +45,7 @@ For every upcoming edition, do the following:
   into some designated publishing directory, so it appears in
   the feed on git.github.io/rev_news/.
 * Announce the edition to the Git mailing list plus any social media channels you prefer.
-* Send the newsletter email (manual process using Mailchimp) - basically just copying the edition into MailChimp for publishing. Christian, Markus and Thomas should have account access.
+* Send the newsletter email (manual process using Mailchimp) - basically just copying the edition into MailChimp for publishing. Everyone from the editor team should have account access.
 
 Links can be handily collected using a browser extension like [diigo](https://www.diigo.com/user/Tfnico/gitrevnews), but note that popular may be duplicated by other contributors.
 
