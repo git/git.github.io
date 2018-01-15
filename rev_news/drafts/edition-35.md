@@ -109,6 +109,8 @@ script runs many times and there are conflicts.
 
 __Various__
 
+* [Git London User Group: 16 January 2018](https://public-inbox.org/git/CA+WKDT3uKyEfzGvnkRUG7SEKy4ypz+Aa223UaVE8vyktcmgSvw@mail.gmail.com/) Edward Thomson announces the formation of the [Git London User Group](http://londongit.org/) and their first meeting on 16 January 2018.
+
 
 __Light reading__
 
