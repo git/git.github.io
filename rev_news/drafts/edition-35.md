@@ -120,6 +120,7 @@ __Git tools and sites__
 * [Git exercises](https://gitexercises.fracz.com/) helps you "learn and practice Git" with exercises to "rapidly become a Git Master".
 * [git-dissect: DIStributed biSECT](https://github.com/talshorer/git-dissect) "an alternative to `git bisect` that allows running tests on multiple hosts in order to bisect faster."
 * [git-pisect: Parallel regression finder](https://github.com/hoelzro/git-pisect) "an alternative to `git bisect run` that uses multiple concurrent tests to try to finish a bisect more quickly", with an [explanatory blog post](https://hoelz.ro/blog/git-pisect).
+* [go-git v4 was announced](https://blog.sourced.tech/post/go-git-v4/). [go-git](https://github.com/src-d/go-git) is "a highly extensible Git implementation in pure Go".
 
 ## Credits
 
