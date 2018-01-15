@@ -112,6 +112,7 @@ __Various__
 
 __Light reading__
 
+* [Using git hooks to improve your day-to-day workflow](https://wyeworks.com/blog/2018/1/3/using-git-hooks-to-improve-your-day-to-day-workflow/)
 
 __Git tools and sites__
 
