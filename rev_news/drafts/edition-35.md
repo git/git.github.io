@@ -29,27 +29,31 @@ This edition covers what happened during the month of December 2017.
 
 * [Need help migrating workflow from svn to git](https://public-inbox.org/git/20171214130933.GA18542@raven.inka.de/)
 
-Josef Wolf first described is current workflow that uses Subversion
+Josef Wolf first described his current workflow which uses Subversion
 (SVN).
 
 Josef has a number of machines that all have a working copy of the
 same repository in a specific directory. A cron job updates the
 working copies and then run scripts contained in the working copies.
 
-When using `svn updates` to update those copies, the changes made
+When using `svn update` to update those copies, the changes made
 locally on the machines are automatically merged with the upstream
-changes usually without conflict.
+changes, usually without conflicts.
 
 Then Josef explained what would happen with Git:
 
 > With git, by contrast, this won't work. Git will refuse to pull
 > anything as long as there are ANY local modifications. The cron job
-> would need to
->
->   git stash
->   git pull
->   git stash pop
->
+> would need to  
+> ```
+> git stash
+> ```  
+> ```
+> git pull
+> ```  
+> ```
+> git stash pop
+> ```  
 > But this will temporarily remove my local modifications. If I happen
 > to do a test run at this time, the test run would NOT contain the
 > local modifications which I was about to test.
@@ -74,7 +78,7 @@ to latest changes fetched from remote".
 In a later email Buga alternatively suggested "using
 `git worktree add <temp_copy_path>` to create a temporary working tree
 ... alongside a temporary branch" and deleting those after having
-commited, merged and pushed the local changes made there.
+committed, merged and pushed the local changes made there.
 
 Josef replied to Buga that some potential issues Buga worried about
 are not relevant when using SVN because of the specifics of his work,
@@ -84,15 +88,15 @@ About the solutions Buga had suggested, Josef and Buga started to
 discuss them, but at this point Junio Hamano, the Git maintainer,
 suggested using just:
 
-> git fetch <remote> <branch>
-> git checkout -m -B <master> FETCH_HEAD
+> ```git fetch <remote> <branch>```  
+> ```git checkout -m -B <master> FETCH_HEAD```
 
 with:
 
-> <remote> <branch>: the branch at the remote you are pulling from
-> <master>: whatever branch you are using
+> ```<remote> <branch>```: the branch at the remote you are pulling from  
+> ```<master>```: whatever branch you are using
 
-After some tests and further discussion, Josef agreed that it was a
+After some tests and further discussion, Josef agreed that this was a
 good solution. Buga also suggested using `git add -u` and `git reset`
 after or before the above commands to avoid failures in case the
 script runs many times and there are conflicts.
