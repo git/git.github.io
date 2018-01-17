@@ -120,21 +120,27 @@ script runs many times and there are conflicts.
 
 __Various__
 
-* [Git London User Group: 16 January 2018](https://public-inbox.org/git/CA+WKDT3uKyEfzGvnkRUG7SEKy4ypz+Aa223UaVE8vyktcmgSvw@mail.gmail.com/) Edward Thomson announces the formation of the [Git London User Group](http://londongit.org/) and their first meeting on 16 January 2018.
+* [Git London User Group: 16 January 2018](https://public-inbox.org/git/CA+WKDT3uKyEfzGvnkRUG7SEKy4ypz+Aa223UaVE8vyktcmgSvw@mail.gmail.com/): Edward Thomson announces the formation of the [Git London User Group](http://londongit.org/) and their first meeting on 16 January 2018.
 
 
 __Light reading__
 
-* [Using git hooks to improve your day-to-day workflow](https://wyeworks.com/blog/2018/1/3/using-git-hooks-to-improve-your-day-to-day-workflow/)
+* Federico Kauffman blogs about [using git hooks to improve your day-to-day workflow](https://wyeworks.com/blog/2018/1/3/using-git-hooks-to-improve-your-day-to-day-workflow/).
+* A short post for Emacs users who want to [narrow the author column in Magit](https://scripter.co/narrowing-the-author-column-in-magit/).
+* [Master the Rebase (and the Other Way Around)](https://blog.algolia.com/master-git-rebase/) by Anthony Seure introduces `rebase` both as an alternative to `merge` and as a history rewriting tool. 
+* A security write-up on [Git and escape sequences](https://www.twistlock.com/2017/12/13/hiding-content-git-escape-sequence-twistlock-labs-experiment/) by Ariel Zelivansky.
+* Dan Palmer explains [how and why they teach non-engineers to use GitHub at Thread](https://thread.engineering/teaching-non-engineers-how-to-contribute-code-2e85411ab464).
+
 
 __Git tools and sites__
 
-* [GitPlex](https://www.gitplex.com/) a tool to "browse code in git repository like in IDE".
-* [FAC](https://github.com/mkchoi212/fac) a command line tool to fix merge conflicts has been [discussed on Hacker News](https://news.ycombinator.com/item?id=16056271).
+* [GitPlex](https://www.gitplex.com/) is a tool to "browse code in git repository like in IDE".
+* [FAC](https://github.com/mkchoi212/fac), a command line tool to fix merge conflicts, has been [discussed on Hacker News](https://news.ycombinator.com/item?id=16056271).
 * [Git exercises](https://gitexercises.fracz.com/) helps you "learn and practice Git" with exercises to "rapidly become a Git Master".
-* [git-dissect: DIStributed biSECT](https://github.com/talshorer/git-dissect) "an alternative to `git bisect` that allows running tests on multiple hosts in order to bisect faster."
-* [git-pisect: Parallel regression finder](https://github.com/hoelzro/git-pisect) "an alternative to `git bisect run` that uses multiple concurrent tests to try to finish a bisect more quickly", with an [explanatory blog post](https://hoelz.ro/blog/git-pisect).
+* [git-dissect: DIStributed biSECT](https://github.com/talshorer/git-dissect) is "an alternative to `git bisect` that allows running tests on multiple hosts in order to bisect faster".
+* [git-pisect: Parallel regression finder](https://github.com/hoelzro/git-pisect) is "an alternative to `git bisect run` that uses multiple concurrent tests to try to finish a bisect more quickly", with an [explanatory blog post](https://hoelz.ro/blog/git-pisect).
 * [go-git v4 was announced](https://blog.sourced.tech/post/go-git-v4/). [go-git](https://github.com/src-d/go-git) is "a highly extensible Git implementation in pure Go".
+* [Real-world Git](https://trevordmiller.com/courses/real-world-git) is an hour-long video free course on Git basics.
 
 ## Credits
 
