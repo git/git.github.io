@@ -44,16 +44,12 @@ Then Josef explained what would happen with Git:
 
 > With git, by contrast, this won't work. Git will refuse to pull
 > anything as long as there are ANY local modifications. The cron job
-> would need to  
+> would need to
 > ```
 > git stash
-> ```  
-> ```
 > git pull
-> ```  
-> ```
 > git stash pop
-> ```  
+> ```
 > But this will temporarily remove my local modifications. If I happen
 > to do a test run at this time, the test run would NOT contain the
 > local modifications which I was about to test.
