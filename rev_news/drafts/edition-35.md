@@ -84,13 +84,17 @@ About the solutions Buga had suggested, Josef and Buga started to
 discuss them, but at this point Junio Hamano, the Git maintainer,
 suggested using just:
 
-> ```git fetch <remote> <branch>```
-> ```git checkout -m -B <master> FETCH_HEAD```
+> ```
+> git fetch <remote> <branch>
+> git checkout -m -B <master> FETCH_HEAD
+> ```
 
 with:
 
-> ```<remote> <branch>```: the branch at the remote you are pulling from
-> ```<master>```: whatever branch you are using
+> ```
+> <remote> <branch>: the branch at the remote you are pulling from
+> <master>: whatever branch you are using
+> ```
 
 After some tests and further discussion, Josef agreed that this was a
 good solution. Buga also suggested using `git add -u` and `git reset`
