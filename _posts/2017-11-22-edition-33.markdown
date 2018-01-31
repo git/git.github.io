@@ -106,7 +106,7 @@ because:
 and also:
 
 > Those who have `core.autocrlf=false` would produce commits with CRLF
-> for new files, and those developpers who have `core.autocrlf=true` would
+> for new files, and those developers who have `core.autocrlf=true` would
 > produce files with LF in the index and CRLF in the worktree.  This may
 > (most probably will) cause confusion later, when things are pushed and
 > pulled.
