@@ -101,6 +101,8 @@ __Light reading__
 
 __Git tools and sites__
 
+* [GitFinder](https://gitfinder.com) is a new Git client for Mac that provides status badges and context menus directly into the Finder.
+
 __Listening and Watching__
 
 * [All Things Git](https://allthingsgit.com/episodes/teaching_git_with_johan_abildskov.html) talks to Johan Abildskov
