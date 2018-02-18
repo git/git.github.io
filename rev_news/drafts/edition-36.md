@@ -51,7 +51,7 @@ of the idea, and something will very likely happen around the
 [upcoming Git Merge 2018 and associated Contributor Summit](https://git-merge.com/)
 on March 7-8 in Barcelona.
 
-Just before the closing talk of FOSSDEM 2018, "the world largest
+Just before the closing talk of FOSDEM 2018, "the world largest
 conference of its kind", on February 4th in Brussels, a big round of
 applause was made for Shawn.
 
