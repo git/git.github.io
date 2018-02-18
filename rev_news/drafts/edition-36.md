@@ -76,11 +76,26 @@ in an article about a [Resumable clone based on hybrid "smart" and "dumb" HTTP](
 
 ## Releases
 
+* Git [v2.16.2](https://public-inbox.org/git/xmqqinaw7rat.fsf@gitster-ct.c.googlers.com),
+[v2.16.1](https://public-inbox.org/git/xmqqy3kqmoax.fsf@gitster.mtv.corp.google.com) and
+[v2.16.0](https://public-inbox.org/git/xmqqfu73r9tf.fsf@gitster.mtv.corp.google.com)
+* Git for Windows [2.16.1(4)](https://public-inbox.org/git/20180207200157.17672-1-johannes.schindelin@gmx.de),
+[2.16.1(3)](https://public-inbox.org/git/20180206153802.14064-1-johannes.schindelin@gmx.de),
+[2.16.1(2)](https://public-inbox.org/git/0MFuWk-1eTyyv270g-00EthZ@mail.gmx.com),
+[2.16.1](https://public-inbox.org/git/20180122170959.12528-1-johannes.schindelin@gmx.de) and
+[2.16.0(2)](https://public-inbox.org/git/20180118222154.15784-1-johannes.schindelin@gmx.de)
+* tig [2.3.3](https://public-inbox.org/git/CAFuPQ1L7AKp5UXzLxUhFWkmK2HPRZhOMbapqdT7bCpbHSHkUow@mail.gmail.com)
 
 ## Other News
 
 __Various__
 
+* Jeff King [announced the Git Merge Contributor's Summit](https://public-inbox.org/git/20180119001034.GA29172@sigill.intra.peff.net/)
+on March 7, 2018, Barcelona.
+* Ed Thomson [announced a libgit2 summit](https://public-inbox.org/git/CA+WKDT0rB0XV-99bnYYH7A7=a7doL2fqFR=FOq2DFuczUb9xDw@mail.gmail.com/)
+on March 9, 2018, Barcelona.
+* The [Git Merge web site](https://git-merge.com) has been updated and contains a lot more information. 
+* Git has been [accepted as a mentor organization](https://public-inbox.org/git/CAP8UFD0Qqf23Ya3BP4oL641G+EsZ9pP17iKpSEV4JFsEbEPPKQ@mail.gmail.com/) for the Google Summer of Code 2018.
 
 __Light reading__
 
