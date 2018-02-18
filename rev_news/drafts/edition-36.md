@@ -99,9 +99,12 @@ on March 9, 2018, Barcelona.
 
 __Light reading__
 
-
 __Git tools and sites__
 
+__Listening and Watching__
+
+* [All Things Git](https://allthingsgit.com/episodes/teaching_git_with_johan_abildskov.html) talks to Johan Abildskov
+about how to teach Git to students and professional developers.
 
 ## Credits
 
