@@ -22,7 +22,7 @@ This edition covers what happened during the month of January 2018.
 * [Shawn Pearce has died](https://public-inbox.org/git/nycvar.QRO.7.76.6.1801291031040.35@ZVAVAG-6OXH6DA.rhebcr.pbec.zvpebfbsg.pbz/)
 
 On January 29th Johannes Schindelin, alias Dscho, announced Shawn's
-death on the mailing. He had learned about it from
+death on the mailing list. He had learned about it from
 [a tweet by Chris DiBona](https://twitter.com/cdibona/status/957822400518696960).
 
 Chris' post after telling that "Shawn Pearce, author and committer
@@ -38,7 +38,7 @@ on the Software Freedom Conservancy blog.
 Luca Milanesio, director of GerritForge and one of the maintainers of the Gerrit project, also wrote
 [a post called "Shawn Pearce: a true leader"](https://gitenterprise.me/2018/01/30/shawn-pearce-a-true-leader/).
 
-Dave Borowitz, leader of the Gerrit project, officially announced in a [discussions thread on the Gerrit mailing list](https://groups.google.com/forum/#!topic/repo-discuss/B4P7G1YirdM/discussion) too.
+Dave Borowitz, leader of the Gerrit project, [informed the Gerrit community](https://groups.google.com/forum/#!topic/repo-discuss/B4P7G1YirdM/discussion) on their discussion forum, too.
 
 On the Git mailing list, following Dscho's email, as can be expected
 in this kind of circumstances, people expressed a lot of emotions,
@@ -53,7 +53,7 @@ on March 7-8 in Barcelona.
 
 Just before the closing talk of FOSDEM 2018, "the world largest
 conference of its kind", on February 4th in Brussels, a big round of
-applause was made for Shawn.
+applause was given to Shawn.
 
 Shawn had been [interviewed in Git Rev News edition 30](https://git.github.io/rev_news/2017/08/16/edition-30/)
 published last August. He was also mentioned in 9 other editions, especially in
@@ -95,9 +95,9 @@ in an article about a [Resumable clone based on hybrid "smart" and "dumb" HTTP](
 __Various__
 
 * Jeff King [announced the Git Merge Contributor's Summit](https://public-inbox.org/git/20180119001034.GA29172@sigill.intra.peff.net/)
-on March 7, 2018, Barcelona.
-* Ed Thomson [announced a libgit2 summit](https://public-inbox.org/git/CA+WKDT0rB0XV-99bnYYH7A7=a7doL2fqFR=FOq2DFuczUb9xDw@mail.gmail.com/)
-on March 9, 2018, Barcelona.
+in Barcelona on March 7, 2018.
+* Ed Thomson [announced the libgit2 2018 Summit](https://public-inbox.org/git/CA+WKDT0rB0XV-99bnYYH7A7=a7doL2fqFR=FOq2DFuczUb9xDw@mail.gmail.com/)
+in Barcelona on March 9, 2018.
 * The [Git Merge web site](https://git-merge.com) has been updated and contains a lot more information. 
 * Git has been [accepted as a mentor organization](https://public-inbox.org/git/CAP8UFD0Qqf23Ya3BP4oL641G+EsZ9pP17iKpSEV4JFsEbEPPKQ@mail.gmail.com/) for the Google Summer of Code 2018.
 
@@ -106,7 +106,7 @@ __Light reading__
 __Git tools and sites__
 
 * [GitFinder](https://gitfinder.com) is a Git client for Mac that provides status badges and context menus directly into the Finder.
-* [GRV](https://github.com/rgburke/grv) is a terminal interface for viewing git repositories
+* [GRV](https://github.com/rgburke/grv) is a terminal interface for viewing git repositories.
 
 __Listening and Watching__
 
