@@ -85,10 +85,10 @@ in an article about a [Resumable clone based on hybrid "smart" and "dumb" HTTP](
 [2.16.1](https://public-inbox.org/git/20180122170959.12528-1-johannes.schindelin@gmx.de) and
 [2.16.0(2)](https://public-inbox.org/git/20180118222154.15784-1-johannes.schindelin@gmx.de)
 * tig [2.3.3](https://public-inbox.org/git/CAFuPQ1L7AKp5UXzLxUhFWkmK2HPRZhOMbapqdT7bCpbHSHkUow@mail.gmail.com)
-* Bitbucket Server [v5.8](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-5-8-release-notes-943973059.html)
-* Github Enterprise [v2.12.5](https://enterprise.github.com/releases/2.12.5), [v2.11.11](https://enterprise.github.com/releases/2.11.11), [v2.10.17](https://enterprise.github.com/releases/2.10.17), [v9.2.22](https://enterprise.github.com/releases/2.9.22)
+* Bitbucket Server [5.8](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-5-8-release-notes-943973059.html)
+* Github Enterprise [2.12.5](https://enterprise.github.com/releases/2.12.5), [2.11.11](https://enterprise.github.com/releases/2.11.11), [2.10.17](https://enterprise.github.com/releases/2.10.17), [9.2.22](https://enterprise.github.com/releases/2.9.22)
 * Github Desktop [1.0.13](https://desktop.github.com/release-notes/)
-* Gitlab [v10.4.4](https://about.gitlab.com/2018/02/16/gitlab-10-dot-4-dot-4-released/), [v10.3.7, v10.2.8](https://about.gitlab.com/2018/02/07/gitlab-security-10-4-3-plus-10-3-7-plus-10-2-8-blog/)
+* Gitlab [10.4.4](https://about.gitlab.com/2018/02/16/gitlab-10-dot-4-dot-4-released/), [10.3.7, 10.2.8](https://about.gitlab.com/2018/02/07/gitlab-security-10-4-3-plus-10-3-7-plus-10-2-8-blog/)
 
 ## Other News
 
