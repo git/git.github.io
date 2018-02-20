@@ -51,7 +51,7 @@ of the idea, and something will very likely happen around the
 [upcoming Git Merge 2018 and associated Contributor Summit](https://git-merge.com/)
 on March 7-8 in Barcelona.
 
-Just before the closing talk of FOSSDEM 2018, "the world largest
+Just before the closing talk of FOSDEM 2018, "the world largest
 conference of its kind", on February 4th in Brussels, a big round of
 applause was made for Shawn.
 
@@ -103,10 +103,15 @@ on March 9, 2018, Barcelona.
 
 __Light reading__
 
-
 __Git tools and sites__
 
+* [GitFinder](https://gitfinder.com) is a new Git client for Mac that provides status badges and context menus directly into the Finder.
 * [GRV](https://github.com/rgburke/grv) is a terminal interface for viewing git repositories
+
+__Listening and Watching__
+
+* [All Things Git](https://allthingsgit.com/episodes/teaching_git_with_johan_abildskov.html) talks to Johan Abildskov
+about how to teach Git to students and professional developers.
 
 ## Credits
 
