@@ -105,7 +105,7 @@ __Light reading__
 
 __Git tools and sites__
 
-* [GitFinder](https://gitfinder.com) is a new Git client for Mac that provides status badges and context menus directly into the Finder.
+* [GitFinder](https://gitfinder.com) is a Git client for Mac that provides status badges and context menus directly into the Finder.
 * [GRV](https://github.com/rgburke/grv) is a terminal interface for viewing git repositories
 
 __Listening and Watching__
