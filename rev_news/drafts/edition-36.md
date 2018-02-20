@@ -35,10 +35,10 @@ Jeff King, alias Peff, wrote
 [a "Remembering Shawn Pearce" post](https://sfconservancy.org/blog/2018/jan/30/shawn-pearce/)
 on the Software Freedom Conservancy blog.
 
-Luca Milanesio, the leader of the Gerrit project, also wrote
+Luca Milanesio, director of GerritForge and one of the maintainers of the Gerrit project, also wrote
 [a post called "Shawn Pearce: a true leader"](https://gitenterprise.me/2018/01/30/shawn-pearce-a-true-leader/).
 
-There have been [discussions on the Gerrit mailing list](https://groups.google.com/forum/#!topic/repo-discuss/B4P7G1YirdM/discussion) too.
+Dave Borowitz, leader of the Gerrit project, officially announced in a [discussions thread on the Gerrit mailing list](https://groups.google.com/forum/#!topic/repo-discuss/B4P7G1YirdM/discussion) too.
 
 On the Git mailing list, following Dscho's email, as can be expected
 in this kind of circumstances, people expressed a lot of emotions,
