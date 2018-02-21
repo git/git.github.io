@@ -79,7 +79,8 @@ in an article about a [Resumable clone based on hybrid "smart" and "dumb" HTTP](
 * Git [v2.16.2](https://public-inbox.org/git/xmqqinaw7rat.fsf@gitster-ct.c.googlers.com),
 [v2.16.1](https://public-inbox.org/git/xmqqy3kqmoax.fsf@gitster.mtv.corp.google.com) and
 [v2.16.0](https://public-inbox.org/git/xmqqfu73r9tf.fsf@gitster.mtv.corp.google.com)
-* Git for Windows [2.16.2](https://github.com/git-for-windows/git/releases/tag/v2.16.2.windows.1), Git for Windows [2.16.1(4)](https://public-inbox.org/git/20180207200157.17672-1-johannes.schindelin@gmx.de),
+* Git for Windows [2.16.2](https://github.com/git-for-windows/git/releases/tag/v2.16.2.windows.1),
+[2.16.1(4)](https://public-inbox.org/git/20180207200157.17672-1-johannes.schindelin@gmx.de),
 [2.16.1(3)](https://public-inbox.org/git/20180206153802.14064-1-johannes.schindelin@gmx.de),
 [2.16.1(2)](https://public-inbox.org/git/0MFuWk-1eTyyv270g-00EthZ@mail.gmx.com),
 [2.16.1](https://public-inbox.org/git/20180122170959.12528-1-johannes.schindelin@gmx.de) and
