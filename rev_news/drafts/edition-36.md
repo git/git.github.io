@@ -104,10 +104,17 @@ in Barcelona on March 9, 2018.
 
 __Light reading__
 
+* [Git for Beginners](https://lennerd.github.io/git-for-beginners/) is "an interactive tutorial to learn and understand Git".
+* [Thoughts on atomic commits and quality of life](https://brainlessdeveloper.com/2018/02/19/git-best-practices-atomic-commits/).
+* [git open](http://blog.amjith.com/git-open-a-small-git-hack) is a blog post about a small git hack to open the latest files that have been worked on.
+
 __Git tools and sites__
 
 * [GitFinder](https://gitfinder.com) is a Git client for Mac that provides status badges and context menus directly into the Finder.
 * [GRV](https://github.com/rgburke/grv) is a terminal interface for viewing git repositories.
+* [fugit](https://github.com/cbdevnet/fugit) is "_really_ lightweight git access control".
+* [gitsh](https://github.com/thoughtbot/gitsh) is "an interactive shell for git".
+* [GitLeaks](https://github.com/zricethezav/gitleaks) is a tool to "check git repos for secrets and keys".
 
 __Listening and Watching__
 
