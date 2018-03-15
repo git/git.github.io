@@ -38,6 +38,17 @@ This edition covers what happened during the month of February 2018.
 
 ## Other News
 
+__News from Git Merge 2018__
+
+Another exciting [Git Merge](https://git-merge.com/) happened this year, this time in the lovely city of Barcelona in Catalunia, Spain. Surrounded by crazy skaters, two days full of Git happened, with a couple of add-on events on both ends.
+
+* The usual Git Contributor Summit was held in parallel to the workshop day. Alex Vandiver provided a nice [write-up](https://public-inbox.org/git/alpine.DEB.2.20.1803091557510.23109@alexmv-linux/) of the event, which felt more focused on concrete projects than in the last years. Be sure to read through the replies that add more information, still.
+* Plastic SCM's Semantic Merge was not only presented in a [talk](https://git-merge.com/#pablo-santos-luaces), but made available as a bot called ["mergedroid"](https://gmaster.io/mergedroid) that applies the same merge conflict resolution to Pull Requests on GitHub.
+* A big theme this year was to apply Git to files other than source code.
+  * Stephen Hathaway detailed how [designers use Git to work on visual design](https://git-merge.com/#stephen-hathaway).
+  * William Chia described how [GitLab uses Git to collaborate on documents](https://git-merge.com/#william-chia).
+  * The xltrail product makes it possible to use [Git to manage Excel files](https://www.xltrail.com) (this was demo'ed between talks by Felix Zumstein).
+
 __Various__
 
 
