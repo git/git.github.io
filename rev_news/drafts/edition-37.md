@@ -37,7 +37,14 @@ to the [Git Merge](https://git-merge.com/) conference on March 7th and 8th 2018.
 ## Releases
 
 * Git [v2.17.0-rc0](https://public-inbox.org/git/xmqqwoyc3kir.fsf@gitster-ct.c.googlers.com)
-
+* Github Enterprise [2.12.7](https://enterprise.github.com/releases/2.12.7),
+[2.11.13](https://enterprise.github.com/releases/2.11.13),
+[2.10.19](https://enterprise.github.com/releases/2.10.19)
+* Gitlab [10.5](https://about.gitlab.com/2018/02/22/gitlab-10-5-released/),
+[10.5.1](https://about.gitlab.com/2018/02/22/gitlab-10-5-1-released/),
+[10.5.2](https://about.gitlab.com/2018/02/27/gitlab-10-5-2-released/),
+[10.5.3, 10.4.5, 10.3.8](https://about.gitlab.com/2018/03/06/security-10-5-3-plus-10-4-5-plus-10-3-8-1st-blog-post/),
+[10.5.4](https://about.gitlab.com/2018/03/09/gitlab-10-5-4-released/)
 
 ## Other News
 
