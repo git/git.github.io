@@ -36,6 +36,8 @@ to the [Git Merge](https://git-merge.com/) conference on March 7th and 8th 2018.
 
 ## Releases
 
+* Git [v2.17.0-rc0](https://public-inbox.org/git/xmqqwoyc3kir.fsf@gitster-ct.c.googlers.com)
+
 
 ## Other News
 
