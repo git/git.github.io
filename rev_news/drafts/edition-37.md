@@ -1,5 +1,5 @@
 ---
-title: Git Rev News Edition 37 (XXX, 2018)
+title: Git Rev News Edition 37 (March 21st, 2018)
 layout: default
 date: 2018-03-21 12:06:51 +0100
 author: chriscool
@@ -7,13 +7,14 @@ categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 37 (XXX, 2018)
+## Git Rev News: Edition 37 (March 21st, 2018)
 
 Welcome to the 37th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
-This edition covers what happened during the month of February 2018.
+This edition covers what happened from the month of February 2018 up
+to the [Git Merge](https://git-merge.com/) conference on March 7th and 8th 2018.
 
 ## Discussions
 
