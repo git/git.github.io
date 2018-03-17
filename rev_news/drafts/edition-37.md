@@ -38,8 +38,12 @@ to the [Git Merge](https://git-merge.com/) conference on March 7th and 8th 2018.
 
 * Git [v2.17.0-rc0](https://public-inbox.org/git/xmqqwoyc3kir.fsf@gitster-ct.c.googlers.com)
 * Github Enterprise [2.12.7](https://enterprise.github.com/releases/2.12.7),
+[2.12.6](https://enterprise.github.com/releases/2.12.6),
 [2.11.13](https://enterprise.github.com/releases/2.11.13),
-[2.10.19](https://enterprise.github.com/releases/2.10.19)
+[2.11.12](https://enterprise.github.com/releases/2.11.12),
+[2.10.19](https://enterprise.github.com/releases/2.10.19),
+[2.10.18](https://enterprise.github.com/releases/2.10.18),
+[2.9.23](https://enterprise.github.com/releases/2.9.23)
 * Gitlab [10.5](https://about.gitlab.com/2018/02/22/gitlab-10-5-released/),
 [10.5.1](https://about.gitlab.com/2018/02/22/gitlab-10-5-1-released/),
 [10.5.2](https://about.gitlab.com/2018/02/27/gitlab-10-5-2-released/),
