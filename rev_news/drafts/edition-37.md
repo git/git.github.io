@@ -72,8 +72,8 @@ __Light reading__
 __Git tools and sites__
 
 * The [GVFS](https://gvfs.io/) effort (scaling Git to support massive repositories) starts developing [MacOS support](https://blogs.msdn.microsoft.com/devops/2018/03/15/gvfs-for-mac/).
-* Michael Haggerty [announced](https://public-inbox.org/git/CAMy9T_FaOdLP482YZcMX16mpy_EgM0ok1GKg45rE=X+HTGxSiQ@mail.gmail.com)
-[git-sizer](https://github.com/github/git-sizer), a new tool to "compute various size-related metrics for your Git repository".
+* Michael Haggerty [announced a new tool](https://public-inbox.org/git/CAMy9T_FaOdLP482YZcMX16mpy_EgM0ok1GKg45rE=X+HTGxSiQ@mail.gmail.com)
+called [git-sizer](https://github.com/github/git-sizer) to "compute various size-related metrics for your Git repository".
 
 
 ## Credits
