@@ -49,6 +49,9 @@ to the [Git Merge](https://git-merge.com/) conference on March 7th and 8th 2018.
 [10.5.2](https://about.gitlab.com/2018/02/27/gitlab-10-5-2-released/),
 [10.5.3, 10.4.5, 10.3.8](https://about.gitlab.com/2018/03/06/security-10-5-3-plus-10-4-5-plus-10-3-8-1st-blog-post/),
 [10.5.4](https://about.gitlab.com/2018/03/09/gitlab-10-5-4-released/)
+* Github Desktop [1.1.0](https://desktop.github.com/release-notes/)
+* GitKraken [3.4.0](https://support.gitkraken.com/release-notes/current#v3-4-0),
+[3.4.1](https://support.gitkraken.com/release-notes/current#v3-4-1)
 
 ## Other News
 
