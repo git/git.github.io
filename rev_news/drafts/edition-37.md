@@ -58,7 +58,7 @@ __Light reading__
 
 __Git tools and sites__
 
-* The [GVFS](https://gvfs.io/) effort (scaling Git to support massive repositories) starts developing [support macOS](https://blogs.msdn.microsoft.com/devops/2018/03/15/gvfs-for-mac/).
+* The [GVFS](https://gvfs.io/) effort (scaling Git to support massive repositories) starts developing [MacOS support](https://blogs.msdn.microsoft.com/devops/2018/03/15/gvfs-for-mac/).
 
 
 ## Credits
