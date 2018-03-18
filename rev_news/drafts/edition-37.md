@@ -26,13 +26,86 @@ to the [Git Merge](https://git-merge.com/) conference on March 7th and 8th 2018.
 ### Reviews
 -->
 
-<!---
-### Support
--->
 
-<!---
-## Developer Spotlight:
--->
+### Support
+
+* [Is there any way to "interrupt" a rebase?](https://public-inbox.org/git/CAE1pOi1XtrWqG7mOdrNt10YoZG0LOAB7i9cc1Gi8oWhULxE57A@mail.gmail.com/)
+
+Hilco Wijbenga explained to the mailing list that sometimes when a
+rebase fails because of rebase/merge conflicts, he would like to
+"rewind" the rebase to an earlier commit and restart from there. This
+would be useful for example when the earlier commit is the right
+commit where a conflict should be fixed.
+
+His current solution is to abort the rebase and start over with
+̀git rebase --interactive` and then "edit" commits. This doesn't work
+well though when a lot of conflicts have already been resolved before
+the ealier commit he would "rewind" to, because, when the original
+rebase is aborted, all the work that already went into resolving
+conflicts is lost.
+
+Brian Carlson replied to Hilco that in this case he unstages all the
+changes from the index, then makes the change that should have gone
+into the earlier commit, uses `git commit --fixup` (or `--squash`),
+and then restages the rest of the changes and continues with the
+rebase. He can then use `git rebase -i --autosquash` afterwards to
+insert the fixup commit into the right place.
+
+Hilco replied to Brian that he ends up doing that too, but it doesn't
+work well when the fixup commit is not easy to move to the right
+place.
+
+Jeff King, alias Peff, replied to Hilco's original email saying that
+`git rerere` should help reapplying conflict resolutions. He also
+suggested to "simply pick the resolved state at each step" when
+repeating the rebase, using for example `git tag failed` to remember
+the failed attempt, and then `git checkout failed~4 --` to pick
+conflict resolutions from the failed attempt.
+
+Peff alternatively suggested "rewinding" using `git reset --hard` and
+then, after fixing the earlier commit, using `git cherry-pick` to
+cherry-pick commits with conflict resolutions from the failed attempt.
+
+Johannes Schindelin, alias Dscho, also replied to Hilco. Dscho first
+suggested basically the same workflow as Peff's alternative
+suggestion.
+
+He then suggested an alternative strategy which consists in copying
+parts of the $GIT_DIR/rebase-merge/done file to the beginning of the
+$GIT_DIR/rebase-merge/git-rebase-todo file, instead of cherry-picking
+commits. This copying would in effect "rewind" the original rebase.
+
+Dscho mentioned that a new interactive rebase subcommand could be
+created to facilitate using this strategy. The new subcommand could
+"make use of the fact that the interactive rebase accumulates mappings
+between the original commits and the rewritten ones" in the
+$GIT_DIR/rebase-merge/rewritten-list file.
+
+Phillip Wood also replied to Hilco's first email suggesting something
+similar as Dscho's alternative strategy. Phillip suggested using
+`git log --pretty="pick %h %s" <earlier_commit>..` followed by
+`git rebase --edit-todo` to edit the git-rebase-todo file, and then
+`git checkout <earlier_commit>` to rewind.
+
+In a following email replying to himself Dscho elaborated on a
+possible new subcommand. He proposed
+`git rebase --replay-latest-commits 3` and a sightly different way to
+copy commits to the git-rebase-todo file so that it contains commits
+with resolved merge conflicts.
+
+Phillip replied to Dscho that it's the reason why he actually uses
+`git log --pretty="pick %h %s" <earlier_commit>..` to get the lines
+that should be pasted at the beginning of the git-rebase-todo file.
+
+Peff replied to Dscho suggesting a "general form" of Dscho's proposal
+that would be called `git rebase --rewind` and that could "undo" the
+prior rebase command whatever it is.
+
+Jacob Keller, alias Jake, chimed in to support Peff's suggestion and
+Hilco's wish of "a --rewind that simply tracks the point of each
+history and can reset back to each".
+
+<!--- ## Developer Spotlight: -->
 
 ## Releases
 
