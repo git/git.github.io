@@ -38,7 +38,7 @@ would be useful for example when the earlier commit is the right
 commit where a conflict should be fixed.
 
 His current solution is to abort the rebase and start over with
-̀git rebase --interactive` and then "edit" commits. This doesn't work
+`git rebase --interactive` and then "edit" commits. This doesn't work
 well though when a lot of conflicts have already been resolved before
 the ealier commit he would "rewind" to, because, when the original
 rebase is aborted, all the work that already went into resolving
