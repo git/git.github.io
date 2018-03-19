@@ -125,6 +125,8 @@ history and can reset back to each".
 * Github Desktop [1.1.0](https://desktop.github.com/release-notes/)
 * GitKraken [3.4.0](https://support.gitkraken.com/release-notes/current#v3-4-0),
 [3.4.1](https://support.gitkraken.com/release-notes/current#v3-4-1)
+* libgit2 [0.26.1](https://github.com/libgit2/libgit2/releases/tag/v0.26.1), [0.26.2](https://github.com/libgit2/libgit2/releases/tag/v0.26.2), [0.26.3](https://github.com/libgit2/libgit2/releases/tag/v0.26.3)
+* LibGit2Sharp [0.24.1](https://github.com/libgit2/libgit2sharp/releases/tag/v0.24.1)
 
 ## Other News
 
