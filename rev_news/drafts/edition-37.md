@@ -141,10 +141,19 @@ Another exciting [Git Merge](https://git-merge.com/) happened this year, this ti
   * William Chia described how [GitLab uses Git to collaborate on documents](https://git-merge.com/#william-chia).
   * The xltrail product makes it possible to use [Git to manage Excel files](https://www.xltrail.com) (this was demo'ed between talks by Felix Zumstein).
 
+
 __Various__
+
+* [Building Windows: 4 million commits, 10 million work items | Ars Technica](https://arstechnica.com/gadgets/2018/03/building-windows-4-million-commits-10-million-work-items/). Microsoft talks about some of the work it’s done to move Windows development to VSTS (Visual Studio Team Services), the company's source control, item tracking, integration and testing system (Git and GVFS is a part of it).
+* [GitHub introduces support for committing together with co-authors](https://blog.github.com/2018-01-29-commit-together-with-co-authors/), via "Co-authored-by:" trailers at the end of the commit message
 
 
 __Light reading__
+
+* [Code Review Isn't Evil. Security Through Obscurity Is.](https://www.eff.org/deeplinks/2018/01/code-review-not-evil-security-through-obscurity) by Sydney Li, Nate Cardozo, and Jeremy Malcolm
+* [Nobody's just reading your code](http://akkartik.name/post/comprehension) by Stephen Malina, about _guiding exploration_
+* [That Thing About Commit Messages](http://zdominguez.com/2018/03/03/commit-messages.html) by Zarah Dominguez
+* [https://gregoryszorc.com/blog/2017/12/11/high-level-problems-with-git-and-how-to-fix-them/](https://gregoryszorc.com/blog/2017/12/11/high-level-problems-with-git-and-how-to-fix-them/) by Gregory Szorc
 
 
 __Git tools and sites__
@@ -152,6 +161,12 @@ __Git tools and sites__
 * The [GVFS](https://gvfs.io/) effort (scaling Git to support massive repositories) starts developing [MacOS support](https://blogs.msdn.microsoft.com/devops/2018/03/15/gvfs-for-mac/).
 * Michael Haggerty [announced a new tool](https://public-inbox.org/git/CAMy9T_FaOdLP482YZcMX16mpy_EgM0ok1GKg45rE=X+HTGxSiQ@mail.gmail.com)
 called [git-sizer](https://github.com/github/git-sizer) to "compute various size-related metrics for your Git repository".
+* [Gitkube](https://gitkube.sh/) is a tool for building and deploying docker images on Kubernetes using `git push`.
+* [nbdime](http://nbdime.readthedocs.io/en/latest/) –- diffing and merging of Jupyter Notebooks
+* [Easily back up your Github repositories and/or issues](http://blogs.perl.org/users/steve_bertrand/2018/02/easily-back-up-your-github-repositories-andor-issues.html) with [Github::Backup](https://metacpan.org/pod/Github::Backup)
+* [rpm-ostree](http://www.projectatomic.io/docs/os-updates/) update system, based on [OSTree / libostree](https://ostree.readthedocs.io/en/latest/), which is described as "Git for operating systems" -- where atomic versions are managed in a Git repository, [used by Project Atomic from Red Hat and the Fedora Project](https://lwn.net/Articles/747576/)
+* [git-hooks](http://github.com/icefox/git-hooks) by Benjamin Meyer is a tool for [managing project, user, and global git hooks](https://benjamin-meyer.blogspot.com/2010/06/managing-project-user-and-global-git.html)
+* [The Git® Notes for Professionals](http://books.goalkicker.com/GitBook/) book, compiled from Stack Overflow Documentation dump (sunsetted project)
 
 
 ## Credits
