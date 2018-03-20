@@ -87,7 +87,7 @@ similar as Dscho's alternative strategy. Phillip suggested using
 `git rebase --edit-todo` to edit the git-rebase-todo file, and then
 `git checkout <earlier_commit>` to rewind.
 
-In a following email replying to himself Dscho elaborated on a
+In a subsequent email replying to himself Dscho elaborated on a
 possible new subcommand. He proposed
 `git rebase --replay-latest-commits 3` and a sightly different way to
 copy commits to the git-rebase-todo file so that it contains commits
@@ -102,7 +102,7 @@ that would be called `git rebase --rewind` and that could "undo" the
 prior rebase command whatever it is.
 
 Jacob Keller, alias Jake, chimed in to support Peff's suggestion and
-Hilco's wish of "a --rewind that simply tracks the point of each
+Hilco's wish of "a \-\-rewind that simply tracks the point of each
 history and can reset back to each".
 
 <!--- ## Developer Spotlight: -->
@@ -110,13 +110,13 @@ history and can reset back to each".
 ## Releases
 
 * Git [v2.17.0-rc0](https://public-inbox.org/git/xmqqwoyc3kir.fsf@gitster-ct.c.googlers.com)
-* Github Enterprise [2.12.7](https://enterprise.github.com/releases/2.12.7),
-[2.12.6](https://enterprise.github.com/releases/2.12.6),
-[2.11.13](https://enterprise.github.com/releases/2.11.13),
-[2.11.12](https://enterprise.github.com/releases/2.11.12),
-[2.10.19](https://enterprise.github.com/releases/2.10.19),
+* Github Enterprise [2.9.23](https://enterprise.github.com/releases/2.9.23),
 [2.10.18](https://enterprise.github.com/releases/2.10.18),
-[2.9.23](https://enterprise.github.com/releases/2.9.23)
+[2.10.19](https://enterprise.github.com/releases/2.10.19),
+[2.11.12](https://enterprise.github.com/releases/2.11.12),
+[2.11.13](https://enterprise.github.com/releases/2.11.13),
+[2.12.6](https://enterprise.github.com/releases/2.12.6),
+[2.12.7](https://enterprise.github.com/releases/2.12.7)
 * Gitlab [10.5](https://about.gitlab.com/2018/02/22/gitlab-10-5-released/),
 [10.5.1](https://about.gitlab.com/2018/02/22/gitlab-10-5-1-released/),
 [10.5.2](https://about.gitlab.com/2018/02/27/gitlab-10-5-2-released/),
@@ -132,11 +132,11 @@ history and can reset back to each".
 
 __News from Git Merge 2018__
 
-Another exciting [Git Merge](https://git-merge.com/) happened this year, this time in the lovely city of Barcelona in Catalunia, Spain. Surrounded by crazy skaters, two days full of Git happened, with a couple of add-on events on both ends.
+Another exciting [Git Merge](https://git-merge.com/) happened this year, this time in the lovely city of Barcelona in Catalonia, Spain. Surrounded by crazy skaters, two days full of Git happened, with a couple of add-on events on both ends.
 
 * The usual Git Contributor Summit was held in parallel to the workshop day. Alex Vandiver provided a nice [write-up](https://public-inbox.org/git/alpine.DEB.2.20.1803091557510.23109@alexmv-linux/) of the event, which felt more focused on concrete projects than in the last years. Be sure to read through the replies that add more information, still.
 * Plastic SCM's Semantic Merge was not only presented in a [talk](https://git-merge.com/#pablo-santos-luaces), but made available as a bot called ["mergedroid"](https://gmaster.io/mergedroid) that applies the same merge conflict resolution to Pull Requests on GitHub.
-* A big theme this year was to apply Git to files other than source code.
+* A big theme this year was to apply Git to files other than source code:
   * Stephen Hathaway detailed how [designers use Git to work on visual design](https://git-merge.com/#stephen-hathaway).
   * William Chia described how [GitLab uses Git to collaborate on documents](https://git-merge.com/#william-chia).
   * The xltrail product makes it possible to use [Git to manage Excel files](https://www.xltrail.com) (this was demo'ed between talks by Felix Zumstein).
