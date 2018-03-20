@@ -110,6 +110,7 @@ history and can reset back to each".
 ## Releases
 
 * Git [v2.17.0-rc0](https://public-inbox.org/git/xmqqwoyc3kir.fsf@gitster-ct.c.googlers.com)
+* Git for Windows [v2.17.0-rc0](https://github.com/git-for-windows/git/releases/tag/v2.17.0-rc0.windows.1)
 * Github Enterprise [2.12.7](https://enterprise.github.com/releases/2.12.7),
 [2.12.6](https://enterprise.github.com/releases/2.12.6),
 [2.11.13](https://enterprise.github.com/releases/2.11.13),
