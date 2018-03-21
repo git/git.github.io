@@ -18,9 +18,20 @@ to the [Git Merge](https://git-merge.com/) conference on March 7th and 8th 2018.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* Git Merge 2018 conference
+
+Another exciting [Git Merge](https://git-merge.com/) happened this year, this time in the lovely city of Barcelona in Catalonia, Spain. Surrounded by crazy skaters, two days full of Git happened, with a couple of add-on events on both ends.
+
+* The usual Git Contributor Summit was held in parallel to the workshop day. Alex Vandiver provided a nice [write-up](https://public-inbox.org/git/alpine.DEB.2.20.1803091557510.23109@alexmv-linux/) of the event, which felt more focused on concrete projects than in the last years. Be sure to read through the replies that add more information, still.
+* A few days before the Contributor Summit Jeff King, alias Peff, posted a [Git / Software Freedom Conservancy status report (2018)](https://public-inbox.org/git/20180306231609.GA1632@sigill.intra.peff.net/) and a [git-scm.com update](https://public-inbox.org/git/20180306230419.GA1373@sigill.intra.peff.net/).
+* Plastic SCM's Semantic Merge was not only presented in a [talk](https://git-merge.com/#pablo-santos-luaces), but made available as a bot called ["mergedroid"](https://gmaster.io/mergedroid) that applies the same merge conflict resolution to Pull Requests on GitHub.
+* A big theme this year was to apply Git to files other than source code:
+  * Stephen Hathaway detailed how [designers use Git to work on visual design](https://git-merge.com/#stephen-hathaway).
+  * William Chia described how [GitLab uses Git to collaborate on documents](https://git-merge.com/#william-chia).
+  * The xltrail product makes it possible to use [Git to manage Excel files](https://www.xltrail.com) (this was demo'ed between talks by Felix Zumstein).
+
 
 <!---
 ### Reviews
@@ -129,19 +140,8 @@ history and can reset back to each".
 * libgit2 [0.26.1](https://github.com/libgit2/libgit2/releases/tag/v0.26.1), [0.26.2](https://github.com/libgit2/libgit2/releases/tag/v0.26.2), [0.26.3](https://github.com/libgit2/libgit2/releases/tag/v0.26.3)
 * LibGit2Sharp [0.24.1](https://github.com/libgit2/libgit2sharp/releases/tag/v0.24.1)
 
+
 ## Other News
-
-__News from Git Merge 2018__
-
-Another exciting [Git Merge](https://git-merge.com/) happened this year, this time in the lovely city of Barcelona in Catalonia, Spain. Surrounded by crazy skaters, two days full of Git happened, with a couple of add-on events on both ends.
-
-* The usual Git Contributor Summit was held in parallel to the workshop day. Alex Vandiver provided a nice [write-up](https://public-inbox.org/git/alpine.DEB.2.20.1803091557510.23109@alexmv-linux/) of the event, which felt more focused on concrete projects than in the last years. Be sure to read through the replies that add more information, still.
-* A few days before the Contributor Summit Jeff King, alias Peff, posted a [Git / Software Freedom Conservancy status report (2018)](https://public-inbox.org/git/20180306231609.GA1632@sigill.intra.peff.net/) and a [git-scm.com update](https://public-inbox.org/git/20180306230419.GA1373@sigill.intra.peff.net/).
-* Plastic SCM's Semantic Merge was not only presented in a [talk](https://git-merge.com/#pablo-santos-luaces), but made available as a bot called ["mergedroid"](https://gmaster.io/mergedroid) that applies the same merge conflict resolution to Pull Requests on GitHub.
-* A big theme this year was to apply Git to files other than source code:
-  * Stephen Hathaway detailed how [designers use Git to work on visual design](https://git-merge.com/#stephen-hathaway).
-  * William Chia described how [GitLab uses Git to collaborate on documents](https://git-merge.com/#william-chia).
-  * The xltrail product makes it possible to use [Git to manage Excel files](https://www.xltrail.com) (this was demo'ed between talks by Felix Zumstein).
 
 
 __Various__
