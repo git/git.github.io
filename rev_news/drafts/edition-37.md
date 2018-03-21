@@ -149,6 +149,7 @@ __Various__
 
 * [Building Windows: 4 million commits, 10 million work items | Ars Technica](https://arstechnica.com/gadgets/2018/03/building-windows-4-million-commits-10-million-work-items/). Microsoft talks about some of the work it’s done to move Windows development to VSTS (Visual Studio Team Services), the company's source control, item tracking, integration and testing system (Git and GVFS is a part of it).
 * [GitHub introduces support for committing together with co-authors](https://blog.github.com/2018-01-29-commit-together-with-co-authors/), via "Co-authored-by:" trailers at the end of the commit message
+* Git's history simplification [is explained nicely on Microsoft's documentation site](https://docs.microsoft.com/en-us/vsts/git/concepts/history-simplification).
 
 
 __Light reading__
