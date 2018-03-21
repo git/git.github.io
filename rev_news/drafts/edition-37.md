@@ -156,7 +156,7 @@ __Light reading__
 * [Code Review Isn't Evil. Security Through Obscurity Is.](https://www.eff.org/deeplinks/2018/01/code-review-not-evil-security-through-obscurity) by Sydney Li, Nate Cardozo, and Jeremy Malcolm
 * [Nobody's just reading your code](http://akkartik.name/post/comprehension) by Stephen Malina, about _guiding exploration_
 * [That Thing About Commit Messages](http://zdominguez.com/2018/03/03/commit-messages.html) by Zarah Dominguez
-* [https://gregoryszorc.com/blog/2017/12/11/high-level-problems-with-git-and-how-to-fix-them/](https://gregoryszorc.com/blog/2017/12/11/high-level-problems-with-git-and-how-to-fix-them/) by Gregory Szorc
+* [High-level Problems with Git and How to Fix Them](https://gregoryszorc.com/blog/2017/12/11/high-level-problems-with-git-and-how-to-fix-them/) by Gregory Szorc
 
 
 __Git tools and sites__
