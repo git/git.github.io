@@ -40,6 +40,7 @@ This edition covers what happened during the month of March 2018.
 
 __Various__
 
++ The [videos of the 2018 Git Merge talks](https://www.youtube.com/watch?v=MfIi3d7UAhs&list=PLTpLVrHJAlODA3qfvV-x_QBPTZtT5JT5q) have been released.
 
 __Light reading__
 
