@@ -110,12 +110,19 @@ This edition covers what happened during the month of March 2018.
 
 ## Releases
 
+* Git [v2.17.0](https://public-inbox.org/git/xmqq6059z9kz.fsf@gitster-ct.c.googlers.com),
+[v2.17.0-rc2](https://public-inbox.org/git/xmqqwoxw6kkk.fsf@gitster-ct.c.googlers.com),
+[v2.17.0-rc1](https://public-inbox.org/git/xmqqtvt9nr7p.fsf@gitster-ct.c.googlers.com) and
+[v2.16.3](https://public-inbox.org/git/xmqq4ll7lq0r.fsf@gitster-ct.c.googlers.com)
+* Git for Windows [2.17.0](https://public-inbox.org/git/20180403123410.13300-1-johannes.schindelin@gmx.de) and
+[2.16.3](https://public-inbox.org/git/20180323174044.14612-1-johannes.schindelin@gmx.de)
 
 ## Other News
 
 __Various__
 
 + The [videos of the 2018 Git Merge talks](https://www.youtube.com/watch?v=MfIi3d7UAhs&list=PLTpLVrHJAlODA3qfvV-x_QBPTZtT5JT5q) have been released.
++ [Git developers contacted by an advanced alien species](https://public-inbox.org/git/CAP8UFD0WZ07EVER_HupcFLw4w-4H2hb2cp8wTaj2i9jOc_+pTA@mail.gmail.com), a 1st of April announce.
 
 __Light reading__
 
