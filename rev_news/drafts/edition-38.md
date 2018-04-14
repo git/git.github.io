@@ -52,8 +52,8 @@ Git, and it become this feature: git clean --interactive.
 I also have contributed some fixes which maybe only important under
 certain corner case:
 
-  * [fix on crash of git-receive-pack](https://github.com/git/git/commit/b112b14d)
-  * [fix on proxy issue](https://github.com/git/git/commit/d445fda4)
+  - [fix on crash of git-receive-pack](https://github.com/git/git/commit/b112b14d)
+  - [fix on proxy issue](https://github.com/git/git/commit/d445fda4)
 
 For Chinese, the most important work I have done is that I wrote a
 book on Git in Chinese, and the book was published at 2011. As soon as
@@ -77,15 +77,15 @@ data centers distributed in China. There are many cool features I am
 working on.
 For example: Git central workflow and Git-CDN.
 
-  * Git central workflow is something like Gerrit. No forking before
+  - Git central workflow is something like Gerrit. No forking before
     sending pull request and no "Change-Id" in the commit message, and
     we use pull request for review.
 
-  * Git-CDN is a reverse proxy for Git. I wrote a program named
+  - Git-CDN is a reverse proxy for Git. I wrote a program named
     `git-upload-pack-proxy` to handle data syncing across different
     data-centers.
 
-  * Also we have some enhancement on Git, and I wish I can
+  - Also we have some enhancement on Git, and I wish I can
     contribute them back to Git one day.
 
 * If you could get a team of expert developers to work full time on
