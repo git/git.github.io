@@ -116,6 +116,19 @@ This edition covers what happened during the month of March 2018.
 [v2.16.3](https://public-inbox.org/git/xmqq4ll7lq0r.fsf@gitster-ct.c.googlers.com)
 * Git for Windows [2.17.0](https://public-inbox.org/git/20180403123410.13300-1-johannes.schindelin@gmx.de) and
 [2.16.3](https://public-inbox.org/git/20180323174044.14612-1-johannes.schindelin@gmx.de)
+* GitHub Enterprise [2.13.1](http://enterprise.github.localhost/releases/2.13.1),
+[2.12.9](http://enterprise.github.localhost/releases/2.12.9),
+[2.11.15](http://enterprise.github.localhost/releases/2.11.15),
+[2.10.21](http://enterprise.github.localhost/releases/2.10.21),
+[2.13.0](http://enterprise.github.localhost/releases/2.13.0),
+[2.12.8](http://enterprise.github.localhost/releases/2.12.8),
+[2.11.14](http://enterprise.github.localhost/releases/2.11.14) and
+[2.10.20](http://enterprise.github.localhost/releases/2.10.20)
+* GitLab [10.5.5](https://about.gitlab.com/2018/03/19/gitlab-10-5-5-released/),
+[10.6](https://about.gitlab.com/2018/03/22/gitlab-10-6-released/),
+[10.6.1](https://about.gitlab.com/2018/03/28/gitlab-10-6-1-released/),
+[10.6.2](https://about.gitlab.com/2018/03/29/gitlab-10-6-2-released/) and
+[10.6.4](https://about.gitlab.com/2018/04/09/gitlab-10-6-4-released/)
 
 ## Other News
 
