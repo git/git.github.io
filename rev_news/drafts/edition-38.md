@@ -46,8 +46,8 @@ One guy (reader of my book) lost his work by running "git clean -f"
 and asked me for help. I wanted to do something, so I sent patches to
 Git, and it become this feature: git clean --interactive.
 
-    - https://github.com/git/git/commit/9f93e461
-    - http://marc.info/?l=git&m=137217568306354
+  - https://github.com/git/git/commit/9f93e461
+  - http://marc.info/?l=git&m=137217568306354
 
 I also have contributed some fixes which maybe only important under
 certain corner case:
@@ -77,16 +77,16 @@ data centers distributed in China. There are many cool features I am
 working on.
 For example: Git central workflow and Git-CDN.
 
-    * Git central workflow is something like Gerrit. No forking before
-      sending pull request and no "Change-Id" in the commit message,
-      and we use pull request for review.
+  * Git central workflow is something like Gerrit. No forking before
+    sending pull request and no "Change-Id" in the commit message, and
+    we use pull request for review.
 
-    * Git-CDN is a reverse proxy for Git. I wrote a program named
-      `git-upload-pack-proxy` to handle data syncing across different
-      data-centers.
+  * Git-CDN is a reverse proxy for Git. I wrote a program named
+    `git-upload-pack-proxy` to handle data syncing across different
+    data-centers.
 
-    * Also we have some enhancement on Git, and I wish I can
-      contribute them back to Git one day.
+  * Also we have some enhancement on Git, and I wish I can
+    contribute them back to Git one day.
 
 * If you could get a team of expert developers to work full time on
   something in Git for a full year, what would it be?
@@ -104,9 +104,9 @@ garbage collection, it will be great.
 * What is your favorite Git-related tool/library, outside of Git
   itself?
 
-Library: libgit2
-L10n: Emacs po-mode
-Git RPC: Gitaly
+  - Library: libgit2
+  - L10n: Emacs po-mode
+  - Git RPC: Gitaly
 
 ## Releases
 
