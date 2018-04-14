@@ -52,8 +52,8 @@ Git, and it become this feature: git clean --interactive.
 I also have contributed some fixes which maybe only important under
 certain corner case:
 
-    * [fix on crash of git-receive-pack](https://github.com/git/git/commit/b112b14d)
-    * [fix on proxy issue](https://github.com/git/git/commit/d445fda4)
+  * [fix on crash of git-receive-pack](https://github.com/git/git/commit/b112b14d)
+  * [fix on proxy issue](https://github.com/git/git/commit/d445fda4)
 
 For Chinese, the most important work I have done is that I wrote a
 book on Git in Chinese, and the book was published at 2011. As soon as
