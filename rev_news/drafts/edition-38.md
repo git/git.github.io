@@ -131,7 +131,8 @@ This edition covers what happened during the month of March 2018.
 * GitLab [10.5.5](https://about.gitlab.com/2018/03/19/gitlab-10-5-5-released/),
 [10.6](https://about.gitlab.com/2018/03/22/gitlab-10-6-released/),
 [10.6.1](https://about.gitlab.com/2018/03/28/gitlab-10-6-1-released/),
-[10.6.2](https://about.gitlab.com/2018/03/29/gitlab-10-6-2-released/) and
+[10.6.2](https://about.gitlab.com/2018/03/29/gitlab-10-6-2-released/),
+[10.6.3, 10.5.7, and 10.4.7](https://about.gitlab.com/2018/04/04/security-release-gitlab-10-dot-6-dot-3-released/) and
 [10.6.4](https://about.gitlab.com/2018/04/09/gitlab-10-6-4-released/)
 
 ## Other News
