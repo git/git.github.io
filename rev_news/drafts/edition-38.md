@@ -21,9 +21,59 @@ This edition covers what happened during the month of March 2018.
 ### General
 -->
 
-<!---
+
 ### Reviews
--->
+
+* [branch -l: print useful info whilst rebasing a non-local branch](https://public-inbox.org/git/20180324183844.4565-1-kaartic.sivaraam@gmail.com/)
+
+Kaartic Sivaraam sent a patch to the mailing list that fixed
+`git branch -l̀ output when an interactive rebase is performed
+and when the interactive rebase was started from a remote branch
+or when HEAD was detached.
+
+Eric Sunshine replied to Kaartic that `-l` in `git branch -l̀ is a
+shortcut for `--create-reflog` not for `--list`, and suggested some
+small improvements among which adding a couple of new tests.
+
+Kaartic then wondered why `git branch -l` prints a list of branch
+names when `-l` is not a shorthand for `--list`, and agreed to
+implement Eric suggestions.
+
+Jeff King, alias Peff, replied to Kaartic that `-l` just sets the
+"reflog" variable to 1, and then, as the command defaults to `--list`
+when there is no other command line option, the branch names are
+printed which just ignores the "reflog" variable.
+
+Peff also explains that `-l` is probably never used in practice as it
+is the default to create a reflog, so it's "historical and quite
+unfortunate" that `-l` is a shortcut for `--create-reflog` and not for
+`--list`.
+
+Eric then suggested making `-l` mean sometimes `--create-reflog` and
+sometimes `--list`, but Peff didn't like that and suggested instead to
+either complaining when `-l` is used in list mode or deprecating and
+dropping `-l` first and then maybe after a significant amount of time
+repurposing it as a shortcut for `--list`.
+
+Then Eric replied to Kaartic with a few small additional suggestions
+and with a patch that add the new tests that Eric had previously
+suggested.
+
+Meanwhile Kaartic agreed with Peff's suggestions. Those suggestions
+were discussed a bit more by Jacob Keller, alias Jake, and Junio
+Hamano, the Git maintainer, who agreed with the plan to deprecate
+`-l`, then to drop it and eventually to make it shortcut for `--list`.
+
+Peff then sent a patch series [doing all that](https://public-inbox.org/git/20180326072618.GA12530@sigill.intra.peff.net/).
+The series was reviewed by Eric and Jake.
+
+Kaartic reworked his original patch to improve `git branch --list̀
+output and sent to the mailing list a
+[second version of it](https://public-inbox.org/git/3566c82c-114a-ec2d-286c-2851e4b2952d@gmail.com/)
+along with Eric's patch adding new tests.
+
+Peff's patch series has been merged into the 'next' branch and
+Kaartic's patch series will probably also be merged there too.
 
 <!---
 ### Support
