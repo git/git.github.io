@@ -190,6 +190,7 @@ Kaartic's patch series will probably also be merged there too.
 [3.5.1](https://support.gitkraken.com/release-notes/current#v3-5-1)
 * libgit2 [0.27.0-rc3](https://github.com/libgit2/libgit2/releases/tag/v0.27.0-rc3) and
 [0.27.0](https://github.com/libgit2/libgit2/releases/tag/v0.27.0)
+* Gerrit Code Review [2.5.1](https://www.gerritcodereview.com/releases/2.15.md)
 
 ## Other News
 
@@ -197,6 +198,7 @@ __Various__
 
 + The [videos of the 2018 Git Merge talks](https://www.youtube.com/watch?v=MfIi3d7UAhs&list=PLTpLVrHJAlODA3qfvV-x_QBPTZtT5JT5q) have been released.
 + [Git developers contacted by an advanced alien species](https://public-inbox.org/git/CAP8UFD0WZ07EVER_HupcFLw4w-4H2hb2cp8wTaj2i9jOc_+pTA@mail.gmail.com), a 1st of April announce.
++ New YouTube Channel [GerritForge TV](https://youtube.com/gerritforgetv) dedicated to the Gerrit Code Review community events and tutorials.
 
 __Light reading__
 
