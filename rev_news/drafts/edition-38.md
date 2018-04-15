@@ -134,6 +134,12 @@ This edition covers what happened during the month of March 2018.
 [10.6.2](https://about.gitlab.com/2018/03/29/gitlab-10-6-2-released/),
 [10.6.3, 10.5.7, and 10.4.7](https://about.gitlab.com/2018/04/04/security-release-gitlab-10-dot-6-dot-3-released/) and
 [10.6.4](https://about.gitlab.com/2018/04/09/gitlab-10-6-4-released/)
+* Bitbucket Server [5.9](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-5-9-release-notes-946029921.html)
+* Github Desktop [1.1.1](https://desktop.github.com/release-notes/)
+* GitKraken [3.5.0](https://support.gitkraken.com/release-notes/current#v3-5-0) and
+[3.5.1](https://support.gitkraken.com/release-notes/current#v3-5-1)
+* libgit2 [0.27.0-rc3](https://github.com/libgit2/libgit2/releases/tag/v0.27.0-rc3) and
+[0.27.0](https://github.com/libgit2/libgit2/releases/tag/v0.27.0)
 
 ## Other News
 
