@@ -73,8 +73,10 @@ did not work, as dropped commits could end up being replaid into the
 merge commits, turning them into "evil" merges.
 
 Further suggestions to the strategy were proposed and tested,
-ultimately resulting in Sergey proposing the addition of using the
-original merge commit as a merge base during the final step.
+ultimately resulting in Sergey proposing
+[a fix to his method](https://public-inbox.org/git/87r2oxe3o1.fsf@javad.com/),
+specifically using the original merge commit as a merge base during
+the final step.
 
 Some discussion occurred about `merge -s ours` and how any rebasing
 strategy should avoid attempting to understand the semantics of the
@@ -86,7 +88,8 @@ the parent merge branch. This was immediately understood by Johannes
 and suggested as a potential for the default implementation.
 
 Sergey replied that he thinks the solution produces the same result as
-his updated strategy.
+his updated strategy, at least when none of the strategies produce any
+conflicts.
 
 Johannes suggested that he was open to using Phillip's strategy but
 was worried about syntax. He did not want to introduce inconsistent
