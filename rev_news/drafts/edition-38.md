@@ -17,10 +17,114 @@ This edition covers what happened during the month of March 2018.
 
 ## Discussions
 
-<!---
-### General
--->
 
+### General
+
+* [rebase -i: offer to recreate merge commits](https://public-inbox.org/git/cover.1516225925.git.johannes.schindelin@gmx.de/) (*written by Jacob Keller*)
+
+Johannes Schindelin has worked to replace `--preserve-merges`
+functionality in `git rebase` which has many known flaws by a new
+`--recreate-merges` which aims to replace the functionality of
+`--preserve-merges` in a way that fixes the known issues.
+
+When the patch series was sent to the list, Sergey Organov brought up
+that `--recreate-merges` is still (true to its name) recreating the
+merges from scratch, thus losing any content they might contain such
+as fixes.
+
+He pointed to a strategy for cherry-picking the merge commmit. Others
+chimed in to say that they share concerns and would like to see the
+ability to preserve the merge resolutions properly.
+
+Johannes replied that this does not make sense because the cherry-pick
+solution does not work when you drop or re-order commits. The goal of
+`--recreate-merges` is to allow the same level of freedom as with
+regular interactive rebases. Using the `--preserve-merges --first-parent`
+strategy of just cherry-picking the merge commit will
+result in any changes before that merge being dropped.
+
+Junio Hamano, the Git maintainer, chimed in that Johannes was correct,
+if for example the side branch you are merging dropped a commit during
+the rebase, you absolutely do not want to use the simple `git cherry-pick -m1`
+original.
+
+Sergey replied that he had only intended the use of cherry-pick as an
+explanation facility, and that a proper strategy would be required to
+actually implement and allow history editing.
+
+Some discussion about `--preserve-merges` and compatibility with scripts
+(i.e. should we change or fix it? or should we deprecate it?)
+followed.
+
+* [Rebasing merges: a jorney to the ultimate solution (Road Clear)](https://public-inbox.org/git/87y3jtqdyg.fsf@javad.com/) (*written by Jacob Keller*)
+
+After the discussions in the above article Sergey posted an
+outline of a potential method for actually rebasing a merge (as
+opposed to recreating it from scratch) which used a process of
+`git cherry-pick -mN` of the merge onto each topic branch being
+merged, and then merging the result.
+
+Igor Djordjevic and Jacob Keller, alias Jake, chimed in hoping to
+prove by example that the solution could work. Johannes replied that
+he was skeptical and pointed out possible flaws.
+
+A few examples were tried, but it was proven that the original concept
+did not work, as dropped commits could end up being replaid into the
+merge commits, turning them into "evil" merges.
+
+Further suggestions to the strategy were proposed and tested,
+ultimately resulting in Sergey proposing the addition of using the
+original merge commit as a merge base during the final step.
+
+Some discussion occurred about `merge -s ours` and how any rebasing
+strategy should avoid attempting to understand the semantics of the
+merges.
+
+Phillip Wood suggested an alternative idea for keeping the merge
+conflicts by merging the changes from each rebased branch back into
+the parent merge branch. This was immediately understood by Johannes
+and suggested as a potential for the default implementation.
+
+Sergey replied that he thinks the solution produces the same result as
+his updated strategy.
+
+Johannes suggested that he was open to using Phillip's strategy but
+was worried about syntax. He did not want to introduce inconsistent
+behavior of the new "merge" command.
+
+Despite Sergey believing that the two strategies were equivalent,
+Johannes was not convinced.
+
+Discussion about the syntax for the new "rebase a merge" todo command
+continued. Johannes landed on the idea of adding an option to the
+merge line `-R` to indicate that it was rebasing a merge (vs creating
+a new merge).
+
+Phillip suggested that we re-use "pick" but thought it might be a bit
+too magical. He then followed up that it is indeed too magical, and is
+basically the `--preserve-merges` mistake all over again. He suggested
+it was a shame to have merge mean both recreate a merge and rebase a
+merge, but didn't have a good answer.
+
+Igor suggested that "pick" was more natural, and that we should extend
+it to properly support picking merge commits in a way that was not
+broken like `--perserve-merges`.
+
+Johannes said he did not like the extension of "pick" because it makes
+it harder to understand which lines are actually merges and which
+are not.
+
+Johannes replied that Sergey's strategy is actually worse than
+Phillip's functionally, because it has potential to produce conflicts
+multiple times. The discussion continued and became heated, with both
+Johannes and Sergey unable to come to consensus.
+
+Discussion about pick vs `merge -R` continued, with Igor and Sergey
+stating that they thought extending pick syntax would be better than
+introducing `merge -R` syntax.
+
+Some further discussion about backwards compatibility of the todo list
+format, and of options for it followed.
 
 ### Reviews
 
@@ -211,4 +315,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Gabriel Alcaras &lt;<gabriel.alcaras@telecom-paristech.fr>&gt;
-with help from Jiang Xin.
+with help from Jiang Xin and Jacob Keller.
