@@ -68,9 +68,9 @@ Igor Djordjevic and Jacob Keller, alias Jake, chimed in hoping to
 prove by example that the solution could work. Johannes replied that
 he was skeptical and pointed out possible flaws.
 
-A few examples were tried, but it was proven that the original concept
-did not work, as dropped commits could end up being replaid into the
-merge commits, turning them into "evil" merges.
+A few examples were tried, but it was proven that the original
+algorithm did not work, as dropped commits could end up being replayed
+into the merge commits, turning them into "evil" merges.
 
 Further suggestions to the strategy were proposed and tested,
 ultimately resulting in Sergey proposing
@@ -174,7 +174,7 @@ Hamano, the Git maintainer, who agreed with the plan to deprecate
 Peff then sent a patch series [doing all that](https://public-inbox.org/git/20180326072618.GA12530@sigill.intra.peff.net/).
 The series was reviewed by Eric and Jake.
 
-Kaartic reworked his original patch to improve `git branch --list̀
+Kaartic reworked his original patch to improve `git branch --list`
 output and sent to the mailing list a
 [second version of it](https://public-inbox.org/git/3566c82c-114a-ec2d-286c-2851e4b2952d@gmail.com/)
 along with Eric's patch adding new tests.
