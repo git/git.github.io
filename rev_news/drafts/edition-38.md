@@ -27,11 +27,11 @@ This edition covers what happened during the month of March 2018.
 * [branch -l: print useful info whilst rebasing a non-local branch](https://public-inbox.org/git/20180324183844.4565-1-kaartic.sivaraam@gmail.com/)
 
 Kaartic Sivaraam sent a patch to the mailing list that fixed
-`git branch -l̀ output when an interactive rebase is performed
+`git branch -l` output when an interactive rebase is performed
 and when the interactive rebase was started from a remote branch
 or when HEAD was detached.
 
-Eric Sunshine replied to Kaartic that `-l` in `git branch -l̀ is a
+Eric Sunshine replied to Kaartic that `-l` in `git branch -l` is a
 shortcut for `--create-reflog` not for `--list`, and suggested some
 small improvements among which adding a couple of new tests.
 
