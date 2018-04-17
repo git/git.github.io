@@ -23,17 +23,17 @@ This edition covers what happened during the month of March 2018.
 * [rebase -i: offer to recreate merge commits](https://public-inbox.org/git/cover.1516225925.git.johannes.schindelin@gmx.de/) (*written by Jacob Keller*)
 
 Johannes Schindelin has worked to replace `--preserve-merges`
-functionality in `git rebase` which has many known flaws by a new
-`--recreate-merges` which aims to replace the functionality of
+functionality in `git rebase`, which has many known flaws, by a new
+`--recreate-merges`, which aims to replace the functionality of
 `--preserve-merges` in a way that fixes the known issues.
 
 When the patch series was sent to the list, Sergey Organov brought up
 that `--recreate-merges` is still (true to its name) recreating the
-merges from scratch, thus losing any content they might contain such
-as fixes.
+merges from scratch, thus losing any content they might have contained,
+such as fixes.
 
-He pointed to a strategy for cherry-picking the merge commmit. Others
-chimed in to say that they share concerns and would like to see the
+He pointed to a strategy for cherry-picking the merge commit. Others
+chimed in to state that they share concerns and would like to see the
 ability to preserve the merge resolutions properly.
 
 Johannes replied that this does not make sense because the cherry-pick
@@ -53,10 +53,10 @@ explanation facility, and that a proper strategy would be required to
 actually implement and allow history editing.
 
 Some discussion about `--preserve-merges` and compatibility with scripts
-(i.e. should we change or fix it? or should we deprecate it?)
+(i.e. should we change or fix it? -- or should we deprecate it?)
 followed.
 
-* [Rebasing merges: a jorney to the ultimate solution (Road Clear)](https://public-inbox.org/git/87y3jtqdyg.fsf@javad.com/) (*written by Jacob Keller*)
+* [Rebasing merges: a journey to the ultimate solution (Road Clear)](https://public-inbox.org/git/87y3jtqdyg.fsf@javad.com/) (*written by Jacob Keller*)
 
 After the discussions in the above article Sergey posted an
 outline of a potential method for actually rebasing a merge (as
@@ -99,12 +99,12 @@ Despite Sergey believing that the two strategies were equivalent,
 Johannes was not convinced.
 
 Discussion about the syntax for the new "rebase a merge" todo command
-continued. Johannes landed on the idea of adding an option to the
-merge line `-R` to indicate that it was rebasing a merge (vs creating
+continued. Johannes landed on the idea of adding an option `-R` to the
+merge command line to indicate that it was rebasing a merge (vs creating
 a new merge).
 
 Phillip suggested that we re-use "pick" but thought it might be a bit
-too magical. He then followed up that it is indeed too magical, and is
+too magical. He then adjoined that it is indeed too magical, and is
 basically the `--preserve-merges` mistake all over again. He suggested
 it was a shame to have merge mean both recreate a merge and rebase a
 merge, but didn't have a good answer.
@@ -113,21 +113,22 @@ Igor suggested that "pick" was more natural, and that we should extend
 it to properly support picking merge commits in a way that was not
 broken like `--perserve-merges`.
 
-Johannes said he did not like the extension of "pick" because it makes
+Johannes stated he did not like the extension of "pick" because it makes
 it harder to understand which lines are actually merges and which
 are not.
 
 Johannes replied that Sergey's strategy is actually worse than
-Phillip's functionally, because it has potential to produce conflicts
-multiple times. The discussion continued and became heated, with both
-Johannes and Sergey unable to come to consensus.
+Phillip's from a functional point of view, because it has potential
+to produce conflicts multiple times.
+The discussion continued and became heated, with both Johannes and
+Sergey unable to reach a consensus.
 
-Discussion about pick vs `merge -R` continued, with Igor and Sergey
-stating that they thought extending pick syntax would be better than
+Discussion about "pick" vs `merge -R` continued, with Igor and Sergey
+stating that they thought extending "pick" syntax would be better than
 introducing `merge -R` syntax.
 
-Some further discussion about backwards compatibility of the todo list
-format, and of options for it followed.
+Some further discussion about backward compatibility of the todo list
+format and of options for it followed.
 
 ### Reviews
 
@@ -140,18 +141,18 @@ or when HEAD was detached.
 
 Eric Sunshine replied to Kaartic that `-l` in `git branch -l` is a
 shortcut for `--create-reflog` not for `--list`, and suggested some
-small improvements among which adding a couple of new tests.
+small improvements along with adding a couple of new tests.
 
 Kaartic then wondered why `git branch -l` prints a list of branch
 names when `-l` is not a shorthand for `--list`, and agreed to
-implement Eric suggestions.
+implement Eric's suggestions.
 
 Jeff King, alias Peff, replied to Kaartic that `-l` just sets the
 "reflog" variable to 1, and then, as the command defaults to `--list`
 when there is no other command line option, the branch names are
-printed which just ignores the "reflog" variable.
+printed, which just ignores the "reflog" variable.
 
-Peff also explains that `-l` is probably never used in practice as it
+Peff also explained that `-l` is probably never used in practice as it
 is the default to create a reflog, so it's "historical and quite
 unfortunate" that `-l` is a shortcut for `--create-reflog` and not for
 `--list`.
@@ -163,13 +164,14 @@ dropping `-l` first and then maybe after a significant amount of time
 repurposing it as a shortcut for `--list`.
 
 Then Eric replied to Kaartic with a few small additional suggestions
-and with a patch that add the new tests that Eric had previously
+and with a patch that adds the new tests which Eric had previously
 suggested.
 
-Meanwhile Kaartic agreed with Peff's suggestions. Those suggestions
+Meanwhile Kaartic agreed to Peff's suggestions. Those suggestions
 were discussed a bit more by Jacob Keller, alias Jake, and Junio
-Hamano, the Git maintainer, who agreed with the plan to deprecate
-`-l`, then to drop it and eventually to make it shortcut for `--list`.
+Hamano, the Git maintainer, who agreed to the plan to deprecate
+`-l`, then to drop it, and eventually re-establish it as shortcut
+for `--list`.
 
 Peff then sent a patch series [doing all that](https://public-inbox.org/git/20180326072618.GA12530@sigill.intra.peff.net/).
 The series was reviewed by Eric and Jake.
@@ -180,7 +182,7 @@ output and sent to the mailing list a
 along with Eric's patch adding new tests.
 
 Peff's patch series has been merged into the 'next' branch and
-Kaartic's patch series will probably also be merged there too.
+Kaartic's patch series will probably also be merged there, too.
 
 <!---
 ### Support
@@ -193,34 +195,39 @@ Kaartic's patch series will probably also be merged there too.
   I am a Chinese, live in Beijing, China.  Almost at the same time when
   Linus wrote the first line of code for Git, I started to work as a
   self-employed open source consultant. At that time, I didn't know Git
-  yet, then I chose SVN, Redmine as the main products to start my consultant
+  yet, so I chose SVN and Redmine as the main products to start my consultant
   career.  After working as a Git consultant for Huawei for one year, I
-  accepted Huawei's offer at Dec, 2015.
+  accepted Huawei's offer in Dec, 2015.
 
 * What would you name your most important contribution to Git?
 
   As a developer, the most important contribution to Git is interactive
-  git clean. One day a guy (reader of my book) lost his work by running
-  "git clean -f" and asked me for help. I wanted to do something, so I
-  sent patches to Git, and it become this feature: git clean --interactive.
+  `git clean`. One day a guy (reader of my book) lost his work by running
+  `git clean -f` and asked me for help. I wanted to do something, so I
+  sent patches to Git, and it became this feature: `git clean --interactive`.
 
-    - http://marc.info/?l=git&m=137217568306354
-    - https://github.com/git/git/commit/988f98f6
+    - [http://marc.info/?l=git&m=137217568306354](http://marc.info/?l=git&m=137217568306354)
+    - [https://github.com/git/git/commit/988f98f6](https://github.com/git/git/commit/988f98f6)  
+&nbsp;  
 
   As a Huaweier, I also have contributed some fixes for corner cases I met
   at work:
 
     - [fix on crash of git-receive-pack](https://github.com/git/git/commit/b112b14d)
-    - [fix on proxy issue](https://github.com/git/git/commit/d445fda4)
+    - [fix on proxy issue](https://github.com/git/git/commit/d445fda4)  
+&nbsp;  
 
   As a Chinese, the most important work I have done is that I wrote a
-  book on Git, and the book was published at 2011. As soon as I received
+  book on Git, and the book was published in 2011. As soon as I received
   the first copy of my book, I sent one to Junio. :)  I open-sourced the
-  book in: https://github.com/gotgit/gotgit, and you can read it from:
-  http://www.worldhello.net/gotgit/.  Meanwhile, I wrote an e-book for
-  GitHub: http://www.worldhello.net/gotgithub; it is also written in
-  Chinese, but not published because I feel it is hard to track changes
-  of GitHub UI and the book will become obsolete very quickly.
+  book in [https://github.com/gotgit/gotgit](https://github.com/gotgit/gotgit),
+  and you can read it from
+  [http://www.worldhello.net/gotgit/](http://www.worldhello.net/gotgit/).
+  Meanwhile, I wrote an e-book for GitHub:
+  [http://www.worldhello.net/gotgithub](http://www.worldhello.net/gotgithub);
+  it is also written in Chinese, but did not publish it because I feel it is
+  hard to track changes of the GitHub UI, and the book might become obsolete
+  very quickly.
 
   I became Git l10n coordinator to help Junio for l10n management in
   early 2012. Now there are 11 fully supported language packs for Git,
@@ -235,22 +242,22 @@ Kaartic's patch series will probably also be merged there too.
 
     - Git central workflow is something like Gerrit. No forking before
       sending pull request, no special git hook on client side, no
-      "Change-Id" in the commit message, and we use pull request for
+      "Change-ID" in the commit message, and we use pull request for
       review. We also developed a client side program named "git-mm"
-      to help our users to manage multiple git modules, or a single
+      to help our users to manage multiple git modules, or just a single
       git repository.
 
     - Git-CDN is a reverse proxy for Git. I wrote a program named
       `git-upload-pack-proxy` to handle data syncing and data caching
-      across different data-centers.
+      across different data centers.
 
-    - Also we have some enhancement on Git, and I wish I can
+    - We have also some enhancements on Git, and I wish I can
       contribute them back to Git one day.
 
 * If you could get a team of expert developers to work full time on
   something in Git for a full year, what would it be?
 
-  When I was developing git reverse proxy, I found the git protocol is a
+  When I was developing the Git reverse proxy, I found the Git protocol is a
   bit complicated and not very efficient. For example, if a client wants
   to fetch a single branch, the server still needs to send thousands of
   references as refs-advertisement. We can improve it.
@@ -258,9 +265,9 @@ Kaartic's patch series will probably also be merged there too.
 * If you could remove something from Git without worrying about
   backwards compatibility, what would it be?
 
-  git-gc, I think.  If a repository is as big as 10 GB, git-gc will be
-  quite slow.  If we can design a new storage model for Git without
-  garbage collection, it will be great.
+  `git-gc`, I think.  If a repository is as big as 10 GB, `git-gc` will be
+  quite slow.  If we designed a new storage model for Git without
+  garbage collection, it would be great.
 
 * What is your favorite Git-related tool/library, outside of Git
   itself?
@@ -273,7 +280,7 @@ Kaartic's patch series will probably also be merged there too.
 
 * Git [v2.17.0](https://public-inbox.org/git/xmqq6059z9kz.fsf@gitster-ct.c.googlers.com),
 [v2.17.0-rc2](https://public-inbox.org/git/xmqqwoxw6kkk.fsf@gitster-ct.c.googlers.com),
-[v2.17.0-rc1](https://public-inbox.org/git/xmqqtvt9nr7p.fsf@gitster-ct.c.googlers.com) and
+[v2.17.0-rc1](https://public-inbox.org/git/xmqqtvt9nr7p.fsf@gitster-ct.c.googlers.com), and
 [v2.16.3](https://public-inbox.org/git/xmqq4ll7lq0r.fsf@gitster-ct.c.googlers.com)
 * Git for Windows [2.17.0](https://public-inbox.org/git/20180403123410.13300-1-johannes.schindelin@gmx.de) and
 [2.16.3](https://public-inbox.org/git/20180323174044.14612-1-johannes.schindelin@gmx.de)
@@ -283,13 +290,13 @@ Kaartic's patch series will probably also be merged there too.
 [2.10.21](http://enterprise.github.localhost/releases/2.10.21),
 [2.13.0](http://enterprise.github.localhost/releases/2.13.0),
 [2.12.8](http://enterprise.github.localhost/releases/2.12.8),
-[2.11.14](http://enterprise.github.localhost/releases/2.11.14) and
+[2.11.14](http://enterprise.github.localhost/releases/2.11.14), and
 [2.10.20](http://enterprise.github.localhost/releases/2.10.20)
 * GitLab [10.5.5](https://about.gitlab.com/2018/03/19/gitlab-10-5-5-released/),
 [10.6](https://about.gitlab.com/2018/03/22/gitlab-10-6-released/),
 [10.6.1](https://about.gitlab.com/2018/03/28/gitlab-10-6-1-released/),
 [10.6.2](https://about.gitlab.com/2018/03/29/gitlab-10-6-2-released/),
-[10.6.3, 10.5.7, and 10.4.7](https://about.gitlab.com/2018/04/04/security-release-gitlab-10-dot-6-dot-3-released/) and
+[Security Release 10.6.3, 10.5.7, and 10.4.7](https://about.gitlab.com/2018/04/04/security-release-gitlab-10-dot-6-dot-3-released/), and
 [10.6.4](https://about.gitlab.com/2018/04/09/gitlab-10-6-4-released/)
 * Bitbucket Server [5.9](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-5-9-release-notes-946029921.html)
 * Github Desktop [1.1.1](https://desktop.github.com/release-notes/)
@@ -304,8 +311,8 @@ Kaartic's patch series will probably also be merged there too.
 __Various__
 
 + The [videos of the 2018 Git Merge talks](https://www.youtube.com/watch?v=MfIi3d7UAhs&list=PLTpLVrHJAlODA3qfvV-x_QBPTZtT5JT5q) have been released.
-+ [Git developers contacted by an advanced alien species](https://public-inbox.org/git/CAP8UFD0WZ07EVER_HupcFLw4w-4H2hb2cp8wTaj2i9jOc_+pTA@mail.gmail.com), a 1st of April announce.
-+ New YouTube Channel [GerritForge TV](https://youtube.com/gerritforgetv) dedicated to the Gerrit Code Review community events and tutorials.
++ [Git developers contacted by an advanced alien species](https://public-inbox.org/git/CAP8UFD0WZ07EVER_HupcFLw4w-4H2hb2cp8wTaj2i9jOc_+pTA@mail.gmail.com), a 1st of April announcement.
++ New YouTube Channel [GerritForge TV](https://youtube.com/gerritforgetv), dedicating events and tutorials to the Gerrit Code Review community.
 
 __Light reading__
 
