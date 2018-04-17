@@ -220,7 +220,7 @@ Kaartic's patch series will probably also be merged there too.
   http://www.worldhello.net/gotgit/.  Meanwhile, I wrote an e-book for
   GitHub: http://www.worldhello.net/gotgithub; it is also written in
   Chinese, but not published because I feel it is hard to track changes
-  of GitHub UI and the book will become obsolte very quickly.
+  of GitHub UI and the book will become obsolete very quickly.
 
   I became Git l10n coordinator to help Junio for l10n management in
   early 2012. Now there are 11 fully supported language packs for Git,
@@ -236,7 +236,7 @@ Kaartic's patch series will probably also be merged there too.
     - Git central workflow is something like Gerrit. No forking before
       sending pull request, no special git hook on client side, no
       "Change-Id" in the commit message, and we use pull request for
-      review. We also developped a client side program named "git-mm"
+      review. We also developed a client side program named "git-mm"
       to help our users to manage multiple git modules, or a single
       git repository.
 
