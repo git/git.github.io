@@ -32,7 +32,7 @@ that `--recreate-merges` is still (true to its name) recreating the
 merges from scratch, thus losing any content they might contain such
 as fixes.
 
-He pointed to a strategy for cherry-picking the merge commmit. Others
+He pointed to a strategy for cherry-picking the merge commit. Others
 chimed in to say that they share concerns and would like to see the
 ability to preserve the merge resolutions properly.
 
