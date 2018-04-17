@@ -262,6 +262,10 @@ Kaartic's patch series will probably also be merged there, too.
   to fetch a single branch, the server still needs to send thousands of
   references as refs-advertisement. We can improve it.
 
+  (EDIT: Stefan Beller pointed out that there would be great improvements
+  in protocol v2, a simpler and less wasteful protocol, which had already
+  been merged from the bw/protocol-v2 topic branch to Git next branch.)
+
 * If you could remove something from Git without worrying about
   backwards compatibility, what would it be?
 
