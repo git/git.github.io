@@ -306,11 +306,30 @@ __Various__
 + The [videos of the 2018 Git Merge talks](https://www.youtube.com/watch?v=MfIi3d7UAhs&list=PLTpLVrHJAlODA3qfvV-x_QBPTZtT5JT5q) have been released.
 + [Git developers contacted by an advanced alien species](https://public-inbox.org/git/CAP8UFD0WZ07EVER_HupcFLw4w-4H2hb2cp8wTaj2i9jOc_+pTA@mail.gmail.com), a 1st of April announce.
 + New YouTube Channel [GerritForge TV](https://youtube.com/gerritforgetv) dedicated to the Gerrit Code Review community events and tutorials.
++ [Git 2.17 is now available](https://blog.github.com/2018-04-05-git-217-released/) -- a look at some of the most interesting new features from the last few versions of Git
++ [Generating a changelog based on merge commits](https://medium.com/@andriesss/generating-a-changelog-based-on-merge-commits-b4b3445c9af3) by Andries
++ [git log – the Good Parts](https://zwischenzugs.com/2018/03/26/git-log-the-good-parts/), based on author's material from the book [Learn Git the Hard Way](https://leanpub.com/learngitthehardway)
++ [14 tips and tools to resolve conflicts with Git](https://developer.atlassian.com/blog/2015/12/tips-tools-to-solve-git-conflicts/) by Nicola Paolucci, from 2015
+
 
 __Light reading__
 
++ There is a series of articles by Joe Neeman about mathematical underpinnings of [Pijul](https://pijul.org/) distributed version control system, which is based like [Darcs](http://darcs.net/) on theory of merges. Pijul was mentioned in [Git Rev News #9](https://git.github.io/rev_news/2015/11/11/edition-9/) and [#24](https://git.github.io/rev_news/2017/02/22/edition-24/):
+  + [Merging and patches](https://jneem.github.io/merging/)
+  + [Merging, patches, and pijul](https://jneem.github.io/pijul/)
++ [Release Notes using Fastlane](https://blog.blueapron.io/release-notes-using-fastlane-fba80240dc4d) by Tom Wilson, about how to deal with Android version code that is dynamically generated based git revision history
++ [Reimplementing “git clone” in Haskell from the bottom up](http://stefan.saasen.me/articles/git-clone-in-haskell-from-the-bottom-up/) by Stefan Saasen - March 2013
++ [Putting the I back in IDE: Towards a Github Explorer](https://blog.janestreet.com/putting-the-i-back-in-ide-towards-a-github-explorer/) - what Git and Github could look like with truly deep editor integration
++ [Merging Done Right: Semantic Merge](https://daedtech.com/merging-done-right-semantic-merge/), about Plastic SCM's [SemanticMerge](https://www.semanticmerge.com/) paid tool, presented on Git Merge 2018 (event covered by [Git Rev News Edition 37](https://git.github.io/rev_news/2017/05/17/edition-27/))
+
 
 __Git tools and sites__
+
++ [Guiffy](https://www.guiffy.com/), the advanced cross-platform diff/merge
++ [gitworkflow repository](https://github.com/rocketraman/gitworkflow) is a documentation repository for [gitworkflows](https://mirrors.edge.kernel.org/pub/software/scm/git/docs/gitworkflows.html): see [How the Creators of Git do Branching](https://hackernoon.com/how-the-creators-of-git-do-branches-e6fcc57270fb), by Raman Gupta (mentioned in [Git Rev News Edition 27](https://git.github.io/rev_news/2017/05/17/edition-27/))
++ [git-immersion](https://github.com/jce-il/git-immersion) repository for [git-immersion excercise](http://jce-il.github.io/git-immersion/index.html) guided tour
++ [commit -> public-inbox link helper](https://public-inbox.org/git/nycvar.QRO.7.76.6.1804041821420.55@ZVAVAG-6OXH6DA.rhebcr.pbec.zvpebfbsg.pbz/) script by Johannes Schindelin was posted on git mailing list
++ [kaizenboard](https://kaizenboard.xyz/#/) - GitHub issues on a Kanban board
 
 
 ## Credits
