@@ -328,7 +328,7 @@ __Light reading__
 + There is a series of articles by Joe Neeman about mathematical underpinnings of [Pijul](https://pijul.org/) distributed version control system, which is based like [Darcs](http://darcs.net/) on theory of merges. Pijul was mentioned in [Git Rev News #9](https://git.github.io/rev_news/2015/11/11/edition-9/) and [#24](https://git.github.io/rev_news/2017/02/22/edition-24/):
   + [Merging and patches](https://jneem.github.io/merging/)
   + [Merging, patches, and pijul](https://jneem.github.io/pijul/)
-+ [Release Notes using Fastlane](https://blog.blueapron.io/release-notes-using-fastlane-fba80240dc4d) by Tom Wilson, about how to deal with Android version code that is dynamically generated based git revision history
++ [Release Notes using Fastlane](https://blog.blueapron.io/release-notes-using-fastlane-fba80240dc4d) by Tom Wilson, about how to deal with Android version code that is dynamically generated based on git revision history
 + [Reimplementing “git clone” in Haskell from the bottom up](http://stefan.saasen.me/articles/git-clone-in-haskell-from-the-bottom-up/) by Stefan Saasen - March 2013
 + [Putting the I back in IDE: Towards a Github Explorer](https://blog.janestreet.com/putting-the-i-back-in-ide-towards-a-github-explorer/) - what Git and Github could look like with truly deep editor integration
 + [Merging Done Right: Semantic Merge](https://daedtech.com/merging-done-right-semantic-merge/), about Plastic SCM's [SemanticMerge](https://www.semanticmerge.com/) paid tool, presented on Git Merge 2018 (event covered by [Git Rev News Edition 37](https://git.github.io/rev_news/2017/05/17/edition-27/))
