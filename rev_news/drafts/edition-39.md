@@ -192,9 +192,13 @@ Git-related tools or libraries simply are not all that automatable.
 
 __Various__
 
+* GitHub is [hiring a Linux Kernel Engineer](https://boards.greenhouse.io/github/jobs/1121642?gh_src=cadcuf3r1) to work on supporting [GVFS](https://gvfs.io/) (an extension of Git to support Git at Enterprise Scale).
 
 __Light reading__
 
+* Joe Neeman posted [a series](https://jneem.github.io/merging/) of [blog posts](https://jneem.github.io/pijul/) about patch theory and [pijul](https://pijul.com/) (yet another animal in the Version Control System zoo). Read this if you are interested in merge algorithms.
+* Edward Thomson (co-maintainer of libgit2) talks about [the branching model of the team developing Visual Studio Team Services](https://blogs.msdn.microsoft.com/devops/2018/04/19/release-flow-how-we-do-branching-on-the-vsts-team/).
+* Pratik Karti, who is working on a Google Summer of Code project to convert `git-rebase.sh` into a builtin [started blogging about his project](https://prertik.github.io/categories/git).
 
 __Git tools and sites__
 
