@@ -27,13 +27,13 @@ This edition covers what happened during the month of April 2018.
   "We'll have [3 students](https://summerofcode.withgoogle.com/organizations/5376866043559936/#projects)
   and 3 mentors, which is more than in recent years."
 
-  * Pratik Karti, who will work on [converting interactive rebase to C](https://summerofcode.withgoogle.com/projects/#4981391490547712)
+  * Pratik Karti, who will work on [converting `git rebase` to C](https://summerofcode.withgoogle.com/projects/#4981391490547712)
     and will be mentored by Stefan Beller and Christian Couder, started blogging about his project:
 
     * [[GSoC] Info: new blog series of my work on Git GSoC '18](https://public-inbox.org/git/20180502033925.6744-1-predatoramigo@gmail.com/) - announcement on the mailing list
     * ["git" category](https://prertik.github.io/categories/git/) - the blog in question 
 
-  * Paul Ungureanu, who will work on [converting “git stash” to builtin](https://summerofcode.withgoogle.com/projects/#5431410714738688))
+  * Paul Ungureanu, who will work on [converting `git stash` to C](https://summerofcode.withgoogle.com/projects/#5431410714738688))
     and will be mentored by Johannes Schindelin, alias Dscho, is also starting a blog about it:
 
     * [[GSoC] A blog about 'git stash' project](https://public-inbox.org/git/7557a20a-a55e-e085-1aaa-3935000f643f@gmail.com) - announcement on the mailing list
