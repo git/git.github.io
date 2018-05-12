@@ -187,6 +187,15 @@ Git-related tools or libraries simply are not all that automatable.
 
 ## Releases
 
+* Bitbucket Server [5.10](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-5-10-release-notes-948214779.html)
+* GitLab [10.7.3](https://about.gitlab.com/2018/05/03/gitlab-10-7-3-released/),
+[Security Release 10.7.2, 10.6.5, and 10.5.8](https://about.gitlab.com/2018/04/30/security-release-gitlab-10-dot-7-dot-2-released/),
+[10.7.1](https://about.gitlab.com/2018/04/23/gitlab-10-7-1-released/), and
+[10.7.0](https://about.gitlab.com/2018/04/22/gitlab-10-7-released/)
+* GitHub Enterprise [2.13.2](https://enterprise.github.com/releases/2.13.2),
+[2.12.10](https://enterprise.github.com/releases/2.12.10),
+[2.11.16](https://enterprise.github.com/releases/2.11.16), and
+[2.10.22](https://enterprise.github.com/releases/2.10.22)
 
 ## Other News
 
