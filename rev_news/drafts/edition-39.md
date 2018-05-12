@@ -220,6 +220,7 @@ Git-related tools or libraries simply are not all that automatable.
 [2.12.10](https://enterprise.github.com/releases/2.12.10),
 [2.11.16](https://enterprise.github.com/releases/2.11.16), and
 [2.10.22](https://enterprise.github.com/releases/2.10.22)
+* GitKraken [3.6.0](https://support.gitkraken.com/release-notes/current#v3-6-0)
 
 ## Other News
 
