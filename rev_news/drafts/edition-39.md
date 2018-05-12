@@ -17,9 +17,33 @@ This edition covers what happened during the month of April 2018.
 
 ## Discussions
 
-<!---
+
 ### General
--->
+
+* [GSoC students and mentors in 2018](https://public-inbox.org/git/CAGZ79kbzFGn2-xcrWFi1+ZUgSGGHdUPEQOexu8Lan796LCsvBg@mail.gmail.com/)
+
+  Stefan Beller announced to the mailing list that once again this year
+  the Git project will participate in [Google Summer or Code](https://summerofcode.withgoogle.com/)!
+  "We'll have [3 students](https://summerofcode.withgoogle.com/organizations/5376866043559936/#projects)
+  and 3 mentors, which is more than in recent years."
+
+  * Pratik Karti, who will work on [converting interactive rebase to C](https://summerofcode.withgoogle.com/projects/#4981391490547712)
+    and will be mentored by Stefan Beller and Christian Couder, started blogging about his project:
+
+    * [[GSoC] Info: new blog series of my work on Git GSoC '18](https://public-inbox.org/git/20180502033925.6744-1-predatoramigo@gmail.com/) - announcement on the mailing list
+    * ["git" category](https://prertik.github.io/categories/git/) - the blog in question 
+
+  * Paul Ungureanu, who will work on [converting “git stash” to builtin](https://summerofcode.withgoogle.com/projects/#5431410714738688))
+    and will be mentored by Johannes Schindelin, alias Dscho, is also starting a blog about it:
+
+    * [[GSoC] A blog about 'git stash' project](https://public-inbox.org/git/7557a20a-a55e-e085-1aaa-3935000f643f@gmail.com) - announcement on the mailing list
+    * [Paul's Blog - Google Summer of Code 2018](https://ungps.github.io/) - the blog in question
+
+  * Alban Gruin, who will work on [converting interactive rebase to C](https://summerofcode.withgoogle.com/projects/#4906232314331136))
+    and will be mentored by Stefan Beller and Christian Couder, is like the other students starting a blog about it:
+
+    * [[GSoC] Yet another blog series about the GSoC](https://public-inbox.org/git/917621a4-b46a-95aa-dccc-905c0cd32b1d@gmail.com/) - announcement on git mailing list
+    * [Mon coin sur l’Internet - posts with GSoC 2018 category](https://blog.pa1ch.fr/category/gsoc-2018.html), starting with [GSoC with git, week 1 : community bonding](https://blog.pa1ch.fr/posts/2018/05/05/en/gsoc2018-week-1.html)
 
 <!---
 ### Reviews
@@ -207,7 +231,6 @@ __Light reading__
 
 * Joe Neeman posted [a series](https://jneem.github.io/merging/) of [blog posts](https://jneem.github.io/pijul/) about patch theory and [pijul](https://pijul.com/) (yet another animal in the Version Control System zoo). Read this if you are interested in merge algorithms.
 * Edward Thomson (co-maintainer of libgit2) talks about [the branching model of the team developing Visual Studio Team Services](https://blogs.msdn.microsoft.com/devops/2018/04/19/release-flow-how-we-do-branching-on-the-vsts-team/).
-* Pratik Karti, who is working on a Google Summer of Code project to convert `git-rebase.sh` into a builtin [started blogging about his project](https://prertik.github.io/categories/git).
 
 __Git tools and sites__
 
