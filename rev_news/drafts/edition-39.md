@@ -42,7 +42,7 @@ This edition covers what happened during the month of April 2018.
   * Alban Gruin, who will work on [converting interactive rebase to C](https://summerofcode.withgoogle.com/projects/#4906232314331136))
     and will be mentored by Stefan Beller and Christian Couder, is like the other students starting a blog about it:
 
-    * [[GSoC] Yet another blog series about the GSoC](https://public-inbox.org/git/917621a4-b46a-95aa-dccc-905c0cd32b1d@gmail.com/) - announcement on git mailing list
+    * [[GSoC] Yet another blog series about the GSoC](https://public-inbox.org/git/917621a4-b46a-95aa-dccc-905c0cd32b1d@gmail.com/) - announcement on the mailing list
     * [Mon coin sur l’Internet - posts with GSoC 2018 category](https://blog.pa1ch.fr/category/gsoc-2018.html), starting with [GSoC with git, week 1 : community bonding](https://blog.pa1ch.fr/posts/2018/05/05/en/gsoc2018-week-1.html)
 
 <!---
