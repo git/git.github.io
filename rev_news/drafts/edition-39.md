@@ -290,9 +290,6 @@ to work on supporting [GVFS](https://gvfs.io/) (an extension of Git to support G
 
 __Light reading__
 
-* Joe Neeman posted [a series](https://jneem.github.io/merging/) of [blog posts](https://jneem.github.io/pijul/)
-about patch theory and [pijul](https://pijul.com/) (yet another animal in the Version Control System zoo). Read
-this if you are interested in merge algorithms.
 * Edward Thomson (co-maintainer of libgit2) talks about
 [the branching model of the team developing Visual Studio Team Services](https://blogs.msdn.microsoft.com/devops/2018/04/19/release-flow-how-we-do-branching-on-the-vsts-team/).
 
