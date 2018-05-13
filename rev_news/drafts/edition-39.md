@@ -49,10 +49,69 @@ This edition covers what happened during the month of April 2018.
 ### Reviews
 -->
 
-<!---
-### Support
--->
 
+### Support
+
+* [Optimizing writes to unchanged files during merges?](https://public-inbox.org/git/CA+55aFzLZ3UkG5svqZwSnhNk75=fXJRkvU1m_RHBG54NOoaZPA@mail.gmail.com/)
+
+Linus Torvalds emailed the mailing list that after merging XFS code
+into the Linux kernel he was surprised "pretty much *everything*" got
+recompiled and the test build took 22 minutes instead of about a
+minute.
+
+When debugging this, Linus found that a core header file had been
+changed by the patch series he had merged, but the changes were
+already upstream and got merged away. Nevertheless the core header
+file got written out with the same contents it had before the merge,
+and as 'make' only looks at modification time, everything got rebuilt.
+
+As he was still busy with the merge window, Linus hoped that someone
+could look at making the merging logic optimize things and not even
+write out the end result when a file doesn't change.
+
+Junio Hamano soon posted a fix for this issue but it appeared to Linus
+that it was not a complete fix, so Linus started debugging further by
+himself and updated the mailing list by regularly posting what he had
+found. He even started one of his emails with "[ Talking to myself ]"
+and the next one with "[ Still talking to myself. Very soothing. ]"
+
+Elijah Newren eventually replied to Linus that he already had a fix
+for that in one of his patch series that had been merged into the
+master branch, but unfortunately the fix caused some
+["impressively awful fireworks"](https://public-inbox.org/git/xmqqefjm3w1h.fsf@gitster-ct.c.googlers.com/),
+so the fix had been reverted from master.
+
+Fortunately Elijah wrote that he had already reworked his fix and
+added many test cases, so that he would be able to resend his patch
+series containing a fully working fix in a few days.
+
+Linus replied by sending an alternative patch relying on "stupid brute
+force" to fix his issue. Stefan Beller reviewed the patch and Linus
+replied back to Stefan discussing other improvements and different
+approaches.
+
+Elijah also replied to Linus' alternative patch by discussing
+different approaches. And Junio agreed with the direction Elijah was
+taking, though he had not as much time as he would have liked to think
+this through at that time.
+
+Junio discussed Linus' alternative patch anyway with Linus and then
+Lars Schneider chimed in by suggesting to add a cache to speed up
+builds. Ævar Arnfjörð Bjarmason then replied to Lars and they
+discussed this idea but concluded that it wouldn't work.
+
+Jacob Keller and Junio also discussed Lars' idea. They suggested
+alternative ideas or tools to address the underlying problem. Junio
+especially mentioned ccache which had been also suggested by Stefan
+Haller.
+
+Phillip Wood replied to Lars by sending a Perl script he has been
+using to save and restore mtimes to avoid rebuilds.
+
+Elijah resent [his patch series](https://public-inbox.org/git/20180419175823.7946-1-newren@gmail.com/)
+a few days later, and though there were further fixes needed, it
+appears that the patch series will be merged in the "next" branch
+soon.
 
 ## Developer Spotlight: Johannes Schindelin (alias Dscho)
 
