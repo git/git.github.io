@@ -27,7 +27,7 @@ This edition covers what happened during the month of April 2018.
   "We'll have [3 students](https://summerofcode.withgoogle.com/organizations/5376866043559936/#projects)
   and 3 mentors, which is more than in recent years."
 
-  * Pratik Karti, who will work on [converting `git rebase` to C](https://summerofcode.withgoogle.com/projects/#4981391490547712)
+  * Pratik Karki, who will work on [converting `git rebase` to C](https://summerofcode.withgoogle.com/projects/#4981391490547712)
     and will be mentored by Stefan Beller and Christian Couder, started blogging about his project:
 
     * [[GSoC] Info: new blog series of my work on Git GSoC '18](https://public-inbox.org/git/20180502033925.6744-1-predatoramigo@gmail.com/) - announcement on the mailing list
