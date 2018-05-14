@@ -31,7 +31,7 @@ This edition covers what happened during the month of April 2018.
     and will be mentored by Stefan Beller and Christian Couder, started blogging about his project:
 
     * [[GSoC] Info: new blog series of my work on Git GSoC '18](https://public-inbox.org/git/20180502033925.6744-1-predatoramigo@gmail.com/) - announcement on the mailing list
-    * ["git" category](https://prertik.github.io/categories/git/) - the blog in question 
+    * [(recur code) - posts with "git" category](https://prertik.github.io/categories/git/) - the blog in question 
 
   * Paul Ungureanu, who will work on [converting `git stash` to C](https://summerofcode.withgoogle.com/projects/#5431410714738688))
     and will be mentored by Johannes Schindelin, alias Dscho, is also starting a blog about it:
@@ -39,11 +39,11 @@ This edition covers what happened during the month of April 2018.
     * [[GSoC] A blog about 'git stash' project](https://public-inbox.org/git/7557a20a-a55e-e085-1aaa-3935000f643f@gmail.com) - announcement on the mailing list
     * [Paul's Blog - Google Summer of Code 2018](https://ungps.github.io/) - the blog in question
 
-  * Alban Gruin, who will work on [converting interactive rebase to C](https://summerofcode.withgoogle.com/projects/#4906232314331136))
+  * Alban Gruin, who will work on [converting interactive rebase to C](https://summerofcode.withgoogle.com/projects/#4906232314331136)
     and will be mentored by Stefan Beller and Christian Couder, is like the other students starting a blog about it:
 
     * [[GSoC] Yet another blog series about the GSoC](https://public-inbox.org/git/917621a4-b46a-95aa-dccc-905c0cd32b1d@gmail.com/) - announcement on the mailing list
-    * [Mon coin sur l’Internet - posts with GSoC 2018 category](https://blog.pa1ch.fr/category/gsoc-2018.html), starting with [GSoC with git, week 1 : community bonding](https://blog.pa1ch.fr/posts/2018/05/05/en/gsoc2018-week-1.html)
+    * [Mon coin sur l’Internet - posts with "GSoC 2018" category](https://blog.pa1ch.fr/category/gsoc-2018.html) - the blog in question, starting with [GSoC with git, week 1 : community bonding](https://blog.pa1ch.fr/posts/2018/05/05/en/gsoc2018-week-1.html)
 
 <!---
 ### Reviews
