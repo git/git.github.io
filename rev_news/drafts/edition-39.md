@@ -93,10 +93,11 @@ approaches.
 Elijah also replied to Linus' alternative patch by discussing
 different approaches. And Junio agreed with the direction Elijah was
 taking, though he had not as much time as he would have liked to think
-this through at that time.
+this through at that time.  Junio discussed Linus' alternative patch
+anyway with Linus, and noted that it could cause problems in the case
+of local dirty changes.
 
-Junio discussed Linus' alternative patch anyway with Linus and then
-Lars Schneider chimed in by suggesting to add a cache to speed up
+Then Lars Schneider chimed in by suggesting to add a cache to speed up
 builds. Ævar Arnfjörð Bjarmason then replied to Lars and they
 discussed this idea but concluded that it wouldn't work.
 
@@ -109,9 +110,12 @@ Phillip Wood replied to Lars by sending a Perl script he has been
 using to save and restore mtimes to avoid rebuilds.
 
 Elijah resent [his patch series](https://public-inbox.org/git/20180419175823.7946-1-newren@gmail.com/)
-a few days later, and though there were further fixes needed, it
-appears that the patch series will be merged in the "next" branch
-soon.
+a few days later, and after a few minor fixes, the patch series was
+merged to "next" on May 8.  The commit message of the final patch of
+the series in particular documents the
+["long and blemished history"](https://public-inbox.org/git/20180419175823.7946-37-newren@gmail.com/)
+of the can-working-tree-updates-be-skipped check and how it has been
+fixed.
 
 ## Developer Spotlight: Johannes Schindelin (alias Dscho)
 
