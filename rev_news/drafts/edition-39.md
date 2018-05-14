@@ -295,7 +295,7 @@ __Light reading__
 
 __Git tools and sites__
 
-* [Mo Repos, Mo Problems? How We Make Changes Across Many Git Repositories] explains how Clever uses a
+* [Mo Repos, Mo Problems? How We Make Changes Across Many Git Repositories](https://engineering.clever.com/2017/12/11/mo-repos-mo-problems-how-we-make-changes-across-many-git-repositories/) explains how Clever uses a
   [cli tool called microplane](https://github.com/Clever/microplane) they developed to make changes across many repos.
 
 ## Credits
