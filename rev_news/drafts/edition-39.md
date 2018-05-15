@@ -288,6 +288,14 @@ __Various__
 
 * GitHub is [hiring a Linux Kernel Engineer](https://boards.greenhouse.io/github/jobs/1121642?gh_src=cadcuf3r1)
 to work on supporting [GVFS](https://gvfs.io/) (an extension of Git to support Git at Enterprise Scale).
+* The [Next Git meetup in London](https://skillsmatter.com/meetups/10863-gerrit-devops-analytics-and-git-auto-magic) is the 17th of May at 7:00 PM
+  and will be hosted by Skills Matter at CodeNode. There will be talks about Git auto-magic and Gerrit DevOps Analytics.
+* The [Gerrit Code Review Hackathon 2018](https://youtu.be/ntxEJ-mUVTU) has ended, leaving many innovative ideas to the project:
+  - Improvements on the Mobile experience and a new dark theme
+  - Ability to dynamically reload its configuration
+  - Analytics, how to leverage and chart your Git and Code Review data
+  - Extensible submit rules without having to be a Prolog expert
+  - Gitiles command line, to invoke your code browser from your prompt
 
 __Light reading__
 
