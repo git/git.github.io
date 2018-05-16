@@ -314,6 +314,36 @@ __Git tools and sites__
 * [git-shame](https://github.com/drench/git-shame) finds out to blame for stale remote branches
 * [Tugboat](https://tugboat.qa/) is a service allowing you to generate preview of your working website for every pull request, tag or branch and share it (and see visual regressions).  Works with GitHub, Bitbucket, and Gitlab.
 * [git-driven-refactoring](https://github.com/bdpalladino/git-driven-refactoring) -- sample code for "Git Driven Refactoring" presentation by Ashley Ellis Pierce at [RubyConf 2017](https://www.youtube.com/watch?v=3OgbQOsW61Y), [GitHub Universe 2017](https://www.youtube.com/watch?v=rK8yHl0cHoc) and [Git Merge 2018](https://www.youtube.com/watch?v=e9K1gHYIE2c&list=PL0lo9MOBetEGIifU90rTn5zQaX5NibX08&index=6).
+* Tools to prevent from accidentally storing secrets in repositories:
+  * [git-secrets](https://github.com/awslabs/git-secrets)
+    is a tool to prevent from committing secrets and credentials into git repositories,
+    was mentioned in [Git Rev News Edition 25](https://git.github.io/rev_news/2017/03/15/edition-25/#other-news).
+  * [git-all-secrets](https://github.com/anshumanbh/git-all-secrets)
+    is a tool to capture all the git secrets in multiple repositories by leveraging multiple open source git searching tools ([truffleHog](https://github.com/dxa4481/truffleHog), [repo-supervisor](https://github.com/auth0/repo-supervisor)),
+    was mentioned in [Git Rev News Edition 28](https://git.github.io/rev_news/2017/06/14/edition-28/#other-news).
+  * [GitLeaks](https://github.com/zricethezav/gitleaks)
+    is a tool to "check git repos for secrets and keys".
+	was mentioned in [Git Rev News Edition 36](https://git.github.io/rev_news/2018/02/21/edition-36/#other-news).
+  * [repo-security-scanner](https://github.com/UKHomeOffice/repo-security-scanner)
+    by [UKHomeOffice](https://github.com/UKHomeOffice)
+    is a command-line tool that finds secrets accidentally committed to a git repo, e.g. passwords, private keys
+* Tools to encrypt repositories, files in epositories, or fragments of files
+  (for example to safely store secrets):
+  * [git-remote-gcrypt](https://github.com/spwhitton/git-remote-gcrypt)
+    is a git remote helper to push and pull from repositories encrypted with GnuPG (a shell script),
+    described in [Best practices for securely storing API keys](https://medium.freecodecamp.org/how-to-securely-store-api-keys-4ff3ea19ebda).
+  * [git-secret](http://git-secret.io/)
+    is a bash tool to store your private data inside a git repository (encrypting files),
+    described in [Best practices for securely storing API keys](https://medium.freecodecamp.org/how-to-securely-store-api-keys-4ff3ea19ebda);
+    was mentioned in [Git Rev News Edition 15](https://git.github.io/rev_news/2016/05/11/edition-15/#other-news).
+  * [git-crypt](https://www.agwa.name/projects/git-crypt/)
+    enables transparent encryption and decryption of files in a git repository (written in C++),
+    described in [Best practices for securely storing API keys](https://medium.freecodecamp.org/how-to-securely-store-api-keys-4ff3ea19ebda).
+  * [BlackBox](https://github.com/StackExchange/blackbox)
+    is a tool to safely store secrets in Git/Mercurial/Subversion, encrypting files (and small strings when using Puppet),
+    described in [Best practices for securely storing API keys](https://medium.freecodecamp.org/how-to-securely-store-api-keys-4ff3ea19ebda).
+  * [transcrypt](https://github.com/elasticdog/transcrypt)
+    is a tool to transparently encrypt files within a git repository (with OpenSSL's symmetric cipher routines).
 
 ## Credits
 
