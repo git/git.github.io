@@ -55,6 +55,7 @@ __Light reading__
 
 __Git tools and sites__
 
+* [git auto-magic]( https://blog.adamspiers.org/2018/06/14/git-auto-magic/) is a set of four tools developed by Adam Spiers supporting higher-level workflows on top of git: git-splice, git-transplant, git-deps and git-explode.
 
 ## Credits
 
@@ -63,4 +64,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Gabriel Alcaras &lt;<gabriel.alcaras@telecom-paristech.fr>&gt;
-with help from XXX.
+with help from Adam Spiers.
