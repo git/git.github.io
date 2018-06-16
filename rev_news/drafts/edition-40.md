@@ -1,5 +1,5 @@
 ---
-title: Git Rev News Edition 40 (XXX, 2018)
+title: Git Rev News Edition 40 (June 20th, 2018)
 layout: default
 date: 2018-06-20 12:06:51 +0100
 author: chriscool
@@ -7,7 +7,7 @@ categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 40 (XXX, 2018)
+## Git Rev News: Edition 40 (June 20th, 2018)
 
 Welcome to the 40th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
