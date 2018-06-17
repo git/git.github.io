@@ -36,7 +36,7 @@ This edition covers what happened during the month of May 2018.
   I graduated with a software engineering degree from École Polytechnique de
   Montréal. I'm currently a software architect on the OCTO team at Linaro.
   I spent most of my professional life working on the Linux kernel for the ARM
-  architecture. And being a code tinkerer at heart, I often looking at assembly
+  architecture. And being a code tinkerer at heart, I am often looking at assembly
   output from the compiler to see what it made of my code.
 
 * How did you get involved in Git?
@@ -71,7 +71,7 @@ This edition covers what happened during the month of May 2018.
 * As a git user, what functionality would you like to see implemented?
 
   I really get annoyed when fetching a tracked repository and all the tags from
-  that remote repo are merged with my own tag, or with tags from another remote
+  that remote repo are merged with my own tags, or with tags from another remote
   repo. We have a separate namespace for remote branches but not for remote tags.
   That makes it very hard to know where a particular tag comes from, and "git
   remote rm" doesn't get rid of them either. This also pollutes the git-describe
