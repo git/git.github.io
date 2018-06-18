@@ -25,9 +25,57 @@ This edition covers what happened during the month of May 2018.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [git rebase -i --exec and changing directory](https://public-inbox.org/git/CAAUqJDu_3DTyd1cFKaNRKOzo3AHosfxP1jjWpa=HGtyAyitTeA@mail.gmail.com/)
+
+On May 19th Ondrej Mosnáček described an issue he had using `git rebase -i --exec ...`.
+
+He tried to pass something like `cd <dir> && git <cmd>` to the
+`--exec` option and found that it didn't behave as it should.
+
+Ondrej listed commands using `cd src && git status` to reproduce the
+issue which is that "`git status` reports as if all files in the
+repository are deleted".
+
+As noone had replied, Ondrej asked on May 27th if anyone had time to
+look at this.
+
+Philip Oakley replied to Ondrej asking for more information about the
+directories he had created and the directory he was in when he
+launched the rebase command.
+
+Ondrej said that he had to be in the top level directory of the
+repository for the rebase to work, and also that the commands he gave
+can reproduce the issue even in a current directory without any
+special name.
+
+Another Phillip (with two `l` instead of one), Phillip Wood, chimed in
+saying that he could reproduce the issue with the commands that Ondrej
+had given, though he could also reproduce it outside a rebase using
+only `git status` when the GIT_DIR environment variable is set to the
+`.git` directory of the repo. So Phillip thought that the problem came
+from `git status` not behaving properly when GIT_DIR is set.
+
+Philip Oakley replied that he could also reproduce the issue. Though
+after experimenting he suggested `git status` could behave differently
+when attached or not to a terminal.
+
+Junio Hamano, the Git maintainer, then chimed in to agree with Phillip
+Wood's previous suggestion pointing to the GIT_DIR environment
+variable:
+
+> When GIT_DIR environment variable appears without GIT_WORKING_TREE,
+> "git" assumes that you are starting it at the root level of the
+> working tree. In your example, if there is README at the top-level
+> but dir/README is not there, "status" would report that you removed
+> it.
+
+Junio also suggested a work-around:
+
+> You can unset GIT_DIR in your `--exec` script if you know that
+> Git would find the right repository when run from your script.
+
 
 ## Developer Spotlight: Nicolas Pitre
 
