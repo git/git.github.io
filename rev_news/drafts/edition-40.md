@@ -105,7 +105,7 @@ want an open source, self-hosted solution, like GNOME or Debian. At the same
 time, he underlined that "Microsoft has shown it's a new company, they're not
 pulling the tricks of the past". According to him, the criterion for choosing
 Gitlab over Github is not whether companies care about open source, but rather
-if they want to trust another's company Software as a Service. "If you want to
+if they want to trust somebody else's company Software as a Service. "If you want to
 self host, Gitlab is the logical choice, and we want to stimulate that as much
 as we can", he said to sum up the reasoning behind Gitlab's strategy. He added
 that 6% of the users of the open source edition converted to the paid edition.
@@ -139,7 +139,7 @@ repository for the rebase to work, and also that the commands he gave
 can reproduce the issue even in a current directory without any
 special name.
 
-Another Phillip (with two `l` instead of one), Phillip Wood, chimed in
+Another Phillip (with two 'l' instead of one), Phillip Wood, chimed in
 saying that he could reproduce the issue with the commands that Ondrej
 had given, though he could also reproduce it outside a rebase using
 only `git status` when the GIT_DIR environment variable is set to the
@@ -155,9 +155,9 @@ Wood's previous suggestion pointing to the GIT_DIR environment
 variable:
 
 > When GIT_DIR environment variable appears without GIT_WORKING_TREE,
-> "git" assumes that you are starting it at the root level of the
+> `git` assumes that you are starting it at the root level of the
 > working tree. In your example, if there is README at the top-level
-> but dir/README is not there, "status" would report that you removed
+> but dir/README is not there, `status` would report that you removed
 > it.
 
 Junio also suggested a work-around:
