@@ -243,9 +243,10 @@ Junio also suggested a work-around:
 + libgit2sharp [v0.25.2](https://github.com/libgit2/libgit2sharp/releases/tag/v0.25.2), [v0.25.1](https://github.com/libgit2/libgit2sharp/releases/tag/v0.25.1)
 + Github Enterprise [v2.13.4](https://enterprise.github.com/releases/2.13.4), [v2.12.12](https://enterprise.github.com/releases/2.12.12), [v2.11.18](https://enterprise.github.com/releases/2.11.18), [v2.10.24](https://enterprise.github.com/releases/2.10.24), [v2.13.3](https://enterprise.github.com/releases/2.13.3), [v2.12.11](https://enterprise.github.com/releases/2.12.11), [v2.11.17](https://enterprise.github.com/releases/2.11.17), [v2.10.23](https://enterprise.github.com/releases/2.10.23)
 + Gitlab [v10.8.4](https://about.gitlab.com/2018/06/07/gitlab-10-8-4-released/), [v10.8.3](https://about.gitlab.com/2018/06/01/gitlab-10-8-3-released/), [v10.8.2, 10.7.5, 10.6.6](https://about.gitlab.com/2018/05/29/security-release-gitlab-10-dot-8-dot-2-released/), [v10.8.1](https://about.gitlab.com/2018/05/24/gitlab-10-8-1-released/), [v10.8](https://about.gitlab.com/2018/05/22/gitlab-10-8-released/), [v10.7.4](https://about.gitlab.com/2018/05/22/gitlab-10-7-4-released/)
-+ Bitbucket [v5.1](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-5-10-release-notes-948214779.html)
++ Bitbucket Server [v5.11](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-5-11-release-notes-950274914.html)
 + GitKraken [v3.6.3](https://support.gitkraken.com/release-notes/current), [v3.6.2](https://support.gitkraken.com/release-notes/current)
 + Github Desktop [v1.2.3](https://desktop.github.com/), [v1.2.2](https://desktop.github.com/), [v1.2.1](https://desktop.github.com/), [v1.2.0](https://desktop.github.com/)
++ Sourcetree [v2.7.6 for Mac](https://www.sourcetreeapp.com/), [v2.5.5 for Windows](https://www.sourcetreeapp.com/)
 
 ## Other News
 
