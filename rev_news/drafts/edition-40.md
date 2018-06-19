@@ -168,7 +168,21 @@ __Light reading__
 
 __Git tools and sites__
 
-* [git auto-magic]( https://blog.adamspiers.org/2018/06/14/git-auto-magic/) is a set of four tools developed by Adam Spiers supporting higher-level workflows on top of git: git-splice, git-transplant, git-deps and git-explode.
+*   Adam Spiers has developed a set of four tools supporting higher-level git
+    workflows:
+
+    *   git-splice - (non-interactively) splices commits into/out of current
+        branch
+    *   git-transplant - (non-interactively) transplants commits from current
+        branch into/onto another
+    *   git-deps - automatically detects textual dependencies between commits
+    *   git-explode (recently released) - automatically explodes a linear
+        sequence of git commits into new independent topic branches
+
+    Last month he presented demonstrations of these to the Git London
+    User Group.  [His blog post "git auto-magic"](https://blog.adamspiers.org/2018/06/14/git-auto-magic/)
+    provides links to the video and slides from the talk, and more
+    information about each tool.
 
 ## Credits
 
