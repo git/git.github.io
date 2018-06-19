@@ -17,9 +17,98 @@ This edition covers what happened during the month of May 2018.
 
 ## Discussions
 
-<!---
-### General
--->
+### General: Microsoft acquires Github for $7.5 billion
+
+On Monday, June 4th, Microsoft acquired Github for $7.5 billion in an all-stock
+deal. After [Business Insider reported on
+Friday](http://www.businessinsider.com/2-billion-startup-github-could-be-for-sale-microsoft-2018-5?IR=T)
+that Microsoft was in talks to acquire Github, Microsoft CEO [Satya Nadella
+made it
+official](https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/)
+in a blog post.  After raising [$100 million in
+2012](https://www.crunchbase.com/funding_round/github-series-a--832c3557) in
+series A then [$250 million in
+2015](https://www.crunchbase.com/funding_round/github-series-b--49182d09) for
+its series B from Sequoia Capital and others, Github was last valued at $1.8
+billion. The deal should be finalised before the end of this year. This
+is Microsoft's second big acquisition under Satya Nadella, two years after the
+$26.2 billion acquisition of LinkedIn.
+
+In his blog post, Satya Nadella stated that "Microsoft is all-in on open
+source", reassured that "GitHub will remain an open platform, which any
+developer can plug into and extend", adding that his company is "the most
+active organization on GitHub, with more than 2 million 'commits', or updates,
+made to projects". He also detailed "three opportunities" for both companies:
+
+1. "Empower developers at every stage of the development lifecycle – from
+   ideation to collaboration to deployment to the cloud".
+2. Use Microsoft's "direct sales and partner channels" and its "global cloud
+   infrastructure" to "accelerate enterprise developers’ use of GitHub".
+3. Bring "Microsoft’s developer tools and services to new audiences".
+
+As for Github, its CEO and co-founder Chris Wanstrath, aka defunkt, also [wrote
+a blog post](https://blog.github.com/2018-06-04-github-microsoft/) to confirm
+the news. He explained that "collaborating on projects from Git LFS to
+Electron" showed him that Microsoft and Github shared a common vision − "it’s all
+about the developer". Like Satya Nadella did in his post, he also emphasized
+that "GitHub needs to remain an open platform for all developers". He had
+already announced in August 2017 that [he intended to step down as
+CEO](http://www.businessinsider.fr/us/github-ceo-chris-wanstrath-to-step-down-become-executive-chairman-2017-8),
+and he confirmed that he would be replaced by Nat Friedman.
+
+Nat Friedman first founded [Ximian](https://en.wikipedia.org/wiki/Ximian) in
+1999 with Miguel de Icaza, co-creator of the GNOME project. Both met at
+Microsoft in 1997 when Friedman was an intern and de Icaza interviewed for
+a job. Ximian goal was to develop free and proprietary software that relied on
+GNOME. After Novell acquired Ximian in 2003, Ximian developed
+[Mono](https://en.wikipedia.org/wiki/Mono_(software)), which aimed at bringing
+.NET tools to other platforms, especially Linux. As a Chief Technology and
+Strategy Officer for Open Source at Ximian until 2010, Nat Friedman [reportedly
+migrated 6,000 employees from Windows to
+SUSE](https://en.wikipedia.org/wiki/Nat_Friedman) and from Microsoft Office to
+OpenOffice. In 2011, de Icaza and him reunited to found
+[Xamarin](https://en.wikipedia.org/wiki/Xamarin), a company focused on
+developing Mono. Xamarin was finally acquired by Microsoft in 2016. After
+Xamarin's acquisition, Friedman joined Microsoft as an employee, where he was
+a vice-president of Developer Services.
+
+Nat Friedman recently gave a [Reddit
+AMA](https://www.reddit.com/r/AMA/comments/8pc8mf/im_nat_friedman_future_ceo_of_github_ama/)
+to answer questions about the future of Github. Among other comments, he stated
+that:
+
++ Microsoft and Github will continue to [expand GVFS support to macOS and
+  Linux](https://www.reddit.com/r/AMA/comments/8pc8mf/im_nat_friedman_future_ceo_of_github_ama/e0a2rss/).
++ Github will [continue to support Atom](https://www.reddit.com/r/AMA/comments/8pc8mf/im_nat_friedman_future_ceo_of_github_ama/e0a2b2e/) going forward, while Microsoft continues
+  to develop Visual Studio Code.
++ [No advertisement](https://www.reddit.com/r/AMA/comments/8pc8mf/im_nat_friedman_future_ceo_of_github_ama/e0a3ygb/) would be added to the platform, taking Sourceforge as an example of what not to do.
++ He would be interested to see if Github could [provide financial incentives
+  to open source developers](https://www.reddit.com/r/AMA/comments/8pc8mf/im_nat_friedman_future_ceo_of_github_ama/e0a51y1/) or fund [student programs](https://www.reddit.com/r/AMA/comments/8pc8mf/im_nat_friedman_future_ceo_of_github_ama/e0a8077/).
++ Github will continue to [limit employee access to private repos](https://www.reddit.com/r/AMA/comments/8pc8mf/im_nat_friedman_future_ceo_of_github_ama/e0a33cv/).
+
+Among the many reactions to the acquisition, both positive and negative, some
+developers began migrating their repos from Github to Gitlab. Gitlab declared
+seeing a [dramatic increase in imports and
+customers](https://twitter.com/gitlab/status/1003715180348338176), while Nat
+Friedman [noted](https://www.reddit.com/r/AMA/comments/8pc8mf/im_nat_friedman_future_ceo_of_github_ama/e0a2ge2/)
+that "the set of users who have migrated [...] is extremely small,
+and this is more than made up for by the surge of new signups [...]". On an
+[interview with Coder
+Radio](https://www.youtube.com/watch?v=VSk-QOEA8bU&t=1186s), Gitlab CEO Sid
+Sijbrandij explained that upon hearing the rumors of Github's acquisition, they
+had prepared themselves for an increase in imports. As for their strategy going
+ahead, he said that their priority in the short term is to focus on CI and CD
+with "Auto DevOps".
+
+He also declared that Gitlab would continue to try and please projects that
+want an open source, self-hosted solution, like GNOME or Debian. At the same
+time, he underlined that "Microsoft has shown it's a new company, they're not
+pulling the tricks of the past". According to him, the criterion for choosing
+Gitlab over Github is not whether companies care about open source, but rather
+if they want to trust another's company Software as a Service. "If you want to
+self host, Gitlab is the logical choice, and we want to stimulate that as much
+as we can", he said to sum up the reasoning behind Gitlab's strategy. He added
+that 6% of the users of the open source edition converted to the paid edition.
 
 <!---
 ### Reviews
