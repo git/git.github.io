@@ -249,6 +249,21 @@ Junio also suggested a work-around:
 
 ## Other News
 
+__Events__
+
+* Microsoft acquires Github for $7.5 billion (see above)
+  * [Microsoft to acquire GitHub for $7.5 billion](https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/), Microsoft News Center
+  * [Microsoft snaps up GitHub for $7.5 billion](https://arstechnica.com/gadgets/2018/06/microsoft-snaps-up-github-for-7-5-billion/) by Peter Bright on ArsTechnica
+  * [Everyone complaining about Microsoft buying GitHub needs to offer a better solution](https://arstechnica.com/gadgets/2018/06/everyone-complaining-about-microsoft-buying-github-needs-to-offer-a-better-solution/) by Peter Bright on ArsTechnica
+  * [Microsoft’s plan for GitHub: “Make GitHub better at being GitHub”](https://arstechnica.com/gadgets/2018/06/microsofts-plan-for-github-make-github-better-at-being-github/) by Peter Bright on ArsTechnica
+  * [10 Views on What Microsoft’s GitHub Deal Does for DevOps Users](https://devops.com/10-views-on-what-microsofts-github-deal-does-for-devops-users/) by Ericka Chickowski on DevOps.com 
+  * [GitHub Is Microsoft’s $7.5 Billion Undo Button](https://www.bloomberg.com/news/articles/2018-06-06/github-is-microsoft-s-7-5-billion-undo-button) by Paul Ford on Bloomberg
+  * [Why Microsoft's GitHub Deal Isn't a Sign of the Apocalypse](https://www.informationweek.com/devops/why-microsofts-github-deal-isnt-a-sign-of-the-apocalypse/a/d-id/1331975) by John Edwards on InformationWeek
+  * [Why Microsoft is a good steward for GitHub](https://blog.hansenpartnership.com/why-microsoft-is-a-good-steward-for-github/) by James Bottomley
+  * [What is wrong with Microsoft buying GitHub](https://jacquesmattheij.com/what-is-wrong-with-microsoft-buying-github) by Jacques Mattheij
+  * [the single most important criteria when replacing Github](http://joeyh.name/blog/entry/the_single_most_important_criteria_when_replacing_Github/) by Joey Hess
+  * [13,000 Projects Ditched GitHub for GitLab Monday Morning](https://motherboard.vice.com/en_us/article/ywen8x/13000-projects-ditched-github-for-gitlab-monday-morning) by Daniel Oberhaus on Motherboard
+
 __Various__
 
 
