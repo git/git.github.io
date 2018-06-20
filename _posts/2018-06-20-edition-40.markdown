@@ -17,7 +17,9 @@ This edition covers what happened during the month of May 2018.
 
 ## Discussions
 
-### General: Microsoft acquires Github for $7.5 billion
+### General
+
+* Microsoft acquires Github for $7.5 billion
 
 On Monday, June 4th, Microsoft acquired Github for $7.5 billion in an all-stock
 deal. After [Business Insider reported on
