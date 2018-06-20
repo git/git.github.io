@@ -250,11 +250,44 @@ Junio also suggested a work-around:
 
 ## Other News
 
+__Security__
+
+* [Remediating the May 2018 Git Security Vulnerability](https://blogs.msdn.microsoft.com/devops/2018/05/29/announcing-the-may-2018-git-security-vulnerability/) related to handling of submodule paths
+
+__Events__
+
+* Microsoft acquires Github for $7.5 billion (see above)
+  * [Microsoft to acquire GitHub for $7.5 billion](https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/), Microsoft News Center
+  * [Microsoft snaps up GitHub for $7.5 billion](https://arstechnica.com/gadgets/2018/06/microsoft-snaps-up-github-for-7-5-billion/) by Peter Bright on ArsTechnica
+  * [Everyone complaining about Microsoft buying GitHub needs to offer a better solution](https://arstechnica.com/gadgets/2018/06/everyone-complaining-about-microsoft-buying-github-needs-to-offer-a-better-solution/) by Peter Bright on ArsTechnica
+  * [Microsoft’s plan for GitHub: “Make GitHub better at being GitHub”](https://arstechnica.com/gadgets/2018/06/microsofts-plan-for-github-make-github-better-at-being-github/) by Peter Bright on ArsTechnica
+  * [10 Views on What Microsoft’s GitHub Deal Does for DevOps Users](https://devops.com/10-views-on-what-microsofts-github-deal-does-for-devops-users/) by Ericka Chickowski on DevOps.com 
+  * [GitHub Is Microsoft’s $7.5 Billion Undo Button](https://www.bloomberg.com/news/articles/2018-06-06/github-is-microsoft-s-7-5-billion-undo-button) by Paul Ford on Bloomberg
+  * [Why Microsoft's GitHub Deal Isn't a Sign of the Apocalypse](https://www.informationweek.com/devops/why-microsofts-github-deal-isnt-a-sign-of-the-apocalypse/a/d-id/1331975) by John Edwards on InformationWeek
+  * [Why Microsoft is a good steward for GitHub](https://blog.hansenpartnership.com/why-microsoft-is-a-good-steward-for-github/) by James Bottomley
+  * [What is wrong with Microsoft buying GitHub](https://jacquesmattheij.com/what-is-wrong-with-microsoft-buying-github) by Jacques Mattheij
+  * [the single most important criteria when replacing Github](http://joeyh.name/blog/entry/the_single_most_important_criteria_when_replacing_Github/) by Joey Hess
+  * [13,000 Projects Ditched GitHub for GitLab Monday Morning](https://motherboard.vice.com/en_us/article/ywen8x/13000-projects-ditched-github-for-gitlab-monday-morning) by Daniel Oberhaus on Motherboard
+
 __Various__
 
+* [Introducing Git protocol version 2](https://opensource.googleblog.com/2018/05/introducing-git-protocol-version-2.html) on Google Open Source Blog
+* [Import your project from GitHub to GitLab](https://docs.gitlab.com/ee/user/project/import/github.html), a GitLab user documentation page
+* [GNOME, welcome to GitLab!](https://about.gitlab.com/2018/05/31/welcome-gnome-to-gitlab/)
+* [Gerrit Code Review - NoteDb Backend](https://gerrit-review.googlesource.com/Documentation/note-db.html), which is new backend for storing change and account metadata in the same repository as code changes
 
 __Light reading__
 
+* [Microsoft’s Performance Contributions to Git in 2017](https://blogs.msdn.microsoft.com/devops/2018/01/11/microsofts-performance-contributions-to-git-in-2017/) by Derrick Stolee on Microsoft DevOps Blog
+* [Mailing lists vs Github](https://begriffs.com/posts/2018-06-05-mailing-list-vs-github.html) by Joe "begriffs" Nelson
+* [Tikhon Jelvis' ideas about Structural Merging](https://begriffs.com/posts/2014-04-08-pilgrimage-report-structural-merging.html) by Joe "begriffs" Nelson (2014)
+* [Abstract vs Kactus vs Plant: a guide of version control solutions for Sketch](https://blog.prototypr.io/abstract-vs-kactus-vs-plant-a-guide-of-version-control-solutions-for-sketch-7da0a8ab5105) (2017)
+* [Understanding git under the hood](https://medium.com/@henrmota83/understanding-git-under-the-hood-b05b1dd52dec) by Henrique Mota
+* [Mastering git branches](https://geeks.uniplaces.com/mastering-branches-in-git-f20cb2d0c51f) by Henrique Mota
+* [15 Tips to Enhance your Github Flow](https://hackernoon.com/15-tips-to-enhance-your-github-flow-6af7ceb0d8a3) by Gabo Esquivel
+* [Commit Messages Matter](https://blog.oozou.com/commit-messages-matter-60309983c227) by Tino Thamjarat
+* [Release Flow: How We Do Branching on the VSTS Team](https://blogs.msdn.microsoft.com/devops/2018/04/19/release-flow-how-we-do-branching-on-the-vsts-team/) by Edward Thompson on Microsoft DevOps Blog
+* [Build your own `Git`](https://github.com/danistefanovic/build-your-own-x#build-your-own-git), a part of [build-your-own-x](https://github.com/danistefanovic/build-your-own-x), lists a few articles about reimplementing parts of Git functionality
 
 __Git tools and sites__
 
@@ -273,6 +306,19 @@ __Git tools and sites__
     User Group.  [His blog post "git auto-magic"](https://blog.adamspiers.org/2018/06/14/git-auto-magic/)
     provides links to the video and slides from the talk, and more
     information about each tool.
+
+* GitHub Evacuation Project: on [GitHub](https://github.com/upend/IF_MS_BUYS_GITHUB_IMMA_OUT) and on [GitLab](https://gitlab.com/upend/github)
+* [git-ssb](https://www.scuttlebutt.nz/applications.html#git-ssb) is a totally decentralized git interface (decentralized version of GitHub / Bitbucket / GitLab), with familiar interface for raising issues, forking, opening pull requests, etc. It uses Secure Scuttlebut decentralized gossip protocol. Its development started on [GitHub](https://github.com/clehner/git-ssb), but has been since moved to git-ssb itself (Repo ID: %n92DiQh7ietE+R+X/I403LQoyf2DtR3WQfCkDKlheQU=.sha256), and GitHub project is now in archived state. There exist online portals serving git-ssb over HTTP(S): <https://gitmx.com>, <https://git-ssb.celehner.com>, <http://git.mixmix.io>, <https://git.scuttlebot.io>
+  * [git-ssb-intro](https://github.com/noffle/git-ssb-intro) - Learn git-ssb: a decentralized GitHub alternative
+* [BitHubLab](https://bithublab.org/): Search for open source repositories on github, gitlab, and bitbucket all at once
+* [GitHub Pull Request Rejection Bot](http://nopullrequests.com/) - effectively disable pull requests for your repo on GitHub
+* Continuous Integration for projects using a patch-based, mailing-list-centric git workflow:
+  * [PostgreSQL Patch Tester](http://cfbot.cputube.org/) for patches submitted for Commitfests
+  * [snowpatch](https://github.com/ruscur/snowpatch) - CI for patches
+* Distributed bug tracking
+  * [bug](https://github.com/driusan/bug): distributed bug tracking with the filesystem and hg or git
+  * [Bugs Everywhere](http://bugseverywhere.org/) is a “distributed bugtracker”, designed to complement distributed revision control systems, supporting Arch, Bazaar, Darcs, Git, Mercurial, Monotone
+* [isomorphic-git](https://github.com/isomorphic-git/isomorphic-git) ([homepage](https://isomorphic-git.github.io/)) is a pure JavaScript implementation of git for Node.js and browsers
 
 ## Credits
 
