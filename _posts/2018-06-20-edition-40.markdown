@@ -288,7 +288,7 @@ __Light reading__
 * [Mastering git branches](https://geeks.uniplaces.com/mastering-branches-in-git-f20cb2d0c51f) by Henrique Mota
 * [15 Tips to Enhance your Github Flow](https://hackernoon.com/15-tips-to-enhance-your-github-flow-6af7ceb0d8a3) by Gabo Esquivel
 * [Commit Messages Matter](https://blog.oozou.com/commit-messages-matter-60309983c227) by Tino Thamjarat
-* [Release Flow: How We Do Branching on the VSTS Team](https://blogs.msdn.microsoft.com/devops/2018/04/19/release-flow-how-we-do-branching-on-the-vsts-team/) by Edward Thompson on Microsoft DevOps Blog
+* [Release Flow: How We Do Branching on the VSTS Team](https://blogs.msdn.microsoft.com/devops/2018/04/19/release-flow-how-we-do-branching-on-the-vsts-team/) by Edward Thomson on Microsoft DevOps Blog
 * [Build your own `Git`](https://github.com/danistefanovic/build-your-own-x#build-your-own-git), a part of [build-your-own-x](https://github.com/danistefanovic/build-your-own-x), lists a few articles about reimplementing parts of Git functionality
 
 __Git tools and sites__
