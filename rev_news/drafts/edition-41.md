@@ -43,6 +43,7 @@ __Various__
 
 __Light reading__
 
+* [The advantages of an email-driven git workflow](https://drewdevault.com/2018/07/02/Email-driven-git.html)
 
 __Git tools and sites__
 
