@@ -1,0 +1,332 @@
+---
+title: Git Rev News Edition 40 (June 20th, 2018)
+layout: default
+date: 2018-06-20 12:06:51 +0100
+author: chriscool
+categories: [news]
+navbar: false
+---
+
+## Git Rev News: Edition 40 (June 20th, 2018)
+
+Welcome to the 40th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
+a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
+subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
+
+This edition covers what happened during the month of May 2018.
+
+## Discussions
+
+### General
+
+* Microsoft acquires Github for $7.5 billion
+
+On Monday, June 4th, Microsoft announced an agreement to acquire GitHub for $7.5 billion in an all-stock
+deal. The acquisition is expected to close later this year. After [Business Insider reported on
+Friday](http://www.businessinsider.com/2-billion-startup-github-could-be-for-sale-microsoft-2018-5?IR=T)
+that Microsoft was in talks to acquire Github, Microsoft CEO [Satya Nadella
+made it
+official](https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/)
+in a blog post.  After raising [$100 million in
+2012](https://www.crunchbase.com/funding_round/github-series-a--832c3557) in
+series A then [$250 million in
+2015](https://www.crunchbase.com/funding_round/github-series-b--49182d09) for
+its series B from Sequoia Capital and others, Github was last valued at $1.8
+billion. The deal should be finalised before the end of this year. This
+is Microsoft's second big acquisition under Satya Nadella, two years after the
+$26.2 billion acquisition of LinkedIn.
+
+In his blog post, Satya Nadella stated that "Microsoft is all-in on open
+source", reassured that "GitHub will remain an open platform, which any
+developer can plug into and extend", adding that his company is "the most
+active organization on GitHub, with more than 2 million 'commits', or updates,
+made to projects". He also detailed "three opportunities" for both companies:
+
+1. "Empower developers at every stage of the development lifecycle – from
+   ideation to collaboration to deployment to the cloud".
+2. Use Microsoft's "direct sales and partner channels" and its "global cloud
+   infrastructure" to "accelerate enterprise developers’ use of GitHub".
+3. Bring "Microsoft’s developer tools and services to new audiences".
+
+As for Github, its CEO and co-founder Chris Wanstrath, aka defunkt, also [wrote
+a blog post](https://blog.github.com/2018-06-04-github-microsoft/) to confirm
+the news. He explained that "collaborating on projects from Git LFS to
+Electron" showed him that Microsoft and Github shared a common vision − "it’s all
+about the developer". Like Satya Nadella did in his post, he also emphasized
+that "GitHub needs to remain an open platform for all developers". He had
+already announced in August 2017 that [he intended to step down as
+CEO](http://www.businessinsider.fr/us/github-ceo-chris-wanstrath-to-step-down-become-executive-chairman-2017-8),
+and he confirmed that he would be replaced by Nat Friedman.
+
+Nat Friedman first founded [Ximian](https://en.wikipedia.org/wiki/Ximian) in
+1999 with Miguel de Icaza, co-creator of the GNOME project. Both met at
+Microsoft in 1997 when Friedman was an intern and de Icaza interviewed for
+a job. Ximian goal was to develop free and proprietary software that relied on
+GNOME. After Novell acquired Ximian in 2003, Ximian developed
+[Mono](https://en.wikipedia.org/wiki/Mono_(software)), which aimed at bringing
+.NET tools to other platforms, especially Linux. As a Chief Technology and
+Strategy Officer for Open Source at Ximian until 2010, Nat Friedman [reportedly
+migrated 6,000 employees from Windows to
+SUSE](https://en.wikipedia.org/wiki/Nat_Friedman) and from Microsoft Office to
+OpenOffice. In 2011, de Icaza and him reunited to found
+[Xamarin](https://en.wikipedia.org/wiki/Xamarin), a company focused on
+developing Mono. Xamarin was finally acquired by Microsoft in 2016. After
+Xamarin's acquisition, Friedman joined Microsoft as an employee, where he was
+a vice-president of Developer Services.
+
+Nat Friedman recently gave a [Reddit
+AMA](https://www.reddit.com/r/AMA/comments/8pc8mf/im_nat_friedman_future_ceo_of_github_ama/)
+to answer questions about the future of Github. Among other comments, he stated
+that:
+
++ Microsoft and Github will continue to [expand GVFS support to macOS and
+  Linux](https://www.reddit.com/r/AMA/comments/8pc8mf/im_nat_friedman_future_ceo_of_github_ama/e0a2rss/).
++ Github will [continue to support Atom](https://www.reddit.com/r/AMA/comments/8pc8mf/im_nat_friedman_future_ceo_of_github_ama/e0a2b2e/) going forward, while Microsoft continues
+  to develop Visual Studio Code.
++ [No advertisement](https://www.reddit.com/r/AMA/comments/8pc8mf/im_nat_friedman_future_ceo_of_github_ama/e0a3ygb/) would be added to the platform, taking Sourceforge as an example of what not to do.
++ He would be interested to see if Github could [provide financial incentives
+  to open source developers](https://www.reddit.com/r/AMA/comments/8pc8mf/im_nat_friedman_future_ceo_of_github_ama/e0a51y1/) or fund [student programs](https://www.reddit.com/r/AMA/comments/8pc8mf/im_nat_friedman_future_ceo_of_github_ama/e0a8077/).
++ Github will continue to [limit employee access to private repos](https://www.reddit.com/r/AMA/comments/8pc8mf/im_nat_friedman_future_ceo_of_github_ama/e0a33cv/).
+
+Among the many reactions to the acquisition, both positive and negative, some
+developers began migrating their repos from Github to Gitlab. Gitlab declared
+seeing a [dramatic increase in imports and
+customers](https://twitter.com/gitlab/status/1003715180348338176), while Nat
+Friedman [noted](https://www.reddit.com/r/AMA/comments/8pc8mf/im_nat_friedman_future_ceo_of_github_ama/e0a2ge2/)
+that "the set of users who have migrated [...] is extremely small,
+and this is more than made up for by the surge of new signups [...]". On an
+[interview with Coder
+Radio](https://www.youtube.com/watch?v=VSk-QOEA8bU&t=1186s), Gitlab CEO Sid
+Sijbrandij explained that upon hearing the rumors of Github's acquisition, they
+had prepared themselves for an increase in imports. As for their strategy going
+ahead, he said that their priority in the short term is to focus on CI and CD
+with "Auto DevOps".
+
+He also declared that Gitlab would continue to try and please projects that
+want an open source, self-hosted solution, like GNOME or Debian. At the same
+time, he underlined that "Microsoft has shown it's a new company, they're not
+pulling the tricks of the past". According to him, the criterion for choosing
+Gitlab over Github is not whether companies care about open source, but rather
+if they want to trust somebody else's company Software as a Service. "If you want to
+self host, Gitlab is the logical choice, and we want to stimulate that as much
+as we can", he said to sum up the reasoning behind Gitlab's strategy. He added
+that 6% of the users of the open source edition converted to the paid edition.
+
+<!---
+### Reviews
+-->
+
+### Support
+
+* [git rebase -i --exec and changing directory](https://public-inbox.org/git/CAAUqJDu_3DTyd1cFKaNRKOzo3AHosfxP1jjWpa=HGtyAyitTeA@mail.gmail.com/)
+
+On May 19th Ondrej Mosnáček described an issue he had using `git rebase -i --exec ...`.
+
+He tried to pass something like `cd <dir> && git <cmd>` to the
+`--exec` option and found that it didn't behave as it should.
+
+Ondrej listed commands using `cd src && git status` to reproduce the
+issue which is that "`git status` reports as if all files in the
+repository are deleted".
+
+As noone had replied, Ondrej asked on May 27th if anyone had time to
+look at this.
+
+Philip Oakley replied to Ondrej asking for more information about the
+directories he had created and the directory he was in when he
+launched the rebase command.
+
+Ondrej said that he had to be in the top level directory of the
+repository for the rebase to work, and also that the commands he gave
+can reproduce the issue even in a current directory without any
+special name.
+
+Another Phillip (with two 'l' instead of one), Phillip Wood, chimed in
+saying that he could reproduce the issue with the commands that Ondrej
+had given, though he could also reproduce it outside a rebase using
+only `git status` when the GIT_DIR environment variable is set to the
+`.git` directory of the repo. So Phillip thought that the problem came
+from `git status` not behaving properly when GIT_DIR is set.
+
+Philip Oakley replied that he could also reproduce the issue. Though
+after experimenting he suggested `git status` could behave differently
+when attached or not to a terminal.
+
+Junio Hamano, the Git maintainer, then chimed in to agree with Phillip
+Wood's previous suggestion pointing to the GIT_DIR environment
+variable:
+
+> When GIT_DIR environment variable appears without GIT_WORKING_TREE,
+> `git` assumes that you are starting it at the root level of the
+> working tree. In your example, if there is README at the top-level
+> but dir/README is not there, `status` would report that you removed
+> it.
+
+Junio also suggested a work-around:
+
+> You can unset GIT_DIR in your `--exec` script if you know that
+> Git would find the right repository when run from your script.
+
+
+## Developer Spotlight: Nicolas Pitre
+
+* Who are you and what do you do?
+
+  I graduated with a software engineering degree from École Polytechnique de
+  Montréal. I'm currently a software architect on the OCTO team at Linaro.
+  I spent most of my professional life working on the Linux kernel for the ARM
+  architecture. And being a code tinkerer at heart, I am often looking at assembly
+  output from the compiler to see what it made of my code.
+
+* How did you get involved in Git?
+
+  When Linus Torvalds announced that he'd be taking a break from kernel work to
+  dedicate some time to the creation of a new code management system of his own
+  then I got intrigued. I expected this new system to have an impact on my kernel
+  work flow so I wanted to test it early on.  And of course I quickly got annoyed
+  by all the shortcomings Git had in those early days, so I started making
+  patches and became a regular contributor for a few years.
+
+* What would you name your most important contribution to Git?
+
+  Delta compression, and object packing heuristics. Getting git-repack to produce
+  smaller packs and do it faster became an obsession of mine for a while.
+
+* If you could get a team of expert developers to work full time on something
+  in Git for a full year, what would it be?
+
+  The git pack format version 2. This is something I worked on for a while, from
+  the format definition to the first proof-of-concept implementation. The initial
+  pack size reduction over the current format was really interesting (around 20%)
+  and the potential for significant runtime speed-ups was there in theory. In
+  practice that meant reworking most of git's inner core code to benefit from all
+  the direct object references provided by that pack format. The existing proof
+  of concept simply implemented backward compatibility with the rest of git which
+  made it slower than the current pack format. And because the current format is
+  already quite efficient already, this project was facing diminishing returns
+  and I could no longer justify the required time to work on it. But... if
+  I could get a team for a year...
+
+* As a git user, what functionality would you like to see implemented?
+
+  I really get annoyed when fetching a tracked repository and all the tags from
+  that remote repo are merged with my own tags, or with tags from another remote
+  repo. We have a separate namespace for remote branches but not for remote tags.
+  That makes it very hard to know where a particular tag comes from, and "git
+  remote rm" doesn't get rid of them either. This also pollutes the git-describe
+  output.
+
+  I think remote tags should have separate namespaces by default just like remote
+  branches, with similar disambiguation rules when referring to a tag using
+  a partial path. That's something I meant to implement myself for years now but
+  never got around to it.
+
+* If you could remove something from Git without worrying about backwards
+  compatibility, what would it be?
+
+  Some of the early choices I made in the delta compression encoding format. But
+  that format is simply too widely used now to consider incompatible changes just
+  for the sake of being marginally more efficient.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+  I'm pretty much a pure-git user and never got used to any of the associated
+  tools. I grew my git usage while I was also a git developer with a pretty good
+  knowledge of its internals and native capabilities.  Most tools on top of git
+  are meant to provide a different user experience that always gave me the
+  impression they were in the way of the actual basic git command I wanted to
+  use.
+
+## Releases
+
++ Git [v2.18.0-rc2](https://public-inbox.org/git/xmqqefha5o9g.fsf@gitster-ct.c.googlers.com/), [v2.18.0-rc1](https://public-inbox.org/git/xmqqwove4pzo.fsf@gitster-ct.c.googlers.com/), [v2.18.0-rc0](https://public-inbox.org/git/xmqqr2lsdam9.fsf@gitster-ct.c.googlers.com/), [v2.17.1, v2.13.7, v2.14.4, v2.15.2 and v2.16.4](https://public-inbox.org/git/xmqqy3g2flb6.fsf@gitster-ct.c.googlers.com/)
++ Git for Windows [v2.17.1(2)](https://github.com/git-for-windows/git/releases/tag/v2.17.1.windows.2), [v2.17.1(1)](https://github.com/git-for-windows/git/releases/tag/v2.17.1.windows.1)
++ libgit2 [v0.27.2](https://github.com/libgit2/libgit2/releases/tag/v0.27.2), [v0.27.1](https://github.com/libgit2/libgit2/releases/tag/v0.27.1)
++ libgit2sharp [v0.25.2](https://github.com/libgit2/libgit2sharp/releases/tag/v0.25.2), [v0.25.1](https://github.com/libgit2/libgit2sharp/releases/tag/v0.25.1)
++ Github Enterprise [v2.13.4](https://enterprise.github.com/releases/2.13.4), [v2.12.12](https://enterprise.github.com/releases/2.12.12), [v2.11.18](https://enterprise.github.com/releases/2.11.18), [v2.10.24](https://enterprise.github.com/releases/2.10.24), [v2.13.3](https://enterprise.github.com/releases/2.13.3), [v2.12.11](https://enterprise.github.com/releases/2.12.11), [v2.11.17](https://enterprise.github.com/releases/2.11.17), [v2.10.23](https://enterprise.github.com/releases/2.10.23)
++ Gitlab [v10.8.4](https://about.gitlab.com/2018/06/07/gitlab-10-8-4-released/), [v10.8.3](https://about.gitlab.com/2018/06/01/gitlab-10-8-3-released/), [v10.8.2, 10.7.5, 10.6.6](https://about.gitlab.com/2018/05/29/security-release-gitlab-10-dot-8-dot-2-released/), [v10.8.1](https://about.gitlab.com/2018/05/24/gitlab-10-8-1-released/), [v10.8](https://about.gitlab.com/2018/05/22/gitlab-10-8-released/), [v10.7.4](https://about.gitlab.com/2018/05/22/gitlab-10-7-4-released/)
++ Bitbucket Server [v5.11](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-5-11-release-notes-950274914.html), [v5.10](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-5-10-release-notes-948214779.html)
++ GitKraken [v3.6.3](https://support.gitkraken.com/release-notes/current), [v3.6.2](https://support.gitkraken.com/release-notes/current)
++ Github Desktop [v1.2.3](https://desktop.github.com/), [v1.2.2](https://desktop.github.com/), [v1.2.1](https://desktop.github.com/), [v1.2.0](https://desktop.github.com/)
++ Sourcetree [v2.7.6 for Mac](https://www.sourcetreeapp.com/), [v2.5.5 for Windows](https://www.sourcetreeapp.com/)
+
+## Other News
+
+__Security__
+
+* [Remediating the May 2018 Git Security Vulnerability](https://blogs.msdn.microsoft.com/devops/2018/05/29/announcing-the-may-2018-git-security-vulnerability/) related to handling of submodule paths
+
+__Events__
+
+* Microsoft acquires Github for $7.5 billion (see above)
+  * [Microsoft to acquire GitHub for $7.5 billion](https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/), Microsoft News Center
+  * [Microsoft snaps up GitHub for $7.5 billion](https://arstechnica.com/gadgets/2018/06/microsoft-snaps-up-github-for-7-5-billion/) by Peter Bright on ArsTechnica
+  * [Everyone complaining about Microsoft buying GitHub needs to offer a better solution](https://arstechnica.com/gadgets/2018/06/everyone-complaining-about-microsoft-buying-github-needs-to-offer-a-better-solution/) by Peter Bright on ArsTechnica
+  * [Microsoft’s plan for GitHub: “Make GitHub better at being GitHub”](https://arstechnica.com/gadgets/2018/06/microsofts-plan-for-github-make-github-better-at-being-github/) by Peter Bright on ArsTechnica
+  * [10 Views on What Microsoft’s GitHub Deal Does for DevOps Users](https://devops.com/10-views-on-what-microsofts-github-deal-does-for-devops-users/) by Ericka Chickowski on DevOps.com 
+  * [GitHub Is Microsoft’s $7.5 Billion Undo Button](https://www.bloomberg.com/news/articles/2018-06-06/github-is-microsoft-s-7-5-billion-undo-button) by Paul Ford on Bloomberg
+  * [Why Microsoft's GitHub Deal Isn't a Sign of the Apocalypse](https://www.informationweek.com/devops/why-microsofts-github-deal-isnt-a-sign-of-the-apocalypse/a/d-id/1331975) by John Edwards on InformationWeek
+  * [Why Microsoft is a good steward for GitHub](https://blog.hansenpartnership.com/why-microsoft-is-a-good-steward-for-github/) by James Bottomley
+  * [What is wrong with Microsoft buying GitHub](https://jacquesmattheij.com/what-is-wrong-with-microsoft-buying-github) by Jacques Mattheij
+  * [the single most important criteria when replacing Github](http://joeyh.name/blog/entry/the_single_most_important_criteria_when_replacing_Github/) by Joey Hess
+  * [13,000 Projects Ditched GitHub for GitLab Monday Morning](https://motherboard.vice.com/en_us/article/ywen8x/13000-projects-ditched-github-for-gitlab-monday-morning) by Daniel Oberhaus on Motherboard
+
+__Various__
+
+* [Introducing Git protocol version 2](https://opensource.googleblog.com/2018/05/introducing-git-protocol-version-2.html) on Google Open Source Blog
+* [Import your project from GitHub to GitLab](https://docs.gitlab.com/ee/user/project/import/github.html), a GitLab user documentation page
+* [GNOME, welcome to GitLab!](https://about.gitlab.com/2018/05/31/welcome-gnome-to-gitlab/)
+* [Gerrit Code Review - NoteDb Backend](https://gerrit-review.googlesource.com/Documentation/note-db.html), which is new backend for storing change and account metadata in the same repository as code changes
+
+__Light reading__
+
+* [Microsoft’s Performance Contributions to Git in 2017](https://blogs.msdn.microsoft.com/devops/2018/01/11/microsofts-performance-contributions-to-git-in-2017/) by Derrick Stolee on Microsoft DevOps Blog
+* [Mailing lists vs Github](https://begriffs.com/posts/2018-06-05-mailing-list-vs-github.html) by Joe "begriffs" Nelson
+* [Tikhon Jelvis' ideas about Structural Merging](https://begriffs.com/posts/2014-04-08-pilgrimage-report-structural-merging.html) by Joe "begriffs" Nelson (2014)
+* [Abstract vs Kactus vs Plant: a guide of version control solutions for Sketch](https://blog.prototypr.io/abstract-vs-kactus-vs-plant-a-guide-of-version-control-solutions-for-sketch-7da0a8ab5105) (2017)
+* [Understanding git under the hood](https://medium.com/@henrmota83/understanding-git-under-the-hood-b05b1dd52dec) by Henrique Mota
+* [Mastering git branches](https://geeks.uniplaces.com/mastering-branches-in-git-f20cb2d0c51f) by Henrique Mota
+* [15 Tips to Enhance your Github Flow](https://hackernoon.com/15-tips-to-enhance-your-github-flow-6af7ceb0d8a3) by Gabo Esquivel
+* [Commit Messages Matter](https://blog.oozou.com/commit-messages-matter-60309983c227) by Tino Thamjarat
+* [Release Flow: How We Do Branching on the VSTS Team](https://blogs.msdn.microsoft.com/devops/2018/04/19/release-flow-how-we-do-branching-on-the-vsts-team/) by Edward Thomson on Microsoft DevOps Blog
+* [Build your own `Git`](https://github.com/danistefanovic/build-your-own-x#build-your-own-git), a part of [build-your-own-x](https://github.com/danistefanovic/build-your-own-x), lists a few articles about reimplementing parts of Git functionality
+
+__Git tools and sites__
+
+*   Adam Spiers has developed a set of four tools supporting higher-level git
+    workflows:
+
+    *   git-splice - (non-interactively) splices commits into/out of current
+        branch
+    *   git-transplant - (non-interactively) transplants commits from current
+        branch into/onto another
+    *   git-deps - automatically detects textual dependencies between commits
+    *   git-explode (recently released) - automatically explodes a linear
+        sequence of git commits into new independent topic branches
+
+    Last month he presented demonstrations of these to the Git London
+    User Group.  [His blog post "git auto-magic"](https://blog.adamspiers.org/2018/06/14/git-auto-magic/)
+    provides links to the video and slides from the talk, and more
+    information about each tool.
+
+* GitHub Evacuation Project: on [GitHub](https://github.com/upend/IF_MS_BUYS_GITHUB_IMMA_OUT) and on [GitLab](https://gitlab.com/upend/github)
+* [git-ssb](https://www.scuttlebutt.nz/applications.html#git-ssb) is a totally decentralized git interface (decentralized version of GitHub / Bitbucket / GitLab), with familiar interface for raising issues, forking, opening pull requests, etc. It uses Secure Scuttlebut decentralized gossip protocol. Its development started on [GitHub](https://github.com/clehner/git-ssb), but has been since moved to git-ssb itself (Repo ID: %n92DiQh7ietE+R+X/I403LQoyf2DtR3WQfCkDKlheQU=.sha256), and GitHub project is now in archived state. There exist online portals serving git-ssb over HTTP(S): <https://gitmx.com>, <https://git-ssb.celehner.com>, <http://git.mixmix.io>, <https://git.scuttlebot.io>
+  * [git-ssb-intro](https://github.com/noffle/git-ssb-intro) - Learn git-ssb: a decentralized GitHub alternative
+* [BitHubLab](https://bithublab.org/): Search for open source repositories on github, gitlab, and bitbucket all at once
+* [GitHub Pull Request Rejection Bot](http://nopullrequests.com/) - effectively disable pull requests for your repo on GitHub
+* Continuous Integration for projects using a patch-based, mailing-list-centric git workflow:
+  * [PostgreSQL Patch Tester](http://cfbot.cputube.org/) for patches submitted for Commitfests
+  * [snowpatch](https://github.com/ruscur/snowpatch) - CI for patches
+* Distributed bug tracking
+  * [bug](https://github.com/driusan/bug): distributed bug tracking with the filesystem and hg or git
+  * [Bugs Everywhere](http://bugseverywhere.org/) is a “distributed bugtracker”, designed to complement distributed revision control systems, supporting Arch, Bazaar, Darcs, Git, Mercurial, Monotone
+* [isomorphic-git](https://github.com/isomorphic-git/isomorphic-git) ([homepage](https://isomorphic-git.github.io/)) is a pure JavaScript implementation of git for Node.js and browsers
+
+## Credits
+
+This edition of Git Rev News was curated by
+Christian Couder &lt;<christian.couder@gmail.com>&gt;,
+Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
+Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
+Gabriel Alcaras &lt;<gabriel.alcaras@telecom-paristech.fr>&gt;
+with help from Adam Spiers, Bryan Turner, Alyss Noland and Nicolas Pitre.
