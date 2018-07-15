@@ -37,20 +37,24 @@ This edition covers what happened during the month of June 2018.
 
 + Git [v2.18.0](https://public-inbox.org/git/xmqqbmc4szxc.fsf@gitster-ct.c.googlers.com/)
 + Git for Windows [2.18.0](https://public-inbox.org/git/20180622115913.14184-1-johannes.schindelin@gmx.de)
++ libgit2 [v0.27.3](https://github.com/libgit2/libgit2/releases/tag/v0.27.3)
 + Bitbucket Server [v5.12](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
-+ Github Enterprise [v2.14.0](https://enterprise.github.com/releases/2.14.0),
++ GitHub Enterprise [v2.14.0](https://enterprise.github.com/releases/2.14.0),
 [v2.13.6](https://enterprise.github.com/releases/2.13.6),
 [v2.12.14](https://enterprise.github.com/releases/2.12.14),
 [v2.11.20](https://enterprise.github.com/releases/2.11.20),
 [v2.13.5](https://enterprise.github.com/releases/2.13.5),
 [v2.12.13](https://enterprise.github.com/releases/2.12.13),
 [v2.11.19](https://enterprise.github.com/releases/2.11.19)
-+ Gitlab [11.0.3](https://about.gitlab.com/2018/07/05/gitlab-11-0-3-released/),
++ GitLab [11.0.3](https://about.gitlab.com/2018/07/05/gitlab-11-0-3-released/),
 [11.0.2](https://about.gitlab.com/2018/06/27/gitlab-11-0-2-released/),
 [11.0.1, 10.8.5, 10.7.6](https://about.gitlab.com/2018/06/25/security-release-gitlab-11-dot-0-dot-1-released/),
 [11.0.0](https://about.gitlab.com/2018/06/22/gitlab-11-0-released/)
 + GitKraken [v3.6.6](https://support.gitkraken.com/release-notes/current),
 [v3.6.4](https://support.gitkraken.com/release-notes/current)
++ GitHub Desktop [v1.2.6](https://desktop.github.com/release-notes/),
+[v1.2.5](https://desktop.github.com/release-notes/),
+[v1.2.4](https://desktop.github.com/release-notes/)
 
 ## Other News
 
