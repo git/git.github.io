@@ -60,6 +60,11 @@ This edition covers what happened during the month of June 2018.
 
 __Various__
 
+* Derrick Stolee has written about Commit Graph on [Microsoft DevOps Blog](https://blogs.msdn.microsoft.com/devops/):
+
+  - [Supercharging the Git Commit Graph](https://blogs.msdn.microsoft.com/devops/2018/06/25/supercharging-the-git-commit-graph/)
+  - [Supercharging the Git Commit Graph II: File Format](https://blogs.msdn.microsoft.com/devops/2018/07/02/supercharging-the-git-commit-graph-ii-file-format/)
+  - [Supercharging the Git Commit Graph III: Generations and Graph Algorithms](https://blogs.msdn.microsoft.com/devops/2018/07/09/supercharging-the-git-commit-graph-iii-generations/)
 
 __Light reading__
 
