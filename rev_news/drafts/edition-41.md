@@ -128,6 +128,9 @@ has been made.
 
 __Various__
 
+* A [Git standup on IRC](https://public-inbox.org/git/20180713170018.GA139708@aiede.svl.corp.google.com/)
+  every two weeks at 17:00-17:30 UTC has been announced by Jonathan Nieder.
+
 * Derrick Stolee has written about Commit Graph on [Microsoft DevOps Blog](https://blogs.msdn.microsoft.com/devops/):
 
   - [Supercharging the Git Commit Graph](https://blogs.msdn.microsoft.com/devops/2018/06/25/supercharging-the-git-commit-graph/)
