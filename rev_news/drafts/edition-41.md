@@ -122,6 +122,7 @@ has been made.
 + GitHub Desktop [v1.2.6](https://desktop.github.com/release-notes/),
 [v1.2.5](https://desktop.github.com/release-notes/),
 [v1.2.4](https://desktop.github.com/release-notes/)
++ Gerrit Code Review [v2.14.10](https://www.gerritcodereview.com/releases/2.14.md)
 
 ## Other News
 
