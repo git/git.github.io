@@ -123,6 +123,7 @@ has been made.
 [v1.2.5](https://desktop.github.com/release-notes/),
 [v1.2.4](https://desktop.github.com/release-notes/)
 + Gerrit Code Review [v2.14.10](https://www.gerritcodereview.com/releases/2.14.md)
++ Git Tower GUI v2: [Better than Ever: The New Tower Has Launched](https://www.git-tower.com/blog/the-new-tower-has-launched-2018), now with annual license model
 
 ## Other News
 
@@ -138,13 +139,37 @@ __Various__
   - [Supercharging the Git Commit Graph III: Generations and Graph Algorithms](https://blogs.msdn.microsoft.com/devops/2018/07/09/supercharging-the-git-commit-graph-iii-generations/)
   - [Supercharing the Git Commit Graph IV: Bloom Filters](https://blogs.msdn.microsoft.com/devops/2018/07/16/super-charging-the-git-commit-graph-iv-bloom-filters/)
 
+* Echoes of Microsoft acquring GitHub (see [Git RevNews Edition #40](https://git.github.io/rev_news/2018/06/20/edition-40/))
+
+  - [Microsoft Buys GitHub: Three Weeks Later](https://www.linuxjournal.com/content/microsoft-buys-github-three-weeks-later) by Marcel Gagné
+  - [Opinion: GitHub vs GitLab](https://www.linuxjournal.com/content/opinion-github-vs-gitlab) by Matt Lee (with a bit of history)
+
+* [Gentoo GitHub Organization hacking incident summary](https://wiki.gentoo.org/wiki/Project:Infrastructure/Incident_Reports/2018-06-28_Github)
+* [GitLab Moves to Automate DevOps](https://devops.com/gitlab-moves-to-automate-devops/) by Mike Vizard on DevOps.com 
+
 __Light reading__
 
-* [The advantages of an email-driven git workflow](https://drewdevault.com/2018/07/02/Email-driven-git.html)
+* [The advantages of an email-driven git workflow](https://drewdevault.com/2018/07/02/Email-driven-git.html) by Drew DeVault
 * [Git Syncing tutorial](https://www.atlassian.com/git/tutorials/syncing) from Atlassian
+* [Version Control Before Git with CVS](https://twobithistory.org/2018/07/07/cvs.html) on Two-Bit History blog (though it missed the problem with repeated merges in CVS)
+* [The 5 basic Git commands every beginner needs to master](https://www.theserverside.com/tutorial/Five-basic-Git-commands-every-beginner-needs-to-know) by Cameron McKenzie
+* [How to git revert a commit: A simple undo changes example](https://www.theserverside.com/tutorial/How-to-git-revert-a-commit-A-simple-undo-changes-example) by Cameron McKenzie
+* [How to reset, revert, and return to previous states in Git](https://opensource.com/article/18/6/git-reset-revert-rebase-commands) by Brent Laster
+* [Terrible Ideas in Git](https://www.linuxjournal.com/content/terrible-ideas-git) by Corey Quinn (tongue-in-cheek?), with some good Git tips
+* [The Git Rebase Introduction I Wish I'd Had](https://dev.to/maxwell_dev/the-git-rebase-introduction-i-wish-id-had) by Max Antonucci (2017)
+* [Anatomy of a perfect pull request](https://opensource.com/article/18/6/anatomy-perfect-pull-request) by Hugo Dias
+* [Meet the GitLab Web IDE](https://about.gitlab.com/2018/06/15/introducing-gitlab-s-integrated-development-environment/) on GitLab Blog
+* [Storing Encrypted Credentials in Git](https://dzone.com/articles/storing-encrypted-credentials-in-git) by Bozhidar Bozhanov, with a look at a possible solution;  
+  see also [Best practices for securely storing API keys](https://medium.freecodecamp.org/how-to-securely-store-api-keys-4ff3ea19ebda) by Bruno Pedro (mentioned in [Git Rev News Edition #39](https://git.github.io/rev_news/2018/05/16/edition-39/))
 
 __Git tools and sites__
 
+* [GitRuler](https://github.com/rcraggs/gitruler) - Automated checking of the status of a repository, like unit testing for a git repo (that repo has specific state)
+* [Gitgraph.js](http://gitgraphjs.com/) is a simple JavaScript library meant to help you visually presenting git branching models, using HTML canvas
+* [diffoscope](https://diffoscope.org/): in-depth comparison of files, archives, and directories (will recursively unpack archives of many kinds and transform various binary formats into more human readable form)
+* [gitfiti](https://github.com/gelstudios/gitfiti) is a tool for crafting graffiti in a GitHub commit history calendar; includes list of notable derivatives
+* [GitLab Pages](https://about.gitlab.com/features/pages/): websites for your GitLab projects, user account or group
+* A new archive of linux-kernel mailing list (LKML) posts going back to 1998 [is now available](https://www.kernel.org/lore.html) at [lore.kernel.org](https://lore.kernel.org/lkml/), which is based on [public-inbox](https://public-inbox.org/design_notes.html) (with Git-backed archival mechanism you can clone and pull)
 
 ## Credits
 
