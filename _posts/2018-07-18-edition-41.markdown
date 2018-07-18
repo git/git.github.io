@@ -29,7 +29,7 @@ future steps in this area.
 
 As the new hash function is still undecided (see below), it is called
 "NewHash" by everyone for now. It is expected though that it will be a
-256-bit hash algorithm while SHA-1 is 128-bit, and this change alone
+256-bit hash algorithm while SHA-1 is 160-bit, and this change alone
 has required a lot of internal work.
 
 With Brian's latest patches Git would work using NewHash, including
