@@ -48,7 +48,7 @@ This edition covers what happened during the month of July 2018.
 + GitLab [11.1.4](https://about.gitlab.com/2018/07/31/gitlab-11-1-4-released/),
 [11.1.2, 11.0.5, and 10.8.7](https://about.gitlab.com/2018/07/26/security-release-gitlab-11-dot-1-dot-2-released/),
 [11.1.1](https://about.gitlab.com/2018/07/24/gitlab-11-1-1-released/),
-[11.1.0](https://about.gitlab.com/2018/07/22/gitlab-11-1-released/)
+[11.1.0](https://about.gitlab.com/2018/07/22/gitlab-11-1-released/),
 [11.0.4, 10.8.6, and 10.7.7](https://about.gitlab.com/2018/07/17/critical-security-release-gitlab-11-dot-0-dot-4-released/)
 + Bitbucket Server [v5.13](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
 + GitKraken [v4.0.2](https://support.gitkraken.com/release-notes/current),
