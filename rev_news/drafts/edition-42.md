@@ -72,24 +72,28 @@ follow complex folding rules that a filesystem might use.
 Duy then started sending [a real patch in its own email](https://public-inbox.org/git/20180730152756.15012-1-pclouds@gmail.com/).
 
 Junio Hamano chimed in to suggest a different implementation and a
-long discussion thread followed about how to best find all the
-colliding paths.
+long discussion thread involving Torsten Bögershausen, Elijah Newren,
+Duy, Junio, Peff and Jeff Hostetler followed about how to best find
+all the colliding paths.
 
 Duy sent [a version 2 of his patch](https://public-inbox.org/git/20180807190110.16216-1-pclouds@gmail.com/).
 
 The previous long discussion thread continued following this patch though.
 
 Duy sent [a version 3](https://public-inbox.org/git/20180810153608.30051-1-pclouds@gmail.com/)
-that actually tries to find all the colliding paths on "UNIXy platforms"
-and then [a version 4](https://public-inbox.org/git/20180812090714.19060-1-pclouds@gmail.com/).
+that actually tries to find all the colliding paths on "UNIXy platforms".
 
-A discussion and a patch about clarifying the documentation of the
-`core.checkStat` config option followed.
+Szeder Gábor found small issues in the patch, so Duy
+sent [a version 4](https://public-inbox.org/git/20180812090714.19060-1-pclouds@gmail.com/).
+
+Comments from Torsten started a discussion about clarifying the
+documentation of the `core.checkStat` config option which was
+addressed by a separate patch from Duy and Junio.
 
 Duy then recently sent [a version 5](https://public-inbox.org/git/20180817161645.28249-1-pclouds@gmail.com/)
 which tries to find all the colliding paths on Windows too,
 and [a version 6](https://public-inbox.org/git/20180817180039.GA31789@duynguyen.home/)
-to address a few more comments.
+to address a few more comments from Junio and Torsten.
 
 It looks like the latest version will be merged to the "next" branch soon.
 
