@@ -65,7 +65,7 @@ list the problematic file names to help users.
 Peff agreed with Simon and wondered if it was better to detect at
 checkout time if a file already exists on the filesystem rather than
 checking before the checkout. Peff also noted that Duy's patch used
-strcasecmp() to check if filemanes diff only by case, but in some
+strcasecmp() to check if filenames diff only by case, but in some
 cases, especially related to utf8 names, a filesystem could use
 complex folding rules which we would need to follow.
 
@@ -111,7 +111,7 @@ It looks like the latest version will be merged to the "next" branch soon.
 
   I'm a software engineer at Microsoft working on the version control
   client team. My team includes the Git contributors from Microsoft
-  was well as most of the developers for VFS for Git (formerly
+  as well as most of the developers for VFS for Git (formerly
   GVFS). We also work on other version control clients, such as Team
   Explorer for Visual Studio.
 
@@ -157,7 +157,7 @@ It looks like the latest version will be merged to the "next" branch soon.
 * If you could get a team of expert developers to work full time on
   something in Git for a full year, what would it be?
 
-  THE INDEX! The .git/index file is a linear list of every path
+  THE INDEX! The `.git/index` file is a linear list of every path
   available in the working directory, even if those files are not
   checked out (due to a sparse-checkout). This is one of the most
   central features to all of Git, and is used in many places with a
@@ -187,7 +187,7 @@ It looks like the latest version will be merged to the "next" branch soon.
 * If you could remove something from Git without worrying about
   backwards compatibility, what would it be?
 
-  I would rebuild revision.c from scratch. I'm going to need to do a
+  I would rebuild `revision.c` from scratch. I'm going to need to do a
   lot of replacement to make `git log --graph` use generation numbers,
   but it would be easier if I could start over and add features one at
   a time.
