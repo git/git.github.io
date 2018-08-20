@@ -93,9 +93,113 @@ to address a few more comments.
 
 It looks like the latest version will be merged to the "next" branch soon.
 
-<!---
-## Developer Spotlight:
--->
+
+## Developer Spotlight: Derrick Stolee
+
+* Who are you and what do you do?
+
+  I'm a software engineer at Microsoft working on the version control
+  client team. My team includes the Git contributors from Microsoft
+  was well as most of the developers for VFS for Git (formerly
+  GVFS). We also work on other version control clients, such as Team
+  Explorer for Visual Studio.
+
+  I joined this team after a couple years on the Git Server team for
+  Visual Studio Team Services (VSTS), where I work generally on
+  performance features, such as the history algorithm, reachability
+  bitmaps, and other scale issues. While I was on the team, we
+  onboarded the Windows development group to Git, which was a very
+  exciting time to be part of the team. After they were using VSTS,
+  the place that needed the most performance improvement was in the
+  client experience, so I switched teams.
+
+  Before Microsoft, I was an academic. I got my Ph.D in Mathematics
+  and Computer Science from the University of Nebraska and was an
+  assistant professor for a few years, working in computational graph
+  theory and combinatorics. I found that being a faculty was not
+  nearly as much fun as being a graduate student, and I couldn't find
+  enough time to write code for my computational experiments. Luckily,
+  I was able to find a role at Microsoft that could use some of those
+  skills.
+
+* What would you name your most important contribution to Git?
+
+  My most important contribution to Git has been the commit-graph
+  feature. This feature enables significant performance boosts for Git
+  repos of almost every size. I built a similar feature while
+  rewriting the history algorithm for VSTS, and I changed teams from
+  server to client so I could contribute this feature to core Git.
+
+* What are you doing on the Git project these days, and why?
+
+  In addition to working on more fallout from the commit-graph feature
+  (including speeding up `git log --graph`), I've been working on the
+  multi-pack-index feature. This allows indexing a list of objects
+  across several packfiles. I'm the first to admit that this feature
+  is not as necessary as the commit-graph until you get to incredibly
+  large repositories. When `git repack` stops being a realistic
+  option, then the multi-pack-index can keep your lookup times sane. I
+  hope that there are some more future integrations that are
+  beneficial to other repos, such as tying the reachability bitmap to
+  the multi-pack-index instead of a single packfile.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+  THE INDEX! The .git/index file is a linear list of every path
+  available in the working directory, even if those files are not
+  checked out (due to a sparse-checkout). This is one of the most
+  central features to all of Git, and is used in many places with a
+  very transparent API.
+
+  The index is the single biggest bottleneck left to tackle for
+  super-large repos like the Windows repo. These enormous repos are
+  too large for most developers to need the entire thing, so they work
+  in a small cone. VFS for Git virtualizes the files until they are
+  read or written, and we use the sparse-checkout feature to limit
+  Git's interaction to be in that cone. However, we still need to read
+  and write the entire index file whenever we interact with the
+  staging area. If the index was hierarchical or could prune the list
+  for entire subtrees, then we could drastically reduce this cost.
+
+  The biggest problem with this direction is that it requires
+  refactoring almost all of the consumers to use a new API that is not
+  as coupled to the layout of the index. Only after that change
+  happens can we drastically replace the file format. It's a bit of a
+  chicken-or-the-egg problem, because we can't refactor the API unless
+  we know the behavior the new format can present, but we can't test
+  format options until we refactor the API.
+
+  The task is pretty daunting, but I think someone could get there
+  with enough focus and determination.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+  I would rebuild revision.c from scratch. I'm going to need to do a
+  lot of replacement to make `git log --graph` use generation numbers,
+  but it would be easier if I could start over and add features one at
+  a time.
+
+  This is probably a boring answer, but I have found that every single
+  command-line option is someone's favorite feature, so I don't want
+  to take that away from anyone. One of Git's strengths is that it is
+  so flexible for different use cases and different repos.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+  It's rather new, but I've been enjoying using [GitGitGadget](https://github.com/gitgitgadget/gitgitgadget)
+  to send patches to the mailing list. Too often I make a mistake
+  sending patches upstream, or lose track of which commit I used in
+  v2, and things like that. Starting from a GitHub pull request (that
+  also ran builds on the code for Windows, Mac, & Linux) is much
+  easier (to me) than going through the hoops of `git format-patch`
+  and `git send-email`. I think that getting started submitting
+  patches via email is one of the biggest barriers to entry for our
+  community, and I really believe we are losing quality contributors
+  due to that friction. Hopefully, GitGitGadget can be one way that we
+  can attract and retain more contributors.
+
 
 ## Releases
 
