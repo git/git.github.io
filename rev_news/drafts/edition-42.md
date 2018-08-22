@@ -243,11 +243,44 @@ It looks like the latest version will be merged to the "next" branch soon.
 
 __Various__
 
+* [Introducing freedesktop.org GitLab](https://www.fooishbar.org/blog/gitlab-fdo-introduction/) by Daniel Stone
+* [dev.to is now open source](https://dev.to/ben/devto-is-now-open-source-5n1) announcement by Ben Halpern (source available [on GitHub](https://github.com/thepracticaldev/dev.to))
+* [Image Diffing & Reflog in [new] Tower](https://www.git-tower.com/blog/image-diffing-and-reflog) (multiplatform proprietary Git client) by Tobias Günther
+* [13 new Bitbucket Cloud features](https://blog.bitbucket.org/2018/07/19/13-new-bitbucket-cloud-features/) by Justine Davis
+
 
 __Light reading__
 
+* [Git workflow for individuals](https://code-maven.com/git-workflow-for-individuals) by Gabor Szabo
+* [GitOps: A Path to More Self-service IT](https://queue.acm.org/detail.cfm?id=3237207) by Thomas A. Limoncelli
+* [Kubernetes anti-patterns: Let's do GitOps, not CIOps!](https://www.weave.works/blog/kubernetes-anti-patterns-let-s-do-gitops-not-ciops) by Ilya on Weaveworks blog
+* [Splitting SSH and git configs](https://iamjonfry.com/splitting-ssh-and-git-configs/) (with the help of [git-config's `includeIf` directive](https://git-scm.com/docs/git-config#_includes)), by Jonathon Fry
+* [10 Common Git Problems and How to Fix Them](https://dev.to/citizen428/10-common-git-problems-and-how-to-fix-them-234o) by Michael Kohl (with caveats about some advice)
+* [An automatic interactive pre-commit checklist, in the style of infomercials](https://dev.to/vickylai/an-automatic-interactive-pre-commit-checklist-in-the-style-of-infomercials-14i7) by Vicky Lai
+* [Do your commits pass this simple test?](https://dev.to/sublimegeek/do-your-commits-pass-this-simple-test-4ak2) (Frequent. Descriptive. Atomic. Decentralized. Immutable.) by Jonathan Irvin
+* [Follow these [three] simple rules and you’ll become a Git and GitHub master](https://medium.freecodecamp.org/follow-these-simple-rules-and-youll-become-a-git-and-github-master-e1045057468f) by Ariel Camus
+* [Working with large files and repositories](https://github.community/t5/Support-Protips/Working-with-large-files-and-repositories/ba-p/9343) with Git LFS on GitHub, on GitHub Community Forum
+* [10 Git quiz questions to test your distributed version control skills](https://www.theserverside.com/quiz/Prove-your-DVCS-IQ-with-our-Git-quiz-for-beginners) by Cameron McKenzie
+* [Data Version Control Tutorial](https://blog.dataversioncontrol.com/data-version-control-tutorial-9146715eda46) by Dmitry Petrov (uses [DVC software](https://dvc.org))
+* [The 10:1 rule of writing and programming](https://www.ybrikman.com/writing/2018/08/12/the-10-to-1-rule-of-writing-and-programming/) by Yevgeniy Brikman; it uses [git-quick-stats](https://github.com/arzzen/git-quick-stats#usage) and [cloc](https://github.com/AlDanial/cloc) to derive its conclusions, and inspired creation of [hofs-churn](https://github.com/Decagon/hofs-churn) script
+* [Code Review Review is the Manager's Job](https://hecate.co/blog/code-review-review-is-the-managers-job) by John Barton
+* [Using Microsoft Word with git](http://blog.martinfenner.org/2014/08/25/using-microsoft-word-with-git/) by Martin Fenner (2014); advises to use [pandoc](https://pandoc.org/) to convert MS Word documents to Markdown format in a `diff` filter (via [gitattributes](https://git-scm.com/docs/gitattributes#_generating_diff_text))
+
 
 __Git tools and sites__
+
+* Web applications for sending patches via email:
+  * [GitGitGadget](https://github.com/gitgitgadget/gitgitgadget) ([homepage](https://gitgitgadget.github.io/)) is a bot (gadget) to serve as glue between GitHub Pull Requests and the Git mailing list, allowing to submit _patch series_, and to iterate this process.
+  * [submitGit](https://github.com/rtyley/submitgit) is an older [Heroku app](https://submitgit.herokuapp.com/) to send GitHub Pull Request to the Git mailing list, correctly formatting the patches. It's creation was extensively covered in [Git Rev News Edition #4](https://git.github.io/rev_news/2015/06/03/edition-4/).
+* Version control for Data Science:
+  * [Meltano](https://gitlab.com/meltano/meltano) by GitLab is an open source convention-over-configuration product for the whole data lifecycle, all the way from loading data to analyzing it. Meltano stands for the [steps of the data science life-cycle](https://gitlab.com/meltano/meltano/tree/master#data-engineering-lifecycle): Model, Extract, Load, Transform, Analyze, Notebook, and Orchestrate. Announced in [Hey, data teams - We're working on a tool just for you](https://about.gitlab.com/2018/08/01/hey-data-teams-we-are-working-on-a-tool-just-for-you/).
+  * [DVC](https://dvc.org): Open-source Version Control System for Data Science Projects. It is present in Python Package Index.
+* [lazygit](https://github.com/jesseduffield/lazygit) is simple [windowed] terminal UI for git commands, written in Go with the [gocui](https://github.com/jroimartin/gocui) library (compare [tig](https://github.com/jonas/tig), an ncurses-based text-mode interface for Git).
+* [Gitrob: Putting the Open Source in OSINT](https://github.com/michenriksen/gitrob) is a tool to help find potentially sensitive files pushed to public repositories on GitHub
+* [git-quick-stats](https://github.com/arzzen/git-quick-stats) is a simple and efficient way to access various statistics in git repository (with a simple [homepage](https://arzzen.github.io/git-quick-stats/))
+* [hofs-churn](https://github.com/Decagon/hofs-churn) is a small bash script to approximate code churn for a Git repo as described by Brikman's article: "[The 10:1 rule of writing and programming](https://www.ybrikman.com/writing/2018/08/12/the-10-to-1-rule-of-writing-and-programming/)"
+* [Atlas](https://atlas.oreilly.com) by O'Reilly, is a tool/site for publishing books (which can be written in AsciiDoc, with layout and structure defined in HTML and CSS files), based on Git.
+* [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), a site with proposed changelog format and a motto: _"Don’t let your friends dump git logs into changelogs"_.
 
 
 ## Credits
