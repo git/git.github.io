@@ -1,7 +1,7 @@
 ---
 title: Git Rev News Edition 43 (XXX, 2018)
 layout: default
-date: 2018-08-22 12:06:51 +0100
+date: 2018-09-19 12:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
