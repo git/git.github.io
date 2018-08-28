@@ -41,6 +41,8 @@ This edition covers what happened during the month of August 2018.
 __Various__
 
 
+* [GitOps — `git push` all the things](https://dzone.com/articles/gitops-git-push-all-the-things)
+
 __Light reading__
 
 
