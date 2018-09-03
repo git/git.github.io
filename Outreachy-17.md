@@ -58,8 +58,8 @@ This consists in working on the following tasks:
 
 #### Finish converting `git bisect` from shell to C
 
-This is about finishing Pranit Bauva's GSoC work on converting `git
-bisect` from shell to C
+This is about finishing Pranit Bauva's GSoC work on converting
+`git bisect` from shell to C.
 
 See the status of the pb/bisect-helper-2 branch in Junio's "What's
 cooking in git.git" emails.
@@ -99,7 +99,4 @@ See discussions in:
 
 <https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t>
 <http://public-inbox.org/git/CA+55aFwT2HUBzZO8Gpt9tHoJtdRxv9oe3TDoSH5jcEOixRNBXg@mail.gmail.com/>
-
-
-
 
