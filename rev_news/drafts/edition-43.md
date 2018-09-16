@@ -42,6 +42,134 @@ This edition covers what happened during the month of August 2018.
 
   Congratulations to them and their mentors!
 
+* [git-bug: Distributed bug tracker embedded in git](https://public-inbox.org/git/CACSZ0Pwzs2e7E5RUEPDcEUsa=inzCyBAptU7YaCUw+5=MutSsA@mail.gmail.com/)
+
+  Michael Muré emailed the mailing list to announce that he had just
+  released "[git-bug](https://github.com/MichaelMure/git-bug), a
+  distributed bug tracker that embeds in git".
+
+  Michael had previously announced it on
+  [Hacker News](https://news.ycombinator.com/item?id=17782121)
+  where Ævar Arnfjörð Bjarmason suggested him to also post on the
+  mailing list.
+
+  Michael described his tool like this:
+
+  > It uses git's internal storage to store bugs information in a way
+  > that can be merged without conflict. You can push/pull to the normal
+  > git remote you are already using to interact with other people. Normal
+  > code and bugs are completely separated and no files are added in the
+  > regular branches.
+
+  and:
+
+  > It's an all-in-one binary that is picked up by git as a porcelain
+  > command. It features a set of CLI command for simple interaction, an
+  > interactive terminal UI and a rich web UI.
+
+  He also gave a [link to the documentation of the internal design](https://github.com/MichaelMure/git-bug/blob/master/doc/model.md).
+
+  Jonathan Nieder replied to Michael asking if it might be possible to
+  rename the tool to use a less generic name, as Jonathan envisioned "a
+  future Git command like `git bug` to produce a bug report with
+  appropriate diagnostics for a bug in Git".
+
+  Ævar replied to Jonathan suggesting other names for the envisioned
+  command to report bugs in Git, and starting a subthread about
+  adopting a policy regarding external tools named "git-whatever".
+
+  This subthread involved Ævar, Jonathan and towards the end Jeff
+  King, alias Peff. It looks like the Git community is likely to
+  continue to recommend against too generic names. Peff gave the
+  example of the Microsoft GVFS tool which is in a similar situation,
+  as people are thinking about using the `git-vfs` command name which
+  Peff also considers too generic.
+
+  Tacitus Aedifex also replied to Michael saying that he had "often
+  wanted an integrated bug database like this", and that he has
+  created his own solution for this purpose using a "subrepo storing
+  bug reports and coments in .txt files" and "bash porcelain scripts".
+
+  Junio Hamano, the Git maintainer, replied to Michael too. He told
+  that this reminds him of a "demo Scott Chacon showed us ages ago".
+
+  Jonathan added that the tool Scott demoed was TicGit. Then Jonathan
+  started along with Kyle Meyer to compile the following lists of
+  similar tools and links related to them in a small subthread:
+
+  tools:
+
+    - [TicGit](https://github.com/jeffWelling/ticgit)
+    - [Ditz](https://github.com/jashmenn/ditz)
+    - [git-issues](https://github.com/duplys/git-issues)
+    - [cil](https://github.com/chilts/cil)
+    - [Bugs Everywhere](http://bugseverywhere.org/)
+    - milli by Steve Kemp (no copy found)
+    - [Simple Defects](https://syncwith.us/sd/)
+    - [Kipling](https://gitorious.org/kipling/mainline)
+    - [BuGit](https://gitlab.com/monnier/bugit) ([discussion on the mailing list](https://public-inbox.org/git/jwva8psr6vr.fsf-monnier+gmane.comp.version-control.git@gnu.org/))
+    - [git-dit](https://github.com/neithernut/git-dit)
+
+  lists of such tools:
+
+    - [good list on a non Git-specific wiki](https://dist-bugs.branchable.com/software/)
+    - [old list on the Git wiki](https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools#Bug.2Fissue_trackers.2C_etc)
+    - [nice though old list](http://www.cs.unb.ca/~bremner/blog/posts/git-issue-trackers/)
+
+  Jonathan commented that it was nice to see new work in this area as
+  "it seems to have gone mostly quiet since 2014". He also added
+  git-dit authors in CC of his last email in the subthread, while
+  saying that git-dit seems to have "very similar goals and a similar
+  data model" as git-bug, and suggesting that the authors could work
+  "more closely together".
+
+  This later [prompted](https://public-inbox.org/git/20180820195929.58444ae0@neithernut.Speedport_W_921V_1_39_000/)
+  Julian Ganz, a co-author of git-dit, to request comments in an email
+  called "[RFC] Git enumerations" about a functionality which he
+  originally planned on introducing as a git-dit internal
+  feature. Unfortunately it looks like noone commented on the proposed
+  feature.
+
+  Jonathan also sent another reply to Michael's original
+  email. Commenting on the [documentation of the internal design](https://github.com/MichaelMure/git-bug/blob/master/doc/model.md)
+  of git-bug, he said that he likes that git-bug uses as identifier
+  for the bug the hash of the first commit in the chain of commit of
+  the bug.
+
+  About the fact that Git doesn't provide a low-level command to
+  rebase a branch onto another without touching the index, Jonathan
+  replied that a lot of related work has been done lately, as merge
+  code (also used for cherry-pick) is less reliant on the index and
+  worktree, and rebase code is being ported to C (see the article
+  about Google Summer of Code 2018 above). Jonathan suggested setting
+  the GIT_INDEX environment variable to point to a temporary index
+  file as a work-around until something like
+  `git cherry-pick --onto=<branch> <revisions>` is implemented.
+
+  Jonathan then asked about which federation model git-bug intends to
+  support. Micheal replied giving technical details about how the tool
+  works and saying:
+
+  > So for now, collaboration is based on push/pull to whatever remote you
+  > want, as git does, with the exception of the Web UI. The goal here is
+  > to have it running locally for each user but also to make it a public
+  > interface for users that don't have write access to the repo, much
+  > like any bug tracker has.
+
+  and:
+
+  > In the future, it could be possible to have more fancy features like a
+  > federated forge with ActivityPub, but that's way outside of the scope
+  > of the project for now.
+
+  About Jonathan's suggestion for an `--onto` option in `git
+  cherry-pick`, Elijah Newren replied that, after his current work on
+  the merge code, he indeed wants to work on that, and also
+  investigate "in-memory" merges to improve interactive rebase
+  performance. He agreed that "we're pretty close to having a
+  rebase-without-touching-index-or-worktree that we can make
+  accessible to other scripts like git-bug".
+
 <!---
 ### Reviews
 -->
