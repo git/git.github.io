@@ -17,9 +17,30 @@ This edition covers what happened during the month of August 2018.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* Google Summer of Code 2018 wrap up
+
+The three students who worked on [projects](https://summerofcode.withgoogle.com/organizations/5376866043559936/#projects)
+to improve Git this summer as part of
+[Google Summer of Code 2018](https://summerofcode.withgoogle.com)
+have successfully passed their final evaluation.
+
+They have created repositories with a lot of information related to their work:
+
+  - Alban Gruin's [Convert interactive rebase to C](https://github.com/agrn/gsoc2018)
+  - Pratik Karki's [Convert interactive rebase to C](https://github.com/prertik/GSoC2018)
+  - Paul-Sebastian Ungureanu's [Convert `git stash` to builtin](https://github.com/ungps/gsoc2018)
+
+Their patch series are still not fully merged, but it seems that this
+is likely to happen after perhaps a few more review and improvement
+cycles.
+
+Fast, built-in versions of `git stash` and `git rebase` based on their
+work are already available as experimental options in
+[Git for Windows 2.19.0](https://public-inbox.org/git/20180913022344.1348-1-johannes.schindelin@gmx.de/).
+
+Congratulations to them and their mentors!
 
 <!---
 ### Reviews
