@@ -193,6 +193,7 @@ This edition covers what happened during the month of August 2018.
 [11.2.1](https://about.gitlab.com/2018/08/23/gitlab-11-2-1-released/),
 [11.2.0](https://about.gitlab.com/2018/08/22/gitlab-11-2-released/)
 + Bitbucket Server [v5.14](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ Gerrit Code Review [v2.14.12](https://groups.google.com/forum/#!msg/repo-discuss/iTc-8qSHNOM/WchxHqg7BQAJ;context-place=forum/repo-discuss)
 + GitHub Enterprise [v2.14.5](https://enterprise.github.com/releases/2.14.5),
 [v2.13.11](https://enterprise.github.com/releases/2.13.11),
 [v2.12.19](https://enterprise.github.com/releases/2.12.19),
@@ -217,6 +218,8 @@ __Various__
 
 
 * [GitOps — `git push` all the things](https://dzone.com/articles/gitops-git-push-all-the-things)
+* [Gerrit User Summit 2018](https://gerrit.googlesource.com/summit/2018/+/master/index.md) will be hosted at Cloudera HQ in Palo Alto,
+  15-16 Nov. Registration is now open to all the Gerrit and JGit users, maintainers and supporters.
 
 __Light reading__
 
