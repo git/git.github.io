@@ -86,36 +86,34 @@ This edition covers what happened during the month of August 2018.
   Peff also considers too generic.
 
   Tacitus Aedifex also replied to Michael saying that he had "often
-  wanted an integrated bug database like this", and that he has
+  wanted an integrated bug database like this", and that he had
   created his own solution for this purpose using a "subrepo storing
-  bug reports and coments in .txt files" and "bash porcelain scripts".
+  bug reports and comments in .txt files" and "bash porcelain scripts".
 
-  Junio Hamano, the Git maintainer, replied to Michael too. He told
+  Junio Hamano, the Git maintainer, replied to Michael, too. He told
   that this reminds him of a "demo Scott Chacon showed us ages ago".
 
   Jonathan added that the tool Scott demoed was TicGit. Then Jonathan
   started along with Kyle Meyer to compile the following lists of
   similar tools and links related to them in a small subthread:
+    - tools:
+      - [TicGit](https://github.com/jeffWelling/ticgit)
+      - [Ditz](https://github.com/jashmenn/ditz)
+      - [git-issues](https://github.com/duplys/git-issues)
+      - [cil](https://github.com/chilts/cil)
+      - [Bugs Everywhere](http://bugseverywhere.org/)
+      - milli by Steve Kemp (no copy found)
+      - [Simple Defects](https://syncwith.us/sd/)
+      - [Kipling](https://gitorious.org/kipling/mainline)
+      - [BuGit](https://gitlab.com/monnier/bugit) ([discussion on the mailing list](https://public-inbox.org/git/jwva8psr6vr.fsf-monnier+gmane.comp.version-control.git@gnu.org/))
+      - [git-dit](https://github.com/neithernut/git-dit)
 
-  tools:
+    - lists of such tools:
+      - [good list on a non Git-specific wiki](https://dist-bugs.branchable.com/software/)
+      - [old list on the Git wiki](https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools#Bug.2Fissue_trackers.2C_etc)
+      - [nice though old list](http://www.cs.unb.ca/~bremner/blog/posts/git-issue-trackers/)
 
-    - [TicGit](https://github.com/jeffWelling/ticgit)
-    - [Ditz](https://github.com/jashmenn/ditz)
-    - [git-issues](https://github.com/duplys/git-issues)
-    - [cil](https://github.com/chilts/cil)
-    - [Bugs Everywhere](http://bugseverywhere.org/)
-    - milli by Steve Kemp (no copy found)
-    - [Simple Defects](https://syncwith.us/sd/)
-    - [Kipling](https://gitorious.org/kipling/mainline)
-    - [BuGit](https://gitlab.com/monnier/bugit) ([discussion on the mailing list](https://public-inbox.org/git/jwva8psr6vr.fsf-monnier+gmane.comp.version-control.git@gnu.org/))
-    - [git-dit](https://github.com/neithernut/git-dit)
-
-  lists of such tools:
-
-    - [good list on a non Git-specific wiki](https://dist-bugs.branchable.com/software/)
-    - [old list on the Git wiki](https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools#Bug.2Fissue_trackers.2C_etc)
-    - [nice though old list](http://www.cs.unb.ca/~bremner/blog/posts/git-issue-trackers/)
-
+  <br>
   Jonathan commented that it was nice to see new work in this area as
   "it seems to have gone mostly quiet since 2014". He also added
   git-dit authors in CC of his last email in the subthread, while
@@ -123,17 +121,17 @@ This edition covers what happened during the month of August 2018.
   data model" as git-bug, and suggesting that the authors could work
   "more closely together".
 
-  This later [prompted](https://public-inbox.org/git/20180820195929.58444ae0@neithernut.Speedport_W_921V_1_39_000/)
-  Julian Ganz, a co-author of git-dit, to request comments in an email
-  called "[RFC] Git enumerations" about a functionality which he
-  originally planned on introducing as a git-dit internal
-  feature. Unfortunately it looks like noone commented on the proposed
-  feature.
+  This later prompted Julian Ganz, a co-author of git-dit, to request
+  comments in an email called
+  "[\[RFC\] Git enumerations](https://public-inbox.org/git/20180820195929.58444ae0@neithernut.Speedport_W_921V_1_39_000/)"
+  about a functionality which he had originally planned on introducing
+  it as a git-dit internal feature. Unfortunately, it looks like no one
+  commented on the proposed feature.
 
   Jonathan also sent another reply to Michael's original
   email. Commenting on the [documentation of the internal design](https://github.com/MichaelMure/git-bug/blob/master/doc/model.md)
-  of git-bug, he said that he likes that git-bug uses as identifier
-  for the bug the hash of the first commit in the chain of commit of
+  of git-bug, he said that he likes that git-bug uses the hash of the
+  first commit in the chain of related commits as identifier for
   the bug.
 
   About the fact that Git doesn't provide a low-level command to
@@ -142,12 +140,12 @@ This edition covers what happened during the month of August 2018.
   code (also used for cherry-pick) is less reliant on the index and
   worktree, and rebase code is being ported to C (see the article
   about Google Summer of Code 2018 above). Jonathan suggested setting
-  the GIT_INDEX environment variable to point to a temporary index
+  the `GIT_INDEX` environment variable to point to a temporary index
   file as a work-around until something like
   `git cherry-pick --onto=<branch> <revisions>` is implemented.
 
   Jonathan then asked about which federation model git-bug intends to
-  support. Micheal replied giving technical details about how the tool
+  support. Michael replied giving technical details about how the tool
   works and saying:
 
   > So for now, collaboration is based on push/pull to whatever remote you
@@ -164,7 +162,7 @@ This edition covers what happened during the month of August 2018.
 
   About Jonathan's suggestion for an `--onto` option in `git
   cherry-pick`, Elijah Newren replied that, after his current work on
-  the merge code, he indeed wants to work on that, and also
+  the merge code, he indeed wanted to work on that, and also
   investigate "in-memory" merges to improve interactive rebase
   performance. He agreed that "we're pretty close to having a
   rebase-without-touching-index-or-worktree that we can make
@@ -194,7 +192,7 @@ This edition covers what happened during the month of August 2018.
 [11.2.0](https://about.gitlab.com/2018/08/22/gitlab-11-2-released/)
 + Bitbucket Server [v5.14](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
 + Gerrit Code Review [v2.14.12](https://groups.google.com/forum/#!msg/repo-discuss/iTc-8qSHNOM/WchxHqg7BQAJ;context-place=forum/repo-discuss)
-+ GitHub Enterprise [v2.14.5](https://enterprise.github.com/releases/2.14.5),
++ GitHub Enterprise [v2.14.5](https://enterprise.github.com/releases/2.14.5)
 [v2.13.11](https://enterprise.github.com/releases/2.13.11),
 [v2.12.19](https://enterprise.github.com/releases/2.12.19),
 [v2.11.25](https://enterprise.github.com/releases/2.11.25),
@@ -208,9 +206,9 @@ This edition covers what happened during the month of August 2018.
 [v2.11.23](https://enterprise.github.com/releases/2.11.23)
 + GitHub Desktop [v1.4.0](https://desktop.github.com/release-notes/),
 [v1.3.5](https://desktop.github.com/release-notes/),
-[v1.3.4](https://desktop.github.com/release-notes/),
+[v1.3.4](https://desktop.github.com/release-notes/)
 + GitKraken [v4.0.4](https://support.gitkraken.com/release-notes/current),
-[v4.0.3](https://support.gitkraken.com/release-notes/current),
+[v4.0.3](https://support.gitkraken.com/release-notes/current)
 
 ## Other News
 
@@ -219,7 +217,7 @@ __Various__
 
 * [GitOps — `git push` all the things](https://dzone.com/articles/gitops-git-push-all-the-things)
 * [Gerrit User Summit 2018](https://gerrit.googlesource.com/summit/2018/+/master/index.md) will be hosted at Cloudera HQ in Palo Alto,
-  15-16 Nov. Registration is now open to all the Gerrit and JGit users, maintainers and supporters.
+  15-16 Nov. Registration is now open to all Gerrit and JGit users, maintainers and supporters.
 
 __Light reading__
 
