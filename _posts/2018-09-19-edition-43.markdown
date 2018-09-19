@@ -29,7 +29,7 @@ This edition covers what happened during the month of August 2018.
   They have created repositories with a lot of information related to their work:
 
     - Alban Gruin's [Convert interactive rebase to C](https://github.com/agrn/gsoc2018)
-    - Pratik Karki's [Convert rebase and it's options to C](https://github.com/prertik/GSoC2018)
+    - Pratik Karki's [Convert rebase and its options to C](https://github.com/prertik/GSoC2018)
     - Paul-Sebastian Ungureanu's [Convert `git stash` to builtin](https://github.com/ungps/gsoc2018)
 
   Their patch series are still not fully merged, but it seems that this
