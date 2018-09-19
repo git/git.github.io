@@ -210,19 +210,43 @@ This edition covers what happened during the month of August 2018.
 + GitKraken [v4.0.4](https://support.gitkraken.com/release-notes/current),
 [v4.0.3](https://support.gitkraken.com/release-notes/current)
 
+
 ## Other News
 
 __Various__
 
-
 * [GitOps — `git push` all the things](https://dzone.com/articles/gitops-git-push-all-the-things)
 * [Gerrit User Summit 2018](https://gerrit.googlesource.com/summit/2018/+/master/index.md) will be hosted at Cloudera HQ in Palo Alto,
   15-16 Nov. Registration is now open to all Gerrit and JGit users, maintainers and supporters.
+* [Highlights from Git 2.19](https://blog.github.com/2018-09-10-highlights-from-git-2-19/) on The GitHub Blog
+* [New improvements and best practices for account security and recoverability at GitHub](https://blog.github.com/2018-07-31-new-improvements-and-best-practices-for-account-security-and-recoverability/)
+* [Git-bug: A new distributed bug tracker embedded in git](https://hub.packtpub.com/git-bug-a-new-distributed-bug-tracker-embedded-in-git/) by Melisha Dsouza on Packt Hub
+
 
 __Light reading__
 
+* [Git commands to keep a fork up to date](https://philna.sh/blog/2018/08/21/git-commands-to-keep-a-fork-up-to-date/) by Phil Nash
+* [I love git log](https://dev.to/drews256/i-love-git-log-off) by Andrew Stuntz
+* [Enforce fast forward as merge strategy in Git](https://code-maven.com/enforce-fast-forward-as-merge-strategy) and some of Git hosting sites, by Gabor Szabo
+* [Enforcing commit message format in Git -- on the client side](https://code-maven.com/enforcing-commit-message-format-in-git) with [`commit-msg` hook](https://git-scm.com/docs/githooks#_commit_msg) by Gabor Szabo
+* [Slides from Git & GitHub Getting Started Workshop](https://polyhacks17.github.io/github-workshop/), originally by Gwen Lofman, modified by Greg Willard
+* [Using [Shell] Aliases to Speed Up Your Git Workflow](https://dev.to/robertcoopercode/using-aliases-to-speed-up-your-git-workflow-2f5a) by Robert Cooper 
+* [and the second top voted question on StackOverflow is... how to undo the most recent commit in git](https://dev.to/tomerbendavid/the-second-most-voted-question-on-stackoverflow-is-60b) by Tomer Ben David
+* [Visualize Merge History with git log --graph, --first-parent, and --no-merges](https://redfin.engineering/visualize-merge-history-with-git-log-graph-first-parent-and-no-merges-c6a9b5ff109c) by Dan Fabulich (2017)
+* [How to find stuff in Git](https://medium.com/@tygertec/how-to-find-stuff-in-git-35d4cb8c1845) by Ty Walls (2017)
+
 
 __Git tools and sites__
+
+* [bat](https://github.com/sharkdp/bat), a _cat(1)_ clone with syntax highlighting and Git integration
+* [Lerna](https://lernajs.io/) is a tool that optimizes the workflow around managing multi-package JavaScript repositories (monorepos) with git and npm
+* [Dat](https://datproject.org/) is a new peer-to-peer protocol for sharing, archiving, and cataloging large data sets, that uses some of the concepts of BitTorrent and Git.
+  Described in LWN.net article [Sharing and archiving data sets with Dat](https://lwn.net/Articles/763492/) by Antoine Beaupré.
+  For other version control tools for Data Science see [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/).
+* [LiteTree: SQLite with Branches](https://github.com/aergoio/litetree) is a modification of the SQLite engine to support branching, like Git
+
+* [GitHooks.com](https://githooks.com/) is a guide to the wonders of git hooks, with the list of hooks, links to some articles about git hooks, and list of various related projects; accepts pull requests 
+
 
 
 ## Credits
