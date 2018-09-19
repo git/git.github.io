@@ -192,7 +192,7 @@ This edition covers what happened during the month of August 2018.
 [11.2.0](https://about.gitlab.com/2018/08/22/gitlab-11-2-released/)
 + Bitbucket Server [v5.14](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
 + Gerrit Code Review [v2.14.12](https://groups.google.com/forum/#!msg/repo-discuss/iTc-8qSHNOM/WchxHqg7BQAJ;context-place=forum/repo-discuss)
-+ GitHub Enterprise [v2.14.5](https://enterprise.github.com/releases/2.14.5)
++ GitHub Enterprise [v2.14.5](https://enterprise.github.com/releases/2.14.5),
 [v2.13.11](https://enterprise.github.com/releases/2.13.11),
 [v2.12.19](https://enterprise.github.com/releases/2.12.19),
 [v2.11.25](https://enterprise.github.com/releases/2.11.25),
