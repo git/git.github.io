@@ -231,14 +231,14 @@ __Light reading__
 * [Enforcing commit message format in Git -- on the client side](https://code-maven.com/enforcing-commit-message-format-in-git) with [`commit-msg` hook](https://git-scm.com/docs/githooks#_commit_msg) by Gabor Szabo
 * [Slides from Git & GitHub Getting Started Workshop](https://polyhacks17.github.io/github-workshop/), originally by Gwen Lofman, modified by Greg Willard
 * [Using [Shell] Aliases to Speed Up Your Git Workflow](https://dev.to/robertcoopercode/using-aliases-to-speed-up-your-git-workflow-2f5a) by Robert Cooper 
-* [and the second top voted question on StackOverflow is... how to undo the most recent commit in git](https://dev.to/tomerbendavid/the-second-most-voted-question-on-stackoverflow-is-60b) by Tomer Ben David
-* [Visualize Merge History with git log --graph, --first-parent, and --no-merges](https://redfin.engineering/visualize-merge-history-with-git-log-graph-first-parent-and-no-merges-c6a9b5ff109c) by Dan Fabulich (2017)
+* [and the second top voted question on StackOverflow is... how to undo the most recent commit in Git](https://dev.to/tomerbendavid/the-second-most-voted-question-on-stackoverflow-is-60b) by Tomer Ben David
+* [Visualize Merge History with `git log --graph`, `--first-parent`, and `--no-merges`](https://redfin.engineering/visualize-merge-history-with-git-log-graph-first-parent-and-no-merges-c6a9b5ff109c) by Dan Fabulich (2017)
 * [How to find stuff in Git](https://medium.com/@tygertec/how-to-find-stuff-in-git-35d4cb8c1845) by Ty Walls (2017)
 
 
 __Git tools and sites__
 
-* [bat](https://github.com/sharkdp/bat), a _cat(1)_ clone with syntax highlighting and Git integration
+* [bat](https://github.com/sharkdp/bat), a `cat(1)` clone with syntax highlighting and Git integration
 * [Lerna](https://lernajs.io/) is a tool that optimizes the workflow around managing multi-package JavaScript repositories (monorepos) with git and npm
 * [Dat](https://datproject.org/) is a new peer-to-peer protocol for sharing, archiving, and cataloging large data sets, that uses some of the concepts of BitTorrent and Git.
   Described in LWN.net article [Sharing and archiving data sets with Dat](https://lwn.net/Articles/763492/) by Antoine Beaupré.
