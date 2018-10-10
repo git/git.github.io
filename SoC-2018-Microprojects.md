@@ -263,8 +263,8 @@ the tests (in the "t" directory).
 When you find something you are interested to work on, please ask
 first on the mailing list if it's worth doing and if it's appropriate
 for a microproject before starting to work on what you find. Even if
-it looks straitforward, there could be hidden reasons why it is too
-difficult or just innappropriate.
+it looks straightforward, there could be hidden reasons why it is too
+difficult or just inappropriate.
 
 ### Searching for #leftoverbits in the mailing list
 
