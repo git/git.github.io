@@ -1,5 +1,5 @@
 ---
-title: Git Rev News Edition 44 (XXX, 2018)
+title: Git Rev News Edition 44 (October 24th, 2018)
 layout: default
 date: 2018-10-24 12:06:51 +0100
 author: chriscool
@@ -7,7 +7,7 @@ categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 44 (XXX, 2018)
+## Git Rev News: Edition 44 (October 24th, 2018)
 
 Welcome to the 44th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
