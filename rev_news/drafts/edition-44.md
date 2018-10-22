@@ -133,6 +133,10 @@ This third version should be merged into the "master" branch soon.
 
 __Various__
 
+* The Git community is still looking for an
+  [Outreachy](https://www.outreachy.org/) applicant to work on a Git
+  related project from December 2018 to March 2019. Two different
+  projects are proposed on the [list of available projects](https://www.outreachy.org/apply/project-selection/).
 
 __Light reading__
 
