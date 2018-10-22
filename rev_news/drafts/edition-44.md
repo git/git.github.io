@@ -137,6 +137,10 @@ __Various__
   [Outreachy](https://www.outreachy.org/) applicant to work on a Git
   related project from December 2018 to March 2019. Two different
   projects are proposed on the [list of all the open projects](https://www.outreachy.org/apply/project-selection/).
+* New Git PLC Members have been [announced](https://public-inbox.org/git/20180925215112.GA29627@sigill.intra.peff.net/).
+  Ævar Arnfjörð Bjarmason and Christian Couder are joining Junio
+  Hamano and Jeff King (alias Peff) in the committee representing the
+  Git project as part of Software Freedom Conservancy.
 
 __Light reading__
 
