@@ -11,7 +11,7 @@ navbar: false
 
 Welcome to the 44th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
-subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
+subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](https://git.github.io).
 
 This edition covers what happened during the month of September 2018.
 
@@ -26,7 +26,7 @@ This edition covers what happened during the month of September 2018.
 
 * [Add an EditorConfig file](https://public-inbox.org/git/20180917230307.588334-1-sandals@crustytoothpaste.net/)
 
-Brian Carlson sent a patch that adds an ".editorconfig" file to the
+Brian Carlson sent a patch that adds a `.editorconfig` file to the
 Git codebase.
 
 The [EditorConfig web site](https://editorconfig.org/) explains the
@@ -41,34 +41,35 @@ codebase without having to read the [CodingGuidelines document](https://github.c
 
 Taylor Blau, who has been using Vim with the editorconfig-vim plugin
 for years, supported the patch and the choice of settings that Brian
-had written in the ".editorconfig" file. He suggested adding a
+had written in the `.editorconfig` file. He suggested adding a
 guideline to enforce at most 72 characters per line in commit
 messages.
 
 Junio Hamano, the Git maintainer, also replied to Brian wondering how
-to keep the content of the file in sync with the [".clang-format" file](https://github.com/git/git/blob/master/.clang-format)
+to keep the content of the file in sync with the [`.clang-format` file](https://github.com/git/git/blob/master/.clang-format)
 that is already part of the project and can be used through the
 `style` Makefile target.
 
 Brian replied to Junio that `make style` is not run automatically and
 only formats C code, not Perl, Python, shell code and commit
 messages. Brian also said that he had trouble running `make style` as
-it invokes clang-format as a git subcommand.
+it invokes `clang-format` as a Git subcommand.
 
-Junio replied that he would have liked if there was a tool that could
-"generate clang-format configuration from the section for C language
-in any EditorConfig file", but in case there isn't he is ok with
-maintaining both config files.
+Junio replied that in an ideal dream-world, an EditorConfig driven
+tool solution to "generate clang-format configuration from the section
+for C language in any EditorConfig file" already existed,
+but otherwise he would be "perfectly OK if the plan is to manually
+keep them (loosely) in sync".
 
 Eric Sunshine then pointed Brian to [git-clang-format](https://llvm.org/svn/llvm-project/cfe/trunk/tools/clang-format/git-clang-format)
-which integrates clang-format with Git, so that clang-format can be
+which integrates `clang-format` with Git, so that clang-format can be
 run on the changes in current files or a specific commit.
 
 This prompted Peff and Brian to discuss possible improvements in
-Debian or Git that would make git-clang-format work better.
+Debian or Git that would make `git-clang-format` work better.
 
 Responding to Junio, Brian suggested adding a script to check that
-".editorconfig" and ".clang-format" were kept in sync, but Junio
+`.editorconfig` and `.clang-format` were kept in sync, but Junio
 replied that adding a comment in both files saying that they should be
 kept in sync would be enough.
 
@@ -77,8 +78,8 @@ of his patch which enforces at most 72 characters per line in commit
 messages along with another patch that adds the comments that Junio
 suggested.
 
-Ævar Arnfjörð Bjarmason suggested an improvement to also catch perl
-files with the ".pl" and ".pm" file extensions. Brian
+Ævar Arnfjörð Bjarmason suggested an improvement to also catch Perl
+files with the `.pl` and `.pm` file extensions. Brian
 implemented this in a [third version](https://public-inbox.org/git/20181008220353.780301-1-sandals@crustytoothpaste.net/)
 of his patches.
 
