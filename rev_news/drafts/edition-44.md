@@ -141,11 +141,31 @@ __Various__
   Ævar Arnfjörð Bjarmason and Christian Couder are joining Junio
   Hamano and Jeff King (alias Peff) in the committee representing the
   Git project as part of Software Freedom Conservancy.
+* [Highlights from Git 2.19](https://blog.github.com/2018-09-10-highlights-from-git-2-19/) on the GitHub Blog
+* [GitHub launches Actions, its workflow automation tool](https://techcrunch.com/2018/10/16/github-launches-actions-its-workflow-automation-tool/).
+  One may register for [GitHub Actions](https://github.com/features/actions) beta;
+  there is already [short] [curated list of actions](https://github.com/sdras/awesome-actions) to use on GitHub.
+* [Bitbucket Cloud introduced branching model support](https://bitbucket.org/blog/introducing-bitbucket-branching-model-support),
+  helping to keep consistent naming decisions when creating branches,
+  enforcing branching permissions for different types of branches, etc.
+* [GitLab raises $100 million from Iconiq, GV, and Khosla, at $1.1 billion valuation](https://venturebeat.com/2018/09/19/gitlab-raises-100-million-from-iconiq-gv-and-khosla-at-1-1-billion-valuation/)
+* [Sourcegraph](https://sourcegraph.com/start), a code navigation engine for a repository with advanced search capabilities
+  [has just gone open-source](https://www.i-programmer.info/news/90-tools/12219-sourcegraph-powers-up-your-code-repository.html).
 
 __Light reading__
 
+* [How to use the Jenkins Git Plugin: Tips and tricks](https://www.theserverside.com/video/Tips-and-tricks-on-how-to-use-Jenkins-Git-Plugin) by Cameron McKenzie
+* [Deploying frontend applications — the fun way](https://hackernoon.com/deploying-frontend-applications-the-fun-way-bc3f69e15331) (from Git repository), by Carlos Roso
+* [Stacked Diffs versus Pull Requests](https://jg.gg/2018/09/29/stacked-diffs-versus-pull-requests/) by Jackson Gabbard
+* [How to organize your git branches](https://dev.to/hardkoded/how-to-organize-your-git-branches-4dci), listing different approaches, by Dario Kondratiuk
+* [and the second top voted question on StackOverflow is...](https://dev.to/tomerbendavid/the-second-most-voted-question-on-stackoverflow-is-60b) by Tomer Ben David
 
 __Git tools and sites__
+
+* Makers of Sublime Text editor introduced Git GUI client: [Sublime Merge](https://www.sublimemerge.com/) (tagline: _Git, done Sublime_)
+* TwilioQuest, an interactive, self-paced game-like learning platform now includes
+  [Contributing to Open Source Projects on GitHub](https://www.twilio.com/quest/mission/28)
+  quest
 
 
 ## Credits
