@@ -145,7 +145,7 @@ __Various__
 * [Highlights from Git 2.19](https://blog.github.com/2018-09-10-highlights-from-git-2-19/) on the GitHub Blog
 * [GitHub launches Actions, its workflow automation tool](https://techcrunch.com/2018/10/16/github-launches-actions-its-workflow-automation-tool/).
   One may register for [GitHub Actions](https://github.com/features/actions) beta;
-  there is already [short] [curated list of actions](https://github.com/sdras/awesome-actions) to use on GitHub.
+  there is already [a short curated list of actions](https://github.com/sdras/awesome-actions) to use on GitHub.
 * [Bitbucket Cloud introduced branching model support](https://bitbucket.org/blog/introducing-bitbucket-branching-model-support),
   helping to keep consistent naming decisions when creating branches,
   enforcing branching permissions for different types of branches, etc.
