@@ -18,17 +18,18 @@ Some ideas on where we can go to gather Git Rev News material.
 ## Blogs (the RSS-feeds can be aggregated into one shared resource)
 
 * [Junio's blog](http://git-blame.blogspot.com/)
-* Company blogs of [GitHub](https://github.com/blog), [BitBucket](https://blog.bitbucket.org/), [GitLab](https://about.gitlab.com/blog/), etc.
+* Company blogs of [GitHub](https://github.com/blog), [BitBucket](https://blog.bitbucket.org/),
+  [GitLab](https://about.gitlab.com/blog/), etc.
 * ...
 
 ## Forums/news
 
 * [Hacker News](https://news.ycombinator.com/) (can be monitored using Google Alerts or searched
-[here](https://hn.algolia.com/?query=git&sort=byPopularity&prefix=false&page=0&dateRange=last24h&type=story) or
-[here](http://newscombinator.com/))
+  [here](https://hn.algolia.com/?query=git&sort=byPopularity&prefix=false&page=0&dateRange=last24h&type=story) or
+  [here](http://newscombinator.com/))
 * [Reddit/git](http://www.reddit.com/r/git) (offers RSS)
 * [Git community on Google+](https://plus.google.com/communities/112688280189071733518)
-* [The Changelog/Git](http://thechangelog.com/tagged/git/)
+* [The Changelog/Git](https://changelog.com/topic/git/)
 * ...
 
 # Process
@@ -45,9 +46,11 @@ For every upcoming edition, do the following:
   into some designated publishing directory, so it appears in
   the feed on git.github.io/rev_news/.
 * Announce the edition to the Git mailing list plus any social media channels you prefer.
-* Send the newsletter email (manual process using Mailchimp) - basically just copying the edition into MailChimp for publishing. Everyone from the editor team should have account access.
+* Send the newsletter email (manual process using Mailchimp) -
+  basically just copying the edition into MailChimp for publishing.
+  Everyone from the editor team should have account access.
 
-Links can be handily collected using a browser extension like [diigo](https://www.diigo.com/user/Tfnico/gitrevnews), but note that popular may be duplicated by other contributors.
+Links can be handily collected using a browser extension like [diigo](https://www.diigo.com/user/Tfnico/gitrevnews),
+but note that popular may be duplicated by other contributors.
 
 When adding links, this is a great tool: [chitsaou/copy-as-markdown](https://github.com/chitsaou/copy-as-markdown/)
-
