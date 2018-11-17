@@ -35,6 +35,7 @@ This edition covers what happened during the month of October 2018.
 
 ## Releases
 
++ [StGit 0.19](https://public-inbox.org/git/1541522776.3963181.1567641696.46EFA2E6@webmail.messagingengine.com)
 + libgit2 [0.27.7](https://github.com/libgit2/libgit2/releases/tag/v0.27.7),
 [0.27.6](https://github.com/libgit2/libgit2/releases/tag/v0.27.6)
 + GitHub Enterprise [2.15.2](https://enterprise.github.com/releases/2.15.2/notes),
@@ -63,6 +64,8 @@ This edition covers what happened during the month of October 2018.
 
 __Various__
 
+* [Git Merge Contributor's Summit Jan 31, 2019, Brussels](https://public-inbox.org/git/20181109104202.GA8717@sigill.intra.peff.net)
+  has been announced on the mailing list. All contributors to Git or related projects in the Git ecosystem are invited.
 
 __Light reading__
 
