@@ -67,6 +67,14 @@ __Various__
 * [Git Merge Contributor's Summit Jan 31, 2019, Brussels](https://public-inbox.org/git/20181109104202.GA8717@sigill.intra.peff.net)
   has been announced on the mailing list. All contributors to Git or related projects in the Git ecosystem are invited.
 
+* [Outreachy interns](https://www.outreachy.org/alums/) for the
+  December 2018 to March 2019 round have been announced. Two Outreachy
+  interns will work on Git. Slavica Đukić mentored by Johannes
+  Schindelin will work on turning `git add -i` into a built-in, while
+  Tanushree Tumane co-mentored by Christian Couder and Johannes
+  Schindelin will work on improving `git bisect`. GitHub will sponsor
+  these internships.
+
 __Light reading__
 
 
