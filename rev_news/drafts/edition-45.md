@@ -123,9 +123,7 @@ This edition covers what happened during the month of October 2018.
 [11.4.0](https://about.gitlab.com/2018/10/22/gitlab-11-4-released/)
 + Gerrit Code Review [2.16](https://www.gerritcodereview.com/2.16.html),
 [2.15.7](https://www.gerritcodereview.com/2.15.html#2157),
-[2.14.17](https://www.gerritcodereview.com/2.14.html#21417),
-[2.15.6](https://www.gerritcodereview.com/2.15.html#2156),
-[2.14.16](https://www.gerritcodereview.com/2.14.html#21416)
+[2.14.17](https://www.gerritcodereview.com/2.14.html#21417)
 + GitKraken [4.1.1](https://support.gitkraken.com/release-notes/current),
 [4.1.0](https://support.gitkraken.com/release-notes/current)
 + GitHub Desktop [1.5.0](https://desktop.github.com/release-notes/)
@@ -145,6 +143,13 @@ __Various__
   Tanushree Tumane co-mentored by Christian Couder and Johannes
   Schindelin will work on improving `git bisect`. GitHub will sponsor
   these internships.
+
+* [Gerrit User Summit 2018, Summary Report](https://gitenterprise.me/2018/11/18/gerrit-user-summit-2018-2/)
+
+  The Gerrit User Summit 2018 at Cloudera in Palo Alto has ended with over 80+ participants coming
+  all over the world. Main topics have been the release of Gerrit v2.16, support for Git protocol v2,
+  Gerrit DevOps Analytics & Insights and the support for Kubernetes.
+
 
 __Light reading__
 
