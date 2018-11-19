@@ -52,6 +52,9 @@ This edition covers what happened during the month of October 2018.
     - [Supercharging the Git Commit Graph III: Generations and Graph Algorithms](https://blogs.msdn.microsoft.com/devops/2018/07/09/supercharging-the-git-commit-graph-iii-generations/)
     - [Supercharing the Git Commit Graph IV: Bloom Filters](https://blogs.msdn.microsoft.com/devops/2018/07/16/super-charging-the-git-commit-graph-iv-bloom-filters/)
 
+  (These links were already provided in [Git Rev News edition 41 last July](https://git.github.io/rev_news/2018/07/18/edition-41/).
+  Stolee has been interviewed in [Git Rev News edition 42 last August](https://git.github.io/rev_news/2018/08/22/edition-42/).)
+
   Elijah found that the commit-graph feature reduced the time of a
   `git push --dry-run` by a factor of over 100, from over a minute to
   sub-second, though this speed up came from making all the
