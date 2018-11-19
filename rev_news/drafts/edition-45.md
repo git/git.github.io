@@ -123,7 +123,7 @@ This edition covers what happened during the month of October 2018.
 [11.4.0](https://about.gitlab.com/2018/10/22/gitlab-11-4-released/)
 + Gerrit Code Review [2.16](https://www.gerritcodereview.com/2.16.html),
 [2.15.7](https://www.gerritcodereview.com/2.15.html#2157),
-[2.14.17](https://www.gerritcodereview.com/2.14.html#21417),
+[2.14.17](https://www.gerritcodereview.com/2.14.html#21417)
 + GitKraken [4.1.1](https://support.gitkraken.com/release-notes/current),
 [4.1.0](https://support.gitkraken.com/release-notes/current)
 + GitHub Desktop [1.5.0](https://desktop.github.com/release-notes/)
