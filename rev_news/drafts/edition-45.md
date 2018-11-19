@@ -144,6 +144,13 @@ __Various__
   Schindelin will work on improving `git bisect`. GitHub will sponsor
   these internships.
 
+* [Gerrit User Summit 2018, Summary Report](https://gitenterprise.me/2018/11/18/gerrit-user-summit-2018-2/)
+
+  The Gerrit User Summit 2018 at Cloudera in Palo Alto has ended with over 80+ participants coming
+  all over the world. Main topics have been the release of Gerrit v2.16, support for Git protocol v2,
+  Gerrit DevOps Analytics & Insights and the support for Kubernetes.
+
+
 __Light reading__
 
 
