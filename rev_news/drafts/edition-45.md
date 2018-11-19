@@ -124,8 +124,6 @@ This edition covers what happened during the month of October 2018.
 + Gerrit Code Review [2.16](https://www.gerritcodereview.com/2.16.html),
 [2.15.7](https://www.gerritcodereview.com/2.15.html#2157),
 [2.14.17](https://www.gerritcodereview.com/2.14.html#21417),
-[2.15.6](https://www.gerritcodereview.com/2.15.html#2156),
-[2.14.16](https://www.gerritcodereview.com/2.14.html#21416)
 + GitKraken [4.1.1](https://support.gitkraken.com/release-notes/current),
 [4.1.0](https://support.gitkraken.com/release-notes/current)
 + GitHub Desktop [1.5.0](https://desktop.github.com/release-notes/)
