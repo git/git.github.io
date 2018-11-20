@@ -173,15 +173,14 @@ This edition covers what happened during the month of October 2018.
 
 * What are you doing on the Git project these days, and why?
 
-  I'm currently creating a replacement for git filter-branch that I'm
-  provisionally naming [git
-  repo-filter](https://github.com/newren/git-repo-filter/). My goal is
-  to address what I perceive to be a few glaring deficiencies of the
-  otherwise versatile and cool filter-branch tool. It's not ready for
-  external consumption at all yet (one problem of many is that it
-  depends on git patches which I just recently posted to the
-  list). I'll submit repo-filter to the list when it's closer to
-  ready.
+  I'm currently creating a replacement for `git filter-branch` that I'm
+  provisionally naming [git repo-filter](https://github.com/newren/git-repo-filter/).
+  My goal is to address what I perceive to be a few glaring
+  deficiencies of the otherwise versatile and cool filter-branch
+  tool. It's not ready for external consumption at all yet (one
+  problem of many is that it depends on Git patches which I just
+  recently posted to the list). I'll submit repo-filter to the list
+  when it's closer to ready.
 
   I've done some work to document inconsistencies and incompatible
   flag pairs in rebase, due to its multiple different backends. I'm
