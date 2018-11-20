@@ -100,9 +100,174 @@ This edition covers what happened during the month of October 2018.
   should be in the upcoming v2.20.0 Git release
   [scheduled for the beginning of December](https://tinyurl.com/gitCal).
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Elijah Newren
+
+  * Who are you and what do you do?
+
+  Big question; I'll answer in three parts, and see if I can use a
+  little humor to offset the lengthy answer.
+
+  Personally, I'm a husband to the most amazing woman in the world, and
+  a father to one son and six daughters.  My wife is expecting again, so
+  next spring my son will get something he's never had before: a seventh
+  sister!  I'm a devout member of
+  [The Church of Jesus Christ of Latter-day Saints](https://www.lds.org).
+  I received a PhD in mathematics from the
+  [University of Utah](http://www.math.utah.edu/~newren/), which
+  aside from meaning I've forgotten more math than most people will
+  ever know, comes with one primary benefit: when my kids need a
+  "doctor's note", it's often the case that someone has overlooked
+  specifying that the note needs to come from a medical doctor.
+  Sadly, my wife has vetoed me writing these notes myself, which just
+  goes to show that a doctorate isn't all it's cracked up to be.
+
+  In the open source world, in addition to my contributions to Git in
+  more recent years, I was once upon a time heavily involved in the
+  Gnome community; a
+  [behind the scenes interview](https://thegnomejournal.wordpress.com/2006/04/21/behind-the-scenes-elijah-newren/)
+  I did with them may still be interesting, particularly the
+  travelling tips.
+
+  Professionally, I worked at [Sandia National Labs](https://www.sandia.gov/)
+  for about six years, transitioning during that time from working on
+  fluid dynamics codes to working on tools to make other developers more
+  productive. Palantir lured me away in early 2013 with a cool
+  [mission](https://www.palantir.com/about/) (especially
+  intriguing to me at the time was the results they were getting in
+  [fighting child exploitation and recovering missing children](https://www.palantir.com/philanthropy-engineering/annual-report/2017/ncmec.html),
+  and an understanding that I would get to work on open source stuff
+  likeGerrit and Git. The underlying mission has remained cool (despite
+  some contrary claims in the media these days), but between managerial
+  turnover and the short-term focus of a startup, it took a long time
+  before I actually had the opportunity to work on Git even part time.
+
+  * What would you name your most important contribution to Git?
+
+  I've contributed to a few different places in Git, but most of my
+  contributions have been around merging. I've put a lot of work into
+  addressing edge and corner cases; possibly too much: Junio has named
+  some of my patch series things like
+  `en/t6042-insane-merge-rename-testcases`.  Part of the reason for
+  addressing edge and corner cases, though, dovetails with my other
+  work towards fixing, documenting, testing, and restructuring the
+  recursive merge machinery with an eye towards changing out the
+  [basic implementation strategy](href="https://public-inbox.org/git/xmqqd147kpdm.fsf@gitster.mtv.corp.google.com/).
+
+  A while ago I found a bug in merge-recursive.c and traced it back to
+  code introduced years ago by myself, but then found that the original
+  bug was only an issue because of some other problem created years
+  ago...that also traced back to me. Sometimes merge-recursive.c feels
+  like it's all my fault other than the original implementation
+  design. So, not only have I mostly worked on stuff that few people
+  will ever notice, but once I change the implementation underpinnings,
+  merge problems can be entirely my fault too.  :-)
+
+  The most notable thing I've contributed that users are likely to
+  notice is directory rename detection in the merge machinery. An
+  amusing bit of trivia about that feature is that GitHub highlighted
+  this feature in their
+  [Highlights from Git 2.19](https://blog.github.com/2018-09-10-highlights-from-git-2-19/#directory-rename-detection),
+  even though this was a feature added in Git 2.18. (I'm not
+  complaining since this meant more exposure to my pet feature, I just
+  found it humorous.)
+
+  * What are you doing on the Git project these days, and why?
+
+  I'm currently creating a replacement for git filter-branch that I'm
+  provisionally naming [git
+  repo-filter](https://github.com/newren/git-repo-filter/). My goal is
+  to address what I perceive to be a few glaring deficiencies of the
+  otherwise versatile and cool filter-branch tool. It's not ready for
+  external consumption at all yet (one problem of many is that it
+  depends on git patches which I just recently posted to the
+  list). I'll submit repo-filter to the list when it's closer to
+  ready.
+
+  I've done some work to document inconsistencies and incompatible
+  flag pairs in rebase, due to its multiple different backends. I'm
+  slowly doing some ongoing work to make that behavior more uniform. One
+  particular difference that ties into my other work concerns directory
+  rename detection: I want that capability for rebases as well as merges
+  and cherry-picks. However, directory rename detection in rebase is
+  [backend dependent, and the default backend lacks this ability](https://public-inbox.org/git/xmqqh8jeh1id.fsf@gitster-ct.c.googlers.com/).
+  Dscho has some performance concerns with switching the default backend
+  (fewer than he used to now that the various rebase-in-C rewrites have
+  merged), so fixing that issue might depend on some more merge work
+  first.
+
+  I will also soon get back to my
+  [rewrite of the implementation strategy from merge-recursive](https://public-inbox.org/git/xmqqk1ydkbx0.fsf@gitster.mtv.corp.google.com/).
+  While that may not sound too exciting to most users, I think it
+  could net some nice maintainability wins, improve performance (thus
+  perhaps allowing the rebase switchover), fix a variety of
+  edge/corner cases we currently fail, and make some new features
+  easier to implement (e.g. merges in bare repos, cherry-picking to an
+  un-checked-out branch, remerge-diff capability, and tree-based
+  trivial merges).
+
+  * If you could get a team of expert developers to work full time on
+    something in Git for a full year, what would it be?
+
+  I'd be happy if I could be allowed to work full time on Git
+  myself. Getting a full time team?  Well...
+
+    * Work on all the stuff I mentioned above (including the features
+      I think my current work would enable)
+
+    * Upstream or at least release and open source our snowflake report
+      tool, to help other groups (if there are any) that also weirdly
+      support way too many customer-specific branches and want a better
+      way to determine what changes have already been ported back to the
+      main development branch.
+
+    * Improve performance on large repositories (in particular, storing
+      and using a partial index that includes some tree entries and
+      omits files underneath, used together with partial clones and
+      sparse checkouts)
+
+    * Add a couple alternative forms of binary storage.
+
+    * Create a better webby merge review tool. One which treats commits
+      as the unit of review and branches as the unit of merging,
+      possibly based on or taking advantage of range-diff. One which
+      encourages writing clean history that is easy for future readers
+      to follow. (This includes making commit messages a fundamental
+      part of what is reviewed, expecting and working with multiple
+      commits as separate small atomic steps, avoiding fixup commits in
+      the final while also not doing user-hostile history-destroying
+      squash merges, and if it wasn't clear already from the previous
+      requirements it needs to work reasonably with and not be hostile
+      to rebases). Also, it shouldn't botch commit order (I understand
+      that merges may be difficult and some form of linearization may be
+      in order, but messing up the topology of a linear history is
+      unforgivable; doubly so when you document it as intended), and it
+      shouldn't use magic refnames. There are probably other issues
+      from the various systems I have used that I could add into the
+      above requirements, but the list already rules out all existing
+      tools that I know of. Git's (and Linux's) email based workflow is
+      the only one I know of to get all these things right; however, the
+      problems with getting an email workflow running make it a
+      non-starter for many groups. I wish there were something better
+      than the current offerings to point people to, or that one of the
+      existing offerings would transform into this tool.
+
+  * If you could remove something from Git without worrying about
+    backwards compatibility, what would it be?
+
+  Perhaps just make checkout and reset do just one thing each?
+
+  * What is your favorite Git-related tool/library, outside of Git itself?
+
+  I would have said tbdiff, but now range-diff is built in. I could
+  mention various repository management and code review tools
+  (particularly a few that bundle these capabilities together), but
+  it's hard to pick a "favorite" as the ones I know all tend to be
+  strong in some area(s) and extremely weak in others.
+
+  I'm not sure if public-inbox.org/git qualifies as a "Git-related
+  tool or library", but it's been very helpful. I also use Dscho's
+  apply-from-public-inbox.sh script to apply submitted patch series
+  locally.
 
 ## Releases
 
