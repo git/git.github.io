@@ -81,7 +81,7 @@ This edition covers what happened during the month of October 2018.
   Junio Hamano, the Git maintainer, and Elijah then reviewed the patch
   series and discussed the implementation with Stolee.
 
-  Elijah reported that the path series indeed improved the time of a
+  Elijah reported that the patch series indeed improved the time of a
   dry-run push from around 1 minutes and 20 seconds to around 3
   seconds, but that it seemed that now the push was a little bit
   faster without the commit-graph feature. After discussing this with
