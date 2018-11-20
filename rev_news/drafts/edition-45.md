@@ -134,9 +134,9 @@ This edition covers what happened during the month of October 2018.
   productive. Palantir lured me away in early 2013 with a cool
   [mission](https://www.palantir.com/about/) (especially
   intriguing to me at the time was the results they were getting in
-  [fighting child exploitation and recovering missing children](https://www.palantir.com/philanthropy-engineering/annual-report/2017/ncmec.html),
+  [fighting child exploitation and recovering missing children](https://www.palantir.com/philanthropy-engineering/annual-report/2017/ncmec.html)),
   and an understanding that I would get to work on open source stuff
-  likeGerrit and Git. The underlying mission has remained cool (despite
+  like Gerrit and Git. The underlying mission has remained cool (despite
   some contrary claims in the media these days), but between managerial
   turnover and the short-term focus of a startup, it took a long time
   before I actually had the opportunity to work on Git even part time.
@@ -151,7 +151,7 @@ This edition covers what happened during the month of October 2018.
   addressing edge and corner cases, though, dovetails with my other
   work towards fixing, documenting, testing, and restructuring the
   recursive merge machinery with an eye towards changing out the
-  [basic implementation strategy](href="https://public-inbox.org/git/xmqqd147kpdm.fsf@gitster.mtv.corp.google.com/).
+  [basic implementation strategy](https://public-inbox.org/git/xmqqd147kpdm.fsf@gitster.mtv.corp.google.com/).
 
   A while ago I found a bug in merge-recursive.c and traced it back to
   code introduced years ago by myself, but then found that the original
