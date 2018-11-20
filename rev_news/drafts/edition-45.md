@@ -102,7 +102,7 @@ This edition covers what happened during the month of October 2018.
 
 ## Developer Spotlight: Elijah Newren
 
-  * Who are you and what do you do?
+* Who are you and what do you do?
 
   Big question; I'll answer in three parts, and see if I can use a
   little humor to offset the lengthy answer.
@@ -141,7 +141,7 @@ This edition covers what happened during the month of October 2018.
   turnover and the short-term focus of a startup, it took a long time
   before I actually had the opportunity to work on Git even part time.
 
-  * What would you name your most important contribution to Git?
+* What would you name your most important contribution to Git?
 
   I've contributed to a few different places in Git, but most of my
   contributions have been around merging. I've put a lot of work into
@@ -171,7 +171,7 @@ This edition covers what happened during the month of October 2018.
   complaining since this meant more exposure to my pet feature, I just
   found it humorous.)
 
-  * What are you doing on the Git project these days, and why?
+* What are you doing on the Git project these days, and why?
 
   I'm currently creating a replacement for git filter-branch that I'm
   provisionally naming [git
@@ -205,58 +205,58 @@ This edition covers what happened during the month of October 2018.
   un-checked-out branch, remerge-diff capability, and tree-based
   trivial merges).
 
-  * If you could get a team of expert developers to work full time on
-    something in Git for a full year, what would it be?
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
 
   I'd be happy if I could be allowed to work full time on Git
   myself. Getting a full time team?  Well...
 
-    * Work on all the stuff I mentioned above (including the features
-      I think my current work would enable)
+  * Work on all the stuff I mentioned above (including the features
+    I think my current work would enable)
 
-    * Upstream or at least release and open source our snowflake report
-      tool, to help other groups (if there are any) that also weirdly
-      support way too many customer-specific branches and want a better
-      way to determine what changes have already been ported back to the
-      main development branch.
+  * Upstream or at least release and open source our snowflake report
+    tool, to help other groups (if there are any) that also weirdly
+    support way too many customer-specific branches and want a better
+    way to determine what changes have already been ported back to the
+    main development branch.
 
-    * Improve performance on large repositories (in particular, storing
-      and using a partial index that includes some tree entries and
-      omits files underneath, used together with partial clones and
-      sparse checkouts)
+  * Improve performance on large repositories (in particular, storing
+    and using a partial index that includes some tree entries and
+    omits files underneath, used together with partial clones and
+    sparse checkouts)
 
-    * Add a couple alternative forms of binary storage.
+  * Add a couple alternative forms of binary storage.
 
-    * Create a better webby merge review tool. One which treats commits
-      as the unit of review and branches as the unit of merging,
-      possibly based on or taking advantage of range-diff. One which
-      encourages writing clean history that is easy for future readers
-      to follow. (This includes making commit messages a fundamental
-      part of what is reviewed, expecting and working with multiple
-      commits as separate small atomic steps, avoiding fixup commits in
-      the final while also not doing user-hostile history-destroying
-      squash merges, and if it wasn't clear already from the previous
-      requirements it needs to work reasonably with and not be hostile
-      to rebases). Also, it shouldn't botch commit order (I understand
-      that merges may be difficult and some form of linearization may be
-      in order, but messing up the topology of a linear history is
-      unforgivable; doubly so when you document it as intended), and it
-      shouldn't use magic refnames. There are probably other issues
-      from the various systems I have used that I could add into the
-      above requirements, but the list already rules out all existing
-      tools that I know of. Git's (and Linux's) email based workflow is
-      the only one I know of to get all these things right; however, the
-      problems with getting an email workflow running make it a
-      non-starter for many groups. I wish there were something better
-      than the current offerings to point people to, or that one of the
-      existing offerings would transform into this tool.
+  * Create a better webby merge review tool. One which treats commits
+    as the unit of review and branches as the unit of merging,
+    possibly based on or taking advantage of range-diff. One which
+    encourages writing clean history that is easy for future readers
+    to follow. (This includes making commit messages a fundamental
+    part of what is reviewed, expecting and working with multiple
+    commits as separate small atomic steps, avoiding fixup commits in
+    the final while also not doing user-hostile history-destroying
+    squash merges, and if it wasn't clear already from the previous
+    requirements it needs to work reasonably with and not be hostile
+    to rebases). Also, it shouldn't botch commit order (I understand
+    that merges may be difficult and some form of linearization may be
+    in order, but messing up the topology of a linear history is
+    unforgivable; doubly so when you document it as intended), and it
+    shouldn't use magic refnames. There are probably other issues
+    from the various systems I have used that I could add into the
+    above requirements, but the list already rules out all existing
+    tools that I know of. Git's (and Linux's) email based workflow is
+    the only one I know of to get all these things right; however, the
+    problems with getting an email workflow running make it a
+    non-starter for many groups. I wish there were something better
+    than the current offerings to point people to, or that one of the
+    existing offerings would transform into this tool.
 
-  * If you could remove something from Git without worrying about
-    backwards compatibility, what would it be?
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
 
   Perhaps just make checkout and reset do just one thing each?
 
-  * What is your favorite Git-related tool/library, outside of Git itself?
+* What is your favorite Git-related tool/library, outside of Git itself?
 
   I would have said tbdiff, but now range-diff is built in. I could
   mention various repository management and code review tools
