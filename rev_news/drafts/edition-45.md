@@ -36,10 +36,10 @@ This edition covers what happened during the month of October 2018.
 
   He then describes a user with a repo where pushing a commit takes
   more than one minute. The repo was quite "unusual" as it had a lots
-  of tag and the push.followTags config option was set to true. Elijah
-  found that most of the time was spent in a add_missing_tags()
-  function which called in_merge_bases_many() once per tag, which
-  "seemed rather suboptimal", as in_merge_bases_many() does a commit
+  of tag and the `push.followTags` config option was set to `true`. Elijah
+  found that most of the time was spent in an `add_missing_tags()`
+  function which called `in_merge_bases_many()` once per tag, which
+  "seemed rather suboptimal", as `in_merge_bases_many()` does a commit
   traversal which is not cheap.
 
   Instead of optimizing this Elijah tried a development version of the
@@ -50,7 +50,8 @@ This edition covers what happened during the month of October 2018.
     - [Supercharging the Git Commit Graph](https://blogs.msdn.microsoft.com/devops/2018/06/25/supercharging-the-git-commit-graph/)
     - [Supercharging the Git Commit Graph II: File Format](https://blogs.msdn.microsoft.com/devops/2018/07/02/supercharging-the-git-commit-graph-ii-file-format/)
     - [Supercharging the Git Commit Graph III: Generations and Graph Algorithms](https://blogs.msdn.microsoft.com/devops/2018/07/09/supercharging-the-git-commit-graph-iii-generations/)
-    - [Supercharing the Git Commit Graph IV: Bloom Filters](https://blogs.msdn.microsoft.com/devops/2018/07/16/super-charging-the-git-commit-graph-iv-bloom-filters/)
+    - [Supercharging the Git Commit Graph IV: Bloom Filters](https://blogs.msdn.microsoft.com/devops/2018/07/16/super-charging-the-git-commit-graph-iv-bloom-filters/)  
+<br/>
 
   (These links were already provided in [Git Rev News edition 41 last July](https://git.github.io/rev_news/2018/07/18/edition-41/).
   Stolee has been interviewed in [Git Rev News edition 42 last August](https://git.github.io/rev_news/2018/08/22/edition-42/).)
@@ -58,7 +59,7 @@ This edition covers what happened during the month of October 2018.
   Elijah found that the commit-graph feature reduced the time of a
   `git push --dry-run` by a factor of over 100, from over a minute to
   sub-second, though this speed up came from making all the
-  in_merge_bases_many() calls much faster, not from reducing the
+  `in_merge_bases_many()` calls much faster, not from reducing the
   number of calls to this function.
 
   Stolee replied that the generation numbers feature in the
@@ -73,8 +74,8 @@ This edition covers what happened during the month of October 2018.
 
   Stolee a few weeks later sent
   [a small patch series](https://public-inbox.org/git/pull.60.git.gitgitgadget@gmail.com/)
-  to fix the behavior of the add_missing_tags() function by
-  implementing a new get_reachable_subset() function which does "a
+  to fix the behavior of the `add_missing_tags()` function by
+  implementing a new `get_reachable_subset()` function which does "a
   many-to-many reachability test" and performs only one commit
   traversal.
 
@@ -85,12 +86,12 @@ This edition covers what happened during the month of October 2018.
   dry-run push from around 1 minutes and 20 seconds to around 3
   seconds, but that it seemed that now the push was a little bit
   faster without the commit-graph feature. After discussing this with
-  Stolee and other tests though Elijah reported that he had made a
-  mistake in testing Stolee's patch series and that using the
-  commit-graph feature was still faster even with the patch series.
+  Stolee and running additional tests though Elijah reported that he
+  had made a mistake in testing Stolee's patch series and that using
+  the commit-graph feature was still faster even with the patch series.
 
   Ævar Arnfjörð Bjarmason also replied to Elijah's initial email to
-  say that users can set the fetch.pruneTags config option to true to
+  say that users can set the `fetch.pruneTags` config option to `true` to
   avoid accumulating local-only tags. Elijah then thanked Ævar for the
   suggestion.
 
@@ -136,7 +137,7 @@ This edition covers what happened during the month of October 2018.
   intriguing to me at the time was the results they were getting in
   [fighting child exploitation and recovering missing children](https://www.palantir.com/philanthropy-engineering/annual-report/2017/ncmec.html),
   and an understanding that I would get to work on open source stuff
-  likeGerrit and Git. The underlying mission has remained cool (despite
+  like Gerrit and Git). The underlying mission has remained cool (despite
   some contrary claims in the media these days), but between managerial
   turnover and the short-term focus of a startup, it took a long time
   before I actually had the opportunity to work on Git even part time.
@@ -153,14 +154,14 @@ This edition covers what happened during the month of October 2018.
   recursive merge machinery with an eye towards changing out the
   [basic implementation strategy](href="https://public-inbox.org/git/xmqqd147kpdm.fsf@gitster.mtv.corp.google.com/).
 
-  A while ago I found a bug in merge-recursive.c and traced it back to
+  A while ago I found a bug in `merge-recursive.c` and traced it back to
   code introduced years ago by myself, but then found that the original
   bug was only an issue because of some other problem created years
   ago...that also traced back to me. Sometimes merge-recursive.c feels
   like it's all my fault other than the original implementation
   design. So, not only have I mostly worked on stuff that few people
   will ever notice, but once I change the implementation underpinnings,
-  merge problems can be entirely my fault too.  :-)
+  merge problems can be entirely my fault too. :-)
 
   The most notable thing I've contributed that users are likely to
   notice is directory rename detection in the merge machinery. An
@@ -174,12 +175,12 @@ This edition covers what happened during the month of October 2018.
 * What are you doing on the Git project these days, and why?
 
   I'm currently creating a replacement for `git filter-branch` that I'm
-  provisionally naming [git repo-filter](https://github.com/newren/git-repo-filter/).
+  provisionally naming [`git repo-filter`](https://github.com/newren/git-repo-filter/).
   My goal is to address what I perceive to be a few glaring
   deficiencies of the otherwise versatile and cool filter-branch
   tool. It's not ready for external consumption at all yet (one
   problem of many is that it depends on Git patches which I just
-  recently posted to the list). I'll submit repo-filter to the list
+  recently posted to the list). I'll submit `repo-filter` to the list
   when it's closer to ready.
 
   I've done some work to document inconsistencies and incompatible
@@ -222,13 +223,13 @@ This edition covers what happened during the month of October 2018.
   * Improve performance on large repositories (in particular, storing
     and using a partial index that includes some tree entries and
     omits files underneath, used together with partial clones and
-    sparse checkouts)
+    sparse checkouts).
 
   * Add a couple alternative forms of binary storage.
 
   * Create a better webby merge review tool. One which treats commits
     as the unit of review and branches as the unit of merging,
-    possibly based on or taking advantage of range-diff. One which
+    possibly based on or taking advantage of `range-diff`. One which
     encourages writing clean history that is easy for future readers
     to follow. (This includes making commit messages a fundamental
     part of what is reviewed, expecting and working with multiple
@@ -257,15 +258,15 @@ This edition covers what happened during the month of October 2018.
 
 * What is your favorite Git-related tool/library, outside of Git itself?
 
-  I would have said tbdiff, but now range-diff is built in. I could
+  I would have said `tbdiff`, but now `range-diff` is built in. I could
   mention various repository management and code review tools
   (particularly a few that bundle these capabilities together), but
   it's hard to pick a "favorite" as the ones I know all tend to be
   strong in some area(s) and extremely weak in others.
 
-  I'm not sure if public-inbox.org/git qualifies as a "Git-related
+  I'm not sure if [public-inbox.org/git](https://public-inbox.org/git/) qualifies as a "Git-related
   tool or library", but it's been very helpful. I also use Dscho's
-  apply-from-public-inbox.sh script to apply submitted patch series
+  `apply-from-public-inbox.sh` script to apply submitted patch series
   locally.
 
 ## Releases
@@ -298,7 +299,11 @@ This edition covers what happened during the month of October 2018.
 __Various__
 
 * [Git Merge Contributor's Summit Jan 31, 2019, Brussels](https://public-inbox.org/git/20181109104202.GA8717@sigill.intra.peff.net)
-  has been announced on the mailing list. All contributors to Git or related projects in the Git ecosystem are invited.
+  as part of the [Git Merge Conference](https://git-merge.com/)
+  has been announced on the mailing list. All contributors to Git
+  or related projects in the Git ecosystem are invited.  
+  Open source addicts may also want to
+  attend the [FOSDEM](https://fosdem.org/2019/) conference on the two subsequent days.
 
 * [Outreachy interns](https://www.outreachy.org/alums/) for the
   December 2018 to March 2019 round have been announced. Two Outreachy
