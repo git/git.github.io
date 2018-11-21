@@ -134,7 +134,7 @@ This edition covers what happened during the month of October 2018.
   Removing this limitation yields correct results, but the performance
   is worse.
   
-  That is why Derrick Stolee send [this RFC](https://public-inbox.org/git/86tvl0zhos.fsf@gmail.com/t/#u)
+  That is why Derrick Stolee sent [this RFC](https://public-inbox.org/git/86tvl0zhos.fsf@gmail.com/t/#u)
   
   > We've discussed in several places how to improve upon generation
   > numbers. This RFC is a report based on my investigation into a
@@ -176,7 +176,7 @@ This edition covers what happened during the month of October 2018.
 
   Based on performed benchmarks (by comparing the number of commits
   walked with the help of [trace2](https://public-inbox.org/git/pull.29.git.gitgitgadget@gmail.com/t/#u)
-  facility), Derrick proposed to pursue one of the following options,
+  facility), Stolee proposed to pursue one of the following options,
   though he was undecided about which one to choose:
   
   1. Maximum Generation Number.
