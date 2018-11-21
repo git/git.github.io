@@ -101,6 +101,128 @@ This edition covers what happened during the month of October 2018.
   should be in the upcoming v2.20.0 Git release
   [scheduled for the beginning of December](https://tinyurl.com/gitCal).
 
+
+### General
+
+* [[RFC] Generation Number v2](https://public-inbox.org/git/86tvl0zhos.fsf@gmail.com/t/#u)
+
+  The [commit-graph](https://github.com/git/git/blob/master/Documentation/technical/commit-graph.txt)
+  file mechanism (see the description above) accelerates commit graph
+  walks in the two following ways:
+  
+  1. Getting basic commit data (satisfying requirements of
+     `parse_commit_gently()`) without decompressing and parsing.
+  2. Reducing the time it takes to walk commits and determine
+     topological relationships by providing "generation number" (as a
+     negative-cut reachability index), which makes it possible skip
+     walking whole parts of commit graph.
+
+  The current version of the generation number has the advantage over
+  using heuristic based on the commit date that it is always correct.
+  It turned out however that in some cases it can give worse
+  performance than using the date heuristics; that is why its use got
+  limited in [[PATCH 1/1] commit: don't use generation numbers if not
+  needed](https://public-inbox.org/git/efa3720fb40638e5d61c6130b55e3348d8e4339e.1535633886.git.gitgitgadget@gmail.com/).
+
+  For the same reason why [[PATCH 0/6] Use generation numbers for
+  --topo-order](https://public-inbox.org/git/pull.25.git.gitgitgadget@gmail.com/),
+  and its subsequent revisions, also limited its use:
+  
+  > One notable case that is not included in this series is the case
+  > of a history comparison such as `git rev-list --topo-order A..B`.
+
+  Removing this limitation yields correct results, but the performance
+  is worse.
+  
+  That is why Derrick Stolee sent [this RFC](https://public-inbox.org/git/86tvl0zhos.fsf@gmail.com/t/#u)
+  
+  > We've discussed in several places how to improve upon generation
+  > numbers. This RFC is a report based on my investigation into a
+  > few new options, and how they compare for Git's purposes on
+  > several existing open-source repos.
+  >
+  > You can find this report and the associated test scripts at
+  > <https://github.com/derrickstolee/gen-test>.
+  
+  > Please also let me know about any additional tests that I could
+  > run. Now that I've got a lot of test scripts built up, I can re-run
+  > the test suite pretty quickly.
+  
+  He then explains why Generation Number v2 is needed:
+  
+  > Specifically, some algorithms in Git already use commit date as a
+  > heuristic reachability index. This has some problems, though, since
+  > commit date can be incorrect for several reasons (clock skew between
+  > machines, purposefully setting `GIT_COMMIT_DATE` to the author date, etc.).
+  > However, the speed boost by using commit date as a cutoff was so
+  > important in these cases, that the potential for incorrect answers was
+  > considered acceptable.
+  >
+  > When these algorithms were converted to use generation numbers, we
+  > _added_ the extra constraint that the algorithms are _never incorrect_.
+  > Unfortunately, this led to some cases where performance was worse than
+  > before. There are known cases where `git merge-base A B` or
+  > `git log --topo-order A..B` are worse when using generation numbers
+  > than when using commit dates.
+  >
+  > This report investigates four replacements for generation numbers, and
+  > compares the number of walked commits to the existing algorithms (both
+  > using generation numbers and not using them at all). We can use this
+  > data to make decisions for the future of the feature.
+  
+  The very rough implementation of those four proposed generation
+  numbers can be found in [the `reach-perf` branch in 
+  https://github.com/derrickstolee/git](https://github.com/derrickstolee/git/tree/reach-perf).
+
+  Based on performed benchmarks (by comparing the number of commits
+  walked with the help of [trace2](https://public-inbox.org/git/pull.29.git.gitgitgadget@gmail.com/t/#u)
+  facility), Stolee proposed to pursue one of the following options,
+  though he was undecided about which one to choose:
+  
+  1. Maximum Generation Number.
+  2. Corrected Commit Date.
+  
+  Maximum generation number has the advantage that it is
+  backwards-compatibile, that is it can be used (but not updated) with
+  the current code; however it is not locally-computable or
+  immutable.  Corrected commit date would require changes to the
+  commit-graph format, but it can be updated incrementally.
+  
+  Junio C Hamano [replied](https://public-inbox.org/git/86tvl0zhos.fsf@gmail.com/t/#m83011e1c6f4dedf35a2e167870cdcb1bfda46e30)
+  that
+  
+  > [...] I personally do not think being compatible with
+  > currently deployed clients is important at all (primarily because I
+  > still consider the whole thing experimental), and there is a clear
+  > way forward once we correct the mistake of not having a version
+  > number in the file format that tells the updated clients to ignore
+  > the generation numbers.  For longer term viability, we should pick
+  > something that is immutable, reproducible, computable with minimum
+  > input---all of which would lead to being incrementally computable, I
+  > would think.
+  
+  It looks like the Corrected Commit Date is the way
+  forward,... unless the variant of Maximum Generation
+  Number [proposed by Jakub Narębski](https://public-inbox.org/git/86ftwjzv1h.fsf@gmail.com/t/#e6a1ca42ad3dd0e9f3a63912af404973be4cbe181),
+  which looks like it could be updated almost incrementally, would
+  turn out to be better.  The change to use Corrected Commit Date
+  would require new revision of the commit-graph format (which includes
+  a version number, fortunately).  Derrick Stolee [writes](https://public-inbox.org/git/6902dbff-d9f6-e897-2c20-d0cb47a50795@gmail.com/)
+  
+  > Here is my list for what needs to be in the next
+  > version of the commit-graph file format:
+  >
+  > 1. A four-byte hash version.
+  >
+  > 2. File incrementality (split commit-graph).
+  > 
+  > 3. Reachability Index versioning
+  >
+  > Most of these changes will happen in the file header. The chunks
+  > themselves don't need to change, but some chunks may be added that
+  > only make sense in v2 commit-graphs.
+
+
 ## Developer Spotlight: Elijah Newren
 
 * Who are you and what do you do?
