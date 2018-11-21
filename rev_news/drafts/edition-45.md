@@ -271,6 +271,7 @@ This edition covers what happened during the month of October 2018.
 
 ## Releases
 
++ [Git v2.20.0-rc0](https://public-inbox.org/git/xmqqh8gefowy.fsf@gitster-ct.c.googlers.com/) and [Git for Windows v2.20.0-rc0](https://github.com/git-for-windows/git/releases/tag/v2.20.0-rc0.windows.1),
 + StGit [0.19](https://public-inbox.org/git/1541522776.3963181.1567641696.46EFA2E6@webmail.messagingengine.com),
 + libgit2 [0.27.7](https://github.com/libgit2/libgit2/releases/tag/v0.27.7),
 [0.27.6](https://github.com/libgit2/libgit2/releases/tag/v0.27.6)
