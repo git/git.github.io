@@ -134,7 +134,7 @@ This edition covers what happened during the month of October 2018.
   Removing this limitation yields correct results, but the performance
   is worse.
   
-  That is why Derrick Stolee sent [this RFC](https://public-inbox.org/git/86tvl0zhos.fsf@gmail.com/t/#u)
+  That is why Derrick Stolee sent [this RFC](https://public-inbox.org/git/86tvl0zhos.fsf@gmail.com/t/#u):
   
   > We've discussed in several places how to improve upon generation
   > numbers. This RFC is a report based on my investigation into a
@@ -189,7 +189,7 @@ This edition covers what happened during the month of October 2018.
   commit-graph format, but it can be updated incrementally.
   
   Junio C Hamano [replied](https://public-inbox.org/git/86tvl0zhos.fsf@gmail.com/t/#m83011e1c6f4dedf35a2e167870cdcb1bfda46e30)
-  that
+  that:
   
   > [...] I personally do not think being compatible with
   > currently deployed clients is important at all (primarily because I
@@ -207,7 +207,7 @@ This edition covers what happened during the month of October 2018.
   which looks like it could be updated almost incrementally, would
   turn out to be better.  The change to use Corrected Commit Date
   would require new revision of the commit-graph format (which includes
-  a version number, fortunately).  Derrick Stolee [writes](https://public-inbox.org/git/6902dbff-d9f6-e897-2c20-d0cb47a50795@gmail.com/)
+  a version number, fortunately).  Derrick Stolee [writes](https://public-inbox.org/git/6902dbff-d9f6-e897-2c20-d0cb47a50795@gmail.com/):
   
   > Here is my list for what needs to be in the next
   > version of the commit-graph file format:
