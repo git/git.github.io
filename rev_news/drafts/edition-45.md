@@ -319,10 +319,33 @@ __Various__
   have been the release of Gerrit v2.16, support for Git protocol v2,
   Gerrit DevOps Analytics & Insights and the support for Kubernetes.
 
+* In June Microsoft announced an agreement to acquire GitHub for $7.5 billion (this was covered by [Git Rev News Edition #40](https://git.github.io/rev_news/2018/06/20/edition-40/)). The acquisition is now completed:
+  * [Microsoft completes $7.5B GitHub acquisition, says user base has grown to 31M developers](https://www.geekwire.com/2018/microsoft-completes-7-5b-github-acquisition-says-user-base-grown-31m-developers/)
+  * [Microsoft officially closes $7.5 billion purchase of GitHub](https://mashable.com/article/microsoft-closes-7-5-billion-github-acquisition/)
+  * [GitHub is now officially a part of Microsoft](https://arstechnica.com/gadgets/2018/10/github-is-now-officially-a-part-of-microsoft/)
+
+* [Git Submodule Vulnerability Announced](https://blog.github.com/2018-10-05-git-submodule-vulnerability/) (CVE-2018-17456), fixed in v2.19.1, backported to v2.14.5, v2.15.3, v2.16.5, v2.17.2, and v2.18.1.
+
+
 __Light reading__
+
+* [Dangit, git!](http://dangitgit.com/) by Katie Sylor-Miller -- figuring out how to fix your mistakes. Also in the form of ready to print $10 [Dangit, git! Recipes for gitting out of a Git mess](https://gumroad.com/l/dangit-git) zine on Gumroad.
+* [20 useful tools for open-source maintainers](https://hackernoon.com/20-useful-tools-for-open-source-maintainers-ee86a09e04e5) by Kazz Yokomizo, includes a series of [Probot](https://github.com/probot/probot)-based GitHub Apps, various continuous integration tools, and more.
+* [How This Startup [GitLab] Made $10.5 Million in Revenue With Every Single Employee Working From Home](https://www.inc.com/cameron-albert-deitch/2018-inc5000-gitlab.html) by Cameron Albert-Deitch.
+* [How to use git efficiently](https://dev.to/adityasridhar/how-to-use-git-efficiently-2pfa) (also on [Medium](https://medium.freecodecamp.org/how-to-use-git-efficiently-54320a236369)) by Aditya Sridhar, describing particular workflow.
 
 
 __Git tools and sites__
+
+* [Gitote](https://gitote.in/) ([https://gitote.in](https://gitote.in/))
+  is new Git repository hosting site, an alternative to GitHub, GitLab, Bitbucket, etc.
+  It is developed from [Gogs](https://gogs.io) fork, and powered by [DigitalOcean](https://www.digitalocean.com/).
+  Announced in [Gitote is out now](https://dev.to/gitote/gitote-has-been-launched-m35) blog post.
+* [Bit](https://bitsrc.io) ([on GitHub](https://github.com/teambit/bit)) helps you organize your components, share them as a team and keep them synced in all your projects; it helps to seamlessly isolate components (sets of files) from any existing repository and share them
+* [Git::IssueManager](https://metacpan.org/pod/Git::IssueManager) is a Perl module for managing issues in a git branch within your repository, creating a distributed issue management system; see also [Git Rev News Edition #43](https://git.github.io/rev_news/2018/09/19/edition-43/) for more bug trackers embedded in git
+* [pre-commit Python module](https://pre-commit.com) is a framework for managing and maintaining multiple multi-language pre-commit hooks
+* [lint-staged](https://github.com/okonet/lint-staged) runs linters on git staged files
+* [git-fire](https://github.com/qw3rtman/git-fire) is a Git plugin to save (add, commit and push) your code in the case of emergency
 
 
 ## Credits
