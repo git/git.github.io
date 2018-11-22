@@ -308,7 +308,7 @@ Kaartic's patch series will probably also be merged there, too.
 [3.5.1](https://support.gitkraken.com/release-notes/current#v3-5-1)
 * libgit2 [0.27.0-rc3](https://github.com/libgit2/libgit2/releases/tag/v0.27.0-rc3) and
 [0.27.0](https://github.com/libgit2/libgit2/releases/tag/v0.27.0)
-* Gerrit Code Review [2.5.1](https://www.gerritcodereview.com/releases/2.15.md)
+* Gerrit Code Review [2.15.1](https://www.gerritcodereview.com/2.15.html#2151)
 
 ## Other News
 
