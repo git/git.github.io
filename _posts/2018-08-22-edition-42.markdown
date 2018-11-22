@@ -215,7 +215,7 @@ It looks like the latest version will be merged to the "next" branch soon.
 ## Releases
 
 + libgit2 [v0.27.4](https://github.com/libgit2/libgit2/releases/tag/v0.27.4)
-+ Gerrit Code Review [v2.15.3](https://www.gerritcodereview.com/releases/2.15.md)
++ Gerrit Code Review [v2.15.3](https://www.gerritcodereview.com/2.15.html#2153)
 + GitHub Enterprise [v2.14.2](https://enterprise.github.com/releases/2.14.2),
 [v2.13.8](https://enterprise.github.com/releases/2.13.8),
 [v2.12.16](https://enterprise.github.com/releases/2.12.16),
