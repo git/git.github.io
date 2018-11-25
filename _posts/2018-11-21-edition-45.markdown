@@ -462,14 +462,14 @@ __Light reading__
 __Git tools and sites__
 
 * [Gitote](https://gitote.in/) ([https://gitote.in](https://gitote.in/))
-  is new Git repository hosting site, an alternative to GitHub, GitLab, Bitbucket, etc.
+  is a new Git repository hosting site, an alternative to GitHub, GitLab, Bitbucket, etc.
   It is developed from [Gogs](https://gogs.io) fork, and powered by [DigitalOcean](https://www.digitalocean.com/).
   Announced in [Gitote is out now](https://dev.to/gitote/gitote-has-been-launched-m35) blog post.
-* [Bit](https://bitsrc.io) ([on GitHub](https://github.com/teambit/bit)) helps you organize your components, share them as a team and keep them synced in all your projects; it helps to seamlessly isolate components (sets of files) from any existing repository and share them
-* [Git::IssueManager](https://metacpan.org/pod/Git::IssueManager) is a Perl module for managing issues in a git branch within your repository, creating a distributed issue management system; see also [Git Rev News Edition #43](https://git.github.io/rev_news/2018/09/19/edition-43/) for more bug trackers embedded in git
-* [pre-commit Python module](https://pre-commit.com) is a framework for managing and maintaining multiple multi-language pre-commit hooks
-* [lint-staged](https://github.com/okonet/lint-staged) runs linters on git staged files
-* [git-fire](https://github.com/qw3rtman/git-fire) is a Git plugin to save (add, commit and push) your code in the case of emergency
+* [Bit](https://bitsrc.io) ([on GitHub](https://github.com/teambit/bit)) helps you organize your components, share them as a team and keep them synced in all your projects; it helps to seamlessly isolate components (sets of files) from any existing repository and share them.
+* [Git::IssueManager](https://metacpan.org/pod/Git::IssueManager) is a Perl module for managing issues in a git branch within your repository, creating a distributed issue management system; see also [Git Rev News Edition #43](https://git.github.io/rev_news/2018/09/19/edition-43/) for more bug trackers embedded in Git.
+* [pre-commit Python module](https://pre-commit.com) is a framework for managing and maintaining multiple multi-language pre-commit hooks.
+* [lint-staged](https://github.com/okonet/lint-staged) runs linters on Git staged files.
+* [git-fire](https://github.com/qw3rtman/git-fire) is a Git plugin to save (add, commit and push) your code in the case of emergency.
 
 
 ## Credits
