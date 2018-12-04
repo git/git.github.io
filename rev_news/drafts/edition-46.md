@@ -45,6 +45,11 @@ __Light reading__
 
 
 __Git tools and sites__
+* [sr.ht](https://sr.ht/) ([https://sr.ht](https://sr.ht/))
+  is a very capable software forge which is already serving the needs of many projects in the free & open source software community site.
+  It is 100% open source software and includes goodies such as a wiki, mailing lists, ticketing, with neat features such as all the pages work without Javascript, and it is designed to support a email git workflow. Provided hosting is available for a low cost and contributing to the software can get one credit towards hosting.
+  
+  Announced in [sr.ht, the hacker's forge, now open for public alpha](https://drewdevault.com/2018/11/15/sr.ht-general-availability.html) blog post.
 
 * [Adobe's `git-server`](https://github.com/adobe/git-server), a [nodegit](https://github.com/nodegit/nodegit)-based application to serve Git repositories via `http://` and `https://`.
 
