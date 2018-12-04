@@ -46,6 +46,7 @@ __Light reading__
 
 __Git tools and sites__
 
+* [Adobe's `git-server`](https://github.com/adobe/git-server), a [nodegit](https://github.com/nodegit/nodegit)-based application to serve Git repositories via `http://` and `https://`.
 
 ## Credits
 
