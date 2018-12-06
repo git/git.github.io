@@ -74,13 +74,13 @@ videos, blog posts and other materials available from her
 [gitforteams GitHub repo](https://github.com/emmajane/gitforteams), and also in an
 [upcoming Git for Teams of One or More book](http://gitforteams.com/books/).
 
-* [Git + Software Freedom Conservancy Overview](http://thread.gmane.org/gmane.comp.version-control.git/267077/)
+* [Git + Software Freedom Conservancy Overview](http://article.gmane.org/gmane.comp.version-control.git/267077)
 
 At the Contributor Summit that was part of the [Git Merge 2015](http://git-merge.com),
 Jeff King, aka Peff, gave a presentation about the status of Git as a
 [Software Freedom Conservancy (SFC)](https://sfconservancy.org/) project.
 
-Git is a [member project of the SFC since 2010](http://thread.gmane.org/gmane.comp.version-control.git/159722/).
+Git is a [member project of the SFC since 2010](https://public-inbox.org/git/20101022183027.GA12124%40sigill.intra.peff.net/).
 This gives some legal status to "The Git Project" and makes it possible for it
 to handle money (around $19,000), hold domain names (git-scm.com, git-scm.org) and
 [the "Git" trademark](https://git-scm.com/trademark), and own a Mac!
@@ -116,20 +116,20 @@ about possible changes to the current situation.
 
 ### Reviews
 
-* ["cat-file --allow-unknown-type"](http://thread.gmane.org/gmane.comp.version-control.git/268262)
+* ["cat-file --allow-unknown-type"](https://public-inbox.org/git/55463094.9040204%40gmail.com/)
 
 Karthik Nayak, a Google Summer of Code student, has been working for
 some months on developing the `--allow-unknown-type` option for `git cat-file`.
 
 He has been helped by Eric Sunshine, Ramsay Jones, Phil Hord, Charles Bailey, David Turner, Duy Nguyen,
 Jeff King and Junio Hamano, and, along the development, improving the test script led
-to a [discovery and fix of a bug](http://thread.gmane.org/gmane.comp.version-control.git/268306)
+to a [discovery and fix of a bug](https://public-inbox.org/git/1430724315-524-1-git-send-email-sunshine%40sunshineco.com/)
 in `hash-object --literally`.
 
 The 10th iteration of his patch series was merged to the 'next' branch,
 so the new option will probably appear in the next git release.
 
-* ["git help" reorganisation](http://thread.gmane.org/gmane.comp.version-control.git/268348)
+* ["git help" reorganisation](https://public-inbox.org/git/cover.1430770308.git.sebastien.guimmara%40gmail.com/)
 
 Sébastien Guimmara started working on improving the output of `git help`.
 
@@ -148,7 +148,7 @@ while.
 In the case of Sébastien's patch series, many developers helped or got
 involved in the discussions: Eric Sunshine, Junio Hamano, Stefan
 Beller, Matthieu Moy, Johannes Schindelin, Johannes Sixt. Emma Jane Hogbin Westby
-also [weighed in](http://thread.gmane.org/gmane.comp.version-control.git/268348/focus=268525)
+also [weighed in](https://public-inbox.org/git/cover.1430770308.git.sebastien.guimmara%40gmail.com//focus=268525)
 with her experience in teaching Git to people, which is a valuable
 piece of input.
 
@@ -157,7 +157,7 @@ We will see how it goes and if some improvements are merged.
 
 ### Support
 
-* [gitk won't show notes?](http://thread.gmane.org/gmane.comp.version-control.git/266662/)
+* [gitk won't show notes?](https://public-inbox.org/git/551D99B9.7040200%40ubuntu.com/)
 
 Phillip Susi had trouble getting gitk to show notes. Michael J. Gruber
 tried to help him, but it didn't work when adding a note while gitk is
@@ -175,7 +175,7 @@ Paul agreed that indeed works need to be done to fix this problem. He
 asked if `git notes list` is the best way to find out all the current
 notes, and Johan Herland who developed `git notes` answered yes.
 
-* [git ls-files wildcard behavior considered harmful](http://thread.gmane.org/gmane.comp.version-control.git/266486/)
+* [git ls-files wildcard behavior considered harmful](https://public-inbox.org/git/20150330230459.GA13927%40kitenet.net/)
 
 Joey Hess who is developing [git-annex](https://git-annex.branchable.com/) was surprised by how
 `git ls-files` expands wildcard characters like `*[]` and the fact that escaping these characters
@@ -204,16 +204,16 @@ environment variable have been created especially for this purpose and
 it is a good idea to use them in script or tools, like GitHub is doing
 on their servers.
 
-* [No longer builds with NO_IPV6?](http://thread.gmane.org/gmane.comp.version-control.git/268406)
+* [No longer builds with NO_IPV6?](https://public-inbox.org/git/CAK4aQQJ9yT8%2BQ9jPQ78cauhyPj3j5WmpgrQJ5%3DcA-ECjaWn8BQ%40mail.gmail.com/)
 
 Eduardo Espejo found that Git does not compile anymore when using the
 `NO_IPV6` configuration switch. And it is not the first time that
-[someone finds out that Git such a `NO_IPV6` breakage](http://thread.gmane.org/gmane.comp.version-control.git/28033/).
+[someone finds out that Git such a `NO_IPV6` breakage](https://public-inbox.org/git/20060928184814.GA4294%40steel.home/).
 
 This time Junio Hamano, the Git maintainer, fixed the breakage in
 "daemon.c", but more importantly found that `NO_CURL` and `NO_EXPAT`
 configurations did not to pass the test suite.
-So helped by Jeff King [he quickly fixed that too](http://thread.gmane.org/gmane.comp.version-control.git/268467/).
+So helped by Jeff King [he quickly fixed that too](https://public-inbox.org/git/xmqq6185d4o1.fsf%40gitster.dls.corp.google.com/).
 And now he has a nightly cron job to try building
 and testing a few selected configurations.
 
@@ -251,7 +251,7 @@ work on Git scalability issues. If you are interested please contact
 
 ### Event
 
-[GSoC 2015: 2 accepted proposals](http://thread.gmane.org/gmane.comp.version-control.git/267878)
+[GSoC 2015: 2 accepted proposals](https://public-inbox.org/git/vpqoam9mjuo.fsf%40anie.imag.fr/)
 
 For a long time Git has been participating in [the Google Summer of Code](http://www.google-melange.com/gsoc/document/show/gsoc_program/google/gsoc2015/about_page).
 This summer two students, Paul Tan and Karthik Nayak, mentored by four experienced Git developers, Johannes Schindelin, Stefan Beller, Matthieu Moy and Christian Couder, will work on improving Git and will receive a stipend from Google.

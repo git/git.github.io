@@ -209,7 +209,7 @@ long merge window.
 
 Following Greg's talk, Stefan Beller asked on the mailing list if Greg
 could put the Git developers in touch with the 0 day bot developers
-and [a discussion started](http://thread.gmane.org/gmane.comp.version-control.git/291242/)
+and [a discussion started](https://public-inbox.org/git/CAGZ79kZOx8ehAB-%3DFrjgde2CDo_vwoVzQNizJinf4LLXek5PSQ%40mail.gmail.com/)
 about how the 0 day bot could be used.
 
 <!--- ### Reviews -->
@@ -278,7 +278,7 @@ git-difftool and git-mergetool.
 
 ## Releases
 
-* [ANNOUNCE Git v2.8.0](http://article.gmane.org/gmane.linux.kernel/2185094)
+* [ANNOUNCE Git v2.8.0](https://public-inbox.org/git/xmqqoa9y1ays.fsf%40gitster.mtv.corp.google.com/)
 * [ANNOUNCE Git v2.8.1 and call for help to make rpmbuild users](http://article.gmane.org/gmane.linux.kernel/2189878)
 * [Release Git for Windows 2.8.0 · git-for-windows/git](https://github.com/git-for-windows/git/releases/tag/v2.8.0.windows.1)
 * [Release Git for Windows 2.8.1 · git-for-windows/git](https://github.com/git-for-windows/git/releases/tag/v2.8.1.windows.1)

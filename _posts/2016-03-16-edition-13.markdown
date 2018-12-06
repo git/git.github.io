@@ -19,7 +19,7 @@ This edition covers what happened during the month of February 2016.
 
 ### General
 
-* [RFC: Resumable clone based on hybrid "smart" and "dumb" HTTP](http://thread.gmane.org/gmane.comp.version-control.git/285921/)
+* [RFC: Resumable clone based on hybrid "smart" and "dumb" HTTP](https://public-inbox.org/git/CAJo%3DhJtHgE_vye_1sPTDsvJ0X%3DCs72HKLgRH8btpW-pMrDdk9g%40mail.gmail.com/)
 
 It is a widely known problem that `git clone` is not resumable. If the
 connection comes down during a clone, the clone has to be restarted
@@ -29,14 +29,14 @@ A work around that is often suggested and used is to first create a
 bundle using `git bundle`, to rsync that bundle, then to clone from
 the rsync'ed bundle and eventually to fetch what is missing from the
 remote git repository. Some tools
-[like gitolite](http://thread.gmane.org/gmane.comp.version-control.git/235040/) or
+[like gitolite](https://public-inbox.org/git/CADdDZRmufDTYYxHeAuPbCUn5iQHruAOXXho5KVOQ6McfSFvPJw%40mail.gmail.com/) or
 [the "repo" tool that is used by AOSP](https://source.android.com/source/using-repo.html)
 and some websites
 [like kernel.org](https://www.kernel.org/)
 have even been making it easier to support that.
 
 There was also at one point in 2011
-[a patch series](http://thread.gmane.org/gmane.comp.version-control.git/185196/)
+[a patch series](https://public-inbox.org/git/20111110074330.GA27925%40sigill.intra.peff.net/)
 to improve the support of this kind of clone workflow internally.
 
 And for some time this was thought of by some Git developers as just a
@@ -52,7 +52,7 @@ So it was very exciting to see a number of new proposals pop up on the
 list during the last few months.
 
 It started on February 5 with
-[a "Resumable clone revisited, proof of concept" patch series by Duy Nguyen](http://thread.gmane.org/gmane.comp.version-control.git/285555/)
+[a "Resumable clone revisited, proof of concept" patch series by Duy Nguyen](https://public-inbox.org/git/1454662677-15137-1-git-send-email-pclouds%40gmail.com/)
 where he wrote:
 
 > I was reminded by LWN about this. Annoyed in fact because it's
@@ -65,11 +65,11 @@ that reports about
 download operations, which is an important bug to fix."
 
 Then on February 10 Shawn Pearce sent
-[an 'RFC: Resumable clone based on hybrid "smart" and "dumb" HTTP' proposal](http://thread.gmane.org/gmane.comp.version-control.git/285921/)
+[an 'RFC: Resumable clone based on hybrid "smart" and "dumb" HTTP' proposal](https://public-inbox.org/git/CAJo%3DhJtHgE_vye_1sPTDsvJ0X%3DCs72HKLgRH8btpW-pMrDdk9g%40mail.gmail.com/)
 that he had discussed internally with other people at Google where he works.
 
 This was followed on March 2 by
-[an email called "Resumable git clone?"](http://thread.gmane.org/gmane.comp.version-control.git/288088/)
+[an email called "Resumable git clone?"](https://public-inbox.org/git/20160302012922.GA17114%40jtriplet-mobl2.jf.intel.com/)
 from Josh Triplett, a well known Linux Kernel developer, who asked:
 
 > In a discussion elsewhere, Al Viro suggested taking the partial pack
@@ -105,7 +105,7 @@ to be worked on soon, and then later some optimizations from Al and
 Josh could be implemented on top of it.
 
 Then on March 5 Kevin Wern sent
-[an email called "Resumable clone"](http://thread.gmane.org/gmane.comp.version-control.git/288306/),
+[an email called "Resumable clone"](https://public-inbox.org/git/CANtyZjSJf5_xbsBC5tUaazFT3uiEgJnx2_kHLwYwKcn50Jy_qg%40mail.gmail.com/),
 where he said he began looking at relevant code to start working on it, and he asked:
 
 > Is someone working on this currently?  Are there any things I should
@@ -113,10 +113,10 @@ where he said he began looking at relevant code to start working on it, and he a
 > down/organize the feature when writing patches?
 
 Duy answered that "Resumable clone is happening." And pointed to
-[some preparation work](http://thread.gmane.org/gmane.comp.version-control.git/288205/focus=288222)
-by Junio Hamano [going on](http://thread.gmane.org/gmane.comp.version-control.git/288080/focus=288150).
+[some preparation work](https://public-inbox.org/git/xmqq1t7r2x21.fsf%40gitster.mtv.corp.google.com/)
+by Junio Hamano [going on](https://public-inbox.org/git/xmqqvb556abd.fsf%40gitster.mtv.corp.google.com/).
 Junio by the way answered with
-[a very long email](http://thread.gmane.org/gmane.comp.version-control.git/288306/focus=288317)
+[a very long email](https://public-inbox.org/git/CANtyZjSJf5_xbsBC5tUaazFT3uiEgJnx2_kHLwYwKcn50Jy_qg%40mail.gmail.com/focus=288317)
 that contains "a rough and still slushy outline" of what remains to be
 done. This was then discussed and explained further.
 
@@ -127,11 +127,11 @@ fixed not too far away into the future.
 
 ### Reviews
 
-* [config: add '--show-origin' option to print the origin of a config value](http://thread.gmane.org/gmane.comp.version-control.git/286198/)
+* [config: add '--show-origin' option to print the origin of a config value](https://public-inbox.org/git/1455531466-16617-4-git-send-email-larsxschneider%40gmail.com/)
 
 For some time Lars Schneider has been sending versions of a short
 patch series to make it possible to see where a config option comes
-from ([v1](http://thread.gmane.org/gmane.comp.version-control.git/285553/), [v2](http://thread.gmane.org/gmane.comp.version-control.git/285894/), [v3](http://thread.gmane.org/gmane.comp.version-control.git/286110/), [v4](http://thread.gmane.org/gmane.comp.version-control.git/286197/), [v5](http://thread.gmane.org/gmane.comp.version-control.git/286485/), [v6](http://thread.gmane.org/gmane.comp.version-control.git/286672/)):
+from ([v1](https://public-inbox.org/git/1454661750-85703-1-git-send-email-larsxschneider%40gmail.com/), [v2](https://public-inbox.org/git/1455099198-11515-1-git-send-email-larsxschneider%40gmail.com/), [v3](https://public-inbox.org/git/1455373456-64691-1-git-send-email-larsxschneider%40gmail.com/), [v4](https://public-inbox.org/git/1455531466-16617-1-git-send-email-larsxschneider%40gmail.com/), [v5](https://public-inbox.org/git/1455699468-45443-1-git-send-email-larsxschneider%40gmail.com/), [v6](https://public-inbox.org/git/1455873362-66998-1-git-send-email-larsxschneider%40gmail.com/)):
 
 ```
 $ git config --list --show-origin
@@ -140,8 +140,8 @@ file:/Users/john/.gitconfig alias.co=checkout
 file:.git/config    remote.origin.url=https://repos/myrepo.git
 ```
 
-Lars started this patch series with an [RFC](http://thread.gmane.org/gmane.comp.version-control.git/285246)
-whereupon Jeff King pointed him to a [previous discussion](http://thread.gmane.org/gmane.comp.version-control.git/190027/focus=190267)
+Lars started this patch series with an [RFC](https://public-inbox.org/git/3226E251-73F9-4410-84DE-49C8FFAD92EB%40gmail.com/)
+whereupon Jeff King pointed him to a [previous discussion](https://public-inbox.org/git/20120206062713.GA9699%40sigill.intra.peff.net/)
 about the same idea. Jeff also posted his initial implementation which
 Lars' v1 was based on.
 
@@ -181,15 +181,15 @@ One nice side effect of this patch series is that in case of a config error
 Git can now tell more precisely from what type of config the error originates 
 from (e.g. `standard input` or `file`).
 
-* [add DEVELOPER makefile knob to check for acknowledged warnings](http://thread.gmane.org/gmane.comp.version-control.git/287345)  (*written by Lars Schneider*)
+* [add DEVELOPER makefile knob to check for acknowledged warnings](https://public-inbox.org/git/1456389742-48052-1-git-send-email-larsxschneider%40gmail.com/)  (*written by Lars Schneider*)
 
-Jeff King noted in a [review](http://thread.gmane.org/gmane.comp.version-control.git/285553/focus=285568) 
+Jeff King noted in a [review](https://public-inbox.org/git/1454661750-85703-1-git-send-email-larsxschneider%40gmail.com/focus=285568) 
 that *git style doesn't allow declaration-after-statement*. Thereupon
-Lars Schneider posted a [patch](http://thread.gmane.org/gmane.comp.version-control.git/285752) 
+Lars Schneider posted a [patch](https://public-inbox.org/git/1454921958-53129-1-git-send-email-larsxschneider%40gmail.com/) 
 to check for this warning in the TravisCI build. In the review of this 
-patch Jeff [suggested](http://thread.gmane.org/gmane.comp.version-control.git/285752/focus=285761)
+patch Jeff [suggested](https://public-inbox.org/git/1454921958-53129-1-git-send-email-larsxschneider%40gmail.com//focus=285761)
 to codify the knowledge about the warnings into an optional Makefile knob 
-called "DEVELOPER". Lars combined the warnings that [Junio and Jeff](http://thread.gmane.org/gmane.comp.version-control.git/285752/focus=285761) care about and posted a revised version of the [patch](http://thread.gmane.org/gmane.comp.version-control.git/287345).
+called "DEVELOPER". Lars combined the warnings that [Junio and Jeff](https://public-inbox.org/git/1454921958-53129-1-git-send-email-larsxschneider%40gmail.com//focus=285761) care about and posted a revised version of the [patch](https://public-inbox.org/git/1456389742-48052-1-git-send-email-larsxschneider%40gmail.com/).
 
 Git developers with a reasonably modern compiler can now compile Git with 
 `DEVELOPER=1 make` or set the flag once for all make executions with 
@@ -264,7 +264,7 @@ The last month we saw some maintenance releases of Git, along with some RCs of t
 
 * [Git v2.7.3](https://lkml.org/lkml/2016/3/10/612)
 * [Git for Windows 2.7.3](https://github.com/git-for-windows/git/releases/tag/v2.7.3.windows.1)
-* [Git v2.8.0-rc2](http://article.gmane.org/gmane.linux.kernel/2174436) 
+* [Git v2.8.0-rc2](https://public-inbox.org/git/xmqqr3fiaq9f.fsf%40gitster.mtv.corp.google.com/) 
 
 And then there was a significant, albeit humbly versioned new libgit2, which dominoed through its wrapper projects:
 

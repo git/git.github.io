@@ -250,7 +250,7 @@ by allowing the commands to take options.  Maybe
   ```
 
 See [this
-discussion](http://thread.gmane.org/gmane.comp.version-control.git/242701)
+discussion](https://public-inbox.org/git/530DA00E.4090402%40alum.mit.edu/)
 on the mailing list for more related ideas.
 
 The goal of this project would be (1) to add the infrastructure for
@@ -298,9 +298,9 @@ to invalidate the cache correctly in the case that the configuration
 is changed while `git` is executing.
 
 See [this mailing list
-thread](http://article.gmane.org/gmane.comp.version-control.git/242952)
+thread](https://public-inbox.org/git/53108650.2020708%40alum.mit.edu/)
 and [this
-email](http://article.gmane.org/gmane.comp.version-control.git/243542)
+email](https://public-inbox.org/git/20140306194654.GA28203%40sigill.intra.peff.net/)
 for some discussion about this and related ideas.
 
  - Language: C

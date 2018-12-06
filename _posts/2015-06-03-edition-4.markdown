@@ -19,7 +19,7 @@ This edition covers what happened during the month of May 2015.
 
 ### General
 
-* [submitGit for patch submission](http://thread.gmane.org/gmane.comp.version-control.git/269699/)
+* [submitGit for patch submission](https://public-inbox.org/git/CAFY1edY3%2BWt-p2iQ5k64Fg-nMk2PmRSvhVkQSVNw94R18uPV2Q%40mail.gmail.com/)
 
 At the [Git Merge 2015](http://git-merge.com/) conference, during the Contributor
 Summit, there were discussions about how to help people send patches
@@ -47,7 +47,7 @@ configured. The problem is that it is not very easy to configure to
 say the least, especially on Windows.
 
 [A recent discussion on the mailing
-list](http://thread.gmane.org/gmane.comp.version-control.git/268000/)
+list](https://public-inbox.org/git/CAHd499BqB_ZFKMNxSVCDTFx2Ge%3DTfCE6gexFn%2BrfRbS%2BybLybA%40mail.gmail.com/)
 shows how difficult it can be even for developers to find a way to
 properly send a patch to the mailing list. Toward the end of the
 discussion, Stefan Beller summarized the discussions at [Git Merge
@@ -67,7 +67,7 @@ discussion, Stefan Beller summarized the discussions at [Git Merge
 
 A few days later, Roberto Tyley, who is the author of
 [the BFG repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/),
-replied to Stefan's email [by announcing submitGit](http://thread.gmane.org/gmane.comp.version-control.git/269699):
+replied to Stefan's email [by announcing submitGit](https://public-inbox.org/git/CAFY1edY3%2BWt-p2iQ5k64Fg-nMk2PmRSvhVkQSVNw94R18uPV2Q%40mail.gmail.com/):
 
 > Hello, I'm stepping up to do that work :) Or at least, I'm implementing a
 > one-way GitHub PR -> Mailing list tool, called submitGit:
@@ -93,26 +93,26 @@ This announcement was met with a lot of enthusiasm from the community,
 especially from the [Git for Windows](https://msysgit.github.io/)
 developers. Junio Hamano, the Git maintainer, also liked the idea and pointed out that
 submitGit would be usable for an even wider audience if it only required
-[a narrower scope of GitHub authorization](http://thread.gmane.org/gmane.comp.version-control.git/269733),
+[a narrower scope of GitHub authorization](https://public-inbox.org/git/xmqq4mn4fugi.fsf%40gitster.dls.corp.google.com/),
 which [submitGit was updated to reflect a few days
 later](https://github.com/rtyley/submitgit/pull/3) - improvements are still coming!
 
 Aspiring contributors are encouraged to try submitGit out, and provide feedback
 on the mailing list or on the project's [GitHub issues](https://github.com/rtyley/submitgit/issues).
 
-* [git-multimail resurrected!](http://thread.gmane.org/gmane.comp.version-control.git/270239) (*written by Matthieu Moy*)
+* [git-multimail resurrected!](https://public-inbox.org/git/vpqr3pz5y35.fsf%40anie.imag.fr/) (*written by Matthieu Moy*)
 
   [git-multimail](https://github.com/git-multimail/git-multimail) got
   a new co-maintainer, and is active again after a long period of
   inactivity. [A summary of the recent
-  activity](http://thread.gmane.org/gmane.comp.version-control.git/270239)
+  activity](https://public-inbox.org/git/vpqr3pz5y35.fsf%40anie.imag.fr/)
   was posted on the Git mailing-list. A 1.1 release is expected in
   June. Don't hesitate to join the fun and help by reviewing
   pull-requests or submitting new ones!
 
 ### Reviews
 
-* [clean/smudge empty contents](http://thread.gmane.org/gmane.comp.version-control.git/269050) (*written by Junio C Hamano*)
+* [clean/smudge empty contents](https://public-inbox.org/git/1431624219-25045-1-git-send-email-gjthill%40gmail.com/) (*written by Junio C Hamano*)
 
 Jim Hill noticed that Git issues an error message saying that copy_fd() was given a bad
 file descriptor when clean/smudge filters is fed an file with empty contents, found that
@@ -134,12 +134,12 @@ it saw EPIPE. Peff observed:
 >    start of the cruft, and then stop for reasons of efficiency.
 
 The discussion lead to
-an [enhancement](http://thread.gmane.org/gmane.comp.version-control.git/269050/focus=269383)
+an [enhancement](https://public-inbox.org/git/1431624219-25045-1-git-send-email-gjthill%40gmail.com//focus=269383)
 to allow clean/smudge filters to quit before reading their input fully.
 
 ### Support
 
-* [git pack protocol question: sideband responses in case of errors?](http://thread.gmane.org/gmane.comp.version-control.git/268949)
+* [git pack protocol question: sideband responses in case of errors?](https://public-inbox.org/git/CAENte7j9De5Bqu2jDcmXQAxZheSGo%2BEntzsYUaen0N7cnuiCDQ%40mail.gmail.com/)
 
 Christian Halstrick said that he sometimes gets "invalid channel 101"
 errors when pushing over HTTP using a JGit client.
@@ -172,7 +172,7 @@ And Shawn concluded with the following:
 > won't fit on local disk due to disk full" condition that narrows
 > down the offending section of JGit considerably.
 
-* ["git commit --date" does not behave well?](http://thread.gmane.org/gmane.comp.version-control.git/269832) (*written by Junio C Hamano*)
+* ["git commit --date" does not behave well?](https://public-inbox.org/git/5562646A.1080608%40alum.mit.edu/) (*written by Junio C Hamano*)
 
 Bastien Traverse was having trouble specifying the date when creating a commit
 with the `--date` parameter to `git commit` command.  He tried various
@@ -190,12 +190,12 @@ turns out that the input Bastien was feeding did not have the right "colon".
 
 ## Releases
 
-* Git [2.3.8](http://article.gmane.org/gmane.comp.version-control.git/268828) (final for 2.3.x series for now)
+* Git [2.3.8](https://public-inbox.org/git/xmqqlhgu20n4.fsf%40gitster.dls.corp.google.com/) (final for 2.3.x series for now)
 * Git [2.4.1 and 2.4.2](http://git-blame.blogspot.com/2015/05/git-241-and-242.html) maintenance releases.
 
   Together with Git 2.3.8, `git commit --date=now` now works correctly in timezones that honor
   daylight-saving-time, fixing a 
-  breakage [Linus noticed](http://thread.gmane.org/gmane.comp.version-control.git/267183).
+  breakage [Linus noticed](https://public-inbox.org/git/CA%2B55aFxvcN8Dz-t6fi6etycg%2BAiyR0crXv5AcfCdv8ji-iNBpw%40mail.gmail.com/).
 
 * [Git for Windows 2.x preview](http://article.gmane.org/gmane.comp.version-control.msysgit/21601)
 

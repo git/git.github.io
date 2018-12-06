@@ -111,7 +111,7 @@ NFS, Amazon S3 ...) and chunking for resumable downloads.
 
 ### Reviews
 
-* [Speeding up strbuf_getwholeline()](http://thread.gmane.org/gmane.comp.version-control.git/266789/focus=266796)
+* [Speeding up strbuf_getwholeline()](https://public-inbox.org/git/20150405010611.GA15901%40peff.net/)
 
 Jeff King, alias Peff, posted a patch series to address speed
 regressions when accessing the packed-refs file. This lead to
@@ -215,7 +215,7 @@ Brendan Forster put together this [Beta Testers Guide](https://gist.github.com/s
 > The following fixes have been backported to this maintenance release. [...]
 > All users of the library are encouraged to update.
 
-* [tig-2.1.1](http://article.gmane.org/gmane.comp.version-control.git/266979), April 9th
+* [tig-2.1.1](https://public-inbox.org/git/CAFuPQ1%2B5Cpb5VYPdF3E0i3Fp%2B%2BMRs6DwPnkJZ171MHNzrq5hTQ%40mail.gmail.com/), April 9th
 
 > Finally, files (or blobs) can now be searched using the new GitHub-inspired
 > [file finder](https://asciinema.org/a/18525) (press 'f' to launch it).﻿

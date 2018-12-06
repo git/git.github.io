@@ -24,16 +24,16 @@ This edition covers what happened during the month of June 2016.
 
 ### Reviews
 
-* [contrib/subtree: Remove --annotate](http://thread.gmane.org/gmane.comp.version-control.git/283340/)
+* [contrib/subtree: Remove --annotate](https://public-inbox.org/git/1451963101-4901-1-git-send-email-greened%40obbligato.org/)
 
 Last January David Greene, who maintains git-subtree.sh, sent
-[a patch series](http://thread.gmane.org/gmane.comp.version-control.git/283268/)
+[a patch series](https://public-inbox.org/git/1451766984-4648-1-git-send-email-greened%40obbligato.org/)
 to remove the `--annotate` option from `git subtree` and then
-[a version 2 of this patch series](http://thread.gmane.org/gmane.comp.version-control.git/283340/).
+[a version 2 of this patch series](https://public-inbox.org/git/1451963101-4901-1-git-send-email-greened%40obbligato.org/).
 
 This came after previous work to add `--unannotate` some years ago
-[in 2012](http://thread.gmane.org/gmane.comp.version-control.git/207341/) and
-[in 2013](http://thread.gmane.org/gmane.comp.version-control.git/212954/focus=212961).
+[in 2012](https://public-inbox.org/git/CABVa4NinSighUn7GKbzMx9qZj3Ao2dCtEZxUqCPwO9TocZ8Kkg%40mail.gmail.com/) and
+[in 2013](https://public-inbox.org/git/1357646997-28675-1-git-send-email-greened%40obbligato.org/).
 
 The reason why adding `--unannotate` has not been pursued is that it
 is "difficult to define due to the numerous ways one might want to
@@ -104,7 +104,7 @@ subtree`.
 
 ### Support
 
-* [Fwd: what is a snapshot](http://thread.gmane.org/gmane.comp.version-control.git/297701/)
+* [Fwd: what is a snapshot](https://public-inbox.org/git/CAHWPVgMWeHoD5vTiFJ1gsm2hS74LK7j4npVVbOZeR43cX3qWXw%40mail.gmail.com/)
 
 Ovatta Bianca asked:
 
@@ -286,8 +286,8 @@ but didn't have an occasion to use, is the [git-imerge](https://github.com/mhagg
 
 ## Releases
 
-* Git [2.9.1](http://article.gmane.org/gmane.linux.kernel/2263540) (maintenance release), followed by Git [2.9.2](http://article.gmane.org/gmane.linux.kernel/2267451) that fixes a regression on 32-bit and on Windows.
-* Git for Windows [2.9.2](http://article.gmane.org/gmane.comp.version-control.git/299684) (maintenance release, skipping 2.9.1).
+* Git [2.9.1](https://public-inbox.org/git/xmqqbn247x1f.fsf%40gitster.mtv.corp.google.com/) (maintenance release), followed by Git [2.9.2](https://public-inbox.org/git/xmqqlh12lhq1.fsf%40gitster.mtv.corp.google.com/) that fixes a regression on 32-bit and on Windows.
+* Git for Windows [2.9.2](https://public-inbox.org/git/alpine.DEB.2.20.1607161120030.6426%40virtualbox/) (maintenance release, skipping 2.9.1).
 * [nodegit/nodegit v0.15.1](https://github.com/nodegit/nodegit/releases/tag/v0.15.1)
 * [libgit2/pygit2 v0.24.1](https://github.com/libgit2/pygit2/releases/tag/v0.24.1)
 * [JGit/EGit Release 4.4.1](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03176.html)
@@ -298,8 +298,8 @@ but didn't have an occasion to use, is the [git-imerge](https://github.com/mhagg
 
 __Various__
 
-* [New archives of the Git Mailing list have been announced](http://thread.gmane.org/gmane.comp.version-control.git/299195/) by Eric Wong.
-* [An RFC about questions for "Git User's Survey 2016" has been posted](http://thread.gmane.org/gmane.comp.version-control.git/299032/) by Jakub Narębski.
+* [New archives of the Git Mailing list have been announced](https://public-inbox.org/git/20160710004813.GA20210%40dcvr.yhbt.net/) by Eric Wong.
+* [An RFC about questions for "Git User's Survey 2016" has been posted](https://public-inbox.org/git/577E6F32.7020007%40gmail.com/) by Jakub Narębski.
 
 __Light reading__
 

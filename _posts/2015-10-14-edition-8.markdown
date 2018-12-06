@@ -23,7 +23,7 @@ This edition covers what happened during the month of September 2015.
 
 ### Reviews
 
-* [Add Travis CI support](http://thread.gmane.org/gmane.comp.version-control.git/278633)
+* [Add Travis CI support](https://public-inbox.org/git/1443131004-39284-1-git-send-email-larsxschneider%40gmail.com/)
 
 Lars Schneider wrote that to avoid breaking tests in the future he
 configured Travis-CI to run all Git tests including git-p4 and git-lfs
@@ -81,16 +81,16 @@ And then Matthieu Moy explained the benefits for everyone like this:
 
 This appear to have convinced Junio of the value of a CI tool linked
 to git/git, and Lars has since posted
-[a version 2](http://thread.gmane.org/gmane.comp.version-control.git/279011)
+[a version 2](https://public-inbox.org/git/1443981977-64604-1-git-send-email-larsxschneider%40gmail.com/)
 and [a version 3 of his
-patches](http://thread.gmane.org/gmane.comp.version-control.git/279348),
+patches](https://public-inbox.org/git/1444586102-82557-1-git-send-email-larsxschneider%40gmail.com/),
 so an interesting way to test patchs will perhaps be available soon
 to Git developers.
 
 
 ### Support
 
-* [2.6.0: Comment in rebase instruction has become too rigid](http://thread.gmane.org/gmane.comp.version-control.git/278824)
+* [2.6.0: Comment in rebase instruction has become too rigid](https://public-inbox.org/git/CAEY4ZpN0C96jU4Tgvqt-hWEviR-sapDoyAv88H%2BopPSr-cs%3Dmg%40mail.gmail.com/)
 
 Shortly after git version 2.6.0 was released, Nazri Ramliy noticed
 that:
@@ -106,7 +106,7 @@ pre check the rebase instruction sheet before starting an interactive
 rebase. The goal of this pre checking patch was to avoid discovering a
 syntax error in the instruction sheet in the middle of a rebase.
 
-Matthieu then posted [a patch to fix the regression](http://thread.gmane.org/gmane.comp.version-control.git/278841)
+Matthieu then posted [a patch to fix the regression](https://public-inbox.org/git/1443600661-19391-1-git-send-email-Matthieu.Moy%40imag.fr/)
 based on a suggestion by Junio Hamano. Matthieu's patch just
 prefilters the instruction sheet by piping it through
 `sed 's/^[[:space:]]*//'`.
@@ -240,7 +240,7 @@ I only found this recently, it's just brilliant. Thank you, whoever it was put t
 __Updates__
 
 * [Since we talked about it last month](https://git.github.io/rev_news/2015/09/09/edition-7/) David Turner
-submitted [a new patch series](http://thread.gmane.org/gmane.comp.version-control.git/278757) of his work on
+submitted [a new patch series](https://public-inbox.org/git/1443477738-32023-1-git-send-email-dturner%40twopensource.com/) of his work on
 alternate ref backends. This work is being reviewed by Michael Haggerty, Junio, and others. The ultimate goal 
 is still to allow a lmdb-based backend, which should be faster and have fewer issues on
 case-insensitive filesystems than the traditional files-based backend. This work is sponsored by

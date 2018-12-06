@@ -28,7 +28,7 @@ requests](https://github.com/git/git.github.io/pulls) or opening
 
 ### General
 
-* [Promoting Git developers](http://thread.gmane.org/gmane.comp.version-control.git/265165)  (*written by Junio C Hamano*)
+* [Promoting Git developers](https://public-inbox.org/git/54FDA6B5.8050505%40drmicha.warpmail.net/)  (*written by Junio C Hamano*)
 
 Following up to a message from David Kastrup, a discussion was initiated
 by Christian Couder where Michael J Gruber noted
@@ -47,7 +47,7 @@ contributors and thank for their help for each release.
 
 ### Reviews
 
-* [make git-pull a builtin](http://thread.gmane.org/gmane.comp.version-control.git/265628/)
+* [make git-pull a builtin](https://public-inbox.org/git/1426600662-32276-1-git-send-email-pyokagan%40gmail.com/)
 
 Paul Tan, who will probably apply to be a [Google Summer of Code
 (GSoC)](https://developers.google.com/open-source/soc/) student for
@@ -111,7 +111,7 @@ Regarding the test suite, Matthieu Moy suggested:
 >they do, add a failing test that passes again once you uncomment the
 >code.
 
-* [Forbid "log --graph --no-walk"](http://thread.gmane.org/gmane.comp.version-control.git/264899/)
+* [Forbid "log --graph --no-walk"](https://public-inbox.org/git/1425632110-31863-1-git-send-email-dongcan.jiang%40gmail.com/)
 
 Dongcan Jiang, who will also probably apply to be a GSoC student for
 Git this year, sent a patch to prevent `git log` from being used with both
@@ -138,7 +138,7 @@ on incoming patches:
 >
 >Okay. You might also want to cite the wider discussion[1].
 >
->[1]: http://article.gmane.org/gmane.comp.version-control.git/216083
+>[1]: https://public-inbox.org/git/7vvc9ylh97.fsf%40alter.siamese.dyndns.org/
 >
 >> revision.c: Judge whether --graph and --no-walk come together when running git-log.
 >> buildin/log.c: Set git-log cmd flag.
@@ -158,7 +158,7 @@ on the arguments it is given:
 > command about a connected history.  Otherwise, it is a command about
 > discrete point(s).
 
-* [War on broken &&-chain](http://thread.gmane.org/gmane.comp.version-control.git/265874) (*written by Junio C Hamano*)
+* [War on broken &&-chain](https://public-inbox.org/git/20150320100429.GA17354%40peff.net/) (*written by Junio C Hamano*)
 
 We often see review comments on test scripts that points out a
 breakage in the &&-chain, but what does that mean?
@@ -203,7 +203,7 @@ runs only on a case insensitive filesystem a few days later.
 
 ### Support
 
-* [Git with Lader logic](http://thread.gmane.org/gmane.comp.version-control.git/265679/)
+* [Git with Lader logic](https://public-inbox.org/git/5F9B9EBF-CD4D-42A8-8A0C-9806702231A1%40icloud.com/)
  
 People often ask the Git mailing list whether they can use Git to manage
 special content. Fortunately, the list is monitored by many experts in different
@@ -267,7 +267,7 @@ Jeff King &lt;<peff@peff.net>&gt;.
 > The latest maintenance release Git v2.3.2 is now available at
 > the usual places.
 
-* [Commandline GUI-tool *tig* version 2.1](http://article.gmane.org/gmane.comp.version-control.git/265298), March 11th:
+* [Commandline GUI-tool *tig* version 2.1](https://public-inbox.org/git/CAFuPQ1%2BD3QY8MxNRX87R6-nUR9eP3JRTq_yuWfRq1upQT7iC8w%40mail.gmail.com/), March 11th:
 
 > I just released version 2.1 of Tig which brings a lot of improvements to speed
 > up usage in large repositories such as the Linux kernel repo (see improvements
@@ -287,7 +287,7 @@ Jeff King &lt;<peff@peff.net>&gt;.
 > the usual places.  It is comprised of 26 non-merge commits since
 > v2.3.2, contributed by 11 people, 1 of which is a new contributor.
 
-* [Git v2.3.4](http://permalink.gmane.org/gmane.linux.kernel/1915412), March 23rd:
+* [Git v2.3.4](https://public-inbox.org/git/xmqqlhin8kh9.fsf%40gitster.dls.corp.google.com/), March 23rd:
 
 > The latest maintenance release Git v2.3.4 is now available at the
 > usual places.  It is comprised of 22 non-merge commits since v2.3.3,

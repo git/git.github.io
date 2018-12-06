@@ -21,7 +21,7 @@ projects](https://github.com/libgit2/libgit2/blob/development/PROJECTS.md)
 rather than the list below.*
 
 Consider [a sample email
-thread](http://thread.gmane.org/gmane.comp.version-control.git/239068),
+thread](https://public-inbox.org/git/1386590745-4412-1-git-send-email-t.gummerer%40gmail.com/),
 which shows how a developer proposed a change and a patch to implement
 it.  The problem being solved, the design of the proposed solution,
 and the implementation of that design were all reviewed and discussed,

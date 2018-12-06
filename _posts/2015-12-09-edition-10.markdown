@@ -23,7 +23,7 @@ This edition covers what happened during the month of November 2015.
 
 ### Reviews
 
-* [clean: new option --exclude-from](http://thread.gmane.org/gmane.comp.version-control.git/281762)
+* [clean: new option --exclude-from](https://public-inbox.org/git/1448549065-16337-1-git-send-email-rouzier%40gmail.com/)
 
 James Rouzier sent a patch to add a new `--exclude-from=<file>` option
 to `git clean`. It looked quite straightforward, but as often Eric
@@ -56,10 +56,10 @@ commands.
 
 In the end it is not clear if the patch will be accepted.
 
-* [remote-http(s): Support SOCKS proxies](http://thread.gmane.org/gmane.comp.version-control.git/280191)
+* [remote-http(s): Support SOCKS proxies](https://public-inbox.org/git/bf218d020e24216f55d1514c4459e645b13ec075.1445865176.git.johannes.schindelin%40gmx.de/)
 
 In a patch series called
-["Miscellaneous platform-independent patches from Git for Windows"](http://thread.gmane.org/gmane.comp.version-control.git/280190/)
+["Miscellaneous platform-independent patches from Git for Windows"](https://public-inbox.org/git/cover.1445865176.git.johannes.schindelin%40gmx.de/)
 Johannes Schindelin, alias Dscho, sent a patch from Pat Thoyts that adds SOCKS proxies support to Git:
 
 > With this patch we properly support SOCKS proxies, configured e.g. like

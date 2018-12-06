@@ -23,15 +23,15 @@ This edition covers what happened during the month of January 2016.
 
 ### Reviews
 
-* [refs backend rebase on pu](http://thread.gmane.org/gmane.comp.version-control.git/284036/)
+* [refs backend rebase on pu](https://public-inbox.org/git/1452788777-24954-1-git-send-email-dturner%40twopensource.com/)
 
 David Turner, who works for Twitter, recently sent new versions of his
 work to add a database backend to store Git refs:
 
-- [v1 "LMDB refs backend atop pre-vtable"](http://thread.gmane.org/gmane.comp.version-control.git/281925/)
-- [v2 "refs backend reroll"](http://thread.gmane.org/gmane.comp.version-control.git/283739/)
-- [v3 "refs backend rebase on pu"](http://thread.gmane.org/gmane.comp.version-control.git/284036/)
-- [v4 "refs backend"](http://thread.gmane.org/gmane.comp.version-control.git/285604/)
+- [v1 "LMDB refs backend atop pre-vtable"](https://public-inbox.org/git/1449102921-7707-1-git-send-email-dturner%40twopensource.com/)
+- [v2 "refs backend reroll"](https://public-inbox.org/git/1452561740-8668-1-git-send-email-dturner%40twopensource.com/)
+- [v3 "refs backend rebase on pu"](https://public-inbox.org/git/1452788777-24954-1-git-send-email-dturner%40twopensource.com/)
+- [v4 "refs backend"](https://public-inbox.org/git/1454701462-3817-1-git-send-email-dturner%40twopensource.com/)
 
 This work was started a long time ago by Ronnie Sahlberg, working for
 Google, and has already been reported about in
@@ -45,24 +45,24 @@ Gummerer, Ramsay Jones, and also a bit by Howard Chu the LMDB author.
 
 Some suggestions were about:
 
-- [avoiding "extern" in C source](http://thread.gmane.org/gmane.comp.version-control.git/282020),
-- [splitting functions](http://thread.gmane.org/gmane.comp.version-control.git/282924),
-- [config options](http://thread.gmane.org/gmane.comp.version-control.git/281925),
-- [indenting using tabs instead of spaces](http://thread.gmane.org/gmane.comp.version-control.git/281925),
-- [option naming](http://thread.gmane.org/gmane.comp.version-control.git/282934),
-- [using argv_array_* functions](http://thread.gmane.org/gmane.comp.version-control.git/282952),
-- [using pointers to functions](http://thread.gmane.org/gmane.comp.version-control.git/282923),
-- [typedef and pointers](http://thread.gmane.org/gmane.comp.version-control.git/282699),
-- [naming call back functions](http://thread.gmane.org/gmane.comp.version-control.git/283936),
-- [avoiding strcpy()](http://thread.gmane.org/gmane.comp.version-control.git/284091),
-- [strings and memory leaks](http://thread.gmane.org/gmane.comp.version-control.git/284170).
+- [avoiding "extern" in C source](https://lore.kernel.org/lkml/200502270134.13625.dtor_core%40ameritech.net/),
+- [splitting functions](https://public-inbox.org/git/567A3EB6.9000405%40alum.mit.edu/),
+- [config options](https://public-inbox.org/git/1449102921-7707-1-git-send-email-dturner%40twopensource.com/),
+- [indenting using tabs instead of spaces](https://public-inbox.org/git/1449102921-7707-1-git-send-email-dturner%40twopensource.com/),
+- [option naming](https://public-inbox.org/git/567AA2DF.1020408%40alum.mit.edu/),
+- [using argv_array_* functions](https://public-inbox.org/git/CAPig%2BcSaZRAXJ%2BsVZgFUbWcNMzqWGtH9rgqFXjupjtTJiQVYFw%40mail.gmail.com/),
+- [using pointers to functions](https://public-inbox.org/git/567A3228.2060407%40alum.mit.edu/),
+- [typedef and pointers](https://public-inbox.org/git/loom.20151218T050438-482%40post.gmane.org/),
+- [naming call back functions](https://public-inbox.org/git/xmqqtwmhpg4j.fsf%40gitster.mtv.corp.google.com/),
+- [avoiding strcpy()](https://public-inbox.org/git/20160114205259.GA10440%40sigill.intra.peff.net/),
+- [strings and memory leaks](https://public-inbox.org/git/20160115133317.GJ10612%40hank/).
 
 So the interest in this work is still big and makes it likely that it
 will bear fruits hopefully soon.
 
 ### Support
 
-* [clones over rsync broken?](http://thread.gmane.org/gmane.comp.version-control.git/285099/)
+* [clones over rsync broken?](https://public-inbox.org/git/20160130051133.GA21973%40dcvr.yhbt.net/)
 
 Eric Wong, a long time git developer and the original git-svn author,
 reported that he couldn't use the rsync protocol anymore to clone:
@@ -185,9 +185,9 @@ addressed.
 
 ## Releases
 
-* On January 4th, 2016, [Git 2.7.0 was released](http://article.gmane.org/gmane.linux.kernel/2118402), and a day later, [Git for Windows followed suite](http://article.gmane.org/gmane.comp.version-control.git/283383).
-* On February 2nd, 2016, Git for Windows published [version 2.7.0(2)](http://article.gmane.org/gmane.comp.version-control.git/285282) primarily to address [complaints by web browsers about "unsigned" installers](https://github.com/git-for-windows/git/issues/592).
-* On February 6th, 2016, [Git 2.7.1 was released](http://article.gmane.org/gmane.comp.version-control.git/285657), followed by [Git for Windows 2.7.1](http://article.gmane.org/gmane.comp.version-control.git/285699) on the same day.
+* On January 4th, 2016, [Git 2.7.0 was released](http://article.gmane.org/gmane.linux.kernel/2118402), and a day later, [Git for Windows followed suite](https://public-inbox.org/git/alpine.DEB.2.20.1601051641240.14434%40virtualbox/).
+* On February 2nd, 2016, Git for Windows published [version 2.7.0(2)](https://public-inbox.org/git/alpine.DEB.2.20.1602021805250.2964%40virtualbox/) primarily to address [complaints by web browsers about "unsigned" installers](https://github.com/git-for-windows/git/issues/592).
+* On February 6th, 2016, [Git 2.7.1 was released](https://public-inbox.org/git/xmqqd1sabt0a.fsf%40gitster.mtv.corp.google.com/), followed by [Git for Windows 2.7.1](https://public-inbox.org/git/alpine.DEB.2.20.1602061820490.2964%40virtualbox/) on the same day.
 * [Release v0.24.0b12 · libgit2/rugged](https://github.com/libgit2/rugged/releases/tag/v0.24.0b12)
 * [Release v0.11.0 · nodegit/nodegit](https://github.com/nodegit/nodegit/releases/tag/v0.11.0)
 * [JGit/EGit Release 4.2](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03087.html)
@@ -197,7 +197,7 @@ addressed.
 
 __Various__
 
-* [Git Merge 2016 on April 5th 2016](http://git-merge.com/) and [Git Developer Summit on April 4th 2016](http://thread.gmane.org/gmane.comp.version-control.git/285270) in New York City USA have been officially announced.
+* [Git Merge 2016 on April 5th 2016](http://git-merge.com/) and [Git Developer Summit on April 4th 2016](https://public-inbox.org/git/20160202161240.GA16870%40sigill.intra.peff.net/) in New York City USA have been officially announced.
 * [dear-github: An open letter to GitHub from the maintainers of open source projects](https://github.com/dear-github/dear-github)
 * [The history behind the decision to move Python to GitHub - Brett Cannon](http://www.snarky.ca/the-history-behind-the-decision-to-move-python-to-github)
 * [Mercurial's author, Matt Mackall, is moving on after 10 years of leading the project](https://www.mercurial-scm.org/wiki/mpm/transition)

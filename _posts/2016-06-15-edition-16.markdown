@@ -58,7 +58,7 @@ But for sure, launching a git command will never feel the same ;-)
 
 *(written by François BEUTIN, Jordan DE GEA, William DUCLOT, Samuel GROOT, Erwan MATHONIERE, Antoine QUERU, Simon RABOURG and Tom RUSSELLO)*
 
-* [proposal for extending smudge/clean filters with raw file access](http://thread.gmane.org/gmane.comp.version-control.git/294425)
+* [proposal for extending smudge/clean filters with raw file access](https://public-inbox.org/git/20160512182432.GA27427%40kitenet.net/)
 
 Joey Hess, who is the [git-annex](https://git-annex.branchable.com/)
 main developer and maintainer, sent an email with some suggestions to
@@ -109,7 +109,7 @@ names "clean-from-fs" and "smudge-to-fs" have been suggested for them.
 
 ### Support
 
-* [http://thread.gmane.org/gmane.comp.version-control.git/295135](Odd Difference Between Windows Git and Standard Git)
+* [https://public-inbox.org/git/nhlqd4%24ekr%241%40ger.gmane.org/](Odd Difference Between Windows Git and Standard Git)
 
 Jon Forrest sent an email about a `git status` behavior he sees on
 Windows, which is different than on Linux on a repository that is
@@ -248,8 +248,8 @@ itself so I don't have extra dependencies :)
 ## Releases
 
 * Git [2.9.0](http://article.gmane.org/gmane.linux.kernel/2242820) (major release).
-* Git for Windows [2.9.0](http://article.gmane.org/gmane.comp.version-control.git/297287) (major release).
-* Git [2.8.3](http://article.gmane.org/gmane.comp.version-control.git/295081) and [2.8.4](http://article.gmane.org/gmane.linux.kernel/2236998) (maintenance releases).
+* Git for Windows [2.9.0](https://public-inbox.org/git/alpine.DEB.2.20.1606141316530.22630%40virtualbox/) (major release).
+* Git [2.8.3](https://public-inbox.org/git/xmqqh9duj5vi.fsf%40gitster.mtv.corp.google.com/) and [2.8.4](http://article.gmane.org/gmane.linux.kernel/2236998) (maintenance releases).
 * Git for Windows [2.8.3](https://groups.google.com/forum/#!topic/git-for-windows/P008PLusCxw) and [2.8.4](https://groups.google.com/forum/#!topic/git-for-windows/LtFxynlPdAc) (maintenance releases).
 * git-multimail [1.3.0](https://github.com/git-multimail/git-multimail/releases/tag/1.3.0) and
   [1.3.1](https://github.com/git-multimail/git-multimail/releases/tag/1.3.1) were released,
@@ -257,7 +257,7 @@ itself so I don't have extra dependencies :)
   a few SMTP-related improvements.
 * Sharness [1.0.0](https://github.com/chriscool/sharness/releases/tag/v1.0.0),
   a shell library to test your tools like Git does, was released and
-  [announced on the mailing list](http://thread.gmane.org/gmane.comp.version-control.git/297324).
+  [announced on the mailing list](https://public-inbox.org/git/CAP8UFD0uvaB-2_CrXs2ZvoqLRHfCd8efA-S7-tE2Qa6Pn%2BrAAg%40mail.gmail.com/).
 * libgit2/nodegit [v0.13.2](https://github.com/nodegit/nodegit/releases/tag/v0.13.2)
 * libgit2/rugged [v0.25.0b4](https://github.com/libgit2/rugged/releases/tag/v0.25.0b4)
 * GitLab [8.8](https://about.gitlab.com/2016/05/22/gitlab-8-8-released/) with Pipelines and .gitignore templates, patched up to [8.8.4](https://about.gitlab.com/2016/06/09/gitlab-8-dot-8-dot-4-released/)
@@ -270,7 +270,7 @@ __Various__
 * [Git 2.9 has been released](https://github.com/blog/2188-git-2-9-has-been-released) by Peff
 * [New "Mastering Git" book](https://www.packtpub.com/application-development/mastering-git) by long time Git contributor Jakub Narębski
 * [Rebase a Pull Request without access on the Fork](https://medium.com/@p.tournaris/git-rebase-a-pull-request-without-access-on-the-fork-a4189bac81b9) told by Pavlos-Petros Tournaris
-* Some really cool new Git subcommands from Adam Spiers: [new git splice subcommand for non interactive branch splicing](http://article.gmane.org/gmane.comp.version-control.git/295755) 
+* Some really cool new Git subcommands from Adam Spiers: [new git splice subcommand for non interactive branch splicing](https://lore.kernel.org/lkml/200504121030.j3CAUkUl005147%40shell0.pdx.osdl.net/) 
 * [Who Needs Git When You Got ZFS?](http://zef.me/blog/6023/who-needs-git-when-you-got-zfs) Zef Hemel asks. We do, but ZFS is still interesting.
 * [Easily Adding Meta Information to Git Branches](https://iinteractive.com/notebook/2016/05/25/git-mo-meta.html) by Yanick Champoux
 * [Display git branch in Windows command prompt](https://www.nu42.com/2016/05/display-git-branch-windows-command-prompt.html) in the simplest way, by A. Sinan Unur

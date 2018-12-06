@@ -73,7 +73,7 @@ Nicola's [just published piece](https://developer.atlassian.com/blog/2015/08/gra
 
 ### Support
 
-* [git log fails to show all changes for a file](http://thread.gmane.org/gmane.comp.version-control.git/273937)
+* [git log fails to show all changes for a file](https://public-inbox.org/git/20150714073035.GA22707%40aepfle.de/)
 
 Working on the Linux kernel, Olaf Hering wondered why the following
 command does not show all the commits that modified a function in the
@@ -142,7 +142,7 @@ behavior might have some drawbacks. Junio concluded the thread with:
 > and harder to explain to new people.
 
 
-* [Git tag: pre-receive hook issue](http://thread.gmane.org/gmane.comp.version-control.git/274095)
+* [Git tag: pre-receive hook issue](https://public-inbox.org/git/1437159533304-7635764.post%40n2.nabble.com/)
 
 Gaurav Chhabra reported that in his company they have [a script
 launched by a pre-receive hook](http://pastebin.com/VnMQp5ar) in which

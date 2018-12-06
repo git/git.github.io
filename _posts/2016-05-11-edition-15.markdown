@@ -161,7 +161,7 @@ vim () {
 That makes vim open file "foo" at line "X" if one uses `vim foo:X`
 just after having run `git grep`.
 
-* [GSoC 2016](http://thread.gmane.org/gmane.comp.version-control.git/292308/)
+* [GSoC 2016](https://public-inbox.org/git/CAFZEwPMr%3Dimv%3D%3DkvVULy4PDYKW-0RRQ5a%2BX8DFqNFhNjCSyWKA%40mail.gmail.com/)
 
 This year only one student, Pranit Bauva, will participate in the
 Google Summer of Code 2016 under the Git project. He will work on
@@ -238,7 +238,7 @@ which is very useful when rebasing a large patch series.  I also have to mention
 
 ## Releases
 
-* [Git 2.8.2](http://article.gmane.org/gmane.comp.version-control.git/293059/)
+* [Git 2.8.2](https://public-inbox.org/git/xmqq7ffgvzpn.fsf%40gitster.mtv.corp.google.com/)
 * [Git for Windows 2.8.2](https://groups.google.com/d/msg/git-for-windows/-Jur6cdjMjE/m02wl_qCCQAJ)
 * [libgit2/rugged v0.25.0b2](https://github.com/libgit2/rugged/releases/tag/v0.25.0b2)
 * [libgit2/nodegit v0.13.0](https://github.com/nodegit/nodegit/releases/tag/v0.13.0)
