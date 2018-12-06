@@ -148,7 +148,7 @@ while.
 In the case of Sébastien's patch series, many developers helped or got
 involved in the discussions: Eric Sunshine, Junio Hamano, Stefan
 Beller, Matthieu Moy, Johannes Schindelin, Johannes Sixt. Emma Jane Hogbin Westby
-also [weighed in](https://public-inbox.org/git/cover.1430770308.git.sebastien.guimmara%40gmail.com//focus=268525)
+also [weighed in](https://public-inbox.org/git/cover.1430770308.git.sebastien.guimmara%40gmail.com/)
 with her experience in teaching Git to people, which is a valuable
 piece of input.
 
