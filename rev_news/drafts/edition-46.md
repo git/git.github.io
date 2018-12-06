@@ -44,6 +44,7 @@ __Various__
 __Light reading__
 
 * Ed Thomson's [Git Advent Calendar](https://www.edwardthomson.com/blog/git_tips_and_tricks_advent_calendar.html).
+* Samuel Walladge explains [how to use Git with (Neo)Vim](https://vimways.org/2018/vim-and-git/) on Day 6 of the Vimways Advent Calendar.
 
 __Git tools and sites__
 * [sr.ht](https://sr.ht/) ([https://sr.ht](https://sr.ht/))
