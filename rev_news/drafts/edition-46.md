@@ -43,6 +43,7 @@ __Various__
 
 __Light reading__
 
+* Ed Thomson's [Git Advent Calendar](https://www.edwardthomson.com/blog/git_tips_and_tricks_advent_calendar.html).
 
 __Git tools and sites__
 * [sr.ht](https://sr.ht/) ([https://sr.ht](https://sr.ht/))
