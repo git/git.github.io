@@ -23,18 +23,18 @@ This edition covers what happened during the month of October 2015.
 
 ### Reviews
 
-* [Expose the submodule parallelism to the user](http://thread.gmane.org/gmane.comp.version-control.git/280284)
+* [Expose the submodule parallelism to the user](https://public-inbox.org/git/1445969753-418-1-git-send-email-sbeller%40google.com/)
 
 Stefan Beller started posting patch series to "finish the on going
 efforts of parallelizing submodule network traffic".
 
 This followed
-[previous work by Stefan](http://thread.gmane.org/gmane.comp.version-control.git/277705/)
+[previous work by Stefan](https://public-inbox.org/git/1442012994-20374-1-git-send-email-sbeller%40google.com/)
 to make it possible to launch many git submodule fetches in parallel.
 
 What is interesting is that a few weeks before posting the first
 version of his patch series, Stefan had been involved in a
-[discussion](http://thread.gmane.org/gmane.comp.version-control.git/279712/)
+[discussion](https://public-inbox.org/git/loom.20151016T001449-848%40post.gmane.org/)
 that was started by Kannan Goundan who asked if it would be possible
 to "Make 'git checkout' automatically update submodules?".
 
@@ -64,7 +64,7 @@ This will be an interesting benchmark for the submodules as well.
 
 ### Support
 
-* [broken racy detection and performance issues with nanosecond file times](http://thread.gmane.org/gmane.comp.version-control.git/278683)
+* [broken racy detection and performance issues with nanosecond file times](https://public-inbox.org/git/5605D88A.20104%40gmail.com/)
 
 At the end of last September, Karsten Blees sent an email starting
 with the following:
@@ -226,7 +226,7 @@ features on top of it.
 
 ## Releases
 
-* Git, following some intermediate releases, is now at [2.6.3](http://article.gmane.org/gmane.comp.version-control.git/280947/)
+* Git, following some intermediate releases, is now at [2.6.3](https://public-inbox.org/git/xmqqegg43uqw.fsf%40gitster.mtv.corp.google.com/)
 * Git for Windows, similarly is now at [2.6.2](https://groups.google.com/d/msg/git-for-windows/R4xTgOfFu3Q/vex656-JBQAJ)
 * GitLab shipped several times in the last month, leaving their latest version at
   [8.1.3](https://about.gitlab.com/2015/11/06/gitlab-8-dot-1-dot-3-released/), after the major

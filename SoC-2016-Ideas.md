@@ -113,7 +113,7 @@ should be honored without checking the ownership.  Cf. <http://article.gmane.org
 ### Implement `git apply --fix-mta-corruption`
 
 Takes eol attributes into account to correct lossage/addition of CR at
-the end of line, with updates to "am".  Cf. <http://article.gmane.org/gmane.comp.version-control.git/257445>
+the end of line, with updates to "am".  Cf. <https://public-inbox.org/git/xmqqoau6gguz.fsf%40gitster.dls.corp.google.com/>
 
 ### git bisect improvements
 
@@ -149,7 +149,7 @@ error message if 'fast' is the new term, 'slow' the old one, and if C
 is 'fast'. Instead of failing, it could offer the user to reverse the
 terms and continue the bisection.
 
-See discussion on the subject [here](http://thread.gmane.org/gmane.comp.version-control.git/272792/focus=272869).
+See discussion on the subject [here](https://public-inbox.org/git/1435337896-20709-1-git-send-email-Matthieu.Moy%40imag.fr/).
 
 The change is controversial, hence a substantial part of the project
 would be to define what is the right behavior (should it be activated
@@ -208,11 +208,11 @@ another one to give a proper GSoC project.
 "git config", when removing the last variable in a section, leaves an
 empty section header behind. Anybody who wants to improve this needs
 to consider ramifications of leaving or removing comments.
-Cf. <http://article.gmane.org/gmane.comp.version-control.git/219524>
+Cf. <https://public-inbox.org/git/20130329195155.GA19994%40sigill.intra.peff.net/>
 
 ### Introduce threading to checkout codepath, possibly helping Windows folks.
 
-Cf. <http://article.gmane.org/gmane.comp.version-control.git/235874>
+Cf. <https://public-inbox.org/git/CAHOQ7J_ZZ%3D7j-5ULd7Tdvbiqg4inhwi%2Bfue_w6WAtNRkvZSwsg%40mail.gmail.com/>
 
 ### Be nicer to the user on tracked/untracked merge conflicts
 
@@ -334,7 +334,7 @@ deep understanding of Git: how each command is meant to be used, what
 are the potential dangers, ... Reaching a solution that effectively
 protects beginners without harming anyone is much harder than it
 seems. See for example [this
-thread](http://thread.gmane.org/gmane.comp.version-control.git/285893/focus=286614)
+thread](https://public-inbox.org/git/vpqoabox66p.fsf%40anie.imag.fr/)
 for example potential objections. If chosen, this project should be
 discussed in depth on the list before and after the student
 application.

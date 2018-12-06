@@ -34,7 +34,7 @@ and on [porting git-am from shell to C too](https://github.com/pyokagan/git/comm
 
 ### Reviews
 
-* [New `git worktree` command](http://thread.gmane.org/gmane.comp.version-control.git/272949) (*written by Eric Sunshine*)
+* [New `git worktree` command](https://public-inbox.org/git/1435582278-31158-1-git-send-email-pclouds%40gmail.com/) (*written by Eric Sunshine*)
 
 The linked-worktree facility allows multiple working directories to share a
 single repository, with (typically) a different branch checked out in each
@@ -49,22 +49,22 @@ via `git checkout --to <path> <branch>`, and cleanup of leftover
 administrative files after manual deletion of `<path>` was done with `git
 prune --worktrees`. However, a recent unrelated change to `git prune` led
 to a
-[discussion](http://thread.gmane.org/gmane.comp.version-control.git/272447/focus=272546)
+[discussion](https://public-inbox.org/git/20150623105042.GA10888%40peff.net/)
 that concluded that worktree-related maintenance functionality didn't
 belong in `git prune`.
 
 Consequently, Nguyễn Thái Ngọc Duy submitted a
-[patch](http://thread.gmane.org/gmane.comp.version-control.git/272949)
+[patch](https://public-inbox.org/git/1435582278-31158-1-git-send-email-pclouds%40gmail.com/)
 which introduces a new `git worktree` command, and relocates `git prune
 --worktrees` functionality to `git worktree prune`.
 
 Eric Sunshine then further fleshed out `git worktree` with a
-[patch](http://article.gmane.org/gmane.comp.version-control.git/273032)
+[patch](https://public-inbox.org/git/1435640202-95945-1-git-send-email-sunshine%40sunshineco.com/)
 which relocates `git checkout --to` functionality to `git worktree new`.
 A lengthy
-[discussion](http://thread.gmane.org/gmane.comp.version-control.git/273032)
+[discussion](https://public-inbox.org/git/1435640202-95945-1-git-send-email-sunshine%40sunshineco.com/)
 ensued, which eventually led to a second version, consisting of [23
-patches](http://thread.gmane.org/gmane.comp.version-control.git/273316),
+patches](https://public-inbox.org/git/1435969052-540-1-git-send-email-sunshine%40sunshineco.com/),
 and which names the command `git worktree add`, rather than `git worktree
 new`, and gives the documentation some needed attention.
 
@@ -84,13 +84,13 @@ checked out into new worktree `../hotfix`, as if
 `git worktree -b hotfix ../hotfix HEAD` had been specified.
 
 Finally, the question was
-[raised](http://article.gmane.org/gmane.comp.version-control.git/273107)
+[raised](https://public-inbox.org/git/CAPig%2BcT0a201MVTsvvLrndr40GsMkyvtao33Gt%3DAFhvShtr%3DKg%40mail.gmail.com/)
 whether `git checkout --ignore-other-worktrees` should be retired and `git
 checkout --force` overloaded to subsume its duties, however, Junio was [not
-thrilled](http://article.gmane.org/gmane.comp.version-control.git/273108)
+thrilled](https://public-inbox.org/git/xmqqtwtobzn0.fsf%40gitster.dls.corp.google.com/)
 by the idea.
 
-* [Warning when charset conversion did not happen due to iconv compiled out](http://thread.gmane.org/gmane.comp.version-control.git/270952/)
+* [Warning when charset conversion did not happen due to iconv compiled out](https://public-inbox.org/git/1433624551-20730-1-git-send-email-max%40max630.net/)
 
 Max Kirillov proposed a patch to warn when a conversion from a
 character set to another character set could not happen because iconv
@@ -142,7 +142,7 @@ suggestion into account.
 
 ### Support
 
-* [Visualizing merge conflicts after the fact](http://thread.gmane.org/gmane.comp.version-control.git/271738)
+* [Visualizing merge conflicts after the fact](https://public-inbox.org/git/557F791D.3080003%40nextest.com/)
 
 Eric Raible reported the following:
 
@@ -181,7 +181,7 @@ Michael J Gruber replied to Dscho that, as we often get this type of
 request, it might be a good idea to better support the above.
 
 Junio Hamano then pointed to
-[a patch series from last September by Thomas Rast](http://thread.gmane.org/gmane.comp.version-control.git/256591)
+[a patch series from last September by Thomas Rast](https://public-inbox.org/git/cover.1409860234.git.tr%40thomasrast.ch/)
 that implements a new `--remerge-diff` option for `git log` to show
 what a conflict resolution changed. Unfortunately, though the feature
 looks promising at least to Michael, it looks like some more work is
@@ -205,7 +205,7 @@ git rev-list --author="My Colleague" --parents --merges HEAD
 ```
 
 
-* [Several date related issues](http://thread.gmane.org/gmane.comp.version-control.git/272658)
+* [Several date related issues](https://public-inbox.org/git/20150625131901.5b962336%40pc09.procura.nl/)
 
 Right now `git log` supports the following date related options:
 
@@ -262,7 +262,7 @@ And H.Merijn said that the option names are misleading, and suggested
 a gitk option for Peff's script.
 
 It looks like no gitk option has been developed yet for the above, but
-Peff sent [a patch series](http://thread.gmane.org/gmane.comp.version-control.git/272695)
+Peff sent [a patch series](https://public-inbox.org/git/20150625165341.GA21949%40peff.net/)
 to implement `--date=format:...` which can produce the same output as the
 `--date=...` options H.Merijn suggested about his first issue.
 

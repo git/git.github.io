@@ -48,7 +48,7 @@ proposals for other ideas related to Git or libgit2.
 ### Tighten configuration and hook execution based on the file ownership.
 
 In addition to what we discussed, I think files named by include.path
-should be honored without checking the ownership.  Cf. <http://article.gmane.org/gmane.comp.version-control.git/243628>
+should be honored without checking the ownership.  Cf. <https://public-inbox.org/git/20140307210403.GA6790%40sigill.intra.peff.net/>
 
 ### "git apply --fix-mta-corruption".
 
@@ -67,7 +67,7 @@ When your project is strictly "new features are merged into trunk,
 never the other way around", it is handy to be able to first find
 a merge on the trunk that merged a topic to point fingers at when
 a bug appears, instead of having to drill down to the individual
-commit on the faulty side branch. Cf.  <http://thread.gmane.org/gmane.comp.version-control.git/264661/focus=264720>
+commit on the faulty side branch. Cf.  <https://public-inbox.org/git/CAMo-WNYNeShbbhNfG455o7krGfY7_9zVU3dMpJ7b4Smh_AiATg%40mail.gmail.com/>
 
 #### "git bisect fixed/unfixed"
 
@@ -83,27 +83,27 @@ than defining "fixed"/"unfixed" as aliases for "bad"/"good".
 
 A patch for this feature was sent to the mailing list in this thread a
 few years ago by Dscho:
-<http://thread.gmane.org/gmane.comp.version-control.git/86063>
+<https://public-inbox.org/git/alpine.DEB.1.00.0806241515460.9925%40racer/>
 
 Unfortunately there were some problems with the patch and no one tried
 to fix them. So the same problem/suggestion is often reported on the
 mailing list, for example:
 
- - <http://thread.gmane.org/gmane.comp.version-control.git/165141>
- - <http://thread.gmane.org/gmane.comp.version-control.git/170113>
- - <http://thread.gmane.org/gmane.comp.version-control.git/182398>
+ - <https://public-inbox.org/git/855249CA-A006-475C-8F96-EFD614795064%40gmail.com/>
+ - <https://public-inbox.org/git/AANLkTinQ0rCw2ydisHra779r6_iSOxqRwOStpJrNbx7h%40mail.gmail.com/>
+ - <https://public-inbox.org/git/20110929142027.GA4936%40zelva.suse.cz/>
 
 A patch series to let "old/new" be used instead of "good/bad" was
 started here:
 
-<http://thread.gmane.org/gmane.comp.version-control.git/199758/focus=199869>
+<https://public-inbox.org/git/1339466625-17461-1-git-send-email-Valentin.Duperray%40ensimag.imag.fr/>
 
 There is still work to be done to complete it.
 
 Note than another feature with the name "git bisect fix" was suggested
 to do something else:
 
-<http://thread.gmane.org/gmane.comp.version-control.git/169026>
+<https://lore.kernel.org/lkml/200312231416.58998.kernel%40kolivas.org/>
 
 Since there have already been discussions and patches, the remaining
 work is probably less than a GSoC, so this project should be grouped
@@ -133,15 +133,15 @@ formatting, and use it consistently in the three commands.
 "git config", when removing the last variable in a section, leaves an
 empty section header behind. Anybody who wants to improve this needs
 to consider ramifications of leaving or removing comments.
-Cf. <http://article.gmane.org/gmane.comp.version-control.git/219524>
+Cf. <https://lore.kernel.org/lkml/40FFBC8B.5050407%40cox.net/>
 
 ### "git fetch --deepen"?
 
-Cf. <http://article.gmane.org/gmane.comp.version-control.git/213180> <http://article.gmane.org/gmane.comp.version-control.git/212950>
+Cf. <https://public-inbox.org/git/7vk3rkcocy.fsf%40alter.siamese.dyndns.org/> <https://public-inbox.org/git/7vobh0f5nc.fsf%40alter.siamese.dyndns.org/>
 
 ### Introduce threading to checkout codepath, possibly helping Windows folks.
 
-Cf. <http://article.gmane.org/gmane.comp.version-control.git/235874>
+Cf. <https://public-inbox.org/git/CAHOQ7J_ZZ%3D7j-5ULd7Tdvbiqg4inhwi%2Bfue_w6WAtNRkvZSwsg%40mail.gmail.com/>
 
 ### Be nicer to the user on tracked/untracked merge conflicts
 

@@ -23,7 +23,7 @@ This edition covers what happened during the month of December 2015.
 
 ### Reviews
 
-* [RefTree: Alternate ref backend](http://thread.gmane.org/gmane.comp.version-control.git/282677/)
+* [RefTree: Alternate ref backend](https://public-inbox.org/git/CAJo%3DhJvnAPNAdDcAAwAvU9C4RVeQdoS3Ev9WTguHx4fD0V_nOg%40mail.gmail.com/)
 
 Shawn Pearce, who is one of the main Git, JGit and Gerrit
 contributors, sent an email about a new ref storage backend saying:
@@ -38,7 +38,7 @@ and:
 
 It's interesting because there has been a lot of work during the past
 years to develop news ways to store refs. Especially there has been
-[attemps to store refs in databases like LMDB](http://thread.gmane.org/gmane.comp.version-control.git/277138), that have been covered in
+[attemps to store refs in databases like LMDB](https://public-inbox.org/git/1441245313-11907-1-git-send-email-dturner%40twopensource.com/), that have been covered in
 [Git Rev News edition 7](https://git.github.io/rev_news/2015/09/09/edition-7/).
 
 This new approach tries to store refs using git's own object database
@@ -75,10 +75,10 @@ reachability, and Shawn mentioned other advantages:
 And it looks like Shawn has a bigger plan but don't want to tell us
 too much for now.
 
-* [Split .git/config in multiple worktree setup](http://thread.gmane.org/gmane.comp.version-control.git/281906/)
+* [Split .git/config in multiple worktree setup](https://public-inbox.org/git/1449083626-20075-1-git-send-email-pclouds%40gmail.com/)
 
 Duy Nguyen sent a patch series that restarted
-[previous work he had already done](http://thread.gmane.org/gmane.comp.version-control.git/266520)
+[previous work he had already done](https://public-inbox.org/git/1427804079-13061-1-git-send-email-pclouds%40gmail.com/)
 on splitting config options in two different sets. Some that are
 specific to each worktree and some that are not.
 
@@ -136,9 +136,9 @@ Other releases:
 
 __Various__
 
-* Jeff King [announced that GitHub is organizing another Git Merge conference](http://article.gmane.org/gmane.comp.version-control.git/282634/) for the beginning of April 2016 with a Git Developer Summit, and asked for people interested in coming to the Summit to tell him.
+* Jeff King [announced that GitHub is organizing another Git Merge conference](https://public-inbox.org/git/20151217071430.GA3711%40sigill.intra.peff.net/) for the beginning of April 2016 with a Git Developer Summit, and asked for people interested in coming to the Summit to tell him.
 * Jeff King, Shawn Pearce and Junio C. Hamano ganged up, urging everyone to
-  [support the Software Freedom Conservancy](http://permalink.gmane.org/gmane.comp.version-control.git/282881),
+  [support the Software Freedom Conservancy](https://public-inbox.org/git/xmqqpoxyeajy.fsf%40gitster.mtv.corp.google.com/),
   which is the non-profit organization that legally hosts the Git project.
 
 __Light reading__
