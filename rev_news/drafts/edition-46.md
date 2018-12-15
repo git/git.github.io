@@ -35,7 +35,8 @@ This edition covers what happened during the month of November 2018.
 
 ## Releases
 
-* [Git v2.20.0](https://public-inbox.org/git/xmqq1s6r3xb5.fsf@gitster-ct.c.googlers.com/T/#u) and [Git for Windows v2.20.0](https://github.com/git-for-windows/git/releases/tag/v2.20.0.windows.1).
+* Git [2.20.0](https://public-inbox.org/git/xmqq1s6r3xb5.fsf@gitster-ct.c.googlers.com)
+* Git for Windows [2.20.0](https://github.com/git-for-windows/git/releases/tag/v2.20.0.windows.1).
 
 ## Other News
 
