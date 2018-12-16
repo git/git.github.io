@@ -67,6 +67,7 @@ This edition covers what happened during the month of November 2018.
 
 __Various__
 
+* [Git Contributor Summit Registration, Jan 31, 2019, Brussels](https://public-inbox.org/git/20181206094805.GA1398@sigill.intra.peff.net)
 
 __Light reading__
 
