@@ -73,6 +73,7 @@ __Light reading__
 * Ed Thomson's [Git Advent Calendar](https://www.edwardthomson.com/blog/git_tips_and_tricks_advent_calendar.html).
 * Samuel Walladge explains [how to use Git with (Neo)Vim](https://vimways.org/2018/vim-and-git/) on Day 6 of the Vimways Advent Calendar.
 * Neil Kakkar's [How not to be afraid of Git anymore](https://medium.freecodecamp.org/how-not-to-be-afraid-of-git-anymore-fe1da7415286).
+* Will Hay Jr.'s [The Architecture and History of Git: A Distributed Version Control System](https://medium.com/@willhayjr/the-architecture-and-history-of-git-a-distributed-version-control-system-62b17dd37742)
 
 __Git tools and sites__
 * [sr.ht](https://sr.ht/) ([https://sr.ht](https://sr.ht/))
