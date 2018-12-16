@@ -76,12 +76,20 @@ __Light reading__
 * Neil Kakkar's [How not to be afraid of Git anymore](https://medium.freecodecamp.org/how-not-to-be-afraid-of-git-anymore-fe1da7415286).
 * Will Hay Jr.'s [The Architecture and History of Git: A Distributed Version Control System](https://medium.com/@willhayjr/the-architecture-and-history-of-git-a-distributed-version-control-system-62b17dd37742)
 
+
 __Git tools and sites__
-* [sr.ht](https://sr.ht/) ([https://sr.ht](https://sr.ht/))
-  is a very capable software forge which is already serving the needs of many projects in the free & open source software community site.
-  It is 100% open source software and includes goodies such as a wiki, mailing lists, ticketing, with neat features such as all the pages work without Javascript, and it is designed to support a email git workflow. Provided hosting is available for a low cost and contributing to the software can get one credit towards hosting.
-  
-  Announced in [sr.ht, the hacker's forge, now open for public alpha](https://drewdevault.com/2018/11/15/sr.ht-general-availability.html) blog post.
+
+* [sr.ht](https://sr.ht/) ([https://sr.ht](https://sr.ht/)) is a very
+  capable software forge which is already serving the needs of many
+  projects in the free & open source software community site.  It is
+  100% open source software and includes goodies such as a wiki,
+  mailing lists, ticketing, with neat features such as all the pages
+  work without Javascript, and it is designed to support a email git
+  workflow. Provided hosting is available for a low cost and
+  contributing to the software can get one credit towards hosting.
+  It was announced in a
+  [sr.ht, the hacker's forge, now open for public alpha](https://drewdevault.com/2018/11/15/sr.ht-general-availability.html)
+  blog post.
 
 * [Adobe's `git-server`](https://github.com/adobe/git-server), a [nodegit](https://github.com/nodegit/nodegit)-based application to serve Git repositories via `http://` and `https://`.
 
