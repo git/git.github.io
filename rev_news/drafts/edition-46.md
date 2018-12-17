@@ -95,7 +95,7 @@ This edition covers what happened during the month of November 2018.
 [2.20.0](https://public-inbox.org/git/xmqq1s6r3xb5.fsf@gitster-ct.c.googlers.com/),
 [2.20.0-rc2](https://public-inbox.org/git/xmqq36rhjnts.fsf@gitster-ct.c.googlers.com/),
 [2.20.0-rc1](https://public-inbox.org/git/xmqqmuq25ufc.fsf@gitster-ct.c.googlers.com/),
-[2.19.2](https://public-inbox.org/git/xmqqtvka5ugt.fsf@gitster-ct.c.googlers.com/),
+[2.19.2](https://public-inbox.org/git/xmqqtvka5ugt.fsf@gitster-ct.c.googlers.com/)
 + Git for Windows [2.20.1(1)](https://github.com/git-for-windows/git/releases/tag/v2.20.1.windows.1),
 [2.20.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.20.0.windows.1),
 [2.19.2(1)](https://github.com/git-for-windows/git/releases/tag/v2.19.2.windows.1)
