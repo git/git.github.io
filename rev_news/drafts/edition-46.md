@@ -21,9 +21,65 @@ This edition covers what happened during the month of November 2018.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [[RFC] Introduce two new commands, switch-branch and restore-paths](https://public-inbox.org/git/20181120174554.GA29910@duynguyen.home/)
+
+  Duy Nguyen sent an RFC patch to the mailing list that implemented 2
+  new git commands:
+
+  - `git switch-branch` which "is all about switching branches"
+  - `git restore-paths` "for checking out paths"
+
+  The goal is to split `git checkout` into different commands while
+  not deprecating it, so that "Old timers will still use
+  `git checkout`. But new people should be introduced to the new two
+  instead."
+
+  The idea to do that appeared [following a previous patch to print something when checking out paths](https://public-inbox.org/git/20181110133525.17538-1-pclouds@gmail.com/),
+  though it has been considered for a long time that `git checkout`
+  should not do as many different things as it currently does.
+
+  Thomas Gummerer replied that he liked the idea and had been
+  considering working on it. He suggested taking at look at maybe
+  changing the behavior of the new command a bit.
+
+  Junio Hamano, the Git maintainer, then started to discuss the naming
+  of `git restore-paths` with Duy.
+
+  Ævar Arnfjörð Bjarmason replied to Duy's original message asking
+  questions about arguments accepted by `git switch-branch` and
+  suggesting a comparison between the new commands and `git checkout`
+  or even other source code mangament tools. He also discussed with
+  Duy about eventually deprecating `git checkout`
+
+  Stefan Beller replied to Ævar and started discussing the names and
+  syntax of the command. Junio replied to Stefan telling that he
+  thought the names Duy suggested make sense, though "checkout"
+  already makes sense and longhands starting with "checkout", like
+  "checkout-branch", would make sense too.
+
+  Duy then sent a [version 2](https://public-inbox.org/git/20181127165211.24763-1-pclouds@gmail.com/)
+  of his initial patch that "breaks down the giant patch in v1 and
+  starts adding some changes in these new commands". Especially the
+  names were changed to "checkout-branch" and "checkout-files"
+
+  A first discussion thread started with Junio, Duy, Stefan Beller and
+  Stefan Xenos about the name and syntax of the new commands. As no
+  clear conclusion appeared though, Duy decided to go back towards the
+  original names he had proposed.
+
+  Another discussion thread among the same developers was about using
+  "unnamed branch" instead of "detached HEAD".
+
+  These discussions were followed by a [version 3](https://public-inbox.org/git/20181129215850.7278-1-pclouds@gmail.com/)
+  where the names of the commands were changed back to "switch-branch"
+  and "restore-files" instead of "restore-paths".
+
+  There were further discussions involving Elijah Newren, Junio, Duy,
+  Ævar, Dan Fabulich, Thomas and Eric Sunshine, about a lot of related
+  subjects, though Duy decided to wait until the release of Git 2.20
+  before sending an updated patch series.
 
 <!---
 ### Support
