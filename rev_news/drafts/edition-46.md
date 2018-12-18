@@ -95,12 +95,12 @@ This edition covers what happened during the month of November 2018.
 [2.20.0](https://public-inbox.org/git/xmqq1s6r3xb5.fsf@gitster-ct.c.googlers.com/),
 [2.20.0-rc2](https://public-inbox.org/git/xmqq36rhjnts.fsf@gitster-ct.c.googlers.com/),
 [2.20.0-rc1](https://public-inbox.org/git/xmqqmuq25ufc.fsf@gitster-ct.c.googlers.com/),
-[2.19.2](https://public-inbox.org/git/xmqqtvka5ugt.fsf@gitster-ct.c.googlers.com/),
+[2.19.2](https://public-inbox.org/git/xmqqtvka5ugt.fsf@gitster-ct.c.googlers.com/)
 + Git for Windows [2.20.1](https://github.com/git-for-windows/git/releases/tag/v2.20.1.windows.1),
 [2.20.0](https://github.com/git-for-windows/git/releases/tag/v2.20.0.windows.1),
 [2.20.0-rc2](https://github.com/git-for-windows/git/releases/tag/v2.20.0-rc2.windows.1),
 [2.20.0-rc1](https://github.com/git-for-windows/git/releases/tag/v2.20.0-rc1.windows.1),
-[2.20.0-rc0](https://github.com/git-for-windows/git/releases/tag/v2.20.0-rc0.windows.1),
+[2.20.0-rc0](https://github.com/git-for-windows/git/releases/tag/v2.20.0-rc0.windows.1)
 + libgit2sharp [0.25.4](https://github.com/libgit2/libgit2sharp/releases/tag/v0.25.4)
 + GitLab [11.6RC7, 11.5.4, 11.4.11 and 11.3.13](https://about.gitlab.com/2018/12/13/critical-security-release-gitlab-11-dot-5-dot-4-released/),
 [11.5.3](https://about.gitlab.com/2018/12/06/critical-security-release-gitlab-11-dot-5-dot-3-released/),
