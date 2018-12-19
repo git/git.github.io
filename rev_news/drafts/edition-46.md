@@ -132,8 +132,10 @@ __Light reading__
 * Ed Thomson's [Git Advent Calendar](https://www.edwardthomson.com/blog/git_tips_and_tricks_advent_calendar.html).
 * Samuel Walladge explains [how to use Git with (Neo)Vim](https://vimways.org/2018/vim-and-git/) on Day 6 of the Vimways Advent Calendar.
 * Neil Kakkar's [How not to be afraid of Git anymore](https://medium.freecodecamp.org/how-not-to-be-afraid-of-git-anymore-fe1da7415286).
-* Will Hay Jr.'s [The Architecture and History of Git: A Distributed Version Control System](https://medium.com/@willhayjr/the-architecture-and-history-of-git-a-distributed-version-control-system-62b17dd37742).
-* Susan Potter's [Git entry](http://www.aosabook.org/en/git.html) in ["The Architecture of Open Source Applications" book](http://www.aosabook.org/en/index.html).
+* Will Hay Jr.'s [The Architecture and History of Git: A Distributed Version Control System](https://medium.com/@willhayjr/the-architecture-and-history-of-git-a-distributed-version-control-system-62b17dd37742). See also:
+  * [The Git Parable](http://tom.preston-werner.com/2009/05/19/the-git-parable.html), by Tom Preston-Werner (2009) - the ideas behind the architecture of Git; covered in [Git Rev News #30](https://git.github.io/rev_news/2017/08/16/edition-30/)
+  * slides from ["Git Chronicles"](https://docs.google.com/file/d/0Bw3FApcOlPDhMFR3UldGSHFGcjQ/view) talk at GitTogether 2008 - early history
+* Susan Potter's [Git entry](http://www.aosabook.org/en/git.html) in ["The Architecture of Open Source Applications" book](http://www.aosabook.org/en/index.html), Volume II (2012); there is [chapter on Mercurial](http://www.aosabook.org/en/mercurial.html) in Volume I (2012).
 
 __Git tools and sites__
 
