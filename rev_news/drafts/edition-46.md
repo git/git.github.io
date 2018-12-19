@@ -131,6 +131,8 @@ __Various__
   * A chat with Deb Nicholson from the Software Freedom Conservancy on the future of software
   * Sessions by Google, Microsoft, and Praqma on scaling Git
   * Lighting talks on everything from version control for law to Git for games
+* [“The 's' is sad”: 4-year-old submits Linux kernel doc patch](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=690b0543a813b0ecfc51b0374c0ce6c8275435f0) with some assistance (via Hacker Newsletter #429)
+
 
 __Light reading__
 
