@@ -126,6 +126,11 @@ This edition covers what happened during the month of November 2018.
 __Various__
 
 * [Git Contributor Summit Registration, Jan 31, 2019, Brussels](https://public-inbox.org/git/20181206094805.GA1398@sigill.intra.peff.net)
+* [Git Merge 2019](https://git-merge.com/) (Jan 31 -- Feb 01) schedule announced, including:
+  * A “Git and version control in the enterprise” panel with GitHub, Atlassian, and GitLab
+  * A chat with Deb Nicholson from the Software Freedom Conservancy on the future of software
+  * Sessions by Google, Microsoft, and Praqma on scaling Git
+  * Lighting talks on everything from version control for law to Git for games
 
 __Light reading__
 
