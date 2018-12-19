@@ -136,6 +136,14 @@ __Light reading__
   * [The Git Parable](http://tom.preston-werner.com/2009/05/19/the-git-parable.html), by Tom Preston-Werner (2009) - the ideas behind the architecture of Git; covered in [Git Rev News #30](https://git.github.io/rev_news/2017/08/16/edition-30/)
   * slides from ["Git Chronicles"](https://docs.google.com/file/d/0Bw3FApcOlPDhMFR3UldGSHFGcjQ/view) talk at GitTogether 2008 - early history
 * Susan Potter's [Git entry](http://www.aosabook.org/en/git.html) in ["The Architecture of Open Source Applications" book](http://www.aosabook.org/en/index.html), Volume II (2012); there is [chapter on Mercurial](http://www.aosabook.org/en/mercurial.html) in Volume I (2012).
+* David Gohberg's [The Biggest Misconception About Git](https://medium.com/@gohberg/the-biggest-misconception-about-git-b2f87d97ed52), that Git is all about storing differences between files.
+* Aditya Sridhar's [How to become a Git expert](https://medium.freecodecamp.org/how-to-become-a-git-expert-e7c38bf54826), about amending commits and rebasing
+* [Large files with Git: LFS and git-annex](https://lwn.net/Articles/774125) article on LWN.net, contributed by Antoine Beaupré
+* [How I changed the law with a GitHub pull request](https://arstechnica.com/tech-policy/2018/11/how-i-changed-the-law-with-a-github-pull-request/) article on Ars Technica, contributed by Joshua Tauberer
+* Caitlin Hudon's [Git Your SQL Together (with a Query Library)](https://caitlinhudon.com/2018/11/28/git-sql-together/) recommends tracking SQL queries in Git
+* Eric S. Raymond's [SRC, four years later](http://esr.ibiblio.org/?p=8205), about his single-file version control system with modern UI
+* Johnathan Swan's [Gradually improving our code quality with Test::Perl::Critic::Progressive](https://medium.com/adzuna-engineering/gradually-improving-our-code-quality-with-test-perl-critic-progressive-a8f98319ac56) together with Git to catch and report _new_ code style policy violations
+* Peter Hutterer's [On commit messages](http://who-t.blogspot.com/2009/12/on-commit-messages.html) (2009)
 
 __Git tools and sites__
 
@@ -152,6 +160,8 @@ __Git tools and sites__
   blog post.
 
 * [Adobe's `git-server`](https://github.com/adobe/git-server), a [nodegit](https://github.com/nodegit/nodegit)-based application to serve Git repositories via `http://` and `https://`.
+
+* [Git Butler](https://www.gitbutler.com/): Pull Request and Issue Workflow Automation -- an alternative to [GitHub Actions](https://github.com/features/actions) (covered in [Git Rev News #44](https://git.github.io/rev_news/2018/10/24/edition-44/)), allowing to automate Git workflow by creating powerful rules with a simple visual editor
 
 ## Credits
 
