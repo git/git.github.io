@@ -40,6 +40,10 @@ This edition covers what happened during the month of December 2018.
 
 __Various__
 
+* [Outreachy](https://www.outreachy.org/) interns working on Git have been blogging about their internship:
+  - [Tanushree Tumane's blog](http://tanu1596.blogspot.com/)
+  - [Slavica Đukić's blog](https://slavicadj.github.io/blog/)
+  
 
 __Light reading__
 
