@@ -43,7 +43,8 @@ __Various__
 * [Outreachy](https://www.outreachy.org/) interns working on Git have been blogging about their internship:
   - [Tanushree Tumane's blog](http://tanu1596.blogspot.com/)
   - [Slavica Đukić's blog](https://slavicadj.github.io/blog/)
-* AsciiDoc, the markup language used by [Git's manual and other documentation](https://git-scm.com/docs), will get an official specification under the Eclipse Foundation](https://asciidoctor.org/news/2019/01/07/asciidoc-spec-proposal/).
+* AsciiDoc, the markup language used by [Git's manual and other documentation](https://git-scm.com/docs),
+  will get [an official specification under the Eclipse Foundation](https://asciidoctor.org/news/2019/01/07/asciidoc-spec-proposal/).
 
 __Light reading__
 
