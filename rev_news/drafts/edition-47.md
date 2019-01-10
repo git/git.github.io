@@ -51,6 +51,7 @@ __Light reading__
 
 __Git tools and sites__
 
+* [OneDev](https://onedev.io) Open source git server with unique features such as language aware code search and navigation, source/diff annotation for code discussion and comprehension, customizable issue field and workflow, write protection for branches/tags/files, etc.
 
 ## Credits
 
