@@ -1,5 +1,5 @@
 ---
-title: Git Rev News Edition 47 (XXX, 2018)
+title: Git Rev News Edition 47 (January 23rd, 2019)
 layout: default
 date: 2019-01-23 12:06:51 +0100
 author: chriscool
@@ -7,7 +7,7 @@ categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 47 (XXX, 2018)
+## Git Rev News: Edition 47 (January 23rd, 2019)
 
 Welcome to the 47th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
