@@ -17,9 +17,105 @@ This edition covers what happened during the month of December 2018.
 
 ## Discussions
 
-<!---
+
 ### General
--->
+
+* [Referring to commits in commit messages](https://public-inbox.org/git/877eg5fwd5.fsf@evledraar.gmail.com/)
+
+Ævar Arnfjörð Bjarmason replied to a
+[patch](https://public-inbox.org/git/20181217165957.GA60293@google.com/)
+that Jonathan Nieder had sent to the mailing list. He suggested using
+the [standard commit-reference format documented in SubmittingPatches](https://github.com/git/git/blob/16a465bc018d09e9d7bbbdc5f40a7fb99c21f8ef/Documentation/SubmittingPatches#L143-L158) in the commit message of the patch.
+
+Using the standard format would have produced:
+
+```
+92068ae8bf ("stripspace: respect repository config", 2016-11-21)
+```
+
+while Jonathan's patch contained:
+
+```
+v2.11.0-rc3~3^2~1 (stripspace: respect repository config, 2016-11-21)
+```
+
+The main difference is that the former starts with an abbreviated
+object id, while the latter starts with an output from `git describe`.
+
+Ævar gave an example of him previously looking for a commit using
+`git log --grep=0386dd37b1` and not finding it because Jonathan had
+not used the standard format.
+
+Ævar also wondered if "we should have some mode where
+`--grep=<commitish>` will be combined with some mode where we try to
+find various forms of `<commitish>` in commit messages, then normalize
+& match them..."
+
+Buy Nguyen replied to that by suggesting we use email style trailers
+like `In-Reply-To: ...` or even `Fixes: ...` to refer
+to related commits, which could make sense as we already use
+[`Signed-off-by: User <email>` trailers](https://github.com/git/git/blob/master/Documentation/SubmittingPatches#L306-L347)
+and some other similar trailers in commit messages.
+
+SZEDER Gábor also replied to Ævar saying that the `%h (%s, %ad)` is
+even better and more widely used than the standard `%h ("%s", %ad)` as
+the former avoids useless double quotes around the commit title.
+
+Jeff King, alias Peff, then commented to Ævar's suggestion about a new
+mode for `--grep=<commitish>`. He gave examples of other tools that
+work better with the standard format:
+
+- web interfaces like GitHub have learned to replace an abbreviated
+  object id with a link to a page displaying the object,
+
+- terminals makes it easy to select object ids, but don't understand
+  output from `git describe`.
+
+Peff acknowledged that the format with an output from `git describe`
+has some benefits:
+
+> As far as I can tell, the main advantage of using `v2.11.0-rc3~3^2~1`
+> over its hex id is that it gives a better sense in time of which Git
+> version we're talking about. The date in the parentheses does something
+> similar for wall-clock time, but it's left to the reader to map that to
+> a Git version if they choose.
+
+But he thought that they were not worth the disadvantages "as in the
+rare instance that I care about the containing version, it's not a big
+deal to use `git tag --contains`".
+
+He suggested anyway using something like:
+
+```
+1234abcd (the subject line, 2016-01-01, v2.11.0)
+```
+
+which adds a version after the date, "if we really want to convey that
+information". And he proposed some reasonable rules for this new
+format.
+
+Jonathan replied to Peff's suggestion by discussing the possible
+ambiguities in what the tag name is referring to. This led Jonathan to
+prefer using trailers like `Fixes: ...` as Duy had suggested,
+saying they have been working well for the Linux kernel project.
+
+In a separate reply to Duy's email, Jonathan copied relevant
+[documentation from the Linux kernel project](https://github.com/torvalds/linux/blob/ae67ee6c5e1d5b6acdb0d51fddde651834096d75/Documentation/process/submitting-patches.rst)
+where they specify a trailer that looks like:
+
+```
+Fixes: e21d2170f366 ("video: remove unnecessary platform_set_drvdata()")
+```
+
+Jonathan then proposed a patch to the Git Documentation that would
+make the Git project adopt a similar policy.
+
+Peff replied to Jonathan that using `Fixes: ...` trailers is a good
+idea but that "there are many other reasons to refer to another commit
+in prose (or even outside of a commit message entirely)".
+
+Jonathan, Peff and Ævar discussed a bit more, and Jacob Keller chimed
+in, but in the end it doesn't look like any change has been decided.
 
 <!---
 ### Reviews
