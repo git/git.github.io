@@ -51,7 +51,7 @@ not used the standard format.
 find various forms of `<commitish>` in commit messages, then normalize
 & match them..."
 
-Buy Nguyen replied to that by suggesting we use email style trailers
+Duy Nguyen replied to that by suggesting we use email style trailers
 like `In-Reply-To: ...` or even `Fixes: ...` to refer
 to related commits, which could make sense as we already use
 [`Signed-off-by: User <email>` trailers](https://github.com/git/git/blob/master/Documentation/SubmittingPatches#L306-L347)
