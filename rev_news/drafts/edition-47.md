@@ -161,6 +161,17 @@ in, but in the end it doesn't look like any change has been decided.
 ## Other News
 
 __Various__
+* Security vulnerabilities in JGit and Gerrit:
+  - [Gerrit issue 10201](https://bugs.chromium.org/p/gerrit/issues/detail?id=10201):
+    When protocol v2 was enabled and used, Gerrit would make all refs visible to the
+    calling user. Support for protocol v2 was removed in Gerrit 2.16.2, and the issue
+    was fixed in JGit versions 5.1.5 and 5.2.1.
+  - [Gerrit issue 10262](https://bugs.chromium.org/p/gerrit/issues/detail?id=10262):
+    In protocol v0 stateless transport, it was possible to fetch anything that is
+    pointed to by any ref (using fetch-by-sha1), as long as the attacker could guess
+    the object name. The issue was fixed in JGit versions 4.5.5, 4.7.7, 4.9.8, 4.11.6,
+    5.1.5 and 5.2.1, which were included in Gerrit versions 2.9.5, 2.10.8, 2.11.12,
+    2.12.9, 2.13.12, 2.14.18, 2.15.8 and 2.16.3.
 
 * [Outreachy](https://www.outreachy.org/) interns working on Git have been blogging about their internship:
   - [Tanushree Tumane's blog](http://tanu1596.blogspot.com/)
