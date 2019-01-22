@@ -179,12 +179,40 @@ __Various__
 * AsciiDoc, the markup language used by [Git's manual and other documentation](https://git-scm.com/docs),
   will get [an official specification under the Eclipse Foundation](https://asciidoctor.org/news/2019/01/07/asciidoc-spec-proposal/).
 
-__Light reading__
+* Google is [seeking open source projects for Google Summer of Code 2019](https://opensource.googleblog.com/2019/01/seeking-projects-for-gsoc-2019.html)
+  The deadline to apply is February 6 at 20:00 UTC, chosen
+  organizations will be annouced on February 26.
+  Git Development Community [is interested](https://public-inbox.org/git/CAP8UFD3Kt3dreMnfAdLiP2yc47kBLoVYCk-2yDw67OkujVY=Ew@mail.gmail.com/T/#m5568b147f03c0b2e9dc96843dc13e85f5b2f187f).
 
+* [GitLab Serverless launched Dec. 22](https://about.gitlab.com/2018/12/11/introducing-gitlab-serverless/)
+* [New year, new GitHub: Announcing unlimited free private repos and unified Enterprise offering](https://github.blog/2019-01-07-new-year-new-github/) (the former with up to three collaborators per repository)
+
+__Light reading__
+* [A tale of 132 e's](https://linuxwit.ch/blog/2018/12/e98e/) and [the [E]nd of eeeee](https://linuxwit.ch/blog/2018/12/everything-that-lives-is-designed-to-end/) by Iliana Weller, about [e30e/e98e](https://github.com/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee) GitHub repository and its history
+* [How to teach Git](https://rachelcarmena.github.io/2018/12/12/how-to-teach-git.html) by Rachel M. Carmena
+* [How To Use Git: A Reference Guide](https://dev.to/digitalocean/how-to-use-git-a-reference-guide-6b6) by Lisa Tagliaferri from DigitalOcean
+* [8 Productivity Tips for GitHub](https://dev.to/_darrenburns/8-productivity-tips-for-github-44kn) by Darren Burns
+* [Something Someone Somewhere Uses... Sometimes](https://dev.to/benjaminadk/something-someone-somewhere-uses-sometimes-1kab) by benjaminadk, about [Gitmoji](https://gitmoji.carloscuesta.me/)
+* [A new free-software forge: sr.ht [LWN.net]](https://lwn.net/Articles/775963/) by Jake Edge; this service was covered in [previous edition of Git Rev News](https://git.github.io/rev_news/2018/12/19/edition-46/#other-news)
+* [Monorepos: Please don’t!](https://medium.com/@mattklein123/monorepos-please-dont-e9a279be011b) by Matt Klein
+  - [Monorepo: please do!](https://medium.com/@adamhjk/monorepo-please-do-3657e08a4b70), response by Adam Jacob
+  - see also
+    [Advantages of Monolithic Version Control](http://danluu.com/monorepo/) by Dan Luu
+    ([Git Rev News: Edition #4](https://git.github.io/rev_news/2015/06/03/edition-4/)) and
+    [Monorepos in Git](https://developer.atlassian.com/blog/2015/10/monorepos-in-git/?p) by Stefan Saasen
+    ([Git Rev News: Edition #9](https://git.github.io/rev_news/2015/11/11/edition-9/))
+  - and also [splitsh/lite](https://github.com/splitsh/lite) ([Git Rev News: Edition #16](https://git.github.io/rev_news/2016/06/15/edition-16/)) and
+    [Lerna](https://lernajs.io/) ([Git Rev News: Edition #43](https://git.github.io/rev_news/2018/09/19/edition-43/)) tools for monorepos
+* [Writing Good Commit Messages](https://medium.com/compass-true-north/writing-good-commit-messages-fc33af9d6321) by Ben Hoyt (2018)
+* [Useful Tips for writing better Git commit messages](https://code.likeagirl.io/useful-tips-for-writing-better-git-commit-messages-808770609503) by Egwuenu Gift (2018)
+* [1296: Git Commit - explain xkcd](https://www.explainxkcd.com/wiki/index.php/1296:_Git_Commit) (2013)
+* [How to manage binary blobs with Git](https://opensource.com/life/16/8/how-manage-binary-blobs-git-part-7) by Seth Kenlon (2016)
+* [Migrating Internet Archive to Kubernetes](https://archive.org/~tracey/slides/kubecon/#/) -- slides from presentation at KubeCon 2018; slides [#35](https://archive.org/~tracey/slides/kubecon/#/35) and later are about how Git is used at Archive.org
 
 __Git tools and sites__
 
 * [OneDev](https://onedev.io) Open source git server with unique features such as language aware code search and navigation, source/diff annotation for code discussion and comprehension, customizable issue field and workflow, write protection for branches/tags/files, etc.
+* [gitmoji | An emoji guide for your commit messages](https://gitmoji.carloscuesta.me/)
 
 ## Credits
 
