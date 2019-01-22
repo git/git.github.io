@@ -162,10 +162,12 @@ in, but in the end it doesn't look like any change has been decided.
 
 __Various__
 * Security vulnerabilities in JGit and Gerrit:
-  - When protocol v2 was enabled and used, Gerrit would make all refs visible to the
+  - [Gerrit issue 10201](https://bugs.chromium.org/p/gerrit/issues/detail?id=10201):
+    When protocol v2 was enabled and used, Gerrit would make all refs visible to the
     calling user. Support for protocol v2 was removed in Gerrit 2.16.2, and the issue
     was fixed in JGit versions 5.1.5 and 5.2.1.
-  - In protocol v0 stateless transport, it was possible to fetch anything that is
+  - [Gerrit issue 10262](https://bugs.chromium.org/p/gerrit/issues/detail?id=10262):
+    In protocol v0 stateless transport, it was possible to fetch anything that is
     pointed to by any ref (using fetch-by-sha1), as long as the attacker could guess
     the object name. The issue was fixed in JGit versions 4.5.5, 4.7.7, 4.9.8, 4.11.6,
     5.1.5 and 5.2.1, which were included in Gerrit versions 2.9.5, 2.10.8, 2.11.12,
