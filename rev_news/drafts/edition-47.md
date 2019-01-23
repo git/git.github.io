@@ -131,6 +131,12 @@ This edition covers what happened during the month of December 2018.
 
 ## Releases
 
++ JGit [4.5.5](https://projects.eclipse.org/projects/technology.jgit/releases/4.5.5),
+[4.7.7](https://projects.eclipse.org/projects/technology.jgit/releases/4.7.7),
+[4.9.8](https://projects.eclipse.org/projects/technology.jgit/releases/4.9.8),
+[4.11.6](https://projects.eclipse.org/projects/technology.jgit/releases/4.11.6),
+[5.1.5](https://projects.eclipse.org/projects/technology.jgit/releases/5.1.5),
+[5.2.1](https://projects.eclipse.org/projects/technology.jgit/releases/5.2.1)
 + Gerrit Code Review [2.9.5](https://www.gerritcodereview.com/2.9.html#295),
 [2.10.8](https://www.gerritcodereview.com/2.10.html#2108),
 [2.11.12](https://www.gerritcodereview.com/2.11.html#21112),
@@ -140,12 +146,6 @@ This edition covers what happened during the month of December 2018.
 [2.15.8](https://www.gerritcodereview.com/2.15.html#2158),
 [2.16.2](https://www.gerritcodereview.com/2.16.html#2162),
 [2.16.3](https://www.gerritcodereview.com/2.16.html#2163)
-+ JGit [4.5.5](https://projects.eclipse.org/projects/technology.jgit/releases/4.5.5),
-[4.7.7](https://projects.eclipse.org/projects/technology.jgit/releases/4.7.7),
-[4.9.8](https://projects.eclipse.org/projects/technology.jgit/releases/4.9.8),
-[4.11.6](https://projects.eclipse.org/projects/technology.jgit/releases/4.11.6),
-[5.1.5](https://projects.eclipse.org/projects/technology.jgit/releases/5.1.5),
-[5.2.1](https://projects.eclipse.org/projects/technology.jgit/releases/5.2.1)
 + GitHub Enterprise [2.15.5](https://enterprise.github.com/releases/2.15.5/notes),
 [2.14.12](https://enterprise.github.com/releases/2.14.12/notes),
 [2.13.18](https://enterprise.github.com/releases/2.13.18/notes)
