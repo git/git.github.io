@@ -185,6 +185,8 @@ __Various__
 * [New year, new GitHub: Announcing unlimited free private repos and unified Enterprise offering](https://github.blog/2019-01-07-new-year-new-github/) (the former with up to three collaborators per repository).
 
 __Light reading__
+* [Git explained: Git Concepts and Workflows](https://docs.google.com/presentation/d/1IQCRPHEIX-qKo7QFxsD3V62yhyGA9_5YsYXFOiBpgkk/edit?usp=sharing) by Edwin Kempin
+* [Gerrit explained: Gerrit Concepts and Workflows](https://docs.google.com/presentation/d/1C73UgQdzZDw0gzpaEqIC6SPujZJhqamyqO1XOHjH-uk/edit?usp=sharing) by Edwin Kempin
 * [A tale of 132 e's](https://linuxwit.ch/blog/2018/12/e98e/) and [the [E]nd of eeeee](https://linuxwit.ch/blog/2018/12/everything-that-lives-is-designed-to-end/) by Iliana Weller, about [e30e/e98e](https://github.com/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee) GitHub repository and its history
 * [How to teach Git](https://rachelcarmena.github.io/2018/12/12/how-to-teach-git.html) by Rachel M. Carmena
 * [How To Use Git: A Reference Guide](https://dev.to/digitalocean/how-to-use-git-a-reference-guide-6b6) by Lisa Tagliaferri from DigitalOcean
