@@ -130,3 +130,35 @@ See discussions in:
 <https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t>
 <http://public-inbox.org/git/CA+55aFwT2HUBzZO8Gpt9tHoJtdRxv9oe3TDoSH5jcEOixRNBXg@mail.gmail.com/>
 
+## Note about refactoring projects versus projects that implement new features
+
+Over the years we have been favoring refactoring projects over
+possibly more interesting projects that implement new
+features. Refactoring projects are usually easier to do step by step
+and to get code merged step by step which is encouraging.
+
+In general refactoring projects are worthwhile to do even if the
+project is not finished at the end of the GSoC and even if the student
+stops contributing after that. In those cases it is often a good idea
+to later finish the refactoring either by ourselves or by proposing it
+to another GSoC student or Outreachy intern. This way the work of both
+students and mentors is not likely to be wasted.
+
+With a project that implements a feature, there is a risk, if it's too
+complex or too difficult, that the feature will not be finished and
+that nothing, or nearly nothing, will have been merged during the
+GSoC. There is also the risk that another way to implement the feature
+will appear later in the GSoC and all, or nearly all, the work of the
+student and mentors will have been mostly wasted. It could also appear
+that the use cases the feature was envisioned to be used in, are
+better addressed by other improvements or a different workflow.
+
+Another potential issue is that a new feature might be prone to naming
+or user interface discussions which could last for a long time or
+could not result in clear decisions.
+
+Therefore we think that we should be very careful before proposing to
+a student, or accepting, a project that implements a new
+feature. People suggesting such a project should at least carefully
+consider the above potential issues and see if they can be mitigated
+before the project is submitted.
