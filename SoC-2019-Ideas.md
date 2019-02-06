@@ -107,7 +107,8 @@ These days we usually accept between 0 and 3 students per year.
 
 **Students**: Please consider these ideas as starting points for
 generating proposals. We are also more than happy to receive proposals
-for other ideas related to Git.
+for other ideas related to Git. Read the note below about refactoring
+projects versus projects that implement new features though.
 
 ### Unify ref-filter formats with other `--pretty` formats
 
@@ -133,9 +134,9 @@ See discussions in:
 ## Note about refactoring projects versus projects that implement new features
 
 Over the years we have been favoring refactoring projects over
-possibly more interesting projects that implement new
-features. Refactoring projects are usually easier to do step by step
-and to get code merged step by step which is encouraging.
+possibly more interesting projects that implement new features.
+Refactoring projects are usually easier to do step by step and to get
+code merged step by step which is encouraging.
 
 In general refactoring projects are worthwhile to do even if the
 project is not finished at the end of the GSoC and even if the student
@@ -158,7 +159,7 @@ or user interface discussions which could last for a long time or
 could not result in clear decisions.
 
 Therefore we think that we should be very careful before proposing to
-a student, or accepting, a project that implements a new
-feature. People suggesting such a project should at least carefully
-consider the above potential issues and see if they can be mitigated
-before the project is submitted.
+a student, or accepting, a project that implements a new feature.
+People suggesting such a project should at least carefully consider
+the above potential issues and see if they can be mitigated before the
+project is submitted.
