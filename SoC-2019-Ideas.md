@@ -135,7 +135,7 @@ See discussions in:
 
 Over the years we have been favoring refactoring projects over
 possibly more interesting projects that implement new features.
-Refactoring projects are usually easier to do step by step and to get
+Refactoring projects are usually easier to do step by step, and to get
 code merged step by step which is encouraging.
 
 In general refactoring projects are worthwhile to do even if the
@@ -163,3 +163,9 @@ a student, or accepting, a project that implements a new feature.
 People suggesting such a project should at least carefully consider
 the above potential issues and see if they can be mitigated before the
 project is submitted.
+
+As [suggested by Google][https://google.github.io/gsocguides/mentor/defining-a-project-ideas-list]
+we emphasize that a student proposing something original must engage
+with the community strongly before and during the application period
+to get feedback and guidance to improve the proposal and avoid the
+above potential issues.
