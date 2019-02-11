@@ -114,7 +114,7 @@ projects versus projects that implement new features though.
 
  - Language: C, shell (bash)
  - Difficulty: medium
- - Possible mentors: Christian Couder, Оля Тележная (Olga Telezhnaya), Thomas Gummerer
+ - Possible mentors: Christian Couder, Olga Telezhnaya, Thomas Gummerer
 
 See discussion in:
 
@@ -124,7 +124,7 @@ See discussion in:
 
  - Language: C, shell (bash)
  - Difficulty: medium
- - Possible mentors: Christian Couder, Оля Тележная (Olga Telezhnaya), Thomas Gummerer
+ - Possible mentors: Christian Couder, Thomas Gummerer
 
 See discussions in:
 
