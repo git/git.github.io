@@ -155,6 +155,29 @@ See discussions in:
 <https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t>
 <http://public-inbox.org/git/CA+55aFwT2HUBzZO8Gpt9tHoJtdRxv9oe3TDoSH5jcEOixRNBXg@mail.gmail.com/>
 
+### Convert scripts to builtins
+
+ - Language: C, shell (bash), possibly Perl
+ - Difficulty: medium
+ - Possible mentors: Christian Couder, Thomas Gummerer
+
+A few components of Git are still in the form of shell and sometimes
+Perl scripts. This causes problems in production code – in particular
+on multiple platforms, e.g. Windows (think: POSIX-to-Windows path
+conversion issues).
+
+The idea of this project is to dive into the Git source code and
+convert a couple of shell and/or Perl scripts into portable and
+performant C code, making it a so-called "built-in".
+
+(Un)fortunately, the important and easy to port scripts like
+`git-pull.sh` are already ported by now. It should still be possible
+to start with something small by porting portions of existing
+shell-scripts to C using a C helper inside the existing shell-script.
+
+It will be an important part of the project to discuss and find the
+most interesting scripts or parts of scripts to be ported.
+
 ## Note about refactoring projects versus projects that implement new features
 
 Over the years we have been favoring refactoring projects over
