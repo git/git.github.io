@@ -35,6 +35,8 @@ This edition covers what happened during the month of January 2019.
 
 ## Releases
 
+* Gerrit Code Review [2.15.10](https://www.gerritcodereview.com/2.15.html#21510)
+and [2.16.5](https://www.gerritcodereview.com/2.16.html#2165).
 
 ## Other News
 
