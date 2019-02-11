@@ -116,6 +116,14 @@ projects versus projects that implement new features though.
  - Difficulty: medium
  - Possible mentors: Christian Couder, Olga Telezhnaya, Thomas Gummerer
 
+Git has old problem of duplication implementations of some logic. For
+example, Git had at least 4 different implementations to format the
+output. Our previous interns unified logic of
+[ref-filter](https://github.com/git/git/blob/master/ref-filter.h) and
+got rid of similar logic in part of files. Current task is to continue
+this work and reuse ref-filter formatting logic in
+[pretty](https://github.com/git/git/blob/master/pretty.h).
+
 See discussion in:
 
 <https://public-inbox.org/git/87pnsfkvk1.fsf@0x63.nu/T/#u>
