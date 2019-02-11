@@ -135,6 +135,21 @@ See discussion in:
  - Difficulty: medium
  - Possible mentors: Christian Couder, Thomas Gummerer
 
+A number of Git commands, like `git log`, can show commit information
+in a configurable way using ["pretty" formats](https://github.com/git/git/blob/master/Documentation/pretty-formats.txt).
+Such formats though don't yet support some features that users would
+like, for example to display a log like the following:
+
+```
+  b9df16a4c (HEAD -> master)
+            pathspec: don't error out on all-exclusionary pathspec patterns
+  91a491f05 pathspec magic: add '^' as alias for '!'
+  c8e05fd6d ls-remote: add "--diff" option to show only refs that differ
+  20769079d (tag: v2.12.0-rc2, origin/master, origin/HEAD)
+            Git 2.12-rc2
+  076c05393 Hopefully the final batch of mini-topics before the final
+```
+
 See discussions in:
 
 <https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t>
