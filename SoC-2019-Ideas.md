@@ -155,6 +155,21 @@ See discussions in:
 <https://public-inbox.org/git/xmqqeg42fslw.fsf@gitster.mtv.corp.google.com/T/#t>
 <http://public-inbox.org/git/CA+55aFwT2HUBzZO8Gpt9tHoJtdRxv9oe3TDoSH5jcEOixRNBXg@mail.gmail.com/>
 
+### Add support for `stash`ing merge conflicts
+
+ - Language: C, shell (bash)
+ - Difficulty: medium
+ - Possible mentors: Christian Couder, Thomas Gummerer
+
+`git stash` currently aborts when the current index state contains
+conflicts.  The idea here is to allow `stash`ing this conflicted
+state, and add an option to `git stash pop` to re-create the
+conflict.
+
+See discussion in:
+
+<https://public-inbox.org/git/20190205211736.GD6085@hank.intra.tgummerer.com>
+
 ### Convert scripts to builtins
 
  - Language: C, shell (bash), possibly Perl
