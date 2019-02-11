@@ -164,7 +164,7 @@ People suggesting such a project should at least carefully consider
 the above potential issues and see if they can be mitigated before the
 project is submitted.
 
-As [suggested by Google][https://google.github.io/gsocguides/mentor/defining-a-project-ideas-list]
+As [suggested by Google](https://google.github.io/gsocguides/mentor/defining-a-project-ideas-list)
 we emphasize that a student proposing something original must engage
 with the community strongly before and during the application period
 to get feedback and guidance to improve the proposal and avoid the
