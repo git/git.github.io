@@ -163,8 +163,10 @@ See discussions in:
 
 `git stash` currently aborts when the current index state contains
 conflicts.  The idea here is to allow `stash`ing this conflicted
-state, and add an option to `git stash pop` to re-create the
-conflict.
+state, and add an option to `git stash pop` to re-create the conflict.
+This will include writing the technical documentation of the stash
+format, and optionally refactoring the `git stash` code to use more of
+the libgit.a API, instead of the run_command API.
 
 See discussion in:
 
