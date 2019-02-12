@@ -81,13 +81,13 @@ the following steps:
   signify your agreement by adding a `Signed-off-by` line.
 
 * *Optional, but recommended:*
-  Create a fork of [Git](https://github.com/git/git) on github.com, 
-  [sign in to Travis CI](https://travis-ci.org/auth) with your GitHub 
-  account, accepting the GitHub 
+  Create a fork of [Git](https://github.com/git/git) on github.com,
+  [sign in to Travis CI](https://travis-ci.org/auth) with your GitHub
+  account, accepting the GitHub
   [access permissions confirmation](https://docs.travis-ci.com/user/github-oauth-scopes),
   and enable builds of your Git fork in your Travis CI profile
   (you only have to do these steps once). Afterwards you can push
-  your changes to your fork and on https://travis-ci.org/your-github-name/git/builds 
+  your changes to your fork and on https://travis-ci.org/your-github-name/git/builds
   (example [here](https://travis-ci.org/git/git/builds)) you can see
   if your changes pass the Git test suite on Ubuntu Linux and on Mac OS X.
 
@@ -253,5 +253,3 @@ one of those options.
 You can search the mailing list for words like "low hanging fruit", or
 "low-hanging fruits", "hint, hint", "later", "we should", "I plan
 to"...
-
-
