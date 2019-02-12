@@ -81,13 +81,13 @@ the following steps:
   signify your agreement by adding a `Signed-off-by` line.
 
 * *Optional, but recommended:*
-  Create a fork of [Git](https://github.com/git/git) on github.com, 
-  [sign in to Travis CI](https://travis-ci.org/auth) with your GitHub 
-  account, accepting the GitHub 
+  Create a fork of [Git](https://github.com/git/git) on github.com,
+  [sign in to Travis CI](https://travis-ci.org/auth) with your GitHub
+  account, accepting the GitHub
   [access permissions confirmation](https://docs.travis-ci.com/user/github-oauth-scopes),
   and enable builds of your Git fork in your Travis CI profile
   (you only have to do these steps once). Afterwards you can push
-  your changes to your fork and on https://travis-ci.org/your-github-name/git/builds 
+  your changes to your fork and on https://travis-ci.org/your-github-name/git/builds
   (example [here](https://travis-ci.org/git/git/builds)) you can see
   if your changes pass the Git test suite on Ubuntu Linux and on Mac OS X.
 
@@ -171,27 +171,6 @@ used as a collection of multiple bits. Discuss if there is a good reason
 why it has to be a signed integral field and change it to an unsigned
 type otherwise.  [[thread](https://public-inbox.org/git/xmqqsiebrlez.fsf@gitster.dls.corp.google.com)]
 
-### Move `~/.git-credential-cache` to `~/.cache/git`
-
-Most of git dotfiles can be located, at the user's option, in
-`~/.<file>` or in `~/.config/git/<file>`, following the
-[XDG standard](http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html).
-`~/.git-credential-cache` is still hardcoded as
-`~/.git-credential-cache`,
-but should allow using the XDG directory layout too as
-`~/.cache/git/credential`, possibly modified by `$XDG_CONFIG_HOME` and
-`$XDG_CACHE_HOME`).
-
-The suggested approach is:
-
-* See how XDG was implemented for other files (run "`git log --grep
-  XDG`" in Git's source code) and read the XDG specification.
-
-* Implement and test the new behavior, without breaking compatibility
-  with the old behavior.
-
-* Update the documentation
-
 Even though the amount of code to write is small, these projects
 involve a lot of prior work to understand the specification and deal
 with all potential corner-cases.
@@ -274,5 +253,3 @@ one of those options.
 You can search the mailing list for words like "low hanging fruit", or
 "low-hanging fruits", "hint, hint", "later", "we should", "I plan
 to"...
-
-
