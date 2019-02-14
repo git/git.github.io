@@ -195,6 +195,47 @@ shell-scripts to C using a C helper inside the existing shell-script.
 It will be an important part of the project to discuss and find the
 most interesting scripts or parts of scripts to be ported.
 
+### Improve consistency of sequencer commands
+
+ - Language: C, shell (bash)
+ - Difficulty: medium
+ - Possible mentors: Elijah Newren, Christian Couder, Thomas Gummerer
+
+This would consist in taking care of the following issues:
+
+* The suggestion to fix an interrupted rebase-i or cherry-pick due to
+  a commit that became empty via 'git reset HEAD' (in
+  builtin/commit.c) instead of 'git rebase --skip' or 'git cherry-pick
+  --skip' ranges from annoying to confusing.  (Especially since other
+  interrupted am's and rebases both point to am/rebase --skip.).
++
+Note that 'git cherry-pick --skip' is not yet implemented, so that
+would have to be added first.
+
+* There are a handful of flags that am-based rebases support that are
+  not available to interactive/merge-based rebases; it'd be nice to
+  implement them for the interactive machinery.  (There are also
+  numerous flags that only the interactive machinery supports that are
+  unavailable to am-based rebases, but we don't care; we want to
+  deprecate am-based rebases.)
+
+  * --ignore-whitespace (transliterate to -Xignore-space-change?)
+  * --whitespace=...
+  * --committer-date-is-author-date/--ignore-date
+  * -C4
+
+* [There's also some empty handling (from "Behavioral Differences" in
+  Documentation/git-rebase.txt) that would be nice to address, though
+  that might be contentious and we might try to tackle that piece
+  before GSoC gets rolling...]
+
+* Bonus: Make a flag to allow rebase to rewrite commit messages that
+  refer to older commits that were also rebased.  (i.e. if rebasing
+  commits A and B, and commit B says "This reverts commit <sha-of-A>,
+  then rewritten B's commit message should say "This reverts commit
+  <sha-of-rewritten-A".)  Do this for both sha1sums and sha1sum
+  abbreviations in commit messages.
+
 ## Note about refactoring projects versus projects that implement new features
 
 Over the years we have been favoring refactoring projects over
