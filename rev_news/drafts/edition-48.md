@@ -57,7 +57,7 @@ Merge conference that happened on January 31th and February 1st.
 [11.7.4](https://about.gitlab.com/2019/02/05/critical-security-release-gitlab-11-dot-7-dot-4-released/),
 [11.7.3](https://about.gitlab.com/2019/01/31/security-release-gitlab-11-dot-7-dot-3-released/)
 + Bitbucket Server [6.0](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
-* Gerrit Code Review [2.15.10](https://www.gerritcodereview.com/2.15.html#21510)
++ Gerrit Code Review [2.15.10](https://www.gerritcodereview.com/2.15.html#21510)
 and [2.16.5](https://www.gerritcodereview.com/2.16.html#2165)
 + GitKraken [4.2.2](https://support.gitkraken.com/release-notes/current),
 [4.2.1](https://support.gitkraken.com/release-notes/current),
