@@ -1,19 +1,21 @@
 ---
-title: Git Rev News Edition 48 (XXX, 2018)
+title: Git Rev News Edition 48 (February 27st, 2019)
 layout: default
-date: 2019-02-20 12:06:51 +0100
+date: 2019-02-27 12:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 48 (XXX, 2018)
+## Git Rev News: Edition 48 (February 27st, 2019)
 
 Welcome to the 48th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
-This edition covers what happened during the month of January 2019.
+This edition covers what happened during the month of January
+2019. This edition also covers the Git Contributor Summit and the Git
+Merge conference that happened on January 31th and February 1st.
 
 ## Discussions
 
