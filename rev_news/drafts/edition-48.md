@@ -78,6 +78,8 @@ and [2.16.5](https://www.gerritcodereview.com/2.16.html#2165)
 
 __Various__
 
+* [GSoC 2019: Git's application submitted](https://public-inbox.org/git/20190204215251.GB6085@hank.intra.tgummerer.com/T/);
+  ideas for project proposals [published](https://git.github.io/SoC-2019-Ideas/)
 
 __Light reading__
 
