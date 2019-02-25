@@ -136,7 +136,7 @@ __Various__
   [before the end of this month](https://public-inbox.org/git/20190221082218.GA3335@sigill.intra.peff.net/).
 
 * [GerritHub.io multi-site plugin is going public](https://groups.google.com/forum/#!topic/repo-discuss/A9dGOppvgGA) and has
-  been proposed to be hosted on gerrit-review.googlesource.com. That is going to first globally available OpenSource
+  been proposed to be hosted on gerrit-review.googlesource.com. That is going to be the first globally available OpenSource
   implementation for having [Gerrit Code Review](https://www.gerritcodereview.com) masters replicated and synchronized over multiple sites.
 
 __Light reading__
