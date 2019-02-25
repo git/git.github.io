@@ -81,6 +81,16 @@ __Various__
 * [GSoC 2019: Git's application submitted](https://public-inbox.org/git/20190204215251.GB6085@hank.intra.tgummerer.com/T/);
   ideas for project proposals [published](https://git.github.io/SoC-2019-Ideas/)
 
+* The Git Contributor Summit 2019 happened on January 30th in Brussels. Elijah
+  Newren took some [notes](https://public-inbox.org/git/CABPp-BGfSRy-NT+f39gSumD9haYZPAnpNPY-VnanioCbdYFoEQ@mail.gmail.com/).
+  A video stream of the event was broadcast and recorded, but is not
+  yet available for download.
+
+* The [Git Merge Conference 2019](https://git-merge.com/) happened on
+  February 1st in Brussels. Videos of the presentations are not yet
+  available. The GitHub team expects them to be available
+  [before the end of this month](https://public-inbox.org/git/20190221082218.GA3335@sigill.intra.peff.net/).
+
 __Light reading__
 
 
