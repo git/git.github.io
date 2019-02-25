@@ -23,9 +23,53 @@ Merge conference that happened on January 31th and February 1st.
 ### General
 -->
 
-<!---
+
 ### Reviews
--->
+
+* [Add a new "sparse" tree walk algorithm](https://public-inbox.org/git/pull.89.git.gitgitgadget@gmail.com/)
+
+Last November Derrick Stolee, who prefers to be called just Stolee,
+sent a patch series to the mailing list to speed up `git push`
+operations by implementing and using a new "sparse" tree walk
+algorithm.
+
+Stefan Beller wondered how users can know about this new algorithm and
+if it should be turned on by default for users. Stolee replied that
+indeed "we should actually make the config setting true by default,
+and recommend that servers opt-out"
+
+Junio Hamano, the Git maintainer, disagreed saying that we should wait
+until "enough users complain that they have to turn it on" before we
+turn it on by default.
+
+Stolee later sent a [version 2 of the patch series](https://public-inbox.org/git/pull.89.v2.git.gitgitgadget@gmail.com/)
+improving the tests, then a [version 3](https://public-inbox.org/git/pull.89.v3.git.gitgitgadget@gmail.com/)
+improving the documentation, and a [version 4](https://public-inbox.org/git/pull.89.v4.git.gitgitgadget@gmail.com/)
+with a few code and commit message improvements.
+
+Junio and Stolee discussed how the mark_trees_uninteresting_sparse()
+function is implemented in the first patch, and how a variable is
+named in this function.
+
+They also discussed the purpose of patches 2 and 3 and agreed that
+they should be merged and what the related tests should do.
+
+And Junio suggested a number of small code improvements in the last
+patch. Especially he suggested to get rid of a global variable that
+was unused. Ramsay Jones, who regularly uses the `sparse` tool and his
+own `static-check.pl` script on the Git code base to find errors, had
+also found this unused variable separately.
+
+Ævar Arnfjörð Bjarmason chimed in to ask for a clarification about
+which step the patch speeds up, and if a progress bar should be added
+while the user is waiting during this step, and how this step should
+be named on the command line interface. It seems though that some
+preliminary work would be needed to untangle the steps during which a
+progress bar is already displayed.
+
+Stolee eventually sent a [version 5 of the patch series](https://public-inbox.org/git/pull.89.v5.git.gitgitgadget@gmail.com/)
+on January 16th which has since been merged and is in the recently
+released Git v2.21.0.
 
 <!---
 ### Support
