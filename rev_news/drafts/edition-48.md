@@ -1,5 +1,5 @@
 ---
-title: Git Rev News Edition 48 (February 27st, 2019)
+title: Git Rev News Edition 48 (February 27th, 2019)
 layout: default
 date: 2019-02-27 12:06:51 +0100
 author: chriscool
@@ -7,7 +7,7 @@ categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 48 (February 27st, 2019)
+## Git Rev News: Edition 48 (February 27th, 2019)
 
 Welcome to the 48th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
