@@ -47,7 +47,7 @@ improving the tests, then a [version 3](https://public-inbox.org/git/pull.89.v3.
 improving the documentation, and a [version 4](https://public-inbox.org/git/pull.89.v4.git.gitgitgadget@gmail.com/)
 with a few code and commit message improvements.
 
-Junio and Stolee discussed how the mark_trees_uninteresting_sparse()
+Junio and Stolee discussed how the `mark_trees_uninteresting_sparse()`
 function is implemented in the first patch, and how a variable is
 named in this function.
 
