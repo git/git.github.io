@@ -122,7 +122,8 @@ and [2.16.5](https://www.gerritcodereview.com/2.16.html#2165)
 
 __Various__
 
-* [GSoC 2019: Git's application submitted](https://public-inbox.org/git/20190204215251.GB6085@hank.intra.tgummerer.com/T/);
+* [GSoC 2019: Git's application submitted](https://public-inbox.org/git/20190204215251.GB6085@hank.intra.tgummerer.com/T/)
+  and [got accepted](https://summerofcode.withgoogle.com/organizations/6104737735245824/) as one of [207 open source projects](https://opensource.googleblog.com/2019/02/gsoc-2019-organizations.html);
   ideas for project proposals [published](https://git.github.io/SoC-2019-Ideas/)
 
 * The Git Contributor Summit 2019 happened on January 30th in Brussels. Elijah
