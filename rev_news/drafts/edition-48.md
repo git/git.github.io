@@ -134,6 +134,7 @@ __Various__
   February 1st in Brussels. Videos of the presentations are not yet
   available. The GitHub team expects them to be available
   [before the end of this month](https://public-inbox.org/git/20190221082218.GA3335@sigill.intra.peff.net/).
+  - A short [Mission report: Git Merge 2019](https://github.blog/2019-02-12-mission-report-git-merge-2019/) was posted on GitHub blog.
 
 * [GerritHub.io multi-site plugin is going public](https://groups.google.com/forum/#!topic/repo-discuss/A9dGOppvgGA) and has
   been proposed to be hosted on gerrit-review.googlesource.com. That is going to first globally available OpenSource
