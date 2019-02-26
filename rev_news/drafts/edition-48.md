@@ -47,7 +47,7 @@ improving the tests, then a [version 3](https://public-inbox.org/git/pull.89.v3.
 improving the documentation, and a [version 4](https://public-inbox.org/git/pull.89.v4.git.gitgitgadget@gmail.com/)
 with a few code and commit message improvements.
 
-Junio and Stolee discussed how the mark_trees_uninteresting_sparse()
+Junio and Stolee discussed how the `mark_trees_uninteresting_sparse()`
 function is implemented in the first patch, and how a variable is
 named in this function.
 
@@ -122,7 +122,8 @@ and [2.16.5](https://www.gerritcodereview.com/2.16.html#2165)
 
 __Various__
 
-* [GSoC 2019: Git's application submitted](https://public-inbox.org/git/20190204215251.GB6085@hank.intra.tgummerer.com/T/);
+* [GSoC 2019: Git's application submitted](https://public-inbox.org/git/20190204215251.GB6085@hank.intra.tgummerer.com/T/)
+  and [got accepted](https://summerofcode.withgoogle.com/organizations/6104737735245824/) as one of [207 open source projects](https://opensource.googleblog.com/2019/02/gsoc-2019-organizations.html);
   ideas for project proposals [published](https://git.github.io/SoC-2019-Ideas/)
 
 * The Git Contributor Summit 2019 happened on January 30th in Brussels. Elijah
@@ -134,15 +135,70 @@ __Various__
   February 1st in Brussels. Videos of the presentations are not yet
   available. The GitHub team expects them to be available
   [before the end of this month](https://public-inbox.org/git/20190221082218.GA3335@sigill.intra.peff.net/).
+  - A short [Mission report: Git Merge 2019](https://github.blog/2019-02-12-mission-report-git-merge-2019/) was posted on GitHub blog.
 
 * [GerritHub.io multi-site plugin is going public](https://groups.google.com/forum/#!topic/repo-discuss/A9dGOppvgGA) and has
   been proposed to be hosted on gerrit-review.googlesource.com. That is going to be the first globally available OpenSource
   implementation for having [Gerrit Code Review](https://www.gerritcodereview.com) masters replicated and synchronized over multiple sites.
 
 __Light reading__
+* [gitgeist: a git-based social network proof of concept](https://www.karimyaghmour.com/blog/2019/02/gitgeist-a-git-based-social-network-proof-of-concept.html) by Karim Yaghmour
+  (mentioned [on LWN.net](https://lwn.net/Articles/780365/))
+
+* [France enters the Matrix [LWN.net]](https://lwn.net/Articles/779331/) by Tom Yates
+  covers Matthew Hodgson talk about [Matrix](https://matrix.org/blog/home/) at [FOSDEM 2019](https://fosdem.org/2019/);
+  Matrix is an open standard and lightweight protocol for real-time communication,
+  allowing to create decentralized federated instant messenging system with end-to-end encryption;
+  the video of the whole talk [is available](https://fosdem.org/2019/schedule/event/matrix_french_state/).
+
+  > [...] the "first-class citizen" in Matrix is not the message, but
+  > the conversation history of the room. That history is stored in a
+  > big data structure that is replicated across a number of
+  > participants; in that respect, said Hodgson, Matrix is *more like
+  > Git* than XMPP, SIP, IRC, or many other traditional communication
+  > protocols.
+
+* [./hacker-tools lectures: Version Control](https://hacker-tools.github.io/version-control/),
+  focusing on Git (article, with embedded 53 minutes long video)
+
+* [An open source parser for GitHub Actions](https://githubengineering.com/an-open-source-parser-for-github-actions/)
+  on GitHub Engineering Blog
+  ([GitHub Actions](https://github.com/features/actions) were covered in
+  [Git Rev News #44](https://git.github.io/rev_news/2018/10/24/edition-44/))
+
+* [Snowpatch: continuous-integration testing for the kernel [LWN.net]](https://lwn.net/Articles/777421/)
+  by Jonathan Corbet.  [Snowpatch](https://github.com/ruscur/snowpatch)
+  (mentioned in [Git Rev News Edition #40](https://git.github.io/rev_news/2018/06/20/edition-40/))
+  is built on top of [patchwork](http://jk.ozlabs.org/projects/patchwork/)
+  (mentioned in [Git Rev News Edition #20](https://git.github.io/rev_news/2016/10/19/edition-20/)).
 
 
 __Git tools and sites__
+* [git-history](https://github.com/pomber/git-history) is a web-based tool (for Node.js)
+  to quickly browse the history of a file from any GitHub repository
+  ([GitLab and Bitbucket support is also planned](https://github.com/pomber/git-history/issues/14));
+  unfortunately the [demo service](https://github.githistory.xyz/babel/babel/blob/master/packages/babel-core/test/browserify.js)
+  at <https://githistory.xyz/> [was down](https://twitter.com/pomber/status/1100412811455287304) at the time of publishing this edition,
+  making [Chrome](https://chrome.google.com/webstore/detail/github-history-browser-ex/laghnmifffncfonaoffcndocllegejnf) and [Firefox](https://addons.mozilla.org/firefox/addon/github-history/) extensions,
+  which add _Open in Git History_ button to GitHub, do not work either
+
+* [gitgeist-poc](https://github.com/opersys/gitgeist-poc) by Francois-Denis Gonthier
+  is a Proof-of-Concept implementation  of
+  [gitgeist: a git-based social network proof of concept](https://www.karimyaghmour.com/blog/2019/02/gitgeist-a-git-based-social-network-proof-of-concept.html) idea
+
+* [Git Gud](https://nic-hartley.github.io/git-gud/) is a pretty
+  barebone visual web-based Git simulator, meant to help understand
+  Git better, which got announced by its' author Nic Hartley in
+  [Git Gud at git](https://dev.to/nichartley/git-gud-at-git-5d9k);
+  quite similar to [Learn Git Branching](https://learngitbranching.js.org/)
+  service (covered in [Git Rev News Edition #30](https://git.github.io/rev_news/2017/08/16/edition-30/#other-news))
+
+* [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+  extension supercharges the Git capabilities built into Visual Studio Code
+
+* [github-spray](https://github.com/Annihil/github-spray) is yet another tool
+  to draw on your GitHub contribution graph; there is also
+  [GitHub Spray Gnerator](https://annihil.github.io/github-spray-generator/) service
 
 
 ## Credits
