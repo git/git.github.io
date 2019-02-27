@@ -19,9 +19,91 @@ Merge conference that took place on January 31th and February 1st.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* Git Merge 2019 — General Sessions
+
+  The [Git Merge](https://git-merge.com/) 2019 conference took place in Brussels, Belgium
+  on January 31st (workshops and contributor summit) and February 1st (main conference day).
+
+  * This year a big theme was handling large Git repositories,
+    both from technical and organizational point of view
+
+    * Ivan Frade and Minh Thai in _"Tales in scalability: how Google has seen users break Git"_
+      talked about solving problems with Android (many repos, huge binary assets, many commits)
+      and Chromium monorepo (many unique commiters).  Some of the problems were caused by legacy
+      practices of trying to keep Subversion-like monotonic version number -- it turned out
+      that attempts to provide it got into troubles and were cause of much of churn.  Another
+      problem was the change in Gerrit, which now stores patch history in git repo, resulting
+      in "forest of tiny bushes" graph of commits; the solution here was moving to protocol v2.
+      There was also talk about making the negotiation phase during fetch faster at the cost
+      of somewhat bigger data transfer, e.g. by skipping commits using Fibonacci number gaps.
+
+    * Johan Abildskov, a consultant at Praqma in _"The what, how and why of scaling repositories"_
+      talked about how to choose between monorepos and many-repos (and how to split the codebase
+      into repositories).  The major idea was to not ignore the real problems (like having to
+      create multiple commits to handle single bug), and to base decision on data
+
+      > Our conclusions are not better than our data
+
+      For this reason the [git-metrics](https://github.com/Praqma/git-metrics) tool was created,
+      which is a set of util scripts to scrape data from git repositories to help teams improve.
+
+    * Brandon Williams from Facebook gave a lightning talk _"Git protocols: still tinkering after all these years?"_
+      focusing on introduction of protocol v2 to reduce communication overhead (especially important
+      for repositories with large number of branches and tags) and increase extensibility, and troubles
+      with adding it while maintaining all-important backwards compatibility.
+
+    * Terry Parker from Google gave a lightning talk _"Native Git support for large objects"_
+      explain how Git’s new partial clone feature (where only a subset of objects,
+      selected by initial filter, e.g. `--filter=blob:limit=1m`, is downloaded on clone;
+      the rest are fetched on demand, as needed) and the new proposal to use content distribution networks
+      (CDN) can help with handling repositories with large files.
+
+    * John Briggs from Microsoft in _"Technical contributions towards scaling for Windows"_
+	  talked about both technical improvements in Git, like serialized commit graph (with
+	  generation numbers) and multipack index (`*.midx`), and the "sparse" object walk
+	  during push that is being worked on (see the ["Reviews"](#reviews) section), and
+	  improvements in VFS for Git (formerly called GVFS), like prefetching in background
+	  and git status serialization.  He also announced that VFS for Git will be ported
+	  to other platforms: MacOS and Linux (to handle MS Office, which itself is cross-platform
+	  project).
+
+  * John Austin, game studio technical lead from A Stranger Gravity and Funomena
+    in _"Git for games: current problems and solutions"_ talked about major problem
+    with using Git in game development workflows, namely many and large binary files,
+    for which file conflicts are lost work (minor change, like adding voiceover
+    or changing equalizer settings results in large changes to files).  File locking
+    is one possibility, but it doesn't play nicely with Git -- it is inherently centralized.
+    He introduces a new tool, [Git Global Graph](https://github.com/Kleptine/gitglobalgraph)
+    (a work in progress), which can be used to check at commit time if it wouldn't
+    create a divergent version of a file.  The idea is that there should be only
+    a single path through commit graph with changes to binary files.
+
+  * Javier Fontan from source{d} gave a lightning talk _"Gitbase, SQL interface to Git repositories"_
+    about [gitbase](https://github.com/src-d/gitbase) tool, which provides read-only
+    SQL interface to Git repositories (with Abstract Syntax Tree support).
+
+  * Brian M. Carlson, Git Ecosystem Engineer at GitHub in _"Bridging the gap: transitioning Git to SHA-256"_
+    talked about ongoing work to transition from SHA-1, which is considered weak,
+    to SHA-256, which is more secure: the transition plan, where we are with it,
+    and how to provide interoperability between versions of Git using different hash algorithms.
+
+  * Belén Barros Pena, PhD student and interaction designer, gave talk
+    _"The art of patience: why you should bother teaching Git to designers"_,
+	where she also described _how_ to do it and provide good retention, namely:
+
+    1. Show things on a need-to-know basis
+    2. Avoid the Git jargon
+    3. Don't bother too much with the concepts;
+       will be grasped through practice
+    4. Do things with, never for, your designer
+    5. Designer should take notes and keep cheat sheet
+    6. Teach command--line Git
+
+  * Veronica Hanus in _"Version control for visual learners"_
+    talked about how to enter visual representations of recently-changed elements into version control
+    in the form of screenshot diffing.
 
 
 ### Reviews
