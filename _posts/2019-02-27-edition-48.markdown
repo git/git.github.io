@@ -234,6 +234,7 @@ __Various__
   implementation for having [Gerrit Code Review](https://www.gerritcodereview.com) masters replicated and synchronized over multiple sites.
 
 __Light reading__
+
 * [gitgeist: a git-based social network proof of concept](https://www.karimyaghmour.com/blog/2019/02/gitgeist-a-git-based-social-network-proof-of-concept.html) by Karim Yaghmour
   (mentioned [on LWN.net](https://lwn.net/Articles/780365/)).
 
@@ -266,6 +267,7 @@ __Light reading__
 
 
 __Git tools and sites__
+
 * [git-history](https://github.com/pomber/git-history) is a web-based tool (for Node.js)
   to quickly browse the history of a file from any GitHub repository.
   ([GitLab and Bitbucket support is also planned](https://github.com/pomber/git-history/issues/14));
