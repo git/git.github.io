@@ -48,7 +48,7 @@ links to discussions that would support your application.
 
 Students must send drafts of their proposal on the mailing-list before
 submitting it officially to GSoC to get feedback from the
-community. They are strongly encourraged to publish a draft on the
+community. They are strongly encouraged to publish a draft on the
 official GSoC website *and* post it to the mailing list for
 discussion.
 
