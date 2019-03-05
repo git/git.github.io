@@ -303,12 +303,12 @@ __Git tools and sites__
   and [bblfhs](https://github.com/bblfsh) for source code parsing into AST (Abstract Syntax Tree).
   There is also a [web client](https://github.com/src-d/gitbase-web) for it.
 
-  * [Gitana](http://modeling-languages.com/gitana-a-sql-based-git-repository-inspector/): a SQL-based Project Activity Inspector,
-    written in Python ([GitHub reposiotory](https://github.com/SOM-Research/Gitana)),
-    was mentioned in [Git Rev News Edition #7](https://git.github.io/rev_news/2015/09/09/edition-7/#other-news).
-    Nowadays it imports and digests the data of Git repositories, issue trackers (including Bugzilla and GitHub),
-    Q&amp;A web-sites (including forums and StackOverflow) and instant messaging services to a relational database
-    in order to ease browsing and querying activities with standard SQL syntax and tools.
+* [Gitana](http://modeling-languages.com/gitana-a-sql-based-git-repository-inspector/): a SQL-based Project Activity Inspector,
+  written in Python ([GitHub reposiotory](https://github.com/SOM-Research/Gitana)),
+  was mentioned in [Git Rev News Edition #7](https://git.github.io/rev_news/2015/09/09/edition-7/#other-news).
+  Nowadays it imports and digests the data of Git repositories, issue trackers (including Bugzilla and GitHub),
+  Q&amp;A web-sites (including forums and StackOverflow) and instant messaging services to a relational database
+  in order to ease browsing and querying activities with standard SQL syntax and tools.
 
 
 ## Credits
