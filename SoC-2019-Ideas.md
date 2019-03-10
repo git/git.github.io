@@ -214,9 +214,9 @@ This would consist in taking care of the following issues:
 * Bonus: Make a flag to allow rebase to rewrite commit messages that
   refer to older commits that were also rebased.  (i.e. if rebasing
   commits A and B, and commit B says `This reverts commit <sha-of-A>`,
-  then rewritten B's commit message should say `This reverts commit
-  <sha-of-rewritten-A>`.)  Do this for both sha1sums and sha1sum
-  abbreviations in commit messages.
+  then rewritten B's commit message should say
+  `This reverts commit <sha-of-rewritten-A>`.)
+  Do this for both sha1sums and sha1sum abbreviations in commit messages.
 
 ## Note about refactoring projects versus projects that implement new features
 
