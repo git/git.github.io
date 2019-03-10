@@ -121,11 +121,15 @@ interact with the other Git developers.
 
 Students: Please attempt only **ONE** microproject.  We want quality,
 not quantity!  (Also, it takes work to collect the ideas, and it would
-be nice to have enough microprojects for everybody.)  If you've
-already done a microproject and are itching to do more, then get
-involved in other ways, like finding and fixing other problems in the
-code, or improving the documentation or code comments, or helping to
-review other people's patches on the mailing list, or answering
+be nice to have enough microprojects for everybody.) This means that
+for microproject that consist in refactoring or rewriting a small
+amount of code, your patch should change only **ONE** file, or perhaps
+2 files if they are closely related, like "foo.c" and "foo.h".
+
+If you've already done a microproject and are itching to do more, then
+get involved in other ways, like finding and fixing other problems in
+the code, or improving the documentation or code comments, or helping
+to review other people's patches on the mailing list, or answering
 questions on the mailing list or in IRC, or writing new tests, etc.,
 etc.  In short, start doing things that other Git developers do!
 
