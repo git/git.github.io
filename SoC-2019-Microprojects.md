@@ -119,19 +119,43 @@ the time of your formal application; we mostly want to see that you
 have a basic level of competence and especially the ability to
 interact with the other Git developers.
 
-Students: Please attempt only **ONE** microproject.  We want quality,
+## Only ONE quality focused microproject per student
+
+Students, please attempt only **ONE** microproject.  We want quality,
 not quantity!  (Also, it takes work to collect the ideas, and it would
-be nice to have enough microprojects for everybody.) This means that
-for microproject that consist in refactoring or rewriting a small
-amount of code, your patch should change only **ONE** file, or perhaps
-2 files if they are closely related, like "foo.c" and "foo.h".
+be nice to have enough microprojects for everybody.)
+
+This means that for a microproject that consist in refactoring or
+rewriting a small amount of code, your patch should change only
+**ONE** file, or perhaps 2 files if they are closely related, like
+"foo.c" and "foo.h".
+
+If you change a test file, the title of your patch should start with
+"tXXXX: " where tXXXX is the start of the filename of the test script
+you change. If you change "foo.c" or "foo.h", the title of your patch
+should probably start with "foo: ".
+
+In general it's a good idea to check on the mailing list archive what
+other GSoC students attempting a microproject have already been told
+this year or any previous year, as hopefully it will help you avoid
+some mistakes. As some microproject ideas haven't changed for years,
+some microprojects might have been attempted many times already and
+you can learn a lot from these attempts.
+
+The more you research your microproject and take advantage of that,
+the more confident we can be that you will be able to solve many
+problems when working on your real GSoC project. So it's a very good
+thing to show that you have researched your microproject and taken
+into account what you have found.
 
 If you've already done a microproject and are itching to do more, then
 get involved in other ways, like finding and fixing other problems in
 the code, or improving the documentation or code comments, or helping
 to review other people's patches on the mailing list, or answering
 questions on the mailing list or in IRC, or writing new tests, etc.,
-etc.  In short, start doing things that other Git developers do!
+etc. In short, start doing things that other Git developers do!
+Alternatively you can of course focus on your
+[project proposal](https://git.github.io/SoC-2019-Ideas).
 
 ## Ideas for microprojects
 
@@ -157,7 +181,7 @@ already been done for a number of languages.
 
 ### Use `test_path_is_*` functions in test scripts
 
-Find a test script that verifies the presence/absence of
+Find one test script that verifies the presence/absence of
 files/directories with 'test -(e|f|d|...)' and replace them with the
 appropriate `test_path_is_file`, `test_path_is_dir`, etc. helper
 functions.
@@ -166,7 +190,7 @@ functions.
 
 See the commit
 [c6f44e1da5](https://github.com/git/git/commit/c6f44e1da5e88e34)
-for example.
+for example, and then do the same thing in one other test script.
 
 ### Use unsigned integral type for collection of bits.
 
