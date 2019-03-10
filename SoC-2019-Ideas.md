@@ -201,7 +201,7 @@ This would consist in taking care of the following issues:
   unavailable to am-based rebases, but we don't care; we want to
   deprecate am-based rebases.)
 
-  * `--ignore-whitespace` (transliterate to -Xignore-space-change?)
+  * `--ignore-whitespace` (transliterate to `-Xignore-space-change`?)
   * `--whitespace=...`
   * `--committer-date-is-author-date`/`--ignore-date`
   * `-C4`
