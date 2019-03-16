@@ -52,6 +52,9 @@ __Git tools and sites__
   an improved sequence editor for Git interactive rebase by
   [MitMaro](https://github.com/MitMaro).
 
+* [radicle](http://radicle.xyz/) is a peer-to-peer stack for code
+  collaboration based on Git and [IPFS](https://ipfs.io/).
+
 ## Credits
 
 This edition of Git Rev News was curated by
