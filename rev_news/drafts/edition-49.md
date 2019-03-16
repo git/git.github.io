@@ -40,7 +40,8 @@ This edition covers what happened during the month of February 2019.
 
 __Various__
 
-* Videos of the [Git Merge 2019](https://git-merge.com/) conference (January 31th and February 1st 2019 in Brussels) are now
+* Videos of the [Git Merge 2019](https://git-merge.com/) conference
+  (January 31th and February 1st 2019 in Brussels, Belgium) are now
   [available](https://www.youtube.com/playlist?list=PL0lo9MOBetEFqBue4vNcTEnkBjgIQU1Q3).
 
 __Light reading__
