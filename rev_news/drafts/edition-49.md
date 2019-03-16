@@ -46,6 +46,9 @@ __Light reading__
 
 __Git tools and sites__
 
+* [Git Interactive Rebase Tool](https://gitrebasetool.mitmaro.ca/) is
+  an improved sequence editor for Git interactive rebase by
+  [MitMaro](https://github.com/MitMaro).
 
 ## Credits
 
