@@ -141,7 +141,7 @@ __Various__
 
 * The [Gerrit User Summit 2019](https://gus2019.eventbrite.com) will take place
   in Gothenburg 29-30 August, hosted by [Volvo Cars](http://volvocars.com).
-  The event if free but seats are limited. For the first time also the community
+  The event is free but seats are limited. For the first time also the community
   opens the 5-days Hackathon 24-28 August, same location, to everyone: the only
   requirement is to be willing to learn and contribute to the JGit or Gerrit
   Code Review project.
