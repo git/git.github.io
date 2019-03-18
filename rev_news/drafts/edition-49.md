@@ -21,9 +21,89 @@ This edition covers what happened during the month of February 2019.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [test-lib: make '--stress' more bisect-friendly](https://public-inbox.org/git/20190208115045.13256-1-szeder.dev@gmail.com/)
+
+  `--stress` is an option that can be passed to a test script from the
+  Git test suite to try to reproduce rare failures in the test script
+  by running it many times in parallel.
+
+  Gábor Szeder had initially implemented this option starting
+  [last december](https://public-inbox.org/git/20181204163457.15717-1-szeder.dev@gmail.com/)
+  based on [a script](https://github.com/peff/git/blob/meta/stress)
+  that Jeff King, alias Peff had developed and
+  [mentioned](https://public-inbox.org/git/20181122161722.GC28192@sigill.intra.peff.net/)
+  on the mailing list.
+
+  That first iteration had been reviewed by Peff, Ævar Arnfjörð
+  Bjarmason and Junio Hamano, and was followed by a
+  [second iteration](https://public-inbox.org/git/20181209225628.22216-1-szeder.dev@gmail.com/)
+  also reviewed by Peff.
+
+  A [third](https://public-inbox.org/git/20181230191629.3232-1-szeder.dev@gmail.com/) and
+  [fourth](https://public-inbox.org/git/20190105010859.11031-1-szeder.dev@gmail.com/)
+  iteration were sent with only minor changes. The latter then got merged last January,
+  so the feature was released in Git 2.21.0.
+
+  On February 8th Gábor sent a patch to improve on top of his previous
+  work on `--stress`. The goal was to make it easier to use the
+  `--stress` along with `git bisect` to find the first commit that
+  introduced a test failure when the test failure is not easy to
+  reproduce.
+
+  Specifically the patch was addressing two issues with
+  `--stress`. The first one is that `--stress` runs the test script
+  endlessly when the test doesn't fail. This is fixed with a new
+  `--stress-limit=<N>` option "to repeat the test script at most N
+  times in each of the parallel jobs, and exit with success when the
+  limit is reached".
+
+  The second issue is that when the test script used with `--stress`
+  fails, it exits with a success error code. This is addressed by
+  making it exit with a failure error code in this case.
+
+  This makes it possible to automatically find the commit that
+  introduced a flakiness in for example `t1234-foo.sh` using something
+  like:
+
+  ```sh
+  $ git bisect start origin/pu master
+  $ git bisect run sh -c 'make && cd t && ./t1234-foo.sh --stress --stress-limit=300'
+  ```
+
+  Gábor and Peff then discussed a few things. About how to select a
+  good N to pass to `--stress-limit=<N>`, Gábor suggested runnning the
+  test script with `--stress` 3-5 times to trigger the failure, taking
+  the highest repetition count that was necessary for the failure and
+  multiplying it by 4-6 to get a round number".
+
+  Gábor later sent [a following patch](https://public-inbox.org/git/20190211195803.1682-1-szeder.dev@gmail.com/)
+  to fix a minor issue in his previous patches, as it seems that some
+  shells require the `!` character to start a non-matching pattern
+  bracket expression instead of `^` that he had used.
+
+  These improvements to the `--stress` option made it in the Git
+  2.21.0 release too.
+
+  Even more recently Johannes Schindelin, alias Dscho, sent
+  [a small patch series](https://public-inbox.org/git/pull.155.git.gitgitgadget@gmail.com/)
+  to improve on the previous work by:
+
+    - having `--stress-limit=<N>` imply `--stress`
+    - introducing `--stress-jobs=<N>`
+
+  The goal is to avoid mistakenly using `--stress=<N>` when one wants
+  to limit the number of number of times the test script is run (which
+  should be done using `--stress-limit=<N>`).
+
+  Dscho then sent a [second version](https://public-inbox.org/git/pull.155.v2.git.gitgitgadget@gmail.com/)
+  of his patch series with a few improvements.
+
+  These patches were reviewed by Junio, Eric Sunshine, Peff and
+  Gábor. The changes have been merged to the 'next' branch and are
+  planned to be merged in the 'master' branch soon.
+
 
 <!---
 ### Support
