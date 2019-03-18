@@ -139,6 +139,13 @@ __Various__
   (January 31th and February 1st 2019 in Brussels, Belgium) are now
   [available](https://www.youtube.com/playlist?list=PL0lo9MOBetEFqBue4vNcTEnkBjgIQU1Q3).
 
+* The [Gerrit User Summit 2019](https://gus2019.eventbrite.com) will take place
+  in Gothenburg 29-30 August, hosted by [Volvo Cars](http://volvocars.com).
+  The event if free but seats are limited. For the first time also the community
+  opens the 5-days Hackathon 24-28 August, same location, to everyone: the only
+  requirement is to be willing to learn and contribute to the JGit or Gerrit
+  Code Review project.
+
 __Light reading__
 
 
@@ -163,4 +170,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Gabriel Alcaras &lt;<gabriel.alcaras@telecom-paristech.fr>&gt;
-with help from XXX.
+with help from Luca Milanesio &lt;<luca.milanesio@gmail.com>&gt.
