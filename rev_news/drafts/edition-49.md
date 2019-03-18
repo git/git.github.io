@@ -151,6 +151,11 @@ __Git tools and sites__
 * [radicle](http://radicle.xyz/) is a peer-to-peer stack for code
   collaboration based on Git and [IPFS](https://ipfs.io/).
 
+* [Git-graph](https://github.com/hoduche/git-graph) by
+  [Henri-Olivier Duché](https://github.com/hoduche)
+  can help you "Learn Git fast and well - by visualizing the inner graph of your Git
+  repositories".
+
 ## Credits
 
 This edition of Git Rev News was curated by
