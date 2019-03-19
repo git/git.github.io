@@ -93,7 +93,6 @@ This edition covers what happened during the month of February 2019.
     - having `--stress-limit=<N>` imply `--stress`
     - introducing `--stress-jobs=<N>`
 
-  <br/>
   The goal is to avoid mistakenly using `--stress=<N>` when one wants
   to limit the number of number of times the test script is run (which
   should be done using `--stress-limit=<N>`).
