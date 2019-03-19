@@ -74,9 +74,9 @@ This edition covers what happened during the month of February 2019.
 
   Gábor and Peff then discussed a few details. Regarding how to select a
   good N to pass to `--stress-limit=<N>`, Gábor suggested running the
-  test script with `--stress` 3--5 times to trigger the failure, taking
+  test script with `--stress` 3-5 times to trigger the failure, taking
   the highest repetition count that was necessary for the failure and
-  multiplying it by 4--6 to get a round number".
+  multiplying it by 4-6 to get a round number".
 
   Gábor later sent [a subsequent patch](https://public-inbox.org/git/20190211195803.1682-1-szeder.dev@gmail.com/)
   to fix a minor issue in his previous patches, as it seems that some
@@ -141,9 +141,9 @@ __Various__
   [available](https://www.youtube.com/playlist?list=PL0lo9MOBetEFqBue4vNcTEnkBjgIQU1Q3).
 
 * The [Gerrit User Summit 2019](https://gus2019.eventbrite.com) will take place
-  in Gothenburg 29--30 August, hosted by [Volvo Cars](http://volvocars.com).
+  in Gothenburg 29-30 August, hosted by [Volvo Cars](http://volvocars.com).
   The event is free but seats are limited. For the first time also the community
-  opens the 5 days Hackathon 24--28 August, same location, to everyone: the only
+  opens the 5 days Hackathon 24-28 August, same location, to everyone: the only
   requirement is to be willing to learn and contribute to the JGit or Gerrit
   Code Review project.
 
@@ -161,7 +161,7 @@ __Git tools and sites__
 
 * [Git-graph](https://github.com/hoduche/git-graph) by
   [Henri-Olivier Duché](https://github.com/hoduche)
-  can help you "Learn Git fast and well --- by visualizing the inner graph of your Git
+  can help you "Learn Git fast and well - by visualizing the inner graph of your Git
   repositories".
 
 ## Credits
