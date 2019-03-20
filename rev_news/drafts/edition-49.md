@@ -23,16 +23,16 @@ This edition covers what happened during the month of February 2019.
 
 ### Reviews
 
-* [test-lib: make '--stress' more bisect-friendly](https://public-inbox.org/git/20190208115045.13256-1-szeder.dev@gmail.com/)
+* [test-lib: make '\-\-stress' more bisect-friendly](https://public-inbox.org/git/20190208115045.13256-1-szeder.dev@gmail.com/)
 
   `--stress` is an option that can be passed to a test script from the
   Git test suite to try to reproduce rare failures in the test script
   by running it many times in parallel.
 
   Gábor Szeder had initially implemented this option starting
-  [last december](https://public-inbox.org/git/20181204163457.15717-1-szeder.dev@gmail.com/)
+  [last December](https://public-inbox.org/git/20181204163457.15717-1-szeder.dev@gmail.com/)
   based on [a script](https://github.com/peff/git/blob/meta/stress)
-  that Jeff King, alias Peff had developed and
+  that Jeff King, alias Peff, had developed and
   [mentioned](https://public-inbox.org/git/20181122161722.GC28192@sigill.intra.peff.net/)
   on the mailing list.
 
@@ -52,7 +52,7 @@ This edition covers what happened during the month of February 2019.
   introduced a test failure when the test failure is not easy to
   reproduce.
 
-  Specifically the patch was addressing two issues with
+  Specifically, the patch was addressing two issues with
   `--stress`. The first one is that `--stress` runs the test script
   endlessly when the test doesn't fail. This is fixed with a new
   `--stress-limit=<N>` option "to repeat the test script at most N
@@ -63,22 +63,22 @@ This edition covers what happened during the month of February 2019.
   fails, it exits with a success error code. This is addressed by
   making it exit with a failure error code in this case.
 
-  This makes it possible to automatically find the commit that
-  introduced a flakiness in for example `t1234-foo.sh` using something
-  like:
+  With the improvement, it is possible to automatically find the
+  commit that introduced a flakiness in for example `t1234-foo.sh`,
+  using something like:
 
   ```sh
   $ git bisect start origin/pu master
   $ git bisect run sh -c 'make && cd t && ./t1234-foo.sh --stress --stress-limit=300'
   ```
 
-  Gábor and Peff then discussed a few things. About how to select a
-  good N to pass to `--stress-limit=<N>`, Gábor suggested runnning the
+  Gábor and Peff then discussed a few details. Regarding how to select a
+  good N to pass to `--stress-limit=<N>`, Gábor suggested running the
   test script with `--stress` 3-5 times to trigger the failure, taking
   the highest repetition count that was necessary for the failure and
   multiplying it by 4-6 to get a round number".
 
-  Gábor later sent [a following patch](https://public-inbox.org/git/20190211195803.1682-1-szeder.dev@gmail.com/)
+  Gábor later sent [a subsequent patch](https://public-inbox.org/git/20190211195803.1682-1-szeder.dev@gmail.com/)
   to fix a minor issue in his previous patches, as it seems that some
   shells require the `!` character to start a non-matching pattern
   bracket expression instead of `^` that he had used.
@@ -142,7 +142,7 @@ __Various__
 * The [Gerrit User Summit 2019](https://gus2019.eventbrite.com) will take place
   in Gothenburg 29-30 August, hosted by [Volvo Cars](http://volvocars.com).
   The event is free but seats are limited. For the first time also the community
-  opens the 5-days Hackathon 24-28 August, same location, to everyone: the only
+  opens the 5 days Hackathon 24-28 August, same location, to everyone: the only
   requirement is to be willing to learn and contribute to the JGit or Gerrit
   Code Review project.
 
@@ -211,4 +211,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Gabriel Alcaras &lt;<gabriel.alcaras@telecom-paristech.fr>&gt;
-with help from Luca Milanesio &lt;<luca.milanesio@gmail.com>&gt.
+with help from Luca Milanesio &lt;<luca.milanesio@gmail.com>&gt;.
