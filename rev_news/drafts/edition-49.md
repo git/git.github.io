@@ -196,10 +196,10 @@ __Git tools and sites__
   to enable sustainable data science workflows via a language-agnostic
   system for *data versioning* with data pipelining.  Similar tools,
   namely [DVC](https://dvc.org) (Data Version Control)
-  and [Meltano](https://gitlab.com/meltano/meltano) were described
+  and [Meltano](https://gitlab.com/meltano/meltano), were described
   in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/).
 
-* [git ready](http://gitready.com/): learn git one commit at a time;
+* [git ready](http://gitready.com/): learn Git one commit at a time;
   tips are split into beginner, intermediate and advanced.
   Latest tip is from 2015, though.
 
