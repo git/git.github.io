@@ -146,7 +146,36 @@ __Various__
   requirement is to be willing to learn and contribute to the JGit or Gerrit
   Code Review project.
 
+* Google [is creating](https://opensource.googleblog.com/2019/03/introducing-season-of-docs.html)
+  a project aimed at improving OSS projects documentation:
+  [Season of Docs 2019](https://developers.google.com/season-of-docs/).
+  Mentoring organizations can begin submitting applications to Google
+  on April 2, 2019.
+
+
 __Light reading__
+
+* [Redesigning Github repository page](http://tonsky.me/blog/github-redesign/)
+  by Nikita Prokopov describes how the author would have changed the design.
+
+* [Write yourself a Git!](https://wyag.thb.lt/) by Thibault Polge is
+  an attempt at explaining the Git version control system from the
+  bottom up, that is, starting at the most fundamental level moving up
+  from there. All it takes to understand Git internals is to
+  reimplement Git from scratch  in exactly 503 lines of very simple
+  Python code.
+
+* [10 Git Commands You Should Know; Plus tips to save time with Git](https://towardsdatascience.com/10-git-commands-you-should-know-df54bea1595c)
+  by Jeff Hale.
+
+* [Git hacks you should know about](https://dev.to/teamxenox/git-hacks-you-should-know-about-16pk)
+  by Ankur Biswas; most of these is a regular workflow stuff, though
+  (and you need to take care as some of commands rewrite history).
+
+* [Data Versioning](https://emilygorcenski.com/post/data-versioning/)
+  by Emily Gorcenski identifies four key axes on which machine
+  learning systems have a notion of version along with some brief
+  recommendations for how to simplify it a bit.
 
 
 __Git tools and sites__
@@ -162,6 +191,18 @@ __Git tools and sites__
   [Henri-Olivier Duché](https://github.com/hoduche)
   can help you "Learn Git fast and well - by visualizing the inner graph of your Git
   repositories".
+
+* [Pachyderm](https://www.pachyderm.io/open_source.html) is designed
+  to enable sustainable data science workflows via a language-agnostic
+  system for *data versioning* with data pipelining.  Similar tools,
+  namely [DVC](https://dvc.org) (Data Version Control)
+  and [Meltano](https://gitlab.com/meltano/meltano) were described
+  in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/).
+
+* [git ready](http://gitready.com/): learn git one commit at a time;
+  tips are split into beginner, intermediate and advanced.
+  Latest tip is from 2015, though.
+
 
 ## Credits
 
