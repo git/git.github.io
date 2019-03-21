@@ -218,6 +218,56 @@ This would consist in taking care of the following issues:
   `This reverts commit <sha-of-rewritten-A>`.)
   Do this for both sha1sums and sha1sum abbreviations in commit messages.
 
+### `git revert --drop` and `git commit --reword`
+
+ - Language: C, shell (bash)
+ - Difficulty: easy
+ - Possible mentors: N/A
+
+The interactive rebase already supports the special oneline prefixes
+`fixup!` and `squash!` in the `--autosquash` mode; these commits will
+be reordered in the todo list and their `pick` commands adjusted
+accordingly.
+
+These commits can be crafted conveniently via the `--fixup` and
+`--squash` options of `git commit`.
+
+The idea of this project is to add two more actions, `drop!` and
+`reword!`:
+
+* The `drop!` action (for convenience, `git revert --drop <commit>`)
+  would not only revert the commit, but a subsequent `git rebase -i
+  --autosquash` would reorder the `drop!` commit directly after the
+  matching commit, then change the matching commit's `pick` to `drop`
+  and comment out the `drop!` one.
+
+* The `reword!` action (for convenience, `git commit --reword <commit>`)
+  would let the user edit the commit message of the referenced commit,
+  and add an "empty" commit (i.e. a commit that does not modify any
+  files) with that commit message, prefixed with the `reword!` oneline.
+  The next `git rebase -i --autosquash` would then not only reorder
+  that commit after verifying that it is indeed an empty commit, it
+  would then also replace the `pick` command with an appropriate new
+  command (say, by extending the `squash` command to accept a `--reword`
+  option).
+
+This project will need to begin by implementing test cases to define
+the expected outcome, and then implement the actual functionality.
+
+### Teach `git stash` to handle unmerged index entries
+
+ - Language: C, shell (bash)
+ - Difficulty: easy
+ - Possible mentors: N/A
+
+When the index is unmerged, `git stash` refuses to do anything. That is
+unnecessary, though, as it could easily craft e.g. an octopus merge
+of the various stages. A subsequent `git stash apply` can detect that
+octopus and re-generate the unmerged index.
+
+See also the discussion in [this Git mailing list
+thread](https://public-inbox.org/git/nycvar.QRO.7.76.6.1902072023250.41@tvgsbejvaqbjf.bet/).
+
 ## Note about refactoring projects versus projects that implement new features
 
 Over the years we have been favoring refactoring projects over
