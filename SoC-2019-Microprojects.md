@@ -218,6 +218,28 @@ that we have `struct dir_iterator` (see dir-iterator.h), convert these
 to use the dir-iterator to simplify the code. Do only one conversion
 per microproject.
 
+### Let `git fetch <remote> HEAD` use the current branch name
+
+When fetching from a remote, one can specify which ref(s) to fetch.
+There is no convenient way to specify the current branch, though, and
+`HEAD` may be a good shortcut. Or `@`. Or `-`.
+
+### Teach `git range-diff` new tricks
+
+When contributing patches to Git, developers often need to compare
+in what form those patches made it upstream (e.g. to pick up fixes
+made by the Git maintainer in preparation for a new iteration). In
+such a case, a `--left-only` (or `--right-only`) option would come
+in real handy, to allow `git range-diff --left-only <branch>..upstream/pu`
+to skip commits that are upstream only (as there will be a metric
+ton of them).
+
+Another neat trick that could come in real handy at times would be
+to teach `git range-diff` to compare a local branch to a patch
+series that is provided as an mbox, e.g. to use `git range-diff` to see
+whether a given patch series on the mailing list has made it into
+git.git's `pu` branch yet.
+
 ## How to find other ideas for microprojects
 
 If you don't like for some reason the above microprojects or if you
