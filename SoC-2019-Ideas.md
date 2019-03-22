@@ -221,7 +221,7 @@ This would consist in taking care of the following issues:
 ### `git revert --drop` and `git commit --reword`
 
  - Language: C, shell (bash)
- - Difficulty: easy
+ - Difficulty: medium
  - Possible mentors: N/A
 
 The interactive rebase already supports the special oneline prefixes
@@ -257,7 +257,7 @@ the expected outcome, and then implement the actual functionality.
 ### Teach `git stash` to handle unmerged index entries
 
  - Language: C, shell (bash)
- - Difficulty: easy
+ - Difficulty: medium
  - Possible mentors: N/A
 
 When the index is unmerged, `git stash` refuses to do anything. That is
