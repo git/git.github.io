@@ -222,7 +222,7 @@ This would consist in taking care of the following issues:
 
  - Language: C, shell (bash)
  - Difficulty: medium
- - Possible mentors: N/A
+ - Possible mentors: Thomas Gummerer
 
 The interactive rebase already supports the special oneline prefixes
 `fixup!` and `squash!` in the `--autosquash` mode; these commits will
@@ -258,7 +258,7 @@ the expected outcome, and then implement the actual functionality.
 
  - Language: C, shell (bash)
  - Difficulty: medium
- - Possible mentors: N/A
+ - Possible mentors: Thomas Gummerer
 
 When the index is unmerged, `git stash` refuses to do anything. That is
 unnecessary, though, as it could easily craft e.g. an octopus merge
