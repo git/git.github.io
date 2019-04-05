@@ -43,6 +43,10 @@ __Various__
 
 __Light reading__
 
+* [Sending patches by email with Git](https://flusp.ime.usp.br/git/2019/02/15/sending-patches-by-email-with-git/)
+  by Matheus Tavares and [https://git-send-email.io/](https://git-send-email.io/)
+  by sourcehut are two articles on how to setup and use Git's send-email
+  command.
 
 __Git tools and sites__
 
