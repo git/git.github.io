@@ -25,9 +25,61 @@ This edition covers what happened during the month of March 2019.
 ### Reviews
 -->
 
-<!---
+
 ### Support
--->
+
+* [Can't build first git commit](https://public-inbox.org/git/1551729517.4092.1.camel@libero.it/)
+
+Fabio Aiuto asked for support on the Git mailing list as he was trying
+to build [the first commit of Git made by Linus in April 2005](https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23),
+but was getting "undefined reference to symbol" errors related to the Openssl library.
+
+Santiago Torres replied suggesting him to use a toolchain from around
+the time the commit was made and using an earlier Openssl library.
+
+Fabio replied that he would have liked to "to debug around that simple
+version, to understand how everithing works".
+
+Santiago suggested playing with libgit2, that has a smaller code base,
+and its python bindings that "abstract the memory management and other
+low-level stuff".
+
+Jeff King, alias Peff, suggested linking with -lcrypto instead of
+-lssl and also adding -lz to the Makefile or the command line. He said
+that: `make LIBS='-lcrypto -lz'` works for him and that he "used
+periodically check that Git v1.0 can fetch happily from GitHub".
+
+"asymptosis" chimed in to suggest working through
+[the "Git Internals" chapter in the Git Book](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain)
+to understand how Git works. He also pointed to a
+[Git re-implementation as simple bash scripts](https://notabug.org/cryptarch/sgit)
+he has started to understand that chapter.
+
+Jonathan Nieder recommended reading the
+[Hackng Git chapter in the user manual documentation](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html#hacking-git)
+that comes with Git.
+
+Peff then reported that he managed again to build Git version 1.0.0
+from December 2005 with `make NO_OPENSSL=Nope` and to use it to fetch
+from GitHub.
+
+Fabio replied that he also succeeded in building the first commit of
+Git made by Linus.
+
+Fabio, Santiago and Peff then discussed the fact that it was still
+possible to build a 15 year old codebase with a modern toolchain. Peff
+explained that it's possible because "Git has very few external
+dependencies", and other than that, Git "just depends on a reasonable
+C compiler and a POSIX libc, both of which have been standardized for
+decades".
+
+Then Fabio reported a segfault in the version he had built. Peff
+reproduced it and showed how to work around it.
+
+Fabio thanked Peff and "asymptosis". He said he would "go on studying
+git this way, and follow all the improvements that were made along his
+history".
+
 
 <!---
 ## Developer Spotlight:
