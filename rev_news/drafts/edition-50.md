@@ -89,7 +89,8 @@ history".
 
 + Bitbucket Server [6.2](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
 + Gerrit Code Review [2.13.14](https://www.gerritcodereview.com/2.13.html#21314),
-[2.14.20](https://www.gerritcodereview.com/2.14.html#21420), [2.15.13](https://www.gerritcodereview.com/2.15.html#21513)
+[2.14.20](https://www.gerritcodereview.com/2.14.html#21420),
+[2.15.13](https://www.gerritcodereview.com/2.15.html#21513)
 + GitHub Enterprise [2.16.6](https://enterprise.github.com/releases/2.16.6/notes),
 [2.15.11](https://enterprise.github.com/releases/2.15.11/notes),
 [2.14.18](https://enterprise.github.com/releases/2.14.18/notes),
@@ -132,4 +133,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Gabriel Alcaras &lt;<gabriel.alcaras@telecom-paristech.fr>&gt;
-with help from XXX.
+with help from Luca Milanesio.
