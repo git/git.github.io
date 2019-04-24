@@ -88,7 +88,8 @@ history".
 ## Releases
 
 + Bitbucket Server [6.2](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
-+ Gerrit Code Review [2.16.8](https://www.gerritcodereview.com/2.16.html#2168),
++ Gerrit Code Review [2.13.14](https://www.gerritcodereview.com/2.13.html#21314),
+[2.14.20](https://www.gerritcodereview.com/2.14.html#21420), [2.15.13](https://www.gerritcodereview.com/2.15.html#21513)
 + GitHub Enterprise [2.16.6](https://enterprise.github.com/releases/2.16.6/notes),
 [2.15.11](https://enterprise.github.com/releases/2.15.11/notes),
 [2.14.18](https://enterprise.github.com/releases/2.14.18/notes),
