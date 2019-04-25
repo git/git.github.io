@@ -32,10 +32,10 @@ This edition covers what happened during the month of March 2019.
 
 Fabio Aiuto asked for support on the Git mailing list as he was trying
 to build [the first commit of Git made by Linus in April 2005](https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23),
-but was getting "undefined reference to symbol" errors related to the Openssl library.
+but was getting "undefined reference to symbol" errors related to the OpenSSL library.
 
 Santiago Torres replied suggesting him to use a toolchain from around
-the time the commit was made and using an earlier Openssl library.
+the time the commit was made and using an earlier OpenSSL library.
 
 Fabio replied that he would have liked to "to debug around that simple
 version, to understand how everithing works".
@@ -44,19 +44,20 @@ Santiago suggested playing with libgit2, that has a smaller code base,
 and its python bindings that "abstract the memory management and other
 low-level stuff".
 
-Jeff King, alias Peff, suggested linking with -lcrypto instead of
--lssl and also adding -lz to the Makefile or the command line. He said
-that: `make LIBS='-lcrypto -lz'` works for him and that he "used
-periodically check that Git v1.0 can fetch happily from GitHub".
+Jeff King, alias Peff, suggested linking with `-lcrypto` instead of
+`-lssl` and also adding `-lz` to the Makefile or the command line.
+He said that `make LIBS='-lcrypto -lz'` works for him and that he
+"used periodically check that Git v1.0 can fetch happily from GitHub".
 
-"asymptosis" chimed in to suggest working through
+[asymptosis](https://public-inbox.org/git/20190304214829.GA573@sleipnir/)
+chimed in to suggest working through
 [the "Git Internals" chapter in the Git Book](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain)
 to understand how Git works. He also pointed to a
 [Git re-implementation as simple bash scripts](https://notabug.org/cryptarch/sgit)
-he has started to understand that chapter.
+he had started to understand that chapter.
 
 Jonathan Nieder recommended reading the
-[Hackng Git chapter in the user manual documentation](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html#hacking-git)
+[Hacking Git chapter in the user manual documentation](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html#hacking-git)
 that comes with Git.
 
 Peff then reported that he managed again to build Git version 1.0.0
@@ -76,8 +77,8 @@ decades".
 Then Fabio reported a segfault in the version he had built. Peff
 reproduced it and showed how to work around it.
 
-Fabio thanked Peff and "asymptosis". He said he would "go on studying
-git this way, and follow all the improvements that were made along his
+Fabio thanked Peff and asymptosis. He said he would "go on studying
+Git this way, and follow all the improvements that were made along its
 history".
 
 
