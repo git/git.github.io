@@ -116,6 +116,13 @@ history".
 
 __Various__
 
+* [Highlights from Git 2.21](https://github.blog/2019-02-24-highlights-from-git-2-21/)
+  on GitHub Blog.
+* [6 new Bitbucket Cloud features that spark joy](https://bitbucket.org/blog/6-new-bitbucket-cloud-features-that-spark-joy).
+* [Announcing _Building Git_](https://blog.jcoglan.com/2019/04/08/announcing-building-git/) by James Coglan;
+  some of the articles about diff and merge algorithms that form a part of this book were covered in
+  [Git Rev News Edition #25](https://git.github.io/rev_news/2017/03/15/edition-25/).
+
 
 __Light reading__
 
@@ -123,8 +130,38 @@ __Light reading__
   by Matheus Tavares and [https://git-send-email.io/](https://git-send-email.io/)
   by sourcehut are two articles on how to setup and use Git's send-email
   command.
+* [Learn by Contributing](https://dev.to/agoldis/learn-by-contributing-27g6) by Andrew Goldis,
+  about how contributing to open source projects helps you to improve
+  your professional skills and discover new opportunities.
+* [Writing Good Source Control Commit Messages](https://dev.to/rachelsoderberg/writing-good-source-control-commit-messages-2j2m) by Rachel Soderberg;
+  the slightly controversial part might be leaving out the information
+  that can be found in issue tracker.
+* [Using Graph Theory to Decide Where to Start Reading Source Code](https://medium.com/@a.lurie_78598/using-graph-theory-to-decide-where-to-start-reading-source-code-74a1e2ddf72) by Aron Lurie
+  (connecting files that are changed together, and finding "central" nodes in that graph).
+* [Tips for a disciplined git workflow](https://drewdevault.com/2019/02/25/Using-git-with-discipline.html) by Drew DeVault.
+* [5 Free Courses to Learn Git and GitHub in Depth](https://dev.to/javinpaul/5-free-courses-to-learn-git-and-github-in-depth-jpp) by javingpaul.
+* [15 Git Commands You May Not Know](https://dev.to/zaiste/15-git-commands-you-may-not-know-4a8j) by Zaiste.
+* [10 insanely useful Git commands you wish existed – and their alternatives](https://dev.to/datreeio/10-insanely-useful-git-commands-you-wish-existed-and-their-alternatives-8e6) by Eyar Zilberman.
+* [Don’t Commit Improperly Formatted Go (golang) Code](https://medium.com/@corylanou/dont-commit-improperly-formatted-go-golang-code-5cea011d589d) - use git hooks, by Cory LaNou.
+* [How does git bisect choose the commit to test?](http://julien.mascart.com/2017/03/how-does-git-bisect-choose-commit-to.html) by Julien 'jma' Mascart (2017).
+* [Fun with bisecting](https://git-blame.blogspot.com/2011/07/fun-with-bisecting.html) by Junio C Hamano aka Gitster (2011).
+
 
 __Git tools and sites__
+
+* [Gitlet.js](http://gitlet.maryrosecook.com/docs/gitlet.html)
+  by Mary Rose Cook is Git implemented in JavaScript,
+  written to show how Git works under the covers
+  (written to be readable and heavily commented).
+* [git-rs](https://github.com/chrisdickinson/git-rs):
+  Git, implemented in [Rust](https://www.rust-lang.org/), for fun and education.
+* [Git Cheat Sheets](https://github.github.com/training-kit/):
+  Reference sheets covering Git commands, features, SVN migrations,
+  and bash.  Available in a multiple languages.
+* [Giistr](https://giistr.com/): Contribute to build the open-source world.
+  Search, filter and help easily on the issues of the [GitHub] repositories you starred.
+* [BDFL : A 100% accurate simulation of OSS maintenance](https://derrickstolee.github.io/bdfl/):
+  A silly clicker game featuring graphs.
 
 
 ## Credits
