@@ -157,10 +157,10 @@ __Git tools and sites__
   Git, implemented in [Rust](https://www.rust-lang.org/), for fun and education.
 * [Git Cheat Sheets](https://github.github.com/training-kit/):
   Reference sheets covering Git commands, features, SVN migrations,
-  and bash.  Available in a multiple languages.
+  and bash.  Available in multiple languages.
 * [Giistr](https://giistr.com/): Contribute to build the open-source world.
   Search, filter and help easily on the issues of the [GitHub] repositories you starred.
-* [BDFL : A 100% accurate simulation of OSS maintenance](https://derrickstolee.github.io/bdfl/):
+* [BDFL: A 100% accurate simulation of OSS maintenance](https://derrickstolee.github.io/bdfl/):
   A silly clicker game featuring graphs.
 
 
