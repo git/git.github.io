@@ -38,7 +38,7 @@ Santiago Torres replied suggesting him to use a toolchain from around
 the time the commit was made and using an earlier OpenSSL library.
 
 Fabio replied that he would have liked to "to debug around that simple
-version, to understand how everithing works".
+version, to understand how everything works".
 
 Santiago suggested playing with libgit2, that has a smaller code base,
 and its python bindings that "abstract the memory management and other
