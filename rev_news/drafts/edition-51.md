@@ -35,6 +35,8 @@ This edition covers what happened during the month of April 2019.
 
 ## Releases
 
++ Gerrit Code Review [3.0.0](https://www.gerritcodereview.com/3.0.html).
+
 
 ## Other News
 
