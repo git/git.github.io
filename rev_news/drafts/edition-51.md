@@ -35,8 +35,20 @@ This edition covers what happened during the month of April 2019.
 
 ## Releases
 
++ Git [2.22.0-rc0](https://public-inbox.org/git/xmqqef52baih.fsf@gitster-ct.c.googlers.com/)
 + Gerrit Code Review [3.0.0](https://www.gerritcodereview.com/3.0.html).
-
++ GitHub Enterprise [2.16.8](https://enterprise.github.com/releases/2.16.8/notes),
+[2.15.13](https://enterprise.github.com/releases/2.15.13/notes),
+[2.14.20](https://enterprise.github.com/releases/2.14.20/notes),
+[2.16.7](https://enterprise.github.com/releases/2.16.7/notes),
+[2.15.12](https://enterprise.github.com/releases/2.15.12/notes),
+[2.14.19](https://enterprise.github.com/releases/2.14.19/notes)
++ GitLab [11.10.4](https://about.gitlab.com/2019/05/01/gitlab-11-10-4-released/),
+[11.10.3](https://about.gitlab.com/2019/04/30/security-release-gitlab-11-dot-10-dot-3-released/),
+[11.10.2](https://about.gitlab.com/2019/04/29/security-release-gitlab-11-dot-10-dot-2-released/),
+[11.10.1](https://about.gitlab.com/2019/04/24/gitlab-11-10-1-released/),
++ Bitbucket Server [6.3](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ GitHub Desktop [1.6.6](https://desktop.github.com/release-notes/)
 
 ## Other News
 
