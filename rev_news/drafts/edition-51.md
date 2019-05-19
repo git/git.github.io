@@ -78,6 +78,8 @@ This edition covers what happened during the month of April 2019.
 [11.10.1](https://about.gitlab.com/2019/04/24/gitlab-11-10-1-released/)
 + Bitbucket Server [6.3](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
 + GitHub Desktop [1.6.6](https://desktop.github.com/release-notes/)
++ git-cinnabar [0.5.1](https://public-inbox.org/git/20190508221316.otsflud4qlcpwaeb@glandium.org)
+
 
 ## Other News
 
