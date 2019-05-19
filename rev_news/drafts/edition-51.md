@@ -37,7 +37,17 @@ This edition covers what happened during the month of April 2019.
 
   It will be the 12th time that the Git project will mentor students
   as part of the GSoC. Rohit and Matheus will be the 28th and 29th
-  students mentored.
+  students mentored since 2007 when Git started participating in the
+  GSoC.
+
+  It will be the 15th year of GSoC and to celebrate that Google
+  decided to have the [GSoC Mentor Summit 2019](https://sites.google.com/view/gsoc-mentorsummit2019/home)
+  in an hotel in Munich, Germany instead of a Google campus in
+  California. The Mentor Summit will last 3.5 days (Thursday, October
+  17 - Sunday, October 20) instead of the usual 2.5 days. The
+  additional day, Friday, October 18, will be "Fun Day Activities for
+  attendees to explore Munich and get to know each other before the
+  unconference begins".
 
 <!---
 ### Reviews
