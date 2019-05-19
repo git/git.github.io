@@ -27,7 +27,7 @@ This edition covers what happened during the month of April 2019.
 
   - [Matheus Tavares](https://summerofcode.withgoogle.com/projects/#6477677521797120) is going to work on
     [making pack access code thread safe](https://public-inbox.org/git/CAHd-oW7KMrDJ-cyzk63oqW9-QVpag6fKnDp+Mo5bWxg1KfzY3g@mail.gmail.com/).
-    He will be mentored by Olga Telezhnaia, a former [Outreachy](outreachy.org) intern, and Christian Couder.
+    He will be mentored by Olga Telezhnaia, a former [Outreachy](https://www.outreachy.org/) intern, and Christian Couder.
     Matheus has prepared [a blog](https://matheustavares.gitlab.io/gsoc) to report about his experience.
 
   - [Rohit Ashiwal](https://summerofcode.withgoogle.com/projects/#6407042053439488) will work on
