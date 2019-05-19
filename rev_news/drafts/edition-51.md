@@ -90,6 +90,9 @@ __Various__
 
 __Light reading__
 
+* [The Developer Homepage of Derrick Stolee](https://stolee.dev/)
+  contains a number of interesting articles, presentations and links
+  especially about features he developped like the commit-graph.
 
 __Git tools and sites__
 
