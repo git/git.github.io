@@ -90,6 +90,11 @@ __Various__
   links about a newly published paper about new attacks building on the
   known "SHAttered" attack.
 
+* On April 1st, Ævar sent a two patches long [patch series](https://public-inbox.org/git/20190401101246.21418-1-avarab@gmail.com/)
+  to the mailing list. These April fool's day patches were "praise: a
+  culturally sensitive wrapper for 'blame'" and "praise: make
+  'blameless' cultural enforcement configurable" .
+
 __Light reading__
 
 * [The Developer Homepage of Derrick Stolee](https://stolee.dev/)
