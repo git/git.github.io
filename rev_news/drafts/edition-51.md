@@ -17,9 +17,27 @@ This edition covers what happened during the month of April 2019.
 
 ## Discussions
 
-<!---
+
 ### General
--->
+
+* [GSoC students and mentors 2019](https://public-inbox.org/git/20190508171941.GC2068@hank.intra.tgummerer.com/)
+
+  Two students are going to work on Git during this summer as part of the
+  [GSoC (Google Summer of Code)](https://summerofcode.withgoogle.com/):
+
+  - [Matheus Tavares](https://summerofcode.withgoogle.com/projects/#6477677521797120) is going to work on
+    [making pack access code thread safe](https://public-inbox.org/git/CAHd-oW7KMrDJ-cyzk63oqW9-QVpag6fKnDp+Mo5bWxg1KfzY3g@mail.gmail.com/).
+    He will be mentored by Olga Telezhnaia, a former [Outreachy](outreachy.org) intern, and Christian Couder.
+    Matheus has prepared [a blog](https://matheustavares.gitlab.io/gsoc) to report about his experience.
+
+  - [Rohit Ashiwal](https://summerofcode.withgoogle.com/projects/#6407042053439488) will work on
+    [improving consistency of sequencer commands](https://public-inbox.org/git/20190322151157.9550-1-rohit.ashiwal265@gmail.com/).
+    He will be mentored by Thomas Gummerer, a former GSoC student, and Elijah Newren.
+    Rohit has also planning prepared [a blog](rashiwal.me) to report about his experience.
+
+  It will be the 12th time that the Git project will mentor students
+  as part of the GSoC. Rohit and Matheus will be the 28th and 29th
+  students mentored.
 
 <!---
 ### Reviews
