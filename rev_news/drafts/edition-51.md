@@ -47,7 +47,7 @@ This edition covers what happened during the month of April 2019.
 + GitLab [11.10.4](https://about.gitlab.com/2019/05/01/gitlab-11-10-4-released/),
 [11.10.3](https://about.gitlab.com/2019/04/30/security-release-gitlab-11-dot-10-dot-3-released/),
 [11.10.2](https://about.gitlab.com/2019/04/29/security-release-gitlab-11-dot-10-dot-2-released/),
-[11.10.1](https://about.gitlab.com/2019/04/24/gitlab-11-10-1-released/),
+[11.10.1](https://about.gitlab.com/2019/04/24/gitlab-11-10-1-released/)
 + Bitbucket Server [6.3](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
 + GitHub Desktop [1.6.6](https://desktop.github.com/release-notes/)
 
