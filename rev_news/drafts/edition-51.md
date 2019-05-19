@@ -83,6 +83,10 @@ This edition covers what happened during the month of April 2019.
 
 __Various__
 
+* [Git and the new SHA-1 prefix collision attack](https://public-inbox.org/git/875zqbx5yz.fsf@evledraar.gmail.com/)
+  is an email by Ævar Arnfjörð Bjarmason that has information and
+  links about a newly published paper about new attacks building on the
+  known "SHAttered" attack.
 
 __Light reading__
 
