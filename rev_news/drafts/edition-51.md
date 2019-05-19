@@ -35,7 +35,8 @@ This edition covers what happened during the month of April 2019.
 
 ## Releases
 
-+ Git [2.22.0-rc0](https://public-inbox.org/git/xmqqef52baih.fsf@gitster-ct.c.googlers.com/)
++ Git [2.22.0-rc1](https://public-inbox.org/git/xmqq36la24t1.fsf@gitster-ct.c.googlers.com/),
+[2.22.0-rc0](https://public-inbox.org/git/xmqqef52baih.fsf@gitster-ct.c.googlers.com/)
 + Gerrit Code Review [3.0.0](https://www.gerritcodereview.com/3.0.html).
 + GitHub Enterprise [2.16.8](https://enterprise.github.com/releases/2.16.8/notes),
 [2.15.13](https://enterprise.github.com/releases/2.15.13/notes),
