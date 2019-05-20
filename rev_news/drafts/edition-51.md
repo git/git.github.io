@@ -49,9 +49,110 @@ This edition covers what happened during the month of April 2019.
   attendees to explore Munich and get to know each other before the
   unconference begins".
 
-<!---
 ### Reviews
--->
+
+* [[RFC PATCH] *.h: remove extern from function declarations](https://public-inbox.org/git/3e3b9d6c8e54b326809b95adabd3be39d2d0770f.1555111963.git.liu.denton@gmail.com/)
+
+  Denton Liu sent a big RFC patch that removes "extern" keywords in
+  front of function declarations and that affects in big number of
+  '.h' header files.
+
+  He said that he used the following command to remove the keywords:
+
+  ```
+  $ git ls-files '*.h' | xargs sed -i'' -e 's/^\(\s*\)extern \(.*(\)/\1\2/'
+  ```
+
+  And the following one to check the result:
+
+  ```
+  $ git grep -w extern '*.h'
+  ```
+
+  Jeff King, alias Peff, replied that dropping "extern" should not be
+  done on function pointer declarations though, as a function pointer
+  is a variable, so its visibility would change if "extern" is removed
+  in front of it.
+
+  Junio agreed with Peff and explained that the reason we avoid
+  wholesale updates "is because of an unnecessary bug like this one,
+  not the one-time conflict resolution load that can be subcontracted
+  out to "rerere" once dealt with ;-)".
+
+  Junio also suggested using "a tool more suited for the job
+  (e.g. spatch)" as it "raises the confidence level of the end result
+  a lot more than a "sed and then eyeball" rewrite", though we then
+  have to be careful about possible "bugs in the instructions we give
+  to the tool".
+
+  Denton then sent a [second version](https://public-inbox.org/git/cover.1555352526.git.liu.denton@gmail.com/)
+  of his work. It was now a 3 patch long patch series.
+
+  The first patch used the `spatch` tool to do most of the "extern"
+  keyword removals. The second patch still used `sed` to do it where
+  `spatch` didn't work, but it made sure to ignore function
+  variables. The third patch used a Coccinelle script to make sure
+  that no more "extern" keywords are added to the code base.
+
+  Thomas Gummerer replied to the first patch that it "leaves a bunch
+  of oddly indented parameter lists behind", as when a function has a
+  larger number of parameters, its declaration often span more than
+  one line.
+
+  Denton then send a [third version](https://public-inbox.org/git/cover.1555487380.git.liu.denton@gmail.com/)
+  of his work, with an additional patch to "manually align parameter
+  lists that were mangled by the tools".
+
+  Peff replied wondering if it was a good thing to modify files in the
+  compat/ directory as the code there is often "copied from
+  elsewhere". He also wondered if it was worth keeping the Coccinelle
+  script as it is expensive to run.
+
+  In the [fourth version](https://public-inbox.org/git/cover.1556062365.git.liu.denton@gmail.com/)
+  of his work, Denton decided to keep the Coccinelle script, but
+  excluded the compat/ directory from the files where "extern" is
+  removed.
+
+  Junio noticed that in a commit message Denton mentioned using:
+
+  ```
+  $ git ls-files \*.{c,h} | \
+      grep -v ^compat/ | \
+      xargs sed -i'' -e 's/^\(\s*\)extern \([^(]*([^*]\)/\1\2/'
+  ```
+
+  and then asked him to remove the useless backslashes at the end of
+  the first 2 lines above, saying:
+
+  > Your shell knows its own syntax sufficiently well, and when you end
+  > a line with a pipe, it knows that you haven't finished speaking to
+  > it and waits for you to give the command downstream of the pipe,
+  > without being told that you haven't finished with a backslash.
+
+  Unfortunately SZEDER Gábor then found that the Coccinelle script
+  failed on 'compat/obstack.h' as it is included in a '.c' file
+  checked by Coccinelle scripts.
+
+  Denton replied by proposing to drop the patch that contained his
+  Coccinelle script, but Johannes Schindelin, alias Dscho, suggested
+  to exclude certain directories or certain files for certain
+  Coccinelle scripts.
+
+  There was then a long discussion thread involving Peff, Denton,
+  Jacob Keller, Dscho, Junio and Gábor about what was possible to do
+  with Coccinelle and spatch and how they are used in the Git
+  toolchain. This thread eventually resulted in Peff making a small
+  series of
+  [patches](https://public-inbox.org/git/20190506234334.GA13296@sigill.intra.peff.net/),
+  based on a previous patch by Jacob, that makes it possible to run
+  Coccinelle faster on machines with a lot of memory. Peff's patches
+  have since been merged into the 'master' branch.
+
+  Denton in the meantime sent a [fifth version](https://public-inbox.org/git/cover.1556526308.git.liu.denton@gmail.com/)
+  of his work that drops the patch that contained his Coccinelle
+  script, and loses the useless backslashes. This patch series has
+  also been merged into the 'master' branch and will be part of Git
+  v2.22.0 that should be released at the beginning of June 2019.
 
 <!---
 ### Support
