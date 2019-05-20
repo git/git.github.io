@@ -198,6 +198,10 @@ __Various__
   culturally sensitive wrapper for 'blame'" and "praise: make
   'blameless' cultural enforcement configurable".
 
+* Dave Borowitz, one of the top contributors of the Gerrit,
+  [leaves the project](https://groups.google.com/forum/#!topic/repo-discuss/ySP84Q0DHsw) after
+  9k reviews, 3.4k commits and 8 years of contributions to the project.
+
 __Light reading__
 
 * [Exploring new frontiers for Git push performance](https://devblogs.microsoft.com/devops/exploring-new-frontiers-for-git-push-performance/)
@@ -208,6 +212,11 @@ __Light reading__
 * [The Developer Homepage of Derrick Stolee](https://stolee.dev/)
   contains a number of interesting articles, presentations and links
   especially about features he developed like the commit-graph.
+
+* [The history behind 6 years of development of Gerrit v3.0](https://gitenterprise.me/2019/05/20/gerrit-v3-0-is-here/)
+  goes back in time and describes the long path from the original
+  green-ish GWT UI until the latest shiny blue Polymer-based user
+  experience.
 
 __Git tools and sites__
 
