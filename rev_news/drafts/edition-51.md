@@ -200,9 +200,14 @@ __Various__
 
 __Light reading__
 
+* [Exploring new frontiers for Git push performance](https://devblogs.microsoft.com/devops/exploring-new-frontiers-for-git-push-performance/)
+  includes a description of the new "sparse" push algorithm, enabled
+  by the `pack.useSparse` config option.
+
+
 * [The Developer Homepage of Derrick Stolee](https://stolee.dev/)
   contains a number of interesting articles, presentations and links
-  especially about features he developped like the commit-graph.
+  especially about features he developed like the commit-graph.
 
 __Git tools and sites__
 
