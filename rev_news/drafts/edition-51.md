@@ -198,16 +198,24 @@ __Various__
   culturally sensitive wrapper for 'blame'" and "praise: make
   'blameless' cultural enforcement configurable".
 
+* Dave Borowitz, one of the top contributors of Gerrit Code Review,
+  [leaves the project](https://groups.google.com/forum/#!topic/repo-discuss/ySP84Q0DHsw) after
+  9k reviews, 3.4k commits and 8 years of contributions.
+
 __Light reading__
 
 * [Exploring new frontiers for Git push performance](https://devblogs.microsoft.com/devops/exploring-new-frontiers-for-git-push-performance/)
   includes a description of the new "sparse" push algorithm, enabled
   by the `pack.useSparse` config option.
 
-
 * [The Developer Homepage of Derrick Stolee](https://stolee.dev/)
   contains a number of interesting articles, presentations and links
   especially about features he developed like the commit-graph.
+
+* [The history behind 6 years of development of Gerrit v3.0](https://gitenterprise.me/2019/05/20/gerrit-v3-0-is-here/)
+  goes back in time and describes the long path from the original
+  green-ish GWT UI until the latest shiny blue Polymer-based user
+  experience.
 
 __Git tools and sites__
 
@@ -219,4 +227,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Gabriel Alcaras &lt;<gabriel.alcaras@telecom-paristech.fr>&gt;
-with help from David Pursehouse.
+with help from David Pursehouse and Luca Milanesio.
