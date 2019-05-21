@@ -27,7 +27,7 @@ This edition covers what happened during the month of April 2019.
 
   - [Matheus Tavares](https://summerofcode.withgoogle.com/projects/#6477677521797120) is going to work on
     [making pack access code thread safe](https://public-inbox.org/git/CAHd-oW7KMrDJ-cyzk63oqW9-QVpag6fKnDp+Mo5bWxg1KfzY3g@mail.gmail.com/).
-    He will be mentored by Olga Telezhnaia, a former [Outreachy](https://www.outreachy.org/) intern, and Christian Couder.
+    He will be mentored by Olga Telezhnaia, a&nbsp;former [Outreachy](https://www.outreachy.org/) intern, and Christian Couder.
     Matheus has prepared [a blog](https://matheustavares.gitlab.io/gsoc) to report about his experience.
 
   - [Rohit Ashiwal](https://summerofcode.withgoogle.com/projects/#6407042053439488) will work on
@@ -42,7 +42,7 @@ This edition covers what happened during the month of April 2019.
 
   It will be the 15th year of GSoC and to celebrate that Google
   decided to have the [GSoC Mentor Summit 2019](https://sites.google.com/view/gsoc-mentorsummit2019/home)
-  in an hotel in Munich, Germany instead of a Google campus in
+  in a hotel in Munich, Germany instead of a Google campus in
   California. The Mentor Summit will last 3.5 days (Thursday, October
   17 - Sunday, October 20) instead of the usual 2.5 days. The
   additional day, Friday, October 18, will be "Fun Day Activities for
@@ -53,9 +53,9 @@ This edition covers what happened during the month of April 2019.
 
 * [[RFC PATCH] *.h: remove extern from function declarations](https://public-inbox.org/git/3e3b9d6c8e54b326809b95adabd3be39d2d0770f.1555111963.git.liu.denton@gmail.com/)
 
-  Denton Liu sent a big RFC patch that removes "extern" keywords in
-  front of function declarations and that affects in big number of
-  '.h' header files.
+  Denton Liu sent a big RFC patch that removes `extern` keywords in
+  front of function declarations and that affects '.h' header files
+  in large numbers.
 
   He said that he used the following command to remove the keywords:
 
@@ -69,34 +69,34 @@ This edition covers what happened during the month of April 2019.
   $ git grep -w extern '*.h'
   ```
 
-  Jeff King, alias Peff, replied that dropping "extern" should not be
+  Jeff King, alias Peff, replied that dropping `extern` should not be
   done on function pointer declarations though, as a function pointer
-  is a variable, so its visibility would change if "extern" is removed
+  is a variable, so its visibility would change if `extern` is removed
   in front of it.
 
   Junio agreed with Peff and explained that the reason we avoid
   wholesale updates "is because of an unnecessary bug like this one,
   not the one-time conflict resolution load that can be subcontracted
-  out to "rerere" once dealt with ;-)".
+  out to 'rerere' once dealt with ;-)".
 
   Junio also suggested using "a tool more suited for the job
   (e.g. spatch)" as it "raises the confidence level of the end result
-  a lot more than a "sed and then eyeball" rewrite", though we then
+  a lot more than a 'sed and then eyeball' rewrite", though we then
   have to be careful about possible "bugs in the instructions we give
   to the tool".
 
   Denton then sent a [second version](https://public-inbox.org/git/cover.1555352526.git.liu.denton@gmail.com/)
   of his work. It was now a 3 patch long patch series.
 
-  The first patch used the `spatch` tool to do most of the "extern"
+  The first patch used the `spatch` tool to do most of the `extern`
   keyword removals. The second patch still used `sed` to do it where
   `spatch` didn't work, but it made sure to ignore function
   variables. The third patch used a Coccinelle script to make sure
-  that no more "extern" keywords are added to the code base.
+  that no more `extern` keywords are added to the code base.
 
   Thomas Gummerer replied to the first patch that it "leaves a bunch
   of oddly indented parameter lists behind", as when a function has a
-  larger number of parameters, its declaration often span more than
+  larger number of parameters, its declaration often spans more than
   one line.
 
   Denton then send a [third version](https://public-inbox.org/git/cover.1555487380.git.liu.denton@gmail.com/)
@@ -110,7 +110,7 @@ This edition covers what happened during the month of April 2019.
 
   In the [fourth version](https://public-inbox.org/git/cover.1556062365.git.liu.denton@gmail.com/)
   of his work, Denton decided to keep the Coccinelle script, but
-  excluded the compat/ directory from the files where "extern" is
+  excluded the compat/ directory from the files where `extern` is
   removed.
 
   Junio noticed that in a commit message Denton mentioned using:
@@ -129,7 +129,7 @@ This edition covers what happened during the month of April 2019.
   > it and waits for you to give the command downstream of the pipe,
   > without being told that you haven't finished with a backslash.
 
-  Unfortunately SZEDER Gábor then found that the Coccinelle script
+  Unfortunately Gábor Szeder then found that the Coccinelle script
   failed on 'compat/obstack.h' as it is included in a '.c' file
   checked by Coccinelle scripts.
 
@@ -141,7 +141,7 @@ This edition covers what happened during the month of April 2019.
   There was then a long discussion thread involving Peff, Denton,
   Jacob Keller, Dscho, Junio and Gábor about what was possible to do
   with Coccinelle and spatch and how they are used in the Git
-  toolchain. This thread eventually resulted in Peff making a small
+  toolchain. This thread eventually resulted in Peff writing a small
   series of
   [patches](https://public-inbox.org/git/20190506234334.GA13296@sigill.intra.peff.net/),
   based on a previous patch by Jacob, that makes it possible to run
@@ -214,7 +214,7 @@ __Light reading__
 
 * [The history behind 6 years of development of Gerrit v3.0](https://gitenterprise.me/2019/05/20/gerrit-v3-0-is-here/)
   goes back in time and describes the long path from the original
-  green-ish GWT UI until the latest shiny blue Polymer-based user
+  greenish GWT UI until the latest shiny blue Polymer-based user
   experience.
 
 __Git tools and sites__
