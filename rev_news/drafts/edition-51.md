@@ -158,9 +158,95 @@ This edition covers what happened during the month of April 2019.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Denton Liu
+
+* Who are you and what do you do?
+
+  My name is Denton and I'm a relatively new contributor to Git. I'm a
+  Software Engineering student at the University of Waterloo and I've been
+  bouncing around from internship to internship until I graduate next
+  year.
+
+  I got started just over half a year ago when we had an assignment in
+  school that required us to make a contribution to some open-source
+  project. Since Git is so ubiquitous for developers, my team decided to
+  target it.
+
+  Since then, I never really stopped because I've been having a lot of fun
+  with it.
+
+* What would you name your most important contribution to Git?
+
+  I haven't really been as prolific as other contributors so I wouldn't
+  say that my contributions are "important", per se. I guess the most
+  important contribution that I've made (although it's still cooking) is
+  teaching `--keep-base` to rebase.
+
+  Judging from the number of StackOverflow posts about it, I guess people
+  expect this to be a feature but, since it's not, I think most people
+  alias it away or something.
+
+  Hopefully, this will be helpful to all the good people in the world who
+  bother to clean up their branches before sending them up ;).
+
+* What are you doing on the Git project these days, and why?
+
+  I'd say that I'm a "selfish" contributor to Git. What I mean by this is
+  I've only been working on features that _I've_ wanted.
+
+  I keep a todo list on my phone of feature requests that I would like
+  in Git and, whenever I have some free time, I'll code it up. So these
+  days, I'm mostly working all over the place, but mostly at a pretty high
+  level.
+
+  Why? Because it's fun :). It's always cool running
+  `git pull upstream master` and seeing your work in there.
+
+* If you could get a team of expert developers to work full time on
+something in Git for a full year, what would it be?
+
+  Hmm, it would be nice if Git's interface were a little more standardised.
+
+  If I could get a team of developers working on Git, I'd probably get
+  them to clean up Git's user interface and make it more consistent with
+  itself.
+
+  In this regard, Duy has been making me happy with his work making Git
+  externally and internally consistent with git-restore, git-switch and
+  the diff-parseopt changes but if we could have a team of Duys working,
+  that would be amazing!
+
+* If you could remove something from Git without worrying about
+backwards compatibility, what would it be?
+
+  Continuing the above, my biggest gripe about Git is how inconsistent its
+  interface is since it was developed organically. I think the biggest
+  example of this would be how the meaning of `..` and `...` are
+  essentially swapped in diff compared to the log family of commands. I
+  always end up using the wrong number of dots because of this.
+
+  If I could change one thing about Git, it'd probably be the above. Even
+  though it's a very small thing, it trips me up a lot of the time.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+  I like to keep my setup as vanilla as possible so that when I move onto
+  other machines, I don't have to adjust my workflow very much so I only
+  really use the stock Git. However, a while back, I was reading about
+  git-imerge by Michael Haggerty.
+
+  I'm very thankful that I haven't had to deal with any painfully large
+  merges recently that have necessitated it but I'm keeping this tool in
+  my back pocket in case the situation ever comes up.
+
+* Anything else you'd like to add?
+
+  I'd like to thank the more seasoned members of the Git project for being
+  patient and helping me learn even through the (many) mistakes I've made
+  through the process. In particular, in no particular order, I'd like to
+  thank Junio, Ævar, Phillip Wood, Johannes Schindelin, Eric Sunshine and
+  many others for helping me.
+
 
 ## Releases
 
