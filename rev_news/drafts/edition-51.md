@@ -33,7 +33,7 @@ This edition covers what happened during the month of April 2019.
   - [Rohit Ashiwal](https://summerofcode.withgoogle.com/projects/#6407042053439488) will work on
     [improving consistency of sequencer commands](https://public-inbox.org/git/20190322151157.9550-1-rohit.ashiwal265@gmail.com/).
     He will be mentored by Thomas Gummerer, a former GSoC student, and Elijah Newren.
-    Rohit has also planning prepared [a blog](https://rashiwal.me) to report about his experience.
+    Rohit has also prepared [a blog](https://rashiwal.me) to report about his experience.
 
   It will be the 12th time that the Git project will mentor students
   as part of the GSoC. Rohit and Matheus will be the 28th and 29th
