@@ -202,6 +202,12 @@ __Various__
   [leaves the project](https://groups.google.com/forum/#!topic/repo-discuss/ySP84Q0DHsw) after
   9k reviews, 3.4k commits and 8 years of contributions.
 
+* [Someone Is Hacking GitHub Repositories and Holding Code Ransom](https://www.vice.com/en_us/article/vb9v33/github-bitbucket-repositories-ransomware),
+  which lead to [Git ransom campaign incident report—Atlassian Bitbucket, GitHub, GitLab](https://github.blog/2019-05-14-git-ransom-campaign-incident-report/);
+  this topic was also discussed on git mailing list:
+	  [Git ransom campaign incident report - May 2019](https://public-inbox.org/git/20190519051604.GC19434@sigill.intra.peff.net/t/#m5a98bd982c8994b3c275b86cd46d67dbe9ee7d7e).
+
+
 __Light reading__
 
 * [Exploring new frontiers for Git push performance](https://devblogs.microsoft.com/devops/exploring-new-frontiers-for-git-push-performance/)
@@ -217,7 +223,44 @@ __Light reading__
   green-ish GWT UI until the latest shiny blue Polymer-based user
   experience.
 
+* [git rebase in depth](https://git-rebase.io/), a guide to help
+  demystify the powerful [git-rebase](https://git-scm.com/docs/git-rebase).
+
+* [Signing Git Commits](https://www.linuxjournal.com/content/signing-git-commits)
+  by Kyle Rankin, from Linux Journal
+
+* [Git does not remember username and password on Windows](https://snede.net/git-does-not-remember-username-password/)
+  by André Snede Kock, or how to use Windows Credentials manager with Git,
+  and how to manually set credentials if needed.
+  
+* [Stupid git tricks: Combining two files into one while preserving line history](https://devblogs.microsoft.com/oldnewthing/20190514-00/?p=102493)
+  by Raymond Chen; the trick is to create a rename/rename merge commit.
+
+* [The Essential Git Handbook](https://medium.freecodecamp.org/the-essential-git-handbook-a1cf77ed11b5)
+  by Sanjula Madurapperuma, teaching a little about Git.
+
+* [Squash commits when merging a Git branch with Bitbucket](https://bitbucket.org/blog/git-squash-commits-merging-bitbucket) by Abhin Chhabra
+
+* [Serving Vue.js apps on Github Pages](https://blog.usmanity.com/serving-vue-js-apps-on-github-pages/)
+  by Muhammad Usman; the trick is to configure
+  GitHub Pages and use 'docs' folder.
+
+
 __Git tools and sites__
+
+* [gitfolio](https://github.com/imfunniee/gitfolio) - 
+  personal website + blog for every GitHub user (JavaScript with Node.js);
+  see <https://imfunniee.github.io/gitfolio/>
+
+* [GitHub Learning Lab](GitHub Learning Lab) - learn new skills
+  by completing fun, realistic projects in your very own GitHub
+  repository
+  
+* [fh](https://github.com/xorhash/fh) records changes to a file on a per-file basis,
+  with ed(1), diff(1), awk(1), sed(1) and sh(1)
+  
+* [commit-messages-guide](https://github.com/RomuloOliveira/commit-messages-guide),
+  a guide to understand the importance of commit messages and how to write them well
 
 
 ## Credits
