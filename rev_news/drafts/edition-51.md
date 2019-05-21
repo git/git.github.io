@@ -227,7 +227,7 @@ __Light reading__
   demystify the powerful [git-rebase](https://git-scm.com/docs/git-rebase).
 
 * [Signing Git Commits](https://www.linuxjournal.com/content/signing-git-commits)
-  by Kyle Rankin, from Linux Journal
+  by Kyle Rankin, from Linux Journal.
 
 * [Git does not remember username and password on Windows](https://snede.net/git-does-not-remember-username-password/)
   by André Snede Kock, or how to use Windows Credentials manager with Git,
@@ -239,7 +239,7 @@ __Light reading__
 * [The Essential Git Handbook](https://medium.freecodecamp.org/the-essential-git-handbook-a1cf77ed11b5)
   by Sanjula Madurapperuma, teaching a little about Git.
 
-* [Squash commits when merging a Git branch with Bitbucket](https://bitbucket.org/blog/git-squash-commits-merging-bitbucket) by Abhin Chhabra
+* [Squash commits when merging a Git branch with Bitbucket](https://bitbucket.org/blog/git-squash-commits-merging-bitbucket) by Abhin Chhabra.
 
 * [Serving Vue.js apps on Github Pages](https://blog.usmanity.com/serving-vue-js-apps-on-github-pages/)
   by Muhammad Usman; the trick is to configure
@@ -250,17 +250,17 @@ __Git tools and sites__
 
 * [gitfolio](https://github.com/imfunniee/gitfolio) - 
   personal website + blog for every GitHub user (JavaScript with Node.js);
-  see <https://imfunniee.github.io/gitfolio/>
+  see <https://imfunniee.github.io/gitfolio/>.
 
 * [GitHub Learning Lab](GitHub Learning Lab) - learn new skills
   by completing fun, realistic projects in your very own GitHub
-  repository
+  repository.
   
 * [fh](https://github.com/xorhash/fh) records changes to a file on a per-file basis,
-  with ed(1), diff(1), awk(1), sed(1) and sh(1)
+  with ed(1), diff(1), awk(1), sed(1) and sh(1).
   
 * [commit-messages-guide](https://github.com/RomuloOliveira/commit-messages-guide),
-  a guide to understand the importance of commit messages and how to write them well
+  a guide to understand the importance of commit messages and how to write them well.
 
 
 ## Credits
