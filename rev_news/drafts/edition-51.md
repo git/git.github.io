@@ -334,18 +334,18 @@ __Light reading__
 
 __Git tools and sites__
 
-* [gitfolio](https://github.com/imfunniee/gitfolio) - 
+* [gitfolio](https://github.com/imfunniee/gitfolio):
   personal website + blog for every GitHub user (JavaScript with Node.js);
   see <https://imfunniee.github.io/gitfolio/>.
 
-* [GitHub Learning Lab](GitHub Learning Lab) - learn new skills
+* [GitHub Learning Lab](https://lab.github.com/): learn new skills
   by completing fun, realistic projects in your very own GitHub
   repository.
   
-* [fh](https://github.com/xorhash/fh) records changes to a file on a per-file basis,
+* [fh](https://github.com/xorhash/fh): record changes to a file on a per-file basis,
   with ed(1), diff(1), awk(1), sed(1) and sh(1).
   
-* [commit-messages-guide](https://github.com/RomuloOliveira/commit-messages-guide),
+* [commit-messages-guide](https://github.com/RomuloOliveira/commit-messages-guide):
   a guide to understand the importance of commit messages and how to write them well.
 
 
