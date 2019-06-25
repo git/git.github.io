@@ -17,9 +17,87 @@ This edition covers what happened during the month of May 2019.
 
 ## Discussions
 
-<!---
+
 ### General
--->
+
+* [I made a flame graph renderer for git's trace2 output](https://public-inbox.org/git/87zhnuwdkp.fsf@evledraar.gmail.com/)
+
+  Ævar Arnfjörð Bjarmason sent an email saying he developed a script that uses the
+  [FlameGraph tool](http://www.brendangregg.com/flamegraphs.html)
+  to generate a
+  [picture](https://vm.nix.is/~avar/noindex/git-tests.svg) showing
+  where Git's test suite spends its time.
+
+  His script also uses the new
+  [Git Trace2 API](https://github.com/git/git/blob/master/Documentation/technical/api-trace2.txt)
+  which has been developed mostly by Jeff Hostetler
+  [starting nearly one year ago](https://public-inbox.org/git/20180713165621.52017-1-git@jeffhostetler.com/)
+  and then through different versions:
+  [RFC](https://public-inbox.org/git/pull.29.git.gitgitgadget@gmail.com/),
+  [V1](https://public-inbox.org/git/pull.108.git.gitgitgadget@gmail.com/),
+  [V2](https://public-inbox.org/git/pull.108.v2.git.gitgitgadget@gmail.com/),
+  [V3](https://public-inbox.org/git/pull.108.v3.git.gitgitgadget@gmail.com/),
+  [V4](https://public-inbox.org/git/pull.108.v4.git.gitgitgadget@gmail.com/),
+  [V5](https://public-inbox.org/git/pull.169.v5.git.gitgitgadget@gmail.com/),
+  and which has eventually been released in Git v2.22.0 at the beginning of June 2019.
+
+  Ævar added that he plans to improve
+  [his script](https://github.com/avar/FlameGraph/commit/7a834718a12ed8b0d897ee90b00e2f654508cabd)
+  over time and maybe submit it in a Pull Request to the FlameGraph
+  tool, or perhaps integrate it in the Git test suite.
+
+  Derrick Stolee, who prefers to be called just Stolee, replied that
+  he liked the idea and sent the commands using Ævar's script that he used to create
+  [another picture](https://github.com/derrickstolee/FlameGraph/blob/git-test/git-test.svg)
+  from a much smaller test.
+
+  Gábor Szeder commented on Stolee's commands to ask why "GIT_TR2"
+  instead of "GIT_TRACE2" was used in the environment variables
+  related to the Trace2 API. Gábor refered to Ken Thompson "who
+  (allegedly?) later regretted spelling creat()/O_CREAT without the
+  'e'..."
+
+  Jeff King, alias Peff, replied to Ævar's initial email asking
+  "doesn't `perf record -g make test` already give us that granular
+  data?" refering to the [Linux perf tool](https://en.wikipedia.org/wiki/Perf_(Linux))
+  which is already supported by the FlameGraph tool. Peff also
+  wondered about the usefulness of such a graph:
+
+  > But having generated such a flamegraph, it's not all that helpful. It
+  > mainly tells us that we spend a lot of time on fork/exec. Which is no
+  > surprise, since the test suite is geared not towards heavy workloads,
+  > but lots of tiny functionality tests.
+
+  Though he agreed that it could help in some cases:
+
+  > I think the trace2 flamegraph would be most useful if you were
+  > collecting across a broad spectrum of workloads done by a user. You
+  > _can_ do that with perf or similar tools, but it can be a bit awkward.
+
+  Ævar replied that his "actual use-case for this is to see what
+  production nodes are spending their time on, similar to what
+  Microsoft is doing with their use of this facility", and that he
+  used the test suite because it is a good way to test his script and
+  the Trace2 API as "we're pretty much guaranteed to run all our
+  commands, and cover a lot of unusual cases".
+
+  Ævar pointed that his work "shows that we've got a long way to go in
+  improving the trace2 facility, i.e. adding region enter/leave for
+  some of the things we spend the most time on."
+
+  Jeff Hostetler, who authored the Trace2 API and works for Microsoft
+  along with Stolee, then replied "Very Nice !" to Ævar and agreed
+  with him about the work still needed to "to get more granular data for
+  interesting/problematic things".
+
+  Ævar and Jeff then discussed this future work further in a few
+  emails.
+
+  Jeff also replied to Gábor that he was ok to change "TR2" to
+  "TRACE2" and Gábor sent
+  [two patchs](https://public-inbox.org/git/20190519144309.9597-1-szeder.dev@gmail.com/)
+  to make that change. These patchs were agreed on and merged before
+  Git v2.22.0 was released on June 7th, 2019.
 
 <!---
 ### Reviews
