@@ -17,9 +17,59 @@ This edition covers what happened during the month of May 2019.
 
 ## Discussions
 
-<!---
+
 ### General
--->
+
+* [I made a flame graph renderer for git's trace2 output](https://public-inbox.org/git/87zhnuwdkp.fsf@evledraar.gmail.com/)
+
+  Ævar Arnfjörð Bjarmason sent an email saying he developed a script that uses the
+  [FlameGraph tool](http://www.brendangregg.com/flamegraphs.html)
+  and the new
+  [Git Trace2 API](https://github.com/git/git/blob/master/Documentation/technical/api-trace2.txt)
+  to generate a
+  [picture](https://vm.nix.is/~avar/noindex/git-tests.svg) showing
+  where Git's test suite spends its time.
+  
+  He added that he plans to improve
+  [his script](https://github.com/avar/FlameGraph/commit/7a834718a12ed8b0d897ee90b00e2f654508cabd)
+  over time and maybe submit it in a Pull Request to the FlameGraph
+  tool, or perhaps integrate it in the Git test suite.
+
+  The Trace2 API, has been de
+
+  Derrick Stolee, who prefers to be called just Stolee, replied that
+  he liked the idea and sent the commands using Ævar's script that he used to create
+  [another picture](https://github.com/derrickstolee/FlameGraph/blob/git-test/git-test.svg)
+  from a much smaller test.
+
+  Gábor Szeder commented on Stolee's commands to ask why "GIT_TR2"
+  instead of "GIT_TRACE2" was used in the environment variables
+  related to the Trace2 API. Gábor refered to Ken Thompson "who
+  (allegedly?) later regretted spelling creat()/O_CREAT without the
+  'e'..."
+
+  Jeff King, alias Peff, replied to Ævar's initial email asking
+  "doesn't `perf record -g make test` already give us that granular
+  data?" refering to the [Linux perf tool](https://en.wikipedia.org/wiki/Perf_(Linux))
+  which is already supported by the FlameGraph tool. Peff also
+  wondered about the usefulness of such a graph:
+
+  > But having generated such a flamegraph, it's not all that helpful. It
+  > mainly tells us that we spend a lot of time on fork/exec. Which is no
+  > surprise, since the test suite is geared not towards heavy workloads,
+  > but lots of tiny functionality tests.
+
+  Though he agreed that it could help in some cases:
+
+  > I think the trace2 flamegraph would be most useful if you were
+  > collecting across a broad spectrum of workloads done by a user. You
+  > _can_ do that with perf or similar tools, but it can be a bit awkward.
+
+  Ævar replied that his "actual use-case for this is to see what
+  production nodes are spending their time on, similar to what Microsoft
+  is doing with their use of this facility."
+
+  Jeff Hostetler, who initialy authored the Trace2 API
 
 <!---
 ### Reviews
