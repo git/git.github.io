@@ -116,7 +116,7 @@ This edition covers what happened during the month of May 2019.
 + Git [2.22.0](https://public-inbox.org/git/xmqq36klozfu.fsf@gitster-ct.c.googlers.com/),
 [2.22.0-rc3](https://public-inbox.org/git/xmqqlfyito3a.fsf@gitster-ct.c.googlers.com/),
 [2.22.0-rc2](https://public-inbox.org/git/xmqqpnnzws9q.fsf@gitster-ct.c.googlers.com/)
-+ Git for Windows [2.22.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.22.0.windows.1)
++ Git for Windows [2.22.0](https://github.com/git-for-windows/git/releases/tag/v2.22.0.windows.1)
 + libgit2 [0.28.2](https://github.com/libgit2/libgit2/releases/tag/v0.28.2)
 + GitHub Enterprise [2.17.2](https://enterprise.github.com/releases/2.17.2/notes),
 [2.16.11](https://enterprise.github.com/releases/2.16.11/notes),
