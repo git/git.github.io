@@ -138,6 +138,8 @@ This edition covers what happened during the month of May 2019.
 [11.11.1, 11.10.5, and 11.9.12](https://about.gitlab.com/2019/06/03/security-release-gitlab-11-dot-11-dot-1-released/),
 [11.11](https://about.gitlab.com/2019/05/22/gitlab-11-11-released/)
 + Bitbucket Server [6.4](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ Gerrit Code Review [2.15.14](https://www.gerritcodereview.com/2.15.html#21514),
+[2.16.9](https://www.gerritcodereview.com/2.16.html#2169)
 + GitKraken [6.0.0](https://support.gitkraken.com/release-notes/current),
 [5.0.4](https://support.gitkraken.com/release-notes/current),
 [5.0.3](https://support.gitkraken.com/release-notes/current),
