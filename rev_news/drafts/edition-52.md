@@ -1,13 +1,13 @@
 ---
-title: Git Rev News Edition 52 (June 19th, 2019)
+title: Git Rev News Edition 52 (June 28th, 2019)
 layout: default
-date: 2019-06-19 12:06:51 +0100
+date: 2019-06-28 12:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 52 (June 19th, 2019)
+## Git Rev News: Edition 52 (June 28th, 2019)
 
 Welcome to the 52nd edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
