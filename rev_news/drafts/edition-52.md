@@ -107,9 +107,106 @@ This edition covers what happened during the month of May 2019.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Jeff Hostetler
+
+* Who are you and what do you do?
+
+  My name is Jeff Hostetler and I work for Microsoft.
+  I've been working on Git and on Git-related technologies
+  for the last 5 years.  Primarily focusing on performance
+  and scale.
+
+  Prior to joining Microsoft, I worked for [SourceGear](http://www.sourcegear.com/)
+  and built the [Veracity](https://en.wikipedia.org/wiki/Veracity_(software)) DVCS
+  and the [DiffMerge](http://www.sourcegear.com/diffmerge/) visual
+  diff and merge tool.
+
+  A long, long time ago I was Architect for Spyglass Mosaic.
+
+* What would you name your most important contribution to Git?
+
+  I'd have to say the Trace2 facility that is now in v2.22.
+  With this in place, it will be much easier to understand
+  performance bottlenecks at scale.
+
+  Second to that would be the beginnings of the Partial Clone
+  feature.  There's still a lot of work to do in this area, but
+  I think long term, it will be central to solving certain
+  enterprise-level scale problems.
+
+* What are you doing on the Git project these days, and why?
+
+  I'm currently working on a series of blog posts explaining
+  Trace2 and how it can be used to measure and track Git
+  performance.
+
+  Within Microsoft we continue to study Trace2 data generated
+  by our Windows and Office developers and look for opportunities
+  to improve the developer experience, such as making status and
+  checkout faster.  And we are using the data to guide how/where
+  we should invest our engineering time for future performance
+  gains.
+
+  Hopefully, I can encourage others to start using Trace2,
+  gather their own data and look for opportunities where they
+  can help improve Git.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+  Bring together the Partial Clone and Sparse Checkout features
+  to scale to large repos.  This includes completing the end-user
+  experience, so that it just works and doesn't require any
+  wizardry.
+
+  There are several dimensions that have similar, but not
+  identical needs.
+
+  For example, a moderately-sized work tree with a few large
+  blobs might use Partial Clone with the blob-size filter and
+  only demand-fetch large blobs when actually needed.  This could
+  be seen as an easier to use solution than LFS.
+
+  Alternatively, a repo with a gigantic tree might use Partial
+  Clone with the sparse filter (to get "cones" of the work tree).
+  That could be coordinated with the sparse-checkout file to
+  populate just the desired parts of the work tree.  For some
+  users this would be simpler than using GVFS.
+
+  Let's add new porcelain commands to create, grow, and shrink the
+  sparse-checkout file and automatically update the index, so that
+  the user doesn't have to manually manipulate it.
+
+  Investigate a bulk pre-fetch command or hook, such as before a
+  checkout, to reduce the overhead of individually demand-loading
+  missing objects.
+
+  Finally, update Protocol V2 to include whatever verbs we need
+  to make all of this work efficiently.
+
+  With this we could probably retire most if not all of GVFS and
+  hopefully let our Windows and Office developers use core Git
+  and not need a private fork.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+  I'd like to revisit the design of the index.  Switch to a sparse
+  and hierarchical format, for example.  This is a large task and
+  touches everything from the on-disk format to every index-related
+  loop in the program.
+
+  [Ben Peart](https://git.github.io/rev_news/2017/09/20/edition-31/)
+  and [Derrick Stolee](https://git.github.io/rev_news/2018/08/22/edition-42/)
+  both touched upon this in earlier issues.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+  I'm mostly a terminal user, so I don't use very many third-party
+  tools.  I do highly recommend
+  [GitGitGadget](https://github.com/gitgitgadget/gitgitgadget).
+  I use it to run CI builds on all Windows, Mac, and Linux and to send
+  patches to the mailing list.
 
 ## Releases
 
