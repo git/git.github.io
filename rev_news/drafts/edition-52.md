@@ -43,7 +43,7 @@ This edition covers what happened during the month of May 2019.
 
   Ævar added that he plans to improve
   [his script](https://github.com/avar/FlameGraph/commit/7a834718a12ed8b0d897ee90b00e2f654508cabd)
-  over time and maybe submit it in a Pull Request to the FlameGraph
+  over time and maybe submit it in a pull request to the FlameGraph
   tool, or perhaps integrate it in the Git test suite.
 
   Derrick Stolee, who prefers to be called just Stolee, replied that
@@ -51,15 +51,15 @@ This edition covers what happened during the month of May 2019.
   [another picture](https://github.com/derrickstolee/FlameGraph/blob/git-test/git-test.svg)
   from a much smaller test.
 
-  Gábor Szeder commented on Stolee's commands to ask why "`GIT_TR2`"
-  instead of "`GIT_TRACE2`" was used in the environment variables
+  Gábor Szeder commented on Stolee's commands to ask why `GIT_TR2`
+  instead of `GIT_TRACE2` was used in the environment variables
   related to the Trace2 API. Gábor refered to Ken Thompson "who
   (allegedly?) later regretted spelling `creat()`/`O_CREAT` without the
-  'e'..."
+  'e'...".
 
   Jeff King, alias Peff, replied to Ævar's initial email asking
   "doesn't `perf record -g make test` already give us that granular
-  data?" refering to the [Linux perf tool](https://en.wikipedia.org/wiki/Perf_(Linux))
+  data?" referring to the [Linux perf tool](https://en.wikipedia.org/wiki/Perf_(Linux))
   which is already supported by the FlameGraph tool. Peff also
   wondered about the usefulness of such a graph:
 
@@ -86,17 +86,17 @@ This edition covers what happened during the month of May 2019.
   some of the things we spend the most time on."
 
   Jeff Hostetler, who authored the Trace2 API and works for Microsoft
-  along with Stolee, then replied "Very Nice !" to Ævar and agreed
-  with him about the work still needed to "to get more granular data for
+  along with Stolee, then replied "Very Nice!" to Ævar and agreed
+  with him about the work still needed "to get more granular data for
   interesting/problematic things".
 
   Ævar and Jeff then discussed this future work further in a few
   emails.
 
-  Jeff also replied to Gábor that he was ok to change "TR2" to
-  "TRACE2" and Gábor sent
-  [two patchs](https://public-inbox.org/git/20190519144309.9597-1-szeder.dev@gmail.com/)
-  to make that change. These patchs were agreed on and merged before
+  Jeff also replied to Gábor that he was ok to change `TR2` to
+  `TRACE2`, and Gábor sent
+  [two patches](https://public-inbox.org/git/20190519144309.9597-1-szeder.dev@gmail.com/)
+  to get that change done. These patches were agreed on and merged before
   Git v2.22.0 was released on June 7th, 2019.
 
 <!---
@@ -259,7 +259,7 @@ __Various__
 * [GitHub Maintainer Security Advisories](https://dwheeler.com/blog/2019/05/25/#github-maintainer-security-advisories)
   are a way to _privately_ report vulnerabilities to OSS projects on GitHub,
   currently in a [public beta](https://dwheeler.com/blog/2019/05/25/#github-maintainer-security-advisories).
-  Those are a part of a larger effort by GitHub to support security (including for OSS).
+  Those are a part of a larger effort by GitHub to support security (especially targeting OSS projects).
   For more information about this effort see the following GitHub Help pages:
 
   * [About maintainer security advisories](https://help.github.com/en/articles/about-maintainer-security-advisories)
@@ -269,23 +269,23 @@ __Various__
 * [Announcing GitHub Sponsors: a new way to contribute to open source](https://github.blog/2019-05-23-announcing-github-sponsors-a-new-way-to-contribute-to-open-source/) by Devon Zuegel on GitHub Blog;
   see also [TechCrunch article](https://techcrunch.com/2019/05/23/github-launches-sponsors-lets-you-pay-your-favorite-open-source-contributors/) by Frederic Lardinois on the same subject.
 * [Introducing GitHub Package Registry](https://github.blog/2019-05-10-introducing-github-package-registry/) by Simina Pasat on GitHub Blog;
-  [GitHub Package Registry feature](https://github.com/features/package-registry) is currently in limited beta (you need to sign up for the beta)
+  [GitHub Package Registry feature](https://github.com/features/package-registry) is currently in limited beta (you need to sign up for the beta).
 
 
 __Light reading__
 
 * [FreeBSD and Git](https://www.freebsdfoundation.org/wp-content/uploads/2018/10/FreeBSD-and-Git.pdf) (PDF)
-  -- slides from Ed Maste presentation at FreeBSD Vendor Summit 2018.
+  -- slides from Ed Maste's presentation at the FreeBSD Vendor Summit 2018.
 * [Things I Learnt The Hard Way (in 30 Years of Software Development)](https://blog.juliobiason.net/thoughts/things-i-learnt-the-hard-way/) by Julio Biason,
-  including few thoughts about use of version control and of Git.
+  including few thoughts about the use of version control and Git.
 * [Rebasing and merging in kernel repositories [LWN.net]](https://lwn.net/Articles/791284/) by Jonathan Corbet.
 * [Enforcing Conventional Commits using Git hooks](https://endaphelan.me/guides/git/using-git-hooks-to-enforce-conventional-commits/) by Enda Phelan.
   [Conventional Commits](https://www.conventionalcommits.org/) is a specification for adding human and machine readable meaning to commit messages.
   The presented solution was turned into the [Sailr](https://github.com/craicoverflow/sailr) project.
-* [Learn git concepts, not commands](https://dev.to/unseenwizzard/learn-git-concepts-not-commands-4gjc) by Nico Riedmann:
-  An interactive git tutorial for beginners meant to teach you how git works,
+* [Learn Git concepts, not commands](https://dev.to/unseenwizzard/learn-git-concepts-not-commands-4gjc) by Nico Riedmann:
+  An interactive Git tutorial for beginners meant to teach you how Git works,
   not just which commands to execute.
-* [A Git Origin Story](https://www.linuxjournal.com/content/git-origin-story) by Zack Brown (2018)
+* [A Git Origin Story](https://www.linuxjournal.com/content/git-origin-story) by Zack Brown (2018).
 
 
 __Git tools and sites__
