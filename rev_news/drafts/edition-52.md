@@ -51,10 +51,10 @@ This edition covers what happened during the month of May 2019.
   [another picture](https://github.com/derrickstolee/FlameGraph/blob/git-test/git-test.svg)
   from a much smaller test.
 
-  Gábor Szeder commented on Stolee's commands to ask why "GIT_TR2"
-  instead of "GIT_TRACE2" was used in the environment variables
+  Gábor Szeder commented on Stolee's commands to ask why "`GIT_TR2`"
+  instead of "`GIT_TRACE2`" was used in the environment variables
   related to the Trace2 API. Gábor refered to Ken Thompson "who
-  (allegedly?) later regretted spelling creat()/O_CREAT without the
+  (allegedly?) later regretted spelling `creat()`/`O_CREAT` without the
   'e'..."
 
   Jeff King, alias Peff, replied to Ævar's initial email asking
