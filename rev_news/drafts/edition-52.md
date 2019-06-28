@@ -131,7 +131,7 @@ This edition covers what happened during the month of May 2019.
   It turned out however that the statement _"existing clients will
   gracefully respond to files with a different version number"_
   unfortunately turned out to be not true.  [Ævar Arnfjörð Bjarmason noticed](https://public-inbox.org/git/87a7gdspo4.fsf@evledraar.gmail.com/)
-  that older Git responds with hard error to commit-graph v2, instead
+  that older Git responds with **hard error** to commit-graph v2, instead
   of simply turning the serialized-graph feature off in such case.
 
   > [...] writing a v2 file
@@ -194,11 +194,18 @@ This edition covers what happened during the month of May 2019.
   The original idea was to store subsequent deltas (incremental
   additions to serialized commit-graph data) in files named
   `commit-graph-2`, `commit-graph-3`, etc.  After involved discussion,
-  considering problems of concurrent writes, at [V6](https://public-inbox.org/git/6d9c0911-6f36-3fb7-2be9-2be9bc68fc69@gmail.com/t/#me8922324aebcdf4050bd5a4b1d18ef281bd47769)
-  the design has changed.  To have incremental commit-graph file, Git
-  would
+  considering problems of concurrency, at [V6](https://public-inbox.org/git/6d9c0911-6f36-3fb7-2be9-2be9bc68fc69@gmail.com/t/#me8922324aebcdf4050bd5a4b1d18ef281bd47769)
+  the design has changed, to having `commit-graphs/graph-{hash}.graph`
+  together with `commit-graph-chain` index file.
 
-  > create a "chain" of commit-graphs in the
+  > The commit-graph is a valuable performance feature for repos with large
+  > commit histories, but suffers from the same problem as git repack: it
+  > rewrites the entire file every time. This can be slow when there are
+  > millions of commits, especially after we stopped reading from the
+  > commit-graph file during a write in [43d3561 (commit-graph write: don't die
+  > if the existing graph is corrupt)](https://git.kernel.org/pub/scm/git/git.git/commit/?id=43d356180556180b4ef6ac232a14498a5bb2b446).
+  >
+  > Instead, create a "chain" of commit-graphs in the
   > `.git/objects/info/commit-graphs` folder with name graph-{hash}.graph. The
   > list of hashes is given by the commit-graph-chain file, and also in a "base
   > graph chunk" in the commit-graph format. As we read a chain, we can verify
@@ -210,7 +217,7 @@ This edition covers what happened during the month of May 2019.
   > searching for a commit (before we know its graph position). We decide to
   > merge levels of the stack when the new commits we will write is less than
   > half of the commits in the level above. This can be tweaked by the
-  > `--size-multiple` and `--max-commits options`.
+  > `--size-multiple` and `--max-commits` options.
 
   This series, as 'ds/commit-graph-incremental' branch, is currently
   marked as ready to be merged into 'next'.
