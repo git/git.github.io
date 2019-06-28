@@ -99,9 +99,122 @@ This edition covers what happened during the month of May 2019.
   to get that change done. These patches were agreed on and merged before
   Git v2.22.0 was released on June 7th, 2019.
 
-<!---
+
 ### Reviews
--->
+
+* [[PATCH 00/17] [RFC] Commit-graph: Write incremental files](https://public-inbox.org/git/6d9c0911-6f36-3fb7-2be9-2be9bc68fc69@gmail.com/t/)
+
+  The road to incremental serialized [commit-graph](https://github.com/git/git/blob/master/Documentation/technical/commit-graph.txt)
+  started with [an attempt to create commit-graph file format v2](https://public-inbox.org/git/pull.112.git.gitgitgadget@gmail.com/t/#u)
+
+  > The commit-graph file format has some shortcomings that were discussed
+  > on-list:
+  >
+  >  1. It doesn't use the 4-byte format ID from the\_hash\_algo.
+  >
+  >  2. There is no way to change the reachability index from generation numbers
+  >     to [corrected commit date](https://public-inbox.org/git/6367e30a-1b3a-4fe9-611b-d931f51effef@gmail.com/).
+  >
+  >  3. The unused byte in the format could be used to signal the file is
+  >     incremental, but current clients ignore the value even if it is
+  >     non-zero.
+  >
+  > This series adds a new version (2) to the commit-graph file. The fifth byte
+  > already specified the file format, so existing clients will gracefully
+  > respond to files with a different version number. The only real change now
+  > is that the header takes 12 bytes instead of 8, due to using the 4-byte
+  > format ID for the hash algorithm.
+
+  (Note that switching to corrected commit date as generation number v2
+  was covered in [Git Rev News edition 45, November 2018](https://git.github.io/rev_news/2018/11/21/edition-45/)).
+
+  It turned out however that the statement _"existing clients will
+  gracefully respond to files with a different version number"_
+  unfortunately turned out to be not true.  [Ævar Arnfjörð Bjarmason noticed](https://public-inbox.org/git/87a7gdspo4.fsf@evledraar.gmail.com/)
+  that older Git responds with hard error to commit-graph v2, instead
+  of simply turning the serialized-graph feature off in such case.
+
+  > [...] writing a v2 file
+  > would make most things (e.g. "status") hard error on e.g. v2.21.0:
+  >
+  >     $ git status
+  >     error: graph version 2 does not match version 1
+  >     $
+  >
+  > Now as noted in [my series](https://public-inbox.org/git/20190501183108.GE4109@sigill.intra.peff.net/t/#md66d1ac26799a296d6019cd8bb1048c975ad89f5) we now on 'master' downgrade that to a warning
+  > (along with the rest of the errors):
+  >
+  >     $ ~/g/git/git --exec-path=$PWD status
+  >     error: commit-graph version 2 does not match version 1
+  >     On branch master
+  >     [...]
+  >
+  > ...and this series sets the default version for all new graphs to v2.
+  >
+  > I think this is *way* too aggressive of an upgrade path. If these
+  > patches go into v2.22.0 then git clients on all older versions that grok
+  > the commit graph (IIRC v2.18 and above) will have their git completely
+  > broken if they're in a mixed-git-version environment.
+
+  The workaround is easy: removing `.git/info/commit-graph`, or using
+  "`git -c > core.commitGraph=false ...`".  However it is not possible
+  to e.g. add advice describing the workaround to past Git versions
+  (and new version would simply not fail hard on v2).
+
+  It turned out that there is no need to introduce new commit-graph
+  file format to achieve [almost] all stated goals.  The goal 1.)
+  turned out to be [not important](https://public-inbox.org/git/87lfzprkfc.fsf@evledraar.gmail.com/).
+
+  >  * Let's just live with "1" as the marker for SHA-1.
+  >
+  >    Yeah it would be cute to use 0x73686131 instead like "struct
+  >    git\_hash\_algo", but we can live with a 1=0x73686131 ("sha1"),
+  >    2=0x73323536 ("s256") mapping somewhere. It's not like we're going to
+  >    be running into the 255 limit of hash algorithms Git will support any
+  >    time soon.
+
+  For 2.), Stolee noticed that generation number v2 (corrected
+  commit date) [can be made backward compatibile](https://public-inbox.org/git/bb0c22f9-9d0b-0fa6-e826-8e2ac146c6f9@gmail.com/)
+
+  > Since we can make the "corrected commit date" offset for a commit be
+  > strictly larger than the offset of a parent, we can make it so an old client
+  > will not give incorrect values when we use the new values. The only downside
+  > would be that we would fail on '`git commit-graph verify`' since the offsets
+  > are not actually generation numbers in all cases.
+
+  This is discussed in a bit more detail in [Re: Revision walking, commit dates, slop](https://public-inbox.org/git/20190521020009.GC32230@google.com/T/#m418d1c46c0200de198946ec00cfb5c8c39ddf4d0)
+  thread.
+
+  The issue of incremental commit-graph file, i.e. 3.), turned out to
+  be better solved by keeping the base as backward-compatibile
+  commit-graph, and deltas as separate files.  Thus "Create
+  commit-graph file format v2" turned into [Commit-graph write refactor](https://public-inbox.org/git/pull.112.git.gitgitgadget@gmail.com/t/#mc8fda9ba6fad8fc53c55db2b9b35bd9b3bab71ca),
+  and Stolee started a separate [[RFC] Commit-graph: Write incremental files](https://public-inbox.org/git/6d9c0911-6f36-3fb7-2be9-2be9bc68fc69@gmail.com/t/) thread.
+
+  The original idea was to store subsequent deltas (incremental
+  additions to serialized commit-graph data) in files named
+  `commit-graph-2`, `commit-graph-3`, etc.  After involved discussion,
+  considering problems of concurrent writes, at [V6](https://public-inbox.org/git/6d9c0911-6f36-3fb7-2be9-2be9bc68fc69@gmail.com/t/#me8922324aebcdf4050bd5a4b1d18ef281bd47769)
+  the design has changed.  To have incremental commit-graph file, Git
+  would
+
+  > create a "chain" of commit-graphs in the
+  > `.git/objects/info/commit-graphs` folder with name graph-{hash}.graph. The
+  > list of hashes is given by the commit-graph-chain file, and also in a "base
+  > graph chunk" in the commit-graph format. As we read a chain, we can verify
+  > that the hashes match the trailing hash of each commit-graph we read along
+  > the way and each hash below a level is expected by that graph file.
+  >
+  > When writing, we don't always want to add a new level to the stack. This
+  > would eventually result in performance degradation, especially when
+  > searching for a commit (before we know its graph position). We decide to
+  > merge levels of the stack when the new commits we will write is less than
+  > half of the commits in the level above. This can be tweaked by the
+  > `--size-multiple` and `--max-commits options`.
+
+  This series, as 'ds/commit-graph-incremental' branch, is currently
+  marked as ready to be merged into 'next'.
+
 
 <!---
 ### Support
