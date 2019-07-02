@@ -131,7 +131,7 @@ This edition covers what happened during the month of May 2019.
   It turned out however that the statement _"existing clients will
   gracefully respond to files with a different version number"_
   unfortunately turned out to be not true.  [Ævar Arnfjörð Bjarmason noticed](https://public-inbox.org/git/87a7gdspo4.fsf@evledraar.gmail.com/)
-  that older Git responds with **hard error** to commit-graph v2, instead
+  that older Git responds with a **hard error** to commit-graph v2, instead
   of simply turning the serialized-graph feature off in such case.
 
   > [...] writing a v2 file
@@ -159,7 +159,7 @@ This edition covers what happened during the month of May 2019.
   The workaround is easy: removing `.git/info/commit-graph`, or using
   "`git -c > core.commitGraph=false ...`".  However it is not possible
   to e.g. add advice describing the workaround to past Git versions
-  (and new version would simply not fail hard on v2).
+  (and new versions would simply not fail hard on v2).
 
   It turned out that there is no need to introduce new commit-graph
   file format to achieve [almost] all stated goals.  The goal 1.)
