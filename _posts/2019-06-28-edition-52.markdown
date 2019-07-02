@@ -157,7 +157,7 @@ This edition covers what happened during the month of May 2019.
   > broken if they're in a mixed-git-version environment.
 
   The workaround is easy: removing `.git/info/commit-graph`, or using
-  "`git -c > core.commitGraph=false ...`".  However it is not possible
+  "`git -c core.commitGraph=false ...`".  However it is not possible
   to e.g. add advice describing the workaround to past Git versions
   (and new versions would simply not fail hard on v2).
 
