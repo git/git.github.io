@@ -46,6 +46,17 @@ __Light reading__
 
 __Git tools and sites__
 
+* [CallPath](https://github.com/matheustavares/callpath), by Matheus
+  Tavares, "lets you see all the paths your code take until a
+  specified function". Matheus is a Google Summer of Code student
+  currently working on
+  [making pack access code thread-safe](https://matheustavares.gitlab.io/gsoc/).
+
+* [diffr](https://github.com/mookid/diffr), by Nathan Moreau, is a new
+  diff highlighting tool "trying to improve on the
+  [diff-highlight](https://github.com/git/git/tree/master/contrib/diff-highlight)
+  script distributed with Git".
+
 
 ## Credits
 
