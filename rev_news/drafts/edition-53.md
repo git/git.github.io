@@ -40,6 +40,7 @@ This edition covers what happened during the month of June 2019.
 
 __Various__
 
+* Synergy is looking for a Git expert to join as a partner or in a freelance role. We are a startup developing an Enterprise Content Management solution for the office worker and we are looking to expand the team to build our GUI client and manage the infrastructure. If interested, please reach out to jaime.rivas@synergy.page
 
 __Light reading__
 
