@@ -35,6 +35,22 @@ This edition covers what happened during the month of June 2019.
 
 ## Releases
 
++ GitLab [12.0.3](https://about.gitlab.com/2019/07/03/security-release-gitlab-12-dot-0-dot-3-released/),
+[12.0.2](https://about.gitlab.com/2019/06/26/gitlab-12-0-2-11-11-4-11-10-7-released/),
+[12.0.1](https://about.gitlab.com/2019/06/25/gitlab-12-0-1-released/),
+[12.0](https://about.gitlab.com/2019/06/22/gitlab-12-0-released/)
++ Gerrit Code Review [2.16.10](https://www.gerritcodereview.com/2.16.html#21610),
+[3.0.1](https://www.gerritcodereview.com/3.0.html#301)
++ GitHub Enterprise [2.17.4](https://enterprise.github.com/releases/2.17.4/notes),
+[2.16.13](https://enterprise.github.com/releases/2.16.13/notes),
+[2.15.18](https://enterprise.github.com/releases/2.15.18/notes),
+[2.14.25](https://enterprise.github.com/releases/2.14.25/notes),
+[2.17.3](https://enterprise.github.com/releases/2.17.3/notes),
+[2.16.12](https://enterprise.github.com/releases/2.16.12/notes),
+[2.15.17](https://enterprise.github.com/releases/2.15.17/notes),
+[2.14.24](https://enterprise.github.com/releases/2.14.24/notes)
++ GitHub Desktop [2.1.0](https://desktop.github.com/release-notes/)
++ GitKraken [6.0.1](https://support.gitkraken.com/release-notes/current)
 
 ## Other News
 
