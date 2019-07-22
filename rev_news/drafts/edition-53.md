@@ -149,7 +149,7 @@ This edition covers what happened during the month of June 2019.
 
 ## Releases
 
-+ GitLab [12.0.3](https://about.gitlab.com/2019/07/03/security-release-gitlab-12-dot-0-dot-3-released/),
++ GitLab [12.0.3, 11.11.5, and 11.10.8](https://about.gitlab.com/2019/07/03/security-release-gitlab-12-dot-0-dot-3-released/),
 [12.0.2](https://about.gitlab.com/2019/06/26/gitlab-12-0-2-11-11-4-11-10-7-released/),
 [12.0.1](https://about.gitlab.com/2019/06/25/gitlab-12-0-1-released/),
 [12.0](https://about.gitlab.com/2019/06/22/gitlab-12-0-released/)
