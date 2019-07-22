@@ -134,8 +134,10 @@ This edition covers what happened during the month of June 2019.
   Peff then sent [a version 2](https://public-inbox.org/git/20190629045322.GA8155@sigill.intra.peff.net/)
   of the patch that implements `test_commit_bulk` with many of the
   improvements that had been discussed. Junio discussed the
-  implementation a bit further, but seemed happy with the patch, which
-  will hopefully be merged soon.
+  implementation a bit further, but seemed happy with the patch series.
+
+  Peff sent [a version 3](https://public-inbox.org/git/20190719215417.GA31841@sigill.intra.peff.net/)
+  recenty which will hopefully be merged soon.
   
 <!---
 ### Support
