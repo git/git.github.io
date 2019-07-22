@@ -62,34 +62,34 @@ This edition covers what happened during the month of June 2019.
 
   The comments above the function explains it like this:
 
-  ```sh
-# Similar to test_commit, but efficiently create <nr> commits, each with a
-# unique number $n (from 1 to <nr> by default) in the commit message.
-#
-# Usage: test_commit_bulk [options] <nr>
-#   -C <dir>:
-#	Run all git commands in directory <dir>
-#   --ref=<n>:
-#	ref on which to create commits (default: HEAD)
-#   --start=<n>:
-#	number commit messages from <n> (default: 1)
-#   --message=<msg>:
-#	use <msg> as the commit mesasge (default: "commit $n")
-#   --filename=<fn>:
-#	modify <fn> in each commit (default: $n.t)
-#   --contents=<string>:
-#	place <string> in each file (default: "content $n")
-#   --id=<string>:
-#	shorthand to use <string> and $n in message, filename, and contents
-#
-# The message, filename, and contents strings are evaluated by the shell inside
-# double-quotes, with $n set to the current commit number. So you can do:
-#
-#   test_commit_bulk --filename=file --contents='modification $n'
-#
-# to have every commit touch the same file, but with unique content. Spaces are
-# OK, but you must escape any metacharacters (like backslashes or
-# double-quotes) you do not want expanded.
+  ```
+  # Similar to test_commit, but efficiently create <nr> commits, each with a
+  # unique number $n (from 1 to <nr> by default) in the commit message.
+  #
+  # Usage: test_commit_bulk [options] <nr>
+  #   -C <dir>:
+  #	Run all git commands in directory <dir>
+  #   --ref=<n>:
+  #	ref on which to create commits (default: HEAD)
+  #   --start=<n>:
+  #	number commit messages from <n> (default: 1)
+  #   --message=<msg>:
+  #	use <msg> as the commit mesasge (default: "commit $n")
+  #   --filename=<fn>:
+  #	modify <fn> in each commit (default: $n.t)
+  #   --contents=<string>:
+  #	place <string> in each file (default: "content $n")
+  #   --id=<string>:
+  #	shorthand to use <string> and $n in message, filename, and contents
+  #
+  # The message, filename, and contents strings are evaluated by the shell inside
+  # double-quotes, with $n set to the current commit number. So you can do:
+  #
+  #   test_commit_bulk --filename=file --contents='modification $n'
+  #
+  # to have every commit touch the same file, but with unique content. Spaces are
+  # OK, but you must escape any metacharacters (like backslashes or
+  # double-quotes) you do not want expanded.
   ```
 
   Johannes Schindelin replied to Peff that he likes the direction
