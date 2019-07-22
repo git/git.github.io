@@ -21,10 +21,122 @@ This edition covers what happened during the month of June 2019.
 ### General
 -->
 
-<!---
-### Reviews
--->
 
+### Reviews
+
+* [easy bulk commit creation in tests](https://public-inbox.org/git/20190628093751.GA3569@sigill.intra.peff.net/)
+
+  Derrick Stolee, who prefers to be called Stolee, has sent
+  [since September 2018](https://public-inbox.org/git/4bcd63bf-648d-f3f6-dac8-aabe7ea1e480@gmail.com/)
+  "Git Test Coverage Report" emails to the mailing list.
+
+  These emails contains reports made using `contrib/coverage-diff.sh`
+  to combine the gcov output from `make coverage-test ; make coverage-report`
+  with the output from `git diff A B` to discover _new_ lines of code that are
+  not covered by the test suite.
+
+  In June 2019 Stolee sent
+  [a new report](https://public-inbox.org/git/49d98293-9f0b-44e9-cb07-d6b7ac791eb6@gmail.com/)
+  that found that some new lines of code contributed by Jeff King,
+  alias Peff, were not covered by any test. Peff replied that when
+  running the test that exercises the surrounding code, we hit the early
+  return above the lines that are not tested when there are fewer than
+  100 commits to index.
+
+  One solution to that could be to create 100 commits, instead of just
+  10, in the test, though that would make the test slower. Peff then
+  concluded:
+
+  > It would be nice if we had a "test_commits_bulk" that used fast-import
+  > to create larger numbers of commits.
+
+  A few hours later Peff replied to himself by sending a 6 patch long
+  patch series that implements the `test_commit_bulk` function he
+  suggested.
+
+  In this patch series Peff converted a few places in the code to used
+  this function and reported that it saves around 7.5 seconds from his
+  test runs. He commented: "Not ground-breaking, but I think it's nice
+  to have a solution where we don't have to be afraid to generate a
+  bunch of commits."
+
+  The comments above the function explains it like this:
+
+  ```sh
+# Similar to test_commit, but efficiently create <nr> commits, each with a
+# unique number $n (from 1 to <nr> by default) in the commit message.
+#
+# Usage: test_commit_bulk [options] <nr>
+#   -C <dir>:
+#	Run all git commands in directory <dir>
+#   --ref=<n>:
+#	ref on which to create commits (default: HEAD)
+#   --start=<n>:
+#	number commit messages from <n> (default: 1)
+#   --message=<msg>:
+#	use <msg> as the commit mesasge (default: "commit $n")
+#   --filename=<fn>:
+#	modify <fn> in each commit (default: $n.t)
+#   --contents=<string>:
+#	place <string> in each file (default: "content $n")
+#   --id=<string>:
+#	shorthand to use <string> and $n in message, filename, and contents
+#
+# The message, filename, and contents strings are evaluated by the shell inside
+# double-quotes, with $n set to the current commit number. So you can do:
+#
+#   test_commit_bulk --filename=file --contents='modification $n'
+#
+# to have every commit touch the same file, but with unique content. Spaces are
+# OK, but you must escape any metacharacters (like backslashes or
+# double-quotes) you do not want expanded.
+  ```
+
+  Johannes Schindelin replied to Peff that he likes the direction
+  because "it would make it super easy to go one step further that would
+  probably make a huge difference on Windows: to move `test_commit_bulk`
+  to `test-tool commit-bulk`".
+
+  Peff replied that "in the biggest case we dropped 900 processes to
+  4" so that he thought it would not make a big difference to convert
+  `test_commit_bulk` to C code and integrate it as `test-tool commit-bulk`.
+  But anyway Peff suggested 3 different ways to have only 1 process.
+
+  One of the way Peff suggested was to add a feature to fast-import to
+  say "build on top of ref X". Elijah Newren replied to Peff that such
+  a feature already exists using something like `from refs/heads/branch^0`.
+
+  Peff thanked Elijah used the feature in a patch he attached that
+  further reduces the number of processes used.
+
+  Ævar Arnfjörð Bjarmason also replied to Peff wondering if just
+  having a few "template" repositories, that could just be copied in
+  many tests, would be a better approach.
+
+  Peff replied to Ævar that just "seeing the end result of running a
+  bunch of commands" is less instructive than following "the steps
+  that the author was thinking about", and that "it's more annoying to
+  update". Peff though would find cool that we could "allow caching of
+  the on-disk state at certain points in a test script", for example
+  by annotating some test snippets as "SETUP", like a prerequisite.
+
+  Stolee also replied to Peff, congratulating him for the quick
+  turnaround, providing results from performance tests on Windows
+  which were similar as those provided by Peff, and suggesting
+  possible improvements to the `test_commit_bulk` function. These
+  possible improvements were then discussed by Junio Hamano, the Git
+  maintainer, and Peff.
+
+  Junio, Ævar, Eric Sunshine and Gábor Szeder also discussed with Peff
+  some aspects of the implementation and documentation of the new
+  feature.
+
+  Peff then sent [a version 2](https://public-inbox.org/git/20190629045322.GA8155@sigill.intra.peff.net/)
+  of the patch that implements `test_commit_bulk` with many of the
+  improvements that had been discussed. Junio discussed the
+  implementation a bit further, but seemed happy with the patch, which
+  will hopefully be merged soon.
+  
 <!---
 ### Support
 -->
