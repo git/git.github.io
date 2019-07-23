@@ -177,7 +177,23 @@ __Various__
   infrastructure. If interested, please reach out to
   jaime.rivas@synergy.page
 
+
 __Light reading__
+
+* [My Personal Git Tricks Cheatsheet](https://dev.to/antjanus/my-personal-git-tricks-cheatsheet-23j1)
+  by Antonin Januska, with some improvements based on feedback in comments
+
+* [Manage your dev.to blog posts from a Git repo
+   and use continuous deployment to auto publish/update them](https://dev.to/maxime1992/manage-your-dev-to-blog-posts-from-a-git-repo-and-use-continuous-deployment-to-auto-publish-update-them-143j)
+  by Maxime (@maxime1992)
+
+* [Object Oriented Programming in C: A Case Study - Git and Linux Kernel](https://matheustavares.gitlab.io/assets/oop_git_and_kernel.pdf):
+  slides by Matheus Tavares and Renato Lui Geh (PDF)
+
+* [C# or Java? TypeScript or JavaScript?
+  Machine learning based classification
+  of programming languages](https://github.blog/2019-07-02-c-or-java-typescript-or-javascript-machine-learning-based-classification-of-programming-languages/)
+  by Kavita Ganesan on GitHub Blog (OctoLingua project)
 
 
 __Git tools and sites__
