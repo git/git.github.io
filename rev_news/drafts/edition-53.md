@@ -54,7 +54,7 @@ This edition covers what happened during the month of June 2019.
   patch series that implements the `test_commit_bulk` function he
   suggested.
 
-  In this patch series Peff converted a few places in the code to used
+  In this patch series Peff converted a few places in the code to use
   this function and reported that it saves around 7.5 seconds from his
   test runs. He commented: "Not ground-breaking, but I think it's nice
   to have a solution where we don't have to be afraid to generate a
