@@ -24,34 +24,34 @@ This edition covers what happened during the month of June 2019.
 
 ### Reviews
 
-* [easy bulk commit creation in tests](https://public-inbox.org/git/20190628093751.GA3569@sigill.intra.peff.net/)
+* [Easy bulk commit creation in tests](https://public-inbox.org/git/20190628093751.GA3569@sigill.intra.peff.net/)
 
-  Derrick Stolee, who prefers to be called Stolee, has sent
-  [since September 2018](https://public-inbox.org/git/4bcd63bf-648d-f3f6-dac8-aabe7ea1e480@gmail.com/)
-  "Git Test Coverage Report" emails to the mailing list.
+  Derrick Stolee, who prefers to be called Stolee, has been sending
+  "Git Test Coverage Report" emails to the mailing list
+  [since September 2018](https://public-inbox.org/git/4bcd63bf-648d-f3f6-dac8-aabe7ea1e480@gmail.com/).
 
-  These emails contains reports made using `contrib/coverage-diff.sh`
-  to combine the gcov output from `make coverage-test ; make coverage-report`
+  These emails contain reports made using `contrib/coverage-diff.sh`
+  to combine the `gcov` output from `make coverage-test ; make coverage-report`
   with the output from `git diff A B` to discover _new_ lines of code that are
   not covered by the test suite.
 
   In June 2019 Stolee sent
   [a new report](https://public-inbox.org/git/49d98293-9f0b-44e9-cb07-d6b7ac791eb6@gmail.com/)
-  that found that some new lines of code contributed by Jeff King,
+  which stated that some new lines of code contributed by Jeff King,
   alias Peff, were not covered by any test. Peff replied that when
   running the test that exercises the surrounding code, we hit the early
   return above the lines that are not tested when there are fewer than
   100 commits to index.
 
-  One solution to that could be to create 100 commits, instead of just
-  10, in the test, though that would make the test slower. Peff then
+  One solution to that problem could be to create 100 commits, instead of just
+  10, in the test, though that would slow down the test. Peff then
   concluded:
 
   > It would be nice if we had a "test_commits_bulk" that used fast-import
   > to create larger numbers of commits.
 
   A few hours later Peff replied to himself by sending a 6 patch long
-  patch series that implements the `test_commit_bulk` function he
+  patch series which implements the `test_commit_bulk` function he
   suggested.
 
   In this patch series Peff converted a few places in the code to use
@@ -74,9 +74,9 @@ This edition covers what happened during the month of June 2019.
   #   --start=<n>:
   #	number commit messages from <n> (default: 1)
   #   --message=<msg>:
-  #	use <msg> as the commit mesasge (default: "commit $n")
+  #	use <msg> as the commit message (default: "commit $n")
   #   --filename=<fn>:
-  #	modify <fn> in each commit (default: $n.t)
+  #	modify <fn> in each commit (default: "$n.t")
   #   --contents=<string>:
   #	place <string> in each file (default: "content $n")
   #   --id=<string>:
@@ -102,11 +102,11 @@ This edition covers what happened during the month of June 2019.
   `test_commit_bulk` to C code and integrate it as `test-tool commit-bulk`.
   But anyway Peff suggested 3 different ways to have only 1 process.
 
-  One of the way Peff suggested was to add a feature to fast-import to
+  One of the ways Peff suggested was to add a feature to fast-import to
   say "build on top of ref X". Elijah Newren replied to Peff that such
   a feature already exists using something like `from refs/heads/branch^0`.
 
-  Peff thanked Elijah used the feature in a patch he attached that
+  Peff thanked Elijah and used the feature in a patch he attached, which
   further reduces the number of processes used.
 
   Ævar Arnfjörð Bjarmason also replied to Peff wondering if just
@@ -124,7 +124,7 @@ This edition covers what happened during the month of June 2019.
   turnaround, providing results from performance tests on Windows
   which were similar as those provided by Peff, and suggesting
   possible improvements to the `test_commit_bulk` function. These
-  possible improvements were then discussed by Junio Hamano, the Git
+  suggestions were then discussed by Junio Hamano, the Git
   maintainer, and Peff.
 
   Junio, Ævar, Eric Sunshine and Gábor Szeder also discussed with Peff
@@ -136,8 +136,8 @@ This edition covers what happened during the month of June 2019.
   improvements that had been discussed. Junio discussed the
   implementation a bit further, but seemed happy with the patch series.
 
-  Peff sent [a version 3](https://public-inbox.org/git/20190719215417.GA31841@sigill.intra.peff.net/)
-  recenty which will hopefully be merged soon.
+  Peff recently sent [a version 3](https://public-inbox.org/git/20190719215417.GA31841@sigill.intra.peff.net/),
+  which will hopefully be merged soon.
   
 <!---
 ### Support
