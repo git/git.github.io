@@ -40,6 +40,7 @@ This edition covers what happened during the month of July 2019.
 
 __Various__
 
+* The first translations of manpages are finally hitting git-scm.com. The project was kicked off and [announced](https://public-inbox.org/git/1992944.NOdEsaAZKb@cayenne/) in january 2019. It was decided to hold the translation outside the main git repository and use a converter from the original asciidoc format to gettext po. After some more work on tooling and [more people](https://public-inbox.org/git/CAHtYWY4g4BYDr_z7pfS-p=aX_YkVo4HzGR1Dsytn4RkzBo0GjA@mail.gmail.com/) joining the project, the toolchain to allow publishing on git-scm.com is in place and you can already see [some results](https://git-scm.com/docs/git-add/pt_BR). There are presently 9 languages of which 2 have several complete translated manpages. The upcoming tasks are to direct prioritary translators to most viewed content and generate packages for distribution along git itself.
 
 __Light reading__
 
