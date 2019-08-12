@@ -46,6 +46,10 @@ __Light reading__
 
 __Git tools and sites__
 
+* [Game of Trees (Got)](https://gameoftrees.org/index.html) is a
+  version control system developed by and for OpenBSD developers which
+  prioritizes ease of use and simplicity over flexibility. Got wants
+  to remain on-disk compatible with bare Git repositories.
 
 ## Credits
 
