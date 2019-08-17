@@ -56,7 +56,7 @@ This edition covers what happened during the month of July 2019.
 + GitKraken [6.1.3](https://support.gitkraken.com/release-notes/current),
 [6.1.2](https://support.gitkraken.com/release-notes/current),
 [6.1.1](https://support.gitkraken.com/release-notes/current),
-[6.1.0](https://support.gitkraken.com/release-notes/current),
+[6.1.0](https://support.gitkraken.com/release-notes/current)
 + GitHub Desktop [2.1.1](https://desktop.github.com/release-notes/)
 
 ## Other News
