@@ -21,9 +21,7 @@ This edition covers what happened during the month of July 2019.
 ### General
 -->
 
-<!---
 ### Reviews
--->
 
 * [[RFC/PATCH] CodingGuidelines: spell out post-C89 rules](https://public-inbox.org/git/xmqq4l3l520f.fsf_-_@gitster-ct.c.googlers.com/)
 
