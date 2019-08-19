@@ -25,6 +25,57 @@ This edition covers what happened during the month of July 2019.
 ### Reviews
 -->
 
+* [[RFC/PATCH] CodingGuidelines: spell out post-C89 rules](https://public-inbox.org/git/xmqq4l3l520f.fsf_-_@gitster-ct.c.googlers.com/)
+
+  Carlo Arenas recently [commented on a patch by Emily Shaffer](https://public-inbox.org/git/CAPUEspgjSAqHUP2vsCCjqG8b0QkWdgoAByh4XdqsThQMt=V38w@mail.gmail.com/)
+  that moving a declaration out of a "for" loop would allow building on
+  a Centos 6 box.
+
+  Junio Hamano, the Git maintainer, replied to Carlo that we indeed
+  "still reject variable definition in for loop control" even if "for
+  past several years we've been experimenting with a bit more modern
+  features".
+
+  Junio then sent a patch to update the Documentation/CodingGuidelines
+  file. This file describes which coding conventions are, and should
+  be, used by developers working on the Git codebase.
+
+  One very important part of these conventions are the C language
+  features that the developers are allowed or disallowed to use.
+
+  For a very long time, to be compatible with as many systems as
+  possible, only features part of the
+  [C89 standard](https://en.wikipedia.org/wiki/ANSI_C) were
+  allowed. Since 2012 though features part of the C99 standard have
+  been very slowly introduced.
+
+  When these new features were introduced, they were introduced in
+  "weather balloons" patches, which are very limited changes that are
+  easy to undo in case someone complains.
+
+  Fortunately in most cases, though not in the "for" loop case, since
+  the patches have been merged, no one has complained that they
+  couldn't compile Git's code due to these patches, which means that
+  code using these new features can now be more widely accepted.
+
+  The goal of Junio's patch was to document that fact and these new
+  features at the same time.
+
+  One of the new feature is allowing an enum definition whose last
+  element is followed by a comma. Jonathan Nieder replied to Junio
+  that someone complained about that in [2010](https://public-inbox.org/git/20100311163235.GC7877@thor.il.thewrittenword.com/),
+  but, as it has not happened since 2012 when the feature was
+  reintroduced in the code base, it is ok.
+
+  Jonathan even suggested that we "say that the last element should
+  always be followed by a comma, for ease of later patching", and
+  Junio found this idea interesting.
+
+  A few more comments were made by Jonathan and Bryan Turner about
+  small possible improvements to Junio's patch. Junio then sent an
+  updated version of the patch which has since been merged to the
+  master branch.
+
 <!---
 ### Support
 -->
