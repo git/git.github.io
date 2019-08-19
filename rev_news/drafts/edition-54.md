@@ -78,9 +78,44 @@ This edition covers what happened during the month of July 2019.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+
+## Developer Spotlight: Jean-Noël Avila
+
+* Who are you and what do you do?
+
+  My name is Jean-Noël Avila, father of three daughters and husband of an incredibly comprehensive wife. I graduated a long time ago from a french engineering school, with a speciality  in signal processing, not really in computer science .
+
+  Professionally, I work in the R&D team of a [small company](https://www.scantech.com) that makes industrial online measurement systems, and guess what, we're using Git as an ubiquitous revision control system (software, documentation); my colleagues know who they should call for any issue. Sadly though, I don't work on Git.
+
+* What would you name your most important contribution to Git?
+
+  For the Git project itself, my most important and only contribution has been to deliver the french localization of the software since... 2013 (gasp!) and occasionally propose some patches to fix internationalization issues. 
+
+  At the beginning, I proposed some patches to fix glob-pattern matching in the `.gitignore` file, but even if it fixed the issue, it turned out later that  the patch had introduced a performance regression. So I chose to stick to a less harmful activity in the community (although bad translation can be quite harmful).
+
+  In the Git ecosystem more generally, I've been working on translating the Progit book to French and managing with Peff and Pedro (@pedrorijo91) the publishing of the translations of the book on http://git-scm.com. So, to sum it up, not working on the core, but on the public interfaces of the project.
+
+* What are you doing on the Git project these days, and why?
+
+  Following the path of localization, what is a localized application worth if the documentation is still an impediment? In this idea, at the beginning of this year, I've started an effort to translate the manual pages in French and to propose the translation framework put in place for this purpose to  other languages.
+
+  So far, only two languages have translated content, but I expect to have some more soon. The pages are already available at http://git-scm.com/docs/ . What is still missing is the packaging for other distributions of Git. Maybe when we have more content to provide.
+
+* If you could get a team of expert developers to work full time on something in Git for a full year, what would it be?
+
+  Functionally, we've been bitten by some wrong merges of concurrent branches, and I wish Git could have some knowledge in patch algebra to better handle these corner cases. I know that it would be quite orthogonal to the present design, but even just detecting and showing warnings that something nasty is happening would prevent surprises (to say the least) of the users in complex histories.
+
+  From a translator's stand point, a project that would not require a big expertise while still being useful would be to introduce rules and factorize internationalization. This part of Git is still the wild west by some aspects with a lot of freedom left to developers to choose their own formatting. A sizeable part of these strings are almost identical: with or without an ending period, with quoted or unquoted `%s`, with uppercase or not. Some strings are very similar: "foo and bar are mutually exclusive", and so on. In the end, the number of segments to translate in Git amounts to 4674 for v2.23.0, which basically bars the entry to new translations.
+
+  As an aside, providing a `po` file for core strings and another one for less used strings would also help kickstart translations by focusing on more productive work for translators of new languages. I understand this kind of task would be Sisyphos' work, but that would really help the community grow by giving access to Git to users less educated in computer science. 
+
+* If you could remove something from Git without worrying about backwards compatibility, what would it be?
+
+  Translating Git and the manpages gives a good overview of what's available and what is being introduced. So far, I haven't experienced anything strinkingly bad about a particular feature. At the limit, I would make rebasing require a more advanced knowledge of Git's internals by not providing such an easy way to shoot in one's foot.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+  In fact, in my daily work with Git, I don't use the command line that much. I'm an emacs fan, and Magit is really a miraculous tool when it comes to interacting with a Git repository from my favorite editor.
 
 ## Releases
 
