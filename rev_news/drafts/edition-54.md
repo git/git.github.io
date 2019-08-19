@@ -67,6 +67,8 @@ __Various__
 
 __Light reading__
 
+* [A Deep Dive into Git Performance using Trace2](https://devblogs.microsoft.com/devops/a-deep-dive-into-git-performance-using-trace2/)
+  by Jeff Hostetler explains everything about the Trace2 logging framework which was released in Git 2.22.0.
 
 __Git tools and sites__
 
