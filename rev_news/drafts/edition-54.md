@@ -28,7 +28,7 @@ and an ability to scale -- from making simple history rewrites
 trivial, to facilitating the creation of entirely new tools which
 leverage existing capabilities to handle more complex cases.
 
-You can read more about [common usecases and base capabilities of
+You can read more about [common use cases and base capabilities of
 filter-repo](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/Documentation/git-filter-repo.txt#L17-L55),
 but in this article, I'd like to focus on two things: providing a simple
 example to give a very brief flavor for git-filter-repo usage, and answer a
@@ -55,17 +55,29 @@ Doing this with filter-repo is as simple as the following command:
 ```shell
   git filter-repo --path src/ --to-subdirectory-filter my-module --tag-rename '':'my-module-'
 ```
-(the single quotes are unnecessary, but make it clearer to a human that we
-are replacing the empty string as a prefix with `my-module-`)
+(The single quotes are unnecessary, but make it clearer to a human that we
+are replacing the empty string as a prefix with `my-module-`.)
 
 By contrast, filter-branch comes with a pile of caveats even once you
-figure out the necessary (os-dependent) invocation(s):
+figure out the necessary (OS-dependent) invocation(s):
 
 ```shell
-  git filter-branch --index-filter 'git ls-files | grep -v ^src/ | xargs git rm -q --cached; git ls-files -s | sed "s-$(printf \\t)-&my-module/-" | git update-index --index-info; git ls-files | grep -v ^my-module/ | xargs git rm -q --cached' --tag-name-filter 'echo "my-module-$(cat)"' --prune-empty -- --all
+  git filter-branch \
+      --index-filter 'git ls-files \
+			  | grep -v ^src/ \
+			  | xargs git rm -q --cached; \
+		      git ls-files -s \
+			  | sed "s-$(printf \\t)-&my-module/-" \
+			  | git update-index --index-info; \
+		      git ls-files \
+			  | grep -v ^my-module/ \
+			  | xargs git rm -q --cached' \
+      --tag-name-filter 'echo "my-module-$(cat)"' --prune-empty -- --all
   git clone file://$(pwd) newcopy
   cd newcopy
-  git for-each-ref --format="delete %(refname)" refs/tags/ | grep -v refs/tags/my-module- | git update-ref --stdin
+  git for-each-ref --format="delete %(refname)" refs/tags/ \
+      | grep -v refs/tags/my-module- \
+      | git update-ref --stdin
   git gc --prune=now
 ```
 
@@ -132,11 +144,11 @@ From the technical architecture/design angle:
     [roadblocks](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/contrib/filter-repo-demos/bfg-ish#L23-L26)
     [and](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/contrib/filter-repo-demos/bfg-ish#L64-L66)
     [limitations](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/contrib/filter-repo-demos/bfg-ish#L27-L28)
-    even within its intended usecase of removing big or sensitive content.
+    even within its intended use case of removing big or sensitive content.
 
   * filter-branch: performance really shouldn't matter for a one shot
     usage tool, but filter-branch can turn a few hour rewrite
-    (allowing an overnight downtime) into an intractable three month
+    (allowing an overnight downtime) into an intractable three-month
     wait.  Further, its design architecture leaks through every level
     of the interface, making it nearly impossible to change anything
     about the slow design without having backward compatibility
@@ -156,7 +168,7 @@ Some brief impressions about reposurgeon:
     [almost](http://www.catb.org/~esr/reposurgeon/features.html)
     [exclusively](http://www.catb.org/~esr/reposurgeon/dvcs-migration-guide.html)
     focused on transitioning between different version control systems
-    (cvs, svn, hg, bzr, git, etc.), and in particular handling the myriad
+    (CVS, SVN, Hg, Bazaar, Git, etc.), and in particular handling the myriad
     edge and corner cases that arise in transitioning from CVS or SVN to a
     DVCS.
   * Provides very thorough reference-style documentation; if you read all
@@ -195,7 +207,7 @@ the fast-export output to handle a number of history rewriting cases.  I
 have done this many times, but it has some
 [drawbacks](https://public-inbox.org/git/CABPp-BGL-3_nhZSpt0Bz0EVY-6-mcbgZMmx4YcXEfA_ZrTqFUw@mail.gmail.com/):
 
-  * Dangerous for programmatic edits: It's tempting to use sed or perl
+  * Dangerous for programmatic edits: It's tempting to use `sed` or `perl`
     one-liners to e.g. try to modify filenames, but you risk accidentally
     also munging unrelated data such as commit messages, file contents, and
     branch and tag names.
@@ -208,7 +220,7 @@ have done this many times, but it has some
     refer to the new commit hashes, or stripping of non-merge commits which
     become empty or merge commits which become degenerate and empty.
   * Misses a lot of pieces needed to round things out into a usable
-    tool
+    tool.
 
 However, fast-export and fast-import are the right architecture for
 building a repository filtering tool on top of; they are fast, provide
@@ -235,7 +247,7 @@ and therefore technically predates both BFG and reposurgeon.)
 
 ### Why not a builtin command?
 
-One could ask why this new command is not written in C like most of git.
+One could ask why this new command is not written in C like most of Git.
 While that would have several advantages, it doesn't meet the necessary
 design requirements.  See the ["VERSATILITY" section of the
 manpage](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/Documentation/git-filter-repo.txt#L306-L326)
@@ -277,7 +289,7 @@ interest:
 
   Carlo Arenas recently [commented on a patch by Emily Shaffer](https://public-inbox.org/git/CAPUEspgjSAqHUP2vsCCjqG8b0QkWdgoAByh4XdqsThQMt=V38w@mail.gmail.com/)
   that moving a declaration out of a "for" loop would allow building on
-  a Centos 6 box.
+  a CentOS 6 box.
 
   Junio Hamano, the Git maintainer, replied to Carlo that we indeed
   "still reject variable definition in for loop control" even if "for
@@ -309,7 +321,7 @@ interest:
   The goal of Junio's patch was to document that fact and these new
   features at the same time.
 
-  One of the new feature is allowing an enum definition whose last
+  One of the new features is allowing an enum definition whose last
   element is followed by a comma. Jonathan Nieder replied to Junio
   that someone complained about that in [2010](https://public-inbox.org/git/20100311163235.GC7877@thor.il.thewrittenword.com/),
   but, as it has not happened since 2012 when the feature was
@@ -336,7 +348,7 @@ interest:
   My name is Jean-Noël Avila, father of three daughters and husband of
   an incredibly understanding wife. I graduated a long time ago from a
   french engineering school, with a speciality in signal processing,
-  not really in computer science .
+  not really in computer science.
 
   Professionally, I work in the R&D team of a
   [small company](https://www.scantech.com) that makes industrial
@@ -361,7 +373,7 @@ interest:
   In the Git ecosystem more generally, I've been working on
   translating the Progit book to French and managing with Peff and
   Pedro (@pedrorijo91) the publishing of the translations of the book
-  on http://git-scm.com. So, to sum it up, not working on the core,
+  on [http://git-scm.com](http://git-scm.com). So, to sum it up, not working on the core,
   but on the public interfaces of the project.
 
 * What are you doing on the Git project these days, and why?
@@ -374,7 +386,7 @@ interest:
 
   So far, only two languages have translated content, but I expect to
   have some more soon. The pages are already available at
-  http://git-scm.com/docs/ . What is still missing is the packaging
+  [http://git-scm.com/docs/](http://git-scm.com/docs/). What is still missing is the packaging
   for other distributions of Git. Maybe when we have more content to
   provide.
 
@@ -411,7 +423,7 @@ interest:
 
   Translating Git and the manpages gives a good overview of what's
   available and what is being introduced. So far, I haven't
-  experienced anything strinkingly bad about a particular feature. At
+  experienced anything strikingly bad about a particular feature. At
   the limit, I would make rebasing require a more advanced knowledge
   of Git's internals by not providing such an easy way to shoot in
   one's foot.
@@ -419,7 +431,7 @@ interest:
 * What is your favorite Git-related tool/library, outside of Git itself?
 
   In fact, in my daily work with Git, I don't use the command line
-  that much. I'm an emacs fan, and Magit is really a miraculous tool
+  that much. I'm an Emacs fan, and Magit is really a miraculous tool
   when it comes to interacting with a Git repository from my favorite
   editor.
 
@@ -453,7 +465,7 @@ interest:
 
 __Various__
 
-* The first translations of manpages are finally hitting git-scm.com. The project was kicked off and [announced](https://public-inbox.org/git/1992944.NOdEsaAZKb@cayenne/) in january 2019. It was decided to hold the translation outside the main git repository and use a converter from the original asciidoc format to gettext po. After some more work on tooling and [more people](https://public-inbox.org/git/CAHtYWY4g4BYDr_z7pfS-p=aX_YkVo4HzGR1Dsytn4RkzBo0GjA@mail.gmail.com/) joining the project, the toolchain to allow publishing on git-scm.com is in place and you can already see [some results](https://git-scm.com/docs/git-add/pt_BR). There are presently 9 languages of which 2 have several complete translated manpages. The upcoming tasks are to direct prioritary translators to most viewed content and generate packages for distribution along git itself.
+* The first translations of manpages are finally hitting git-scm.com. The project was kicked off and [announced](https://public-inbox.org/git/1992944.NOdEsaAZKb@cayenne/) in January 2019. It was decided to hold the translation outside the main git repository and use a converter from the original asciidoc format to gettext po. After some more work on tooling and [more people](https://public-inbox.org/git/CAHtYWY4g4BYDr_z7pfS-p=aX_YkVo4HzGR1Dsytn4RkzBo0GjA@mail.gmail.com/) joining the project, the toolchain to allow publishing on git-scm.com is in place and you can already see [some results](https://git-scm.com/docs/git-add/pt_BR). There are presently 9 languages of which 2 have several complete translated manpages. The upcoming tasks are to direct priority-oriented translators to most viewed content and generate packages for distribution along Git itself.
 
 __Light reading__
 
