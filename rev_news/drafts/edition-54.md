@@ -84,7 +84,7 @@ This edition covers what happened during the month of July 2019.
 * Who are you and what do you do?
 
   My name is Jean-Noël Avila, father of three daughters and husband of
-  an incredibly comprehensive wife. I graduated a long time ago from a
+  an incredibly understanding wife. I graduated a long time ago from a
   french engineering school, with a speciality in signal processing,
   not really in computer science .
 
