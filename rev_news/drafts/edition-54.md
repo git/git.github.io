@@ -78,6 +78,253 @@ This edition covers what happened during the month of July 2019.
 ### Support
 -->
 
+## An Introduction to git-filter-repo
+
+There is a new tool available for surgery on git repositories:
+[git-filter-repo](https://github.com/newren/git-filter-repo).  It
+claims to have [many new unique
+features](https://github.com/newren/git-filter-repo#design-rationale-behind-filter-repo-why-create-a-new-tool),
+[good
+performance](https://public-inbox.org/git/CABPp-BGOz8nks0+Tdw5GyGqxeYR-3FF6FT5JcgVqZDYVRQ6qog@mail.gmail.com/),
+and an ability to scale -- from making simple history rewrites
+trivial, to facilitating the creation of entirely new tools which
+leverage existing capabilities to handle more complex cases.
+
+You can read more about [common usecases and base capabilities of
+filter-repo](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/Documentation/git-filter-repo.txt#L17-L55),
+but in this article, I'd like to focus on two things: providing a simple
+example to give a very brief flavor for git-filter-repo usage, and answer a
+few likely questions about its purpose and rationale (including a short
+comparison to other tools).  I will provide several links along the way for
+curious folks to learn more.
+
+### A simple example
+
+Let's start with a simple example that has come up a lot for me:
+extracting a piece of an existing repository and preparing it to be
+merged into some larger monorepository.  So, we want to:
+
+  * extract the history of a single directory, src/.  This means that only
+    paths under src/ remain in the repo, and any commits that only touched
+    paths outside this directory will be removed.
+  * rename all files to have a new leading directory, my-module/ (e.g. so that
+    src/foo.c becomes my-module/src/foo.c)
+  * rename any tags in the extracted repository to have a 'my-module-'
+    prefix (to avoid any conflicts when we later merge this repo into
+    something else)
+
+Doing this with filter-repo is as simple as the following command:
+```shell
+  git filter-repo --path src/ --to-subdirectory-filter my-module --tag-rename '':'my-module-'
+```
+(the single quotes are unnecessary, but make it clearer to a human that we
+are replacing the empty string as a prefix with `my-module-`)
+
+By contrast, filter-branch comes with a pile of caveats even once you
+figure out the necessary (os-dependent) invocation(s):
+
+```shell
+  git filter-branch --index-filter 'git ls-files | grep -v ^src/ | xargs git rm -q --cached; git ls-files -s | sed "s-$(printf \\t)-&my-module/-" | git update-index --index-info; git ls-files | grep -v ^my-module/ | xargs git rm -q --cached' --tag-name-filter 'echo "my-module-$(cat)"' --prune-empty -- --all
+  git clone file://$(pwd) newcopy
+  cd newcopy
+  git for-each-ref --format="delete %(refname)" refs/tags/ | grep -v refs/tags/my-module- | git update-ref --stdin
+  git gc --prune=now
+```
+
+BFG is not capable of this type of rewrite, and this type of rewrite is
+difficult to perform safely using fast-export and fast-import directly.
+
+You can find a lot more examples in [filter-repo's
+manpage](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/Documentation/git-filter-repo.txt#L434).
+(If you are curious about the "pile of caveats" mentioned above or the
+reasons for the extra steps for filter-branch, you can [read more
+details about this
+example](https://github.com/newren/git-filter-repo#example-usage-comparing-to-filter-branch)).
+
+### Why a new tool instead of contributing to other tools?
+
+There are two well known tools in the repository rewriting space:
+
+  * [git-filter-branch](https://git-scm.com/docs/git-filter-branch)
+  * [BFG Repo Cleaner](https://rtyley.github.io/bfg-repo-cleaner/)
+
+and two lesser-known tools:
+
+  * [reposurgeon](http://www.catb.org/~esr/reposurgeon/reposurgeon.html)
+  * [git-fast-export](https://git-scm.com/docs/git-fast-export) and
+    [git-fast-import](https://git-scm.com/docs/git-fast-import)
+
+(While fast-export and fast-import themselves are well known, they are
+usually thought of as export-to-another-VCS or import-from-another-VCS
+tools, though they also work for git->git transitions.)
+
+I will briefly discuss each.
+
+#### filter-branch and BFG
+
+It's natural to ask why, if these well-known tools lacked features I
+wanted, they could not have been extended instead of creating a new tool.
+In short, they were philosophically the wrong starting point for extension
+and they also had the wrong architecture or design to support such an
+effort.
+
+From the philosophical angle:
+
+  * BFG: easy to use flags for some common cases, but not extensible
+  * filter-branch: relatively versatile capability via user-specified
+    shell commands, but rapidly becomes very difficult to use beyond
+    trivial cases especially as usability defaults increasingly
+    conflict and cause problems.
+
+I wanted something that made the easy cases simple like BFG, but which
+would scale up to more difficult cases and have versatility beyond that
+which filter-branch provides.
+
+From the technical architecture/design angle:
+
+  * BFG: works on packfiles and packed-refs, directly rewriting tree and
+    blob objects; Roberto proved you can get a lot done with this design
+    with his work on the BFG (as many people who have used his tool can
+    attest), but this design does not permit things like differentiating
+    paths in different directories with the same basename nor could it be
+    used to allow renaming of paths (except within the same directory).
+    Further, this design even sadly runs into a
+    [lot](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/contrib/filter-repo-demos/bfg-ish#L32-L39)
+    [of](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/contrib/filter-repo-demos/bfg-ish#L29-L31)
+    [roadblocks](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/contrib/filter-repo-demos/bfg-ish#L23-L26)
+    [and](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/contrib/filter-repo-demos/bfg-ish#L64-L66)
+    [limitations](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/contrib/filter-repo-demos/bfg-ish#L27-L28)
+    even within its intended usecase of removing big or sensitive content.
+
+  * filter-branch: performance really shouldn't matter for a one shot
+    usage tool, but filter-branch can turn a few hour rewrite
+    (allowing an overnight downtime) into an intractable three month
+    wait.  Further, its design architecture leaks through every level
+    of the interface, making it nearly impossible to change anything
+    about the slow design without having backward compatibility
+    issues.  These issues are well known, but what is less well known
+    is that even ignoring performance, [the usability choices in
+    filter-branch rapidly become increasingly conflicting and
+    problematic](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/contrib/filter-repo-demos/filter-lamely#L9-L61)
+    for users with larger repos and more involved rewrites,
+    difficulties that again cannot be ameliorated without breaking
+    backward compatibility.
+
+#### reposurgeon
+
+Some brief impressions about reposurgeon:
+
+  * Appears to be
+    [almost](http://www.catb.org/~esr/reposurgeon/features.html)
+    [exclusively](http://www.catb.org/~esr/reposurgeon/dvcs-migration-guide.html)
+    focused on transitioning between different version control systems
+    (cvs, svn, hg, bzr, git, etc.), and in particular handling the myriad
+    edge and corner cases that arise in transitioning from CVS or SVN to a
+    DVCS.
+  * Provides very thorough reference-style documentation; if you read all
+    reposurgeon documentation, you will likely feel as though you can take
+    an existing example and modify it in many ways.
+  * [Absolutely no full-fledged
+    examples](https://public-inbox.org/git/CAA01Csq0eX2L5cKpjjySs+4e0Sm+vp=10C_SAkE6CLpCHBWZ8g@mail.gmail.com/)
+    [or user-guide style
+    documentation](https://public-inbox.org/git/CAA01Csp+RpCXO4noewBOMY6qJiBy=Gshv3rUh83ZY2RJ5Th3Ww@mail.gmail.com/)
+    are provided for getting started.
+  * Appears to not have any facilities for quick (in terms of time spent by
+    the user) conversions similar to filter-branch, BFG, or filter-repo.
+    Users who want such capabilities are likely to be frustrated by
+    reposurgeon and give up.
+  * Strikes me as "GDB for history rewriting"; it has lots of facilities
+    for manually inspecting and editing, but is not intended for the
+    first-time or casual history spelunker.  Only those who view history
+    spelunking as a frequent hobby or job are likely to dive in.  And it's
+    not quite clear whether it is only useful to those transitioning from
+    CVS/SVN or whether the facilities would also be useful to others.
+  * Built on top of fast-export and fast-import, which I contend is the
+    right architecture for a history filtering tool (see below).
+
+I have read the reposurgeon documentation multiple times over the years,
+and am almost at a point where I feel like I know how to get started with
+it.  I haven't had a need to convert a CVS or SVN repo in over a decade; if
+I had such a need, perhaps I'd persevere and learn more about it.  I
+suspect it has some good ideas I could apply to filter-repo.  But I haven't
+managed to get started with reposurgeon, so clearly my impressions of it
+should be taken with a grain of salt.
+
+#### fast-export and fast-import
+
+Finally, fast-export and fast-import can be used with a little editing of
+the fast-export output to handle a number of history rewriting cases.  I
+have done this many times, but it has some
+[drawbacks](https://public-inbox.org/git/CABPp-BGL-3_nhZSpt0Bz0EVY-6-mcbgZMmx4YcXEfA_ZrTqFUw@mail.gmail.com/):
+
+  * Dangerous for programmatic edits: It's tempting to use sed or perl
+    one-liners to e.g. try to modify filenames, but you risk accidentally
+    also munging unrelated data such as commit messages, file contents, and
+    branch and tag names.
+  * Easy to miss corner cases: for example, fast-export only quotes
+    filenames when necessary; as such, your attempt to rename a directory
+    might leave files with spaces or UTF-8 characters in their original
+    location.
+  * Difficult to directly provide higher level facilities: for example,
+    rewriting (possibly abbreviated) commit hashes in commit messages to
+    refer to the new commit hashes, or stripping of non-merge commits which
+    become empty or merge commits which become degenerate and empty.
+  * Misses a lot of pieces needed to round things out into a usable
+    tool
+
+However, fast-export and fast-import are the right architecture for
+building a repository filtering tool on top of; they are fast, provide
+access to almost all aspects of a repository in a very machine-parseable
+format, and will continue to gain features and capabilities over time
+(e.g. when replace refs were added, fast-export and fast-import immediately
+gained support).  To create a full repository surgery tool, you "just" need
+to [combine fast-export and fast-import together with a whole lot of
+parsing and
+glue](https://github.com/newren/git-filter-repo#how-filter-repo-works),
+which, in a nutshell, is what filter-repo is.
+
+#### Upstream improvements
+
+But to circle back to the question of improving existing tools, during the
+development of filter-repo and its predecessor, lots of [improvements to
+both fast-export and
+fast-import](https://github.com/newren/git-filter-repo/tree/develop#upstream-improvements)
+were submitted and included in git.git.
+
+(Also, [filter-repo started in early 2009 as
+git_fast_filter.py](https://public-inbox.org/git/51419b2c0904072035u1182b507o836a67ac308d32b9@mail.gmail.com/)
+and therefore technically predates both BFG and reposurgeon.)
+
+### Why not a builtin command?
+
+One could ask why this new command is not written in C like most of git.
+While that would have several advantages, it doesn't meet the necessary
+design requirements.  See the ["VERSATILITY" section of the
+manpage](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/Documentation/git-filter-repo.txt#L306-L326)
+or see the "Versatility" section under the [Design Rationale of the
+README](https://github.com/newren/git-filter-repo#design-rationale-behind-filter-repo-why-create-a-new-tool).
+
+Technically, we could perhaps provide a mechanism for people to write
+and compile plugins that a builtin command could load, but having users
+write filtering functions in C sounds suboptimal, and requiring gcc for
+filter-repo sounds more onerous than using python.
+
+### Where to from here?
+
+This was just a quick intro to filter-repo, and I've provided a lot of
+links above if you want to learn more.  Just a few more that might be of
+interest:
+
+  * [Ramifications of repository
+    rewrites](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/Documentation/git-filter-repo.txt#L340-L350);
+    including
+    [some](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/Documentation/git-filter-repo.txt#L376-L410)
+    [tips](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/Documentation/git-filter-repo.txt#L426-L431)
+    (not specific to filter-repo)
+  * [Finding big objects/directories/extensions (and renames) in your
+    repo](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/Documentation/git-filter-repo.txt#L356-L361)
+    (can be used together with tools other than filter-repo too)
+  * [Creating new history rewriting tools](https://github.com/newren/git-filter-repo/tree/master/contrib/filter-repo-demos)
 
 ## Developer Spotlight: Jean-Noël Avila
 
