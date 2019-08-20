@@ -193,10 +193,10 @@ This edition covers what happened during the month of July 2019.
 [12.1.3](https://about.gitlab.com/2019/07/31/gitlab-12-1-3-released/),
 [12.1.2](https://about.gitlab.com/2019/07/29/security-release-gitlab-12-dot-1-dot-2-released/),
 [12.1.1](https://about.gitlab.com/2019/07/24/gitlab-12-1-1-released/)
-+ GitKraken [6.1.3](https://support.gitkraken.com/release-notes/current),
-[6.1.2](https://support.gitkraken.com/release-notes/current),
-[6.1.1](https://support.gitkraken.com/release-notes/current),
-[6.1.0](https://support.gitkraken.com/release-notes/current)
++ GitKraken [6.1.3](https://support.gitkraken.com/release-notes/current/#version-613),
+[6.1.2](https://support.gitkraken.com/release-notes/current/#version-612),
+[6.1.1](https://support.gitkraken.com/release-notes/current/#version-611),
+[6.1.0](https://support.gitkraken.com/release-notes/current/#version-610)
 + GitHub Desktop [2.1.1](https://desktop.github.com/release-notes/)
 
 ## Other News
