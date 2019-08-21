@@ -371,7 +371,7 @@ interest:
   community (although bad translation can be quite harmful).
 
   In the Git ecosystem more generally, I've been working on
-  translating the Progit book to French and managing with Peff and
+  translating the Pro Git book [to French](https://git-scm.com/book/fr/v2) and managing with Peff and
   Pedro (@pedrorijo91) the publishing of the translations of the book
   on [http://git-scm.com](http://git-scm.com). So, to sum it up, not working on the core,
   but on the public interfaces of the project.
@@ -431,7 +431,7 @@ interest:
 * What is your favorite Git-related tool/library, outside of Git itself?
 
   In fact, in my daily work with Git, I don't use the command line
-  that much. I'm an Emacs fan, and Magit is really a miraculous tool
+  that much. I'm an Emacs fan, and [Magit](https://magit.vc/) is really a miraculous tool
   when it comes to interacting with a Git repository from my favorite
   editor.
 
