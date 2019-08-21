@@ -29,7 +29,7 @@ trivial, to facilitating the creation of entirely new tools which
 leverage existing capabilities to handle more complex cases.
 
 You can read more about [common use cases and base capabilities of
-filter-repo](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/Documentation/git-filter-repo.txt#L17-L55),
+filter-repo](https://github.com/newren/git-filter-repo/blob/a6a6a1b0f62d365bbe2e76f823e1621857ec4dbd/Documentation/git-filter-repo.txt#L17-L55),
 but in this article, I'd like to focus on two things: providing a simple
 example to give a very brief flavor for git-filter-repo usage, and answer a
 few likely questions about its purpose and rationale (including a short
@@ -67,7 +67,7 @@ figure out the necessary (OS-dependent) invocation(s):
 			  | grep -v ^src/ \
 			  | xargs git rm -q --cached; \
 		      git ls-files -s \
-			  | sed "s-$(printf \\t)-&my-module/-" \
+			  | sed "s%$(printf \\t)%&my-module/%" \
 			  | git update-index --index-info; \
 		      git ls-files \
 			  | grep -v ^my-module/ \
@@ -85,7 +85,7 @@ BFG is not capable of this type of rewrite, and this type of rewrite is
 difficult to perform safely using fast-export and fast-import directly.
 
 You can find a lot more examples in [filter-repo's
-manpage](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/Documentation/git-filter-repo.txt#L434).
+manpage](https://github.com/newren/git-filter-repo/blob/a6a6a1b0f62d365bbe2e76f823e1621857ec4dbd/Documentation/git-filter-repo.txt#L434).
 (If you are curious about the "pile of caveats" mentioned above or the
 reasons for the extra steps for filter-branch, you can [read more
 details about this
@@ -139,11 +139,11 @@ From the technical architecture/design angle:
     paths in different directories with the same basename nor could it be
     used to allow renaming of paths (except within the same directory).
     Further, this design even sadly runs into a
-    [lot](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/contrib/filter-repo-demos/bfg-ish#L32-L39)
-    [of](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/contrib/filter-repo-demos/bfg-ish#L29-L31)
-    [roadblocks](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/contrib/filter-repo-demos/bfg-ish#L23-L26)
-    [and](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/contrib/filter-repo-demos/bfg-ish#L64-L66)
-    [limitations](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/contrib/filter-repo-demos/bfg-ish#L27-L28)
+    [lot](https://github.com/newren/git-filter-repo/blob/a6a6a1b0f62d365bbe2e76f823e1621857ec4dbd/contrib/filter-repo-demos/bfg-ish#L32-L39)
+    [of](https://github.com/newren/git-filter-repo/blob/a6a6a1b0f62d365bbe2e76f823e1621857ec4dbd/contrib/filter-repo-demos/bfg-ish#L29-L31)
+    [roadblocks](https://github.com/newren/git-filter-repo/blob/a6a6a1b0f62d365bbe2e76f823e1621857ec4dbd/contrib/filter-repo-demos/bfg-ish#L23-L26)
+    [and](https://github.com/newren/git-filter-repo/blob/a6a6a1b0f62d365bbe2e76f823e1621857ec4dbd/contrib/filter-repo-demos/bfg-ish#L66-L68)
+    [limitations](https://github.com/newren/git-filter-repo/blob/a6a6a1b0f62d365bbe2e76f823e1621857ec4dbd/contrib/filter-repo-demos/bfg-ish#L27-L28)
     even within its intended use case of removing big or sensitive content.
 
   * filter-branch: performance really shouldn't matter for a one shot
@@ -155,7 +155,7 @@ From the technical architecture/design angle:
     issues.  These issues are well known, but what is less well known
     is that even ignoring performance, [the usability choices in
     filter-branch rapidly become increasingly conflicting and
-    problematic](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/contrib/filter-repo-demos/filter-lamely#L9-L61)
+    problematic](https://github.com/newren/git-filter-repo/blob/a6a6a1b0f62d365bbe2e76f823e1621857ec4dbd/contrib/filter-repo-demos/filter-lamely#L9-L61)
     for users with larger repos and more involved rewrites,
     difficulties that again cannot be ameliorated without breaking
     backward compatibility.
@@ -250,7 +250,7 @@ and therefore technically predates both BFG and reposurgeon.)
 One could ask why this new command is not written in C like most of Git.
 While that would have several advantages, it doesn't meet the necessary
 design requirements.  See the ["VERSATILITY" section of the
-manpage](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/Documentation/git-filter-repo.txt#L306-L326)
+manpage](https://github.com/newren/git-filter-repo/blob/a6a6a1b0f62d365bbe2e76f823e1621857ec4dbd/Documentation/git-filter-repo.txt#L306-L326)
 or see the "Versatility" section under the [Design Rationale of the
 README](https://github.com/newren/git-filter-repo#design-rationale-behind-filter-repo-why-create-a-new-tool).
 
@@ -266,13 +266,13 @@ links above if you want to learn more.  Just a few more that might be of
 interest:
 
   * [Ramifications of repository
-    rewrites](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/Documentation/git-filter-repo.txt#L340-L350);
+    rewrites](https://github.com/newren/git-filter-repo/blob/a6a6a1b0f62d365bbe2e76f823e1621857ec4dbd/Documentation/git-filter-repo.txt#L340-L350);
     including
-    [some](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/Documentation/git-filter-repo.txt#L376-L410)
-    [tips](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/Documentation/git-filter-repo.txt#L426-L431)
+    [some](https://github.com/newren/git-filter-repo/blob/a6a6a1b0f62d365bbe2e76f823e1621857ec4dbd/Documentation/git-filter-repo.txt#L376-L410)
+    [tips](https://github.com/newren/git-filter-repo/blob/a6a6a1b0f62d365bbe2e76f823e1621857ec4dbd/Documentation/git-filter-repo.txt#L426-L431)
     (not specific to filter-repo)
   * [Finding big objects/directories/extensions (and renames) in your
-    repo](https://github.com/newren/git-filter-repo/blob/ae43a0ef6d2c7af8f38c5bba38ca0b22942463cf/Documentation/git-filter-repo.txt#L356-L361)
+    repo](https://github.com/newren/git-filter-repo/blob/a6a6a1b0f62d365bbe2e76f823e1621857ec4dbd/Documentation/git-filter-repo.txt#L356-L361)
     (can be used together with tools other than filter-repo too)
   * [Creating new history rewriting tools](https://github.com/newren/git-filter-repo/tree/master/contrib/filter-repo-demos)
 
