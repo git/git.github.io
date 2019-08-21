@@ -442,6 +442,7 @@ interest:
 [2.23.0-rc2](https://public-inbox.org/git/xmqqk1bmcf3q.fsf@gitster-ct.c.googlers.com/),
 [2.23.0-rc1](https://public-inbox.org/git/xmqq36ijjk8i.fsf@gitster-ct.c.googlers.com/),
 [2.23.0-rc0](https://public-inbox.org/git/xmqqh874tssp.fsf@gitster-ct.c.googlers.com/)
++ Git for Windows [2.23.0](https://github.com/git-for-windows/git/releases/tag/v2.23.0.windows.1)
 + libgit2 [0.28.3](https://github.com/libgit2/libgit2/releases/tag/v0.28.3)
 + libgit2sharp [0.26.1](https://github.com/libgit2/libgit2sharp/releases/tag/v0.26.1)
 + Bitbucket Server [6.5](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
