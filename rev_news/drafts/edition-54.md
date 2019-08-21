@@ -466,11 +466,22 @@ interest:
 __Various__
 
 * The first translations of manpages are finally hitting git-scm.com. The project was kicked off and [announced](https://public-inbox.org/git/1992944.NOdEsaAZKb@cayenne/) in January 2019. It was decided to hold the translation outside the main git repository and use a converter from the original asciidoc format to gettext po. After some more work on tooling and [more people](https://public-inbox.org/git/CAHtYWY4g4BYDr_z7pfS-p=aX_YkVo4HzGR1Dsytn4RkzBo0GjA@mail.gmail.com/) joining the project, the toolchain to allow publishing on git-scm.com is in place and you can already see [some results](https://git-scm.com/docs/git-add/pt_BR). There are presently 9 languages of which 2 have several complete translated manpages. The upcoming tasks are to direct priority-oriented translators to most viewed content and generate packages for distribution along Git itself.
+* [GitHub Actions now supports CI/CD, free for public repositories](https://github.blog/2019-08-08-github-actions-now-supports-ci-cd/)
 
 __Light reading__
 
 * [A Deep Dive into Git Performance using Trace2](https://devblogs.microsoft.com/devops/a-deep-dive-into-git-performance-using-trace2/)
   by Jeff Hostetler explains everything about the Trace2 logging framework which was released in Git 2.22.0.
+* [Documenting Proper Git Usage](https://www.linuxjournal.com/content/documenting-proper-git-usage)
+  by Zack Brown in Linux Journal, mainly about the
+  [Rebasing and merging in kernel repositories](https://lwn.net/Articles/791284/)
+  article by Jonathan Corbet in LWN.net, mentioned in
+  [Git Rev News Edition #52](https://git.github.io/rev_news/2019/06/28/edition-52/).
+* [Patch Workflow With Mutt - 2019](http://kroah.com/log/blog/2019/08/14/patch-workflow-with-mutt-2019/)
+  by Greg Kroah-Hartman.
+* [Using Conventional Commit in Projects](https://dzone.com/articles/using-conventional-commit-in-project)
+  by Sathyabodh Mudhol on DZone. [Conventional Commits](https://www.conventionalcommits.org/) specification
+  was mentioned in [Git Rev News Edition #52](https://git.github.io/rev_news/2019/06/28/edition-52/).
 
 __Git tools and sites__
 
@@ -478,6 +489,14 @@ __Git tools and sites__
   version control system developed by and for OpenBSD developers which
   prioritizes ease of use and simplicity over flexibility. Got wants
   to remain on-disk compatible with bare Git repositories.
+* [git-revise](https://mystor.github.io/git-revise.html) by Nika Layzell
+  is a history editing tool designed for the patch-stack workflow
+  (similarly to [StGit](http://procode.org/stgit/), [Quilt](http://savannah.nongnu.org/projects/quilt), [Guilt (formerly gq)](https://github.com/jeffpc/guilt) or [TopGit](https://github.com/mackyle/topgit)).
+  It is intended to be fast, at least for small editing tasks;
+  it is not meant to be a complete replacement for `git rebase -i`.
+* [StoryTime](https://storytime.dev/) is a tool
+  that enables developers to easily simulate debugger-like visuals
+  to tell or read a story about pieces of code (in their GitHub repositories).
 
 ## Credits
 
