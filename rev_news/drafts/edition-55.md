@@ -42,7 +42,9 @@ __Various__
 
 
 __Light reading__
-
+<br>
+Notes from Virtual Git Contributor Summit 2019 : https://docs.google.com/document/d/1Yp6tz_JgUYjoofTDogtosLsdykwiAyYu9yM42yTuFA4/edit#heading=h.7lypv2eie7xm <br>
+https://public-inbox.org/git/BF65DE67-42F0-4BFD-A2EF-E12DA48B8B4F@jramsay.com.au/
 
 __Git tools and sites__
 
