@@ -1,0 +1,139 @@
+<style type="text/css">
+			body { font-family:'Gotham Light'; font-size:11pt }
+			h1, h2, h3, h4, h5, h6, p { margin:6pt 0pt }
+			li, table { margin-top:6pt; margin-bottom:6pt }
+			h1, .modulename, .sectiontitle { margin-top:24pt; margin-bottom:12pt; page-break-after:avoid; border-bottom:0.75pt solid #942876; padding-bottom:1pt; font-family:'Gotham Medium'; font-size:16pt; font-weight:bold; font-variant:small-caps; color:#7850a0 }
+			h2, .Heading2leftcolumn, .background { margin-top:12pt; margin-left:10.8pt; margin-bottom:6pt; page-break-after:avoid; font-family:'Gotham Medium'; font-size:14pt; font-weight:bold; font-variant:small-caps; color:#000000 }
+			h3, .Heading3Subheading, .columntitle { margin-top:12pt; margin-left:21.6pt; margin-bottom:6pt; page-break-after:avoid; font-family:'Gotham Medium'; font-size:13pt; font-weight:normal }
+			h4 { margin-top:12pt; margin-left:32.4pt; margin-bottom:6pt; page-break-after:avoid; font-family:'Gotham Medium'; font-size:13pt; font-weight:normal; color:#63666a }
+			h5 { margin-top:2pt; margin-bottom:2pt; page-break-after:avoid; font-family:'Gotham Medium'; font-size:11pt; font-weight:normal }
+			h6, .embeddedtable, .leftcolumn { margin-top:6pt; margin-bottom:6pt; font-family:'Gotham Medium'; font-size:11pt; font-weight:bold }
+			.Heading7, .TableLeft { margin-top:2pt; margin-bottom:2pt; page-break-after:avoid; font-family:'Gotham Medium'; font-size:11pt; font-weight:normal; font-variant:small-caps; color:#ffffff }
+			.Heading8, .TableCenter { margin-top:2pt; margin-bottom:2pt; text-align:center; font-family:'Gotham Medium'; font-size:11pt; font-weight:normal; font-variant:small-caps; color:#ffffff }
+			.Heading9 { margin-top:12pt; margin-bottom:6pt; font-family:'Gotham Medium'; font-size:12pt; font-weight:bold; font-style:italic }
+			.BalloonText { margin-top:0pt; margin-bottom:0pt; font-family:Tahoma; font-size:8pt }
+			.Bibliography { margin-top:6pt; margin-bottom:6pt; font-family:'Gotham Light'; font-size:11pt }
+			.BlockText { margin:6pt 57.6pt; border:0.75pt solid #4f81bd; padding:10pt; font-family:Calibri; font-size:11pt; font-style:italic; color:#4f81bd }
+			.BodyText2 { margin-top:6pt; margin-bottom:6pt; line-height:200%; font-family:'Gotham Light'; font-size:11pt }
+			.BodyText3 { margin-top:6pt; margin-bottom:6pt; font-family:'Gotham Light'; font-size:8pt }
+			.BodyTextFirstIndent { margin-top:6pt; margin-bottom:6pt; text-indent:18pt; font-family:'Gotham Light'; font-size:11pt }
+			.BodyTextFirstIndent2 { margin-top:6pt; margin-left:18pt; margin-bottom:3pt; text-indent:18pt; font-family:'Gotham Light'; font-size:11pt }
+			.BodyTextIndent { margin-top:6pt; margin-left:18pt; margin-bottom:6pt; font-family:'Gotham Light'; font-size:11pt }
+			.BodyTextIndent2 { margin-top:6pt; margin-left:18pt; margin-bottom:6pt; line-height:200%; font-family:'Gotham Light'; font-size:11pt }
+			.BodyTextIndent3 { margin-top:6pt; margin-left:18pt; margin-bottom:6pt; font-family:'Gotham Light'; font-size:8pt }
+			.Caption { margin-top:0pt; margin-bottom:10pt; text-align:center; font-family:'Gotham Light'; font-size:9pt }
+			.Closing { margin-top:0pt; margin-left:216pt; margin-bottom:0pt; font-family:'Gotham Light'; font-size:11pt }
+			.CodeBlock { margin-top:12pt; margin-left:0pt; margin-bottom:6pt; page-break-after:avoid; font-family:Consolas; font-size:11pt; font-weight:normal; font-variant:small-caps; color:#000000 }
+			.CommentSubject { margin-top:6pt; margin-bottom:6pt; font-family:'Gotham Light'; font-size:10pt; font-weight:bold }
+			.CommentText { margin-top:6pt; margin-bottom:6pt; font-family:'Gotham Light'; font-size:10pt }
+			.Date { margin-top:6pt; margin-bottom:6pt; font-family:'Gotham Light'; font-size:11pt }
+			.DocumentMap { margin-top:0pt; margin-bottom:0pt; font-family:'Segoe UI'; font-size:8pt }
+			.E-mailSignature { margin-top:0pt; margin-bottom:0pt; font-family:'Gotham Light'; font-size:11pt }
+			.EndnoteText { margin-top:0pt; margin-bottom:0pt; font-family:'Gotham Light'; font-size:10pt }
+			.EnvelopeAddress { margin-top:0pt; margin-left:144pt; margin-bottom:0pt; font-family:Cambria; font-size:12pt }
+			.EnvelopeReturn { margin-top:0pt; margin-bottom:0pt; font-family:Cambria; font-size:10pt }
+			.Footer, .P00FooterLeft, .P100FooterLeft { margin-top:6pt; margin-bottom:6pt; font-family:'Gotham Light'; font-size:8pt }
+			.FootnoteText { margin-top:0pt; margin-bottom:0pt; font-family:'Gotham Light'; font-size:10pt }
+			.HTMLAddress { margin-top:0pt; margin-bottom:0pt; font-family:'Gotham Light'; font-size:11pt; font-style:italic }
+			.HTMLPreformatted { margin-top:0pt; margin-bottom:0pt; font-family:Consolas; font-size:10pt }
+			.Header { margin-top:6pt; margin-bottom:18pt; text-align:right; font-family:'Gotham Light'; font-size:11pt; font-weight:bold; font-variant:small-caps }
+			.Index1 { margin-top:0pt; margin-left:11pt; margin-bottom:0pt; text-indent:-11pt; font-family:'Gotham Light'; font-size:11pt }
+			.Index2 { margin-top:0pt; margin-left:22pt; margin-bottom:0pt; text-indent:-11pt; font-family:'Gotham Light'; font-size:11pt }
+			.Index3 { margin-top:0pt; margin-left:33pt; margin-bottom:0pt; text-indent:-11pt; font-family:'Gotham Light'; font-size:11pt }
+			.Index4 { margin-top:0pt; margin-left:44pt; margin-bottom:0pt; text-indent:-11pt; font-family:'Gotham Light'; font-size:11pt }
+			.Index5 { margin-top:0pt; margin-left:55pt; margin-bottom:0pt; text-indent:-11pt; font-family:'Gotham Light'; font-size:11pt }
+			.Index6 { margin-top:0pt; margin-left:66pt; margin-bottom:0pt; text-indent:-11pt; font-family:'Gotham Light'; font-size:11pt }
+			.Index7 { margin-top:0pt; margin-left:77pt; margin-bottom:0pt; text-indent:-11pt; font-family:'Gotham Light'; font-size:11pt }
+			.Index8 { margin-top:0pt; margin-left:88pt; margin-bottom:0pt; text-indent:-11pt; font-family:'Gotham Light'; font-size:11pt }
+			.Index9 { margin-top:0pt; margin-left:99pt; margin-bottom:0pt; text-indent:-11pt; font-family:'Gotham Light'; font-size:11pt }
+			.IndexHeading { margin-top:6pt; margin-bottom:6pt; font-family:Cambria; font-size:11pt; font-weight:bold }
+			.IntenseQuote { margin:18pt 43.2pt; text-align:center; border-top:0.75pt solid #4f81bd; border-bottom:0.75pt solid #4f81bd; padding-top:10pt; padding-bottom:10pt; font-family:'Gotham Light'; font-size:11pt; font-style:italic; color:#4f81bd }
+			.Line { margin-top:6pt; margin-right:-7.2pt; margin-bottom:6pt; border-bottom:0.75pt solid #000000; padding-bottom:1pt; font-family:'Gotham Light'; font-size:11pt }
+			.List { margin-top:6pt; margin-left:18pt; margin-bottom:6pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.List2 { margin-top:6pt; margin-left:36pt; margin-bottom:6pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.List3 { margin-top:6pt; margin-left:54pt; margin-bottom:6pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.List4 { margin-top:6pt; margin-left:72pt; margin-bottom:6pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.List5 { margin-top:6pt; margin-left:90pt; margin-bottom:6pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.ListBullet { margin-top:6pt; margin-left:18pt; margin-bottom:6pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.ListBullet2 { margin-top:6pt; margin-left:36pt; margin-bottom:6pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.ListBullet3 { margin-top:6pt; margin-left:54pt; margin-bottom:6pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.ListBullet4 { margin-top:6pt; margin-left:72pt; margin-bottom:6pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.ListBullet5 { margin-top:6pt; margin-left:90pt; margin-bottom:6pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.ListContinue { margin-top:6pt; margin-left:18pt; margin-bottom:6pt; font-family:'Gotham Light'; font-size:11pt }
+			.ListContinue2 { margin-top:6pt; margin-left:36pt; margin-bottom:6pt; font-family:'Gotham Light'; font-size:11pt }
+			.ListNumber { margin-top:6pt; margin-left:18pt; margin-bottom:6pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.ListNumber2 { margin-top:6pt; margin-left:36pt; margin-bottom:6pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.ListNumber3 { margin-top:6pt; margin-left:54pt; margin-bottom:6pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.ListNumber4 { margin-top:6pt; margin-left:72pt; margin-bottom:6pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.ListNumber5 { margin-top:6pt; margin-left:90pt; margin-bottom:6pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.ListParagraph { margin-top:6pt; margin-left:36pt; margin-bottom:6pt; font-family:'Gotham Light'; font-size:11pt }
+			.Macro { margin-top:6pt; font-family:Consolas }
+			.MessageHeader { margin-top:0pt; margin-left:54pt; margin-bottom:0pt; text-indent:-54pt; border:0.75pt solid #000000; padding:1pt; font-family:Cambria; font-size:12pt; background-color:#cccccc }
+			.NormalWeb { margin-top:5pt; margin-bottom:5pt; font-family:'Times New Roman'; font-size:12pt }
+			.NormalBullet { margin-top:6pt; margin-left:36pt; margin-bottom:3pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.NormalBulletIndent { margin-top:6pt; margin-left:54pt; margin-bottom:3pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.NormalIndent { margin-top:6pt; margin-left:36pt; margin-bottom:6pt; font-family:'Gotham Light'; font-size:11pt }
+			.NormalNumber { margin-top:6pt; margin-left:36pt; margin-bottom:6pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.NoteHeading { margin-top:0pt; margin-bottom:0pt; font-family:'Gotham Light'; font-size:11pt }
+			.Notes { margin-top:6pt; margin-left:25.2pt; margin-bottom:6pt; font-family:'Gotham Medium'; font-size:11pt; font-variant:small-caps }
+			.PlainText { margin-top:0pt; margin-bottom:0pt; font-family:Consolas; font-size:10.5pt }
+			.Quote { margin:10pt 43.2pt 8pt; text-align:center; font-family:'Gotham Light'; font-size:11pt; font-style:italic; color:#404040 }
+			.Salutation { margin-top:6pt; margin-bottom:6pt; font-family:'Gotham Light'; font-size:11pt }
+			.Signature { margin-top:0pt; margin-left:216pt; margin-bottom:0pt; font-family:'Gotham Light'; font-size:11pt }
+			.Subtitle { margin-top:6pt; margin-bottom:6pt; text-align:center; font-family:'Gotham Medium'; font-size:24pt; font-weight:bold; font-variant:small-caps; letter-spacing:0.75pt; color:#da291c }
+			.TOAHeading { margin-top:6pt; margin-bottom:6pt; font-family:Cambria; font-size:12pt; font-weight:bold }
+			.TOC1 { margin-top:18pt; margin-bottom:12pt; font-family:Calibri; font-size:11pt; font-weight:bold; text-decoration:underline; text-transform:uppercase }
+			.TOC2 { margin-top:0pt; margin-bottom:0pt; font-family:Calibri; font-size:11pt; font-weight:bold; font-variant:small-caps }
+			.TOC3 { margin-top:0pt; margin-bottom:0pt; font-family:Calibri; font-size:11pt; font-variant:small-caps }
+			.TOC4 { margin-top:0pt; margin-bottom:0pt; font-family:Calibri; font-size:11pt }
+			.TOC5 { margin-top:0pt; margin-bottom:0pt; font-family:Calibri; font-size:11pt }
+			.TOC6 { margin-top:0pt; margin-bottom:0pt; font-family:Calibri; font-size:11pt }
+			.TOC7 { margin-top:0pt; margin-bottom:0pt; font-family:Calibri; font-size:11pt }
+			.TOC8 { margin-top:0pt; margin-bottom:0pt; font-family:Calibri; font-size:11pt }
+			.TOC9 { margin-top:0pt; margin-bottom:0pt; font-family:Calibri; font-size:11pt }
+			.TOCHeading { margin-top:12pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; font-family:Cambria; font-size:16pt; font-weight:normal; font-variant:normal; color:#365f91 }
+			.Table { margin-top:2pt; margin-bottom:2pt; font-family:'Gotham Light'; font-size:11pt }
+			.TableBullet { margin-top:6pt; margin-left:18pt; margin-bottom:3pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.TableBulletIndent { margin-top:6pt; margin-left:36pt; margin-bottom:3pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.TableNumber { margin-top:2pt; margin-left:36pt; margin-bottom:2pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			.TableofAuthorities { margin-top:6pt; margin-left:11pt; margin-bottom:0pt; text-indent:-11pt; font-family:'Gotham Light'; font-size:11pt }
+			.TableofFigures { margin-top:6pt; margin-bottom:0pt; font-family:'Gotham Light'; font-size:11pt }
+			.Title { margin-top:6pt; margin-bottom:6pt; text-align:center; font-family:'Gotham Medium'; font-size:29pt; font-weight:bold; font-variant:small-caps; letter-spacing:-0.5pt; color:#da291c }
+			.normalbulletindent0 { margin-top:2pt; margin-left:36pt; margin-bottom:2pt; text-indent:-18pt; font-family:'Gotham Light'; font-size:11pt }
+			span.BalloonTextChar { font-family:Tahoma; font-size:8pt }
+			span.BodyText2Char { font-family:'Gotham Light'; font-size:11pt }
+			span.BodyText3Char { font-family:'Gotham Light'; font-size:8pt }
+			span.BodyTextFirstIndent2Char { font-family:'Gotham Light'; font-size:11pt }
+			span.BodyTextFirstIndentChar { font-family:'Gotham Light'; font-size:11pt }
+			span.BodyTextIndent2Char { font-family:'Gotham Light'; font-size:11pt }
+			span.BodyTextIndent3Char { font-family:'Gotham Light'; font-size:8pt }
+			span.BodyTextIndentChar { font-family:'Gotham Light'; font-size:11pt }
+			span.ClosingChar { font-family:'Gotham Light'; font-size:11pt }
+			span.CommentSubjectChar { font-family:'Gotham Light'; font-weight:bold }
+			span.CommentTextChar { font-family:'Gotham Light' }
+			span.DateChar { font-family:'Gotham Light'; font-size:11pt }
+			span.DocumentMapChar { font-family:'Segoe UI'; font-size:8pt }
+			span.E-mailSignatureChar { font-family:'Gotham Light'; font-size:11pt }
+			span.EndnoteTextChar { font-family:'Gotham Light' }
+			span.FollowedHyperlink { text-decoration:underline; color:#800080 }
+			span.FooterChar, span.P00FooterLeftChar, span.P100FooterLeftChar { font-family:'Gotham Light'; font-size:8pt }
+			span.FootnoteTextChar { font-family:'Gotham Light' }
+			span.HTMLAddressChar { font-family:'Gotham Light'; font-size:11pt; font-style:italic }
+			span.HTMLPreformattedChar { font-family:Consolas }
+			span.Heading1Char, span.modulenameChar, span.sectiontitleChar { font-family:'Gotham Medium'; font-size:16pt; font-weight:bold; font-variant:small-caps; color:#7850a0 }
+			span.Heading2Char, span.Heading2leftcolumnChar, span.backgroundChar { font-family:'Gotham Medium'; font-size:14pt; font-weight:bold; font-variant:small-caps; color:#000000 }
+			span.Heading5Char { font-family:'Gotham Medium' }
+			span.Hyperlink { text-decoration:none; color:#0000ff }
+			span.IntenseQuoteChar { font-family:'Gotham Light'; font-size:11pt; font-style:italic; color:#4f81bd }
+			span.MacroTextChar { font-family:Consolas }
+			span.MessageHeaderChar { font-family:Cambria; font-size:12pt; background-color:#cccccc }
+			span.NoteHeadingChar { font-family:'Gotham Light'; font-size:11pt }
+			span.PlaceholderText { color:#808080 }
+			span.PlainTextChar { font-family:Consolas; font-size:10.5pt }
+			span.QuoteChar { font-family:'Gotham Light'; font-size:11pt; font-style:italic; color:#404040 }
+			span.SalutationChar { font-family:'Gotham Light'; font-size:11pt }
+			span.SignatureChar { font-family:'Gotham Light'; font-size:11pt }
+			span.SubtitleChar { font-family:'Gotham Medium'; font-size:24pt; font-weight:bold; font-variant:small-caps; letter-spacing:0.75pt; color:#da291c }
+			span.TitleChar { font-family:'Gotham Medium'; font-size:29pt; font-weight:bold; font-variant:small-caps; letter-spacing:-0.5pt; color:#da291c }
+			span.UnresolvedMention { color:#808080; background-color:#e6e6e6 }
+		</style>
