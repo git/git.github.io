@@ -37,6 +37,24 @@ This edition covers what happened during the month of August 2019.
   [Notes](https://docs.google.com/document/d/1Yp6tz_JgUYjoofTDogtosLsdykwiAyYu9yM42yTuFA4/edit)
   have been taken and are used to organize follow up actions.
 
+* [RFC - Git Developer Blog](https://public-inbox.org/git/20190806014935.GA26909@google.com/)
+
+  Emily Shaffer asked on the mailing list if people would be
+  interested in creating a "Git-project-blessed blog written by Git
+  contributors". The goal was "to make Git better understood in the
+  rest of the world", in a not very formal setting.
+
+  A number of people replied to Emily saying that they thought it was
+  a good idea and sometimes agreeing to submit article for the new
+  blog or to review other people's submissions.
+
+  Jeff King who manages the git-scm.com web site suggested hosting it
+  at the same place, using blog.git-scm.com, which Emily accepted.
+
+  Following the Virtual Git Contributor Summit
+  [a repository](https://gitlab.com/git-scm/blog/)
+  has been created for the blog by James Ramsey.
+
 <!---
 ### Reviews
 -->
