@@ -28,6 +28,15 @@ This edition covers what happened during the month of August 2019.
 
   * [Matheus' report about making pack access code thread-safe](https://matheustavares.gitlab.io/posts/gsoc-final-report)
 
+* [Virtual Git Contributor Summit](https://public-inbox.org/git/nycvar.QRO.7.76.6.1907031429420.44@tvgsbejvaqbjf.bet/)
+
+  Johannes Schindelin, alias Dscho, organized the first Virtual Git
+  Contributor Summit which happened on Thursday September 12 and
+  Friday September 13 over a Zoom call.
+
+  [Notes](https://docs.google.com/document/d/1Yp6tz_JgUYjoofTDogtosLsdykwiAyYu9yM42yTuFA4/edit)
+  have been taken and are used to organize follow up actions.
+
 <!---
 ### Reviews
 -->
@@ -77,8 +86,6 @@ __Various__
 
 __Light reading__
 <br>
-Notes from Virtual Git Contributor Summit 2019 : https://docs.google.com/document/d/1Yp6tz_JgUYjoofTDogtosLsdykwiAyYu9yM42yTuFA4/edit#heading=h.7lypv2eie7xm <br>
-https://public-inbox.org/git/BF65DE67-42F0-4BFD-A2EF-E12DA48B8B4F@jramsay.com.au/
 
 __Git tools and sites__
 
