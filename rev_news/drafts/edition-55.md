@@ -17,9 +17,16 @@ This edition covers what happened during the month of August 2019.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* Google Summer of Code 2019 is over.
+
+  Both students, Rohit Ashiwal and Matheus Tavares passed their final evaluation
+  and posted a final report on their blog. See:
+
+  * [Rohit's report about improving the consistency of sequencer commands](https://rashiwal.me/2019/final-report/)
+
+  * [Matheus' report about making pack access code thread-safe](https://matheustavares.gitlab.io/posts/gsoc-final-report)
 
 <!---
 ### Reviews
