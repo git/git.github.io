@@ -59,9 +59,25 @@ This edition covers what happened during the month of August 2019.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [diff.renames not working?](https://public-inbox.org/git/CAHd499BT35jvPtsuD9gfJB0HJ=NxtzyQOaiD7-=sHJbFYhphpg@mail.gmail.com/)
+
+  Robert Dailey wondered if the `diff.renames` config option worked
+  correctly when it's set to `copies`, as `git diff --name-status` and
+  `git diff --follow` (which is not documented) showed that one file
+  was copied from another when they were passed a path to a file as
+  argument, but `git diff` and `git diff -M` didn't.
+
+  Jeff King, alias Peff, replied to Robert explaining how rename
+  detection works and what are the current limitations. He also
+  suggested some possible improvements.
+
+  Bryan Turner and Peff also noticed that `-M` is for renames not
+  copies.
+
+  Junio agreed with Peff and gave extra historical information and
+  also discussed possible improvements.
 
 <!---
 ## Developer Spotlight:
