@@ -53,7 +53,7 @@ This edition covers what happened during the month of August 2019.
 
   Following the Virtual Git Contributor Summit
   [a repository](https://gitlab.com/git-scm/blog/)
-  has been created for the blog by James Ramsey.
+  has been created for the blog by James Ramsay.
 
 <!---
 ### Reviews
