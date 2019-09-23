@@ -21,7 +21,7 @@ This edition covers what happened during the month of August 2019.
 
 * Google Summer of Code 2019 is over.
 
-  Both students, Rohit Ashiwal and Matheus Tavares passed their final evaluation
+  Both students, Rohit Ashiwal and Matheus Tavares, passed their final evaluation
   and posted a final report on their blog. See:
 
   * [Rohit's report about improving the consistency of sequencer commands](https://rashiwal.me/2019/final-report/)
@@ -45,10 +45,10 @@ This edition covers what happened during the month of August 2019.
   rest of the world", in a not very formal setting.
 
   A number of people replied to Emily saying that they thought it was
-  a good idea and sometimes agreeing to submit article for the new
+  a good idea, and sometimes agreeing to submit articles for the new
   blog or to review other people's submissions.
 
-  Jeff King who manages the git-scm.com web site suggested hosting it
+  Jeff King, who manages the git-scm.com web site, suggested hosting it
   at the same place, using blog.git-scm.com, which Emily accepted.
 
   Following the Virtual Git Contributor Summit
@@ -73,7 +73,7 @@ This edition covers what happened during the month of August 2019.
   detection works and what are the current limitations. He also
   suggested some possible improvements.
 
-  Bryan Turner and Peff also noticed that `-M` is for renames not
+  Bryan Turner and Peff also noticed that `-M` detects renames, not
   copies.
 
   Junio agreed with Peff and gave extra historical information and
