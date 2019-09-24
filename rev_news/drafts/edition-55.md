@@ -79,9 +79,53 @@ This edition covers what happened during the month of August 2019.
   Junio agreed with Peff and gave extra historical information and
   also discussed possible improvements.
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Emily Shaffer
+
+* Who are you and what do you do?
+
+  I'm a California resident, dog mom, maker, and software engineer at
+  Google contributing to Git as my day job!
+
+* What would you name your most important contribution to Git?
+
+  [The My First Contribution tutorial](https://git-scm.com/docs/MyFirstContribution.html) -
+  it's helping folks who are interested in committing to Git full-time
+  figure out how to write and send patches, and more importantly (to
+  me), it has launched a conversation about better internal
+  documentation for Git contributors, which I'm really excited about.
+
+* What are you doing on the Git project these days, and why?
+
+  Lately, I've been making it easier for the Git team at Google to
+  distribute Git to Googlers (gee). For the benefit of the broader
+  community, I have started working on a tool to help users generate
+  helpful, actionable bug reports. Soon I hope to be doing some work
+  with hook management.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+  Submodules! I think they're such a cool idea but they have a long
+  way to go right now. It's a little personal for me; I also
+  contribute to [OpenBMC](https://openbmc.org) which I think could benefit a
+  lot from using submodules as well, but it hasn't been feasible yet.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+  That's a good question! There are lots of depths of Git that I
+  haven't been subjected to yet, so I think I have to do some more
+  homework before I can decide what I'd do away with.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+  Probably the high number of tiny .bashrc aliases I've got for the
+  Git CLI. My work would be much slower without quick aliases for
+  `git grep`, `git format-patch`, and so on. Or, I suppose related to the
+  Git project (but not the Git tool), I learned to use mutt for
+  interacting with the Git mailing list and am still thrilled to be
+  able to email in Vim.
+
 
 ## Releases
 
