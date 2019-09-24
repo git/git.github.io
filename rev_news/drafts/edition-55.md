@@ -160,12 +160,36 @@ This edition covers what happened during the month of August 2019.
 ## Other News
 
 __Various__
-
+* [Highlights from Git 2.23](https://github.blog/2019-08-16-highlights-from-git-2-23/)
+  on GitHub blog (by Taylor Blau).
+* There is an informal [Git standup on IRC](https://public-inbox.org/git/20180713170018.GA139708@aiede.svl.corp.google.com/t/#u)
+  on #git-devel on irc.freenode.net every two weeks;
+  you can find dates in [Git Events](https://calendar.google.com/calendar/embed?src=nk8ph2kh4p5tgfcctb8i7dm6d4%40group.calendar.google.com) calendar ([.ics](https://calendar.google.com/calendar/ical/nk8ph2kh4p5tgfcctb8i7dm6d4%40group.calendar.google.com/public/basic.ics));
+  Logs are at <https://j.mp/gitdevlog>.
+* [Sunsetting Mercurial support in Bitbucket](https://bitbucket.org/blog/sunsetting-mercurial-support-in-bitbucket)
 
 __Light reading__
-<br>
+* [“They Didn’t Teach Us This”: A Crash Course for Your First Job in Software](https://stackoverflow.blog/2019/09/05/they-didnt-teach-us-this-a-crash-course-for-your-first-job-in-software/) by Max Pekarsky,
+  which includes Git Workflow section.
+* [First Steps Contributing to Git](https://matheustavares.gitlab.io/posts/first-steps-contributing-to-git) by Matheus Tavares.
+* [Maintaining the kernel's web of trust [LWN.net]](https://lwn.net/Articles/798230/) by Jonathan Corbet;
+  one of proposed solutions is [pgpkeys.git](https://git.kernel.org/pub/scm/docs/kernel/pgpkeys.git) repository to hold GPG keys for kernel developers.
+* [Defragmenting the kernel development process [LWN.net]](https://lwn.net/Articles/799134/)
+  article by Jonathan Corbet, including section about version control
+  and Git.  It mentions and references [Change IDs for kernel patches [LWN.net]](https://lwn.net/Articles/797613/).
+* [GitLens: where have you been all my life!](https://dev.to/glsolaria/gitlens-where-have-you-been-all-my-life-1c2d) by G.L Solaria,
+  told using animated screenshots GIFs.
+  [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+  add-on for Visual Studio Code was mentioned in
+  [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/).
 
 __Git tools and sites__
+* [patchew](https://github.com/patchew-project/patchew)
+  is a patch email tracking and testing system,
+  very similar to [patchwork](http://jk.ozlabs.org/projects/patchwork/)
+  (mentioned in [Git Rev News Edition #20](https://git.github.io/rev_news/2016/10/19/edition-20/)
+* [gitin2it](https://github.com/slefevre/gitin2it),
+  set of [git] aliases to make git actions more intuitive
 
 
 ## Credits
