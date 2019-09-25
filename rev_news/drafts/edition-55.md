@@ -49,7 +49,7 @@ This edition covers what happened during the month of August 2019.
   blog or to review other people's submissions.
 
   Jeff King, who manages the git-scm.com web site, suggested hosting it
-  at the same place, using blog.git-scm.com, which Emily accepted.
+  at the same place using blog.git-scm.com, which Emily accepted.
 
   Following the Virtual Git Contributor Summit
   [a repository](https://gitlab.com/git-scm/blog/)
@@ -119,7 +119,7 @@ This edition covers what happened during the month of August 2019.
 
 * What is your favorite Git-related tool/library, outside of Git itself?
 
-  Probably the high number of tiny .bashrc aliases I've got for the
+  Probably the high number of tiny `.bashrc` aliases I've got for the
   Git CLI. My work would be much slower without quick aliases for
   `git grep`, `git format-patch`, and so on. Or, I suppose related to the
   Git project (but not the Git tool), I learned to use mutt for
@@ -161,11 +161,11 @@ This edition covers what happened during the month of August 2019.
 
 __Various__
 * [Highlights from Git 2.23](https://github.blog/2019-08-16-highlights-from-git-2-23/)
-  on GitHub blog (by Taylor Blau).
+  on GitHub blog by Taylor Blau.
 * There is an informal [Git standup on IRC](https://public-inbox.org/git/20180713170018.GA139708@aiede.svl.corp.google.com/t/#u)
   on #git-devel on irc.freenode.net every two weeks;
   you can find dates in [Git Events](https://calendar.google.com/calendar/embed?src=nk8ph2kh4p5tgfcctb8i7dm6d4%40group.calendar.google.com) calendar ([.ics](https://calendar.google.com/calendar/ical/nk8ph2kh4p5tgfcctb8i7dm6d4%40group.calendar.google.com/public/basic.ics));
-  Logs are at <https://j.mp/gitdevlog>.
+  logs are at <https://j.mp/gitdevlog>.
 * [Sunsetting Mercurial support in Bitbucket](https://bitbucket.org/blog/sunsetting-mercurial-support-in-bitbucket)
 
 __Light reading__
@@ -173,7 +173,7 @@ __Light reading__
   which includes Git Workflow section.
 * [First Steps Contributing to Git](https://matheustavares.gitlab.io/posts/first-steps-contributing-to-git) by Matheus Tavares.
 * [Maintaining the kernel's web of trust [LWN.net]](https://lwn.net/Articles/798230/) by Jonathan Corbet;
-  one of proposed solutions is [pgpkeys.git](https://git.kernel.org/pub/scm/docs/kernel/pgpkeys.git) repository to hold GPG keys for kernel developers.
+  one of the proposed solutions is [pgpkeys.git](https://git.kernel.org/pub/scm/docs/kernel/pgpkeys.git) repository to hold GPG keys for kernel developers.
 * [Defragmenting the kernel development process [LWN.net]](https://lwn.net/Articles/799134/)
   article by Jonathan Corbet, including section about version control
   and Git.  It mentions and references [Change IDs for kernel patches [LWN.net]](https://lwn.net/Articles/797613/).
