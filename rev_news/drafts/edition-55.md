@@ -182,6 +182,7 @@ __Light reading__
   [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
   add-on for Visual Studio Code was mentioned in
   [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/).
+* [Git Can Do That?](https://docs.google.com/presentation/d/1xbzgdj_gnUSEvpTedoyJXVvREwOxBi1amm7A_FdMFCc/edit?usp=sharing) Git presentation given at [Web Weekend Kathmandu, 2019](https://2019.wwktm.co/speakers/pratik-karki/) by Pratik Karki.
 
 __Git tools and sites__
 * [patchew](https://github.com/patchew-project/patchew)
