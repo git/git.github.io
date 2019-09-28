@@ -35,6 +35,7 @@ This edition covers what happened during the month of August 2019.
   Friday September 13 over a Zoom call.
 
   [Notes](https://docs.google.com/document/d/1Yp6tz_JgUYjoofTDogtosLsdykwiAyYu9yM42yTuFA4/edit)
+  ([plain text](https://public-inbox.org/git/nycvar.QRO.7.76.6.1909261253400.15067@tvgsbejvaqbjf.bet/))
   have been taken and are used to organize follow up actions.
 
 * [RFC - Git Developer Blog](https://public-inbox.org/git/20190806014935.GA26909@google.com/)
@@ -171,9 +172,10 @@ __Various__
 __Light reading__
 * [“They Didn’t Teach Us This”: A Crash Course for Your First Job in Software](https://stackoverflow.blog/2019/09/05/they-didnt-teach-us-this-a-crash-course-for-your-first-job-in-software/) by Max Pekarsky,
   which includes Git Workflow section.
-* [First Steps Contributing to Git](https://matheustavares.gitlab.io/posts/first-steps-contributing-to-git) by Matheus Tavares.
+*
+  [First Steps Contributing to Git](https://matheustavares.gitlab.io/posts/first-steps-contributing-to-git) by Matheus Tavares, GSoC 2019 student.
 * [Maintaining the kernel's web of trust [LWN.net]](https://lwn.net/Articles/798230/) by Jonathan Corbet;
-  one of the proposed solutions is [pgpkeys.git](https://git.kernel.org/pub/scm/docs/kernel/pgpkeys.git) repository to hold GPG keys for kernel developers.
+  one of the proposed solutions is to use [pgpkeys.git](https://git.kernel.org/pub/scm/docs/kernel/pgpkeys.git) repository to hold GPG keys for kernel developers.
 * [Defragmenting the kernel development process [LWN.net]](https://lwn.net/Articles/799134/)
   article by Jonathan Corbet, including section about version control
   and Git.  It mentions and references [Change IDs for kernel patches [LWN.net]](https://lwn.net/Articles/797613/).
@@ -188,7 +190,7 @@ __Git tools and sites__
 * [patchew](https://github.com/patchew-project/patchew)
   is a patch email tracking and testing system,
   very similar to [patchwork](http://jk.ozlabs.org/projects/patchwork/)
-  (mentioned in [Git Rev News Edition #20](https://git.github.io/rev_news/2016/10/19/edition-20/)
+  (mentioned in [Git Rev News Edition #20](https://git.github.io/rev_news/2016/10/19/edition-20/))
 * [gitin2it](https://github.com/slefevre/gitin2it),
   set of [git] aliases to make git actions more intuitive
 
