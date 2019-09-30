@@ -167,13 +167,12 @@ __Various__
   on #git-devel on irc.freenode.net every two weeks;
   you can find dates in [Git Events](https://calendar.google.com/calendar/embed?src=nk8ph2kh4p5tgfcctb8i7dm6d4%40group.calendar.google.com) calendar ([.ics](https://calendar.google.com/calendar/ical/nk8ph2kh4p5tgfcctb8i7dm6d4%40group.calendar.google.com/public/basic.ics));
   logs are at <https://j.mp/gitdevlog>.
-* [Sunsetting Mercurial support in Bitbucket](https://bitbucket.org/blog/sunsetting-mercurial-support-in-bitbucket)
+* [Sunsetting Mercurial support in Bitbucket](https://bitbucket.org/blog/sunsetting-mercurial-support-in-bitbucket).
 
 __Light reading__
 * [“They Didn’t Teach Us This”: A Crash Course for Your First Job in Software](https://stackoverflow.blog/2019/09/05/they-didnt-teach-us-this-a-crash-course-for-your-first-job-in-software/) by Max Pekarsky,
   which includes Git Workflow section.
-*
-  [First Steps Contributing to Git](https://matheustavares.gitlab.io/posts/first-steps-contributing-to-git) by Matheus Tavares, GSoC 2019 student.
+* [First Steps Contributing to Git](https://matheustavares.gitlab.io/posts/first-steps-contributing-to-git) by Matheus Tavares, GSoC 2019 student.
 * [Maintaining the kernel's web of trust [LWN.net]](https://lwn.net/Articles/798230/) by Jonathan Corbet;
   one of the proposed solutions is to use [pgpkeys.git](https://git.kernel.org/pub/scm/docs/kernel/pgpkeys.git) repository to hold GPG keys for kernel developers.
 * [Defragmenting the kernel development process [LWN.net]](https://lwn.net/Articles/799134/)
@@ -190,9 +189,9 @@ __Git tools and sites__
 * [patchew](https://github.com/patchew-project/patchew)
   is a patch email tracking and testing system,
   very similar to [patchwork](http://jk.ozlabs.org/projects/patchwork/)
-  (mentioned in [Git Rev News Edition #20](https://git.github.io/rev_news/2016/10/19/edition-20/))
+  (mentioned in [Git Rev News Edition #20](https://git.github.io/rev_news/2016/10/19/edition-20/)).
 * [gitin2it](https://github.com/slefevre/gitin2it),
-  set of [git] aliases to make git actions more intuitive
+  set of [git] aliases to make git actions more intuitive.
 
 
 ## Credits
