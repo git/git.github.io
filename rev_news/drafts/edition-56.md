@@ -35,6 +35,29 @@ This edition covers what happened during the month of September 2019.
 
 ## Releases
 
++ Git [2.24.0-rc0](https://public-inbox.org/git/xmqq4l065zx5.fsf@gitster-ct.c.googlers.com/)
++ Git for Windows [2.24.0-rc0](https://public-inbox.org/git/nycvar.QRO.7.76.6.1910220004190.46@tvgsbejvaqbjf.bet/)
++ GitHub Enterprise [2.18.4](https://enterprise.github.com/releases/2.18.4/notes),
+[2.17.10](https://enterprise.github.com/releases/2.17.10/notes),
+[2.16.19](https://enterprise.github.com/releases/2.16.19/notes),
+[2.15.24](https://enterprise.github.com/releases/2.15.24/notes),
+[2.18.3](https://enterprise.github.com/releases/2.18.3/notes),
+[2.17.9](https://enterprise.github.com/releases/2.17.9/notes),
+[2.16.18](https://enterprise.github.com/releases/2.16.18/notes),
+[2.15.23](https://enterprise.github.com/releases/2.15.23/notes)
++ GitLab [12.4](https://about.gitlab.com/blog/2019/10/22/gitlab-12-4-released/),
+[12.3.5, 12.2.8, and 12.1.14](https://about.gitlab.com/blog/2019/10/07/security-release-gitlab-12-dot-3-dot-5-released/),
+[12.3.4](https://about.gitlab.com/blog/2019/10/03/gitlab-12-dot-3-dot-4-released/),
+[12.3.3, 12.2.7, and 12.1.13](https://about.gitlab.com/blog/2019/10/02/security-release-gitlab-12-dot-3-dot-3-released/),
+[12.3.2, 12.2.6, and 12.1.12](https://about.gitlab.com/blog/2019/09/30/security-release-gitlab-12-dot-3-dot-2-released/),
+[12.3.1](https://about.gitlab.com/blog/2019/09/24/gitlab-12-3-1-released/),
+[12.3](https://about.gitlab.com/blog/2019/09/22/gitlab-12-3-released/)
++ Bitbucket Server [6.7](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ Gerrit Code Review [3.0.3](https://www.gerritcodereview.com/3.0.html#303)
++ GitKraken [6.3.0](https://support.gitkraken.com/release-notes/current),
+[6.2.1](https://support.gitkraken.com/release-notes/current)
++ GitHub Desktop [2.2.1](https://desktop.github.com/release-notes/),
+[2.2.0](https://desktop.github.com/release-notes/)
 
 ## Other News
 
