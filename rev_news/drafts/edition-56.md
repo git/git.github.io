@@ -235,6 +235,9 @@ This edition covers what happened during the month of September 2019.
 
 __Various__
 
+* A new maintainer for Git-Gui, Pratyush Yadav (@prati0100),
+  [came forward](https://public-inbox.org/git/xmqq7e655ryx.fsf@gitster-ct.c.googlers.com/).
+  Let's praise and thank him for volunteering.
 
 __Light reading__
 
