@@ -1,13 +1,13 @@
 ---
-title: Git Rev News Edition 56 (October 23rd, 2019)
+title: Git Rev News Edition 56 (October 26th, 2019)
 layout: default
-date: 2019-10-23 12:06:51 +0100
+date: 2019-10-26 12:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 56 (October 23rd, 2019)
+## Git Rev News: Edition 56 (October 26th, 2019)
 
 Welcome to the 56th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
