@@ -101,7 +101,7 @@ This edition covers what happened during the month of September 2019.
   contribute.
 
   Johannes Schindelin, alias Dscho, replied to Mike that newcomers
-  need experimented developers to validate the ideas they would like
+  need experienced developers to validate the ideas they would like
   to implement in Git, before they can be confident enough to work on
   them. And they also need to be shown ideas they could
   implement. Dscho then talked about
@@ -182,8 +182,8 @@ This edition covers what happened during the month of September 2019.
   members with their email addresses and by saying that they can also
   be contacted individually.
 
-  In general even if there were some disagreement, most of the people
-  taking part in the discussion agreed with Peff patches. Junio though
+  In general even if there was some disagreement, most of the people
+  taking part in the discussion agreed with Peff's patches. Junio though
   later sent a
   [follow-up email](https://public-inbox.org/git/xmqqd0f6n5a4.fsf_-_@gitster-ct.c.googlers.com/)
   with the subject "Raise your hand to Ack jk/code-of-conduct if your
