@@ -63,7 +63,7 @@ This edition covers what happened during the month of September 2019.
   Each action was explained and justified, sometimes pointing to interesting research like the recent paper
   [""We Don't Do That Here": How Collaborative Editing With Mentors Improves Engagement in Social Q&A Communities"](http://www.chrisparnin.me/pdf/chi18.pdf).
 
-  Stolee also proposed some metrics to be mesured between releases to
+  Stolee also proposed some metrics to be measured between releases to
   monitor how the community are doing:
 
   1. How many first-time contributors sent a patch?
@@ -107,7 +107,7 @@ This edition covers what happened during the month of September 2019.
   implement. Dscho then talked about
   https://github.com/gitgitgadget/git/issues which is open and
   "intended to accumulate possible project ideas". Dscho also
-  acknoledged https://crbug.com/git which is another issue tracker
+  acknowledged https://crbug.com/git which is another issue tracker
   with a similar purpose.
 
   Replying to Stolee, Jeff King, alias Peff, who is responsible for
@@ -130,7 +130,7 @@ This edition covers what happened during the month of September 2019.
   > cannot serve even the existing members well, we shouldn't be
   > talking about acquiring new members.
 
-  He then proposed to mesure "community-member happiness" with metrics
+  He then proposed to measure "community-member happiness" with metrics
   like "This many percent of total community member population have
   been active this month".
 
@@ -175,7 +175,7 @@ This edition covers what happened during the month of September 2019.
   code.
 
   A number of the replies were about the Project Leadership Committee
-  as it's not easy to know who is part of it. This was acknoledged by
+  as it's not easy to know who is part of it. This was acknowledged by
   Peff who sent
   [a follow-up patch](https://public-inbox.org/git/20190926072046.GB20653@sigill.intra.peff.net/)
   to address the issue by listing the Project Leadership Committee
