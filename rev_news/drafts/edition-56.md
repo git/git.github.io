@@ -238,6 +238,8 @@ __Various__
 * A new maintainer for Git-Gui, Pratyush Yadav (@prati0100),
   [came forward](https://public-inbox.org/git/xmqq7e655ryx.fsf@gitster-ct.c.googlers.com/).
   Let's praise and thank him for volunteering.
+* The Gerrit User Summit 2019 is going to be [broadcasted on live.gerritforge.com](https://live.gerritforge.com) and will
+  include talks about JGit and Gerrit Code Review, including major members of the Git Community, like Jonathan Nieder and Terry Parker.
 
 __Light reading__
 
