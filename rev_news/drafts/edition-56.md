@@ -247,6 +247,9 @@ __Light reading__
   by pvigier (Pierre Vigier), describes algorithms used by various
   tools including one in pvigier's prototype git client called [gitamine](https://github.com/pvigier/gitamine).
 
+* [Git Pathspecs and How to Use Them](https://css-tricks.com/git-pathspecs-and-how-to-use-them/)
+  by Adam Giese.
+
 * [GitHub Actions, the missing notes: CMake, Qt and IFW](https://skypjack.github.io/2019-10-23-gh-greets-qt/)
   by Michele 'skypjack' Caini, shows how he uses [GitHub Actions](https://github.com/features/actions)
   in his project.  (GitHub Actions, still in public beta, were first
