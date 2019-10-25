@@ -243,9 +243,42 @@ __Various__
 
 __Light reading__
 
+* [Commit graph drawing algorithms](https://pvigier.github.io/2019/05/06/commit-graph-drawing-algorithms.html)
+  by pvigier (Pierre Vigier), describes algorithms used by various
+  tools including one in pvigier's prototype git client called [gitamine](https://github.com/pvigier/gitamine).
+
+* [GitHub Actions, the missing notes: CMake, Qt and IFW](https://skypjack.github.io/2019-10-23-gh-greets-qt/)
+  by Michele 'skypjack' Caini, shows how he uses [GitHub Actions](https://github.com/features/actions)
+  in his project.  (GitHub Actions, still in public beta, were first
+  covered in [Git Rev News #44](https://git.github.io/rev_news/2018/10/24/edition-44/))
+
+* [An Unintentionally Comprehensive Introduction to GitHub Actions CI](https://dev.to/bnb/an-unintentionally-comprehensive-introduction-to-github-actions-ci-blm)
+  by Tierney Cyren -- with example of an application build on top of
+  Node.js.
+
+* [Scheduling Jekyll posts with Netlify and GitHub Actions](https://humanwhocodes.com/blog/2019/10/scheduling-jekyll-posts-netlify-github-actions/)
+  by Nicholas C. Zakas on his Human Who Codes blog: using a GitHub
+  Action cron job to schedule Netlify builds for static site generated
+  blog posts (which was previously done [using Netlify and AWS Lambda](https://humanwhocodes.com/blog/2018/03/scheduling-jekyll-posts-netlify/)).
+
+* ["git request-pull" and confusing diffstats [LWN.net]](https://lwn.net/Articles/802797/)
+  by Jonathan Corbet talks about what to do if the history to be
+  pulled includes merges from outside (e.g. to obtain the dependencies
+  for a fix), and why it happens.
+
+* [How Bash completion works](https://tuzz.tech/blog/how-bash-completion-works) and
+  [Adding Bash completion to my tool](https://tuzz.tech/blog/adding-bash-completion)
+  by Chris Patuzzo; Git's Bash completion can be found in
+  [`contrib/completion/git-completion.bash`](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash).
+
 
 __Git tools and sites__
 
+* [Gollum](https://github.com/gollum/gollum) is a simple, Git-powered
+  wiki written in Ruby with a sweet API and local frontend.
+* [git_examples.sh](https://bitbucket.org/BitPusher16/dotfiles/raw/49a01d929dcaebcca68bbb1859b4ac1aea93b073/refs/git/git_examples.sh)
+  -- 99% of the Git commands you'll need at work,
+  demonstrated in a single script.
 
 ## Credits
 
