@@ -22,7 +22,7 @@ This edition covers what happened during the month of September 2019.
 * [Growing the Git community](https://public-inbox.org/git/b6835484-62a4-6f89-b6b1-f43afe794272@iee.email/)
 
   Derrick Stolee, who prefers to be called Stolee, emailed the mailing
-  list after the Virtual Contributor Summit (see previous edition)
+  list after the Virtual Contributor Summit (see [previous edition](/rev_news/2019/09/25/edition-55/#general))
   saying he wanted to further discuss some ideas, that had been shared
   during the Summit, about "Inclusion & Diversity" with the goal of
   making the community more welcoming to new contributors of all
@@ -77,7 +77,7 @@ This edition covers what happened during the month of September 2019.
 
   His email was very detailed with many suggestions about how to
   implement the actions, and he asked interesting questions to gather
-  people's opinion.
+  peoples' opinion.
 
   Denton Liu replied to Stolee sharing some thoughts as a "relatively
   new contributor (just less than a year)". He said that from his
@@ -105,14 +105,14 @@ This edition covers what happened during the month of September 2019.
   to implement in Git, before they can be confident enough to work on
   them. And they also need to be shown ideas they could
   implement. Dscho then talked about
-  https://github.com/gitgitgadget/git/issues which is open and
+  [the GitGitGadget issue list](https://github.com/gitgitgadget/git/issues) which is open and
   "intended to accumulate possible project ideas". Dscho also
-  acknowledged https://crbug.com/git which is another issue tracker
+  acknowledged [the Chromium Git issue list](https://crbug.com/git) which is another issue tracker
   with a similar purpose.
 
   Replying to Stolee, Jeff King, alias Peff, who is responsible for
   [the main Git web site](https://git-scm.com), suggested improving
-  [the community page] (https://git-scm.com/community) to add more
+  [the community page](https://git-scm.com/community) to add more
   information for beginners. He said he was open to accepting patches
   or [pull requests](https://github.com/git/git-scm.com).
 
@@ -135,7 +135,7 @@ This edition covers what happened during the month of September 2019.
   been active this month".
 
   The discussion involved a number of other Git developers like Jakub
-  Narebski, Emily Shaffer, Garima Singh, Pierre Tardy, Philip Oakley
+  Narębski, Emily Shaffer, Garima Singh, Pierre Tardy, Philip Oakley
   and Randall S. Becker.
 
   A number of people commented especially on the subject of adding an
@@ -147,7 +147,7 @@ This edition covers what happened during the month of September 2019.
 
 * [[PATCH] add a Code of Conduct document](https://public-inbox.org/git/20190924064454.GA30419@sigill.intra.peff.net/)
 
-  Following the Virtual Contributor Summit (see previous edition) and
+  Following the Virtual Contributor Summit (see [previous edition](/rev_news/2019/09/25/edition-55/#general)) and
   the discussions about growing the Git community (see the article
   above), Jeff King, alias Peff, decided to send a patch to add a code
   of conduct.
@@ -160,7 +160,7 @@ This edition covers what happened during the month of September 2019.
 
   Peff says that his patch adapts the Contributor Covenant Code of
   Conduct from
-  https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
+  [https://www.contributor-covenant.org/version/1/4/code-of-conduct.html](https://www.contributor-covenant.org/version/1/4/code-of-conduct.html)
   and that "it's also the same document used by the Git for Windows
   project".
 
@@ -182,13 +182,13 @@ This edition covers what happened during the month of September 2019.
   members with their email addresses and by saying that they can also
   be contacted individually.
 
-  In general even if there was some disagreement, most of the people
-  taking part in the discussion agreed with Peff's patches. Junio though
+  Even though there was some disagreement, in general most of the people
+  taking part in the discussion agreed with Peff's patches. Junio
   later sent a
   [follow-up email](https://public-inbox.org/git/xmqqd0f6n5a4.fsf_-_@gitster-ct.c.googlers.com/)
   with the subject "Raise your hand to Ack jk/code-of-conduct if your
   Ack fell thru cracks" to get more developers to formally agree with the
-  final patch which several did.
+  final patch, which then several did.
 
   The commit adding the Code of Conduct has since been merged into the
   master branch.
