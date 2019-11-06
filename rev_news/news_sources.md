@@ -50,6 +50,6 @@ For every upcoming edition, do the following:
   Everyone from the editor team should have account access.
 
 Links can be handily collected using a browser extension like [diigo](https://www.diigo.com/user/Tfnico/gitrevnews),
-but note that popular may be duplicated by other contributors.
+but note that popular links may be duplicated by other contributors.
 
 When adding links, this is a great tool: [chitsaou/copy-as-markdown](https://github.com/chitsaou/copy-as-markdown/)
