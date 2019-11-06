@@ -28,7 +28,6 @@ Some ideas on where we can go to gather Git Rev News material.
   [here](https://hn.algolia.com/?query=git&sort=byPopularity&prefix=false&page=0&dateRange=last24h&type=story) or
   [here](http://newscombinator.com/))
 * [Reddit/git](http://www.reddit.com/r/git) (offers RSS)
-* [Git community on Google+](https://plus.google.com/communities/112688280189071733518)
 * [The Changelog/Git](https://changelog.com/topic/git/)
 * ...
 
@@ -51,6 +50,6 @@ For every upcoming edition, do the following:
   Everyone from the editor team should have account access.
 
 Links can be handily collected using a browser extension like [diigo](https://www.diigo.com/user/Tfnico/gitrevnews),
-but note that popular may be duplicated by other contributors.
+but note that popular links may be duplicated by other contributors.
 
 When adding links, this is a great tool: [chitsaou/copy-as-markdown](https://github.com/chitsaou/copy-as-markdown/)
