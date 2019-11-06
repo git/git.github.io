@@ -28,7 +28,6 @@ Some ideas on where we can go to gather Git Rev News material.
   [here](https://hn.algolia.com/?query=git&sort=byPopularity&prefix=false&page=0&dateRange=last24h&type=story) or
   [here](http://newscombinator.com/))
 * [Reddit/git](http://www.reddit.com/r/git) (offers RSS)
-* [Git community on Google+](https://plus.google.com/communities/112688280189071733518)
 * [The Changelog/Git](https://changelog.com/topic/git/)
 * ...
 
