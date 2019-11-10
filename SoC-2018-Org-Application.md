@@ -1,6 +1,7 @@
 ---
 layout: default
 title: SoC 2018 Organization Application
+navbar: false
 ---
 
 This is a draft of git's application to Google's Summer of Code 2018.
