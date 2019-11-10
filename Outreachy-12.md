@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Outreachy May 2016
+title: Outreachy Round 12 (May 2016)
 navbar: false
 ---
 
