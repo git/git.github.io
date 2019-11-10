@@ -8,11 +8,19 @@ title: General Microproject Information
 It is strongly recommended that people who want to apply to the Git
 project for the Google Summer of Code (GSoC), Outreachy, or other such
 mentoring programs, submit a small code-related patch to the Git
-project as part of their application. Think of these microprojects as
-the "Hello, world" of getting involved with the Git project; the
-coding aspect of the change can be almost trivial, but to make the
-change the student has to become familiar with many of the practical
-aspects of working on the Git project.
+project as part of their application.
+
+People who want to get involved in Git development outside mentoring
+programs can also benefit from information on this page to get
+started, though it might be a bit less relevant to them. If they want,
+they can use something like "[FirstTimer]", "[Newbie]", "[Newcomer]"
+instead of "[GSoC]" or "[Outreachy]" in the emails they send.
+
+Think of these microprojects as the "Hello, world" of getting involved
+with the Git project; the coding aspect of the change can be almost
+trivial, but to make the change the student or applicant has to become
+familiar with many of the practical aspects of working on the Git
+project.
 
 Git development is based on sending successive versions of patches or
 patch series to the mailing list until they are considered good and
@@ -193,6 +201,11 @@ first on the mailing list if it's worth doing and if it's appropriate
 for a microproject before starting to work on what you find. Even if
 it looks straightforward, there could be hidden reasons why it is too
 difficult or just inappropriate.
+
+You can also always send an email to the mailing list to ask if people
+have other microproject ideas, but before that please check that
+someone participating in the same program as you has not already done
+that recently.
 
 ### Searching for #leftoverbits in the mailing list
 
