@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Outreachy Round 17: September 2018
+title: Outreachy Round 17 (September 2018)
 navbar: false
 ---
 
