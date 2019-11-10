@@ -1,6 +1,7 @@
 ---
 layout: default
 title: SoC 2017 Applicant Microprojects
+navbar: false
 ---
 
 ## Introduction

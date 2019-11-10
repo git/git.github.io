@@ -1,6 +1,7 @@
 ---
 layout: default
 title: SoC 2017 Ideas
+navbar: false
 ---
 
 This is the idea page for Summer of Code 2017 for Git.
