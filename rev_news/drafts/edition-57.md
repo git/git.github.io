@@ -69,6 +69,10 @@ This edition covers what happened during the month of October 2019.
 
 __Various__
 
+* Welcome to Kaartic Sivaraam to the Git Rev News edition team! And
+  thanks to Gabriel Alcaras, who leaves the team after contributing to
+  the interviews and as the author of the script that scraps some
+  websites to help prepare the "Release" section.
 
 __Light reading__
 
@@ -82,5 +86,5 @@ This edition of Git Rev News was curated by
 Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
-Gabriel Alcaras &lt;<gabriel.alcaras@telecom-paristech.fr>&gt;
+Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
 with help from XXX.
