@@ -115,16 +115,16 @@ This edition covers what happened during the month of October 2019.
 
   I'm still mostly working around the code in the
   sequencer. Interactive rebases are one of the features I like best
-  about git. Being able to rewrite commits in order to polish a
+  about Git. Being able to rewrite commits in order to polish a
   feature before merging it or posting patches helps make it easier to
   understand and review. I've also contributed to `add -p` and
   `diff --color-moved-ws` as I find those really useful as well.
 
   I also try to spend some time reviewing patches in the areas I'm
-  interested in. One of the great things about contributing to git is
+  interested in. One of the great things about contributing to Git is
   the reviews one receives when posting patches, they're always
   friendly and constructive and I try to do the same for others. It's
-  also interesting to see what problems other people who use git are
+  also interesting to see what problems other people who use Git are
   facing and how they're solving them.
 
 * If you could get a team of expert developers to work full time on
@@ -150,7 +150,7 @@ This edition covers what happened during the month of October 2019.
   `git diff` that would allow apps like `tig` and `magit` to show
   moved lines.
 
-  I'd also like to improve git push and pull to extend the idea of
+  I'd also like to improve Git push and pull to extend the idea of
   `--force-with-lease` to support synchronizing between a laptop,
   desktop and remote server by allowing forced updates of the local
   branch when it has not changed since it was last pushed and improve
@@ -169,7 +169,7 @@ This edition covers what happened during the month of October 2019.
   compatibility, what would it be?
 
   Personally I'd like to change the way ignored files are handled so
-  that git never overwrites them (we could add a new category for
+  that Git never overwrites them (we could add a new category for
   files that are expendable). The relative priority of `.gitignore`
   and `.git/info/excludes` could also be tweaked.
 
