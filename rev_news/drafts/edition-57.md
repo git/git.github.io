@@ -93,9 +93,94 @@ This edition covers what happened during the month of October 2019.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Phillip Wood
+
+* Who are you and what do you do?
+
+  I'm a physicist by training, unfortunately I had to stop working
+  some years ago due to a chronic health condition. Since then I've
+  spent some time coding and I got into contributing to Git after
+  using it on another open source project.
+
+* What would you name your most important contribution to Git?
+
+  That's hard to say. Personally it was getting `rebase -i` to create
+  commits without forking `git commit`. I think it was my first big
+  contribution, it gave a noticeable performance improvement and
+  meantr learning the API around commit creation as well as getting to
+  grips with the sequencer code that drives cherry-picks and
+  interactive rebases.
+
+* What are you doing on the Git project these days, and why?
+
+  I'm still mostly working around the code in the
+  sequencer. Interactive rebases are one of the features I like best
+  about git. Being able to rewrite commits in order to polish a
+  feature before merging it or posting patches helps make it easier to
+  understand and review. I've also contributed to `add -p` and
+  `diff --color-moved-ws` as I find those really useful as well.
+
+  I also try to spend some time reviewing patches in the areas I'm
+  interested in. One of the great things about contributing to git is
+  the reviews one receives when posting patches, they're always
+  friendly and constructive and I try to do the same for others. It's
+  also interesting to see what problems other people who use git are
+  facing and how they're solving them.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+  Gosh that would be fantastic. I'd probably concentrate on the
+  UI. Firstly I'm interested in being able to amend commits more
+  easily by providing a simpler interface to `rebase -i` that does not
+  involve editing a todo file. I'm currently working on a script that
+  lets you amend the commit that created the current line directly
+  from an editor and lets you walk backwards and forwards through
+  history rewriting it as you go. Being able to say "amend the commit
+  responsible for this line" with a single key stroke is really
+  convenient.
+
+  There are a number of other UI related projects I'm interested in. I
+  use diff-highlight but wish it would work on hunks with different
+  numbers of additions and deletions. Adapting it to diff the diff in
+  order to highlight the changes would be useful but would need some
+  careful heuristics to distinguish between when highlighting the
+  changes is useful and when it is just confusing. Another diff
+  improvement I'd like to see is implementing `--color=porcelain` for
+  `git diff` that would allow apps like `tig` and `magit` to show
+  moved lines.
+
+  I'd also like to improve git push and pull to extend the idea of
+  `--force-with-lease` to support synchronizing between a laptop,
+  desktop and remote server by allowing forced updates of the local
+  branch when it has not changed since it was last pushed and improve
+  `push --force-with-lease` to default to using the hash of the last
+  pushed commit.
+
+  If there's still some time left then working on the documentation to
+  make it more approachable for new users would be great. At the
+  moment the man pages detail the individual commands but there's not
+  much documentation introducing high level concepts and ideas. There
+  are some other things such as adding a `--reword` option to `commit`
+  and improving `add -p` to allow the selection of groups of lines but
+  that's probably enough for now.
+
+* If you could remove something from Git without worrying backwards
+  compatibility, what would it be?
+
+  Personally I'd like to change the way ignored files are handled so
+  that git never overwrites them (we could add a new category for
+  files that are expendable). The relative priority of `.gitignore`
+  and `.git/info/excludes` could also be tweaked.
+
+  Standardizing option names across the commands would also help users
+  I think.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+  I use `tig` for inspecting history with `log` and `blame`. I also
+  use [Public Inbox](https://public-inbox.org/git) a lot for searching
+  the mailing list.
 
 ## Releases
 
