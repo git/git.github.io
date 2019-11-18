@@ -55,6 +55,7 @@ This edition covers what happened during the month of October 2019.
 [2.18.5](https://enterprise.github.com/releases/2.18.5/notes),
 [2.17.11](https://enterprise.github.com/releases/2.17.11/notes),
 [2.16.20](https://enterprise.github.com/releases/2.16.20/notes)
++ TortoiseGit [2.9.0](https://tortoisegit.org/download/)
 + GitKraken [6.3.1](https://support.gitkraken.com/release-notes/current)
 + GitHub Desktop [2.2.3](https://desktop.github.com/release-notes/),
 [2.2.2](https://desktop.github.com/release-notes/)
