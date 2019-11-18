@@ -43,6 +43,10 @@ This edition covers what happened during the month of October 2019.
 + GitLab [12.4.2](https://about.gitlab.com/blog/2019/11/04/gitlab-12-4-2-released/),
 [12.4.1](https://about.gitlab.com/blog/2019/10/30/security-release-gitlab-12-dot-4-dot-1-released/)
 + Bitbucket Server [6.8](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ Gerrit Code Review [3.1.0](https://www.gerritcodereview.com/3.1.html),
+[3.0.4](https://www.gerritcodereview.com/3.0.html#304),
+[2.16.13](https://www.gerritcodereview.com/2.16.html#21613),
+[2.15.18](https://www.gerritcodereview.com/2.15.html#21518)
 + GitHub Enterprise [2.19.1](https://enterprise.github.com/releases/2.19.1/notes),
 [2.19.0](https://enterprise.github.com/releases/2.19.0/notes),
 [2.18.6](https://enterprise.github.com/releases/2.18.6/notes),
@@ -51,17 +55,7 @@ This edition covers what happened during the month of October 2019.
 [2.18.5](https://enterprise.github.com/releases/2.18.5/notes),
 [2.17.11](https://enterprise.github.com/releases/2.17.11/notes),
 [2.16.20](https://enterprise.github.com/releases/2.16.20/notes)
-+ GitKraken [6.3.1](https://support.gitkraken.com/release-notes/current),
-[6.3.0](https://support.gitkraken.com/release-notes/current),
-[6.2.1](https://support.gitkraken.com/release-notes/current),
-[6.2.0](https://support.gitkraken.com/release-notes/current),
-[6.1.4](https://support.gitkraken.com/release-notes/current),
-[6.1.3](https://support.gitkraken.com/release-notes/current),
-[6.1.2](https://support.gitkraken.com/release-notes/current),
-[6.1.1](https://support.gitkraken.com/release-notes/current),
-[6.1.0](https://support.gitkraken.com/release-notes/current),
-[6.0.1](https://support.gitkraken.com/release-notes/current),
-[6.0.0](https://support.gitkraken.com/release-notes/current)
++ GitKraken [6.3.1](https://support.gitkraken.com/release-notes/current)
 + GitHub Desktop [2.2.3](https://desktop.github.com/release-notes/),
 [2.2.2](https://desktop.github.com/release-notes/)
 
