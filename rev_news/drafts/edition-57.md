@@ -21,9 +21,73 @@ This edition covers what happened during the month of October 2019.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [[PATCH 0/9] [RFC] New sparse-checkout builtin and "cone" mode](https://public-inbox.org/git/6b461ad3-164d-46ff-4a68-99f8e6562a72@gmail.com)
+
+  Last August, Derrick Stolee, who prefers to be called just "Stolee",
+  sent to the mailing list an RFC patch series to "make the
+  sparse-checkout more user-friendly" and to increase performance in
+  very large repositories.
+
+  The patch series does that by introducing a new
+  `git sparse-checkout` command with 4 sub-commands: `init`, `add`, `list`
+  and `disable`. The series also introduce the `--sparse` option to
+  `git clone`.
+
+  This helps users manipulate how a sparse-checkout is performed
+  compared to [the current way](https://git-scm.com/docs/git-read-tree#_sparse_checkout).
+
+  The performance boost is achieved through a new mode called "cone
+  mode" where all the patterns in the sparse-checkout file are "based
+  on prefix matches at a directory level". In this mode it can be
+  faster to match the patterns to the files and directories that
+  should or should not be checked out, because a hashset (a set
+  implemented using a hash table) can be used.
+
+  Elijah Newren reviewed Stolee's patches. As Stolee had mentioned
+  that some people have created
+  [their own helper tools](http://www.marcoyuen.com/articles/2016/06/07/git-sparse.html)
+  Elijah first revealed that he also created a "sparsify" script
+  specific to his company's internal repository.
+
+  Elijah then was concerned about how the feature worked along with
+  [worktrees](https://git-scm.com/docs/git-worktree) and how the `add`
+  sub-command and the cone mode work. He suggested that the
+  `core.sparseCheckout` config option could be tri-state to make it
+  explicit how the sparse-checkout file should be parsed.
+
+  Eric Sunshine also chimed into the discussion.
+
+  Stolee replied to Elijah that he hadn't considered worktrees and was
+  going to take a look at them. He accepted the suggestions about how
+  `add` should work and about making `core.sparseCheckout` a tri-state
+  and then sent a
+  [V2 version of the patch series](https://public-inbox.org/git/pull.316.v2.git.gitgitgadget@gmail.com/)
+  with those changes and a few other improvements.
+
+  The `add` sub-command was also replaced with a `set`
+  sub-command. And the tristate was actually implemented by adding a
+  new `core.sparseCheckoutCone` config option
+
+  The discussion continued between Stolee and Elijah, mostly about the
+  documentation and commit messages. Then Stolee sent a
+  [V3 version of the patch series](https://public-inbox.org/git/pull.316.v3.git.gitgitgadget@gmail.com/)
+  with small bug fixes and various improvements, especially in the
+  documentation and commit messages according to Elijah's suggestions.
+
+  After another round of review from Elijah, Stolee sent a
+  [V4 version of the patch series](https://public-inbox.org/git/pull.316.v4.git.1571147764.gitgitgadget@gmail.com/)
+  with only a few small changes.
+
+  Then Gábor Szeder commented on few bugs and small things he had
+  found. Jon Simons and Elijah also made a few comments. So Stolee sent a
+  [V5 version of the patch series](https://public-inbox.org/git/pull.316.v5.git.1571666186.gitgitgadget@gmail.com/)
+  on October 21st addressing the comments.
+
+  Phillip Wood, Stolee and Junio Hamano then discussed another small
+  issue. It seems though that the patch series will be merged into the
+  next branch soon.
 
 <!---
 ### Support
