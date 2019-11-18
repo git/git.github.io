@@ -107,7 +107,7 @@ This edition covers what happened during the month of October 2019.
   That's hard to say. Personally it was getting `rebase -i` to create
   commits without forking `git commit`. I think it was my first big
   contribution, it gave a noticeable performance improvement and
-  meantr learning the API around commit creation as well as getting to
+  meant learning the API around commit creation as well as getting to
   grips with the sequencer code that drives cherry-picks and
   interactive rebases.
 
