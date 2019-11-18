@@ -53,7 +53,7 @@ This edition covers what happened during the month of October 2019.
 
   Elijah then was concerned about how the feature worked along with
   [worktrees](https://git-scm.com/docs/git-worktree) and how the `add`
-  sub-command and the cone mode work. He suggested that the
+  sub-command and the cone mode worked. He suggested that the
   `core.sparseCheckout` config option could be tri-state to make it
   explicit how the sparse-checkout file should be parsed.
 
