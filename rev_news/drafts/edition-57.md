@@ -218,6 +218,12 @@ __Various__
   the interviews and as the author of the script that scrapes some
   websites to help prepare the "Releases" section.
 
+* Emily Shaffer [announced](https://public-inbox.org/git/20191114194708.GD60198@google.com/)
+  the new git-mentoring@googlegroups.com mailing list as "a great place
+  for those who are new to Git and interested in learning how to
+  contribute to ask questions and expect kind, thorough answers out of
+  the spotlight of the main Git mailing list."
+
 __Light reading__
 
 
