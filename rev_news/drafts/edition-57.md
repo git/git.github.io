@@ -67,7 +67,7 @@ This edition covers what happened during the month of October 2019.
   with those changes and a few other improvements.
 
   The `add` sub-command was also replaced with a `set`
-  sub-command. And the tristate was actually implemented by adding a
+  sub-command. And the tri-state was actually implemented by adding a
   new `core.sparseCheckoutCone` config option
 
   The discussion continued between Stolee and Elijah, mostly about the
@@ -107,7 +107,7 @@ This edition covers what happened during the month of October 2019.
   That's hard to say. Personally it was getting `rebase -i` to create
   commits without forking `git commit`. I think it was my first big
   contribution, it gave a noticeable performance improvement and
-  meantr learning the API around commit creation as well as getting to
+  meant learning the API around commit creation as well as getting to
   grips with the sequencer code that drives cherry-picks and
   interactive rebases.
 
@@ -215,8 +215,8 @@ __Various__
 
 * Welcome to Kaartic Sivaraam to the Git Rev News edition team! And
   thanks to Gabriel Alcaras, who leaves the team after contributing to
-  the interviews and as the author of the script that scraps some
-  websites to help prepare the "Release" section.
+  the interviews and as the author of the script that scrapes some
+  websites to help prepare the "Releases" section.
 
 __Light reading__
 
