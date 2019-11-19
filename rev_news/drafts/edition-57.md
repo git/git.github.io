@@ -150,7 +150,7 @@ This edition covers what happened during the month of October 2019.
   `git diff` that would allow apps like `tig` and `magit` to show
   moved lines.
 
-  I'd also like to improve Git push and pull to extend the idea of
+  I'd also like to improve `git push` and `git pull` to extend the idea of
   `--force-with-lease` to support synchronizing between a laptop,
   desktop and remote server by allowing forced updates of the local
   branch when it has not changed since it was last pushed and improve
