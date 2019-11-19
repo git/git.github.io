@@ -30,9 +30,9 @@ This edition covers what happened during the month of October 2019.
   sparse-checkout more user-friendly" and to increase performance in
   very large repositories.
 
-  The patch series does that by introducing a new
-  `git sparse-checkout` command with 4 sub-commands: `init`, `add`, `list`
-  and `disable`. The series also introduce the `--sparse` option to
+  The patch series achieves that by introducing a new
+  `git sparse-checkout` command with 4 subcommands: `init`, `add`, `list`
+  and `disable`. The series also introduces the `--sparse` option to
   `git clone`.
 
   This helps users manipulate how a sparse-checkout is performed
@@ -47,13 +47,13 @@ This edition covers what happened during the month of October 2019.
 
   Elijah Newren reviewed Stolee's patches. As Stolee had mentioned
   that some people have created
-  [their own helper tools](http://www.marcoyuen.com/articles/2016/06/07/git-sparse.html)
+  [their own helper tools](http://www.marcoyuen.com/articles/2016/06/07/git-sparse.html),
   Elijah first revealed that he also created a "sparsify" script
   specific to his company's internal repository.
 
   Elijah then was concerned about how the feature worked along with
   [worktrees](https://git-scm.com/docs/git-worktree) and how the `add`
-  sub-command and the cone mode worked. He suggested that the
+  subcommand and the cone mode worked. He suggested that the
   `core.sparseCheckout` config option could be tri-state to make it
   explicit how the sparse-checkout file should be parsed.
 
@@ -66,9 +66,9 @@ This edition covers what happened during the month of October 2019.
   [V2 version of the patch series](https://public-inbox.org/git/pull.316.v2.git.gitgitgadget@gmail.com/)
   with those changes and a few other improvements.
 
-  The `add` sub-command was also replaced with a `set`
-  sub-command. And the tri-state was actually implemented by adding a
-  new `core.sparseCheckoutCone` config option
+  The `add` subcommand was also replaced with a `set`
+  subcommand, and the tri-state was actually implemented by adding a
+  new `core.sparseCheckoutCone` config option.
 
   The discussion continued between Stolee and Elijah, mostly about the
   documentation and commit messages. Then Stolee sent a
@@ -81,7 +81,7 @@ This edition covers what happened during the month of October 2019.
   with only a few small changes.
 
   Then Gábor Szeder commented on few bugs and small things he had
-  found. Jon Simons and Elijah also made a few comments. So Stolee sent a
+  found; Jon Simons and Elijah also made a few comments. So Stolee sent a
   [V5 version of the patch series](https://public-inbox.org/git/pull.316.v5.git.1571666186.gitgitgadget@gmail.com/)
   on October 21st addressing the comments.
 
@@ -222,7 +222,7 @@ __Various__
   the new git-mentoring@googlegroups.com mailing list as "a great place
   for those who are new to Git and interested in learning how to
   contribute to ask questions and expect kind, thorough answers out of
-  the spotlight of the main Git mailing list."
+  the spotlight of the main Git mailing list".
 
 __Light reading__
 
