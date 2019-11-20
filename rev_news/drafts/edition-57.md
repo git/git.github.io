@@ -17,9 +17,25 @@ This edition covers what happened during the month of October 2019.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [RFC: Moving git-gui development to GitHub](https://public-inbox.org/git/20191023201310.thzpxyoeb3ta55dc@yadavpratyush.com/t/#u)
+
+  Pratyush Yadav, a new maintainer for git-gui, asked about whether it
+  is a better idea to use GitHub for development instead of email
+  (after [discussion with Dscho](public-inbox.org/git/nycvar.QRO.7.76.6.1910061054470.46@tvgsbejvaqbjf.bet/)),
+  stating arguments in favor and against of moving to GitHub.  There
+  were some voices for the idea, and some against, describing
+  additional advantages and disadvantages.  One idea was to use
+  GitHub Issues as a centralized issue / bug tracker
+  regardless of where development would take place, which
+  [Yadav did](https://github.com/prati0100/git-gui/issues).
+
+  As an interesting vote against the idea was of Elijah Newren, who wrote
+  that he had been had been pondering asking the opposite question for
+  [filter-repo](https://github.com/newren/git-filter-repo/), i.e.
+  moving its development to git mailing list.
+
 
 ### Reviews
 
