@@ -31,8 +31,8 @@ This edition covers what happened during the month of October 2019.
   regardless of where development would take place, which
   [Yadav did](https://github.com/prati0100/git-gui/issues).
 
-  As an interesting vote against the idea was of Elijah Newren, who wrote
-  that he had been had been pondering asking the opposite question for
+  An interesting vote against the idea was that of Elijah Newren, who wrote
+  that he had been pondering asking the opposite question for
   [filter-repo](https://github.com/newren/git-filter-repo/), i.e.
   moving its development to git mailing list.
 
