@@ -338,7 +338,9 @@ __Git tools and sites__
 * [Gitter](https://gitter.im/) is an open-source instant messaging
   and chat room system for developers and users of GitHub repositories,
   similar to Slack.  Gitter is provided as software-as-a-service.
-
+* [.gitignore Generator](https://marketplace.visualstudio.com/items?itemName=piotrpalarz.vscode-gitignore-generator)
+  extension for Visual Studio Code -  easily and quickly generate .gitignore
+  file for your project. It uses the [gitignore.io](https://gitignore.io/) API.
 
 ## Credits
 
