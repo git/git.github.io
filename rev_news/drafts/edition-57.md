@@ -224,11 +224,104 @@ __Various__
   contribute to ask questions and expect kind, thorough answers out of
   the spotlight of the main Git mailing list".
 
+* GitHub announced [GitHub Archive Program](https://archiveprogram.github.com/),
+  intended to preserve open source software for future generations
+  in partership with Long Now Foundation, the Internet Archive,
+  the Software Heritage Foundation, Arctic World Archive, Microsoft Research,
+  the Bodleian Library, and Stanford Libraries.  On **February 2, 2020**,
+  GitHub will capture a snapshot of every active public repository,
+  to be preserved in the [GitHub Arctic Code Vault](https://archiveprogram.github.com/#arctic-code-vault).
+  This data will be stored on 3,500-foot film reels.
+
+* It [looks like](https://public-inbox.org/git/CAP8UFD0WXrG=XbZj9fyo1v0zy8p7yNnGZGVH8bHDqPOLThGD-w@mail.gmail.com/t/#u)
+  the [Git Merge](https://git-merge.com/) 2020 conference
+  will be in Los Angeles on March 4 2020.
+
+
 __Light reading__
 
+* [Highlights from Git 2.24](https://github.blog/2019-11-03-highlights-from-git-2-24/)
+  on GitHub Blog by Taylor Blau: feature macros, commit graph by default,
+  adopting the Contributor Covenant (see [previous Git Rev News](https://git.github.io/rev_news/2019/10/26/edition-56/)),
+  recommending new history-rewriting tool: [git-filter-repo](https://github.com/newren/git-filter-repo/)
+  (more about which can be found in [Git Rev News #54](https://git.github.io/rev_news/2019/08/21/edition-54/)),
+  and other.
+
+* [Updates to the Git Commit Graph Feature](https://devblogs.microsoft.com/devops/updates-to-the-git-commit-graph-feature/) by Derrick Stolee
+  describes new commit-graph related changes in Git version 2.24.0:
+  new faster algorithm for topological sorting (e.g. for `git log --graph`),
+  namely an iterative version of Kahn’s algorithm (making use of generation numbers),
+  incremental commit-graph format with adaptive merging,
+  new `fetch.writeCommitGraph` setting to update commit-graph after every `git fetch`,
+  and having `core.commitGraph` and `gc.writeCommitGraph` on by default.
+  See also [this Twitter thread](https://twitter.com/stolee/status/1194242763413438465).
+
+  Previous blog posts in the series about commit-graph were linked to
+  in [Git Rev News Edition #41](https://git.github.io/rev_news/2018/07/18/edition-41/), [#45](https://git.github.io/rev_news/2018/11/21/edition-45/) and [#51](https://git.github.io/rev_news/2019/05/22/edition-51/).
+  Developing incremental commit-graph was covered in detail in
+  [Git Rev News Edition #52](https://git.github.io/rev_news/2019/06/28/edition-52/).
+  At the time of writing link to mentioned article was not yet posted
+  to [Derrick Stolee developer homepage](https://stolee.dev/).
+
+* [[LWN.net] Next steps for kernel workflow improvement](https://lwn.net/Articles/803619/)
+  by Jonathan Corbet: fix attestation with minisig, add base-tree information,
+  and going beyond email.
+
+* [[LWN.net] Analyzing kernel email](https://lwn.net/Articles/804511/)
+  by Jake Edge, about research which goal is "formalizing and assessing
+  the Linux kernel development process".
+
+* [I posted my password / API key on GitHub.  Now what?](https://flaviocopes.com/git-secrets/)
+  by Flavio Copes.  There are various tools to detect such situation,
+  and/or to safely store secrets in Git repository; some links
+  can be found for example in [Git Rev News #39](https://git.github.io/rev_news/2018/05/16/edition-39/).
+
+* [Three Simple Rules for Putting Secrets into Git](https://engineering.udacity.com/three-simple-rules-for-putting-secrets-into-git-d47b207852b9)
+  by Jesse Swidler (2018), author of [LockGit](https://github.com/jswidler/lockgit).
+
+* "Stupid git commit-tree tricks" series of blog posts by Raymond Chen, starting with
+  [Part 1: Building a commit manually out of a tree](https://devblogs.microsoft.com/oldnewthing/20190506-00/?p=102478).
+
+* [My favourite Git commit](https://fatbusinessman.com/2019/my-favourite-git-commit)
+  by David Thompson.
+
+* [How to write a kickass README](https://dev.to/scottydocs/how-to-write-a-kickass-readme-5af9)
+  by James.Scott (@scottydocs).
+
+* [What nobody tells you about documentation](https://www.divio.com/blog/documentation/),
+  namely that it needs to include and be structured around its four different functions:
+  _tutorials_, _how-to guides_, _explanation_ and _technical reference_,
+  each of which requires a distinct mode of writing.
 
 
 __Git tools and sites__
+
+* [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+  extension for Visual Studio Code -- view a commit graph of your repository,
+  and easily perform Git actions from the graph.
+* [git-subtrac](https://github.com/apenwarr/git-subtrac) is a helper tool
+  that makes it easier to keep track of your git submodule contents.
+  It collects the entire contents of the entire history of all your submodules
+  (recursively) into a separate git branch, which can be pushed, pulled,
+  forked, and merged however you want.
+  [Announced as a sequel to git-subtree](https://public-inbox.org/git/CAHqTa-15fKjH-3Z-vHhgNpfx6c1OQXbDXwKJHT9JX6G+7tjGBA@mail.gmail.com/T/#u)
+  by Avery Pennarun, creator of git-subtree.
+* [myrepos](https://myrepos.branchable.com/) is a tool to manage
+  all your version control repositories, for example
+  to update them all at once, or push out all your local changes
+  (similar to [git-repo](https://gerrit.googlesource.com/git-repo/)
+  or [gitslave](http://gitslave.sourceforge.net/) tools).
+* [LockGit](https://github.com/jswidler/lockgit) is a CLI tool
+  for storing encrypted secrets in a git repo.
+* [Onefetch](https://github.com/o2sh/onefetch) is a command line tool
+  that displays summary information about your Git repository
+  directly on your terminal.
+* [USA-Constitution](https://github.com/JesseKPhillips/USA-Constitution)
+  repository, with a history of edits to the US Constitution
+  as it has been amended.  Written in Markdown to match original formatting.
+* [Gitter](https://gitter.im/) is an open-source instant messaging
+  and chat room system for developers and users of GitHub repositories,
+  similar to Slack.  Gitter is provided as software-as-a-service.
 
 
 ## Credits
