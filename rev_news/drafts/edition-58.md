@@ -35,6 +35,33 @@ This edition covers what happened during the month of November 2019.
 
 ## Releases
 
++ Git [2.24.1 and others](https://public-inbox.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/)
++ Git for Windows [2.24.1(2)](https://github.com/git-for-windows/git/releases/tag/v2.24.1.windows.2)
++ libgit2 [0.28.4](https://github.com/libgit2/libgit2/releases/tag/v0.28.4)
++ libgit2sharp [0.26.2](https://github.com/libgit2/libgit2sharp/releases/tag/v0.26.2)
++ Bitbucket Server [6.9](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ Gerrit Code Review [3.1.2](https://www.gerritcodereview.com/3.1.html#312),
+[3.0.6](https://www.gerritcodereview.com/3.0.html#306),
+[2.16.15](https://www.gerritcodereview.com/2.16.html#21615),
+[3.1.1](https://www.gerritcodereview.com/3.1.html#311),
+[3.0.5](https://www.gerritcodereview.com/3.0.html#305),
+[2.16.14](https://www.gerritcodereview.com/2.16.html#21614)
++ GitHub Enterprise [2.19.3](https://enterprise.github.com/releases/2.19.3/notes),
+[2.18.8](https://enterprise.github.com/releases/2.18.8/notes),
+[2.17.14](https://enterprise.github.com/releases/2.17.14/notes),
+[2.16.23](https://enterprise.github.com/releases/2.16.23/notes),
+[2.19.2](https://enterprise.github.com/releases/2.19.2/notes),
+[2.18.7](https://enterprise.github.com/releases/2.18.7/notes),
+[2.17.13](https://enterprise.github.com/releases/2.17.13/notes),
+[2.16.22](https://enterprise.github.com/releases/2.16.22/notes)
++ GitLab [12.5.4](https://about.gitlab.com/blog/2019/12/10/critical-security-release-gitlab-12-5-4-released/),
+[12.5.3](https://about.gitlab.com/blog/2019/12/03/gitlab-12-5-3-released/),
+[12.5.1](https://about.gitlab.com/blog/2019/11/27/security-release-gitlab-12-5-1-released/),
+[12.5.2](https://about.gitlab.com/blog/2019/11/27/security-release-gitlab-12-5-2-released/),
+[12.5](https://about.gitlab.com/blog/2019/11/22/gitlab-12-5-released/),
+[12.4.3](https://about.gitlab.com/blog/2019/11/18/gitlab-12-4-3-released/)
++ GitKraken [6.4.0](https://support.gitkraken.com/release-notes/current)
++ GitHub Desktop [2.2.4](https://desktop.github.com/release-notes/)
 
 ## Other News
 
