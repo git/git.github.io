@@ -17,9 +17,19 @@ This edition covers what happened during the month of November 2019.
 
 ## Discussions
 
-<!---
+
 ### General
--->
+
+* Two [Outreachy interns](https://www.outreachy.org/alums/) have been accepted to work on Git this winter
+
+  * Heba W. from New Zealand will be mentored by Emily Shaffer and
+    Jonathan Tan to work on the Add "Did you mean?" hints
+    project. Heba started [blogging about her
+    internship](https://medium.com/@heba.waly).
+
+  * Miriam Rubio from Barcelona, Spain will be mentored by Christian
+    Couder to work on the Finish converting `git bisect` from shell to
+    C project. Miriam also started [blogging about her internship](https://mirucam.gitlab.io/outreachy_blog/).
 
 <!---
 ### Reviews
