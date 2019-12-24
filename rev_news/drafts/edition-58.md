@@ -28,7 +28,7 @@ This edition covers what happened during the month of November 2019.
     internship](https://medium.com/@heba.waly).
 
   * Miriam Rubio from Barcelona, Spain will be mentored by Christian
-    Couder to work on the `Finish converting `git bisect` from shell to
+    Couder to work on the `Finish converting "git bisect" from shell to
     C` project. Miriam also started [blogging about her internship](https://mirucam.gitlab.io/outreachy_blog/).
 
 
