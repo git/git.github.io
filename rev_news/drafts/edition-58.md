@@ -31,9 +31,64 @@ This edition covers what happened during the month of November 2019.
     Couder to work on the Finish converting `git bisect` from shell to
     C project. Miriam also started [blogging about her internship](https://mirucam.gitlab.io/outreachy_blog/).
 
-<!---
+
 ### Reviews
--->
+
+* [[RFC] xl command for visualizing recent history](https://public-inbox.org/git/20191029003023.122196-1-matvore@google.com/)
+
+  Matthew DeVore sent an RFC patch implementing a `git xl` command
+  that would show "a graph of recent history, including all existing
+  branches (unless flagged with a config option) and their upstream
+  counterparts".
+
+  In practice the command would show graph like this one, where the
+  XXXXXXXX would be the beginning of a commit hash:
+
+  ```
+  XXXXXXXX  *  1   committer@example.com  [HEAD branch3]
+            | baz
+            |
+  XXXXXXXX  | *  2   committer@example.com  [branch2]
+            |/  bar
+            |
+  XXXXXXXX  *  3   committer@example.com
+              foo
+  ```
+
+  The command would also associate refs with all visible
+  commits. These refs would have names in the form of `h/#` where # is
+  an incrementing count.
+
+  It would by default show only what has not been pushed upstream yet
+  and the branches and their commits would be shown as a graph.
+
+  Emily Shaffer first replied to Matthew, making suggestions to
+  improve the name of the command as well as the commit subject and
+  the commit message.
+
+  Johannes Schindelin, alias Dscho, replied to Emily's reply. He
+  agreed with her that the name of the command was not a good one and
+  suggested instead to make this fonctionality a mode of an existing
+  command, like `git show-branch --unpushed` or `git branch --show-unpushed`.
+
+  About the `h/#` refs, that he called "ephemeral refs", Dscho
+  suggested implementing them in a separate patch, using `^<counter>`
+  instead of "h/#" for their syntax, and making them only available for
+  a "reasonably short time" by default, and then offering a config
+  setting to change this time.
+
+  He also suggested implementing an option to show those "ephemeral
+  refs" in other commands too.
+
+  Phillip Wood mostly agreed with Dscho about the "ephemeral refs"
+  while suggesting "having them as a feature of the rev listing
+  machinery rather than specific to a particular command".
+ 
+  Dscho also commented on Matthew's initial RFC patch. He suggested
+  commit message improvements. He reiterated some of the suggestions
+  he made in his reply to Emily, and reviewed the code suggesting many
+  changes there too. He wrote though that he loved the main ideas
+  proposed by Matthew.
 
 <!---
 ### Support
