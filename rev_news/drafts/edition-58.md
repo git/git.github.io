@@ -140,6 +140,11 @@ This edition covers what happened during the month of November 2019.
 
 __Various__
 
+* The latest [Git releases](https://lore.kernel.org/git/xmqqr21cqcn9.fsf@gitster-ct.c.googlers.com/) and
+  [Git for Windows releases](https://github.com/git-for-windows/git/releases/tag/v2.24.1.windows.2)
+  are security releases. They fix a significant number of serious
+  security issues. Upgrading to one of these new versions is highly
+  recommended.
 
 __Light reading__
 
