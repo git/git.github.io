@@ -59,8 +59,8 @@ This edition covers what happened during the month of November 2019.
   commits. These refs would have names in the form of `h/#` where # is
   an incrementing count.
 
-  It would by default show only what has not been pushed upstream yet
-  and the branches and their commits would be shown as a graph.
+  It would by default show only what has not been pushed upstream yet,
+  and the branches with their commits would be shown as a graph.
 
   Emily Shaffer first replied to Matthew, making suggestions to
   improve the name of the command as well as the commit subject and
@@ -68,7 +68,7 @@ This edition covers what happened during the month of November 2019.
 
   Johannes Schindelin, alias Dscho, replied to Emily's reply. He
   agreed with her that the name of the command was not a good one and
-  suggested instead to make this fonctionality a mode of an existing
+  suggested instead to make this functionality a mode of an existing
   command, like `git show-branch --unpushed` or `git branch --show-unpushed`.
 
   About the `h/#` refs, that he called "ephemeral refs", Dscho
@@ -80,9 +80,12 @@ This edition covers what happened during the month of November 2019.
   He also suggested implementing an option to show those "ephemeral
   refs" in other commands too.
 
-  Phillip Wood mostly agreed with Dscho about the "ephemeral refs"
-  while suggesting "having them as a feature of the rev listing
-  machinery rather than specific to a particular command".
+  Phillip Wood agreed with Dscho about the "ephemeral refs", especially 
+  "having them as a feature of the rev listing machinery rather than
+  specific to a particular command".
+  He also suggested to use `getsid()` rather than `getppid()` to tie them
+  to a terminal, and expressed his uncertainty how this should be done
+  on Windows and whether a split was also necessary/wanted per worktree.
  
   Dscho also commented on Matthew's initial RFC patch. He suggested
   commit message improvements. He reiterated some of the suggestions
