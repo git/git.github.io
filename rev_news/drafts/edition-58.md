@@ -149,11 +149,27 @@ __Various__
   security issues. Upgrading to one of these new versions is highly
   recommended.
 
+* The [Git Merge Contributor's Summit](https://lore.kernel.org/git/20191213050038.GA75792@coredump.intra.peff.net/)
+  has been announced. It will happen on March 5, 2020, in Los Angeles,
+  the day after the [Git Merge](https://git-merge.com/).
+
 __Light reading__
 
+* [What are git objects under the hood](https://blog.alexlai.xyz/what-are-git-objects-under-the-hood/)
+  is a blog post about Git objects.
+
+* [Git Repository Transfer Keeping All History](https://itnext.io/git-repository-transfer-keeping-all-history-670fe04cd5e4)
+  by Nassos Michas explains "how to replicate your Git repo and keep
+  all previous commits, branches, and tags".
 
 __Git tools and sites__
 
+* [GitVine](https://insanesharpness.gitlab.io/GitVine/),
+  an application to better visualise git commits has been
+  [announced on the mailing list](https://public-inbox.org/git/CAMNO-Ba0-Me67qEEfHoJyBoWg0X_x7=qmmZ1D8ZK9S_0Tk=J5Q@mail.gmail.com/).
+
+* [git-cpcover](https://public-inbox.org/git/20191203201233.661696-1-mst@redhat.com/),
+  a script to copy cover letters, has been announced on the mailing list.
 
 ## Credits
 
