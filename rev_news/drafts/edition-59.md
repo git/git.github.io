@@ -35,6 +35,20 @@ This edition covers what happened during the month of December 2019.
 
 ## Releases
 
++ Git [2.25.0](https://public-inbox.org/git/xmqqtv4zjgv5.fsf@gitster-ct.c.googlers.com/),
+[2.25.0-rc2](https://public-inbox.org/git/xmqq8smh1t3m.fsf@gitster-ct.c.googlers.com/),
+[2.25.0-rc1](https://public-inbox.org/git/xmqqpng1cu2c.fsf@gitster-ct.c.googlers.com/),
+[2.25.0-rc0](https://public-inbox.org/git/xmqqblrwm65l.fsf@gitster-ct.c.googlers.com/)
++ Git for Windows [2.25.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.25.0.windows.1)
++ GitHub Enterprise [2.19.5](https://enterprise.github.com/releases/2.19.5/notes),
+[2.18.10](https://enterprise.github.com/releases/2.18.10/notes),
+[2.17.16](https://enterprise.github.com/releases/2.17.16/notes),
+[2.16.25](https://enterprise.github.com/releases/2.16.25/notes)
++ GitLab [12.6.4, 12.5.7, and 12.4.8](https://about.gitlab.com/releases/2020/01/13/critical-security-release-gitlab-12-dot-6-dot-4-released/),
+[12.6.3](https://about.gitlab.com/releases/2020/01/09/gitlab-12-6-3-released/),
+[12.6.2, 12.5.6, and 12.4.7](https://about.gitlab.com/releases/2020/01/02/security-release-gitlab-12-6-2-released/),
+[12.6.1](https://about.gitlab.com/releases/2019/12/27/gitlab-12-6-1-released/)
++ Bitbucket Server [6.10](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
 
 ## Other News
 
