@@ -62,6 +62,11 @@ __Light reading__
 
 __Git tools and sites__
 
+* git-filter-repo v2.25.0 has been [announced](https://public-inbox.org/git/CABPp-BFP38okGPTmyUJ-vVqq4=T0CypuyD05e6ArEfwhq2mdpg@mail.gmail.com/)
+  on the mailing list.
+
+* git-cinnabar 0.5.3 has also been [announced](https://public-inbox.org/git/20200118024728.4dugot7nmj3tdkhx@glandium.org/)
+  on the mailing list.
 
 ## Credits
 
