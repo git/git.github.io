@@ -54,6 +54,8 @@ This edition covers what happened during the month of December 2019.
 
 __Various__
 
+* Registration for the Git Contributor Summit, on March 5, 2020, at
+  Los Angeles is now [opened](https://public-inbox.org/git/20200115200532.GA4101552@coredump.intra.peff.net/).
 
 __Light reading__
 
