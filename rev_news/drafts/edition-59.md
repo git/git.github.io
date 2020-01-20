@@ -58,8 +58,8 @@ This edition covers what happened during the month of December 2019.
   or higher, instead of Git 2.19, as a memory cache was introduced in
   2.21 that would further speed up the checks.
 
-  In general it's a good idea for maximum performance to always use
-  the most recent Git version as improvements are regularly merged in
+  In general it's a good idea to always use the most recent Git version
+  for maximum performance as improvements are regularly merged in
   each new version.
 
   Meanwhile Junio Hamano, the Git maintainer wondered if improvements
