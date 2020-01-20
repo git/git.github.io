@@ -25,9 +25,60 @@ This edition covers what happened during the month of December 2019.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [Push a ref to a remote with many refs](https://public-inbox.org/git/CH2PR11MB429411CA1288526D21C7AF26CF4C0@CH2PR11MB4294.namprd11.prod.outlook.com/)
+
+  Patrick Marlier sent an email about performance issues when pushing
+  from a local repository with a few refs to a remote repository with
+  a lot more refs (1000+) and Git objects.
+
+  The local Git client receives the entire list of refs on the remote,
+  and then checks in its repository if the objects exist for all the
+  remote refs, but in Patrick's case most of the objects are unknown.
+
+  As the local repository is using many alternates, Git will try to
+  find each unknown object in all the alternates which amplifies the
+  problem. To work around this Patrick showed a patch that skips the
+  refs that are not part of the push when looking for objects.
+
+  Jeff King, alias Peff, replied to Patrick that the behavior is
+  expected and that not looking at the refs that are not part of the
+  push could miss objects that are already in the remote repo, and
+  therefore result in pushing more objects than needed.
+
+  Peff proposed an alternative patch that uses an OBJECT_INFO_QUICK
+  flag when checking if objects exist. That flag makes the check
+  faster but less thorough, which is ok in this case.
+
+  Patrick then thanked Peff for the patch saying that he would try it,
+  and later replied with some numbers showing a median time decreasing
+  from 7 minutes and 38 seconds to 5 minutes and 40 seconds. Peff
+  replied to those numbers suggesting applying the patch to Git 2.21
+  or higher, instead of Git 2.19, as a memory cache was introduced in
+  2.21 that would further speed up the checks.
+
+  In general it's a good idea for maximum performance to always use
+  the most recent Git version as improvements are regularly merged in
+  each new version.
+
+  Meanwhile Junio Hamano, the Git maintainer wondered if improvements
+  could be made in the different flags that can be used when checking
+  objects. Peff replied that these flags have been coming up in
+  discussions "about once a month lately" and pointed to
+  [a previous analysis made by Jonathan Tan](https://public-inbox.org/git/20191011220822.154063-1-jonathantanmy@google.com/).
+  He also suggested some small changes in the flags according to the analysis.
+
+  Jonathan Tan then chimed in to give his opinion about the flag issue
+  and mostly agreed with Peff's suggestion. Junio then also agreed
+  with Peff's and Jonathan's suggestion.
+
+  Jonathan Nieder reviewed Peff's patch asking a few questions to make
+  sure he understood it properly. Peff then answered those questions
+  explaining a few more details.
+
+  Peff's patch eventually got merged into the master branch and is
+  included in the recent Git 2.25 release.
 
 <!---
 ## Developer Spotlight:
