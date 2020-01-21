@@ -13,7 +13,7 @@ Welcome to the 59th edition of [Git Rev News](https://git.github.io/rev_news/rev
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
-This edition covers what happened during the month of December 2019.
+This edition covers what happened around the month of December 2019.
 
 ## Discussions
 
@@ -43,11 +43,11 @@ This edition covers what happened during the month of December 2019.
   refs that are not part of the push when looking for objects.
 
   Jeff King, alias Peff, replied to Patrick that the behavior is
-  expected and that not looking at the refs that are not part of the
+  expected and that not looking at the refs which are not part of the
   push could miss objects that are already in the remote repo, and
   therefore result in pushing more objects than needed.
 
-  Peff proposed an alternative patch that uses an OBJECT_INFO_QUICK
+  Peff proposed an alternative patch that uses an `OBJECT_INFO_QUICK`
   flag when checking if objects exist. That flag makes the check
   faster but less thorough, which is ok in this case.
 
@@ -63,15 +63,15 @@ This edition covers what happened during the month of December 2019.
   each new version.
 
   Meanwhile Junio Hamano, the Git maintainer wondered if improvements
-  could be made in the different flags that can be used when checking
-  objects. Peff replied that these flags have been coming up in
-  discussions "about once a month lately" and pointed to
+  could be made regarding the different flags that can be used when
+  checking objects. Peff replied that these flags have been coming up
+  in discussions "about once a month lately" and pointed to
   [a previous analysis made by Jonathan Tan](https://public-inbox.org/git/20191011220822.154063-1-jonathantanmy@google.com/).
   He also suggested some small changes in the flags according to the analysis.
 
   Jonathan Tan then chimed in to give his opinion about the flag issue
   and mostly agreed with Peff's suggestion. Junio then also agreed
-  with Peff's and Jonathan's suggestion.
+  with Peff's and Jonathan's findings.
 
   Jonathan Nieder reviewed Peff's patch asking a few questions to make
   sure he understood it properly. Peff then answered those questions
@@ -106,7 +106,7 @@ This edition covers what happened during the month of December 2019.
 __Various__
 
 * Registration for the Git Contributor Summit, on March 5, 2020, at
-  Los Angeles is now [opened](https://public-inbox.org/git/20200115200532.GA4101552@coredump.intra.peff.net/).
+  Los Angeles is now [open](https://public-inbox.org/git/20200115200532.GA4101552@coredump.intra.peff.net/).
 
 __Light reading__
 
