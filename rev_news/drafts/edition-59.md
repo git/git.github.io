@@ -107,8 +107,26 @@ __Various__
 
 * Registration for the Git Contributor Summit, on March 5, 2020, at
   Los Angeles is now [open](https://public-inbox.org/git/20200115200532.GA4101552@coredump.intra.peff.net/).
+* [Highlights from Git 2.25](https://github.blog/2020-01-13-highlights-from-git-2-25/)
+  by Taylor Blau on GitHub Blog
+* [Git team releases 2.25, takes step towards Perl freedom](https://devclass.com/2020/01/14/git-team-releases-2-25-takes-step-towards-perl-freedom/)
+  by Julia Schmidt
+
 
 __Light reading__
+
+* [Bring your monorepo down to size with sparse-checkout](https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/)
+  by Derrick Stolee on GitHub Blog
+* [Stage. Commit. Push. A Git Story (Comic)](https://dev.to/erikaheidi/stage-commit-push-a-git-story-comic-a37)
+  by Erika Heidi
+* [6 handy Bash scripts for Git](https://opensource.com/article/20/1/bash-scripts-git)
+  by Bob Peterson: gitlog, gitlog.id, gitlog.grep, gitbranchcmp, gitlog.find,...
+* [`git switch <branch>` – Easily checkout git branches with this new command](https://bluecast.tech/blog/git-switch-branch/)
+  by Irshad Bluecast
+* [Git tips for trunk-based development](https://dev.to/alediaferia/git-tips-for-trunk-based-development-1i1g)
+  by Alessandro Diaferia
+* [Understanding delta file changes and merge conflicts in Git pull requests](https://devblogs.microsoft.com/devops/understanding-delta-file-changes-and-merge-conflicts-in-git-pull-requests/)
+  by Aram on Azure DevOps Blog
 
 
 __Git tools and sites__
@@ -118,6 +136,15 @@ __Git tools and sites__
 
 * git-cinnabar 0.5.3 has also been [announced](https://public-inbox.org/git/20200118024728.4dugot7nmj3tdkhx@glandium.org/)
   on the mailing list.
+
+* [GitVine](https://insanesharpness.gitlab.io/GitVine/) by Insane Sharpness:
+  A simpler visualisation of Git Commits, inspired by Clearcase Version Tree.
+  _Not open-source_.
+
+* [GitAhead](https://gitahead.github.io/gitahead.com/) is a graphical Git client
+  for Windows, Linux and macOS designed to help you understand and manage
+  your source code history, by [SciTools™](https://scitools.com/).
+
 
 ## Credits
 
