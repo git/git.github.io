@@ -37,10 +37,11 @@ This edition covers what happened around the month of December 2019.
   and then checks in its repository if the objects exist for all the
   remote refs, but in Patrick's case most of the objects are unknown.
 
-  As the local repository is using many alternates, Git will try to
-  find each unknown object in all the alternates which amplifies the
-  problem. To work around this Patrick showed a patch that skips the
-  refs that are not part of the push when looking for objects.
+  As the local repository is using many [alternates](https://git-scm.com/docs/gitrepository-layout/#Documentation/gitrepository-layout.txt-objectsinfoalternates),
+  Git will try to find each unknown object in all the alternates which
+  amplifies the problem. To work around this Patrick showed a patch
+  that skips the refs that are not part of the push when looking for
+  objects.
 
   Jeff King, alias Peff, replied to Patrick that the behavior is
   expected and that not looking at the refs which are not part of the
