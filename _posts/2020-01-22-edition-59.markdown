@@ -60,7 +60,7 @@ This edition covers what happened around the month of December 2019.
   2.21 that would further speed up the checks.
 
   In general it's a good idea to always use the most recent Git version
-  for maximum performance as improvements are regularly merged in
+  for maximum performance as improvements are regularly merged into
   each new version.
 
   Meanwhile Junio Hamano, the Git maintainer wondered if improvements
