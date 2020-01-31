@@ -15,7 +15,7 @@ subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/)
 
 This edition covers what happened during the month of January 2020.
 
-## The Pros and Cons of Reposurgeon (*written by <a href="http://www.catb.org/~esr/">Eric S. Raymond</a>*)
+## The Pros and Cons of Reposurgeon (*written by [Eric S. Raymond](http://www.catb.org/~esr/)*)
 
 On January 12th 2020, the history of the GNU Compiler Collection was
 lifted from Subversion to Git. At 280K commits, with a history
