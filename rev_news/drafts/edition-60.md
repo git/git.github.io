@@ -81,7 +81,7 @@ debubbling an unnecessary complex history to make reading it easier.
 
 Often, though, those things can be done with other tools like his
 git-filter-repo. It's repository conversions for which you are likely
-to actually *need* the full power of a domain-spesific language
+to actually *need* the full power of a domain-specific language
 designed for repository surgery.
 
 Which brings us to how you write out your graph as a live
