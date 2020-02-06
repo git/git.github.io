@@ -202,6 +202,8 @@ You can find more about conversions with reposurgeon
 ### Reviews
 -->
 
+* [The History of Git: The Road to Domination in Software Version Control](https://www.welcometothejungle.com/en/articles/btc-history-git)
+
 <!---
 ### Support
 -->
@@ -212,6 +214,7 @@ You can find more about conversions with reposurgeon
 
 ## Releases
 
+* [git-cinnabar 0.5.4](https://github.com/glandium/git-cinnabar/releases/tag/0.5.4)
 
 ## Other News
 
