@@ -226,6 +226,9 @@ __Light reading__
 
 __Git tools and sites__
 
+* [git-repo](https://github.com/aliyun/git-repo-go) is a
+  reimplementation in Golang by [Alibaba Cloud](https://github.com/aliyun) of the
+  [Android repo tool](https://source.android.com/setup/develop/repo).
 
 ## Credits
 
