@@ -202,8 +202,6 @@ You can find more about conversions with reposurgeon
 ### Reviews
 -->
 
-* [The History of Git: The Road to Domination in Software Version Control](https://www.welcometothejungle.com/en/articles/btc-history-git)
-
 <!---
 ### Support
 -->
@@ -223,6 +221,10 @@ __Various__
 
 __Light reading__
 
+* [The History of Git: The Road to Domination in Software Version Control](https://www.welcometothejungle.com/en/articles/btc-history-git)
+  was made using interviews and material from members of this
+  community, especially Linus Torvalds, Johannes Schindelin and Jeff
+  King.
 
 __Git tools and sites__
 
