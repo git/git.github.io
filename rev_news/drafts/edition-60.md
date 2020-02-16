@@ -212,7 +212,27 @@ You can find more about conversions with reposurgeon
 
 ## Releases
 
-* [git-cinnabar 0.5.4](https://github.com/glandium/git-cinnabar/releases/tag/0.5.4)
++ GitLab [12.7.6](https://about.gitlab.com/releases/2020/02/13/critical-security-release-gitlab-12-dot-7-dot-6-released/),
+[12.7.5](https://about.gitlab.com/releases/2020/01/31/gitlab-12-7-5-released/),
+[12.7.4, 12.6.6, and 12.5.9](https://about.gitlab.com/releases/2020/01/30/security-release-gitlab-12-7-4-released/),
+[12.7.2](https://about.gitlab.com/releases/2020/01/24/gitlab-12-7-2-released/),
+[12.7](https://about.gitlab.com/releases/2020/01/22/gitlab-12-7-released/)
++ Bitbucket Server [6.10](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-6-10-release-notes-987140367.html)
++ Gerrit Code Review [3.1.3](https://www.gerritcodereview.com/3.1.html#313),
+[3.0.7](https://www.gerritcodereview.com/3.0.html#307),
+[2.16.16](https://www.gerritcodereview.com/2.16.html#21616),
++ GitHub Enterprise [2.20.0](https://enterprise.github.com/releases/2.20.0/notes),
+[2.19.7](https://enterprise.github.com/releases/2.19.7/notes),
+[2.18.12](https://enterprise.github.com/releases/2.18.12/notes),
+[2.17.18](https://enterprise.github.com/releases/2.17.18/notes),
+[2.19.6](https://enterprise.github.com/releases/2.19.6/notes),
+[2.18.11](https://enterprise.github.com/releases/2.18.11/notes),
+[2.17.17](https://enterprise.github.com/releases/2.17.17/notes)
++ GitKraken [6.5.1](https://support.gitkraken.com/release-notes/current),
+[6.5.0](https://support.gitkraken.com/release-notes/current),
++ GitHub Desktop [2.3.1](https://desktop.github.com/release-notes/),
+[2.3.0](https://desktop.github.com/release-notes/)
++ git-cinnabar [0.5.4](https://github.com/glandium/git-cinnabar/releases/tag/0.5.4)
 
 ## Other News
 
