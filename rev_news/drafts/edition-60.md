@@ -238,6 +238,7 @@ You can find more about conversions with reposurgeon
 
 __Various__
 
+* Heads-up for SSH users: as mentioned in [the release notes of OpenSSH v8.2](https://www.openssh.com/txt/release-8.2), the prevalent `ssh-rsa` keys will be disabled. If you use SSH with private keys, you will want to regenerate them soon.
 
 __Light reading__
 
