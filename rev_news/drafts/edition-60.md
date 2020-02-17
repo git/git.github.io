@@ -212,6 +212,7 @@ You can find more about conversions with reposurgeon
 
 ## Releases
 
++ Git [2.25.1](https://lore.kernel.org/git/xmqq36b9n2da.fsf@gitster-ct.c.googlers.com/)
 + GitLab [12.7.6](https://about.gitlab.com/releases/2020/02/13/critical-security-release-gitlab-12-dot-7-dot-6-released/),
 [12.7.5](https://about.gitlab.com/releases/2020/01/31/gitlab-12-7-5-released/),
 [12.7.4, 12.6.6, and 12.5.9](https://about.gitlab.com/releases/2020/01/30/security-release-gitlab-12-7-4-released/),
