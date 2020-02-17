@@ -124,8 +124,8 @@ directory. The copy operation leaves a commit in place which, if moved
 literally to gitspace, would just be junk. What you want is to move
 the metadata of that commit to an annotated tag.
 
-Many attempts at importers silently botch this in practice, but least
-it handled automatically in theory - and reposurgeon does that. The
+Many attempts at importers silently botch this in practice, but it can
+be handled automatically in theory - and reposurgeon does that. The
 mess you're likely to have on your hands anyway is due to Subversion
 operator errors, scar tissue for a previous conversion out of CVS, and
 use of git-svn as a live gateway to the repository.
