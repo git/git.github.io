@@ -231,7 +231,7 @@ You can find more about conversions with reposurgeon
   and then came up with [a patch](https://lore.kernel.org/git/20200108114344.GA3380580@coredump.intra.peff.net/)
   to fix the bug in `git restore --staged`.
 
-  Junio Hamano, the Git maintainer, review the patch and praised Peff,
+  Junio Hamano, the Git maintainer, reviewed the patch and praised Peff,
   while Dennis Kaarsemaker reported just being bitten by seemingly the
   same bug.
 
