@@ -202,9 +202,45 @@ You can find more about conversions with reposurgeon
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [Broken branch after git commit](https://lore.kernel.org/git/07c84224bb0b093ab3770be9b5ab2ec23ce2d31a.camel@gmail.com/)
+
+  Torsten Krah wrote that after using `git restore --staged $my-files`
+  to remove some files from the index, but not the working tree, and
+  then `git commit` to commit other changes, he found that the files
+  were marked as deleted in the index though they are still in the
+  working tree.
+
+  He didn't understand what happened and didn't know how to fix the
+  situation. He later added that the `git commit` he had done had
+  actually commited the files even though `git status` told him that
+  the files wouldn't go into the commit. And he also sent instructions
+  to help reproduce the issue.
+
+  Jeff King, alias Peff, replied to Torsten saying that he couldn't
+  reproduce the issue and asking for more details and examples.
+
+  Torsten then sent an example with a lot more details which enabled
+  Peff to reproduce the issue. Peff confirmed that there was a bug in
+  `git restore` and also found that the index-reading code could
+  segfault when it processes bogus cache-trees.
+
+  Peff also mentioned that Emily Shaffer had recently found a similar
+  segfault and that she had provided [a fix](https://lore.kernel.org/git/20200108023127.219429-1-emilyshaffer@google.com/),
+  and then came up with [a patch](https://lore.kernel.org/git/20200108114344.GA3380580@coredump.intra.peff.net/)
+  to fix the bug in `git restore --staged`.
+
+  Junio Hamano, the Git maintainer, review the patch and praised Peff,
+  while Dennis Kaarsemaker reported just being bitten by seemingly the
+  same bug.
+
+  In the meantime Torsten also thanked Peff for investigating the
+  issue and asked for a way to fix his current index. Peff suggested
+  using `git reset --hard <original-commit>` after finding the
+  original commit in the reflog. Torsten replied that he actually had
+  to remove the index using `rm .git/index` first to get back to a
+  working state.
 
 <!---
 ## Developer Spotlight:
