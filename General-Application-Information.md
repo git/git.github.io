@@ -40,7 +40,8 @@ the result of your thinking as a review.
 
 A complete application should include a presentation of yourself
 (include any argument that may convince mentors that you are able to
-complete the project) and detailed explanations about your project.
+complete the project) and detailed explanations about your
+project. See also the "Note about giving back and mentoring" below.
 
 Project ideas are just ... ideas! The list we provide is not
 exhaustive, and more importantly each idea only includes a summary of
@@ -121,6 +122,39 @@ discussions.)
 The Git organization usually has very limited mentoring capacity.
 These days we usually accept between 0 and 3 students per season
 (Winter or Summer).
+
+## Note about giving back and mentoring
+
+We appreciate very much students and interns who stay around after the
+mentoring period is over. It is very nice to see them on the mailing
+list, even if they don't contribute much. It's of course better when
+they continue to contribute though, even by just reviewing a patch
+from time to time.
+
+Some people have been around for more than 10 years, others have
+become regular contributors and that's great!
+
+One very nice way to contribute and to give back is to mentor or
+co-mentor other students or interns coming after you. It helps create
+more opportunities for more students and interns like you, as
+mentoring capacity is the main factor preventing us from accepting
+more students and interns. If each student or intern accepted to
+co-mentor twice (once in Summer and once in Winter) just after they
+have been mentored, our mentoring capacity could increase
+significantly each year.
+
+Unfortunately very few former students or interns have been willing to
+just co-mentor along with an experienced mentor, even though it
+doesn't require much work, technical ability or time.
+
+Other free or open source projects have done better than us on
+this. At the Google Summer of Code Mentor Summit for example, more
+than 30% of the mentors that are former students.
+
+Therefore if you can show us in your application that you like
+mentoring, giving back and sticking to the projects you have worked
+on, you are likely to significantly increase your chances to be
+selected.
 
 ## Note about refactoring projects versus projects that implement new features
 
