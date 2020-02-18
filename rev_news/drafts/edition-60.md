@@ -242,9 +242,60 @@ You can find more about conversions with reposurgeon
   to remove the index using `rm .git/index` first to get back to a
   working state.
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Chris Webster
+* Who are you and what do you do?
+
+  I am a retired software developer. After 25+ years in commercial
+  software development I wanted to contribute to open source.
+  Having used GNU Make and Perl extensively in a build system
+  I wanted to give back. GitGitGadget caught my attention when
+  I was contributing a fix to diff-highlight.pm in Git.
+  Dscho guided me through my many errors to get the change
+  approved. I decided to help with GitGitGadget to say thanks.
+  Fun/scary facts: Primary language - IBM mainframe assembler,
+  Secondary language: C++.
+
+* What would you name your most important contribution to Git?
+
+  My contributions are mainly to GitGitGadget and I think adding
+  the `/preview` command was really helpful. It only gets used
+  once by most new contributors to Git but it gives them a chance
+  to see what their change requests would look like. I hope seeing
+  the email gives these contributors the confidence to submit their
+  changes to the general Git community. It wasn't a big change but
+  it appears to get used by a lot of first time contributors.
+
+* What are you doing on the Git ecosystem these days, and why?
+
+  I am still very much in learning mode. Working on GitGitGadget
+  provides an opportunity to work with modern TypeScript and
+  JavaScript features. There are some issues I would still like
+  to help with. Contributing more to Git is a next step.
+  Helping to make tools easier and more reliable is my motivation.
+
+* Can you briefly explain your user experience with Git so far?
+
+  So far I have been mostly using Git from the command line and
+  only recently started to look at Git-GUI and gitk. This is a
+  stark contrast to my previous use of CM/Synergy and PVCS
+  where the GUI was used almost exclusively. Working on GitGitGadget
+  requires getting to know some of the plumbing of Git and GitHub,
+  which is interesting. For personal projects, most use is pretty basic.
+
+* Have you ever felt that something that you've used in other version
+  control software is missing from Git?
+
+  VS Code shows a side-by-side diff for working objects. CM/Synergy
+  allowed a side-by-side diff for any versions of the objects. I have
+  not seen a way to do that. Sometimes it is easier to debug when you
+  have the complete source to see changes.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+  My answer should be GitGitGadget but I'm not really a user these
+  days - need to be more of a contributor to Git to appreciate GitGitGadget.
+  VS Code is providing more Git specific tooling (i.e. Timeline view) that
+  looks really interesting along with the GitLens extension.
 
 ## Releases
 
