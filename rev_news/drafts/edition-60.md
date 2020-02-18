@@ -361,6 +361,9 @@ __Light reading__
 * [How to Bisect Perl](https://www.perlmonks.org/?node_id=11110663) on PerlMonks
 * [Commit Often, Perfect Later, Publish Once: Git Best Practices](http://sethrobertson.github.io/GitBestPractices/)
   by Seth Robertson (2012)
+* [🙏 Please Add .gitattributes To Your Git Repository - DEV Community](https://dev.to/deadlybyte/please-add-gitattributes-to-your-git-repository-1jld) by deadlybyte
+* [A guide on commit messages - DEV Community](https://dev.to/yvonnickfrin/a-guide-on-commit-messages-d8n) by Yvonnick FRIN
+* [Stage. Commit. Push. A Git Story (Comic) - DEV Community](https://dev.to/erikaheidi/pick-squash-drop-rebase-comic-607) by Erika Heidi
 * [Git Commands – 10 Terminal Tricks Every Developer Should Know](https://www.freecodecamp.org/news/10-important-git-commands-that-every-developer-should-know/) by Cem Eygi
 
 
