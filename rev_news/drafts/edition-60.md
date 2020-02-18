@@ -327,20 +327,90 @@ You can find more about conversions with reposurgeon
 __Various__
 
 * Heads-up for SSH users: as mentioned in [the release notes of OpenSSH v8.2](https://www.openssh.com/txt/release-8.2), the prevalent `ssh-rsa` keys will be disabled. If you use SSH with private keys, you will want to regenerate them soon.
+* [REBASE: A complete Guide on Rebasing in Git](https://rebase-book.com/)
+  is a new less than 200 pages book from Pascal Precht (with a free sample)
 
 __Light reading__
 
 * [The History of Git: The Road to Domination in Software Version Control](https://www.welcometothejungle.com/en/articles/btc-history-git)
   was made using interviews and material from members of this
-  community, especially Linus Torvalds, Johannes Schindelin and Jeff
-  King.
+  community, especially Linus Torvalds, Johannes Schindelin and Jeff King.
+* [A new hash algorithm for Git [LWN.net]](https://lwn.net/Articles/811068/) by Jonathan Corbet
+  * [Git takes baby steps towards swapping out vulnerable SHA-1 hashing algo for SHA-256](https://www.theregister.co.uk/2020/02/05/git_sha_256_work/) by Tim Anderson in The Register
+  * [Bridging the gap: transitioning Git to SHA-256 - Git Merge 2019](https://www.youtube.com/watch?v=qHERDFUSa14)
+    video of Brian M. Carlson presentation at Git Merge 2019
+	(event which was covered in [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/#discussions) and [#49](https://git.github.io/rev_news/2019/03/20/edition-49/#other-news))
+* [Automating MySQL schema migrations with GitHub Actions and more](https://github.blog/2020-02-14-automating-mysql-schema-migrations-with-github-actions-and-more/)
+  by Shlomi Noach on GitHub Blog, using GitHub-developed [gh-ost](https://githubengineering.com/gh-ost-github-s-online-migration-tool-for-mysql),
+  an online table migration solution, and [skeema](https://www.skeema.io/) by Evan Elias,
+  an open source schema management utility.
+* [Better tools for kernel developers [LWN.net]](https://lwn.net/Articles/811528/)
+  by Jonathan Corbet, about [posting of  a simple tool called get-lore-mbox](https://lwn.net/ml/workflows/20200201030105.k6akvbjpmlpcuiky@chatter.i7.local/)
+* In [Re: [Lsf-pc] [LSF/MM/BPF TOPIC] FS Maintainers Don't Scale](https://lwn.net/ml/linux-fsdevel/20200202214620.GA20628@dread.disaster.area/)
+  Dave Chinner writes on the need and usefulness of doing code review,
+  without being experienced in the area that the patch series cover
+* [Fedora gathering requirements for a Git forge [LWN.net]](https://lwn.net/Articles/810776/)
+  by Jake Edge, with three possibilities: GitHub, GitLab CE, and [Pagure](https://pagure.io/pagure)
+  (the last one was mentioned in [Git Rev News Edition #24 (February 22nd, 2017)](https://git.github.io/rev_news/2017/02/22/edition-24/#other-news))
+* ['Succinct Data Structure for Delta Encoding for Modern Databases'](https://github.com/terminusdb/terminus-server/blob/dev/docs/whitepaper/terminusdb.pdf) [PDF]
+  or How we built a Git for Data (and Learned to Stop Worrying and Love the Bomb) -
+  whitepaper about TerminusDB
+* [Lecture 6: Version Control (Git)](https://missing.csail.mit.edu/2020/version-control/)
+  is a part of "The Missing Semester of Your CS Education" class at MIT
+* [Weird Hobby: Scraped Git Histories](https://blog.afoolishmanifesto.com/posts/weird-hobby-scraped-git-histories/) by fREW Schmidt
+* [How to Bisect Perl](https://www.perlmonks.org/?node_id=11110663) on PerlMonks
+* [Commit Often, Perfect Later, Publish Once: Git Best Practices](http://sethrobertson.github.io/GitBestPractices/)
+  by Seth Robertson (2012)
+* [Git Commands – 10 Terminal Tricks Every Developer Should Know](https://www.freecodecamp.org/news/10-important-git-commands-that-every-developer-should-know/) by Cem Eygi
+
 
 __Git tools and sites__
 
 * [git-repo](https://github.com/aliyun/git-repo-go) is a
   reimplementation in Golang by [Alibaba Cloud](https://github.com/aliyun) of the
   [Android repo tool](https://source.android.com/setup/develop/repo).
+* [OneDev](https://github.com/theonedev/onedev) is all-in-one DevOps platform,
+  with issue tracking, Git management, pull requests, and build farm;
+  written in Java
 * [Introducing Scalar: Git at scale for everyone](https://devblogs.microsoft.com/devops/introducing-scalar/)
+* [chronologer](https://github.com/dandavison/chronologer):
+  visualize changes in program timing (performance) over git commit history;
+  uses [hyperfine](https://github.com/sharkdp/hyperfine) for the benchmarking
+* [skeema](https://www.skeema.io/) is an open source pure-SQL database
+  schema management system, with which you can diff, push, and pull
+  schemas
+  
+  There are various other tools to help version-control database schema,
+  including:
+  
+  * [Sqitch](https://sqitch.org/) is database-native change management
+    for framework-free development and dependable deployment
+  * [Alembic](https://alembic.sqlalchemy.org/) is a lightweight database migration tool
+    for usage with the [SQLAlchemy](https://www.sqlalchemy.org/) Database Toolkit for Python
+  * [Flyway](https://flywaydb.org/) by Redgate,
+	with Apache v2 licensed Community Edition version
+  * [Liquibase](https://www.liquibase.org/) by Datical,
+    with free Liquibase Community edition
+
+* [get-lore-mbox](https://git.kernel.org/pub/scm/linux/kernel/git/mricon/korg-helpers.git/tree/get-lore-mbox.py)
+  by Konstantin Ryabitsev is a Python script that given the message ID
+  for any email in a thread of interest, it will download the entire
+  thread from the [lore.kernel.org](https://lore.kernel.org/) archive
+  into a local mbox file, for an easy applying to git repository
+* [GitHub and Government](https://government.github.com/) is a site to
+  Ggather, curate, and feature stories of public servants and civic hackers
+  using GitHub as part of their open government innovations
+* [git-evtag](https://github.com/cgwalters/git-evtag): Extended verification for git tags,
+  that can be used as a replacement for `git-tag -s`
+* [shit](https://git.sr.ht/~sircmpwn/shit) (shit == Shell Git) is an implementation
+  of Git [plumbing] using (almost) entirely POSIX shell; more proof-of-concept
+  that a practical tool
+* [git-tfs](http://git-tfs.com/) is a two-way bridge between TFS and git,
+  similar to `git-svn`; no more actively maintained because the authors
+  are no longer users of TFS
+  * [Why you should abandon TFS and adopt Git](https://www.continuousimprover.com/2015/06/why-you-should-abandon-tfs-source.html)
+    by Dennis Doomen (2015)
+
 
 ## Credits
 
