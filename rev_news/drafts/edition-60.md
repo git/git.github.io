@@ -290,6 +290,10 @@ You can find more about conversions with reposurgeon
   not seen a way to do that. Sometimes it is easier to debug when you
   have the complete source to see changes.
 
+  ***Note**: Chris was told that `git difftool` might help him with getting
+  side-by-side diff in Git. He acknowledged the same stating "Difftool looks
+  like what I am looking for".*
+
 * What is your favorite Git-related tool/library, outside of Git itself?
 
   My answer should be GitGitGadget but I'm not really a user these
