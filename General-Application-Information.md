@@ -143,18 +143,18 @@ co-mentor twice (once in Summer and once in Winter) just after they
 have been mentored, our mentoring capacity could increase
 significantly each year.
 
-Unfortunately very few former students or interns have been willing to
-just co-mentor along with an experienced mentor, even though it
-doesn't require much work, technical ability or time.
+Even though successful former students/interns usually have adequate
+technical ability to be a successful mentor, unfortunately very few of
+them have been willing to just co-mentor along with an experienced
+mentor.
 
 Other free or open source projects have done better than us on
 this. At the Google Summer of Code Mentor Summit for example, more
-than 30% of the mentors that are former students.
+than 30% of the mentors were former students.
 
-Therefore if you can show us in your application that you like
-mentoring, giving back and sticking to the projects you have worked
-on, you are likely to significantly increase your chances to be
-selected.
+Consider showing us in your application previous mentoring, giving
+back and community activities that you have done, especially related
+to free or open source software.
 
 ## Note about refactoring projects versus projects that implement new features
 
