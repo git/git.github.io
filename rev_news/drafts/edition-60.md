@@ -21,8 +21,8 @@ On January 12th 2020, the history of the GNU Compiler Collection was
 lifted from Subversion to Git. At 280K commits, with a history
 containing traces of two previous version-control systems (CVS and
 RCS) this was the largest and most complex repository conversion of an
-open-source project ever. It swamped the previous record-holder -
-Emacs's move from Bazaar to Git back in 2011 - by an order of magnitude.
+open-source project ever. It swamped the previous record-holder --
+Emacs's move from Bazaar to Git back in 2011 -- by an order of magnitude.
 
 Both those conversions were done by [reposurgeon](https://gitlab.com/esr/reposurgeon).
 Neither of them could practically have been performed by any other
@@ -39,7 +39,7 @@ exporters such as git-fast-export and cvs-fast-export to serialize a
 repository for it.
 
 Actually, that's not quite right either. Subversion doesn't have an
-exporter - there is no svn-fast-export (well, not one that works for
+exporter -- there is no svn-fast-export (well, not one that works for
 more than trivial cases, anyway). Instead, reposurgeon reads the
 native serialization produced by Subversion's svnadmin dump
 tool. Internally, this is massaged into the equivalent of a git
@@ -56,14 +56,14 @@ version of a git fast-input stream. A productive way to think about
 what reposurgeon does is to remember that this is basically just a DAG
 (directed acyclic graph) with text attached to the nodes. Now think of
 reposurgeon as an editor for this graph and its nodes. Then, think of
-it as a DSL (domain-specific language) designed to be *scripted* -
+it as a DSL (domain-specific language) designed to be *scripted* --
 that is, designed to reproducibly apply editing procedures to this
 graph.
 
 So the general answer to "what can you do with it" is "anything you
 want to". I enjoy thinking about and implementing DSLs, and once I had
 the basic design idea it was pretty much inevitable that I was going
-to write the most general set of primitives I could imagine - and I
+to write the most general set of primitives I could imagine -- and I
 have a very fertile imagination.
 
 Elijah Newren's aside on reposurgeon in [Git Rev News 54](https://git.github.io/rev_news/2019/08/21/edition-54/)
@@ -125,7 +125,7 @@ literally to gitspace, would just be junk. What you want is to move
 the metadata of that commit to an annotated tag.
 
 Many attempts at importers silently botch this in practice, but it can
-be handled automatically in theory - and reposurgeon does that. The
+be handled automatically in theory -- and reposurgeon does that. The
 mess you're likely to have on your hands anyway is due to Subversion
 operator errors, scar tissue for a previous conversion out of CVS, and
 use of git-svn as a live gateway to the repository.
@@ -147,7 +147,7 @@ repository:
 <96593>|<96595> reparent --use-order
 ```
 
-The GCC conversion was pretty hairy - 343 lines of DSL scripting - but
+The GCC conversion was pretty hairy -- 343 lines of DSL scripting -- but
 there are whole new levels of complexity when, as still sometimes
 happens, you need to recover history from pre-version-controlled
 sources to stitch the repository together.
@@ -174,12 +174,12 @@ misplaced branch joins.
 A subtle but important point is that I didn't do that work
 myself. That kind of thing is not a job for reposurgeon's maintainer,
 it's a job for a "Mr. Inside" who knows the project's history
-intimately - in this case it was actually the GCC project lead, Joseph
+intimately -- in this case it was actually the GCC project lead, Joseph
 Myers. One of reposurgeon's requirements is that it has to be a tool
 that a "Mr. Inside" can learn to use with minimum friction.
 
 And generally it is, if you're being driven to it by the kind of
-problem it was designed to solve - it's like gdb that way. I've been
+problem it was designed to solve -- it's like gdb that way. I've been
 taken to task about the tool having no intro documentation; this is
 not because I'm lazy, it's because there's
 [no plausible way to write any](http://esr.ibiblio.org/?p=8551), any
@@ -214,7 +214,7 @@ You can find more about conversions with reposurgeon
 
   He didn't understand what happened and didn't know how to fix the
   situation. He later added that the `git commit` he had done had
-  actually commited the files even though `git status` told him that
+  actually committed the files even though `git status` told him that
   the files wouldn't go into the commit. And he also sent instructions
   to help reproduce the issue.
 
@@ -252,7 +252,7 @@ You can find more about conversions with reposurgeon
   I was contributing a fix to diff-highlight.pm in Git.
   Dscho guided me through my many errors to get the change
   approved. I decided to help with GitGitGadget to say thanks.
-  Fun/scary facts: Primary language - IBM mainframe assembler,
+  Fun/scary facts: Primary language -- IBM mainframe assembler,
   Secondary language: C++.
 
 * What would you name your most important contribution to Git?
@@ -293,7 +293,7 @@ You can find more about conversions with reposurgeon
 * What is your favorite Git-related tool/library, outside of Git itself?
 
   My answer should be GitGitGadget but I'm not really a user these
-  days - need to be more of a contributor to Git to appreciate GitGitGadget.
+  days -- need to be more of a contributor to Git to appreciate GitGitGadget.
   VS Code is providing more Git specific tooling (i.e. Timeline view) that
   looks really interesting along with the GitLens extension.
 
@@ -326,7 +326,7 @@ You can find more about conversions with reposurgeon
 
 __Various__
 
-* Heads-up for SSH users: as mentioned in [the release notes of OpenSSH v8.2](https://www.openssh.com/txt/release-8.2), the prevalent `ssh-rsa` keys will be disabled. If you use SSH with private keys, you will want to regenerate them soon.
+* Heads-up for SSH users: as mentioned in [the release notes of OpenSSH v8.2](https://www.openssh.com/txt/release-8.2), the prevalent `ssh-rsa` keys will be disabled. If you use SSH with private keys depending on SHA-1, you will want to regenerate them soon.
 
 __Light reading__
 
