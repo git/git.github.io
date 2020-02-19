@@ -32,7 +32,7 @@ yourself.
 
 Let's start with a brief description of what reposurgeon actually
 does. When you use it, you start by reading in a version-control
-repository...but actually, that's not quite right. What reposurgeon
+repository... but actually, that's not quite right. What reposurgeon
 actually does is read in a git fast-import stream. It looks like it
 reads repositories because it knows how to call front ends that use
 exporters such as git-fast-export and cvs-fast-export to serialize a
@@ -335,8 +335,9 @@ __Light reading__
 * [The History of Git: The Road to Domination in Software Version Control](https://www.welcometothejungle.com/en/articles/btc-history-git)
   was made using interviews and material from members of this
   community, especially Linus Torvalds, Johannes Schindelin and Jeff King.
-* [A new hash algorithm for Git [LWN.net]](https://lwn.net/Articles/811068/) by Jonathan Corbet.
-  * [Git takes baby steps towards swapping out vulnerable SHA-1 hashing algo for SHA-256](https://www.theregister.co.uk/2020/02/05/git_sha_256_work/) by Tim Anderson in The Register
+* Transitioning Git to SHA-256: 
+  * [A new hash algorithm for Git [LWN.net]](https://lwn.net/Articles/811068/) by Jonathan Corbet.
+  * [Git takes baby steps towards swapping out vulnerable SHA-1 hashing algo for SHA-256](https://www.theregister.co.uk/2020/02/05/git_sha_256_work/) by Tim Anderson in The Register.
   * [Bridging the gap: transitioning Git to SHA-256 - Git Merge 2019](https://www.youtube.com/watch?v=qHERDFUSa14)
     video of Brian M. Carlson presentation at Git Merge 2019
 	(event which was covered in [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/#discussions) and [#49](https://git.github.io/rev_news/2019/03/20/edition-49/#other-news)).
@@ -399,7 +400,7 @@ __Git tools and sites__
   thread from the [lore.kernel.org](https://lore.kernel.org/) archive
   into a local mbox file, for an easy applying to git repository.
 * [GitHub and Government](https://government.github.com/) is a site to
-  Ggather, curate, and feature stories of public servants and civic hackers
+  gather, curate, and feature stories of public servants and civic hackers
   using GitHub as part of their open government innovations.
 * [git-evtag](https://github.com/cgwalters/git-evtag): Extended verification for git tags,
   that can be used as a replacement for `git-tag -s`.
