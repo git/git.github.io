@@ -69,7 +69,7 @@ list for discussion.
 
 Getting your proposal right can follow the same process as usual patch
 submission for Git, as described in the
-[microprojects](https://git.github.io/SoC-2020-Microprojects) page and
+[microprojects](https://git.github.io/General-Microproject-Information) page and
 in `Documentation/SubmittingPatches` in Git's source code. It is also
 expected that you will send several versions of your draft, responding
 to comments on the list. Please plan to send the first draft early
@@ -84,7 +84,7 @@ emails.
 
 In summary, all applicants must (not necessarily in this order):
 
-* Complete a [microproject](https://git.github.io/SoC-2020-Microprojects).
+* Complete a [microproject](https://git.github.io/General-Microproject-Information).
 
 * Write a detailed application explaining their project.
 
