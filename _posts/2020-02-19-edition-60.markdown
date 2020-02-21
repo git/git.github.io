@@ -410,7 +410,7 @@ __Git tools and sites__
   that can be used as a replacement for `git-tag -s`.
 * [shit](https://git.sr.ht/~sircmpwn/shit) (shit == Shell Git) is an implementation
   of Git [plumbing] using (almost) entirely POSIX shell; more proof-of-concept
-  that a practical tool.
+  than a practical tool.
 * [git-tfs](http://git-tfs.com/) is a two-way bridge between TFS and git,
   similar to `git-svn`; no more actively maintained because the authors
   are no longer users of TFS:
