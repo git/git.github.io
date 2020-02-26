@@ -152,6 +152,16 @@ Other free or open source projects have done better than us on
 this. At the Google Summer of Code Mentor Summit for example, more
 than 30% of the mentors were former students.
 
+Here is a quote by a mentor (Carlos Fernandez Sanz) on the GSoC
+Mentors List, that describes very well how we see GSoC and Outreachy:
+
+"GSoC is (for us, anyway) more about growing the community than
+getting stuff done. If they don't stick around their value diminishes
+a lot, even if they do a great job [...]. The students that did a
+great job but completely left the community [...] are just a memory...
+the ones that have been with us and that are now mentors [...], long
+after they participated in GSoC, are the ones we love :-)"
+
 Consider showing us in your application previous mentoring, giving
 back and community activities that you have done, especially related
 to free or open source software.
