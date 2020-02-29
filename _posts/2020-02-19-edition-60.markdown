@@ -374,9 +374,12 @@ __Light reading__
 
 __Git tools and sites__
 
-* [git-repo](https://github.com/aliyun/git-repo-go) is a
-  reimplementation in Golang by [Alibaba Cloud](https://github.com/aliyun) of the
-  [Android repo tool](https://source.android.com/setup/develop/repo).
+* [git-repo-go](https://github.com/aliyun/git-repo-go) provides a command-line
+  tool for centralized workflow, which can work with Gerrit, AGit-Flow compatible
+  servers. It is written in Golang, and it can be installed easily without further
+  dependency. It provides an easy-to-use solution for multiple repositories
+  which is introduced by Android repo first, and it can also work with
+  a single repository. For documentation, see: [https://git-repo.info/](https://git-repo.info/).
 * [OneDev](https://github.com/theonedev/onedev) is an all-in-one DevOps platform,
   with issue tracking, Git management, pull requests, and build farm;
   written in Java.
