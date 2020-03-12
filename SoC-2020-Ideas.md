@@ -85,5 +85,77 @@ See discussion in:
 
 <https://lore.kernel.org/git/nycvar.QRO.7.76.6.2001301154170.46@tvgsbejvaqbjf.bet/T/#t>
 
+### Commit graph labeling for speeding up git commands
 
+ - Language: C
+ - Difficulty: hard
+ - Possible mentors: Jakub Narębski
+ - Possible co-mentors: Heba Waly
 
+Git uses various clever methods for making operations on very large
+repositories faster, from bitmap indices for `git fetch`[1], to generation
+numbers (also known as topological levels) in the commit-graph file for
+commit graph traversal operations like `git log --graph`[2].
+
+One possible improvement that can make Git even faster is using min-post
+intervals labeling.  The basis of this labeling is post-visit order of
+a depth-first search traversal tree of a commit graph, let's call it
+'post(v)'.
+
+If for each commit 'v' we would compute and store in the commit-graph
+file two numbers: 'post(v)' and the minimum of 'post(u)' for all commits
+reachable from 'v', let's call the latter 'min_graph(v)', then the
+following condition is true:
+
+> if 'v' can reach 'u', then min_graph(v) <= post(u) <= post(v)
+
+This labeling can be used to quickly find which commits are
+unreachable (it is so called negative-cut filter).
+
+If for each commit 'v' we would compute and store in the commit-graph
+file two numbers: 'post(v)' and the minimum of 'post(u)' for commits
+that were visited during the part of depth-first search that started
+from 'v' (which is the minimum of post-order number for subtree of a
+spanning tree that starts at 'v'), let's call the later 'min_tree(v)',
+then the following condition is true:
+
+> if min_tree(v) <= post(u) <= post(v), then 'v' can reach 'u'
+
+This labeling can be used to quickly find which commits are
+reachable, because if they are reachable in the spanning tree for
+commit graph, they are reachable in commit graph itself.  (Such
+labeling is called positive-cut filter).
+
+The task would be to implement computing such labeling (or a more
+involved variant of it, for example as described in [3,4,5]), store it
+in the commit-graph file, and then use it for speeding up git
+commands, such as:
+
+ - `git merge-base --is-ancestor`
+ - `git branch --contains`
+ - `git tag --contains`
+ - `git branch --merged`
+ - `git tag --merged`
+ - `git merge-base --all`
+ - `git log --topo-sort`
+
+One can start with using this labeling for making selected single
+command faster, for example `--contains` queries (as it was done for
+generation numbers).
+
+Next task would be, time permitting, to make it possible to update the
+labeling without recomputing it from scratch, and to make it
+compatible with incremental update of the commit-graph file[6].
+
+References:
+
+1. <https://githubengineering.com/counting-objects/>
+2. <https://devblogs.microsoft.com/devops/supercharging-the-git-commit-graph-iii-generations/>
+3. <https://arxiv.org/abs/1404.4465>
+4. <https://github.com/steps/Ferrari> and <https://arxiv.org/abs/1211.3375>
+5. <https://colab.research.google.com/drive/1V-U7_slu5Z3s5iEEMFKhLXtaxSu5xyzg>
+6. <https://devblogs.microsoft.com/devops/updates-to-the-git-commit-graph-feature/>
+
+See also discussion in:
+
+<https://public-inbox.org/git/86tvl0zhos.fsf@gmail.com/t/>
