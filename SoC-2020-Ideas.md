@@ -98,8 +98,8 @@ numbers (also known as topological levels) in the commit-graph file for
 commit graph traversal operations like `git log --graph`[2].
 
 One possible improvement that can make Git even faster is using min-post
-intervals labeling.  The basis of this labeling is post-visit order of
-a depth-first search traversal tree of a commit graph, let's call it
+intervals labeling[3].  The basis of this labeling is post-visit order of
+a depth-first search (DFS) traversal tree of a commit graph, let's call it
 'post(v)'.
 
 If for each commit 'v' we would compute and store in the commit-graph
@@ -123,13 +123,13 @@ then the following condition is true:
 
 This labeling can be used to quickly find which commits are
 reachable, because if they are reachable in the spanning tree for
-commit graph, they are reachable in commit graph itself.  (Such
+commit graph, then they are reachable in commit graph itself.  (Such
 labeling is called positive-cut filter).
 
 The task would be to implement computing such labeling (or a more
-involved variant of it, for example as described in [3,4,5]), store it
+involved variant of it, for example as described in [4,5,6]), store it
 in the commit-graph file, and then use it for speeding up git
-commands, such as:
+commands, such as[3]:
 
  - `git merge-base --is-ancestor`
  - `git branch --contains`
@@ -145,16 +145,18 @@ generation numbers).
 
 Next task would be, time permitting, to make it possible to update the
 labeling without recomputing it from scratch, and to make it
-compatible with incremental update of the commit-graph file[6].
+compatible with incremental update of the commit-graph file[7].
 
 References:
 
 1. <https://githubengineering.com/counting-objects/>
 2. <https://devblogs.microsoft.com/devops/supercharging-the-git-commit-graph-iii-generations/>
-3. <https://arxiv.org/abs/1404.4465>
-4. <https://github.com/steps/Ferrari> and <https://arxiv.org/abs/1211.3375>
-5. <https://colab.research.google.com/drive/1V-U7_slu5Z3s5iEEMFKhLXtaxSu5xyzg>
-6. <https://devblogs.microsoft.com/devops/updates-to-the-git-commit-graph-feature/>
+3. <https://drive.google.com/open?id=1psMBVfcRHcZeJ7AewGpdoymrEfFVdXoK>
+4. <https://arxiv.org/abs/1404.4465>  
+   section 3.3 "Pruning Based on DFS Numbering"
+5. <https://github.com/steps/Ferrari> and <https://arxiv.org/abs/1211.3375>
+6. <https://colab.research.google.com/drive/1V-U7_slu5Z3s5iEEMFKhLXtaxSu5xyzg>
+7. <https://devblogs.microsoft.com/devops/updates-to-the-git-commit-graph-feature/>
 
 See also discussion in:
 
