@@ -93,12 +93,12 @@ See discussion in:
  - Possible co-mentors: Heba Waly, Derrick Stolee
 
 Git uses various clever methods for making operations on very large
-repositories faster, from bitmap indices for `git fetch`[1], to generation
+repositories faster, from bitmap indices for `git fetch`[[1][]], to generation
 numbers (also known as topological levels) in the commit-graph file for
-commit graph traversal operations like `git log --graph`[2].
+commit graph traversal operations like `git log --graph`[[2][]].
 
 One possible improvement that can make Git even faster is using min-post
-intervals labeling[3].  The basis of this labeling is post-visit order of
+intervals labeling[[3][]].  The basis of this labeling is post-visit order of
 a depth-first search (DFS) traversal tree of a commit graph, let's call it
 'post(v)'.
 
@@ -127,9 +127,9 @@ commit graph, then they are reachable in commit graph itself.  (Such
 labeling is called positive-cut filter).
 
 The task would be to implement computing such labeling (or a more
-involved variant of it, for example as described in [4,5,6]), store it
+involved variant of it, for example as described in [[4][],[5][],[6][]]), store it
 in the commit-graph file, and then use it for speeding up git
-commands, such as[3]:
+commands, such as[[3][]]:
 
  - `git merge-base --is-ancestor`
  - `git branch --contains`
@@ -145,7 +145,7 @@ generation numbers).
 
 Next task would be, time permitting, to make it possible to update the
 labeling without recomputing it from scratch, and to make it
-compatible with incremental update of the commit-graph file[7].
+compatible with incremental update of the commit-graph file[[7][],[3][]].
 
 References:
 
@@ -159,6 +159,14 @@ References:
 5. <https://github.com/steps/Ferrari> and <https://arxiv.org/abs/1211.3375>
 6. <https://colab.research.google.com/drive/1V-U7_slu5Z3s5iEEMFKhLXtaxSu5xyzg>
 7. <https://devblogs.microsoft.com/devops/updates-to-the-git-commit-graph-feature/>
+
+[1]: https://githubengineering.com/counting-objects/ "Counting Objects | The GitHub Blog"
+[2]: https://devblogs.microsoft.com/devops/supercharging-the-git-commit-graph-iii-generations/ "Supercharging the Git Commit Graph III: Generations and Graph Algorithms | Azure DevOps Blog"
+[3]: https://drive.google.com/open?id=1psMBVfcRHcZeJ7AewGpdoymrEfFVdXoK "Graph operations in Git version control system (PDF)"
+[4]: https://arxiv.org/abs/1404.4465 "[arXiv:1404.4465] PReaCH: A Fast Lightweight Reachability Index using Pruning and Contraction Hierarchies"
+[5]: https://arxiv.org/abs/1211.3375 "[arXiv:1211.3375] High-Performance Reachability Query Processing under Index Size Restrictions"
+[6]: https://colab.research.google.com/drive/1V-U7_slu5Z3s5iEEMFKhLXtaxSu5xyzg "Reachability labels for version control graphs.ipynb | Colaboratory"
+[7]: https://devblogs.microsoft.com/devops/updates-to-the-git-commit-graph-feature/ "Updates to the Git Commit Graph Feature | Azure DevOps Blog"
 
 See also discussion in:
 
