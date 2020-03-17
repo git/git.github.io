@@ -90,7 +90,7 @@ See discussion in:
  - Language: C
  - Difficulty: hard
  - Possible mentors: Jakub Narębski
- - Possible co-mentors: Heba Waly
+ - Possible co-mentors: Heba Waly, Derrick Stolee
 
 Git uses various clever methods for making operations on very large
 repositories faster, from bitmap indices for `git fetch`[1], to generation
