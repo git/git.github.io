@@ -97,10 +97,44 @@ repositories faster, from bitmap indices for `git fetch`[[1][]], to generation
 numbers (also known as topological levels) in the commit-graph file for
 commit graph traversal operations like `git log --graph`[[2][]].
 
-One possible improvement that can make Git even faster is using min-post
-intervals labeling[[3][]].  The basis of this labeling is post-visit order of
-a depth-first search (DFS) traversal tree of a commit graph, let's call it
-'post(v)'.
+Unfortunately it turned out that we can get worse performance when
+using those generation numbers than without them, with using
+committerdate as a heuristics[[8][],[3][]] (and for selecting which
+commits to walk first).  It can lead to a large increase in number of
+commits walked. The example we saw in the Linux kernel repository was
+a bug fix created on top of a very old commit, so there was a commit
+of low generation with very high commit-date that caused extra
+walking.  (See [[9][]] for a detailed description of the data shape in
+this case.)
+
+Therefore the need for **generation number v2** was born.  Various
+candidates were examined (see e.g. <https://github.com/derrickstolee/gen-test>
+for initial list).  New generation number needed to provide good
+performance, incremental updates, and (due to unfortunate
+problem[[10][],[[3][]]) also backward compatibility.
+
+The generation number v2 that fulfills those requirements is 'backward
+compatible date ceiling' or 'corrected commit date with monotonically
+increasing offsets'[[11][],[3][]].  What is stored in the commit-graph
+in place of generation number is value of date offset; it is chosen to
+be at least 1 more than maximum offsets of the parents of the commit,
+while committerdate+offset (corrected commit date) also meets this
+condition.
+
+The task would be then to update the generation number to "v2" based
+on the referenced definition.  A part of this task would be moving the
+`generation` member of `struct commit` into a slab before making it a
+64-bit value.  (To learn how to store data on a slab one can see
+ongoing work on adding Bloom filter for changed files to the commit
+graph [[12][]].)  A part of this task could be examining performance
+improvements, like in <https://github.com/derrickstolee/gen-test>
+(perhaps extending it with `--contains`/`--merged` test).
+
+An _alternative_ would be examining other possible improvements that
+can make Git even faster than just using generation numbers, like
+using min-post **intervals labeling**[[3][]].  The basis of this
+labeling is post-visit order of a depth-first search (DFS) traversal
+tree of a commit graph, let's call it 'post(v)'.
 
 If for each commit 'v' we would compute and store in the commit-graph
 file two numbers: 'post(v)' and the minimum of 'post(u)' for all commits
@@ -159,6 +193,10 @@ References:
 5. <https://github.com/steps/Ferrari> and <https://arxiv.org/abs/1211.3375>
 6. <https://colab.research.google.com/drive/1V-U7_slu5Z3s5iEEMFKhLXtaxSu5xyzg>
 7. <https://devblogs.microsoft.com/devops/updates-to-the-git-commit-graph-feature/>
+8. <https://git.github.io/rev_news/2018/11/21/edition-45/#general>
+9. <https://lore.kernel.org/git/efa3720fb40638e5d61c6130b55e3348d8e4339e.1535633886.git.gitgitgadget@gmail.com/>
+10. <https://git.github.io/rev_news/2019/06/28/edition-52/#reviews>
+11. <https://lore.kernel.org/git/86o8ziatb2.fsf_-_@gmail.com/>
 
 [1]: https://githubengineering.com/counting-objects/ "Counting Objects | The GitHub Blog"
 [2]: https://devblogs.microsoft.com/devops/supercharging-the-git-commit-graph-iii-generations/ "Supercharging the Git Commit Graph III: Generations and Graph Algorithms | Azure DevOps Blog"
@@ -167,6 +205,10 @@ References:
 [5]: https://arxiv.org/abs/1211.3375 "[arXiv:1211.3375] High-Performance Reachability Query Processing under Index Size Restrictions"
 [6]: https://colab.research.google.com/drive/1V-U7_slu5Z3s5iEEMFKhLXtaxSu5xyzg "Reachability labels for version control graphs.ipynb | Colaboratory"
 [7]: https://devblogs.microsoft.com/devops/updates-to-the-git-commit-graph-feature/ "Updates to the Git Commit Graph Feature | Azure DevOps Blog"
+[8]: https://git.github.io/rev_news/2018/11/21/edition-45/#general "Git Rev News: Edition 45 (November 21st, 2018) :: [RFC] Generation Number v2"
+[9]: https://lore.kernel.org/git/efa3720fb40638e5d61c6130b55e3348d8e4339e.1535633886.git.gitgitgadget@gmail.com/ "[PATCH 1/1] commit: don't use generation numbers if not needed"
+[10]: https://git.github.io/rev_news/2019/06/28/edition-52/#reviews "Git Rev News: Edition 52 (June 28th, 2019) :: [PATCH 00/17] [RFC] Commit-graph: Write incremental files"
+[11]: https://lore.kernel.org/git/86o8ziatb2.fsf_-_@gmail.com/ "[RFC/PATCH] commit-graph: generation v5 (backward compatible date ceiling)"
 
 See also discussion in:
 
