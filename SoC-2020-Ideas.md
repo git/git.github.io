@@ -111,11 +111,11 @@ Therefore the need for **generation number v2** was born.  Various
 candidates were examined (see e.g. <https://github.com/derrickstolee/gen-test>
 for initial list).  New generation number needed to provide good
 performance, incremental updates, and (due to unfortunate
-problem[[10][],[[3][]]) also backward compatibility.
+problem[[10][],[3][]]) also backward compatibility.
 
 The generation number v2 that fulfills those requirements is 'backward
 compatible date ceiling' or 'corrected commit date with monotonically
-increasing offsets'[[11][],[3][]].  What is stored in the commit-graph
+increasing offsets[[11][],[3][]].  What is stored in the commit-graph
 in place of generation number is value of date offset; it is chosen to
 be at least 1 more than maximum offsets of the parents of the commit,
 while committerdate+offset (corrected commit date) also meets this
@@ -208,6 +208,7 @@ References:
 9. <https://lore.kernel.org/git/efa3720fb40638e5d61c6130b55e3348d8e4339e.1535633886.git.gitgitgadget@gmail.com/>
 10. <https://git.github.io/rev_news/2019/06/28/edition-52/#reviews>
 11. <https://lore.kernel.org/git/86o8ziatb2.fsf_-_@gmail.com/>
+12. <https://public-inbox.org/git/pull.497.git.1576879520.gitgitgadget@gmail.com/t/#u>
 
 [1]: https://githubengineering.com/counting-objects/ "Counting Objects | The GitHub Blog"
 [2]: https://devblogs.microsoft.com/devops/supercharging-the-git-commit-graph-iii-generations/ "Supercharging the Git Commit Graph III: Generations and Graph Algorithms | Azure DevOps Blog"
@@ -220,6 +221,7 @@ References:
 [9]: https://lore.kernel.org/git/efa3720fb40638e5d61c6130b55e3348d8e4339e.1535633886.git.gitgitgadget@gmail.com/ "[PATCH 1/1] commit: don't use generation numbers if not needed"
 [10]: https://git.github.io/rev_news/2019/06/28/edition-52/#reviews "Git Rev News: Edition 52 (June 28th, 2019) :: [PATCH 00/17] [RFC] Commit-graph: Write incremental files"
 [11]: https://lore.kernel.org/git/86o8ziatb2.fsf_-_@gmail.com/ "[RFC/PATCH] commit-graph: generation v5 (backward compatible date ceiling)"
+[12]: https://public-inbox.org/git/pull.497.git.1576879520.gitgitgadget@gmail.com/t/#u "[PATCH 0/9] [RFC] Changed Paths Bloom Filters"
 
 See also discussion in:
 
