@@ -177,6 +177,17 @@ One can start with using this labeling for making selected single
 command faster, for example `--contains` queries (as it was done for
 generation numbers).
 
+Before starting on this task, at the beginning of the GSoC, it might
+be good idea to check that interval labels would provide significant
+performance improvements at least in some cases (and if it is not the
+case, switch to working on generation numbers v2).  This _could_ be
+done with the help of "Reachability labels for version control
+graphs.ipynb" Jupyter Notebook on Google Colaboratory[[6][]].  It was
+created to answer such questions, though the exploration didn't get
+finished.  It would be possible with this notebook to at least find
+the amount of false negatives for min-post interval labeling for
+git.git or Linux kernel repo.
+
 Next task would be, time permitting, to make it possible to update the
 labeling without recomputing it from scratch, and to make it
 compatible with incremental update of the commit-graph file[[7][],[3][]].
