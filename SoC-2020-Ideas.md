@@ -173,20 +173,23 @@ commands, such as[[3][]]:
  - `git merge-base --all`
  - `git log --topo-sort`
 
-One can start with using this labeling for making selected single
-command faster, for example `--contains` queries (as it was done for
-generation numbers).
-
 Before starting on this task, at the beginning of the GSoC, it might
-be good idea to check that interval labels would provide significant
-performance improvements at least in some cases (and if it is not the
-case, switch to working on generation numbers v2).  This _could_ be
-done with the help of "Reachability labels for version control
-graphs.ipynb" Jupyter Notebook on Google Colaboratory[[6][]].  It was
+be good idea to have an exploration period, to determine which methods
+brings which performance improvements.  This _could_ be done with the
+help of "Reachability labels for version control graphs.ipynb" Jupyter
+Notebook on Google Colaboratory[[6][]] (in Python).  This notebook was
 created to answer such questions, though the exploration didn't get
 finished.  It would be possible with this notebook to at least find
-the amount of false negatives for min-post interval labeling for
-git.git or Linux kernel repo.
+the amount of false negatives for min-post interval labeling in
+git.git or Linux kernel repo.  Alternatively this could be done by
+creating prototypes and perhaps examining performance in portable and
+repeatable way using [trace2 API][api-trace2], like it was done
+for [gen-test][] (experimenting with candidates for generation number
+v2, see above).
+
+One can start this task with using min-post interval labeling for
+making selected single command faster, for example for `--contains`
+queries (as it was done for generation numbers).
 
 Next task would be, time permitting, to make it possible to update the
 labeling without recomputing it from scratch, and to make it
@@ -222,6 +225,9 @@ References:
 [10]: https://git.github.io/rev_news/2019/06/28/edition-52/#reviews "Git Rev News: Edition 52 (June 28th, 2019) :: [PATCH 00/17] [RFC] Commit-graph: Write incremental files"
 [11]: https://lore.kernel.org/git/86o8ziatb2.fsf_-_@gmail.com/ "[RFC/PATCH] commit-graph: generation v5 (backward compatible date ceiling)"
 [12]: https://public-inbox.org/git/pull.497.git.1576879520.gitgitgadget@gmail.com/t/#u "[PATCH 0/9] [RFC] Changed Paths Bloom Filters"
+
+[api-trace2]: https://git-scm.com/docs/api-trace2 "Trace2 API | Documentation/technical/api-trace2.txt"
+[gen-test]: https://github.com/derrickstolee/gen-test "Generation Number Performance Test - Test scripts for testing new versions of generation numbers"
 
 See also discussion in:
 
