@@ -90,17 +90,54 @@ See discussion in:
  - Language: C
  - Difficulty: hard
  - Possible mentors: Jakub Narębski
- - Possible co-mentors: Heba Waly
+ - Possible co-mentors: Heba Waly, Derrick Stolee
 
 Git uses various clever methods for making operations on very large
-repositories faster, from bitmap indices for `git fetch`[1], to generation
+repositories faster, from bitmap indices for `git fetch`[[1][]], to generation
 numbers (also known as topological levels) in the commit-graph file for
-commit graph traversal operations like `git log --graph`[2].
+commit graph traversal operations like `git log --graph`[[2][]].
 
-One possible improvement that can make Git even faster is using min-post
-intervals labeling[3].  The basis of this labeling is post-visit order of
-a depth-first search (DFS) traversal tree of a commit graph, let's call it
-'post(v)'.
+Unfortunately it turned out that we can get worse performance when
+using those generation numbers than without them, with using
+committerdate as a heuristics[[8][],[3][]] (and for selecting which
+commits to walk first).  It can lead to a large increase in number of
+commits walked. The example we saw in the Linux kernel repository was
+a bug fix created on top of a very old commit, so there was a commit
+of low generation with very high commit-date that caused extra
+walking.  (See [[9][]] for a detailed description of the data shape in
+this case.)
+
+Therefore the need for **generation number v2** was born.  Various
+candidates were examined (see e.g. <https://github.com/derrickstolee/gen-test>
+for initial list).  New generation number needed to provide good
+performance, incremental updates, and (due to unfortunate
+problem[[10][],[3][]]) also backward compatibility.
+
+The generation number v2 that fulfills those requirements is 'backward
+compatible date ceiling' or 'corrected commit date with monotonically
+increasing offsets[[11][],[3][]].  What is stored in the commit-graph
+in place of generation number is value of date offset; it is chosen to
+be at least 1 more than maximum offsets of the parents of the commit,
+while committerdate+offset (corrected commit date) also meets this
+condition.
+
+The task would be then to update the generation number to "v2" based
+on the referenced definition.  A part of this task would be moving the
+`generation` member of `struct commit` into a slab before making it a
+64-bit value.  (To learn how to store data on a slab one can see
+ongoing work on adding Bloom filter for changed files to the commit
+graph [[12][]].)  This part could be done with help of [Coccinelle][]
+scripts, like the ones in [`contrib/coccinelle`](https://github.com/git/git/tree/master/contrib/coccinelle).
+
+Another part of this task could be examining performance
+improvements, like in <https://github.com/derrickstolee/gen-test>
+(perhaps extending it with `--contains`/`--merged` test).
+
+An _alternative_ would be examining other possible improvements that
+can make Git even faster than just using generation numbers, like
+using min-post **intervals labeling**[[3][]].  The basis of this
+labeling is post-visit order of a depth-first search (DFS) traversal
+tree of a commit graph, let's call it 'post(v)'.
 
 If for each commit 'v' we would compute and store in the commit-graph
 file two numbers: 'post(v)' and the minimum of 'post(u)' for all commits
@@ -127,9 +164,9 @@ commit graph, then they are reachable in commit graph itself.  (Such
 labeling is called positive-cut filter).
 
 The task would be to implement computing such labeling (or a more
-involved variant of it, for example as described in [4,5,6]), store it
+involved variant of it, for example as described in [[4][],[5][],[6][]]), store it
 in the commit-graph file, and then use it for speeding up git
-commands, such as[3]:
+commands, such as[[3][]]:
 
  - `git merge-base --is-ancestor`
  - `git branch --contains`
@@ -139,24 +176,62 @@ commands, such as[3]:
  - `git merge-base --all`
  - `git log --topo-sort`
 
-One can start with using this labeling for making selected single
-command faster, for example `--contains` queries (as it was done for
-generation numbers).
+Before starting on this task, at the beginning of the GSoC, it might
+be good idea to have an exploration period, to determine which methods
+brings which performance improvements.  This _could_ be done with the
+help of "Reachability labels for version control graphs.ipynb" Jupyter
+Notebook on Google Colaboratory[[6][]] (in Python).  This notebook was
+created to answer such questions, though the exploration didn't get
+finished.  It would be possible with this notebook to at least find
+the amount of false negatives for min-post interval labeling in
+git.git or Linux kernel repo.  Alternatively this could be done by
+creating prototypes and perhaps examining performance in portable and
+repeatable way using [trace2 API][api-trace2], like it was done
+for [gen-test][] (experimenting with candidates for generation number
+v2, see above).
+
+One can start this task with using min-post interval labeling for
+making selected single command faster, for example for `--contains`
+queries (as it was done for generation numbers).
 
 Next task would be, time permitting, to make it possible to update the
 labeling without recomputing it from scratch, and to make it
-compatible with incremental update of the commit-graph file[7].
+compatible with incremental update of the commit-graph file[[7][],[3][]].
 
 References:
 
 1. <https://githubengineering.com/counting-objects/>
 2. <https://devblogs.microsoft.com/devops/supercharging-the-git-commit-graph-iii-generations/>
 3. <https://drive.google.com/open?id=1psMBVfcRHcZeJ7AewGpdoymrEfFVdXoK>
+    - <https://www.slideshare.net/JakubNarbski/graph-operations-in-git-version-control-system-how-the-performance-was-improved-for-large-repositories-how-can-it-be-further-improved>
+    - <https://speakerdeck.com/jnareb/graph-operations-in-git-slides-2019>
 4. <https://arxiv.org/abs/1404.4465>  
    section 3.3 "Pruning Based on DFS Numbering"
 5. <https://github.com/steps/Ferrari> and <https://arxiv.org/abs/1211.3375>
 6. <https://colab.research.google.com/drive/1V-U7_slu5Z3s5iEEMFKhLXtaxSu5xyzg>
 7. <https://devblogs.microsoft.com/devops/updates-to-the-git-commit-graph-feature/>
+8. <https://git.github.io/rev_news/2018/11/21/edition-45/#general>
+9. <https://lore.kernel.org/git/efa3720fb40638e5d61c6130b55e3348d8e4339e.1535633886.git.gitgitgadget@gmail.com/>
+10. <https://git.github.io/rev_news/2019/06/28/edition-52/#reviews>
+11. <https://lore.kernel.org/git/86o8ziatb2.fsf_-_@gmail.com/>
+12. <https://public-inbox.org/git/pull.497.git.1576879520.gitgitgadget@gmail.com/t/#u>
+
+[1]: https://githubengineering.com/counting-objects/ "Counting Objects | The GitHub Blog"
+[2]: https://devblogs.microsoft.com/devops/supercharging-the-git-commit-graph-iii-generations/ "Supercharging the Git Commit Graph III: Generations and Graph Algorithms | Azure DevOps Blog"
+[3]: https://drive.google.com/open?id=1psMBVfcRHcZeJ7AewGpdoymrEfFVdXoK "Graph operations in Git version control system (PDF)"
+[4]: https://arxiv.org/abs/1404.4465 "[arXiv:1404.4465] PReaCH: A Fast Lightweight Reachability Index using Pruning and Contraction Hierarchies"
+[5]: https://arxiv.org/abs/1211.3375 "[arXiv:1211.3375] High-Performance Reachability Query Processing under Index Size Restrictions"
+[6]: https://colab.research.google.com/drive/1V-U7_slu5Z3s5iEEMFKhLXtaxSu5xyzg "Reachability labels for version control graphs.ipynb | Colaboratory"
+[7]: https://devblogs.microsoft.com/devops/updates-to-the-git-commit-graph-feature/ "Updates to the Git Commit Graph Feature | Azure DevOps Blog"
+[8]: https://git.github.io/rev_news/2018/11/21/edition-45/#general "Git Rev News: Edition 45 (November 21st, 2018) :: [RFC] Generation Number v2"
+[9]: https://lore.kernel.org/git/efa3720fb40638e5d61c6130b55e3348d8e4339e.1535633886.git.gitgitgadget@gmail.com/ "[PATCH 1/1] commit: don't use generation numbers if not needed"
+[10]: https://git.github.io/rev_news/2019/06/28/edition-52/#reviews "Git Rev News: Edition 52 (June 28th, 2019) :: [PATCH 00/17] [RFC] Commit-graph: Write incremental files"
+[11]: https://lore.kernel.org/git/86o8ziatb2.fsf_-_@gmail.com/ "[RFC/PATCH] commit-graph: generation v5 (backward compatible date ceiling)"
+[12]: https://public-inbox.org/git/pull.497.git.1576879520.gitgitgadget@gmail.com/t/#u "[PATCH 0/9] [RFC] Changed Paths Bloom Filters"
+
+[Coccinelle]: http://coccinelle.lip6.fr/ "Coccinelle: A Program Matching and Transformation Tool for Systems Code"
+[api-trace2]: https://git-scm.com/docs/api-trace2 "Trace2 API | Documentation/technical/api-trace2.txt"
+[gen-test]: https://github.com/derrickstolee/gen-test "Generation Number Performance Test - Test scripts for testing new versions of generation numbers"
 
 See also discussion in:
 
