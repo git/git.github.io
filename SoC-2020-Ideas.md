@@ -126,7 +126,10 @@ on the referenced definition.  A part of this task would be moving the
 `generation` member of `struct commit` into a slab before making it a
 64-bit value.  (To learn how to store data on a slab one can see
 ongoing work on adding Bloom filter for changed files to the commit
-graph [[12][]].)  A part of this task could be examining performance
+graph [[12][]].)  This part could be done with help of [Coccinelle][]
+scripts, like the ones in [`contrib/coccinelle`](https://github.com/git/git/tree/master/contrib/coccinelle).
+
+Another part of this task could be examining performance
 improvements, like in <https://github.com/derrickstolee/gen-test>
 (perhaps extending it with `--contains`/`--merged` test).
 
@@ -226,6 +229,7 @@ References:
 [11]: https://lore.kernel.org/git/86o8ziatb2.fsf_-_@gmail.com/ "[RFC/PATCH] commit-graph: generation v5 (backward compatible date ceiling)"
 [12]: https://public-inbox.org/git/pull.497.git.1576879520.gitgitgadget@gmail.com/t/#u "[PATCH 0/9] [RFC] Changed Paths Bloom Filters"
 
+[Coccinelle]: http://coccinelle.lip6.fr/ "Coccinelle: A Program Matching and Transformation Tool for Systems Code"
 [api-trace2]: https://git-scm.com/docs/api-trace2 "Trace2 API | Documentation/technical/api-trace2.txt"
 [gen-test]: https://github.com/derrickstolee/gen-test "Generation Number Performance Test - Test scripts for testing new versions of generation numbers"
 
