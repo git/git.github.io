@@ -199,9 +199,9 @@ References:
 
 1. <https://githubengineering.com/counting-objects/>
 2. <https://devblogs.microsoft.com/devops/supercharging-the-git-commit-graph-iii-generations/>
-3. <https://drive.google.com/open?id=1psMBVfcRHcZeJ7AewGpdoymrEfFVdXoK>  
-   <https://www.slideshare.net/JakubNarbski/graph-operations-in-git-version-control-system-how-the-performance-was-improved-for-large-repositories-how-can-it-be-further-improved>  
-   <https://speakerdeck.com/jnareb/graph-operations-in-git-slides-2019>
+3. <https://drive.google.com/open?id=1psMBVfcRHcZeJ7AewGpdoymrEfFVdXoK>
+    - <https://www.slideshare.net/JakubNarbski/graph-operations-in-git-version-control-system-how-the-performance-was-improved-for-large-repositories-how-can-it-be-further-improved>
+    - <https://speakerdeck.com/jnareb/graph-operations-in-git-slides-2019>
 4. <https://arxiv.org/abs/1404.4465>  
    section 3.3 "Pruning Based on DFS Numbering"
 5. <https://github.com/steps/Ferrari> and <https://arxiv.org/abs/1211.3375>
