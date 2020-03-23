@@ -90,6 +90,33 @@ This edition covers what happened during the month of February 2020.
 
 ## Releases
 
++ Git [2.26.0](https://public-inbox.org/git/xmqqa7477u6j.fsf@gitster.c.googlers.com/),
+[2.25.2](https://public-inbox.org/git/xmqqeetqh6fp.fsf@gitster.c.googlers.com/),
+[2.26.0-rc2](https://public-inbox.org/git/xmqqa74fj30p.fsf@gitster.c.googlers.com/),
+[2.26.0-rc1](https://public-inbox.org/git/xmqqo8t4z29k.fsf@gitster-ct.c.googlers.com/),
+[2.26.0-rc0](https://public-inbox.org/git/xmqq5zfi4g0p.fsf@gitster-ct.c.googlers.com/)
++ Git for Windows [2.26.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.26.0.windows.1)
++ Bitbucket Server [7.0](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ Gerrit Code Review [2.16.17](https://www.gerritcodereview.com/2.16.html#21617)
++ GitHub Enterprise [2.20.3](https://enterprise.github.com/releases/2.20.3/notes),
+[2.20.2](https://enterprise.github.com/releases/2.20.2/notes),
+[2.19.9](https://enterprise.github.com/releases/2.19.9/notes),
+[2.18.14](https://enterprise.github.com/releases/2.18.14/notes),
+[2.17.20](https://enterprise.github.com/releases/2.17.20/notes),
+[2.20.1](https://enterprise.github.com/releases/2.20.1/notes),
+[2.19.8](https://enterprise.github.com/releases/2.19.8/notes),
+[2.18.13](https://enterprise.github.com/releases/2.18.13/notes),
+[2.17.19](https://enterprise.github.com/releases/2.17.19/notes)
++ GitLab [12.9](https://about.gitlab.com/releases/2020/03/22/gitlab-12-9-released/),
+[12.8.7](https://about.gitlab.com/releases/2020/03/16/gitlab-12-8-7-released/),
+[12.8.6](https://about.gitlab.com/releases/2020/03/11/critical-security-release-gitlab-12-dot-8-dot-6-released/),
+[12.8.5](https://about.gitlab.com/releases/2020/03/09/gitlab-12-8-5-released/),
+[12.8.2](https://about.gitlab.com/releases/2020/03/04/gitlab-12-dot-8-dot-2-released/),
+[12.8.1](https://about.gitlab.com/releases/2020/02/24/gitlab-12-8-1-released/),
+[12.8](https://about.gitlab.com/releases/2020/02/22/gitlab-12-8-released/)
++ GitKraken [6.5.4](https://support.gitkraken.com/release-notes/current),
+[6.5.3](https://support.gitkraken.com/release-notes/current),
+[6.5.2](https://support.gitkraken.com/release-notes/current)
 
 ## Other News
 
