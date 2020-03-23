@@ -38,11 +38,17 @@ This edition covers what happened during the month of February 2020.
 
 * [Git Contributor Summit](https://lore.kernel.org/git/AC2EB721-2979-43FD-922D-C5076A57F24B@jramsay.com.au/)
 
-  The Git Merge conference happened on March 5, 2020 in Los Angeles,
-  the day after the Git Merge conference. The event
+  The Git Contributor Summit happened on March 5, 2020 in Los Angeles,
+  the day after the Git Merge conference. The event was also organized
+  by GitHub.
 
-  There 26 people attending physically and 5 people attending
+  There were 26 people attending physically and 5 people attending
   remotely.
+
+  As usual it was an unconference where people wrote topics on a
+  whiteboard during the breakfast and then voted on them by putting a
+  tick-mark on the board. The topics were then discussed during the
+  day roughly from the most voted on to the less voted on.
 
   [Notes](https://lore.kernel.org/git/AC2EB721-2979-43FD-922D-C5076A57F24B@jramsay.com.au/)
   have been taken collaboratively and sent to the mailing list
