@@ -95,6 +95,12 @@ This edition covers what happened during the month of February 2020.
 
 __Various__
 
+* Outreachy Winter internships finished
+
+  Both Heba Waly and Miriam Rubio successfully finished their
+  Outreachy internships. Miriam posted
+  [a final blog post](https://mirucam.gitlab.io/outreachy_blog/post/week13/)
+  about it.
 
 __Light reading__
 
