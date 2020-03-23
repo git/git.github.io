@@ -127,7 +127,6 @@ __Various__
   their Outreachy internships. Miriam posted
   [a final blog post](https://mirucam.gitlab.io/outreachy_blog/post/week13/)
   about it.
-
 * Git has been selected as a
   [Google Summer of Code 2020](https://summerofcode.withgoogle.com/)
   mentor organization. Students willing to participate have until
