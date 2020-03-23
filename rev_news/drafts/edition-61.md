@@ -95,12 +95,16 @@ This edition covers what happened during the month of February 2020.
 
 __Various__
 
-* Outreachy Winter internships finished
-
-  Both Heba Waly and Miriam Rubio successfully finished their
-  Outreachy internships. Miriam posted
+* [Outreachy](https://www.outreachy.org/) Winter internships
+  finished. Both Heba Waly and Miriam Rubio successfully finished
+  their Outreachy internships. Miriam posted
   [a final blog post](https://mirucam.gitlab.io/outreachy_blog/post/week13/)
   about it.
+
+* Git has been selected as a
+  [Google Summer of Code 2020](https://summerofcode.withgoogle.com/)
+  mentor organization. Students willing to participate have until
+  March 31 to apply online.
 
 __Light reading__
 
