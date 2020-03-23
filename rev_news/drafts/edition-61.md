@@ -20,6 +20,34 @@ This edition covers what happened during the month of February 2020.
 
 ### General
 
+* [Git Merge 2020 conference](https://git-merge.com/)
+
+  The Git Merge conference happened on March 4, 2020 in Los
+  Angeles. It was organized by GitHub and sponsored by GitHub, GitLab
+  and the [Software Freedom Conservancy](https://sfconservancy.org/).
+
+  Over 300 people attended. Some people didn't attend and some talks
+  had to be changed at the last minute due to coronavirus related
+  reasons.
+
+  On the wall [a big timeline](https://photos.google.com/share/AF1QipP764-lYtgUakk-4Kr_Njh6S3GZE0BqdU8V_3j63RyhTygxNR12oO3mY5gSJdSGGA/photo/AF1QipPDidUvdLbTsS9DJKJlAVQ-PEV5zP1MZ4NIkd-x)
+  mentioned some important events in Git history.
+
+  There was a party in the evening with
+  [a big cake dedicated to Git's 15th anniversary](https://photos.google.com/share/AF1QipP764-lYtgUakk-4Kr_Njh6S3GZE0BqdU8V_3j63RyhTygxNR12oO3mY5gSJdSGGA/photo/AF1QipOXskul_osttaPQuOHkR1wAQQdOJb4j89VO3ipn).
+
+* [Git Contributor Summit](https://lore.kernel.org/git/AC2EB721-2979-43FD-922D-C5076A57F24B@jramsay.com.au/)
+
+  The Git Merge conference happened on March 5, 2020 in Los Angeles,
+  the day after the Git Merge conference. The event
+
+  There 26 people attending physically and 5 people attending
+  remotely.
+
+  [Notes](https://lore.kernel.org/git/AC2EB721-2979-43FD-922D-C5076A57F24B@jramsay.com.au/)
+  have been taken collaboratively and sent to the mailing list
+  afterwards.
+
 * [AGit-Flow and git-repo](https://git-repo.info/en/2020/03/agit-flow-and-git-repo/) (*written by Jiang Xin*)
 
   [AGit-Flow and git-repo](https://git-repo.info/en/2020/03/agit-flow-and-git-repo/)
