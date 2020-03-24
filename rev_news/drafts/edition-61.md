@@ -134,7 +134,8 @@ __Various__
 
 __Light reading__
 
-
+* Derrick Stolee's slides for his "Git at Scale for Everyone" talk
+  during the Git Merge 2020 conference are [available](https://stolee.dev/docs/git-merge-2020.pdf).
 
 __Git tools and sites__
 
