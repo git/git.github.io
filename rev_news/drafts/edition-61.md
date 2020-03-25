@@ -26,7 +26,7 @@ This edition covers what happened during the month of February 2020.
   Angeles. It was organized by GitHub and sponsored by GitHub, GitLab
   and the [Software Freedom Conservancy](https://sfconservancy.org/).
 
-  Over 300 people attended. Some people didn't attend and some talks
+  Over 300 people attended. Some people didn't attend, and some talks
   had to be changed at the last minute due to coronavirus related
   reasons.
 
@@ -59,22 +59,22 @@ This edition covers what happened during the month of February 2020.
   [AGit-Flow and git-repo](https://git-repo.info/en/2020/03/agit-flow-and-git-repo/)
   is a blog post on a missing speech from Git
   Merge 2020. Jiang Xin, a developer at Alibaba China, had planned to
-  speak at the Git Merge 2020 conference, but cancelled his flight due
+  speak at the Git Merge 2020 conference, but canceled his flight due
   to a coronavirus outbreak in China. He wrote this blog post about the
-  topic he wanted to offer to the conference.
+  topic he wanted to present at the conference.
 
   In this blog post, he introduces a centralized workflow (named AGit-Flow)
-  implemented at Alibaba, and an open source command-line tool "git-repo".
-  "git-repo" is an open-source software host in GitHub:
+  implemented at Alibaba, and an Open Source command-line tool "git-repo",
+  which is hosted on GitHub:
   [https://github.com/alibaba/git-repo-go](https://github.com/alibaba/git-repo-go).
-  It is not bound to a single protocol or a single server. It is
+  The tool is not bound to a single protocol or a single server. It is
   extensible and can run on Gerrit, AGit-Flow or other compatible protocols.
 
   The implementation of AGit-Flow has been contributed to
   [the Git mailing list](https://public-inbox.org/git/20200304113312.34229-1-zhiyou.jx@alibaba-inc.com/),
-  and this feature is under code review. Junio states that the name of
-  the new hook is inappropriate. Therefore, after a code review of these
-  patches, some updates will be made in the blog post.
+  and this feature is under code review. Junio stated that the proposed name of
+  the new hook was inappropriate. Therefore, after a code review of these
+  patches, expect some updates on the blog post.
 
 <!---
 ### Reviews
@@ -122,15 +122,15 @@ This edition covers what happened during the month of February 2020.
 
 __Various__
 
-* [Outreachy](https://www.outreachy.org/) Winter internships
+* [Outreachy](https://www.outreachy.org/) winter internships
   finished. Both Heba Waly and Miriam Rubio successfully finished
   their Outreachy internships. Miriam posted
   [a final blog post](https://mirucam.gitlab.io/outreachy_blog/post/week13/)
   about it.
 * Git has been selected as a
   [Google Summer of Code 2020](https://summerofcode.withgoogle.com/)
-  mentor organization. Students willing to participate have until
-  March 31 to apply online.
+  mentor organization. Students willing to participate need to apply
+  online until March 31.
 * [Tower for Teachers & Universities](https://www.git-tower.com/education/):
   Teachers and universities get free access to Tower "Pro" Git GUI.
 
