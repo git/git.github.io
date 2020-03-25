@@ -84,9 +84,82 @@ This edition covers what happened during the month of February 2020.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Christian Couder
+
+* Who are you and what do you do?
+
+  In the Git community I am a contributor since 2006, a member of the
+  PLC (the "Project Leadership Committee" which represents Git in the
+  [Conservancy](https://sfconservancy.org/)) since a few years ago and a
+  Git Rev News editor since exactly 5 years ago when it started! I also
+  regularly mentor or co-mentor GSoC students or Outreachy interns, and
+  sometimes give presentations about Git at conferences.
+
+  My current job title is Senior Backend Engineer in the Gitaly team at
+  GitLab. I have been working full time for GitLab since October last
+  year. Previously since October 2015 I was freelancing for GitLab,
+  Booking.com and Protocol Labs.
+
+  I am very happy that GitLab supports my involvement in Git and the Git
+  community. At GitLab I am involved in development activities, and a
+  bit in support, marketing, community relations and sometimes even
+  sales, around Git.
+
+  As a hobby I am singing in a choir and with a teacher. I also enjoy
+  time with my 3 teenager kids.
+
+* What would you name your most important contribution to Git?
+
+  I think the improvements I contributed to `git bisect` around
+  2007-2008 helped the Linux kernel community and gave Git an additional
+  edge. At that time it was not clear that Git was going to overcome
+  other version control system.
+
+  Also around 2008 I co-mentored for the first time a GSoC student
+  working on the sequencer which has become more and more useful as it's
+  now the default underlying engine behind `git rebase`.
+
+  More recently I am happy that my patches to make it possible to have
+  more than one promisor remote have been merged. I think it's an
+  interesting way to improve performance and to broaden usage.
+
+* What are you doing on the Git ecosystem these days, and why?
+
+  My time is spent on probably too many different things, like GSoC or
+  Outreachy, Git Rev News, PLC, GitLab activities, improving partial
+  clone, helping with getting GitHub patches merged upstream.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+  Right now I think it would be a good time to work on specialized
+  drivers/helpers for additional promisor remotes, and on improving
+  partial clone. I am glad though that the main companies contributing
+  to Git have already asked their developers to focus on improving
+  partial clone.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+  I think I would streamline as much as possible what's in the Git repo.
+  That is I would remove git-gui, gitk, gitweb, git-svn, git-p4,
+  contrib/ and even the Git test framework, which could perhaps be
+  merged with [Sharness](https://github.com/chriscool/sharness/). These
+  related tools could live in their own repo but still be discussed on
+  the mailing list and automatically be released at the same time as
+  Git. It would be a significant amount of work to set this up properly,
+  but then new Git related tools, like git-filter-repo or git-subtrac,
+  and perhaps old tools too could probably better find their place in
+  the ecosystem.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+  In 2016 I became the maintainer of
+  [Sharness](https://github.com/chriscool/sharness/) which was extracted
+  from the Git test framework in 2011. I have thought for a long time
+  that the Git test framework has helped tremendously in keeping the
+  amount of regressions and bugs in Git very low. I don't have much time
+  to take care of Sharness, but I think it can still help a lot.
 
 ## Releases
 
