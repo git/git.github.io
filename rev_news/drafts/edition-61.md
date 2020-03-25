@@ -30,11 +30,11 @@ This edition covers what happened during the month of February 2020.
   had to be changed at the last minute due to coronavirus related
   reasons.
 
-  On the wall [a big timeline](images/git_merge_2020_timeline.jpg)
+  On the wall [a big timeline](/images/git_merge_2020_timeline.jpg)
   mentioned some important events in Git history.
 
   There was a party in the evening with
-  [a big cake dedicated to Git's 15th anniversary](images/git_merge_2020_cake.jpg).
+  [a big cake dedicated to Git's 15th anniversary](/images/git_merge_2020_cake.jpg).
 
 * [Git Contributor Summit](https://lore.kernel.org/git/AC2EB721-2979-43FD-922D-C5076A57F24B@jramsay.com.au/)
 
