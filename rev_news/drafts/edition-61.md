@@ -131,14 +131,42 @@ __Various__
   [Google Summer of Code 2020](https://summerofcode.withgoogle.com/)
   mentor organization. Students willing to participate have until
   March 31 to apply online.
+* [Tower for Teachers & Universities](https://www.git-tower.com/education/):
+  Teachers and universities get free access to Tower "Pro" Git GUI.
 
 __Light reading__
 
 * Derrick Stolee's slides for his "Git at Scale for Everyone" talk
   during the Git Merge 2020 conference are [available](https://stolee.dev/docs/git-merge-2020.pdf).
+* Elijah Newren's slides for his "Scaling the Merge Machinery" talk
+  during the Git Merge 2020 conference are [available](https://github.com/newren/presentations/blob/pdfs/merge-performance/merge-performance-slides.pdf)
+  in his personal notes and presentations repository.
+  Steps to reproduce the speedups he got can be found [here](https://github.com/newren/git/blob/git-merge-2020-demo/README.md).
+
+* [Git moves to new defaults in 2.26 release](https://devclass.com/2020/03/23/git-moves-to-new-defaults-in-2-26-release/) by Julia Schmidt, about version 2 of the transport protocol, backend used by `git rebase`, etc.
+* [How Git Partial Clone lets you fetch only the large file you need](https://about.gitlab.com/blog/2020/03/13/partial-clone-for-massive-repositories/) by James Ramsay on GitLab Blog
+* [Make advanced Git tasks simple with Lazygit: 5 ways to harness the power of git with the Lazygit terminal UI](https://opensource.com/article/20/3/lazygit) by Jesse Duffield.
+  [Lazygit](https://github.com/jesseduffield/lazygit) was mentioned in [Git Rev News Edition #42 (August 22nd, 2018)](https://git.github.io/rev_news/2018/08/22/edition-42/).
+* [Introducing b4 and patch attestation](https://people.kernel.org/monsieuricon/introducing-b4-and-patch-attestation) by Konstantin Ryabitsev.
+  The [b4 tool](https://git.kernel.org/pub/scm/utils/b4/b4.git) started out as `get-lore-mbox`;
+  the latter was mentioned in [Git Rev News Edition #60 (February 19th, 2020)](https://git.github.io/rev_news/2020/02/19/edition-60/#other-news)
+  * [Attestation for kernel patches [LWN.net]](https://lwn.net/Articles/813646/) by Jonathan Corbet
+* [Please stop recommending Git Flow!](https://georgestocker.com/2020/03/04/please-stop-recommending-git-flow/) by George Stocker (Git Flow branching model was popularized by blog post entitled [A Successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/))
+  * [The problem with Git flow: Learn why Git flow complicates the lifecycle and discover an alternative to streamline development](https://about.gitlab.com/blog/2020/03/05/what-is-gitlab-flow/) by Suri Patel on GitLab Blog
+* [A Beginner’s Guide to Git -- How to Write a Good Commit Message](https://www.freecodecamp.org/news/a-beginners-guide-to-git-how-to-write-a-good-commit-message/) by Gaël Thomas
+* [10 Git Techniques You Need to Know Before You Join a Team](https://www.sitepoint.com/git-techniques-to-know-before-you-join-a-team/) by Shaumik Daityari on Sitepoint
+* [Feature Flags and GitOps. 5 Use Cases to Help You ‘Git’r Done.](https://dev.to/cloudbees/feature-flags-and-gitops-5-use-cases-to-help-you-git-r-done-45ga) by Kristin Baskett of CloudBees.
+  The idea of [GitOps](https://www.cloudbees.com/blog/gitops-dev-dash-ops) was mentioned in
+  [Git Rev News Edition #42 (August 22nd, 2018)](https://git.github.io/rev_news/2018/08/22/edition-42/) and [#43](https://git.github.io/rev_news/2018/09/19/edition-43/).
+* [Microsoft’s Scalar speeds up Git](https://www.infoworld.com/article/3528008/microsofts-scalar-speeds-up-git.html) by Paul Krill in InfoWorld.
+  [Scalar](https://github.com/microsoft/scalar/) was mentioned in [Git Rev News Edition #60 (February 19th, 2020)](https://git.github.io/rev_news/2020/02/19/edition-60/)
 
 __Git tools and sites__
 
+* [Scalar](https://github.com/microsoft/scalar/) by Microsoft is a set of tools, settings and extensions for Git to help manage large Git repositories
+* [bash-git-prompt](https://github.com/magicmonty/bash-git-prompt): an informative and fancy bash prompt for Git users, a port of the "[Informative git prompt for zsh](https://github.com/olivierverdier/zsh-git-prompt)"
+* [showthedocs](http://showthedocs.com/) is a both a syntax highlighter and a documentation browser that finds the relevant docs for your code.  Given code, it parses and highlights it, and makes it possible to jump directly to the place in the docs where an item is explained.  Includes support for [gitconfig](https://git-scm.com/docs/git-config) "language".
+* [//grep.app](https://grep.app/): Search across a half million git repos, currently public repositories on GitHub; you can search by regular expression, using the RE2 syntax
 
 ## Credits
 
