@@ -142,6 +142,7 @@ __Light reading__
   during the Git Merge 2020 conference are [available](https://github.com/newren/presentations/blob/pdfs/merge-performance/merge-performance-slides.pdf)
   in his personal notes and presentations repository.
   Steps to reproduce the speedups he got can be found [here](https://github.com/newren/git/blob/git-merge-2020-demo/README.md).
+* [Graph operations in Git, and how to make them faster](https://speakerdeck.com/jnareb/graph-operations-in-git-and-how-to-make-them-faster) presentation slides by Jakub Narębski on SpeakerDeck; also available on [SlideShare](https://www.slideshare.net/JakubNarbski/graph-operations-in-git-version-control-system-how-the-performance-was-improved-for-large-repositories-how-can-it-be-further-improved) and as [PDF file](https://drive.google.com/open?id=1psMBVfcRHcZeJ7AewGpdoymrEfFVdXoK)
 
 * [Git moves to new defaults in 2.26 release](https://devclass.com/2020/03/23/git-moves-to-new-defaults-in-2-26-release/) by Julia Schmidt, about version 2 of the transport protocol, backend used by `git rebase`, etc.
 * [How Git Partial Clone lets you fetch only the large file you need](https://about.gitlab.com/blog/2020/03/13/partial-clone-for-massive-repositories/) by James Ramsay on GitLab Blog
