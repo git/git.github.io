@@ -30,11 +30,11 @@ This edition covers what happened during the month of February 2020.
   had to be changed at the last minute due to coronavirus related
   reasons.
 
-  On the wall [a big timeline](https://photos.google.com/share/AF1QipP764-lYtgUakk-4Kr_Njh6S3GZE0BqdU8V_3j63RyhTygxNR12oO3mY5gSJdSGGA/photo/AF1QipPDidUvdLbTsS9DJKJlAVQ-PEV5zP1MZ4NIkd-x)
+  On the wall [a big timeline](images/git_merge_2020_timeline.jpg)
   mentioned some important events in Git history.
 
   There was a party in the evening with
-  [a big cake dedicated to Git's 15th anniversary](https://photos.google.com/share/AF1QipP764-lYtgUakk-4Kr_Njh6S3GZE0BqdU8V_3j63RyhTygxNR12oO3mY5gSJdSGGA/photo/AF1QipOXskul_osttaPQuOHkR1wAQQdOJb4j89VO3ipn).
+  [a big cake dedicated to Git's 15th anniversary](images/git_merge_2020_cake.jpg).
 
 * [Git Contributor Summit](https://lore.kernel.org/git/AC2EB721-2979-43FD-922D-C5076A57F24B@jramsay.com.au/)
 
@@ -250,4 +250,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Jiang Xin.
+with help from Jiang Xin and Nuritzi Sanchez.
