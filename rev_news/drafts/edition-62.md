@@ -17,9 +17,27 @@ This edition covers what happened during the month of March 2020.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [Happy birthday to all of us ;-)](https://lore.kernel.org/git/xmqqzhbmpyh6.fsf@gitster.c.googlers.com/)
+
+  On April 7, Junio Hamano, the Git maintainer, sent an happy birthday
+  message to the mailing list to celebrate that "it was today 15 years
+  ago that Linus announced the availability of the first tarball of
+  Git".
+
+  Junio thanked the contributors and everyone in the ecosystem,
+  including people from the [Software Freedom Conservancy](https://sfconservancy.org/)
+  and employers of contributors.
+
+  His email ended with "Thanks all, and let's look forward to see the
+  next 15 years be as wonderful years for Git as the past 15 years
+  ;-)"
+
+  A number of people replied especially thanking Junio for his work as
+  the maintainer of the project. Edward Thomson, who is a maintainer
+  of [libgit2](https://libgit2.org/), also thanked everyone, on behalf
+  of libgit2.
 
 <!---
 ### Reviews
