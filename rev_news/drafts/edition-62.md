@@ -237,6 +237,8 @@ This edition covers what happened during the month of March 2020.
 
 __Various__
 
+* (Peff interviewed Junio)[https://github.blog/2020-04-07-celebrating-15-years-of-git-an-interview-with-git-maintainer-junio-hamano/]
+  on the GitHub Blog to celebrate Git’s 15th anniversary.
 
 __Light reading__
 
