@@ -141,6 +141,25 @@ This edition covers what happened during the month of March 2020.
 
 ## Releases
 
++ Git [2.26.1 and others](https://public-inbox.org/git/xmqqy2qy7xn8.fsf@gitster.c.googlers.com/)
++ Git for Windows [2.26.1(1)](https://github.com/git-for-windows/git/releases/tag/v2.26.1.windows.1)
++ libgit2 [1.0.0](https://github.com/libgit2/libgit2/releases/tag/v1.0.0)
++ Gerrit Code Review [3.1.4](https://www.gerritcodereview.com/3.1.html#314),
+[3.0.8](https://www.gerritcodereview.com/3.0.html#308)
++ GitHub Enterprise [2.20.5](https://enterprise.github.com/releases/2.20.5/notes),
+[2.19.11](https://enterprise.github.com/releases/2.19.11/notes),
+[2.18.16](https://enterprise.github.com/releases/2.18.16/notes),
+[2.17.22](https://enterprise.github.com/releases/2.17.22/notes),
+[2.20.4](https://enterprise.github.com/releases/2.20.4/notes),
+[2.19.10](https://enterprise.github.com/releases/2.19.10/notes),
+[2.18.15](https://enterprise.github.com/releases/2.18.15/notes),
+[2.17.21](https://enterprise.github.com/releases/2.17.21/notes)
++ GitLab [12.9.3, 12.8.9, and 12.7.9](https://about.gitlab.com/releases/2020/04/14/critical-security-release-gitlab-12-dot-9-dot-3-released/),
+[12.9.2](https://about.gitlab.com/releases/2020/03/31/gitlab-12-9-2-released/),
+[12.9.1](https://about.gitlab.com/releases/2020/03/26/security-release-12-dot-9-dot-1-released/)
++ Bitbucket Server [7.1](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ GitHub Desktop [2.4.1](https://desktop.github.com/release-notes/),
+[2.4.0](https://desktop.github.com/release-notes/)
 
 ## Other News
 
