@@ -25,11 +25,62 @@ This edition covers what happened during the month of March 2020.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [Regression in v2.26.0-rc0 and Magit](https://lore.kernel.org/git/3091652.KAqcNXvZJ4@cayenne/)
+
+  Jean-Noël Avila reported to the mailing list that git version
+  2.26.0-rc0 segfaulted under Magit with auto-revert enabled.
+
+  [Magit](https://magit.vc/) is a popular Emacs interface to Git, and
+  the [auto-revert mode](https://magit.vc/manual/magit/Automatic-Reverting-of-File_002dVisiting-Buffers.html)
+  lets Emacs revert file that have changed on disk when a Git command
+  has been run outside of Emacs.
+
+  Jean-Noël had bisected the issue to a commit that was improving the
+  error message that Git gave when it dies because a path it is passed
+  is outside the repository. This commit though didn't considered the
+  case of a bare repo which triggered the segfault.
+
+  Jonathan Nieder replied that the bug was fixed by another commit by
+  Emily Shaffer that had not yet made it to the master branch. He
+  asked Junio Hamano, the Git maintainer, if the commit could be
+  fast-tracked and Emily if she could add a test to the commit.
+
+  Junio replied that he agreed that a few tests should be added and
+  that there a few days left before v2.26.0-rc2 to add them. The next
+  day though Junio replied to himself with a patch adding the tests
+  and asking for comments.
+
+  Jonathan Nieder reviewed Junio's tests adding his "Reviewed-by:",
+  and said that Emily was out of office so they were well timed.
+
+  Junio replied to himself again discussing one test he wrote that
+  tested that both `git log -- ..` and `git ls-files -- ..` fail when
+  the current working directory is the `.git` directory.
+
+  He wondered why, if "." instead of ".." is used in the above
+  commands, Git should behave as if the current working directory was
+  the top-level of the working tree instead of `.git`, and why Magit
+  is expecting `cd .git && git ls-files ..` to show the entire working
+  tree.
+
+  Kyle Meyer replied to Junio that internally Magit's call that
+  triggered the bug is running `git ls-files` from `.git` to ask
+  whether the file used to edit a commit message is actually tracked,
+  as it makes no distinction between files in .git and in the working
+  tree. He said that he would propose a change in Magit to improve
+  this.
+
+  Gábor Szeder also replied to Junio's patch suggesting a small
+  improvement in the tests which Junio accepted sending an improved
+  patch.
+
+  The fix with Emily's code and Junio's tests was then merged into
+  v2.26.0-rc2.
 
 ## Developer Spotlight: Eric S. Raymond
+
 * Who are you and what do you do?
 
   I've been an open-source hacker since long before that term was coined.
