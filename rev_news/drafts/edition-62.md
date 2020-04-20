@@ -39,6 +39,9 @@ This edition covers what happened during the month of March 2020.
   of [libgit2](https://libgit2.org/), also thanked everyone, on behalf
   of libgit2.
 
+  Let's all also thank Junio, Linus and every contributor in the Git
+  ecosystem!
+
 <!---
 ### Reviews
 -->
