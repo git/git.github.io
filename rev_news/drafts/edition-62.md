@@ -238,12 +238,49 @@ This edition covers what happened during the month of March 2020.
 __Various__
 
 * [Peff interviewed Junio](https://github.blog/2020-04-07-celebrating-15-years-of-git-an-interview-with-git-maintainer-junio-hamano/)
-  on the GitHub Blog to celebrate Git’s 15th anniversary.
+  on the GitHub Blog to celebrate Git’s 15th anniversary.  
+  An interview with Git creator Linus Torvalds on Git's 10th anniversary [can be found](https://www.linux.com/news/10-years-git-interview-git-creator-linus-torvalds/)
+  in [Git Rev News #2 (April 15th, 2015)](https://git.github.io/rev_news/2015/04/05/edition-2/)
+* [Git credential helper vulnerability announced](https://github.blog/2020-04-14-git-credential-helper-vulnerability-announced/)
+  by Taylor Blau on GitHub Blog -- upgrade to 2.26.1.
+* [GitHub sharply slashes plan pricing, offers core features for free to all](https://arstechnica.com/gadgets/2020/04/github-sharply-slashes-plan-pricing-offers-core-features-for-free-to-all/)
 
 __Light reading__
 
+* [GitLab: Our ultimate guide to Git](https://about.gitlab.com/blog/2020/04/20/ultimate-git-guide/).
+  Tagline: "Open source pioneer Git is 15 years old. Here is our guide to making the most of it.
+* [15 years of Git: How to get started or learn something new](https://opensource.com/article/20/4/get-started-git)
+  by Seth Kenlon (Red Hat) on OpenSource.com
+* [4 Git scripts I can't live without](https://opensource.com/article/20/4/git-extras)
+  by Vince Power on OpenSource.com.  The scripts can be found in [git-extras](https://github.com/tj/git-extras) project.
+* [Optimizing Git For Ryzen CPUs (1.5x Faster)](https://docs.keydb.dev/blog/2020/04/08/blog-post/),
+  utilizing Intel's SHA-NI instruction set to speed up SHA-1, by John Sully
+* [Create web tutorials with Reveal.js and Git](https://opensource.com/article/20/4/create-web-tutorial-git) by Eric D. Schabell (Red Hat)
+* [Using a self-rewriting README powered by GitHub Actions to track TILs (Today I Learneds)](https://simonwillison.net/2020/Apr/20/self-rewriting-readme/)
+  by Simon Willison
+* [GitOps - A Security Perspective (Part 1)](https://dev.to/alcide/gitops-a-security-perspective-part-1-16ci)
+  by Gadi Naor of Alcide.  [GitOps](https://www.gitops.tech/) is a paradigm that puts Git
+  at the heart of building and operating cloud native applications
+  by using Git as the single source of truth.
+* [Computer Science Visualized: Useful Git Commands](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1)
+  by Lydia Hallie
+* [How To Make Life Easier When Using Git](https://www.smashingmagazine.com/make-life-easier-when-using-git/)
+  by Shane Hudson
+* [A Beginner’s Guide to Git — What is a Changelog and How to Generate it](https://www.freecodecamp.org/news/a-beginners-guide-to-git-what-is-a-changelog-and-how-to-generate-it/)
+  by Gaël Thomas
+* [Setting Up Git Identities](https://www.micah.soy/posts/setting-up-git-identities/) by Micah Henning,
+  with use of Git alias to switch identities
+* [Maintaining Different Git Identities](https://dev.to/maxlmator/maintaining-different-git-identities)
+  by Max Kleucker (2018), with help of Git's "[Conditional Includes](https://git-scm.com/docs/git-config#_conditional_includes)"
 
 __Git tools and sites__
+
+* [Git Extras](https://github.com/tj/git-extras): shell Git utilities for repo summary, repl, changelog population, author commit percentages and more, by TJ Holowaychuk
+* [Ovid / git-workflow](https://github.com/Ovid/git-workflow) contains a simplified subset of the git tools used by [All Around the World](https://allaroundtheworld.fr/) organization
+* [Dolt](https://github.com/liquidata-inc/dolt) is Git for data, versioning tables: a database with branches.  
+  [DoltHub](https://www.dolthub.com/) is a place on the internet to share Dolt repositories.
+* [GitFiend](https://gitfiend.com/) by Toby Suggate is a new Git client for Windows, Mac and Linux,
+  deliberately not trying to follow in the footsteps of other Git clients
 
 
 ## Credits
