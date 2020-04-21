@@ -1,13 +1,13 @@
 ---
-title: Git Rev News Edition 62 (April 22nd, 2020)
+title: Git Rev News Edition 62 (April 23rd, 2020)
 layout: default
-date: 2020-04-22 12:06:51 +0100
+date: 2020-04-23 12:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 62 (April 22nd, 2020)
+## Git Rev News: Edition 62 (April 23rd, 2020)
 
 Welcome to the 62nd edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
