@@ -21,7 +21,7 @@ This edition covers what happened during the month of March 2020.
 
 * [Happy birthday to all of us ;-)](https://lore.kernel.org/git/xmqqzhbmpyh6.fsf@gitster.c.googlers.com/)
 
-  On April 7, Junio Hamano, the Git maintainer, sent an happy birthday
+  On April 7, Junio Hamano, the Git maintainer, sent a happy birthday
   message to the mailing list to celebrate that "it was today 15 years
   ago that Linus announced the availability of the first tarball of
   Git".
@@ -60,7 +60,7 @@ This edition covers what happened during the month of March 2020.
 
   Jean-Noël had bisected the issue to a commit that was improving the
   error message that Git gave when it dies because a path it is passed
-  is outside the repository. This commit though didn't considered the
+  is outside the repository. This commit though didn't consider the
   case of a bare repo which triggered the segfault.
 
   Jonathan Nieder replied that the bug was fixed by another commit by
