@@ -55,21 +55,21 @@ This edition covers what happened during the month of March 2020.
 
   [Magit](https://magit.vc/) is a popular Emacs interface to Git, and
   the [auto-revert mode](https://magit.vc/manual/magit/Automatic-Reverting-of-File_002dVisiting-Buffers.html)
-  lets Emacs revert file that have changed on disk when a Git command
+  lets Emacs revert files that have changed on disk when a Git command
   has been run outside of Emacs.
 
   Jean-Noël had bisected the issue to a commit that was improving the
-  error message that Git gave when it dies because a path it is passed
-  is outside the repository. This commit though didn't consider the
+  error message which Git issues when it dies due to processing a path 
+  outside the repository. This commit though didn't consider the
   case of a bare repo which triggered the segfault.
 
   Jonathan Nieder replied that the bug was fixed by another commit by
   Emily Shaffer that had not yet made it to the master branch. He
   asked Junio Hamano, the Git maintainer, if the commit could be
-  fast-tracked and Emily if she could add a test to the commit.
+  fast-tracked, and Emily if she could add a test to her commit.
 
-  Junio replied that he agreed that a few tests should be added and
-  that there a few days left before v2.26.0-rc2 to add them. The next
+  Junio replied suggesting that a few tests should be added, and that
+  there were a few days left before v2.26.0-rc2 to add them. The next
   day though Junio replied to himself with a patch adding the tests
   and asking for comments.
 
@@ -86,7 +86,7 @@ This edition covers what happened during the month of March 2020.
   is expecting `cd .git && git ls-files ..` to show the entire working
   tree.
 
-  Kyle Meyer replied to Junio that internally Magit's call that
+  Kyle Meyer replied to Junio that internally Magit's call which
   triggered the bug is running `git ls-files` from `.git` to ask
   whether the file used to edit a commit message is actually tracked,
   as it makes no distinction between files in .git and in the working
@@ -200,7 +200,7 @@ This edition covers what happened during the month of March 2020.
 
   If I pick one thing to *fix* rather than remove without worrying about
   backwards compatibility, it would be git-cvsimport.  That thing is
-  very badly broken; the engine it uses misplaces branch joins.  The git
+  very badly broken; the engine it uses misplaces branch joins.  The Git
   devs know it's broken but have stuck to it because of an
   incremental-conversion feature that I think is effectively
   useless. They should scrap it and rewrite the CVS import procedure to
@@ -240,47 +240,47 @@ __Various__
 * [Peff interviewed Junio](https://github.blog/2020-04-07-celebrating-15-years-of-git-an-interview-with-git-maintainer-junio-hamano/)
   on the GitHub Blog to celebrate Git’s 15th anniversary.  
   An interview with Git creator Linus Torvalds on Git's 10th anniversary [can be found](https://www.linux.com/news/10-years-git-interview-git-creator-linus-torvalds/)
-  in [Git Rev News #2 (April 15th, 2015)](https://git.github.io/rev_news/2015/04/05/edition-2/)
+  in [Git Rev News #2 (April 15th, 2015)](https://git.github.io/rev_news/2015/04/05/edition-2/).
 * [Git credential helper vulnerability announced](https://github.blog/2020-04-14-git-credential-helper-vulnerability-announced/)
-  by Taylor Blau on GitHub Blog -- upgrade to 2.26.1.
-* [GitHub sharply slashes plan pricing, offers core features for free to all](https://arstechnica.com/gadgets/2020/04/github-sharply-slashes-plan-pricing-offers-core-features-for-free-to-all/)
+  by Taylor Blau on GitHub Blog -- please upgrade to 2.26.1.
+* [GitHub sharply slashes plan pricing, offers core features for free to all](https://arstechnica.com/gadgets/2020/04/github-sharply-slashes-plan-pricing-offers-core-features-for-free-to-all/).
 
 __Light reading__
 
 * [GitLab: Our ultimate guide to Git](https://about.gitlab.com/blog/2020/04/20/ultimate-git-guide/).
-  Tagline: "Open source pioneer Git is 15 years old. Here is our guide to making the most of it.
+  Tagline: "Open source pioneer Git is 15 years old. Here is our guide to making the most of it."
 * [15 years of Git: How to get started or learn something new](https://opensource.com/article/20/4/get-started-git)
-  by Seth Kenlon (Red Hat) on OpenSource.com
+  by Seth Kenlon (Red Hat) on [Opensource.com](https://opensource.com).
 * [4 Git scripts I can't live without](https://opensource.com/article/20/4/git-extras)
-  by Vince Power on OpenSource.com.  The scripts can be found in [git-extras](https://github.com/tj/git-extras) project.
+  by Vince Power on Opensource.com.  The scripts can be found in the [git-extras](https://github.com/tj/git-extras) project.
 * [Optimizing Git For Ryzen CPUs (1.5x Faster)](https://docs.keydb.dev/blog/2020/04/08/blog-post/),
-  utilizing Intel's SHA-NI instruction set to speed up SHA-1, by John Sully
-* [Create web tutorials with Reveal.js and Git](https://opensource.com/article/20/4/create-web-tutorial-git) by Eric D. Schabell (Red Hat)
+  utilizing Intel's SHA-NI instruction set to speed up SHA-1, by John Sully.
+* [Create web tutorials with Reveal.js and Git](https://opensource.com/article/20/4/create-web-tutorial-git) by Eric D. Schabell (Red Hat).
 * [Using a self-rewriting README powered by GitHub Actions to track TILs (Today I Learneds)](https://simonwillison.net/2020/Apr/20/self-rewriting-readme/)
-  by Simon Willison
+  by Simon Willison.
 * [GitOps - A Security Perspective (Part 1)](https://dev.to/alcide/gitops-a-security-perspective-part-1-16ci)
   by Gadi Naor of Alcide.  [GitOps](https://www.gitops.tech/) is a paradigm that puts Git
   at the heart of building and operating cloud native applications
   by using Git as the single source of truth.
 * [Computer Science Visualized: Useful Git Commands](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1)
-  by Lydia Hallie
+  by Lydia Hallie.
 * [How To Make Life Easier When Using Git](https://www.smashingmagazine.com/make-life-easier-when-using-git/)
-  by Shane Hudson
+  by Shane Hudson.
 * [A Beginner’s Guide to Git — What is a Changelog and How to Generate it](https://www.freecodecamp.org/news/a-beginners-guide-to-git-what-is-a-changelog-and-how-to-generate-it/)
-  by Gaël Thomas
+  by Gaël Thomas.
 * [Setting Up Git Identities](https://www.micah.soy/posts/setting-up-git-identities/) by Micah Henning,
-  with use of Git alias to switch identities
+  with use of a Git alias to switch identities.
 * [Maintaining Different Git Identities](https://dev.to/maxlmator/maintaining-different-git-identities)
-  by Max Kleucker (2018), with help of Git's "[Conditional Includes](https://git-scm.com/docs/git-config#_conditional_includes)"
+  by Max Kleucker (2018), with help of Git's "[conditional includes](https://git-scm.com/docs/git-config#_conditional_includes)".
 
 __Git tools and sites__
 
-* [Git Extras](https://github.com/tj/git-extras): shell Git utilities for repo summary, repl, changelog population, author commit percentages and more, by TJ Holowaychuk
-* [Ovid / git-workflow](https://github.com/Ovid/git-workflow) contains a simplified subset of the git tools used by [All Around the World](https://allaroundtheworld.fr/) organization
+* [Git Extras](https://github.com/tj/git-extras): shell Git utilities for repo summary, repl, changelog population, author commit percentages and more, by TJ Holowaychuk.
+* [Ovid / git-workflow](https://github.com/Ovid/git-workflow) contains a simplified subset of the git tools used by [All Around the World](https://allaroundtheworld.fr/) organization.
 * [Dolt](https://github.com/liquidata-inc/dolt) is Git for data, versioning tables: a database with branches.  
   [DoltHub](https://www.dolthub.com/) is a place on the internet to share Dolt repositories.
 * [GitFiend](https://gitfiend.com/) by Toby Suggate is a new Git client for Windows, Mac and Linux,
-  deliberately not trying to follow in the footsteps of other Git clients
+  deliberately not trying to follow in the footsteps of other Git clients.
 
 
 ## Credits
