@@ -277,6 +277,8 @@ __Light reading__
   with use of a Git alias to switch identities.
 * [Maintaining Different Git Identities](https://dev.to/maxlmator/maintaining-different-git-identities)
   by Max Kleucker (2018), with help of Git's "[conditional includes](https://git-scm.com/docs/git-config#_conditional_includes)".
+* [The phases of remote adaptation](https://about.gitlab.com/company/culture/all-remote/phases-of-remote-adaptation/)
+  is a list of phases for teams switching from a colocated environment to a remote one put together by GitLab.
 
 __Git tools and sites__
 
@@ -295,4 +297,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Eric S. Raymond.
+with help from Eric S. Raymond and Philip Oakley.
