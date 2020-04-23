@@ -228,12 +228,15 @@ This edition covers what happened during the month of March 2020.
 [2.19.10](https://enterprise.github.com/releases/2.19.10/notes),
 [2.18.15](https://enterprise.github.com/releases/2.18.15/notes),
 [2.17.21](https://enterprise.github.com/releases/2.17.21/notes)
-+ GitLab [12.9.3, 12.8.9, and 12.7.9](https://about.gitlab.com/releases/2020/04/14/critical-security-release-gitlab-12-dot-9-dot-3-released/),
++ GitLab GitLab [12.10](https://about.gitlab.com/releases/2020/04/22/gitlab-12-10-released/),
+[12.9.4](https://about.gitlab.com/releases/2020/04/20/gitlab-12-9-4-released/),
+[12.9.3, 12.8.9, and 12.7.9](https://about.gitlab.com/releases/2020/04/14/critical-security-release-gitlab-12-dot-9-dot-3-released/),
 [12.9.2](https://about.gitlab.com/releases/2020/03/31/gitlab-12-9-2-released/),
 [12.9.1](https://about.gitlab.com/releases/2020/03/26/security-release-12-dot-9-dot-1-released/)
 + Bitbucket Server [7.1](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
 + GitHub Desktop [2.4.1](https://desktop.github.com/release-notes/),
 [2.4.0](https://desktop.github.com/release-notes/)
++ GitKraken [6.6.0](https://support.gitkraken.com/release-notes/current)
 
 ## Other News
 
