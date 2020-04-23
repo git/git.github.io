@@ -249,6 +249,7 @@ __Various__
 * [Git credential helper vulnerability announced](https://github.blog/2020-04-14-git-credential-helper-vulnerability-announced/)
   by Taylor Blau on GitHub Blog -- please upgrade to [2.26.2](https://public-inbox.org/git/xmqq4kterq5s.fsf@gitster.c.googlers.com/) which fixes the mentioned vulnerability and yet another related vulnerability.
 * [GitHub sharply slashes plan pricing, offers core features for free to all](https://arstechnica.com/gadgets/2020/04/github-sharply-slashes-plan-pricing-offers-core-features-for-free-to-all/).
+* [GitLab moves 18 features to open source](https://about.gitlab.com/blog/2020/03/30/new-features-to-core/).
 
 __Light reading__
 
