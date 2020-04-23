@@ -213,8 +213,8 @@ This edition covers what happened during the month of March 2020.
 
 ## Releases
 
-+ Git [2.26.2 and others](https://public-inbox.org/git/xmqq4kterq5s.fsf@gitster.c.googlers.com/)
-+ Git for Windows [2.26.2(1)](https://github.com/git-for-windows/git/releases/tag/v2.26.2.windows.1)
++ Git: [2.26.2 and others](https://public-inbox.org/git/xmqq4kterq5s.fsf@gitster.c.googlers.com/), [2.26.1 and others](https://public-inbox.org/git/xmqqy2qy7xn8.fsf@gitster.c.googlers.com/)
++ Git for Windows: [2.26.2(1)](https://github.com/git-for-windows/git/releases/tag/v2.26.2.windows.1), [2.26.1(1)](https://github.com/git-for-windows/git/releases/tag/v2.26.1.windows.1)
 + libgit2 [1.0.0](https://github.com/libgit2/libgit2/releases/tag/v1.0.0)
 + Gerrit Code Review [3.1.4](https://www.gerritcodereview.com/3.1.html#314),
 [3.0.8](https://www.gerritcodereview.com/3.0.html#308)
