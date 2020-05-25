@@ -17,9 +17,42 @@ This edition covers what happened during the month of April 2020.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [GSoC 2020 Students and Projects](https://lore.kernel.org/git/CAP8UFD1iBxiOZ_OA4DbMF9Kx2UHL15TPygoX6x-JrDGuReG1Vw@mail.gmail.com/)
+
+  The following three students have been officially accepted to work on Git
+  as part of the [GSoC (Google Summer of Code) 2020](https://summerofcode.withgoogle.com/):
+
+  - Abhishek Kumar will work on
+    [Implement Generation Number v2](https://summerofcode.withgoogle.com/projects/#6140278689234944).
+    He will be co-mentored by Jakub Narebski and Derrick Stolee.
+    More information is available on his
+    [proposal](https://lore.kernel.org/git/20200326101520.GA19326@Abhishek-Arch/)
+    and [blog](https://abhishekkumar2718.github.io/blog).
+
+  - Hariom Verma  will work on
+    [Unify ref-filter formats with other --pretty formats](https://summerofcode.withgoogle.com/projects/#4593212745842688).
+    He  will be co-mentored by Heba Waly and Christian Couder.
+    More information is available on his
+    [proposal](https://lore.kernel.org/git/CA+CkUQ966swTrR7D2vxgQ2ZA3E=Le=u8yvEAopOsphoCWGgDeg@mail.gmail.com/)
+    and [blog](https://harry-hov.github.io/blogs/posts/).
+
+  - Shourya Shukla will work on
+    [Convert submodule to builtin](https://summerofcode.withgoogle.com/projects/#6451304047575040).
+    He will be co-mentored by Kaartic Sivaraam and Christian Couder.
+    More information is available on his
+    [proposal](https://lore.kernel.org/git/20200325185053.10274-1-shouryashukla.oo@gmail.com/)
+    and [blog](https://shouryashukla.blogspot.com/).
+
+  It will be the 13th Summer that the Git project will mentor students
+  as part of the GSoC. Shourya, Hariom and Abhishek will be the 30th,
+  31st and 32nd students mentored since 2007 when Git started
+  participating in the GSoC.
+
+  It will be the 16th year of the GSoC, but unfortunately because of
+  the current sanitary situation in the world, there will be no GSoC
+  Mentor Summit, and no swag will be sent to participants this year.
 
 <!---
 ### Reviews
