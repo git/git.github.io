@@ -96,6 +96,11 @@ This edition covers what happened during the month of April 2020.
 
 __Various__
 
+* New [git-filter-repo](https://github.com/newren/git-filter-repo) resources:
+  a [cheat sheet for converting filter-branch commands](https://github.com/newren/git-filter-repo/blob/master/Documentation/converting-from-filter-branch.md#cheat-sheet-conversion-of-examples-from-the-filter-branch-manpage)
+  which shows equivalents for all examples from the filter-branch manpage, and a similar
+  [cheat sheet for converting bfg repo cleaner commands](https://github.com/newren/git-filter-repo/blob/master/Documentation/converting-from-bfg-repo-cleaner.md#cheat-sheet-conversion-of-examples-from-bfg)
+  which shows equivalents for all the examples from the bfg webpage.
 
 __Light reading__
 
