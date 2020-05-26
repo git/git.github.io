@@ -1,13 +1,13 @@
 ---
-title: Git Rev News Edition 63 (May 27th, 2020)
+title: Git Rev News Edition 63 (May 28th, 2020)
 layout: default
-date: 2020-05-27 12:06:51 +0100
+date: 2020-05-28 12:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 63 (May 27th, 2020)
+## Git Rev News: Edition 63 (May 28th, 2020)
 
 Welcome to the 63rd edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
