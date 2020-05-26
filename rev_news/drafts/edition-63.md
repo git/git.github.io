@@ -91,6 +91,7 @@ This edition covers what happened during the month of April 2020.
 + GitKraken [7.0.0](https://support.gitkraken.com/release-notes/current)
 + GitHub Desktop [2.5.0](https://desktop.github.com/release-notes/),
 [2.4.3](https://desktop.github.com/release-notes/)
++ isomorphic-git [1.0.0](https://isomorphic-git.org/blog/2020/02/25/version-1-0-0)
 
 ## Other News
 
