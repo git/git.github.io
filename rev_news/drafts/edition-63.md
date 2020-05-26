@@ -54,9 +54,85 @@ This edition covers what happened during the month of April 2020.
   the current sanitary situation in the world, there will be no GSoC
   Mentor Summit, and no swag will be sent to participants this year.
 
-<!---
 ### Reviews
--->
+
+* [remote.c: fix handling of push:remote_ref](https://lore.kernel.org/git/20200228172455.1734888-1-damien.olivier.robert+git@gmail.com/)
+
+  Last February Damien Robert sent a patch to change how
+  'ref-filter.c' interprets `%(push:remoteref)`.
+
+  'ref-filter.c' is some internal API that formats information about
+  Git refs or Git objects. It's used by commands like `git branch` and
+  `git for-each-ref`.
+
+  The issue Damien wanted to fix was that 'ref-filter.c' didn't take
+  into account the [`push.default` config option](https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushdefault)
+  which is used when no refspec is specified for the push.
+
+  Peff, alias Jeff King, replied to Damien, and made it clear that it
+  was about taking `push.default` into account. He also found that
+  Damien's patch wouldn't work in the case where `push.default` is set
+  to `upstream` and a branch has been set to track a specific branch
+  different than the default one.
+
+  Peff then commented on the code and asked for some tests, saying
+  that the current tests were not covering this case and that they
+  would wrongly fail if Damien's patch was applied.
+
+  Damien replied to Peff agreeing about the `upstream` case and to add
+  more tests. He found that his initial code wouldn't work when
+  `push.default` is set to `nothing` too.
+
+  Peff and Damien discussed a bit more some details of the possible
+  changes in the code, while Peff proposed a preparatory patch to
+  clean up the current code before Damien's changes. Then Damien sent
+  a [version 2](https://lore.kernel.org/git/20200303161223.1870298-1-damien.olivier.robert+git@gmail.com/)
+  of his patch along with Peff's preparatory patch.
+
+  The version 2 handled all push.default cases and added tests for
+  them, but Junion Hamano, the Git maintainer, suggested improvements
+  in the commit message of the preparatory patch. Peff suggested
+  improvements of his own but agreed with Junio's suggestion too.
+
+  Meanwhile Damien found issues in version 2 of his own patch, and
+  separately Junio commented on it and suggested some
+  improvements. Damien and Junio soon agreed, and then Damien sent a
+  [version 3](https://lore.kernel.org/git/20200312164558.2388589-1-damien.olivier.robert+git@gmail.com/)
+  of his patch. This version contained only Damien's patch, as Peff's
+  patch was merged separately.
+
+  Peff found a memory leak around Damien's patch, but the leak was
+  already there before his patch. Peff also suggested small
+  improvements to the tests, and eventually sent his own version of
+  Damien's patch for him to "to try it out or hack on it further".
+
+  Damien found an issue in Peff's patch though, and, after improving
+  the tests in his patch, others existing issues in the current code
+  in case of a triangular workflow. Peff commented that these issues
+  could be left for a separate fix though.
+
+  Damien then sent a
+  [version 6](https://lore.kernel.org/git/20200406175648.25737-1-damien.olivier.robert+git@gmail.com/)
+  of his patch, though the title in the cover letter mistakenly
+  contains "v4", saying version 4 and version 5 were intermediate
+  versions he made but did not send to the mailing list.
+
+  This version had a preparatory patch to fix the triangular workflow
+  issues Damien had found, as well as his updated patch with tests for
+  both his fixes in this patch and the triangular workflow fixes. But
+  this version was marked as RFC as the first patch was not very
+  polished.
+
+  This led to some [release confusion](https://lore.kernel.org/git/20200416211208.xqnnrkvcl2jw3ejr@doriath/)
+  as Junio then had merged the 2 patches to the `next` branch, while
+  Damien had sent a
+  [version 8](https://lore.kernel.org/git/20200416150355.635436-1-damien.olivier.robert+git@gmail.com/)
+  that contains only his patch without the triangular workflow fixes
+  and test cases.
+
+  This last version is now merged in the `pu` branch, and will is
+  likely to find its way to `master`, while hopefully the fixes
+  related to triangular workflows will be resent separately.
 
 <!---
 ### Support
