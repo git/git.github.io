@@ -180,11 +180,69 @@ __Various__
   which shows equivalents for all examples from the filter-branch manpage, and a similar
   [cheat sheet for converting bfg repo cleaner commands](https://github.com/newren/git-filter-repo/blob/master/Documentation/converting-from-bfg-repo-cleaner.md#cheat-sheet-conversion-of-examples-from-bfg)
   which shows equivalents for all the examples from the bfg webpage.
+* [Java 16: Migration to Git and GitHub gets closer](https://jaxenter.com/java-16-migration-to-git-and-github-jdk-172076.html)
+  (from Mercurial)
+* [Why AppsFlyer moved from Bitbucket to [self-hosted] GitLab](https://about.gitlab.com/blog/2020/04/27/appsflyer-moves-to-gitlab/)
+* [GitHub Codespaces lets you code in your browser without any setup](https://thenextweb.com/dd/2020/05/06/github-codespace-lets-you-code-in-your-browser-without-any-setup/);
+  see also [New from Satellite 2020: Start coding in seconds on GitHub with Codespaces](https://github.blog/2020-05-06-new-from-satellite-2020-github-codespaces-github-discussions-securing-code-in-private-repositories-and-more/#codespaces)
+* [DVC 3 Years 🎉 and 1.0 Pre-release 🚀](https://dvc.org/blog/dvc-3-years-and-1-0-release);
+  [DVC](https://dvc.org) (Data Version Control), an open-source version control
+  system for Data Science projects was first mentioned in [Git Rev News #42](https://git.github.io/rev_news/2018/08/22/edition-42/)
+
 
 __Light reading__
 
+* [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html)
+  by Martin Fowler (author of the [Refactoring: Improving the Design of Existing Code](https://martinfowler.com/books/refactoring.html) book);
+  _note_ that this article is being released in installments,
+  and at the time of publishing this edition it finished describing all the patterns but was not yet complete
+* [How LinkedIn handles merging code in high-velocity repositories](https://engineering.linkedin.com/blog/2020/continuous-integration)
+  by Niket Parikh
+* [How to Set up the HTTP Git Server for Private Projects](https://thenewstack.io/how-to-set-up-the-http-git-server-for-private-projects/)
+  on Ubuntu 18.04 with nginx, by Jack Wallen
+* [Git on Windows](https://code-maven.com/git-on-windows) by Gabor Szabo,
+  a video series where you can learn how to use Git on MS Windows
+  (half of links to videos are behind a Code Maven paywall)
+* [Git Explained: The Basics](https://dev.to/milu_franz/git-explained-the-basics-igc)
+  by Milu Franz
+* [Git Explained: An In-Depth Comparison](https://dev.to/milu_franz/git-explained-an-in-depth-comparison-18mk)
+  of the following commands: revert, checkout, reset, merge, and rebase
+  (by Milu Franz)
+* [The life-changing magic of `git rebase -i`](https://opensource.com/article/20/4/git-rebase-i)
+  by Dave Neary
+* [How to resolve a git merge conflict](https://opensource.com/article/20/4/git-merge-conflict)
+  by Brian Breniser
+* [Managing Git projects with submodules and subtrees](https://opensource.com/article/20/5/git-submodules-subtrees)
+  by Manaswini Das
+* [Improve Git Diffs for Structured Data](https://blog.afoolishmanifesto.com/posts/improve-git-diffs-structured-data/)
+  by fREW Schmidt.  The solution uses `.gitattributes` and custom shell script
+  for `diff` attribute, using `jq` tool to process JSON files.
+* [Comparing Code Quality Meta Tools](https://blog.urth.org/2020/05/08/comparing-code-quality-meta-tools/),
+  that is linters and beautifiers operating on the whole project
+  (many of those tools being systems for managing Git hooks):
+  [tidyall][], [pre-commit][], [lefthook][], [husky][], [overcommit][], and [precious][];
+  article by Dave Rolsky
+
+[tidyall]: https://metacpan.org/pod/distribution/Code-TidyAll/bin/tidyall
+[pre-commit]: https://pre-commit.com/
+[lefthook]: https://github.com/Arkweid/lefthook
+[husky]: https://github.com/typicode/husky
+[overcommit]: https://github.com/sds/overcommit
+[precious]: https://github.com/houseabsolute/precious
+
 
 __Git tools and sites__
+
+* [Fork](https://fork.dev/), a fast and friendly proprietary git client for Mac and Windows
+  (with free evaluation)
+* [Git-Stats](https://gitstats.me/) is an open-source GitHub contribution analyzer
+  service written in Node.js
+* [Git Insights](https://www.gitinsights.io/) is an open-source analytics tool
+  to give you insights on your software projects and teams, currently supporting
+  only GitHub (as GitHub App); support for Bitbucket nd GitLab and self-hosted
+  repositories planned
+* [GitSavvy](https://github.com/timbrel/GitSavvy) is an open-source
+  Sublime Text 3 plugin providing full git and GitHub integration
 
 
 ## Credits
