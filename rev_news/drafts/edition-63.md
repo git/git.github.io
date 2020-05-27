@@ -90,7 +90,7 @@ This edition covers what happened during the month of April 2020.
   of his patch along with Peff's preparatory patch.
 
   The version 2 handled all push.default cases and added tests for
-  them, but Junion Hamano, the Git maintainer, suggested improvements
+  them, but Junio Hamano, the Git maintainer, suggested improvements
   in the commit message of the preparatory patch. Peff suggested
   improvements of his own but agreed with Junio's suggestion too.
 
@@ -132,7 +132,7 @@ This edition covers what happened during the month of April 2020.
 
   This last version is now merged in the `pu` branch, and will is
   likely to find its way to `master`, while hopefully the fixes
-  related to triangular workflows will be resent separately.
+  related to triangular workflows will be re-sent separately.
 
 <!---
 ### Support
