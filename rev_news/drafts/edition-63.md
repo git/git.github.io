@@ -61,7 +61,8 @@ This edition covers what happened during the month of April 2020.
   Last February Damien Robert sent a patch to change how
   'ref-filter.c' interprets `%(push:remoteref)`.
 
-  Damien had already sent [a patch](https://lore.kernel.org/git/20190417081754.bd27mjxjx7qdxhty@doriath/) in April 2019 to fix another bug in 'ref-filter.c'
+  Damien had already sent [a patch](https://lore.kernel.org/git/20190417081754.bd27mjxjx7qdxhty@doriath/)
+  in April 2019 to fix another bug in 'ref-filter.c'
   related to `%(push:track)`. This patch was incorporated in `git 2.22`.
 
   'ref-filter.c' is some internal API that formats information about
@@ -106,13 +107,16 @@ This edition covers what happened during the month of April 2020.
 
   Peff found a memory leak around Damien's patch, but the leak was
   already there before his patch. Peff also suggested small
-  improvements to the tests, and eventually sent [his own
-  version](https://public-inbox.org/git/20200328133134.GA1196665@coredump.intra.peff.net/) of Damien's patch for him to "to try it out or hack on it further".
+  improvements to the tests, and eventually sent
+  [his own version](https://public-inbox.org/git/20200328133134.GA1196665@coredump.intra.peff.net/)
+  of Damien's patch for him to "to try it out or hack on it further".
 
-  Damien found [an issue](https://public-inbox.org/git/20200416151213.xbo5x6jt477ezwvo@feanor/) in Peff's patch though, and, after improving
-  the tests in his patch, others existing issues in the current code
-  in case of a [triangular workflow](https://public-inbox.org/git/20200406160439.gg5uu6kepnyxpvuc@feanor/). Peff commented that these issues
-  could be left for a separate fix though.
+  Damien found [an issue](https://public-inbox.org/git/20200416151213.xbo5x6jt477ezwvo@feanor/)
+  in Peff's patch though, and, after improving the tests in his patch,
+  others existing issues in the current code in case of a
+  [triangular workflow](https://public-inbox.org/git/20200406160439.gg5uu6kepnyxpvuc@feanor/).
+  Peff commented that these issues could be left for a separate fix
+  though.
 
   Damien then sent a
   [version 6](https://lore.kernel.org/git/20200406175648.25737-1-damien.olivier.robert+git@gmail.com/)
