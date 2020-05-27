@@ -144,9 +144,11 @@ This edition covers what happened during the month of April 2020.
 
 ## Releases
 
-+ Git [2.27.0-rc1](https://public-inbox.org/git/xmqqsgfuv2ko.fsf@gitster.c.googlers.com/),
++ Git [2.27.0-rc2](https://lore.kernel.org/git/xmqqtv02mt2m.fsf@gitster.c.googlers.com/),
+[2.27.0-rc1](https://public-inbox.org/git/xmqqsgfuv2ko.fsf@gitster.c.googlers.com/),
 [2.27.0-rc0](https://public-inbox.org/git/xmqqy2punll7.fsf@gitster.c.googlers.com/)
-+ Git for Windows [2.27.0-rc1](https://github.com/git-for-windows/git/releases/tag/v2.27.0-rc1.windows.1),
++ Git for Windows [2.27.0-rc2](https://github.com/git-for-windows/git/releases/tag/v2.27.0-rc2.windows.1),
+[2.27.0-rc1](https://github.com/git-for-windows/git/releases/tag/v2.27.0-rc1.windows.1),
 [2.27.0-rc0](https://github.com/git-for-windows/git/releases/tag/v2.27.0-rc0.windows.1)
 + GitHub Enterprise [2.20.8](https://enterprise.github.com/releases/2.20.8/notes),
 [2.19.14](https://enterprise.github.com/releases/2.19.14/notes),
