@@ -61,6 +61,9 @@ This edition covers what happened during the month of April 2020.
   Last February Damien Robert sent a patch to change how
   'ref-filter.c' interprets `%(push:remoteref)`.
 
+  Damien had already sent [a patch](https://lore.kernel.org/git/20190417081754.bd27mjxjx7qdxhty@doriath/) in April 2019 to fix another bug in 'ref-filter.c'
+  related to `%(push:track)`. This patch was incorporated in `git 2.22`.
+
   'ref-filter.c' is some internal API that formats information about
   Git refs or Git objects. It's used by commands like `git branch` and
   `git for-each-ref`.
@@ -103,12 +106,12 @@ This edition covers what happened during the month of April 2020.
 
   Peff found a memory leak around Damien's patch, but the leak was
   already there before his patch. Peff also suggested small
-  improvements to the tests, and eventually sent his own version of
-  Damien's patch for him to "to try it out or hack on it further".
+  improvements to the tests, and eventually sent [his own
+  version](https://public-inbox.org/git/20200328133134.GA1196665@coredump.intra.peff.net/) of Damien's patch for him to "to try it out or hack on it further".
 
-  Damien found an issue in Peff's patch though, and, after improving
+  Damien found [an issue](https://public-inbox.org/git/20200416151213.xbo5x6jt477ezwvo@feanor/) in Peff's patch though, and, after improving
   the tests in his patch, others existing issues in the current code
-  in case of a triangular workflow. Peff commented that these issues
+  in case of a [triangular workflow](https://public-inbox.org/git/20200406160439.gg5uu6kepnyxpvuc@feanor/). Peff commented that these issues
   could be left for a separate fix though.
 
   Damien then sent a
@@ -121,7 +124,8 @@ This edition covers what happened during the month of April 2020.
   issues Damien had found, as well as his updated patch with tests for
   both his fixes in this patch and the triangular workflow fixes. But
   this version was marked as RFC as the first patch was not very
-  polished.
+  polished. Furthermore this RFC version does not fix all
+  [corner triangular workflow cases](https://lore.kernel.org/git/20200418173651.djzriazxj5kbo6ax@doriath/).
 
   This led to some [release confusion](https://lore.kernel.org/git/20200416211208.xqnnrkvcl2jw3ejr@doriath/)
   as Junio then had merged the 2 patches to the `next` branch, while
@@ -130,7 +134,7 @@ This edition covers what happened during the month of April 2020.
   that contains only his patch without the triangular workflow fixes
   and test cases.
 
-  This last version is now merged in the `pu` branch, and will is
+  This last version is now merged in the `pu` branch, and is
   likely to find its way to `master`, while hopefully the fixes
   related to triangular workflows will be re-sent separately.
 
