@@ -127,8 +127,8 @@ This edition covers what happened during the month of April 2020.
   This version contained a preparatory patch to fix the triangular workflow
   issues Damien had found, as well as his updated patch with tests for
   both his fixes in this patch and the triangular workflow fixes. However,
-  this patch was marked as RFC since its first version was not very
-  polished. Furthermore this RFC version does not fix all
+  this patch series was marked as RFC, since its first patch was not very
+  polished and did not fix all
   [corner triangular workflow cases](https://lore.kernel.org/git/20200418173651.djzriazxj5kbo6ax@doriath/).
 
   This led to some [release confusion](https://lore.kernel.org/git/20200416211208.xqnnrkvcl2jw3ejr@doriath/)
