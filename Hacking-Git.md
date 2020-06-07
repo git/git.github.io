@@ -28,6 +28,10 @@ people to interesting material that has already been written.
 
 * ["SubmittingPatches"](https://git-scm.com/docs/SubmittingPatches/)
 
+* ["A note from the maintainer"](https://github.com/git/git/blob/todo/MaintNotes)
+
+* ["How to maintain Git"](https://github.com/git/git/blob/master/Documentation/howto/maintain-git.txt)
+
 ## Debugging
 
 * [Git for Windows' Debugging Git](https://github.com/git-for-windows/git/wiki/Debugging-Git)
