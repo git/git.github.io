@@ -32,6 +32,8 @@ people to interesting material that has already been written.
 
 * ["`SubmittingPatches`"](https://git-scm.com/docs/SubmittingPatches/)
 
+* [Git for Windows' "Good commits"](https://github.com/git-for-windows/git/wiki/Good-commits)
+
 ## Branching workflow
 
 * ["A note from the maintainer"](https://github.com/git/git/blob/todo/MaintNotes)
