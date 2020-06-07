@@ -30,9 +30,17 @@ people to interesting material that has already been written.
 
 * ["SubmittingPatches"](https://git-scm.com/docs/SubmittingPatches/)
 
+## Branching workflow
+
 * ["A note from the maintainer"](https://github.com/git/git/blob/todo/MaintNotes)
 
+* ["Large-Merging Workflows"](https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project#_large_merging_workflows) in the Pro Git book
+
+* [gitworkflows](https://git-scm.com/docs/gitworkflows) manual page
+
 * ["How to maintain Git"](https://github.com/git/git/blob/master/Documentation/howto/maintain-git.txt)
+
+* ["How the Creators of Git do Branching"](https://hackernoon.com/how-the-creators-of-git-do-branches-e6fcc57270fb), and the associated [gitworkflow](https://github.com/rocketraman/gitworkflow) repository
 
 ## Debugging
 
