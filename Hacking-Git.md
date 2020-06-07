@@ -8,7 +8,7 @@ people to interesting material that has already been written.
 
 # Building Git
 
-* ["INSTALL"](https://github.com/git/git/blob/master/INSTALL)
+* ["`INSTALL`"](https://github.com/git/git/blob/master/INSTALL)
 
 * ["Installing from Source"](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_from_source) in the Pro Git book
 
@@ -26,9 +26,9 @@ people to interesting material that has already been written.
 
 ## Conventions and processes
 
-* ["CodingGuidelines"](https://github.com/git/git/blob/master/Documentation/CodingGuidelines)
+* ["`CodingGuidelines`"](https://github.com/git/git/blob/master/Documentation/CodingGuidelines)
 
-* ["SubmittingPatches"](https://git-scm.com/docs/SubmittingPatches/)
+* ["`SubmittingPatches`"](https://git-scm.com/docs/SubmittingPatches/)
 
 ## Branching workflow
 
@@ -36,7 +36,7 @@ people to interesting material that has already been written.
 
 * ["Large-Merging Workflows"](https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project#_large_merging_workflows) in the Pro Git book
 
-* [gitworkflows](https://git-scm.com/docs/gitworkflows) manual page
+* [`gitworkflows`](https://git-scm.com/docs/gitworkflows) manual page
 
 * ["How to maintain Git"](https://github.com/git/git/blob/master/Documentation/howto/maintain-git.txt)
 
@@ -52,4 +52,4 @@ people to interesting material that has already been written.
 
 ## Tests
 
-* ["t/README"](https://github.com/git/git/blob/master/t/README)
+* ["`t/README`"](https://github.com/git/git/blob/master/t/README)
