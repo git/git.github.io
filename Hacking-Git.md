@@ -10,6 +10,8 @@ people to interesting material that has already been written.
 
 * ["INSTALL"](https://github.com/git/git/blob/master/INSTALL)
 
+* [The top of the Makefile](https://github.com/git/git/blob/master/Makefile), for special "Makefile knobs"
+
 * ["My First Contribution"](https://git-scm.com/docs/MyFirstContribution)
 
 * ["My First Object Walk"](https://github.com/git/git/blob/master/Documentation/MyFirstObjectWalk.txt)
