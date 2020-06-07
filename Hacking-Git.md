@@ -10,6 +10,8 @@ people to interesting material that has already been written.
 
 * ["INSTALL"](https://github.com/git/git/blob/master/INSTALL)
 
+* ["Installing from Source"](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_from_source) in the Pro Git book
+
 * [The top of the Makefile](https://github.com/git/git/blob/master/Makefile), for special "Makefile knobs"
 
 * ["My First Contribution"](https://git-scm.com/docs/MyFirstContribution)
