@@ -6,13 +6,15 @@ title: Hacking Git
 The goal of this document is not to be a tutorial but rather to point
 people to interesting material that has already been written.
 
-## Getting started
+# Building Git
 
 * ["INSTALL"](https://github.com/git/git/blob/master/INSTALL)
 
 * ["Installing from Source"](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_from_source) in the Pro Git book
 
 * [The top of the Makefile](https://github.com/git/git/blob/master/Makefile), for special "Makefile knobs"
+
+## Getting started hacking and contributing
 
 * ["My First Contribution"](https://git-scm.com/docs/MyFirstContribution)
 
