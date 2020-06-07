@@ -26,9 +26,9 @@ people to interesting material that has already been written.
 
 * [Git for Windows' Debugging Git](https://github.com/git-for-windows/git/wiki/Debugging-Git)
 
-* [Launching gdb explanations in CodingGuidelines](https://github.com/git/git/blob/v2.27.0/Documentation/CodingGuidelines#L441-L445)
+* [Launching GDB explanations in CodingGuidelines](https://github.com/git/git/blob/v2.27.0/Documentation/CodingGuidelines#L441-L445)
 
-* [Explanations by Philippe Blain](https://github.com/gitgitgadget/git/pull/582#issuecomment-599845508)
+* [Philippe Blain's "Debugging Git" Gist](https://gist.github.com/phil-blain/17c67740bd26e66f4851fe0c07230ea4)
 
 ## Tests
 
