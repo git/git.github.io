@@ -24,6 +24,8 @@ people to interesting material that has already been written.
 
 * ["Hacking Git"](https://git-scm.com/docs/user-manual#hacking-git) in the Git User's Manual
 
+* ["`Documentation/technical`"](https://github.com/git/git/tree/master/Documentation/technical), technical documentation (also viewable at `https://git-scm.com/docs/<file-name-without-.txt>`)
+
 ## Conventions and processes
 
 * ["`CodingGuidelines`"](https://github.com/git/git/blob/master/Documentation/CodingGuidelines)
