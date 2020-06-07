@@ -18,6 +18,8 @@ people to interesting material that has already been written.
 
 * [Matheus' tutorial](https://matheustavares.gitlab.io/posts/first-steps-contributing-to-git)
 
+* ["Hacking Git"](https://git-scm.com/docs/user-manual#hacking-git) in the Git User's Manual
+
 ## Conventions and processes
 
 * ["CodingGuidelines"](https://github.com/git/git/blob/master/Documentation/CodingGuidelines)
