@@ -6,7 +6,7 @@ title: Hacking Git
 The goal of this document is not to be a tutorial but rather to point
 people to interesting material that has already been written.
 
-# Building Git
+## Building Git
 
 * ["`INSTALL`"](https://github.com/git/git/blob/master/INSTALL)
 
