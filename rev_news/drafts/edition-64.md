@@ -45,7 +45,7 @@ __Various__
   so that a Git mailing list archive can now be accessed through 8 IMAP
   mailboxes sliced into ~50K messages to not overload clients.
 
-* Matheus Tavares, who was a [GSoC](summerofcode.withgoogle.com/)
+* Matheus Tavares, who was a [GSoC](https://summerofcode.withgoogle.com/)
   student [last year](https://matheustavares.gitlab.io/gsoc/), has been
   hired as a freelancer by Amazon to improve Git
   performance. Congratulations to him!
