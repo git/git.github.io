@@ -40,13 +40,13 @@ This edition covers what happened during the month of May 2020.
 
 __Various__
 
-* Eric Wong, the developer of [public-inbox.org](https://public-inbox.org/README.html)
+* Eric Wong, the developer of [public-inbox.org](https://public-inbox.org/README.html),
   [implemented a read-only IMAP/IMAPS server](https://lore.kernel.org/git/20200610184147.GA1887@dcvr/),
   so that Git mailing list archive can now be accessed through 8 IMAP
   mailboxes sliced into ~50K messages to not overload clients.
 
-* Matheus Tavares who was a [GSoC](summerofcode.withgoogle.com/)
-  student [last year](https://matheustavares.gitlab.io/gsoc/) has been
+* Matheus Tavares, who was a [GSoC](summerofcode.withgoogle.com/)
+  student [last year](https://matheustavares.gitlab.io/gsoc/), has been
   hired as a freelancer by Amazon to improve Git
   performance. Congratulations to him!
 
