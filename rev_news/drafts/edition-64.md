@@ -35,6 +35,38 @@ This edition covers what happened during the month of May 2020.
 
 ## Releases
 
++ Git [2.27.0](https://public-inbox.org/git/xmqqzh9mu4my.fsf@gitster.c.googlers.com/),
++ Git for Windows [2.27.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.27.0.windows.1)
++ git-filter-repo [2.27.0](https://lore.kernel.org/git/CABPp-BF+xvzroi5QU8zPp-7KoSS16v1CsM43vWx1WO5NjyU0BQ@mail.gmail.com/)
++ libgit2 [1.0.1](https://github.com/libgit2/libgit2/releases/tag/v1.0.1)
++ GitLab [13.0.6, 12.10.11, 12.9.10](https://about.gitlab.com/releases/2020/06/10/critical-security-release-13-0-6-released/),
+[12.10.10](https://about.gitlab.com/releases/2020/06/04/gitlab-12-10-10-released/),
+[13.0.5](https://about.gitlab.com/releases/2020/06/04/gitlab-13-0-5-released/),
+[13.0.4, 12.10.9, 12.9.9](https://about.gitlab.com/releases/2020/06/03/critical-security-release-13-0-4-released/),
+[12.10.8](https://about.gitlab.com/releases/2020/05/29/gitlab-12-10-8-released/),
+[13.0.3](https://about.gitlab.com/releases/2020/05/29/gitlab-13-0-3-released/),
+[13.0.1, 12.10.7, 12.9.8](https://about.gitlab.com/releases/2020/05/27/security-release-13-0-1-released/)
++ Bitbucket Server [7.3](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ Gerrit Code Review [3.2.2](https://www.gerritcodereview.com/3.2.html#322),
+[3.1.7](https://www.gerritcodereview.com/3.1.html#317),
+[3.0.11](https://www.gerritcodereview.com/3.0.html#3011),
+[3.2.1](https://www.gerritcodereview.com/3.2.html#321),
+[3.1.6](https://www.gerritcodereview.com/3.1.html#316),
+[3.0.10](https://www.gerritcodereview.com/3.0.html#3010),
+[2.16.21](https://www.gerritcodereview.com/2.16.html#21621),
+[2.15.19](https://www.gerritcodereview.com/2.15.html#21519),
+[2.14.21](https://www.gerritcodereview.com/2.14.html#21421),
+[3.2.0](https://www.gerritcodereview.com/3.2.html),
+[2.16.20](https://www.gerritcodereview.com/2.16.html#21620),
+[3.1.5](https://www.gerritcodereview.com/3.1.html#315),
+[3.0.9](https://www.gerritcodereview.com/3.0.html#309)
++ GitHub Enterprise [2.21.0](https://enterprise.github.com/releases/2.21.0/notes),
+[2.20.9](https://enterprise.github.com/releases/2.20.9/notes),
+[2.19.15](https://enterprise.github.com/releases/2.19.15/notes),
+[2.18.20](https://enterprise.github.com/releases/2.18.20/notes)
++ GitKraken [7.0.1](https://support.gitkraken.com/release-notes/current)
++ GitHub Desktop [2.5.2](https://desktop.github.com/release-notes/),
+[2.5.1](https://desktop.github.com/release-notes/)
 
 ## Other News
 
