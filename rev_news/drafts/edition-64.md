@@ -82,6 +82,8 @@ __Various__
   hired as a freelancer by Amazon to improve Git
   performance. Congratulations to him!
 
+* A new [Hacking Git](https://git.github.io/Hacking-Git/) page lists
+  documents helpful to develop Git.
 
 __Light reading__
 
