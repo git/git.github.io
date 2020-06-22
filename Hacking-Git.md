@@ -57,3 +57,5 @@ people to interesting material that has already been written.
 ## Tests
 
 * ["`t/README`"](https://github.com/git/git/blob/master/t/README)
+
+* ["`t/perf/README`"](https://github.com/git/git/blob/master/t/perf/README)
