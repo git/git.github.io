@@ -124,7 +124,8 @@ This edition covers what happened during the month of May 2020.
 
 + Git [2.27.0](https://public-inbox.org/git/xmqqzh9mu4my.fsf@gitster.c.googlers.com/),
 + Git for Windows [2.27.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.27.0.windows.1)
-+ git-filter-repo [2.27.0](https://lore.kernel.org/git/CABPp-BF+xvzroi5QU8zPp-7KoSS16v1CsM43vWx1WO5NjyU0BQ@mail.gmail.com/)
++ git-filter-repo [2.27.1](https://lore.kernel.org/git/CABPp-BFo=SRkMezdD_FvM92-bgdeBzfExpjtjYiEvg0UM1rWQQ@mail.gmail.com/),
+[2.27.0](https://lore.kernel.org/git/CABPp-BF+xvzroi5QU8zPp-7KoSS16v1CsM43vWx1WO5NjyU0BQ@mail.gmail.com/)
 + libgit2 [1.0.1](https://github.com/libgit2/libgit2/releases/tag/v1.0.1)
 + GitLab [13.0.6, 12.10.11, 12.9.10](https://about.gitlab.com/releases/2020/06/10/critical-security-release-13-0-6-released/),
 [12.10.10](https://about.gitlab.com/releases/2020/06/04/gitlab-12-10-10-released/),
