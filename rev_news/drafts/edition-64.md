@@ -21,9 +21,96 @@ This edition covers what happened during the month of May 2020.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [fetch: allow adding a filter after initial clone](https://lore.kernel.org/git/20200513200040.68968-1-delphij@google.com/)
+
+  Xin Li sent a patch to allow using a partial clone filter when
+  fetching even if the original clone didn't use one.
+
+  As the patch was lacking a proper commit message, Junio Hamano, the
+  Git maintainer, asked Xin to add one. So Xin sent an explanation of
+  what the commit does taking as an example a shallow clone, with
+  `git clone --depth=1 ...`, that is transformed into a partial clone
+  with `git fetch --unshallow --filter=blob:none ...`. Xin wrote that
+  being able to do so is easier for the user than having to manually
+  set the `core.repositoryFormatVersion` and `extensions.partialClone`
+  config options.
+
+  Junio replied asking how we could be sure that the server actually
+  supports the protocol extensions required for partial clone, as
+  setting up the config options manually or automatically shouldn't be
+  done without verifying that.
+
+  Brian Carlson also replied to Xin's initial patch wondering if it
+  was safe to set the `core.repositoryFormatVersion` to 1 as it would
+  make Git fail if any already configured "extensions.*" config
+  option, like "extensions.tomatoSalad" is not recognized.
+
+  Xin then sent a version 2 of his patch. This time there was a commit
+  message in the patch and a cover letter along with the patch that
+  explained the changes. The patch itself added tests and checked that
+  the existing configuration had no unsupported "extension.*"
+  configuration before upgrading the `core.repositoryFormatVersion`
+  config option to 1.
+
+  Jonathan Nieder reviewed the patch suggesting a number of small
+  changes and moving some content from the cover letter to the commit
+  message. Xin then sent a version 3 of his patch applying Jonathan's
+  suggestions and without a cover letter.
+
+  Junio in the meantime commented on the version 2 that it was not
+  enough to check that the existing configuration had no unsupported
+  "extension.*" configuration variable, but that instead the code
+  should check that there is no "extension.*" configuration variable
+  at all, as any such configuration variable could have an unsupported
+  value. Jonathan then agreed with Junio.
+
+  Xin replied to them that the current code doesn't actually check
+  repositoryFormatVersion, so setting `extensions.partialclone` is
+  enough to make `git fetch --filter=...` work. He then asked what we
+  want to do about this situation.
+
+  Jonathan replied that this should be fixed even though it was a
+  separate concern from the patch.
+
+  Xin then sent a version 4 of his patch taking into account Junio's
+  comments. Junio reviewed it and suggested other improvements. He
+  further elaborated on `core.repositoryFormatVersion` upgrade by
+  suggesting the following criteria:
+
+  > (1) if upgrading from v0, there must be no "extensions.*"; and
+  >
+  > (2) if upgrading from other versions, there must be no
+  >     "extensions.*" we do not recognise.
+
+  Jonathan also reviewed version 4 of Xin's patch focusing on the
+  changes made in tests.
+
+  Xin sent a version 5 of the patch adressing the comments. He also
+  replied to Jonathan's review. Junio also replied to Jonathan's
+  review agreeing with him that some changes in the patch actually
+  belong to another patch.
+
+  Xin then sent a version 6 with 4 patches instead of 1. Junio
+  reviewed the patches and found that only the last one could be
+  controversial as it could perhaps break an existing set-up.
+
+  The last patch indeed contained the changes about checking
+  repositoryFormatVersion that Jonathan and Junio wanted to see
+  separately. With that patch the "extensions.*" config options don't
+  take effect unless "core.repositoryFormatVersion" has been upgraded
+  to 1.
+
+  So for example if "extensions.worktreeConfig" is set to "true" but
+  "core.repositoryFormatVersion" isn't set, then with the patch Git
+  will behave as if "extensions.worktreeConfig" isn't set.
+
+  Junio thinks that this change is the right thing to do in the longer
+  term though. He asked for comments about that but no-one
+  answered. So the patch series has been merged to 'pu' and then
+  'next" and in the last "What's cooking in git.git" email from Junio,
+  the plan is to merge to 'master'.
 
 <!---
 ### Support
