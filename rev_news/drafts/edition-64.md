@@ -160,6 +160,11 @@ This edition covers what happened during the month of May 2020.
 
 __Various__
 
+* The Git PLC (Project Leadership Committee) [announced](https://lore.kernel.org/git/CAP8UFD1KfEps4hS8eadBK-E4e5WyWSh93XivRabZAVhiCuQimQ@mail.gmail.com/)
+  that it drafted a statement "regarding Git and branch naming" with
+  the [Software Freedom Conservancy](https://sfconservancy.org/) that
+  has been [posted at Conservancy's site](https://sfconservancy.org/news/2020/jun/23/gitbranchname/).
+
 * Eric Wong, the developer of [public-inbox.org](https://public-inbox.org/README.html),
   [implemented a read-only IMAP/IMAPS server](https://lore.kernel.org/git/20200610184147.GA1887@dcvr/),
   so that a Git mailing list archive can now be accessed through 8 IMAP
