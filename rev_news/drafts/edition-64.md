@@ -185,11 +185,28 @@ __Various__
 * A new [Hacking Git](https://git.github.io/Hacking-Git/) page lists
   documents helpful to develop Git.
 
+* [Introducing GitHub Super Linter: one linter to rule them all](https://github.blog/2020-06-18-introducing-github-super-linter-one-linter-to-rule-them-all/) by Lucas Gravley on GitHub Blog
+
+* [DVC 1.0 release: new features for MLOps](https://dvc.org/blog/dvc-1-0-release); the
+  [1.0 Pre-release](https://dvc.org/blog/dvc-3-years-and-1-0-release) was mentioned
+  in [previous edition of Git Rev News](https://git.github.io/rev_news/2020/05/28/edition-63/#other-news)
+
+
 __Light reading__
+
+* [Using GitHub Actions for MLOps (Machine Learning Operations) & Data Science](https://github.blog/2020-06-17-using-github-actions-for-mlops-data-science/) by Hamel Husain on GitHub Blog
+* [How to squash git commits](https://levelup.gitconnected.com/how-to-squash-git-commits-9a095c1bc1fc) by Srebalaji Thirumalai
+* [Rebase and retag](https://github.polettix.it/ETOOBUSY/2020/06/11/rebase-retag/) and [Rebase and retag, but manually](https://github.polettix.it/ETOOBUSY/2020/06/12/rebase-auto-retag/) is a series of short articles by Flavio Poletti on how to use tagging to schedule blog article publication and how to use rebase to change planned publishing date
+* [Reordering git commits (not patches) with interactive rebase](https://blog.plover.com/prog/git-reorder-3.html) by Mark Dominus (a very specific use-case)
+* [Speeding up a Git monorepo at Dropbox with <200 lines of code](https://dropbox.tech/application/speeding-up-a-git-monorepo-at-dropbox-with--200-lines-of-code) by Utsav Shah on Dropbox.Tech
+* [Using `make` and `git diff` for a simple and powerful test harness](https://chrismorgan.info/blog/make-and-git-diff-test-harness/) by Chris Morgan
+* [Git Explained: Proper Team Etiquette](https://dev.to/milu_franz/git-explained-proper-team-etiquette-1od) by Milu
 
 
 __Git tools and sites__
 
+* [Piranha](https://github.com/uber/piranha/) by Uber is open-source tool for automated clean up of stale code caused by [feature flags](https://www.martinfowler.com/articles/feature-toggles.html) that are no longer required, currently supporting for Java, Swift, and Objective-C
+* [git-fuzzy](https://github.com/bigH/git-fuzzy) is a CLI interface to git that relies heavily on [fzf](https://github.com/junegunn/fzf) general-purpose command-line fuzzy finder (version 0.21.0 or higher)
 
 ## Credits
 
