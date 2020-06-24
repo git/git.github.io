@@ -43,16 +43,16 @@ This edition covers what happened during the month of May 2020.
   done without verifying that.
 
   Brian Carlson also replied to Xin's initial patch wondering if it
-  was safe to set the `core.repositoryFormatVersion` to 1 as it would
-  make Git fail if any already configured "extensions.*" config
-  option, like "extensions.tomatoSalad" is not recognized.
+  was safe to set the `core.repositoryFormatVersion` to `1` as it would
+  make Git fail if any already configured `extensions.*` config
+  option, like `extensions.tomatoSalad`, was not recognized.
 
   Xin then sent a version 2 of his patch. This time there was a commit
   message in the patch and a cover letter along with the patch that
   explained the changes. The patch itself added tests and checked that
-  the existing configuration had no unsupported "extension.*"
+  the existing configuration had no unsupported `extensions.*`
   configuration before upgrading the `core.repositoryFormatVersion`
-  config option to 1.
+  config option to `1`.
 
   Jonathan Nieder reviewed the patch suggesting a number of small
   changes and moving some content from the cover letter to the commit
@@ -61,8 +61,8 @@ This edition covers what happened during the month of May 2020.
 
   Junio in the meantime commented on the version 2 that it was not
   enough to check that the existing configuration had no unsupported
-  "extension.*" configuration variable, but that instead the code
-  should check that there is no "extension.*" configuration variable
+  `extensions.*` configuration variable, but that instead the code
+  should check that there is no `extensions.*` configuration variable
   at all, as any such configuration variable could have an unsupported
   value. Jonathan then agreed with Junio.
 
@@ -79,15 +79,15 @@ This edition covers what happened during the month of May 2020.
   further elaborated on `core.repositoryFormatVersion` upgrade by
   suggesting the following criteria:
 
-  > (1) if upgrading from v0, there must be no "extensions.*"; and
+  > (1) if upgrading from v0, there must be no `extensions.*` and
   >
   > (2) if upgrading from other versions, there must be no
-  >     "extensions.*" we do not recognise.
+  >     `extensions.*` we do not recognize.
 
   Jonathan also reviewed version 4 of Xin's patch focusing on the
   changes made in tests.
 
-  Xin sent a version 5 of the patch adressing the comments. He also
+  Xin sent a version 5 of the patch addressing the comments. He also
   replied to Jonathan's review. Junio also replied to Jonathan's
   review agreeing with him that some changes in the patch actually
   belong to another patch.
@@ -98,18 +98,18 @@ This edition covers what happened during the month of May 2020.
 
   The last patch indeed contained the changes about checking
   repositoryFormatVersion that Jonathan and Junio wanted to see
-  separately. With that patch the "extensions.*" config options don't
-  take effect unless "core.repositoryFormatVersion" has been upgraded
-  to 1.
+  separately. With that patch the `extensions.*` config options don't
+  take effect unless `core.repositoryFormatVersion` has been upgraded
+  to `1` or higher.
 
-  So for example if "extensions.worktreeConfig" is set to "true" but
-  "core.repositoryFormatVersion" isn't set, then with the patch Git
-  will behave as if "extensions.worktreeConfig" isn't set.
+  So for example if `extensions.worktreeConfig` is set to `true` but
+  `core.repositoryFormatVersion` isn't set, then with the patch Git
+  will behave as if `extensions.worktreeConfig` wasn't set.
 
   Junio thinks that this change is the right thing to do in the longer
   term though. He asked for comments about that but no-one
   answered. So the patch series has been merged to 'pu' and then
-  'next" and in the last "What's cooking in git.git" email from Junio,
+  'next' and according to the last "What's cooking in git.git" email from Junio,
   the plan is to merge to 'master'.
 
 <!---
@@ -122,7 +122,7 @@ This edition covers what happened during the month of May 2020.
 
 ## Releases
 
-+ Git [2.27.0](https://public-inbox.org/git/xmqqzh9mu4my.fsf@gitster.c.googlers.com/),
++ Git [2.27.0](https://public-inbox.org/git/xmqqzh9mu4my.fsf@gitster.c.googlers.com/)
 + Git for Windows [2.27.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.27.0.windows.1)
 + git-filter-repo [2.27.1](https://lore.kernel.org/git/CABPp-BFo=SRkMezdD_FvM92-bgdeBzfExpjtjYiEvg0UM1rWQQ@mail.gmail.com/),
 [2.27.0](https://lore.kernel.org/git/CABPp-BF+xvzroi5QU8zPp-7KoSS16v1CsM43vWx1WO5NjyU0BQ@mail.gmail.com/)
@@ -175,7 +175,7 @@ __Various__
 * Eric Wong, the developer of [public-inbox.org](https://public-inbox.org/README.html),
   [implemented a read-only IMAP/IMAPS server](https://lore.kernel.org/git/20200610184147.GA1887@dcvr/),
   so that a Git mailing list archive can now be accessed through 8 IMAP
-  mailboxes sliced into ~50K messages to not overload clients.
+  mailboxes sliced into ~50k messages to not overload clients.
 
 * Matheus Tavares, who was a [GSoC](https://summerofcode.withgoogle.com/)
   student [last year](https://matheustavares.gitlab.io/gsoc/), has been
@@ -185,28 +185,28 @@ __Various__
 * A new [Hacking Git](https://git.github.io/Hacking-Git/) page lists
   documents helpful to develop Git.
 
-* [Introducing GitHub Super Linter: one linter to rule them all](https://github.blog/2020-06-18-introducing-github-super-linter-one-linter-to-rule-them-all/) by Lucas Gravley on GitHub Blog
+* [Introducing GitHub Super Linter: one linter to rule them all](https://github.blog/2020-06-18-introducing-github-super-linter-one-linter-to-rule-them-all/) by Lucas Gravley on GitHub Blog.
 
 * [DVC 1.0 release: new features for MLOps](https://dvc.org/blog/dvc-1-0-release); the
   [1.0 Pre-release](https://dvc.org/blog/dvc-3-years-and-1-0-release) was mentioned
-  in [previous edition of Git Rev News](https://git.github.io/rev_news/2020/05/28/edition-63/#other-news)
+  in a [previous edition of Git Rev News](https://git.github.io/rev_news/2020/05/28/edition-63/#other-news).
 
 
 __Light reading__
 
-* [Using GitHub Actions for MLOps (Machine Learning Operations) & Data Science](https://github.blog/2020-06-17-using-github-actions-for-mlops-data-science/) by Hamel Husain on GitHub Blog
-* [How to squash git commits](https://levelup.gitconnected.com/how-to-squash-git-commits-9a095c1bc1fc) by Srebalaji Thirumalai
-* [Rebase and retag](https://github.polettix.it/ETOOBUSY/2020/06/11/rebase-retag/) and [Rebase and retag, but manually](https://github.polettix.it/ETOOBUSY/2020/06/12/rebase-auto-retag/) is a series of short articles by Flavio Poletti on how to use tagging to schedule blog article publication and how to use rebase to change planned publishing date
-* [Reordering git commits (not patches) with interactive rebase](https://blog.plover.com/prog/git-reorder-3.html) by Mark Dominus (a very specific use-case)
-* [Speeding up a Git monorepo at Dropbox with <200 lines of code](https://dropbox.tech/application/speeding-up-a-git-monorepo-at-dropbox-with--200-lines-of-code) by Utsav Shah on Dropbox.Tech
+* [Using GitHub Actions for MLOps (Machine Learning Operations) & Data Science](https://github.blog/2020-06-17-using-github-actions-for-mlops-data-science/) by Hamel Husain on GitHub Blog.
+* [How to squash git commits](https://levelup.gitconnected.com/how-to-squash-git-commits-9a095c1bc1fc) by Srebalaji Thirumalai.
+* [Rebase and retag](https://github.polettix.it/ETOOBUSY/2020/06/11/rebase-retag/) and [Rebase and retag, but manually](https://github.polettix.it/ETOOBUSY/2020/06/12/rebase-auto-retag/) is a series of short articles by Flavio Poletti on how to use tagging to schedule blog article publication and how to use rebase to change planned publishing date.
+* [Reordering git commits (not patches) with interactive rebase](https://blog.plover.com/prog/git-reorder-3.html) by Mark Dominus (a very specific use-case).
+* [Speeding up a Git monorepo at Dropbox with <200 lines of code](https://dropbox.tech/application/speeding-up-a-git-monorepo-at-dropbox-with--200-lines-of-code) by Utsav Shah on Dropbox.Tech .
 * [Using `make` and `git diff` for a simple and powerful test harness](https://chrismorgan.info/blog/make-and-git-diff-test-harness/) by Chris Morgan
-* [Git Explained: Proper Team Etiquette](https://dev.to/milu_franz/git-explained-proper-team-etiquette-1od) by Milu
+* [Git Explained: Proper Team Etiquette](https://dev.to/milu_franz/git-explained-proper-team-etiquette-1od) by Milu.
 
 
 __Git tools and sites__
 
-* [Piranha](https://github.com/uber/piranha/) by Uber is open-source tool for automated clean up of stale code caused by [feature flags](https://www.martinfowler.com/articles/feature-toggles.html) that are no longer required, currently supporting for Java, Swift, and Objective-C
-* [git-fuzzy](https://github.com/bigH/git-fuzzy) is a CLI interface to git that relies heavily on [fzf](https://github.com/junegunn/fzf) general-purpose command-line fuzzy finder (version 0.21.0 or higher)
+* [Piranha](https://github.com/uber/piranha/) by Uber is an Open Source tool for automated clean up of stale code caused by [feature flags](https://www.martinfowler.com/articles/feature-toggles.html) that are no longer required, currently supporting for Java, Swift, and Objective-C.
+* [git-fuzzy](https://github.com/bigH/git-fuzzy) is a CLI interface to Git that relies heavily on the [fzf](https://github.com/junegunn/fzf) general-purpose command-line fuzzy finder (version 0.21.0 or higher).
 
 ## Credits
 
