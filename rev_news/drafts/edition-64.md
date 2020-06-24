@@ -164,6 +164,13 @@ __Various__
   that it drafted a statement "regarding Git and branch naming" with
   the [Software Freedom Conservancy](https://sfconservancy.org/) that
   has been [posted at Conservancy's site](https://sfconservancy.org/news/2020/jun/23/gitbranchname/).
+  Articles related to this issue include:
+    * [Proposal to Rename the ‘Master’ Branch of WordPress-Owned Git Repositories](https://wptavern.com/proposal-to-rename-the-master-branch-from-wordpress-owned-git-repositories)
+    * [Loaded terms in free software [LWN.net]](https://lwn.net/Articles/823224/)
+    * [Replacing master in git](https://dev.to/damcosset/replacing-master-in-git-2jim)
+    * [Migrating your default git branch to 'main'](https://blog.b12.io/migrating-your-default-git-branch-to-main-a0fb706e3668)
+    * [GitHub to replace "master" with alternative term to avoid slavery references](https://www.zdnet.com/article/github-to-replace-master-with-alternative-term-to-avoid-slavery-references/);
+      note that while BitKeeper used master/slave terminology for repositories, 'master' branch in Git is about being 'master copy'
 
 * Eric Wong, the developer of [public-inbox.org](https://public-inbox.org/README.html),
   [implemented a read-only IMAP/IMAPS server](https://lore.kernel.org/git/20200610184147.GA1887@dcvr/),
