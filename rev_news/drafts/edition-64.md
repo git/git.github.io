@@ -174,8 +174,9 @@ __Various__
 
 * Eric Wong, the developer of [public-inbox.org](https://public-inbox.org/README.html),
   [implemented a read-only IMAP/IMAPS server](https://lore.kernel.org/git/20200610184147.GA1887@dcvr/),
-  so that a Git mailing list archive can now be accessed through 8 IMAP
-  mailboxes sliced into ~50k messages to not overload clients.
+  so that a Git mailing list archive can now be accessed through
+  initially 8, and now 9, IMAP mailboxes sliced into ~50k messages to
+  not overload clients.
 
 * Matheus Tavares, who was a [GSoC](https://summerofcode.withgoogle.com/)
   student [last year](https://matheustavares.gitlab.io/gsoc/), has been
