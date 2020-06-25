@@ -206,7 +206,7 @@ __Light reading__
 
 __Git tools and sites__
 
-* [Piranha](https://github.com/uber/piranha/) by Uber is an Open Source tool for automated clean up of stale code caused by [feature flags](https://www.martinfowler.com/articles/feature-toggles.html) that are no longer required, currently supporting for Java, Swift, and Objective-C.
+* [Piranha](https://github.com/uber/piranha/) by Uber is an Open Source tool for automated clean up of stale code caused by [feature flags](https://www.martinfowler.com/articles/feature-toggles.html) that are no longer required, currently supported for Java, Swift, and Objective-C.
 * [git-fuzzy](https://github.com/bigH/git-fuzzy) is a CLI interface to Git that relies heavily on the [fzf](https://github.com/junegunn/fzf) general-purpose command-line fuzzy finder (version 0.21.0 or higher).
 
 ## Credits
