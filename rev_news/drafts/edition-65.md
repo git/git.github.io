@@ -43,9 +43,11 @@ __Various__
 
 __Light reading__
 
+* [Git Rebase - A Complete Guide](https://www.alchemists.io/articles/git_rebase) by Brooke Kuhlmann at Alchemists.
 
 __Git tools and sites__
 
+* [Git Lint](https://www.alchemists.io/projects/git-lint) - A command line interface for analyzing Git commit quality and consistency for yourself and/or team. Can be used as a Git Hook and/or wired into your continuous integration build system.
 
 ## Credits
 
