@@ -207,6 +207,34 @@ have other microproject ideas, but before that please check that
 someone participating in the same program as you has not already done
 that recently.
 
+### Searching for bug reports
+
+Git has no official bug tracker or bug list. On
+https://git-scm.com/community we recommend that people report bugs
+directly on the Git mailing list.
+
+On the mailing list people sending bug reports are likely to use
+things like "[BUG]", "bug", "issue" or "crash" in the subject of their
+emails. So it can be a good idea to search for that.
+
+Most bugs are usually fixed soon after they are reported or are well
+known behaviors or limitations though. So don't expect too much.
+
+There is a non official bug tracker dedicated to Git issues on:
+
+https://crbug.com/git
+
+Git for Windows also has it's own issue tracker:
+
+https://github.com/git-for-windows/git/issues
+
+But of course the Git for Windows issues might not apply to Git
+itself. Please check that before talking about them on the Git mailing
+list.
+
+In general it's a very good idea to check that you can reproduce the
+bug on the latest version of Git before working on it.
+
 ### Searching for #leftoverbits in the mailing list
 
 People have recently started to add "#leftoverbits" to their emails
