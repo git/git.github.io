@@ -61,3 +61,13 @@ people to interesting material that has already been written.
 * ["`t/README`"](https://github.com/git/git/blob/master/t/README)
 
 * ["`t/perf/README`"](https://github.com/git/git/blob/master/t/perf/README)
+
+## Community, getting help, mentoring
+
+* [git-scm community page](https://git-scm.com/community)
+
+* [freenode webchat for the #git-devel IRC channel](https://webchat.freenode.net/#git-devel)
+
+* [#git-devel IRC channel archive](https://colabti.org/irclogger/irclogger_logs/git-devel)
+
+* [git-mentoring mailing list](https://groups.google.com/forum/#!forum/git-mentoring)
