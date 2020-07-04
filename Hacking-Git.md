@@ -26,6 +26,8 @@ people to interesting material that has already been written.
 
 * ["`Documentation/technical`"](https://github.com/git/git/tree/master/Documentation/technical), technical documentation (also viewable at `https://git-scm.com/docs/<file-name-without-.txt>`)
 
+* [Our General Microproject Information](https://git.github.io/General-Microproject-Information/) can help understand the process of contributing and find issues to work on.
+
 ## Conventions and processes
 
 * ["`CodingGuidelines`"](https://github.com/git/git/blob/master/Documentation/CodingGuidelines)
