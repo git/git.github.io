@@ -220,7 +220,24 @@ emails. So it can be a good idea to search for that.
 Most bugs are usually fixed soon after they are reported or are well
 known behaviors or limitations though. So don't expect too much.
 
-There is a non official bug tracker dedicated to Git issues on:
+[GitGitGadget](https://gitgitgadget.github.io/), which can be used to
+send patches from a GitHub repository to the Git mailing list, has its
+own list of Git issues on:
+
+https://github.com/gitgitgadget/git/issues
+
+There are even a couple ideas marked as #leftoverbits, i.e. curated
+and copied from the Git mailing list see:
+
+https://github.com/gitgitgadget/git/issues?q=is%3Aissue+is%3Aopen+label%3Aleftoverbits
+
+And there are a couple of project ideas marked as "good first issue":
+
+https://github.com/gitgitgadget/git/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22
+
+that might be interesting to look at.
+
+There is another non official bug tracker dedicated to Git issues on:
 
 https://crbug.com/git
 
