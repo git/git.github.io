@@ -40,6 +40,11 @@ This edition covers what happened during the month of June 2020.
 
 __Various__
 
+* Junio Hamano, the Git maintainer has renamed the `pu` branch of
+  git.git to `seen`. This has been done to use a more meaningful name
+  and make room for topics from those contributors whose two-letter
+  name abbreviation needs to be 'pu'. This was announced in
+  "[What's cooking in git.git (Jun 2020, #04; Mon, 22)](https://public-inbox.org/git/xmqqimfid2l1.fsf@gitster.c.googlers.com)"
 
 __Light reading__
 
