@@ -29,9 +29,58 @@ This edition covers what happened during the month of June 2020.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Jonathan Tan
+* Who are you and what do you do?
+
+  I'm a Software Engineer at Google who works on Git. I also contribute
+  to JGit (a Java implementation of Git) as one of its committers.
+
+* What would you name your most important contribution to Git?
+
+  I would say "[partial clone](https://git-scm.com/docs/partial-clone)" - the
+  ability to clone a repository, but not necessarily have all of
+  that repository's objects (accumulatedthroughout its history) in
+  your clone. Quite a few articles have been written about it, but in
+  summary, it improves Git performance especially for large repositories.
+
+* What are you doing on the Git project these days, and why?
+
+  The thing that immediately comes to mind is "partial clone".  The
+  fundamentals are there, but some Git commands still operate under the
+  assumption that objects are only a disk read away (instead of a
+  network fetch - in a partial clone, if an object is needed but
+  missing, it is automatically fetched). I'm improving those commands to
+  be more cognizant of this fact - typically, this means batching the
+  fetch of all the objects it will need once it realizes that it does
+  not have some of them, instead of "I need this object, so go fetch it;
+  OK let me process it; oops I need another one, so go fetch that".
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+  Along the lines of "partial clone" and large repositories, I would
+  like them to investigate the feasibility of having Git servers be able
+  to serve results of computations (thus, not just objects). One case is
+  `git blame` - if a Git client could ask a Git server to send the
+  results of such a command, it could offload most of the computation to
+  the server, only needing to build upon the server's results with the
+  locally-created objects that the server does not know about. This is
+  especially useful with partial clone, because the client does not even
+  have most of the objects needed and would have to fetch them
+  otherwise.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+  One small thing that I can think of: remove the ability of `git reset`
+  to update the working tree and the objects staged in the index. The
+  [`git restore`](https://git-scm.com/docs/git-restore) command,
+  relatively recently introduced, does this with more beginner-friendly
+  parameter names (`--worktree` and `--staged`, respectively, instead of
+  the `--hard`, `--mixed`, and `--soft` of `git reset`). This change
+  would make it easier, for example, to read scripts written by other
+  people - I would no longer need to think so much about what that
+  `reset` in the script would do.
 
 ## Releases
 
