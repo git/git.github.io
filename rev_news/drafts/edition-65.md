@@ -34,7 +34,7 @@ This edition covers what happened during the month of June 2020.
 * Who are you and what do you do?
 
   I'm a Software Engineer at Google who works on Git. I also contribute
-  to JGit (a Java implementation of Git) as one of its committers.
+  to [JGit](https://www.eclipse.org/jgit/) (a Java implementation of Git) as one of its committers.
 
 * What would you name your most important contribution to Git?
 
