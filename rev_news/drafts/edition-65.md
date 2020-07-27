@@ -122,6 +122,12 @@ __Various__
   name abbreviation needs to be 'pu'. This was announced in
   "[What's cooking in git.git (Jun 2020, #04; Mon, 22)](https://public-inbox.org/git/xmqqimfid2l1.fsf@gitster.c.googlers.com)"
 
+* The Git Project Leadership Committee has been briefly interviewed by
+  email by [Elizabeth Landau](https://en.wikipedia.org/wiki/Elizabeth_Landau)
+  for an [article](https://www.wired.com/story/tech-confronts-use-labels-master-slave/)
+  in [Wired](https://www.wired.com/) about current changes to Git's
+  default name for the initial branch.
+
 __Light reading__
 
 * [Git Rebase - A Complete Guide](https://www.alchemists.io/articles/git_rebase) by Brooke Kuhlmann at Alchemists.
