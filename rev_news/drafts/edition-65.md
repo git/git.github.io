@@ -100,7 +100,7 @@ This edition covers what happened during the month of June 2020.
 
   I would say "[partial clone](https://git-scm.com/docs/partial-clone)" - the
   ability to clone a repository, but not necessarily have all of
-  that repository's objects (accumulatedthroughout its history) in
+  that repository's objects (accumulated throughout its history) in
   your clone. Quite a few articles have been written about it, but in
   summary, it improves Git performance especially for large repositories.
 
