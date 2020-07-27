@@ -116,6 +116,16 @@ This edition covers what happened during the month of June 2020.
 
 __Various__
 
+* Carmen Andoh, who works for Google, and Jonathan Nieder’s team at
+  Google have volunteered to organize a
+  [Git Inclusion Summit](https://lore.kernel.org/git/CA+TwhoKBYwUKmtQTyiocPWJD=KeZQryS+6Q8JKxKgLEy0qJwAw@mail.gmail.com/).
+  It would be a virtual contributor summit with the purpose of
+  engaging core Git contributors as active participants in diversity
+  and inclusion initiatives for the Git project. Interested Git
+  contributors can vote on their preferred summit duration and times
+  on [a whenisgood pool](http://whenisgood.net/9z2diyy) by Thursday,
+  July 30th.
+
 * Junio Hamano, the Git maintainer has renamed the `pu` branch of
   git.git to `seen`. This has been done to use a more meaningful name
   and make room for topics from those contributors whose two-letter
