@@ -127,7 +127,7 @@ __Various__
   on [a whenisgood pool](http://whenisgood.net/9z2diyy) by Thursday,
   July 30th.
 
-* Junio Hamano, the Git maintainer has renamed the `pu` branch of
+* Junio Hamano, the Git maintainer, has renamed the `pu` branch of
   git.git to `seen`. This has been done to use a more meaningful name
   and make room for topics from those contributors whose two-letter
   name abbreviation needs to be 'pu'. This was announced in
