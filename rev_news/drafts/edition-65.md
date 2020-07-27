@@ -21,9 +21,69 @@ This edition covers what happened during the month of June 2020.
 ### General
 -->
 
-<!---
+
 ### Reviews
--->
+
+* [More commit-graph/Bloom filter improvements](https://lore.kernel.org/git/pull.659.git.1592252093.gitgitgadget@gmail.com/)
+
+  Derrick Stolee, who prefers to be called Stolee, sent a patch series
+  to the mailing list, based on a
+  [previous experimental patch series](https://lore.kernel.org/git/20200529085038.26008-1-szeder.dev@gmail.com/)
+  sent a few weeks earlier by Gábor Szeder.
+
+  When he sent his patch series, Gábor said that his work was a proof
+  of concept started more than a year ago, that he had no time to
+  finish until recently. He was motivated to finish it when he
+  recently took a look at the current bloom filter
+  implementation. This implementation was developed for a long time
+  mainly by Garima Singh and was merged at the beginning of May. He
+  saw that it had some of the same issues that he had stumbled upon,
+  and that it missed some optimization opportunities.
+
+  Gábor listed a lot of very interesting benefits from his work, but
+  also a lot of drawbacks that would prevent it from being merged as
+  is. Many reviewers like Stolee, Taylor Blau, Johannes Schindelin and
+  Junio Hamano, were disapointed that Gábor was not trying to
+  contribute to the current implementation. It looked like though that
+  a number of Gábor's 34 patches and ideas could be applied on top of
+  the current implementation.
+
+  That's what Stolee did by first sending
+  [10 patches from Gábor's series](https://lore.kernel.org/git/pull.650.git.1591362032.gitgitgadget@gmail.com/)
+  at the beginning of June. This patches series required a bit of
+  work, but Stolee left out what would have been more difficult to
+  apply to the current code. René Scharfe, Stolee, Gábor and Junio
+  commented a bit on it, but didn't found anything that would require
+  a new version of this patch series. So it is now "cooking" in the
+  'next' branch.
+
+  Stolee's next patch series called
+  ["More commit-graph/Bloom filter improvements"](https://lore.kernel.org/git/pull.659.git.1592252093.gitgitgadget@gmail.com/)
+  was about adding a few extra improvements, several of which are
+  rooted in Gábor's original series, even though Gábor's patches did
+  not apply or cherry-pick at all. Stolee still credited Gábor as the
+  author of 4 patches out of 8.
+
+  Anyway this new series contained 2 changes that improve the
+  false-positive rate which significantly increase performance, and
+  one change that improves usability. René and Taylor
+  suggested improvements and bug fixes. Taylor even sent a patch.
+
+  Stolee then sent [a version 2](https://lore.kernel.org/git/pull.659.v2.git.1592934430.gitgitgadget@gmail.com/)
+  of the series, taking into account the feedback and adding the patch
+  from Taylor to the series. René, Gábor, Junio and Stolee discussed a
+  few more points.
+
+  That led to Stolee sending
+  [a version 3](https://lore.kernel.org/git/pull.659.v3.git.1593174636.gitgitgadget@gmail.com/)
+  in which Gábor reported a bug that Stolee subsequently fixed.
+
+  So Stolee sent
+  [a version 4](https://lore.kernel.org/git/pull.659.v4.git.1593610050.gitgitgadget@gmail.com/)
+  which is now cooking in the 'next' branch, along with the first
+  patch that has 10 patches from Gábor. Hopefully both will be merged
+  in the 'master' branch after the release of Git 2.28.0 which should
+  happen soon.
 
 <!---
 ### Support
