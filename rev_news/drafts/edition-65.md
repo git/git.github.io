@@ -84,6 +84,30 @@ This edition covers what happened during the month of June 2020.
 
 ## Releases
 
++ Git [2.28.0-rc2](https://public-inbox.org/git/xmqqblk75uel.fsf@gitster.c.googlers.com/),
+[2.28.0-rc1](https://public-inbox.org/git/xmqqv9ildh46.fsf@gitster.c.googlers.com/),
+[2.28.0-rc0](https://public-inbox.org/git/xmqqh7ugwen6.fsf@gitster.c.googlers.com/)
++ Bitbucket Server [7.4](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ Gerrit Code Review [3.1.8](https://www.gerritcodereview.com/3.1.html#318),
+[3.0.12](https://www.gerritcodereview.com/3.0.html#3012),
+[2.16.22](https://www.gerritcodereview.com/2.16.html#21622)
++ GitHub Enterprise [2.21.3](https://enterprise.github.com/releases/2.21.3/notes),
+[2.20.12](https://enterprise.github.com/releases/2.20.12/notes),
+[2.19.18](https://enterprise.github.com/releases/2.19.18/notes),
+[2.18.23](https://enterprise.github.com/releases/2.18.23/notes),
+[2.21.2](https://enterprise.github.com/releases/2.21.2/notes),
+[2.20.11](https://enterprise.github.com/releases/2.20.11/notes),
+[2.19.17](https://enterprise.github.com/releases/2.19.17/notes),
+[2.18.22](https://enterprise.github.com/releases/2.18.22/notes)
++ GitLab [13.1.5](https://about.gitlab.com/releases/2020/07/24/gitlab-13-1-5-released/),
+[13.2.1](https://about.gitlab.com/releases/2020/07/24/gitlab-13-2-1-released/),
+[13.2](https://about.gitlab.com/releases/2020/07/22/gitlab-13-2-released/),
+[13.0.10](https://about.gitlab.com/releases/2020/07/09/gitlab-13-0-10-released/),
+[13.1.4](https://about.gitlab.com/releases/2020/07/09/gitlab-13-1-4-released/),
+[13.1.3, 13.0.9 and 12.10.14](https://about.gitlab.com/releases/2020/07/06/critical-security-release-gitlab-13-1-3-released/),
+[13.1.2, 13.0.8 and 12.10.13](https://about.gitlab.com/releases/2020/07/01/security-release-13-1-2-release/)
++ GitKraken [7.1.0](https://support.gitkraken.com/release-notes/current)
++ GitHub Desktop [2.5.3](https://desktop.github.com/release-notes/)
 
 ## Other News
 
