@@ -118,8 +118,8 @@ This edition covers what happened during the month of June 2020.
 
   When he sent his patch series, Gábor said that his work was a proof
   of concept started more than a year ago, that he had no time to
-  finish until recently. He was motivated to finish it when he
-  recently took a look at the current bloom filter
+  finish yet. He was motivated to send it as-is with changes to commit
+  messages, when he recently took a look at the current changed-path Bloom filter
   implementation. This implementation was developed for a long time
   mainly by Garima Singh and was merged at the beginning of May. He
   saw that it had some of the same issues that he had stumbled upon,
@@ -128,7 +128,7 @@ This edition covers what happened during the month of June 2020.
   Gábor listed a lot of very interesting benefits from his work, but
   also a lot of drawbacks that would prevent it from being merged as
   is. Many reviewers like Stolee, Taylor Blau, Johannes Schindelin and
-  Junio Hamano, were disapointed that Gábor was not trying to
+  Junio Hamano, were disappointed that Gábor was not trying to
   contribute to the current implementation. It appeared though that
   a number of Gábor's 34 patches and ideas could be applied on top of
   the current implementation.
@@ -362,5 +362,5 @@ Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
 with help from Andrew Ardill, Jonathan Tan,
-Brooke Kuhlmann, Eric Sunshine and Carlo Marcelo
-Arenas Belón.
+Brooke Kuhlmann, Eric Sunshine, Carlo Marcelo
+Arenas Belón and Gábor Szeder.
