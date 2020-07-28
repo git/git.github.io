@@ -285,13 +285,74 @@ __Various__
   in [Wired](https://www.wired.com/) about current changes to Git's
   default name for the initial branch.
 
+* [Highlights from Git 2.28](https://github.blog/2020-07-27-highlights-from-git-2-28/)
+  by Taylor Blau on GitHub Blog, mentioning among others `init.defaultBranch`,
+  changed-path Bloom filters, `git bugreport` command and `git log` new `--show-pulls` option.
+
+* The [Tower](https://www.git-tower.com/) Git client for Windows and MacOS now supports
+  [CMD+Z for Git](https://css-tricks.com/cmdz-for-git-is-here/) (a universal undo).
+
+* [Exciting new updates to the Git experience in Microsoft Visual Studio 2019](https://devblogs.microsoft.com/visualstudio/exciting-new-updates-to-the-git-experience-in-visual-studio/).
+
+* [GitHub Archive Program: the journey of the world’s open source code to the Arctic](https://github.blog/2020-07-16-github-archive-program-the-journey-of-the-worlds-open-source-code-to-the-arctic/)
+  by Julia Metcalf on GitHub Blog.  The GitHub Archive Program along with the
+  GitHub Arctic Code Vault were introduced at GitHub Universe 2019, and mentioned
+  in [Git Rev News #57 (November 20th, 2019)](https://git.github.io/rev_news/2019/11/20/edition-57/).
+
+* [Updating the Git protocol for SHA-256 [LWN.net]](https://lwn.net/Articles/823352/)
+  by John Coggeshall.
+
 __Light reading__
 
 * [Git Rebase - A Complete Guide](https://www.alchemists.io/articles/git_rebase) by Brooke Kuhlmann at Alchemists.
+* [How to safely use GitHub Actions in organizations](https://humanwhocodes.com/blog/2020/07/safely-use-github-actions-in-organizations/)
+  by Nicholas C. Zakas, mainly about handling credentials and other secrets.
+  Various tools for checking the repository for secrets and/or safely storing secrets
+  were mentioned in [Git Rev News Edition #25](https://git.github.io/rev_news/2017/03/15/edition-25/),
+  [#28](https://git.github.io/rev_news/2017/06/14/edition-28/),
+  [#36](https://git.github.io/rev_news/2018/02/21/edition-36/),
+  [#39](https://git.github.io/rev_news/2018/05/16/edition-39/),
+  [#57](https://git.github.io/rev_news/2019/11/20/edition-57/)
+* [Fedora Classroom: Git 101 with Pagure](https://fedoramagazine.org/fedora-classroom-session-git-101-with-pagure/)
+  session was [streamed on YouTube](https://www.youtube.com/watch?v=HfsKvRecniI)
+  on Fedora Project channel.
+* [How To Create A GitHub Profile README](https://dev.to/m0nica/how-to-create-a-github-profile-readme-1paj)
+  by Monica Powell on Dev.to.
+* [Top 13 GitHub Alternatives in 2020 [Free and Paid]](https://dzone.com/articles/top-13-github-alternatives-in-2020-free-and-paid)
+  by Momchil Koychev on DevOps Zone.
+* [Git Best Practices -- AFTER Technique](https://dzone.com/articles/git-best-practices-after-technique-1)
+  by Rajeev Bera on DevOps Zone.
+* [6 best practices for teams using Git](https://opensource.com/article/20/7/git-best-practices)
+  by Ravi Chandran on OpenSource.com.
+* [Use `broot` and `meld` to diff before commit](https://dystroy.org/blog/gg/) by Denys Séguret
+  (author of [broot](https://dystroy.org/broot/), which is the tool to navigate file trees).
+* [Basic Git Analogy for Contributing to Open Source Project](https://medium.com/@thesagarsehgal/basic-git-analogy-for-contributing-to-open-source-project-8c314789326e)
+  by Sagar Seghal on Medium.
+* [Can You Restore A Deleted Commit on Git?](https://www.hackernoon.com/can-you-restore-a-deleted-commit-on-git-yr1x3ygx)
+  by Dmytro Khmelenko on Hacker Noon (the answer is yes, with the help of the reflog).
 
 __Git tools and sites__
 
 * [Git Lint](https://www.alchemists.io/projects/git-lint) - A command line interface for analyzing Git commit quality and consistency for yourself and/or team. Can be used as a Git Hook and/or wired into your continuous integration build system.
+* [git-assembler: update git branches using high-level instructions](https://www.thregr.org/~wavexx/software/git-assembler/);
+  it can perform automatic merge and rebase operations following a simple declarative script
+  (like “make”, for branches).
+* [git-manpages-l10n](https://github.com/jnavila/git-manpages-l10n) is repository
+  for translating Git manpages (the Git documentation).
+* [icdiff](https://www.jefftk.com/icdiff) is <b>i</b>mproved <b>c</b>olored <b>diff</b>.
+  Instead of trying to be a `diff` replacement for all circumstances,
+  the goal of `icdiff` is to be a tool you can reach for to get a better picture
+  of what changed when it's not immediately obvious from `diff`.
+  Docs include examples on how to integrate it with Git, Mercurial and Subversion.
+* [Guitar](https://github.com/soramimi/Guitar) is a multiplatform graphical Git client
+  under development, written in C++ and powered by Qt.
+* [SCM Breeze](https://madebynathan.com/2011/10/19/git-shortcuts-like-youve-never-seen-before/)
+  is a set of shell scripts (for `bash` and `zsh`) that make it easier to use Git.
+  It integrates with your shell to give you numbered file shortcuts, a repository index
+  with tab completion, and a community driven collection of useful SCM functions.
+  SCM Breeze lives on GitHub at <https://github.com/ndbroadbent/scm_breeze>
+* [Gitpod](https://www.gitpod.io/) - Prebuilt Dev Environments for GitLab, GitHub and Bitbucket;
+  on the cloud or self-hosted, with a free tier.
 
 ## Credits
 
