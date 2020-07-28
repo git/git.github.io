@@ -21,10 +21,10 @@ This edition covers what happened during the month of June 2020.
 
 * The history of `master` in Git (*written by Andrew Ardill*)
 
-  Admidst [all the discussion](https://lore.kernel.org/git/CAOAHyQwyXC1Z3v7BZAC+Bq6JBaM7FvBenA-1fcqeDV==apdWDg@mail.gmail.com/)
+  Amidst [all the discussion](https://lore.kernel.org/git/CAOAHyQwyXC1Z3v7BZAC+Bq6JBaM7FvBenA-1fcqeDV==apdWDg@mail.gmail.com/)
   around changing the default branch from `master` to something else,
   many people have asked why `master` was chosen in the first place.
-  As master has a few different meanings in English, just which
+  As `master` has a few different meanings in English, just which
   meaning was intended?
 
   [Konstantin Ryabitsev](https://lore.kernel.org/git/20200504174548.r3zaftqcq52yhd2u@chatter.i7.local/)
@@ -41,7 +41,7 @@ This edition covers what happened during the month of June 2020.
   [a CVS helper script](https://github.com/git/git/commit/3e91311ae750af9bf2e3517b1e701288ac3066b9),
   links that to BitKeeper (the version control system used to manage
   Linux development when Linus Torvalds first wrote Git), and claims
-  BitKeeper used the "master and slave" meaning of master.
+  BitKeeper used the "master and slave" meaning of `master`.
 
   Many people considered `master` to mean a "master copy", so this
   connection to slavery was very surprising.
@@ -64,7 +64,7 @@ This edition covers what happened during the month of June 2020.
   >
   > Glad it's happenning @natfriedman
 
-  Asked which meaning of master was intended,
+  When asked for which meaning of `master` was intended,
   [Petr replied](https://twitter.com/xpasky/status/1272280760280637441)
   > "master" as in e.g. "master recording". Perhaps you could say the
   > original, but viewed from the production process perspective.
@@ -129,7 +129,7 @@ This edition covers what happened during the month of June 2020.
   also a lot of drawbacks that would prevent it from being merged as
   is. Many reviewers like Stolee, Taylor Blau, Johannes Schindelin and
   Junio Hamano, were disapointed that Gábor was not trying to
-  contribute to the current implementation. It looked like though that
+  contribute to the current implementation. It appeared though that
   a number of Gábor's 34 patches and ideas could be applied on top of
   the current implementation.
 
@@ -138,15 +138,15 @@ This edition covers what happened during the month of June 2020.
   at the beginning of June. This patches series required a bit of
   work, but Stolee left out what would have been more difficult to
   apply to the current code. René Scharfe, Stolee, Gábor and Junio
-  commented a bit on it, but didn't found anything that would require
+  commented a bit on it, but didn't find anything that would require
   a new version of this patch series. So it is now "cooking" in the
   'next' branch.
 
   Stolee's next patch series called
   ["More commit-graph/Bloom filter improvements"](https://lore.kernel.org/git/pull.659.git.1592252093.gitgitgadget@gmail.com/)
   was about adding a few extra improvements, several of which are
-  rooted in Gábor's original series, even though Gábor's patches did
-  not apply or cherry-pick at all. Stolee still credited Gábor as the
+  rooted in Gábor's original series. Even though Gábor's patches did
+  not apply or cherry-pick at all, Stolee still credited Gábor as the
   author of 4 patches out of 8.
 
   Anyway this new series contained 2 changes that improve the
@@ -279,7 +279,7 @@ __Various__
   name abbreviation needs to be 'pu'. This was announced in
   "[What's cooking in git.git (Jun 2020, #04; Mon, 22)](https://public-inbox.org/git/xmqqimfid2l1.fsf@gitster.c.googlers.com)"
 
-* The Git Project Leadership Committee has been briefly interviewed by
+* The Git Project Leadership Committee has been briefly interviewed via
   email by [Elizabeth Landau](https://en.wikipedia.org/wiki/Elizabeth_Landau)
   for an [article](https://www.wired.com/story/tech-confronts-use-labels-master-slave/)
   in [Wired](https://www.wired.com/) about current changes to Git's
@@ -311,7 +311,7 @@ __Light reading__
   were mentioned in [Git Rev News Edition #25](https://git.github.io/rev_news/2017/03/15/edition-25/),
   [#28](https://git.github.io/rev_news/2017/06/14/edition-28/),
   [#36](https://git.github.io/rev_news/2018/02/21/edition-36/),
-  [#39](https://git.github.io/rev_news/2018/05/16/edition-39/),
+  [#39](https://git.github.io/rev_news/2018/05/16/edition-39/) and
   [#57](https://git.github.io/rev_news/2019/11/20/edition-57/)
 * [Fedora Classroom: Git 101 with Pagure](https://fedoramagazine.org/fedora-classroom-session-git-101-with-pagure/)
   session was [streamed on YouTube](https://www.youtube.com/watch?v=HfsKvRecniI)
@@ -344,7 +344,7 @@ __Git tools and sites__
   the goal of `icdiff` is to be a tool you can reach for to get a better picture
   of what changed when it's not immediately obvious from `diff`.
   Docs include examples on how to integrate it with Git, Mercurial and Subversion.
-* [Guitar](https://github.com/soramimi/Guitar) is a multiplatform graphical Git client
+* [Guitar](https://github.com/soramimi/Guitar) is a multi-platform graphical Git client
   under development, written in C++ and powered by Qt.
 * [SCM Breeze](https://madebynathan.com/2011/10/19/git-shortcuts-like-youve-never-seen-before/)
   is a set of shell scripts (for `bash` and `zsh`) that make it easier to use Git.
