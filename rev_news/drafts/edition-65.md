@@ -19,7 +19,7 @@ This edition covers what happened during the month of June 2020.
 
 ### General
 
-* The history of `master` in git
+* The history of `master` in Git (*written by Andrew Ardill*)
   
   Admidst [all the discussion](https://lore.kernel.org/git/CAOAHyQwyXC1Z3v7BZAC+Bq6JBaM7FvBenA-1fcqeDV==apdWDg@mail.gmail.com/)
   around changing the default branch from `master` to something else,
@@ -35,12 +35,12 @@ This edition covers what happened during the month of June 2020.
   [This post from the GNOME mailing list](https://mail.gnome.org/archives/desktop-devel-list/2019-May/msg00066.html)
   was then [linked by Simon Pieters](https://lore.kernel.org/git/CAOAHyQx=+fM1FpAv+g3M+j7j4MgLJA03=MGFmXLvZcfJKAEpGg@mail.gmail.com/)
   with the claim that
-  > git's `master` is in fact a reference to master/slave
+  > Git's `master` is in fact a reference to master/slave
   
   That post points out that the first use of `master` was in
   [a CVS helper script](https://github.com/git/git/commit/3e91311ae750af9bf2e3517b1e701288ac3066b9),
   links that to BitKeeper (the version control system used to manage
-  Linux development when Linus Torvalds first wrote git), and claims
+  Linux development when Linus Torvalds first wrote Git), and claims
   BitKeeper used the "master and slave" meaning of master.
   
   Many people considered `master` to mean a "master copy", so this
@@ -54,7 +54,7 @@ This edition covers what happened during the month of June 2020.
   than the norm."
   
   Off the list discussions were ongoing, and
-  [Petr Baudis wrote on twitter about naming the `master` branch in git](https://twitter.com/xpasky/status/1271477451756056577)
+  [Petr Baudis wrote on twitter about naming the `master` branch in Git](https://twitter.com/xpasky/status/1271477451756056577)
   > I picked the names "master" (and "origin") in the early Git tooling back in 2005.
   >
   > (this probably means you shouldn't give much weight to my name preferences :) )
@@ -75,7 +75,7 @@ This edition covers what happened during the month of June 2020.
   In [a follow-up to that original GNOME mailing list post](https://mail.gnome.org/archives/desktop-devel-list/2020-June/msg00023.html),
   Bastien Nocera retracted their claims from the original post, saying
   > I emailed Linus Torvalds recently... and he told me that it was
-  unlikely that the "git master" branch name was influenced by
+  unlikely that the "Git master" branch name was influenced by
   BitKeeper, and that "master" was "fairly standard naming" for this
   sort of thing and "more likely to be influenced by the
   CVS master repository"
@@ -86,7 +86,7 @@ This edition covers what happened during the month of June 2020.
   communities, is reason enough to change it."
   
   This is something that
-  [Brian M. Carlson had also pointed out on the git mailing list](https://lore.kernel.org/git/20200505231641.GH6530@camp.crustytoothpaste.net/),
+  [Brian M. Carlson had also pointed out on the Git mailing list](https://lore.kernel.org/git/20200505231641.GH6530@camp.crustytoothpaste.net/),
   saying
   > "master", even though from a different origin, brings the idea of
   human bondage and suffering to mind for a non-trivial number of
@@ -94,16 +94,16 @@ This edition covers what happened during the month of June 2020.
   I suspect if we were making the decision today, we'd pick another
   name, since that's not what we want people to think of when they use Git.
   
-  Brian goes on to lay out changes required in git to rename `master`
+  Brian goes on to lay out changes required in Git to rename `master`
   as the default, suggesting that there is a decent amount of work and
   that due to compatibility concerns "we'd probably want to make it in
-  a \[git version\] 3.0".
+  a \[Git version\] 3.0".
   
   Around the web the discussion about renaming `master` continues.
   The incorrect claims around the history of `master` persist, even in
   our own [Git Rev News: Edition 64](https://git.github.io/rev_news/2020/06/25/edition-64/#other-news),
   but seem to be quickly corrected where possible such as on
-  [git-lab's discussion on the topic](https://gitlab.com/gitlab-org/gitlab/-/issues/221164#note_372560473).
+  [GitLab's discussion on the topic](https://gitlab.com/gitlab-org/gitlab/-/issues/221164#note_372560473).
   
 ### Reviews
 
@@ -297,5 +297,5 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Jonathan Tan, Brooke Kuhlmann and
-Eric Sunshine.
+with help from Andrew Ardill, Jonathan Tan,
+Brooke Kuhlmann and Eric Sunshine.
