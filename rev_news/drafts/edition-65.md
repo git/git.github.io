@@ -259,7 +259,7 @@ This edition covers what happened during the month of June 2020.
 
 ## Other News
 
-__Various__
+__Events__
 
 * Carmen Andoh, who works for Google, and Jonathan Nieder’s team at
   Google have volunteered to organize a
@@ -270,6 +270,8 @@ __Various__
   contributors can vote on their preferred summit duration and times
   on [a whenisgood pool](http://whenisgood.net/9z2diyy) by Thursday,
   July 30th.
+
+__Various__
 
 * Junio Hamano, the Git maintainer, has renamed the `pu` branch of
   git.git to `seen`. This has been done to use a more meaningful name
