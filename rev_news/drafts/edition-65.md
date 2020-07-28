@@ -164,9 +164,8 @@ This edition covers what happened during the month of June 2020.
   So Stolee sent
   [a version 4](https://lore.kernel.org/git/pull.659.v4.git.1593610050.gitgitgadget@gmail.com/)
   which is now cooking in the 'next' branch, along with the first
-  patch that has 10 patches from Gábor. Hopefully both will be merged
-  in the 'master' branch after the release of Git 2.28.0 which should
-  happen soon.
+  series that has 10 patches from Gábor. Hopefully both will be merged
+  in the 'master' branch soon, as Git 2.28.0 has just been released.
 
 <!---
 ### Support
@@ -298,4 +297,5 @@ Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
 with help from Andrew Ardill, Jonathan Tan,
-Brooke Kuhlmann and Eric Sunshine.
+Brooke Kuhlmann, Eric Sunshine and Carlo Marcelo
+Arenas Belón.
