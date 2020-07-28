@@ -127,9 +127,13 @@ This edition covers what happened during the month of June 2020.
 
   Gábor listed a lot of very interesting benefits from his work, but
   also a lot of drawbacks that would prevent it from being merged as
-  is. Many reviewers like Stolee, Taylor Blau, Johannes Schindelin and
-  Junio Hamano, were disappointed that Gábor was not trying to
-  contribute to the current implementation. It appeared though that
+  is. Many of the benefits are linked to a new format used to store
+  the changed-path Bloom filter. This new format was justified by
+  [an impressive commit message](https://public-inbox.org/git/20200529085038.26008-16-szeder.dev@gmail.com/).
+
+  Stolee, Taylor Blau, Johannes Schindelin and Junio Hamano, when
+  reviewing Gábor's work, were disappointed that Gábor was not trying
+  to contribute to the current implementation. It appeared though that
   a number of Gábor's 34 patches and ideas could be applied on top of
   the current implementation.
 
@@ -150,7 +154,7 @@ This edition covers what happened during the month of June 2020.
   author of 4 patches out of 8.
 
   Anyway this new series contained 2 changes that improve the
-  false-positive rate which significantly increase performance, and
+  false-positive rate which increases performance, and
   one change that improves usability. René and Taylor
   suggested improvements and bug fixes. Taylor even sent a patch.
 
