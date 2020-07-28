@@ -57,6 +57,7 @@ This edition covers what happened during the month of June 2020.
   [Petr Baudis wrote on twitter about naming the `master` branch in Git](https://twitter.com/xpasky/status/1271477451756056577)
 
   > I picked the names "master" (and "origin") in the early Git tooling back in 2005.
+  >
   > (this probably means you shouldn't give much weight to my name preferences :) )
   >
   > I have wished many times I would have named them "main" (and "upstream") instead.
