@@ -237,12 +237,15 @@ This edition covers what happened during the month of June 2020.
 
 ## Releases
 
-+ Git [2.28.0-rc2](https://public-inbox.org/git/xmqqblk75uel.fsf@gitster.c.googlers.com/),
-[2.28.0-rc1](https://public-inbox.org/git/xmqqv9ildh46.fsf@gitster.c.googlers.com/),
-[2.28.0-rc0](https://public-inbox.org/git/xmqqh7ugwen6.fsf@gitster.c.googlers.com/)
-+ Git for Windows [2.28.0-rc2](https://public-inbox.org/git/20200722195905.6540-1-johannes.schindelin@gmx.de),
++ Git [2.28.0](https://public-inbox.org/git/xmqq5za8hpir.fsf@gitster.c.googlers.com),
+[2.28.0-rc2](https://public-inbox.org/git/xmqqblk75uel.fsf@gitster.c.googlers.com),
+[2.28.0-rc1](https://public-inbox.org/git/xmqqv9ildh46.fsf@gitster.c.googlers.com),
+[2.28.0-rc0](https://public-inbox.org/git/xmqqh7ugwen6.fsf@gitster.c.googlers.com)
++ Git for Windows [2.28.0](https://lore.kernel.org/git/20200728103216.7378-1-johannes.schindelin@gmx.de),
+[2.28.0-rc2](https://public-inbox.org/git/20200722195905.6540-1-johannes.schindelin@gmx.de),
 [2.28.0-rc1](https://public-inbox.org/git/20200718011007.6808-1-johannes.schindelin@gmx.de),
 [2.28.0-rc0](https://public-inbox.org/git/20200710135935.6416-1-johannes.schindelin@gmx.de)
++ git-filter-repo [2.28.0](https://lore.kernel.org/git/CABPp-BGVFKKm+n8wTN9dqbA6=HJSZ5m3bnG7fLZ5DGevXSXBAA@mail.gmail.com)
 + Bitbucket Server [7.4](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
 + Gerrit Code Review [3.1.8](https://www.gerritcodereview.com/3.1.html#318),
 [3.0.12](https://www.gerritcodereview.com/3.0.html#3012),
