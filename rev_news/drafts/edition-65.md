@@ -338,6 +338,9 @@ __Light reading__
   by Sagar Seghal on Medium.
 * [Can You Restore A Deleted Commit on Git?](https://www.hackernoon.com/can-you-restore-a-deleted-commit-on-git-yr1x3ygx)
   by Dmytro Khmelenko on Hacker Noon (the answer is yes, with the help of the reflog).
+* [Git Concepts I Wish I Knew Years
+  Ago](https://dev.to/g_abud/advanced-git-reference-1o9j?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email)
+  by Gabriel Abud on Dev.to
 
 __Git tools and sites__
 
