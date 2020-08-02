@@ -54,7 +54,7 @@ This edition covers what happened during the month of June 2020.
   than the norm."
 
   Off the list discussions were ongoing, and
-  [Petr Baudis wrote on twitter about naming the `master` branch in Git](https://twitter.com/xpasky/status/1271477451756056577)
+  [Petr Baudis wrote on Twitter about naming the `master` branch in Git](https://twitter.com/xpasky/status/1271477451756056577)
 
   > I picked the names "master" (and "origin") in the early Git tooling back in 2005.
   >
@@ -62,7 +62,7 @@ This edition covers what happened during the month of June 2020.
   >
   > I have wished many times I would have named them "main" (and "upstream") instead.
   >
-  > Glad it's happenning @natfriedman
+  > Glad it's happening @natfriedman
 
   When asked for which meaning of `master` was intended,
   [Petr replied](https://twitter.com/xpasky/status/1272280760280637441)
@@ -298,7 +298,7 @@ __Various__
 
 * [Highlights from Git 2.28](https://github.blog/2020-07-27-highlights-from-git-2-28/)
   by Taylor Blau on GitHub Blog, mentioning among others `init.defaultBranch`,
-  changed-path Bloom filters, `git bugreport` command and `git log` new `--show-pulls` option.
+  changed-path Bloom filters, the `git bugreport` command and `git log`'s new `--show-pulls` option.
 
 * The [Tower](https://www.git-tower.com/) Git client for Windows and MacOS now supports
   [CMD+Z for Git](https://css-tricks.com/cmdz-for-git-is-here/) (a universal undo).
@@ -326,7 +326,7 @@ __Light reading__
   [#57](https://git.github.io/rev_news/2019/11/20/edition-57/)
 * [Fedora Classroom: Git 101 with Pagure](https://fedoramagazine.org/fedora-classroom-session-git-101-with-pagure/)
   session was [streamed on YouTube](https://www.youtube.com/watch?v=HfsKvRecniI)
-  on Fedora Project channel.
+  on the Fedora Project channel.
 * [How To Create A GitHub Profile README](https://dev.to/m0nica/how-to-create-a-github-profile-readme-1paj)
   by Monica Powell on Dev.to.
 * [Top 13 GitHub Alternatives in 2020 [Free and Paid]](https://dzone.com/articles/top-13-github-alternatives-in-2020-free-and-paid)
@@ -336,7 +336,7 @@ __Light reading__
 * [6 best practices for teams using Git](https://opensource.com/article/20/7/git-best-practices)
   by Ravi Chandran on OpenSource.com.
 * [Use `broot` and `meld` to diff before commit](https://dystroy.org/blog/gg/) by Denys Séguret
-  (author of [broot](https://dystroy.org/broot/), which is the tool to navigate file trees).
+  (author of [broot](https://dystroy.org/broot/), which is a tool to navigate file trees).
 * [Basic Git Analogy for Contributing to Open Source Project](https://medium.com/@thesagarsehgal/basic-git-analogy-for-contributing-to-open-source-project-8c314789326e)
   by Sagar Seghal on Medium.
 * [Can You Restore A Deleted Commit on Git?](https://www.hackernoon.com/can-you-restore-a-deleted-commit-on-git-yr1x3ygx)
