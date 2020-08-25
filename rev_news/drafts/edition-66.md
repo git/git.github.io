@@ -61,7 +61,7 @@ This edition covers what happened during the month of July 2020.
   email can be read as a guide to modernizing test scripts.
 
   Elijah Newren replied to Junio's suggestion, pointing to
-  [an email from one year ago](https://lore.kernel.org/git/xmqqk1ozb6qy.fsf@gitster-ct.c.googlers.com/),
+  [an email from two years ago](https://lore.kernel.org/git/xmqqk1ozb6qy.fsf@gitster-ct.c.googlers.com/),
   where the same issue was already discussed and where Junio suggested
   that `git mv` on a conflicting file could just move the file and
   remove its conflicting status, in the same way as `git rm` and
