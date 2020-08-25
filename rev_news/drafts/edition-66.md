@@ -1,13 +1,13 @@
 ---
-title: Git Rev News Edition 66 (August 26th, 2020)
+title: Git Rev News Edition 66 (August 27th, 2020)
 layout: default
-date: 2020-08-26 12:06:51 +0100
+date: 2020-08-27 12:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 66 (August 26th, 2020)
+## Git Rev News: Edition 66 (August 27th, 2020)
 
 Welcome to the 66th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
