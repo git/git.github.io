@@ -121,6 +121,11 @@ This edition covers what happened during the month of July 2020.
 
 __Various__
 
+* GitLab is looking for a Backend Engineer with Git experience to join
+  its Gitaly team. See
+  [the job description](https://about.gitlab.com/job-families/engineering/backend-engineer/#gitaly)
+  and [apply through the GitLab Talent Community](https://about.gitlab.com/jobs/careers/)
+  if you are interested.
 
 __Light reading__
 
