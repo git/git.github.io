@@ -126,11 +126,45 @@ __Various__
   [the job description](https://about.gitlab.com/job-families/engineering/backend-engineer/#gitaly)
   and [apply through the GitLab Talent Community](https://about.gitlab.com/jobs/careers/)
   if you are interested.
+* [China is building a GitHub alternative called Gitee](https://techcrunch.com/2020/08/21/china-is-building-its-github-alternative-gitee/) (on TechCrunch)
+* [Conditional steps and improvements to logs in Bitbucket Pipelines](https://bitbucket.org/blog/conditional-steps-and-improvements-to-logs-in-bitbucket-pipelines)
+  by Peter Plewa
 
 __Light reading__
 
+* [Creating a GitHub Action to detect toxic comments using TensorFlow.js](https://charliegerard.dev/blog/github-action-toxic-comments)
+  by Charlie Gerard (also on [Dev.to](https://dev.to/devdevcharlie/creating-a-github-action-to-detect-toxic-comments-using-tensorflow-js-13bo)),
+  using TensorFlow's toxicity pre-trained model
+* [What Is Git ? – Explore A Distributed Version Control Tool](https://www.edureka.co/blog/what-is-git/)
+  by Reshma Ahmed on Edureka! blog
+* [Lecture 6: Version Control (git) (2020)](https://www.youtube.com/watch?v=2sjqTHE0zok),
+  part of lecture videos from the class offered during MIT's Independent Activities Period in 2020,
+  from the ["Missing Semester" course](https://missing.csail.mit.edu/about/)
+  providing hands-on introduction to tools and techniques in Computer Science
+* [Don't ignore .gitignore](https://opensource.com/article/20/8/dont-ignore-gitignore)
+  by Rajeev Bera on Opensource.com
+* [How to write a good commit message](https://dev.to/chrissiemhrk/git-commit-message-5e21)
+  by Chrissie on Dev.to; one of many such articles
+* [Searching code with Sourcegraph [LWN.net]](https://lwn.net/Articles/828748/)
+  by Ben Hoyt.  Open-sourcing [Sourcegraph](https://about.sourcegraph.com/) was covered in
+  [Git Rev News #44 (October 24th, 2018)](https://git.github.io/rev_news/2018/10/24/edition-44/)
+* [Using Git with WordPress — Part 1](https://www.git-tower.com/blog/git-wordpress-1/)
+  by Kristian Lumme
+* [A Resource for all Things Git](https://codeburst.io/a-resource-for-all-things-git-b63d6626beca)
+  by Lea Cohen o codeburst.io is a list of articles about Git, with descriptions
 
 __Git tools and sites__
+
+* [Hosted version of Sourcegraph](https://sourcegraph.com/search)
+  allows to search "top" public repositories from various code hosting sites;
+  there are also [browser extensions](https://docs.sourcegraph.com/integration/browser_extension) for Chrome and Firefox
+  that enable its features to be used when browsing on hosts like GitHub and GitLab
+* [Autohook](https://github.com/Autohook/Autohook)
+  is a very, _very_ small Git hook manager in bash with focus on automation
+* [RepoZ](https://github.com/awaescher/RepoZ)
+  is a zero-conf git repository hub for Windows and macOS,
+  providing a navigation widget allowing for quick overview of your repositories,
+  with a sidekick command line app called **grr** and Windows Explorer-enhancements
 
 
 ## Credits
