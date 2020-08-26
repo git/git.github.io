@@ -72,8 +72,8 @@ This edition covers what happened during the month of July 2020.
   message was perfectly fine.
 
   Junio replied to Elijah saying that he was not convinced any more
-  that what he had suggested one year ago was actually the right thing
-  to do, and then describing in details some issues with his old
+  that what he had suggested two years ago was actually the right
+  thing to do, and then describing in details some issues with his old
   suggestion. Junio agreed though that fixing the error message as in
   Chris' patch was a "strict improvement".
 
