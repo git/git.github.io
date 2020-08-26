@@ -27,15 +27,15 @@ This edition covers what happened during the month of July 2020.
 * [git-mv: improve error message for conflicted file](https://lore.kernel.org/git/pull.678.git.1595028293855.gitgitgadget@gmail.com/)
 
   Chris Torek sent a patch to change the error message from `git mv`
-  when it's used on a file that has unresolved conflicts. Previously
-  in this special case, `git mv` would error out with the same error
+  when it's used on a file that has unresolved conflicts. Previously,
+  in this special case `git mv` would error out with the same error
   message as if the file was not managed by Git, that is:
 
   "fatal: not under version control, src=..."
 
-  This was of course misleading, so Chris' patch was detecting this
+  This was of course misleading, so Chris' patch implemented detecting this
   case and then using the new "must resolve merge conflict first"
-  error message in this case.
+  error message if applicable.
 
   Eric Sunshine first reviewed the patch suggesting a small code
   improvement in the detection of this case, and a more succinct new
@@ -52,13 +52,14 @@ This edition covers what happened during the month of July 2020.
 
   Chris also asked if he should clean up and modernize other tests in
   the test script that could benefit from Eric's suggestions, but Eric
-  replied that the test script, "t7001-mv.sh", has so many old style
+  replied that the test script, "t7001-mv.sh", had so many old style
   issues that such improvements should happen in a dedicated patch
   series.
 
   Interestingly Eric listed 17 different old style issues, and for
-  each one he described what should be done to fix them, so that his
-  email can be read as a guide to modernizing test scripts.
+  each one he described what should be done to fix them, so that
+  [his email](https://lore.kernel.org/git/CAPig+cQpUu2UO-+jWn1nTaDykWnxwuEitzVB7PnW2SS_b7V8Hg@mail.gmail.com/)
+  can be read as a guide to modernizing test scripts.
 
   Elijah Newren replied to Junio's suggestion, pointing to
   [an email from two years ago](https://lore.kernel.org/git/xmqqk1ozb6qy.fsf@gitster-ct.c.googlers.com/),
@@ -122,49 +123,50 @@ This edition covers what happened during the month of July 2020.
 __Various__
 
 * GitLab is looking for a Backend Engineer with Git experience to join
-  its Gitaly team. See
+  their Gitaly team. See
   [the job description](https://about.gitlab.com/job-families/engineering/backend-engineer/#gitaly)
   and [apply through the GitLab Talent Community](https://about.gitlab.com/jobs/careers/)
   if you are interested.
-* [China is building a GitHub alternative called Gitee](https://techcrunch.com/2020/08/21/china-is-building-its-github-alternative-gitee/) (on TechCrunch)
+* [China is building a GitHub alternative called Gitee](https://techcrunch.com/2020/08/21/china-is-building-its-github-alternative-gitee/) (on TechCrunch).
 * [Conditional steps and improvements to logs in Bitbucket Pipelines](https://bitbucket.org/blog/conditional-steps-and-improvements-to-logs-in-bitbucket-pipelines)
-  by Peter Plewa
+  by Peter Plewa.
 
 __Light reading__
 
 * [Creating a GitHub Action to detect toxic comments using TensorFlow.js](https://charliegerard.dev/blog/github-action-toxic-comments)
   by Charlie Gerard (also on [Dev.to](https://dev.to/devdevcharlie/creating-a-github-action-to-detect-toxic-comments-using-tensorflow-js-13bo)),
-  using TensorFlow's toxicity pre-trained model
+  using TensorFlow's toxicity pre-trained model.
 * [What Is Git ? – Explore A Distributed Version Control Tool](https://www.edureka.co/blog/what-is-git/)
-  by Reshma Ahmed on Edureka! blog
+  by Reshma Ahmed on the Edureka! blog.
 * [Lecture 6: Version Control (git) (2020)](https://www.youtube.com/watch?v=2sjqTHE0zok),
   part of lecture videos from the class offered during MIT's Independent Activities Period in 2020,
   from the ["Missing Semester" course](https://missing.csail.mit.edu/about/)
-  providing hands-on introduction to tools and techniques in Computer Science
+  providing hands-on introduction to tools and techniques in Computer Science.
 * [Don't ignore .gitignore](https://opensource.com/article/20/8/dont-ignore-gitignore)
-  by Rajeev Bera on Opensource.com
+  by Rajeev Bera on opensource.com.
 * [How to write a good commit message](https://dev.to/chrissiemhrk/git-commit-message-5e21)
-  by Chrissie on Dev.to; one of many such articles
+  by Chrissie on Dev.to; one of many such articles.
 * [Searching code with Sourcegraph [LWN.net]](https://lwn.net/Articles/828748/)
   by Ben Hoyt.  Open-sourcing [Sourcegraph](https://about.sourcegraph.com/) was covered in
-  [Git Rev News #44 (October 24th, 2018)](https://git.github.io/rev_news/2018/10/24/edition-44/)
+  [Git Rev News #44 (October 24th, 2018)](https://git.github.io/rev_news/2018/10/24/edition-44/).
 * [Using Git with WordPress — Part 1](https://www.git-tower.com/blog/git-wordpress-1/)
-  by Kristian Lumme
+  by Kristian Lumme.
 * [A Resource for all Things Git](https://codeburst.io/a-resource-for-all-things-git-b63d6626beca)
-  by Lea Cohen o codeburst.io is a list of articles about Git, with descriptions
+  by Lea Cohen on codeburst.io is a list of articles about Git, with descriptions.
 
 __Git tools and sites__
 
-* [Hosted version of Sourcegraph](https://sourcegraph.com/search)
-  allows to search "top" public repositories from various code hosting sites;
+* [Sourcegraph Cloud](https://sourcegraph.com/search)
+  allows to search "top" public repositories from various code hosting sites,
+  while self-hosted instances can be used to also search private and local repositories;
   there are also [browser extensions](https://docs.sourcegraph.com/integration/browser_extension) for Chrome and Firefox
-  that enable its features to be used when browsing on hosts like GitHub and GitLab
+  that enable its features to be used when browsing on hosts like GitHub and GitLab.
 * [Autohook](https://github.com/Autohook/Autohook)
-  is a very, _very_ small Git hook manager in bash with focus on automation
+  is a very, _very_ small Git hook manager in bash with focus on automation.
 * [RepoZ](https://github.com/awaescher/RepoZ)
   is a zero-conf git repository hub for Windows and macOS,
   providing a navigation widget allowing for quick overview of your repositories,
-  with a sidekick command line app called **grr** and Windows Explorer-enhancements
+  with a sidekick command line app called `grr` and Windows Explorer enhancements.
 
 
 ## Credits
