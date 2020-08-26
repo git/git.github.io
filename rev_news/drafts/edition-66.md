@@ -89,9 +89,117 @@ This edition covers what happened during the month of July 2020.
   message, but Chris' version 2 patch got merged to the master branch
   as is.
 
-<!---
+
 ### Support
--->
+
+* [How can I search git log with ceratin keyword but without the other keyword?](https://public-inbox.org/git/CAAvDm6Z2HcQkyinCD4hKTnqGR3gcXodhoo0YKSnbB-vDJcn3MQ@mail.gmail.com/t/#u)
+
+  孙世龙 sunshilong asked how to search for commits in `git log` that include
+  certain keyword A, but at the same time do not have another keyword B in them.
+  The example provided was a branch with three commits:
+
+  > b90b03f b12
+  > 27f7577 b1
+  > 7268b40 t123
+
+  The original poster wanted to use `git log --grep` to find commits that match
+  "12" but not "t123". In this example it should return only "b90b03f b12" as
+  search result.
+
+  Carlo Arenas proposed using features of [PCRE syntax](https://perldoc.perl.org/perlre.html)
+  (Perl Compatibile Regular Expressions) with a negative lookahead assertion and
+  word boundary to generate expression that matches one but not the other:
+
+  > `git log -P --all-match --grep '12' --grep '\b(?!t123\b)\w+'`
+
+  The syntax was explained by Jeff King, alias Peff, who also said that the
+  short option `-P` had to be spelled `--perl-regexp` before Git version
+  v2.14.0. He also reminded that for this to work one also need a version of Git
+  built with libpcre support.
+
+  It turned out however that it [didn't resolve](https://public-inbox.org/git/CAAvDm6Z6SA8rYYHaFT=APBSx0tM+5rHseP+fRLufgDxvEthsww@mail.gmail.com/)
+  the [more] real issue that sunshilong had:
+
+  > I wonder why this command doesn't work well.
+  >
+  > I intend to find the comment with the keyword "12" but without "comments"
+  > whereas the output is something like this:
+  >
+  >     git log --perl-regexp --all-match --grep=12 --grep '\b(?!comments\b)\w+'
+  >     commit f5b6c3e33bd2559d6976b1d589071a5928992601
+  >     Author: sunshilong <sunshilong369@gmail.com>
+  >     Date:   2020-04-12 23:00:29 +0800
+  >
+  >         comments 2020.04.12 ng
+
+  Peff responded that he can't think of a way to do what you want just a regex,
+  and that currently [Git supports similar feature only in `git grep`](https://public-inbox.org/git/20200717063324.GB1179001@coredump.intra.peff.net/):
+
+  > The natural thing to me would be the equivalent of:
+  >
+  >       git grep -e 12 --and --not -e comments
+  >
+  > The underlying grep machinery in Git understands how to compose multiple
+  > patterns like this, and the command above really does work (though of
+  > course it is searching for lines in a file and not commit messages).
+  >
+  > But none of that is exposed via the command-line of "git log". I think
+  > it would be possible to do so, but I'm not sure how tricky it would be
+  > (certainly one complication is that "--not" already means something else
+  > there, but presumably we could have "--grep-and", "--grep-not", etc).
+
+  The idea of `--grep-and` and `--grep-not` to disambiguate the `--not` (which
+  means something completely different for the log family) is
+  [as old as 2012](https://lore.kernel.org/git/7vr4q45y65.fsf@alter.siamese.dyndns.org/),
+  as Junio C Hamano reminded.  He then went to [explain the problem](https://public-inbox.org/git/xmqq7dv2fnpb.fsf@gitster.c.googlers.com/)
+  with properly implemeting such feature:
+
+  > Having said that, I do not think our underlying grep machinery is
+  > equipped to answer "find every commit whose log message has X but
+  > not Y", even if we exposed the interface that is equivalent to that
+  > of "git grep" to "git log".
+  >
+  > There are two levels of boolean combination involved in running our
+  > "grep" machinery.  The lower level is used to determine if each line
+  > matches the criteria.  The main consumer of the "grep" machinery is
+  > of course "git grep" and because it is line oriented, we have quite
+  > a rich set of operations and combinations to say things like "if a
+  > line has X and Y on it in any order, but not Z on it, then the line
+  > is a match."  That is what "--not", "--and", "--or" (not exposed to
+  > the "git log" interface) express and we even take "(" and ")" for
+  > grouping, e.g. "( X --or Y ) --and --not Z".
+  >
+  > Another level of combination is to determine if the entire document
+  > matches.  It often happens that you want to find a document with
+  > both X and Y in it, and "grep -e X --and -e Y" is *NOT* a way to do
+  > so---the "--and" is a line-level combinator and tells the machinery
+  > to find lines that have both X and Y on them.
+  >
+  > We have a fairly ad-hoc single mechanism for boolean combination at
+  > this level and that is the "--all-match" option, which says "Look at
+  > the boolean expression you used to find each matching line, and
+  > separate them at the OR operator at the top level.  Now, apply the
+  > matching logic to all lines in a document and see if _all_ the
+  > clauses joined by the top-level OR operators matched at least once.
+  > If yes, then the document matches."
+  >
+  > That is how "git grep --all-match -e X -e Y" finds documents that
+  > refer to both X and Y but not necessarily on the same line.
+  >
+  > There is not much room for the line-level "--not" operator to
+  > participate in this picture.  "git grep -e X --not -e Y" would mean
+  > "find lines that has X, or that does not have Y", so as long as a
+  > document has one line with X on it and one line (which can be but
+  > does not have to be the same line) that does not have Y on it, the
+  > variant of that search with "--all-match" in it would say "yup the
+  > doc matches".  But that is definitely not what the user who wants to
+  > say "if a doc has X in it, I want to see it, but I do not want to
+  > see it if it also has Y" wants to see.
+
+  Then the discussion petered out, without much further help. It remains to be
+  seen if somebody would take up the challenge of improving Git search
+  capabilities by adding support for boolean combinations of line-level and
+  document-level match operations.
 
 <!---
 ## Developer Spotlight:
