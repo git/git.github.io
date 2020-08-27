@@ -114,7 +114,7 @@ This edition covers what happened during the month of July 2020.
 
   The syntax was explained by Jeff King, alias Peff, who also said that the
   short option `-P` had to be spelled `--perl-regexp` before Git version
-  v2.14.0. He also reminded that for this to work one also need a version of Git
+  v2.14.0. He also reminded that for this to work one also needs a version of Git
   built with libpcre support.
 
   It turned out however that it [didn't resolve](https://public-inbox.org/git/CAAvDm6Z6SA8rYYHaFT=APBSx0tM+5rHseP+fRLufgDxvEthsww@mail.gmail.com/)
@@ -132,7 +132,7 @@ This edition covers what happened during the month of July 2020.
   >
   >         comments 2020.04.12 ng
 
-  Peff responded that he can't think of a way to do what you want just a regex,
+  Peff responded that he can't think of a way to achieve that just using a regex,
   and that currently [Git supports similar feature only in `git grep`](https://public-inbox.org/git/20200717063324.GB1179001@coredump.intra.peff.net/):
 
   > The natural thing to me would be the equivalent of:
@@ -148,11 +148,11 @@ This edition covers what happened during the month of July 2020.
   > (certainly one complication is that "--not" already means something else
   > there, but presumably we could have "--grep-and", "--grep-not", etc).
 
-  The idea of `--grep-and` and `--grep-not` to disambiguate the `--not` (which
+  The idea of introducing `--grep-and` and `--grep-not` to disambiguate from `--not` (which
   means something completely different for the log family) is
   [as old as 2012](https://lore.kernel.org/git/7vr4q45y65.fsf@alter.siamese.dyndns.org/),
   as Junio C Hamano reminded.  He then went to [explain the problem](https://public-inbox.org/git/xmqq7dv2fnpb.fsf@gitster.c.googlers.com/)
-  with properly implemeting such feature:
+  with properly implementing such feature:
 
   > Having said that, I do not think our underlying grep machinery is
   > equipped to answer "find every commit whose log message has X but
