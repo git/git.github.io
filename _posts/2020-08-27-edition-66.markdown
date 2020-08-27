@@ -98,8 +98,8 @@ This edition covers what happened during the month of July 2020.
   certain keyword A, but at the same time do not have another keyword B in them.
   The example provided was a branch with three commits:
 
-  > b90b03f b12
-  > 27f7577 b1
+  > b90b03f b12  
+  > 27f7577 b1  
   > 7268b40 t123
 
   The original poster wanted to use `git log --grep` to find commits that match
