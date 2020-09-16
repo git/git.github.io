@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Historical Summer of Code Materials
+title: Historical Summer of Code and Outreachy Materials
 ---
 
-These pages are historical application materials for Summer of Code and
-other programs. They are for reference only!
+These pages are historical materials for Summer of Code and
+Outreachy. They are for reference only!
 
 <ul>
 {% for node in site.pages reversed %}
