@@ -67,7 +67,7 @@ style that is now outdated.
 In the following email it is explained in details how to modernize and
 clean up the t7001 test script:
 
-https://lore.kernel.org/git/CAPig+cQpUu2UO-+jWn1nTaDykWnxwuEitzVB7PnW2SS_b7V8Hg@mail.gmail.com/
+<https://lore.kernel.org/git/CAPig+cQpUu2UO-+jWn1nTaDykWnxwuEitzVB7PnW2SS_b7V8Hg@mail.gmail.com/>
 
 t7001 is not the only test script where similar changes could be made
 though.
