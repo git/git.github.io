@@ -79,3 +79,15 @@ worked on by asking on the mailing list before starting to work on it.
 There should be only one kind of change per commit. For example if one
 of your commits indents test bodies with TABs, instead of spaces, then
 this should be the only kind of change in this commit.
+
+### Unify the meaning of `-dirty` between `diff` and `describe`
+
+`git diff` reports a submodule directory, whose tracked contents match
+the commit at the `HEAD` in the submodule, as `-dirty` when there is an
+untracked file in the submodule directory.  This is inconsistent with
+what `git describe --dirty` says when run in the submodule directory in
+that state.
+
+Fix `git diff` to use the same definition of dirtyness for such a
+submodule directory (or the other way around).
+[[cf](https://lore.kernel.org/git/xmqqo8m1k542.fsf@gitster.c.googlers.com)]
