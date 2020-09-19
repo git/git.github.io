@@ -50,6 +50,9 @@ Arista Networks, a Fortune 500 company, has rolled out mandatory commit signing 
 
 __Git tools and sites__
 
+* [ugit: DIY Git in Python](https://www.leshenko.net/p/ugit/#) is a
+  tutorial to help learn about Git internals by building an
+  implementation of Git in Python.
 
 ## Credits
 
