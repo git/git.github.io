@@ -43,10 +43,14 @@ __Various__
 
 __Light reading__
 
-Arista Networks, a Fortune 500 company, has rolled out mandatory commit signing across their git repositories. Read about their journey at <https://eos.arista.com/commit-signing-with-git-at-enterprise-scale/> and learn about how they:
-* Manage code signing keys across a large company
-* Enforce that all commits are signed
-* Audit git repositories to ensure that no unsigned commits are added
+* Arista Networks, a Fortune 500 company, has rolled out mandatory
+  commit signing across their git repositories. Read about their
+  journey at
+  <https://eos.arista.com/commit-signing-with-git-at-enterprise-scale/>
+  and learn about how they:
+  * Manage code signing keys across a large company
+  * Enforce that all commits are signed
+  * Audit git repositories to ensure that no unsigned commits are added
 
 __Git tools and sites__
 
