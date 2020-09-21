@@ -125,6 +125,10 @@ __Git tools and sites__
   tutorial to help learn about Git internals by building an
   implementation of Git in Python.
 
+* [grokmirror-2.0](https://lore.kernel.org/git/20200921170651.aszbydzvnj7l4y2w@chatter.i7.local/)
+  is a Git mirroring software announced by Konstantin Ryabitsev on the
+  Git mailing list. It was developed by kernel.org for its own use.
+
 ## Credits
 
 This edition of Git Rev News was curated by
