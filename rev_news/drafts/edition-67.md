@@ -35,6 +35,23 @@ This edition covers what happened during the month of August 2020.
 
 ## Releases
 
++ GitHub Enterprise [2.22.0](https://enterprise.github.com/releases/2.22.0/notes),
+[2.21.7](https://enterprise.github.com/releases/2.21.7/notes),
+[2.20.16](https://enterprise.github.com/releases/2.20.16/notes),
+[2.19.22](https://enterprise.github.com/releases/2.19.22/notes),
+[2.21.6](https://enterprise.github.com/releases/2.21.6/notes),
+[2.20.15](https://enterprise.github.com/releases/2.20.15/notes),
+[2.19.21](https://enterprise.github.com/releases/2.19.21/notes)
++ GitLab [13.3.6](https://about.gitlab.com/releases/2020/09/14/gitlab-13-3-6-released/),
+[13.3.5](https://about.gitlab.com/releases/2020/09/04/gitlab-13-3-5-released/),
+[13.3.4](https://about.gitlab.com/releases/2020/09/02/security-release-gitlab-13-3-3-released/),
+[13.3.2](https://about.gitlab.com/releases/2020/08/28/gitlab-13-3-2-released/),
+[13.3.1](https://about.gitlab.com/releases/2020/08/25/gitlab-13-3-1-released/)
++ Bitbucket Server [7.6](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ GitKraken [7.3.2](https://support.gitkraken.com/release-notes/current),
+[7.3.1](https://support.gitkraken.com/release-notes/current),
+[7.3.0](https://support.gitkraken.com/release-notes/current)
++ GitHub Desktop [2.5.5](https://desktop.github.com/release-notes/)
 
 ## Other News
 
