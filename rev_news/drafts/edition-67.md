@@ -17,9 +17,23 @@ This edition covers what happened during the month of August 2020.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [GSoC 2020 End](https://summerofcode.withgoogle.com/organizations/4722049416691712/#projects)
+
+  The Google Summer of Code 2020 officially ended on September 8,
+  2020. Congratulations to the three students who were mentored by the
+  Git community, as they successfully passed all the
+  evaluations! Their final reports and code submissions are available:
+
+  * Hariom Verma, who was mentored by Heba Waly and Christian Couder,
+    worked on ["Unify ref-filter formats with other --pretty formats"](https://harry-hov.github.io/blogs/posts/the-final-report).
+
+  * Abhishek Kumar, who was mentored by Jakub Narębski and D. Stolee,
+    worked on ["Implement Generation Number v2"](https://github.com/abhishekkumar2718/GSoC20/blob/master/README.md).
+
+  * Shourya Shukla, who was mentored by Kaartic Sivaraam and Christian Couder,
+    worked on ["Convert submodule to builtin"](https://shouryashukla.blogspot.com/2020/08/the-final-report.html).
 
 <!---
 ### Reviews
