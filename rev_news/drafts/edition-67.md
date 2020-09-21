@@ -45,7 +45,7 @@ This edition covers what happened during the month of August 2020.
 
 * What are you doing on the Git project these days, and why?
 
-  I mostly watching for sideline these days, since I'm busy with other
+  I mostly watch for sideline these days, since I'm busy with other
   things. Occasionally, I jump in one or two discussion since that topic
   looks relevant to me. Sometimes, I write a patch or two to support my
   own jobs.
