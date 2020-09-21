@@ -29,9 +29,45 @@ This edition covers what happened during the month of August 2020.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Đoàn Trần Công Danh
+
+* Who are you and what do you do?
+
+  I'm just another average developer addicted to exotic environment.
+  Outside of my $dayjobs, I maintain Git and some other packages for
+  VoidLinux.
+
+* What would you name your most important contribution to Git?
+
+  I would consider fixing remaining problems with musl libc my most
+  important contributions to Git,  since I mostly stay inside my musl
+  box these days.
+
+* What are you doing on the Git project these days, and why?
+
+  I mostly watching for sideline these days, since I'm busy with other
+  things. Occasionally, I jump in one or two discussion since that topic
+  looks relevant to me. Sometimes, I write a patch or two to support my
+  own jobs.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+  I don't have anything specific in mind, except the transition into the
+  new hash algorithm, brian m. carlson has done a very good job, and
+  I understand the transition would require a long transition period,
+  testing, a lot of testing.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+  The diff to merge-base notation (upstream...fork) of diff family.
+  This has been floating in the mailing list for a while, and I won't
+  waste this opportunity to not mention it again.
+
+  There's an on-going change from Denton Liu to [support `--merge-base`](https://public-inbox.org/git/cover.1600600823.git.liu.denton@gmail.com/)
+  into diff family. Hopefully, people can retrain their brain-muscles to
+  use this new option instead.
 
 ## Releases
 
