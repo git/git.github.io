@@ -35,9 +35,95 @@ This edition covers what happened during the month of August 2020.
   * Shourya Shukla, who was mentored by Kaartic Sivaraam and Christian Couder,
     worked on ["Convert submodule to builtin"](https://shouryashukla.blogspot.com/2020/08/the-final-report.html).
 
-<!---
 ### Reviews
--->
+
+* [[RFC PATCH 0/2]extend --abbrev support to diff-patch format](https://lore.kernel.org/git/cover.1596887883.git.congdanhqx@gmail.com/)
+
+  Đoàn Trần Công Danh sent a small RFC patch series that made the diff
+  machinery, which is used by `git diff` and similar commands, support
+  the `--abbrev` option when it shows a patch.
+
+  The diff machinery can produce 3 different kinds of output. The
+  first one is called the "diff-raw" format, and is used when `--raw`
+  option is passed. The second one is called the "diff-tree" format,
+  and is used by `git diff-tree`. The third one is called the
+  "diff-patch" format, and is used when showing regular diffs in a
+  similar way as the
+  [unified format of the Unix `diff` command](https://en.wikipedia.org/wiki/Diff#Unified_format).
+
+  The `--abbrev` option allowed customizing the length of object names
+  displayed in the "diff-raw" and "diff-tree" formats. In these
+  formats, object names only appear in header lines like:
+
+  ```
+  :100644 100644 86e5411f39 f1b1bc8aa0 M  Makefile
+  ```
+
+  In the "diff-patch" format, object names only appear in the index
+  line, which looks like:
+
+  ```
+  index 4adb9ce124..67d9801da3 100644
+  ```
+
+  "diff-patch" was the only format that didn't already support the
+  `--abbrev` option, so Đoàn's patch series actually made the diff
+  machinery and related git commands like `git diff` more consistent.
+
+  "diff-patch" already supported an option called `--full-index` that
+  can be used to display full object names in the index line though.
+
+  In the cover letter of his RFC patch series, Đoàn tried to explain
+  how the changes would improve his workflow when dealing with
+  patches. But Junio Hamano and Jeff King, alias Peff, replied saying
+  that they had trouble understanding the purpose of the series from
+  the explanations in the cover letter.
+
+  A discussion followed in which Peff and Junio suggested using
+  `--full-index` in Đoàn's workflow. A consensus was reached though
+  that Đoàn's patch series was worth moving forward anyway as it
+  improved consistency between the diff formats.
+
+  So Đoàn sent a
+  [version 2](https://lore.kernel.org/git/cover.1597146478.git.congdanhqx@gmail.com/)
+  of his patch series with only changes in the cover letter and in the
+  commit message of the second patch.
+
+  Junio replied to the first patch of the series though. This patch
+  changed how "--no-abbrev" was dealt with. Junio asked for
+  clarifications in the commit message, especially about why the patch
+  was necessary.
+
+  So Đoàn sent a
+  [version 3](https://lore.kernel.org/git/cover.1597364493.git.congdanhqx@gmail.com/)
+  of his patch series with only changes in the commit message of the
+  first patch. After further discussion with Junio, it appears that
+  the patch was not actually necessary.
+
+  In the meantime though Gábor Szeder found that the tests in the
+  second patch were failing when run with
+  GIT_TEST_DEFAULT_HASH=sha256. This setting makes Git use the
+  [SHA-256 hash algorithm](https://en.wikipedia.org/wiki/SHA-2)
+  instead of the usual
+  [SHA-1 hash algorithm](https://en.wikipedia.org/wiki/SHA-1)
+  for object names.
+
+  A discussion about the best approach to fix this then followed
+  between Đoàn, Junio and Brian M. Carlson, who has been working for a
+  long time on implementing support for SHA-256 in Git.
+
+  Đoàn eventually sent a
+  [version 4](https://lore.kernel.org/git/cover.1597926783.git.congdanhqx@gmail.com/)
+  of his patch series, where the first patch of his version 3 had been
+  discarded, but a new patch to improve handling of SHA-256 object
+  names in the tests replaced it.
+
+  Junio and Đoàn discussed further improvements to the commit messages
+  of both patches. Then Đoàn sent a
+  [version 5](https://lore.kernel.org/git/cover.1598010556.git.congdanhqx@gmail.com/)
+  taking these improvements into account.
+
+  The patch series has since been merged into the 'master' branch.
 
 <!---
 ### Support
