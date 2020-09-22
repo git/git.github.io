@@ -1,13 +1,13 @@
 ---
-title: Git Rev News Edition 67 (September 23rd, 2020)
+title: Git Rev News Edition 67 (September 24rd, 2020)
 layout: default
-date: 2020-09-23 12:06:51 +0100
+date: 2020-09-24 12:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 67 (September 23rd, 2020)
+## Git Rev News: Edition 67 (September 24rd, 2020)
 
 Welcome to the 67th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
