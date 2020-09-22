@@ -193,6 +193,19 @@ This edition covers what happened during the month of August 2020.
 
 __Various__
 
+* [Set the default branch for newly-created GitHub repositories](https://github.blog/changelog/2020-08-26-set-the-default-branch-for-newly-created-repositories/)
+  on GitHub Blog.
+
+  On **October 1, 2020**, if you haven't changed the default branch
+  for new repositories for your user, organization, or enterprise on
+  GitHub, it will automatically change from **`master`** to
+  **`main`**.  You can opt out of this change at any time.  Existing
+  repositories will continue to have the same default branch they have
+  now.
+
+* ['There is no way we can keep coding local': GitPod's cloud
+  development platform released into sunlight of open source](https://www.theregister.com/2020/08/25/gitpod_open_sources_cloud_development_platform/) --
+  _The Register_ chats with co-founder Sven Efftinge.
 
 __Light reading__
 
@@ -205,15 +218,69 @@ __Light reading__
   * Enforce that all commits are signed
   * Audit git repositories to ensure that no unsigned commits are added
 
+* Guillaume Papin in his development notes [on a compilation database](https://sarcasm.github.io/notes/dev/compilation-database.html)
+  (a concept that includes, but is not limited to a [JSON Compilation Database](http://clang.llvm.org/docs/JSONCompilationDatabase.html))
+  includes [section on Git](https://sarcasm.github.io/notes/dev/compilation-database.html#git)
+  as one of (and at this time the only) case studies on open source projects.
+
+  There exist patch by Philippe Blain to [add support for generating JSON compilation database](https://lore.kernel.org/git/pull.714.git.1598815707540.gitgitgadget@gmail.com/t/#u)
+  to Git's Makefile.  It is currently [merged into 'next'](https://github.com/git/git/commit/4f4cb66b091c1d87cd42e8a7905b479f3560b28b).
+
+* Keith Peters writes how to create your own [Git-based Wiki](https://www.bit-101.com/blog/2020/09/git-based-wiki/)
+  to save information that one might need later.  The idea is to make
+  use of the fact that many git hosting sites render Markdown on-line,
+  by storing the data in interlinked Markdown files -- the article
+  proposes the template to use.
+
+* [Patterns for writing better git commit messages](https://dev.to/helderburato/patterns-for-writing-better-git-commit-messages-4ba0)
+  by Helder Burato Berto, with references to other articles, and
+  a [git commit template](https://github.com/helderburato/dotfiles/blob/master/git/.gittemplates/commit).
+
+* [Learn Enough Git and Github to take part in the Weekly Challenge](https://dev.to/davorg/learn-enough-git-and-github-to-take-part-in-the-perl-weekly-challenge-gpm)
+  by Dave Cross (**not** intended as "beginners guide to Git and Github").
+
+* [Git Concepts and Workflow for Beginners](https://livecodestream.dev/post/2020-08-21-git-concepts-and-workflow-for-beginners/)
+  by Juan Cruz Martinez on Live Code Stream.
+
 __Git tools and sites__
 
 * [ugit: DIY Git in Python](https://www.leshenko.net/p/ugit/#) is a
   tutorial to help learn about Git internals by building an
   implementation of Git in Python.
 
+* [gitoxide](https://github.com/Byron/gitoxide) (`gix`) is a
+  command-line interface (CLI) to access git repositories. It's
+  written to optimize the _user-experience_, and perform as _good or
+  better than the canonical implementation_.
+
+  It provides an idiomatic, lean, fast and safe pure Rust
+  implementation of Git, and it also provides an easy and safe to use
+  API in the form of various small crates for implementing your own
+  tools.
+
 * [grokmirror-2.0](https://lore.kernel.org/git/20200921170651.aszbydzvnj7l4y2w@chatter.i7.local/)
   is a Git mirroring software announced by Konstantin Ryabitsev on the
   Git mailing list. It was developed by kernel.org for its own use.
+
+* [GitQlient](https://github.com/francescmm/GitQlient), pronounced as
+  git+client (_/gɪtˈklaɪənt/_), is a multi-platform Git client written
+  with Qt, originally forked from [QGit](https://github.com/tibirna/qgit).
+
+  Related project is [GitQlientPlugin](https://github.com/francescmm/GitQlientPlugin),
+  the project to build an integrated QtCreator plugin of GitQlient.
+
+* [Graphtage: A New Semantic Diffing Tool](https://blog.trailofbits.com/2020/08/28/graphtage/)
+  is a command line utility and underlying library for semantically
+  comparing and merging tree-like structures such as JSON, JSON5, XML,
+  HTML, YAML, and TOML files.  You can even compare files that are in
+  two different formats.  When paired with [PolyFile tool](https://blog.trailofbits.com/2019/11/01/two-new-tools-that-tame-the-treachery-of-files/)
+  you can semantically diff arbitrary file formats.
+
+* [Sourcetrail](https://www.sourcetrail.com/) is a free and
+  [open-source](https://github.com/CoatiSoftware/Sourcetrail)
+  cross-platform interactive source explorer, that helps you get
+  productive on unfamiliar source code.  Currently supports
+  C, C++, Java and Python.
 
 ## Credits
 
