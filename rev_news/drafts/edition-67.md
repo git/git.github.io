@@ -43,35 +43,35 @@ This edition covers what happened during the month of August 2020.
   machinery, which is used by `git diff` and similar commands, support
   the `--abbrev` option when it shows a patch.
 
-  The diff machinery can produce 3 different kinds of output. The
-  first one is called the "diff-raw" format, and is used when `--raw`
-  option is passed. The second one is called the "diff-tree" format,
-  and is used by `git diff-tree`. The third one is called the
-  "diff-patch" format, and is used when showing regular diffs in a
-  similar way as the
+  The diff machinery can produce 3 different kinds of output formats,
+  called `--patch`, `--raw` and `--binary` after the options that can
+  generate them. The `--patch` format is used when showing regular
+  diffs in a similar way as the
   [unified format of the Unix `diff` command](https://en.wikipedia.org/wiki/Diff#Unified_format).
 
-  The `--abbrev` option allowed customizing the length of object names
-  displayed in the "diff-raw" and "diff-tree" formats. In these
-  formats, object names only appear in header lines like:
+  The `--abbrev` option allows customizing the length of object names
+  displayed in the `--raw` format, where object names appear before
+  and after for each paths like this:
 
   ```
   :100644 100644 86e5411f39 f1b1bc8aa0 M  Makefile
   ```
 
-  In the "diff-patch" format, object names only appear in the index
-  line, which looks like:
+  In the `--patch` format, object names appear on the index line,
+  which looks like:
 
   ```
   index 4adb9ce124..67d9801da3 100644
   ```
 
-  "diff-patch" was the only format that didn't already support the
-  `--abbrev` option, so Đoàn's patch series actually made the diff
-  machinery and related git commands like `git diff` more consistent.
+  The `--patch` format was the only format that didn't already support
+  the `--abbrev` option, so Đoàn's patch series actually makes the
+  diff machinery and related git commands like `git diff` more
+  consistent.
 
-  "diff-patch" already supported an option called `--full-index` that
-  can be used to display full object names in the index line though.
+  The `--patch` format already supported an option called
+  `--full-index` that can be used to display full object names in the
+  index line though.
 
   In the cover letter of his RFC patch series, Đoàn tried to explain
   how the changes would improve his workflow when dealing with
