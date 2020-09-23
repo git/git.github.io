@@ -281,6 +281,11 @@ __Git tools and sites__
   cross-platform interactive source explorer, that helps you get
   productive on unfamiliar source code.  Currently supports
   C, C++, Java and Python.
+  
+* [`git-in`](https://gist.github.com/phil-blain/d350e91959efa6e7afce60e74bf7e4a8), 
+  a small Python script to import a message or an entire thread from the mailing list 
+  to an IMAP mailbox. Very useful when you are *not* subscribed to the list but want to answer 
+  an email from the list, while being be able to quote parts of the message.
 
 ## Credits
 
