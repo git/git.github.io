@@ -21,13 +21,13 @@ This edition covers what happened during the month of August 2020.
 
 * [GSoC 2020 End](https://summerofcode.withgoogle.com/organizations/4722049416691712/#projects)
 
-  The Google Summer of Code 2020 officially ended on September 8,
-  2020. Congratulations to the three students who were mentored by the
+  The Google Summer of Code 2020 officially ended on September 8, 2020.
+  Congratulations to the three students who were mentored by the
   Git community, as they successfully passed all the
   evaluations! Their final reports and code submissions are available:
 
   * Hariom Verma, who was mentored by Heba Waly and Christian Couder,
-    worked on ["Unify ref-filter formats with other --pretty formats"](https://harry-hov.github.io/blogs/posts/the-final-report).
+    worked on ["Unify ref-filter formats with other \-\-pretty formats"](https://harry-hov.github.io/blogs/posts/the-final-report).
 
   * Abhishek Kumar, who was mentored by Jakub Narębski and D. Stolee,
     worked on ["Implement Generation Number v2"](https://github.com/abhishekkumar2718/GSoC20/blob/master/README.md).
@@ -37,9 +37,9 @@ This edition covers what happened during the month of August 2020.
 
 ### Reviews
 
-* [[RFC PATCH 0/2]extend --abbrev support to diff-patch format](https://lore.kernel.org/git/cover.1596887883.git.congdanhqx@gmail.com/)
+* [[RFC PATCH 0/2]extend \-\-abbrev support to diff-patch format](https://lore.kernel.org/git/cover.1596887883.git.congdanhqx@gmail.com/)
 
-  Đoàn Trần Công Danh sent a small RFC patch series that made the diff
+  Đoàn Trần Công Danh sent a small RFC patch series that makes the diff
   machinery, which is used by `git diff` and similar commands, support
   the `--abbrev` option when it shows a patch.
 
@@ -72,12 +72,12 @@ This edition covers what happened during the month of August 2020.
   the explanations in the cover letter.
 
   After a discussion with Peff and Junio, it turns out that using
-  `--full-index` option is a better approach to help Đoàn's workflow
+  the `--full-index` option is a better approach to help Đoàn's workflow
   (the option was specifically designed to ensure that the index
   line in the `--patch` format can be used to exactly identify the
   objects involved in the change to help the users, which was what
   Đoàn's workflow wanted). However, a consensus was reached that
-  Đoàn's patch series was worth movind forward, because it improved
+  Đoàn's patch series was worth moving forward, because it improved
   consistency between the diff formats.
 
   So Đoàn sent a
@@ -86,7 +86,7 @@ This edition covers what happened during the month of August 2020.
   commit message of the second patch.
 
   Junio replied to the first patch of the series though. This patch
-  changed how "--no-abbrev" was dealt with. Junio asked for
+  changed how `--no-abbrev` was dealt with. Junio asked for
   clarifications in the commit message, especially about why the patch
   was necessary.
 
@@ -129,7 +129,7 @@ This edition covers what happened during the month of August 2020.
 
 * Who are you and what do you do?
 
-  I'm just another average developer addicted to exotic environment.
+  I'm just another average developer addicted to an exotic environment.
   Outside of my $dayjobs, I maintain Git and some other packages for
   VoidLinux.
 
@@ -157,12 +157,12 @@ This edition covers what happened during the month of August 2020.
 * If you could remove something from Git without worrying about
   backwards compatibility, what would it be?
 
-  The diff to merge-base notation (upstream...fork) of diff family.
+  The diff to merge-base notation (upstream...fork) of the diff family.
   This has been floating in the mailing list for a while, and I won't
   waste this opportunity to not mention it again.
 
   There's an on-going change from Denton Liu to [support `--merge-base`](https://public-inbox.org/git/cover.1600600823.git.liu.denton@gmail.com/)
-  into diff family. Hopefully, people can retrain their brain-muscles to
+  into the diff family. Hopefully, people can retrain their brain-muscles to
   use this new option instead.
 
 ## Releases
@@ -190,8 +190,7 @@ This edition covers what happened during the month of August 2020.
 __Various__
 
 * [Set the default branch for newly-created GitHub repositories](https://github.blog/changelog/2020-08-26-set-the-default-branch-for-newly-created-repositories/)
-  on GitHub Blog.
-
+  on GitHub Blog.  
   On **October 1, 2020**, if you haven't changed the default branch
   for new repositories for your user, organization, or enterprise on
   GitHub, it will automatically change from **`master`** to
@@ -206,31 +205,31 @@ __Various__
 __Light reading__
 
 * Arista Networks, a Fortune 500 company, has rolled out mandatory
-  commit signing across their git repositories. Read about their
+  commit signing across their Git repositories. Read about their
   journey at
   <https://eos.arista.com/commit-signing-with-git-at-enterprise-scale/>
   and learn about how they:
   * Manage code signing keys across a large company
   * Enforce that all commits are signed
-  * Audit git repositories to ensure that no unsigned commits are added
+  * Audit Git repositories to ensure that no unsigned commits are added.  
 
 * Guillaume Papin in his development notes [on a compilation database](https://sarcasm.github.io/notes/dev/compilation-database.html)
   (a concept that includes, but is not limited to a [JSON Compilation Database](http://clang.llvm.org/docs/JSONCompilationDatabase.html))
   includes [section on Git](https://sarcasm.github.io/notes/dev/compilation-database.html#git)
   as one of (and at this time the only) case studies on open source projects.
 
-  There exist patch by Philippe Blain to [add support for generating JSON compilation database](https://lore.kernel.org/git/pull.714.git.1598815707540.gitgitgadget@gmail.com/t/#u)
+  There exist patch by Philippe Blain to [add support for generating a JSON compilation database](https://lore.kernel.org/git/pull.714.git.1598815707540.gitgitgadget@gmail.com/t/#u)
   to Git's Makefile.  It is currently [merged into 'next'](https://github.com/git/git/commit/4f4cb66b091c1d87cd42e8a7905b479f3560b28b).
 
 * Keith Peters writes how to create your own [Git-based Wiki](https://www.bit-101.com/blog/2020/09/git-based-wiki/)
   to save information that one might need later.  The idea is to make
-  use of the fact that many git hosting sites render Markdown on-line,
+  use of the fact that many Git hosting sites render Markdown on-line,
   by storing the data in interlinked Markdown files -- the article
   proposes the template to use.
 
 * [Patterns for writing better git commit messages](https://dev.to/helderburato/patterns-for-writing-better-git-commit-messages-4ba0)
   by Helder Burato Berto, with references to other articles, and
-  a [git commit template](https://github.com/helderburato/dotfiles/blob/master/git/.gittemplates/commit).
+  a [`git commit` template](https://github.com/helderburato/dotfiles/blob/master/git/.gittemplates/commit).
 
 * [Learn Enough Git and Github to take part in the Weekly Challenge](https://dev.to/davorg/learn-enough-git-and-github-to-take-part-in-the-perl-weekly-challenge-gpm)
   by Dave Cross (**not** intended as "beginners guide to Git and Github").
@@ -245,7 +244,7 @@ __Git tools and sites__
   implementation of Git in Python.
 
 * [gitoxide](https://github.com/Byron/gitoxide) (`gix`) is a
-  command-line interface (CLI) to access git repositories. It's
+  command-line interface (CLI) to access Git repositories. It's
   written to optimize the _user-experience_, and perform as _good or
   better than the canonical implementation_.
 
@@ -256,7 +255,7 @@ __Git tools and sites__
 
 * [grokmirror-2.0](https://lore.kernel.org/git/20200921170651.aszbydzvnj7l4y2w@chatter.i7.local/)
   is a Git mirroring software announced by Konstantin Ryabitsev on the
-  Git mailing list. It was developed by kernel.org for its own use.
+  Git mailing list. It was developed by kernel.org for their own use.
 
 * [GitQlient](https://github.com/francescmm/GitQlient), pronounced as
   git+client (_/gɪtˈklaɪənt/_), is a multi-platform Git client written
@@ -269,18 +268,18 @@ __Git tools and sites__
   is a command line utility and underlying library for semantically
   comparing and merging tree-like structures such as JSON, JSON5, XML,
   HTML, YAML, and TOML files.  You can even compare files that are in
-  two different formats.  When paired with [PolyFile tool](https://blog.trailofbits.com/2019/11/01/two-new-tools-that-tame-the-treachery-of-files/)
+  two different formats.  When paired with the [PolyFile tool](https://blog.trailofbits.com/2019/11/01/two-new-tools-that-tame-the-treachery-of-files/)
   you can semantically diff arbitrary file formats.
 
 * [Sourcetrail](https://www.sourcetrail.com/) is a free and
   [open-source](https://github.com/CoatiSoftware/Sourcetrail)
   cross-platform interactive source explorer, that helps you get
-  productive on unfamiliar source code.  Currently supports
+  productive on unfamiliar source code.  It currently supports
   C, C++, Java and Python.
   
 * [`git-in`](https://gist.github.com/phil-blain/d350e91959efa6e7afce60e74bf7e4a8), 
-  a small Python script to import a message or an entire thread from the mailing list 
-  to an IMAP mailbox. Very useful when you are *not* subscribed to the list but want to answer 
+  a small Python script to import a message or an entire thread from a mailing list 
+  to an IMAP mailbox. Very useful when you are **not** subscribed to the list but want to answer 
   an email from the list, while being be able to quote parts of the message.
 
 ## Credits
