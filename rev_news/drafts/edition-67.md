@@ -43,46 +43,42 @@ This edition covers what happened during the month of August 2020.
   machinery, which is used by `git diff` and similar commands, support
   the `--abbrev` option when it shows a patch.
 
-  The diff machinery can produce 3 different kinds of output formats,
-  called `--patch`, `--raw` and `--binary` after the options that can
-  generate them. The `--patch` format is used when showing regular
-  diffs in a similar way as the
-  [unified format of the Unix `diff` command](https://en.wikipedia.org/wiki/Diff#Unified_format).
-
-  The `--abbrev` option allows customizing the length of object names
-  displayed in the `--raw` format, where object names appear before
-  and after for each paths like this:
+  In addition to the familiar `--patch` format, which is used when
+  showing regular diffs in a way similar to the
+  [unified format of the Unix `diff` command](https://en.wikipedia.org/wiki/Diff#Unified_format),
+  the diff machinery can produce the `--raw` format output to show object
+  names before and after the change for each path like this:
 
   ```
   :100644 100644 86e5411f39 f1b1bc8aa0 M  Makefile
   ```
 
-  In the `--patch` format, object names appear on the index line,
-  which looks like:
+  In the `--patch` format, object names before and after the change
+  appear on the index line, which looks like this:
 
   ```
   index 4adb9ce124..67d9801da3 100644
   ```
 
-  The `--patch` format was the only format that didn't already support
-  the `--abbrev` option, so Đoàn's patch series actually makes the
-  diff machinery and related git commands like `git diff` more
-  consistent.
+  The `--abbrev` option used to control the abbreviation of the
+  object names in the `--raw` format but did not affect those shown
+  on the index line in the `--patch` format. Đoàn's patch series
+  makes the option control both.
 
-  The `--patch` format already supported an option called
-  `--full-index` that can be used to display full object names in the
-  index line though.
-
-  In the cover letter of his RFC patch series, Đoàn tried to explain
+  In the cover letter of his RFC patch series, Đoàn explained
   how the changes would improve his workflow when dealing with
   patches. But Junio Hamano and Jeff King, alias Peff, replied saying
   that they had trouble understanding the purpose of the series from
   the explanations in the cover letter.
 
-  A discussion followed in which Peff and Junio suggested using
-  `--full-index` in Đoàn's workflow. A consensus was reached though
-  that Đoàn's patch series was worth moving forward anyway as it
-  improved consistency between the diff formats.
+  After a discussion with Peff and Junio, it turns out that using
+  `--full-index` option is a better approach to help Đoàn's workflow
+  (the option was specifically designed to ensure that the index
+  line in the `--patch` format can be used to exactly identify the
+  objects involved in the change to help the users, which was what
+  Đoàn's workflow wanted). However, a consensus was reached that
+  Đoàn's patch series was worth movind forward, because it improved
+  consistency between the diff formats.
 
   So Đoàn sent a
   [version 2](https://lore.kernel.org/git/cover.1597146478.git.congdanhqx@gmail.com/)
