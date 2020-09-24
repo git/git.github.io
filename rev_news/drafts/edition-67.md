@@ -189,10 +189,10 @@ This edition covers what happened during the month of August 2020.
 
 __Events__
 
-* The first [Git Contributors' Inclusion Summit] happened on Monday,
-  September 14th, and Tuesday, September 15th. It was attended by
-  around 30 people. Some notes were taken but it's not clear if they
-  are going to be publicly available.
+* The first [Git Contributors' Inclusion Summit](https://code.googlesource.com/git/summit/2020/+/main/index.md)
+  happened on Monday, September 14th, and Tuesday, September 15th. It
+  was attended by around 30 people. Some notes were taken but it's not
+  clear if they are going to be publicly available.
 
 __Various__
 
