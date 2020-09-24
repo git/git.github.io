@@ -209,6 +209,12 @@ __Various__
   development platform released into sunlight of open source](https://www.theregister.com/2020/08/25/gitpod_open_sources_cloud_development_platform/) --
   _The Register_ chats with co-founder Sven Efftinge.
 
+* [Discussions](https://lore.kernel.org/git/20200828065609.GA2105118@coredump.intra.peff.net/)
+  have been going on about the Git project participating in the next
+  [Outreachy](https://www.outreachy.org/) round. So far
+  [3 projects](https://www.outreachy.org/apply/project-selection/#git)
+  have been proposed.
+
 __Light reading__
 
 * Arista Networks, a Fortune 500 company, has rolled out mandatory
