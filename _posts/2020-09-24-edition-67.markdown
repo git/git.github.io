@@ -174,7 +174,8 @@ This edition covers what happened during the month of August 2020.
 [2.21.6](https://enterprise.github.com/releases/2.21.6/notes),
 [2.20.15](https://enterprise.github.com/releases/2.20.15/notes),
 [2.19.21](https://enterprise.github.com/releases/2.19.21/notes)
-+ GitLab [13.3.6](https://about.gitlab.com/releases/2020/09/14/gitlab-13-3-6-released/),
++ GitLab [13.4](https://about.gitlab.com/releases/2020/09/22/gitlab-13-4-released/),
+[13.3.6](https://about.gitlab.com/releases/2020/09/14/gitlab-13-3-6-released/),
 [13.3.5](https://about.gitlab.com/releases/2020/09/04/gitlab-13-3-5-released/),
 [13.3.4](https://about.gitlab.com/releases/2020/09/02/security-release-gitlab-13-3-3-released/),
 [13.3.2](https://about.gitlab.com/releases/2020/08/28/gitlab-13-3-2-released/),
