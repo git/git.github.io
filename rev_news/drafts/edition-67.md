@@ -187,6 +187,13 @@ This edition covers what happened during the month of August 2020.
 
 ## Other News
 
+__Events__
+
+* The first [Git Contributors' Inclusion Summit] happened on Monday,
+  September 14th, and Tuesday, September 15th. It was attended by
+  around 30 people. Some notes were taken but it's not clear if they
+  are going to be publicly available.
+
 __Various__
 
 * [Set the default branch for newly-created GitHub repositories](https://github.blog/changelog/2020-08-26-set-the-default-branch-for-newly-created-repositories/)
