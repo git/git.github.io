@@ -98,7 +98,7 @@ This edition covers what happened during the month of August 2020.
 
   In the meantime though Gábor Szeder found that the tests in the
   second patch were failing when run with
-  GIT_TEST_DEFAULT_HASH=sha256. This setting makes Git use the
+  `GIT_TEST_DEFAULT_HASH=sha256`. This setting makes Git use the
   [SHA-256 hash algorithm](https://en.wikipedia.org/wiki/SHA-2)
   instead of the usual
   [SHA-1 hash algorithm](https://en.wikipedia.org/wiki/SHA-1)
