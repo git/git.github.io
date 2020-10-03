@@ -232,7 +232,7 @@ __Light reading__
   includes [section on Git](https://sarcasm.github.io/notes/dev/compilation-database.html#git)
   as one of (and at this time the only) case studies on open source projects.
 
-  There exist patch by Philippe Blain to [add support for generating a JSON compilation database](https://lore.kernel.org/git/pull.714.git.1598815707540.gitgitgadget@gmail.com/t/#u)
+  There is a patch by Philippe Blain to [add support for generating a JSON compilation database](https://lore.kernel.org/git/pull.714.git.1598815707540.gitgitgadget@gmail.com/t/#u)
   to Git's Makefile.  It is currently [merged into 'next'](https://github.com/git/git/commit/4f4cb66b091c1d87cd42e8a7905b479f3560b28b).
 
 * Keith Peters writes how to create your own [Git-based Wiki](https://www.bit-101.com/blog/2020/09/git-based-wiki/)
@@ -291,7 +291,7 @@ __Git tools and sites__
   productive on unfamiliar source code.  It currently supports
   C, C++, Java and Python.
   
-* [`git-in`](https://gist.github.com/phil-blain/d350e91959efa6e7afce60e74bf7e4a8), 
+* [`git-in`](https://gist.github.com/phil-blain/d350e91959efa6e7afce60e74bf7e4a8) is 
   a small Python script to import a message or an entire thread from a mailing list 
   to an IMAP mailbox. Very useful when you are **not** subscribed to the list but want to answer 
   an email from the list, while being be able to quote parts of the message.
