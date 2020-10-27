@@ -61,6 +61,7 @@ This edition covers what happened during the month of September 2020.
 [2.20.18](https://enterprise.github.com/releases/2.20.18/notes),
 [2.19.24](https://enterprise.github.com/releases/2.19.24/notes)
 + GitHub Desktop [2.5.6](https://desktop.github.com/release-notes/)
++ TortoiseGit [2.11.0](https://tortoisegit.org/download/)
 
 ## Other News
 
