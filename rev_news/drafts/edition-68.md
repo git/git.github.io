@@ -101,9 +101,66 @@ This edition covers what happened during the month of September 2020.
   material in their repositories"."Tarballs can be repacked, but it's
   harder to rewrite Git history to exclude objects."
 
-<!---
-## Developer Spotlight:
--->
+
+## Developer Spotlight: Matheus Tavares Bernardino
+
+* Who are you and what do you do?
+
+  I'm a software developer and MSc student, living in São Paulo, Brazil. I
+  started contributing to Git just over a year ago, through Google Summer of Code
+  (GSoC). During the program, I was fascinated with the internal mechanics of Git
+  and with Git features that I had not known until then. So, at the end of GSoC, I
+  definitely wanted to stick around and learn more. Today, I'm working as a
+  contract developer for Amazon, seeking to parallelize checkout and other Git
+  operations.
+
+* What would you name your most important contribution to Git?
+
+  The improvements in `git grep`'s parallelism, during GSoC. With
+  these changes, we've got [up to 3.3x faster](https://matheustavares.gitlab.io/posts/git-2.26-faster-git-grep)
+  `git grep` searches in the object store, using threads.
+
+* What are you doing on the Git project these days, and why?
+
+  I'm currently working on parallelizing checkout. The parallel version has shown
+  to be particularly effective for repositories located on SSDs or over network
+  file systems ([here are some benchmark numbers](https://lore.kernel.org/git/cover.1597093021.git.matheus.bernardino@usp.br/)).
+  The idea is to make it available to all commands that perform checkout: from
+  the plumbing `git read-tree` to `git clone`, `git sparse-checkout`, and
+  `git checkout` itself.
+
+  It's been an exciting and challenging project! And containing patches
+  and ideas from two previous parallel checkout approaches (by
+  [Duy](https://lore.kernel.org/git/CACsJy8Ab=q0mbdcXn9O7=dKHaOuhUCNk4g6BU5kZHdPM+z7yng@mail.gmail.com/)
+  and [Jeff Hostetler](https://github.com/gitgitgadget/git/pull/628)), I think it
+  really goes to show the power of collaboration and open-source.
+
+* If you could get a team of expert developers to work full time on
+   something in Git for a full year, what would it be?
+
+  Hmm, it would be nice to try to minimize the global states in the codebase. We
+  have a fair amount of thread-unsafe operations, due to reads and writes to
+  global variables or function-scoped static variables. Such variables do offer
+  quite practical mechanics, but they can also hinder the process of adding
+  multi-thread support. Furthermore, they are sometimes hard to locate, which can
+  potentially lead to race conditions. The alternative approach, using
+  multi-processes, usually requires writing more code for communication and
+  synchronization (besides having an extra cost for subprocess spawning).
+
+* If you could remove something from Git without worrying about
+   backwards compatibility, what would it be?
+
+  Hmm, nothing comes to mind right now.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+  I rarely use Git-related tools besides Git itself. But I've always wanted to
+  try and incorporate `tig blame` more in my daily life. I use `git blame` quite
+  a lot, to dig through the code's history and find answers regarding specific
+  designs or implementations. In that sense, what I find most attractive about
+  the `tig` interface, is that it allows to interactively load blame for parent
+  commits, which is quite handy. I guess I still tend to go with the plain
+  `git blame` out of habit.
 
 ## Releases
 
