@@ -171,8 +171,8 @@ This edition covers what happened during the month of September 2020.
 [2.29.0-rc0](https://public-inbox.org/git/xmqqa6x070tn.fsf@gitster.c.googlers.com/)
 + Git for Windows [2.29.1](https://github.com/git-for-windows/git/releases/tag/v2.29.1.windows.1),
 [2.29.0](https://github.com/git-for-windows/git/releases/tag/v2.29.0.windows.1)
-+ [git-filter-repo v2.29.0](https://public-inbox.org/git/CABPp-BG+uP2-t62AfgBauvoRtXfF4pU-xXKq3+YEEhjDdiHR_w@mail.gmail.com/)
-+ [git-assembler 1.2](https://public-inbox.org/git/87mu1f2rc0.fsf@wavexx.thregr.org)
++ git-filter-repo [2.29.0](https://public-inbox.org/git/CABPp-BG+uP2-t62AfgBauvoRtXfF4pU-xXKq3+YEEhjDdiHR_w@mail.gmail.com/)
++ git-assembler [1.2](https://public-inbox.org/git/87mu1f2rc0.fsf@wavexx.thregr.org)
 + libgit2 [1.1.0](https://github.com/libgit2/libgit2/releases/tag/v1.1.0)
 + GitLab [13.3.8](https://about.gitlab.com/releases/2020/10/23/gitlab-13-3-8-released/),
 [13.5](https://about.gitlab.com/releases/2020/10/22/gitlab-13-5-released/),
