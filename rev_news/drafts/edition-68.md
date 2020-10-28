@@ -208,6 +208,10 @@ __Various__
   Sourcehut, or [sr.ht](https://sr.ht/), is a software forge which was covered in
   [Git Rev News Edition #46](https://git.github.io/rev_news/2018/12/19/edition-46/#other-news).
 
+* [Google Summer of Code 2021](https://opensource.googleblog.com/2020/10/google-summer-of-code-2021-is-bringing.html)
+  has been announced with significant changes compared to previous
+  editions. Notably coding hours and period will be reduced from 350
+  hours and 12 weeks to 175 hours and 10 weeks.
 
 __Light reading__
 
