@@ -25,9 +25,81 @@ This edition covers what happened during the month of September 2020.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [Apply git bundle to source tree?](https://lore.kernel.org/git/CAHpGcMJqmUmCR_u3fxSVppzwBo8_6RJG5-WLrXAWXm+OQ6_3bA@mail.gmail.com/)
+
+  Andreas Grünbacher asked the mailing list if there was "a way to
+  apply a particular head in a bundle to a source tree". Using the
+  Linux kernel as an example, he said he would like to create
+  [a bundle](https://git-scm.com/docs/git-bundle) containing Git
+  objects from version 5.8 to version 5.9-rc1:
+
+  ```
+  $ git bundle create v5.9-rc1.bundle v5.8..v5.9-rc1
+  ```
+
+  and then be able to "apply" this bundle either to an existing
+  repository or only a source tree that would already contain code for
+  version 5.8.
+
+  Taylor Blau replied to Andreas that there is no such thing as
+  `git bundle apply`, but that `git fetch` and `git pull` can be used
+  to update an existing repo from a bundle, for example:
+
+  ```
+  $ git pull /path/to/bundle 'refs/tags/v5.9-rc1'
+  ```
+
+  Andreas replied to Taylor that he was looking for a way to apply a
+  bundle to an actual source tree, not a git repository, but Taylor
+  didn't think it was possible.
+
+  Then another Andreas, Andreas Schwab, chimed in to discuss with
+  Andreas Grünbacher what basis was needed to "apply" a bundle.
+
+  In the meantime Junio Hamano, the Git maintainer, replied to the
+  original email from Andreas G. saying that a bundle created with
+  "v5.8..v5.9-rc1" was not like a patch but rather "an equivalent of a
+  (shallow) repository" that required having v5.8 for the bundle to be
+  usable. Junio suggested ways to use such a bundle to update and then
+  work in an existing repo that has v5.8, and asked for ideas to
+  improve the `git bundle` documentation.
+
+  Andreas G. replied to Junio that the documentation was fine, and
+  that he then saw that there's simply not enough information in a
+  bundle for what he wants to achieve on a source tree.
+
+  Konstantin Ryabitsev, a maintainer of kernel.org, also replied to
+  Andreas G.'s initial email suggesting the following command:
+
+  ```
+  curl --header 'Accept-Encoding: gzip' -L https://git.kernel.org/torvalds/p/v5.9-rc1/v5.8 | gunzip - | git apply
+  ```
+
+  Andreas G. liked it, but said that the use case he was thinking
+  about was to replace the patches that are, along with a baseline
+  release, in source packages provided by Linux distributions. As
+  bundles would provide actual Git history, they would be nicer than
+  patches, if they could replace them.
+
+  Thomas Guyot-Sionnest replied that bundles could do that and that
+  it's a "neat idea". He said "bundles could be used for both the base
+  release *and* patches". The source packages would be "bigger
+  initially than a single release", but old bundles could help
+  downloading just the additional bits needed for the next
+  versions. That would help packagers as patches are "best maintained
+  in Git" already.
+
+  Thomas also mentioned that he has been using bundles "since the very
+  beginning" for backups as it's "an efficient way to archive an entire
+  bare repo into a single file and ship it offsite".
+
+  Brian M. Carlson also replied to Andreas G. saying that "Debian
+  considered using Git as part of the 3.0 (git) format", but that
+  there were issues with upstream having "non-free or undistributable
+  material in their repositories"."Tarballs can be repacked, but it's
+  harder to rewrite Git history to exclude objects."
 
 <!---
 ## Developer Spotlight:
