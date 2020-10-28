@@ -211,7 +211,10 @@ __Various__
 * [Google Summer of Code 2021](https://opensource.googleblog.com/2020/10/google-summer-of-code-2021-is-bringing.html)
   has been announced with significant changes compared to previous
   editions. Notably coding hours and period will be reduced from 350
-  hours and 12 weeks to 175 hours and 10 weeks.
+  hours and 12 weeks to 175 hours and 10 weeks; there would be 2 evaluations
+  (instead of 3). Additionally, eligilibility requirements will be relaxed,
+  among others allowing people participating in a variety of different
+  licensed academic programs, not just students of accredited university programs.
 
 __Light reading__
 
