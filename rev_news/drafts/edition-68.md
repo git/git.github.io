@@ -1,4 +1,4 @@
----
+    ---
 title: Git Rev News Edition 68 (October 30th, 2020)
 layout: default
 date: 2020-10-30 12:06:51 +0100
@@ -27,7 +27,7 @@ This edition covers what happened during the month of September 2020.
 
 ### Support
 
-* [Apply git bundle to source tree?](https://lore.kernel.org/git/CAHpGcMJqmUmCR_u3fxSVppzwBo8_6RJG5-WLrXAWXm+OQ6_3bA@mail.gmail.com/)
+* [Apply Git bundle to source tree?](https://lore.kernel.org/git/CAHpGcMJqmUmCR_u3fxSVppzwBo8_6RJG5-WLrXAWXm+OQ6_3bA@mail.gmail.com/)
 
   Andreas Grünbacher asked the mailing list if there was "a way to
   apply a particular head in a bundle to a source tree". Using the
@@ -52,7 +52,7 @@ This edition covers what happened during the month of September 2020.
   ```
 
   Andreas replied to Taylor that he was looking for a way to apply a
-  bundle to an actual source tree, not a git repository, but Taylor
+  bundle to an actual source tree, not a Git repository, but Taylor
   didn't think it was possible.
 
   Then another Andreas, Andreas Schwab, chimed in to discuss with
@@ -84,7 +84,7 @@ This edition covers what happened during the month of September 2020.
   patches, if they could replace them.
 
   Thomas Guyot-Sionnest replied that bundles could do that and that
-  it's a "neat idea". He said "bundles could be used for both the base
+  it was a "neat idea". He said "bundles could be used for both the base
   release *and* patches". The source packages would be "bigger
   initially than a single release", but old bundles could help
   downloading just the additional bits needed for the next
@@ -98,7 +98,7 @@ This edition covers what happened during the month of September 2020.
   Brian M. Carlson also replied to Andreas G. saying that "Debian
   considered using Git as part of the 3.0 (git) format", but that
   there were issues with upstream having "non-free or undistributable
-  material in their repositories"."Tarballs can be repacked, but it's
+  material in their repositories". "Tarballs can be repacked, but it's
   harder to rewrite Git history to exclude objects."
 
 
@@ -148,7 +148,7 @@ This edition covers what happened during the month of September 2020.
   synchronization (besides having an extra cost for subprocess spawning).
 
 * If you could remove something from Git without worrying about
-   backwards compatibility, what would it be?
+  backwards compatibility, what would it be?
 
   Hmm, nothing comes to mind right now.
 
@@ -212,7 +212,7 @@ __Various__
   has been announced with significant changes compared to previous
   editions. Notably coding hours and period will be reduced from 350
   hours and 12 weeks to 175 hours and 10 weeks; there would be 2 evaluations
-  (instead of 3). Additionally, eligilibility requirements will be relaxed,
+  (instead of 3). Additionally, eligibility requirements will be relaxed,
   among others allowing people participating in a variety of different
   licensed academic programs, not just students of accredited university programs.
 
@@ -239,13 +239,13 @@ __Light reading__
   by Anthony Heddings.
 * [How Git works inside](https://docable.cloud/chrisparnin/examples/tutorials/Git.md):
   an interactive [Docable](https://github.com/ottomatica/docable) notebook,
-  rendered as static HTML with animated gifs.
+  rendered as static HTML with animated GIFs.
 
 
 __Git tools and sites__
 
-* [bit](https://github.com/chriswalz/bit) is an experimental modernized git CLI,
-  written in Go, built on top of git, that provides happy defaults and other
+* [bit](https://github.com/chriswalz/bit) is an experimental modernized Git CLI,
+  written in Go, built on top of `git`, that provides happy defaults and other
   niceties, with some commands taken from [git-extras](https://github.com/tj/git-extras).  
   It takes some inspiration from [Gitless](https://gitless.com/), which was
   covered in [Git Rev News Edition #20](https://git.github.io/rev_news/2016/10/19/edition-20/#other-news).
@@ -266,7 +266,7 @@ __Git tools and sites__
   and service where one can learn and practice Git and discover its features,
   with the help of 23 exercises.
 
-* [git-send-email.io](https://git-send-email.io/) by [sourcehut](https://sourcehut.org/)
+* [git-send-email.io](https://git-send-email.io/) by [Sourcehut](https://sourcehut.org/)
   is a step-by-step tutorial on how to contribute to email-driven projects
   like the Linux kernel, PostgreSQL, or Git.
 
