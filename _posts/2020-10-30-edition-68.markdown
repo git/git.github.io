@@ -1,4 +1,4 @@
-    ---
+---
 title: Git Rev News Edition 68 (October 30th, 2020)
 layout: default
 date: 2020-10-30 12:06:51 +0100
