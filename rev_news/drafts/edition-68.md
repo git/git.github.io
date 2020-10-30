@@ -216,6 +216,11 @@ __Various__
   among others allowing people participating in a variety of different
   licensed academic programs, not just students of accredited university programs.
 
+* [How Gitlab puts gRPC in the Real World](https://www.programmableweb.com/news/how-gitlab-puts-grpc-real-world/analysis/2020/10/28)
+  talks about GitLab internals, especially access and management of
+  Git repos through gRPC and a software layer written in Go called
+  Gitaly.
+
 __Light reading__
 
 * [Sourcegraph: Devs are managing 100x more code now than they did in 2010](https://arstechnica.com/gadgets/2020/10/sourcegraph-devs-are-managing-100x-more-code-now-than-they-did-in-2010/)
