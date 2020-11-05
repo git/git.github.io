@@ -74,7 +74,8 @@ This edition covers what happened during the month of September 2020.
   Andreas G.'s initial email suggesting the following command:
 
   ```
-  curl --header 'Accept-Encoding: gzip' -L https://git.kernel.org/torvalds/p/v5.9-rc1/v5.8 | gunzip - | git apply
+  curl --header 'Accept-Encoding: gzip' -L https://git.kernel.org/torvalds/p/v5.9-rc1/v5.8 |
+    gunzip - | git apply
   ```
 
   Andreas G. liked it, but said that the use case he was thinking
