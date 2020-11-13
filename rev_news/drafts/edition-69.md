@@ -46,6 +46,10 @@ __Light reading__
 
 __Git tools and sites__
 
+* [repositorch](https://github.com/kirnosenko/Repositorch) is a VCS repository analysis 
+  engine written in C#, which supports Git. It allows to get some basic and advanced 
+  statistics including LOCs, Burndown, Code ownership, Defect density and more.
+  
 
 ## Credits
 
