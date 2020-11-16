@@ -43,7 +43,7 @@ __Various__
 
 __Light reading__
 
-* [Git before GitHub](https://github.com/tarunbatra/git-before-github/)
+* [Git before GitHub](https://tarunbatra.com/blog/x/git-before-github/)
 by Tarun Batra is a beginner-friendly article explaining how to submit
 patches using git's built-in tools without using a platform like GitHub.
 
