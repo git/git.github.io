@@ -11,7 +11,7 @@ navbar: false
 
 Welcome to the 69th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
-subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
+subscribe, see the [About Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
 This edition covers what happened during the month of October 2020.
 
@@ -128,7 +128,7 @@ fix mistakes, and more.
 which is nothing more than a Git repo (on GitHub), divided in folders
 with a bunch of READMEs in each of them.
 * [GitHub Actions for semi-static web sites](https://dev.to/davorg/github-actions-for-semi-static-web-sites-597g)
-by Dave Cross on Dev.To explains how to keep up-to-date a site where
+by Dave Cross on Dev.To explains how to keep a site up-to-date where
 there are only a few ways that it can change, like [CPAN Dashboard](https://cpandashboard.com/).
 ([GitHub Actions](https://github.com/features/actions), then beta,
 were covered in [Git Rev News #44](https://git.github.io/rev_news/2018/10/24/edition-44/)).
@@ -195,7 +195,7 @@ __Git tools and sites__
   for Zsh and Bash.
   It's a sister project of the [Oh My Zsh gitfast plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gitfast).
 * [git-crecord](https://github.com/andrewshadura/git-crecord)
-  is a Git subcommand (written in Python), which allows users to interactively select
+  is a `git` subcommand (written in Python), which allows users to interactively select
   changes to commit or stage using a ncurses-based text user interface.
 
 * [ForgeFed](https://notabug.org/peers/forgefed) - Federation Protocol for Forge Services.
@@ -205,8 +205,8 @@ __Git tools and sites__
   a server to server API for pull request, forking and subscription of repositories
   provided by Git web services (services like GitLab, Gogs, Gitea or SourceHut).
 * [Visualizing Git Concepts with D3](http://onlywei.github.io/explain-git-with-d3/)
-  is a website designed to help you understand some basic git concepts visually,
-  with sandboxes split by specific git commands and a few specific real-world scenarios;
+  is a website designed to help you understand some basic Git concepts visually,
+  with sandboxes split by specific Git commands and a few specific real-world scenarios;
   adding/staging your files for commit is not covered.
 
 
