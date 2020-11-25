@@ -312,4 +312,4 @@ Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
 with help from Philippe Blain, Semyon Kirnosenko,
-Tarun Batra and Philip Oakley.
+Tarun Batra, Philip Oakley and Luca Milanesio.
