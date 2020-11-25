@@ -101,6 +101,36 @@ This edition covers what happened during the month of October 2020.
 
 ## Releases
 
++ Git [2.29.2](https://public-inbox.org/git/xmqqlffo4qjw.fsf@gitster.c.googlers.com/)
++ Git for Windows [2.29.2(2)](https://github.com/git-for-windows/git/releases/tag/v2.29.2.windows.2),
+[2.29.2(1)](https://github.com/git-for-windows/git/releases/tag/v2.29.2.windows.1)
++ GitHub Enterprise [2.22.4](https://enterprise.github.com/releases/2.22.4/notes),
+[2.21.12](https://enterprise.github.com/releases/2.21.12/notes),
+[2.20.21](https://enterprise.github.com/releases/2.20.21/notes),
+[2.22.3](https://enterprise.github.com/releases/2.22.3/notes),
+[2.21.11](https://enterprise.github.com/releases/2.21.11/notes),
+[2.20.20](https://enterprise.github.com/releases/2.20.20/notes),
+[2.19.26](https://enterprise.github.com/releases/2.19.26/notes)
++ Bitbucket Server [7.8](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ Gerrit Code Review [3.2.5.1](https://www.gerritcodereview.com/3.2.html#3251),
+[3.2.5](https://www.gerritcodereview.com/3.2.html#325),
+[3.2.4](https://www.gerritcodereview.com/3.2.html#324),
+[3.1.10](https://www.gerritcodereview.com/3.1.html#3110),
+[3.1.9](https://www.gerritcodereview.com/3.1.html#319),
+[3.0.15](https://www.gerritcodereview.com/3.0.html#3015),
+[3.0.14](https://www.gerritcodereview.com/3.0.html#3014),
+[2.16.25](https://www.gerritcodereview.com/2.16.html#21625),
+[2.15.21](https://www.gerritcodereview.com/2.15.html#21521),
+[2.15.20](https://www.gerritcodereview.com/2.15.html#21520),
+[2.14.22](https://www.gerritcodereview.com/2.14.html#21422)
++ GitLab [13.6.1](https://about.gitlab.com/releases/2020/11/23/gitlab-13-6-1-released/),
+[13.6](https://about.gitlab.com/releases/2020/11/22/gitlab-13-6-released/),
+[13.5.4](https://about.gitlab.com/releases/2020/11/13/gitlab-13-5-4-released/),
+[13.5.3](https://about.gitlab.com/releases/2020/11/03/gitlab-13-5-3-released/),
+[13.5.2](https://about.gitlab.com/releases/2020/11/02/security-release-gitlab-13-5-2-released/)
++ GitKraken [7.4.0](https://support.gitkraken.com/release-notes/current)
++ GitHub Desktop [2.6.0](https://desktop.github.com/release-notes/),
+[2.5.7](https://desktop.github.com/release-notes/)
 
 ## Other News
 
