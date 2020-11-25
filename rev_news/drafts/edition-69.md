@@ -177,14 +177,10 @@ This edition covers what happened during the month of October 2020.
 + Bitbucket Server [7.8](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
 + Gerrit Code Review [3.2.5.1](https://www.gerritcodereview.com/3.2.html#3251),
 [3.2.5](https://www.gerritcodereview.com/3.2.html#325),
-[3.2.4](https://www.gerritcodereview.com/3.2.html#324),
 [3.1.10](https://www.gerritcodereview.com/3.1.html#3110),
-[3.1.9](https://www.gerritcodereview.com/3.1.html#319),
 [3.0.15](https://www.gerritcodereview.com/3.0.html#3015),
-[3.0.14](https://www.gerritcodereview.com/3.0.html#3014),
 [2.16.25](https://www.gerritcodereview.com/2.16.html#21625),
 [2.15.21](https://www.gerritcodereview.com/2.15.html#21521),
-[2.15.20](https://www.gerritcodereview.com/2.15.html#21520),
 [2.14.22](https://www.gerritcodereview.com/2.14.html#21422)
 + GitLab [13.6.1](https://about.gitlab.com/releases/2020/11/23/gitlab-13-6-1-released/),
 [13.6](https://about.gitlab.com/releases/2020/11/22/gitlab-13-6-released/),
@@ -243,7 +239,12 @@ podcast.
 See also [Gitless](https://gitless.com/), the experimental reworking of Git,
 based on [research on difficulties in Git](https://gitless.com/#research),
 mentioned in [Git Rev News #20](https://git.github.io/rev_news/2016/10/19/edition-20/).
-
+* Gerrit Code Review fixes two important security vulnerabilities,
+[Issue 13621](https://bugs.chromium.org/p/gerrit/issues/detail?id=13621) and [Issue 13514](https://bugs.chromium.org/p/gerrit/issues/detail?id=13514).
+They have been found during the test migrations of the [OpenDev Code Review service](https://review.opendev.org/) to the latest version v3.2.
+The issue was particularly sensitive for all those setups hosted in Europe, because of
+the potential exposure to other people's personal information, such as e-mail and external ids,
+and was impacting only those very old setups that had recently migrated to v2.14 or later.
 
 __Git tools and sites__
 
