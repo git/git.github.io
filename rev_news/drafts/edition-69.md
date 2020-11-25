@@ -21,9 +21,72 @@ This edition covers what happened during the month of October 2020.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [[PATCH] userdiff: support Bash](https://lore.kernel.org/git/373640ea4d95f3b279b9d460d9a8889b4030b4e9.camel@engmark.name/)
+
+  Victor Engmark sent a patch to add support for Bash and POSIX shell
+  to the userdiff mechanism. This mechanism is used by the diff code
+  to make diffs more informative and better suited to the content,
+  in this case Bash or POSIX shell programs.
+
+  As explained in [the documentation](https://git-scm.com/docs/gitattributes#_defining_a_custom_hunk_header),
+  diffs contains sections called hunks that look like:
+
+  ```
+  @@ -k,l +n,m @@ TEXT
+  ```
+
+  where `k`, `l`, `n` and `m` are numbers indicating the lines that
+  are concerned, and `TEXT`, which is called the "hunk-header", is a
+  part of a line of the file to further help identify the related
+  context of the diff in the file.
+
+  The best thing for programs is often to have the name of the
+  enclosing function, or method, in the hunk-header. As detecting
+  functions is programming language specific, it's the role of the
+  userdiff mechanism to provide a regex (regular expression) that can
+  be used to do that.
+
+  Another role of the userdiff mechanism is to prodive a regex to
+  [customize word diffs](https://git-scm.com/docs/gitattributes#_customizing_word_diff).
+
+  Victor's patch then mainly consisted in adding regexes for Bash and
+  POSIX shells to `userdiff.c`, along with some documentation and a
+  lot of tests.
+
+  Junio Hamano, the Git maintainer, replied to Victor, by commenting a
+  bit on the tests and a lot on the complex regex to detect a
+  function. He wondered if it correctly accepts white spaces
+  where they are allowed, and suggested for more clarity to break it down like this:
+
+  ```
+  "^[ \t]*"                    /* (op) leading indent */
+  "("                          /* here comes the whole thing */
+  "(function[ \t]+)?"          /* (op) noiseword "function" */
+  "[a-zA-Z_][a-zA-Z0-9_]*"     /* identifier - function name */
+  "[ \t]*(\\([ \t]*\\))?"      /* (op) start of func () */
+  "[ \t]*(\\{|\\(\\(?|\\[\\[)" /* various "opening" of body */
+  ")",
+  ```
+
+  Victor then sent a [version 2](https://lore.kernel.org/git/1442e85cfbe70665890a79a5054ee07c9c16b7c6.camel@engmark.name/)
+  of his patch implementing Junio's suggestions and answering his
+  comments.
+
+  Johannes Sixt then suggested a number of improvements especially
+  about the tests, and about the regex to customize word diffs. Victor
+  replied about the latter asking for pointers to look at, as it
+  seemed that there were no tests for that.
+
+  Victor nevertheless sent a [version 3](https://lore.kernel.org/git/6c6b5ed2166ec2c308c53bf87c78b422fdc5084f.camel@engmark.name/)
+  implementing Johannes' suggestions, and Johannes indeed replied that
+  he was happy with the result. Junio was also happy with the result
+  after fixing a typo in the commit message.
+
+  The patch was later merged to the `next` and then `master` branches,
+  so Git should soon better support shell scripts, while it has been
+  itself developed for a long time using shell scripts.
 
 <!---
 ### Support
