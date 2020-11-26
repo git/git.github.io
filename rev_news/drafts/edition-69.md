@@ -9,7 +9,7 @@ navbar: false
 
 ## Git Rev News: Edition 69 (November 27th, 2020)
 
-Welcome to the 69th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
+Welcome to the 69th edition of [Git Rev News](https://git.github.io/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see the [About Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
@@ -31,7 +31,7 @@ This edition covers what happened during the month of October 2020.
   in this case Bash or POSIX shell programs.
 
   As explained in [the documentation](https://git-scm.com/docs/gitattributes#_defining_a_custom_hunk_header),
-  diffs contains sections called hunks that look like:
+  diffs contain sections called hunks that look like:
 
   ```
   @@ -k,l +n,m @@ TEXT
@@ -48,7 +48,7 @@ This edition covers what happened during the month of October 2020.
   userdiff mechanism to provide a regex (regular expression) that can
   be used to do that.
 
-  Another role of the userdiff mechanism is to prodive a regex to
+  Another role of the userdiff mechanism is to provide a regex to
   [customize word diffs](https://git-scm.com/docs/gitattributes#_customizing_word_diff).
 
   Victor's patch then mainly consisted in adding regexes for Bash and
@@ -85,8 +85,8 @@ This edition covers what happened during the month of October 2020.
   after fixing a typo in the commit message.
 
   The patch was later merged to the `next` and then `master` branches,
-  so Git should soon better support shell scripts, while it has been
-  itself developed for a long time using shell scripts.
+  so Git should soon support shell scripts in a better way, while it
+  itself has been developed for a long time using shell scripts.
 
 <!---
 ### Support
@@ -119,7 +119,7 @@ This edition covers what happened during the month of October 2020.
   Git ["unpack trees"](https://github.com/git/git/blob/master/unpack-trees.c)
   to keep the index, working directory and HEAD consistent, but also how
   [`fork` and `exec`](https://en.wikipedia.org/wiki/Fork%E2%80%93exec)
-  calls work and especially how to debug such spawned process using GDB
+  calls work and especially how to debug such spawned processes using GDB
   and LLDB.
 
 * What are you doing on the Git project these days, and why?
@@ -263,7 +263,7 @@ __Git tools and sites__
   two-way sync between notebooks and source code, and tools for merge/conflict
   resolution with notebooks in a human readable format. It is set-up out of the box
   for integration with GitHub Pages and GitHub Actions.  
-  Compare with [nbdime](http://nbdime.readthedocs.io/en/latest/) –- a tool for
+  Compare with [nbdime](http://nbdime.readthedocs.io/en/latest/) -- a tool for
   diffing and merging of Jupyter Notebooks, mentioned in [Git Rev News #37](https://git.github.io/rev_news/2018/03/21/edition-37/),
   and [jupytext](https://github.com/mwouts/jupytext) -- a plugin for Jupyter
   that can save Jupyter notebooks as Markdown documents, or Julia, Python or R scripts,
