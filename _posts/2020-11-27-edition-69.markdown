@@ -196,55 +196,60 @@ This edition covers what happened during the month of October 2020.
 __Various__
 
 * [Announcing the Release of the Git Experience in Visual Studio](https://devblogs.microsoft.com/visualstudio/announcing-the-release-of-the-git-experience-in-visual-studio/);
-the new Git tooling is now the default source control experience
-in Visual Studio 2019, beginning with [version 16.8](https://devblogs.microsoft.com/visualstudio/visual-studio-2019-v16-8/#git-productivity).
-* Kernel.org manager Konstantin Ryabitsev announced that [signed git pushes](https://people.kernel.org/monsieuricon/signed-git-pushes)
-are now supported by the kernel.org system. Among other things, push signatures
-can be preserved in a commit transparency log, [which is also now provided](https://people.kernel.org/monsieuricon/introducing-the-kernel-org-git-transparency-log)
-by kernel.org.
-
+  the new Git tooling is now the default source control experience
+  in Visual Studio 2019, beginning with
+  [version 16.8](https://devblogs.microsoft.com/visualstudio/visual-studio-2019-v16-8/#git-productivity).
+* Kernel.org manager Konstantin Ryabitsev announced that
+  [signed git pushes](https://people.kernel.org/monsieuricon/signed-git-pushes)
+  are now supported by the kernel.org system. Among other things, push signatures
+  can be preserved in a commit transparency log,
+  [which is also now provided](https://people.kernel.org/monsieuricon/introducing-the-kernel-org-git-transparency-log)
+  by kernel.org.
 
 __Light reading__
 
 * [Git before GitHub](https://tarunbatra.com/blog/x/git-before-github/)
-by Tarun Batra is a beginner-friendly article explaining how to submit
-patches using git's built-in tools without using a platform like GitHub.
+  by Tarun Batra is a beginner-friendly article explaining how to submit
+  patches using git's built-in tools without using a platform like GitHub.
 * [How to keep your Git history clean with interactive rebase](https://about.gitlab.com/blog/2020/11/23/keep-git-history-clean-with-interactive-rebase/)
-by Tobias Günther on GitLab Blog. Interactive rebase is one of Git's
-most versatile tools. Here's how to use it to correct commit messages,
-fix mistakes, and more.
+  by Tobias Günther on GitLab Blog. Interactive rebase is one of Git's
+  most versatile tools. Here's how to use it to correct commit messages,
+  fix mistakes, and more.
 * [How I remember everything I learn](https://aurelio.me/blog/How-I-remember-everything-I-learn/) by Aurelio Ogliari; he uses [his personal wiki](https://github.com/nobitagit/knowledge),
-which is nothing more than a Git repo (on GitHub), divided in folders
-with a bunch of READMEs in each of them.
+  which is nothing more than a Git repo (on GitHub), divided in folders
+  with a bunch of READMEs in each of them.
 * [GitHub Actions for semi-static web sites](https://dev.to/davorg/github-actions-for-semi-static-web-sites-597g)
-by Dave Cross on Dev.To explains how to keep a site up-to-date where
-there are only a few ways that it can change, like [CPAN Dashboard](https://cpandashboard.com/).
-([GitHub Actions](https://github.com/features/actions), then beta,
-were covered in [Git Rev News #44](https://git.github.io/rev_news/2018/10/24/edition-44/)).
+  by Dave Cross on Dev.To explains how to keep a site up-to-date where
+  there are only a few ways that it can change, like [CPAN Dashboard](https://cpandashboard.com/).
+  ([GitHub Actions](https://github.com/features/actions), then beta,
+  were covered in [Git Rev News #44](https://git.github.io/rev_news/2018/10/24/edition-44/)).
 * [What adding CI to 30 projects revealed](https://dev.to/szabgab/what-adding-ci-to-30-projects-revealed-3d4k)
-by Gabor Szabo on Dev.To. Among others it found developer forgetting to add
-file to Git repository, or pushing some changes, or that build script depends
-on unreleased code or local configuration, or that not all dependencies were
-declared.
-* [Nbdev: A literate programming environment that democratizes software
-engineering best practices](https://github.blog/2020-11-20-nbdev-a-literate-programming-environment-that-democratizes-software-engineering-best-practices/)
-by Hamel Husain on GitHub Blog. [nbdev](https://nbdev.fast.ai/) builds
-on top of Jupyter notebooks to encompass the entire software development
-life cycle: automated generation of docs, Continuous Integration (CI),
-writing tests directly in notebooks, etc. Many of those features are
-integrated with GitHub (GitHub Actions, GitHub Pages, GitHub Codespaces).
+  by Gabor Szabo on Dev.To. Among others it found developer forgetting to add
+  file to Git repository, or pushing some changes, or that build script depends
+  on unreleased code or local configuration, or that not all dependencies were
+  declared.
+* [Nbdev: A literate programming environment that democratizes software engineering best practices](https://github.blog/2020-11-20-nbdev-a-literate-programming-environment-that-democratizes-software-engineering-best-practices/)
+  by Hamel Husain on GitHub Blog. (See also nbdev's mention in the 'Git
+  tools and sites' section below.) [nbdev](https://nbdev.fast.ai/)
+  builds on top of Jupyter notebooks to encompass the entire software
+  development life cycle: automated generation of docs, Continuous
+  Integration (CI), writing tests directly in notebooks, etc. Many of
+  those features are integrated with GitHub (GitHub Actions, GitHub
+  Pages, GitHub Codespaces).
 * [Git is simply too hard](https://changelog.com/posts/git-is-simply-too-hard):
-a fancified excerpt of Mislav Marohnić's unpopular opinion on [Go Time #153](https://changelog.com/gotime/153)
-podcast.  
-See also [Gitless](https://gitless.com/), the experimental reworking of Git,
-based on [research on difficulties in Git](https://gitless.com/#research),
-mentioned in [Git Rev News #20](https://git.github.io/rev_news/2016/10/19/edition-20/).
+  a fancified excerpt of Mislav Marohnić's unpopular opinion on [Go Time #153](https://changelog.com/gotime/153)
+  podcast. See also [Gitless](https://gitless.com/), the experimental reworking of Git,
+  based on [research on difficulties in Git](https://gitless.com/#research),
+  mentioned in [Git Rev News #20](https://git.github.io/rev_news/2016/10/19/edition-20/).
 * Gerrit Code Review fixes two important security vulnerabilities,
-[Issue 13621](https://bugs.chromium.org/p/gerrit/issues/detail?id=13621) and [Issue 13514](https://bugs.chromium.org/p/gerrit/issues/detail?id=13514).
-They have been found during the test migrations of the [OpenDev Code Review service](https://review.opendev.org/) to the latest version v3.2.
-The issue was particularly sensitive for all those setups hosted in Europe, because of
-the potential exposure to other people's personal information, such as e-mail and external ids,
-and was impacting only those very old setups that had recently migrated to v2.14 or later.
+  [Issue 13621](https://bugs.chromium.org/p/gerrit/issues/detail?id=13621) and
+  [Issue 13514](https://bugs.chromium.org/p/gerrit/issues/detail?id=13514).
+  They have been found during the test migrations of the
+  [OpenDev Code Review service](https://review.opendev.org/) to the latest version v3.2.
+  The issue was particularly sensitive for all those setups hosted in
+  Europe, because of the potential exposure to other people's personal
+  information, such as e-mail and external ids, and was impacting only
+  those very old setups that had recently migrated to v2.14 or later.
 
 __Git tools and sites__
 
@@ -257,17 +262,21 @@ __Git tools and sites__
   It uses [novel techniques](https://arxiv.org/abs/2009.03115) (graph reconstruction,
   clustering, and Context-Preserving Squash Merge (CSM) methods) to abstract
   a large-scale Git commit graph.
-* [nbdev](https://nbdev.fast.ai/) is a library that allows you to develop
-  a Python library in Jupyter Notebooks, putting all your code, tests and
-  documentation in one place. Among other features it provides a robust,
-  two-way sync between notebooks and source code, and tools for merge/conflict
-  resolution with notebooks in a human readable format. It is set-up out of the box
-  for integration with GitHub Pages and GitHub Actions.  
-  Compare with [nbdime](http://nbdime.readthedocs.io/en/latest/) -- a tool for
-  diffing and merging of Jupyter Notebooks, mentioned in [Git Rev News #37](https://git.github.io/rev_news/2018/03/21/edition-37/),
-  and [jupytext](https://github.com/mwouts/jupytext) -- a plugin for Jupyter
-  that can save Jupyter notebooks as Markdown documents, or Julia, Python or R scripts,
-  or [Review Notebook GitHub App](https://github.com/marketplace/review-notebook-app)
+* [nbdev](https://nbdev.fast.ai/) is a library that allows you to
+  develop a Python library in Jupyter Notebooks, putting all your
+  code, tests and documentation in one place. (See also nbdev's
+  mention in the 'Light reading' section above.) Among other features
+  it provides a robust, two-way sync between notebooks and source
+  code, and tools for merge/conflict resolution with notebooks in a
+  human readable format. It is set-up out of the box for integration
+  with GitHub Pages and GitHub Actions.  Compare with
+  [nbdime](http://nbdime.readthedocs.io/en/latest/) -- a tool for
+  diffing and merging of Jupyter Notebooks, mentioned in
+  [Git Rev News #37](https://git.github.io/rev_news/2018/03/21/edition-37/),
+  and [jupytext](https://github.com/mwouts/jupytext) -- a plugin for
+  Jupyter that can save Jupyter notebooks as Markdown documents, or
+  Julia, Python or R scripts, or
+  [Review Notebook GitHub App](https://github.com/marketplace/review-notebook-app)
   (free for Open Source and Education).
 * [Flagsmith](https://www.flagsmith.com/) (formerly Bullet Train) is an open source
   service to help release features with confidence by managing
@@ -291,7 +300,6 @@ __Git tools and sites__
 * [git-crecord](https://github.com/andrewshadura/git-crecord)
   is a `git` subcommand (written in Python), which allows users to interactively select
   changes to commit or stage using a ncurses-based text user interface.
-
 * [ForgeFed](https://notabug.org/peers/forgefed) - Federation Protocol for Forge Services.
   ForgeFed (formerly GitPub) is an _upcoming_ decentralized federation protocol based on
   the W3C's [ActivityPub](https://www.w3.org/TR/activitypub/), which extends
