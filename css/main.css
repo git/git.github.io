@@ -20,11 +20,10 @@ time, mark, audio, video {
 }
 
 body {
-  font-family: sans-serif;
   line-height: 1;
   font-size: 14px;
   line-height: 22px;
-  font-family: "adelle", Georgia, "Times New Roman", serif;
+  font-family: Adelle, Roboto Slab, DejaVu Serif, Georgia, Times New Roman, sans-serif;
   color: #4e443c;
   background: #f0efe7;
 }
@@ -121,20 +120,6 @@ a img {
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
-}
-
-body {
-  font-size: 14px;
-  line-height: 22px;
-  font-family: "adelle", Georgia, "Times New Roman", serif;
-  color: #4e443c;
-  margin: 0;
-  padding: 0;
-}
-
-.windows.chrome body,
-.windows.ie8 body {
-  font-family: Georgia, "Times New Roman", serif !important;
 }
 
 .inner {
@@ -1013,15 +998,9 @@ input.active {
 
 
 input, textarea {
-  font-family: "adelle", Georgia, "Times New Roman", serif;
+  font-family: Adelle, Roboto Slab, DejaVu Serif, Georgia, Times New Roman, sans-serif;
   font-size: 14px;
   outline: none;
-}
-
-
-.windows.chrome input, .windows.chrome textarea,
-.windows.ie8 input, .windows.chrome textarea {
-  font-family: Georgia, "Times New Roman", serif !important;
 }
 
 
@@ -1528,11 +1507,6 @@ pre.sh_sourceCode .sh_value {
   color: #008800;
   font-weight: normal;
   font-style: normal;
-}
-
-.windows.chrome body *,
-.windows.ie8 body * {
-  font-family: Georgia, "Times New Roman", serif !important;
 }
 
 header {
