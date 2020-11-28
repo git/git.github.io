@@ -123,15 +123,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-body {
-  font-size: 14px;
-  line-height: 22px;
-  font-family: "adelle", Georgia, "Times New Roman", serif;
-  color: #4e443c;
-  margin: 0;
-  padding: 0;
-}
-
 .inner {
   overflow: hidden;
   *zoom: 1;
