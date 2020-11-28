@@ -132,11 +132,6 @@ body {
   padding: 0;
 }
 
-.windows.chrome body,
-.windows.ie8 body {
-  font-family: Georgia, "Times New Roman", serif !important;
-}
-
 .inner {
   overflow: hidden;
   *zoom: 1;
@@ -1019,12 +1014,6 @@ input, textarea {
 }
 
 
-.windows.chrome input, .windows.chrome textarea,
-.windows.ie8 input, .windows.chrome textarea {
-  font-family: Georgia, "Times New Roman", serif !important;
-}
-
-
 form#search {
   position: absolute;
   z-index: 1000;
@@ -1528,11 +1517,6 @@ pre.sh_sourceCode .sh_value {
   color: #008800;
   font-weight: normal;
   font-style: normal;
-}
-
-.windows.chrome body *,
-.windows.ie8 body * {
-  font-family: Georgia, "Times New Roman", serif !important;
 }
 
 header {
