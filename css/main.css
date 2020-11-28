@@ -23,7 +23,7 @@ body {
   line-height: 1;
   font-size: 14px;
   line-height: 22px;
-  font-family: Adelle, Georgia, Times New Roman, serif;
+  font-family: Adelle, Roboto Slab, DejaVu Serif, Georgia, Times New Roman, sans-serif;
   color: #4e443c;
   background: #f0efe7;
 }
@@ -998,7 +998,7 @@ input.active {
 
 
 input, textarea {
-  font-family: Adelle, Georgia, Times New Roman, serif;
+  font-family: Adelle, Roboto Slab, DejaVu Serif, Georgia, Times New Roman, sans-serif;
   font-size: 14px;
   outline: none;
 }
