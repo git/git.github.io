@@ -36,13 +36,15 @@ body {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
+    max-width: 700px;
 }
 
 .navbar {
   float: left;
   text-align: left;
-  width: 20em;
+  width: 15em;
   padding: 2em;
+  padding-right: 0;
 }
 
 #menuLinkBar {
@@ -62,7 +64,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  max-width: 940px;
+  justify-content: center;
 }
 
 @media (max-width: 700px) {
