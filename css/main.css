@@ -36,6 +36,7 @@ body {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
+    max-width: 660px;
 }
 
 .navbar {
@@ -62,7 +63,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  max-width: 940px;
+  justify-content: center;
 }
 
 @media (max-width: 700px) {
