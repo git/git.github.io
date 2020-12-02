@@ -36,13 +36,13 @@ body {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    max-width: 660px;
+    max-width: 700px;
 }
 
 .navbar {
   float: left;
   text-align: left;
-  width: 20em;
+  width: 15em;
   padding: 2em;
 }
 
