@@ -43,6 +43,8 @@ __Various__
 
 __Light reading__
 
+[Use the Git History to Identify Pain Points in Any Project](https://preslav.me/2020/03/01/use-the-git-history/)
+"basic idea - files that change often (with some exceptions) tend to be the ones where most issues occur" - let's go find them with this useful command. Includes useful follow on reading about your code crimes..
 
 __Git tools and sites__
 
