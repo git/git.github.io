@@ -55,7 +55,9 @@ This edition covers what happened during the month of November 2020.
 
 + Git [2.30.0-rc1](https://public-inbox.org/git/xmqqsg82qur4.fsf@gitster.c.googlers.com/),
 [2.30.0-rc0](https://public-inbox.org/git/xmqq7dpkdup6.fsf@gitster.c.googlers.com/)
-+ Git for Windows [2.29.2(3)](https://github.com/git-for-windows/git/releases/tag/v2.29.2.windows.3)
++ Git for Windows [2.30.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.30.0-rc1.windows.1),
+[2.30.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.30.0-rc0.windows.1),
+[2.29.2(3)](https://github.com/git-for-windows/git/releases/tag/v2.29.2.windows.3)
 + Gerrit Code Review [3.3.0](https://www.gerritcodereview.com/3.3.html)
 + GitHub Enterprise [2.22.6](https://enterprise.github.com/releases/2.22.6/notes),
 [2.21.14](https://enterprise.github.com/releases/2.21.14/notes),
