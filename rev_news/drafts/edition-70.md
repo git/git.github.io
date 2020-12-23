@@ -47,9 +47,222 @@ This edition covers what happened during the month of November 2020.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Felipe Contreras
+
+* Who are you and what do you do?
+
+  I'm a software engineer who has worked in all areas of software
+  development. These days they use the term "full stack developer" for a
+  developer that works on all areas of web development, which I have
+  done, but I've also worked on Linux kernel development, middleware,
+  UI; you name it.
+
+  Right now I'm a freelancer offering services to local companies doing
+  mostly web development, but not quite.
+
+  It's hard to pigeonhole me because I not only do software development,
+  I also write a blog (which is not only about software), I've moderated
+  online communities, and I read a lot from intellectuals regarding the
+  ongoing culture war, and so on.
+
+  I guess you could say I'm a jack of all trades (but I've actually
+  mastered a few).
+
+* What would you name your most important contribution to Git?
+
+  That's very hard to tell because I've worked all over the place, so
+  most of my changes are minor improvements. But I guess the one with
+  the biggest impact to users would have to be `git-remote-hg`; a
+  bidirectional bridge between Git and Mercurial.
+
+  Ironically I've never had to use Mercurial, nor worked on a project
+  that uses Mercurial. However, I did work on projects that used
+  Subversion and CVS back in 2005, when Git started, and I found it
+  useful that there existed tools to use Git while working with other
+  version control systems.
+
+  I used to contribute to Pidgin (the MSN protocol parts), who used
+  Monotone, and I refused to work on such a horrendous VCS, so I started
+  to work on scripts to convert Monotone repositories to Git, and I
+  contributed my patches back through Bugzilla (like all other
+  contributors).
+
+  This gave me insight into the inner workings of Git, and eventually
+  when the Pidgin project decided to move to Mercurial (an obvious
+  mistake in my opinion), I started surveying the tools to convert from
+  Git to Mercurial, and I found lots of areas of improvement.
+
+  Regarding these tools I would be remiss if I didn't give attribution
+  to Rocco Rutte, who created the first `fast-export` script, which I used
+  as inspiration for `git-remote-hg`, but unfortunately died of cancer in
+  2009. Without his work I might not have started this particular
+  journey.
+
+  Using Rocco Rutte's program, I had the idea to take that approach, but
+  hide it inside Git's remote-helper infrastructure, which was
+  surprisingly easy. Everything else that came after was fine-tuning,
+  adding features, and improving Git's infrastructure to make such
+  features possible.
+
+  In response to some pushback that I received from more established Git
+  developers--who claimed that some of these changes were specific to
+  `git-remote-hg`--I decided to create `git-remote-bzr` as a proof of
+  concept to interact with Bazaar (again, I never personally had to use
+  Bazaar), but it turned out there was a huge demand for such a tool, so
+  I kept working on it.
+
+  Some GNU Emacs developers loved `git-remote-bzr`, and it probably helped
+  in the eventual move to Git, even though Richard Stallman initially
+  pushed back hard against it.
+
+  So, even though I never really used `git-remote-hg`, or `git-remote-bzr` I
+  kept working at them because clearly other people did. I understand
+  all too well the frustration of working on a VCS that is foreign and
+  suboptimal, especially when you know Git has everything you need; it's
+  like being stranded.
+
+* What are you doing on the Git project these days, and why?
+
+  A lot of things. I stopped working on the Git project for many years,
+  but right now I have motivation to work on it again, and there's
+  literally dozens of features I'm working on. Unfortunately my patches
+  have a tendency to not be accepted, so many of these will not end up
+  helping the end users, but I'm thinking of ways to make these
+  available outside of Git.
+
+  The main one is improvements to "git pull". Initially there was a
+  complaint from a Red Hat employee about an annoying warning added
+  recently, which prompted me to look back at work I did in 2013 which
+  solves all this, but was never merged. Back then the "git pull" code
+  was written in shell script, now it's in C, so I had to rewrite all
+  this functionality.
+
+  It's a lot of work because there's many different workflows,
+  configurations, and options that affect the way "git pull" works. I
+  think the bulk of the code is mostly done, but there's a few options I
+  would like to explore that I haven't mentioned yet in the mailing
+  list, since the current patch series is controversial as it is.
+
+  Part of the work is reading back old mail threads which go back to
+  2008. A lot of problems and suggestions have been mentioned throughout
+  the years, and my patch series tries to compile all of those, in
+  addition to the comments from 2020.
+
+  The story of these changes is interesting enough that I have been
+  writing a blog post about it, which is going to be enormous, but a lot
+  more work is needed to finish it properly. Hopefully it will be ready
+  for the next edition of Git Rev News.
+
+  In another irony; I don't even use "git pull" (I use "git fetch" +
+  "git merge" / "git rebase").
+
+* If you could get a team of expert developers to work full time
+  on something in Git for a full year, what would it be?
+
+  I would split Git into a library, and a command line interface.
+
+  Clearly there's a need for a stand-alone library, since there is
+  libgit2, but Git doesn't use libgit2, so one has to always catch up
+  with the other.
+
+  Recently Ævar Arnfjörð Bjarmason mentioned a thought about somehow
+  splitting the porcelain and plumbing of Git; the part that is for
+  typical end users, and the part that is for advanced users or scripts.
+  Splitting the command line from the library would allow us to more
+  easily see what part belongs where. Plus, I would split the command
+  line into two; `git` and `git-tool`. The `git` command should be
+  for typical end users, and the documentation about those commands
+  should not include any implementation details, or plumbing.
+
+  I believe having a clean command line, which hides implementation
+  details and plumbing, would be of great benefit to the average Git
+  user, and in addition would help developers visualize what changes are
+  more likely to affect the end user, plus where the focus of improving
+  documentation should be.
+
+  Oh, and one person on the team should be not a developer, but a copy
+  editor, and his job would be to rewrite *all* the documentation. It's
+  probably incontrovertible that Git's documentation can be improved a
+  lot.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+  I don't think I would remove anything from Git.
+
+  Plus, I don't believe any good developer should stop worrying about
+  backwards compatibility, ever. I'm of the opinion that there's always
+  a way to implement changes that are incompatible with previous
+  versions, but there's a series of steps. First you add the new
+  functionality, then you add a deprecation period, then you make the
+  new functionality the default, but always allowing the user to access
+  the old functionality.
+
+  It's a lot more work, and takes a lot more time, which is why many bad
+  projects don't do it, but I think you always need to worry about
+  backwards compatibility, and it's a good thing Git developers do worry
+  about that.
+
+  OK, maybe `merge.defaultToUpstream`, nobody uses that.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+  I don't really use anything outside of Git.
+
+  I find Git vanilla to be mostly good enough to do everything I need,
+  and when I don't; I try to introduce that directly into Git itself.
+
+  I created a fork of Git called `git-fc` with all the features I didn't
+  manage to land into Git upstream, but I have not updated it in some
+  years (it's in my endless to-do list), and even though I miss those
+  features a lot, I can manage.
+
+  I also have a bunch of projects that add other functionality, like
+  [`git-related`](https://github.com/felipec/git-related),
+  [`git-reintegrate`](https://github.com/felipec/git-reintegrate),
+  and [`git-send-series`](https://github.com/felipec/git-send-series),
+  but I could live fine without those.
+
+  I think the only tool I would find very hard to live without is
+  [`git-smartlist`](https://github.com/felipec/git-smartlist). Since
+  I use gitk a lot to visualize commit history, very often I just want
+  to see the history from the master branch to the current branch I'm
+  at, and while usually you can do that with `master..@`, that's not
+  always the case and "git smartlist" helps a lot in telling gitk
+  exactly what I want to see.
+
+  I think this would be a good additional question:
+
+* Outside of code, is there anything you would like to change about
+  the Git project?
+
+  I think there's a disconnection between users and developers. Recently
+  I've been talking about the curse of knowledge; the better you know
+  something, the less you remember about how hard it was to learn. It's
+  very typical for experts to underestimate how hard it is to understand
+  something, because they've had many years of experience with it.
+
+  One example is rebasing. Basically all Git developers are very
+  familiar with rebasing, so they can't imagine what it must be like for
+  a user to not know how to rebase, or worse; to not know what a rebase
+  is. But feedback from people whose job is to train users tells us the
+  vast majority of new users have no idea what a rebase is.
+
+  Of course the Git developers care about the users, but many times we
+  have to imagine hypothetical users and their needs, and it's not rare
+  that these don't match the needs of real users.
+
+  That's why [Git Users' Surveys](https://public-inbox.org/git/577E6F32.7020007%40gmail.com/)
+  are so important. Unfortunately they haven't been made in many years,
+  and to be honest I don't see much point in them if the developers
+  are not going to trust the results and use them to guide the project.
+
+  In all the users' surveys the number one and two areas of improvement
+  without fail are: user-interface, and documentation, and I believe
+  those are the two areas that are neglected the most.
+
+  I would take this feedback seriously, and as a project make a real
+  effort to try to improve in these areas.
 
 ## Releases
 
