@@ -39,9 +39,115 @@ This edition covers what happened during the month of November 2020.
     project. Charvi also started
     [blogging](https://charvi-077.github.io/).
 
-<!---
 ### Reviews
--->
+
+* [[PATCH 00/10] Advertise trace2 SID in protocol capabilities](https://lore.kernel.org/git/cover.1604006121.git.steadmon@google.com/)
+
+  Last October Josh Steadmon sent a patch series to the mailing
+  list. The goal of the patch series was to allow a Git client and a
+  Git server, that are communicating to perform a Git operation like a
+  push, a fetch or a clone, to share each other's trace2 session ID
+  (SID).
+
+  [Trace2](https://git-scm.com/docs/api-trace2) is a relatively new
+  tracing mechanism that was developed primarily by Jeff Hostetler to
+  improve on the previous [trace mechanism](https://git-scm.com/docs/api-trace).
+
+  These tracing mechanisms let users print debug, performance, and
+  telemetry logs to a file or a file descriptor, so that they can
+  better understand what's going on inside Git processes.
+
+  Josh's patch series allows a Git client to record the server's
+  trace2 session ID in its logs, and vice versa, by advertising the
+  session ID in a new "trace2-sid" protocol capability.
+
+  Josh asked 2 questions in the cover letter of his patch series
+  though. He first asked if the code in the `trace2/` directory was
+  supposed to contain only implementation details hidden from the rest
+  of Git and accessible only through the `trace2.h` and `trace2.c`
+  files. The reason for this question is that Josh's code needed to
+  access the trace2 session ID which was previously managed only in
+  `trace2/tr2_sid.h` and `trace2/tr2_sid.c`.
+
+  Josh's second question was if it was ok to add a
+  `trace2.announceSID` configuration option for the feature his patch
+  series implemented. The reason is that some Git processes on
+  servers, like `git upload-pack` have previously been prevented to
+  read some potentially malicious config options from local
+  repositories for security reasons.
+
+  Jeff Hostetler was very happy with Josh's patch series saying "Very
+  nice! This should be very helpful when matching up client and server
+  commands."
+
+  He also replied that he indeed intended the `trace2/` directory to
+  be opaque, so "that just trace2.h contains the official API". And he
+  suggested adding to `trace2.h` and `trace2.c` a new
+  trace2_session_id() function that would just call the existing
+  tr2_sid_get() function from `trace2/tr2_sid.h` and
+  `trace2/tr2_sid.c`.
+
+  Jeff also pointed to the fact that the session ID of a process was
+  built up based on the session IDs of its parent processes. For
+  example a Git process spawned from another Git process will have a
+  session ID of the form `<sid1>/<sid2>`, where `<sid1>` is the
+  session ID of its parent. And if it spawns another Git process, the
+  session ID of this new process will be of the form
+  `<sid1>/<sid2>/<sid3>`.
+
+  Jeff also mentioned that if the GIT_TRACE2_PARENT_SID environment
+  variable, which is used to communicate the session ID of the parent
+  process, already contains something, for example 'hello', when the
+  initial Git process is launched, then the session IDs will
+  accumulate after this existing content, like
+  `hello/<sid1>/<sid2>/<sid3>`.
+
+  Jeff wondered if clients and servers should share only the last
+  session ID component, for example `<sid3>`, instead of the full
+  session ID.
+
+  While Jeff couldn't answer Josh's second question about possible
+  security issues with using a new `trace2.announceSID` configuration
+  option, Junio Hamano, the Git maintainer, replied that it was
+  probably ok, given the fact that Git processes, like `git
+  upload-pack`, already take into account at least some boolean config
+  options, like `uploadpack.allowrefinwant`.
+
+  Josh thanked Jeff for his review, and said that in the
+  [version 2](https://lore.kernel.org/git/cover.1604355792.git.steadmon@google.com/)
+  of his patch series he had implemented the new trace2_session_id()
+  function in `trace2.h` and `trace2.c` Jeff had suggested, and that
+  it was probably ok for clients and servers to share their full
+  session ID rather than the last component.
+
+  Junio asked Josh to document this design decision to share the full
+  session ID. Josh replied to Junio that he did that in the
+  [version 3](https://lore.kernel.org/git/cover.1605136908.git.steadmon@google.com/)
+  of his patch series.
+
+  In the version 2 of the patch series though, Junio had also
+  requested that session Id, how they look like, and what special
+  characters they can contain, be better documented to help
+  third-party when they write their own implementation of the
+  protocol.
+
+  This spawned a small discussion thread where Jeff, Ævar Arnfjörð
+  Bjarmason, Junio and Josh eventually agreed on limiting the content
+  of the GIT_TRACE2_PARENT_SID environment variable and session ID, to
+  printable, non-whitespace characters that fit into a Git protocol
+  line.
+
+  Another discussion following version 2 between Josh, Junio and
+  Johannes Schindelin was about Junio's suggestion to separate the
+  concept of "session" from the trace2 mechanism. This led to the
+  decision to use just "session ID", instead of "trace2 session ID",
+  in the documentation, and to call the new configuration option
+  `transport.advertiseSID` instead of `trace2.announceSID`.
+
+  Other smaller discussions over details of the implementation and the
+  documentation followed version 2, but version 3 got merged into the
+  `next` and then the `master` branch. So this new feature will be
+  released in soon upcoming Git v2.30.
 
 <!---
 ### Support
