@@ -138,11 +138,11 @@ This edition covers what happened during the month of November 2020.
   line.
 
   Another discussion following version 2 between Josh, Junio and
-  Johannes Schindelin was about Junio's suggestion to separate the
-  concept of "session" from the trace2 mechanism. This led to the
-  decision to use just "session ID", instead of "trace2 session ID",
-  in the documentation, and to call the new configuration option
-  `transport.advertiseSID` instead of `trace2.announceSID`.
+  Johannes Schindelin, alias Dscho, was about Junio's suggestion to
+  separate the concept of "session" from the trace2 mechanism. This
+  led to the decision to use just "session ID", instead of "trace2
+  session ID", in the documentation, and to call the new configuration
+  option `transport.advertiseSID` instead of `trace2.announceSID`.
 
   Other smaller discussions over details of the implementation and the
   documentation followed version 2, but version 3 got merged into the
