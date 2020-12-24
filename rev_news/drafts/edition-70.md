@@ -278,7 +278,9 @@ This edition covers what happened during the month of November 2020.
 [2.22.5](https://enterprise.github.com/releases/2.22.5/notes),
 [2.21.13](https://enterprise.github.com/releases/2.21.13/notes),
 [2.20.22](https://enterprise.github.com/releases/2.20.22/notes)
-+ GitLab [13.6.3](https://about.gitlab.com/releases/2020/12/10/gitlab-13-6-3-released/)
++ GitLab [13.7.1](https://about.gitlab.com/releases/2020/12/23/gitlab-13-7-1-released/),
+[13.7](https://about.gitlab.com/releases/2020/12/22/gitlab-13-7-released/),
+[13.6.3](https://about.gitlab.com/releases/2020/12/10/gitlab-13-6-3-released/)
 [13.6.2](https://about.gitlab.com/releases/2020/12/07/security-release-gitlab-13-6-2-released/)
 + GitKraken [7.4.1](https://support.gitkraken.com/release-notes/current)
 + GitHub Desktop [2.6.1](https://desktop.github.com/release-notes/)
