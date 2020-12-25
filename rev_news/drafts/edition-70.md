@@ -395,6 +395,8 @@ This edition covers what happened during the month of November 2020.
 
 __Various__
 
+- Felip Contreras shared his [sharness/test Vim syntax file to the list](https://lore.kernel.org/git/CAMP44s1D-Zp3KDS+Hi74a=Lkc7Nc_0qiEzQEF0Pmj=bD8i+=JQ@mail.gmail.com/).
+  It enables syntax highlighting for the body of test_success, test_failure etc.
 
 __Light reading__
 
