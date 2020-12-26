@@ -35,7 +35,7 @@ This edition covers what happened during the month of November 2020.
 
   * Charvi Mendiratta from Faridabad, Haryana, India will be mentored
     by Phillip Wood and Christian Couder to work on on the '*Improve
-    droping and rewording commits in Git interactive rebase*'
+    dropping and rewording commits in Git interactive rebase*'
     project. Charvi also started
     [blogging](https://charvi-077.github.io/).
 
@@ -69,10 +69,10 @@ This edition covers what happened during the month of November 2020.
   access the trace2 session ID which was previously managed only in
   `trace2/tr2_sid.h` and `trace2/tr2_sid.c`.
 
-  Josh's second question was if it was ok to add a
+  Josh's second question was if it was OK to add a
   `trace2.announceSID` configuration option for the feature his patch
   series implemented. The reason is that some Git processes on
-  servers, like `git upload-pack` have previously been prevented to
+  servers, like `git upload-pack`, have previously been prevented to
   read some potentially malicious config options from local
   repositories for security reasons.
 
@@ -81,11 +81,10 @@ This edition covers what happened during the month of November 2020.
   commands."
 
   He also replied that he indeed intended the `trace2/` directory to
-  be opaque, so "that just trace2.h contains the official API". And he
-  suggested adding to `trace2.h` and `trace2.c` a new
-  trace2_session_id() function that would just call the existing
-  tr2_sid_get() function from `trace2/tr2_sid.h` and
-  `trace2/tr2_sid.c`.
+  be opaque, so "that just `trace2.h` contains the official API". And he
+  suggested adding a new `trace2_session_id()` function to `trace2.h`
+  and `trace2.c`, that would just call the existing `tr2_sid_get()`
+  function from `trace2/tr2_sid.h` and `trace2/tr2_sid.c`.
 
   Jeff also pointed to the fact that the session ID of a process was
   built up based on the session IDs of its parent processes. For
@@ -95,7 +94,7 @@ This edition covers what happened during the month of November 2020.
   session ID of this new process will be of the form
   `<sid1>/<sid2>/<sid3>`.
 
-  Jeff also mentioned that if the GIT_TRACE2_PARENT_SID environment
+  Jeff also mentioned that if the `GIT_TRACE2_PARENT_SID` environment
   variable, which is used to communicate the session ID of the parent
   process, already contains something, for example 'hello', when the
   initial Git process is launched, then the session IDs will
@@ -109,15 +108,15 @@ This edition covers what happened during the month of November 2020.
   While Jeff couldn't answer Josh's second question about possible
   security issues with using a new `trace2.announceSID` configuration
   option, Junio Hamano, the Git maintainer, replied that it was
-  probably ok, given the fact that Git processes, like `git
+  probably OK, given the fact that Git processes, like `git
   upload-pack`, already take into account at least some boolean config
   options, like `uploadpack.allowrefinwant`.
 
   Josh thanked Jeff for his review, and said that in the
   [version 2](https://lore.kernel.org/git/cover.1604355792.git.steadmon@google.com/)
-  of his patch series he had implemented the new trace2_session_id()
+  of his patch series he had implemented the new `trace2_session_id()`
   function in `trace2.h` and `trace2.c` Jeff had suggested, and that
-  it was probably ok for clients and servers to share their full
+  it was probably OK for clients and servers to share their full
   session ID rather than the last component.
 
   Junio asked Josh to document this design decision to share the full
@@ -125,15 +124,14 @@ This edition covers what happened during the month of November 2020.
   [version 3](https://lore.kernel.org/git/cover.1605136908.git.steadmon@google.com/)
   of his patch series.
 
-  In the version 2 of the patch series though, Junio had also
-  requested that session Id, how they look like, and what special
-  characters they can contain, be better documented to help
-  third-party when they write their own implementation of the
-  protocol.
+  In reply to version 2 of the patch series though, Junio had also
+  requested that session IDs, how they look like, and what special
+  characters they can contain, should be better documented to help
+  third parties writing their own implementation of the protocol.
 
   This spawned a small discussion thread where Jeff, Ævar Arnfjörð
   Bjarmason, Junio and Josh eventually agreed on limiting the content
-  of the GIT_TRACE2_PARENT_SID environment variable and session ID, to
+  of the `GIT_TRACE2_PARENT_SID` environment variable and session ID to
   printable, non-whitespace characters that fit into a Git protocol
   line.
 
@@ -187,7 +185,7 @@ This edition covers what happened during the month of November 2020.
   useful that there existed tools to use Git while working with other
   version control systems.
 
-  I used to contribute to Pidgin (the MSN protocol parts), who used
+  I used to contribute to Pidgin (the MSN protocol parts), which used
   Monotone, and I refused to work on such a horrendous VCS, so I started
   to work on scripts to convert Monotone repositories to Git, and I
   contributed my patches back through Bugzilla (like all other
@@ -200,9 +198,8 @@ This edition covers what happened during the month of November 2020.
 
   Regarding these tools I would be remiss if I didn't give attribution
   to Rocco Rutte, who created the first `fast-export` script, which I used
-  as inspiration for `git-remote-hg`, but unfortunately died of cancer in
-  2009. Without his work I might not have started this particular
-  journey.
+  as inspiration for `git-remote-hg`, but unfortunately died of cancer in 2009.
+  Without his work I might not have started this particular journey.
 
   Using Rocco Rutte's program, I had the idea to take that approach, but
   hide it inside Git's remote-helper infrastructure, which was
@@ -211,8 +208,8 @@ This edition covers what happened during the month of November 2020.
   features possible.
 
   In response to some pushback that I received from more established Git
-  developers--who claimed that some of these changes were specific to
-  `git-remote-hg`--I decided to create `git-remote-bzr` as a proof of
+  developers -- who claimed that some of these changes were specific to
+  `git-remote-hg` -- I decided to create `git-remote-bzr` as a proof of
   concept to interact with Bazaar (again, I never personally had to use
   Bazaar), but it turned out there was a huge demand for such a tool, so
   I kept working on it.
@@ -221,7 +218,7 @@ This edition covers what happened during the month of November 2020.
   in the eventual move to Git, even though Richard Stallman initially
   pushed back hard against it.
 
-  So, even though I never really used `git-remote-hg`, or `git-remote-bzr` I
+  So, even though I never really used `git-remote-hg` or `git-remote-bzr`, I
   kept working at them because clearly other people did. I understand
   all too well the frustration of working on a VCS that is foreign and
   suboptimal, especially when you know Git has everything you need; it's
@@ -236,21 +233,21 @@ This edition covers what happened during the month of November 2020.
   helping the end users, but I'm thinking of ways to make these
   available outside of Git.
 
-  The main one is improvements to "git pull". Initially there was a
+  The main one is improvements to `git pull`. Initially there was a
   complaint from a Red Hat employee about an annoying warning added
   recently, which prompted me to look back at work I did in 2013 which
-  solves all this, but was never merged. Back then the "git pull" code
+  solves all this, but was never merged. Back then the `git pull` code
   was written in shell script, now it's in C, so I had to rewrite all
   this functionality.
 
-  It's a lot of work because there's many different workflows,
-  configurations, and options that affect the way "git pull" works. I
+  It's a lot of work because there are many different workflows,
+  configurations, and options that affect the way `git pull` works. I
   think the bulk of the code is mostly done, but there's a few options I
   would like to explore that I haven't mentioned yet in the mailing
   list, since the current patch series is controversial as it is.
 
-  Part of the work is reading back old mail threads which go back to
-  2008. A lot of problems and suggestions have been mentioned throughout
+  Part of the work is reading back old mail threads which go back to 2008.
+  A lot of problems and suggestions have been mentioned throughout
   the years, and my patch series tries to compile all of those, in
   addition to the comments from 2020.
 
@@ -259,13 +256,13 @@ This edition covers what happened during the month of November 2020.
   more work is needed to finish it properly. Hopefully it will be ready
   for the next edition of Git Rev News.
 
-  In another irony; I don't even use "git pull" (I use "git fetch" +
-  "git merge" / "git rebase").
+  In another irony; I don't even use `git pull` (I use `git fetch` +
+  `git merge` / `git rebase`).
 
 * If you could get a team of expert developers to work full time
   on something in Git for a full year, what would it be?
 
-  I would split Git into a library, and a command line interface.
+  I would split Git into a library and a command line interface.
 
   Clearly there's a need for a stand-alone library, since there is
   libgit2, but Git doesn't use libgit2, so one has to always catch up
@@ -315,8 +312,8 @@ This edition covers what happened during the month of November 2020.
 
   I don't really use anything outside of Git.
 
-  I find Git vanilla to be mostly good enough to do everything I need,
-  and when I don't; I try to introduce that directly into Git itself.
+  I find Git vanilla to be mostly good enough to do everything I need;
+  and when I don't, I try to introduce that directly into Git itself.
 
   I created a fork of Git called `git-fc` with all the features I didn't
   manage to land into Git upstream, but I have not updated it in some
@@ -331,10 +328,10 @@ This edition covers what happened during the month of November 2020.
 
   I think the only tool I would find very hard to live without is
   [`git-smartlist`](https://github.com/felipec/git-smartlist). Since
-  I use gitk a lot to visualize commit history, very often I just want
+  I use `gitk` a lot to visualize commit history, very often I just want
   to see the history from the master branch to the current branch I'm
   at, and while usually you can do that with `master..@`, that's not
-  always the case and "git smartlist" helps a lot in telling gitk
+  always the case and `git smartlist` helps a lot in telling `gitk`
   exactly what I want to see.
 
   I think this would be a good additional question:
@@ -395,19 +392,19 @@ This edition covers what happened during the month of November 2020.
 
 __Various__
 
-- Felip Contreras shared his [sharness/test Vim syntax file to the list](https://lore.kernel.org/git/CAMP44s1D-Zp3KDS+Hi74a=Lkc7Nc_0qiEzQEF0Pmj=bD8i+=JQ@mail.gmail.com/).
+- Felipe Contreras shared his [sharness/test Vim syntax file to the list](https://lore.kernel.org/git/CAMP44s1D-Zp3KDS+Hi74a=Lkc7Nc_0qiEzQEF0Pmj=bD8i+=JQ@mail.gmail.com/).
   It enables syntax highlighting for the body of test_success, test_failure etc.
 
 __Light reading__
 
 - [Use the Git History to Identify Pain Points in Any Project](https://preslav.me/2020/03/01/use-the-git-history/)
-  "basic idea - files that change often (with some exceptions) tend to be the ones where most issues occur" - let's go find them with this useful command. Includes useful follow on reading about your code crimes..
+  "basic idea - files that change often (with some exceptions) tend to be the ones where most issues occur" - let's go find them with this useful command. Includes useful follow on reading about your code crimes.
 - [Commits are snapshots, not diffs](https://github.blog/2020-12-17-commits-are-snapshots-not-diffs/)
-  by Derrick Stolee on GitHub Blog
+  by Derrick Stolee on GitHub Blog.
 - [Get up to speed with partial clone and shallow clone](https://github.blog/2020-12-21-get-up-to-speed-with-partial-clone-and-shallow-clone/)
-  by Derrick Stolee on GitHub Blog
+  by Derrick Stolee on GitHub Blog.
 - [Optimize your monorepo experience - GitHub Universe 2020](https://www.youtube.com/watch?v=RcqLV1lU408):
-  video of presentation by Derrick Stolee, Staff Software Engineer, GitHub
+  video of presentation by Derrick Stolee, Staff Software Engineer, GitHub.
 - [The Philosophy of Scalar](https://github.com/microsoft/scalar/blob/main/docs/philosophy.md),
   a part of [Scalar](https://github.com/microsoft/scalar/) docs; the tool itself,
   intended to provide  settings and extensions for Git to help manage large Git repositories,
