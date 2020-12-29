@@ -334,8 +334,6 @@ This edition covers what happened during the month of November 2020.
   always the case and `git smartlist` helps a lot in telling `gitk`
   exactly what I want to see.
 
-  I think this would be a good additional question:
-
 * Outside of code, is there anything you would like to change about
   the Git project?
 
