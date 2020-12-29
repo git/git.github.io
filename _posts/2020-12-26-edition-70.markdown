@@ -234,7 +234,8 @@ This edition covers what happened during the month of November 2020.
   available outside of Git.
 
   The main one is improvements to `git pull`. Initially there was a
-  complaint from a Red Hat employee about an annoying warning added
+  [complaint from a Red Hat employee](https://lore.kernel.org/git/742df4c2-2bc5-8a4b-8de1-cd5e48718398@redhat.com/)
+  about an annoying warning added
   recently, which prompted me to look back at work I did in 2013 which
   solves all this, but was never merged. Back then the `git pull` code
   was written in shell script, now it's in C, so I had to rewrite all
