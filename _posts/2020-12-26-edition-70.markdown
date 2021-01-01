@@ -399,7 +399,7 @@ __Various__
 __Light reading__
 
 - [Use the Git History to Identify Pain Points in Any Project](https://preslav.me/2020/03/01/use-the-git-history/)
-  "basic idea - files that change often (with some exceptions) tend to be the ones where most issues occur" - let's go find them with this useful command. Includes useful follow on reading about your code crimes.
+  "basic idea - files that change often (with some exceptions) tend to be the ones where most issues occur" - let's go find them with this useful command. Includes a useful follow on reading about your code crimes.
 - [Commits are snapshots, not diffs](https://github.blog/2020-12-17-commits-are-snapshots-not-diffs/)
   by Derrick Stolee on GitHub Blog.
 - [Get up to speed with partial clone and shallow clone](https://github.blog/2020-12-21-get-up-to-speed-with-partial-clone-and-shallow-clone/)
@@ -415,11 +415,11 @@ __Light reading__
   by Michael Lynch; a good counterpart to [The Gentle Art Of Patch Review](https://sage.thesharps.us/2014/09/01/the-gentle-art-of-patch-review/)
   by Sage Sharp from 2014.
 - [8 Git aliases that make me more efficient](https://opensource.com/article/20/11/git-aliases)
-  by Ricardo Gerardi on OpenSource.com.  Use aliases to create shortcuts
+  by Ricardo Gerardi on Opensource.com.  Use aliases to create shortcuts
   for your most-used or complex Git commands.
 - [10 Git Anti Patterns You Should be Aware of](https://speakerdeck.com/lemiorhan/10-git-anti-patterns-you-should-be-aware-of),
   slide deck presented by Lemi Orhan Ergin at ITAKE UnConf 2018;
-  though one should take it and especially proposed solution with critical eye.
+  though one should take it and especially the proposed solutions with a critical eye.
 - [Regular Expression Matching with a Trigram Index, or How Google Code Search Worked](https://swtch.com/~rsc/regexp/regexp4.html)
   by Russ Cox (2012).
 
