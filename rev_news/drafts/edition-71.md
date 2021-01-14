@@ -43,6 +43,8 @@ __Various__
 
 __Light reading__
 
+* [Git Metadata Cloning](https://www.alchemists.io/articles/git_metadata_cloning)- Learn about the
+  performance impacts of cloning repository metadata.
 
 __Git tools and sites__
 
