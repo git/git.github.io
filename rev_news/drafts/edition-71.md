@@ -54,6 +54,8 @@ This edition covers what happened during the month of December 2020.
 
 __Various__
 
+* [Meet Praefect: The traffic manager making your Git data highly available](https://about.gitlab.com/blog/2021/01/21/high-availability-git-storage-with-praefect/)
+  How GitLab scales Git and makes it highly available.
 
 __Light reading__
 
