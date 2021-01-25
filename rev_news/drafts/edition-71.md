@@ -35,6 +35,20 @@ This edition covers what happened during the month of December 2020.
 
 ## Releases
 
++ Git [2.30.0](https://public-inbox.org/git/xmqqk0t1g326.fsf@gitster.c.googlers.com/)
++ Git for Windows [2.30.0(2)](https://github.com/git-for-windows/git/releases/tag/v2.30.0.windows.2),
+[2.30.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.30.0.windows.1)
++ GitHub Enterprise [3.0.0](https://help.github.com/enterprise-server@3.0/admin/release-notes#3.0.0.rc1)
++ GitLab [13.8](https://about.gitlab.com/releases/2021/01/22/gitlab-13-8-released/)
+[13.7.4, 13.6.5 and 13.5.7](https://about.gitlab.com/releases/2021/01/14/critical-security-release-gitlab-13-7-4-released/),
+[13.7.3](https://about.gitlab.com/releases/2021/01/08/gitlab-13-7-3-released/),
+[13.7.2, 13.6.4, and 13.5.6](https://about.gitlab.com/releases/2021/01/07/security-release-gitlab-13-7-2-released/)
++ Bitbucket Server [7.9](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ Gerrit Code Review [3.3.1](https://www.gerritcodereview.com/3.3.html#331),
+[3.2.6](https://www.gerritcodereview.com/3.2.html#326),
+[3.1.11](https://www.gerritcodereview.com/3.1.html#3111)
++ GitKraken [7.5.0](https://support.gitkraken.com/release-notes/current)
++ GitHub Desktop [2.6.2](https://desktop.github.com/release-notes/)
 
 ## Other News
 
