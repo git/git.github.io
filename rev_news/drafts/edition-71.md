@@ -21,9 +21,72 @@ This edition covers what happened during the month of December 2020.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [[PATCH 00/26] git-log: implement new --diff-merge options](https://lore.kernel.org/git/20201101193330.24775-1-sorganov@gmail.com/)
+
+  Last November Sergey Organov sent a 26 patch long series to the
+  mailing list. This series added a number of new modes to
+  `git log --diff-merges=<mode>`.
+
+  Before this patch series, there would be no diff for merge commits
+  unless one of `-m`, `-c` or `--cc` was given. And in case one of
+  these options was given, then `--diff-merges=off`, or its
+  `--no-diff-merges` synonym, could be used to remove that diff output
+  for merge commits. This was the only possible use of
+  `--diff-merges=<mode>`.
+
+  Sergey's patch series introduced four new modes. Three of them,
+  "separate", "combined" and "dense-combined" do not generate new diff
+  output. They are just synonyms of `-m`, `-c` and `--cc`
+  respectively.
+
+  The fourth new mode, called "first-parent", though allows to get the
+  same output as `-p --first-parent` but "without the changes in
+  history traversal that the `--first-parent` option causes".
+
+  Sergey's patch series also refactored some code and fixed a small
+  issue. In a follow up email Sergey asked questions related to
+  further possible issues related to how `-m`, `-c` and `--cc`
+  interact with `--oneline`.
+
+  Elijah Newren replied to Sergey's questions, and a long discussion
+  involving Junio Hamano, the Git maintainer, started about different
+  technical topics, especially the interactions between `-p` and the
+  `-m`, `-c` and `--cc` options.
+
+  Elijah and Philip Oakley also commented on small issues in a few
+  patches.
+
+  Sergey then sent a new version, that he named v1, of his patch
+  series with 27 patches, so one more than in the original series. The
+  changes were mostly typo and documentation fixes.
+
+  Elijah and Junio commented on the patch series. Elijah and Sergey
+  discussed some new `--remerge-diff` and `--remerge-diff-only`
+  options Elijah had been working on, and how there could also be a
+  related `--diff-merges=remerge` mode.
+
+  Junio found a few issues and suggested some renaming and test
+  improvements.
+
+  Sergey sent a new v2 version of his patch series with 33 patches, so
+  6 more than in v1. One change compared to the previous version was
+  that the diff output for the new --diff-merges options didn't affect
+  non-merge commits. Another change was that short mnemonics
+  `--diff-merges=(1|m|c|cc)` were provided on top of long mode
+  names. A lot of smaller changes addressed Elijah's and Junio's
+  reviews.
+
+  Elijah and Sergey then discussed further improvements especially to
+  the documentation. Felipe Contreras and Junio sometimes also chimed
+  in with further explanations or suggestions.
+
+  Sergey sent a new v3 version, with 32 patches, one less than in v2.
+  The changes were mostly following reviewers' suggestions. Felipe
+  commented positively on one patch, and Junio said he didn't spot
+  anything objectionable in the series and was ok to start merging it
+  to the next branch.
 
 <!---
 ### Support
