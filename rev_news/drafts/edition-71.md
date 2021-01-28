@@ -42,7 +42,7 @@ This edition covers what happened during the month of December 2020.
   respectively.
 
   The fourth new mode, called "first-parent", though allows to get the
-  same output as `-p --first-parent` but "without the changes in
+  same output as `-p --first-parent`, but "without the changes in
   history traversal that the `--first-parent` option causes".
 
   Sergey's patch series also refactored some code and fixed a small
@@ -72,7 +72,7 @@ This edition covers what happened during the month of December 2020.
 
   Sergey sent a new v2 version of his patch series with 33 patches, so
   6 more than in v1. One change compared to the previous version was
-  that the diff output for the new --diff-merges options didn't affect
+  that the diff output for the new `--diff-merges` options didn't affect
   non-merge commits. Another change was that short mnemonics
   `--diff-merges=(1|m|c|cc)` were provided on top of long mode
   names. A lot of smaller changes addressed Elijah's and Junio's
@@ -85,7 +85,7 @@ This edition covers what happened during the month of December 2020.
   Sergey sent a new v3 version, with 32 patches, one less than in v2.
   The changes were mostly following reviewers' suggestions. Felipe
   commented positively on one patch, and Junio said he didn't spot
-  anything objectionable in the series and was ok to start merging it
+  anything objectionable in the series and was OK to start merging it
   to the next branch.
 
 <!---
@@ -96,10 +96,10 @@ This edition covers what happened during the month of December 2020.
 
 * Who are you and what do you do?
 
-  I'm a software engineer and system architect at JAVAD GNSS, working in its
+  I'm a software engineer and system architect at JAVAD GNSS, working in their
   Moscow Research Center, in Russia. We design (and manufacture) high-end
   GNSS receivers, both hardware and software. Design and implementation of
-  receivers firmware is my primary job for about 25 years already. I'm
+  receiver firmware is my primary job for about 25 years already. I'm
   also responsible for the development tools our team is using, and that's
   where GNU/Linux and then Git come to the picture.
 
@@ -108,9 +108,9 @@ This edition covers what happened during the month of December 2020.
   interested in computing. I then worked for about 10 years in "Kurchatov
   Institute" in the field of computer modeling of nuclear radiation and
   detectors, as well as in advanced processing of experimental results.
-  Then a few years later started to work for JAVAD as well, in parallel.
-  Then, a few more years later, left Kurchatov and entirely focused on
-  working for JAVAD full-time which is my current job.
+  Then, a few years later, I started to work for JAVAD as well, in parallel.
+  A few more years later, I left Kurchatov and entirely focused on
+  working for JAVAD full-time, which is my current job.
 
   Real-time embedded applications, also using Linux on the targets, is my
   primary field of expertise nowadays.
@@ -136,42 +136,42 @@ This edition covers what happened during the month of December 2020.
   Actually, I have 2 favorites:
 
   1. Designing support for explicit commits grouping, somewhat similar to
-  grouping objects in graphical editors, likely implemented as a container
-  commit capturing particular part of the DAG. It'd be then seen as a
-  single commit by default, unless user specifically asks to look inside.
-  If we had it, our typical history would be more linear, feature branches
-  essentially becoming single (group) commits, that'd make history simpler
-  to traverse and to reason about.
+     grouping objects in graphical editors, likely implemented as a container
+     commit capturing a particular part of the DAG. It'd be then seen as a
+     single commit by default, unless the user specifically asks to look inside.
+     If we had it, our typical history would be more linear, feature branches
+     essentially becoming single (group) commits, that'd make history simpler
+     to traverse and to reason about.
 
-  Right now the only poor-man estimate for that is a branch that is merged
-  back to its origin (the true-non-evil merge, as I call it), that brings
-  history that looks like a sequence of bubbles, but it lacks direct
-  support that specific grouping feature would have.
+     Right now the only poor-man approximation for that is a branch that is merged
+     back to its origin (the true-non-evil merge, as I call it), which results in a
+     history that looks like a sequence of bubbles, but it lacks direct
+     support which the specific grouping feature would have.
 
-  2. Designing new history editor that will aim at being ultimate
-  replacement for both `git rebase` and `git cherry-pick` that are
-  essentially the same thing at fundamental level. As useful as these
-  existing features are, they have wide opportunities for improvements
-  that apparently don't fit into the current design, and their history of
-  incremental adaptations to different needs made quite a mess of them.
+  2. Designing a new history editor that will aim at being the ultimate
+     replacement for both `git rebase` and `git cherry-pick`, which are
+     essentially the same thing at fundamental level. As useful as these
+     existing features are, they have wide opportunities for improvements
+     that apparently don't fit into the current design, and their history of
+     incremental adaptations to different needs made quite a mess of them.
 
-  Covering all the functionality of rebase and cherry-pick, the two most
-  important new features I'd like to see are:
+     Covering all the functionality of `rebase` and `cherry-pick`, the two most
+     important new features I'd like to see are:
 
-  - Ensuring, by design, one of the primary features of any reasonable
-  editing tool: carefully preserve the content if no actual editing has
-  been made or requested. This should be ensured even if the tool is
-  forced to do the full job of re-creating the history according to the
-  instructions. I.e., the cycle: load/mark-as-modified/save should bring
-  the original result by default.
+     - Ensuring, by design, one of the primary features of any reasonable
+       editing tool: carefully preserve the content if no actual editing has
+       been made or requested. This should be ensured even if the tool is
+       forced to do the full job of re-creating the history according to the
+       instructions. I.e., the cycle: load/mark-as-modified/save should result in
+       the original result by default.
 
-  - Better replacement for todo lists. Carefully designed format for
-  describing DAG in a text form convenient for humans and for editing with
-  text editor, with simple yet strictly defined syntax and semantics,
-  preferably supporting generic programming language features. For
-  example, it could be based on some existing language, say, Tcl. Yet it
-  should take the best features of the current format and look familiar
-  enough to be immediately useful without significant learning cycle.
+     - Better replacement for to-do lists. Carefully designed format for
+       describing the DAG in a text form convenient for humans and for editing with
+       a text editor, with simple yet strictly defined syntax and semantics,
+       preferably supporting generic programming language features. For
+       example, it could be based on some existing language, say, Tcl. Yet it
+       should take the best features of the current format and look familiar
+       enough to be immediately useful without a significant learning cycle.
 
   [That said, do we need two teams of expert developers for that, or one
   would suffice, I wonder?]
@@ -186,14 +186,14 @@ This edition covers what happened during the month of December 2020.
 * If you could add something to Git without worrying about
   backwards compatibility, what would it be?
 
-  I'd add a simple model behind Git command-line options, so that their
-  design came from the model rather than entirely from the use-cases, as
-  it happens to be now. It'd play similar positive role in UI design as
-  Git core data model plays in the features design.
+  I'd add a simple model behind the Git command-line options, so that their
+  design came from the model rather than entirely from the use cases, as
+  it happens to be now. It'd play a similar positive role in UI design as
+  the Git core data model plays in the features design.
 
-  Then, I sometimes think about addition of single NULL-commit, the
+  Then, I sometimes think about the addition of a single NULL-commit, the
   ultimate parent of all the Git commits all over the world. I'm not sure
-  it has enough value in simplifying corner cases in git implementation,
+  it has enough value in simplifying corner cases in Git's implementation,
   but it fits so nice into the elegant Git data model!
 
 * What is your favorite Git-related tool/library, outside of Git
@@ -201,7 +201,7 @@ This edition covers what happened during the month of December 2020.
 
   Emacs and the Magit, its interface to Git, in particular, as well as a
   few parts of Emacs generic VC interface that features Git among others.
-  The Magit got to the point already where I rarely find myself using Git
+  The Magit got to the point already where I rarely find myself using the Git
   command-line directly, and then mostly for some batch-processing, or on
   hosts where Emacs is not readily available.
 
@@ -226,12 +226,12 @@ This edition covers what happened during the month of December 2020.
 
 __Various__
 
-* [Meet Praefect: The traffic manager making your Git data highly available](https://about.gitlab.com/blog/2021/01/21/high-availability-git-storage-with-praefect/)
+* [Meet Praefect: The traffic manager making your Git data highly available](https://about.gitlab.com/blog/2021/01/21/high-availability-git-storage-with-praefect/):
   How GitLab scales Git and makes it highly available.
 
 __Light reading__
 
-* [Git Metadata Cloning](https://www.alchemists.io/articles/git_metadata_cloning)- Learn about the
+* [Git Metadata Cloning](https://www.alchemists.io/articles/git_metadata_cloning) - Learn about the
   performance impacts of cloning repository metadata.
 
 __Git tools and sites__
