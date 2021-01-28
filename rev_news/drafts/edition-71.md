@@ -228,14 +228,45 @@ __Various__
 
 * [Meet Praefect: The traffic manager making your Git data highly available](https://about.gitlab.com/blog/2021/01/21/high-availability-git-storage-with-praefect/):
   How GitLab scales Git and makes it highly available.
+* [Git your updates now: Version control system hits 2.30, preps for main switch](https://devclass.com/2021/01/04/git-2_30-version-control/)
+  by Julia Schmidt.
 
 __Light reading__
 
+* [Git clone: a data-driven study on cloning behaviors](https://github.blog/2020-12-22-git-clone-a-data-driven-study-on-cloning-behaviors/)
+  by Solmaz Abbaspoursani on GitHub blog continues where 
+  [Derrick Stolee's article on `git clone` options](https://github.blog/2020-12-21-get-up-to-speed-with-partial-clone-and-shallow-clone/),
+  mentioned in the [previous edition](https://git.github.io/rev_news/2020/12/26/edition-70/), left off.
 * [Git Metadata Cloning](https://www.alchemists.io/articles/git_metadata_cloning) - Learn about the
   performance impacts of cloning repository metadata.
+* [MAINTAINERS truth and fiction](https://lwn.net/Articles/842415/)
+  article by Jonathan Corbet on LWN.net
+  describes how one can analyze Git history of the Linux kernel
+  for insights to be gleaned from comparing MAINTAINERS entries
+  against activity in the real world.
+* [How to Use Multiple Git Configs on One Computer](https://www.freecodecamp.org/news/how-to-handle-multiple-git-configurations-in-one-machine/)
+  with the help of `includeIf` directive,
+  by Dhruv Barochiya on freeCodeCamp.
+* [Keeping Git Commit Messages Consistent with a Custom Template](https://dev.to/timmybytes/keeping-git-commit-messages-consistent-with-a-custom-template-1jkm)
+  by Timothy Merritt on DEV.to.
+* [Conflict resolution in various mergetools](https://www.eseth.org/2020/mergetools.html)
+  by Seth House was [previously an appeal to mergetools authors to stop doing three-way merges from scratch](https://github.com/whiteinge/eseth/blob/e993b4b9c5f7e5d2c83890bcb7cd218abe867afd/2020/mergetools.md),
+  but now describes the effect of [patches by Felipe Contreras and several other people](https://lore.kernel.org/git/5fe4bec2da21a_19c92085f@natae.notmuch/T/#t)
+  that changed the default behaviour of `git mergetool` (this can be controlled
+  with the new `mergetool.autoMerge` and `mergetool.<tool>.autoMerge` config options).
+* [10 things to love about Git](https://opensource.com/article/20/12/git) by Joshua Allen Holm
+  lists OpenSource.com readers' favorite Git articles of the year 2020.
 
 __Git tools and sites__
 
+* [code-compass](https://github.com/ag91/code-compass) is a package that is intended
+  to guide you in your software development within Emacs.  For example, you can
+  [let history show you which files to edit next](https://ag91.github.io/blog/2021/01/12/emacs-as-your-code-compass-let-history-show-you-which-files-to-edit-next/) or
+  [examine how files are historically related to each other](https://ag91.github.io/blog/2021/01/07/emacs-as-your-code-compass-how-related-are-these-modules/).
+* [Crev](https://github.com/crev-dev/crev) is a Scalable, social,
+  Code REView and recommendation system (rather than _change_ review system);
+  currently [Crev for Rust/cargo](https://github.com/crev-dev/cargo-crev)
+  is ready and working.
 
 ## Credits
 
