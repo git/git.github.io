@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Outreachy Winter 2020-2021 Applicant Microprojects
+navbar: false
 ---
 
 ## Introduction
