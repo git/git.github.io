@@ -24,8 +24,8 @@ page though.
  - Possible mentors: Hariom Verma, Christian Couder
 
 `git cat-file` has options `--batch[=<format>]` and
-`--batch-check[=<format>]` that can take a <format>. It would be nice
-if the implementation of this <format> would use the as much as
+`--batch-check[=<format>]` that can take a `<format>`. It would be nice
+if the implementation of this `<format>` would use the as much as
 possible the same code and syntax as the ref-filter formats.
 
 Git used to have an old problem of duplicated implementations of some
