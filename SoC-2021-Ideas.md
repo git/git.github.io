@@ -21,7 +21,7 @@ page though.
 
  - Language: C, shell (bash)
  - Difficulty: medium
- - Possible mentors: Christian Couder
+ - Possible mentors: Hariom Verma, Christian Couder
 
 `git cat-file` has options `--batch[=<format>]` and
 `--batch-check[=<format>]` that can take a <format>. It would be nice
