@@ -1,7 +1,6 @@
 ---
 layout: default
-title: SoC 2020 Organization Application
-navbar: false
+title: SoC 2021 Organization Application
 ---
 
 This is a draft of git's application to Google's Summer of Code 2021.
