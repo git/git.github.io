@@ -39,9 +39,9 @@ This edition covers what happened during the month of January 2021.
 
 * What would you name your most important contribution to Git?
 
-  I'm still submitting many of the patches, but I think multi-pack
-  reachability bitmaps will be my most important contribution to Git so
-  far.
+  I'm still submitting many of the patches, but I think
+  [multi-pack reachability bitmaps](https://lore.kernel.org/git/e64504bad6e181522946a8f234e12f569bede89e.1612998106.git.me@ttaylorr.com/)
+  will be my most important contribution to Git so far.
 
   If they work, they'll allow hosting providers who rely on reachability
   bitmaps more flexibility to control when and how they repack their
@@ -51,7 +51,7 @@ This edition covers what happened during the month of January 2021.
   repository however you want.
 
   If I'm limited to things that I have finished, I would say that the
-  [on-disk reverse index](https://public-inbox.org/git/cover.1612998106.git.me@ttaylorr.com/)
+  [on-disk reverse index](https://lore.kernel.org/git/cover.1610129989.git.me@ttaylorr.com)
   is another good one. But that's kind of cheating, since it's related
   to multi-pack bitmaps ;).
 
