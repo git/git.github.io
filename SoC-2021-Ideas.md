@@ -36,7 +36,7 @@ into [ref-filter](https://github.com/git/git/blob/master/ref-filter.h)
 and got rid of similar logic in some command specific files.
 
 Current task is to continue this work, especially Olga's work (see
-https://medium.com/@olyatelezhnaya) and reuse ref-filter formatting
+<https://medium.com/@olyatelezhnaya>) and reuse ref-filter formatting
 logic in `git cat-file`.
 
 ### Finish convert `git submodule` script to builtin
@@ -57,7 +57,7 @@ code, making it a so-called "built-in".
 Shourya Shukla is the latest GSoC student to have been working on
 this.
 
-See: https://lore.kernel.org/git/20201214231939.644175-1-periperidip@gmail.com/
+See: <https://lore.kernel.org/git/20201214231939.644175-1-periperidip@gmail.com/>
 
 
 
