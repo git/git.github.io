@@ -101,6 +101,23 @@ This edition covers what happened during the month of January 2021.
 
 ## Releases
 
++ Git [2.30.1](https://public-inbox.org/git/xmqqsg662k8p.fsf@gitster.c.googlers.com/)
++ Git for Windows [2.30.1(1)](https://github.com/git-for-windows/git/releases/tag/v2.30.1.windows.1)
++ GitLab [13.9](https://about.gitlab.com/releases/2021/02/22/gitlab-13-9-released/),
+[13.8.4, 13.7.7 and 13.6.7](https://about.gitlab.com/releases/2021/02/11/security-release-gitlab-13-8-4-released/),
+[13.8.3](https://about.gitlab.com/releases/2021/02/05/gitlab-13-8-3-released/),
+[13.8.2, 13.7.6 and 13.6.6](https://about.gitlab.com/releases/2021/02/01/security-release-gitlab-13-8-2-released/),
+[13.8.1](https://about.gitlab.com/releases/2021/01/26/gitlab-13-8-1-released/),
+[13.7.5](https://about.gitlab.com/releases/2021/01/25/gitlab-13-7-5-released/)
++ Bitbucket Server [7.10](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ Gerrit Code Review [3.3.2](https://www.gerritcodereview.com/3.3.html#332),
+[3.2.7](https://www.gerritcodereview.com/3.2.html#327),
+[3.1.12](https://www.gerritcodereview.com/3.1.html#3112),
+[3.0.16](https://www.gerritcodereview.com/3.0.html#3016),
+[2.16.27](https://www.gerritcodereview.com/2.16.html#21627),
+[2.15.22](https://www.gerritcodereview.com/2.15.html#21522)
++ GitKraken [7.5.1](https://support.gitkraken.com/release-notes/current)
++ GitHub Desktop [2.6.3](https://desktop.github.com/release-notes/)
 
 ## Other News
 
