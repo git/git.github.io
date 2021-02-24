@@ -109,8 +109,42 @@ __Various__
 
 __Light reading__
 
+* In [Getting The Most Out Of Git](https://www.smashingmagazine.com/2021/02/getting-the-most-out-of-git/)
+  article in Smashing Magazine, the author Tobias Günther explores some of
+  the less known but very useful features in Git: how to recover deleted commits,
+  clean up your commit history, use submodules to manage third-party code
+  and compose commits with precision.
+* [How to Use Branches in Git – the Ultimate Cheatsheet](https://www.freecodecamp.org/news/how-to-use-branches-in-git/)
+  by Tobias Günther on freeCodeCamp describes how to create, rename, switch,
+  publish, track, delete, merge, rebase and compare branches.
+* [How to Collaborate on Data Science Projects with DAGsHub](https://www.freecodecamp.org/news/collaborate-on-data-science-projects-with-dagshub/)
+  (and [DVC](https://dvc.org) (Data Version Control)), by Linda Ikechukwu
+  on freeCodeCamp.  DVC was first mentioned
+  in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/).
+* [RefinementCodeReview](https://martinfowler.com/bliki/RefinementCodeReview.html)
+  post by Martin Fowler describes an alternative to [PullRequest](https://martinfowler.com/bliki/PullRequest.html)
+  mechanism for code review, namely one that is triggered each time
+  the code is looked at rather than when the code is added to the codebase.
+* In [Monorepos](https://css-tricks.com/monorepo/) Chris Coyier explains the reasoning,
+  pros and cons for them, moving back toward a monorepo at [CodePen](https://codepen.io/).
+  You can find links to articles advocating for and against monorepos,
+  among others, in [Git Rev News Edition #47](https://git.github.io/rev_news/2019/01/23/edition-47/).
+* [Rewriting your git history, removing files permanently - cheatsheet & guide](https://blog.gitguardian.com/rewriting-git-history-cheatsheet/)
+  by Don Goodman-Wilson on GitGuardian blog.
+* [2020 Version control best practices: Five easy ways to enhance team collaboration](https://learn.gitlab.com/version-control/version-control-best-practice)
+  (PDF) -- a booklet by GitLab.
+
 
 __Git tools and sites__
+
+* [DAGsHub Storage](https://dagshub.com/docs/reference/dagshub_storage/)
+  is an alternative (and free-to-use) [DVC](https://dvc.org) remote
+  that requires zero configuration.
+* [Commitizen](http://commitizen.github.io/cz-cli/) is an open source project
+  that helps contributors be good open source citizens. It accomplishes this
+  by prompting them to follow commit message conventions at commit time,
+  asking the user fill in any required fields and automatically formatting
+  the commit message according to selected convention.
 
 
 ## Credits
