@@ -21,9 +21,96 @@ This edition covers what happened during the month of January 2021.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [[PATCH 0/5] Support for commits signed by multiple algorithms](https://lore.kernel.org/git/20210111003740.1319996-1-sandals@crustytoothpaste.net/)
+
+  Brian M Carlson sent a patch series to allow verifying signed
+  commits and tags when using multiple hash algorithms. This is a
+  follow up from Brian's multi-year work on supporting the SHA-256
+  hash algorithm in Git, to deal with the fact that the original SHA-1
+  algorithm is becoming more and more outdated and insecure.
+
+  One of the trickiest part in supporting a new hash algorithm is that
+  when Git objects (except blobs) are converted to the new hash, their
+  contents changes, because the hashes they contain (to reference
+  other Git objects) are converted too. So old signatures they contain
+  become invalid.
+
+  A way to overcome this issue is to add a new signature, that signs
+  the converted object, to each signed object that is converted. This
+  way such object would have 2 signatures, and can always be verified
+  using one of them, even if it gets converted back and forth.
+
+  Brian's patch series addressed the issue that for SHA-256 tags it
+  was initially planned to have the signature in a Git object header
+  (which is called a header signature), instead of at the end of the
+  tag message (which is called a trailing signature), but
+  unfortunately the patch implementing that got lost. So we use
+  trailing signatures.
+
+  Brian then explained "We can't change this now, because otherwise it
+  would be ambiguous whether the trailing signature on a SHA-256
+  object was for the SHA-256 contents or whether the contents were a
+  rewritten SHA-1 object with no SHA-256 signature at all." So the
+  solution he implemented was to "use the trailing signature for the
+  preferred hash algorithm and use a header for the other variant".
+
+  Brian thinks this solution is the best we can do in the current
+  situation, as it still allows converting back and forth between
+  hashes, and verifying signatures created with older versions of Git,
+  though tags signed with multiple algorithms can't be verified with
+  older versions of Git.
+
+  For commits, Brian patch series fixes the bug that old header
+  signatures weren't stripped off before verifying new signatures, so
+  verifications always failed.
+
+  The result of his series is then that signing both commits and tags
+  can now be round-tripped through both SHA-1 and SHA-256 conversions.
+
+  Junio Hamano, the Git maintainer, replied to a patch in the series
+  suggesting using the `size_t` type for byte lengths, instead of
+  `unsigned long`, as `unsigned long` was breaking 32-bit builds.
+
+  Brian agreed and sent a
+  [version 2](https://lore.kernel.org/git/20210111035840.2437737-1-sandals@crustytoothpaste.net/)
+  of the series with Junio's fix.
+
+  Junio replied to the cover letter of this series asking "How widely
+  are SHA-256 tags in use in the real world, though?", and if it was really
+  too late to use a header signature for tags, as was originaly
+  planned.
+
+  Brian replied:
+
+  > I don't know. I don't know of any major hosting platform that
+    supports them, but of course many people may be using them
+    independently on self-hosted instances.
+
+  He also explained why he thought the solution didn't matter much,
+  because he'd just noticed that old Git versions don't properly strip
+  header signatures, so wouldn't anyway be able to verify tags or
+  commits with multiple signatures.
+
+  He ended his reply saying "there's a lot more prep work (surprise)
+  before we get to anything interesting." To which Junio replied:
+  "Uncomfortably excited to hear this ;-)"
+
+  Brian [replied with an interesting summary of his in progress work](https://lore.kernel.org/git/X%2F0IaVkxqbYxKJBf@camp.crustytoothpaste.net/).
+
+  Gábor Szeder then reported a Clang warning, while Junio suggested
+  more `unsigned long` to `size_t` changes.
+
+  Brian then sent a
+  [version 3](https://lore.kernel.org/git/20210118234915.2036197-1-sandals@crustytoothpaste.net/)
+  of his patch series with fixes for the issues reported by Gábor and
+  Junio, and then a few weeks later
+  [version 4](https://lore.kernel.org/git/20210211020806.288523-1-sandals@crustytoothpaste.net/)
+  to fix another small issue.
+
+  This patch series is scheduled to be merged in the `master` branch
+  soon.
 
 <!---
 ### Support
