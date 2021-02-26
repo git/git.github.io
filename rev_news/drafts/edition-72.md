@@ -262,6 +262,12 @@ __Git tools and sites__
   by prompting them to follow commit message conventions at commit time,
   asking the user fill in any required fields and automatically formatting
   the commit message according to selected convention.
+* [Git Gud](https://github.com/benthayer/git-gud) by Ben Thayer
+  is a *command line* game designed to help you learn how to use Git.
+  Note that there was a pretty barebone visual web-based Git simulator
+  [with the same name](https://nic-hartley.github.io/git-gud/) by Nic Hartley, which
+  got mentioned in [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/),
+  but it is no longer available.
 
 
 ## Credits
