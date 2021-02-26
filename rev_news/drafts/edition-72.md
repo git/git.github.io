@@ -213,8 +213,7 @@ __Various__
 * At FOSDEM 2021 (this year this event happened in the virtual format)
   there was a lightning talk [Building a Git learning game: A playful approach to version control](https://fosdem.org/2021/schedule/event/git_learning_game/) (video available)
   initiated by two students who wanted to understand Git themselves...
-  (which can be seen by the fact that arrows in graph of revisions point
-  in the wrong direction).  This [Oh My Git!](https://ohmygit.org/) game
+  This [Oh My Git!](https://ohmygit.org/) game
   [is open-source](https://github.com/git-learning-game/oh-my-git) and
   is written using the [Godot game engine](https://godotengine.org/).
   There are binaries for Linux, macOS, and Windows, but currently no web
