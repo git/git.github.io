@@ -25,9 +25,9 @@ This edition covers what happened during the month of January 2021.
 
 * [[PATCH 0/5] Support for commits signed by multiple algorithms](https://lore.kernel.org/git/20210111003740.1319996-1-sandals@crustytoothpaste.net/)
 
-  Brian M Carlson sent a patch series to allow verifying signed
+  brian m. carlson sent a patch series to allow verifying signed
   commits and tags when using multiple hash algorithms. This is a
-  follow up from Brian's multi-year work on supporting the SHA-256
+  follow up from brian's multi-year work on supporting the SHA-256
   hash algorithm in Git, to deal with the fact that the original SHA-1
   algorithm is becoming more and more outdated and insecure.
 
@@ -42,29 +42,29 @@ This edition covers what happened during the month of January 2021.
   way such object would have 2 signatures, and can always be verified
   using one of them, even if it gets converted back and forth.
 
-  Brian's patch series addressed the issue that for SHA-256 tags it
+  brian's patch series addressed the issue that for SHA-256 tags it
   was initially planned to have the signature in a Git object header
-  (which is called a header signature), instead of at the end of the
+  (which is called a header signature) instead of at the end of the
   tag message (which is called a trailing signature), but
   unfortunately the patch implementing that got lost. So we use
   trailing signatures.
 
-  Brian then explained "We can't change this now, because otherwise it
+  brian then explained "We can't change this now, because otherwise it
   would be ambiguous whether the trailing signature on a SHA-256
   object was for the SHA-256 contents or whether the contents were a
   rewritten SHA-1 object with no SHA-256 signature at all." So the
   solution he implemented was to "use the trailing signature for the
   preferred hash algorithm and use a header for the other variant".
 
-  Brian thinks this solution is the best we can do in the current
+  brian thinks this solution is the best we can do in the current
   situation, as it still allows converting back and forth between
   hashes, and verifying signatures created with older versions of Git,
   though tags signed with multiple algorithms can't be verified with
   older versions of Git.
 
-  For commits, Brian patch series fixes the bug that old header
+  For commits, brian's patch series fixes the bug that old header
   signatures weren't stripped off before verifying new signatures, so
-  verifications always failed.
+  verification always failed.
 
   The result of his series is then that signing both commits and tags
   can now be round-tripped through both SHA-1 and SHA-256 conversions.
@@ -73,16 +73,16 @@ This edition covers what happened during the month of January 2021.
   suggesting using the `size_t` type for byte lengths, instead of
   `unsigned long`, as `unsigned long` was breaking 32-bit builds.
 
-  Brian agreed and sent a
+  brian agreed and sent a
   [version 2](https://lore.kernel.org/git/20210111035840.2437737-1-sandals@crustytoothpaste.net/)
   of the series with Junio's fix.
 
   Junio replied to the cover letter of this series asking "How widely
   are SHA-256 tags in use in the real world, though?", and if it was really
-  too late to use a header signature for tags, as was originaly
+  too late to use a header signature for tags, as was originally
   planned.
 
-  Brian replied:
+  brian replied:
 
   > I don't know. I don't know of any major hosting platform that
     supports them, but of course many people may be using them
@@ -97,12 +97,12 @@ This edition covers what happened during the month of January 2021.
   before we get to anything interesting." To which Junio replied:
   "Uncomfortably excited to hear this ;-)"
 
-  Brian [replied with an interesting summary of his in progress work](https://lore.kernel.org/git/X%2F0IaVkxqbYxKJBf@camp.crustytoothpaste.net/).
+  brian [replied with an interesting summary of his in progress work](https://lore.kernel.org/git/X%2F0IaVkxqbYxKJBf@camp.crustytoothpaste.net/).
 
   Gábor Szeder then reported a Clang warning, while Junio suggested
   more `unsigned long` to `size_t` changes.
 
-  Brian then sent a
+  brian then sent a
   [version 3](https://lore.kernel.org/git/20210118234915.2036197-1-sandals@crustytoothpaste.net/)
   of his patch series with fixes for the issues reported by Gábor and
   Junio, and then a few weeks later
@@ -210,17 +210,17 @@ This edition covers what happened during the month of January 2021.
 
 __Various__
 
-* At FOSDEM 2021 (this year this event happened in the virtual format)
+* At FOSDEM 2021 (this year the event happened in a virtual format)
   there was a lightning talk [Building a Git learning game: A playful approach to version control](https://fosdem.org/2021/schedule/event/git_learning_game/) (video available)
   initiated by two students who wanted to understand Git themselves...
   This [Oh My Git!](https://ohmygit.org/) game
-  [is open-source](https://github.com/git-learning-game/oh-my-git) and
-  is written using the [Godot game engine](https://godotengine.org/).
+  [is Open Source](https://github.com/git-learning-game/oh-my-git) and
+  written using the [Godot game engine](https://godotengine.org/).
   There are binaries for Linux, macOS, and Windows, but currently no web
   version, as the game uses real Git as a part of its backend (with some
   sandboxing).
   
-  Similar interactive online [Learn Git Branching](http://learngitbranching.js.org/)
+  The similar interactive online [Learn Git Branching](http://learngitbranching.js.org/)
   game was mentioned in [Git Rev News Edition #30](https://git.github.io/rev_news/2017/08/16/edition-30/).
 
 
@@ -238,8 +238,8 @@ __Light reading__
   (and [DVC](https://dvc.org) (Data Version Control)), by Linda Ikechukwu
   on freeCodeCamp.  DVC was first mentioned
   in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/).
-* [RefinementCodeReview](https://martinfowler.com/bliki/RefinementCodeReview.html)
-  post by Martin Fowler describes an alternative to [PullRequest](https://martinfowler.com/bliki/PullRequest.html)
+* The [RefinementCodeReview](https://martinfowler.com/bliki/RefinementCodeReview.html)
+  post by Martin Fowler describes an alternative to the [PullRequest](https://martinfowler.com/bliki/PullRequest.html)
   mechanism for code review, namely one that is triggered each time
   the code is looked at rather than when the code is added to the codebase.
 * In [Monorepos](https://css-tricks.com/monorepo/) Chris Coyier explains the reasoning,
@@ -257,8 +257,8 @@ __Git tools and sites__
 * [DAGsHub Storage](https://dagshub.com/docs/reference/dagshub_storage/)
   is an alternative (and free-to-use) [DVC](https://dvc.org) remote
   that requires zero configuration.
-* [Commitizen](http://commitizen.github.io/cz-cli/) is an open source project
-  that helps contributors be good open source citizens. It accomplishes this
+* [Commitizen](http://commitizen.github.io/cz-cli/) is an Open Source project
+  that helps contributors be good Open Source citizens. It accomplishes this
   by prompting them to follow commit message conventions at commit time,
   asking the user fill in any required fields and automatically formatting
   the commit message according to selected convention.
@@ -271,4 +271,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Taylor Blau and Markus Jansen.
+with help from Taylor Blau.
