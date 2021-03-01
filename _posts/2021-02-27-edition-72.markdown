@@ -95,7 +95,7 @@ This edition covers what happened during the month of January 2021.
 
   He ended his reply saying "there's a lot more prep work (surprise)
   before we get to anything interesting." To which Junio replied:
-  "Uncomfortably excited to hear this ;-)"
+  "Uncomfortably excited to hear this ;-)".
 
   brian [replied with an interesting summary of his in progress work](https://lore.kernel.org/git/X%2F0IaVkxqbYxKJBf@camp.crustytoothpaste.net/).
 
