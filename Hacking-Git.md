@@ -3,8 +3,18 @@ layout: default
 title: Hacking Git
 ---
 
-The goal of this document is not to be a tutorial but rather to point
-people to interesting material that has already been written.
+The goal of this document is not to be a tutorial, but rather to
+point to interesting material that has already been written.
+
+The goal is also not to list all the articles about Git or its
+internals. There are a lot of good resources, including free
+[books](http://git-scm.com/book/en/v2/), about that elsewhere.
+
+Contributions are welcome though! Please contact us on the Git Mailing
+list (at [git@vger.kernel.org](mailto:git@vger.kernel.org)) or open an
+issue or a pull request on our
+[GitHub repo](https://github.com/git/git.github.io/) to discuss or
+suggest improvements. Thanks!
 
 ## Building Git
 
