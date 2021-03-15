@@ -24,6 +24,14 @@ suggest improvements. Thanks!
 
 * [The top of the Makefile](https://github.com/git/git/blob/master/Makefile), for special "Makefile knobs"
 
+## Understanding the Git code base
+
+* [A birds-eye view of Git’s source code](https://git-scm.com/docs/user-manual#birdview-on-the-source-code)
+
+* [Fabien Sanglar's Git Source Code Review](https://fabiensanglard.net/git_code_review/architecture.php)
+
+* [Boost Your Programming Skills by Reading Git's Code](https://www.freecodecamp.org/news/boost-programming-skills-read-git-code/)
+
 ## Getting started hacking and contributing
 
 * ["My First Contribution"](https://git-scm.com/docs/MyFirstContribution)
