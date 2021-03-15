@@ -26,7 +26,7 @@ suggest improvements. Thanks!
 
 ## Understanding the Git code base
 
-* [A birds-eye view of Git’s source code](https://git-scm.com/docs/user-manual#birdview-on-the-source-code)
+* ["A birds-eye view of Git’s source code"](https://git-scm.com/docs/user-manual#birdview-on-the-source-code) in the Git User’s Manual
 
 * [Fabien Sanglar's Git Source Code Review](https://fabiensanglard.net/git_code_review/architecture.php)
 
