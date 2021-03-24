@@ -25,9 +25,88 @@ This edition covers what happened during the month of February 2021.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [[QUESTION] Tracking HEAD changes?](https://lore.kernel.org/git/CAGgn8PdU1GE_CZdGUpJWKzygd0O+Yn2BnAFGmPfKAxFpoVoqUA@mail.gmail.com/)
+
+  Yaron Wittenstein asked on the mailing list if there is "any
+  possible way to track changes to HEAD using hooks". He said he would
+  like to listen to events such as "pre-head-checkout" and
+  "post-head-checkout", but thought that it was only possible using a
+  file watch over the `.git/refs` directory.
+
+  Jeff King, alias Peff, first replied that he thought there was no
+  better way, and that it was also required to watch `.git/HEAD`. He
+  also showed some code for
+  Linux/[inotify](https://en.wikipedia.org/wiki/Inotify) he uses to
+  automatically run tests against the current commit:
+
+  ```
+  gitdir=$(git rev-parse --git-dir)
+  # We need delete_self to pick up changes to HEAD (since it gets renamed
+  # over), and "move" to pick up changes in the refs directories.
+  inotifywait -qq -t 60 -e delete_self -e move -r "$gitdir/HEAD" "$gitdir/refs"
+  ```
+
+  Peff also recommended using Michael Haggerty's
+  [git-test tool](https://github.com/mhagger/git-test) for avoiding
+  re-running tests against the same commits repeatedly.
+
+  Then Peff replied to his previous email that Patrick Steinhardt also
+  recently (since Git v2.28.0) implemented a new
+  [ref-transaction hook](https://www.git-scm.com/docs/githooks#_reference_transaction)
+  that can get triggered by updates to the ref that HEAD is pointing at.
+
+  Yaron replied that this seems to do the trick, except the hook
+  doesn't execute when switching branches. He found a work-around
+  though by using the post-checkout hook in addition.
+
+  Peff said that he thought the hook would be triggered when HEAD is
+  updated by a branch switch, and wondered if that was a bug, a
+  missing feature, or something intentional in the ref-transaction
+  hook design.
+
+  Patrick replied that the reason is that
+  [symrefs](https://git-scm.com/docs/git-symbolic-ref) are not covered
+  by the reference transaction mechanism itself, which existed before
+  he implemented the new hook, and which the hook is using
+  underneath. He also said that he should update the documentation to
+  make it clearer what is covered by the hook and what's not.
+
+  Yaron thanked Patrick for the clarification and asked if there were
+  plans for the hook to be called when symrefs are updated. He also
+  said it didn't seem intuitive to him that the index and working dirs
+  are being updated, which calls the "post-index-change" hook, before
+  the transaction is approved, which calls the "ref-transaction" hook.
+
+  Patrick replied that he didn't have plan for the hook to support
+  symrefs, but wouldn't oppose such effort. About the order in which
+  things were happening, he said that it is the way Git currently
+  works and that the goal of the ref-transaction hook, which he worked
+  on as part of his work for GitLab, was "to catch _all_ reference
+  updates such that one can coordinate across multiple git nodes the
+  same action to assert they're moving from the same state to the same
+  state, regardless of whether they're doing a
+  [git-push](https://git-scm.com/docs/git-push),
+  [git-merge](https://git-scm.com/docs/git-merge) or
+  [git-update-ref](https://git-scm.com/docs/git-update-ref)".
+
+  Junio Hamano, the Git Maintainer, further explained that "ref
+  transaction is only about changes to the refs" and that "there is no
+  such 'transaction' that treats a series of operations like object
+  creation and index manipulation that may happen before a group of
+  refs are updated as a single unit and make it atomic."
+
+  Meanwhile Peff replied to Patrick's first explanation about why
+  symrefs are not covered by the hook saying that it might be
+  something that could be fixed. He also said that GitHub's custom
+  repository replication mechanism does track symref updates, but uses
+  a simple lock mechanism to get the state of the symrefs, while it
+  uses a 3-phase commit based on custom code similar to the
+  ref-transaction hook for normal refs.
+
+  Yaron then summarized his understanding of how things work and asked
+  if he was right. Peff replied that it matched his understanding.
 
 <!---
 ## Developer Spotlight:
