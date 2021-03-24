@@ -166,7 +166,7 @@ __Light reading__
 * [How to Utilize Submodules within Git Repos](https://blog.bitsrc.io/how-to-utilize-submodules-within-git-repos-5dfdd1c62d09):
   One Solution When the Primary Code Can be Open Source, but Specific Content Needs to be Private,
   by Paige Niedringhaus on Bits and Pieces blog (a Medium site)
-* [How to use .mailmap file in git repository](ukasmestan.com/using-mailmap-in-git-repository/)
+* [How to use .mailmap file in git repository](https://lukasmestan.com/using-mailmap-in-git-repository/)
   by Lukáš Mešťan (2020)
 * [What is Trunk Based Development? A Different Approach to the Software Development Lifecycle](https://www.freecodecamp.org/news/what-is-trunk-based-development/)
   by Kealan Parr on freeCodeCamp.  This approach was also one of those described
