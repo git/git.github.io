@@ -67,11 +67,61 @@ This edition covers what happened during the month of February 2021.
 
 __Various__
 
+* [Git clone vulnerability announced](https://github.blog/2021-03-09-git-clone-vulnerability-announced/)
+  by Taylor Blau on GitHub Blog, and
+  [A vulnerability in Git](https://lwn.net/Articles/848935/)
+  by Jake Edge on LWN.net
+* [Highlights from Git 2.31](https://github.blog/2021-03-15-highlights-from-git-2-31/)
+  by Taylor Blau on GitHub Blog
+
 
 __Light reading__
 
+* [Optimizing git’s merge machinery, #1](https://blog.palantir.com/optimizing-gits-merge-machinery-1-127ceb0ef2a1)
+  and [#2](https://blog.palantir.com/optimizing-gits-merge-machinery-2-d81391b97878)
+  by Elijah Newren on Palantir Blog
+* [How Does Git Work?](https://www.honeybadger.io/blog/how-does-git-work/)
+  by Julie Kent
+* [Git is my buddy: Effective Git as a solo developer](https://mikkel.ca/blog/git-is-my-buddy-effective-solo-developer/)
+  by Mikkel Paulson
+* [How to Utilize Submodules within Git Repos](https://blog.bitsrc.io/how-to-utilize-submodules-within-git-repos-5dfdd1c62d09):
+  One Solution When the Primary Code Can be Open Source, but Specific Content Needs to be Private,
+  by Paige Niedringhaus on Bits and Pieces blog (a Medium site)
+* [How to use .mailmap file in git repository](ukasmestan.com/using-mailmap-in-git-repository/)
+  by Lukáš Mešťan (2020)
+* [What is Trunk Based Development? A Different Approach to the Software Development Lifecycle](https://www.freecodecamp.org/news/what-is-trunk-based-development/)
+  by Kealan Parr on freeCodeCamp.  This approach was also one of those described
+  in [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html)
+  by Martin Fowler, which was mentioned in [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/).
+* [Improving large monorepo performance on GitHub](https://github.blog/2021-03-16-improving-large-monorepo-performance-on-github/)
+  by Scott Arbeit on GitHub Blog, in the Engineering section
+* [Hacking the git shell prompt](https://blog.plover.com/prog/git-prompt-hook-hack.html)
+  by Mark Dominus describes a hack creating a generic mechanism for abbreviating
+  or transforming the branch name in the prompt
+* [Boost Your Programming Skills by Reading Git's Code](https://www.freecodecamp.org/news/boost-programming-skills-read-git-code/)
+  by Jacob Stopak on freeCodeCamp
+* [How To Set Up Continuous Integration With Git and Jenkins](https://www.lambdatest.com/blog/how-to-setup-continuous-integration-with-git-jenkins/)
+  by Suparna Khamaru on LambdaTest Blog
+* [Store your Kubernetes Secrets in Git thanks to Kubeseal. Hello SealedSecret!](https://dev.to/stack-labs/store-your-kubernetes-secrets-in-git-thanks-to-kubeseal-hello-sealedsecret-2i6h)
+  by Aurélie Vache on Dev.to.  More generic solutions for storing secrets in Git repository
+  were described in Git Rev News editions [#39](https://git.github.io/rev_news/2018/05/16/edition-39/)
+  and [#57](https://git.github.io/rev_news/2019/11/20/edition-57/), among others.
+
 
 __Git tools and sites__
+
+* [Project GITenberg](http://gitenberg.github.io/) is a Free and Open,
+  Collaborative, Trackable and Scriptable digital library.  It leverages the
+  power of the Git version control system and the collaborative potential of
+  GitHub to make books more open.  The books in this project originate from
+  the work of [Project Gutenberg](http://www.gutenberg.org/), a volunteer effort
+  to digitize and archive cultural works, mostly the full texts of
+  public domain books.
+* [ungit](https://github.com/FredrikNoren/ungit) is a Git command-line UI 
+  with text-editors integrations,
+  that utilizes web browser for graphical interface.  It is intended to make
+  Git easier to use.  In this it is somewhat similar to no longer actively developed
+  [Easy Git](https://people.gnome.org/~newren/eg/).
 
 
 ## Credits
