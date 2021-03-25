@@ -41,7 +41,7 @@ This edition covers what happened during the month of February 2021.
   Linux/[inotify](https://en.wikipedia.org/wiki/Inotify) he uses to
   automatically run tests against the current commit:
 
-  ```
+  ```shell
   gitdir=$(git rev-parse --git-dir)
   # We need delete_self to pick up changes to HEAD (since it gets renamed
   # over), and "move" to pick up changes in the refs directories.
