@@ -24,6 +24,14 @@ git@vger.kernel.org if appropriate).
 * `bundle exec jekyll serve`
 * browse the site on http://localhost:4000
 
+# Development with Docker
+
+* Make sure you've got [docker](https://docs.docker.com/engine/install/) and [docker-compose](https://docs.docker.com/compose/install/) with dev-packages installed
+* Clone this repo
+*  `docker-compose build  --build-arg RubyVersion="2.7.1"`
+* `docker-compose up`
+* browse the site on http://localhost:4000
+
 Based on https://help.github.com/articles/using-jekyll-with-pages/
 
 [1] http://www.nokogiri.org/tutorials/installing_nokogiri.html#ubuntu___debian
