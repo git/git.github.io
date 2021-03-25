@@ -77,7 +77,7 @@ This edition covers what happened during the month of February 2021.
   plans for the hook to be called when symrefs are updated. He also
   said it didn't seem intuitive to him that the index and working dirs
   are being updated, which calls the "post-index-change" hook, before
-  the transaction is approved, which in-turn calls the "ref-transaction" hook.
+  the transaction is approved, which in turn calls the "ref-transaction" hook.
 
   Patrick replied that he didn't have plan for the hook to support
   symrefs, but wouldn't oppose such effort. About the order in which
@@ -91,7 +91,7 @@ This edition covers what happened during the month of February 2021.
   [git-merge](https://git-scm.com/docs/git-merge) or
   [git-update-ref](https://git-scm.com/docs/git-update-ref)".
 
-  Junio Hamano, the Git Maintainer, further explained that "ref
+  Junio Hamano, the Git maintainer, further explained that "ref
   transaction is only about changes to the refs" and that "there is no
   such 'transaction' that treats a series of operations like object
   creation and index manipulation that may happen before a group of
@@ -150,38 +150,38 @@ __Various__
 * [Git clone vulnerability announced](https://github.blog/2021-03-09-git-clone-vulnerability-announced/)
   by Taylor Blau on GitHub Blog, and
   [A vulnerability in Git](https://lwn.net/Articles/848935/)
-  by Jake Edge on LWN.net
+  by Jake Edge on LWN.net.
 * [Highlights from Git 2.31](https://github.blog/2021-03-15-highlights-from-git-2-31/)
-  by Taylor Blau on GitHub Blog
+  by Taylor Blau on GitHub Blog.
 
 
 __Light reading__
 
 * [Optimizing git’s merge machinery, #1](https://blog.palantir.com/optimizing-gits-merge-machinery-1-127ceb0ef2a1)
   and [#2](https://blog.palantir.com/optimizing-gits-merge-machinery-2-d81391b97878)
-  by Elijah Newren on Palantir Blog
+  by Elijah Newren on Palantir Blog.
 * [How Does Git Work?](https://www.honeybadger.io/blog/how-does-git-work/)
-  by Julie Kent
+  by Julie Kent.
 * [Git is my buddy: Effective Git as a solo developer](https://mikkel.ca/blog/git-is-my-buddy-effective-solo-developer/)
-  by Mikkel Paulson
+  by Mikkel Paulson.
 * [How to Utilize Submodules within Git Repos](https://blog.bitsrc.io/how-to-utilize-submodules-within-git-repos-5dfdd1c62d09):
   One Solution When the Primary Code Can be Open Source, but Specific Content Needs to be Private,
-  by Paige Niedringhaus on Bits and Pieces blog (a Medium site)
+  by Paige Niedringhaus on Bits and Pieces blog (a Medium site).
 * [How to use .mailmap file in git repository](https://lukasmestan.com/using-mailmap-in-git-repository/)
-  by Lukáš Mešťan (2020)
+  by Lukáš Mešťan (2020).
 * [What is Trunk Based Development? A Different Approach to the Software Development Lifecycle](https://www.freecodecamp.org/news/what-is-trunk-based-development/)
   by Kealan Parr on freeCodeCamp.  This approach was also one of those described
   in [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html)
   by Martin Fowler, which was mentioned in [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/).
 * [Improving large monorepo performance on GitHub](https://github.blog/2021-03-16-improving-large-monorepo-performance-on-github/)
-  by Scott Arbeit on GitHub Blog, in the Engineering section
+  by Scott Arbeit on GitHub Blog, in the Engineering section.
 * [Hacking the git shell prompt](https://blog.plover.com/prog/git-prompt-hook-hack.html)
   by Mark Dominus describes a hack creating a generic mechanism for abbreviating
-  or transforming the branch name in the prompt
+  or transforming the branch name in the prompt.
 * [Boost Your Programming Skills by Reading Git's Code](https://www.freecodecamp.org/news/boost-programming-skills-read-git-code/)
-  by Jacob Stopak on freeCodeCamp
+  by Jacob Stopak on freeCodeCamp.
 * [How To Set Up Continuous Integration With Git and Jenkins](https://www.lambdatest.com/blog/how-to-setup-continuous-integration-with-git-jenkins/)
-  by Suparna Khamaru on LambdaTest Blog
+  by Suparna Khamaru on LambdaTest Blog.
 * [Store your Kubernetes Secrets in Git thanks to Kubeseal. Hello SealedSecret!](https://dev.to/stack-labs/store-your-kubernetes-secrets-in-git-thanks-to-kubeseal-hello-sealedsecret-2i6h)
   by Aurélie Vache on Dev.to.  More generic solutions for storing secrets in Git repository
   were described in Git Rev News editions [#39](https://git.github.io/rev_news/2018/05/16/edition-39/)
@@ -198,8 +198,8 @@ __Git tools and sites__
   to digitize and archive cultural works, mostly the full texts of
   public domain books.
 * [ungit](https://github.com/FredrikNoren/ungit) is a Git command-line UI 
-  with text-editors integrations,
-  that utilizes web browser for graphical interface.  It is intended to make
+  with text editor integrations,
+  that utilizes your web browser as graphical interface.  It is intended to make
   Git easier to use.  In this it is somewhat similar to no longer actively developed
   [Easy Git](https://people.gnome.org/~newren/eg/).
 
