@@ -77,7 +77,7 @@ This edition covers what happened during the month of February 2021.
   plans for the hook to be called when symrefs are updated. He also
   said it didn't seem intuitive to him that the index and working dirs
   are being updated, which calls the "post-index-change" hook, before
-  the transaction is approved, which calls the "ref-transaction" hook.
+  the transaction is approved, which in-turn calls the "ref-transaction" hook.
 
   Patrick replied that he didn't have plan for the hook to support
   symrefs, but wouldn't oppose such effort. About the order in which
