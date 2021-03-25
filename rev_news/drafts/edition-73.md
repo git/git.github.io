@@ -105,7 +105,8 @@ This edition covers what happened during the month of February 2021.
   uses a 3-phase commit based on custom code similar to the
   ref-transaction hook for normal refs.
 
-  Yaron then summarized his understanding of how things work and asked
+  Yaron then [summarized his understanding](https://lore.kernel.org/git/CAGgn8PdYsfbSE2vRunOXO1JqXoM8LxoD+5Zn74jmb9vpqDXh+Q@mail.gmail.com/)
+  of how things work and asked
   if he was right. Peff replied that it matched his understanding.
 
 <!---
