@@ -63,7 +63,12 @@ the following steps:
   formatting very seriously.
 
 * Read about the process for submitting patches to Git: this is
-  described in `Documentation/SubmittingPatches`.
+  described in `Documentation/SubmittingPatches`. A more detailed
+  step-by-step guide could be found in [`Documentation/MyFirstContribution.txt`](https://git-scm.com/docs/MyFirstContribution).
+
+* The "[Hacking Git](https://git.github.io/Hacking-Git/)" page
+  could also serve as a handy resource. It points to resources
+  on various topics related to working on Git.
 
 * Select a microproject and check that it has not yet been taken or
   discussed by searching the mailing list.
