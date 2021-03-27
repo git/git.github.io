@@ -98,7 +98,7 @@ the following steps:
   [access permissions confirmation](https://docs.travis-ci.com/user/github-oauth-scopes),
   and enable builds of your Git fork in your Travis CI profile
   (you only have to do these steps once). Afterwards you can push
-  your changes to your fork and on https://travis-ci.org/your-github-name/git/builds
+  your changes to your fork and on <https://travis-ci.org/your-github-name/git/builds>
   (example [here](https://travis-ci.org/git/git/builds)) you can see
   if your changes pass the Git test suite on Ubuntu Linux and on Mac OS X.
 
@@ -192,7 +192,7 @@ you did is very significant and/or of high quality!
 If you don't like for some reason the microprojects that are proposed
 related to your program, or if you just want more choice, you may find
 other ideas for microprojects by searching the mailing list
-(https://public-inbox.org/git/) or the code base itself. In the code
+(<https://public-inbox.org/git/>) or the code base itself. In the code
 base you could search the code itself or the tests (in the "t"
 directory).
 
@@ -210,7 +210,7 @@ that recently.
 ### Searching for bug reports
 
 Git has no official bug tracker or bug list. On
-https://git-scm.com/community we recommend that people report bugs
+<https://git-scm.com/community> we recommend that people report bugs
 directly on the Git mailing list.
 
 On the mailing list people sending bug reports are likely to use
@@ -224,26 +224,26 @@ known behaviors or limitations though. So don't expect too much.
 send patches from a GitHub repository to the Git mailing list, has its
 own list of Git issues on:
 
-https://github.com/gitgitgadget/git/issues
+<https://github.com/gitgitgadget/git/issues>
 
 There are even a couple ideas marked as #leftoverbits, i.e. curated
 and copied from the Git mailing list see:
 
-https://github.com/gitgitgadget/git/issues?q=is%3Aissue+is%3Aopen+label%3Aleftoverbits
+<https://github.com/gitgitgadget/git/issues?q=is%3Aissue+is%3Aopen+label%3Aleftoverbits>
 
 And there are a couple of project ideas marked as "good first issue":
 
-https://github.com/gitgitgadget/git/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22
+<https://github.com/gitgitgadget/git/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22>
 
 that might be interesting to look at.
 
 There is another non official bug tracker dedicated to Git issues on:
 
-https://crbug.com/git
+<https://crbug.com/git>
 
 Git for Windows also has it's own issue tracker:
 
-https://github.com/git-for-windows/git/issues
+<https://github.com/git-for-windows/git/issues>
 
 But of course the Git for Windows issues might not apply to Git
 itself. Please check that before talking about them on the Git mailing
@@ -259,7 +259,7 @@ when they think further small work on the topic could be useful.
 
 You can easily search that using:
 
-https://public-inbox.org/git/?q=leftoverbits
+<https://public-inbox.org/git/?q=leftoverbits>
 
 But don't forget to search to check if what you find has already been
 addressed. If it has not been addressed, please ask first on the
