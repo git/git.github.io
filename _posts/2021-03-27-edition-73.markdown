@@ -153,7 +153,9 @@ __Various__
   by Jake Edge on LWN.net.
 * [Highlights from Git 2.31](https://github.blog/2021-03-15-highlights-from-git-2-31/)
   by Taylor Blau on GitHub Blog.
-
+* Congratulations to [Joey Salazar](https://jsal.home.blog/) and
+  [Charvi Mendiratta](https://charvi-077.github.io/) who successfully completed their
+  [Outreachy internship](https://www.outreachy.org/alums/)!
 
 __Light reading__
 
