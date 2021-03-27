@@ -63,7 +63,8 @@ the following steps:
   formatting very seriously.
 
 * Read about the process for submitting patches to Git: this is
-  described in `Documentation/SubmittingPatches`.
+  described in `Documentation/SubmittingPatches`. A more detailed
+  step-by-step guide could be found in [`Documentation/MyFirstContribution.txt`](https://git-scm.com/docs/MyFirstContribution).
 
 * Select a microproject and check that it has not yet been taken or
   discussed by searching the mailing list.
