@@ -155,7 +155,7 @@ __Various__
   by Taylor Blau on GitHub Blog.
 * Congratulations to [Joey Salazar](https://jsal.home.blog/) and
   [Charvi Mendiratta](https://charvi-077.github.io/) who successfully completed their
-  [Outreachy internship](https://www.outreachy.org/alums/)!
+  [Outreachy internship](https://www.outreachy.org/alums/) working on Git!
 
 __Light reading__
 
