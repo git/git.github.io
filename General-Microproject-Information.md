@@ -86,7 +86,10 @@ the following steps:
   to gain at least
   [a basic familiarity](http://git-scm.com/documentation) with using
   Git. Make sure to write a good commit message that explains the
-  reason for the change and any ramifications. Remember to make sure
+  reason for the change and any ramifications. You can find information
+  on writing a good commit message in the
+  ["Describe your changes well" section of the `SubmittingPatches` document](https://git-scm.com/docs/SubmittingPatches#describe-changes).
+  Remember to make sure
   that you agree with our "Developer's Certificate of Origin" (whose
   text is contained in `Documentation/SubmittingPatches`), and to
   signify your agreement by adding a `Signed-off-by` line.
