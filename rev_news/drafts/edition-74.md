@@ -43,6 +43,7 @@ __Various__
 
 __Light reading__
 
+* [Oh My Git!](https://ohmygit.org/) is an open source game about learning Git!
 
 __Git tools and sites__
 
