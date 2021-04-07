@@ -1,5 +1,6 @@
 ---
 layout: default
+favicon: images/logo.png
 title: Git Developer Pages
 navbar: false
 ---
