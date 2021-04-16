@@ -40,6 +40,8 @@ This edition covers what happened during the month of March 2021.
 
 __Various__
 
+* [Technology internships meet open source in Outreachy](https://about.gitlab.com/blog/2021/04/15/outreachy-sponsorship-winter-2020/)
+  on GitLab's blog is about recent Outreachy interns working on Git.
 
 __Light reading__
 
