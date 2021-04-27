@@ -35,6 +35,32 @@ This edition covers what happened during the month of March 2021.
 
 ## Releases
 
++ Git [2.31.1](https://lore.kernel.org/git/xmqq1rc1sf2z.fsf@gitster.g/),
++ Git for Windows [2.31.1(1)](https://github.com/git-for-windows/git/releases/tag/v2.31.1.windows.1)
++ GitHub Enterprise [3.0.5](https://help.github.com/enterprise-server@3.0/admin/release-notes#3.0.5),
+[2.22.11](https://help.github.com/enterprise-server@2.22/admin/release-notes#2.22.11),
+[2.21.19](https://help.github.com/enterprise-server@2.21/admin/release-notes#2.21.19),
+[3.0.4](https://help.github.com/enterprise-server@3.0/admin/release-notes#3.0.4),
+[2.22.10](https://help.github.com/enterprise-server@2.22/admin/release-notes#2.22.10),
+[2.21.18](https://help.github.com/enterprise-server@2.21/admin/release-notes#2.21.18),
+[3.0.3](https://docs.github.com/en/enterprise-server@3.0/admin/release-notes#3.0.3),
+[2.22.9](https://help.github.com/enterprise-server@2.22/admin/release-notes#2.22.9),
+[2.21.17](https://help.github.com/enterprise-server@2.21/admin/release-notes#2.21.17)
++ GitLab [13.11.1](https://about.gitlab.com/releases/2021/04/23/gitlab-13-11-1-released/),
+[13.11](https://about.gitlab.com/releases/2021/04/22/gitlab-13-11-released/),
+[13.10.3, 13.9.6, and 13.8.8](https://about.gitlab.com/releases/2021/04/14/security-release-gitlab-13-10-3-released/),
+[13.10.2](https://about.gitlab.com/releases/2021/04/01/gitlab-13-10-2-released/),
+[13.10.1, 13.9.5, and 13.8.7](https://about.gitlab.com/releases/2021/03/31/security-release-gitlab-13-10-1-released/)
++ Bitbucket Server [7.12](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ Gerrit Code Review [3.3.3](https://www.gerritcodereview.com/3.3.html#333),
+[3.2.8](https://www.gerritcodereview.com/3.2.html#328),
+[3.1.13](https://www.gerritcodereview.com/3.1.html#3113)
++ GitKraken [7.5.5](https://support.gitkraken.com/release-notes/current),
+[7.5.4](https://support.gitkraken.com/release-notes/current),
+[7.5.3](https://support.gitkraken.com/release-notes/current)
++ GitHub Desktop [2.7.2](https://desktop.github.com/release-notes/),
+[2.7.1](https://desktop.github.com/release-notes/),
+[2.7.0](https://desktop.github.com/release-notes/)
 
 ## Other News
 
