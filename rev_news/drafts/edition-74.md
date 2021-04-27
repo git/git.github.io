@@ -25,9 +25,106 @@ This edition covers what happened during the month of March 2021.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [--no-edit not respected after conflict](https://lore.kernel.org/git/4442fd0a-3306-a22b-3614-e3272f8f0be5@FreeBSD.org/)
+
+  Renato Botelho explained in an email to the mailing list that he was
+  reverting multiple commit using the `--no-edit` option when there
+  was a conflict that he resolved using
+  [`git mergetool`](https://git-scm.com/docs/git-mergetool). After that
+  though, the revert was not respecting the `--no-edit` option anymore
+  for the next commits, so for each of them an editor was opened for him
+  to review the commit messages.
+
+  After brian m. carlson replied to him asking for the set of commands
+  he used or a reproduction test case, Renato provided a test case
+  which shows that indeed after `git revert --continue` the
+  `--no-edit` option, that was provided in the initial
+  `git revert --no-edit commit1 commit2 ... commitN` command, doesn't
+  seem to be taken into account.
+
+  Elijah Newren thanked Renato, confirmed he could reproduce the issue
+  and said he started working on a patch that fixed the issue as well
+  as a similar one he found. The next day though Elijah replied to
+  himself saying the issue turned out to be messier than he expected.
+
+  He provided tables showing that the behavior (launching an editor or
+  not) could depend on a number of factors: the command (`revert` or
+  `cherry-pick`), the use of a terminal or not, before or after a
+  conflict, which option (`--edit`, `--no-edit` or no option) has been
+  passed. The tables also showed that Elijah had some doubts in some
+  cases.
+
+  Elijah for example was not sure what should be done after a conflict
+  when neither `--edit` nor `--no-edit` had been passed and when there
+  was no terminal. It was not clear if an editor should be launched as
+  it was likely to fail if there was no terminal.
+
+  Junio Hamano, the Git maintainer, replied to Elijah saying that,
+  when there is a conflict and when reverting (instead of
+  cherry-picking), the default (so when `--no-edit` is not provided)
+  should be to give the user a chance to explain the conflict
+  resolution or the reason for reverting in the commit message. If
+  there is no terminal though, the process is likely automated and
+  launching an editor might fail the operation for no good reason.
+
+  Elijah then thanked Junio, sent a proper
+  [patch](https://lore.kernel.org/git/pull.988.git.git.1616742969145.gitgitgadget@gmail.com/)
+  to the mailing list fixing the issue and asked Renato to give it a
+  try. Renato replied that the patch worked indeed and thanked Elijah.
+
+  Philip Oakley and Phillip Wood first replied to Elijah's patch,
+  which was quite involved, with only small comments. Elijah and Junio
+  both replied to their comments. Then Elijah sent a
+  [version 2 of his patch](https://lore.kernel.org/git/pull.988.v2.git.git.1617070174458.gitgitgadget@gmail.com/)
+  that only included typo fixes and comment clarifications to address
+  Philip's and Phillip's suggestions.
+
+  Johannes Schindelin, alias Dscho, replied to this new version of the
+  patch. He first said, as a tangent, that we should move away from
+  the "Unix shell script heritage", especially what he called "the
+  awful `let's write out one file per setting` strategy". He would
+  like the project to use the JSON or the INI (like Git's own config
+  files) format instead. He recognized that it might not be an easy
+  switch though, as some users might unfortunately rely too much on
+  such implementation details.
+
+  Dscho also made a number of small code suggestions. One was about
+  how the variable encoding the edit related options is
+  checked. Another one was to get rid of an assert() statement that
+  Elijah's patch introduced. While Elijah agreed with the first one,
+  he disagreed about the second, which started a small discussion
+  about the value of assert() between Elijah, Junio and Dscho, with
+  Ævar Arnfjörð Bjarmason chiming in. Elijah eventually suggested
+  replacing the assert() statements using a new BUG_ON() macro.
+
+  About Dscho's tangent that we should stop writing one file per
+  setting and use a standard format instead, Elijah said he was glad
+  talking about this because it generates a number of issues. Some of
+  these issues are related to the different control structures and
+  code duplication for different operations (like `git cherry-pick`
+  and `git rebase`) because of the differences in writing the
+  settings.
+
+  Another issue is some wasted time in the sequencer (which is used by
+  both `git cherry-pick` and `git rebase`). There is unnecessary
+  process forking and a lot of useless disk writing (to update the
+  index and the working directory but also to write all the individual
+  control files). This started a sub-thread where Dscho, Phillip Wood,
+  Junio and Elijah discussed if it was actually necessary to often
+  write many small files to disk. The conclusion seemed to be that we
+  would need to check if some hooks are configured or not, so that if
+  they are not, we can avoid writing a lot between each commit which
+  is processed. Dscho said that "for example, if no `pre-commit` hook
+  is installed that needs to be run, there is no need to update the
+  worktree nor HEAD until the rebase is done".
+
+  Meanwhile Elijah sent a
+  [version 3 of his patch](https://lore.kernel.org/git/pull.988.v3.git.git.1617173541301.gitgitgadget@gmail.com/)
+  that took into account all the suggestions Dscho made, including the
+  removal of the assert() statement. Dscho gave his "Reviewed-by:" and
+  the patch has since been merged into the 'master' branch.
 
 <!---
 ## Developer Spotlight:
