@@ -64,15 +64,54 @@ This edition covers what happened during the month of March 2021.
 
 ## Other News
 
+__Events__
+
+* [Announcing the Global Maintainer Summit](https://github.blog/2021-04-06-announcing-the-global-maintainer-summit/)
+  on June 8--9th.
+
+
 __Various__
 
 * [Technology internships meet open source in Outreachy](https://about.gitlab.com/blog/2021/04/15/outreachy-sponsorship-winter-2020/)
   on GitLab's blog is about recent Outreachy interns working on Git.
+* [Enhanced Productivity with Git in Visual Studio](https://devblogs.microsoft.com/visualstudio/enhanced-productivity-with-git-in-visual-studio/)
+  (in upcoming version 16.10).
+
 
 __Light reading__
 
+* [A look under the hood: how branches work in Git](https://stackoverflow.blog/2021/04/05/a-look-under-the-hood-how-branches-work-in-git/)
+  by Tobias Günther on The Overflow -- the Stack Overflow blog.
+* [Experiment on your code freely with Git worktree](https://opensource.com/article/21/4/git-worktree)
+  by Seth Kenlon (Red Hat) on Opensource.com.
+* [5 commands to level-up your Git game](https://opensource.com/article/21/4/git-commands):
+  `git whatchanged`, `git stash`, `git worktree`, `git cherry-pick` and
+  [managing $HOME with Git](https://opensource.com/article/21/4/git-home),
+  by Seth Kenlon (Red Hat) on Opensource.com.
+* [A practical guide to using the git stash command](https://opensource.com/article/21/4/git-stash)
+  by Ramakrishna Pattnaik on Opensource.com.
+* [Scanning for secrets](https://lwn.net/Articles/851670/) in Git repositories
+  automatically, by Jake Edge on LWN.net.
+* [How we ship code faster and safer with feature flags](https://github.blog/2021-04-27-ship-code-faster-safer-feature-flags/)
+  by Alberto Gimeno on GitHub Blog.
+* [How to Set Up Continuous Integration for a Monorepo Using Buildkite](https://www.freecodecamp.org/news/how-to-set-up-continuous-integration-for-monorepo-using-buildkite/)
+  by Subash Adhikari on freeCodeCamp.
+* [How to Use Git and Git Workflows -- a Practical Guide](https://www.freecodecamp.org/news/practical-git-and-git-workflows/)
+  by John Mosesman on freeCodeCamp.
+* [Improving shell workflows with fzf](https://seb.jambor.dev/posts/improving-shell-workflows-with-fzf/)
+  by Sebastian Jambor.  The [fzf](https://github.com/junegunn/fzf) tool was mentioned
+  alongside [git-fuzzy](https://github.com/bigH/git-fuzzy) (that uses it) in
+  [Git Rev News #64](https://git.github.io/rev_news/2020/06/25/edition-64/).
+* [Git email flow vs Github flow](https://blog.brixit.nl/git-email-flow-versus-github-flow/):
+  Comparing the Github and Gitlab pull request workflow to the Git built-in email workflow,
+  by Martijn Braam (2020).
+
 
 __Git tools and sites__
+
+* [posh-git](http://dahlbyk.github.io/posh-git/) is a PowerShell module
+  which provides Git/PowerShell integration.  It also provides tab completion
+  support for common git commands, branch names, paths and more.
 
 
 ## Credits
