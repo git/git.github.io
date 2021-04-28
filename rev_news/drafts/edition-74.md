@@ -126,9 +126,70 @@ This edition covers what happened during the month of March 2021.
   removal of the assert() statement. Dscho gave his "Reviewed-by:" and
   the patch has since been merged into the 'master' branch.
 
-<!---
-## Developer Spotlight:
--->
+
+## Developer Spotlight: Yann Dirson
+
+* Who are you and what do you do?
+
+  I'm Yann, and for the last few years I've been working on the
+  Blade/Shadow "stream a Gaming PC" service.
+
+* What would you name your most important contribution to Git?
+
+  I can't say anything I did stands out by itself.  In volume I
+  certainly contributed more to "third-party" tools: cogito initially,
+  then stgit, then more recently git-reintegrate.  In git.git I've
+  mostly contributed small patches here and there when it itched too
+  much, and a number of bugreports and suggestions.
+
+* What are you doing on the Git project these days, and why?
+
+  I've been mostly dormant there lately, and I've been a happy user
+  all that time. To me that tells a lot on the maturity of the
+  project.
+
+  I've started to feel a new itch regarding git-rebase -i, when
+  iterative work requires to go back-and-forth between patches before
+  finishing the rebase (something stgit did quite well, and possibly
+  something most users don't need). I only posted a PoC and some ideas
+  a couple of weeks ago, and that's likely to be my next venture into
+  git if time allows.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+  On my first contact with git shortly after Linus published his first
+  version, one thing that standed out as non-intuitive after using all
+  those former tools, was the "record only the content and not by
+  which operation we got there" moto, leaving to git-diff the work of
+  understanding "by which operation".  Yet soon after it striked me as
+  probably the most brillant aspect in git's design.
+
+  Today there are a handful of such operations that git can detect,
+  and then use when merging to make things easier: essentially renames
+  and copies. Yet so many other high-level operations on code can be
+  done, and are not easy enough to merge: code restructuring implying
+  reindents (think python) and symbol renaming are the first that come
+  to mind.
+
+  This probably should be done as language-specific diff/merge tools,
+  but those tools would likely want to share a common core. Providing
+  such support would likely help many projects, and enable smoother
+  workflows.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+  The current git-rebase syntax, which feels so counter-intuitive today.
+
+* What is your favorite Git-related tool/library, outside of Git
+  itself?
+
+  Recently the tool that has helped me most is git-reintegrate, it
+  simplifies so much the iterative integration process with WiP
+  branches.  It still has a couple of rough edges, but as long as you
+  don't use submodules and don't have to switch the integration task
+  with others too often, it runs really smoothly.
 
 ## Releases
 
@@ -219,4 +280,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Sven Strickroth.
+with help from Yann Dirson and Sven Strickroth.
