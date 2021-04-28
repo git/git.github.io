@@ -1,13 +1,13 @@
 ---
-title: Git Rev News Edition 74 (April 28th, 2021)
+title: Git Rev News Edition 74 (April 30th, 2021)
 layout: default
-date: 2021-04-28 12:06:51 +0100
+date: 2021-04-30 12:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 74 (April 28th, 2021)
+## Git Rev News: Edition 74 (April 30th, 2021)
 
 Welcome to the 74th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
