@@ -158,6 +158,7 @@ This edition covers what happened during the month of March 2021.
 + GitHub Desktop [2.7.2](https://desktop.github.com/release-notes/),
 [2.7.1](https://desktop.github.com/release-notes/),
 [2.7.0](https://desktop.github.com/release-notes/)
++ TortoiseGit [2.12.0](https://tortoisegit.org/docs/releasenotes/#Release_2.12.0.0)
 
 ## Other News
 
@@ -218,4 +219,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from XXX.
+with help from Sven Strickroth.
