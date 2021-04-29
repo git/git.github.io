@@ -246,6 +246,8 @@ __Various__
 
 __Light reading__
 
+* [Optimizing git’s merge machinery, #3](https://blog.palantir.com/optimizing-gits-merge-machinery-3-2dc7c7436978)
+  by Elijah Newren on Palantir Blog.
 * [A look under the hood: how branches work in Git](https://stackoverflow.blog/2021/04/05/a-look-under-the-hood-how-branches-work-in-git/)
   by Tobias Günther on The Overflow -- the Stack Overflow blog.
 * [Experiment on your code freely with Git worktree](https://opensource.com/article/21/4/git-worktree)
