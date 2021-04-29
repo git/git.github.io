@@ -160,6 +160,8 @@ This edition covers what happened during the month of March 2021.
   I only posted a PoC and some ideas a [couple of weeks ago][4], and that's
   likely to be my next venture into Git if time allows.
 
+[4]: https://lore.kernel.org/git/139173043.431119331.1615653441685.JavaMail.root@zimbra39-e7/
+
 * If you could get a team of expert developers to work full time on
   something in Git for a full year, what would it be?
 
