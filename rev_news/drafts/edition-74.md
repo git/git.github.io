@@ -225,7 +225,7 @@ This edition covers what happened during the month of March 2021.
 
 __Events__
 
-* [Announcing the Global Maintainer Summit](https://github.blog/2021-04-06-announcing-the-global-maintainer-summit/)
+* [GitHub is announcing the Global Maintainer Summit](https://github.blog/2021-04-06-announcing-the-global-maintainer-summit/)
   on June 8--9th.
 
 
@@ -253,6 +253,12 @@ __Light reading__
   automatically, by Jake Edge on LWN.net.
 * [How we ship code faster and safer with feature flags](https://github.blog/2021-04-27-ship-code-faster-safer-feature-flags/)
   by Alberto Gimeno on GitHub Blog.
+  * [Feature flags](https://featureflags.io/) were one of solutions to hiding partial features
+    in [trunk based development](https://trunkbaseddevelopment.com/), one of
+    [patterns for managing source code branches](https://martinfowler.com/articles/branching-patterns.html#continuous-integration)
+    in Martin Fowler's article of the same name, covered in
+    [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/)
+    and mentioned in [#73](https://git.github.io/rev_news/2021/03/27/edition-73/).
 * [How to Set Up Continuous Integration for a Monorepo Using Buildkite](https://www.freecodecamp.org/news/how-to-set-up-continuous-integration-for-monorepo-using-buildkite/)
   by Subash Adhikari on freeCodeCamp.
 * [How to Use Git and Git Workflows -- a Practical Guide](https://www.freecodecamp.org/news/practical-git-and-git-workflows/)
@@ -260,7 +266,7 @@ __Light reading__
 * [Improving shell workflows with fzf](https://seb.jambor.dev/posts/improving-shell-workflows-with-fzf/)
   by Sebastian Jambor.  The [fzf](https://github.com/junegunn/fzf) tool was mentioned
   alongside [git-fuzzy](https://github.com/bigH/git-fuzzy) (that uses it) in
-  [Git Rev News #64](https://git.github.io/rev_news/2020/06/25/edition-64/).
+  [Git Rev News Edition #64](https://git.github.io/rev_news/2020/06/25/edition-64/).
 * [Git email flow vs Github flow](https://blog.brixit.nl/git-email-flow-versus-github-flow/):
   Comparing the Github and Gitlab pull request workflow to the Git built-in email workflow,
   by Martijn Braam (2020).
