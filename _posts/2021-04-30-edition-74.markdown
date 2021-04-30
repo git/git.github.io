@@ -76,7 +76,7 @@ This edition covers what happened during the month of March 2021.
 
   Philip Oakley and Phillip Wood first replied to Elijah's patch,
   which was quite complex, with only minor comments. Elijah and Junio
-- both replied to their comments. Then Elijah sent a
+  both replied to their comments. Then Elijah sent a
   [version 2 of his patch](https://lore.kernel.org/git/pull.988.v2.git.git.1617070174458.gitgitgadget@gmail.com/)
   that only included typo fixes and comment clarifications to address
   Philip's and Phillip's suggestions.
@@ -84,7 +84,7 @@ This edition covers what happened during the month of March 2021.
   Johannes Schindelin, alias Dscho, replied to this new version of the
   patch. He first said, as a tangent, that we should move away from
   the "Unix shell script heritage", especially what he called "the
-  awful `let's write out one file per setting` strategy". He would
+  awful _let's write out one file per setting_ strategy". He would
   like the project to use the JSON or the INI (like Git's own config
   files) format instead. He recognized that it might not be an easy
   switch though, as some users might unfortunately rely too much on
@@ -92,12 +92,12 @@ This edition covers what happened during the month of March 2021.
 
   Dscho also made a number of small code suggestions. One was about
   how the variable encoding of the edit related options is
-  checked. Another one was to get rid of an assert() statement that
+  checked. Another one was to get rid of an `assert()` statement that
   Elijah's patch introduced. While Elijah agreed with the first one,
   he disagreed about the second, which started a small discussion
-  about the value of assert() between Elijah, Junio and Dscho, with
+  about the value of `assert()` between Elijah, Junio and Dscho, with
   Ævar Arnfjörð Bjarmason chiming in. Elijah eventually suggested
-  replacing the assert() statements using a new BUG_ON() macro.
+  replacing the `assert()` statements using a new `BUG_ON()` macro.
 
   About Dscho's tangent that we should stop writing one file per
   setting and use a standard format instead, Elijah said he was glad
@@ -123,7 +123,7 @@ This edition covers what happened during the month of March 2021.
   Meanwhile Elijah sent a
   [version 3 of his patch](https://lore.kernel.org/git/pull.988.v3.git.git.1617173541301.gitgitgadget@gmail.com/)
   that took into account all the suggestions Dscho had made, including the
-  removal of the assert() statement. Dscho gave his "Reviewed-by:" and
+  removal of the `assert()` statement. Dscho gave his "Reviewed-by:" and
   the patch has since been merged into the 'master' branch.
 
 
@@ -168,7 +168,7 @@ This edition covers what happened during the month of March 2021.
   On my first contact with Git shortly after Linus published his first
   version, one thing stood out for me as non-intuitive after using all
   those former tools: the "record only the content and not by which
-  operation we got there" motto, which leaves to `git-diff` the work of
+  operation we got there" motto, which leaves to `git diff` the work of
   reconstructing the "which operation" part.  Yet, soon after it struck
   me as probably the most brilliant aspect in Git's design.
 
