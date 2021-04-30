@@ -75,8 +75,8 @@ This edition covers what happened during the month of March 2021.
   try. Renato replied that the patch worked indeed and thanked Elijah.
 
   Philip Oakley and Phillip Wood first replied to Elijah's patch,
-  which was not that tiny, with only minor comments, followed by 
-  remarks from Junio. Then Elijah sent a
+  which was quite complex, with only minor comments. Elijah and Junio
+- both replied to their comments. Then Elijah sent a
   [version 2 of his patch](https://lore.kernel.org/git/pull.988.v2.git.git.1617070174458.gitgitgadget@gmail.com/)
   that only included typo fixes and comment clarifications to address
   Philip's and Phillip's suggestions.
