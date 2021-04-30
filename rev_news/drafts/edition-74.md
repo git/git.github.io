@@ -27,11 +27,11 @@ This edition covers what happened during the month of March 2021.
 
 ### Support
 
-* [--no-edit not respected after conflict](https://lore.kernel.org/git/4442fd0a-3306-a22b-3614-e3272f8f0be5@FreeBSD.org/)
+* [`--no-edit` not respected after conflict](https://lore.kernel.org/git/4442fd0a-3306-a22b-3614-e3272f8f0be5@FreeBSD.org/)
 
-  Renato Botelho explained in an email to the mailing list that he was
-  reverting multiple commit using the `--no-edit` option when there
-  was a conflict that he resolved using
+  Renato Botelho explained in an email to the mailing list that while he
+  was reverting multiple commits using the `--no-edit` option, there
+  was a conflict he resolved using
   [`git mergetool`](https://git-scm.com/docs/git-mergetool). After that
   though, the revert was not respecting the `--no-edit` option anymore
   for the next commits, so for each of them an editor was opened for him
@@ -42,28 +42,28 @@ This edition covers what happened during the month of March 2021.
   which shows that indeed after `git revert --continue` the
   `--no-edit` option, that was provided in the initial
   `git revert --no-edit commit1 commit2 ... commitN` command, doesn't
-  seem to be taken into account.
+  seem to be taken into account anymore.
 
   Elijah Newren thanked Renato, confirmed he could reproduce the issue
   and said he started working on a patch that fixed the issue as well
-  as a similar one he found. The next day though Elijah replied to
-  himself saying the issue turned out to be messier than he expected.
+  as a similar one he had found. The next day though Elijah replied to
+  himself saying the issue turned out to be messier than expected.
 
   He provided tables showing that the behavior (launching an editor or
   not) could depend on a number of factors: the command (`revert` or
   `cherry-pick`), the use of a terminal or not, before or after a
-  conflict, which option (`--edit`, `--no-edit` or no option) has been
+  conflict, which option (`--edit`, `--no-edit` or no option) had been
   passed. The tables also showed that Elijah had some doubts in some
   cases.
 
   Elijah for example was not sure what should be done after a conflict
-  when neither `--edit` nor `--no-edit` had been passed and when there
+  when neither `--edit` nor `--no-edit` had been specified and when there
   was no terminal. It was not clear if an editor should be launched as
   it was likely to fail if there was no terminal.
 
-  Junio Hamano, the Git maintainer, replied to Elijah saying that,
+  Junio Hamano, the Git maintainer, replied to Elijah saying that
   when there is a conflict and when reverting (instead of
-  cherry-picking), the default (so when `--no-edit` is not provided)
+  cherry-picking), the default (that is, `--no-edit` is not provided)
   should be to give the user a chance to explain the conflict
   resolution or the reason for reverting in the commit message. If
   there is no terminal though, the process is likely automated and
@@ -75,8 +75,8 @@ This edition covers what happened during the month of March 2021.
   try. Renato replied that the patch worked indeed and thanked Elijah.
 
   Philip Oakley and Phillip Wood first replied to Elijah's patch,
-  which was quite involved, with only small comments. Elijah and Junio
-  both replied to their comments. Then Elijah sent a
+  which was not that tiny, with only minor comments, followed by 
+  remarks from Junio. Then Elijah sent a
   [version 2 of his patch](https://lore.kernel.org/git/pull.988.v2.git.git.1617070174458.gitgitgadget@gmail.com/)
   that only included typo fixes and comment clarifications to address
   Philip's and Phillip's suggestions.
@@ -91,7 +91,7 @@ This edition covers what happened during the month of March 2021.
   such implementation details.
 
   Dscho also made a number of small code suggestions. One was about
-  how the variable encoding the edit related options is
+  how the variable encoding of the edit related options is
   checked. Another one was to get rid of an assert() statement that
   Elijah's patch introduced. While Elijah agreed with the first one,
   he disagreed about the second, which started a small discussion
@@ -117,12 +117,12 @@ This edition covers what happened during the month of March 2021.
   would need to check if some hooks are configured or not, so that if
   they are not, we can avoid writing a lot between each commit which
   is processed. Dscho said that "for example, if no `pre-commit` hook
-  is installed that needs to be run, there is no need to update the
+  was installed that needs to be run, there was no need to update the
   worktree nor HEAD until the rebase is done".
 
   Meanwhile Elijah sent a
   [version 3 of his patch](https://lore.kernel.org/git/pull.988.v3.git.git.1617173541301.gitgitgadget@gmail.com/)
-  that took into account all the suggestions Dscho made, including the
+  that took into account all the suggestions Dscho had made, including the
   removal of the assert() statement. Dscho gave his "Reviewed-by:" and
   the patch has since been merged into the 'master' branch.
 
@@ -141,7 +141,7 @@ This edition covers what happened during the month of March 2021.
   initially, then [StGit][2] (which I'm happy to see has recently received
   more activity and a 1.0 release), then more recently
   [git-reintegrate][3].  In git.git, I've mostly contributed small patches
-  here and there when it itched too much, and a number of bugreports and
+  here and there when it itched too much, and a number of bug reports and
   suggestions.
 
 [1]: https://en.wikipedia.org/wiki/Cogito_(software)
@@ -168,15 +168,15 @@ This edition covers what happened during the month of March 2021.
   On my first contact with Git shortly after Linus published his first
   version, one thing stood out for me as non-intuitive after using all
   those former tools: the "record only the content and not by which
-  operation we got there" moto, which leaves to git-diff the work of
+  operation we got there" motto, which leaves to `git-diff` the work of
   reconstructing the "which operation" part.  Yet, soon after it struck
-  me as probably the most brillant aspect in Git's design.
+  me as probably the most brilliant aspect in Git's design.
 
   Today there are a handful of such operations that Git can detect, and
   then use when merging to make things easier: essentially renames and
   copies.  Yet, so many other high-level operations can be made on code,
   and are not easy enough to merge: code restructuring inducing
-  reindents (think python) and symbol renaming are the first that come
+  reindents (think Python) and symbol renaming are the first that come
   to mind.
 
   This probably should be done as language-specific diff/merge tools,
@@ -254,16 +254,16 @@ __Light reading__
   by Seth Kenlon (Red Hat) on Opensource.com.
 * [5 commands to level-up your Git game](https://opensource.com/article/21/4/git-commands):
   `git whatchanged`, `git stash`, `git worktree`, `git cherry-pick` and
-  [managing $HOME with Git](https://opensource.com/article/21/4/git-home),
+  [managing `$HOME` with Git](https://opensource.com/article/21/4/git-home),
   by Seth Kenlon (Red Hat) on Opensource.com.
-* [A practical guide to using the git stash command](https://opensource.com/article/21/4/git-stash)
+* [A practical guide to using the `git stash` command](https://opensource.com/article/21/4/git-stash)
   by Ramakrishna Pattnaik on Opensource.com.
 * [Scanning for secrets](https://lwn.net/Articles/851670/) in Git repositories
   automatically, by Jake Edge on LWN.net.
 * [How we ship code faster and safer with feature flags](https://github.blog/2021-04-27-ship-code-faster-safer-feature-flags/)
   by Alberto Gimeno on GitHub Blog.
   * [Feature flags](https://featureflags.io/) were one of solutions to hiding partial features
-    in [trunk based development](https://trunkbaseddevelopment.com/), one of
+    in [trunk based development](https://trunkbaseddevelopment.com/), one of the
     [patterns for managing source code branches](https://martinfowler.com/articles/branching-patterns.html#continuous-integration)
     in Martin Fowler's article of the same name, covered in
     [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/)
@@ -276,8 +276,8 @@ __Light reading__
   by Sebastian Jambor.  The [fzf](https://github.com/junegunn/fzf) tool was mentioned
   alongside [git-fuzzy](https://github.com/bigH/git-fuzzy) (that uses it) in
   [Git Rev News Edition #64](https://git.github.io/rev_news/2020/06/25/edition-64/).
-* [Git email flow vs Github flow](https://blog.brixit.nl/git-email-flow-versus-github-flow/):
-  Comparing the Github and Gitlab pull request workflow to the Git built-in email workflow,
+* [Git email flow vs GitHub flow](https://blog.brixit.nl/git-email-flow-versus-github-flow/):
+  Comparing the GitHub and GitLab pull request workflow to the Git built-in email workflow,
   by Martijn Braam (2020).
 
 
