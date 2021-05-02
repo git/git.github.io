@@ -49,7 +49,8 @@ This edition covers what happened during the month of March 2021.
   as a similar one he had found. The next day though Elijah replied to
   himself saying the issue turned out to be messier than expected.
 
-  He provided tables showing that the behavior (launching an editor or
+  He [provided tables](https://lore.kernel.org/git/CABPp-BEGEcws69sg6Z2=B1nihFG227mAsSx=boU3uSx2xDUEjg@mail.gmail.com/)
+  showing that the behavior (launching an editor or
   not) could depend on a number of factors: the command (`revert` or
   `cherry-pick`), the use of a terminal or not, before or after a
   conflict, which option (`--edit`, `--no-edit` or no option) had been
