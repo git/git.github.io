@@ -286,7 +286,7 @@ __Git tools and sites__
 
 * [posh-git](http://dahlbyk.github.io/posh-git/) is a PowerShell module
   which provides Git/PowerShell integration.  It also provides tab completion
-  support for common git commands, branch names, paths and more.
+  support for common Git commands, branch names, paths, and more.
 
 
 ## Credits
