@@ -40,7 +40,7 @@ This edition covers what happened during the month of April 2021.
 
 __Various__
 
-* Linux was [interviewed](https://www.tag1consulting.com/blog/interview-linus-torvalds-linux-and-git)
+* Linus Torvalds was [interviewed](https://www.tag1consulting.com/blog/interview-linus-torvalds-linux-and-git)
   on the Tag1 Consulting site about 30 Years Of Linux and
   [about Git](https://www.tag1consulting.com/blog/interview-linus-torvalds-linux-and-git#git-distributed-version-control-).
   A [part 2](https://www.tag1consulting.com/blog/interview-linus-torvalds-open-source-and-beyond-part-2)
