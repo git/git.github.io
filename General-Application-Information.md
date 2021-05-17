@@ -175,19 +175,19 @@ code merged step by step which is encouraging.
 
 In general refactoring projects are worthwhile to do even if the
 project is not finished at the end of the GSoC and even if the student
-stops contributing after that. In those cases it is often a good idea
-to later finish the refactoring either by ourselves or by proposing it
-to another GSoC student or Outreachy intern. This way the work of both
-students and mentors is not likely to be wasted.
+or intern stops contributing after that. In those cases it is often a
+good idea to later finish the refactoring either by ourselves or by
+proposing it to another GSoC student or Outreachy intern. This way the
+work of both students and mentors is not likely to be wasted.
 
 With a project that implements a feature, there is a risk, if it's too
 complex or too difficult, that the feature will not be finished and
 that nothing, or nearly nothing, will have been merged during the GSoC
 or Outreachy internship. There is also the risk that another way to
 implement the feature will appear later in the GSoC or Outreachy
-internship, and all, or nearly all, the work of the student and
-mentors will have been mostly wasted. It could also appear that the
-use cases the feature was envisioned to be used in, are better
+internship, and all, or nearly all, the work of the student or intern
+and mentors will have been mostly wasted. It could also appear that
+the use cases the feature was envisioned to be used in, are better
 addressed by other improvements or a different workflow.
 
 Another potential issue is that a new feature might be prone to naming
@@ -195,14 +195,14 @@ or user interface discussions which could last for a long time or
 could not result in clear decisions.
 
 Therefore we think that we should be very careful before proposing to
-a student, or accepting, a project that implements a new feature.
+an applicant, or accepting, a project that implements a new feature.
 People suggesting such a project should at least carefully consider
 the above potential issues and see if they can be mitigated before the
 project is submitted.
 
 As [suggested by Google](https://google.github.io/gsocguides/mentor/defining-a-project-ideas-list)
-(but this is true for Outreachy internships too), we emphasize that a
-student proposing something original must engage with the community
+(but this is true for Outreachy internships too), we emphasize that an
+applicant proposing something original must engage with the community
 strongly before and during the application period to get feedback and
 guidance to improve the proposal and avoid the above potential issues.
 
