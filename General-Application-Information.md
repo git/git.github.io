@@ -57,9 +57,14 @@ documentation on their web site that you should follow.
 
 Please, include link(s) to the mailing-list discussion(s) related to
 your microproject in your application (e.g. linking to
-[lore.kernel.org](https://lore.kernel.org/git/)). If you
-participate in the review of other patches, then you may also include
-links to discussions that would support your application.
+[lore.kernel.org](https://lore.kernel.org/git/)). If you participate
+in the review of other patches, then you may also include links to
+discussions that would support your application. Please also describe
+the status of the patches you have sent and maybe reviewed: Have they
+been merged already in an official branch maintained by Junio? What
+does [Junio's "What's cooking in git.git" emails](https://lore.kernel.org/git/?q=s%3A%22What%27s+cooking+in+git.git%22)
+say about it? In general it's a good idea to describe all your Git
+related work so far with a good amount of detail.
 
 Applicants must send drafts of their proposal on the mailing-list
 before submitting it officially to GSoC or Outreachy to get feedback
