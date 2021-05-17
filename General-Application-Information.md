@@ -120,7 +120,7 @@ discussions.)
 ## Note about the number of slots
 
 The Git organization usually has very limited mentoring capacity.
-These days we usually accept between 0 and 3 students per season
+These days we usually accept around 2 or 3 students per season
 (Winter or Summer).
 
 ## Note about giving back and mentoring
@@ -139,13 +139,13 @@ co-mentor other students or interns coming after you. It helps create
 more opportunities for more students and interns like you, as
 mentoring capacity is the main factor preventing us from accepting
 more students and interns. If each student or intern accepted to
-co-mentor twice (once in Summer and once in Winter) just after they
-have been mentored, our mentoring capacity could increase
+co-mentor twice (for example once in Summer and once in Winter) just
+after they have been mentored, our mentoring capacity could increase
 significantly each year.
 
 Even though successful former students/interns usually have adequate
-technical ability to be a successful mentor, unfortunately very few of
-them have been willing to just co-mentor along with an experienced
+technical ability to be a successful mentor, unfortunately few of them
+have been willing to just co-mentor once along with an experienced
 mentor.
 
 Other free or open source projects have done better than us on
