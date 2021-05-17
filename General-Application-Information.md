@@ -94,7 +94,8 @@ In summary, all applicants must (not necessarily in this order):
 * Write a detailed application explaining their project.
 
 * Discuss their project by posting drafts of their application on the
-  mailing-list long before the deadline.
+  mailing-list long before the deadline. See the "Note about getting
+  involved early" below.
 
 In your application, and in the discussions related to projects you
 are interested in, it is a good idea to:
@@ -211,3 +212,34 @@ applicant proposing something original must engage with the community
 strongly before and during the application period to get feedback and
 guidance to improve the proposal and avoid the above potential issues.
 
+## Note about getting involved early
+
+The process of reviewing microproject patches and applications on the
+mailing list can take a lot of time. Depending on your experience and
+the tools you are already familiar or not with, it can also take some
+time to set up and get used to properly sending emails and patches to
+the mailing list, interacting with people on the mailing list, reading
+the documentation, getting used to the code base, etc. That's why we
+strongly suggest getting involved very early, like several months,
+before the deadline.
+
+The more we can see that you invest in learning and participating in
+Git's development, the more we can be confident that you are motivated
+and will likely stay in the community.
+
+This doesn't necessarily mean that you have no chance at all of
+getting accepted if you get involved quite late. It depends on how
+other applicants are doing and how many available mentors we have or
+can find. But anyway you start with a significant handicap compared to
+other applicants who got involved early.
+
+It might therefore be a good idea to find a project idea that is not
+yet being pursued by a serious applicant who started getting involved
+much earlier than you. This means that you might have to find a
+project idea that we haven't proposed in our idea list.
+
+The good side of this is that this project idea along with your
+enthousiasm for it and the skills you show might encourage Git
+developers to mentor you even if they weren't planning to mentor in
+the first place. It could also happen that someone, who was only
+planning to co-mentor, could agree to fully mentor you alone.
