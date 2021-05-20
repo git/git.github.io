@@ -54,6 +54,10 @@ suggest improvements. Thanks!
 
 * [Git for Windows' "Good commits"](https://github.com/git-for-windows/git/wiki/Good-commits)
 
+## Status of development topics
+
+* [Junio's "What's cooking in git.git" emails](https://lore.kernel.org/git/?q=s%3A%22What%27s+cooking+in+git.git%22)
+
 ## Branching workflow
 
 * ["A note from the maintainer"](https://github.com/git/git/blob/todo/MaintNotes)
