@@ -56,7 +56,7 @@ suggest improvements. Thanks!
 
 ## Development status
 
-* [Junio's "What's cooking in git.git" emails](https://lore.kernel.org/git/?q=s%3A%22What%27s+cooking+in+git.git%22) lists the status of various development topics.
+* [Junio's "What's cooking in git.git" emails](https://lore.kernel.org/git/?q=s%3A%22What%27s+cooking+in+git.git%22) list the status of various development topics.
 
 * [Git's release calendar](https://tinyurl.com/gitCal) shows the planned release cycles, and the maintainer's planned offline time.
 
