@@ -57,9 +57,14 @@ documentation on their web site that you should follow.
 
 Please, include link(s) to the mailing-list discussion(s) related to
 your microproject in your application (e.g. linking to
-[lore.kernel.org](https://lore.kernel.org/git/)). If you
-participate in the review of other patches, then you may also include
-links to discussions that would support your application.
+[lore.kernel.org](https://lore.kernel.org/git/)). If you participate
+in the review of other patches, then you may also include links to
+discussions that would support your application. Please also describe
+the status of the patches you have sent and maybe reviewed: Have they
+been merged already in an official branch maintained by Junio? What
+does [Junio's "What's cooking in git.git" emails](https://lore.kernel.org/git/?q=s%3A%22What%27s+cooking+in+git.git%22)
+say about it? In general it's a good idea to describe all your Git
+related work so far with a good amount of detail.
 
 Applicants must send drafts of their proposal on the mailing-list
 before submitting it officially to GSoC or Outreachy to get feedback
@@ -89,7 +94,8 @@ In summary, all applicants must (not necessarily in this order):
 * Write a detailed application explaining their project.
 
 * Discuss their project by posting drafts of their application on the
-  mailing-list long before the deadline.
+  mailing-list long before the deadline. See the "Note about getting
+  involved early" below.
 
 In your application, and in the discussions related to projects you
 are interested in, it is a good idea to:
@@ -120,7 +126,7 @@ discussions.)
 ## Note about the number of slots
 
 The Git organization usually has very limited mentoring capacity.
-These days we usually accept between 0 and 3 students per season
+These days we usually accept around 2 or 3 students per season
 (Winter or Summer).
 
 ## Note about giving back and mentoring
@@ -139,13 +145,13 @@ co-mentor other students or interns coming after you. It helps create
 more opportunities for more students and interns like you, as
 mentoring capacity is the main factor preventing us from accepting
 more students and interns. If each student or intern accepted to
-co-mentor twice (once in Summer and once in Winter) just after they
-have been mentored, our mentoring capacity could increase
+co-mentor twice (for example once in Summer and once in Winter) just
+after they have been mentored, our mentoring capacity could increase
 significantly each year.
 
 Even though successful former students/interns usually have adequate
-technical ability to be a successful mentor, unfortunately very few of
-them have been willing to just co-mentor along with an experienced
+technical ability to be a successful mentor, unfortunately few of them
+have been willing to just co-mentor once along with an experienced
 mentor.
 
 Other free or open source projects have done better than us on
@@ -175,19 +181,19 @@ code merged step by step which is encouraging.
 
 In general refactoring projects are worthwhile to do even if the
 project is not finished at the end of the GSoC and even if the student
-stops contributing after that. In those cases it is often a good idea
-to later finish the refactoring either by ourselves or by proposing it
-to another GSoC student or Outreachy intern. This way the work of both
-students and mentors is not likely to be wasted.
+or intern stops contributing after that. In those cases it is often a
+good idea to later finish the refactoring either by ourselves or by
+proposing it to another GSoC student or Outreachy intern. This way the
+work of both students and mentors is not likely to be wasted.
 
 With a project that implements a feature, there is a risk, if it's too
 complex or too difficult, that the feature will not be finished and
 that nothing, or nearly nothing, will have been merged during the GSoC
 or Outreachy internship. There is also the risk that another way to
 implement the feature will appear later in the GSoC or Outreachy
-internship, and all, or nearly all, the work of the student and
-mentors will have been mostly wasted. It could also appear that the
-use cases the feature was envisioned to be used in, are better
+internship, and all, or nearly all, the work of the student or intern
+and mentors will have been mostly wasted. It could also appear that
+the use cases the feature was envisioned to be used in, are better
 addressed by other improvements or a different workflow.
 
 Another potential issue is that a new feature might be prone to naming
@@ -195,14 +201,45 @@ or user interface discussions which could last for a long time or
 could not result in clear decisions.
 
 Therefore we think that we should be very careful before proposing to
-a student, or accepting, a project that implements a new feature.
+an applicant, or accepting, a project that implements a new feature.
 People suggesting such a project should at least carefully consider
 the above potential issues and see if they can be mitigated before the
 project is submitted.
 
 As [suggested by Google](https://google.github.io/gsocguides/mentor/defining-a-project-ideas-list)
-(but this is true for Outreachy internships too), we emphasize that a
-student proposing something original must engage with the community
+(but this is true for Outreachy internships too), we emphasize that an
+applicant proposing something original must engage with the community
 strongly before and during the application period to get feedback and
 guidance to improve the proposal and avoid the above potential issues.
 
+## Note about getting involved early
+
+The process of reviewing microproject patches and applications on the
+mailing list can take a lot of time. Depending on your experience and
+the tools you are already familiar or not with, it can also take some
+time to set up and get used to properly sending emails and patches to
+the mailing list, interacting with people on the mailing list, reading
+the documentation, getting used to the code base, etc. That's why we
+strongly suggest getting involved very early, like several months,
+before the deadline.
+
+The more we can see that you invest in learning and participating in
+Git's development, the more we can be confident that you are motivated
+and will likely stay in the community.
+
+This doesn't necessarily mean that you have no chance at all of
+getting accepted if you get involved quite late. It depends on how
+other applicants are doing and how many available mentors we have or
+can find. But anyway you start with a significant handicap compared to
+other applicants who got involved early.
+
+It might therefore be a good idea to find a project idea that is not
+yet being pursued by a serious applicant who started getting involved
+much earlier than you. This means that you might have to find a
+project idea that we haven't proposed in our idea list.
+
+The good side of this is that this project idea along with your
+enthousiasm for it and the skills you show might encourage Git
+developers to mentor you even if they weren't planning to mentor in
+the first place. It could also happen that someone, who was only
+planning to co-mentor, could agree to fully mentor you alone.
