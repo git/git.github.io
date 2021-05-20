@@ -234,9 +234,9 @@ can find. But anyway you start with a significant handicap compared to
 other applicants who got involved early.
 
 It might therefore be a good idea to find a project idea that is not
-yet being pursued by a serious applicant who started getting involved
-much earlier than you. This means that you might have to find a
-project idea that we haven't proposed in our idea list.
+yet being pursued by an applicant who started getting involved much
+earlier than you. This means that you might have to find a project
+idea that we haven't proposed in our idea list.
 
 The good side of this is that this project idea along with your
 enthousiasm for it and the skills you show might encourage Git
