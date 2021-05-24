@@ -35,6 +35,32 @@ This edition covers what happened during the month of April 2021.
 
 ## Releases
 
++ Git [2.32.0-rc1](https://public-inbox.org/git/xmqqk0nqq266.fsf@gitster.g/),
+[2.32.0-rc0](https://public-inbox.org/git/xmqqh7j13kmc.fsf@gitster.g/)
++ Git for Windows [2.32.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.32.0-rc1.windows.1),
+[2.32.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.32.0-rc0.windows.1)
++ GitLab [13.12](https://about.gitlab.com/releases/2021/05/22/gitlab-13-12-released/),
+[13.11.4](https://about.gitlab.com/releases/2021/05/14/gitlab-13-11-4-released/),
+[13.11.3](https://about.gitlab.com/releases/2021/04/30/gitlab-13-11-3-released/),
+[13.11.2](https://about.gitlab.com/releases/2021/04/28/security-release-gitlab-13-11-2-released/)
++ Bitbucket Server [7.13](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ Gerrit Code Review [3.4.0](https://www.gerritcodereview.com/3.4.html),
+[3.3.4](https://www.gerritcodereview.com/3.3.html#334),
+[3.2.10](https://www.gerritcodereview.com/3.2.html#3210),
+[3.1.15](https://www.gerritcodereview.com/3.1.html#3115),
+[3.2.9](https://www.gerritcodereview.com/3.2.html#329),
+[3.1.14](https://www.gerritcodereview.com/3.1.html#3114)
++ GitHub Enterprise [3.0.7](https://help.github.com/enterprise-server@3.0/admin/release-notes#3.0.7),
+[2.22.13](https://help.github.com/enterprise-server@2.22/admin/release-notes#2.22.13),
+[2.21.21](https://help.github.com/enterprise-server@2.21/admin/release-notes#2.21.21),
+[3.1.0](https://help.github.com/enterprise-server@3.1/admin/release-notes#3.1.0),
+[3.0.6](https://help.github.com/enterprise-server@3.0/admin/release-notes#3.0.6),
+[2.22.12](https://help.github.com/enterprise-server@2.22/admin/release-notes#2.22.12),
+[2.21.20](https://help.github.com/enterprise-server@2.21/admin/release-notes#2.21.20)
++ GitKraken [7.6.1](https://support.gitkraken.com/release-notes/current),
+[7.6.0](https://support.gitkraken.com/release-notes/current)
++ GitHub Desktop [2.8.1](https://desktop.github.com/release-notes/),
+[2.8.0](https://desktop.github.com/release-notes/)
 
 ## Other News
 
