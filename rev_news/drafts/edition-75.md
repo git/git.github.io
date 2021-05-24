@@ -29,9 +29,83 @@ This edition covers what happened during the month of April 2021.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Patrick Steinhardt
+
+* Who are you and what do you do?
+
+  I'm a software developer working at GitLab, more specifically in the
+  team working on Gitaly. Gitaly is our RPC interface to all Git
+  repositories, so it is the backbone to all things Git at GitLab.
+
+  In my own free time, I love to tinker with my Gentoo-based systems and
+  tailor them to my own needs, which results in occasional drive-by
+  patches to all kinds of open source projects to scratch my own itches.
+
+* What would you name your most important contribution to Git?
+
+  To me, this is the introduction of the reference-transaction hook, which
+  gets executed whenever a reference is about to be updated. This allows
+  tight control over all reference updates happening in a given repository
+  in a command-agnostic way. At GitLab, we use this hook to coordinate
+  reference updates across multiple replicas of the same repository such
+  that we can be sure that all nodes have the same state and move to the
+  same state.
+
+  My most important contributions I'd not locate in the Git project itself
+  though, but instead in libgit2. While I unfortunately haven't found the
+  time to contribute to it lately, I've done a lot more work on libgit2
+  than I did on Git. And there it's probably the initial introduction of
+  support for worktrees, maintenance of the CMake build system and work on
+  the gitconfig subsystem.
+
+* What are you doing on the Git project these days, and why?
+
+  My current work is mostly focussed on tuning performance of some areas
+  we have found to be slow for gitlab.com. This has motivated the recent
+  introduction of a new git-rev-list(1) filter which allows to filter by
+  object type via `--filter=object:type=<type>`. This makes it easy to
+  find for example all blobs introduced between two revisions.
+
+  And right now I'm trying to devise a new implementation of the object
+  connectivity check performed by git-receive-pack(1) whenever a push gets
+  accepted on the server side. Depending on the repository's shape, the
+  current implementation can be a major bottleneck and take dozens of
+  seconds to compute even for small pushes. You may have noticed this
+  check when it says "Checking connectivity" on a push.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+  I'm obviously biased coming from the libgit2 project, but I'd really
+  love to further push the libification of Git. There has been great
+  progress on this front already to make internal C interfaces look more
+  like the typical interfaces you'd see from a linkable library. But my
+  dream would be to merge the efforts of Git and libgit2 such that Git
+  also provides an official library which can be linked against in your
+  own program.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+  Tough question. There's many user-facing commands which could benefit
+  from a more consistent design, but my take is that these probably could
+  provide an improved user interface while still retaining backwards
+  compatibility.
+
+  But what I'd really love to get rid of is the file-based reference
+  backend. It works reasonably well to represent references as file paths
+  in smallish repositories, but even there it imposes limitations which
+  are only a result of its implementation. It's also inefficient for
+  bigger repositories and does not really allow for atomic modification of
+  multiple references at once. There luckily is ongoing work on the
+  reftable backend, which fixes many of the shortcomings, but it will
+  likely still take some time to land.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+  I guess the answer to that question is going to be obvious by now:
+  libgit2.
+
 
 ## Releases
 
