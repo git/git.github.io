@@ -62,12 +62,12 @@ This edition covers what happened during the month of April 2021.
 
   My current work is mostly focussed on tuning performance of some areas
   we have found to be slow for gitlab.com. This has motivated the recent
-  introduction of a new git-rev-list(1) filter which allows to filter by
+  introduction of a new `git-rev-list(1)` filter which allows to filter by
   object type via `--filter=object:type=<type>`. This makes it easy to
   find for example all blobs introduced between two revisions.
 
   And right now I'm trying to devise a new implementation of the object
-  connectivity check performed by git-receive-pack(1) whenever a push gets
+  connectivity check performed by `git-receive-pack(1)` whenever a push gets
   accepted on the server side. Depending on the repository's shape, the
   current implementation can be a major bottleneck and take dozens of
   seconds to compute even for small pushes. You may have noticed this
