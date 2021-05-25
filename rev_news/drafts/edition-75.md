@@ -17,9 +17,22 @@ This edition covers what happened during the month of April 2021.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [Git participates in GSoC (Google Summer of Code) 2021](https://summerofcode.withgoogle.com/organizations/5908380398387200/#projects)
+
+  The following two students have been officially accepted to work on Git
+  as part of the [GSoC 2021](https://summerofcode.withgoogle.com/):
+
+  - ZheNing Hu will work on the
+    [Use ref-filter formats in git cat-file](https://summerofcode.withgoogle.com/projects/#6499923274498048)
+    project. He will be co-mentored by Hariom Verma and Christian
+    Couder. His first blog post about it [is up](https://adlternative.github.io/GSOC-Git-Blog-1/).
+
+  - Atharva Raykar will work on the
+    [Finish converting submodule to builtin](https://summerofcode.withgoogle.com/projects/#4754589292691456)
+    project. He will be co-mentored by Shourya Shukla and Christian
+    Couder. His first blog posts about it are [also up](https://atharvaraykar.me/gitnotes/).
 
 ### Reviews
 
