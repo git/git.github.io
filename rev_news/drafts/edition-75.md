@@ -21,9 +21,86 @@ This edition covers what happened during the month of April 2021.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [[PATCH] [GSOC] pretty: provide human date format](https://lore.kernel.org/git/pull.939.git.1619195245606.gitgitgadget@gmail.com/)
+
+  ZheNing Hu sent a patch to the mailing list to add the new `%ah` and
+  `%ch` formatting options to the "pretty formats". The "pretty
+  formats" are the main way for users to customize the output of the
+  `git log`, `git show`, `git rev-list` and `git diff-tree` commands.
+
+  These formats are specified by the
+  [`--pretty[=<format>]` or `--format=<format>`](https://git-scm.com/docs/git-log#Documentation/git-log.txt---prettyltformatgt)
+  command line flags, where `<format>`is the actual
+  ["pretty format"](https://git-scm.com/docs/git-log#_pretty_formats),
+  and can be either a "built-in format", like `oneline`, `raw`,
+  `short`, `medium`, etc, or `format:<string>`, which is called a
+  "format string".
+
+  These format strings work in a similar way to `printf()` formats, as
+  they can contain placeholders starting with a `%` character, that
+  will be expanded by the command. For example `%H` will be expanded
+  to print the commit hash, `%an`, the author name, etc.
+
+  A lot of placeholders already exist. For the author date, there are:
+  `%ad`, `%aD`, `%ar`, `%at`, `%ai`, `%aI` and `%as`. And for the
+  committer date, there are the corresponding: `%cd`, `%cD`, `%cr`,
+  `%ct`, `%ci`, `%cI` and `%cs`. Each pair of these placeholders uses
+  a different date format. For example `%aI` and `%cI` use the "strict
+  ISO 8601 format".
+
+  `%ad` and `%cd` though are special as they use the format specified
+  by the `--date=<format>` command line flag, so for example with
+  `--date=iso-strict`, `%ad` and `%cd` will behave in the same way as
+  `%aI` and `%cI`.
+
+  ZheNing's patch added the new `%ah` and `%ch` placeholders that
+  would behave in the same way as `%ad` and `%cd` with
+  `--date=human`. The rationale for the patch being that there are
+  placeholders corresponding to most of the `--date=<format>` options
+  except `--date=human`.
+
+  Taylor Blau was the first to review ZheNing's patch and found it
+  "pretty good", as it was similar to a previous patch by René Scharfe
+  that added the `%as` and `%cs` placeholders for dates in the "short
+  date format". ZheNing indeed acknowledged that he learned from
+  René's patch.
+
+  Philip Oakley though commented on the documentation part of the
+  patch suggesting adding an example similar to `YYYY-MM-DD` for the
+  short format. ZheNing replied that in the "human format" a date
+  could take many forms, so he said he would rather add links to the
+  documentation of the "human format".
+
+  ZheNing then sent a
+  [version 2](https://lore.kernel.org/git/pull.939.v2.git.1619275340051.gitgitgadget@gmail.com/)
+  of his patch where he added the links. Philip suggested further
+  small superficial changes to the link and the related text added in
+  this version though.
+
+  Meanwhile Ævar Arnfjörð Bjarmason sent
+  [a small patch series](https://lore.kernel.org/git/cover-0.2-00000000000-20210425T090506Z-avarab@gmail.com/)
+  that made a "couple of trivial changes" to the tests related to
+  `%aI` and `%cI`, and at the same time suggested ZheNing to make
+  similar changes to the tests in his patch.
+
+  ZheNing then sent a
+  [version 3](https://lore.kernel.org/git/pull.939.v3.git.1619347306291.gitgitgadget@gmail.com/)
+  of his patch taking into account Philip's and Ævar's
+  suggestions. This patch contained a typo though, so ZheNing sent a
+  [version 4](https://lore.kernel.org/git/pull.939.v4.git.1620056221874.gitgitgadget@gmail.com/)
+  of his patch.
+
+  As the version 3 of the patch had already been merged to the "next"
+  branch before ZheNing sent the version 4, the typo got noticed by
+  Martin Ågren who sent
+  [a small patch series](https://lore.kernel.org/git/cover.1620551314.git.martin.agren@gmail.com/)
+  fixing this typo as well as another unrelated one.
+
+  Eventually both ZheNing's patch and Martin's patches were merged
+  into the "master" branch, so that their improvements will appear in
+  the soon upcoming Git version v2.32.0.
 
 <!---
 ### Support
