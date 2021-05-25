@@ -34,6 +34,10 @@ This edition covers what happened during the month of April 2021.
     project. He will be co-mentored by Shourya Shukla and Christian
     Couder. His first blog posts about it are [also up](https://atharvaraykar.me/gitnotes/).
 
+  Thanks to the students who applied and worked on micro-projects, but
+  couldn't be selected! We hope to continue to see you in the
+  community!
+
 ### Reviews
 
 * [[PATCH] [GSOC] pretty: provide human date format](https://lore.kernel.org/git/pull.939.git.1619195245606.gitgitgadget@gmail.com/)
