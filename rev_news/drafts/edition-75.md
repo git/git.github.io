@@ -210,7 +210,7 @@ This edition covers what happened during the month of April 2021.
 + GitLab [13.12](https://about.gitlab.com/releases/2021/05/22/gitlab-13-12-released/),
 [13.11.4](https://about.gitlab.com/releases/2021/05/14/gitlab-13-11-4-released/),
 [13.11.3](https://about.gitlab.com/releases/2021/04/30/gitlab-13-11-3-released/),
-[13.11.2](https://about.gitlab.com/releases/2021/04/28/security-release-gitlab-13-11-2-released/)
+[13.11.2, 13.10.4, and 13.9.7](https://about.gitlab.com/releases/2021/04/28/security-release-gitlab-13-11-2-released/)
 + Bitbucket Server [7.13](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
 + Gerrit Code Review [3.4.0](https://www.gerritcodereview.com/3.4.html),
 [3.3.4](https://www.gerritcodereview.com/3.3.html#334),
