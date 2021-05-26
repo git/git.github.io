@@ -225,6 +225,8 @@ This edition covers what happened during the month of April 2021.
 [3.0.6](https://help.github.com/enterprise-server@3.0/admin/release-notes#3.0.6),
 [2.22.12](https://help.github.com/enterprise-server@2.22/admin/release-notes#2.22.12),
 [2.21.20](https://help.github.com/enterprise-server@2.21/admin/release-notes#2.21.20)
++ Magit [3.0.0](https://emacsair.me/2021/05/25/magit-3.0)
++ Forge [0.2.0](https://emacsair.me/2021/05/25/forge-0.2)
 + GitKraken [7.6.1](https://support.gitkraken.com/release-notes/current),
 [7.6.0](https://support.gitkraken.com/release-notes/current)
 + GitHub Desktop [2.8.1](https://desktop.github.com/release-notes/),
@@ -301,4 +303,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Patrick Steinhardt.
+with help from Patrick Steinhardt and Jonas Bernoulli.
