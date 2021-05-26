@@ -81,11 +81,11 @@ This edition covers what happened during the month of April 2021.
   Taylor Blau was the first to review ZheNing's patch and found it
   "pretty good", as it was similar to a previous patch by René Scharfe
   that added the `%as` and `%cs` placeholders for dates in the "short
-  date format". ZheNing indeed acknowledged that he learned from
+  date format". ZheNing acknowledged that he indeed learned from
   René's patch.
 
   Philip Oakley though commented on the documentation part of the
-  patch suggesting adding an example similar to `YYYY-MM-DD` for the
+  patch suggesting to add an example similar to `YYYY-MM-DD` for the
   short format. ZheNing replied that in the "human format" a date
   could take many forms, so he said he would rather add links to the
   documentation of the "human format".
