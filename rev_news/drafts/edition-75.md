@@ -1,13 +1,13 @@
 ---
-title: Git Rev News Edition 75 (May 26th, 2021)
+title: Git Rev News Edition 75 (May 27th, 2021)
 layout: default
-date: 2021-05-26 12:06:51 +0100
+date: 2021-05-27 12:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 75 (May 26th, 2021)
+## Git Rev News: Edition 75 (May 27th, 2021)
 
 Welcome to the 75th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
@@ -210,7 +210,7 @@ This edition covers what happened during the month of April 2021.
 + GitLab [13.12](https://about.gitlab.com/releases/2021/05/22/gitlab-13-12-released/),
 [13.11.4](https://about.gitlab.com/releases/2021/05/14/gitlab-13-11-4-released/),
 [13.11.3](https://about.gitlab.com/releases/2021/04/30/gitlab-13-11-3-released/),
-[13.11.2](https://about.gitlab.com/releases/2021/04/28/security-release-gitlab-13-11-2-released/)
+[13.11.2, 13.10.4, and 13.9.7](https://about.gitlab.com/releases/2021/04/28/security-release-gitlab-13-11-2-released/)
 + Bitbucket Server [7.13](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
 + Gerrit Code Review [3.4.0](https://www.gerritcodereview.com/3.4.html),
 [3.3.4](https://www.gerritcodereview.com/3.3.html#334),
