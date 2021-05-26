@@ -25,7 +25,7 @@ This edition covers what happened during the month of April 2021.
   as part of the [GSoC 2021](https://summerofcode.withgoogle.com/):
 
   - ZheNing Hu will work on the
-    [Use ref-filter formats in git cat-file](https://summerofcode.withgoogle.com/projects/#6499923274498048)
+    [Use ref-filter formats in `git cat-file`](https://summerofcode.withgoogle.com/projects/#6499923274498048)
     project. He will be co-mentored by Hariom Verma and Christian
     Couder. His first blog post about it [is up](https://adlternative.github.io/GSOC-Git-Blog-1/).
 
@@ -45,7 +45,7 @@ This edition covers what happened during the month of April 2021.
   ZheNing Hu sent a patch to the mailing list to add the new `%ah` and
   `%ch` formatting options to the "pretty formats". The "pretty
   formats" are the main way for users to customize the output of the
-  `git log`, `git show`, `git rev-list` and `git diff-tree` commands.
+  `git log`, `git show`, `git rev-list`, and `git diff-tree` commands.
 
   These formats are specified by the
   [`--pretty[=<format>]` or `--format=<format>`](https://git-scm.com/docs/git-log#Documentation/git-log.txt---prettyltformatgt)
@@ -58,16 +58,16 @@ This edition covers what happened during the month of April 2021.
   These format strings work in a similar way to `printf()` formats, as
   they can contain placeholders starting with a `%` character, that
   will be expanded by the command. For example `%H` will be expanded
-  to print the commit hash, `%an`, the author name, etc.
+  to print the commit hash, `%an` the author name, etc.
 
   A lot of placeholders already exist. For the author date, there are:
-  `%ad`, `%aD`, `%ar`, `%at`, `%ai`, `%aI` and `%as`. And for the
-  committer date, there are the corresponding: `%cd`, `%cD`, `%cr`,
-  `%ct`, `%ci`, `%cI` and `%cs`. Each pair of these placeholders uses
-  a different date format. For example `%aI` and `%cI` use the "strict
+  `%ad`, `%aD`, `%ar`, `%at`, `%ai`, `%aI` and `%as`. For the
+  committer date, there are the corresponding `%cd`, `%cD`, `%cr`,
+  `%ct`, `%ci`, `%cI` and `%cs` ones. Each pair of these placeholders uses
+  a different date format. For example, `%aI` and `%cI` use the "strict
   ISO 8601 format".
 
-  `%ad` and `%cd` though are special as they use the format specified
+  Formats `%ad` and `%cd`, though, are special as they use the format specified
   by the `--date=<format>` command line flag, so for example with
   `--date=iso-strict`, `%ad` and `%cd` will behave in the same way as
   `%aI` and `%cI`.
@@ -84,7 +84,7 @@ This edition covers what happened during the month of April 2021.
   date format". ZheNing acknowledged that he indeed learned from
   René's patch.
 
-  Philip Oakley though commented on the documentation part of the
+  Philip Oakley, though, commented on the documentation part of the
   patch suggesting to add an example similar to `YYYY-MM-DD` for the
   short format. ZheNing replied that in the "human format" a date
   could take many forms, so he said he would rather add links to the
@@ -92,7 +92,7 @@ This edition covers what happened during the month of April 2021.
 
   ZheNing then sent a
   [version 2](https://lore.kernel.org/git/pull.939.v2.git.1619275340051.gitgitgadget@gmail.com/)
-  of his patch where he added the links. Philip suggested further
+  of his patch where he had added the links. Philip suggested further
   small superficial changes to the link and the related text added in
   this version though.
 
@@ -104,8 +104,8 @@ This edition covers what happened during the month of April 2021.
 
   ZheNing then sent a
   [version 3](https://lore.kernel.org/git/pull.939.v3.git.1619347306291.gitgitgadget@gmail.com/)
-  of his patch taking into account Philip's and Ævar's
-  suggestions. This patch contained a typo though, so ZheNing sent a
+  of his patch, taking Philip's and Ævar's suggestions into account.
+  This patch contained a typo, though, so ZheNing sent a
   [version 4](https://lore.kernel.org/git/pull.939.v4.git.1620056221874.gitgitgadget@gmail.com/)
   of his patch.
 
@@ -241,54 +241,54 @@ __Various__
   [about Git](https://www.tag1consulting.com/blog/interview-linus-torvalds-linux-and-git#git-distributed-version-control-).
   A [part 2](https://www.tag1consulting.com/blog/interview-linus-torvalds-open-source-and-beyond-part-2)
   of the interview not related to Git has also been published.
-* [Security keys are now supported for SSH Git operations](https://github.blog/2021-05-10-security-keys-supported-ssh-git-operations/) via ecdsa-sk and ed25519-sk key types.
+* GitHub announced that [security keys are now supported for SSH Git operations](https://github.blog/2021-05-10-security-keys-supported-ssh-git-operations/) via `ecdsa-sk` and `ed25519-sk` key types.
 
 
 __Light reading__
 
 * [Scaling monorepo maintenance](https://github.blog/2021-04-29-scaling-monorepo-maintenance/)
-  by Taylor Blau on GitHub Blog, with reverse indexes, multi-pack bitmaps, and geometric repacking
+  by Taylor Blau on GitHub Blog, with reverse indexes, multi-pack bitmaps, and geometric repacking.
 * [Developing a script in small steps](https://dev.to/vkroll/common-misconception-of-beginners-51jb)
-  by Volker Kroll on Dev.to
+  by Volker Kroll on Dev.to.
 * [Plotting the source code "TODO" history of the most popular open source projects](https://schleiss.io/plotting-source-code-todos-for-open-source-projects)
-  by Martin Schleiss
+  by Martin Schleiss.
 * [Git Push to Remote Branch - How to Push a Local Branch to Origin](https://www.freecodecamp.org/news/git-push-to-remote-branch-how-to-push-a-local-branch-to-origin/)
-  by John Mosesman on freeCodeCamp.org
-* [Heroku-style deployments with Docker and git tags](https://ricardoanderegg.com/posts/git-push-deployments-docker-tags/)
-  (and `post-receive` hook) by Ricardo Ander-Egg Aguilar
-* [YubiKey for SSH, Login, 2FA, GPG and Git Signing](https://ocramius.github.io/blog/yubikey-for-ssh-gpg-git-and-local-login/) by Marco Pivetta (Ocramius)
-* [Diff and merge CSV files in your git client](https://paulfitz.github.io/2014/07/09/diff-merge-csv.html)
-  using [daff](http://paulfitz.github.io/daff/) by Paul Fitz (2014)
+  by John Mosesman on freeCodeCamp.org.
+* [Heroku-style deployments with Docker and Git tags](https://ricardoanderegg.com/posts/git-push-deployments-docker-tags/)
+  (and `post-receive` hook) by Ricardo Ander-Egg Aguilar.
+* [YubiKey for SSH, Login, 2FA, GPG and Git Signing](https://ocramius.github.io/blog/yubikey-for-ssh-gpg-git-and-local-login/) by Marco Pivetta (Ocramius).
+* [Diff and merge CSV files in your Git client](https://paulfitz.github.io/2014/07/09/diff-merge-csv.html)
+  using [daff](http://paulfitz.github.io/daff/) by Paul Fitz (2014).
 * [Visual Studio code editor: Eight tips for using GitLab VS Code](https://about.gitlab.com/blog/2021/05/20/vscode-workflows-for-working-with-gitlab/)
-  extension by Tomas Vik on GitLab Blog
+  extension by Tomas Vik on GitLab Blog.
 * [Top Ten Git Tips & Tricks](https://www.honeybadger.io/blog/git-tricks/)
-  by Julie Kent on Honeybadger blog
+  by Julie Kent on Honeybadger blog.
 
 
 __Git tools and sites__
 
 * [Komit](https://github.com/GitSquared/komit) is a Node.js small command line
-  application providing interactive prompt, designed to be run as a git hook to
+  application providing interactive prompt, designed to be run as a Git hook to
   help follow the [Conventional Commit message standard](https://www.conventionalcommits.org/en/v1.0.0/).
   This standard was mentioned in [Git Rev News Edition #52][rn-52] and [#54][rn-54];
-  other tool that helps follow this standard is [Sailr](https://github.com/craicoverflow/sailr)
+  another tool that helps follow this standard is [Sailr](https://github.com/craicoverflow/sailr)
   (also mentioned in [edition #52][rn-52]).
 * [Flat Data](https://octo.github.com/projects/flat-data) explores how to make
-  it easy to work with data in git and GitHub. The Flat Data project
-  incorporates three different pieces: Flat Action (GitHub Action), Flat Editor
-  VS Code extension, and Flat Viewer website.
+  it easy to work with data in Git and GitHub. The Flat Data project
+  incorporates three different pieces: the Flat Action (GitHub Action), the Flat Editor
+  VS Code extension, and the Flat Viewer website.
 * [git-split-diffs](https://github.com/banga/git-split-diffs), a Node.js
   command-line application, provides side-by-side split diffs with syntax
-  highlighting in your terminal; can be used via `core.pager` or `pager.diff`.
+  highlighting in your terminal, and can be used via `core.pager` or `pager.diff`.
 * [daff: data diff](http://paulfitz.github.io/daff/) is a library and a tool for
   comparing tables, producing a summary of their differences, and using such a
   summary as a patch file. It is optimized for comparing tables that share a
-  common origin, in other words multiple versions of the "same" table. You can
-  make also git diffs and merges table-aware using daff.
+  common origin, in other words multiple versions of the "same" table. With daff,
+  you can also make Git diffs and merges table-aware.
 * [github-csv-diff](https://github.com/wy-z/github-csv-diff) and
   [CSVHub](https://github.com/Data-Liberation-Front/csvhub) are both
   Chrome extensions to show CSV diffs on GitHub.
-* [Semgrep](https://semgrep.dev/) is a fast, open-source, static analysis tool
+* [Semgrep](https://semgrep.dev/) is a fast, Open Source, static analysis tool
   for finding bugs and enforcing code standards at editor, commit, or CI time;
   rules look like the code you’re searching.
 
