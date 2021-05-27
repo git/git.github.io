@@ -267,7 +267,7 @@ __Light reading__
 
 __Git tools and sites__
 
-* [Komit](https://github.com/GitSquared/komit) is a Node.js small command line
+* [Komit](https://github.com/GitSquared/komit) is a Node.js based small command line
   application providing interactive prompt, designed to be run as a Git hook to
   help follow the [Conventional Commit message standard](https://www.conventionalcommits.org/en/v1.0.0/).
   This standard was mentioned in [Git Rev News Edition #52][rn-52] and [#54][rn-54];
