@@ -56,7 +56,11 @@ This edition covers what happened during the month of April 2021.
   been seen once, though now that this list is out there we may see more
   of `deemed-obviously-correct-by`, `worriedly-acked-by`, and `cheered-on-by`
   in the future.
-  
+
+  One can also note that this distribution roughly follows
+  [Zip's law](https://en.wikipedia.org/wiki/Zipf%27s_law); the 10th most
+  popular line ("improved-by") is about 1/10 as popular as the 1st.
+
   [This script](https://gist.github.com/felipec/ce491d351c88e4acbdbf6bc02a47223d)
   can be used to replicate the analysis.
 
@@ -325,5 +329,5 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Patrick Steinhardt, Andrew Ardill and
-Jonas Bernoulli.
+with help from Patrick Steinhardt, Andrew Ardill,
+Felipe Contreras and Jonas Bernoulli.
