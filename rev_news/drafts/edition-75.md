@@ -38,6 +38,28 @@ This edition covers what happened during the month of April 2021.
   couldn't be selected! We hope to continue to see you in the
   community!
 
+* [The top 1% of commit trailers](https://lore.kernel.org/git/60ad75ac7ffca_2ae08208b@natae.notmuch/)
+
+  Felipe Contreras posted a fun analysis of how often various commit
+  trailers (`reviewed-by`, `tested-by`, etc) appear in the git.git project.
+  
+  Setting aside `signed-off-by` (which all contributions must include),
+  the most common trailers are `acked-by` (1945 occurences) and
+  `reviewed-by` (1729 occurences), together accounting for almost half
+  of all trailers.
+  
+  The next 4 most common trailers give a great insight into just how
+  much collaboration goes on in the git.git project: `helped-by` (1336),
+  `reported-by` (960), `mentored-by` (379), and `suggested-by` (281).
+  
+  Perhaps most interesting is the long list of trailers that have only
+  been seen once, though now that this list is out there we may see more
+  of `deemed-obviously-correct-by`, `worriedly-acked-by`, and `cheered-on-by`
+  in the future.
+  
+  [This script](https://gist.github.com/felipec/ce491d351c88e4acbdbf6bc02a47223d)
+  can be used to replicate the analysis.
+
 ### Reviews
 
 * [[PATCH] [GSOC] pretty: provide human date format](https://lore.kernel.org/git/pull.939.git.1619195245606.gitgitgadget@gmail.com/)
