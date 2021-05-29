@@ -45,6 +45,14 @@ __Light reading__
 
 
 __Git tools and sites__
+* [A Git history visualization page](https://git-history.jpalmer.dev/)
+by Jeff Palmer &lt;<jeffrey.palmer@acm.org>&gt; shows "An Interactive Development History" of Git in
+three columns: project and contributor statistics, relative cumulative 
+contributions by contributor, and aggregated commits by 
+contributor by month with milestone annotations. Jeff wrote 
+[an associated blog post](https://jpalmer.dev/2021/05/interactive-git-history/) about how
+he created the visualization, and he's also looking for
+feedback and ideas for milestones or features he could add.
 
 
 ## Credits
