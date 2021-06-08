@@ -90,7 +90,7 @@ suggest improvements. Thanks!
 
 * [git-scm community page](https://git-scm.com/community)
 
-* [freenode webchat for the #git-devel IRC channel](https://webchat.freenode.net/#git-devel)
+* [web interface to #git-devel IRC channel on Libera Chat](https://web.libera.chat/#git-devel)
 
 * [#git-devel IRC channel archive](https://colabti.org/irclogger/irclogger_logs/git-devel)
 
