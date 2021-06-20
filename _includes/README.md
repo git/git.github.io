@@ -1,12 +1,19 @@
-# About
+# About Git Developer Pages
 
-This homepage is maintained by editing files in the
+This is a website to help Git Developers.
+
+It is NOT a place to discuss Git issues. Please see
+[git-scm.org's community page](https://git-scm.com/community)
+for information about bug reporting or interacting with the
+community.
+
+The pages are maintained by editing files in the
 [git/git.github.io](https://github.com/git/git.github.io) repository on
 GitHub. It is then published on the
 [https://git.github.io](https://git.github.io) GitHub page.
 
 It is meant to be edited collaboratively like a wiki, except that
-instead of a web form, you get to use a text editor and git. What could
+instead of a web form, you get to use a text editor and Git. What could
 be better?
 
 If you want push access, contact peff@peff.net and provide your GitHub
