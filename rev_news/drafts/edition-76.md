@@ -25,9 +25,60 @@ This edition covers what happened during the month of May 2021.
 ### Reviews
 -->
 
-<!---
+
 ### Support
--->
+
+* [[BUG] Unix Builds Requires Pthread Support](https://lore.kernel.org/git/009d01d74b44$9efe8a60$dcfb9f20$@nexbridge.com/)
+
+  Not long after 2.32.0-rc0 was released, Randall S. Becker reported
+  to the mailing list that
+  [a patch series](https://lore.kernel.org/git/pull.766.v4.git.1613598529.gitgitgadget@gmail.com/)
+  from Jeff Hostetler, which introduced a "Simple IPC Mechanism",
+  broke the build for the NonStop x86 and ia64 platforms. This build
+  defines `NO_PTHREADS`, as supporting pthreads on these platforms is
+  considered to cause "a bunch of other issues".
+
+  It seems that Jeff patch series has introduced a file, called
+  `ipc-unix-socket.c`, which contains a call to the
+  `pthread_sigmask()` function part of the pthreads library which is
+  of course not linked to when `NO_PTHREADS` is defined.
+
+  Randall suggested a "simple, but probably wrong fix" which just
+  surrounds the call to `pthread_sigmask()` with `#ifndef NO_PTHREADS`
+  and `#endif`.
+
+  Peff, alias Jeff King, replied to Randall that usually an "async"
+  mechanism is used for tasks that can be performed by several workers
+  in parallel, and that underneath this mechanism can be implemented
+  both using different processes and using different threads. At build
+  time, depending on the availability of pthread, one or the other
+  implementation is selected.
+
+  Peff couldn't tell though, if the "async" interface that the IPC
+  mechanism defines can actually be implemented using
+  processes. Anyway he proposed an improved patch to fix the build by
+  just removing the files implementing the mechanism from the build if
+  NO_PTHREAD if defined.
+
+  Jeff Hostetler, who had implemented the IPC mechanism, then replied
+  to Peff, that the mechanism is heavily threaded and that there was
+  no point in trying to "fake it" with processes. So he agreed with
+  Peff's patch which removes it from the build.
+
+  Peff replied to Jeff asking if he wanted to pick his patch up from
+  there and produce a polished patch before the 2.32.0 release. Jeff
+  then agreed to do that, and sent
+  [a more elaborate patch](https://lore.kernel.org/git/pull.955.git.1621352192238.gitgitgadget@gmail.com/)
+  based on Peff's patch and on some discussions about it that happened
+  in the meantime between Peff and Randall.
+
+  Junio reviewed Jeff's patch and made some suggestions, which after
+  further discussion were integrated in
+  [the version 2 of the patch](https://lore.kernel.org/git/pull.955.v2.git.1621520547726.gitgitgadget@gmail.com/).
+
+  A [version 3](https://lore.kernel.org/git/pull.955.v3.git.1621535291406.gitgitgadget@gmail.com/)
+  soon followed to fix the build for people using CMake instead of make.
+  This version was merged before 2.32.0-rc1.
 
 <!---
 ## Developer Spotlight:
