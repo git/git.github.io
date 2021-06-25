@@ -80,9 +80,82 @@ This edition covers what happened during the month of May 2021.
   soon followed to fix the build for people using CMake instead of make.
   This version was merged before 2.32.0-rc1.
 
-<!---
-## Developer Spotlight:
--->
+
+## Developer Spotlight: Han-Wen Nienhuys
+
+* Who are you and what do you do?
+
+  I’m Han-Wen Nienhuys. I work at Google, where I manage the Gerrit
+  team. If you don’t know yet, [Gerrit](https://www.gerritcodereview.com/)
+  is the Git-based code review system that Google uses for large open
+  source projects, such Android and Chrome.
+
+  For a while, Shawn Pearce was my boss. I got to know him because of
+  previous Git adventures at Google: I created git5, a wrapper around
+  our internal Perforce (‘p4’) deployment as a side project. You can
+  still see some traces of this, if you look at the commit history of
+  git-p4.
+
+* What would you name your most important contribution to Git?
+
+  I didn’t contribute many patches to Git directly, but here is my
+  biggest one so far:
+
+  Gerrit accepts code for review through a `git push` command, and user
+  studies showed that Gerrit’s error messages didn’t stand out among
+  the verbose terminal output. I added colorization for keywords like
+  “ERROR” and “WARNING” to draw more attention.
+
+* What are you doing on the Git project these days, and why?
+
+  Gerrit uses Git as a database, storing all review metadata
+  (comments, LGTMs) in Git itself, which is extremely cool, but it
+  also creates extremely ..interesting.. scaling problems for Git and
+  JGit.
+
+  One area of scaling is the ref database: Gerrit stores both metadata
+  and each version of a code review in a separate ref. As a result,
+  large projects, such as Chrome, now have several millions of refs in
+  their repository. Handling those efficiently is a challenge. Shawn
+  designed reftable to solve these problems, and partly implemented it
+  in JGit, but he never got round to updating the Git project itself
+  to use the format.
+
+  At the end 2019, I thought it would be an interesting and fun
+  project to drive that project further. I did severely underestimate
+  how complicated it would be to do brain surgery on Git itself,
+  though, so 1.5 years later, it still hasn’t merged. Working on Git
+  itself (as opposed to Gerrit, and managing the team) is a side
+  project, so progress hasn’t been as fast as I’d like it to be.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+  Rewrite Git on top of [libgit2](https://libgit2.org/). Or even,
+  better rewrite it in Go. Hacking on Git is a fun trip down memory
+  lane, because the last time I wrote C seriously, I was half my
+  current age. It doesn’t feel very productive though, in part because
+  of limitations of the language (memory management, lack of
+  strings/maps/GC etc.).
+
+  I realize that’s ambitious, and would turn off a lot of the current
+  contributors, however, I think much could also be gained by
+  structuring the program better (eg. banish global variables,
+  introduce more unittested abstraction boundaries), and that could be
+  achieved by rewriting parts on top of libgit2.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+  The packed/loose ref backend. All of Git storage is user-accessible
+  (under the `.git` directory), but the packed/loose ref storage is
+  extra insidious, because you read/write it using `cat` and `echo`,
+  which invites people to break abstraction boundaries.
+
+* What is your favorite Git-related tool/library, outside of Git
+  itself?
+
+  It’s Gerrit, of course.
 
 ## Releases
 
