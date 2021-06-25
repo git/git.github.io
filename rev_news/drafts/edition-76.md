@@ -35,6 +35,29 @@ This edition covers what happened during the month of May 2021.
 
 ## Releases
 
++ Git [2.32.0](https://public-inbox.org/git/xmqqa6o3xj2e.fsf@gitster.g/),
+[2.32.0-rc3](https://public-inbox.org/git/xmqq4kegr7o3.fsf@gitster.g/),
+[2.32.0-rc2](https://public-inbox.org/git/xmqq4ken75cv.fsf@gitster.g/)
++ Git for Windows [2.32.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.32.0.windows.1),
+[2.32.0-rc3(1)](https://github.com/git-for-windows/git/releases/tag/v2.32.0-rc3.windows.1),
+[2.32.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.32.0-rc2.windows.1)
++ Bitbucket Server [7.14](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ GitHub Enterprise [3.1.2](https://help.github.com/enterprise-server@3.1/admin/release-notes#3.1.2),
+[3.0.10](https://help.github.com/enterprise-server@3.0/admin/release-notes#3.0.10),
+[2.22.16](https://help.github.com/enterprise-server@2.22/admin/release-notes#2.22.16),
+[3.1.1](https://help.github.com/enterprise-server@3.1/admin/release-notes#3.1.1),
+[3.0.9](https://help.github.com/enterprise-server@3.0/admin/release-notes#3.0.9),
+[2.22.15](https://help.github.com/enterprise-server@2.22/admin/release-notes#2.22.15),
+[2.21.23](https://help.github.com/enterprise-server@2.21/admin/release-notes#2.21.23),
+[3.1.0](https://help.github.com/enterprise-server@3.1/admin/release-notes#3.1.0)
++ GitLab [14.0.1](https://about.gitlab.com/releases/2021/06/24/gitlab-14-0-1-released/),
+[14.0](https://about.gitlab.com/releases/2021/06/22/gitlab-14-0-released/),
+[13.12.5](https://about.gitlab.com/releases/2021/06/21/gitlab-13-12-5-released/),
+[13.12.4](https://about.gitlab.com/releases/2021/06/14/gitlab-13-12-4-released/),
+[13.12.3](https://about.gitlab.com/releases/2021/06/07/gitlab-13-12-3-released/),
+[13.12.2, 13.11.5, and 13.10.5](https://about.gitlab.com/releases/2021/06/01/security-release-gitlab-13-12-2-released/)
++ GitHub Desktop [2.9.0](https://desktop.github.com/release-notes/),
+[2.8.3](https://desktop.github.com/release-notes/)
 
 ## Other News
 
