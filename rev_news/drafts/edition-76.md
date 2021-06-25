@@ -186,7 +186,9 @@ This edition covers what happened during the month of May 2021.
 ## Other News
 
 __Various__
-
+* [The 2021 Gerrit Community Survey results](https://docs.google.com/presentation/d/11Ivu6xtYZBYTU5e5y_lc6tni3nm9fNIUbX2VRTyTMbE/edit#slide=id.ge209b6f75c_0_1459)
+  has been published, showing a robust increase of the overall number of users and the adoption
+  of the most recent versions of [Gerrit Code Review](https://www.gerritcodereview.com).
 
 __Light reading__
 
