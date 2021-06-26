@@ -40,7 +40,7 @@ This edition covers what happened during the month of May 2021.
 
   It seems that Jeff patch series has introduced a file, called
   `ipc-unix-socket.c`, which contains a call to the
-  `pthread_sigmask()` function part of the pthreads library which is
+  `pthread_sigmask()` function part of the pthreads library, which is
   of course not linked to when `NO_PTHREADS` is defined.
 
   Randall suggested a "simple, but probably wrong fix" which just
@@ -58,12 +58,12 @@ This edition covers what happened during the month of May 2021.
   mechanism defines can actually be implemented using
   processes. Anyway he proposed an improved patch to fix the build by
   just removing the files implementing the mechanism from the build if
-  NO_PTHREAD if defined.
+  `NO_PTHREADS` if defined, similar to dealing with `NO_UNIX_SOCKETS`.
 
   Jeff Hostetler, who had implemented the IPC mechanism, then replied
-  to Peff, that the mechanism is heavily threaded and that there was
+  to Peff that the mechanism was heavily threaded and that there was
   no point in trying to "fake it" with processes. So he agreed with
-  Peff's patch which removes it from the build.
+  Peff's patch, which conditionally removes it from the build.
 
   Peff replied to Jeff asking if he wanted to pick his patch up from
   there and produce a polished patch before the 2.32.0 release. Jeff
@@ -74,7 +74,7 @@ This edition covers what happened during the month of May 2021.
 
   Junio reviewed Jeff's patch and made some suggestions, which after
   further discussion were integrated in
-  [the version 2 of the patch](https://lore.kernel.org/git/pull.955.v2.git.1621520547726.gitgitgadget@gmail.com/).
+  [version 2 of the patch](https://lore.kernel.org/git/pull.955.v2.git.1621520547726.gitgitgadget@gmail.com/).
 
   A [version 3](https://lore.kernel.org/git/pull.955.v3.git.1621535291406.gitgitgadget@gmail.com/)
   soon followed to fix the build for people using CMake instead of make.
@@ -88,7 +88,7 @@ This edition covers what happened during the month of May 2021.
   I’m Han-Wen Nienhuys. I work at Google, where I manage the Gerrit
   team. If you don’t know yet, [Gerrit](https://www.gerritcodereview.com/)
   is the Git-based code review system that Google uses for large open
-  source projects, such Android and Chrome.
+  source projects, such as Android and Chrome.
 
   For a while, Shawn Pearce was my boss. I got to know him because of
   previous Git adventures at Google: I created git5, a wrapper around
@@ -140,8 +140,8 @@ This edition covers what happened during the month of May 2021.
 
   I realize that’s ambitious, and would turn off a lot of the current
   contributors, however, I think much could also be gained by
-  structuring the program better (eg. banish global variables,
-  introduce more unittested abstraction boundaries), and that could be
+  structuring the program better (e.g. banish global variables,
+  introduce more unit tested abstraction boundaries), and that could be
   achieved by rewriting parts on top of libgit2.
 
 * If you could remove something from Git without worrying about
@@ -205,9 +205,9 @@ __Light reading__
   ([free link for not subscribed](https://lwn.net/SubscriberLink/860607/fdbce807fe931123/))
   describes attempts to make it possible to submit patches to the Linux kernel
   via GitHub pull requests (PR).  While at it, it also mentions various attempts
-  and tools to improve email-based workflow.
+  and tools to improve an email-based workflow.
 
-  * For submitting patch series to the Git project via GitHub pull request,
+  * For submitting patch series to the Git project via GitHub pull requests,
     there is [GitGitGadget](https://gitgitgadget.github.io/), described in
     [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/).
 
@@ -237,7 +237,7 @@ __Light reading__
   by Abhinav Pandey on Dev.to.
 
 * [After CRUD: Intro to Git and basic workflows](https://johnmosesman.com/post/after-crud-git/)
-  by John Mosesman (2019)
+  by John Mosesman (2019).
 
 
 __Git tools and sites__
