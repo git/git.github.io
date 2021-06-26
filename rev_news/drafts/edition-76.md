@@ -190,7 +190,54 @@ __Various__
   have been published, showing a robust increase of the overall number of users and the adoption
   of the most recent versions of [Gerrit Code Review](https://www.gerritcodereview.com).
 
+* [Got typos? Git 2.32 lands, finally offers way to reword commits [easily]](https://devclass.com/2021/06/07/got-typos-git-2-32-lands-finally-offers-way-to-reword-commits/).
+
+
 __Light reading__
+* [Crypto Mining is Killing All Free CI/CD Platforms](https://dev.to/n3wt0n/crypto-mining-is-killing-all-free-ci-cd-platforms-4chc)
+  by Davide 'CoderDave' Benvegnù is a blog post on Dev.to
+  and a [video on YouTube](https://www.youtube.com/watch?v=9TOJqJSHVvI).
+  The platforms affected include GitLab, TravisCI, CircleCI and GitHub Actions;
+  the CI providers have limited their free tiers, or have to spend much effort
+  on combating crypto miners abusing the platform in response.
+
+* [Pulling GitHub into the kernel process](https://lwn.net/Articles/860607/) by Jake Edge on LWN.net
+  ([free link for not subscribed](https://lwn.net/SubscriberLink/860607/fdbce807fe931123/))
+  describes attempts to make it possible to submit patches to the Linux kernel
+  via GitHub pull requests (PR).  While at it, it also mentions various attempts
+  and tools to improve email-based workflow.
+
+  * For submitting patch series to the Git project via GitHub pull request,
+    there is [GitGitGadget](https://gitgitgadget.github.io/), described in
+    [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/).
+
+* [A Random Walk Through Git](https://bakkenbaeck.github.io/a-random-walk-through-git/)
+  by Bakken & Bæck is a weird in-depth tour through Git and some of its internals,
+  including reflog, interactive rebase, bisect and rerere.
+
+* [How to never type passwords when using Git](https://dev.to/github/how-to-never-type-passwords-when-using-git-18bb)
+  by Michelle Mannering on Dev.to.
+
+* [Confusing Terms in the Git Terminology](https://dev.to/pragativerma18/confusing-terms-in-the-git-terminology-1578)
+  by Pragati Verma on Dev.to.
+
+* [Git Good - The magic of keeping a clean Git history](https://simplabs.com/blog/2021/05/26/keeping-a-clean-git-history/)
+  post by Chris Manson is designed to help you form a solid mental model while
+  working with Git both professionally and in an open source project, and how to
+  ensure you are following best practices to make the process easier for
+  everyone.
+
+* [Merge vs rebase](https://dev.to/emyller/merge-vs-rebase-63e)
+  by Evandro Myller on Dev.to.
+
+* [Git Log: How to Use It](https://careerkarma.com/blog/git-log/)
+  by James Gallagher (2020), one of Git tutorials on Career Karma blog.
+
+* [Fixing basic mistakes with Git](https://dev.to/abh1navv/fixing-basic-mistakes-with-git-4m4l)
+  by Abhinav Pandey on Dev.to.
+
+* [After CRUD: Intro to Git and basic workflows](https://johnmosesman.com/post/after-crud-git/)
+  by John Mosesman (2019)
 
 
 __Git tools and sites__
@@ -202,6 +249,29 @@ contributor by month with milestone annotations. Jeff wrote
 [an associated blog post](https://jpalmer.dev/2021/05/interactive-git-history/) about how
 he created the visualization, and he's also looking for
 feedback and ideas for milestones or features he could add.
+
+* [git undo: We can do better](https://blog.waleedkhan.name/git-undo/)
+describes the `git-undo` tool that is
+a [part of the git-branchless suite of tools](https://github.com/arxanas/git-branchless);
+it can undo bad merges and rebases with ease, and even some rarer operations.
+This `git undo` tool was made possible by a recent addition to Git:
+the [reference-transaction hook](https://git-scm.com/docs/githooks#_reference_transaction)
+(not yet present on the [GitHooks.com](https://githooks.com) site, mentioned
+in [Git Rev News Edition #43](https://git.github.io/rev_news/2018/09/19/edition-43/);
+the reference-transaction hook was described in [#75](https://git.github.io/rev_news/2021/03/27/edition-73/)).
+
+  * The [GitUp](https://gitup.co/) client also supports undo/redo via snapshots,
+    also by adding additional plumbing on top of Git.  This tool was first mentioned
+    in [Git Rev News #5](https://git.github.io/rev_news/2015/07/08/edition-5/).
+
+  * The `undo` Git alias described in [Git Undo](http://megakemp.com/2016/08/25/git-undo/)
+    post by Enrico Campidoglio simply uses the reflog, and is less capable.  This post
+    was mentioned in [Git Rev News #19](https://git.github.io/rev_news/2016/08/17/edition-18/).
+
+* [git-branchless](https://github.com/arxanas/git-branchless) is a suite of tools,
+written in Rust, to help you **visualize**, **navigate**, **manipulate**, and **repair**
+your commit history. It's based off of the branchless Mercurial workflows at large companies
+such as Google and Facebook.
 
 
 ## Credits
