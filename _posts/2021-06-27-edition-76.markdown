@@ -131,8 +131,8 @@ This edition covers what happened during the month of May 2021.
 * If you could get a team of expert developers to work full time on
   something in Git for a full year, what would it be?
 
-  Rewrite Git on top of [libgit2](https://libgit2.org/). Or even,
-  better rewrite it in Go. Hacking on Git is a fun trip down memory
+  Rewrite Git on top of [libgit2](https://libgit2.org/). Or even
+  better, rewrite it in Go. Hacking on Git is a fun trip down memory
   lane, because the last time I wrote C seriously, I was half my
   current age. It doesn’t feel very productive though, in part because
   of limitations of the language (memory management, lack of
