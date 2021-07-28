@@ -57,6 +57,13 @@ This edition covers what happened during the month of June 2021.
 __Various__
 * [Tower 7 - The New Commit Experience](https://www.git-tower.com/blog/tower-mac-7)
 
+* [NO\_COLOR](https://no-color.org/) is a proposed universal standard of
+  disabling colored text output in command-line software programs. The website
+  also documents which software has adopted this standard and when support was
+  added, and for projects that did not adopt this standard it tries to document
+  how to otherwise disable color.
+
+
 __Light reading__
 * [How to Get Better with Git](https://www.anavela.dev/how-to-get-better-with-git)
   by Ana Vela provides a list of free and paid resources to help you boost your
