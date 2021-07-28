@@ -55,12 +55,52 @@ This edition covers what happened during the month of June 2021.
 ## Other News
 
 __Various__
-
+* [Tower 7 - The New Commit Experience](https://www.git-tower.com/blog/tower-mac-7)
 
 __Light reading__
+* [Git quick tips #1: git commit --fixup](https://citizen428.net/blog/git-quick-tips-1-commit-fixup/) and
+  [Git quick tips #2: Working with many branches](https://citizen428.net/blog/git-quick-tips-2-working-with-many-branches/)
+  by Michael Kohl.
+
+* [Git For Data Engineers](https://towardsdatascience.com/git-for-data-engineers-a8b979d8b2ab)
+  by Kovid Rathee: a shortish guide to source control for data engineers,
+  data analysts, and data scientists.
+
+* [How to Learn Git Slowly](https://suchdevblog.com/lessons/HowToLearnGit.html)
+  by Samuel Faure.
+
+* [On the Evilness of Feature Branching - A Tale of Two Teams](https://thinkinglabs.io/articles/2021/07/14/on-the-evilness-of-feature-branching-a-tale-of-two-teams.html),
+  one novice practising [trunk-based development](https://trunkbaseddevelopment.com/),
+  the other very experienced using [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/),
+  by Thierry de Pauw.
+
+  * See also [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html)
+    by Martin Fowler, mentioned in [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/)
+
+* [Things I wish Git had: Commit groups](http://blog.danieljanus.pl/2021/07/01/commit-groups/)
+  by Daniel Janus - to have advantages of topic branch workflow
+  when using "rebase and merge" workflow.
+
+* [How Git Branches Work](https://www.freecodecamp.org/news/how-git-branches-work/):
+  Git Branches Tutorial, by Beau Carnes, on freeCodeCamp.
+
+* [How NOT to use Git in Practice. Ten Git usages, you should know to avoid.](https://blog.greenroots.info/how-not-to-use-git-in-practice-ten-git-usages-you-should-know-to-avoid)
+  by Tapas Adhikary on GreenRoots Blog.
+
+* [Elevate your Git-fu!](https://dev.to/abhaykrishna/elevate-your-git-fu-3ip4)
+  by Abhay Krishna Arunachalam on DEV.to
+
+* [git update: the odyssey for a sensible git pull](https://felipec.wordpress.com/2021/07/05/git-update/)
+  by Felipe Contreras.
 
 
 __Git tools and sites__
+* [diffsitter](https://github.com/afnanenayet/diffsitter) creates semantically meaningful
+  diffs that ignore formatting differences like spacing.  It does so by computing a diff
+  on the AST (abstract syntax tree) of a file rather than computing the diff on the text
+  contents of the file.  `diffsitter` uses the parsers from
+  the [tree-sitter](https://tree-sitter.github.io/tree-sitter) project
+  to parse source code.  Written in Rust, it is very much a work in progress.
 
 
 ## Credits
