@@ -58,6 +58,10 @@ __Various__
 * [Tower 7 - The New Commit Experience](https://www.git-tower.com/blog/tower-mac-7)
 
 __Light reading__
+* [How to Get Better with Git](https://www.anavela.dev/how-to-get-better-with-git)
+  by Ana Vela provides a list of free and paid resources to help you boost your
+  Git know-how.
+
 * [Git quick tips #1: git commit --fixup](https://citizen428.net/blog/git-quick-tips-1-commit-fixup/) and
   [Git quick tips #2: Working with many branches](https://citizen428.net/blog/git-quick-tips-2-working-with-many-branches/)
   by Michael Kohl.
@@ -68,6 +72,16 @@ __Light reading__
 
 * [How to Learn Git Slowly](https://suchdevblog.com/lessons/HowToLearnGit.html)
   by Samuel Faure.
+
+* [How NOT to use Git in Practice. Ten Git usages, you should know to avoid.](https://blog.greenroots.info/how-not-to-use-git-in-practice-ten-git-usages-you-should-know-to-avoid)
+  by Tapas Adhikary on GreenRoots Blog.
+
+* [Elevate your Git-fu!](https://dev.to/abhaykrishna/elevate-your-git-fu-3ip4)
+  by Abhay Krishna Arunachalam on DEV.to
+
+* [How to Collaborate on Components across Projects with Bit](https://dev.to/giteden/how-to-collaborate-on-components-across-projects-with-bit-29c3)
+  by Eden Ella on DEV.to. The [Bit](https://github.com/teambit/bit) project was
+  mentioned in [Git Rev News Edition #45](https://git.github.io/rev_news/2018/11/21/edition-45/).
 
 * [On the Evilness of Feature Branching - A Tale of Two Teams](https://thinkinglabs.io/articles/2021/07/14/on-the-evilness-of-feature-branching-a-tale-of-two-teams.html),
   one novice practising [trunk-based development](https://trunkbaseddevelopment.com/),
@@ -81,14 +95,11 @@ __Light reading__
   by Daniel Janus - to have advantages of topic branch workflow
   when using "rebase and merge" workflow.
 
+* [Git Squash Simplified](https://dev.to/pb/git-squash-simplified-3ba1)
+  by Pawel Borkar on DEV.to.
+
 * [How Git Branches Work](https://www.freecodecamp.org/news/how-git-branches-work/):
   Git Branches Tutorial, by Beau Carnes, on freeCodeCamp.
-
-* [How NOT to use Git in Practice. Ten Git usages, you should know to avoid.](https://blog.greenroots.info/how-not-to-use-git-in-practice-ten-git-usages-you-should-know-to-avoid)
-  by Tapas Adhikary on GreenRoots Blog.
-
-* [Elevate your Git-fu!](https://dev.to/abhaykrishna/elevate-your-git-fu-3ip4)
-  by Abhay Krishna Arunachalam on DEV.to
 
 * [git update: the odyssey for a sensible git pull](https://felipec.wordpress.com/2021/07/05/git-update/)
   by Felipe Contreras.
@@ -102,6 +113,16 @@ __Git tools and sites__
   the [tree-sitter](https://tree-sitter.github.io/tree-sitter) project
   to parse source code.  Written in Rust, it is very much a work in progress.
 
+* [The best 6 VS Code extensions to supercharge Git](https://dev.to/jamieswift90/the-best-vs-code-extensions-to-supercharge-git-yes-there-s-more-than-gitlens-4588)
+  by Jamie Swift on DEV.to.
+
+* [GitLive](https://marketplace.visualstudio.com/items?itemName=TeamHub.teamhub)
+  is a Visual Studio Code extension [to see which branch your teammates are on in VS Code](https://dev.to/gitlive/how-to-see-which-branch-your-teammates-are-on-in-vs-code-cb1).
+
+* [Git Immersion](https://gitimmersion.com/index.html) provides a guided tour
+  that walks through the fundamentals of Git, inspired by the premise that to
+  know a thing is to do it.  Another [variant of Git Immersion](http://jce-il.github.io/git-immersion/index.html)
+  was mentioned in [Git Rev News Edition #38](https://git.github.io/rev_news/2018/04/18/edition-38/).
 
 ## Credits
 
