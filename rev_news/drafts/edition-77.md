@@ -21,9 +21,73 @@ This edition covers what happened during the month of June 2021.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [[PATCH] builtins + test helpers: use return instead of exit() in cmd_*](https://lore.kernel.org/git/patch-1.1-61d7e6e079-20210607T111008Z-avarab@gmail.com/)
+
+  Ævar Arnfjörð Bjarmason sent a patch to the mailing list that
+  changed some cmd_*() functions so that they use a `return` statement
+  instead of `exit()`. He further said that it is legitimate for the
+  SunCC compiler on Solaris to complain about the exit() calls, as
+  they would skip any cleanup made after them.
+
+  The cmd_*() functions are important in the architecture of Git, as
+  there is one such function for each Git "builtin" command, and the
+  function is called by `run_builtin()` in `git.c` to perform the
+  command. For example when `git log` is launched, the `cmd_log()`
+  function is called by `run_builtin()`.
+
+  Felipe Contreras reviewed the patch and found it obviously correct.
+
+  Peff, alias Jeff King, also said that it looked like simple and
+  obvious conversions, but he wondered what was SunCC complaining
+  about, especially if it didn't know about `NORETURN`, and would
+  complain about many other exit() calls.
+
+  `NORETURN` is a special statement to tell the compiler that a
+  function doesn't return, but instead uses a function like `exit()`
+  to stop the current process.
+
+  Phillip Wood also wondered if SunCC would complain about die()
+  calls, which use exit() underneath.
+
+  Ævar then sent
+  [a version 2](https://lore.kernel.org/git/patch-1.1-f225b78e01-20210608T104454Z-avarab@gmail.com/)
+  of his patch, with no code change but explaining that SunCC actually
+  complains when there's no NORETURN while we declare a cmd_*()
+  function to return an int. He replied to Peff with the same
+  explanation and added that around half of SunCC warnings are
+  legitimate, and that he had already been sending miscellaneous fixes
+  for 15-20 of them.
+
+  Junio Hamano, the Git maintainer, replied to the version 2 patch.
+  He especially had issue with the part in the commit message that
+  said that directly exit()-ing would skip the cleanups `git.c` would
+  otherwise do, like closing file descriptors and erroring if it
+  failed. He considered that it was "not a crime" for the functions to
+  exit themselves as file descriptors are closed when we exit and "if
+  we do have clean-ups that are truly important, we would have
+  arranged them to happen in the `atexit()` handler".
+
+  Junio anyway thought that the patch was still "a good idea because
+  it encourages good code hygiene".
+
+  Ævar replied to Junio that file descriptors are indeed closed when we
+  exit, but the errors we get when closing them would not be
+  reported. He pointed to previous commits that had been merged back
+  in 2007 to make sure IO errors were properly reported after the
+  cmd_*() functions return, and said that "the `atexit()` handlers
+  cannot modify the exit code (both per the C standard, and POSIX)".
+  He also discussed a bit how glibc allows `atexit()` handlers to
+  munge the exit code though it's not portable behavior.
+
+  Junio replied that Ævar was right and that "we leave a final clean-up
+  for normal returns (i.e. when `cmd_foo()` intends to return or exit
+  with 0) to be done by the caller".
+
+  The patch was later merged into the master branch and the next
+  version of Git will better signal IO errors, thanks to SunCC and
+  people running it to compile Git on Solaris machines.
 
 <!---
 ### Support
