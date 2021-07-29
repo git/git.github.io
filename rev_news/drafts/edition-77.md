@@ -175,6 +175,8 @@ __Light reading__
 * [git update: the odyssey for a sensible git pull](https://felipec.wordpress.com/2021/07/05/git-update/)
   by Felipe Contreras.
 
+* [Optimizing Git’s Merge Machinery, Part IV](https://palantir.medium.com/optimizing-gits-merge-machinery-part-iv-5bbc4703d050)
+  by Elijah Newren on Palantir Blog.
 
 __Git tools and sites__
 * [diffsitter](https://github.com/afnanenayet/diffsitter) creates semantically meaningful
@@ -201,4 +203,4 @@ This edition of Git Rev News was curated by
 Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
-Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;.
+Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt; with help from Elijah Newren.
