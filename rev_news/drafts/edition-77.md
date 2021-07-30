@@ -23,15 +23,15 @@ This edition covers what happened during the month of June 2021.
 
 ### Reviews
 
-* [[PATCH] builtins + test helpers: use return instead of exit() in cmd_*](https://lore.kernel.org/git/patch-1.1-61d7e6e079-20210607T111008Z-avarab@gmail.com/)
+* [[PATCH] builtins + test helpers: use return instead of exit() in cmd_\*](https://lore.kernel.org/git/patch-1.1-61d7e6e079-20210607T111008Z-avarab@gmail.com/)
 
   Ævar Arnfjörð Bjarmason sent a patch to the mailing list that
-  changed some cmd_*() functions so that they use a `return` statement
+  changed some `cmd_*()` functions so that they use a `return` statement
   instead of `exit()`. He further said that it is legitimate for the
   SunCC compiler on Solaris to complain about the exit() calls, as
   they would skip any cleanup made after them.
 
-  The cmd_*() functions are important in the architecture of Git, as
+  The `cmd_*()` functions are important in the architecture of Git, as
   there is one such function for each Git "builtin" command, and the
   function is called by `run_builtin()` in `git.c` to perform the
   command. For example when `git log` is launched, the `cmd_log()`
@@ -42,28 +42,28 @@ This edition covers what happened during the month of June 2021.
   Peff, alias Jeff King, also said that it looked like simple and
   obvious conversions, but he wondered what was SunCC complaining
   about, especially if it didn't know about `NORETURN`, and would
-  complain about many other exit() calls.
+  complain about many other `exit()` calls.
 
   `NORETURN` is a special statement to tell the compiler that a
   function doesn't return, but instead uses a function like `exit()`
   to stop the current process.
 
-  Phillip Wood also wondered if SunCC would complain about die()
-  calls, which use exit() underneath.
+  Phillip Wood also wondered if SunCC would complain about `die()`
+  calls, which use `exit()` underneath.
 
   Ævar then sent
   [a version 2](https://lore.kernel.org/git/patch-1.1-f225b78e01-20210608T104454Z-avarab@gmail.com/)
   of his patch, with no code change but explaining that SunCC actually
-  complains when there's no NORETURN while we declare a cmd_*()
-  function to return an int. He replied to Peff with the same
+  complains when there's no `NORETURN` while we declare a `cmd_*()`
+  function to return an `int`. He replied to Peff with the same
   explanation and added that around half of SunCC warnings are
   legitimate, and that he had already been sending miscellaneous fixes
   for 15-20 of them.
 
   Junio Hamano, the Git maintainer, replied to the version 2 patch.
-  He especially had issue with the part in the commit message that
-  said that directly exit()-ing would skip the cleanups `git.c` would
-  otherwise do, like closing file descriptors and erroring if it
+  He especially had an issue with the part in the commit message that
+  said that directly `exit()`-ing would skip the cleanups `git.c` would
+  otherwise do, like closing file descriptors and issuing errors if it
   failed. He considered that it was "not a crime" for the functions to
   exit themselves as file descriptors are closed when we exit and "if
   we do have clean-ups that are truly important, we would have
@@ -73,10 +73,10 @@ This edition covers what happened during the month of June 2021.
   it encourages good code hygiene".
 
   Ævar replied to Junio that file descriptors are indeed closed when we
-  exit, but the errors we get when closing them would not be
+  exit, but the errors we could get when closing them would not be
   reported. He pointed to previous commits that had been merged back
   in 2007 to make sure IO errors were properly reported after the
-  cmd_*() functions return, and said that "the `atexit()` handlers
+  `cmd_*()` functions return, and said that "the `atexit()` handlers
   cannot modify the exit code (both per the C standard, and POSIX)".
   He also discussed a bit how glibc allows `atexit()` handlers to
   munge the exit code though it's not portable behavior.
@@ -142,7 +142,7 @@ __Light reading__
 * [How NOT to use Git in Practice. Ten Git usages, you should know to avoid.](https://blog.greenroots.info/how-not-to-use-git-in-practice-ten-git-usages-you-should-know-to-avoid)
   by Tapas Adhikary on GreenRoots Blog.
 * [Elevate your Git-fu!](https://dev.to/abhaykrishna/elevate-your-git-fu-3ip4)
-  by Abhay Krishna Arunachalam on DEV.to
+  by Abhay Krishna Arunachalam on DEV.to.
 * [How to Collaborate on Components across Projects with Bit](https://dev.to/giteden/how-to-collaborate-on-components-across-projects-with-bit-29c3)
   by Eden Ella on DEV.to. The [Bit](https://github.com/teambit/bit) project was
   mentioned in [Git Rev News Edition #45](https://git.github.io/rev_news/2018/11/21/edition-45/).
@@ -151,7 +151,7 @@ __Light reading__
   the other very experienced using [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/),
   by Thierry de Pauw.
   * See also [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html)
-    by Martin Fowler, mentioned in [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/)
+    by Martin Fowler, mentioned in [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/).
 * [Things I wish Git had: Commit groups](http://blog.danieljanus.pl/2021/07/01/commit-groups/)
   by Daniel Janus - to have advantages of topic branch workflow
   when using "rebase and merge" workflow.
