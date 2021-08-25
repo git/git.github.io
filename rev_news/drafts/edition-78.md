@@ -48,6 +48,7 @@ __Various__
 
 
 __Light reading__
+* [Optimizing Git’s Merge Machinery, Part V](https://blog.palantir.com/optimizing-gits-merge-machinery-part-v-46ff3710633e) by Elijah Newren on Palantir Blog.
 * [How to write release notes](https://drewdevault.com/2021/05/19/How-to-write-release-notes.html)
   by Drew DeVault.
 * [From a Single Repo, to Multi-Repos, to Monorepo, to Multi-Monorepo](https://css-tricks.com/from-a-single-repo-to-multi-repos-to-monorepo-to-multi-monorepo/)
