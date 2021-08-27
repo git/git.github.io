@@ -35,6 +35,36 @@ This edition covers what happened during the month of July 2021.
 
 ## Releases
 
++ Git [2.33.0](https://public-inbox.org/git/xmqq1r6touqi.fsf@gitster.g/),
+[2.33.0-rc2](https://public-inbox.org/git/xmqqo8a37eim.fsf@gitster.g/),
+[2.33.0-rc1](https://public-inbox.org/git/xmqq5ywigls4.fsf@gitster.g/),
+[2.33.0-rc0](https://public-inbox.org/git/xmqqbl6fv2b8.fsf@gitster.g/)
++ Git for Windows [2.33.0(2)](https://github.com/git-for-windows/git/releases/tag/v2.33.0.windows.2),
+[2.33.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.33.0.windows.1),
+[2.33.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.33.0-rc2.windows.1),
+[2.33.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.33.0-rc1.windows.1),
+[2.33.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.33.0-rc0.windows.1)
++ GitHub Enterprise [3.1.6](https://help.github.com/enterprise-server@3.1/admin/release-notes#3.1.6),
+[3.0.14](https://help.github.com/enterprise-server@3.0/admin/release-notes#3.0.14),
+[2.22.20](https://help.github.com/enterprise-server@2.22/admin/release-notes#2.22.20),
+[3.1.5](https://help.github.com/enterprise-server@3.1/admin/release-notes#3.1.5),
+[3.0.13](https://help.github.com/enterprise-server@3.0/admin/release-notes#3.0.13),
+[2.22.19](https://help.github.com/enterprise-server@2.22/admin/release-notes#2.22.19)
++ GitLab [14.0.8](https://about.gitlab.com/releases/2021/08/26/gitlab-14-0-8-released/),
+[14.2.1](https://about.gitlab.com/releases/2021/08/23/gitlab-14-2-1-released/),
+[14.2](https://about.gitlab.com/releases/2021/08/22/gitlab-14-2-released/),
+[14.1.3](https://about.gitlab.com/releases/2021/08/17/gitlab-14-1-3-released/),
+[13.12.10](https://about.gitlab.com/releases/2021/08/10/gitlab-13-12-10-released/),
+[14.1.2](https://about.gitlab.com/releases/2021/08/03/security-release-gitlab-14-1-2-released/),
+[14.1.1](https://about.gitlab.com/releases/2021/07/28/gitlab-14-1-1-released/)
++ Gerrit Code Review [3.3.6](https://www.gerritcodereview.com/3.3.html#336),
+[3.2.12](https://www.gerritcodereview.com/3.2.html#3212),
+[3.1.16](https://www.gerritcodereview.com/3.1.html#3116),
+[3.4.1](https://www.gerritcodereview.com/3.4.html#341)
++ GitKraken [7.7.2](https://support.gitkraken.com/release-notes/current),
+[7.7.1](https://support.gitkraken.com/release-notes/current),
++ GitHub Desktop [2.9.2](https://desktop.github.com/release-notes/),
+[2.9.1](https://desktop.github.com/release-notes/)
 
 ## Other News
 
