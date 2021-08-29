@@ -37,13 +37,13 @@ This edition covers what happened during the month of July 2021.
   `/tmp/git-test/.gitconfig` config file, and then sets `GIT_CONFIG`
   to point to this file.
 
-  When he then tries to commit some changes, Git errors out with an
+  When he then tried to commit some changes, Git errored out with an
   "Author identity unknown" error and instructions about how to set
   the current account's default identity. He expected that the values
   of the `user.name` and `user.email` variables set in the temporary
-  config file would be taken into account.
+  config file would have been taken into account.
 
-  Peff, alias Jeff King, replied that `GIT_CONFIG` is an historical
+  Peff, alias Jeff King, replied that `GIT_CONFIG` is a historical
   wart that isn't used by all of Git, but only the `git config`
   command, and even there `git config --file` should be used instead.
 
@@ -53,13 +53,13 @@ This edition covers what happened during the month of July 2021.
   system-level (`$HOME/.gitconfig` and `$XDG_CONFIG_HOME/git/config`)
   config files respectively.
 
-  German thanked Peff saying `GIT_CONFIG_GLOBAL` is what he needed.
+  German thanked Peff saying `GIT_CONFIG_GLOBAL` was what he needed.
 
   Junio Hamano, the Git maintainer, replied to Peff that reading the
   `GIT_CONFIG` documentation gave a misleading impression as it
-  doesn't say that `GIT_CONFIG` is only for the `git config` command.
+  didn't say that `GIT_CONFIG` was only for the `git config` command.
 
-  Peff agreed with Junio saying that the documentation hasn't been
+  Peff agreed with Junio saying that the documentation hadn't been
   updated since 2007, when `GIT_CONFIG` really did impact other
   commands, and that he was sending
   [a small patch series](https://lore.kernel.org/git/YO9ZGTX9f1fOpTkh@coredump.intra.peff.net/)
@@ -115,9 +115,9 @@ __Various__
 * [Highlights from Git 2.33](https://github.blog/2021-08-16-highlights-from-git-2-33/)
   by Taylor Blau on GitHub Blog.
 * [Treeverse raises $23M to bring Git-like version control to data lakes](https://venturebeat.com/2021/07/28/treeverse-raises-23m-to-bring-git-like-version-control-to-data-lakes/):
-  [LakeFS](https://lakefs.io/).
+  [lakeFS](https://lakefs.io/).
 * [GitHub has shut down its Git password authentication on August 13, 2021](https://github.blog/changelog/2021-08-12-git-password-authentication-is-shutting-down/);
-  you should use instead [token-based authentication](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/).
+  you should preferably use [token-based authentication](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/) instead; support for SSH keys continues.
 
 
 __Light reading__
@@ -137,7 +137,7 @@ __Light reading__
 * [Getting geeky with Git](https://wanago.io/courses/getting-geeky-with-git/),
   an 11 part series by Marcin Wanago.
 * [New in Git: switch and restore](https://www.banterly.net/2021/07/31/new-in-git-switch-and-restore/)
-  by Dragos Barosan (new for the author; [`git switch`](https://git-scm.com/docs/git-switch)
+  by Dragos Barosan (new to the author; [`git switch`](https://git-scm.com/docs/git-switch)
   and [`git restore`](https://git-scm.com/docs/git-restore) appeared in Git 2.23 in 2019).
 * [A Guide to Git Stash](https://dev.to/pragativerma18/a-guide-to-git-stash-2h5d)
   by Pragati Verma on DEV.to.
@@ -169,7 +169,7 @@ __Git tools and sites__
   Code developers can include them in their repositories to let others know
   how to correctly cite their software.  Supported by GitHub, Zenodo and Zotero.
 
-* [GitUI](https://github.com/extrawurst/gitui) is a blazing fast terminal-ui for Git
+* [GitUI](https://github.com/extrawurst/gitui) is a blazing fast terminal based GUI for Git
   written in Rust, meant to work reliably even on large repositories.
   Similar to [tig](https://jonas.github.io/tig/).
 
