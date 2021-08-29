@@ -25,9 +25,52 @@ This edition covers what happened during the month of July 2021.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [Bug report: GIT_CONFIG and user.email/name](https://lore.kernel.org/git/1C6C1E49-5EC1-420D-A72A-8C50BD1931A2@getmailspring.com/)
+
+  German Lashevich sent a bug report about an issue when using the
+  `GIT_CONFIG` environment variable.
+
+  He gave an example where he sets the `user.name` and `user.email`
+  config variables to some values in a temporary
+  `/tmp/git-test/.gitconfig` config file, and then sets `GIT_CONFIG`
+  to point to this file.
+
+  When he then tries to commit some changes, Git errors out with an
+  "Author identity unknown" error and instructions about how to set
+  the current account's default identity. He expected that the values
+  of the `user.name` and `user.email` variables set in the temporary
+  config file would be taken into account.
+
+  Peff, alias Jeff King, replied that `GIT_CONFIG` is an historical
+  wart that isn't used by all of Git, but only the `git config`
+  command, and even there `git config --file` should be used instead.
+
+  He suggested using `GIT_CONFIG_GLOBAL` or `GIT_CONFIG_SYSTEM` which
+  are available since v2.32.0. They instruct Git to read a specific
+  file instead of the usual global (usually `/etc/gitconfig`) or
+  system-level (`$HOME/.gitconfig` and `$XDG_CONFIG_HOME/git/config`)
+  config files respectively.
+
+  German thanked Peff saying `GIT_CONFIG_GLOBAL` is what he needed.
+
+  Junio Hamano, the Git maintainer, replied to Peff that reading the
+  `GIT_CONFIG` documentation gave a misleading impression as it
+  doesn't say that `GIT_CONFIG` is only for the `git config` command.
+
+  Peff agreed with Junio saying that the documentation hasn't been
+  updated since 2007, when `GIT_CONFIG` really did impact other
+  commands, and that he was sending
+  [a small patch series](https://lore.kernel.org/git/YO9ZGTX9f1fOpTkh@coredump.intra.peff.net/)
+  to improve the situation.
+
+  Taylor Blau and Martin Ågren reviewed the patches and discussed them
+  a bit with Peff and Junio.
+
+  The patch series was later merged into the master branch, and the
+  documentation improvements are now available in the recently
+  released Git 2.33.
 
 <!---
 ## Developer Spotlight:
