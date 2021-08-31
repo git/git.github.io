@@ -149,6 +149,11 @@ __Light reading__
   by Shadid Haque on DEV.to.
 * [Git for Managing Small Projects](https://thenewstack.io/git-for-managing-small-projects/)
   by Rob "drtorq" Reilly on The New Stack, the first part in a planned series of tutorials on Git.
+* [Git: Fetch and Merge, don’t Pull](https://longair.net/blog/2009/04/16/git-fetch-and-merge/),
+  an old blog post by Mark Longair about his tips related to fetching and merging versus pulling,
+  that was [discussed a long time ago on the mailing list](https://lore.kernel.org/git/alpine.DEB.1.00.0904191709220.10279@pacific.mpi-cbg.de/).
+* [Best practices for writing code comments](https://stackoverflow.blog/2021/07/05/best-practices-for-writing-code-comments/)
+  by Ellen Spertus about writing better code comments.
 
 
 __Git tools and sites__
@@ -181,4 +186,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Elijah Newren.
+with help from Elijah Newren and Philip Oakley.
