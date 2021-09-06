@@ -105,7 +105,7 @@ This edition covers what happened during the month of July 2021.
 [3.1.16](https://www.gerritcodereview.com/3.1.html#3116),
 [3.4.1](https://www.gerritcodereview.com/3.4.html#341)
 + GitKraken [7.7.2](https://support.gitkraken.com/release-notes/current),
-[7.7.1](https://support.gitkraken.com/release-notes/current),
+[7.7.1](https://support.gitkraken.com/release-notes/current)
 + GitHub Desktop [2.9.2](https://desktop.github.com/release-notes/),
 [2.9.1](https://desktop.github.com/release-notes/)
 
