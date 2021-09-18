@@ -75,7 +75,7 @@ This edition covers what happened during the month of August 2021.
 
 * What is your favorite Git-related tool/library, outside of Git itself?
 
-  I'm a huge fan of git-annex (https://git-annex.branchable.com/) and use
+  I'm a huge fan of [git-annex](https://git-annex.branchable.com/) and use
   it to keep my ever-growing pile of PDFs and ebooks synced and organized
   across various devices. I also use it to archive primary sources in a
   homebrew personal knowledge base.
