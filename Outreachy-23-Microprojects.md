@@ -88,3 +88,25 @@ worked on by asking on the mailing list before starting to work on it.
 There should be only one kind of change per commit. For example if one
 of your commits indents test bodies with TABs, instead of spaces, then
 this should be the only kind of change in this commit.
+
+### Add --no-sort option for git-for-each-ref
+
+In "git for-each-ref", `ref_array_sort()` is used to sort ref_array with
+sorting options. Even if the user does not provide any `--sort` option,
+`ref_default_sorting()` will also provide the default sorting options with
+the sort key "refname".
+
+But it turns out that the ref_array we get through `filter_refs()` is
+already sorted by "refname". So providing a `--no-sort` option may
+improve the performance of git for-each-ref when we don't provide any
+sorting options on the command line. [thread](https://lore.kernel.org/git/YTNpeH+jO0zQgAVT@coredump.intra.peff.net/),
+[thread](https://lore.kernel.org/git/YTTARcEvpXWSDfYW@coredump.intra.peff.net/)
+
+But the `--no-sort` option seems to be disabled in "git for-each-ref",
+see "NEEDWORK" hint in `parse_opt_ref_sorting()`. You may need a new
+list api to replace the original linked list implementation for ref_sorting.
+You can refer to the implementation of this patch:
+[thread](https://lore.kernel.org/git/e68635cda515a9cd504c1d7366e9c353ab2adb2e.1629882532.git.gitgitgadget@gmail.com/)
+
+You can use t/perf for performance testing between upstream and your patches.
+[t/perf/README](https://github.com/git/git/blob/master/t/perf/README)
