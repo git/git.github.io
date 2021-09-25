@@ -82,6 +82,24 @@ This edition covers what happened during the month of August 2021.
 
 ## Releases
 
++ libgit2 [1.2.0](https://github.com/libgit2/libgit2/releases/tag/v1.2.0)
++ GitLab [13.12.12](https://about.gitlab.com/releases/2021/09/22/gitlab-13-12-12-released/),
+[14.3](https://about.gitlab.com/releases/2021/09/22/gitlab-14-3-released/),
+[14.2.4](https://about.gitlab.com/releases/2021/09/17/gitlab-14-2-4-released/),
+[13.12.11](https://about.gitlab.com/releases/2021/09/02/gitlab-13-12-11-released/),
+[14.0.10](https://about.gitlab.com/releases/2021/09/02/gitlab-14-0-10-released/),
+[14.2.3](https://about.gitlab.com/releases/2021/09/01/gitlab-14-2-3-released/),
+[14.2.2, 14.1.4, and 14.0.9](https://about.gitlab.com/releases/2021/08/31/security-release-gitlab-14-2-2-released/)
++ Bitbucket Server [7.16](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ GitHub Enterprise [3.1.8](https://help.github.com/enterprise-server@3.1/admin/release-notes#3.1.8),
+[3.0.16](https://help.github.com/enterprise-server@3.0/admin/release-notes#3.0.16),
+[2.22.22](https://help.github.com/enterprise-server@2.22/admin/release-notes#2.22.22),
+[3.2.0](https://help.github.com/enterprise-server@3.2/admin/release-notes#3.2.0),
+[3.1.7](https://help.github.com/enterprise-server@3.1/admin/release-notes#3.1.7),
+[3.0.15](https://help.github.com/enterprise-server@3.0/admin/release-notes#3.0.15),
+[2.22.21](https://help.github.com/enterprise-server@2.22/admin/release-notes#2.22.21)
++ GitKraken [8.0.0](https://support.gitkraken.com/release-notes/current)
++ GitHub Desktop [2.9.3](https://desktop.github.com/release-notes/)
 
 ## Other News
 
