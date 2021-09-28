@@ -53,20 +53,20 @@ This edition covers what happened during the month of August 2021.
 
   Meanwhile René Scharfe replied to Junio saying that `git branch -D`
   (`-D` is a shortcut for `--delete --force`) should delete a branch
-  pointing to an inexisting commit, instead of requiring users to
+  pointing to an unexisting commit, instead of requiring users to
   first reset the branch to some known commit using
   `git branch --force` and then to delete it with `git branch --delete`.
   In this reply René even provided a patch called `branch: allow deleting
   dangling branches with --force` that implemented what he suggested.
 
-  Ulrich and René then discussed how to actually force a branch so
+  Ulrich and René then discussed how to actually force a branch in a way
   that it can then be deleted. The issue was that Ulrich tried to
   force the dangling branch, using `git branch --force bitmap-generic`
   when the current branch wasn't a valid one, so the dangling branch
   wasn't restored to a valid commit.
 
   To René's patch, Junio replied that he felt the filtering process
-  Ulrich used shoudn't have left dangling branches hanging around in
+  Ulrich used shouldn't have left dangling branches hanging around in
   the first place. He agreed though that it should be easy to recover
   from "such a deliberate repository corruption".
 
@@ -82,7 +82,7 @@ This edition covers what happened during the month of August 2021.
   initially [proposed and developed](https://lore.kernel.org/git/CAJo=hJtyof=HRy=2sLP0ng0uZ4=S-DpZ5dR1aF+VHVETKG20OQ@mail.gmail.com/)
   in 2017 by Shawn Pearce. An implementation of it has then been integrated in
   [JGit](https://git.eclipse.org/r/plugins/gitiles/jgit/jgit/+/refs/heads/master/Documentation/technical/reftable.md),
-  and Han-Wen has been working for sometime on versions of this backend
+  and Han-Wen has been working for some time on versions of this backend
   for Git and libgit2.
 
   Junio suggested to change parts of the test that were creating or
@@ -93,13 +93,13 @@ This edition covers what happened during the month of August 2021.
   Junio, Ævar, Han-Wen, Ulrich and René then discussed different ways
   to change the test, like using the `REFFILES` test
   prerequisite. They wondered if such a dangling ref could also happen
-  with the reftable backend. But it seemed that it could indeed
+  with the reftable backend, and it seemed that this could indeed
   happen.
 
   Han-Wen suggested the ref-store test-helper's `update-ref` command
   to manipulate refs instead. Ulrich proposed implementing a new
   `--disarm-safety-belt` option to disable checks for testing
-  purposes. Ævar suggested a work around using an alternate object
+  purposes. Ævar suggested a workaround using an alternate object
   directory.
 
   Meanwhile Ævar commented a bit on René's resent patch. And René
@@ -115,7 +115,7 @@ This edition covers what happened during the month of August 2021.
   with a few more improvements to the test.
 
   As this version of the patch has since been merged into the master
-  branch, Git will soon allow to more easily delete dangling branches.
+  branch, Git will soon allow to delete dangling branches more easily.
 
 ## Developer Spotlight: Josh Steadmon
 
@@ -201,7 +201,7 @@ __Various__
 __Light reading__
 * [Ship / Show / Ask: A modern branching strategy](https://martinfowler.com/articles/ship-show-ask.html)
   by Rouan Wilsenach on martinFowler.com, showing different ways of doing
-  Continuous Integration with Pull Request workflow, and explaining when
+  Continuous Integration with a Pull Request workflow, and explaining when
   to use which method.
 * [GitHub merges 'useless garbage' says Linus Torvalds (as new NTFS support added to Linux kernel 5.15)](https://www.theregister.com/2021/09/06/github_merges_useless_garbage_says/)
   by Tim Anderson in The Register.
@@ -210,13 +210,13 @@ __Light reading__
   still counting your contributions).
 * [Advanced Git Workflow Tips](https://blog.jetbrains.com/dotnet/2021/09/13/advanced-git-workflow-tips/)
   by Khalid Abuhakmeh on JetBrains' The .NET Tools Blog, additionally explaining
-  how to do the steps from [Rider](https://www.jetbrains.com/rider/)’s .NET IDE UI.
+  how to perform the actions from [Rider](https://www.jetbrains.com/rider/)’s .NET IDE UI.
 * [Increasing developer happiness with GitHub code scanning](https://github.blog/2021-09-07-increasing-developer-happiness-github-code-scanning/)
   by Sam Partington on the GitHub Blog; the examples use the Go language.
   [GitHub code scanning](https://github.blog/2021-09-07-increasing-developer-happiness-github-code-scanning/)
-  uses [CodeQL](https://securitylab.github.com/tools/codeql/) semantic code analysis engine.
+  uses the [CodeQL](https://securitylab.github.com/tools/codeql/) semantic code analysis engine.
 * [GitHub Workflow, Merge and Rebase](https://dev.to/aarondski/github-workflow-merge-and-rebase-1cig),
-  actually about Git more than about GitHub, by AaronDski on DEV.to.
+  actually more about Git than about GitHub, by AaronDski on DEV.to.
 * [How to Use Git Hooks For Commit Automation](https://www.cloudsavvyit.com/14036/how-to-use-git-hooks-for-commit-automation/)
   by Anthony Heddings on CloudSavvy IT.
 * [Run RuboCop on `git commit` with Overcommit Gem](https://prabinpoudel.com.np/articles/run-rubocop-on-git-commit-with-overcommit-gem/)
@@ -228,7 +228,7 @@ __Light reading__
 __Git tools and sites__
 * [Glean](https://glean.software/): System for collecting, deriving and querying facts about source code.
 * [5 JetBrains plugins to upgrade the built-in Git support to the next level!](https://dev.to/anotherdevuser/5-jetbrains-plugins-to-upgrade-the-builtin-git-support-to-the-next-level-3ojf)
-  by Thomas Scott on DEV.to.  Similar list for Visual Studio Code was
+  by Thomas Scott on DEV.to.  A similar list for Visual Studio Code was
   presented in [Git Rev News Edition #77](https://git.github.io/rev_news/2021/07/31/edition-77/).
 * [GitHub Web Editor: FREE VSCode in the browser](https://dev.to/github/vscode-in-the-browser-for-free-github-web-editor-k4h)
   by Davide 'CoderDave' Benvegnù on DEV.to, about the lightweight code editor,
