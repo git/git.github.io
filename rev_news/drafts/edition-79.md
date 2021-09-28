@@ -25,9 +25,97 @@ This edition covers what happened during the month of August 2021.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [bug in `git fsck`?](https://public-inbox.org/git/60DF1C22020000A100042225@gwsmtp.uni-regensburg.de/)
+
+  Last July, Ulrich Windl asked the mailing list whether `git fsck`
+  should be able to cleanup orphaned branches. He pointed to
+  [a question he asked on StackOverflow](https://stackoverflow.com/questions/68226081/how-to-recover-head-problems-in-filtered-repository)
+  as he wanted to get rid of obsolete branches after filtering a repo.
+
+  `git fsck` was complaining about a branch called `bitmap-generic`
+  saying `notice: HEAD points to an unborn branch (bitmap-generic)`,
+  because that branch was pointing to a commit that didn't exist
+  anymore after filtering the repo, and he couldn't delete that branch
+  as `git branch -d` errored out with `fatal: Couldn't look up commit
+  object for HEAD`.
+
+  Junio Hamano replied to Ulrich that "HEAD pointing at an unborn
+  branch is not even a corruption", as that's what happen to the
+  default branch when a repo is initialized.
+
+  Ulrich replied that he might have been confused by `git fsck` and
+  suggested updating the documentation to explain what "unborn"
+  means. Ævar Arnfjörð Bjarmason then agreed with Ulrich that "fsck's
+  error messages/reporting is pretty bad". He said that he had been
+  working on it though.
+
+  Meanwhile René Scharfe replied to Junio saying that `git branch -D`
+  (`-D` is a shortcut for `--delete --force`) should delete a branch
+  pointing to an inexisting commit, instead of requiring users to
+  first reset the branch to some known commit using
+  `git branch --force` and then to delete it with `git branch --delete`.
+  In this reply René even provided a patch called `branch: allow deleting
+  dangling branches with --force` that implemented what he suggested.
+
+  Ulrich and René then discussed how to actually force a branch so
+  that it can then be deleted. The issue was that Ulrich tried to
+  force the dangling branch, using `git branch --force bitmap-generic`
+  when the current branch wasn't a valid one, so the dangling branch
+  wasn't restored to a valid commit.
+
+  To René's patch, Junio replied that he felt the filtering process
+  Ulrich used shoudn't have left dangling branches hanging around in
+  the first place. He agreed though that it should be easy to recover
+  from "such a deliberate repository corruption".
+
+  René's patch then fell through the cracks for several weeks, until
+  the end of August when
+  [René resent it](https://public-inbox.org/git/7894f736-4681-7656-e2d4-5945d2c71d31@web.de/).
+
+  Junio replied that the test in René's patch went "against the
+  spirit" of a recently merged patch series by Han-Wen Nienhuys that
+  was preparing tests for the new `reftable` ref backend.
+
+  The [reftable backend](https://www.git-scm.com/docs/reftable) was
+  initially [proposed and developed](https://lore.kernel.org/git/CAJo=hJtyof=HRy=2sLP0ng0uZ4=S-DpZ5dR1aF+VHVETKG20OQ@mail.gmail.com/)
+  in 2017 by Shawn Pearce. An implementation of it has then been integrated in
+  [JGit](https://git.eclipse.org/r/plugins/gitiles/jgit/jgit/+/refs/heads/master/Documentation/technical/reftable.md),
+  and Han-Wen has been working for sometime on versions of this backend
+  for Git and libgit2.
+
+  Junio suggested to change parts of the test that were creating or
+  testing refs to use higher functions to manipulate refs, instead of
+  directly manipulating loose ref files like
+  `.git/refs/heads/dangling`.
+
+  Junio, Ævar, Han-Wen, Ulrich and René then discussed different ways
+  to change the test, like using the `REFFILES` test
+  prerequisite. They wondered if such a dangling ref could also happen
+  with the reftable backend. But it seemed that it could indeed
+  happen.
+
+  Han-Wen suggested the ref-store test-helper's `update-ref` command
+  to manipulate refs instead. Ulrich proposed implementing a new
+  `--disarm-safety-belt` option to disable checks for testing
+  purposes. Ævar suggested a work around using an alternate object
+  directory.
+
+  Meanwhile Ævar commented a bit on René's resent patch. And René
+  replied to the comments, especially noting that `git tag -d` would
+  delete a dangling tag even without `--force`.
+
+  René then sent [a version 2](https://public-inbox.org/git/325d64e9-8a31-6ba0-73f2-5e9d67b8682f@web.de/)
+  of his resent patch with an updated test that was now
+  independent from any ref backend.
+
+  Junio, Ævar and René discussed the patch a bit more, after which René sent
+  [a version 3](https://public-inbox.org/git/c192f438-2eaf-c098-9fe4-c03a9d36cbd0@web.de/)
+  with a few more improvements to the test.
+
+  As this version of the patch has since been merged into the master
+  branch, Git will soon allow to more easily delete dangling branches.
 
 ## Developer Spotlight: Josh Steadmon
 
