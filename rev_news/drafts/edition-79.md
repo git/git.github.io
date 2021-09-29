@@ -199,6 +199,7 @@ __Various__
 
 
 __Light reading__
+* [Optimizing Git’s Merge Machinery, Part VI](https://blog.palantir.com/optimizing-gits-merge-machinery-6-7bf887a131d8) by Elijah Newren on Palantir Blog, the final in the series.
 * [Ship / Show / Ask: A modern branching strategy](https://martinfowler.com/articles/ship-show-ask.html)
   by Rouan Wilsenach on martinFowler.com, showing different ways of doing
   Continuous Integration with a Pull Request workflow, and explaining when
