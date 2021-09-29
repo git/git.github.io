@@ -223,7 +223,11 @@ __Light reading__
   by Prabin Poudel on his blog.  [Overcommit gem](https://github.com/sds/overcommit)
   was mentioned in [Git Rev News #63](https://git.github.io/rev_news/2020/05/28/edition-63/),
   along various other hook management tools.
-
+* [Git Flow Is A Bad Idea](https://www.youtube.com/watch?v=_w6TwnLCFwA) video by Dave Farley of Continuous Delivery.
+  An interesting perspective on the Git branching model. Worth reflecting on the underlying assumptions
+  and management approaches that make Git branches such a bad idea, in that particular context.
+* [Full Git Tutorial](https://www.youtube.com/watch?v=58zsLtwzL60). Basics for the new user.
+  Leap to Part 7 for the `Git Log Fully Explained`.
 
 __Git tools and sites__
 * [Glean](https://glean.software/): System for collecting, deriving and querying facts about source code.
