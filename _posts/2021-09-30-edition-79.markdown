@@ -17,9 +17,24 @@ This edition covers what happened during the month of August 2021.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [GSoC (Google Summer of Code) 2021 End](https://summerofcode.withgoogle.com/organizations/5908380398387200/#projects)
+
+  Congratulations to the two students who had been accepted to work on
+  Git as part of the [GSoC 2021](https://summerofcode.withgoogle.com/)
+  as they successfully passed all the evaluations!
+
+  - Atharva Raykar worked on the
+    [Finish converting submodule to builtin](https://summerofcode.withgoogle.com/projects/#4754589292691456)
+    project. He was co-mentored by Shourya Shukla and Christian Couder. He posted 2 final blog posts about it,
+    some [Reflections on Working With the Git Community](https://atharvaraykar.me/gitnotes/final-reflection)
+    and a [Technical Report](https://atharvaraykar.me/gitnotes/final-report).
+
+  - ZheNing Hu worked on the
+    [Use ref-filter formats in `git cat-file`](https://summerofcode.withgoogle.com/projects/#6499923274498048)
+    project. He was co-mentored by Hariom Verma and Christian Couder and posted
+    [a final blog post about it](https://adlternative.github.io/GSOC-Git-Final-Blog/).
 
 <!---
 ### Reviews
