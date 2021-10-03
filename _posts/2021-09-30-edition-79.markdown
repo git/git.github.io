@@ -71,8 +71,8 @@ This edition covers what happened during the month of August 2021.
   pointing to an unexisting commit, instead of requiring users to
   first reset the branch to some known commit using
   `git branch --force` and then to delete it with `git branch --delete`.
-  In this reply René even provided a patch called `branch: allow deleting
-  dangling branches with --force` that implemented what he suggested.
+  In this reply René even provided a patch called "branch: allow deleting
+  dangling branches with `--force`" that implemented what he suggested.
 
   Ulrich and René then discussed how to actually force a branch in a way
   that it can then be deleted. The issue was that Ulrich tried to
