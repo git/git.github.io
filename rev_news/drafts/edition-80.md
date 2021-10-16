@@ -46,6 +46,8 @@ __Light reading__
 
 __Git tools and sites__
 
+* [git-autofixup](https://github.com/torbiak/git-autofixup) automatically
+  creates fixup commits for topic branches.
 
 ## Credits
 
