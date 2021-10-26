@@ -58,14 +58,66 @@ This edition covers what happened during the month of September 2021.
 
 __Various__
 
+* [Notes from the Git Contributors' Summit 2021, virtual, Oct 19/20](https://public-inbox.org/git/nycvar.QRO.7.76.6.2110221202430.62@tvgsbejvaqbjf.bet/t/),
+  a thread by Johannes Schindelin.
+  * One of the topics was having public "Git chalk talks", which idea 
+    [has now it's own thread](https://public-inbox.org/git/nycvar.QRO.7.76.6.2110220950020.62@tvgsbejvaqbjf.bet/t/#u)
+
 
 __Light reading__
+
+* [A 16 Year History Of The Git Init Command](https://initialcommit.com/blog/history-git-init-command)
+  by Jacob Stopak on Initial Commit.
+* [Clean Conventional Commits](https://dev.to/sublimegeek/clean-conventional-commits-40l8)
+  by Jonathan Irvin on DEV.to.
+  * The [Conventional Commit message standard](https://www.conventionalcommits.org/)
+    was first mentioned in [Git Rev News Edition #52](https://git.github.io/rev_news/2019/06/28/edition-52/).
+* [How to Remove Git Version Tracking from a Folder](https://www.cloudsavvyit.com/14500/how-to-remove-git-version-tracking-from-a-folder/) and
+  [How to Delete Git Branches On Local and Remote Repositories](https://www.cloudsavvyit.com/14289/how-to-delete-git-branches-on-local-and-remote-repositories/)
+  by Anthony Heddings on Cloud Savvy IT.
+* [Git: Moving from Master to Main](https://www.jumpingrivers.com/blog/git-moving-master-to-main/)
+  (as the name of the default branch), challenges faced by Jumping Rivers company;
+  note however that they got the origin history of Git using 'master' wrong in this article.
+* [Branching Strategies in Git](https://css-tricks.com/branching-strategies-in-git/)
+  by Tobias Günther on CSS Tricks is a part two post in the “Advanced Git” series.
+  * See also [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html) in [#73](https://git.github.io/rev_news/2021/03/27/edition-73/)
+    and [Ship / Show / Ask: A modern branching strategy](https://martinfowler.com/articles/ship-show-ask.html) in [#79](https://git.github.io/rev_news/2021/09/30/edition-79/).
+* [Code Review from the Command Line](https://blog.jez.io/cli-code-review/)
+  by Jake Zimmerman (2018)
+* [The Thing About Git](https://tomayko.com/blog/2008/the-thing-about-git)
+  by Ryan Tomayko (2008).
 
 
 __Git tools and sites__
 
 * [git-autofixup](https://github.com/torbiak/git-autofixup) automatically
   creates fixup commits for topic branches.
+* [git-foresta](https://github.com/takaaki-kasai/git-foresta) is a text-based git log graph viewer,
+  written in Perl, using Unicode for drawing.
+  It is a modified version of `git-forest` (written in Perl by Jan Engelhardt), see below.
+* [hxtools](http://inai.de/projects/hxtools/) by Jan Engelhardt
+  is a collection of small tools and scripts, which include 
+  `git-author-stat` (commit author statistics of a git repository),
+  `git-blame-stat` (per-line author statistics),
+  `git-revert-stats` (reverting statistics), and
+  `git-forest` (display the commit graph).
+* [Lab](https://github.com/zaquestion/lab) is a tool that wraps Git,
+  making it simple to clone, fork, and interact with repositories
+  [on GitLab](https://gitlab.com/gitlab-org/ecosystem-stage/lab),
+  including seamless workflows for creating merge requests, issues and snippets.
+  It was inspired by and is similar to the [hub](https://github.com/github/hub)
+  tool that does the same for GitHub.
+  * [GLab](https://glab.readthedocs.io/) for GitLab, and
+    [gh](https://github.com/cli/cli) for GitHub are more interactive
+    command line tools, that do not aim to be familiar to a `git` and to leverage it.
+* [The Advanced Git Kit](https://www.git-tower.com/learn/git/advanced-git-kit)
+  is a 10 part video course for free from makers of the [Tower](https://www.git-tower.com/) Git client
+* [GoGit](https://github.com/opencodeiiita/GoGit) is a project under OpenCode'21
+  that aims to improve the Git and GitHub skills of the contributors by completing some tasks.
+  The tasks are be specified in the issue section of the project's GitHub repo.
+* [GitHub Minesweeper](https://profy.dev/project/github-minesweeper) by Profy
+  is a GitHub bot to learn a professional Git and GitHub workflow.
+
 
 ## Credits
 
