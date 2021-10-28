@@ -29,9 +29,175 @@ This edition covers what happened during the month of September 2021.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+
+## Developer Spotlight: David Aguilar
+
+* Who are you and what do you do?
+
+  My name is David Aguilar and I work as a Staff Software Engineer -
+  Architecture Lead for a small team of devops and infrastructure
+  engineers at the Walt Disney Animation Studios. Outside of work I'm a
+  husband and a caretaker, so my time is usually pretty occupied these
+  days.
+
+  Cats, art, music and mountain biking are a few of my favorite things
+  outside of the usual technical topics.
+
+* What would you name your most important contribution to Git?
+
+  We started adopting Git as our VCS of choice relatively early in Git's
+  history around 2007 at Disney Animation. One of the things that I
+  tried to do early on was to listen to some of the loudest and most
+  vocal critics and get to the root of their complaints about Git at the
+  time.
+
+  One of the tools that fell out of this was `git difftool`. The
+  criticism at the time was along the lines of, "I can't believe Git is
+  missing such a fundamentally basic workflow that even tkcvs / tkdifff
+  have". Git already had `git mergetool` for helping resolve merge
+  conflicts at the time, so adding support for diff workflows seemed
+  like a natural extension of Git's capabilities.
+
+  The original difftool RFC patches started as a crude shell script that
+  drove the diff itself and handled interacting with external diff tools
+  directly. Feedback from the Git mailing list improved it by making it
+  use git diff's `GIT_EXTERNAL_DIFF` functionality when it first landed in
+  git.git's contrib/ area. difftool eventually graduated out of contrib/
+  to become a builtin tool, and its implementation was heavily
+  refactored so that it can share all of its tool-specific
+  implementation details with `git mergetool`.
+
+  Mergetool and difftool are a small yet key part of day-to-day Git
+  usage for many developers and is a great example of a general internal
+  need that was best addressed by proposing a solution to the Git
+  development community so that it can be evolved and improved alongside
+  Git.
+
+* What are you doing on the Git project these days, and why?
+
+  Beyond difftool, I'm the author and maintainer of [Git Cola](https://git-cola.github.io/),
+  a powerful yet simple GUI for Git [[source code](https://github.com/git-cola/git-cola/)].
+
+  Git Cola started as a learning project. I wanted to better learn PyQt
+  and Git in 2007, and creating a user interface for Git's unique and
+  powerful staging area features seemed like a perfect project. One of
+  the features I use very often is its keyboard-driven interactive
+  staging feature. If you've ever wanted to stage, unstage, and revert
+  edits at a line-by-line granularity, using a unified interface (no
+  need to jump between `git add -p` and `git checkout -p`) that is
+  keyboard-driven with vim-inspired hotkeys for power users that
+  understand Git and its strengths, then Git Cola might be just the tool
+  for you.
+
+  Git Cola has been gradually improved over the last 14 years and is
+  extremely stable and capable these days. It includes everything from a
+  drag+drop rebase editor (itself reusable as a `GIT_SEQUENCE_EDITOR` that
+  is provided as a standalone `git-cola-sequence-editor` tool) and
+  encourages users to leverage Git's unique strengths by making it easy
+  for new Git users to follow Git "best practices" such as creating
+  fixup commits and rebasing their work.
+
+  These days I do try to keep an eye on difftool (a big thank you to
+  Johannes Schindelin for rewriting difftool in C in the context of the
+  Git for Windows improvements) and continue to improve Git Cola.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+  I would really like to see more effort put into getting the
+  ideas/improvements from the Microsoft Scalar project integrated into
+  Core Git. Props should go to Microsoft for working alongside the Git
+  project towards up-streaming this work. Focusing on the scaling
+  challenges that come up when working with huge repositories is an area
+  I am hopeful will continue to improve. Git continues to be perceived
+  as being "bad at binary files", and "not industrial-grade like
+  perforce" by the GameDev community, and that's something that can
+  definitely be improved.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+  Submodules are useful and serve a specific use case, but working with
+  them involves a lot of little paper cuts that makes them painful for
+  users that aren't ready to deal with their complexities.
+  Double-commits (having to commit in the sub and super-project) is one
+  of the little paper cuts that really shouldn't exist were the
+  capability to compose and operate on multiple repos intrinsic to Git
+  itself. This is by no means a simple problem.
+
+  On the bright side, `git submodule` has been getting a lot of
+  attention recently. I don't think I would remove them without a
+  compelling replacement in their place.
+
+  Sometimes the downsides of submodules are moreso about how they are
+  used than how they are implemented. Whenever I encounter a project
+  that does `git submodule update` or `git clone` in their `make` build
+  process, I get a bit nervous. That's not really Git's fault, though.
+
+  Transitioning to SHA-256 is an obvious area that would be much simpler
+  if it didn't have to deal with backwards compatibility.
+
+* What is your favorite Git-related tool/library, outside of Git itself?
+
+  Git Cola =)
+
+  [Git Annex](https://git-annex.branchable.com/) is a really great tool
+  for archival purposes and is what I use for backing up my personal
+  files. It'd be nice if it didn't have to exist, but I'm very happy
+  that it does. Git Annex has some concepts that are unique and
+  different from Git LFS and other solutions in this space.
+
+  I somewhat recently wrote a Git workflow tool for myself that I call
+  `garden`. [Garden](https://github.com/davvid/garden/) is basically
+  a glorified way to operate over ad-hoc collections of Git trees.
+  I wrote it because I have lots of Git Annexes and other repos in
+  arbitrary places that I often need to iterate over and perform
+  custom commands or other operations on. `garden` lets me do that.
+  I'm not sure if anyone would ever find it useful, but I wrote
+  it for myself so that's okay.
+
+  I often find myself cloning random repos, figuring out how to build
+  them (lots of projects have bespoke build systems), and then later
+  figuring out how to run and interact with the repo. I used to have a
+  smattering of shell scripts to build and run various projects. I now
+  use `garden` for holding all of these disparate bits in a single place
+  so that the workflows become easier to transport (and store in Git).
+  URLs, multiple worktrees, the remotes associated with each worktree
+  (useful for recreating a worktree with dozens of remotes from
+  contributors) and custom commands for operating in the context of the
+  worktrees can all be grouped together into a single "garden file" that
+  can be shared and reproduced on another machine.
+
+* Do you happen to have any memorable experience w.r.t contributing to the
+  Git project? If yes, could you share it with us?
+
+  I personally learned a lot from the Git development community. The
+  review process is one that focuses on quality and perfection (Git
+  doesn't settle for "good enough") with a strong eye towards
+  maintainability and not breaking existing users. The Git project
+  teaches us to create commits that are reviewable, to make independent,
+  logically-separate changes, and to describe our changes well. These
+  principles, alongside the idea that all code should be reviewed and
+  collaborated on, is something that has helped transform our internal
+  development processes.
+
+* What is your advice for people who want to start Git development?
+  Where and how should they start?
+
+  If you've never built Git yourself from scratch then the quickest way
+  to get started is to clone the repo and run `make`. Start looking
+  around the code base, read the `git log` messages, and start reading
+  the new contributor documentation in the Documentation/ folder.
+
+  A lot of effort has been put into making it easier to contribute to
+  Git itself, but the community won't know about any of the pain points
+  unless you reach out and illuminate what might be blind spots in our
+  practices.
+
+  Setup your mail filters and subscribe to the Git mailing list once
+  you're ready to start diving deeper. There is a lot of activity, but
+  there's also no shortage of things you can learn by reaching out and
+  engaging with the community.
 
 ## Releases
 
