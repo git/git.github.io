@@ -21,9 +21,76 @@ This edition covers what happened during the month of September 2021.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [[PATCH] MyFirstContribution: Document --range-diff option when writing v2](https://lore.kernel.org/git/20210913194816.51182-1-chooglen@google.com/)
+
+  Glen Choo sent a patch to the mailing list to improve the
+  `Documentation/MyFirstContribution.txt` tutorial, so that it
+  suggests using the `--range-diff` option of `git format-patch` when
+  sending a new v2 version of an already sent patch series.
+
+  The `Documentation/MyFirstContribution.txt` tutorial was initially
+  created by Emily Shaffer in 2019, and has been a popular way for
+  developers to start learning how to improve Git.
+
+  Eric Sunshine agreed with Glen's idea, but made a few comments on
+  some minor issues, like using `--range-diff=psuh` over `--range-diff
+  psuh..psuh-v2` and adding a link to the `git range-diff`
+  documentation.
+
+  Junio Hamano, the Git maintainer, also replied to Glen, saying that
+  the tutorial should promote a slightly different workflow to work on
+  an updated branch.
+
+  He suggested creating a topic branch or a lightweight tag called for
+  example `psuh-v1` that points to the old tip of the `psuh` branch
+  and continuing to work on the `psuh` branch to prepare the version 2
+  of a patch series, instead of creating and working on a `psuh-v2`
+  branch.
+
+  He also commented that the commands given in the tutorial might not
+  work well when the branch corresponding to the first and second
+  patch series had the same commits after diverging from the `master`
+  branch.
+
+  Glen agreed with Junio's suggestion, though they discussed it a bit
+  further.
+
+  Bagas Sanjaya replied to Glen initial email saying he wasn't sure
+  that the `--range-diff` option was necessary, but Eric disagreed
+  with him saying:
+
+  "Anyone who does any serious amount of review on this project finds
+  it tremendously helpful to have both a prose description of the
+  changes ("Changes since v1..." plus a link to the previous
+  submission) and a mechanical range-diff or interdiff."
+
+  Glen then sent a
+  [version 2 of his patch](https://lore.kernel.org/git/20210920223226.25877-1-chooglen@google.com/).
+  that took into account Junio's and Eric's suggestions. Especially it
+  recommend marking the tip of the `psuh` branch corresponding to
+  version 1 and continuing to work on the `psuh` branch to prepare the
+  version 2.
+
+  Eric Sunshine replied to this new patch with a number of suggestions
+  to improve some wordings and explanations. Glen agreed with Erics
+  suggestions.
+
+  Bagas then suggested creating a `psuh-v2` branch and continuing to
+  work on it, but this was against what Junio had suggested earlier,
+  so Glen didn't agree with that. He agreed with a wording improvement
+  that Bagas made though.
+
+  Philip Oakley chimed in to discuss some wording when the version
+  number would change again later to 3, 4, etc. But after further
+  discussion with Glen and Bagas, he agreed with the original wording.
+
+  Glen then sent a
+  [version 3 of his patch](https://lore.kernel.org/git/20210922202218.7986-1-chooglen@google.com/)
+  taking into account Eric's and Bagas' suggestions. This version of
+  the patch was later merged into the `master` branch, so we can now
+  enjoy a better tutorial explaining an improved workflow.
 
 <!---
 ### Support
