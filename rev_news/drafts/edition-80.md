@@ -286,6 +286,7 @@ This edition covers what happened during the month of September 2021.
 + GitKraken [8.1.0](https://support.gitkraken.com/release-notes/current),
 [8.0.1](https://support.gitkraken.com/release-notes/current)
 + GitHub Desktop [2.9.4](https://desktop.github.com/release-notes/)
++ Git Cola [3.11.0](http://git-cola.github.io/share/doc/git-cola/html/relnotes.html#v3-11-0)
 
 ## Other News
 
