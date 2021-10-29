@@ -23,7 +23,7 @@ This edition covers what happened during the month of September 2021.
 
 ### Reviews
 
-* [[PATCH] MyFirstContribution: Document --range-diff option when writing v2](https://lore.kernel.org/git/20210913194816.51182-1-chooglen@google.com/)
+* [[PATCH] MyFirstContribution: Document `--range-diff` option when writing v2](https://lore.kernel.org/git/20210913194816.51182-1-chooglen@google.com/)
 
   Glen Choo sent a patch to the mailing list to improve the
   `Documentation/MyFirstContribution.txt` tutorial, so that it
@@ -43,8 +43,8 @@ This edition covers what happened during the month of September 2021.
   the tutorial should promote a slightly different workflow to work on
   an updated branch.
 
-  He suggested creating a topic branch or a lightweight tag called for
-  example `psuh-v1` that points to the old tip of the `psuh` branch
+  He suggested creating a topic branch or a lightweight tag, for example
+  called `psuh-v1`, that points to the old tip of the `psuh` branch,
   and continuing to work on the `psuh` branch to prepare the version 2
   of a patch series, instead of creating and working on a `psuh-v2`
   branch.
@@ -57,8 +57,8 @@ This edition covers what happened during the month of September 2021.
   Glen agreed with Junio's suggestion, though they discussed it a bit
   further.
 
-  Bagas Sanjaya replied to Glen initial email saying he wasn't sure
-  that the `--range-diff` option was necessary, but Eric disagreed
+  Bagas Sanjaya replied to Glen's initial email saying he wasn't sure
+  if the `--range-diff` option was necessary, but Eric disagreed
   with him saying:
 
   "Anyone who does any serious amount of review on this project finds
@@ -67,20 +67,20 @@ This edition covers what happened during the month of September 2021.
   submission) and a mechanical range-diff or interdiff."
 
   Glen then sent a
-  [version 2 of his patch](https://lore.kernel.org/git/20210920223226.25877-1-chooglen@google.com/).
+  [version 2 of his patch](https://lore.kernel.org/git/20210920223226.25877-1-chooglen@google.com/)
   that took into account Junio's and Eric's suggestions. Especially it
-  recommend marking the tip of the `psuh` branch corresponding to
+  recommends marking the tip of the `psuh` branch corresponding to
   version 1 and continuing to work on the `psuh` branch to prepare the
   version 2.
 
   Eric Sunshine replied to this new patch with a number of suggestions
-  to improve some wordings and explanations. Glen agreed with Erics
+  to improve some wordings and explanations. Glen agreed with Eric's
   suggestions.
 
   Bagas then suggested creating a `psuh-v2` branch and continuing to
   work on it, but this was against what Junio had suggested earlier,
   so Glen didn't agree with that. He agreed with a wording improvement
-  that Bagas made though.
+  that Bagas suggested though.
 
   Philip Oakley chimed in to discuss some wording when the version
   number would change again later to 3, 4, etc. But after further
@@ -88,7 +88,7 @@ This edition covers what happened during the month of September 2021.
 
   Glen then sent a
   [version 3 of his patch](https://lore.kernel.org/git/20210922202218.7986-1-chooglen@google.com/)
-  taking into account Eric's and Bagas' suggestions. This version of
+  taking into account Eric's and Bagas's suggestions. This version of
   the patch was later merged into the `master` branch, so we can now
   enjoy a better tutorial explaining an improved workflow.
 
@@ -128,7 +128,7 @@ This edition covers what happened during the month of September 2021.
   The original difftool RFC patches started as a crude shell script that
   drove the diff itself and handled interacting with external diff tools
   directly. Feedback from the Git mailing list improved it by making it
-  use git diff's `GIT_EXTERNAL_DIFF` functionality when it first landed in
+  use `git diff`'s `GIT_EXTERNAL_DIFF` functionality when it first landed in
   git.git's contrib/ area. difftool eventually graduated out of contrib/
   to become a builtin tool, and its implementation was heavily
   refactored so that it can share all of its tool-specific
@@ -178,7 +178,7 @@ This edition covers what happened during the month of September 2021.
   challenges that come up when working with huge repositories is an area
   I am hopeful will continue to improve. Git continues to be perceived
   as being "bad at binary files", and "not industrial-grade like
-  perforce" by the GameDev community, and that's something that can
+  Perforce" by the GameDev community, and that's something that can
   definitely be improved.
 
 * If you could remove something from Git without worrying about
@@ -254,14 +254,14 @@ This edition covers what happened during the month of September 2021.
   If you've never built Git yourself from scratch then the quickest way
   to get started is to clone the repo and run `make`. Start looking
   around the code base, read the `git log` messages, and start reading
-  the new contributor documentation in the Documentation/ folder.
+  the new contributor documentation in the `Documentation/` folder.
 
   A lot of effort has been put into making it easier to contribute to
   Git itself, but the community won't know about any of the pain points
   unless you reach out and illuminate what might be blind spots in our
   practices.
 
-  Setup your mail filters and subscribe to the Git mailing list once
+  Set up your mail filters and subscribe to the Git mailing list once
   you're ready to start diving deeper. There is a lot of activity, but
   there's also no shortage of things you can learn by reaching out and
   engaging with the community.
@@ -294,8 +294,8 @@ __Various__
 
 * [Notes from the Git Contributors' Summit 2021, virtual, Oct 19/20](https://public-inbox.org/git/nycvar.QRO.7.76.6.2110221202430.62@tvgsbejvaqbjf.bet/t/),
   a thread by Johannes Schindelin.
-  * One of the topics was having public "Git chalk talks", which idea 
-    [has now it's own thread](https://public-inbox.org/git/nycvar.QRO.7.76.6.2110220950020.62@tvgsbejvaqbjf.bet/t/#u)
+  * One of the topics was having public "Git chalk talks", an idea which
+    [has now its own thread](https://public-inbox.org/git/nycvar.QRO.7.76.6.2110220950020.62@tvgsbejvaqbjf.bet/t/#u).
 
 
 __Light reading__
@@ -317,7 +317,7 @@ __Light reading__
   * See also [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html) in [#73](https://git.github.io/rev_news/2021/03/27/edition-73/)
     and [Ship / Show / Ask: A modern branching strategy](https://martinfowler.com/articles/ship-show-ask.html) in [#79](https://git.github.io/rev_news/2021/09/30/edition-79/).
 * [Code Review from the Command Line](https://blog.jez.io/cli-code-review/)
-  by Jake Zimmerman (2018)
+  by Jake Zimmerman (2018).
 * [The Thing About Git](https://tomayko.com/blog/2008/the-thing-about-git)
   by Ryan Tomayko (2008).
 
@@ -345,10 +345,10 @@ __Git tools and sites__
     [gh](https://github.com/cli/cli) for GitHub are more interactive
     command line tools, that do not aim to be familiar to a `git` and to leverage it.
 * [The Advanced Git Kit](https://www.git-tower.com/learn/git/advanced-git-kit)
-  is a 10 part video course for free from makers of the [Tower](https://www.git-tower.com/) Git client
+  is a 10 part video course for free from makers of the [Tower](https://www.git-tower.com/) Git client.
 * [GoGit](https://github.com/opencodeiiita/GoGit) is a project under OpenCode'21
   that aims to improve the Git and GitHub skills of the contributors by completing some tasks.
-  The tasks are be specified in the issue section of the project's GitHub repo.
+  The tasks are being specified in the Issues section of the project's GitHub repo.
 * [GitHub Minesweeper](https://profy.dev/project/github-minesweeper) by Profy
   is a GitHub bot to learn a professional Git and GitHub workflow.
 
