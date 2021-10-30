@@ -62,6 +62,7 @@ __Various__
   a thread by Johannes Schindelin.
   * One of the topics was having public "Git chalk talks", which idea 
     [has now it's own thread](https://public-inbox.org/git/nycvar.QRO.7.76.6.2110220950020.62@tvgsbejvaqbjf.bet/t/#u)
+* [Software at Scale 35 - Maintaining Git \[for Windows\] with Johannes Schindelin](https://www.softwareatscale.dev/p/software-at-scale-35-maintaining)
 
 
 __Light reading__
