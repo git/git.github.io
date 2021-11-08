@@ -40,6 +40,7 @@ This edition covers what happened during the month of October 2021.
 
 __Various__
 
+* Derrick Stolee and Lessley Dennington [talk about the future of Git at scale](https://www.youtube.com/watch?v=pXdabSCz4JA).
 
 __Light reading__
 
