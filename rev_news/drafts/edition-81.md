@@ -84,9 +84,13 @@ This edition covers what happened during the month of October 2021.
   of his patch series. In this new version test cases for single-quote
   characters as digit separators and the `<=>` generalized comparison
   operator were moved to a new commit, before the commits supporting
-  these features. Another change was improving support for a
-  single-quote as digit separator when it follows a `.` that starts a
-  floatingpoint number.
+  these features.
+
+  Later-on, Johannes noticed that the single-quote character as digit
+  separator is problematic and requires a more sophisticated
+  implementation. For example, as implemented the character literal
+  `'.'` would be split into `'.` and `'.` The support for digit separator
+  was eventually reverted.
 
   This patch series was then merged into the master branch, so that
   Git 2.34 that was recently released has better support for C++ in
