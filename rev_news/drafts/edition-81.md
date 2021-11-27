@@ -21,9 +21,76 @@ This edition covers what happened during the month of October 2021.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [[PATCH 0/3] Fun with cpp word regex](https://lore.kernel.org/git/pull.1054.git.1633589461.gitgitgadget@gmail.com/)
+
+  Johannes Sixt sent a small patch series about improving C++ (also
+  called 'cpp') support in the userdiff mechanism. This mechanism is
+  used by Git to generate diffs that are customized to specific
+  programming languages (like C, shell, Perl, matlab, etc) or markup
+  languages (like HTML, markdown tex, etc).
+
+  Especially one of the patches splits the regex that was matching all
+  the numbers into 3 different regexes:
+
+    - one for floatingpoint numbers that begin with a decimal point,
+    - one for decimal and octal integers as well as other
+      floatingpoint numbers, and
+    - one for hexadecimal and binary integers.
+
+  The result is that expressions like `1+2`, `1.5-e+2+f` and `.l` are
+  not considered numbers any more and are properly parsed for diff
+  purposes in C++ files.
+
+  Another patch in the series allows single-quote characters as digit
+  separators like in `3.141'592'654` or `0xdead'beaf` according to the
+  C++17 standard.
+
+  The third and last patch prevents the `<=>` generalized comparison
+  operator (also called 'spaceship' operator) allowed since C++20 from
+  being split into `<=` and `>`.
+
+  Ævar Arnfjörð Bjarmason replied to Johannes suggesting him to add a
+  few tests in the `t/t4034/cpp/` directory, where test files for the
+  cpp userdiff mechanism reside.
+
+  Johannes agreed with Ævar and sent a
+  [second version](https://lore.kernel.org/git/pull.1054.v2.git.1633720197.gitgitgadget@gmail.com/)
+  of his patch series. This series included 2 new patches that
+  improved existing tests, and added new tests for problematic behavior
+  that the other patches were fixing.
+
+  Ævar commented on this series saying that it was much improved, but
+  it could perhaps be even better if:
+
+    - the C++ support was split up from the C support,
+
+    - some tests were added first, before the behavior was changed,
+      and
+
+    - some tests could be added for code comments, as he wondered if
+      tokens that often occur in natural language, like `"` and `&`,
+      are still correctly handled when they appear in code comments.
+
+  Johannes agreed with the second point, but wasn't interested in
+  working on the others.
+
+  Ævar and Johannes discussed a bit further if it was worth doing
+  something for code comments, but Johannes concluded that it wasn't.
+
+  Johannes then sent a
+  [third version](https://lore.kernel.org/git/pull.1054.v3.git.1633885384.gitgitgadget@gmail.com/)
+  of his patch series. In this new version test cases for single-quote
+  characters as digit separators and the `<=>` generalized comparison
+  operator were moved to a new commit, before the commits supporting
+  these features. Another change was improving support for a
+  single-quote as digit separator when it follows a `.` that starts a
+  floatingpoint number.
+
+  This patch series was then merged into the master branch, so that
+  Git 2.34 that was recently released has better support for C++ in
+  diffs.
 
 <!---
 ### Support
