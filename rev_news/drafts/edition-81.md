@@ -28,15 +28,15 @@ This edition covers what happened during the month of October 2021.
   Johannes Sixt sent a small patch series about improving C++ (also
   called 'cpp') support in the userdiff mechanism. This mechanism is
   used by Git to generate diffs that are customized to specific
-  programming languages (like C, shell, Perl, matlab, etc) or markup
-  languages (like HTML, markdown tex, etc).
+  programming languages (like C, shell, Perl, MATLAB, etc.) or markup
+  languages (like HTML, Markdown, TeX, etc.).
 
   Especially one of the patches splits the regex that was matching all
   the numbers into 3 different regexes:
 
-    - one for floatingpoint numbers that begin with a decimal point,
+    - one for floating point numbers that begin with a decimal point,
     - one for decimal and octal integers as well as other
-      floatingpoint numbers, and
+      floating point numbers, and
     - one for hexadecimal and binary integers.
 
   The result is that expressions like `1+2`, `1.5-e+2+f` and `.l` are
@@ -44,21 +44,21 @@ This edition covers what happened during the month of October 2021.
   purposes in C++ files.
 
   Another patch in the series allows single-quote characters as digit
-  separators like in `3.141'592'654` or `0xdead'beaf` according to the
-  C++17 standard.
+  separators according to the C++17 standard, like in `3.141'592'654`
+  or `0xdead'beaf`.
 
   The third and last patch prevents the `<=>` generalized comparison
-  operator (also called 'spaceship' operator) allowed since C++20 from
+  operator (also called 'spaceship' operator) introduced in C++20 from
   being split into `<=` and `>`.
 
-  Ævar Arnfjörð Bjarmason replied to Johannes suggesting him to add a
+  Ævar Arnfjörð Bjarmason replied to Johannes suggesting to add a
   few tests in the `t/t4034/cpp/` directory, where test files for the
   cpp userdiff mechanism reside.
 
   Johannes agreed with Ævar and sent a
   [second version](https://lore.kernel.org/git/pull.1054.v2.git.1633720197.gitgitgadget@gmail.com/)
   of his patch series. This series included 2 new patches that
-  improved existing tests, and added new tests for problematic behavior
+  improved existing tests and added new tests for problematic behavior
   that the other patches were fixing.
 
   Ævar commented on this series saying that it was much improved, but
@@ -71,7 +71,7 @@ This edition covers what happened during the month of October 2021.
 
     - some tests could be added for code comments, as he wondered if
       tokens that often occur in natural language, like `"` and `&`,
-      are still correctly handled when they appear in code comments.
+      were still correctly handled when they appeared in code comments.
 
   Johannes agreed with the second point, but wasn't interested in
   working on the others.
@@ -83,14 +83,14 @@ This edition covers what happened during the month of October 2021.
   [third version](https://lore.kernel.org/git/pull.1054.v3.git.1633885384.gitgitgadget@gmail.com/)
   of his patch series. In this new version test cases for single-quote
   characters as digit separators and the `<=>` generalized comparison
-  operator were moved to a new commit, before the commits supporting
+  operator were moved to a new commit before the commits supporting
   these features.
 
-  Later-on, Johannes noticed that the single-quote character as digit
-  separator is problematic and requires a more sophisticated
-  implementation. For example, as implemented the character literal
-  `'.'` would be split into `'.` and `'.` The support for digit separator
-  was eventually reverted.
+  Later on, Johannes [noticed](https://lore.kernel.org/git/a5a05e33-3ad9-e78c-69c0-a466eadeffec@kdbg.org/)
+  that the single-quote character as digit separator is problematic
+  and requires a more sophisticated implementation. For example, as
+  implemented the character literal `'.'` would be split into `'.`
+  and `'`. The support for digit separator was eventually reverted.
 
   This patch series was then merged into the master branch, so that
   Git 2.34 that was recently released has better support for C++ in
@@ -145,7 +145,7 @@ __Various__
   by Julia Schmidt on Dev Class.
 * [Require pull requests without requiring reviews](https://github.blog/changelog/2021-11-10-require-pull-requests-without-requiring-reviews/) on GitHub.
 * [Deprecating Atlassian account password for Bitbucket API and Git activity](https://bitbucket.org/blog/deprecating-atlassian-account-password-for-bitbucket-api-and-git-activity)
-  (for Git over HTTPS), on Bitbucket.
+  (for Git over HTTPS) on Bitbucket.
 
 __Light reading__
 
@@ -162,7 +162,7 @@ __Light reading__
   * [Oh My Git!](https://ohmygit.org/) game by bleeptrack and blinry
     was mentioned in [Git Rev News Edition #72 (February 27th, 2021)](https://git.github.io/rev_news/2021/02/27/edition-72/).
 * The “[Advanced Git](https://css-tricks.com/cherry-picking-commits-in-git/)” series
-  by Tobias Günther on CSS-Tricks, courtesy of Git Tower git client,
+  by Tobias Günther on CSS-Tricks, courtesy of the Tower Git client,
   (mentioned in [Git Rev News #80](https://git.github.io/rev_news/2021/10/30/edition-80/)),
   continues:
   * [Better Collaboration With Pull Requests](https://css-tricks.com/better-collaboration-with-pull-requests/)
@@ -183,7 +183,7 @@ __Light reading__
   by Lee Atchison on Info World.
   * You can find various arguments for and against monorepos in Git Rev News editions
     [#4](https://git.github.io/rev_news/2015/06/03/edition-4/), [#9](https://git.github.io/rev_news/2015/11/11/edition-9/), [#47](https://git.github.io/rev_news/2019/01/23/edition-47/) (pros and cons), [#72](https://git.github.io/rev_news/2021/02/27/edition-72/), [#78](https://git.github.io/rev_news/2021/08/31/edition-78/),
-	not counting articles about improving the performance of large repositories, like monorepos usually are.
+	not counting articles about improving the performance of large repositories, which monorepos usually are.
 * [How to do pull request reviews](https://dev.to/mage_ai/how-to-do-pull-request-reviews-mm6)
   by Mage company on DEV.to.
 * [Git Rebase for Preventing Merge Commits](https://dev.to/jenc/git-rebase-for-preventing-merge-commits-2len)
@@ -196,8 +196,8 @@ __Light reading__
 
 __Git tools and sites__
 
-* [Commitlint](https://commitlint.js.org/#/) is a tool, written in JavaScript and running on Node.js (an npm tool),
-  that helps your team with adhering to a commit convention.
+* [`commitlint`](https://commitlint.js.org/#/) is a tool written in JavaScript and running on Node.js
+  (that is, an npm tool) that helps your team with adhering to a commit convention.
 * [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog)
   is an npm tool to generate changelogs and release notes from a project's commit messages and metadata.
 * [Git Command Explorer](https://gitexplorer.com/) is a web application
@@ -205,8 +205,8 @@ __Git tools and sites__
   without digging through the web,
   made by Summitech company.
 * [Arlo's Commit Notation](https://github.com/RefactoringCombos/ArlosCommitNotation)
-  is a notation for small commits messages that show
-  the risk involved in each step, and the author's intention,
+  is a notation for small commit messages that shows
+  the risk involved in each step and the author's intention,
   conveyed in the first 3 characters of the commit summary line.
 
 ## Credits
