@@ -90,7 +90,7 @@ This edition covers what happened during the month of October 2021.
   that the single-quote character as digit separator is problematic
   and requires a more sophisticated implementation. For example, as
   implemented the character literal `'.'` would be split into `'.`
-  and `'`. The support for digit separator was eventually reverted.
+  and `'`. The support for digit separators was eventually reverted.
 
   This patch series was then merged into the master branch, so that
   Git 2.34 that was recently released has better support for C++ in
