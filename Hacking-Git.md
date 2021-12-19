@@ -54,6 +54,20 @@ suggest improvements. Thanks!
 
 * [Git for Windows' "Good commits"](https://github.com/git-for-windows/git/wiki/Good-commits)
 
+## Process related tools and sites
+
+* [GitGitGadget](https://gitgitgadget.github.io/) makes it easy to send patches to the mailing list.
+
+* [lore.kernel.org/git](https://lore.kernel.org/git/) is our prefered mailing list archive.
+
+* [public-inbox](https://public-inbox.org/README.html) is the software behing lore.kernel.org.
+
+* [lore+lei](https://people.kernel.org/monsieuricon/lore-lei-part-1-getting-started) helps take advantage of lore/public-inbox.
+
+* [b4](https://people.kernel.org/monsieuricon/introducing-b4-and-patch-attestation) helps work with patches posted on lore/public-inbox.
+
+* [git-series](https://github.com/git-series/git-series) helps manage patch series.
+
 ## Development status
 
 * [Junio's "What's cooking in git.git" emails](https://lore.kernel.org/git/?q=s%3A%22What%27s+cooking+in+git.git%22) list the status of various development topics.
