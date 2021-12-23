@@ -123,6 +123,31 @@ This edition covers what happened during the month of November 2021.
 
 ## Releases
 
++ Git [2.34.1](https://public-inbox.org/git/xmqq7dcx1ent.fsf@gitster.g/)
++ Git for Windows [2.34.1(1)](https://github.com/git-for-windows/git/releases/tag/v2.34.1.windows.1)
++ GitHub Enterprise [3.3.1](https://help.github.com/enterprise-server@3.3/admin/release-notes#3.3.1),
+[3.2.6](https://help.github.com/enterprise-server@3.2/admin/release-notes#3.2.6),
+[3.1.14](https://help.github.com/enterprise-server@3.1/admin/release-notes#3.1.14),
+[3.0.22](https://help.github.com/enterprise-server@3.0/admin/release-notes#3.0.22),
+[3.3.0](https://help.github.com/enterprise-server@3.3/admin/release-notes#3.3.0),
+[3.2.5](https://help.github.com/enterprise-server@3.2/admin/release-notes#3.2.5),
+[3.1.13](https://help.github.com/enterprise-server@3.1/admin/release-notes#3.1.13),
+[3.0.21](https://help.github.com/enterprise-server@3.0/admin/release-notes#3.0.21),
+[3.2.4](https://help.github.com/enterprise-server@3.2/admin/release-notes#3.2.4),
+[3.1.12](https://help.github.com/enterprise-server@3.1/admin/release-notes#3.1.12),
+[3.0.20](https://help.github.com/enterprise-server@3.0/admin/release-notes#3.0.20)
++ GitLab [14.6](https://about.gitlab.com/releases/2021/12/22/gitlab-14-6-released/)
+[14.5.2, 14.4.4, and 14.3.6](https://about.gitlab.com/releases/2021/12/06/security-release-gitlab-14-5-2-released/),
+[14.5.1](https://about.gitlab.com/releases/2021/12/01/gitlab-14-5-1-released/),
+[14.4.3](https://about.gitlab.com/releases/2021/12/01/gitlab-14-4-3-released/),
+[14.3.5](https://about.gitlab.com/releases/2021/11/26/gitlab-14-3-5-released/),
+[14.2.7](https://about.gitlab.com/releases/2021/11/26/gitlab-14-2-7-released/)
++ Bitbucket Server [7.19](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ Gerrit Code Review [3.5.0](https://www.gerritcodereview.com/3.5.html#350)
++ GitKraken [8.2.1](https://support.gitkraken.com/release-notes/current),
+[8.2.0](https://support.gitkraken.com/release-notes/current)
++ GitHub Desktop [2.9.6](https://desktop.github.com/release-notes/),
+[2.9.5](https://desktop.github.com/release-notes/)
 
 ## Other News
 
