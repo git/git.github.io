@@ -156,6 +156,8 @@ __Various__
 
 __Light reading__
 
+* [GSoC 2022](https://opensource.googleblog.com/2021/11/expanding-google-summer-of-code-in-2022.html)
+  is expanding to everyone 18 years or older, to different project sizes and to flexible timelines.
 
 __Git tools and sites__
 
