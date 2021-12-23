@@ -17,9 +17,26 @@ This edition covers what happened during the month of November 2021.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [Peff is taking a break from Git](https://public-inbox.org/git/YboaAe4LWySOoAe7@coredump.intra.peff.net/)
+
+  Peff, alias Jeff King, announced on the mailing list that he is
+  going to take a five months break from Git starting at the end of
+  December. He is also steping down from Git's PLC (Project Leadership
+  Committee), the entity that represents Git within
+  [Software Freedom Conservancy](https://sfconservancy.org/).
+
+  Peff has been involved in the project for 15 years, and has
+  contributed a huge number of patches, and an enormous amount of
+  reviews, support and discussions.
+
+  He also used to maintain git-scm.com, the main site of the
+  project. It looks like Taylor Blau, who has been working at GitHub
+  with Peff will take over maintaining this site.
+
+  Along with others on the mailing list, let's thank Peff for his
+  contributions to Git and Git Development Community!
 
 <!---
 ### Reviews
