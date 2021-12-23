@@ -31,7 +31,7 @@ This edition covers what happened during the month of November 2021.
   contributed a huge number of patches, and an enormous amount of
   reviews, support and discussions.
 
-  He also used to maintain git-scm.com, the main site of the
+  He also used to maintain [git-scm.com](https://git-scm.com/), the main site of the
   project. It looks like Taylor Blau, who has been working at GitHub
   with Peff will take over maintaining this site.
 
