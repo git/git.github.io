@@ -68,6 +68,8 @@ suggest improvements. Thanks!
 
 * [git-series](https://github.com/git-series/git-series) helps manage patch series.
 
+* [git-publish](https://github.com/stefanha/git-publish) helps manage patch series.
+
 * [git-related](https://github.com/felipec/git-related) finds people who might be interested in a patch.
 
 ## Development status
