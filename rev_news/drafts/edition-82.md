@@ -177,7 +177,7 @@ This edition covers what happened during the month of November 2021.
   software developer and architect for many decades. Aside from the
   obvious SCM domain knowledge, my interests are around data structures,
   performance, computability, and languages. About 10 years ago, I joined
-  the ITUGLIB Technical Committee, which is an Open Source group that
+  the ITUGLIB Technical Committee, which is an Open-Source group that
   maintains code for the HPE Nonstop community - the platform was
   originally called Tandem Computers Inc.
 
@@ -222,7 +222,7 @@ This edition covers what happened during the month of November 2021.
 * What is your favorite Git-related tool/library, outside of Git
   itself?
 
-  This is a bit of self-promotion for my company and I apologise for that.
+  This is a bit of self-promotion for my company and, I apologise for that.
   We build façade-style interface facilities that allow legacy platforms,
   including HPE NonStop and IBM's TSO/ISPF environments to have full Git
   experiences despite the native file systems not supporting POSIX-like
@@ -231,9 +231,9 @@ This edition covers what happened during the month of November 2021.
   recently added to the HPE price book. These products allow older
   codebases to share in the benefits of real DevOps capabilities without
   having to rely on proprietary knowledge and processes. I am the chief
-  architect of those.
+  architect of those products.
 
-* Do you happen to haveany memorable experience with respect to contributing
+* Do you happen to have any memorable experience with respect to contributing
   to the Git project? If yes, could you share it with us?
 
   I think the most satisfying experience was the few months it took to
@@ -241,7 +241,7 @@ This edition covers what happened during the month of November 2021.
   pain to maintain the separate fork even with Git's awesome merge
   capabilities. Being allowed to be lazy is a dream of many developers and
   cutting down the time and effort spent on each release to a simple push
-  of the Jenkins "Build Now" button freed up a lot of time.
+  of the Jenkins "Build Now" button frees up a lot of time.
 
 * What is your advice for people who want to start Git development?
   Where and how should they start?
