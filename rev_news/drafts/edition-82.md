@@ -175,8 +175,112 @@ __Light reading__
 
 * [GSoC 2022](https://opensource.googleblog.com/2021/11/expanding-google-summer-of-code-in-2022.html)
   is expanding to everyone 18 years or older, to different project sizes and to flexible timelines.
+* [Stochastic bisection in Git](https://lwn.net/Articles/877964/)
+  by Jonathan Corbet on LWN.net.  The patches in question  were
+  [proposed for inclusion in Git](https://lore.kernel.org/git/20211118164940.8818-1-jack@suse.cz/t/#u)
+  by Jan Kara.
+* [Fedora revisits the Git-forge debate](https://lwn.net/Articles/877240/)
+  by Jake Edge on LWN.net.
+* [Working with a Monorepo](https://devblogs.microsoft.com/cse/2021/11/23/working-with-a-monorepo/),
+  co-authored by Claus Matzinger, Stephanie Visser and Martin Tirion;
+  on Microsoft's CSE Developer Blog.
+  Most recent list of pros and cons of monorepos you can find in
+  [Git Rev News Editio #81](https://git.github.io/rev_news/2021/11/29/edition-81/).
+* [How to Create a React Typescript Monorepo with Git Submodules](https://dev.to/alexeagleson/how-to-create-a-node-and-react-monorepo-with-git-submodules-2g83)
+  by Alex Eagleson on DEV.to.
+* [Git Pull, for the Holidays](https://thedailywtf.com/articles/git-pull-for-the-holidays),
+  a song from The Daily WTF; Lyrics - Remy Porter and James Rushin, Music - James Rushin.
+* [How to Reset a Single Git File and Why](https://www.makeuseof.com/git-reset-single-file/)
+  by Bobby Jack on MakeUseOf.
+* [Merging multiple git repos with their commit history](https://domm.plix.at/perl/2021_12_git_merge_repos_with_history.html)
+  by Thomas Klausner (domm).  Note that there might be a better, simpler solution for the problem.
+* [Using the Reflog to Restore Lost Commits](https://css-tricks.com/using-the-reflog-to-restore-lost-commits/)
+  by Tobias Günther on CSS-Tricks is the next part of
+  the [Tower Git Client](https://www.git-tower.com/)'s “Advanced Git” series.
+* [Git Commands Cheatsheet: Advanced (20+ Git Commands Advanced)](https://dev.to/aashiya123/git-commands-cheatsheet-advanced-20-git-commands-advanced--35i3)
+  by aashiya123 on DEV.to.
+* [10 useful Git tips to improve your workflow](https://dev.to/yenyih/10-useful-git-tips-to-improve-your-workflow-kf1)
+  by Jordan Soo Yen Yih on DEV.to.
+* [Top 30 Git Commands You Should Know To Master Git CLI](https://levelup.gitconnected.com/top-30-git-commands-you-should-know-to-master-git-cli-f04e041779bc)
+  by Tara Prasad Routray on Level Up Coding by gitconnected.com (a Medium.com blog).
+* [Git scraping: track changes over time \[to a web site or a web service\] by scraping to a Git repository](https://simonwillison.net/2020/Oct/9/git-scraping/) and
+  [git-history: a tool for analyzing scraped data collected using Git and SQLite](https://simonwillison.net/2021/Dec/7/git-history/)
+  by Simon Willison on his weblog.
+* [Top 5 Best Git Extensions For VS Code (You must have)](https://dev.to/thenomadevel/top-5-best-git-extensions-for-vs-code-you-must-have-40b6)
+  by Nomadev on DEV.to.  You can find another such list in
+  [Git Rev News Edition #77](https://git.github.io/rev_news/2021/07/31/edition-77/).
+* [So you want Database Version Control?](https://www.dolthub.com/blog/2021-09-17-database-version-control/),
+  [So you want a Git Database?](https://www.dolthub.com/blog/2021-11-26-so-you-want-git-database/), and
+  [So you want Git SQL?](https://www.dolthub.com/blog/2021-12-20-git-sql/)
+  by Tim Sehn on DoltHub Blog.  [Dolt](https://www.doltdb.com/) and [DoltHub]((https://www.dolthub.com/)
+  were mentioned in [Git Rev News Edition #62](https://git.github.io/rev_news/2020/04/23/edition-62/).
+  Those blog posts talk about different ways databases and version control can connect:
+  * version controlling database schema, aka **database migrations**: 
+    * [Liquibase](https://www.liquibase.com/),
+      mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/),
+    * [Redgate Deploy](https://www.red-gate.com/products/redgate-deploy/),
+    * [Planetscale](https://www.planetscale.com/),
+    * [Alembic](https://alembic.sqlalchemy.org/) for SQLAlchemy _(not mentioned in those articles)_,
+      mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/),
+    * [Sqitch](https://sqitch.org/) _(not mentioned in those articles)_,
+      mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/),
+    * [Entity Framework Migrations](https://docs.microsoft.com/en-us/ef/core/managing-schemas/migrations/) _(not mentioned in those articles)_,
+    * [Flyway](https://flywaydb.org/) by Redgate _(not mentioned in those articles)_,
+      mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/),
+    * [DBmaestro](https://www.dbmaestro.com/) _(not mentioned in those articles)_,
+    * [skeema](https://www.skeema.io/) for MySQL, MariaDB, and Percona Server _(not mentioned in those articles)_,
+      mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/),
+    * [gh-ost](https://github.com/github/gh-ost): GitHub's online schema migration for MySQL _(not mentioned in those articles)_,
+      mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/),
+  * version controlling queries:
+    * [VersionSQL](https://www.versionsql.com/),
+    * [DBT](https://www.getdbt.com/) (Data Build Tool),
+    * [Git Your SQL Together (with a Query Library)](https://caitlinhudon.com/2018/11/28/git-sql-together/)
+      by Caitlin Hudon (2018) _(not mentioned in those articles)_,
+      mentioned in [Git Rev News #46](https://git.github.io/rev_news/2018/12/19/edition-46/)
+  * **data versioning** (version control within schema, or **[Slowly Changing Dimension](https://en.wikipedia.org/wiki/Slowly_changing_dimension)**):
+    * [Noms](https://github.com/attic-labs/noms),
+    * [TerminusDB](https://www.terminusdb.com/) for graph or document databases;
+      whitepaper about TerminusDB was mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/),
+    * [Dolt](https://www.dolthub.com/) for relational databases,
+      mentioned in [Git Rev News Edition #62](https://git.github.io/rev_news/2020/04/23/edition-62/),
+    * [LiteTree: SQLite with Branches](https://github.com/aergoio/litetree) which is a modification of the SQLite engine to support branching _(not mentioned in those articles)_,
+      mentioned in [Git Rev News #43](https://git.github.io/rev_news/2018/09/19/edition-43/),
+  * Git as database (with own query language):
+    * [GitRows](https://gitrows.com/) for JSON and CSV files,
+    * [Git as a NoSQL database](https://www.kenneth-truyers.net/2016/10/13/git-nosql-database/) by Kenneth Truyers (2016),
+      mentioned in [Git Rev News #28](https://git.github.io/rev_news/2017/06/14/edition-28/),
+    * [Turning Git into an application database](https://nede.dev/blog/turning-git-into-an-application-database) by Peter Ruttkay-Nedecký (2019)
+  * SQL for querying Git repo:
+    * [Gitbase](https://github.com/src-d/gitbase) by source{d} aka src-d - using MySQL,
+      mentioned in [Git Rev News #48](https://git.github.io/rev_news/2019/02/27/edition-48/);
+      note that link [on source{d} site](https://docs.sourced.tech/gitbase) no longer works,
+    * [MergeStat](https://github.com/mergestat/mergestat) - using SQLite,
+    * [Gitana](https://livablesoftware.com/gitana-sql-git-repository-inspector/)
+      ([repo](https://github.com/SOM-Research/Gitana), [docs](http://gitanadocs.getforge.io/), [paper](https://www.researchgate.net/publication/279058070_Gitana_a_SQL-based_Git_Repository_Inspector))- using MySQL
+      _(not mentioned in those articles, possibly because it started as research project)_,
+      mentioned in [Git Rev News #7](https://git.github.io/rev_news/2015/09/09/edition-7/)
+      and [#48](https://git.github.io/rev_news/2019/02/27/edition-48/),
+  * storing database in Git:
+    * [SQLite](https://sqlite.org) where databases are files,
+    * [gitSQL](https://github.com/gitsql) exporting flat file SQL statements of objects from the database to store in the Git repository
+    
+
 
 __Git tools and sites__
+* [BBChop](https://github.com/Ealdwulf/BBChop) is a tool in Python by Ealdwulf Wuffinga
+  implementing a bisection algorithm which works on intermittent bugs (experimental code).
+  BBChop is based on [Bayesian Search Theory](https://en.wikipedia.org/wiki/Bayesian_search_theory).
+* [Soft Serve](https://github.com/charmbracelet/soft-serve)
+  is a self-hostable Git server for the command line, written in Go.
+  It is configurable with Git, you can create repos on demand with `git push`,
+  and you can browse repos with an SSH-accessible <abbr title="Text-based User Interface">TUI</abbr>.
+* [GitLive](https://git.live/) is a proprietary extension with a free tier
+  for Visual Studio Code, JetBrains IDEs, and Android Studio,
+  providing real-time collaborative support, giving insight about what other developers in the team are working on.
+  It supports GitHub, Bitbucket, GitLab (including self-hosted) and Azure DevOps repository hosting services.<br />
+  GitLive was mentioned as [VS Code extension](https://marketplace.visualstudio.com/items?itemName=TeamHub.teamhub)
+  in [Git Rev News Edition #77](https://git.github.io/rev_news/2021/07/31/edition-77/).
 
 
 ## Credits
