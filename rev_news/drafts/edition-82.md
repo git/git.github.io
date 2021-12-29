@@ -309,8 +309,8 @@ __Light reading__
 * [Working with a Monorepo](https://devblogs.microsoft.com/cse/2021/11/23/working-with-a-monorepo/),
   co-authored by Claus Matzinger, Stephanie Visser and Martin Tirion;
   on Microsoft's CSE Developer Blog.
-  Most recent list of pros and cons of monorepos you can find in
-  [Git Rev News Editio #81](https://git.github.io/rev_news/2021/11/29/edition-81/).
+  You can find most recent list of pros and cons of monorepos in
+  [Git Rev News Edition #81](https://git.github.io/rev_news/2021/11/29/edition-81/).
 * [How to Create a React Typescript Monorepo with Git Submodules](https://dev.to/alexeagleson/how-to-create-a-node-and-react-monorepo-with-git-submodules-2g83)
   by Alex Eagleson on DEV.to.
 * [Git Pull, for the Holidays](https://thedailywtf.com/articles/git-pull-for-the-holidays),
@@ -337,7 +337,7 @@ __Light reading__
 * [So you want Database Version Control?](https://www.dolthub.com/blog/2021-09-17-database-version-control/),
   [So you want a Git Database?](https://www.dolthub.com/blog/2021-11-26-so-you-want-git-database/), and
   [So you want Git SQL?](https://www.dolthub.com/blog/2021-12-20-git-sql/)
-  by Tim Sehn on DoltHub Blog.  [Dolt](https://www.doltdb.com/) and [DoltHub]((https://www.dolthub.com/)
+  by Tim Sehn on DoltHub Blog.  [Dolt](https://www.doltdb.com/) and [DoltHub](https://www.dolthub.com/)
   were mentioned in [Git Rev News Edition #62](https://git.github.io/rev_news/2020/04/23/edition-62/).
   Those blog posts talk about different ways databases and version control can connect:
   * version controlling database schema, aka **database migrations**:
@@ -383,7 +383,7 @@ __Light reading__
     * [MergeStat](https://github.com/mergestat/mergestat) - using SQLite,
     * [Gitana](https://livablesoftware.com/gitana-sql-git-repository-inspector/)
       ([repo](https://github.com/SOM-Research/Gitana), [docs](http://gitanadocs.getforge.io/), [paper](https://www.researchgate.net/publication/279058070_Gitana_a_SQL-based_Git_Repository_Inspector))- using MySQL
-      _(not mentioned in those articles, possibly because it started as research project)_,
+      _(not mentioned in those articles, possibly because it started as a research project)_,
       mentioned in [Git Rev News #7](https://git.github.io/rev_news/2015/09/09/edition-7/)
       and [#48](https://git.github.io/rev_news/2019/02/27/edition-48/),
   * storing database in Git:
