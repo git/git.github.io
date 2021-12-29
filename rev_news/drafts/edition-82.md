@@ -292,12 +292,12 @@ This edition covers what happened during the month of November 2021.
 ## Other News
 
 __Various__
+* [Google Summer of Code (GSoC) 2022](https://opensource.googleblog.com/2021/11/expanding-google-summer-of-code-in-2022.html)
+  is expanding to everyone 18 years or older, to different project sizes and to flexible timelines.
 
 
 __Light reading__
 
-* [GSoC 2022](https://opensource.googleblog.com/2021/11/expanding-google-summer-of-code-in-2022.html)
-  is expanding to everyone 18 years or older, to different project sizes and to flexible timelines.
 * [Stochastic bisection in Git](https://lwn.net/Articles/877964/)
   by Jonathan Corbet on LWN.net.  The patches in question  were
   [proposed for inclusion in Git](https://lore.kernel.org/git/20211118164940.8818-1-jack@suse.cz/t/#u)
@@ -340,7 +340,7 @@ __Light reading__
   by Tim Sehn on DoltHub Blog.  [Dolt](https://www.doltdb.com/) and [DoltHub]((https://www.dolthub.com/)
   were mentioned in [Git Rev News Edition #62](https://git.github.io/rev_news/2020/04/23/edition-62/).
   Those blog posts talk about different ways databases and version control can connect:
-  * version controlling database schema, aka **database migrations**: 
+  * version controlling database schema, aka **database migrations**:
     * [Liquibase](https://www.liquibase.com/),
       mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/),
     * [Redgate Deploy](https://www.red-gate.com/products/redgate-deploy/),
@@ -389,10 +389,10 @@ __Light reading__
   * storing database in Git:
     * [SQLite](https://sqlite.org) where databases are files,
     * [gitSQL](https://github.com/gitsql) exporting flat file SQL statements of objects from the database to store in the Git repository
-    
 
 
 __Git tools and sites__
+
 * [BBChop](https://github.com/Ealdwulf/BBChop) is a tool in Python by Ealdwulf Wuffinga
   implementing a bisection algorithm which works on intermittent bugs (experimental code).
   BBChop is based on [Bayesian Search Theory](https://en.wikipedia.org/wiki/Bayesian_search_theory).
