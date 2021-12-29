@@ -304,6 +304,8 @@ __Light reading__
   by Jan Kara.
 * [Fedora revisits the Git-forge debate](https://lwn.net/Articles/877240/)
   by Jake Edge on LWN.net.
+* [A brief history of code search at GitHub](https://github.blog/2021-12-15-a-brief-history-of-code-search-at-github/)
+  by Pavel Avgustinov on GitHub Blog.
 * [Working with a Monorepo](https://devblogs.microsoft.com/cse/2021/11/23/working-with-a-monorepo/),
   co-authored by Claus Matzinger, Stephanie Visser and Martin Tirion;
   on Microsoft's CSE Developer Blog.
