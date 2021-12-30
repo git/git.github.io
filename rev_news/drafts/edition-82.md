@@ -23,17 +23,17 @@ This edition covers what happened during the month of November 2021.
 
   Peff, alias Jeff King, announced on the mailing list that he is
   going to take a five months break from Git starting at the end of
-  December. He is also steping down from Git's PLC (Project Leadership
+  December. He is also stepping down from Git's PLC (Project Leadership
   Committee), the entity that represents Git within
   [Software Freedom Conservancy](https://sfconservancy.org/).
 
-  Peff has been involved in the project for 15 years, and has
-  contributed a huge number of patches, and an enormous amount of
+  Peff has been involved in the project for 15 years and has
+  contributed a huge number of patches as well as an enormous amount of
   reviews, support and discussions.
 
   He also used to maintain [git-scm.com](https://git-scm.com/), the main site of the
   project. It looks like Taylor Blau, who has been working at GitHub
-  with Peff will take over maintaining this site.
+  with Peff, will take over maintaining this site.
 
   Along with others on the mailing list, let's thank Peff for his
   contributions to Git and Git Development Community!
@@ -47,7 +47,7 @@ This edition covers what happened during the month of November 2021.
 * [misleading message printed when worktree add fails](https://lore.kernel.org/git/CA+34VNLj6VB1kCkA=MfM7TZR+6HgqNi5-UaziAoCXacSVkch4A@mail.gmail.com/)
 
   Baruch Burstein posted a bug report on the mailing list saying that
-  he ran `git worktree add <path> <branch>`, where <branch> is an
+  he ran `git worktree add <path> <branch>`, where `<branch>` was an
   already checked-out branch, and saw a message that seemed to
   indicate that the command was a success, when in fact it was not.
 
@@ -90,16 +90,16 @@ This edition covers what happened during the month of November 2021.
   `fflush(stdout)` in vreportf() just before this function calls
   `fflush(stderr)` and before it actually writes a message on stderr.
 
-  Junio Hamano, the Git maintainer replied to the patch wondering if
+  Junio Hamano, the Git maintainer, replied to the patch wondering if
   flushing stdout when it is going to a pipe talking to another
   process could cause issues. He noticed that the HTTP backend code
   uses vreportf() in this way, though he said that any code using
   stdio "cannot precisely control when the buffered contents are
-  flushed anyway" so the patch might be OK.
+  flushed anyway", so the patch might be OK.
 
   Jeff King, alias Peff, then started a discussion about the
-  possibility of some flushing causing some code to block which might
-  create a deadlock as some other code might be waiting for something
+  possibility of arbitrary flushing causing some code to block, which might
+  create a deadlock, as some other code might be waiting for something
   from the now blocking code. Eric suggested that this could be
   addressed by flushing stdout only if stdout is attached to a
   terminal, though he thought this would be "rather ugly".
@@ -109,7 +109,7 @@ This edition covers what happened during the month of November 2021.
   they were probably OK.
 
   Meanwhile Peff also replied to Eric's patch wondering if "status
-  messages like this go to stderr anyway". He said:
+  messages like this go to stderr anyway". He remarked that
 
   > in general our approach in Git is more "if it is the main
   > output of the program, it goes to stdout; if it is
@@ -133,7 +133,7 @@ This edition covers what happened during the month of November 2021.
   Peff agreed that Git has not been very consistent, but he said that
   more careful reviews and "laying out guidelines could help". He also
   pointed to [a previous discussion](https://lore.kernel.org/git/20110907215716.GJ13364@sigill.intra.peff.net/)
-  from 10 years ago where he "laid out his mental model" about this topic.
+  from 10 years ago where he had "laid out his mental model" about this topic.
 
   He also noticed that the 'Preparing' line was marked for
   translation, so "not reliably machine-readable anyway". He also
@@ -196,7 +196,7 @@ This edition covers what happened during the month of November 2021.
   considering the nature of the platform and community. We have to
   maintain compatibility with some old versions of the operating systems
   that lack some more modern capabilities. The platform is an MPP
-  architecture without kernel level threads (yet) and the port to POSIX
+  architecture without kernel level threads (yet), and the port to POSIX
   threads is very messy with the operating system wrappers we have to use.
 
 * If you could get a team of expert developers to work full time on
@@ -208,7 +208,7 @@ This edition covers what happened during the month of November 2021.
   full set of requirements in various countries are not yet fully fleshed
   out. Another two, purely to support the NonStop community is converting
   the code written in Go (Git LFS) into C and making it part of the standard
-  product. The other is migrating the interpretive code to a c99-standard
+  product. The other is migrating the interpretive code to a C99-standard
   code base.
 
 * If you could remove something from Git without worrying about
@@ -222,7 +222,7 @@ This edition covers what happened during the month of November 2021.
 * What is your favorite Git-related tool/library, outside of Git
   itself?
 
-  This is a bit of self-promotion for my company and, I apologise for that.
+  This is a bit of self-promotion for my company, and I apologise for that.
   We build façade-style interface facilities that allow legacy platforms,
   including HPE NonStop and IBM's TSO/ISPF environments to have full Git
   experiences despite the native file systems not supporting POSIX-like
@@ -246,7 +246,7 @@ This edition covers what happened during the month of November 2021.
 * What is your advice for people who want to start Git development?
   Where and how should they start?
 
-  Learn about Merkel Trees and general data structures.
+  Learn about Merkle Trees and general data structures.
 
   I am still learning when it comes to general functional contributions.
   Watching how others contribute is really crucial if you have any hope of
@@ -257,7 +257,7 @@ This edition covers what happened during the month of November 2021.
 
   For every change you make, think about the security implications.
   Think about what a hacker might do to compromise Git or an organisation
-  using Git before you move forward, no matter how good an idea it might
+  using Git before you move forward, no matter how good an idea might
   seem. The last thing you want is to have your contribution show up as a
   Critical Vulnerability Exposure on the NIST database.
 
@@ -332,7 +332,7 @@ __Light reading__
   [git-history: a tool for analyzing scraped data collected using Git and SQLite](https://simonwillison.net/2021/Dec/7/git-history/)
   by Simon Willison on his weblog.
 * [Top 5 Best Git Extensions For VS Code (You must have)](https://dev.to/thenomadevel/top-5-best-git-extensions-for-vs-code-you-must-have-40b6)
-  by Nomadev on DEV.to.  You can find another such list in
+  by Nomadev on DEV.to.  You can find a similar list in
   [Git Rev News Edition #77](https://git.github.io/rev_news/2021/07/31/edition-77/).
 * [So you want Database Version Control?](https://www.dolthub.com/blog/2021-09-17-database-version-control/),
   [So you want a Git Database?](https://www.dolthub.com/blog/2021-11-26-so-you-want-git-database/), and
@@ -342,53 +342,53 @@ __Light reading__
   Those blog posts talk about different ways databases and version control can connect:
   * version controlling database schema, aka **database migrations**:
     * [Liquibase](https://www.liquibase.com/),
-      mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/),
-    * [Redgate Deploy](https://www.red-gate.com/products/redgate-deploy/),
-    * [Planetscale](https://www.planetscale.com/),
+      mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/)
+    * [Redgate Deploy](https://www.red-gate.com/products/redgate-deploy/)
+    * [Planetscale](https://www.planetscale.com/)
     * [Alembic](https://alembic.sqlalchemy.org/) for SQLAlchemy _(not mentioned in those articles)_,
-      mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/),
+      mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/)
     * [Sqitch](https://sqitch.org/) _(not mentioned in those articles)_,
-      mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/),
-    * [Entity Framework Migrations](https://docs.microsoft.com/en-us/ef/core/managing-schemas/migrations/) _(not mentioned in those articles)_,
+      mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/)
+    * [Entity Framework Migrations](https://docs.microsoft.com/en-us/ef/core/managing-schemas/migrations/) _(not mentioned in those articles)_
     * [Flyway](https://flywaydb.org/) by Redgate _(not mentioned in those articles)_,
-      mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/),
-    * [DBmaestro](https://www.dbmaestro.com/) _(not mentioned in those articles)_,
+      mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/)
+    * [DBmaestro](https://www.dbmaestro.com/) _(not mentioned in those articles)_
     * [skeema](https://www.skeema.io/) for MySQL, MariaDB, and Percona Server _(not mentioned in those articles)_,
-      mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/),
+      mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/)
     * [gh-ost](https://github.com/github/gh-ost): GitHub's online schema migration for MySQL _(not mentioned in those articles)_,
-      mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/),
+      mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/)
   * version controlling queries:
-    * [VersionSQL](https://www.versionsql.com/),
-    * [DBT](https://www.getdbt.com/) (Data Build Tool),
+    * [VersionSQL](https://www.versionsql.com/)
+    * [DBT](https://www.getdbt.com/) (Data Build Tool)
     * [Git Your SQL Together (with a Query Library)](https://caitlinhudon.com/2018/11/28/git-sql-together/)
       by Caitlin Hudon (2018) _(not mentioned in those articles)_,
       mentioned in [Git Rev News #46](https://git.github.io/rev_news/2018/12/19/edition-46/)
   * **data versioning** (version control within schema, or **[Slowly Changing Dimension](https://en.wikipedia.org/wiki/Slowly_changing_dimension)**):
-    * [Noms](https://github.com/attic-labs/noms),
+    * [Noms](https://github.com/attic-labs/noms)
     * [TerminusDB](https://www.terminusdb.com/) for graph or document databases;
-      whitepaper about TerminusDB was mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/),
+      whitepaper about TerminusDB was mentioned in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/)
     * [Dolt](https://www.dolthub.com/) for relational databases,
-      mentioned in [Git Rev News Edition #62](https://git.github.io/rev_news/2020/04/23/edition-62/),
+      mentioned in [Git Rev News Edition #62](https://git.github.io/rev_news/2020/04/23/edition-62/)
     * [LiteTree: SQLite with Branches](https://github.com/aergoio/litetree) which is a modification of the SQLite engine to support branching _(not mentioned in those articles)_,
-      mentioned in [Git Rev News #43](https://git.github.io/rev_news/2018/09/19/edition-43/),
+      mentioned in [Git Rev News #43](https://git.github.io/rev_news/2018/09/19/edition-43/)
   * Git as database (with own query language):
-    * [GitRows](https://gitrows.com/) for JSON and CSV files,
+    * [GitRows](https://gitrows.com/) for JSON and CSV files
     * [Git as a NoSQL database](https://www.kenneth-truyers.net/2016/10/13/git-nosql-database/) by Kenneth Truyers (2016),
-      mentioned in [Git Rev News #28](https://git.github.io/rev_news/2017/06/14/edition-28/),
+      mentioned in [Git Rev News #28](https://git.github.io/rev_news/2017/06/14/edition-28/)
     * [Turning Git into an application database](https://nede.dev/blog/turning-git-into-an-application-database) by Peter Ruttkay-Nedecký (2019)
-  * SQL for querying Git repo:
+  * SQL for querying Git repos:
     * [Gitbase](https://github.com/src-d/gitbase) by source{d} aka src-d - using MySQL,
       mentioned in [Git Rev News #48](https://git.github.io/rev_news/2019/02/27/edition-48/);
-      note that link [on source{d} site](https://docs.sourced.tech/gitbase) no longer works,
-    * [MergeStat](https://github.com/mergestat/mergestat) - using SQLite,
+      note that the link [on the source{d} site](https://docs.sourced.tech/gitbase) no longer works
+    * [MergeStat](https://github.com/mergestat/mergestat) - using SQLite
     * [Gitana](https://livablesoftware.com/gitana-sql-git-repository-inspector/)
       ([repo](https://github.com/SOM-Research/Gitana), [docs](http://gitanadocs.getforge.io/), [paper](https://www.researchgate.net/publication/279058070_Gitana_a_SQL-based_Git_Repository_Inspector))- using MySQL
       _(not mentioned in those articles, possibly because it started as a research project)_,
       mentioned in [Git Rev News #7](https://git.github.io/rev_news/2015/09/09/edition-7/)
-      and [#48](https://git.github.io/rev_news/2019/02/27/edition-48/),
-  * storing database in Git:
-    * [SQLite](https://sqlite.org) where databases are files,
-    * [gitSQL](https://github.com/gitsql) exporting flat file SQL statements of objects from the database to store in the Git repository
+      and [#48](https://git.github.io/rev_news/2019/02/27/edition-48/)
+  * storing a database in Git:
+    * [SQLite](https://sqlite.org) where databases are files
+    * [gitSQL](https://github.com/gitsql) exporting flat file SQL statements of objects from the database for storage in a Git repository
 
 
 __Git tools and sites__
