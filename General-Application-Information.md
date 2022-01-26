@@ -216,7 +216,7 @@ guidance to improve the proposal and avoid the above potential issues.
 
 The process of reviewing microproject patches and applications on the
 mailing list can take a lot of time. Depending on your experience and
-the tools you are already familiar or not with, it can also take some
+the tools you are already familiar with or not, it can also take some
 time to set up and get used to properly sending emails and patches to
 the mailing list, interacting with people on the mailing list, reading
 the documentation, getting used to the code base, etc. That's why we
