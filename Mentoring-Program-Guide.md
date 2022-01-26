@@ -151,7 +151,7 @@ messaging group they all belong to), though we know it's not always
 possible or practical when you are blocked.
 
 It could be OK to discuss personal or technical things or anything not
-directly related to your project with only one of your mentors, (like
+directly related to your project with only one of your mentors (like
 with anyone else). Just ask them.
 
 If you prefer to have a completely fixed schedule from the start as
