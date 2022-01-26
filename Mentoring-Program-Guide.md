@@ -57,7 +57,7 @@ the Git community, including your mentors. Your blog is also something
 that can help you in your career by reflecting positively on your
 abilities and dedication. A good example is Matheus' GSoC blog posts:
 
-https://matheustavares.gitlab.io/gsoc
+https://matheustavares.gitlab.io/tags/gsoc/
 
 ## Regular updates
 
