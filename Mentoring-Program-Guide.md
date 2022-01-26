@@ -93,11 +93,11 @@ following week.
 In the blog post update and your emails to your mentors and the
 mailing list, it is important that you cover all the following topics:
 
-1) what you have done since last update and how  
-2) what is blocking you if anything  
-3) what you find difficult to do or understand  
-4) what things you think should be easier  
-5) what you are planning to work on and how  
+1. what you have done since last update and how
+2. what is blocking you if anything
+3. what you find difficult to do or understand
+4. what things you think should be easier
+5. what you are planning to work on and how
 
 The reason we ask for 2), 3) and 4) is that often interns or students
 don't know about things, like existing documentation, historical
