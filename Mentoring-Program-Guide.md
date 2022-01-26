@@ -38,15 +38,12 @@ You might want to check which blogging tools previous Outreachy
 interns and GSoC students used. Using a Git related tools is of course
 a good idea.
 
-For example using GitLab and GitLab pages:
-
-https://mirucam.gitlab.io/outreachy_blog/
-https://matheustavares.gitlab.io/
-https://gitlab.com/MatheusTavares/matheustavares.gitlab.io/
+- [Miriam Rubio's Outreachy intership experiences](https://mirucam.gitlab.io/outreachy_blog/)
+- [Matheus Tavares's Blog](https://matheustavares.gitlab.io/) [ [source](https://gitlab.com/MatheusTavares/matheustavares.gitlab.io/) ]
 
 Using GitHub:
 
-https://charvi-077.github.io/
+- [Charvi Mendiratta's Outreachy Internship Experiences](https://charvi-077.github.io/) [ [source](https://github.com/charvi-077/charvi-077.github.io) ]
 
 If you already have something setup using other tools though, even if
 it's not Git based, it's perfectly OK to use what you already have,
@@ -57,7 +54,7 @@ the Git community, including your mentors. Your blog is also something
 that can help you in your career by reflecting positively on your
 abilities and dedication. A good example is Matheus' GSoC blog posts:
 
-https://matheustavares.gitlab.io/tags/gsoc/
+[Matheus Tavares' GSoC posts](https://matheustavares.gitlab.io/tags/gsoc/)
 
 ## Regular updates
 
