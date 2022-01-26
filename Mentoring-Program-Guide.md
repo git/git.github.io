@@ -64,20 +64,20 @@ planning to work on and how.
 
 The best way to update everyone about your work is probably to post on
 your blog. We understand though that you might not want to put
-everything you might want to say on your blog. Also people on the Git
-mailing list might be interested to know that you published something
-on your blog, so that they can give you some help or feedback about
-your next steps or problems you are facing. Your mentors should be
-notified too that you posted something.
+everything you might want to say on your blog.
 
-So we think that you might want to email the mailing list to notify
-every one about each new blog post. If you don't feel like doing that,
+People on the Git mailing list might be interested to know that you
+published something on your blog, so that they can give you some help
+or feedback about your next steps or problems you are facing. So we
+think that you might want to email the mailing list to notify every
+one about each new blog post. If you don't feel like doing that,
 we might find an alternative solution, but letting people know is
 often a good idea to get help and suggestions. You can also take
 advantage of the notification email to ask for help or to ask
 questions related to issues you have.
 
-To notify your mentors, you can either cc them when you email the
+Your mentors should be notified too that you posted something. To
+notify your mentors, you can either cc them when you email the
 mailing list, or you can send them a separate email. In a separate
 email you might add things that you might not want to post on your
 blog or to the mailing list.
