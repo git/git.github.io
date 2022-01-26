@@ -341,3 +341,12 @@ A few things that you might want to do are:
 - Don't forget using [GSoC] or [Outreachy].
 
 - Don't forget using [RFC] or [WIP], if it's relevant.
+
+# Conclusion
+
+Hope you got an idea about how things usually go during the internship.
+As a reminder, don't be surprised if your mentors ask for things that
+are a bit different than what is described here. Typically your mentors
+will expect that you become more autonomous.
+
+Wishing you luck during the internship!
