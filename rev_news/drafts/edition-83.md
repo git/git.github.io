@@ -35,6 +35,23 @@ This edition covers what happened during the month of December 2021.
 
 ## Releases
 
++ Git [2.35.0](https://public-inbox.org/git/xmqqee4x3pij.fsf@gitster.g/),
+[2.35.0-rc2](https://public-inbox.org/git/xmqqwniui6wd.fsf@gitster.g/),
+[2.35.0-rc1](https://public-inbox.org/git/xmqq35lp68rw.fsf@gitster.g/),
+[2.35.0-rc0](https://public-inbox.org/git/xmqq7db7xfgn.fsf@gitster.g/)
++ Git for Windows [2.35.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.35.0.windows.1),
+[2.35.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.35.0-rc2.windows.1),
+[2.35.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.35.0-rc1.windows.1),
+[2.35.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.35.0-rc0.windows.1)
++ GitLab [14.7](https://about.gitlab.com/releases/2022/01/22/gitlab-14-7-released/)
+[14.6.3](https://about.gitlab.com/releases/2022/01/17/gitlab-14-6-3-released/),
+[14.6.2, 14.5.3, and 14.4.5](https://about.gitlab.com/releases/2022/01/11/security-release-gitlab-14-6-2-released/),
+[14.6.1](https://about.gitlab.com/releases/2022/01/04/gitlab-14-6-1-released/)
++ GitHub Enterprise [3.3.2](https://help.github.com/enterprise-server@3.3/admin/release-notes#3.3.2),
+[3.2.7](https://help.github.com/enterprise-server@3.2/admin/release-notes#3.2.7),
+[3.1.15](https://help.github.com/enterprise-server@3.1/admin/release-notes#3.1.15),
+[3.0.23](https://help.github.com/enterprise-server@3.0/admin/release-notes#3.0.23)
+
 ## Other News
 
 __Various__
