@@ -344,9 +344,11 @@ A few things that you might want to do are:
 
 # Conclusion
 
-Hope you got an idea about how things usually go during the internship.
-As a reminder, don't be surprised if your mentors ask for things that
-are a bit different than what is described here. Typically your mentors
-will expect that you become more autonomous.
+Hope you got an idea about how things usually go during the mentoring
+period of a mentoring program such as GSoC or Outreachy. As a reminder,
+don't be surprised if your mentors ask for things that are a bit different
+than what is described here. Typically your mentors will expect that you
+become more autonomous over time and will adjust things depending on
+how autonomous you already are.
 
-Wishing you luck during the internship!
+Wishing you luck during your mentoring period!
