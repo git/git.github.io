@@ -35,13 +35,12 @@ This edition covers what happened during the month of December 2021.
 
 ## Releases
 
-* [Highlights from Git 2.35](https://github.blog/2022-01-24-highlights-from-git-2-35/)
-  by Taylor Blau on GitHub Blog.
-
 ## Other News
 
 __Various__
 
+* [Highlights from Git 2.35](https://github.blog/2022-01-24-highlights-from-git-2-35/)
+  by Taylor Blau on GitHub Blog.
 * [Linux Foundation launches Open Source Software Development, Linux, and **Git** certification](https://www.zdnet.com/article/linux-foundation-launches-open-source-software-development-linux-git-certification/),
   and three new training courses on the edX platform (including
   [Git for Distributed Software Development (LFD109x)](https://www.edx.org/course/git-for-distributed-development)).
