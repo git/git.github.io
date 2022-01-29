@@ -25,9 +25,86 @@ This edition covers what happened during the month of December 2021.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [Custom subcommand help handlers](https://lore.kernel.org/git/CABceR4ZW4rRWZnH0ZBkWty_H84Z4CmXque_LO+1edETEWrO8PQ@mail.gmail.com/)
+
+  Sean Allred wrote to the mailing list saying that in his company he
+  is distributing a Git subcommand he calls `git-foo`, which can
+  display its own help, but he was struggling to make this work.
+
+  Running `git foo --help` doesn't pass `--help` to `git-foo`, but
+  instead it is rewritten internally in Git to `git help foo`, which
+  tries to find and then display an help page for `git-foo`. This
+  could have worked if Sean could install an help page for `git-foo`
+  along with the help pages for regular Git commands.
+
+  On Windows though by default help pages are displayed in the HTML
+  format, instead of in the 'man' or 'info' format, and these pages
+  are expected to be in a Git4Win-controlled installation directory
+  that he'd rather not touch.
+
+  One solution he suggested would be to not rewrite `git foo --help`
+  to `git help foo`, when the `foo` command is not a builtin.
+
+  Ævar Arnfjörð Bjarmason replied to this suggestion that this might
+  not please everyone, as `git send-email --help` and
+  `git annex --help` are currently expected to show the manual, even
+  though these commands are not builtins.
+
+  Dscho, alias Johannes Schindelin, also replied to Sean, that just
+  looking whether the command is a builtin or not, might not be enough
+  as Git also install scripts or executables, and provided some
+  example code implementing an `is_in_git_exec_path()` function.
+
+  Ævar and Dscho then discussed a bit if such a function was needed as
+  Ævar pointed that we already have a way to dump builtins, other known
+  commands and commands unknown to Git, using respectively:
+
+    - `git --list-cmds=builtins`
+    - `git --list-cmds=main`
+    - `git --list-cmds=others`
+
+  Meanwhile Erik Cervin Edin replied to Ævar's initial reply to Sean
+  that, when a Git alias is configured for `foo` and it's used with
+  `--help`, the user is told that `foo` is an alias for another
+  command and the help page for the other command is displayed. So he
+  suggested doing something similar for non-builtin commands that are
+  missing help pages.
+
+  Erik also mentioned that using `git-foo --help` directly or
+  `git foo -h`, instead of `git foo --help`, would allow `git-foo` to
+  handle everything.
+
+  brian m. carlson replied to Erik that for man pages it might not be
+  possible to distinguish a missing page from another error. He then
+  wondered if there is a similar environment variable as `MANPATH` for
+  HTML pages, as `MANPATH` on Unix systems instructs `man` to search
+  for pages in the directories specified in this variable. He also
+  suggested installing the HTML documentation alongside Git's, as it's
+  expected on Unix systems to have all man pages installed into the
+  same place.
+
+  Junio Hamano, the Git maintainer, then agreed to this suggestion.
+
+  Erik replied to brian and Junio that there is no standard or
+  convention around HTML documentation, and talked about the
+  `help.htmlPath` configuration variable that can be used to tell Git
+  where to look for HTML pages. He also suggested falling back to
+  searching a missing HTML page at the path of the command.
+
+  The discussion continued for sometime between Erik, Junio, Philip
+  Oakley and Dscho, especially around the topic of aliases.
+
+  Then Junio spotted the `GIT_HTML_PATH` environment variable in the
+  code, and noticed that it could currently be used to specify just
+  one directory for HTML pages, while `MANPATH` can be a
+  colon-separated list of directories. So he suggested changing the
+  code to allow `GIT_HTML_PATH` to also be a colon-separated list of
+  directories. This would allow people to also install HTML pages in
+  directories without needing administrator rights.
+
+  It looks like no one has yet started working on this though.
 
 <!---
 ## Developer Spotlight:
