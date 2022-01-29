@@ -1,7 +1,6 @@
 ---
 layout: default
-title: Outreachy Winter 2021-2022 Applicant Microprojects
-navbar: false
+title: SoC 2022 Applicant Microprojects
 ---
 
 ## Introduction

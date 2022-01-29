@@ -1,6 +1,7 @@
 ---
 layout: default
 title: SoC 2021 Ideas
+navbar: false
 ---
 
 This is the idea page for Summer of Code 2021 for Git.
