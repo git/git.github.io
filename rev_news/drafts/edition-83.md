@@ -41,8 +41,8 @@ This edition covers what happened during the month of December 2021.
 
   On Windows though by default help pages are displayed in the HTML
   format, instead of in the 'man' or 'info' format, and these pages
-  are expected to be in a Git4Win-controlled installation directory
-  that he'd rather not touch.
+  are expected to be in a Git for Windows controlled installation
+  directory that he'd rather not touch.
 
   One solution he suggested would be to not rewrite `git foo --help`
   to `git help foo`, when the `foo` command is not a builtin.
