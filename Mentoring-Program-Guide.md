@@ -38,15 +38,12 @@ You might want to check which blogging tools previous Outreachy
 interns and GSoC students used. Using a Git related tools is of course
 a good idea.
 
-For example using GitLab and GitLab pages:
-
-https://mirucam.gitlab.io/outreachy_blog/
-https://matheustavares.gitlab.io/
-https://gitlab.com/MatheusTavares/matheustavares.gitlab.io/
+- [Miriam Rubio's Outreachy intership experiences](https://mirucam.gitlab.io/outreachy_blog/)
+- [Matheus Tavares's Blog](https://matheustavares.gitlab.io/) [ [source](https://gitlab.com/MatheusTavares/matheustavares.gitlab.io/) ]
 
 Using GitHub:
 
-https://charvi-077.github.io/
+- [Charvi Mendiratta's Outreachy Internship Experiences](https://charvi-077.github.io/) [ [source](https://github.com/charvi-077/charvi-077.github.io) ]
 
 If you already have something setup using other tools though, even if
 it's not Git based, it's perfectly OK to use what you already have,
@@ -57,7 +54,7 @@ the Git community, including your mentors. Your blog is also something
 that can help you in your career by reflecting positively on your
 abilities and dedication. A good example is Matheus' GSoC blog posts:
 
-https://matheustavares.gitlab.io/gsoc
+[Matheus Tavares' GSoC posts](https://matheustavares.gitlab.io/tags/gsoc/)
 
 ## Regular updates
 
@@ -67,20 +64,20 @@ planning to work on and how.
 
 The best way to update everyone about your work is probably to post on
 your blog. We understand though that you might not want to put
-everything you might want to say on your blog. Also people on the Git
-mailing list might be interested to know that you published something
-on your blog, so that they can give you some help or feedback about
-your next steps or problems you are facing. Your mentors should be
-notified too that you posted something.
+everything you might want to say on your blog.
 
-So we think that you might want to email the mailing list to notify
-every one about each new blog post. If you don't feel like doing that,
+People on the Git mailing list might be interested to know that you
+published something on your blog, so that they can give you some help
+or feedback about your next steps or problems you are facing. So we
+think that you might want to email the mailing list to notify every
+one about each new blog post. If you don't feel like doing that,
 we might find an alternative solution, but letting people know is
 often a good idea to get help and suggestions. You can also take
 advantage of the notification email to ask for help or to ask
 questions related to issues you have.
 
-To notify your mentors, you can either cc them when you email the
+Your mentors should be notified too that you posted something. To
+notify your mentors, you can either cc them when you email the
 mailing list, or you can send them a separate email. In a separate
 email you might add things that you might not want to post on your
 blog or to the mailing list.
@@ -96,11 +93,11 @@ following week.
 In the blog post update and your emails to your mentors and the
 mailing list, it is important that you cover all the following topics:
 
-1) what you have done since last update and how  
-2) what is blocking you if anything  
-3) what you find difficult to do or understand  
-4) what things you think should be easier  
-5) what you are planning to work on and how  
+1. what you have done since last update and how
+2. what is blocking you if anything
+3. what you find difficult to do or understand
+4. what things you think should be easier
+5. what you are planning to work on and how
 
 The reason we ask for 2), 3) and 4) is that often interns or students
 don't know about things, like existing documentation, historical
@@ -154,7 +151,7 @@ messaging group they all belong to), though we know it's not always
 possible or practical when you are blocked.
 
 It could be OK to discuss personal or technical things or anything not
-directly related to your project with only one of your mentors, (like
+directly related to your project with only one of your mentors (like
 with anyone else). Just ask them.
 
 If you prefer to have a completely fixed schedule from the start as
@@ -344,3 +341,14 @@ A few things that you might want to do are:
 - Don't forget using [GSoC] or [Outreachy].
 
 - Don't forget using [RFC] or [WIP], if it's relevant.
+
+# Conclusion
+
+Hope you got an idea about how things usually go during the mentoring
+period of a mentoring program such as GSoC or Outreachy. As a reminder,
+don't be surprised if your mentors ask for things that are a bit different
+than what is described here. Typically your mentors will expect that you
+become more autonomous over time and will adjust things depending on
+how autonomous you already are.
+
+Wishing you luck during your mentoring period!
