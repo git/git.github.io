@@ -54,7 +54,7 @@ This edition covers what happened during the month of December 2021.
 
   Dscho, alias Johannes Schindelin, also replied to Sean saying that just
   looking whether the command is a builtin or not might not be enough,
-  as Git also install scripts or executables, and provided some
+  as Git also installs scripts or executables, and provided some
   example code implementing an `is_in_git_exec_path()` function.
 
   Ævar and Dscho then discussed a bit if such a function was needed as
