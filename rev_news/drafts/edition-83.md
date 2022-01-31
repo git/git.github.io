@@ -171,6 +171,12 @@ __Light reading__
   by Michael Meli, Matthew R. McNiece, Bradley Reaves in NDSS 2019;
   via [the morning paper article](https://blog.acolyer.org/2019/04/08/how-bad-can-it-git-characterizing-secret-leakage-in-public-github-repositories/)
   by Adrian Colyer.
+* [The Pull Request Paradox: Merge Faster by Promoting Your PR](https://dzone.com/articles/the-pull-request-paradox-merge-faster-by-promoting)
+  Adding more context to our Pull Requests got them merged two days faster. Here's how it works. By Dan Lines.
+* [What's in a Good Error Message?](https://www.morling.dev/blog/whats-in-a-good-error-message/)
+  Some thoughts on ensuring error messages are useful to the reader. By Gunnar Morling.
+* [How to Write Better Git Commit Messages – A Step-By-Step Guide](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
+  Ever wondered how you can improve your Git commit messages? Suggestions by Natalie Pina.
 
 __Git tools and sites__
 
