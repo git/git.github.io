@@ -175,6 +175,8 @@ __Light reading__
   Adding more context to our Pull Requests got them merged two days faster. Here's how it works. By Dan Lines.
 * [What's in a Good Error Message?](https://www.morling.dev/blog/whats-in-a-good-error-message/)
   Some thoughts on ensuring error messages are useful to the reader. By Gunnar Morling.
+* [Let's Talk about Error Messages](https://www.codeproject.com/Articles/5322503/Lets-talk-about-Error-Messages)
+  More thoughts on error messages, by Brien King.
 
 __Git tools and sites__
 
