@@ -30,30 +30,30 @@ This edition covers what happened during the month of December 2021.
 * [Custom subcommand help handlers](https://lore.kernel.org/git/CABceR4ZW4rRWZnH0ZBkWty_H84Z4CmXque_LO+1edETEWrO8PQ@mail.gmail.com/)
 
   Sean Allred wrote to the mailing list saying that in his company he
-  is distributing a Git subcommand he calls `git-foo`, which can
+  is distributing a Git subcommand he named `git-foo`, which can
   display its own help, but he was struggling to make this work.
 
   Running `git foo --help` doesn't pass `--help` to `git-foo`, but
   instead it is rewritten internally in Git to `git help foo`, which
-  tries to find and then display an help page for `git-foo`. This
-  could have worked if Sean could install an help page for `git-foo`
+  tries to find and then display a help page for `git-foo`. This
+  could have worked if Sean could install such a page for `git-foo`
   along with the help pages for regular Git commands.
 
-  On Windows though by default help pages are displayed in the HTML
-  format, instead of in the 'man' or 'info' format, and these pages
+  On Windows, though, by default help pages are displayed in HTML
+  format instead of the 'man' or 'info' formats, and these pages
   are expected to be in a Git for Windows controlled installation
   directory that he'd rather not touch.
 
   One solution he suggested would be to not rewrite `git foo --help`
-  to `git help foo`, when the `foo` command is not a builtin.
+  to `git help foo` if the `foo` command is not a builtin.
 
   Ævar Arnfjörð Bjarmason replied to this suggestion that this might
   not please everyone, as `git send-email --help` and
-  `git annex --help` are currently expected to show the manual, even
+  `git annex --help` were currently expected to show the manual, even
   though these commands are not builtins.
 
-  Dscho, alias Johannes Schindelin, also replied to Sean, that just
-  looking whether the command is a builtin or not, might not be enough
+  Dscho, alias Johannes Schindelin, also replied to Sean saying that just
+  looking whether the command is a builtin or not might not be enough,
   as Git also install scripts or executables, and provided some
   example code implementing an `is_in_git_exec_path()` function.
 
@@ -66,9 +66,9 @@ This edition covers what happened during the month of December 2021.
     - `git --list-cmds=others`
 
   Meanwhile Erik Cervin Edin replied to Ævar's initial reply to Sean
-  that, when a Git alias is configured for `foo` and it's used with
+  saying that when a Git alias is configured for `foo` and it's used with
   `--help`, the user is told that `foo` is an alias for another
-  command and the help page for the other command is displayed. So he
+  command, and the help page for the other command is displayed. So he
   suggested doing something similar for non-builtin commands that are
   missing help pages.
 
@@ -87,22 +87,22 @@ This edition covers what happened during the month of December 2021.
 
   Junio Hamano, the Git maintainer, then agreed to this suggestion.
 
-  Erik replied to brian and Junio that there is no standard or
+  Erik replied to brian and Junio that there was no standard or
   convention around HTML documentation, and talked about the
-  `help.htmlPath` configuration variable that can be used to tell Git
+  `help.htmlPath` configuration variable that could be used to tell Git
   where to look for HTML pages. He also suggested falling back to
-  searching a missing HTML page at the path of the command.
+  searching a missing HTML page starting at the path of the command.
 
-  The discussion continued for sometime between Erik, Junio, Philip
+  The discussion continued for some time between Erik, Junio, Philip
   Oakley and Dscho, especially around the topic of aliases.
 
   Then Junio spotted the `GIT_HTML_PATH` environment variable in the
-  code, and noticed that it could currently be used to specify just
+  code, and noticed that it can currently be used to specify just
   one directory for HTML pages, while `MANPATH` can be a
   colon-separated list of directories. So he suggested changing the
   code to allow `GIT_HTML_PATH` to also be a colon-separated list of
-  directories. This would allow people to also install HTML pages in
-  directories without needing administrator rights.
+  directories. This would allow people to install HTML pages in
+  directories without the need of administrator rights.
 
   It looks like no one has yet started working on this though.
 
@@ -174,10 +174,10 @@ __Light reading__
 
 __Git tools and sites__
 
-* [git-perl-critic](https://github.com/Ovid/git-critic) - Command-line interface for
+* [git-perl-critic](https://github.com/Ovid/git-critic) - Command-line interface for the
   Perl [Git::Critic](https://metacpan.org/pod/Git::Critic) module,
   reporting [Perl::Critic](https://metacpan.org/pod/Perl::Critic) failures
-  (code that is contrary to Perl best-practices) only on git changes in the current branch.
+  (that is, code violating Perl best practices) only on lines changed in the current Git branch.
   By Curtis "Ovid" Poe.
 * [Dura](https://github.com/tkellogg/dura) is a background process that watches
   your Git repositories and commits your uncommitted changes without impacting HEAD,
@@ -188,14 +188,14 @@ __Git tools and sites__
   is a Bash shell script to clone a large repo without retrying again and again,
   by using a deepening shallow clone.
 * [git-pull-run](https://www.npmjs.com/package/git-pull-run) is an npm package
-  which automatically runs commands like `npm install` when fetching changes from git,
-  but only if certain files have changed.  Extended version of script presented in
+  which automatically runs commands like `npm install` when fetching changes from Git,
+  but only if certain files have changed.  Extended version of the script presented in
   [Automatically Install NPM Dependencies on Git Pull](https://dev.to/zirkelc/automatically-install-npm-dependencies-on-git-pull-bg0).
-* [Husky.Net](https://github.com/alirezanet/Husky.Net) is git hooks manager for .NET,
-  among others making it possible to run linters against staged git files.
-  Inspired by [husky](https://github.com/typicode/husky)
-  and [lint-staged](https://github.com/okonet/lint-staged)
-  and a few other tools, and by [Using C# code in your git hooks](https://kaylumah.nl/2019/09/07/using-csharp-code-your-git-hooks.html)
+* [Husky.Net](https://github.com/alirezanet/Husky.Net) is a Git hooks manager for .NET,
+  among others making it possible to run linters against staged Git files.
+  Inspired by [husky](https://github.com/typicode/husky),
+  [lint-staged](https://github.com/okonet/lint-staged),
+  a few other tools, and by [Using C# code in your git hooks](https://kaylumah.nl/2019/09/07/using-csharp-code-your-git-hooks.html)
   article by Max Hamulyák (2019).
    * [lint-staged](https://github.com/okonet/lint-staged) was first mentioned in
      [Git Rev News #45](https://git.github.io/rev_news/2018/11/21/edition-45/)
