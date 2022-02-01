@@ -25,14 +25,14 @@ Before then, you should fill out an
 and complete a small [coding
 project](https://wiki.gnome.org/action/show/Outreachy?action=show&redirect=OutreachProgramForWomen#Make_a_Small_Contribution).
 We have a list of
-[microprojects](../SoC-2016-Microprojects), but
+[microprojects](https://git.github.io/SoC-2016-Microprojects), but
 you may also work with a potential mentor to come up with a contribution
 related to your proposed project.
 
 ## Project Ideas
 
 You can find a list of project ideas on our [ideas
-page](../SoC-2016-Ideas). Note that this just a list of suggested
+page](https://git.github.io/SoC-2016-Ideas). Note that this just a list of suggested
 projects; we are happy to hear proposals for new projects. If you would
 like to propose an idea, please make sure to solicit feedback from the
 mailing list (see below) and find someone willing to be a mentor for it.

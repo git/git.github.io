@@ -199,7 +199,7 @@ fast, scalable, distributed revision control system
 
 ## Logo
 
-![Git Logo](/images/Git-Logo-1788C.png)
+![Git Logo](https://git.github.io/images/Git-Logo-1788C.png)
 
 ## Primary Open Source License
 

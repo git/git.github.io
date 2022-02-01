@@ -14,12 +14,12 @@ some of the interesting Git-related articles, tools and projects we come across.
 
 ## Subscribe
 
-Subscribe to Git Rev News by [RSS/atom](/feed.xml) or by signing up for the
+Subscribe to Git Rev News by [RSS/atom](https://git.github.io/feed.xml) or by signing up for the
 [Email Newsletter](http://eepurl.com/bjP2WT).
 
 ## Archives
 
-You can find a listing of all previous editions on the [Git Rev News Archive](/rev_news/archive/) page.
+You can find a listing of all previous editions on the [Git Rev News Archive](https://git.github.io/rev_news/archive/) page.
 
 ## Contribute
 

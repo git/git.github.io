@@ -31,7 +31,7 @@ GPLv2
 
 ## Logo URL
 
-![Git Logo](/images/logo.png)
+![Git Logo](https://git.github.io/images/logo.png)
 
 ## Ideas list
 
