@@ -309,3 +309,32 @@ one of those options.
 You can search the mailing list for words like "low hanging fruit", or
 "low-hanging fruits", "hint, hint", "later", "we should", "I plan
 to"...
+
+## How to introduce yourself to the community
+
+It's likely that you will introduce yourself to the community around
+the same time you are going to start working on a micro-project.
+
+We don't require you to send us a special introductory email or to
+tell us about your skills, interests, experience, background,
+etc. Feel free to tell us what you want about yourself if you wish
+though.
+
+But please, make it clear that you are interested in a specific
+mentoring program and use the right tag, like [GSoC], [Outreachy], etc
+at the beginning of the subject of your emails.
+
+As we usually don't know your interests, skills, experience,
+background, etc, it's hard for us to select a micro-project for
+you, and it's part of your job as an applicant to research a good
+micro-project for you. It will show us that you will be able to
+select a good project for you and properly research it.
+
+You can ask for help if there are things you don't understand in a
+micro-project description, or if you have some trouble working on your
+micro-project or even finding a micro-project. But please be very
+specific in your questions and tell us in details what you searched or
+tried, what you expected and what didn't work as you
+expected. Something like "I couldn't find a good micro-project for
+me", for example, doesn't tell us much, and doesn't give us any idea
+about how we could help you.
