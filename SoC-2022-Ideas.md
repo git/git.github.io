@@ -71,3 +71,27 @@ Languages: C, shell(bash)
 Co-Mentors:
 * Derrick Stolee `<derrickstolee@github.com>`
 * Victoria Dye `<vdye@github.com>`
+
+### Unify ref-filter formats with other pretty formats
+
+Git has an old problem of duplicated implementations of some
+logic. For example, Git had at least 4 different implementations to
+format command output for different commands.
+
+Our previous GSoC students and Outreachy interns unified some of the
+formating logic into
+[ref-filter](https://github.com/git/git/blob/master/ref-filter.h) and
+got rid of similar logic in some command specific files. Current task
+is to continue this work and reuse ref-filter formatting logic in
+[pretty](https://github.com/git/git/blob/master/pretty.h).
+
+See:
+
+  - this discussion <https://lore.kernel.org/git/87pnsfkvk1.fsf@0x63.nu/T/#u>
+  - Hariom Verma's GSoC 2020 final report <https://harry-hov.github.io/blogs/posts/the-final-report>
+
+Project Size: Medium
+Languages: C, shell(bash)
+
+Possible mentors:
+* Christian Couder `<christian.couder@gmail.com>`
