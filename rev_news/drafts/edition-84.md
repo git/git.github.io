@@ -35,6 +35,7 @@ This edition covers what happened during the month of January 2022.
 
 ## Releases
 
++ Tower for Mac [8.0](https://www.git-tower.com/release-notes/mac) ([What's New in Tower 8 video](https://youtu.be/US4W1lNEJCE))
 
 ## Other News
 
