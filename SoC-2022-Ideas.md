@@ -66,6 +66,7 @@ expectation that _all_ will be completed during the project).
 * `git rerere`
 
 Project Size: Medium
+
 Languages: C, shell(bash)
 
 Co-Mentors:
@@ -91,6 +92,7 @@ See:
   - Hariom Verma's GSoC 2020 final report <https://harry-hov.github.io/blogs/posts/the-final-report>
 
 Project Size: Medium
+
 Languages: C, shell(bash)
 
 Possible mentors:
