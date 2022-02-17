@@ -97,3 +97,86 @@ Languages: C, shell(bash)
 
 Possible mentors:
 * Christian Couder `<christian.couder@gmail.com>`
+
+### Reachability bitmap improvements
+
+[Reachability bitmaps][vmg-bitmaps] allow Git to quickly answer queries about
+which objects are reachable from a given commit. Instead of a commits parents
+and its root tree recursively, we can use a precomputed set of objects encoded
+as a bit-string and stored in a `.bitmap` file to answer the query near
+instantaneously.
+
+There are a couple of areas where bitmap performance itself could be improved:
+
+  - Individual bitmaps are stored compressed (with [EWAH][ewah]), but we have
+    some sense that it can be slow to decompress individual bitmaps (which we
+    have to do in order to read them, but also to do things like negate them, OR
+    and AND them together, etc).
+
+    One possible project could be to explore using an alternative compression
+    scheme (like the more modern [Roaring+Run][roaring-run] technique) to see if
+    we can improve overall bitmap performance by reducing the amount of time it
+    takes to read an individual bitmap.
+
+    This project would entail designing a suite of performance tests, along with
+    any necessary changes to the `.bitmap` format necessary to accommodate the
+    new compression scheme, making those changes, and then running the
+    performance tests to measure the resulting speed-up.
+
+  - Loading a `.bitmap` file can be slow for large bitmaps. This is because we
+    have to read the file sequentially in order to discover the offset of each
+    bitmap within the file.
+
+    It should be possible to shave off some time from this step by including a
+    small "table of contents" that indicates which commits have bitmaps, and
+    where to find them in the `.bitmap` file. In the past [some efforts have
+    been made][ttaylorr-commit-table] to do this. But we should undertake more
+    performance testing to prove whether this is or isn't a good idea before
+    submitting a patch series in this area.
+
+  - [Recent changes][ttaylorr-bitmaps] have made it possible to repack a
+    repository's objects into a sequence of packs whose object count forms a
+    geometric progression (e.g., if the first pack has `N` objects, the next
+    pack will have at least `2N` objects, then `4N` objects and so on).
+
+    But even when repacking a repository in this way, regenerating its bitmaps
+    can still take a long time. One possible approach to this would be a new
+    mode of generating bitmaps that is more "incremental" in nature. In other
+    words, a mode which only adds new bitmaps for commits introduced between
+    successive bitmap generations.
+
+    Because of how individual bitmaps are generated, this will result in only
+    having to traverse objects between the new bitmap tips and old ones,
+    resulting in overall faster bitmap generation.
+
+    Like the above, this project would involve designing a set of performance
+    tests, implementing the changes required to introduce this new type of
+    bitmap generation, and then running those tests against your new code.
+
+  - Other (larger, longer-term) ideas include: rethinking how we select which
+    commits receive bitmaps (and/or having bitmaps represent multiple commits
+    instead of just one to "summarize" small sets of commits), or improving how
+    we handle queries that use a bitmap but do not have complete coverage.
+    GSoC students should consider these projects more advanced, and thus they
+    are not explained in as much detail here. Instead, this point serves to
+    illustrate that there are opportunities to explore larger projects should we
+    decide they are more interesting than the above or we have time to take them
+    on.
+
+This project will give GSoC students a broad overview of reachability bitmaps,
+with the goal of improving their performance in some way or another. Students
+can expect hands-on mentorship, but will have the agency to pick one or more of
+the above sub-projects (or create their own!) that interests them most.
+
+Project Size: Medium
+
+Languages: C, shell
+
+Possible mentors:
+* Taylor Blau `<me@ttaylorr.com>`
+
+[vmg-bitmaps]: https://github.blog/2015-09-22-counting-objects/
+[ewah]: https://arxiv.org/abs/0901.3751
+[roaring-run]: https://roaringbitmap.org/about/
+[ttaylorr-commit-table]: https://lore.kernel.org/git/YNuiM8TR5evSeNsN@nand.local/
+[ttaylorr-bitmaps]: https://github.blog/2021-04-29-scaling-monorepo-maintenance/
