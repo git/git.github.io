@@ -97,6 +97,7 @@ Languages: C, shell(bash)
 
 Possible mentors:
 * Christian Couder `<christian.couder@gmail.com>`
+* Hariom Verma `<hariom18599@gmail.com>`
 
 ### Reachability bitmap improvements
 
