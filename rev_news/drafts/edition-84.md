@@ -29,9 +29,189 @@ This edition covers what happened during the month of January 2022.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Eric Sunshine
+
+_(Eric has already been interviewed in [Git Rev News #7, September 2015](https://git.github.io/rev_news/2015/09/09/edition-7/#developer-spotlight-eric-sunshine).)_
+
+* Since your previous interview, have there been changes in who you
+  are and what you do?
+
+  About a year after the previous interview, taking on the role of
+  caregiver for a family member consumed the bulk of my time to the
+  point that I was unable to keep up with the Git project or contribute
+  in any meaningful way, and was effectively absent from the project
+  for at least a year and a half. Since returning to the project, my
+  contributions have been far more scarce due to time constraints of
+  "real life" and a new job which I started a few years ago.
+
+* You were a long-time RCS, CVS, and Subversion user. Do you miss
+  any features of those version controls systems in Git?
+
+  I can say without hesitation that I do not miss any features of those
+  older version control systems. In fact, I can report (perhaps
+  happily) that I have mostly forgotten how to use them. This is true
+  of Subversion, in particular, in which I have had to consult the
+  documentation to tackle even the simplest tasks the couple times I
+  had to use it in the last few years, despite having been a longtime
+  and experienced user.
+
+* How are your contributions to Git these days? Code contributions?
+  Code reviews? Others?
+
+  In the past, I was generally able to keep up with the mailing list
+  and read most or all patches submitted to the project and often
+  provide detailed reviews, but my Git time is fairly limited these
+  days, so I have to be much more selective about which topics I follow
+  or participate in.
+
+  Since I contributed quite a bit to the `git worktree` command (and am
+  perhaps an "area expert", especially since Nguyễn Thái Ngọc Duy
+  departed from the project), I pay particular attention to bug reports
+  about that command or topics touching it in some significant fashion.
+  In the case of a bug report, I either provide a fix for the problem
+  myself or help guide some other contributor. In the case of topics
+  which touch `git worktree`, I try to set aside time to review the
+  topic's patches carefully and follow along as the topic progresses.
+
+  That aside, I also provide reviews for other topics when they fit
+  into my limited Git time, and answer the periodic question on the
+  mailing list, or interact in a discussion if I have something
+  meaningful to offer on the subject.
+
+* Are 'ability to stage changes' and 'interactive rebase' still your
+  favorite Git features? Or do you have new favorites?
+
+  Yes they are, and no I do not have new favorites.
+
+  In fact, a few years back, I started using the [`src`](http://www.catb.org/~esr/src/)
+  version control system for managing standalone files (which, although built
+  atop RCS, features a "modern" command line interface quite like Git's
+  and in no way like RCS's interface). Although I find `src` handy for
+  versioning standalone files, I always feel as if my hands are tied
+  when using it since it lacks the very useful features of staging
+  changes and rebasing interactively.
+
+  As a consequence, aside from contributing bug fixes and enhancements
+  to the project, I also spent some time significantly improving the
+  `fast-import` and `fast-export` round trip fidelity of `src`. This
+  allows me to temporarily import a `src` history into Git, which gives
+  me access to Git's staging and interactive rebasing, and finally
+  convert the history back to `src`. Yes, it's a terrible kludge, and a
+  painful one, but at least gives me a way to take advantage of those
+  Git features when absolutely required. I don't use `src` often enough
+  presently to justify the development effort, but adding staging and
+  interactive rebasing to the tool directly would be on my wish list
+  for that project.
+
+* How does your mailing list workflow look like?
+
+  I understand that some developers have special tooling set up to
+  improve the mailing list-centric workflow on the Git project, but I
+  still use a plain email client with no special provisions, and I
+  likely will continue with this set-up as long as it works well enough
+  for my simple needs.
+
+  I do find the Git mailing list archive at <https://lore.kernel.org/git>
+  quite useful and often go spelunking through it when researching some
+  topic or bug report, as well as to fetch sets of patches which I may
+  have already deleted from my local email client. Much more recently,
+  I have also started taking advantage of its NNTP feed (nntp.lore.kernel.org).
+
+* What is your advice for people who want to start Git development?
+  Where and how should they start?
+
+  Getting involved in the Git project can be intimidating (I know, even
+  after all these years, I still feel intimidated each time I submit
+  patches), but people on the project are generally quite friendly, and
+  the goal of reviewers is to help you refine your submission so that
+  it can eventually be accepted into the project. After all, that's why
+  reviewers take the time to read submissions so thoroughly and offer
+  (sometimes in-depth and exhaustive) comments to improve the
+  submission. One thing to note: people who review a lot of patches
+  tend (out of necessity) to be economical with their words, pointing
+  out just the parts of the patch which need improvement and often
+  forgetting to praise the parts which are done well. As such, reviews
+  can sometimes feel cold and off putting, but that is not the
+  intention. Reviewers are genuinely trying to help; they would not put
+  in such effort otherwise.
+
+  A good way to learn how the project works is to subscribe to the
+  mailing list and read submissions from active contributors and
+  reviews from regular reviewers. You can learn by example via passive
+  observation. From a patch or patch series, you can learn not only how
+  a patch series should be constructed, but also how an effective
+  commit message is written. By reading reviews, you can learn what
+  reviewers are looking for and how they interact.
+
+  To become actively involved in the project, submit a patch, even a
+  small one fixing a bug you found or making a minor improvement to
+  documentation. If you have an idea for a functionality improvement or
+  a new feature, send it to the mailing list. Or, if you just want to
+  contribute without having anything particular in mind, monitor the
+  mailing list for bug reports (as I did when I joined the project) and
+  try to devise a fix and submit it to the mailing list in the form of
+  a patch.
+
+  Another way to contribute to the project is by reviewing submissions.
+  Reviews do not need to be extensive or elaborate. A review which
+  points out a minor logic flaw in a patch or highlights a
+  typographical error in a comment or commit message is useful.
+
+* If there's one tip you would like to share with other Git developers,
+  what would it be?
+
+  When reviewing a patch, make it clear which of your comments you
+  expect the submitter to act upon and which suggestions can be left to
+  the discretion of the submitter. This is especially important for new
+  contributors who may not be able to distinguish between mandatory
+  changes to the patch and "it might be nice to have" changes. Also let
+  the submitter know that it is okay to push back on a review comment
+  if necessary since newcomers may not realize that doing so is an
+  option.
+
+  For a submitter, try to respond to each review comment -- even if the
+  response is a simple "OK" or "I agree with all your comments" or "I
+  disagree with this comment because..." -- so that reviewers do not
+  feel that their effort has been wasted.
+
+  (Oops, that's two tips, not one. Sorry.)
+
+* What would you name your most important contribution to Git?
+
+  It is difficult to judge the importance of various contributions. I
+  may instead be able to highlight a few areas in which I have been
+  involved.
+
+  Although I do not do many reviews these days, I used to be an active
+  reviewer, and hope that my review comments and suggestions helped
+  improve various submissions in at least some way.
+
+  From an end-user perspective, perhaps the my most visible
+  contribution to Git has been all the work I did to improve and
+  enhance the `git worktree` command and multiple-worktree support in
+  general (though much of the praise for the mechanics of
+  multiple-worktree support belongs to Nguyễn Thái Ngọc Duy who
+  designed and originated the implementation).
+
+  From a Git developer perspective, perhaps my most valuable(?)
+  contribution is the so-called `chainlint` which identifies a specific
+  type of problem in Git test scripts which could, if undetected, allow
+  a test to miss a failure and erroneously report success.
+
+* What are you doing on the Git project these days, and why?
+
+  As mentioned, my Git time is limited, so my involvement is scaled
+  back. I do try to answer a question here or there or contribute to a
+  discussion if possible, and I review the periodic submission.
+
+  Aside from contributing a few bug-fix patches and introducing the
+  `git worktree repair` command relatively recently, my recent focus
+  has been on a new and much enhanced version of the `chainlint` tool
+  mentioned above. Although the implementation has been complete for
+  well over a half year (at the time of writing), I am still trying to
+  find time to polish the patch series itself for submission. In the
+  meantime, I did manage to submit a couple other somewhat lengthy
+  patch series in preparation for the new `chainlint`.
 
 ## Releases
 
