@@ -215,6 +215,28 @@ _(Eric has already been interviewed in [Git Rev News #7, September 2015](https:/
 
 ## Releases
 
++ Git [2.35.1](https://public-inbox.org/git/xmqq1r0rtfw9.fsf@gitster.g/)
++ Git for Windows [2.35.1(2)](https://github.com/git-for-windows/git/releases/tag/v2.35.1.windows.2),
+[2.35.1(1)](https://github.com/git-for-windows/git/releases/tag/v2.35.1.windows.1)
++ libgit2 [1.4.1](https://github.com/libgit2/libgit2/releases/tag/v1.4.1),
+[1.4.0](https://github.com/libgit2/libgit2/releases/tag/v1.4.0)
++ GitHub Enterprise [3.3.4](https://help.github.com/enterprise-server@3.3/admin/release-notes#3.3.4),
+[3.2.9](https://help.github.com/enterprise-server@3.2/admin/release-notes#3.2.9),
+[3.1.17](https://help.github.com/enterprise-server@3.1/admin/release-notes#3.1.17),
+[3.0.25](https://help.github.com/enterprise-server@3.0/admin/release-notes#3.0.25),
+[3.4.0](https://help.github.com/enterprise-server@3.4/admin/release-notes#3.4.0),
+[3.3.3](https://help.github.com/enterprise-server@3.3/admin/release-notes#3.3.3),
+[3.2.8](https://help.github.com/enterprise-server@3.2/admin/release-notes#3.2.8),
+[3.1.16](https://help.github.com/enterprise-server@3.1/admin/release-notes#3.1.16),
+[3.0.24](https://help.github.com/enterprise-server@3.0/admin/release-notes#3.0.24)
++ GitLab [14.8](https://about.gitlab.com/releases/2022/02/22/gitlab-14-8-released/)
+[14.7.3](https://about.gitlab.com/releases/2022/02/14/gitlab-14-7-3-released/),
+[14.7.2](https://about.gitlab.com/releases/2022/02/08/gitlab-14-7-2-released/),
+[14.7.1, 14.6.4, and 14.5.4](https://about.gitlab.com/releases/2022/02/03/security-release-gitlab-14-7-1-released/)
++ GitKraken [8.3.0](https://support.gitkraken.com/release-notes/current)
++ GitHub Desktop [2.9.9](https://desktop.github.com/release-notes/),
+[2.9.8](https://desktop.github.com/release-notes/),
+[2.9.7](https://desktop.github.com/release-notes/)
 + Tower for Mac [8.0](https://www.git-tower.com/release-notes/mac) ([What's New in Tower 8 video](https://youtu.be/US4W1lNEJCE))
 
 ## Other News
