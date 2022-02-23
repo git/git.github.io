@@ -243,11 +243,39 @@ _(Eric has already been interviewed in [Git Rev News #7, September 2015](https:/
 
 __Various__
 
+* [Include diagrams in your Markdown files with Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/),
+  automatically rendered on GitHub and possibly also in other
+  [CommonMark](https://commonmark.org/) implementations.
+* [More ways to keep your pull request branch up-to-date](https://github.blog/changelog/2022-02-03-more-ways-to-keep-your-pull-request-branch-up-to-date/)
+  on GitHub.
+
 
 __Light reading__
 
+* [Cross-fork object sharing in git (is not a bug)](https://people.kernel.org/monsieuricon/cross-fork-object-sharing-in-git-is-not-a-bug)
+  by Konstantin Ryabitsev.
+* [Getting Started with Git Bash](https://www.git-tower.com/blog/git-bash/)
+  by Bruno Brito on Git Tower blog.
+* [Inside the Hidden Git Folder - Computerphile](https://youtu.be/bSA91XTzeuA)
+  by Dr Max Wilson on Computerphile channel on YouTube.
+  Mind blink and you miss it error about the purpose of the `.git/logs/` folder.
+  Link to the previous video on the topic of Git by Dr Max Wilson can be found in
+  [Git Rev News Edition #83](https://git.github.io/rev_news/2022/01/31/edition-83/)
+  (the previous edition).
+* [Protect secrets in Git with the clean/smudge filter](https://developers.redhat.com/articles/2022/02/02/protect-secrets-git-cleansmudge-filter)
+  by Tomer Figenblat on Red Hat Developer blog.
+* [Git: Switching Unstaged Changes to a New Branch](https://css-tricks.com/git-switching-unstaged-changes-to-a-new-branch/)
+  two ways, by Chris Coyier on CSS-Tricks; read also featured comments.
+
 
 __Git tools and sites__
+
+* [Monorepo.tools](https://monorepo.tools/) -- Everything you need to know about monorepos,
+  and the tools to build them.
+  * [Announcing monorepo.tools](https://blog.nrwl.io/announcing-monorepo-tools-da605afbb5d5)
+    by Juri Strumpflohner for Nrwl.
+  * You can find most recent list of pros and cons of monorepos in
+    [Git Rev News Edition #81](https://git.github.io/rev_news/2021/11/29/edition-81/).
 
 
 ## Credits
