@@ -7,8 +7,9 @@ title: General Microproject Information
 
 It is strongly recommended that people who want to apply to the Git
 project for the Google Summer of Code (GSoC), Outreachy, or other such
-mentoring programs, submit a small code-related patch to the Git
-project as part of their application.
+mentoring programs, called "applicants" in this document, submit a
+small code-related patch to the Git project as part of their
+application.
 
 People who want to get involved in Git development outside mentoring
 programs can also benefit from information on this page to get
@@ -18,9 +19,8 @@ instead of "[GSoC]" or "[Outreachy]" in the emails they send.
 
 Think of these microprojects as the "Hello, world" of getting involved
 with the Git project; the coding aspect of the change can be almost
-trivial, but to make the change the student or applicant has to become
-familiar with many of the practical aspects of working on the Git
-project.
+trivial, but to make the change the applicant has to become familiar
+with many of the practical aspects of working on the Git project.
 
 Git development is based on sending successive versions of patches or
 patch series to the mailing list until they are considered good and
@@ -41,7 +41,7 @@ which shows how a developer proposed a change and a patch to implement
 it. The problem being solved, the design of the proposed solution,
 and the implementation of that design were all reviewed and discussed,
 and after several iterations an improved version of the patch was
-accepted into our codebase. As a GSoC student, or Outreachy intern,
+accepted into our codebase. As a GSoC contributor, or Outreachy intern,
 you will be playing the role of the developer and engaging in a
 similar discussion. Get familar with the flow, need for clarity on
 both sides (i.e. you need to clearly defend your design, and need to
@@ -138,12 +138,11 @@ minutes). We don't require that your patch be accepted into the
 to see that you have a basic level of competence and especially the
 ability to interact with the other Git developers.
 
-## Only ONE quality focused microproject per student
+## Only ONE quality focused microproject per applicant
 
-Students or applicants please attempt only **ONE** microproject.  We
-want quality, not quantity!  (Also, it takes work to collect the
-ideas, and it would be nice to have enough microprojects for
-everybody.)
+Applicants please attempt only **ONE** microproject. We want quality,
+not quantity! (Also, it takes work to collect the ideas, and it would
+be nice to have enough microprojects for everybody.)
 
 This means that for a microproject that consists in refactoring or
 rewriting a small amount of code, your patch should change only
@@ -157,9 +156,9 @@ script you change. If you change "foo.c" or "foo.h", the title of your
 patch should probably start with "foo: ".
 
 In general it's a good idea to check on the mailing list archive what
-other GSoC students or Outreachy applicants attempting a microproject
-have already been told this year or any previous year, as hopefully it
-will help you avoid some mistakes. As some microproject ideas haven't
+other GSoC or Outreachy applicants attempting a microproject have
+already been told this year or any previous year, as hopefully it will
+help you avoid some mistakes. As some microproject ideas haven't
 changed for years, some similar microprojects might have been
 attempted many times already and you can learn a lot from these
 attempts.
