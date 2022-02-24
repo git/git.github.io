@@ -145,7 +145,7 @@ want quality, not quantity!  (Also, it takes work to collect the
 ideas, and it would be nice to have enough microprojects for
 everybody.)
 
-This means that for a microproject that consist in refactoring or
+This means that for a microproject that consists in refactoring or
 rewriting a small amount of code, your patch should change only
 **ONE** file, or perhaps 2 files if they are closely related, like
 "foo.c" and "foo.h".
