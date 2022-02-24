@@ -243,6 +243,8 @@ _(Eric has already been interviewed in [Git Rev News #7, September 2015](https:/
 
 __Various__
 
+* How some Git fetch performance improvements were made, [part 1](https://about.gitlab.com/blog/2022/01/20/git-fetch-performance/) and
+  [part 2](https://about.gitlab.com/blog/2022/02/07/git-fetch-performance-2021-part-2/), by the GitLab Scalability team.
 * [Include diagrams in your Markdown files with Mermaid](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/),
   automatically rendered on GitHub and possibly also in other
   [CommonMark](https://commonmark.org/) implementations.
