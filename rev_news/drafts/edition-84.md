@@ -117,6 +117,20 @@ _(Eric has already been interviewed in [Git Rev News #7, September 2015](https:/
   have already deleted from my local email client. Much more recently,
   I have also started taking advantage of its NNTP feed (nntp.lore.kernel.org).
 
+* Could you elaborate a bit about the email client you use?
+
+  I use Gmail in the web browser almost exclusively. Lately, I have
+  been using Thunderbird to access the lore.kernel.org NNTP feed.
+  Infrequently, I use `mutt` when I need to send a patch inline within
+  a reply when I don't want the Gmail web interface to modify
+  whitespace or the formatting in general. (I also have Emacs set up
+  for email, thus could use it for the same purpose as `mutt`, but
+  never actually do so.)
+
+  [ _Editor's note: If you're going to use Gmail in the web browser,
+    ensure "Plain text mode" is checked. Also, see [Gmail specific
+    format-patch hints](https://git-scm.com/docs/git-format-patch#_gmail)_ ]
+
 * What is your advice for people who want to start Git development?
   Where and how should they start?
 
