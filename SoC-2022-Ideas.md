@@ -173,7 +173,7 @@ with the goal of improving their performance in some way or another. Students
 can expect hands-on mentorship, but will have the agency to pick one or more of
 the above sub-projects (or create their own!) that interests them most.
 
-Expected Project Size: 175 hours
+Expected Project Size: 175 hours or 350 hours
 
 Difficulty: Medium
 
