@@ -67,6 +67,8 @@ expectation that _all_ will be completed during the project).
 
 Expected Project Size: 175 hours
 
+Difficulty: Medium
+
 Languages: C, shell(bash)
 
 Possible mentors:
@@ -92,6 +94,8 @@ See:
   - Hariom Verma's GSoC 2020 final report <https://harry-hov.github.io/blogs/posts/the-final-report>
 
 Expected Project Size: 175 hours
+
+Difficulty: Medium
 
 Languages: C, shell(bash)
 
@@ -170,6 +174,8 @@ can expect hands-on mentorship, but will have the agency to pick one or more of
 the above sub-projects (or create their own!) that interests them most.
 
 Expected Project Size: 175 hours
+
+Difficulty: Medium
 
 Languages: C, shell
 
