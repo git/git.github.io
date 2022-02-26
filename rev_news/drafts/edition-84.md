@@ -17,9 +17,19 @@ This edition covers what happened during the month of January 2022.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [Join us for Review Club!](https://lore.kernel.org/git/Yfl1%2FZN%2FtaYwfGD0@google.com/)
+
+  Josh Steadmon announced that the Review Club meeting he has been
+  organizing at Google for a while is now open to everyone. It happens
+  every other Wednesday at 14:00 Pacific time (UTC-8) via Google Meet.
+
+  The first opened meeting happened on Wednesday February 2nd and
+  discussed [Elijah's "In-core git merge-tree" patch series](https://lore.kernel.org/git/pull.1122.v2.git.1643479633.gitgitgadget@gmail.com/).
+
+  Please contact Josh Steadmon at <steadmon@google.com> if you are
+  interested and want to join.
 
 ### Reviews
 
@@ -377,4 +387,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Eric Sunshine.
+with help from Eric Sunshine and Josh Steadmon.
