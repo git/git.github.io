@@ -21,9 +21,85 @@ This edition covers what happened during the month of January 2022.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [[PATCH] fetch --prune: exit with error if pruning fails](https://lore.kernel.org/git/20220127153714.1190894-1-t.gummerer@gmail.com/)
+
+  Thomas Gummerer sent a patch so that `git fetch`, when it's used
+  with the `--prune` flag, or its `-p` short form, will not exit with
+  the 0 exit code anywmore if pruning a ref failed.
+
+  Pruning a ref means removing remote tracking ref, usually a branch,
+  if the ref disappeared on the remote. For example if a remote called
+  `origin` has a branch called `feature1`, then when fetching from
+  `origin` Git, will create a remote tracking branch called
+  `origin/feature1` on the local machine. Then the next time a fetch
+  from `origin` is performed, if the `feature1` branch was removed on
+  `origin`, by default Git would delete the local `origin/feature1`
+  branch only if pruning is requested.
+
+  Thomas noted in his patch that an error message was already printed
+  on stderr when pruning a ref failed, but it felt like a bug that
+  `git fetch` was still exiting with the 0 exit code in this case as
+  it could be interpreted as if no error happened.
+
+  Thomas had looked up the commit that introduced pruning, but he
+  couldn't find if the exit code behavior was "an oversight or
+  intentional", but it felt like an oversight to him.
+
+  Junio Hamano, the Git maintainer, agreed with Thomas about using a
+  non-zero exit code when ref pruning failed, but he was unsure about
+  which actual exit code would be emited by the code in Thomas patch.
+
+  Junio also found an issue with the current code as in some cases it
+  appeared that -1 could be passed to exit(). This would result in a
+  255 exit code, as exit codes have only 8 bits and are unsigned. He
+  left a `#leftoverbits` mention related to this in his email, which
+  helps find usually small issues that should be fixed later.
+
+  Junio also thought that is probably wasn't a good idea to error out
+  as soon as an error happens when pruning. It was probably best to
+  continue to fetch and prune as much as possible, "given that we have
+  already paid for the cost of discovering the refs from the other
+  side".
+
+  Thomas' patch added a new regression test that was then discussed a
+  bit by Junio, who left another `#leftoverbits` mention related to
+  the fact that many tests in the test script, where Thomas added the
+  new test, were using an old style and might want a cleanup.
+
+  Dscho, alias Johannes Schindelin, replied to Junio that it might
+  actually be confusing and unexpected for users if the fetch would
+  continue when pruning failed. He suggested adding a
+  `--prune-best-effort` option for cases where we might want the fetch
+  to continue as much as possible when pruning fails.
+
+  Thomas replied to Dscho, that he was unsure when writing the patch
+  what the behavior should be, but that exiting early "felt like the
+  right thing to do for the user". He said that he would be ok with
+  introducing `--prune-best-effort`. He wasn't sure people would
+  actually use it much though, as "it should be very rare that
+  `--prune` fails".
+
+  Junio replied to Thomas and Dscho that "when we fetch to update
+  multiple refs, we do not stop at the first ref-update failure, but
+  try to do as much as possible and then report an error" and that it
+  the behavior should be similar with `--prune`.
+
+  Thomas also replied separately about Junio's initial comment related
+  to the actual exit code that would be emited after Thomas' patch. He
+  wondered if the exit code should always be 1 when `git fetch` fails
+  when pruning.
+
+  Thomas and Dscho then discussed the new test, following Junio's
+  comments, and agreed on adding a comment in the code to explain what
+  the test was doing.
+
+  Thomas then sent [a version 2 of his patch](https://lore.kernel.org/git/20220131133047.1885074-1-t.gummerer@gmail.com/)
+  with the changes that were discussed.
+
+  Junio reviewed this new version and decided to merge it down, so
+  this small improvement will be in the next Git version.
 
 <!---
 ### Support
