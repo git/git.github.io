@@ -65,11 +65,11 @@ expectation that _all_ will be completed during the project).
 * `git merge-index`
 * `git rerere`
 
-Project Size: Medium
+Expected Project Size: 175 hours
 
 Languages: C, shell(bash)
 
-Co-Mentors:
+Possible mentors:
 * Derrick Stolee `<derrickstolee@github.com>`
 * Victoria Dye `<vdye@github.com>`
 
@@ -91,7 +91,7 @@ See:
   - this discussion <https://lore.kernel.org/git/87pnsfkvk1.fsf@0x63.nu/T/#u>
   - Hariom Verma's GSoC 2020 final report <https://harry-hov.github.io/blogs/posts/the-final-report>
 
-Project Size: Medium
+Expected Project Size: 175 hours
 
 Languages: C, shell(bash)
 
@@ -169,7 +169,7 @@ with the goal of improving their performance in some way or another. Students
 can expect hands-on mentorship, but will have the agency to pick one or more of
 the above sub-projects (or create their own!) that interests them most.
 
-Project Size: Medium
+Expected Project Size: 175 hours
 
 Languages: C, shell
 
