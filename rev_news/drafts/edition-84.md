@@ -36,34 +36,34 @@ This edition covers what happened during the month of January 2022.
 * [[PATCH] fetch --prune: exit with error if pruning fails](https://lore.kernel.org/git/20220127153714.1190894-1-t.gummerer@gmail.com/)
 
   Thomas Gummerer sent a patch so that `git fetch`, when it's used
-  with the `--prune` flag, or its `-p` short form, will not exit with
-  the 0 exit code anywmore if pruning a ref failed.
+  with the `--prune` flag or its `-p` short form, will not exit with
+  exit status 0 anymore if pruning a ref fails.
 
-  Pruning a ref means removing remote tracking ref, usually a branch,
-  if the ref disappeared on the remote. For example if a remote called
-  `origin` has a branch called `feature1`, then when fetching from
-  `origin` Git, will create a remote tracking branch called
-  `origin/feature1` on the local machine. Then the next time a fetch
-  from `origin` is performed, if the `feature1` branch was removed on
-  `origin`, by default Git would delete the local `origin/feature1`
-  branch only if pruning is requested.
+  Pruning a ref means removing a remote tracking ref, usually a branch,
+  if the ref disappeared on the remote. For example, if a remote called
+  `origin` has a branch called `feature1`, then fetching from
+  `origin` will cause Git to create a remote tracking branch called
+  `origin/feature1` on the local machine. After the `feature1` branch
+  is removed on `origin`, subsequent fetches from `origin` will yield
+  the deletion of the local `origin/feature1` branch only if pruning is
+  requested.
 
   Thomas noted in his patch that an error message was already printed
   on stderr when pruning a ref failed, but it felt like a bug that
-  `git fetch` was still exiting with the 0 exit code in this case as
-  it could be interpreted as if no error happened.
+  `git fetch` was still exiting with the 0 exit status in this case, as
+  this could be interpreted as if no error happened.
 
   Thomas had looked up the commit that introduced pruning, but he
-  couldn't find if the exit code behavior was "an oversight or
+  couldn't find if the exit status behavior was "an oversight or
   intentional", but it felt like an oversight to him.
 
   Junio Hamano, the Git maintainer, agreed with Thomas about using a
-  non-zero exit code when ref pruning failed, but he was unsure about
-  which actual exit code would be emited by the code in Thomas patch.
+  non-zero exit status when ref pruning failed, but he was unsure about
+  which actual exit status would be emitted by the code in Thomas' patch.
 
   Junio also found an issue with the current code as in some cases it
-  appeared that -1 could be passed to exit(). This would result in a
-  255 exit code, as exit codes have only 8 bits and are unsigned. He
+  appeared that -1 could be passed to `exit()`. This would result in a
+  255 exit status, as exit statuses have only 8 bits and are unsigned. He
   left a `#leftoverbits` mention related to this in his email, which
   helps find usually small issues that should be fixed later.
 
@@ -84,29 +84,29 @@ This edition covers what happened during the month of January 2022.
   `--prune-best-effort` option for cases where we might want the fetch
   to continue as much as possible when pruning fails.
 
-  Thomas replied to Dscho, that he was unsure when writing the patch
-  what the behavior should be, but that exiting early "felt like the
-  right thing to do for the user". He said that he would be ok with
+  Thomas replied to Dscho that he was unsure what the behavior should
+  be when writing the patch, but that exiting early "felt like the
+  right thing to do for the user". He said that he would be OK with
   introducing `--prune-best-effort`. He wasn't sure people would
   actually use it much though, as "it should be very rare that
   `--prune` fails".
 
   Junio replied to Thomas and Dscho that "when we fetch to update
   multiple refs, we do not stop at the first ref-update failure, but
-  try to do as much as possible and then report an error" and that it
-  the behavior should be similar with `--prune`.
+  try to do as much as possible and then report an error", and that
+  `--prune` should behave similarly.
 
   Thomas also replied separately about Junio's initial comment related
-  to the actual exit code that would be emited after Thomas' patch. He
-  wondered if the exit code should always be 1 when `git fetch` fails
-  when pruning.
+  to the actual exit status that would be emitted after Thomas' patch. He
+  wondered if the exit status should always be 1 when `git fetch` fails
+  at pruning.
 
   Thomas and Dscho then discussed the new test, following Junio's
   comments, and agreed on adding a comment in the code to explain what
   the test was doing.
 
   Thomas then sent [a version 2 of his patch](https://lore.kernel.org/git/20220131133047.1885074-1-t.gummerer@gmail.com/)
-  with the changes that were discussed.
+  with the changes that had been discussed.
 
   Junio reviewed this new version and decided to merge it down, so
   this small improvement will be in the next Git version.
@@ -361,7 +361,7 @@ __Light reading__
 * [Inside the Hidden Git Folder - Computerphile](https://youtu.be/bSA91XTzeuA)
   by Dr Max Wilson on Computerphile channel on YouTube.
   Mind blink and you miss it error about the purpose of the `.git/logs/` folder.
-  Link to the previous video on the topic of Git by Dr Max Wilson can be found in
+  A link to the previous video on the topic of Git by Dr Max Wilson can be found in
   [Git Rev News Edition #83](https://git.github.io/rev_news/2022/01/31/edition-83/)
   (the previous edition).
 * [Protect secrets in Git with the clean/smudge filter](https://developers.redhat.com/articles/2022/02/02/protect-secrets-git-cleansmudge-filter)
@@ -376,7 +376,7 @@ __Git tools and sites__
   and the tools to build them.
   * [Announcing monorepo.tools](https://blog.nrwl.io/announcing-monorepo-tools-da605afbb5d5)
     by Juri Strumpflohner for Nrwl.
-  * You can find most recent list of pros and cons of monorepos in
+  * You can find the most recent list of pros and cons of monorepos in
     [Git Rev News Edition #81](https://git.github.io/rev_news/2021/11/29/edition-81/).
 
 
