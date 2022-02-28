@@ -65,7 +65,7 @@ expectation that _all_ will be completed during the project).
 * `git merge-index`
 * `git rerere`
 
-Expected Project Size: 175 hours
+Expected Project Size: 175 hours or 350 hours
 
 Difficulty: Medium
 
@@ -93,7 +93,7 @@ See:
   - this discussion <https://lore.kernel.org/git/87pnsfkvk1.fsf@0x63.nu/T/#u>
   - Hariom Verma's GSoC 2020 final report <https://harry-hov.github.io/blogs/posts/the-final-report>
 
-Expected Project Size: 175 hours
+Expected Project Size: 175 hours or 350 hours
 
 Difficulty: Medium
 
