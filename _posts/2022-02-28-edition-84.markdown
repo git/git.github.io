@@ -33,7 +33,7 @@ This edition covers what happened during the month of January 2022.
 
 ### Reviews
 
-* [[PATCH] fetch --prune: exit with error if pruning fails](https://lore.kernel.org/git/20220127153714.1190894-1-t.gummerer@gmail.com/)
+* [[PATCH] `fetch --prune`: exit with error if pruning fails](https://lore.kernel.org/git/20220127153714.1190894-1-t.gummerer@gmail.com/)
 
   Thomas Gummerer sent a patch so that `git fetch`, when it's used
   with the `--prune` flag or its `-p` short form, will not exit with
