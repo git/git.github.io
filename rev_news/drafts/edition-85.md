@@ -42,7 +42,7 @@ __Various__
 
 
 __Light reading__
-
+- [How to Really Use Git: 10 Rules to Make Git More Useful](https://hackernoon.com/how-to-really-use-git-10-rules-to-make-git-more-useful) by Bruno Brito on HackerNoon.
 
 __Git tools and sites__
 
