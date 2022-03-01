@@ -34,7 +34,7 @@ This edition covers what happened during the month of February 2022.
 -->
 
 ## Releases
-
+- Tower for Windows [3.1](https://www.git-tower.com/release-notes/windows) ([What's New in Tower 3.1 for Windows blog post](https://www.git-tower.com/blog/gpg-windows/))
 
 ## Other News
 
