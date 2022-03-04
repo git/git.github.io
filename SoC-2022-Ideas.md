@@ -181,6 +181,7 @@ Languages: C, shell
 
 Possible mentors:
 * Taylor Blau `<me@ttaylorr.com>`
+* Kaartic Sivaraam `<kaartic.sivaraam@gmail.com>`
 
 [vmg-bitmaps]: https://github.blog/2015-09-22-counting-objects/
 [ewah]: https://arxiv.org/abs/0901.3751
