@@ -72,8 +72,8 @@ Difficulty: Medium
 Languages: C, shell(bash)
 
 Possible mentors:
-* Derrick Stolee `<derrickstolee@github.com>`
-* Victoria Dye `<vdye@github.com>`
+* Derrick Stolee < <derrickstolee@github.com> >
+* Victoria Dye < <vdye@github.com> >
 
 ### Unify ref-filter formats with other pretty formats
 
@@ -100,8 +100,8 @@ Difficulty: Medium
 Languages: C, shell(bash)
 
 Possible mentors:
-* Christian Couder `<christian.couder@gmail.com>`
-* Hariom Verma `<hariom18599@gmail.com>`
+* Christian Couder < <christian.couder@gmail.com> >
+* Hariom Verma < <hariom18599@gmail.com> >
 
 ### Reachability bitmap improvements
 
@@ -180,8 +180,8 @@ Difficulty: Medium
 Languages: C, shell
 
 Possible mentors:
-* Taylor Blau `<me@ttaylorr.com>`
-* Kaartic Sivaraam `<kaartic.sivaraam@gmail.com>`
+* Taylor Blau < <me@ttaylorr.com> >
+* Kaartic Sivaraam < <kaartic.sivaraam@gmail.com> >
 
 [vmg-bitmaps]: https://github.blog/2015-09-22-counting-objects/
 [ewah]: https://arxiv.org/abs/0901.3751
