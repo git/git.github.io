@@ -20,7 +20,7 @@ These pages also host the [Git Rev News](https://git.github.io/rev_news/),
 see the [About Git Rev News](https://git.github.io/rev_news/rev_news/) page.
 
 If you want push access, contact Christian Couder
-\<<christian.couder@gmail.com>\> or Taylor Blau \<<me@ttaylorr.com>\> and
+< <christian.couder@gmail.com> > or Taylor Blau < <me@ttaylorr.com> > and
 provide your GitHub username. You may also send patches by mail (and
 feel free to cc git@vger.kernel.org if appropriate).
 
