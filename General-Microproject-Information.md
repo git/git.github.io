@@ -332,7 +332,7 @@ select a good project for you and properly research it.
 You can ask for help if there are things you don't understand in a
 micro-project description, or if you have some trouble working on your
 micro-project or even finding a micro-project. But please be very
-specific in your questions and tell us in details what you searched or
+specific in your questions and tell us in detail what you searched or
 tried, what you expected and what didn't work as you
 expected. Something like "I couldn't find a good micro-project for
 me", for example, doesn't tell us much, and doesn't give us any idea
