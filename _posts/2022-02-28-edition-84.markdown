@@ -360,7 +360,7 @@ __Light reading__
   by Bruno Brito on Git Tower blog.
 * [Inside the Hidden Git Folder - Computerphile](https://youtu.be/bSA91XTzeuA)
   by Dr Max Wilson on Computerphile channel on YouTube.
-  Mind blink and you miss it error about the purpose of the `.git/logs/` folder.
+  Beware a blink and you miss it error about the purpose of the `.git/logs/` folder.
   A link to the previous video on the topic of Git by Dr Max Wilson can be found in
   [Git Rev News Edition #83](https://git.github.io/rev_news/2022/01/31/edition-83/)
   (the previous edition).
