@@ -35,6 +35,7 @@ This edition covers what happened during the month of February 2022.
 
 ## Releases
 - Tower for Windows [3.1](https://www.git-tower.com/release-notes/windows) ([What's New in Tower 3.1 for Windows blog post](https://www.git-tower.com/blog/gpg-windows/))
+- Tower for Mac [8.1](https://www.git-tower.com/release-notes/mac)
 
 ## Other News
 
@@ -43,6 +44,7 @@ __Various__
 
 __Light reading__
 - [How to Really Use Git: 10 Rules to Make Git More Useful](https://hackernoon.com/how-to-really-use-git-10-rules-to-make-git-more-useful) by Bruno Brito on HackerNoon.
+- [Git and GitHub for Marketing Teams](https://www.git-tower.com/blog/git-for-marketing-teams/) by Bruno Brito on Tower's blog.
 
 __Git tools and sites__
 
