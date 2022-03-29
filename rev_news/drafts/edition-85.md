@@ -21,9 +21,90 @@ This edition covers what happened during the month of February 2022.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [[PATCH] http API: fix dangling pointer issue noted by GCC 12.0](https://lore.kernel.org/git/patch-1.1-1cec367e805-20220126T212921Z-avarab@gmail.com/)
+
+  Ævar Arnfjörð Bjarmason sent a patch to the mailing list to fix an
+  issue that appears when compiling Git with the gcc 12.0 development
+  branch.
+
+  The issue is that this gcc version emits a warning on the last line
+  of the following code:
+
+  ```
+        int finished = 0;
+
+        slot->finished = &finished;
+  ```
+
+  where `slot` is an instance of `struct active_request_slot` which
+  has an `int *finished` member.
+
+  The warning is "storing the address of local variable ‘finished’ in
+  ‘*slot.finished’ [-Werror=dangling-pointer=]".
+
+  Ævar thought about making the `struct active_request_slot` member an
+  `int finished` member, so it's not anymore a pointer, and then about
+  removing the `int *finished` member entirely and using the
+  `int in_use` member instead. His patch implemented the latter.
+
+  Taylor Blau reviewed Ævar's patch but wasn't sure about one of the
+  places where the `int *finished` member was removed.
+
+  Junio Hamano also reviewed the patch and wondered if the new gcc
+  version was correct in flagging the code in the first place, as it
+  appeared that `slot->finished` wasn't used outside the function
+  where it's assigned the address of a local variable.
+
+  Junio also wondered if it was correct to remove the `int *finished`
+  member entirely and use the `int in_use` member instead, as that
+  looked like reversing the patch that introduced `int *finished`
+  without fully explaining why it was correct to do so.
+
+  To address the issue Junio then proposed implementing the following:
+
+  ```
+        if (slot->finished == &finished)
+              slot->finished = NULL;
+  ```
+
+  so that hopefully gcc would understand that the `slot->finished`
+  field isn't using a local address outside the current function.
+
+  Ævar replied to Junio, that assingning slot->finished to NULL at the
+  end of the function would indeed quiet gcc. So he sent
+  [a version 2 of his patch](https://lore.kernel.org/git/patch-v2-1.1-777838267a5-20220225T090816Z-avarab@gmail.com/)
+  that only added `slot->finished = NULL;` at the end of the function.
+
+  Junio wasn't sure if the change was completely correct as he said he
+  no longer trusts his own reading of the http code, but he agreed
+  that it should be merged if gcc isn't fixed soon.
+
+  Taylor took another look at the patch and found other functions
+  where `slot->finished` is assigned, so he wondered if a better fix
+  would be to change the `int *finished` member into a tri-state
+  "UNKNOWN/TRUE/FALSE enum".
+
+  Ævar then sent [a version 3 of his patch](https://lore.kernel.org/git/patch-v3-1.1-69190804c67-20220325T143322Z-avarab@gmail.com/)
+  where he only improved the commit message compared to the previous
+  version. In the new commit message he explains why the other places
+  where `slot->finished` is assigned are already correct and don't
+  need any change.
+
+  Taylor then agreed with Ævar's explanations, but Junio wasn't sure
+  about them, so he changed the commit message a bit, explaining how
+  we could make sure that the change to clear `slot->finished` is
+  correct by adding the following code before it:
+
+  ```
+          if (slot->finished)
+                 BUG("the uncoditional clearing at the end is wrong");
+  ```
+
+  For now the patch has still not been merged into the `next` branch
+  as Junio hopes that the gcc 12.0 will be fixed before it's actually
+  released. But in case it isn't at least we are ready for it.
 
 <!---
 ### Support
