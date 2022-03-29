@@ -190,8 +190,29 @@ This edition covers what happened during the month of February 2022.
 
 
 ## Releases
-- Tower for Windows [3.1](https://www.git-tower.com/release-notes/windows) ([What's New in Tower 3.1 for Windows blog post](https://www.git-tower.com/blog/gpg-windows/))
-- Tower for Mac [8.1](https://www.git-tower.com/release-notes/mac)
+
++ libgit2 [1.4.2](https://github.com/libgit2/libgit2/releases/tag/v1.4.2)
++ GitLab [14.9.1](https://about.gitlab.com/releases/2022/03/23/gitlab-14-9-1-released/),
+[14.9](https://about.gitlab.com/releases/2022/03/22/gitlab-14-9-released/),
+[14.8.4](https://about.gitlab.com/releases/2022/03/16/gitlab-14-8-4-released/),
+[14.8.3](https://about.gitlab.com/releases/2022/03/15/gitlab-14-8-3-released/),
+[14.7.6](https://about.gitlab.com/releases/2022/03/24/gitlab-14-7-6-released/),
+[14.7.5](https://about.gitlab.com/releases/2022/03/09/gitlab-14-7-5-released/),
+[14.6.6](https://about.gitlab.com/releases/2022/03/02/gitlab-14-6-6-released/)
++ Gerrit Code Review [3.5.1](https://www.gerritcodereview.com/3.5.html#351),
+[3.4.4](https://www.gerritcodereview.com/3.4.html#344),
+[3.3.10](https://www.gerritcodereview.com/3.3.html#3310),
++ GitHub Enterprise [3.4.0](https://help.github.com/enterprise-server@3.4/admin/release-notes#3.4.0),
+[3.3.5](https://help.github.com/enterprise-server@3.3/admin/release-notes#3.3.5),
+[3.2.10](https://help.github.com/enterprise-server@3.2/admin/release-notes#3.2.10),
+[3.1.18](https://help.github.com/enterprise-server@3.1/admin/release-notes#3.1.18)
++ GitKraken [8.3.3](https://support.gitkraken.com/release-notes/current),
+[8.3.2](https://support.gitkraken.com/release-notes/current),
+[8.3.1](https://support.gitkraken.com/release-notes/current)
++ GitHub Desktop [2.9.12](https://desktop.github.com/release-notes/),
+[2.9.11](https://desktop.github.com/release-notes/)
++ Tower for Windows [3.1](https://www.git-tower.com/release-notes/windows) ([What's New in Tower 3.1 for Windows blog post](https://www.git-tower.com/blog/gpg-windows/))
++ Tower for Mac [8.1](https://www.git-tower.com/release-notes/mac)
 
 ## Other News
 
