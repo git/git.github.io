@@ -295,16 +295,75 @@ This edition covers what happened during the month of February 2022.
 + Tower for Windows [3.1](https://www.git-tower.com/release-notes/windows) ([What's New in Tower 3.1 for Windows blog post](https://www.git-tower.com/blog/gpg-windows/))
 + Tower for Mac [8.1](https://www.git-tower.com/release-notes/mac)
 
+
 ## Other News
 
 __Various__
+- [Removed unencrypted Git protocol and certain SSH keys in GitHub](https://github.blog/changelog/2022-03-15-removed-unencrypted-git-protocol-and-certain-ssh-keys/)
+  (removed all support for DSA keys, removed legacy SSH algorithms HMAC-SHA-1 and CBC ciphers, etc.);
+  the motivation behind these changes can be found in
+  [Improving Git protocol security on GitHub](https://github.blog/2021-09-01-improving-git-protocol-security-github/)
+  article on GitHub Blog.
+* [SSH and Git, meet 1Password](https://blog.1password.com/1password-ssh-agent/):
+  you can now, among other things, enable the SSH agent in 1Password.
 
 
 __Light reading__
 - [How to Really Use Git: 10 Rules to Make Git More Useful](https://hackernoon.com/how-to-really-use-git-10-rules-to-make-git-more-useful) by Bruno Brito on HackerNoon.
 - [Git and GitHub for Marketing Teams](https://www.git-tower.com/blog/git-for-marketing-teams/) by Bruno Brito on Tower's blog.
+- [The advantages of large, long-running pull requests](https://world.hey.com/dhh/the-advantages-of-large-long-running-pull-requests-c33d913c)
+- [How Do I Resolve Merge Conflicts?](https://dev.to/github/how-do-i-resolve-merge-conflicts-5438)
+  (without using graphical tools) by Rizèl Scarlett for GitHub, on DEV\.to.
+- [How to Rename a Local or Remote Branch in Git](https://www.freecodecamp.org/news/how-to-rename-a-local-or-remote-branch-in-git/)
+  by Kolade Chris on freeCodeCamp.
+- [Automatically Format your code on Git Commit using Husky, ESLint, Prettier in 9 minutes](https://dev.to/ruppysuppy/automatically-format-your-code-on-git-commit-using-husky-eslint-prettier-in-9-minutes-45eg)
+  by Tapajyoti Bose on DEV\.to and Medium.
+- [How Do Git Branches Work?](https://www.cloudsavvyit.com/14038/how-do-git-branches-work/)
+  by Anthony Heddings on Cloud Savvy IT.
+- [Teamwork & Git](https://www.youtube.com/watch?v=RzYJvSnzlMk):
+  Dr Max Wilson explains how teams collaborate using Git
+  in a video on the [Computerphile](https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA)
+  channel on YouTube.
+    - Links to previous videos in this series can be found in
+      [Git Rev News Edition #83](https://git.github.io/rev_news/2022/01/31/edition-83/)
+      and [#84](https://git.github.io/rev_news/2022/02/28/edition-84/).
+  by David Heinemeier Hansson
+- [Speeding Up Commit Graph Walks in Dolt with Materialized Ancestor Closures](https://www.dolthub.com/blog/2021-10-15-speeding-up-commit-graph-walks-with-materialized-closures/):
+  [Dolt](https://www.dolthub.com/) is a [version controlled SQL database](https://www.dolthub.com/blog/2021-09-17-database-version-control/),
+  first mentioned in [Git Rev News #62](https://git.github.io/rev_news/2020/04/23/edition-62/);
+  you can find more information about versioning and databases in [edition #82](https://git.github.io/rev_news/2021/12/30/edition-82/).
+
 
 __Git tools and sites__
+* [Kart](https://kartproject.org/) stores geospatial and tabular data in Git,
+  providing version control at the row and cell level.
+  It provides repository working copies
+  as <abbr title="Geographic Information System">GIS</abbr> databases and files,
+  allowing one to edit them directly in common GIS software without plugins.
+  Support for GeoPackage, PostGIS, Microsoft SQL Server and MySQL formats.
+* [split-patch](https://github.com/aleclearmind/split-patch) project consists of
+  the `split-patch.py` tool, which is `git add -p` on steroids for patches (`*.patch` files),
+  allowing to choose in which _bucket_ to put each hunk, and
+  the `git-split-commit` command (which can be used from interactive rebase)
+  which uses `split-patch.py` to split the HEAD commit into multiple commits.
+* [DagsHub](https://dagshub.com/) is a web platform for data version control
+  and collaboration for data scientists and machine learning engineers.
+  The free tier provides 10 GB of DAGsHub Storage,
+  and allows up to 3 collaborators in private projects.<br>
+  See also the following articles:
+    * [DagsHub: a GitHub Supplement for Data Scientists and ML Engineers](https://towardsdatascience.com/dagshub-a-github-supplement-for-data-scientists-and-ml-engineers-9ecaf49cc505)
+      by Khuyen Tran in Towards Data Science, a Medium blog.
+    * [DagsHub → Github for Data Science](https://towardsai.net/p/l/dagshub-%E2%86%92-github-for-data-science)
+      by Shubham Saboo on Towards AI blog.
+* [fds](https://github.com/DAGsHub/fds) (Fast Data Science),
+  is a CLI for Data Scientists to version control data and code at once,
+  by conveniently wrapping Git and [DVC](https://dvc.org/).
+    * DVC (Data Version Control) was first mentioned
+      in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/)
+* [Jujutsu](https://github.com/martinvonz/jj) (`jj`) is an experimental Git-compatible DVCS.
+  It combines features from Git (data model, speed),
+  Mercurial (anonymous branching, simple CLI free from "the index", revsets, powerful history-rewriting),
+  and Pijul/Darcs (first-class conflicts), with features not found in either of them.
 
 
 ## Credits
