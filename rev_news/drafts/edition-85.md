@@ -72,8 +72,8 @@ This edition covers what happened during the month of February 2022.
   so that hopefully gcc would understand that the `slot->finished`
   field isn't using a local address outside the current function.
 
-  Ævar replied to Junio, that assingning slot->finished to NULL at the
-  end of the function would indeed quiet gcc. So he sent
+  Ævar replied to Junio, that assigning `slot->finished` to `NULL` at
+  the end of the function would indeed quiet gcc. So he sent
   [a version 2 of his patch](https://lore.kernel.org/git/patch-v2-1.1-777838267a5-20220225T090816Z-avarab@gmail.com/)
   that only added `slot->finished = NULL;` at the end of the function.
 
@@ -99,12 +99,12 @@ This edition covers what happened during the month of February 2022.
 
   ```
           if (slot->finished)
-                 BUG("the uncoditional clearing at the end is wrong");
+                 BUG("the unconditional clearing at the end is wrong");
   ```
 
   For now the patch has still not been merged into the `next` branch
   as Junio hopes that the gcc 12.0 will be fixed before it's actually
-  released. But in case it isn't at least we are ready for it.
+  released. But in case it isn't, at least we are ready for it.
 
 <!---
 ### Support
