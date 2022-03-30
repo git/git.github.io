@@ -44,8 +44,8 @@ This edition covers what happened during the month of February 2022.
   The warning is "storing the address of local variable ‘finished’ in
   ‘*slot.finished’ [-Werror=dangling-pointer=]".
 
-  Ævar thought about making the `struct active_request_slot` member an
-  `int finished` member, so it's not anymore a pointer, and then about
+  Ævar first thought about making the `struct active_request_slot` member an
+  `int finished` member, so it wouldn't be a pointer anymore, and then about
   removing the `int *finished` member entirely and using the
   `int in_use` member instead. His patch implemented the latter.
 
@@ -78,8 +78,8 @@ This edition covers what happened during the month of February 2022.
   that only added `slot->finished = NULL;` at the end of the function.
 
   Junio wasn't sure if the change was completely correct as he said he
-  no longer trusts his own reading of the http code, but he agreed
-  that it should be merged if gcc isn't fixed soon.
+  no longer trusted his own reading of the http code, but he agreed
+  that it should be merged if gcc wasn't fixed soon.
 
   Taylor took another look at the patch and found other functions
   where `slot->finished` is assigned, so he wondered if a better fix
@@ -103,7 +103,7 @@ This edition covers what happened during the month of February 2022.
   ```
 
   For now the patch has still not been merged into the `next` branch
-  as Junio hopes that the gcc 12.0 will be fixed before it's actually
+  as Junio hopes that gcc 12.0 will be fixed before it's actually
   released. But in case it isn't, at least we are ready for it.
 
 <!---
@@ -144,8 +144,8 @@ This edition covers what happened during the month of February 2022.
   user experience.
 
   Beyond my own work, I'm looking forward to mentoring a GSoC contributor in
-  _more_ sparse index integration! It's an admittedly complicated topic, but -
-  based on my own experience - working on it can give new contributors an
+  _more_ sparse index integration! It's an admittedly complicated topic, but ---
+  based on my own experience -- working on it can give new contributors an
   incredible depth of knowledge in Git that's hard to get elsewhere. Plus, I
   love mentoring developers and creating a positive environment for them, so
   I'm excited to have the chance to do that here!
@@ -247,15 +247,15 @@ This edition covers what happened during the month of February 2022.
   contributing.
 
   And once you have a working change, don't be afraid to submit it out of fear
-  that it's not "good enough." The goal we all share is to make Git as good as
-  it can possibly be, so your contribution - no matter how small or trivial
-  you think it is - is a valuable part of what makes this project succeed.
+  that it's not "good enough". The goal we all share is to make Git as good as
+  it can possibly be, so your contribution -- no matter how small or trivial
+  you think it is -- is a valuable part of what makes this project succeed.
 
 * If there's one tip you would like to share with other Git developers,
   what would it be?
 
   Keep learning and trying new things! The Git development community has a
-  vast range of experience across its members - from people who worked on it
+  vast range of experience across its members -- from people who worked on it
   since the beginning to people making their first open source contribution
   ever. But it's also an easy place to get stuck in "your niche" (if you're
   lucky, you get stuck with a couple of other people so you can review each
@@ -301,7 +301,7 @@ This edition covers what happened during the month of February 2022.
 __Various__
 - [Removed unencrypted Git protocol and certain SSH keys in GitHub](https://github.blog/changelog/2022-03-15-removed-unencrypted-git-protocol-and-certain-ssh-keys/)
   (removed all support for DSA keys, removed legacy SSH algorithms HMAC-SHA-1 and CBC ciphers, etc.);
-  the motivation behind these changes can be found in
+  the motivation behind these changes can be found in the
   [Improving Git protocol security on GitHub](https://github.blog/2021-09-01-improving-git-protocol-security-github/)
   article on GitHub Blog.
 * [SSH and Git, meet 1Password](https://blog.1password.com/1password-ssh-agent/):
@@ -311,7 +311,7 @@ __Various__
 __Light reading__
 - [How to Really Use Git: 10 Rules to Make Git More Useful](https://hackernoon.com/how-to-really-use-git-10-rules-to-make-git-more-useful) by Bruno Brito on HackerNoon.
 - [Git and GitHub for Marketing Teams](https://www.git-tower.com/blog/git-for-marketing-teams/) by Bruno Brito on Tower's blog.
-- [The advantages of large, long-running pull requests](https://world.hey.com/dhh/the-advantages-of-large-long-running-pull-requests-c33d913c)
+- [The advantages of large, long-running pull requests](https://world.hey.com/dhh/the-advantages-of-large-long-running-pull-requests-c33d913c) by David Heinemeier Hanson on hey\.com.
 - [How Do I Resolve Merge Conflicts?](https://dev.to/github/how-do-i-resolve-merge-conflicts-5438)
   (without using graphical tools) by Rizèl Scarlett for GitHub, on DEV\.to.
 - [How to Rename a Local or Remote Branch in Git](https://www.freecodecamp.org/news/how-to-rename-a-local-or-remote-branch-in-git/)
@@ -327,7 +327,6 @@ __Light reading__
     - Links to previous videos in this series can be found in
       [Git Rev News Edition #83](https://git.github.io/rev_news/2022/01/31/edition-83/)
       and [#84](https://git.github.io/rev_news/2022/02/28/edition-84/).
-  by David Heinemeier Hansson
 - [Speeding Up Commit Graph Walks in Dolt with Materialized Ancestor Closures](https://www.dolthub.com/blog/2021-10-15-speeding-up-commit-graph-walks-with-materialized-closures/):
   [Dolt](https://www.dolthub.com/) is a [version controlled SQL database](https://www.dolthub.com/blog/2021-09-17-database-version-control/),
   first mentioned in [Git Rev News #62](https://git.github.io/rev_news/2020/04/23/edition-62/);
@@ -359,7 +358,7 @@ __Git tools and sites__
   is a CLI for Data Scientists to version control data and code at once,
   by conveniently wrapping Git and [DVC](https://dvc.org/).
     * DVC (Data Version Control) was first mentioned
-      in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/)
+      in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/).
 * [Jujutsu](https://github.com/martinvonz/jj) (`jj`) is an experimental Git-compatible DVCS.
   It combines features from Git (data model, speed),
   Mercurial (anonymous branching, simple CLI free from "the index", revsets, powerful history-rewriting),
