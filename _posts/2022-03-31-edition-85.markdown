@@ -307,6 +307,7 @@ __Various__
 - [SSH and Git, meet 1Password](https://blog.1password.com/1password-ssh-agent/):
   you can now, among other things, enable the SSH agent in 1Password.
 - [Hugging Face uses Gitaly to store Machine Learning related repos](https://discuss.huggingface.co/t/announcement-switching-our-git-infra-to-gitaly/15030).
+- [GitLab is hiring to work on Gitaly](https://boards.greenhouse.io/gitlab/jobs/5949673002).
 
 
 __Light reading__
