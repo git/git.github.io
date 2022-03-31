@@ -304,8 +304,9 @@ __Various__
   the motivation behind these changes can be found in the
   [Improving Git protocol security on GitHub](https://github.blog/2021-09-01-improving-git-protocol-security-github/)
   article on GitHub Blog.
-* [SSH and Git, meet 1Password](https://blog.1password.com/1password-ssh-agent/):
+- [SSH and Git, meet 1Password](https://blog.1password.com/1password-ssh-agent/):
   you can now, among other things, enable the SSH agent in 1Password.
+- [Hugging Face uses Gitaly to store Machine Learning related repos](https://discuss.huggingface.co/t/announcement-switching-our-git-infra-to-gitaly/15030).
 
 
 __Light reading__
