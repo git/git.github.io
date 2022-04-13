@@ -49,7 +49,7 @@ what is to be done. An application must include detailed plans on the
 design, timeline ...  A typical application takes several pages.
 
 If you are applying for the GSoC, you should already have read
-[the GSoC Student Guide](http://write.flossmanuals.net/gsocstudentguide/writing-a-proposal/)
+[the GSoC Contributor Guide](https://google.github.io/gsocguides/student/writing-a-proposal)
 by now, but re-read it if needed.
 
 If you are applying for Outreachy there is very likely similar
@@ -116,7 +116,7 @@ are interested in, it is a good idea to:
   Junio.
 
 * Include what is suggested in
-  [the GSoC Student Guide](http://write.flossmanuals.net/gsocstudentguide/writing-a-proposal/)
+  [the GSoC Contributor Guide](https://google.github.io/gsocguides/student/writing-a-proposal)
   or the equivalent guidelines for Outreachy.
 
 ([lore.kernel.org](https://lore.kernel.org/git/) can be
