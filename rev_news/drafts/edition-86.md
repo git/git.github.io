@@ -1,13 +1,13 @@
 ---
-title: Git Rev News Edition 86 (April 27th, 2022)
+title: Git Rev News Edition 86 (April 30th, 2022)
 layout: default
-date: 2022-04-27 12:06:51 +0100
+date: 2022-04-30 12:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 86 (April 27th, 2022)
+## Git Rev News: Edition 86 (April 30th, 2022)
 
 Welcome to the 86th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
