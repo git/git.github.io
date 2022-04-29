@@ -43,11 +43,9 @@ __Various__
 
 __Light reading__
 
-[Mac Dev Survey 2022 Results](https://www.git-tower.com/blog/mac-dev-survey-2022-results/) by Kristian Lumme on Tower's blog.
-
-[Setting Up Git on Windows Subsystem for Linux](https://www.git-tower.com/blog/git-wsl/) by Bruno Brito on Tower's blog.
-
-[How to Clean Up Fully Merged Feature Branches](https://www.git-tower.com/blog/how-to-clean-up-merged-feature-branches/) by Bruno Brito on Tower's blog.
+- [Mac Dev Survey 2022 Results](https://www.git-tower.com/blog/mac-dev-survey-2022-results/) by Kristian Lumme on Tower's blog.
+- [Setting Up Git on Windows Subsystem for Linux](https://www.git-tower.com/blog/git-wsl/) by Bruno Brito on Tower's blog.
+- [How to Clean Up Fully Merged Feature Branches](https://www.git-tower.com/blog/how-to-clean-up-merged-feature-branches/) by Bruno Brito on Tower's blog.
 
 __Git tools and sites__
 
