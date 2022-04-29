@@ -21,9 +21,120 @@ This edition covers what happened during the month of March 2022.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [[PATCH 0/5] Separate '--skip-refresh' from '--quiet' in 'reset', use '--quiet' internally in 'stash'](https://lore.kernel.org/git/pull.1170.git.1647043729.gitgitgadget@gmail.com/)
+
+  Victoria Dye sent a 5 patch long series to improve the following:
+
+    - the way the `--quiet` command line options work in `git reset`,
+    - the way index refreshing is handled in `git reset`, and
+    - the way the `--quiet` and `--index` command line option work in
+    `git stash`.
+
+  She had discovered issues with these features when she was working
+  on tests for `git stash` sparse index integration. (See Victoria's
+  interview in last month's
+  [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/)
+  for information on Victoria's current work.) She found that
+  `--quiet` in `git stash` does not suppress all non-error output when
+  used with `--index` and that this comes from `reset_head()` being
+  called without the internal flag corresponding to `--quiet`.
+
+  When calling `reset_head()` with the flag is set though, the index
+  is not refreshed, while `git stash` needs the index to be refreshed.
+  The underlying issue was that the internal flags related to
+  `--quiet` and to refreshing the index were not independent.
+
+  So the first goal with her patch series was to decouple these
+  behaviors, and the second goal was to allow `git stash` to
+  internally use `reset_head()` with the internal flag corresponding
+  to `--quiet` and to still refresh the index.
+
+  To decouple the behaviors one of her patches introduced the
+  `--[no-]refresh` option and the corresponding `reset.refresh` config
+  setting to `git reset`. Derrick Stolee, who prefers to be called
+  just Stolee, reviewed the patch series and agreed that the changes
+  in that patch were "well motivated", and otherwise he found that the
+  "code looks great" and he the mostly suggested improvements to the
+  tests.
+
+  Junio Hamano, the Git maintainer, also agreed that it was a good
+  idea to separate refreshing from `--quiet`.
+
+  Victoria then sent [a version 2](https://lore.kernel.org/git/pull.1170.v2.git.1647274230.gitgitgadget@gmail.com/)
+  of her patch series, with improvements to the tests, some commit
+  messages and the cover letter title.
+
+  Junio then reviewed the patch series and mostly suggested
+  improvements to the tests saying that otherwise "everything looked
+  good", while Stolee was happy with the series as it took into
+  account all his previous suggestions.
+
+  Victoria then sent [a version 3](https://lore.kernel.org/git/pull.1170.v3.git.1647308982.gitgitgadget@gmail.com/)
+  of her patch series that added a few more tests and improved some
+  others tests.
+
+  Junio and Victoria then discussed the tests a bit more, and Junio
+  agreed with Victoria's approach.
+
+  Phillip Wood though chimed in a few days later saying that the
+  approach taken by the patch series, which consisted in still not
+  refreshing the index by default when `--quiet` was given, was maybe
+  not the best. He considered that it was a "hack" that had been
+  introduced for performance reasons before the sparse index feature
+  was introduced and that we should take the opportunity to get rid of
+  it and go back to the original behavior of refreshing the index when
+  `--quiet` is given.
+
+  Junio agreed with Phillip saying that "he would very much prefer to
+  see `--quiet` not making contribution to the decision to refresh or
+  not in the longer term".  He suggested introducing `--no-refresh` to
+  `git reset` and said he thought `reset.refresh` wasn't a good idea
+  as it could lead to issue for people using `git reset` in scripts.
+
+  Victoria replied that she agreed with them but wanted to preserve as
+  much backward compatibility as possible. She said she would gladly
+  make the change if backwards-compatibility wasn't an issue. She also
+  asked if `reset.quiet` should be kept as it could also harm people
+  using `git reset` in scripts.
+
+  As her patch series had already been merged into the `next` branch,
+  she would send a new series on top deprecating `reset.refresh` and
+  `reset.quiet`, and making refreshing the default for all of `git
+  reset`.
+
+  Later she indeed sent the first version of
+  [a 4 patch long series](https://lore.kernel.org/git/pull.1184.git.1647894889.gitgitgadget@gmail.com/)
+  removing all instances of skipping index refresh in `git reset`
+  except for `--no-refresh` itself, and removing both `reset.refresh`
+  and `reset.quiet`.
+
+  Phillip reviewed her new patch series suggesting to allow both
+  `--no-refresh` and `--refresh` as one patch of the series removed
+  the latter. He said that `--refresh` could be used to countermand a
+  previous `--no-refresh` typically when using an alias that includes
+  `--no-refresh`. He also discussed possible improvements to the
+  documentation of `--refresh` and to commit messages.
+
+  Victoria then sent
+  [a version 2 of this new patch series](https://lore.kernel.org/git/pull.1184.v2.git.1648059480.gitgitgadget@gmail.com/)
+  taking into account Phillip's suggestions.
+
+  Junio liked the changes and agreed to merge the series. Later
+  though, Phillip suggested that the short help sentence given by `git
+  reset -h` be about `--no-refresh` instead of `--refresh` as it's
+  "the form that users will want most of the time".
+
+  Junio agreed with Phillip's suggestion. He had already merged the
+  series to `next` though, so he proposed another patch on top
+  implementing Phillip's suggestion. Victoria tested the patch and
+  agreed with it. Junio replied he would merge it then.
+
+  All these patches were indeed merged into the master branch before
+  the recent release of the latest Git 2.36.0, so that in this new Git
+  version `git reset` and `git stash` handle some of their options in
+  a much better way.
 
 <!---
 ### Support
