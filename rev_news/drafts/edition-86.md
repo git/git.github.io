@@ -41,10 +41,10 @@ This edition covers what happened during the month of March 2022.
   used with `--index` and that this comes from `reset_head()` being
   called without the internal flag corresponding to `--quiet`.
 
-  When calling `reset_head()` with the flag is set though, the index
+  When calling `reset_head()` with the flag set though, the index
   is not refreshed, while `git stash` needs the index to be refreshed.
   The underlying issue was that the internal flags related to
-  `--quiet` and to refreshing the index were not independent.
+  `--quiet` and refreshing the index were not independent.
 
   So the first goal with her patch series was to decouple these
   behaviors, and the second goal was to allow `git stash` to
@@ -56,7 +56,7 @@ This edition covers what happened during the month of March 2022.
   setting to `git reset`. Derrick Stolee, who prefers to be called
   just Stolee, reviewed the patch series and agreed that the changes
   in that patch were "well motivated", and otherwise he found that the
-  "code looks great" and he the mostly suggested improvements to the
+  "code looks great" and he mostly suggested improvements to the
   tests.
 
   Junio Hamano, the Git maintainer, also agreed that it was a good
@@ -88,10 +88,10 @@ This edition covers what happened during the month of March 2022.
   `--quiet` is given.
 
   Junio agreed with Phillip saying that "he would very much prefer to
-  see `--quiet` not making contribution to the decision to refresh or
+  see `--quiet` not making a contribution to the decision to refresh or
   not in the longer term".  He suggested introducing `--no-refresh` to
   `git reset` and said he thought `reset.refresh` wasn't a good idea
-  as it could lead to issue for people using `git reset` in scripts.
+  as it could lead to issues for people using `git reset` in scripts.
 
   Victoria replied that she agreed with them but wanted to preserve as
   much backward compatibility as possible. She said she would gladly
