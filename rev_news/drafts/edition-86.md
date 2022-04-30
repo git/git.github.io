@@ -72,6 +72,8 @@ __Various__
 
 + [Git security vulnerability announced](https://github.blog/2022-04-12-git-security-vulnerability-announced/)
   by Taylor Blau.
+    + [The risks of embedded bare repositories in Git](https://lwn.net/Articles/892755/)
+      by Jake Edge on LWN ([free link for non-subscribers](https://lwn.net/SubscriberLink/892755/a087f0c8092e873e/)).
 + [Highlights from Git 2.36](https://github.blog/2022-04-18-highlights-from-git-2-36/)
   by Taylor Blau.
 + [Public open source projects are eligible for Ultimate [GitLab] tier features](https://about.gitlab.com/blog/2022/02/04/ultimate-perks-for-open-source-projects/)
@@ -101,8 +103,6 @@ __Light reading__
   by Matthew John Cheetham on GitHub blog, in [Engineering](https://github.blog/category/engineering/).
 + [The friend zone: friendly forks 101](https://github.blog/2022-04-25-the-friend-zone-friendly-forks-101/)
   by Lessley Dennington on GitHub blog, in [Engineering](https://github.blog/category/engineering/) and [Open Source](https://github.blog/category/open-source/).
-+ [The risks of embedded bare repositories in Git](https://lwn.net/Articles/892755/)
-  by Jake Edge on LWN ([free link for non-subscribers](https://lwn.net/SubscriberLink/892755/a087f0c8092e873e/)).
 + [Handling messy pull-request diffstats](https://lwn.net/Articles/889760/)
   by Jonathan Corbet on LWN ([free link for non-subscribers](https://lwn.net/SubscriberLink/889760/1b10fc1d270a0874/)).
     + Present in Linux kernel documentation as [maintainer/messy-diffstat.rst](https://github.com/torvalds/linux/blob/master/Documentation/maintainer/messy-diffstat.rst).
@@ -136,7 +136,7 @@ __Git tools and sites__
     + [Chapter 7: Using Git On Your Own](https://buildtogether.tech/git-solo/)
     + [Chapter 8: Using Git Together](https://buildtogether.tech/git-team/)
 + [Version Control with Git](https://swcarpentry.github.io/git-novice/index.html)
-  by the Software Carpentry Foundation
+  is a tutorial by the Software Carpentry Foundation
 + [git-backup](https://github.com/ChappIO/git-backup) is a command-line tool
   to pull all your GitHub and GitLab repositories for backup purposes; doesn't require Git.
 + [gitquickbranch.c](https://dianne.skoll.ca/hacks/gitquickbranch.c)
