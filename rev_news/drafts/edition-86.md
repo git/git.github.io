@@ -242,7 +242,7 @@ __Light reading__
 __Git tools and sites__
 
 + [Building Software Together](https://buildtogether.tech/) is a free online book by Greg Wilson
-  which aims aim is to teach you how to be a _compassionate programmer_;
+  which aims to teach you how to be a _compassionate programmer_;
   it includes two chapters about Git:
     + [Chapter 7: Using Git On Your Own](https://buildtogether.tech/git-solo/)
     + [Chapter 8: Using Git Together](https://buildtogether.tech/git-team/)
