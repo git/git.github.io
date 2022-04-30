@@ -23,7 +23,7 @@ This edition covers what happened during the month of March 2022.
 
 ### Reviews
 
-* [[PATCH 0/5] Separate '--skip-refresh' from '--quiet' in 'reset', use '--quiet' internally in 'stash'](https://lore.kernel.org/git/pull.1170.git.1647043729.gitgitgadget@gmail.com/)
+* [[PATCH 0/5] Separate `--skip-refresh` from `--quiet` in `reset`, use `--quiet` internally in `stash`](https://lore.kernel.org/git/pull.1170.git.1647043729.gitgitgadget@gmail.com/)
 
   Victoria Dye sent a 5 patch long series to improve the following:
 
@@ -33,12 +33,12 @@ This edition covers what happened during the month of March 2022.
     `git stash`.
 
   She had discovered issues with these features when she was working
-  on tests for `git stash` sparse index integration. (See Victoria's
+  on tests for the `git stash` sparse index integration. (See Victoria's
   interview in last month's
   [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/)
   for information on Victoria's current work.) She found that
   `--quiet` in `git stash` does not suppress all non-error output when
-  used with `--index` and that this comes from `reset_head()` being
+  used with `--index`, and that this comes from `reset_head()` being
   called without the internal flag corresponding to `--quiet`.
 
   When calling `reset_head()` with the flag set though, the index
@@ -56,7 +56,7 @@ This edition covers what happened during the month of March 2022.
   setting to `git reset`. Derrick Stolee, who prefers to be called
   just Stolee, reviewed the patch series and agreed that the changes
   in that patch were "well motivated", and otherwise he found that the
-  "code looks great" and he mostly suggested improvements to the
+  "code looks great", and he mostly suggested improvements to the
   tests.
 
   Junio Hamano, the Git maintainer, also agreed that it was a good
@@ -66,14 +66,14 @@ This edition covers what happened during the month of March 2022.
   of her patch series, with improvements to the tests, some commit
   messages and the cover letter title.
 
-  Junio then reviewed the patch series and mostly suggested
+  Junio then reviewed the patch series and mostly suggested further
   improvements to the tests saying that otherwise "everything looked
   good", while Stolee was happy with the series as it took into
   account all his previous suggestions.
 
   Victoria then sent [a version 3](https://lore.kernel.org/git/pull.1170.v3.git.1647308982.gitgitgadget@gmail.com/)
   of her patch series that added a few more tests and improved some
-  others tests.
+  others.
 
   Junio and Victoria then discussed the tests a bit more, and Junio
   agreed with Victoria's approach.
@@ -83,9 +83,9 @@ This edition covers what happened during the month of March 2022.
   refreshing the index by default when `--quiet` was given, was maybe
   not the best. He considered that it was a "hack" that had been
   introduced for performance reasons before the sparse index feature
-  was introduced and that we should take the opportunity to get rid of
+  was introduced, and that we should take the opportunity to get rid of
   it and go back to the original behavior of refreshing the index when
-  `--quiet` is given.
+  `--quiet` was given.
 
   Junio agreed with Phillip saying that "he would very much prefer to
   see `--quiet` not making a contribution to the decision to refresh or
@@ -101,7 +101,7 @@ This edition covers what happened during the month of March 2022.
 
   As her patch series had already been merged into the `next` branch,
   she would send a new series on top deprecating `reset.refresh` and
-  `reset.quiet`, and making refreshing the default for all of `git
+  `reset.quiet`, and making refreshing the default for all modes of `git
   reset`.
 
   Later she indeed sent the first version of
@@ -123,8 +123,8 @@ This edition covers what happened during the month of March 2022.
 
   Junio liked the changes and agreed to merge the series. Later
   though, Phillip suggested that the short help sentence given by `git
-  reset -h` be about `--no-refresh` instead of `--refresh` as it's
-  "the form that users will want most of the time".
+  reset -h` should be about `--no-refresh` instead of `--refresh` as this
+  was "the form that users will want most of the time".
 
   Junio agreed with Phillip's suggestion. He had already merged the
   series to `next` though, so he proposed another patch on top
@@ -149,7 +149,7 @@ This edition covers what happened during the month of March 2022.
 + Git [2.36.0](https://public-inbox.org/git/xmqqh76qz791.fsf@gitster.g/),
 [2.35.3 and below as a usability fix](https://public-inbox.org/git/xmqq1qy04iqa.fsf@gitster.g/),
 [2.36.0-rc2](https://public-inbox.org/git/xmqqfsmib5el.fsf@gitster.g/),
-[2.35.2 and below for CVE-2022-24765](https://public-inbox.org/git/xmqqv8veb5i6.fsf@gitster.g/),
+[2.35.2 and below for CVE-2022-24765 and CVE-2022-24767](https://public-inbox.org/git/xmqqv8veb5i6.fsf@gitster.g/),
 [2.36.0-rc1](https://public-inbox.org/git/xmqqy20fjgpy.fsf@gitster.g/),
 [2.36.0-rc0](https://public-inbox.org/git/xmqqo81gpokn.fsf@gitster.g/)
 + Git for Windows [2.36.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.36.0.windows.1),
@@ -196,7 +196,7 @@ __Various__
 __April Fool's__
 
 + [Make a cup of coffee with Git](https://opensource.com/article/22/4/brew-coffee-git-command)
-  by Moshe Zadka on opensource\.com
+  by Moshe Zadka on opensource\.com.
 + [Announcing git snail-mail](https://drewdevault.com/2022/04/01/git-snail-mail.html)
   on Drew DeVault's blog... which almost got created for real (though without `git scan-mail` it would require).
 
@@ -216,7 +216,7 @@ __Light reading__
   by Lessley Dennington on GitHub blog, in [Engineering](https://github.blog/category/engineering/) and [Open Source](https://github.blog/category/open-source/).
 + [Handling messy pull-request diffstats](https://lwn.net/Articles/889760/)
   by Jonathan Corbet on LWN ([free link for non-subscribers](https://lwn.net/SubscriberLink/889760/1b10fc1d270a0874/)).
-    + Present in Linux kernel documentation as [maintainer/messy-diffstat.rst](https://github.com/torvalds/linux/blob/master/Documentation/maintainer/messy-diffstat.rst).
+    + Present in the Linux kernel documentation as [maintainer/messy-diffstat.rst](https://github.com/torvalds/linux/blob/master/Documentation/maintainer/messy-diffstat.rst).
 + [Radicle: a Decentralized Alternative to GitHub for Web3](https://thenewstack.io/radicle-a-decentralized-alternative-to-github-for-web3/)
   by Jake Ludington on The New Stack. [Radicle](https://radicle.xyz/) was previously mentioned in
   [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/) and [#70](https://git.github.io/rev_news/2020/12/26/edition-70/).
@@ -233,7 +233,7 @@ __Light reading__
 + [5 resources to get your Monorepo off the ground](https://dev.to/mbarzeev/5-resources-to-get-your-monorepo-off-the-ground-3mlp)
   by Matti Bar-Zeev on DEV; 
     + first mention of monorepos in Git Rev News can be found in [edition #4](https://git.github.io/rev_news/2015/06/03/edition-4/),
-    + most recent mention is [Monorepo.tools](https://monorepo.tools/) site in [edition #84](https://git.github.io/rev_news/2022/02/28/edition-84/).
+    + most recent mention is the [Monorepo.tools](https://monorepo.tools/) site in [edition #84](https://git.github.io/rev_news/2022/02/28/edition-84/).
 + [Use Git tactically](https://stackoverflow.blog/2022/04/06/use-git-tactically/):
   How you can use micro-commits to effectively apply the [Strangler Fig pattern](https://martinfowler.com/bliki/StranglerFigApplication.html),
   by Mark Seeman on The Overflow (Stack Overflow blog).
@@ -247,11 +247,11 @@ __Git tools and sites__
     + [Chapter 7: Using Git On Your Own](https://buildtogether.tech/git-solo/)
     + [Chapter 8: Using Git Together](https://buildtogether.tech/git-team/)
 + [Version Control with Git](https://swcarpentry.github.io/git-novice/index.html)
-  is a tutorial by the Software Carpentry Foundation
+  is a tutorial by the Software Carpentry Foundation.
 + [git-backup](https://github.com/ChappIO/git-backup) is a command-line tool
-  to pull all your GitHub and GitLab repositories for backup purposes; doesn't require Git.
+  to pull all your GitHub and GitLab repositories for backup purposes; it doesn't require Git.
 + [gitquickbranch.c](https://dianne.skoll.ca/hacks/gitquickbranch.c)
-  by Dianne Skoll is a small program in C to quickly find current branch name.
+  by Dianne Skoll is a small program in C to quickly find the current branch name.
 + [delta](https://github.com/dandavison/delta) is a syntax-highlighting pager
   for git, diff, and grep output.
     + It is one of the tools on [Modern Unix tools](https://github.com/ibraheemdev/modern-unix) list,
@@ -260,12 +260,12 @@ __Git tools and sites__
   is an experimental diff tool that compares files based on their syntax.
   The [manual](https://difftastic.wilfred.me.uk/) includes list of
   [some other tree diffing tools available](https://difftastic.wilfred.me.uk/tree_diffing.html).
-+ [Vershd](https://vershd.io/) is [Electron-based](https://www.electronjs.org/apps?q=git)
++ [Vershd](https://vershd.io/) is an [Electron-based](https://www.electronjs.org/apps?q=git)
   multi-platform Git GUI, with separate views of branches and their commits, pending files and stashes,
   and the ability to show in advance what's going to happen when actions are taken.
   Free for, among others, personal use and educational institutions.
   If only it's marketing was less <abbr title="Fear, uncertainty, and doubt">FUD</abbr>-ish
-  _("Git can [...] destroy your work in a second")_...
+  _("Git [...] can easily destroy days of work in just seconds and requires thousands of keyboard commands and parameters")_...
 
 
 ## Credits
