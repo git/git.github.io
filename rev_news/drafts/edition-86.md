@@ -237,7 +237,7 @@ __Light reading__
 + [Use Git tactically](https://stackoverflow.blog/2022/04/06/use-git-tactically/):
   How you can use micro-commits to effectively apply the [Strangler Fig pattern](https://martinfowler.com/bliki/StranglerFigApplication.html),
   by Mark Seeman on The Overflow (Stack Overflow blog).
-+ [The Programmer's Brain](https://www.infoq.com/presentations/reading-code/) Why we should be taught to 'read code'.
++ [The Programmer's Brain](https://www.infoq.com/presentations/reading-code/) by Felienne Hermans: Why we should be taught to 'read code'.
 + [Working on two git branches at once with git worktree](https://andrewlock.net/working-on-two-git-branches-at-once-with-git-worktree)
   by Andrew Lock on andrewlock\.net.
 
@@ -268,8 +268,8 @@ __Git tools and sites__
   Free for, among others, personal use and educational institutions.
   If only it's marketing was less <abbr title="Fear, uncertainty, and doubt">FUD</abbr>-ish
   _("Git [...] can easily destroy days of work in just seconds and requires thousands of keyboard commands and parameters")_...
-+ [Git for Professionals – Free Version Control Course](https://www.freecodecamp.org/news/git-for-professionals/)
-  FreeCode camp intro with follow-on more 'Advanced Git Tutorial' sessions, all on YouTube. Plenty of useful tidbits.
++ [Git for Professionals – Free Version Control Course](https://www.freecodecamp.org/news/git-for-professionals/):
+  freeCodeCamp intro by Tobias Günther with follow-on more 'Advanced Git Tutorial' sessions, all on YouTube. Plenty of useful tidbits.
 
 
 ## Credits
