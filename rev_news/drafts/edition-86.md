@@ -238,7 +238,8 @@ __Light reading__
   How you can use micro-commits to effectively apply the [Strangler Fig pattern](https://martinfowler.com/bliki/StranglerFigApplication.html),
   by Mark Seeman on The Overflow (Stack Overflow blog).
 + [The Programmer's Brain](https://www.infoq.com/presentations/reading-code/) Why we should be taught to 'read code'.
-
++ [Working on two git branches at once with git worktree](https://andrewlock.net/working-on-two-git-branches-at-once-with-git-worktree)
+  by Andrew Lock on andrewlock\.net.
 
 __Git tools and sites__
 
