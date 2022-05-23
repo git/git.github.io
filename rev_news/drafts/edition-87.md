@@ -166,7 +166,7 @@ This edition covers what happened during the month of May 2022.
   What do you mean by workflow?
 
   (_Editor's note: Here, Carlo jokes about his workflow which according
-   to him "is a "nightmare that is stitched together with masking tape"_)
+   to him "is a nightmare that is stitched together with masking tape"_)
 
 * What is your advice for people who want to start Git development?
   Where and how should they start?
