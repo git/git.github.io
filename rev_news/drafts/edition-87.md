@@ -161,6 +161,13 @@ This edition covers what happened during the month of May 2022.
   better than me at fixing them, mostly nicer as well, and especially
   way more patient than I would be.
 
+* How does your mailing list workflow look like?
+
+  What do you mean by workflow?
+
+  (_Editor's note: Here, Carlo jokes about his workflow which according
+   to him "is a "nightmare that is stitched together with masking tape"_)
+
 * What is your advice for people who want to start Git development?
   Where and how should they start?
 
