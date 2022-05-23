@@ -17,9 +17,33 @@ This edition covers what happened during the month of May 2022.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [Git participates in GSoC (Google Summer of Code) 2022](https://summerofcode.withgoogle.com/programs/2022/organizations/git)
+
+  The following three contributors have been officially accepted to
+  work on Git as part of the
+  [GSoC 2022](https://summerofcode.withgoogle.com/):
+
+  - Abhradeep Chakraborty will work on the
+    [Reachability bitmap improvements](https://summerofcode.withgoogle.com/programs/2022/projects/UPtA6qdf)
+    project. He will be co-mentored by Kaartic Sivaraam and Taylor Blau.
+
+  - Shaoxuan Yuan will work on the
+    [More Sparse Index Integrations](https://summerofcode.withgoogle.com/programs/2022/projects/hz4rcOUB)
+    project. He will be co-mentored by Derrick Stolee and Victoria Dye.
+
+  - Jaydeep Das will work on the
+    [Unify ref-filters with other pretty formats](https://summerofcode.withgoogle.com/programs/2022/projects/8mYcnerl)
+    project. He will be co-mentored by Hariom Verma and Christian
+    Couder. His first blog post about it
+    [is up](https://jdeep.me/posts/6.d/).
+
+  Congratulations to the selected contributors!
+
+  Thanks also to the students who applied and worked on
+  micro-projects, but couldn't be selected! We hope to continue to see
+  you in the community!
 
 <!---
 ### Reviews
