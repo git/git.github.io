@@ -212,13 +212,17 @@ This edition covers what happened during the month of May 2022.
 [3.2.13](https://help.github.com/enterprise-server@3.2/admin/release-notes#3.2.13),
 [3.1.21](https://help.github.com/enterprise-server@3.1/admin/release-notes#3.1.21)
 + GitKraken [8.5.0](https://support.gitkraken.com/release-notes/current)
++ Tower for Windows [3.2](https://www.git-tower.com/release-notes/windows)
 
 ## Other News
 
 __Various__
 
++ [Mastering Tower for Mac — 40 Tips in under 10 Minutes](https://youtu.be/OChAwMBLjnY) video by Bruno Brito.
 
 __Light reading__
+
++ [Mastering Tower (Mac Edition)](https://www.git-tower.com/blog/mastering-tower/) by Bruno Brito on Tower's blog.
 
 
 __Git tools and sites__
