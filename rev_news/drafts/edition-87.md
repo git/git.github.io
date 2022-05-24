@@ -280,14 +280,81 @@ This edition covers what happened during the month of May 2022.
 
 __Various__
 
-+ [Mastering Tower for Mac — 40 Tips in under 10 Minutes](https://youtu.be/OChAwMBLjnY) video by Bruno Brito.
+
 
 __Light reading__
 
++ [An overview of version control in programming](https://lemire.me/blog/2022/04/21/an-overview-of-version-control-in-programming/)
+  by Daniel Lemire on his blog.
++ [Revisiting the Pain: The World without Git](https://dev.to/kcdchennai/revisiting-the-pain-the-world-without-git-3jod)
+  by Sneh Chauhan for Kubernetes Community Days Chennai on DEV\.to.
+    + Compare [The Git Parable](http://tom.preston-werner.com/2009/05/19/the-git-parable.html),
+      by Tom Preston-Werner (2009) - the ideas behind the architecture of Git;
+      covered in [Git Rev News #30](https://git.github.io/rev_news/2017/08/16/edition-30/).
 + [Mastering Tower (Mac Edition)](https://www.git-tower.com/blog/mastering-tower/) by Bruno Brito on Tower's blog.
++ [Mastering Tower for Mac — 40 Tips in under 10 Minutes](https://youtu.be/OChAwMBLjnY) video by Bruno Brito.
++ [Git Commit Message Template in Terminal and VS Code](https://dev.to/abbeyperini/git-commit-message-template-in-terminal-and-vs-code-326p)
+  by Abbey Perini on DEV\.to.  This article refers to:
+  + [How to Write a Git Commit Message](https://cbea.ms/git-commit/) (2014), which appeared in
+    [Git Rev News Edition #24](https://git.github.io/rev_news/2017/02/22/edition-24/).
+  + [Conventional Commits specification](https://www.conventionalcommits.org/), first appearing in
+    [Git Rev News Edition #52](https://git.github.io/rev_news/2019/06/28/edition-52/).
++ [A Guide to writing Industry Standard Git Commit Message](https://dev.to/tuasegun/a-guide-to-writing-industry-standard-git-commit-message-2ohl)
+  by Tuasegun on DEV\.to.
++ [Your Git Commit History Should Read Like a History Book. Here’s How.](https://betterprogramming.pub/your-git-commit-history-should-read-like-a-history-book-heres-how-7f44d5df1801)
+  by Mirco, on Better Programming, a Medium blog (member-only story).
++ [Squash \[merge\] commits considered harmful](https://dev.to/wesen/squash-commits-considered-harmful-ob1)
+  by Manuel Odendahl on DEV\.to.
++ [Can You Resolve Merge Conflicts Before They Happen?](https://dev.to/benjamincohen123/can-you-resolve-merge-conflicts-before-they-happen-46nd)
+  by Benjamin C. Baker on DEV\.to describes how to resolve merge conflicts manually,
+  and how one can detect potential conflicts in advance with [GitLive](https://git.live/) extension.
+  GitLive was mentioned in [Git Rev News Edition #77](https://git.github.io/rev_news/2021/07/31/edition-77/)
+  and [#82](https://git.github.io/rev_news/2021/12/30/edition-82/).
++ [How to Resolve Merge Conflicts in Git – A Practical Guide with Examples](https://www.freecodecamp.org/news/resolve-merge-conflicts-in-git-a-practical-guide/)
+  by Tapas Adhikary on freeCodeCamp.
++ [Automatically formatting and cleaning code on commit](https://blogs.halodoc.io/automatically-formatting-and-beautifying-code-on-commit/)
+  by Muhammad Sibra on Halodoc.
+    + This article mentions [husky](https://typicode.github.io/husky/#/),
+      which was first included in [Git Rev News #63](https://git.github.io/rev_news/2020/05/28/edition-63/),
+      and [lint-staged](https://www.npmjs.com/package/lint-staged),
+      first mentioned in [Git Rev News #45](https://git.github.io/rev_news/2018/11/21/edition-45/).
++ [Arduino and Git: Two Views](https://hackaday.com/2022/04/29/arduino-and-git-two-views/)
+   by Al Williams on Hackaday.
++ [Rename rebase with git](https://edofic.com/posts/2020-04-20-rebase-rename/) (2020),
+  or how to perform a `git rebase` in which you rename a file without conflicts -- though
+  nowadays one would use [`git filter-repo`](https://github.com/newren/git-filter-repo)
+  instead of `git filter-branch` as in the article.
+  Post on Andraž Bajt's blog.
++ [Repairing a corrupt Git repo using a clone](https://edofic.com/posts/2016-02-24-git-repair/) (2016)
+  on Andraž Bajt's blog.
 
 
 __Git tools and sites__
+
++ [Commit Message Editor](https://marketplace.visualstudio.com/items?itemName=adam-bender.commit-message-editor)
+  plugin for Visual Studio Code, by Adam Bender.
+  The default settings follow the Conventional Commits specification
++ [VSCode Git Commit Message](https://marketplace.visualstudio.com/items?itemName=rioukkevin.vscode-git-commit)
+  plugin for Visual Studio Code, by Kévin Riouk.
+  An extension made to formalize git commit messages.
++ [Mergify](https://mergify.com/) is a web service for
+  automatizing pull requests and securing the code merge using a merge queue.
+  Free for open-source.
+    + [Merging Pull Requests Like a Pro With Mergify](https://dev.to/aniket762/merging-pull-requests-like-a-pro-with-mergify-30fa)
+      by Aniket Pal on DEV\.to.
++ [Mani](https://github.com/alajmo/mani) is a CLI tool that helps you manage multiple repositories.
+    + [mani, a CLI Tool to Manage Multiple Repositories](https://dev.to/alajmo/mani-a-cli-tool-to-manage-multiple-repositories-1eg)
+      by Samir Alajmovic on DEV\.to.  The article includes list of
+      [alternatives](https://dev.to/alajmo/mani-a-cli-tool-to-manage-multiple-repositories-1eg#alternatives).
++ [Fig](https://fig.io/) adds IDE-style autocomplete (including for git, cd, ssh)
+  to your existing terminal (Terminal, iTerm, Hyper, Tabby, Kitty, bash, zsh,...).
++ [JSON Patch](http://jsonpatch.com/) is a format for describing changes to a JSON document
+  as JSON document themselves.  Specified in [RFC 6902](https://datatracker.ietf.org/doc/html/rfc6902/).
++ [sqldiff](https://www.sqlite.org/sqldiff.html) is command-line utility program
+  that displays content differences between two [SQLite](https://www.sqlite.org/) databases.
++ [Gitcoin (GTC)](https://gitcoin.co/) is a Web3 platform, which combines
+  open-source programming projects with a Ethereum-based crypto payment system.
+  _In spite of its name it has no connection with Git._
 
 
 ## Credits
