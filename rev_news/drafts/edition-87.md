@@ -41,7 +41,7 @@ This edition covers what happened during the month of May 2022.
 
   Congratulations to the selected contributors!
 
-  Thanks also to the students who applied and worked on
+  Thanks also to the other contributors who applied and worked on
   micro-projects, but couldn't be selected! We hope to continue to see
   you in the community!
 
