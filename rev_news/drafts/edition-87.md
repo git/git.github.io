@@ -45,6 +45,68 @@ This edition covers what happened during the month of May 2022.
   micro-projects, but couldn't be selected! We hope to continue to see
   you in the community!
 
+* [[ANNOUNCE] git-scm.com Heroku credits update](https://lore.kernel.org/git/YkcmtqcFaO7v1jW5@nand.local/)
+
+  Taylor Blau announced that the Heroku credits for
+  [git-scm.com](https://git-scm.com), Git project's de-facto homepage,
+  would not be provided for free by Heroku anymore.
+
+  The Git project has so far relied on those free credits from Heroku
+  and free support from [Cloudflare](https://www.cloudflare.com/) to
+  have $0 maintenance cost for the site.
+
+  Taylor suggested different options to deal with the change:
+
+  - convert to a static site, so that we don't rely on Heroku and can
+    be hosted elsewhere hopefully for free,
+
+  - try to reduce our Heroku bill by getting rid of some of the
+    services we currently use (like database and Ruby on Rails cache),
+
+  - find a cheaper Ruby on Rails host.
+
+  The Heroku credits amount to around $132 per month that are now
+  billed to Git's account at
+  [Conservancy](https://sfconservancy.org/), as Git is Conservancy
+  member, while we "figure out what to do next".
+
+  A few days later, Taylor replied to himself saying that Dan Moore
+  from [FusionAuth](https://fusionauth.io/) has offered to help assist
+  with our hosting costs, as FusionAuth, his company, "has benefited
+  tremendously from Git".
+
+  Git project funds are usually used for things like sponsoring travel
+  and lodging for Git Merge attendees who could not otherwise make it
+  in person, so helping for hosting costs is welcome.
+
+  Sponsors for the site are listed on the
+  [Sponsors section of the about page](https://git-scm.com/site),
+  so we would just have to list FusionAuth there along with
+  [Cloudflare](https://www.cloudflare.com/) and
+  [Bonsai](https://bonsai.io/).
+
+  Dan then replied to Taylor confirming that FusionAuth "would love to
+  offer [their] monetary support if it makes sense for the community".
+
+  Both Kaartic Sivaraam and Phillip Wood thanked Dan and his company
+  for their offer, and agreed with Taylor that it would be a good
+  solution.
+
+  Johannes Schindelin, alias Dscho, also replied to Taylor saying he
+  would be in favor of converting the site to a static web
+  site. Taylor then replied to Dscho, explaining some tasks, along
+  with technical details, that would need to be taken care of for the
+  conversion.
+
+  Junio Hamano, Taylor and Christian Couder also discussed the idea of
+  proposing such conversion tasks as a future
+  [Outreachy](https://www.outreachy.org/) or
+  [GSoC](https://summerofcode.withgoogle.com) project.
+
+  For now the Git project accepted
+  [FusionAuth](https://fusionauth.io/)'s generous offer and the
+  git-scm.com web site will continue to run in the same way.
+
 <!---
 ### Reviews
 -->
