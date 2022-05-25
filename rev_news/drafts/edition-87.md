@@ -181,7 +181,7 @@ This edition covers what happened during the months of April and May 2022.
   there is a pandemic, of course).
 
   Something less ambitious but maybe even more effective would be to get a
-  virtual hackathon, event hough I have to admit realistically a physical
+  virtual hackathon, even though I have to admit realistically a physical
   one would be even better.
 
   It is a shame they don't do the "Linux cruise" anymore, but it might
