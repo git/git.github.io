@@ -304,6 +304,12 @@ __Light reading__
   by Tuasegun on DEV\.to.
 + [Your Git Commit History Should Read Like a History Book. Here’s How.](https://betterprogramming.pub/your-git-commit-history-should-read-like-a-history-book-heres-how-7f44d5df1801)
   by Mirco, on Better Programming, a Medium blog (member-only story).
++ [Automatically formatting and cleaning code on commit](https://blogs.halodoc.io/automatically-formatting-and-beautifying-code-on-commit/)
+  by Muhammad Sibra on Halodoc.
+    + This article mentions [husky](https://typicode.github.io/husky/#/),
+      which was first included in [Git Rev News #63](https://git.github.io/rev_news/2020/05/28/edition-63/),
+      and [lint-staged](https://www.npmjs.com/package/lint-staged),
+      first mentioned in [Git Rev News #45](https://git.github.io/rev_news/2018/11/21/edition-45/).
 + [Squash \[merge\] commits considered harmful](https://dev.to/wesen/squash-commits-considered-harmful-ob1)
   by Manuel Odendahl on DEV\.to.
 + [Can You Resolve Merge Conflicts Before They Happen?](https://dev.to/benjamincohen123/can-you-resolve-merge-conflicts-before-they-happen-46nd)
@@ -313,14 +319,12 @@ __Light reading__
   and [#82](https://git.github.io/rev_news/2021/12/30/edition-82/).
 + [How to Resolve Merge Conflicts in Git – A Practical Guide with Examples](https://www.freecodecamp.org/news/resolve-merge-conflicts-in-git-a-practical-guide/)
   by Tapas Adhikary on freeCodeCamp.
-+ [Automatically formatting and cleaning code on commit](https://blogs.halodoc.io/automatically-formatting-and-beautifying-code-on-commit/)
-  by Muhammad Sibra on Halodoc.
-    + This article mentions [husky](https://typicode.github.io/husky/#/),
-      which was first included in [Git Rev News #63](https://git.github.io/rev_news/2020/05/28/edition-63/),
-      and [lint-staged](https://www.npmjs.com/package/lint-staged),
-      first mentioned in [Git Rev News #45](https://git.github.io/rev_news/2018/11/21/edition-45/).
 + [Arduino and Git: Two Views](https://hackaday.com/2022/04/29/arduino-and-git-two-views/)
-   by Al Williams on Hackaday.
+  by Al Williams on Hackaday.
++ [Why SQLite Does Not Use Git](https://sqlite.org/whynotgit.html) but [Fossil](https://fossil-scm.org/)
+  (a version control system that was specifically designed and written to support SQLite).
+  An article about Fossil did appear in [Git Rev News Edition #11](https://git.github.io/rev_news/2016/01/13/edition-11/),
+  but is nowadays unavailable except through the [Internet Archive](https://web.archive.org/web/20160304055320/https://blog.kotur.org/posts/fossil-keeps-more-than-just-your-code.html).
 + [Rename rebase with git](https://edofic.com/posts/2020-04-20-rebase-rename/) (2020),
   or how to perform a `git rebase` in which you rename a file without conflicts -- though
   nowadays one would use [`git filter-repo`](https://github.com/newren/git-filter-repo)
@@ -351,7 +355,7 @@ __Git tools and sites__
   to your existing terminal (macOS Terminal, iTerm, Hyper, Tabby, Kitty, bash, zsh, ...).
 + [JSON Patch](http://jsonpatch.com/) is a format for describing changes to a JSON document
   as a JSON document itself. Specified in [RFC 6902](https://datatracker.ietf.org/doc/html/rfc6902/).
-+ [sqldiff](https://www.sqlite.org/sqldiff.html) is a command-line utility program (Windows binary)
++ [sqldiff.exe](https://www.sqlite.org/sqldiff.html) is a command-line utility program (Windows binary)
   that displays content differences between two [SQLite](https://www.sqlite.org/) databases.
 + [Gitcoin (GTC)](https://gitcoin.co/) is a Web3 platform which combines
   open-source programming projects with an Ethereum-based crypto payment system.
