@@ -140,7 +140,7 @@ This edition covers what happened during the month of May 2022.
 
   Well; due to either a series of unfortunate misunderstandings or some
   bureaucratic mistake akin to the Vogon Constructor Fleet job that
-  destroyed earth in the beginning of the Hitchhiker of the Galaxy, I am
+  demolished Earth at the beginning of the Hitchhiker's Guide to the Galaxy, I am
   now open to a lot more opportunities to help you do anything, and MUST
   do it for free.  Hope that is a good answer, but ping me if you would
   like some additional explanation.
@@ -209,7 +209,7 @@ This edition covers what happened during the month of May 2022.
   library in my hometown to read about the latest games in the computer
   magazines they had that I might be able to type into that first
   computer my parents got for me, that had an 8-bit CPU and 64KB of RAM
-  (not all of it totally addressable though, as it also had a ROM with a
+  (not all of it totally usable though, as it also had a ROM with a
   basic interpreter that I think used half of that), but I am not sure.
 
 * Do you happen to have any memorable experience w.r.t contributing to the
