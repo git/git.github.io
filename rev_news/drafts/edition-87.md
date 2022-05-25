@@ -268,7 +268,7 @@ This edition covers what happened during the months of April and May 2022.
 [14.10.3](https://about.gitlab.com/releases/2022/05/16/gitlab-14-10-3-released/),
 [14.10.2](https://about.gitlab.com/releases/2022/05/05/gitlab-14-10-2-released/),
 [14.10.1, 14.9.4, and 14.8.6](https://about.gitlab.com/releases/2022/05/02/security-release-gitlab-14-10-1-released/)
-+ Gerrit Code Review [3.3.11](https://www.gerritcodereview.com/3.3.html#3311)
++ Gerrit Code Review [3.3.11](https://www.gerritcodereview.com/3.3.html#3311), [3.4.5](https://www.gerritcodereview.com/3.4.html#345), [3.5.2](https://www.gerritcodereview.com/3.5.html#352) and [3.6.0](https://www.gerritcodereview.com/3.6.html#360)
 + GitHub Enterprise [3.5.0](https://help.github.com/enterprise-server@3.5/admin/release-notes#3.5.0),
 [3.4.3](https://help.github.com/enterprise-server@3.4/admin/release-notes#3.4.3),
 [3.3.8](https://help.github.com/enterprise-server@3.3/admin/release-notes#3.3.8),
