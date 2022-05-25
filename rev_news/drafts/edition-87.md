@@ -13,7 +13,7 @@ Welcome to the 87th edition of [Git Rev News](https://git.github.io/rev_news/rev
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
-This edition covers what happened during the month of May 2022.
+This edition covers what happened during the months of April and May 2022.
 
 ## Discussions
 
@@ -48,7 +48,7 @@ This edition covers what happened during the month of May 2022.
 * [[ANNOUNCE] git-scm.com Heroku credits update](https://lore.kernel.org/git/YkcmtqcFaO7v1jW5@nand.local/)
 
   Taylor Blau announced that the Heroku credits for
-  [git-scm.com](https://git-scm.com), Git project's de-facto homepage,
+  [git-scm.com](https://git-scm.com), Git project's de facto homepage,
   would not be provided for free by Heroku anymore.
 
   The Git project has so far relied on those free credits from Heroku
@@ -104,8 +104,9 @@ This edition covers what happened during the month of May 2022.
   [GSoC](https://summerofcode.withgoogle.com) project.
 
   For now the Git project accepted
-  [FusionAuth](https://fusionauth.io/)'s generous offer and the
-  git-scm.com web site will continue to run in the same way.
+  [FusionAuth](https://fusionauth.io/)'s generous offer, and the
+  [git-scm.com](https://git-scm.com) web site will continue to run
+  in the same way.
 
 <!---
 ### Reviews
@@ -119,7 +120,7 @@ This edition covers what happened during the month of May 2022.
 
 * Who are you and what do you do?
 
-  I am a peruvian hacker that likes to argue he is also "american" to
+  I am a Peruvian hacker who likes to argue he is also "American" to
   his neighbours and accidental coworkers/friends in the USA, because
   while I flew to get here, and I even crossed an ocean to do so, I
   might as well have walked instead.
@@ -165,12 +166,12 @@ This edition covers what happened during the month of May 2022.
   I sometimes can't understand myself), but I had yet to upstream the
   patches, so maybe that?
 
-  Eitherway, I am hoping whatever it is, it will be great and might make
+  Either way, I am hoping whatever it is, it will be great and might make
   my mom or my son proud, even if it is yet to come.
 
 * What are you doing on the Git project these days, and why?
 
-  scratching itches and learning from the best, aren't you?
+  Scratching itches and learning from the best, aren't you?
 
 * If you could get a team of expert developers to work full time on
   something in Git for a full year, what would it be?
@@ -179,8 +180,8 @@ This edition covers what happened during the month of May 2022.
   have a Git conference to get everyone in a room (obviously not while
   there is a pandemic, of course).
 
-  Something less ambitious but maybe even more effective, would be to get a
-  virtual hackathon, eventhough I had to admit realistically a physical
+  Something less ambitious but maybe even more effective would be to get a
+  virtual hackathon, event hough I have to admit realistically a physical
   one would be even better.
 
   It is a shame they don't do the "Linux cruise" anymore, but it might
@@ -189,7 +190,7 @@ This edition covers what happened during the month of May 2022.
   internet connectivity), Git was still useful since you might as well
   send patches around in USB drives.
 
-  I guess the first thing to implement in that hackaton might be ZMODEM
+  I guess the first thing to implement in that hackathon might be ZMODEM
   transport for git push/pull, and I might be more than happy to make
   sure everyone has a working cable to use if they are still lucky
   enough to get a computer that has a DB9.
@@ -212,7 +213,7 @@ This edition covers what happened during the month of May 2022.
   (not all of it totally usable though, as it also had a ROM with a
   basic interpreter that I think used half of that), but I am not sure.
 
-* Do you happen to have any memorable experience w.r.t contributing to the
+* Do you happen to have any memorable experience w\.r\.t\. contributing to the
   Git project? If yes, could you share it with us?
 
   Lots indeed, that is why I sometimes actively try to fix some bugs any
@@ -228,7 +229,7 @@ This edition covers what happened during the month of May 2022.
   What do you mean by workflow?
 
   (_Editor's note: Here, Carlo jokes about his workflow which according
-   to him "is a nightmare that is stitched together with masking tape"_)
+   to him "is a nightmare that is stitched together with masking tape"._)
 
 * What is your advice for people who want to start Git development?
   Where and how should they start?
@@ -257,7 +258,7 @@ This edition covers what happened during the month of May 2022.
 * If there's one tip you would like to share with other Git developers,
   what would it be?
 
-  Don't Panic
+  Don't Panic.
 
 ## Releases
 
@@ -307,7 +308,7 @@ __Light reading__
   by Manuel Odendahl on DEV\.to.
 + [Can You Resolve Merge Conflicts Before They Happen?](https://dev.to/benjamincohen123/can-you-resolve-merge-conflicts-before-they-happen-46nd)
   by Benjamin C. Baker on DEV\.to describes how to resolve merge conflicts manually,
-  and how one can detect potential conflicts in advance with [GitLive](https://git.live/) extension.
+  and how one can detect potential conflicts in advance with the [GitLive](https://git.live/) extension.
   GitLive was mentioned in [Git Rev News Edition #77](https://git.github.io/rev_news/2021/07/31/edition-77/)
   and [#82](https://git.github.io/rev_news/2021/12/30/edition-82/).
 + [How to Resolve Merge Conflicts in Git – A Practical Guide with Examples](https://www.freecodecamp.org/news/resolve-merge-conflicts-in-git-a-practical-guide/)
@@ -333,7 +334,7 @@ __Git tools and sites__
 
 + [Commit Message Editor](https://marketplace.visualstudio.com/items?itemName=adam-bender.commit-message-editor)
   plugin for Visual Studio Code, by Adam Bender.
-  The default settings follow the Conventional Commits specification
+  The default settings follow the Conventional Commits specification.
 + [VSCode Git Commit Message](https://marketplace.visualstudio.com/items?itemName=rioukkevin.vscode-git-commit)
   plugin for Visual Studio Code, by Kévin Riouk.
   An extension made to formalize git commit messages.
@@ -347,13 +348,13 @@ __Git tools and sites__
       by Samir Alajmovic on DEV\.to.  The article includes list of
       [alternatives](https://dev.to/alajmo/mani-a-cli-tool-to-manage-multiple-repositories-1eg#alternatives).
 + [Fig](https://fig.io/) adds IDE-style autocomplete (including for git, cd, ssh)
-  to your existing terminal (Terminal, iTerm, Hyper, Tabby, Kitty, bash, zsh,...).
+  to your existing terminal (macOS Terminal, iTerm, Hyper, Tabby, Kitty, bash, zsh, ...).
 + [JSON Patch](http://jsonpatch.com/) is a format for describing changes to a JSON document
-  as JSON document themselves.  Specified in [RFC 6902](https://datatracker.ietf.org/doc/html/rfc6902/).
-+ [sqldiff](https://www.sqlite.org/sqldiff.html) is command-line utility program
+  as a JSON document itself. Specified in [RFC 6902](https://datatracker.ietf.org/doc/html/rfc6902/).
++ [sqldiff](https://www.sqlite.org/sqldiff.html) is a command-line utility program (Windows binary)
   that displays content differences between two [SQLite](https://www.sqlite.org/) databases.
-+ [Gitcoin (GTC)](https://gitcoin.co/) is a Web3 platform, which combines
-  open-source programming projects with a Ethereum-based crypto payment system.
++ [Gitcoin (GTC)](https://gitcoin.co/) is a Web3 platform which combines
+  open-source programming projects with an Ethereum-based crypto payment system.
   _In spite of its name it has no connection with Git._
 
 
