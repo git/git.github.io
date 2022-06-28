@@ -37,17 +37,80 @@ This edition covers what happened during the month of May 2022.
 + Tower for Mac [8.3](https://www.git-tower.com/release-notes/mac?show_tab=release-notes)
 
 ## Other News
+__Events__
++ [Git Merge 2022](https://github.blog/2022-06-15-git-merge-2022/)
+  by Lee Reilly on GitHub blog.
+  [Git Merge](http://git-merge.com/), the conference dedicated to bringing the Git community together
+  returns on September 14-15 in Chicago, Illinois, USA.
+  [Call for Speakers](https://sessionize.com/git-merge-2022) is open through Sunday, July 10.
 
 __Various__
++ [Highlights from Git 2.37](https://github.blog/2022-06-27-highlights-from-git-2-37/)
+  by Taylor Blau on GitHub's blog.
++ [How Atlassian made Git push over HTTPS faster for Bitbucket Cloud](https://www.atlassian.com/engineering/faster-git-push-over-https-for-bitbucket-cloud)
+  by Brent Thew on [Atlassian Engineering](https://www.atlassian.com/engineering) blog.
++ [Why We’re Sticking with Ruby on Rails at GitLab](https://thenewstack.io/why-were-sticking-with-ruby-on-rails-at-gitlab/)
+  by Sid Sijbrandij on The New Stack (contributed post, sponsored by GitLab).
++ [Improved verification of historic Git commit signatures \[in GitHub\]](https://github.blog/changelog/2022-05-31-improved-verification-of-historic-git-commit-signatures/)
+  with respect to public GPG signing keys that are expired or revoked (but not compromised).
++ [AppSmith Adds Git Support to Low-Code App Dev Framework](https://devops.com/appsmith-adds-git-support-to-low-code-app-dev-framework/)
+  by Mike Vizard on DevOps\.com.
 
 __Light reading__
 + [Better File Comparison with Kaleidoscope](https://www.git-tower.com/blog/kaleidoscope/) by Bruno Brito on Tower’s blog.
 + [Working with Feature Branches](https://www.git-tower.com/blog/working-with-feature-branches/) by Bruno Brito on Tower’s blog.
 + [Coming Up on Tower's Roadmap](https://www.git-tower.com/blog/coming-up-on-the-roadmap-2022/) by Bruno Brito on Tower’s blog.
 + [The Three Phases of Software Development](https://www.git-tower.com/blog/three-phases-of-software-development/) by Kristian Lumme on Tower’s blog.
++ [Best practices for Git branching](https://blogs.halodoc.io/best-practices-for-git/),
+  describing Git flow at Halodoc, by Ashish Anand.
++ [How to Recover a Deleted File in Git – Revert Changes After a Hard Reset](https://www.freecodecamp.org/news/how-to-recover-a-deleted-file-in-git/)
+  by Zaira Hira on freeCodeCamp.
++ [Git List Remote Branches](https://www.freecodecamp.org/news/git-list-remote-branches/)
+  by Quincy Larson on freeCodeCamp.
++ [Replacing Your Git Command Cheat Sheet With AI Command Search](https://www.warp.dev/blog/replace-git-cheat-sheet-ai-command-search)
+  by Jessica Wang on Warp blog; uses [Warp's AI Command search](https://docs.warp.dev/features/ai-command-search#:~:text=Press%20CTRL%2D%60%20to%20open,ENTER%20to%20generate%20the%20command.).
++ [We Put Half a Million files in One git (Mono-)Repository, Here’s What We Learned](https://canvatechblog.com/we-put-half-a-million-files-in-one-git-repository-heres-what-we-learned-ec734a764181)
+  by Ahn Lee in Canva Engineering Blog (a Medium-based blog).
+    + See also, for example, articles on [Developer Homepage of Derrick Stolee](https://stolee.dev/),
+      including [The Future of Git at Scale](https://www.youtube.com/watch?v=pXdabSCz4JA) 2021 presentation
+      ([slides](https://stolee.dev/docs/universe-2020.pdf) available),
+      a survey of some advanced Git features to help Git scale to the largest monorepos.
++ [Reducing the size of a git repository with git-replace](https://andrewlock.net/reducing-the-size-of-a-git-repository-with-git-replace/)
+  by Andrew Lock on andrewlock\.net, where repository is split into
+  a small "current" repository containing a minimal amount of history, and
+  a "history" repository containing all the commits prior to the creation of the new repository,
+  stitched together when needed with git-replace.
++ [How to Prevent Merge Conflicts (or at least have less of them)](https://blackgirlbytes.dev/how-to-prevent-merge-conflicts)
+  by Rizèl Scarlett, featured on daily.dev ([also on DEV.to](https://dev.to/github/how-to-prevent-merge-conflicts-or-at-least-have-less-of-them-109p)).
+  It is the last part
+  of 3 part [Intro to Git](https://dev.to/blackgirlbytes/series/17601) series on DEV\.to,
+  beginning with [How Do I Resolve Merge Conflicts?](https://dev.to/github/how-do-i-resolve-merge-conflicts-5438).
++ [People rarely use complicated git commands on the weekend, and I have the data to prove it.](https://dev.to/devteam/people-rarely-use-complicated-git-commands-on-the-weekend-and-i-have-the-data-to-prove-it-3ae2)
+  by Ben Halpern for The DEV Team on DEV\.to.
++ [How Git truly works](https://towardsdatascience.com/how-git-truly-works-cd9c375966f6)
+  by Alberto Prospero in Towards Data Science (a Medium-based blog).
++ [Sourceware – GNU Toolchain Infrastructure roadmap](https://gnu.wildebeest.org/blog/mjw/2022/06/22/sourceware-gnu-toolchain-infrastructure-roadmap/)
+  by Mark J. Wielaard
 
 __Git tools and sites__
-
++ [Sourceware](https://sourceware.org/) is community run infrastructure, mailing lists,
+  git, bug trackers, wikis, etc. hosted in the Red Hat Open Source
+  [Community Infrastructure Community Cage](https://osci.io/tenants/).
+  Uses [shared buildbot](https://builder.sourceware.org/) for (test) automation,
+  and [patchwork](https://patchwork.sourceware.org/) for tracking the state of contributions;
+  most tests upload all results to [bunsendb](https://sourceware.org/git/bunsendb.git).
+  Uses mirror at SourceHut, <https://sr.ht/~sourceware/>, for web forge.
++ [unix-history-repo](https://github.com/dspinellis/unix-history-repo) is a repository
+  representing a reconstructed version of the Unix history from 1970 until today,
+  based on the currently available data.  Note that this repository will be often
+  automatically regenerated from scratch.
++ [git-repair](http://git-repair.branchable.com/) can repair various forms of damage to git repositories;
+  a complement to `git fsck`, which finds problems, but does not fix them.
+  It is a Haskell program,
+  developed as a spinoff of [git-annex](http://git-annex.branchable.com/) (for large files management).
++ [Rich Enhanced Shell History (resh)](Rich Enhanced Shell History - Contextual shell history for zsh and bash)
+  provides contextual shell history for zsh and bash,
+  where relevant results are based on current directory, _git repo_, exit status, and host.
 
 ## Credits
 
