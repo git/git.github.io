@@ -150,6 +150,8 @@ __Various__
   by Mike Vizard on DevOps\.com.
 
 __Light reading__
++ [Improvements in git 2.37 when resolving conflicts with vimdiff](https://u92.eu/blog/git-vimdiff/)
+  describes a change in Git 2.37 w.r.t vimdiff mergetool drivers.
 + [Better File Comparison with Kaleidoscope](https://www.git-tower.com/blog/kaleidoscope/) by Bruno Brito on Tower’s blog.
 + [Working with Feature Branches](https://www.git-tower.com/blog/working-with-feature-branches/) by Bruno Brito on Tower’s blog.
 + [Coming Up on Tower's Roadmap](https://www.git-tower.com/blog/coming-up-on-the-roadmap-2022/) by Bruno Brito on Tower’s blog.
