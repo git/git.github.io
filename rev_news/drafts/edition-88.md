@@ -33,15 +33,15 @@ This edition covers what happened during the month of May 2022.
   on certain branches of a repo used at his workplace. As the repo is
   a public one, Glen could share the full recipe to reproduce the bug.
 
-  When following it one get the following error:
+  When following it, the following error appears:
 
   `Assertion failed: (ci->filemask == 2 || ci->filemask == 4), function apply_directory_rename_modifications, file merge-ort.c, line 2410.`
 
   Glen noticed that the bug seemed specific to the "ort" merge
-  strategy, which recently became the default merge strategy, as when
-  using the "recursive"strategy, which used to be the default merge
-  strategy before "ort" took over, the merge seemed to work as
-  expected.
+  strategy, which became the default merge strategy in Git 2.34.0
+  released last November, as when using the "recursive" strategy,
+  which used to be the default merge strategy before "ort" took over,
+  the merge seemed to work as expected.
 
   Glen also tried to debug the issue by himself and found that the
   reason for the assertion failure seemed to be that two files
@@ -96,7 +96,7 @@ This edition covers what happened during the month of May 2022.
 
   Jonathan Tan reviewed the series and verified that it indeed fixes
   Glen's test cases. Calvin Wan also commented on the patch series. So
-  there is good hope that after a few iteration to polish the series
+  there is good hope that after a few iterations to polish the series
   the bug will be fixed soon.
 
 <!---
