@@ -201,7 +201,7 @@ __Git tools and sites__
   a complement to `git fsck`, which finds problems, but does not fix them.
   It is a Haskell program,
   developed as a spinoff of [git-annex](http://git-annex.branchable.com/) (for large files management).
-+ [Rich Enhanced Shell History (resh)](Rich Enhanced Shell History - Contextual shell history for zsh and bash)
++ [Rich Enhanced Shell History (resh)](https://github.com/curusarn/resh)
   provides contextual shell history for zsh and bash,
   where relevant results are based on current directory, _git repo_, exit status, and host.
 
