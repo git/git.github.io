@@ -25,9 +25,79 @@ This edition covers what happened during the month of May 2022.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [Bug in merge-ort (rename detection can have collisions?)](https://public-inbox.org/git/kl6lee006mle.fsf@chooglen-macbookpro.roam.corp.google.com/)
+
+  Glen Choo reported on the mailing list that `git merge` was failing
+  on certain branches of a repo used at his workplace. As the repo is
+  a public one, Glen could share the full recipe to reproduce the bug.
+
+  When following it one get the following error:
+
+  `Assertion failed: (ci->filemask == 2 || ci->filemask == 4), function apply_directory_rename_modifications, file merge-ort.c, line 2410.`
+
+  Glen noticed that the bug seemed specific to the "ort" merge
+  strategy, which recently became the default merge strategy, as when
+  using the "recursive"strategy, which used to be the default merge
+  strategy before "ort" took over, the merge seemed to work as
+  expected.
+
+  Glen also tried to debug the issue by himself and found that the
+  reason for the assertion failure seemed to be that two files
+  involved in the merge were renames of each other.
+
+  Elijah Newren, who developed the new "ort" strategy, thanked Glen
+  for the detailed report, and said that he found a small reproduction
+  recipe to simplify what's going on. He explained it with the
+  following:
+
+```
+#   Commit O: sub1/file,                 sub2/other
+#   Commit A: sub3/file,                 sub2/{other, new_add_add_file_1}
+#   Commit B: sub1/{file, newfile}, sub1/sub2/{other, new_add_add_file_2}
+#
+#   In words:
+#     A: sub1/ -> sub3/, add sub2/new_add_add_file_1
+#     B: sub2/ -> sub1/sub2, add sub1/newfile, add sub1/sub2/new_add_add_file_2
+```
+
+  He then explained that both the "ort" and "recursive" merge
+  strategies have code to avoid "doubly transitive renames". Such
+  renames happen when, for example, on one side of the merge a
+  directory named "A" is renamed to "B", while on the other side "B"
+  is renamed "C".
+
+  The code to avoid "doubly transitive renames" is fooled when a
+  leading directory of a directory is renamed though. For example if
+  on one side a directory named "A" is renamed to "B", while on the
+  other side a leading directory of "B" is renamed to "C". That's what
+  triggers the bug.
+
+  Junio Hamano, the Git maintainer, thanked Elijah for his continued
+  support of the merge strategy, and noticed that at least the code is
+  not "making a silent mismerge" in this special case and the
+  recursive strategy is working.
+
+  Elijah replied that he was glad the recursive strategy worked for
+  Glen because it didn't work either with his minimal reproduction
+  test case.
+
+  Glen then wondered if turning off rename detection could help in
+  case of merges with complex renames like this, but Elijah suggested
+  using the 'resolve' strategy, which "is roughly the recursive
+  strategy minus the renames and the multiple merge base handling",
+  instead.
+
+  Elijah also posted
+  [a small patch series](https://lore.kernel.org/git/pull.1268.git.1655871651.gitgitgadget@gmail.com/)
+  that adds test cases demonstrating the bug Glen found and fixing it
+  in the ort strategy code.
+
+  Jonathan Tan reviewed the series and verified that it indeed fixes
+  Glen's test cases. Calvin Wan also commented on the patch series. So
+  there is good hope that after a few iteration to polish the series
+  the bug will be fixed soon.
 
 <!---
 ## Developer Spotlight:
