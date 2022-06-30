@@ -164,6 +164,8 @@ __Various__
   with respect to public GPG signing keys that are expired or revoked (but not compromised).
 + [AppSmith Adds Git Support to Low-Code App Dev Framework](https://devops.com/appsmith-adds-git-support-to-low-code-app-dev-framework/)
   by Mike Vizard on DevOps\.com.
++ [Improve Git monorepo performance with a file system monitor](https://github.blog/2022-06-29-improve-git-monorepo-performance-with-a-file-system-monitor/)
+  by Jeff Hostetler on GitHub's blog.
 
 __Light reading__
 + [Improvements in git 2.37 when resolving conflicts with vimdiff](https://u92.eu/blog/git-vimdiff/)
