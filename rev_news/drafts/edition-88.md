@@ -143,6 +143,7 @@ This edition covers what happened during the month of May and June 2022.
 [3.0.2](https://desktop.github.com/release-notes/),
 [3.0.1](https://desktop.github.com/release-notes/)
 + Tower for Mac [8.3](https://www.git-tower.com/release-notes/mac?show_tab=release-notes)
++ Tower for Windows [3.3](https://www.git-tower.com/release-notes/windows?show_tab=release-notes)
 
 ## Other News
 __Events__
