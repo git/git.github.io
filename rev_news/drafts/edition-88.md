@@ -31,13 +31,13 @@ This edition covers what happened during the month of May and June 2022.
 
   Glen Choo reported on the mailing list that `git merge` was failing
   on certain branches of a repo used at his workplace. As the repo is
-  a public one, Glen could share the full recipe to reproduce the bug.
+  a public one, Glen was able to share the full recipe to reproduce the bug.
 
-  When following it, the following error appears:
+  When following it, this error appears:
 
   `Assertion failed: (ci->filemask == 2 || ci->filemask == 4), function apply_directory_rename_modifications, file merge-ort.c, line 2410.`
 
-  Glen noticed that the bug seemed specific to the "ort" merge
+  Glen noticed that the bug seemed to be specific to the "ort" merge
   strategy, which became the default merge strategy in Git 2.34.0
   released last November.  When using the "recursive" strategy,
   which used to be the default merge strategy before "ort" took over,
@@ -50,7 +50,7 @@ This edition covers what happened during the month of May and June 2022.
   Elijah Newren, who developed the new "ort" strategy, thanked Glen
   for the detailed report, and said that he found a small reproduction
   recipe to simplify what's going on. He explained it with the
-  following:
+  following sequence:
 
 ```
 #   Commit O: sub1/file,                 sub2/other
@@ -71,20 +71,20 @@ This edition covers what happened during the month of May and June 2022.
   strategies have code to avoid "doubly transitive [directory]
   renames". Such renames happen when, for example, on one side of the
   merge a directory named "A" is renamed to "B", while on the other
-  side "B" is renamed "C".
+  side "B" is renamed to "C".
 
-  The code to avoid "doubly transitive [directory] renames" is fooled
-  when a leading directory of a directory is renamed though. For
+  However, the code to avoid "doubly transitive [directory] renames" is
+  fooled when a parent directory of a directory is renamed. For
   example if on one side a directory named "A" is renamed to "B",
   while on the other side a leading directory of "B" is renamed to
-  "C".  That still wouldn't have quite been enough to trigger this
-  bug, though.  It also required adding a file into directory A on one
+  "C".  That still wouldn't be quite enough to trigger this
+  bug, though.  It also requires adding a file into directory A on one
   side and a file with the same name into directory B on the other.
 
   Junio Hamano, the Git maintainer, thanked Elijah for his continued
-  support of the merge strategy, and noticed that at least the code is
+  support of the merge strategy, and noticed that at least the code was
   not "making a silent mismerge" in this special case, and that the
-  recursive strategy can be used as a fallback.
+  recursive strategy could be used as a fallback.
 
   Elijah replied that he was glad the recursive strategy worked for
   Glen but noted that it didn't work with his minimal reproduction
@@ -99,8 +99,8 @@ This edition covers what happened during the month of May and June 2022.
   users tend to have difficulty correctly resolving the conflicts that
   result from a lack of rename detection.  However, he suggested that
   if turning off rename detection was really wanted that one could use
-  the 'resolve' strategy, which "is roughly the recursive strategy
-  minus the renames and the multiple merge base handling", instead.
+  the "resolve" strategy instead, which "is roughly the recursive strategy
+  minus the renames and the multiple merge base handling".
 
   Elijah also posted [a small patch
   series](https://lore.kernel.org/git/pull.1268.git.1655871651.gitgitgadget@gmail.com/)
@@ -149,7 +149,7 @@ This edition covers what happened during the month of May and June 2022.
 __Events__
 + [Git Merge 2022](https://github.blog/2022-06-15-git-merge-2022/)
   by Lee Reilly on GitHub blog.
-  [Git Merge](http://git-merge.com/), the conference dedicated to bringing the Git community together
+  [Git Merge](http://git-merge.com/), the conference dedicated to bringing the Git community together,
   returns on September 14-15 in Chicago, Illinois, USA.
   [Call for Speakers](https://sessionize.com/git-merge-2022) is open through Sunday, July 10.
 
@@ -169,7 +169,7 @@ __Various__
 
 __Light reading__
 + [Improvements in git 2.37 when resolving conflicts with vimdiff](https://u92.eu/blog/git-vimdiff/)
-  describes a change in Git 2.37 w.r.t vimdiff mergetool drivers.
+  describes a change in Git 2.37 w.r.t. vimdiff mergetool drivers.
 + [Better File Comparison with Kaleidoscope](https://www.git-tower.com/blog/kaleidoscope/) by Bruno Brito on Tower’s blog.
 + [Working with Feature Branches](https://www.git-tower.com/blog/working-with-feature-branches/) by Bruno Brito on Tower’s blog.
 + [Coming Up on Tower's Roadmap](https://www.git-tower.com/blog/coming-up-on-the-roadmap-2022/) by Bruno Brito on Tower’s blog.
@@ -217,7 +217,7 @@ __Git tools and sites__
   representing a reconstructed version of the Unix history from 1970 until today,
   based on the currently available data.  Note that this repository will be often
   automatically regenerated from scratch.
-+ [git-repair](http://git-repair.branchable.com/) can repair various forms of damage to git repositories;
++ [git-repair](http://git-repair.branchable.com/) can repair various forms of damage to Git repositories;
   a complement to `git fsck`, which finds problems, but does not fix them.
   It is a Haskell program,
   developed as a spinoff of [git-annex](http://git-annex.branchable.com/) (for large files management).
