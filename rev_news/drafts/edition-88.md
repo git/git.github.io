@@ -39,7 +39,7 @@ This edition covers what happened during the month of May and June 2022.
 
   Glen noticed that the bug seemed specific to the "ort" merge
   strategy, which became the default merge strategy in Git 2.34.0
-  released last November, as when using the "recursive" strategy,
+  released last November.  When using the "recursive" strategy,
   which used to be the default merge strategy before "ort" took over,
   the merge seemed to work as expected.
 
@@ -62,42 +62,57 @@ This edition covers what happened during the month of May and June 2022.
 #     B: sub2/ -> sub1/sub2, add sub1/newfile, add sub1/sub2/new_add_add_file_2
 ```
 
-  He then explained that both the "ort" and "recursive" merge
-  strategies have code to avoid "doubly transitive renames". Such
-  renames happen when, for example, on one side of the merge a
-  directory named "A" is renamed to "B", while on the other side "B"
-  is renamed "C".
+  He noted, though, that he can also trigger a different fatal error
+  in the "ort" strategy with a small tweak to the test setup, and can
+  also trigger that same other fatal error in the "recursive" strategy
+  with his test cases.
 
-  The code to avoid "doubly transitive renames" is fooled when a
-  leading directory of a directory is renamed though. For example if
-  on one side a directory named "A" is renamed to "B", while on the
-  other side a leading directory of "B" is renamed to "C". That's what
-  triggers the bug.
+  He then explained that both the "ort" and "recursive" merge
+  strategies have code to avoid "doubly transitive [directory]
+  renames". Such renames happen when, for example, on one side of the
+  merge a directory named "A" is renamed to "B", while on the other
+  side "B" is renamed "C".
+
+  The code to avoid "doubly transitive [directory] renames" is fooled
+  when a leading directory of a directory is renamed though. For
+  example if on one side a directory named "A" is renamed to "B",
+  while on the other side a leading directory of "B" is renamed to
+  "C".  That still wouldn't have quite been enough to trigger this
+  bug, though.  It also required adding a file into directory A on one
+  side and a file with the same name into directory B on the other.
 
   Junio Hamano, the Git maintainer, thanked Elijah for his continued
   support of the merge strategy, and noticed that at least the code is
-  not "making a silent mismerge" in this special case and the
-  recursive strategy is working.
+  not "making a silent mismerge" in this special case, and that the
+  recursive strategy can be used as a fallback.
 
   Elijah replied that he was glad the recursive strategy worked for
-  Glen because it didn't work either with his minimal reproduction
-  test case.
+  Glen but noted that it didn't work with his minimal reproduction
+  test case, which suggests it's less reliable as a fallback than one
+  might hope.
 
   Glen then wondered if turning off rename detection could help in
-  case of merges with complex renames like this, but Elijah suggested
-  using the 'resolve' strategy, which "is roughly the recursive
-  strategy minus the renames and the multiple merge base handling",
-  instead.
+  case of merges with complex renames like this, but Elijah pointed
+  out [that might be more problematic than
+  helpful](https://lore.kernel.org/git/CABPp-BGN0DoSr3bcjTmGZkcoj_dSVzOgFUQ++R=_z8v=nAJsTg@mail.gmail.com/),
+  particularly since this case had a very large number of renames and
+  users tend to have difficulty correctly resolving the conflicts that
+  result from a lack of rename detection.  However, he suggested that
+  if turning off rename detection was really wanted that one could use
+  the 'resolve' strategy, which "is roughly the recursive strategy
+  minus the renames and the multiple merge base handling", instead.
 
-  Elijah also posted
-  [a small patch series](https://lore.kernel.org/git/pull.1268.git.1655871651.gitgitgadget@gmail.com/)
-  that adds test cases demonstrating the bug Glen found and fixing it
-  in the ort strategy code.
+  Elijah also posted [a small patch
+  series](https://lore.kernel.org/git/pull.1268.git.1655871651.gitgitgadget@gmail.com/)
+  that adds test cases demonstrating the bug Glen found and the
+  related ones he found based on it, and fixes the bugs in the ort
+  strategy.  (The recursive strategy is deprecated, and the bugs noted
+  here are not security critical.)
 
   Jonathan Tan reviewed the series and verified that it indeed fixes
-  Glen's test cases. Calvin Wan also commented on the patch series. So
+  Glen's test case. Calvin Wan also commented on the patch series. So
   there is good hope that after a few iterations to polish the series
-  the bug will be fixed soon.
+  the bugs will be fixed soon.
 
 <!---
 ## Developer Spotlight:
