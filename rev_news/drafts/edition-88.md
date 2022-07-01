@@ -156,6 +156,7 @@ __Events__
 __Various__
 + [Highlights from Git 2.37](https://github.blog/2022-06-27-highlights-from-git-2-37/)
   by Taylor Blau on GitHub's blog.
++ [v2.37.0 highlights video](https://www.youtube.com/watch?v=c1VdZq77i70) by GitKraken.
 + [How Atlassian made Git push over HTTPS faster for Bitbucket Cloud](https://www.atlassian.com/engineering/faster-git-push-over-https-for-bitbucket-cloud)
   by Brent Thew on [Atlassian Engineering](https://www.atlassian.com/engineering) blog.
 + [Why We’re Sticking with Ruby on Rails at GitLab](https://thenewstack.io/why-were-sticking-with-ruby-on-rails-at-gitlab/)
