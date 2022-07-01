@@ -17,9 +17,25 @@ This edition covers what happened during the month of May and June 2022.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [Google Summer of Code](https://summerofcode.withgoogle.com)
+  contributors working on Git are now in the ["Coding Period"](https://developers.google.com/open-source/gsoc/timeline#june_13)
+  (from June 13 to September 19) of the program and have posted at least
+  once on their blogs:
+
+  - Abhradeep Chakraborty, who works on
+    ["Reachability bitmap improvements"](https://summerofcode.withgoogle.com/programs/2022/projects/UPtA6qdf),
+    has published [his latest post](https://medium.com/@abhra303/gsoc-week-2-redesign-the-table-format-829dae755a5)
+    on [his Medium blog](https://medium.com/@abhra303).
+
+  - Shaoxuan Yuan, who works on ["More Sparse Index Integrations"](https://summerofcode.withgoogle.com/programs/2022/projects/hz4rcOUB)
+    has published [his latest post](https://ffyuanda.github.io/blog/GSoC-week-2/)
+    on [his website](https://ffyuanda.github.io/).
+
+  - Jaydeep Das, who works on ["Unify ref-filters with other pretty formats"](https://summerofcode.withgoogle.com/programs/2022/projects/8mYcnerl)
+    has published [his latest post](https://jdeep.me/posts/10.d/)
+    on [his website](https://jdeep.me/posts/).
 
 <!---
 ### Reviews
