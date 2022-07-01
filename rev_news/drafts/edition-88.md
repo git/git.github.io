@@ -13,7 +13,7 @@ Welcome to the 88th edition of [Git Rev News](https://git.github.io/rev_news/rev
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
-This edition covers what happened during the month of May and June 2022.
+This edition covers what happened during the months of May and June 2022.
 
 ## Discussions
 
