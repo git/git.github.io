@@ -49,7 +49,7 @@ __Light reading__
 + [Managing Git projects with submodules and subtrees](https://opensource.com/article/20/5/git-submodules-subtrees)  More choices.
 + ['Turn off merge fast-forward by default'](https://betterdev.blog/turn-off-git-fast-forward-merge/) An alternative viewpoint (from Git for Windows [#3858](https://github.com/git-for-windows/git/issues/3858))
 
-__Easy Watching__
+__Easy watching__
 + [Git Internals - The BLOB](https://www.youtube.com/watch?v=_wj4MGuvcjc) 'A shot of code' looks at the internals of the .git folder to see exactly what goes on under the hood.
 + [Getting Comfortable with GIT](https://www.youtube.com/watch?v=aXXXiynr-4A) looking to get a deeper understanding of Git, and hopefully feeling a lot more comfortable when performing some of the more scary Git operations.. says 'A shot of code'.
 + [It's Impossible to Know If You're a Good Programmer](https://www.youtube.com/watch?v=Ax4EfY9LrF4) The imposter syndrome and irrelavent code challenges.
