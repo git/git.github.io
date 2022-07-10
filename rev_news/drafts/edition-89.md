@@ -46,7 +46,8 @@ __Light reading__
 + [git rebase --fork-point considered harmful (by 'me')](https://commaok.xyz/post/fork-point/) The reflog lookup heuristics aren't what you thought, are they? A UX report.
 + [Git Delete Branch How-To, for Both Local and Remote](https://www.cloudbees.com/blog/git-delete-branch-how-to-for-both-local-and-remote) with pictures, Also includes deleting branches on Github..
 + [Git - Subtree](https://www.geeksforgeeks.org/git-subtree/) A short overview of the common replacement for Git submodule.
-+ [Managing Git projects with submodules and subtrees](https://opensource.com/article/20/5/git-submodules-subtrees)  More choices.
++ [Managing Git projects with submodules and subtrees](https://opensource.com/article/20/5/git-submodules-subtrees) (2020)
+  More choices. This was previously mentioned in [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/).
 + ['Turn off merge fast-forward by default'](https://betterdev.blog/turn-off-git-fast-forward-merge/) An alternative viewpoint (from Git for Windows [#3858](https://github.com/git-for-windows/git/issues/3858))
 
 __Easy watching__
