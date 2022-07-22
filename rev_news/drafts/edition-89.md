@@ -49,6 +49,7 @@ __Light reading__
 + [Managing Git projects with submodules and subtrees](https://opensource.com/article/20/5/git-submodules-subtrees) (2020)
   More choices. This was previously mentioned in [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/).
 + ['Turn off merge fast-forward by default'](https://betterdev.blog/turn-off-git-fast-forward-merge/) An alternative viewpoint (from Git for Windows [#3858](https://github.com/git-for-windows/git/issues/3858))
++ [Getting Started with Git Hooks and Husky](https://www.git-tower.com/blog/git-hooks-husky/) by Bruno Brito on Tower's blog.
 
 __Easy watching__
 + [Git Internals - The BLOB](https://www.youtube.com/watch?v=_wj4MGuvcjc) 'A shot of code' looks at the internals of the .git folder to see exactly what goes on under the hood.
