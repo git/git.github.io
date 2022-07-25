@@ -224,6 +224,7 @@ __Various__
 is completable in a single sitting for those who are reasonably
 fluent in C.  It does not have any frills, but the basic data
 structures to express the important concepts are already there."
++ Matheus Tavares [successfully defended his Master's dissertation about parallelizing Git checkout](https://www.linkedin.com/posts/matheus-tavares-bernardino_faster-git-checkouts-on-nfs-and-ssd-with-activity-6953084366075883520-usZP/). Some of his work on this was done during [his 2019 Google Summer of Code](https://matheustavares.gitlab.io/posts/gsoc-final-report).
 
 __Light reading__
 + [Introduction to Git Ops](https://www.codeproject.com/Articles/5334970/Introduction-to-GitOps) Some useful background to the Git - DevOps approach in this sponsored article.
