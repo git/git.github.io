@@ -219,7 +219,11 @@ that way.
 ## Other News
 
 __Various__
-
++ [About GIT Internals](https://lore.kernel.org/git/?q=%3Cxmqqk09xhdma.fsf%40gitster.g%3E+): Aman asked how to better understand GIT software internals. Junio (maintainer) suggested starting at the [Initial revision of "git", the information manager from hell (e83c5163, v0.99~954)](https://github.com/git/git/tree/e83c5163316f89bfbde7d9ab23ca2e25604af290).
+"With only 1244 lines spread across 11 files, it is a short-read that
+is completable in a single sitting for those who are reasonably
+fluent in C.  It does not have any frills, but the basic data
+structures to express the important concepts are already there."
 
 __Light reading__
 + [Introduction to Git Ops](https://www.codeproject.com/Articles/5334970/Introduction-to-GitOps) Some useful background to the Git - DevOps approach in this sponsored article.
