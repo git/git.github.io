@@ -242,7 +242,7 @@ __Easy watching__
 + [It's Impossible to Know If You're a Good Programmer](https://www.youtube.com/watch?v=Ax4EfY9LrF4) The imposter syndrome and irrelavent code challenges.
 
 __Git tools and sites__
-+[Git Signing](https://wilsonmar.github.io/git-signing/) All the details for signing commits and tags (for non-repudiation) in GitHub using GPG, Vault, Yubikey, Keybase!
++ [Git Signing](https://wilsonmar.github.io/git-signing/) All the details for signing commits and tags (for non-repudiation) in GitHub using GPG, Vault, Yubikey, Keybase!
 
 ## Credits
 
