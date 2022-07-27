@@ -219,15 +219,31 @@ This edition covers what happened during the month of July 2022.
 ## Other News
 
 __Various__
++ [GitLive 15.0: Offline merge conflict detection across all branches for any Git repository and more](https://blog.git.live/gitlive-15.0-offline-merge-conflict-detection-across-all-branches-for-any-git-repository)
+  by Agnieszka Stec.
++ Iterative\.AI, authors of the [DVC](https://dvc.org/) Data Version Control tool
+  (first mentioned in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/)),
+  bring [Git-backed Machine Learning Model Registry](https://dvc.org/blog/iterative-studio-model-registry)
+  to [Iterative Studio](https://studio.iterative.ai/).
 + [About GIT Internals](https://lore.kernel.org/git/?q=%3Cxmqqk09xhdma.fsf%40gitster.g%3E+): Aman asked how to better understand GIT software internals. Junio (maintainer) suggested starting at the [Initial revision of "git", the information manager from hell (e83c5163, v0.99~954)](https://github.com/git/git/tree/e83c5163316f89bfbde7d9ab23ca2e25604af290).
 "With only 1244 lines spread across 11 files, it is a short-read that
 is completable in a single sitting for those who are reasonably
 fluent in C.  It does not have any frills, but the basic data
 structures to express the important concepts are already there."
 + Matheus Tavares [successfully defended his Master's dissertation about parallelizing Git checkout](https://www.linkedin.com/posts/matheus-tavares-bernardino_faster-git-checkouts-on-nfs-and-ssd-with-activity-6953084366075883520-usZP/). Some of his work on this was done during [his 2019 Google Summer of Code](https://matheustavares.gitlab.io/posts/gsoc-final-report).
++ [Whatever happened to SHA-256 support in Git?](https://lwn.net/Articles/898522/):
+  an article by Jonathan Corbet on LWN\.net.
++ [Give Up GitHub: The Time Has Come!](https://sfconservancy.org/blog/2022/jun/30/give-up-github-launch/)
+  by Denver Gingerich and Bradley M. Kuhn of Software Freedom Conservancy,
+  (see also [Open source body quits GitHub, urges you to do the same](https://www.theregister.com/2022/06/30/software_freedom_conservancy_quits_github/) in The Register)
+  calls for FOSS project to migrate away from GitHub.
 
 __Light reading__
 + [Introduction to Git Ops](https://www.codeproject.com/Articles/5334970/Introduction-to-GitOps) Some useful background to the Git - DevOps approach in this sponsored article.
++ [Git workflows: Best practices for GitOps deployments](https://developers.redhat.com/articles/2022/07/20/git-workflows-best-practices-gitops-deployments),
+  describing differences between how you manage your code in Git
+  and how you manage your GitOps configuration in Git.
+  By Christian Hernandez, GitOps Advocate, on Red Hat Developer blog.
 + [`git rebase --fork-point` considered harmful (by 'me')](https://commaok.xyz/post/fork-point/) The reflog lookup heuristics aren't what you thought, are they? A UX report.
 + [Git Delete Branch How-To, for Both Local and Remote](https://www.cloudbees.com/blog/git-delete-branch-how-to-for-both-local-and-remote) with pictures, Also includes deleting branches on Github..
 + [Git - Subtree](https://www.geeksforgeeks.org/git-subtree/) A short overview of the common replacement for Git submodule.
@@ -235,6 +251,19 @@ __Light reading__
   More choices. This was previously mentioned in [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/).
 + ['Turn off merge fast-forward by default'](https://betterdev.blog/turn-off-git-fast-forward-merge/) An alternative viewpoint (from Git for Windows [#3858](https://github.com/git-for-windows/git/issues/3858))
 + [Getting Started with Git Hooks and Husky](https://www.git-tower.com/blog/git-hooks-husky/) by Bruno Brito on Tower's blog.
++ “Codeberg” series by Flavio Poletti (@polettix),
+  starting with [Codeberg](https://github.polettix.it/ETOOBUSY/2022/07/05/codeberg/)
+  and currently ending with [Codeberg Pages - Custom domains](https://github.polettix.it/ETOOBUSY/2022/07/18/codeberg-pages-domains/),
+  describes the [Codeberg](https://codeberg.org/) hosting service,
+  which is powered by [Gitea](https://gitea.io/) software
+  (a fork of [Gogs](https://gogs.io/), which is written in Go).
++ [Write Better Commits, Build Better Projects](https://github.blog/2022-06-30-write-better-commits-build-better-projects/):
+  Learn strategies to improve and use commits to streamline your development process.
+  By Victoria Dye on GitHub Engineering Blog.
++ [Write Git Commit Messages That Your Colleagues Will Love](https://dev.to/simeg/write-git-commit-messages-that-your-colleagues-will-love-1757)
+  by Simon Egersand on DEV\.to.
++ [Why I love Tig for visualizing my Git workflows](https://opensource.com/article/22/7/visualize-git-workflow-tig)
+  by Sumantro Mukherjee (Correspondent, Red Hat) on OpenSource\.com.
 
 __Easy watching__
 + [Git Internals - The BLOB](https://www.youtube.com/watch?v=_wj4MGuvcjc) 'A shot of code' looks at the internals of the .git folder to see exactly what goes on under the hood.
@@ -242,7 +271,42 @@ __Easy watching__
 + [It's Impossible to Know If You're a Good Programmer](https://www.youtube.com/watch?v=Ax4EfY9LrF4) The imposter syndrome and irrelavent code challenges.
 
 __Git tools and sites__
++ [Please remove that `.git` folder](https://dev.to/jmau111/please-remove-that-git-folder-3i9a)
+  from directory browsing on the web server to avoid information leaks.
+  Don't deploy the `.git/` folder or, at least, forbid access.
+  By Julien Maury (jmau111) on DEV\.to and on [own blog](https://blog.julien-maury.dev/en/snippet/practical-git-security/).
 + [Git Signing](https://wilsonmar.github.io/git-signing/) All the details for signing commits and tags (for non-repudiation) in GitHub using GPG, Vault, Yubikey, Keybase!
++ [Git-Story](https://initialcommit.com/tools/git-story): Animate the story of your Git project,
+  by creating video animations (.mp4) of your commit history directly from your Git repo.
+  Note: arrows point in the direction of increasing time, not from commit to its parents.
+    + See also [How to Animate Your Git Commit History with git-story](https://www.freecodecamp.org/news/animate-your-git-repo-with-git-story/)
+      by Jacob Stopak on freeCodeCamp.
++ [GitHub Actions Kotlin DSL](https://github.com/krzema12/github-actions-kotlin-dsl)
+  ([docs](https://krzema12.github.io/github-actions-kotlin-dsl/))
+  allows authoring GitHub Actions workflows for GitOps in Kotlin.
+    + See also [GitHub Actions DSL: a New Hope in YAML Programming Wasteland](https://dev.to/jmfayard/github-actions-a-new-hope-in-yaml-wasteland-1i9c)
+      by Jean-Michel Fayard on DEV\.to.
++ [jc](https://github.com/kellyjonbrazil/jc) (<b>J</b>SON <b>C</b>onvert)
+  is CLI tool and python library that converts the output of popular command-line tools and file-types
+  to JSON, YAML, etc... including `git log`.  This allows automated processing with tools
+  such as [`jq`](https://stedolan.github.io/jq/), and simplifying automation scripts.
++ [GitJournal](https://gitjournal.io/) is Mobile first Markdown Notes app
+  integrated with Git, for Android and iOS,
+  that can work with any Git hosting provider (via SSH).
++ [data-diff](https://github.com/datafold/data-diff) is an open-source command-line tool and Python library
+  by [Datafold](https://www.datafold.com/open-source-data-diff)
+  to efficiently diff rows across two different databases.
+    + See also references to [various](https://www.dolthub.com/blog/2021-09-17-database-version-control/) [blog](https://www.dolthub.com/blog/2021-11-26-so-you-want-git-database/) [posts](https://www.dolthub.com/blog/2021-12-20-git-sql/)
+      by Tim Sehn on DoltHub Blog about version control, Git, and databases, which appeared
+      in [Git Rev News Edition #82](https://git.github.io/rev_news/2021/12/30/edition-82/).
++ [GitHacker](https://github.com/WangYihang/GitHacker) is a multithreaded tool
+  to detect whether a site has the `.git/` folder leakage vulnerability, and if so
+  restores the entire Git repository, including data from stash.
++ [Build your own X](https://github.com/codecrafters-io/build-your-own-x)
+  is a compilation of well-written, step-by-step guides for re-creating our favorite technologies from scratch,
+  including [Build your own `Git`](https://github.com/codecrafters-io/build-your-own-x#build-your-own-git).
+  
+  > What I cannot create, I do not understand — Richard Feynman.
 
 ## Credits
 
