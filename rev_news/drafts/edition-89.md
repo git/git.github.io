@@ -50,7 +50,7 @@ This edition covers what happened during the month of July 2022.
   design or implement a big feature anymore, and luckily there are
   multiple groups of people who do excellent job dreaming up and new
   ways to use Git and make it a reality.  My best days start by
-  getting greeted by surprisingly good proposal of a new feature or
+  getting greeted by a surprisingly good proposal of a new feature or
   optimization of an existing feature, and the entire day is spent on
   reviewing them.  It happens less often these days, but they still do
   occasionally.
@@ -70,7 +70,7 @@ This edition covers what happened during the month of July 2022.
   result of the day by 4pm.  After that, I'd merge the topics that
   have cooked long enough in 'next' to 'master', and the topics that
   have been adequately reviewed to 'next'.  The 'seen' and 'next'
-  branches are rebuild, the "What's cooking" report is rewritten, and
+  branches are rebuilt, the "What's cooking" report is rewritten, and
   the second integration result of the day gets pushed out, before I
   call it a day.
 
@@ -100,7 +100,7 @@ This edition covers what happened during the month of July 2022.
   something in Git for a full year, what would it be?
 
   The interoperability between SHA-1 and SHA-256 repositories first
-  comes to mind.  The ingredients are almost all there, so are rough
+  comes to mind.  The ingredients are almost all there, so is rough
   design.
 
 
@@ -129,7 +129,7 @@ This edition covers what happened during the month of July 2022.
   the tool currently works and they want to change it?  Are they happy
   with Git but they feel they do not know enough of it and are curious
   about how things work?  For the former folks, the usual "scratch
-  your itch" advice would work well to certain extent.  For the latter
+  your itch" advice would work well to a certain extent.  For the latter
   folks, their "itch" can be to try to figure out how one of their
   favorite subcommand works, and then perhaps clean up or optimize
   the code paths they studied.  Following what our test scripts are
@@ -141,8 +141,8 @@ This edition covers what happened during the month of July 2022.
   discussed, the kind of things the reviewers are interested in, and
   how the development process works.  See who are active and how the
   discussion goes.  These social conventions, how our developers work
-  with others, is just as important as, if not more than, technical
-  details.  MyFirstContribution document may also be a good place to
+  with others, are just as important as, if not more than, technical
+  details.  The "MyFirstContribution" document may also be a good place to
   start.
 
 
@@ -198,11 +198,11 @@ This edition covers what happened during the month of July 2022.
   maintainership to me, I also had a "competitive" manner in a bad
   way.  There were plenty of problems to be solved, and it felt as if
   people competed to be the first to offer a solution to each of them.
-  When I had an idea to solve a problem that others are also
+  When I had an idea to solve a problem that others were also
   interested to see solved, sometimes it felt like I had to "beat"
   them, which meant that I had to send out patches that weren't well
   reasoned and well explained enough.  Luckily, being maintainer means
-  I do not have to compete the others.  Instead I can set the pace of
+  I do not have to compete with the others.  Instead I can set the pace of
   the project.  After having lived in such a "competitive" way for a
   few months and saw its downside, I learned to give contributors time
   to think things through and wait long enough for counter-proposals.
@@ -239,17 +239,17 @@ structures to express the important concepts are already there."
   calls for FOSS project to migrate away from GitHub.
 
 __Light reading__
-+ [Introduction to Git Ops](https://www.codeproject.com/Articles/5334970/Introduction-to-GitOps) Some useful background to the Git - DevOps approach in this sponsored article.
++ [Introduction to Git Ops](https://www.codeproject.com/Articles/5334970/Introduction-to-GitOps): Some useful background to the Git - DevOps approach in this sponsored article.
 + [Git workflows: Best practices for GitOps deployments](https://developers.redhat.com/articles/2022/07/20/git-workflows-best-practices-gitops-deployments),
   describing differences between how you manage your code in Git
   and how you manage your GitOps configuration in Git.
   By Christian Hernandez, GitOps Advocate, on Red Hat Developer blog.
-+ [`git rebase --fork-point` considered harmful (by 'me')](https://commaok.xyz/post/fork-point/) The reflog lookup heuristics aren't what you thought, are they? A UX report.
-+ [Git Delete Branch How-To, for Both Local and Remote](https://www.cloudbees.com/blog/git-delete-branch-how-to-for-both-local-and-remote) with pictures, Also includes deleting branches on Github..
-+ [Git - Subtree](https://www.geeksforgeeks.org/git-subtree/) A short overview of the common replacement for Git submodule.
-+ [Managing Git projects with submodules and subtrees](https://opensource.com/article/20/5/git-submodules-subtrees) (2020)
++ [`git rebase --fork-point` considered harmful (by me)](https://commaok.xyz/post/fork-point/): The reflog lookup heuristics aren't what you thought, are they? A UX report by Josh Bleecher Snyder.
++ [Git Delete Branch How-To, for Both Local and Remote](https://www.cloudbees.com/blog/git-delete-branch-how-to-for-both-local-and-remote) with pictures, also includes deleting branches on GitHub.
++ [Git - Subtree](https://www.geeksforgeeks.org/git-subtree/): A short overview of the common replacement for Git submodule.
++ [Managing Git projects with submodules and subtrees](https://opensource.com/article/20/5/git-submodules-subtrees) (2020):
   More choices. This was previously mentioned in [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/).
-+ ['Turn off merge fast-forward by default'](https://betterdev.blog/turn-off-git-fast-forward-merge/) An alternative viewpoint (from Git for Windows [#3858](https://github.com/git-for-windows/git/issues/3858))
++ ['Turn off merge fast-forward by default'](https://betterdev.blog/turn-off-git-fast-forward-merge/): An alternative viewpoint (from Git for Windows [#3858](https://github.com/git-for-windows/git/issues/3858)) by Maciej Radzikowski on the Better Dev blog.
 + [Getting Started with Git Hooks and Husky](https://www.git-tower.com/blog/git-hooks-husky/) by Bruno Brito on Tower's blog.
 + “Codeberg” series by Flavio Poletti (@polettix),
   starting with [Codeberg](https://github.polettix.it/ETOOBUSY/2022/07/05/codeberg/)
@@ -266,16 +266,16 @@ __Light reading__
   by Sumantro Mukherjee (Correspondent, Red Hat) on OpenSource\.com.
 
 __Easy watching__
-+ [Git Internals - The BLOB](https://www.youtube.com/watch?v=_wj4MGuvcjc) 'A shot of code' looks at the internals of the .git folder to see exactly what goes on under the hood.
-+ [Getting Comfortable with GIT](https://www.youtube.com/watch?v=aXXXiynr-4A) looking to get a deeper understanding of Git, and hopefully feeling a lot more comfortable when performing some of the more scary Git operations.. says 'A shot of code'.
-+ [It's Impossible to Know If You're a Good Programmer](https://www.youtube.com/watch?v=Ax4EfY9LrF4) The imposter syndrome and irrelavent code challenges.
++ [Git Internals - The BLOB](https://www.youtube.com/watch?v=_wj4MGuvcjc): 'A shot of code' looks at the internals of the .git folder to see exactly what goes on under the hood.
++ [Getting Comfortable with GIT](https://www.youtube.com/watch?v=aXXXiynr-4A), looking to get a deeper understanding of Git, and hopefully feeling a lot more comfortable when performing some of the more scary Git operations... says 'A shot of code'.
++ [It's Impossible to Know If You're a Good Programmer](https://www.youtube.com/watch?v=Ax4EfY9LrF4): The impostor syndrome and irrelevant code challenges.
 
 __Git tools and sites__
 + [Please remove that `.git` folder](https://dev.to/jmau111/please-remove-that-git-folder-3i9a)
   from directory browsing on the web server to avoid information leaks.
   Don't deploy the `.git/` folder or, at least, forbid access.
   By Julien Maury (jmau111) on DEV\.to and on [own blog](https://blog.julien-maury.dev/en/snippet/practical-git-security/).
-+ [Git Signing](https://wilsonmar.github.io/git-signing/) All the details for signing commits and tags (for non-repudiation) in GitHub using GPG, Vault, Yubikey, Keybase!
++ [Git Signing](https://wilsonmar.github.io/git-signing/): All the details for signing commits and tags (for non-repudiation) in GitHub using GPG, Vault, Yubikey, Keybase!
 + [Git-Story](https://initialcommit.com/tools/git-story): Animate the story of your Git project,
   by creating video animations (.mp4) of your commit history directly from your Git repo.
   Note: arrows point in the direction of increasing time, not from commit to its parents.
@@ -286,11 +286,11 @@ __Git tools and sites__
   allows authoring GitHub Actions workflows for GitOps in Kotlin.
     + See also [GitHub Actions DSL: a New Hope in YAML Programming Wasteland](https://dev.to/jmfayard/github-actions-a-new-hope-in-yaml-wasteland-1i9c)
       by Jean-Michel Fayard on DEV\.to.
-+ [jc](https://github.com/kellyjonbrazil/jc) (<b>J</b>SON <b>C</b>onvert)
-  is CLI tool and python library that converts the output of popular command-line tools and file-types
++ [jc](https://github.com/kellyjonbrazil/jc) (**J**SON **C**onvert)
+  is a CLI tool and Python library that converts the output of popular command-line tools and file-types
   to JSON, YAML, etc... including `git log`.  This allows automated processing with tools
   such as [`jq`](https://stedolan.github.io/jq/), and simplifying automation scripts.
-+ [GitJournal](https://gitjournal.io/) is Mobile first Markdown Notes app
++ [GitJournal](https://gitjournal.io/) is a mobile first Markdown notes app
   integrated with Git, for Android and iOS,
   that can work with any Git hosting provider (via SSH).
 + [data-diff](https://github.com/datafold/data-diff) is an open-source command-line tool and Python library
@@ -304,7 +304,7 @@ __Git tools and sites__
   restores the entire Git repository, including data from stash.
 + [Build your own X](https://github.com/codecrafters-io/build-your-own-x)
   is a compilation of well-written, step-by-step guides for re-creating our favorite technologies from scratch,
-  including [Build your own `Git`](https://github.com/codecrafters-io/build-your-own-x#build-your-own-git).
+  including [Build your own Git](https://github.com/codecrafters-io/build-your-own-x#build-your-own-git).
   
   > What I cannot create, I do not understand — Richard Feynman.
 
