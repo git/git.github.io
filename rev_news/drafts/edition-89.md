@@ -215,6 +215,27 @@ This edition covers what happened during the month of July 2022.
 
 ## Releases
 
++ Git [2.37.1 and others](https://public-inbox.org/git/xmqqv8s2fefi.fsf@gitster.g/)
++ Git for Windows [2.37.1(1)](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1)
++ libgit2 [1.5.0](https://github.com/libgit2/libgit2/releases/tag/v1.5.0),
+[1.4.4](https://github.com/libgit2/libgit2/releases/tag/v1.4.4)
++ GitHub Enterprise [3.6.0](https://help.github.com/enterprise-server@3.6/admin/release-notes#3.6.0),
+[3.5.3](https://help.github.com/enterprise-server@3.5/admin/release-notes#3.5.3),
+[3.4.6](https://help.github.com/enterprise-server@3.4/admin/release-notes#3.4.6),
+[3.3.11](https://help.github.com/enterprise-server@3.3/admin/release-notes#3.3.11),
+[3.2.16](https://help.github.com/enterprise-server@3.2/admin/release-notes#3.2.16),
+[3.5.2](https://help.github.com/enterprise-server@3.5/admin/release-notes#3.5.2),
+[3.4.5](https://help.github.com/enterprise-server@3.4/admin/release-notes#3.4.5),
+[3.3.10](https://help.github.com/enterprise-server@3.3/admin/release-notes#3.3.10),
+[3.2.15](https://help.github.com/enterprise-server@3.2/admin/release-notes#3.2.15)
++ GitLab [15.2.1, 15.1.4, and 15.0.5](https://about.gitlab.com/releases/2022/07/28/security-release-gitlab-15-2-1-released/)
+[15.2](https://about.gitlab.com/releases/2022/07/22/gitlab-15-2-released/),
+[15.1.3](https://about.gitlab.com/releases/2022/07/19/gitlab-15-1-3-released/),
+[15.1.2](https://about.gitlab.com/releases/2022/07/04/gitlab-15-1-2-released/),
+[15.1.1](https://about.gitlab.com/releases/2022/06/30/critical-security-release-gitlab-15-1-1-released/)
++ GitHub Desktop [3.0.5](https://desktop.github.com/release-notes/),
+[3.0.4](https://desktop.github.com/release-notes/)
++ Sourcetree [4.1.9](https://product-downloads.atlassian.com/software/sourcetree/ReleaseNotes/Sourcetree_4.1.9.html)
 
 ## Other News
 
