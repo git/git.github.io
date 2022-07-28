@@ -271,10 +271,6 @@ __Easy watching__
 + [It's Impossible to Know If You're a Good Programmer](https://www.youtube.com/watch?v=Ax4EfY9LrF4): The impostor syndrome and irrelevant code challenges.
 
 __Git tools and sites__
-+ [Please remove that `.git` folder](https://dev.to/jmau111/please-remove-that-git-folder-3i9a)
-  from directory browsing on the web server to avoid information leaks.
-  Don't deploy the `.git/` folder or, at least, forbid access.
-  By Julien Maury (jmau111) on DEV\.to and on [own blog](https://blog.julien-maury.dev/en/snippet/practical-git-security/).
 + [Git Signing](https://wilsonmar.github.io/git-signing/): All the details for signing commits and tags (for non-repudiation) in GitHub using GPG, Vault, Yubikey, Keybase!
 + [Git-Story](https://initialcommit.com/tools/git-story): Animate the story of your Git project,
   by creating video animations (.mp4) of your commit history directly from your Git repo.
@@ -302,6 +298,11 @@ __Git tools and sites__
 + [GitHacker](https://github.com/WangYihang/GitHacker) is a multithreaded tool
   to detect whether a site has the `.git/` folder leakage vulnerability, and if so
   restores the entire Git repository, including data from stash.
+    + See also [Please remove that `.git` folder](https://dev.to/jmau111/please-remove-that-git-folder-3i9a)
+      from directory browsing on the web server to avoid information leaks.
+      Don't deploy the `.git/` folder or, at least, forbid access.
+      By Julien Maury (jmau111) on DEV\.to and on his
+      [own blog](https://blog.julien-maury.dev/en/snippet/practical-git-security/).
 + [Build your own X](https://github.com/codecrafters-io/build-your-own-x)
   is a compilation of well-written, step-by-step guides for re-creating our favorite technologies from scratch,
   including [Build your own Git](https://github.com/codecrafters-io/build-your-own-x#build-your-own-git).
