@@ -46,9 +46,9 @@ This edition covers what happened during the month of July 2022.
 
 * How does your work as the maintainer of the Git project look like?
 
-  Unlike earlier days, I no longer have to be in the driving seat to
-  design or implement a big feature anymore, and luckily there are
-  multiple groups of people who do excellent job dreaming up and new
+  Unlike earlier days, I no longer have to be in the driver's seat to
+  design or implement a big feature, and luckily there are
+  multiple groups of people who do excellent job dreaming up new
   ways to use Git and make it a reality.  My best days start by
   getting greeted by a surprisingly good proposal of a new feature or
   optimization of an existing feature, and the entire day is spent on
@@ -56,7 +56,7 @@ This edition covers what happened during the month of July 2022.
   occasionally.
 
   On my normal days, I scan the mailing list for patches and
-  discussions, and my goal is to at least open every one of incoming
+  discussions. My goal is to at least open every one of incoming
   messages, and read carefully at least half of the patches I pick up
   to queue on the 'seen' branch, which means that I may be queuing the
   other half without carefully reading, trusting the reviews already
@@ -65,9 +65,9 @@ This edition covers what happened during the month of July 2022.
   I aim to finish picking up new topics, replacing existing topics,
   and generally interacting with the mailing list, by around 2pm.
   Then I rebuild the 'seen' topic, rewrite the latest draft of "What's
-  cooking" report (which is used as the guide to choose which topics
+  cooking" report (which is the guide to choose which topics
   will go to the 'next' branch), and push out the first integration
-  result of the day by 4pm.  After that, I'd merge the topics that
+  result of the day by 4pm.  After that, I merge the topics that
   have cooked long enough in 'next' to 'master', and the topics that
   have been adequately reviewed to 'next'.  The 'seen' and 'next'
   branches are rebuilt, the "What's cooking" report is rewritten, and
@@ -88,10 +88,10 @@ This edition covers what happened during the month of July 2022.
 
   There are too many to list in the design and implementation of the
   internals, but in the end, I think what mattered to the project most
-  was that I was consistently there available to help guide the
+  was that I was consistently there, available to help guide the
   project.
 
-  It may not be "important contribution", but my most favorite
+  While it may not be a particularly "important contribution", my most favorite
   creation is "git rerere".  It was fun to design, work on, and (most
   importantly) name it.
 
@@ -100,8 +100,8 @@ This edition covers what happened during the month of July 2022.
   something in Git for a full year, what would it be?
 
   The interoperability between SHA-1 and SHA-256 repositories first
-  comes to mind.  The ingredients are almost all there, so is rough
-  design.
+  comes to mind.  The ingredients are almost all there, so are rough
+  designs.
 
 
 * If you could remove something from Git without worrying about
@@ -136,10 +136,10 @@ This edition covers what happened during the month of July 2022.
   doing to your favorite feature may be a great way to learn them, too.
 
   Either way, while identifying and scratching their "itch", I'd
-  recommend them to lurk on the mailing list for at least a few weeks,
+  recommend they lurk on the mailing list for at least a few weeks,
   and starting early is good.  Learn by reading others' patches being
   discussed, the kind of things the reviewers are interested in, and
-  how the development process works.  See who are active and how the
+  how the development process works.  See who is active and how the
   discussion goes.  These social conventions, how our developers work
   with others, are just as important as, if not more than, technical
   details.  The "MyFirstContribution" document may also be a good place to
@@ -190,22 +190,22 @@ This edition covers what happened during the month of July 2022.
   developers, what would it be?
 
   It is very easy to be too strongly married to your initial solution
-  to become blind to the merits of other approaches suggested in the
-  discussion, or accept a possible reframing of the original problem
-  to solve a wider problem.
+  and become blind to the merits of other approaches suggested in the
+  discussion by others, or accept a possible reframing of the original
+  problem to solve a wider problem.
 
   In the very early days of Git, before Linus passed the project's
   maintainership to me, I also had a "competitive" manner in a bad
   way.  There were plenty of problems to be solved, and it felt as if
   people competed to be the first to offer a solution to each of them.
   When I had an idea to solve a problem that others were also
-  interested to see solved, sometimes it felt like I had to "beat"
-  them, which meant that I had to send out patches that weren't well
+  interested in, sometimes it felt like I had to "beat"
+  them, which meant that I had to send out patches even before they are well
   reasoned and well explained enough.  Luckily, being maintainer means
-  I do not have to compete with the others.  Instead I can set the pace of
+  I no longer have to compete with others.  Instead I can set the pace of
   the project.  After having lived in such a "competitive" way for a
-  few months and saw its downside, I learned to give contributors time
-  to think things through and wait long enough for counter-proposals.
+  few months and saw its downsides, I learned to give contributors time
+  to think things through and wait for counter-proposals.
 
   So, one "tip" is to take things slowly.  Be ready to step back, take
   a deep breath and take time to rethink the problem, together with
