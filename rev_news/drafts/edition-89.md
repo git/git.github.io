@@ -25,9 +25,103 @@ This edition covers what happened during the month of July 2022.
 ### Reviews
 -->
 
-<!---
+
 ### Support
--->
+
+* [[BUG?] Major performance issue with some commands on our repo's master branch](https://public-inbox.org/git/87h750q1b9.fsf@gnu.org/)
+
+  Tassilo Horn sent a long email to the mailing list saying that while
+  writing the email he found a solution to his problem, and that he
+  tells about that solution at the end of the email.
+
+  He then explained that he works on a quite big repo where usual
+  commands are all quick, but some plumbing commands invoked by
+  [Magit](https://magit.vc/) are "extremely slow for no obvious
+  reasons".
+
+  He found that:
+
+  `git show --no-patch --format="%h %s" "master^{commit}" --`
+
+  takes around 13 seconds, while:
+
+  `git show --no-patch --format="%h %s" "SHD_ECORO_3_9_7^{commit}" --`
+
+  takes around 23 milliseconds.
+
+  So there is almost a factor of 1000 difference when the same command
+  is launched on the master branch or on the last release branch.
+
+  He suspected that the difference might have something to do with the
+  fact that there have been a lot of merges recently in master.
+
+  The solution he found while writing the email is to comment out the
+  `diff.renameLimit = 10000` he had in his `~/.gitconfig` file. This
+  reduced the time for the first command above from 13 seconds to 150
+  milliseconds.
+
+  Tassilo wondered though why `diff.renameLimit` had such an
+  influence, as, when `--no-patch` is provided, no diff should be
+  generated.
+
+  Tao Klerks replied to Tassilo that he used to use `git show` to get
+  metadata from a big repo as the command allows specifying an
+  arbitrary list of commits in one call which can save process
+  overhead on Windows. He stopped using `git show` though, when it was
+  reported to be slow. Instead he switched to `git log` and accepted
+  process overhead, as it solved his problem.
+
+  He found that large commits and merge commits when there were a
+  number of changes on any side were slow despite using
+  `--no-patch`. And Tassilo's email made him suspect that it could be
+  linked to rename-detection.
+
+  Tassilo replied to Tao that using `git log` also
+  [solved his problem](https://github.com/magit/magit/commit/d0efb5ffff0b1d4e681f08ff64afbf1ab3257230)
+  but that someone might want to do something to fix `git show` when
+  no diff is generated.
+
+  Tao replied that he found that adding `--diff-merges=off` to the
+  `git show --no-patch ...` command made it perform as fast as
+  `git log`. So he could now combine the performance of `git log`
+  with passing an arbitrary list of commits that `git show` allowed.
+
+  Peff, alias Jeff King, also replied to Tassilo that `git show` might
+  in some cases need underlying diffs even if `--no-patch` is
+  requested, while `git log` might need them too, but not when looking
+  at merges. Peff wondered if the code could be changed to detect when
+  underlying diffs aren't needed, but thought that it could make the
+  code "a bit brittle".
+
+  Kyle Meyer then asked Peff if making `--no-patch` imply
+  `--diff-merges=off` as Tao suggested was safe, and showed benchmarks
+  on the git.git repo where it was nearly 15 times faster with
+  `--diff-merges=off`.
+
+  Peff replied that he wasn't sure it would be safe and gave an
+  example `git show` command using `--diff-filter=D` where the output
+  changes when diff merges are suppressed as the commit isn't showed
+  then. He suggested a mode skipping the diff when it's not shown but
+  always showing the commit. He said that it would require someone
+  verifying it does the right thing in all cases though.
+
+  Junio Hamano, the Git maintainer, chimed in to agree with Peff that
+  making `--no-patch` imply `--diff-merges=off` would cause a
+  regression and mentioned other `git show` options where the output
+  could be affected.
+
+  Junio also elaborated on Peff's idea of a mode skipping the diff
+  when it's not shown but always showing the commit. He suggested an
+  explicit `git show --log-only` option and mentioned a few ways to
+  make it work regarding other options.
+
+  Peff and Junio discussed the idea a bit more, but it doesn't look
+  like something will be implemented soon.
+
+  Tassilo and Peff also discussed a bit the `diff.renameLimit`
+  option. It looks like Tassilo would like to set it to a high value
+  only in some contexts, though the current config might not be
+  sufficient to express that.
 
 ## Developer Spotlight: Junio C Hamano
 
