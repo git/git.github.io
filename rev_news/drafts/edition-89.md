@@ -240,6 +240,7 @@ This edition covers what happened during the month of July 2022.
 ## Other News
 
 __Various__
++ [Contributor's Summit Registration details](https://public-inbox.org/git/YtRqU5rAOsLw5s03@nand.local/) have been posted by Taylor Blau. As usual the Summit will happen the day before the main conference day of the [Git Merge](https://git-merge.com/) and very close to it.
 + [GitLive 15.0: Offline merge conflict detection across all branches for any Git repository and more](https://blog.git.live/gitlive-15.0-offline-merge-conflict-detection-across-all-branches-for-any-git-repository)
   by Agnieszka Stec.
 + Iterative\.AI, authors of the [DVC](https://dvc.org/) Data Version Control tool
