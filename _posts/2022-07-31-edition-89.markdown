@@ -186,7 +186,7 @@ This edition covers what happened during the month of July 2022.
   project.
 
   While it may not be a particularly "important contribution", my most favorite
-  creation is "git rerere".  It was fun to design, work on, and (most
+  creation is `git rerere`.  It was fun to design, work on, and (most
   importantly) name it.
 
 
