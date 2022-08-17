@@ -35,6 +35,8 @@ This edition covers what happened during the month of July 2022.
 
 ## Releases
 
++ Tower for Mac [9.0](https://www.git-tower.com/release-notes/mac) ([What’s New in Tower 9 video](https://youtu.be/CuCCGSlBkis))
++ Tower for Windows [3.4](https://www.git-tower.com/release-notes/windows?show_tab=release-notes) 
 
 ## Other News
 
@@ -42,6 +44,9 @@ __Various__
 
 
 __Light reading__
+
++ [Kaleidoscope + Tower: the perfect Git setup](https://blog.kaleidoscope.app/2022/08/03/kaleidoscope-and-tower/) by Florian Albrecht.
++ [How we built Tower 3 for Windows](https://www.git-tower.com/blog/how-we-built-tower-3-for-windows/) by Kristian Lumme on Tower’s blog.
 
 <!---
 __Easy watching__
