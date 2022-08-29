@@ -35,6 +35,18 @@ This edition covers what happened during the month of July 2022.
 
 ## Releases
 
++ Git [2.37.2](https://public-inbox.org/git/xmqqedxmfyhe.fsf@gitster.g/)
++ Git for Windows [2.37.2(2)](https://github.com/git-for-windows/git/releases/tag/v2.37.2.windows.2),
+[2.37.2(1)](https://github.com/git-for-windows/git/releases/tag/v2.37.2.windows.1)
++ GitLab [15.3.1](https://about.gitlab.com/releases/2022/08/22/critical-security-release-gitlab-15-3-1-released/)
+[15.3](https://about.gitlab.com/releases/2022/08/22/gitlab-15-3-released/),
+[15.2.2](https://about.gitlab.com/releases/2022/08/01/gitlab-15-2-2-released/)
++ Bitbucket Server [8.3](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ GitHub Enterprise [3.5.4](https://help.github.com/enterprise-server@3.5/admin/release-notes#3.5.4),
+[3.4.7](https://help.github.com/enterprise-server@3.4/admin/release-notes#3.4.7),
+[3.3.12](https://help.github.com/enterprise-server@3.3/admin/release-notes#3.3.12),
+[3.2.17](https://help.github.com/enterprise-server@3.2/admin/release-notes#3.2.17)
++ GitHub Desktop [3.0.6](https://desktop.github.com/release-notes/)
 
 ## Other News
 
