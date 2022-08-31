@@ -28,7 +28,7 @@ This edition covers what happened during the month of July 2022.
 
   Last October, Ævar Arnfjörð Bjarmason sent a patch series containing
   only 2 patches. The first one created a new "User-facing file
-  formats" section in the main Git manual page by spliting it off from
+  formats" section in the main Git manual page by splitting it off from
   the existing "Guides" section. The reason for this was that it was a
   stretch to have manual pages like "gitignore(5)" in a section called
   "Guides" which otherwise contained pages like "gitcore-tutorial(7)".
@@ -48,7 +48,7 @@ This edition covers what happened during the month of July 2022.
   The documentation had to be converted when moved over as the man
   page format was different from the previous technical documentation
   format, but the second patch only converted "bundle-format.txt" to a
-  new gitformat-bundle(5) man page. The plan was to convert and move
+  new "gitformat-bundle(5)" man page. The plan was to convert and move
   over more of them later.
 
   Last December Ævar sent
@@ -86,7 +86,7 @@ This edition covers what happened during the month of July 2022.
        gitformat-signature               Git cryptographic signature formats
   ```
 
-  As well as for the first patch series, there were no comment on this
+  As well as for the first patch series, there was no comment on this
   patch series except for one from Eric Sunshine about a possible
   typo. Ævar replied to Eric agreeing to fix some wordings.
 
@@ -99,7 +99,7 @@ This edition covers what happened during the month of July 2022.
   some code in his patch series though. The issue was that the `git
   help` code, which was matching a user requested topic with a man
   page, assumed that the name of man page files started with "git" and
-  then droped this prefix. This was justified as all Git man page
+  then dropped this prefix. This was justified as all Git man page
   filenames have always started with "git", but the `-fanalyzer`
   detected that things could go wrong if that was not the case.
 
@@ -112,7 +112,7 @@ This edition covers what happened during the month of July 2022.
 
   Junio Hamano, the Git maintainer, replied to Ævar suggesting a
   slightly different fix for the complaint. Junio also thought that
-  githooks(5) didn't really belong into a category named
+  "githooks(5)" didn't really belong into a category named
   "user-formats", as a hook can be written in any language, so there
   is no "format" for users to follow. Instead he would have liked a
   better name for a category that could contain both "gitignore" and
@@ -121,7 +121,7 @@ This edition covers what happened during the month of July 2022.
   Junio also suggested not distinguishing between '<guide>' and
   '<doc>' arguments in the `git help` documentation as when we will
   have enough man pages in different sections, we will be able to use
-  '<doc>' for everything that us not related to a specific command.
+  '<doc>' for everything that is not related to a specific command.
 
   About the "user-formats" category name, Ævar replied that he
   couldn't find a better word than "format". He thought about "layout"
