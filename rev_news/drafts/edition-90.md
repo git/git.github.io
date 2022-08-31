@@ -21,9 +21,210 @@ This edition covers what happened during the month of July 2022.
 ### General
 -->
 
-<!---
+
 ### Reviews
--->
+
+* [[PATCH 0/2] git(1) doc + "git help": split-out user & git format docs](https://lore.kernel.org/git/cover-0.2-00000000000-20211015T020351Z-avarab@gmail.com/)
+
+  Last October, Ævar Arnfjörð Bjarmason sent a patch series containing
+  only 2 patches. The first one created a new "User-facing file
+  formats" section in the main Git manual page by spliting it off from
+  the existing "Guides" section. The reason for this was that it was a
+  stretch to have manual pages like "gitignore(5)" in a section called
+  "Guides" which otherwise contained pages like "gitcore-tutorial(7)".
+
+  The second patch in the series created a new "Git file and wire
+  formats" section in the main Git manual page. Contrary to the
+  section created by the first patch, this one was only for internal
+  file and wire formats, that users were not supposed to touch, like
+  "gitformat-bundle(5)".
+
+  The goal was to make the existing technical documentation, which was
+  in "Documentation/technical/" and available only in the HTML format,
+  more accessible and discoverable by moving it over into the new man
+  page sections and adding the corresponding `--user-formats` and
+  `--git-formats` option to the `git help` command.
+
+  The documentation had to be converted when moved over as the man
+  page format was different from the previous technical documentation
+  format, but the second patch only converted "bundle-format.txt" to a
+  new gitformat-bundle(5) man page. The plan was to convert and move
+  over more of them later.
+
+  Last December Ævar sent
+  [a version 2](https://lore.kernel.org/git/cover-v2-0.5-00000000000-20211212T194047Z-avarab@gmail.com/)
+  of his patch series which now contained 5 patches instead of 2 and
+  converted and moved over more documentation to the new man page
+  sections.
+
+  The cover letter of this patch series contained the following
+  examples of what the new `git help` options would show:
+
+  ```
+    $ git help --user-formats
+
+    The user-facing file formats are:
+       gitattributes          Defining attributes per path
+       githooks               Hooks used by Git
+       gitignore              Specifies intentionally untracked files to ignore
+       gitmailmap             Map author/committer names and/or E-Mail addresses
+       gitmodules             Defining submodule properties
+       gitrepository-layout   Git Repository Layout
+
+    $ git help --git-formats
+
+    Git's internal file and network formats are:
+       gitformat-bitmap                  The bitmap file format
+       gitformat-bundle                  The bundle file format
+       gitformat-chunk                   Chunk-based file formats
+       gitformat-commit-graph            Git commit graph format
+       gitformat-index                   Git index format
+       gitformat-pack-protocol           How packs are transferred over-the-wire
+       gitformat-protocol-capabilities   Protocol v0 and v1 capabilities
+       gitformat-protocol-common         Things common to various protocols
+       gitformat-protocol-v2             Git Wire Protocol, Version 2
+       gitformat-signature               Git cryptographic signature formats
+  ```
+
+  As well as for the first patch series, there were no comment on this
+  patch series except for one from Eric Sunshine about a possible
+  typo. Ævar replied to Eric agreeing to fix some wordings.
+
+  [A version 3](https://lore.kernel.org/git/cover-v3-0.7-00000000000-20220712T195419Z-avarab@gmail.com/)
+  of his patch series appeared only last July on the mailing list.
+  Containing 7 patches, it converted and moved over even more
+  documentation to the new man page sections.
+
+  Ævar soon spotted that gcc's `-fanalyzer` option complained about
+  some code in his patch series though. The issue was that the `git
+  help` code, which was matching a user requested topic with a man
+  page, assumed that the name of man page files started with "git" and
+  then droped this prefix. This was justified as all Git man page
+  filenames have always started with "git", but the `-fanalyzer`
+  detected that things could go wrong if that was not the case.
+
+  So a few days later Ævar sent
+  [a version 4](https://lore.kernel.org/git/cover-v4-0.8-00000000000-20220718T132911Z-avarab@gmail.com/)
+  of his patch series with only minor changes. One of them was fixing
+  the `-fanalyzer` complaint by adding a new patch at the beginning of
+  the series which would abort the current command using the BUG()
+  macro in case the man page name didn't start with "git".
+
+  Junio Hamano, the Git maintainer, replied to Ævar suggesting a
+  slightly different fix for the complaint. Junio also thought that
+  githooks(5) didn't really belong into a category named
+  "user-formats", as a hook can be written in any language, so there
+  is no "format" for users to follow. Instead he would have liked a
+  better name for a category that could contain both "gitignore" and
+  "githook" related pages.
+
+  Junio also suggested not distinguishing between '<guide>' and
+  '<doc>' arguments in the `git help` documentation as when we will
+  have enough man pages in different sections, we will be able to use
+  '<doc>' for everything that us not related to a specific command.
+
+  About the "user-formats" category name, Ævar replied that he
+  couldn't find a better word than "format". He thought about "layout"
+  as there is "gitrepository-layout(5)", but found it odd.
+
+  He also proposed using '<name>' instead of '<doc>' or '<guide>' in
+  the `git help` documentation. Junio replied that he prefered '<doc>'
+  instead of '<name>' though.
+
+  Ævar and Junio also discussed interactions of the patch series with
+  patches that were worked on by others at the same time.
+
+  A few days later Ævar then sent
+  [a version 5](https://lore.kernel.org/git/cover-v5-0.9-00000000000-20220721T160721Z-avarab@gmail.com/)
+  of his patch series which mainly renamed "user formats" and
+  "developer formats" to "user interfaces" and "developer interfaces".
+
+  This changes allowed the new "user interfaces" section to also
+  contain the "gitcli", "gitrevisions" as well as "githook" man pages,
+  while the "developer interfaces" had pages called "protocol-*"
+  instead of only "format-*":
+
+  ```
+    $ ./git help --user-interfaces
+    User-facing repository, command and file interfaces:
+       attributes          Defining attributes per path
+       cli                 Git command-line interface and conventions
+       hooks               Hooks used by Git
+       ignore              Specifies intentionally untracked files to ignore
+       mailmap             Map author/committer names and/or E-Mail addresses
+       modules             Defining submodule properties
+       repository-layout   Git Repository Layout
+       revisions           Specifying revisions and ranges for Git
+
+    $ ./git help --developer-interfaces
+    File formats, protocols and other developer interfaces:
+       format-bundle             The bundle file format
+       format-chunk              Chunk-based file formats
+       format-commit-graph       Git commit graph format
+       format-index              Git index format
+       format-multi-pack-index   The multi-pack-index file format
+       format-pack               Git pack format
+       format-pack-cruft         The cruft pack file format
+       format-signature          Git cryptographic signature formats
+       protocol-capabilities     Protocol v0 and v1 capabilities
+       protocol-common           Things common to various protocols
+       protocol-http             Git HTTP-based protocols
+       protocol-pack             How packs are transferred over-the-wire
+       protocol-v2               Git Wire Protocol, Version 2
+  ```
+
+  Along with other small fixes, in the `git help` documentation, the
+  new version also didn't distinguish between '<guide>' and '<doc>'
+  arguments anymore.
+
+  The only comment on this version was from Eric who found a trivial
+  typo in a commit message.
+
+  Anyway a few days later Ævar sent
+  [a version 6](https://lore.kernel.org/git/cover-v6-0.9-00000000000-20220728T164243Z-avarab@gmail.com/)
+  of his patch series fixing the trivial typo.
+
+  Junio commented that the first patch in this series, which had been
+  added in version 4 of the patch series to fix the `-fanalyzer`
+  complaint, wasn't really needed. What wasn't actually needed was the
+  BUG() macro aborting everything in case the name of the man page
+  didn't start with "git", as it could be an unnecessary roadblock if
+  we ever wanted to add such man pages.
+
+  After some further discussion, Ævar sent
+  [a version 7](https://lore.kernel.org/git/cover-v7-00.10-00000000000-20220802T125258Z-avarab@gmail.com/)
+  of his patch series.
+
+  This series mostly removed the BUG() macro that had been added
+  previously, but still refactored in the first patch the code
+  dropping the "git" prefix when a user requested topic must be
+  matched with a man page.
+
+  Junio commented about this first patch that he wasn't sure the
+  commit message properly described what the code was doing in case
+  the man page name started with something like "git-git".
+
+  He then spotted an issue with how some changes were split into
+  different patches, and suggested that a man page should be split
+  into different pages for different topics, while two other man pages
+  about similar topic should be merged into one. He also mentioned
+  some "leftoverbits" that could be done later.
+
+  Ævar sent
+  [a version 8](https://lore.kernel.org/git/cover-v8-00.12-00000000000-20220804T162138Z-avarab@gmail.com/)
+  of his patch series taking account Junio's suggestions, except for
+  one documentation page that he decided could be converted later if
+  needed. So he just removed the changes converting it from the patch
+  series.
+
+  Junio reviewed the series again and liked what it was doing. He
+  discussed further changes a bit with Ævar, but they agreed that they
+  could be done later in another patch series.
+
+  Since then, version 8 of the patch series has been merged into the
+  master branch, so we should have a significantly improved
+  documentation and help system in the next Git feature release
+  (v2.38.0) that should be out in the first weeks of October.
 
 <!---
 ### Support
