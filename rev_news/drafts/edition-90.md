@@ -118,18 +118,18 @@ This edition covers what happened during the month of July 2022.
   better name for a category that could contain both "gitignore" and
   "githook" related pages.
 
-  Junio also suggested not distinguishing between '<guide>' and
-  '<doc>' arguments in the `git help` documentation as when we will
+  Junio also suggested not distinguishing between `<guide>` and
+  `<doc>` arguments in the `git help` documentation as when we will
   have enough man pages in different sections, we will be able to use
-  '<doc>' for everything that is not related to a specific command.
+  `<doc>` for everything that is not related to a specific command.
 
   About the "user-formats" category name, Ævar replied that he
   couldn't find a better word than "format". He thought about "layout"
   as there is "gitrepository-layout(5)", but found it odd.
 
-  He also proposed using '<name>' instead of '<doc>' or '<guide>' in
-  the `git help` documentation. Junio replied that he prefered '<doc>'
-  instead of '<name>' though.
+  He also proposed using `<name>` instead of `<doc>` or `<guide>` in
+  the `git help` documentation. Junio replied that he prefered `<doc>`
+  instead of `<name>` though.
 
   Ævar and Junio also discussed interactions of the patch series with
   patches that were worked on by others at the same time.
@@ -174,7 +174,7 @@ This edition covers what happened during the month of July 2022.
   ```
 
   Along with other small fixes, in the `git help` documentation, the
-  new version also didn't distinguish between '<guide>' and '<doc>'
+  new version also didn't distinguish between `<guide>` and `<doc>`
   arguments anymore.
 
   The only comment on this version was from Eric who found a trivial
