@@ -370,6 +370,20 @@ This edition covers what happened during the month of July 2022.
 
 __Various__
 
++ A series of posts about "Git's database internals" by Derrick Stolee
+  has been published on GitHub's blog site:
+  - [part 1](https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store/)
+    is about how Git stores object data,
+  - [part 2](https://github.blog/2022-08-30-gits-database-internals-ii-commit-history-queries/)
+    is about commit history queries,
+  - [part 3](https://github.blog/2022-08-31-gits-database-internals-iii-file-history-queries/)
+    is about file history queries,
+  - [part 4](https://github.blog/2022-09-01-gits-database-internals-iv-distributed-synchronization/)
+    is about distributed synchronization,
+  - [part 5](https://github.blog/2022-09-02-gits-database-internals-v-scalability/)
+    is about scalability.
++ [The full lineup for Git Merge 2022](https://github.blog/2022-08-23-the-full-lineup-for-git-merge-2022-revealed/)
+  has been revealed by Lee Reilly.
 
 __Light reading__
 
