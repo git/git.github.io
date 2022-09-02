@@ -393,6 +393,9 @@ __Easy watching__
 
 __Git tools and sites__
 
++ [prr alias 'Pull request review'](https://github.com/danobi/prr) by
+  Daniel Xu allows "offline reviews and inline comments" to Github
+  PRs.
 
 ## Credits
 
