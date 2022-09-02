@@ -107,29 +107,29 @@ This edition covers what happened during the month of July 2022.
   [a version 4](https://lore.kernel.org/git/cover-v4-0.8-00000000000-20220718T132911Z-avarab@gmail.com/)
   of his patch series with only minor changes. One of them was fixing
   the `-fanalyzer` complaint by adding a new patch at the beginning of
-  the series which would abort the current command using the BUG()
+  the series which would abort the current command using the `BUG()`
   macro in case the man page name didn't start with "git".
 
   Junio Hamano, the Git maintainer, replied to Ævar suggesting a
   slightly different fix for the complaint. Junio also thought that
   "githooks(5)" didn't really belong into a category named
   "user-formats", as a hook can be written in any language, so there
-  is no "format" for users to follow. Instead he would have liked a
+  is no "format" for users to follow. Instead, he would have liked a
   better name for a category that could contain both "gitignore" and
   "githook" related pages.
 
   Junio also suggested not distinguishing between `<guide>` and
-  `<doc>` arguments in the `git help` documentation as when we will
-  have enough man pages in different sections, we will be able to use
-  `<doc>` for everything that is not related to a specific command.
+  `<doc>` categories in the `git help` documentation, as at some point
+  we would have enough `<doc>` documents that most probably everything
+  not related to a specific command would become `<doc>`.
 
   About the "user-formats" category name, Ævar replied that he
   couldn't find a better word than "format". He thought about "layout"
   as there is "gitrepository-layout(5)", but found it odd.
 
   He also proposed using `<name>` instead of `<doc>` or `<guide>` in
-  the `git help` documentation. Junio replied that he prefered `<doc>`
-  instead of `<name>` though.
+  the `git help` documentation. Junio replied that he preferred `<doc>`
+  to `<name>` though.
 
   Ævar and Junio also discussed interactions of the patch series with
   patches that were worked on by others at the same time.
@@ -139,10 +139,10 @@ This edition covers what happened during the month of July 2022.
   of his patch series which mainly renamed "user formats" and
   "developer formats" to "user interfaces" and "developer interfaces".
 
-  This changes allowed the new "user interfaces" section to also
+  These changes allowed the new "user interfaces" section to also
   contain the "gitcli", "gitrevisions" as well as "githook" man pages,
-  while the "developer interfaces" had pages called "protocol-*"
-  instead of only "format-*":
+  while the "developer interfaces" had pages called "protocol-\*"
+  instead of only "format-\*":
 
   ```
     $ ./git help --user-interfaces
@@ -173,9 +173,9 @@ This edition covers what happened during the month of July 2022.
        protocol-v2               Git Wire Protocol, Version 2
   ```
 
-  Along with other small fixes, in the `git help` documentation, the
+  Along with other small fixes in the `git help` documentation, the
   new version also didn't distinguish between `<guide>` and `<doc>`
-  arguments anymore.
+  categories anymore.
 
   The only comment on this version was from Eric who found a trivial
   typo in a commit message.
@@ -187,7 +187,7 @@ This edition covers what happened during the month of July 2022.
   Junio commented that the first patch in this series, which had been
   added in version 4 of the patch series to fix the `-fanalyzer`
   complaint, wasn't really needed. What wasn't actually needed was the
-  BUG() macro aborting everything in case the name of the man page
+  `BUG()` macro aborting everything in case the name of the man page
   didn't start with "git", as it could be an unnecessary roadblock if
   we ever wanted to add such man pages.
 
@@ -195,9 +195,9 @@ This edition covers what happened during the month of July 2022.
   [a version 7](https://lore.kernel.org/git/cover-v7-00.10-00000000000-20220802T125258Z-avarab@gmail.com/)
   of his patch series.
 
-  This series mostly removed the BUG() macro that had been added
-  previously, but still refactored in the first patch the code
-  dropping the "git" prefix when a user requested topic must be
+  This series mostly removed the `BUG()` macro that had been added
+  previously, but in the first patch still refactored the code
+  dropping the "git" prefix when a user requested topic needs to be
   matched with a man page.
 
   Junio commented about this first patch that he wasn't sure the
@@ -207,14 +207,14 @@ This edition covers what happened during the month of July 2022.
   He then spotted an issue with how some changes were split into
   different patches, and suggested that a man page should be split
   into different pages for different topics, while two other man pages
-  about similar topic should be merged into one. He also mentioned
+  about similar topics should be merged into one. He also mentioned
   some "leftoverbits" that could be done later.
 
   Ævar sent
   [a version 8](https://lore.kernel.org/git/cover-v8-00.12-00000000000-20220804T162138Z-avarab@gmail.com/)
   of his patch series taking account Junio's suggestions, except for
-  one documentation page that he decided could be converted later if
-  needed. So he just removed the changes converting it from the patch
+  one documentation page, which he decided to be converted later if
+  needed, so he just removed the changes converting it from the patch
   series.
 
   Junio reviewed the series again and liked what it was doing. He
@@ -238,7 +238,7 @@ This edition covers what happened during the month of July 2022.
   I'm a Software Engineer at Google on a team that works on Git. My prior
   experience is comprised solely of different flavours of proprietary web
   apps, so I'm constantly grateful for the opportunity to work on the
-  polar opposite of that :)
+  polar opposite of that :).
 
   The only interesting thing I do outside of work is rock climbing.
   Sometimes, I wish I spent as much time rock climbing as I do working,
@@ -249,7 +249,7 @@ This edition covers what happened during the month of July 2022.
 
   Hm, I've only been contributing for a short while, so it's hard for me
   to call any of them important per se. The most user-visible one is
-  safe.bareRepository, but I don't think many users will use it in its
+  `safe.bareRepository`, but I don't think many users will use it in its
   current form. If I had more time, I'd expand it into a safer default for
   everyone.
 
@@ -265,7 +265,7 @@ This edition covers what happened during the month of July 2022.
   something in Git for a full year, what would it be?
 
   I'd probably find a different way to structure the test suite so that we
-  can share far less state between tests, or maybe come up with a way to
+  could share far less state between tests, or maybe come up with a way to
   visualize the setup for each test case. It would be nice to be able to
   read just a single test case to understand what's happening.
 
@@ -293,15 +293,15 @@ This edition covers what happened during the month of July 2022.
 
   Honourable mention goes to [git-branchless](https://github.com/arxanas/git-branchless).
   It does so many amazing things that I've grown to rely on, like
-  anonymous branches, obsolescence tracking, history manipulation.
+  anonymous branches, obsolescence tracking, and history manipulation.
 
-* Do you happen to have any memorable experience w.r.t contributing to
+* Do you happen to have any memorable experience w.r.t. contributing to
   the Git project? If yes, could you share it with us?
 
   Jeff King, one of the most prolific contributors, took a break from the
   Git project last year. I was probably one of the first people to realise
   when he came back from the break because his first email on the mailing
-  list was a bug report comment on a bug that I created :')
+  list was a bug report comment on a bug that I created :').
 
 * Could you describe your Git development toolbox?
 
@@ -319,8 +319,8 @@ This edition covers what happened during the month of July 2022.
   format-patch" and "git send-email" and organised my branches so that I
   could keep track of each version I sent out. Then one day I tried
   GitGitGadget, realised that it does nearly all of those things for me
-  for free, and those scripts have remained virtually unused since :) I
-  will probably never use them again once GGG learns how to base
+  for free, and those scripts have remained virtually unused since :).
+  I will probably never use them again once GGG learns how to base
   topics on topics.
 
 * What is your advice for people who want to start Git development?
@@ -329,7 +329,7 @@ This edition covers what happened during the month of July 2022.
   The best place to start is to get acquainted with the mailing list and
   the community. Reading the mailing list and sending a low-stakes patch
   (like a doc fix or usage string fix) are pretty good ways to do this.
-  Folks on the mailing list tend to communicate in a distinctive style -
+  Folks on the mailing list tend to communicate in a distinctive style --
   it's often direct, and silence can have a different meaning from what
   you're used to. I'm guessing that for most people, learning how to
   communicate effectively on the mailing list is harder than the actual
