@@ -385,7 +385,9 @@ __Various__
 + [The full lineup for Git Merge 2022](https://github.blog/2022-08-23-the-full-lineup-for-git-merge-2022-revealed/)
   has been revealed by Lee Reilly.
 
+<!---
 __Light reading__
+-->
 
 <!---
 __Easy watching__
