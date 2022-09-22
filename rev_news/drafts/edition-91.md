@@ -34,7 +34,8 @@ This edition covers what happened during the month of September 2022.
 -->
 
 ## Releases
-
++ Tower for Mac [9.0](https://www.git-tower.com/release-notes/mac) ([What’s New in Tower 9 video](https://youtu.be/CuCCGSlBkis))
++ Tower for Windows [3.4](https://www.git-tower.com/release-notes/windows?show_tab=release-notes) 
 
 ## Other News
 
@@ -62,6 +63,10 @@ __Light reading__
   by Dionysia Lemonaki o freeCodeCamp.
 + [SSH Tips and Tricks](https://carlosbecker.com/posts/ssh-tips-and-tricks/)
   by Carlos Alexandro Becker, including how to avoid having to touch Yubikey.
++ [Kaleidoscope + Tower: the perfect Git setup](https://blog.kaleidoscope.app/2022/08/03/kaleidoscope-and-tower/) by Florian Albrecht.
++ [How we built Tower 3 for Windows](https://www.git-tower.com/blog/how-we-built-tower-3-for-windows/) by Kristian Lumme on Tower’s blog.
++ [Mastering Google (for Developers)](https://www.git-tower.com/blog/mastering-google-developers/) by Bruno Brito on Tower's blog.
++ [10 Useful Git Commands You Should Know](https://www.git-tower.com/blog/10-useful-git-commands/) by Bruno Brito on Tower's blog.
 
 <!---
 __Easy watching__
