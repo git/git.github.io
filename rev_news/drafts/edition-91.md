@@ -29,9 +29,206 @@ This edition covers what happened during the month of September 2022.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Jeff King (alias Peff)
+
+* Who are you and what do you do?
+
+  My given name is Jeff, but most people call me Peff. Even in real life.
+  I've been working on Git since early 2006. For a while it was for fun
+  and to scratch my own itches (and maybe to avoid doing my school work),
+  but I joined GitHub in 2011, where my job was mostly about improving
+  Git. I stopped being a full-time employee earlier this year, but I'm
+  still working a few hours a week on Git.
+
+* How has your journey been as a long-time Git contributor? Do you
+  happen to have any memorable experience w.r.t contributing to the
+  Git project?
+
+  One thing I've found with contributing to Git is that it sneaks up on
+  you over time.
+
+  I still remember one moment in 2008 or 2009. In my mind, Git was
+  something I did to procrastinate on "real" work. Shawn Pearce was
+  organizing an in-person meeting of developers, and emailed me
+  specifically to say that I was one of the core developers and should
+  consider coming. I was really confused. Wasn't this just a thing I did
+  in my spare time? But running `git shortlog` showed that I was one of
+  the top few contributors. That really changed my mindset; I realized I
+  was part of a larger community, and that it was something I did care
+  about.
+
+  And I have that same sense looking at how far Git has come. Day to day
+  (and especially when you're fixing a bug in code from 2005) it can seem
+  like nothing changes. But when I look back over the span of 10 or 15
+  years, I'm amazed at the progress. Not just in terms of features in Git,
+  but at the overall development process. The way we work and communicate
+  has matured so much in that time. Some of that is from technical tools
+  (new Git features, new internal APIs and data structures to avoid whole
+  classes of bugs) but some of it is in what the people do. In my opinion,
+  our standards for testing and commit messages have gone up considerably
+  over the years.
+
+* Git Merge got over a few days ago. Any takeaways from the conference
+  that you would like to share?
+
+  To me, the most important part of Git Merge is making connections
+  between developers. I'm not convinced that sticking 30 people in a room
+  is the best way to have a technical discussion, and the real work later
+  happens solo, or on the list. But I think seeing people in person, and
+  especially chatting with them over lunch, etc, is so helpful to that
+  later work. We all know intellectually that there's another person on
+  the end of every email, but I think having met them face to face helps
+  us emphathize at a more gut level.
+
+  Of course, there were some talks, too.  I tend to prefer the more
+  technical ones, but being so involved in Git development, there doesn't
+  tend to be anything too surprising for me there. I thought the talks
+  from Taylor and Elijah were nice dives into new technical material
+  (though they both also have great blog posts that go even deeper!).
+  Martin's Jujutsu talk gave a lot of food for thought on different ways
+  for people to interact with Git.
+
+* Could you share a few words regarding your experience while you were
+  a member of the Git PLC?
+
+  I was the person who led the initial effort in 2010 to join Software
+  Freedom Conservancy. We had gotten some money for the project as part of
+  Google's Summer of Code program. It was being passed around like a hot
+  potato (between countries, even!) as somebody took responsiblity for
+  handling GSoC each year. I don't even want to think of what we were
+  _supposed_ to do with it, tax-wise, but we knew it would be better with
+  some actual structure. So that led to us joining, which led to the PLC
+  as committee in control of the project as an entity (and the money), and
+  that led to handling more assets (the git-scm.com domain, donated
+  hosting agreements from various places, the trademark).
+
+  Since the Conservancy entity isn't directly related to code development,
+  being on the PLC is long periods of nothing, punctuated by big threads
+  full of boring non-coding stuff. Some of it is fun-ish, like handing out
+  travel funds so people can come to Git Merge. Some of it I found very
+  tedious, like discussing trademark enforcement, or code of conduct
+  issues. I was happy to serve on the PLC for many years, but I'm also
+  happy that other people are doing that work now.
+
+* What would you name your most important contribution to Git?
+
+  I think my biggest contribution is not any one thing, but rather being
+  there for all of the things. There's hardly a C file in the repository
+  that I haven't touched at some point, and when fixing a bug I'd often
+  try to find solutions we could apply to the whole code base (e.g.,
+  improving an API to be less error-prone and using it consistently in
+  other callers).
+
+  I do sometimes work on bigger features. One of the earliest things I did
+  after starting at GitHub was overhaul our HTTP authentication and
+  introduce the credential-helper protocol. I occasionally see other tools
+  using a similar protocol, proving that it was either a great idea, or a
+  seductively bad one!
+
+* What are you doing on the Git project these days, and why?
+
+  One of my favorite things in Git is to wake up, read an email on the
+  list that says "why does Git do X when I say Y?", dig it down to some
+  bug or missing feature, and end up with a nice, tidy patch by lunchtime.
+  Of course it doesn't always go that way, but I do often enjoy these
+  little fixes. It's like solving a puzzle.
+
+  I also have a backlog of half-finished ideas. Some of them are garbage
+  that I'll probably throw away, but many of them just need a little
+  polishing. One of them is more tunable knobs for repacking (which has
+  been in use on GitHub's servers for a few years already!), and another
+  is handling negative commit timestamps (so we can finally import
+  pre-1970 Apollo code).
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+  Arguably I had that already, so maybe past work speaks for itself. Or
+  maybe I squandered it.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+  Trees should be sorted in order strictly by name, rather than
+  directories sorting as if "/" was appended. It's a little thing, I know,
+  but it's one of the few things that's really impossible to fix because
+  it's baked so deep into Git's logical model.
+
+* What is your favorite Git-related tool/library, outside of Git
+  itself?
+
+  Definitely [`tig`](https://jonas.github.io/tig/). Its "blame" functionality,
+  and especially the "re-blame from parent" feature, are so useful. I almost
+  never run a bare `git blame`.
+
+* What is your toolbox for interacting with the mailing list and
+  for developing Git itself?
+
+  I read the mailing list via mutt. I keep a local archive which I index
+  with notmuch. I used to actually subscribe to the list, but these days I
+  just pull the archive every few minutes from lore.kernel.org's
+  public-inbox Git repository.
+
+  I do all of my development with a fairly vanilla vim setup. I have a few
+  niceties, like terminal hotkeys to cut and paste object hashes, and a
+  vim function to inline output from a Git command (like converting hashes
+  into `--format=reference`).
+
+  I try to share my scripts when they're not too gross or specific to my
+  workflows. An example there is [`contrib/git-jump`](https://github.com/git/git/tree/master/contrib/git-jump).
+  I keep some other Git-specific scripts in the [meta branch](https://github.com/peff/git/tree/meta)
+  which I check out as the directory `Meta` inside my Git repository (I
+  stole the name from Junio, who has a similar tree of scripts). I use it
+  to rebase my topics and make my daily-driver build of Git. There's
+  probably not much of use there for most people, but some of it has led
+  to useful features (e.g., our test suite's `--stress` option started as
+  a script there, though SZEDER Gábor did all the heavy lifting to
+  integrate it).
+
+* What is your advice for people who want to start Git development?
+  Where and how should they start?
+
+  There are a lot of ways to get involved in open source, but I think the
+  best one is scratching your own itch. Pick something you want the tool
+  to do, and work on it. That's probably harder with Git these days than
+  it was when I started, just because the system is larger and more
+  complex, and so much of the low-hanging fruit has already been picked.
+
+  A similar way is just reading the list and looking for bug reports. Once
+  you learn about a problem, then it becomes your itch.
+
+  Of course it's fine to start work on a much larger project if you like.
+  But following my "sneaks up on you" philosophy from above, if you work
+  on enough small things, you will eventually find yourself quite
+  comfortable with the code base, and able to work on larger things.
+
+* If there's one tip you would like to share with other Git
+  developers, what would it be?
+
+  Re-read your emails before sending! Obviously it's nice to catch typos
+  and other simple proofreading errors. But it's also a final chance to
+  make sure you are saying what you want clearly and concisely, and that
+  you understand what the other person is saying.
+
+  I can't count the number of times that I've almost sent out a very
+  confused explanation in a commit message, and upon re-reading realized
+  that not only was there a better way to explain it, but a better way to
+  write the code. It's also one of the reasons I like writing verbose
+  commit messages. Trying to justify the decisions you've made in writing
+  a patch is often the moment you realize that your arguments are weak.
+
+  Likewise, there have been many times when I'm about to respond to
+  somebody along the lines of "I think you're wrong, and here's why". And
+  upon re-reading I realize that I did not understand their point in the
+  first place. Of course if everybody remains polite, then hopefully the
+  error works its way to a shared understanding eventually. But besides
+  saving everybody time, catching a misunderstanding before sending means
+  you're wrong on the Internet one less time!
+
+  Of course, ending the interview with this tip gives an almost certain
+  probability that I have a typo somewhere above. So maybe one more tip:
+  be humble. And remember to have fun. Oops, that's two tips.
+
 
 ## Releases
 + Tower for Mac [9.0](https://www.git-tower.com/release-notes/mac) ([What’s New in Tower 9 video](https://youtu.be/CuCCGSlBkis))
