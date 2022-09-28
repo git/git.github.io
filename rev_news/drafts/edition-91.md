@@ -231,6 +231,31 @@ This edition covers what happened during the month of September 2022.
 
 
 ## Releases
+
++ Git [2.38.0-rc2](https://public-inbox.org/git/xmqqzgek1q1p.fsf@gitster.g/),
+[2.38.0-rc1](https://public-inbox.org/git/xmqqk05wz2si.fsf@gitster.g/),
+[2.38.0-rc0](https://public-inbox.org/git/xmqqczbwkpt8.fsf@gitster.g/),
+[2.37.3](https://public-inbox.org/git/xmqqzgflk211.fsf@gitster.g/)
++ Git for Windows [2.38.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.38.0-rc2.windows.1),
+[2.38.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.38.0-rc1.windows.1),
+[2.38.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.38.0-rc0.windows.1),
+[2.37.3(1)](https://github.com/git-for-windows/git/releases/tag/v2.37.3.windows.1)
++ Bitbucket Server [8.4](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ GitHub Enterprise [3.6.2](https://help.github.com/enterprise-server@3.6/admin/release-notes#3.6.2),
+[3.5.6](https://help.github.com/enterprise-server@3.5/admin/release-notes#3.5.6),
+[3.4.9](https://help.github.com/enterprise-server@3.4/admin/release-notes#3.4.9),
+[3.3.14](https://help.github.com/enterprise-server@3.3/admin/release-notes#3.3.14),
+[3.2.19](https://help.github.com/enterprise-server@3.2/admin/release-notes#3.2.19),
+[3.6.1](https://help.github.com/enterprise-server@3.6/admin/release-notes#3.6.1),
+[3.5.5](https://help.github.com/enterprise-server@3.5/admin/release-notes#3.5.5),
+[3.4.8](https://help.github.com/enterprise-server@3.4/admin/release-notes#3.4.8),
+[3.3.13](https://help.github.com/enterprise-server@3.3/admin/release-notes#3.3.13),
+[3.2.18](https://help.github.com/enterprise-server@3.2/admin/release-notes#3.2.18)
++ GitLab [15.4](https://about.gitlab.com/releases/2022/09/22/gitlab-15-4-released/)
+[15.3.3](https://about.gitlab.com/releases/2022/09/05/gitlab-15-3-3-released/),
+[15.3.2, 15.2.4 and 15.1.6](https://about.gitlab.com/releases/2022/08/30/critical-security-release-gitlab-15-3-2-released/)
++ GitHub Desktop [3.0.8](https://desktop.github.com/release-notes/),
+[3.0.7](https://desktop.github.com/release-notes/)
 + Tower for Mac [9.0](https://www.git-tower.com/release-notes/mac) ([What’s New in Tower 9 video](https://youtu.be/CuCCGSlBkis))
 + Tower for Windows [3.4](https://www.git-tower.com/release-notes/windows?show_tab=release-notes) 
 
