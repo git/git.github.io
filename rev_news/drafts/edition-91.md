@@ -38,6 +38,18 @@ This edition covers what happened during the month of September 2022.
   topics and an email containing them will be sent for each topic to
   the mailing list.
 
+* [Gerrit User Summit](https://www.eventbrite.com/e/gerrit-user-summit-2022-tickets-424995963367) 2022
+
+  Gerrit User Summit is the event that brings together Gerrit and JGit
+  maintainers, contributors and users together, network face-to-face and
+  share news and experiences. It is now back on the 10-11 November 2022
+  in hybrid mode with a physical venue in [London at CodeNode](https://g.page/codenodeuk?share)
+  and online.
+  
+  The summit is going to be recorded and published on the [GerritForge YouTube](https://tv.gerritforge.com)
+  channel, together with roundtables and discussions between the community
+  members.
+
 <!---
 ### Reviews
 -->
@@ -344,6 +356,7 @@ __Various__
   on GitHub.
 + [35,000 code repos not hacked—but clones flood GitHub to serve malware](https://www.bleepingcomputer.com/news/security/35-000-code-repos-not-hacked-but-clones-flood-github-to-serve-malware/),
   and [GitHub blighted by “researcher” who created thousands of malicious projects](https://nakedsecurity.sophos.com/2022/08/04/github-blighted-by-researcher-who-created-thousands-of-malicious-projects/).
++ [Gerrit Code Review v3.7.0 release plan](https://www.gerritcodereview.com/2022-09-29-gerrit-3.7-release-plan.html) has been published.
 
 
 __Light reading__
