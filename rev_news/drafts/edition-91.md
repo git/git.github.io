@@ -42,9 +42,62 @@ This edition covers what happened during the month of September 2022.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [rev-parse: -- is sometimes a flag and sometimes an arg?](https://lore.kernel.org/git/CAO_RewbD+BJd1hPKCmCNM8wYBSUmZ2TuOoy6t1up1CT-rbn4DA@mail.gmail.com/)
+
+  Tim Hockin sent an email to the mailing list containing a series of
+  `git rev-parse` commands with some arguments that he ran on the
+  command line, along with their results, and his comments.
+
+  First he ran `git rev-parse unknown-tag` which errored out, after
+  printing `unknown-tag`. The error message said that `unknown-tag` is
+  an ambiguous argument and suggested to use `--` to separate paths
+  from revisions.
+
+  So he tried `git rev-parse unknown-tag --` which just errored saying
+  that `unknown-tag` is a bad revision as expected.
+
+  Unfortunately when he then tried `git rev-parse HEAD --`, there was
+  no error as expected, but instead of outputting only the SHA1 hash
+  corresponding to HEAD, the command also printed `--` on its own line
+  after the SHA1 hash.
+
+  This made Tim wonder why `--` was treated as a regular argument. He
+  looked at Git source code and said that it seemed intentional to
+  treat it that way, but he didn't understand the reason.
+
+  Junio Hamano, the Git maintainer, replied that `git rev-parse` was
+  mostly a "plumber" command designed to be used by higher level
+  "porcelain" commands. By default, it should be able to "parse"
+  command line arguments, and then dump them all to its output after
+  translating "revs" into raw object names (SHA1 hashes).
+
+  As `--` is a valid option for "porcelain" commands or scripts that
+  would use `git rev-parse` to parse their command line arguments, it
+  makes sense for `git rev-parse` to just pass `--` along.
+
+  Tim then asked if there was "a more friendly way" to do what he
+  wanted to do. But Junio replied that it wasn't clear what Tim
+  actually wanted to do.
+
+  Tim replied that his goal was to convert a string that could contain
+  a tag name, a branch name, or a SHA1 hash (abbreviated or not) into
+  a canonical SHA1.
+
+  Junio suggested using `git rev-parse --verify <string>`, as it would
+  either convert `<string>` into an object ID (a SHA1 hash by
+  default), or it would error out. Junio also mentioned that
+  [the "EXAMPLES" section](https://git-scm.com/docs/git-rev-parse#_examples)
+  has more elaborate examples.
+
+  brian m. carlson chimed in to say that `git rev-parse --verify <string>`
+  would print a full object ID whether it exists in the repo or not, if
+  `<string>` already contains one (for example, the all-zeros object ID).
+  He suggested using `git rev-parse --verify <string>^{object}` if Tim
+  wanted to also verify that the object exists.
+
+  Tim thanked brian and Junio saying that their answer helps a lot.
 
 ## Developer Spotlight: Jeff King (alias Peff)
 
