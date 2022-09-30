@@ -24,19 +24,18 @@ This edition covers what happened during the month of September 2022.
 
   The Git Merge conference happened
   [on September 14th and 15th](https://git-merge.com/#schedule).
-  On the afternoon of first day there were optional workshops and the
-  Git Contributor's Summit, while the main conference happened on the
-  second day.
+  On the afternoon of the first day there were optional workshops and
+  the Git Contributor's Summit, while the main conference happened on
+  the second day.
 
-  As usual [the topics](https://docs.google.com/spreadsheets/d/1QhkUkYvqtGJtN7ViiTmrfcP3s0cXgqyAIACRD5Q24Mg/edit)
+  As usual [the topics](https://docs.google.com/spreadsheets/d/1QhkUkYvqtGJtN7ViiTmrfcP3s0cXgqyAIACRD5Q24Mg)
   that were discussed during the Contributor's Summit were proposed
   and voted on before the the Summit started. The discussions started
-  from the most voted on topics and
-  [some notes were taken](https://docs.google.com/document/d/1gVGZtkCLF3CWPt3xQnIJUy8XP702zGSxvOPk1r-6_8s/edit).
+  from the most voted on topics.
 
-  Hopefully these notes will be split according to the different
-  topics and an email containing them will be sent for each topic to
-  the mailing list.
+  Taylor Blau sent [an email](https://lore.kernel.org/git/YzXvMRc6X60kjVeY@nand.local/).
+  summarizing what happened and asking for feedback, followed by the
+  broken-out notes for each topic that was discussed in an email thread.
 
 <!---
 ### Reviews
