@@ -415,6 +415,10 @@ __Easy watching__
 
 __Git tools and sites__
 
++ [b4](https://b4.docs.kernel.org/en/stable-0.10.y/index.html): has gained
+  [contributor oriented features](https://b4.docs.kernel.org/en/stable-0.10.y/contributor/overview.html),
+  like `b4 send` to send patch series to a mailing list; see
+  [Konstantin Ryabitsev's announce](https://lore.kernel.org/git/20220919145445.ifpjcah44pql2erl@meerkat.local/).
 + [Gitsign](https://github.com/sigstore/gitsign): Keyless Git signing with
   [Sigstore](https://www.sigstore.dev/), with your own GitHub / OIDC (OpenID Connect) identity.
   Written in Go.
