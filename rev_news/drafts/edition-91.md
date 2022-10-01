@@ -25,22 +25,23 @@ This edition covers what happened during the month of September 2022.
   The Git Merge conference happened
   [on September 14th and 15th](https://git-merge.com/#schedule).
   On the afternoon of the first day there were optional workshops and
-  the Git Contributor's Summit, while the main conference happened on
+  the Git Contributor's Summit, while the main conference took place on
   the second day.
 
   As usual [the topics](https://docs.google.com/spreadsheets/d/1QhkUkYvqtGJtN7ViiTmrfcP3s0cXgqyAIACRD5Q24Mg)
   that were discussed during the Contributor's Summit were proposed
-  and voted on before the the Summit started. The discussions started
-  from the most voted on topics.
+  and voted on before the the summit started. The discussions started
+  with the topics with the most votes.
 
-  Taylor Blau sent [an email](https://lore.kernel.org/git/YzXvMRc6X60kjVeY@nand.local/).
-  summarizing what happened and asking for feedback, followed by the
-  broken-out notes for each topic that was discussed in an email thread.
+  Taylor Blau sent [an email](https://lore.kernel.org/git/YzXvMRc6X60kjVeY@nand.local/)
+  summarizing what happened and asking for feedback, followed by an own
+  email thread for each topic that had a note-taker, starting with the 
+  topic's broken-out notes.
 
 * [Gerrit User Summit](https://www.eventbrite.com/e/gerrit-user-summit-2022-tickets-424995963367) 2022
 
   Gerrit User Summit is the event that brings together Gerrit and JGit
-  maintainers, contributors and users together, network face-to-face and
+  maintainers, contributors and users, as an opportunity to network face-to-face and
   share news and experiences. It is now back on the 10-11 November 2022
   in hybrid mode with a physical venue in [London at CodeNode](https://g.page/codenodeuk?share)
   and online.
@@ -55,22 +56,22 @@ This edition covers what happened during the month of September 2022.
 
 ### Support
 
-* [rev-parse: -- is sometimes a flag and sometimes an arg?](https://lore.kernel.org/git/CAO_RewbD+BJd1hPKCmCNM8wYBSUmZ2TuOoy6t1up1CT-rbn4DA@mail.gmail.com/)
+* [rev-parse: `--` is sometimes a flag and sometimes an arg?](https://lore.kernel.org/git/CAO_RewbD+BJd1hPKCmCNM8wYBSUmZ2TuOoy6t1up1CT-rbn4DA@mail.gmail.com/)
 
   Tim Hockin sent an email to the mailing list containing a series of
   `git rev-parse` commands with some arguments that he ran on the
-  command line, along with their results, and his comments.
+  command line, along with their results and his comments.
 
-  First he ran `git rev-parse unknown-tag` which errored out, after
+  First he ran `git rev-parse unknown-tag`, which errored out after
   printing `unknown-tag`. The error message said that `unknown-tag` is
   an ambiguous argument and suggested to use `--` to separate paths
   from revisions.
 
-  So he tried `git rev-parse unknown-tag --` which just errored saying
-  that `unknown-tag` is a bad revision as expected.
+  So he tried `git rev-parse unknown-tag --`, which just errored saying
+  that `unknown-tag` was a bad revision, as expected.
 
   Unfortunately when he then tried `git rev-parse HEAD --`, there was
-  no error as expected, but instead of outputting only the SHA1 hash
+  no error, as expected, but instead of printing only the SHA1 hash
   corresponding to HEAD, the command also printed `--` on its own line
   after the SHA1 hash.
 
@@ -89,7 +90,7 @@ This edition covers what happened during the month of September 2022.
   makes sense for `git rev-parse` to just pass `--` along.
 
   Tim then asked if there was "a more friendly way" to do what he
-  wanted to do. But Junio replied that it wasn't clear what Tim
+  wanted to achieve. But Junio replied that it wasn't clear what Tim
   actually wanted to do.
 
   Tim replied that his goal was to convert a string that could contain
@@ -122,7 +123,7 @@ This edition covers what happened during the month of September 2022.
   still working a few hours a week on Git.
 
 * How has your journey been as a long-time Git contributor? Do you
-  happen to have any memorable experience w.r.t contributing to the
+  happen to have any memorable experience w.r.t. contributing to the
   Git project?
 
   One thing I've found with contributing to Git is that it sneaks up on
@@ -145,7 +146,7 @@ This edition covers what happened during the month of September 2022.
   but at the overall development process. The way we work and communicate
   has matured so much in that time. Some of that is from technical tools
   (new Git features, new internal APIs and data structures to avoid whole
-  classes of bugs) but some of it is in what the people do. In my opinion,
+  classes of bugs), but some of it is in what the people do. In my opinion,
   our standards for testing and commit messages have gone up considerably
   over the years.
 
@@ -159,7 +160,7 @@ This edition covers what happened during the month of September 2022.
   especially chatting with them over lunch, etc, is so helpful to that
   later work. We all know intellectually that there's another person on
   the end of every email, but I think having met them face to face helps
-  us emphathize at a more gut level.
+  us empathize at a more gut level.
 
   Of course, there were some talks, too.  I tend to prefer the more
   technical ones, but being so involved in Git development, there doesn't
@@ -175,7 +176,7 @@ This edition covers what happened during the month of September 2022.
   I was the person who led the initial effort in 2010 to join Software
   Freedom Conservancy. We had gotten some money for the project as part of
   Google's Summer of Code program. It was being passed around like a hot
-  potato (between countries, even!) as somebody took responsiblity for
+  potato (between countries, even!) as somebody took responsibility for
   handling GSoC each year. I don't even want to think of what we were
   _supposed_ to do with it, tax-wise, but we knew it would be better with
   some actual structure. So that led to us joining, which led to the PLC
@@ -441,14 +442,14 @@ __Git tools and sites__
 + [Revup](https://github.com/Skydio/revup) provides command-line tools that allow developers
   to iterate faster on parallel changes and reduce the overhead of creating and maintaining code reviews;
   it creates multiple independent chains of branches for you in the background
-  and then creates and manages github pull requests for all those branches.
+  and then creates and manages GitHub pull requests for all those branches.
   Written in Python.
 + [`git-of-theseus`](https://github.com/erikbern/git-of-theseus) is a set of scripts to
   analyze how a Git repo grows over time.
     + See [The half-life of code & the ship of Theseus](https://erikbern.com/2016/12/05/the-half-life-of-code.html)
       by Erik Bernhardsson (2016).
 + [git_dash](https://github.com/darul75/git_dash) is a command-line shell script
-  for generating a Git metrics dashboard directly in terminal.
+  for generating a Git metrics dashboard directly in your terminal.
 + [GitHub does dotfiles](https://dotfiles.github.io/): Your unofficial guide to dotfiles on GitHub.
 
 
