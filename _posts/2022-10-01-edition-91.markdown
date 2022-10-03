@@ -30,7 +30,7 @@ This edition covers what happened during the month of September 2022.
 
   As usual [the topics](https://docs.google.com/spreadsheets/d/1QhkUkYvqtGJtN7ViiTmrfcP3s0cXgqyAIACRD5Q24Mg)
   that were discussed during the Contributor's Summit were proposed
-  and voted on before the the summit started. The discussions started
+  and voted on before the summit started. The discussions started
   with the topics with the most votes.
 
   Taylor Blau sent [an email](https://lore.kernel.org/git/YzXvMRc6X60kjVeY@nand.local/)
