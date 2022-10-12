@@ -423,3 +423,11 @@ Again, yeah, it's often obvious, but often it's not. So please tell us
 if we should use "He/him/his", "She/her/her(s)", "They/them/their(s)",
 or another pronoun to talk about you.
 
+### Confirm that you pass the requirements
+
+Programs like Outreachy or GSoC usually have requirements for
+applicants. Sometimes applicants have to be accepted by the program
+after they have shown they satisfy the requirements.
+
+In any case it's interesting for us to know soon how you currently
+stand regarding the requirements and maybe the acceptance process.
