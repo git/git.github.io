@@ -349,3 +349,77 @@ tried, what you expected and what didn't work as you
 expected. Something like "I couldn't find a good micro-project for
 me", for example, doesn't tell us much, and doesn't give us any idea
 about how we could help you.
+
+## Some conventions
+
+It can be intimidating to introduce yourself or send your first patch
+to the mailing list, but we hope that the following conventions will
+help you get properly started.
+
+### Start your own email thread
+
+When you introduce yourself to the Git mailing list, please start your
+own email thread instead of replying to a thread where someone else
+introduced themself, or worse a completely unrelated thread.
+
+### Use a tag, like [GSoC], [Outreachy], etc, in your subject
+
+Yeah, we insist on this because many applicants don't do it despite
+the fact that it helps everyone, especially themself.
+
+### Reply inline
+
+Many people these days use the "top posting" posting style, but we
+usually reply inline instead, which is also called the "interleaved
+posting" posting style. See
+https://en.wikipedia.org/wiki/Posting_style for more information about
+these styles.
+
+So please don't just reply on top of the email you are replying
+to. Instead, just expand the email you are replying to and put your
+comments in it.
+
+### Put ALL the co-mentors in To: or Cc:
+
+When emailing about something related to your program (GSoC or
+Outreachy or ...) and when you know who are your possible
+(co-)mentors, put them all in To: or Cc:. If you email or reply and
+forget to put one of your (possible) co-mentors in the loop, it can
+only create confusion or additional useless synchronization work for
+your mentors and ultimately make it harder for them to help you.
+
+If you have something personal to say to only one of your mentors,
+it's Ok to not put others in To: or Cc:, but otherwise, please, make
+it a habit to put them all in the loop when you contact them.
+
+Tip: just use "Reply-all" when you reply to an email.
+
+### Don't be formal
+
+We are used to not using titles, like "Sir", "Mr", etc, and not being
+formal. Yeah, it can be difficult, as in some areas or countries,
+people are supposed to be formal with mentors, professors or people
+older or more experienced than themself. But please try to be as
+informal as us.
+
+### Tell us your first name or how you want to be called
+
+Most people on the mailing list like to call each other and to be
+called using their first name, or sometimes a nickname. So that's how
+we would like to call you. So let us know your firstname or how you
+want to be called.
+
+Yeah, sometimes it seems obvious, but sometimes it's really not, as
+for example in some countries people commonly have 4 different names,
+in others they usually mention their first name after their last name
+(instead of before), in yet others, first names are usually
+abbreviated in non obvious ways, etc.
+
+So please make it clear.
+
+### Tell us the pronouns we should use
+
+Again, yeah, it's often obvious, but often it's not. So please tell us
+if we should use "He/him/his", "She/her/her(s)", "They/them/their(s)",
+or another pronoun to talk about you.
+
