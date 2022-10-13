@@ -350,11 +350,11 @@ expected. Something like "I couldn't find a good micro-project for
 me", for example, doesn't tell us much, and doesn't give us any idea
 about how we could help you.
 
-## Some conventions
+## Some conventions and tips
 
 It can be intimidating to introduce yourself or send your first patch
-to the mailing list, but we hope that the following conventions will
-help you get properly started.
+to the mailing list, but we hope that the following conventions and
+tips will help you get properly started.
 
 ### Start your own email thread
 
@@ -431,3 +431,17 @@ after they have shown they satisfy the requirements.
 
 In any case it's interesting for us to know soon how you currently
 stand regarding the requirements and maybe the acceptance process.
+
+### Tell us what steps you have already taken
+
+We can better help you and suggest the next steps for you to take if
+we know what steps you have already taken.
+
+So if you have read this documentation, tell us. If you have already
+started or finished a Git tutorial, tell us too. If you have only
+built Git from source, tell us. If you have already sent patches on
+the Git mailing list to improve Git, tell us.
+
+We don't need to know about the computer science knowledge or C or
+shell language programming experience you have, but telling us where
+you are regarding developing Git is definitively helpful.
