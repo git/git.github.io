@@ -40,6 +40,7 @@ This edition covers what happened during the month of October 2022.
 
 __Various__
 
++ The recorded talks of GitMerge 2022 [are now live](https://www.youtube.com/playlist?list=PL0lo9MOBetEGEAs1D28ExRQONnX-uZ3Wf).
 
 __Light reading__
 
