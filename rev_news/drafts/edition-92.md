@@ -78,6 +78,13 @@ __Light reading__
 + [GitHub's Missing Merge Option](https://tylercipriani.com/blog/2022/09/30/githubs-missing-merge-option/)
   by Tyler Cipriani, and the conflict between
   team “git log should be clean” vs. team “git log should have an accurate history.”
++ [Take advantage of Git rebase](https://about.gitlab.com/blog/2022/10/06/take-advantage-of-git-rebase/) by Christian Couder on GitLab blog.
++ [Speed up your monorepo workflow in Git](https://about.gitlab.com/blog/2022/09/06/speed-up-your-monorepo-workflow-in-git/) by
+  John Cai on GitLab blog.
+  + See also [Scaling Git’s garbage collection](https://github.blog/2022-09-13-scaling-gits-garbage-collection/),
+    mentioned in [Git Rev News #91](https://git.github.io/rev_news/2022/09/30/edition-91/) and
+    [Scaling monorepo maintenance](https://github.blog/2021-04-29-scaling-monorepo-maintenance/), mentioned
+    in [Git Rev News #75](https://git.github.io/rev_news/2021/05/27/edition-75/).
 
 <!---
 __Easy watching__
