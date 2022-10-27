@@ -60,6 +60,7 @@ __Various__
   See also [Git 2.38 Adds Microsoft's "Scalar" Repository Management Tool](https://www.phoronix.com/news/Git-2.38-Released)
   by Michael Larabel on Phoronix.
 + [Cybernews research team discovered millions of `.git` folders exposed to public](https://cybernews.com/security/millions-git-folders-exposed/).
++ A [Code Review Handbook](https://www.sledgeworx.io/code-review-handbook/) published by Sledgeworx Software.
 
 
 __Light reading__
