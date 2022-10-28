@@ -35,8 +35,29 @@ This edition covers what happened during the month of October 2022.
 
 ## Releases
 
++ Git [2.38.1 and others](https://public-inbox.org/git/xmqq4jw1uku5.fsf@gitster.g/),
+[2.38.0](https://public-inbox.org/git/xmqqmtacu8bw.fsf@gitster.g/)
++ Git for Windows [2.38.1(1)](https://github.com/git-for-windows/git/releases/tag/v2.38.1.windows.1),
+[2.38.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.38.0.windows.1)
++ GitHub Enterprise [3.7.0](https://help.github.com/enterprise-server@3.7/admin/release-notes#3.7.0),
+[3.6.3](https://help.github.com/enterprise-server@3.6/admin/release-notes#3.6.3),
+[3.5.7](https://help.github.com/enterprise-server@3.5/admin/release-notes#3.5.7),
+[3.4.10](https://help.github.com/enterprise-server@3.4/admin/release-notes#3.4.10),
+[3.3.15](https://help.github.com/enterprise-server@3.3/admin/release-notes#3.3.15),
+[3.2.20](https://help.github.com/enterprise-server@3.2/admin/release-notes#3.2.20)
++ GitLab [15.5.1](https://about.gitlab.com/releases/2022/10/24/gitlab-15-5-1-released/)
+[15.5](https://about.gitlab.com/releases/2022/10/22/gitlab-15-5-released/),
+[15.4.3](https://about.gitlab.com/releases/2022/10/19/gitlab-15-4-3-released/),
+[15.4.2](https://about.gitlab.com/releases/2022/10/03/gitlab-15-4-2-released/),
+[15.4.1, 15.3.4, and 15.2.5](https://about.gitlab.com/releases/2022/09/29/security-release-gitlab-15-4-1-released/)
++ Bitbucket Server [8.5](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ Gerrit Code Review [3.4.6](https://www.gerritcodereview.com/3.4.html#346),
+[3.5.3](https://www.gerritcodereview.com/3.5.html#353),
+[3.6.2](https://www.gerritcodereview.com/3.6.html#362)
++ GitHub Desktop [3.1.2](https://desktop.github.com/release-notes/),
+[3.1.1](https://desktop.github.com/release-notes/),
+[3.1.0](https://desktop.github.com/release-notes/)
 + Tower for Windows [4.0](https://www.git-tower.com/release-notes/windows?show_tab=release-notes) ([blog post](https://www.git-tower.com/blog/tower-windows-4/))
-
 
 ## Other News
 
