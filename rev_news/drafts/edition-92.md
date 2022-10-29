@@ -40,9 +40,91 @@ This edition covers what happened during the month of October 2022.
   Congratulations to these contributors and their mentors!
 
 
-<!---
 ### Reviews
--->
+
+* [[PATCH] fuzz: add basic fuzz testing for git command](https://lore.kernel.org/git/pull.1351.git.1663078962231.gitgitgadget@gmail.com/)
+
+  Arthur Chan sent a patch to add basic fuzz testing to Git. The patch
+  added a set of helper functions in some `fuzz-cmd-base.{h,c}` files
+  and an demonstration entry point (called fuzzing target) for
+  [LibFuzzer](https://llvm.org/docs/LibFuzzer.html) or similar tools
+  to inject fuzzed data into `git status` in a `fuzz-cmd-status.c`
+  file.
+
+  Ævar Arnfjörð Bjarmason replied to Arthur. He suggested coding style
+  improvements to better match our style as well as taking a look at
+  the infrastructure code we already have for fuzzing. He also
+  suggested moving all the new infrastructure in the `t/` directory
+  where we have our tests and where we use shell scripts, so that the
+  infrastructure code could perhaps avoid using system(3) calls to
+  launch shell commands.
+
+  Arthur replied that he couldn't find existing infrastructure code
+  for fuzzing and that he was confused about avoiding the system(3)
+  calls as they were needed to reset the state of the repo after each
+  round of fuzzing.
+
+  Junio Hamano, the Git maintainer, also replied to Arthur saying
+  that, before adding new fuzzing infrastructure, existing one should
+  be moved into a new `fuzz/` directory. Junio also suggested some
+  coding style improvements and commented on possible performance and
+  correctness issues.
+
+  Arthur replied to Junio that he implemented the suggested changes in
+  a version 2 of the patch that he was preparing, and then sent this
+  [version 2](https://lore.kernel.org/git/pull.1351.v2.git.1663349383852.gitgitgadget@gmail.com/)
+  to the mailing list.
+
+  This version of this patch indeed moved some existing
+  `fuzz-commit-graph.c`, `fuzz-pack-headers.c` and `fuzz-pack-idx.c`
+  files into a new `oss-fuzz` directory. The patch still added the new
+  fuzzing infrastructure that was in the previous version, though a lot
+  of the issues that had been pointed out were fixed.
+
+  Junio replied that it was better to have the "cleaning up of
+  existing stuff" and "addition of new stuff" into two separate
+  patches instead of everything in the same one.
+
+  Arthur agreed to split the moving of the existing fuzzing
+  infrastructure into
+  [a separate preparatory patch](https://lore.kernel.org/git/pull.1353.git.1663355009333.gitgitgadget@gmail.com/)
+  called "fuzz: reorganise the path for existing oss-fuzz fuzzers"
+  that he later sent to the mailing list.
+
+  Junio reviewed the preparatory patch and found that some changes to
+  the `.gitignore` file were likely missing. He also asked how the
+  fuzzing should be launched.
+
+  Arthur replied agreed that changing the `.gitignore` file was needed
+  and said that he got privately in touch with people from
+  [oss-fuzz targeting Git](https://github.com/google/oss-fuzz/tree/master/projects/git)
+  who had implemented the existing fuzzing. He also said that a
+  dockerfile and build script prepared for Git would launch the
+  fuzzing.
+
+  Arthur then sent a
+  [version 2 of the preparatory patch](https://lore.kernel.org/git/pull.1353.v2.git.1663457311149.gitgitgadget@gmail.com/)
+  with a few small fixes and the `.gitignore` changes that Junio
+  suggested. Soon after he sent a
+  [version 3](https://lore.kernel.org/git/pull.1353.v3.git.1663542495094.gitgitgadget@gmail.com/)
+  with very changes compared to the version 2.
+
+  Ævar replied to this new version suggesting some commit message
+  improvements to better explain the patch purpose as well as creating
+  `oss-fuzz/.gitignore` instead of changing the `.gitignore` file at
+  the root of the repository.
+
+  Arthur sent a
+  [version 4](https://lore.kernel.org/git/pull.1353.v4.git.1663598215154.gitgitgadget@gmail.com/)
+  with the suggested changes.
+
+  Junio commented a bit on how to make sure people get Cc'ed in the
+  emails sent by [GitGitGadget](https://gitgitgadget.github.io/) but
+  was happy with the patch itself which has since been merged into the
+  `master` branch.
+
+  We are looking forward to even more fuzzing infrastructure
+  improvements in the near future.
 
 <!---
 ### Support
