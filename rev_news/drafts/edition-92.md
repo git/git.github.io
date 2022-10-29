@@ -17,9 +17,28 @@ This edition covers what happened during the month of October 2022.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [Git participated in GSoC (Google Summer of Code) 2022](https://summerofcode.withgoogle.com/programs/2022/organizations/git)
+
+  The following contributors have successfully passed their final
+  evaluation and published a final report:
+
+  - Shaoxuan Yuan worked on the
+    [More Sparse Index Integrations project](https://ffyuanda.github.io/blog/GSoC-final-blog/)
+    project. He was co-mentored by Derrick Stolee and Victoria Dye.
+
+  - Abhradeep Chakraborty worked on the
+    [Reachability bitmap improvements](https://medium.com/@abhra303/gsoc-final-report-feaaacfae737)
+    project. He was co-mentored by Kaartic Sivaraam and Taylor Blau.
+
+  Also Siddharth Asthana successfully participated in GSoC 2022 for
+  GitLab (instead of Git) and contributed to Git as part of his work on the
+  [Add Support for Mailmap](https://gitlab.com/groups/gitlab-org/-/epics/8765)
+  project. He was co-mentored by John Cai and Christian Couder.
+
+  Congratulations to these contributors and their mentors!
+
 
 <!---
 ### Reviews
