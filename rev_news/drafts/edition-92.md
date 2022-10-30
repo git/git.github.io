@@ -107,7 +107,7 @@ This edition covers what happened during the month of October 2022.
   with a few small fixes and the `.gitignore` changes that Junio
   suggested. Soon after he sent a
   [version 3](https://lore.kernel.org/git/pull.1353.v3.git.1663542495094.gitgitgadget@gmail.com/)
-  with very changes compared to the version 2.
+  with very minor changes compared to the version 2.
 
   Ævar replied to this new version suggesting some commit message
   improvements to better explain the patch purpose as well as creating
