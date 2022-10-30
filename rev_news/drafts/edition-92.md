@@ -46,7 +46,7 @@ This edition covers what happened during the month of October 2022.
 
   Arthur Chan sent a patch to add basic fuzz testing to Git. The patch
   added a set of helper functions in some `fuzz-cmd-base.{h,c}` files
-  and an demonstration entry point (called fuzzing target) for
+  and a demonstration entry point (called fuzzing target) for
   [LibFuzzer](https://llvm.org/docs/LibFuzzer.html) or similar tools
   to inject fuzzed data into `git status` in a `fuzz-cmd-status.c`
   file.
@@ -54,15 +54,15 @@ This edition covers what happened during the month of October 2022.
   Ævar Arnfjörð Bjarmason replied to Arthur. He suggested coding style
   improvements to better match our style as well as taking a look at
   the infrastructure code we already have for fuzzing. He also
-  suggested moving all the new infrastructure in the `t/` directory
-  where we have our tests and where we use shell scripts, so that the
-  infrastructure code could perhaps avoid using system(3) calls to
-  launch shell commands.
+  wondered if existing code - that is, APIs for file generation and
+  the shell-based infrastructure in the `t/` directory - could not
+  be used for fuzzing, too.
 
   Arthur replied that he couldn't find existing infrastructure code
-  for fuzzing and that he was confused about avoiding the system(3)
+  for fuzzing and that he was confused about avoiding the `system`(3)
   calls as they were needed to reset the state of the repo after each
-  round of fuzzing.
+  round of fuzzing, and the LLVM oss-fuzz library required such
+  resetting logic to be included in the C code.
 
   Junio Hamano, the Git maintainer, also replied to Arthur saying
   that, before adding new fuzzing infrastructure, existing one should
@@ -82,10 +82,10 @@ This edition covers what happened during the month of October 2022.
   of the issues that had been pointed out were fixed.
 
   Junio replied that it was better to have the "cleaning up of
-  existing stuff" and "addition of new stuff" into two separate
-  patches instead of everything in the same one.
+  existing stuff" and "addition of new stuff" split into two separate
+  patches instead of having everything in the same one.
 
-  Arthur agreed to split the moving of the existing fuzzing
+  Arthur agreed to split the move of the existing fuzzing
   infrastructure into
   [a separate preparatory patch](https://lore.kernel.org/git/pull.1353.git.1663355009333.gitgitgadget@gmail.com/)
   called "fuzz: reorganise the path for existing oss-fuzz fuzzers"
@@ -99,7 +99,7 @@ This edition covers what happened during the month of October 2022.
   and said that he got privately in touch with people from
   [oss-fuzz targeting Git](https://github.com/google/oss-fuzz/tree/master/projects/git)
   who had implemented the existing fuzzing. He also said that a
-  dockerfile and build script prepared for Git would launch the
+  Dockerfile and build script prepared for Git would launch the
   fuzzing.
 
   Arthur then sent a
@@ -107,7 +107,7 @@ This edition covers what happened during the month of October 2022.
   with a few small fixes and the `.gitignore` changes that Junio
   suggested. Soon after he sent a
   [version 3](https://lore.kernel.org/git/pull.1353.v3.git.1663542495094.gitgitgadget@gmail.com/)
-  with very minor changes compared to the version 2.
+  with very minor changes compared to version 2.
 
   Ævar replied to this new version suggesting some commit message
   improvements to better explain the patch purpose as well as creating
@@ -118,9 +118,9 @@ This edition covers what happened during the month of October 2022.
   [version 4](https://lore.kernel.org/git/pull.1353.v4.git.1663598215154.gitgitgadget@gmail.com/)
   with the suggested changes.
 
-  Junio commented a bit on how to make sure people get Cc'ed in the
+  Junio commented a bit on how to make sure people get CC'ed in the
   emails sent by [GitGitGadget](https://gitgitgadget.github.io/) but
-  was happy with the patch itself which has since been merged into the
+  was happy with the patch itself, which has since been merged into the
   `master` branch.
 
   We are looking forward to even more fuzzing infrastructure
@@ -164,8 +164,8 @@ This edition covers what happened during the month of October 2022.
 
 __Events__
 
-+ The recorded talks of GitMerge 2022 [are now live](https://www.youtube.com/playlist?list=PL0lo9MOBetEGEAs1D28ExRQONnX-uZ3Wf).
-+ The summary of GitMerge 2022 can be found in the
++ The recorded talks of Git Merge 2022 [are now live](https://www.youtube.com/playlist?list=PL0lo9MOBetEGEAs1D28ExRQONnX-uZ3Wf).
++ The summary of Git Merge 2022 can be found in the
   [Git Merge 2022 – that’s a wrap!](https://github.blog/2022-10-21-git-merge-2022-mission-report/)
   blog post by Lee Reilly on the GitHub Blog.
 
@@ -178,7 +178,7 @@ __Various__
   and [`git shell`'s interactive command mode](https://git-scm.com/docs/git-shell#_interactive_useA).
   Fixed in Git 2.38.1.
 + [Highlights from Git 2.38](https://github.blog/2022-10-03-highlights-from-git-2-38/)
-  by Taylor Blau on GitHub Blog.<br>
+  by Taylor Blau on the GitHub Blog.<br>
   See also [Git 2.38 Adds Microsoft's "Scalar" Repository Management Tool](https://www.phoronix.com/news/Git-2.38-Released)
   by Michael Larabel on Phoronix.
 + [Cybernews research team discovered millions of `.git` folders exposed to public](https://cybernews.com/security/millions-git-folders-exposed/).
@@ -190,7 +190,7 @@ __Light reading__
 + [Setting Up GPG on Windows (The Easy Way)](https://www.git-tower.com/blog/setting-up-gpg-windows/) by Bruno Brito on Tower’s blog.
 + [Our Favorite Tower Features](https://blog.kaleidoscope.app/2022/10/18/our-l33t-tower-features/) by Florian Albrecht on Kaleidoscope's blog.
 + [The Story of Scalar](https://github.blog/2022-10-13-the-story-of-scalar/)
-  by Derrick Stolee and Victoria Dye on GitHub Blog.
+  by Derrick Stolee and Victoria Dye on the GitHub Blog.
 + Literally the smallest changeset possible created:
   [Fix: remove a ZERO WIDTH NO-BREAK SPACE in front of an inline literal](https://github.com/spyder-ide/spyder-docs/pull/332).
 + [VS Code "Timeline" feature — Your local version control system](https://www.amitmerchant.com/vs-code-timeline-your-local-version-control-system/)
@@ -198,11 +198,11 @@ __Light reading__
 + [Turn around your Git mistakes in 17 ways](https://dev.to/smitterhane/turn-around-your-git-mistakes-in-17-ways-2mn1)
   by Smitter hane on DEV\.to.
 + [GitHub's Missing Merge Option](https://tylercipriani.com/blog/2022/09/30/githubs-missing-merge-option/)
-  by Tyler Cipriani, and the conflict between
-  team “git log should be clean” vs. team “git log should have an accurate history.”
-+ [Take advantage of Git rebase](https://about.gitlab.com/blog/2022/10/06/take-advantage-of-git-rebase/) by Christian Couder on GitLab blog.
+  by Tyler Cipriani, explaining the conflict between team “`git log` should be clean” vs. team
+  “`git log` should have an accurate history” and the consequences for GitHub users.
++ [Take advantage of Git rebase](https://about.gitlab.com/blog/2022/10/06/take-advantage-of-git-rebase/) by Christian Couder on the GitLab blog.
 + [Speed up your monorepo workflow in Git](https://about.gitlab.com/blog/2022/09/06/speed-up-your-monorepo-workflow-in-git/) by
-  John Cai on GitLab blog.
+  John Cai on the GitLab blog.
   + See also [Scaling Git’s garbage collection](https://github.blog/2022-09-13-scaling-gits-garbage-collection/),
     mentioned in [Git Rev News #91](https://git.github.io/rev_news/2022/09/30/edition-91/) and
     [Scaling monorepo maintenance](https://github.blog/2021-04-29-scaling-monorepo-maintenance/), mentioned
@@ -223,18 +223,18 @@ __Git tools and sites__
   as [google/goblet](https://github.com/google/goblet),
   and also used in a modified form at Canva
   as [canva-public/goblet](https://github.com/canva-public/goblet).
-+ A different [Goblet](https://pythonhosted.org/goblet/)
-  _was_ time ago a web frontend for Git repositories in Python,
-  using libgit2 and Flask; [seveas/goblet](https://github.com/seveas/goblet)
-  repository was archived by the owner.
+  + A different [Goblet](https://pythonhosted.org/goblet/)
+    _was_ some time ago a web frontend for Git repositories in Python,
+    using libgit2 and Flask; the [seveas/goblet](https://github.com/seveas/goblet)
+    repository has been archived by the owner.
 + [`nb`](https://xwmx.github.io/nb/) is a command line and local web
   note-taking, bookmarking, archiving, and knowledge base application
   with Git-backed versioning and syncing.
-+ [Git Reference](http://git.github.io/git-reference/) site is meant to be a
++ The [Git Reference](http://git.github.io/git-reference/) site is meant to be a
   quick reference for learning and remembering the most important and commonly
   used Git commands, but it can also be used as a tutorial. Every page will also
   link to more in-depth Git documentation.
-+ [email + git = <3: Learn to use email with git!](https://git-send-email.io/)
++ [email + git = <3: Learn to use email with Git!](https://git-send-email.io/)
   is a guide to contributing to email-driven projects like the Linux kernel, PostgreSQL, or Git.
   Covers various operating systems and distributions.
 
