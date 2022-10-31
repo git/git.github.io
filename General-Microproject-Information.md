@@ -365,7 +365,15 @@ introduced themself, or worse a completely unrelated thread.
 ### Use a tag, like [GSoC], [Outreachy], etc, in your subject
 
 Yeah, we insist on this because many applicants don't do it despite
-the fact that it helps everyone, especially themself.
+the fact that it helps everyone, especially themselves.
+
+It helps because efficiently searching the mailing list is not so
+easy. Having such a tag at the start in the subject makes it much
+easier to find what applicants or contributors from a program have
+done. And applicants should be very interested in searching for what
+other applicants or contributors participating in GSoC or Outreachy
+have been doing in the past, for example what kind of microproject
+they have chosen, how their proposal looked like, etc.
 
 ### Reply inline
 
