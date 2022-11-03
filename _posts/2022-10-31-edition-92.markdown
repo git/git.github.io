@@ -178,9 +178,9 @@ __Various__
   and [`git shell`'s interactive command mode](https://git-scm.com/docs/git-shell#_interactive_useA).
   Fixed in Git 2.38.1.
 + [Highlights from Git 2.38](https://github.blog/2022-10-03-highlights-from-git-2-38/)
-  by Taylor Blau on the GitHub Blog.<br>
-  See also [Git 2.38 Adds Microsoft's "Scalar" Repository Management Tool](https://www.phoronix.com/news/Git-2.38-Released)
-  by Michael Larabel on Phoronix.
+  by Taylor Blau on the GitHub Blog.
+  + See also [Git 2.38 Adds Microsoft's "Scalar" Repository Management Tool](https://www.phoronix.com/news/Git-2.38-Released)
+    by Michael Larabel on Phoronix.
 + [Cybernews research team discovered millions of `.git` folders exposed to public](https://cybernews.com/security/millions-git-folders-exposed/).
 + A [Code Review Handbook](https://www.sledgeworx.io/code-review-handbook/) published by Sledgeworx Software.
 
