@@ -72,11 +72,19 @@ suggest improvements. Thanks!
 
 * [git-related](https://github.com/felipec/git-related) finds people who might be interested in a patch.
 
-## Development status
+## Development status, news and events
 
 * [Junio's "What's cooking in git.git" emails](https://lore.kernel.org/git/?q=s%3A%22What%27s+cooking+in+git.git%22) list the status of various development topics.
 
-* [Git's release calendar](https://tinyurl.com/gitCal) shows the planned release cycles, and the maintainer's planned offline time.
+* [Git's release calendar](https://tinyurl.com/gitCal) shows the planned release cycles, the maintainer's planned offline time, the Review Club meetings and possibly other events.
+
+* [Git Rev News](https://git.github.io/rev_news/archive/) newsletter.
+
+* [Git Merge conference](https://git-merge.com/).
+
+* [Review Club announces and discussions on the list](https://lore.kernel.org/git/?q=s%3A%22Review+Club%22).
+
+* [Discussions about Contributor(s) Summits on the list](https://lore.kernel.org/git/?q=s%3AContributor*+Summit)
 
 ## Branching workflow
 
