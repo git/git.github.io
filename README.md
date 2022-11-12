@@ -5,7 +5,8 @@
   - Wiki that has historically contained developer information from [HERE](https://git.wiki.kernel.org/index.php/Main_Page)
 
 - These pages are intended to collect information useful to Git developers. This is also the web home of:
-  - [Git Rev News newsletter](https://git.github.io/rev_news/)
+  - the [Hacking Git](https://git.github.io/Hacking-Git/) page,
+  - the [Git Rev News newsletter](https://git.github.io/rev_news/),
   - the [involvement of the Git project in mentoring programs](https://git.github.io/General-Application-Information/) like [Outreachy](https://www.outreachy.org/) and the [GSoC (Google Summer of Code)](https://summerofcode.withgoogle.com/)
   
 - These pages are intended to be edited collaboratively (i.e., it is an alternative to us having a wiki, but one that is edited entirely via Git pushes).
