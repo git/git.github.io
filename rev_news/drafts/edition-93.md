@@ -66,9 +66,9 @@ This edition covers what happened during the month of October 2022.
   special needs (often different from neurotypical people) so that I
   can thrive my living.
 
-* _It is good to know that you would like to meet compassionate developers.
+* It is good to know that you would like to meet compassionate developers.
   Is it possible for you expand a bit on what you would like to change /
-  enhance in Git when you get a team of such developers for a year ?_
+  enhance in Git when you get a team of such developers for a year ?
 
   I think more on communication. Sure, communicating with email make life
   easier for autistic developers (less physical interaction). However,
