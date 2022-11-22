@@ -128,11 +128,92 @@ __Various__
 
 __Light reading__
 
++ [Working with stacked branches in Git is easier with `--update-refs`](https://andrewlock.net/working-with-stacked-branches-in-git-is-easier-with-update-refs/)
+  (an option which was included in Git 2.38, in October 2022),
+  by Andrew Lock on his blog, .NET Escapades.
++ [Bringing revsets to Git](https://blog.waleedkhan.name/bringing-revsets-to-git/)
+  by Waleed Khan (@arxanas), describes how one can use
+  [git-branchless](https://github.com/arxanas/git-branchless) suite of tools
+  (mentioned in [Git Rev News Edition #76](https://git.github.io/rev_news/2021/06/27/edition-76/)
+  and [#90](https://git.github.io/rev_news/2021/10/30/edition-80/))
+  and [Mercurial's revset notation](https://www.mercurial-scm.org/repo/hg/help/revsets)
+  to form complex queries about repo, and to display their results (for example in a graph view),
+  how to rebase changes using "patch-stack" workflow, and how to help with testing.
++ [Sapling: Source control that’s user-friendly and scalable](https://engineering.fb.com/2022/11/15/open-source/sapling-source-control-scalable/)
+  by Durham Goode on Engineering at Meta (Facebook) blog.
+  At this point, only the client side of the system has been released.<br>
+  You can find some comments about it at:
+    + [Meta's Sapling source-code management system [LWN.net]](https://lwn.net/Articles/915104/)
+    + [Sapling: A new source control system with Git-compatible client | Hacker News](https://news.ycombinator.com/item?id=33612410&utm_term=comment)
++ [Git evolve: tracking changes to changes](https://lwn.net/Articles/914041/)
+  by Jonathan Corbet on LWN.net.
++ [Using gitStream for 'Continuous Merge': automatically approving safe PRs,
+   assigning reviewers, estimating review time, and more](https://blog.jakelee.co.uk/using-gitstream-to-improve-pr-workflow/)
+  by Jake Lee on his blog.
+
++ [My favorite Git tools](https://opensource.com/article/22/11/git-tools)
+  by Dwayne McDaniel on Opensource\.com.
++ [Git concepts in less than 10 minutes](https://opensource.com/article/22/11/git-concepts)
+  by Dwayne McDaniel on Opensource\.com.
++ [#gitPanic - Interactive Rebase](https://dev.to/abbeyperini/gitpanic-interactive-rebase-48fe)
+  by Abbey Perini on DEV\.to (part of [gitPanic series](https://dev.to/abbeyperini/series/20421)).
++ [Top 12 Advanced Git Commands To Know](https://blog.openreplay.com/top-dozen-advanced-git-commands-to-know/)
+  by El-Glory Oriabure on OpenReplay blog, with admittedly some pretty basic commands
+  in there.
++ [Light Git repository checkout](https://github.polettix.it/ETOOBUSY/2022/10/26/light-git-pwc/)
+  with [`git sparse-checkout`](https://www.git-scm.com/docs/git-sparse-checkout)
+  by Flavio Poletti (@polletix) on his ETOOBUSY blog.
++ [The Perfect Commit](https://simonwillison.net/2022/Oct/29/the-perfect-commit/)
+  by Simon Willison on his Weblog.
++ [New git guidelines: We have switched to Conventional Commits](https://happy-coding.visuellverstehen.de/posts/new-git-guidelines-we-have-switched-to-conventional-commits-1p0c)
+  by Malte Riechmann for visuellverstehen on Happy Coding blog
+  (post is also available on [DEV.to](https://dev.to/visuellverstehen/new-git-guidelines-we-have-switched-to-conventional-commits-1p0c)).
+  [Conventional Commits](https://www.conventionalcommits.org/) specification
+  was first mentioned in [Git Rev News Edition #52](https://git.github.io/rev_news/2019/06/28/edition-52/).
+
++ Jakub Kozłowski [tweeted](https://twitter.com/kubukoz/status/1590135952886075393)
+  that git conflict markers are parsed as valid Scala code, though you need to add some
+  appropriate [definitions](https://gist.github.com/kubukoz/894b049b5c1747f17c1e052754640b32),
+  now available as a [scala-git-markers library](https://github.com/polyvariant/scala-git-markers),
+  for it to run ;-).  Explained in more detail in his [video on YouTube](https://www.youtube.com/watch?v=rSk_mea4U1E).
+
 <!---
 __Easy watching__
 -->
 
 __Git tools and sites__
+
++ [Sapling SCM](https://sapling-scm.com/) is a scalable, user-friendly
+  source control system that supports cloning and interacting with Git repositories,
+  and can be used by individual developers to work with GitHub
+  and other Git hosting services.
++ [Stacked Git](https://stacked-git.github.io/), **StGit** for short,
+  is an application for managing Git commits as a stack of patches
+  (with first release in 2005, it is almost as old as Git itself).
+  StGit was mentioned by Yann Dirson in [Git Rev News Edition #74](https://git.github.io/rev_news/2021/04/30/edition-74/)
+  developer spotlight.
++ [Mergify](https://github.com/brooksdavis/mergify) is a tool
+  to merge changes from a branch one commit at a time,
+  most useful when merging changes to a highly diverged fork of a project.
+    + Note that there is also [Mergify.com](https://mergify.com/), mentioned in
+      [Git Rev News Edition #87](https://git.github.io/rev_news/2022/05/26/edition-87/),
+      is free for open-source projects web service for automatizing pull requests
+      and securing the code merge using a merge queue.
++ [git-mergify-rebase](https://github.com/CTSRD-CHERI/git-mergify-rebase)
+  is a replacement for mergify, written using `git rebase` for better performance,
+  supporting most of features of the original.
++ [Nx](https://nx.dev/) is next generation build system for Node\.js,
+  with first class monorepo support and various integrations.
+  Listed in the tools section of [Monorepo.tools](https://monorepo.tools/)
+  (which site was mentioned in [Git Rev News Edition #84](https://git.github.io/rev_news/2022/02/28/edition-84/).
++ [gitStream](https://gitstream.cm/) by LinearB, is a GitHub app
+  that aims to improve the pull request review process.
+  
++ [tweets](https://github.com/diracdeltas/tweets)
+  is @bcrypt's janky twitter "replacement",
+  using Git commit messages and GitHub for "microblogging";
+  see the [announcement on Twitter](https://twitter.com/bcrypt/status/1588416861552582657) ;-).
+  Written as set of Bash scripts and a Makefile.
 
 
 ## Credits
