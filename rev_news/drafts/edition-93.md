@@ -146,6 +146,7 @@ __Light reading__
     + [Meta's Sapling source-code management system [LWN.net]](https://lwn.net/Articles/915104/)
     + [Sapling: A new source control system with Git-compatible client | Hacker News](https://news.ycombinator.com/item?id=33612410&utm_term=comment)
 + [Git evolve: tracking changes to changes](https://lwn.net/Articles/914041/)
+  ([free preview link](https://lwn.net/SubscriberLink/914041/fcffc20089b907b0/))
   by Jonathan Corbet on LWN.net.
 + [Using gitStream for 'Continuous Merge': automatically approving safe PRs,
    assigning reviewers, estimating review time, and more](https://blog.jakelee.co.uk/using-gitstream-to-improve-pr-workflow/)
