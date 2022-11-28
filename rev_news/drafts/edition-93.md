@@ -147,6 +147,12 @@ This edition covers what happened during the month of October 2022.
 
 __Various__
 
++ Shaoxuan Yuan,
+  [who participated in the GSoC 2022](https://ffyuanda.github.io/blog/GSoC-final-blog/),
+  is looking for a full time internship from mid-June 2023 to October
+  2023 or a part-time one starting now. See
+  [his resume](https://github.com/git/git.github.io/files/9995808/Resume_Shaoxuan_Yuan.pdf)
+  for more information.
 
 __Light reading__
 
