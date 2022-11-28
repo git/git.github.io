@@ -194,15 +194,15 @@ __Light reading__
   [Conventional Commits](https://www.conventionalcommits.org/) specification
   was first mentioned in [Git Rev News Edition #52](https://git.github.io/rev_news/2019/06/28/edition-52/).
 
++ [How to Write the Perfect Commit Message](https://www.git-tower.com/blog/how-to-write-the-perfect-commit-message/) by Bruno Brito on Tower’s blog.
++ [Why You Should Use a Git Client](https://dev.to/brunobrito/why-you-should-use-a-git-client-2dpe) by Bruno Brito on dev.to.
+
 + Jakub Kozłowski [tweeted](https://twitter.com/kubukoz/status/1590135952886075393)
   that git conflict markers are parsed as valid Scala code, though you need to add some
   appropriate [definitions](https://gist.github.com/kubukoz/894b049b5c1747f17c1e052754640b32),
   now available as a [scala-git-markers library](https://github.com/polyvariant/scala-git-markers),
   for it to run ;-).  Explained in more detail in his [video on YouTube](https://www.youtube.com/watch?v=rSk_mea4U1E).
   
-+ [How to Write the Perfect Commit Message](https://www.git-tower.com/blog/how-to-write-the-perfect-commit-message/) by Bruno Brito on Tower’s blog.
-+ [Why You Should Use a Git Client](https://dev.to/brunobrito/why-you-should-use-a-git-client-2dpe) by Bruno Brito on dev.to.
-
 <!---
 __Easy watching__
 -->
@@ -249,4 +249,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Bagas Sanjaya.
+with help from Bagas Sanjaya and Bruno Brito.
