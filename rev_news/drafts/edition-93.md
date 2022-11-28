@@ -119,6 +119,28 @@ This edition covers what happened during the month of October 2022.
 
 
 ## Releases
+
++ Git [2.39.0-rc0](https://public-inbox.org/git/xmqqr0xum8tn.fsf@gitster.g/)
++ Git for Windows [2.39.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.39.0-rc0.windows.1)
++ GitLab [15.6](https://about.gitlab.com/releases/2022/11/22/gitlab-15-6-released/)
+[15.5.4](https://about.gitlab.com/releases/2022/11/14/gitlab-15-5-4-released/),
+[15.4.5](https://about.gitlab.com/releases/2022/11/14/gitlab-15-4-5-released/),
+[15.5.3](https://about.gitlab.com/releases/2022/11/08/gitlab-15-5-3-released/),
+[15.5.2, 15.4.4, and 15.3.5](https://about.gitlab.com/releases/2022/11/02/security-release-gitlab-15-5-2-released/)
++ Bitbucket Server [8.6](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ Gerrit Code Review [3.4.7](https://www.gerritcodereview.com/3.4.html#347),
+[3.4.8](https://www.gerritcodereview.com/3.4.html#348),
+[3.5.4](https://www.gerritcodereview.com/3.5.html#354),
+[3.6.3](https://www.gerritcodereview.com/3.6.html#363),
+[3.7.0](https://www.gerritcodereview.com/3.7.html#370)
++ GitHub Enterprise [3.7.1](https://help.github.com/enterprise-server@3.7/admin/release-notes#3.7.1),
+[3.6.4](https://help.github.com/enterprise-server@3.6/admin/release-notes#3.6.4),
+[3.5.8](https://help.github.com/enterprise-server@3.5/admin/release-notes#3.5.8),
+[3.4.11](https://help.github.com/enterprise-server@3.4/admin/release-notes#3.4.11),
+[3.3.16](https://help.github.com/enterprise-server@3.3/admin/release-notes#3.3.16),
+[3.7.0](https://help.github.com/enterprise-server@3.7/admin/release-notes#3.7.0)
++ GitKraken [8.10.3](https://help.gitkraken.com/gitkraken-client/current/#version-8-10-3),
+[8.10.2](https://help.gitkraken.com/gitkraken-client/current/#version-8-10-2)
 + Tower for Mac [9.1](https://www.git-tower.com/release-notes/mac?show_tab=release-notes)
 
 ## Other News
@@ -227,4 +249,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from XXX.
+with help from Bagas Sanjaya.
