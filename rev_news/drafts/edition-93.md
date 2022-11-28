@@ -141,6 +141,7 @@ This edition covers what happened during the month of October 2022.
 [3.7.0](https://help.github.com/enterprise-server@3.7/admin/release-notes#3.7.0)
 + GitKraken [8.10.3](https://help.gitkraken.com/gitkraken-client/current/#version-8-10-3),
 [8.10.2](https://help.gitkraken.com/gitkraken-client/current/#version-8-10-2)
++ Tower for Mac [9.1](https://www.git-tower.com/release-notes/mac?show_tab=release-notes)
 
 ## Other News
 
@@ -198,6 +199,9 @@ __Light reading__
   appropriate [definitions](https://gist.github.com/kubukoz/894b049b5c1747f17c1e052754640b32),
   now available as a [scala-git-markers library](https://github.com/polyvariant/scala-git-markers),
   for it to run ;-).  Explained in more detail in his [video on YouTube](https://www.youtube.com/watch?v=rSk_mea4U1E).
+  
++ [How to Write the Perfect Commit Message](https://www.git-tower.com/blog/how-to-write-the-perfect-commit-message/) by Bruno Brito on Tower’s blog.
++ [Why You Should Use a Git Client](https://dev.to/brunobrito/why-you-should-use-a-git-client-2dpe) by Bruno Brito on dev.to.
 
 <!---
 __Easy watching__
