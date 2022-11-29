@@ -49,7 +49,7 @@ This edition covers what happened during the month of October 2022.
   the patch series had a TODO list with a number of items, most of
   which seemingly already addressed. As the stats in the cover letter
   showed 16 files changed, 269 insertions, 96 deletions, he said it
-  was a bit much for a few patches, and suggested to split them.
+  was a bit much for a few patches, and suggested splitting them.
 
   Heather replied to René that the TODO list came from GitGitGadget.
   And René found that this tool was using an
@@ -74,7 +74,7 @@ This edition covers what happened during the month of October 2022.
 
   Unfortunately it looks like Heather has been swamped with her own
   work and didn't have time to send a new version yet. Hopefully
-  though we will get this very request feature soon.
+  though we will get this very requested feature soon.
 
 <!---
 ### Support
