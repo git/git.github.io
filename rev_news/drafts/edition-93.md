@@ -214,7 +214,7 @@ __Light reading__
   by Waleed Khan (@arxanas), describes how one can use
   [git-branchless](https://github.com/arxanas/git-branchless) suite of tools
   (mentioned in [Git Rev News Edition #76](https://git.github.io/rev_news/2021/06/27/edition-76/)
-  and [#90](https://git.github.io/rev_news/2021/10/30/edition-80/))
+  and [#90](https://git.github.io/rev_news/2022/08/31/edition-90/))
   and [Mercurial's revset notation](https://www.mercurial-scm.org/repo/hg/help/revsets)
   to form complex queries about repo, and to display their results (for example in a graph view),
   how to rebase changes using "patch-stack" workflow, and how to help with testing.
