@@ -21,9 +21,60 @@ This edition covers what happened during the month of October 2022.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [[PATCH] archive: add --recurse-submodules to git-archive command](https://lore.kernel.org/git/pull.1359.git.git.1665597148042.gitgitgadget@gmail.com/)
+
+  Last October Heather Lapointe sent a patch to the mailing list that
+  enabled `git archive` to also include submodule contents in the
+  archives it produces.
+
+  She said she was inspired by
+  [a GitHub issue more than 160 upvotes](https://github.com/dear-github/dear-github/issues/214)
+  and thought the implementation wouldn't be too difficult as most of
+  the plumbing was already in place.
+
+  One of the trickier parts was changing the read_tree() function to
+  support other repos than the current one by not using the
+  `the_repository` global variable.
+
+  Heather soon sent
+  [a version 2 patch series](https://lore.kernel.org/git/pull.1359.v2.git.git.1665660960.gitgitgadget@gmail.com/).
+  This patch series contained only 2 patches. The first one was
+  identical to the one previously sent, while the second one fixed a
+  submodule traversal bug in read_tree() introduced by the first
+  patch.
+
+  René Scharfe replied to Heather, noticing that the cover letter of
+  the patch series had a TODO list with a number of items, most of
+  which seemingly already addressed. As the stats in the cover letter
+  showed 16 files changed, 269 insertions, 96 deletions, he said it
+  was a bit much for a few patches, and suggested to split them.
+
+  Heather replied to René that the TODO list came from GitGitGadget.
+  And René found that this tool was using an
+  [html-to-text converter](https://github.com/html-to-text/node-html-to-text)
+  that [doesn't handle checkboxes nicely by default](https://github.com/html-to-text/node-html-to-text/issues/260).
+  René and Heather then discussed how to split the patches, and a bit
+  how the first patch was implemented.
+
+  Heather then sent
+  [a version 3 of her patch series](https://lore.kernel.org/git/pull.1359.v3.git.git.1665973401.gitgitgadget@gmail.com/)
+  that split her previous patch series into 8 patches.
+
+  Junio Hamano, the Git maintainer, along with Glen Choo, Jonathan
+  Tan, Phillip Wood and Ævar Arnfjörð Bjarmason all commented on some
+  of the patches in this series and suggested small improvements.
+
+  The Review Club [selected this patch series](https://lore.kernel.org/git/kl6l35bbsubq.fsf@chooglen-macbookpro.roam.corp.google.com/)
+  to be reviewed by participants on Wednesday October 26, and
+  participants generally agreed that "this is a really well-structured
+  and easy-to-follow series :) and that "as far as new contributions go,
+  this is really good".
+
+  Unfortunately it looks like Heather has been swamped with her own
+  work and didn't have time to send a new version yet. Hopefully
+  though we will get this very request feature soon.
 
 <!---
 ### Support
