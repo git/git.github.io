@@ -259,9 +259,8 @@ __Light reading__
   now available as a [scala-git-markers library](https://github.com/polyvariant/scala-git-markers),
   for it to run ;-).  Explained in more detail in his [video on YouTube](https://www.youtube.com/watch?v=rSk_mea4U1E).
   
-<!---
 __Easy watching__
--->
++ [Understanding Git Flow](https://www.youtube.com/watch?v=HrA_BbWUKRk): A look at the operations of Git Flow through the Flying Logic visualisation of the branches and release process. The channel also has Git visualisations of Collaboration, merge and rebase, detached HEAD, and 'What's a DAG'.
 
 __Git tools and sites__
 
