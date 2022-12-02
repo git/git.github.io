@@ -49,7 +49,9 @@ __Easy watching__
 
 __Git tools and sites__
 
-* [git-credential-oauth](https://github.com/hickford/git-credential-oauth) is a Git credential helper that securely authenticates to GitHub, GitLab, BitBucket and other forges using OAuth.
+* [git-credential-oauth](https://github.com/hickford/git-credential-oauth)
+  is a Git credential helper that securely authenticates to GitHub,
+  GitLab, BitBucket and other forges using OAuth.
 
 ## Credits
 
@@ -58,4 +60,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from XXX.
+with help from Mirth Hickford.
