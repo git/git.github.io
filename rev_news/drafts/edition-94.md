@@ -49,6 +49,7 @@ __Easy watching__
 
 __Git tools and sites__
 
+* [git-credential-oauth](https://github.com/hickford/git-credential-oauth) is a Git credential helper that securely authenticates to GitHub, GitLab, BitBucket and other forges using OAuth.
 
 ## Credits
 
