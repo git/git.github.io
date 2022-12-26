@@ -56,7 +56,7 @@ This edition covers what happened during the months of November 2022 and Decembe
   how monorepo collaborates and discovered that `git pull` might download
   Git objects outside of the sparse specification. Meanwhile, Elijah Newren
   is contributing [technical documentation of git-sparse-checkout](https://git-scm.com/docs/sparse-checkout)
-  [source](https://github.com/git/git/blob/7c2ef319c52c4997256f5807564523dfd4acdfc7/Documentation/technical/sparse-checkout.txt),
+  [ [source](https://github.com/git/git/blob/7c2ef319c52c4997256f5807564523dfd4acdfc7/Documentation/technical/sparse-checkout.txt) ],
   the article details how other Git commands should properly recognize
   sparse-checkout, and suggests implementing the `--scope` option, which
   I think will solve the problem I encountered above, so I hope to implement it.
