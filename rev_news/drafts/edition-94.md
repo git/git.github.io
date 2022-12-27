@@ -114,6 +114,26 @@ This edition covers what happened during the months of November 2022 and Decembe
 
 ## Releases
 
++ Git [2.39.0](https://public-inbox.org/git/xmqqlencspnl.fsf@gitster.g/),
+[2.38.2](https://public-inbox.org/git/xmqqv8miv7qj.fsf@gitster.g/),
+[2.39.0-rc2](https://public-inbox.org/git/xmqq7cz59o6y.fsf@gitster.g/),
+[2.39.0-rc1](https://public-inbox.org/git/xmqqedtlynq8.fsf@gitster.g/)
++ Git for Windows [2.39.0(2)](https://github.com/git-for-windows/git/releases/tag/v2.39.0.windows.2),
+[2.39.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.39.0.windows.1),
+[2.39.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.39.0-rc2.windows.1),
+[2.39.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.39.0-rc1.windows.1)
++ GitHub Enterprise [3.7.2](https://help.github.com/enterprise-server@3.7/admin/release-notes#3.7.2),
+[3.6.5](https://help.github.com/enterprise-server@3.6/admin/release-notes#3.6.5),
+[3.5.9](https://help.github.com/enterprise-server@3.5/admin/release-notes#3.5.9),
+[3.4.12](https://help.github.com/enterprise-server@3.4/admin/release-notes#3.4.12),
+[3.3.17](https://help.github.com/enterprise-server@3.3/admin/release-notes#3.3.17)
++ GitLab [15.7](https://about.gitlab.com/releases/2022/12/22/gitlab-15-7-released/)
+[15.6.3](https://about.gitlab.com/releases/2022/12/16/gitlab-15-6-3-released/),
+[15.5.6](https://about.gitlab.com/releases/2022/12/08/gitlab-15-5-6-released/),
+[15.6.2](https://about.gitlab.com/releases/2022/12/02/gitlab-15-6-2-released/),
+[15.6.1, 15.5.5 and 15.4.6](https://about.gitlab.com/releases/2022/11/30/security-release-gitlab-15-6-1-released/)
++ GitKraken [9.0.0](https://help.gitkraken.com/gitkraken-client/current/)
++ Sourcetree [4.2.1](https://product-downloads.atlassian.com/software/sourcetree/ReleaseNotes/Sourcetree_4.2.1.html)
 
 ## Other News
 
