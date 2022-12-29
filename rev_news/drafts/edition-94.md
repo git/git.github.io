@@ -134,6 +134,8 @@ This edition covers what happened during the months of November 2022 and Decembe
 [15.6.1, 15.5.5 and 15.4.6](https://about.gitlab.com/releases/2022/11/30/security-release-gitlab-15-6-1-released/)
 + GitKraken [9.0.0](https://help.gitkraken.com/gitkraken-client/current/)
 + Sourcetree [4.2.1](https://product-downloads.atlassian.com/software/sourcetree/ReleaseNotes/Sourcetree_4.2.1.html)
++ git-assembler [1.3](https://lore.kernel.org/git/87tu2927yt.fsf@wavexx.thregr.org/)
+
 
 ## Other News
 
