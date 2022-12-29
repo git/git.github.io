@@ -139,8 +139,99 @@ This edition covers what happened during the months of November 2022 and Decembe
 
 __Various__
 
+* [Highlights from Git 2.39](https://github.blog/2022-12-12-highlights-from-git-2-39/)
+  by Taylor Blau on GitHub Blog.
+* [Andrew Morton's first pull request](https://lwn.net/Articles/895689/)
+  by Jonathan Corbet on LWN\.net (from May 2022).
+    * [Git Rev News: Edition 14 (April 20th, 2016)](https://git.github.io/rev_news/2016/04/20/edition-14/)
+      mentions, when describing discussions at the Git Contributor Summit
+      (part 1, about big repos and big files), that Andrew Morton uses (used?)
+      [quilt](https://savannah.nongnu.org/projects/quilt)
+      to maintain his "-mm" kernels, and that he sent patches by email.
+
 
 __Light reading__
+
+* [Billions of unnecessary files in GitHub](https://dev.to/szabgab/billions-of-unnecessary-files-in-github-i85)
+  and Git repositories in general, due to missing or lacking
+  [`.gitignore`](https://git-scm.com/docs/gitignore)
+  files.  Article by Gabor Szabo on DEV\.to (also known as The Practical Dev).
+  There is also some good information in comments.
+* [What are your git aliases?](https://dev.to/imjoseangel/what-are-your-git-aliases-43om)
+  by Jose Angel Munoz on DEV\.to.
+* [How to Close a Pull Request - Merge Commit vs Squash vs Rebase on GitHub](https://leonardomontini.dev/close-pr-strategy-merge-commit-squash-rebase/)
+  by Leonardo Montini.
+* [What is GitOps?](https://about.gitlab.com/topics/gitops/) on GitLab.
+    * The topic of GitOps was mentioned in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/),
+      [#43](https://git.github.io/rev_news/2018/09/19/edition-43/),
+      [#61](https://git.github.io/rev_news/2020/03/25/edition-61/),
+      [#62](https://git.github.io/rev_news/2020/04/23/edition-62/),
+      and [#89](https://git.github.io/rev_news/2022/07/31/edition-89/)
+* [GitOps viewed as part of the Ops evolution](https://about.gitlab.com/blog/2021/07/12/gitops-as-the-evolution-of-operations/)
+  by Viktor Nagy o GitLab Blog (2021).
+* [A meta talk about Git strategies](https://dev.to/mortenolsen/deployment-confidence-with-git-4b0b)
+  for deployment (GitOps-like), by Morten Olsen on DEV\.to.
+* [Rebases in Git and why you shouldn't be afraid of them](https://how-to.dev/rebases-in-git-and-why-you-shouldnt-be-afraid-of-them)
+  by Marcin Wosinek for [How to dev](https://how-to.dev/)
+  (also [reposted on DEV\.to](https://dev.to/how-to-dev/rebases-in-git-and-why-you-shouldnt-be-afraid-of-them-1fb5)).
+* [Take advantage of Git rebase](https://about.gitlab.com/blog/2022/10/06/take-advantage-of-git-rebase/)
+  by Christian Couder on GitLab Blog.
+* [Split a commit into 2 commits with `git rebase`](https://dev.to/thelarkinn/split-a-commit-into-2-commits-with-git-rebase-31ee)
+  by Sean Larkin on DEV\.to.
+* [Minimum Viable Git for Trunk-based Development](https://blog.trunk.io/minimum-viable-git-for-trunk-based-development-81a5da7a77a7)
+  by Eli Schleifer on [trunk.io](https://trunk.io/) blog (a Medium-based blog).
+    * [Trunk Based Development](https://trunkbaseddevelopment.com/)
+      was mentioned directly in [Git Rev News Edition #24](https://git.github.io/rev_news/2017/02/22/edition-24/)
+      and [#73](https://git.github.io/rev_news/2021/03/27/edition-73/).
+    * [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html)
+      by Martin Fowler, mentioned in [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/),
+      describes Trunk-Based Development in the section
+      [Looking at some branching policies](https://martinfowler.com/articles/branching-patterns.html#LookingAtSomeBranchingPolicies).
+* [Benefits of Using Pull Requests for Collaboration and Code Review](https://developer.nvidia.com/blog/benefits-of-using-pull-requests-for-collaboration-and-code-review/)
+  by Fatos Morina on NVIDIA Developer Technical Blog.
+* [How to revert a merge commit then merge again](https://dev.indooroutdoor.io/how-to-revert-a-merge-commit-and-then-merge-again)
+  by Jb Rocher on his blog
+  ([also on DEV\.to](https://dev.to/jbrocher/how-to-revert-a-merge-commit-then-merge-again-hoo)).
+* [Git worktree](https://github.polettix.it/ETOOBUSY/2022/11/22/git-worktree/)
+  by Flavio Poletti (@polettix) on his ETOOBUSY blog.
+* [Git Notes: Git's Coolest, Most Unloved Feature](https://tylercipriani.com/blog/2022/11/19/git-notes-gits-coolest-most-unloved-feature/)
+  by Tyler Cipriani on his blog.
+    * You can find various uses of _git notes_ feature mentioned in Git Rev News:
+      [marking test suite successes](http://who-t.blogspot.de/2015/07/using-git-notes-for-marking-test-suite.html)
+      in [#6](https://git.github.io/rev_news/2015/08/05/edition-6/),
+      and [maintaining a high quality change log](https://harrow.io/blog/effortlessly-maintain-a-high-quality-change-log-with-little-known-git-tricks/)
+      in [#34](https://git.github.io/rev_news/2017/12/20/edition-34/).
+    * [git-appraise](https://github.com/google/git-appraise),
+      a distributed code review system for Git repos using git notes
+      was mentioned in [Git Rev News Edition #11](https://git.github.io/rev_news/2016/01/13/edition-11/).
+* [Learn Git: 3 commands to level up your skill](https://opensource.com/article/22/11/advanced-git-commands)
+  by Dwayne McDaniel on Opensource\.com.
+* [Code version best practices with clean commit formats](https://blogs.halodoc.io/code-version-best-practices-with-clean-commit-formats/),
+  following [angular commit convention guidelines](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#commit),
+  by Chaitanya S. on Halodoc blog.
+    * [Conventional Commit specification](https://www.conventionalcommits.org/)
+      was first mentioned in [Git Rev News Edition #52](https://git.github.io/rev_news/2019/06/28/edition-52/).
+    * [commitlint](https://commitlint.js.org/#/) was first mentioned
+      in [Git Rev News Edition #81](https://git.github.io/rev_news/2021/11/29/edition-81/),
+      [Commitizen](http://commitizen.github.io/cz-cli/)
+      in [#72](https://git.github.io/rev_news/2021/02/27/edition-72/),
+      [Husky](https://github.com/typicode/husky)
+      in [#63](https://git.github.io/rev_news/2020/05/28/edition-63/),
+      and [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog)
+      in [#81](https://git.github.io/rev_news/2021/11/29/edition-81/).
+* [Resolving Merge Conflicts with Visual Studio Code](https://leonardomontini.dev/merge-conflict-vscode/)
+  by Leonardo Montini (also [on This is Learning DEV\.to blog](https://dev.to/this-is-learning/resolving-merge-conflicts-with-visual-studio-code-1mn1)).
+<!-- this is humor, and should be last entry -->
+* [Extremely Linear Git History](https://westling.dev/b/extremely-linear-git),
+  where first commit in a repo hash a hash that starts with `0000000`,
+  the second commit is `0000001`, the third is `0000002`, and so on
+  is possible with [extremely-linear](https://github.com/zegl/extremely-linear)
+  (aka `git linearize`) tool.  Article and tool by Gustav Westling.  ☺
+    * [Git Rev News Edition #24](https://git.github.io/rev_news/2017/02/22/edition-24/)
+      mentions in passing the <s>[git-sham](https://bitbucket.org/tpettersen/git-sham)</s> tool,
+      with which you can make it so that subsequent commits have SHA-1 identifiers
+      beginning with subsequent numbers - but the tool no longer exists at provided URL.
+
 
 <!---
 __Easy watching__
@@ -151,6 +242,44 @@ __Git tools and sites__
 * [git-credential-oauth](https://github.com/hickford/git-credential-oauth)
   is a Git credential helper that securely authenticates to GitHub,
   GitLab, BitBucket and other forges using OAuth.
+* [semantic-release](https://github.com/semantic-release/semantic-release)
+  ([documentation](https://semantic-release.gitbook.io/semantic-release/))
+  is a fully automated version management and package publishing Node\.js tool.
+* [Release Please](https://github.com/googleapis/release-please) is a Node\.js too that
+  automates CHANGELOG generation, the creation of GitHub releases,
+  and version bumps for your projects; it does so by parsing your git history,
+  and looking for [Conventional Commit](https://www.conventionalcommits.org/) messages
+* [gitignore.io](https://www.toptal.com/developers/gitignore/) by Toptal
+  is a service that creates useful `.gitignore` files for your project.
+    * [github/gitignore](https://github.com/github/gitignore)
+      is GitHub's collection of `.gitignore` file templates.
+    * Atlassian's Bitbucket has [`.gitignore` Tutorial](https://www.atlassian.com/git/tutorials/saving-changes/gitignor)
+    * GitLab provides [.gitignore API](https://docs.gitlab.com/ee/api/templates/gitignores.html)
+      for all tiers.
+    * [gig](https://github.com/hackrslab/gig),
+      a Node\.js command-line tool for quickly setting up `.gitignore` files,
+      which uses GitHub's gitignore repository for gitignore templates,
+      was mentioned in [Git Rev News Edition #6](https://git.github.io/rev_news/2015/08/05/edition-6/).
+    * [.gitignore Generator](https://marketplace.visualstudio.com/items?itemName=piotrpalarz.vscode-gitignore-generator)
+      extension for _Visual Studio Code_, which uses the gitignore.io API,
+      was mentioned in [Git Rev News Edition #57](https://git.github.io/rev_news/2019/11/20/edition-57/).
+* [Diffchecker.com](https://www.diffchecker.com/) is an online service that
+  will compare text to find the difference between two text files; there is also
+  an option for comparing [images](https://www.diffchecker.com/image-compare/),
+  [PDFs](https://www.diffchecker.com/pdf-compare/),
+  and [spreadsheets](https://www.diffchecker.com/excel-compare/) in xls/xlsx/xlsm/xlsb, csv, txt, dif, ods formats.
+  There is also paid Diffchecker Pro and Diffchecker Desktop app.
+* [OpenGitOps](https://opengitops.dev/) is a set of open-source standards,
+  best practices, and community-focused education to help organizations
+  adopt a structured, standardized approach to implementing GitOps.
+    * [GitOps.tech](https://www.gitops.tech/), a similar site that aggregates the essence of GitOps
+      (and includes free [GitOps: Cloud-native Continuous Deployment](https://leanpub.com/gitops)
+      e-book, published via Leanpub), was mentioned in passing in
+      [Git Rev News Edition #62](https://git.github.io/rev_news/2020/04/23/edition-62/).
+* [Semantic Versioning Specification (SemVer)](https://semver.org/)
+  is a simple set of rules and requirements that dictate
+  how version numbers are assigned and incremented.
+
 
 ## Credits
 
