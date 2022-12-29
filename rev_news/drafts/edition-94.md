@@ -225,6 +225,8 @@ __Light reading__
       in [#81](https://git.github.io/rev_news/2021/11/29/edition-81/).
 * [Resolving Merge Conflicts with Visual Studio Code](https://leonardomontini.dev/merge-conflict-vscode/)
   by Leonardo Montini (also [on This is Learning DEV\.to blog](https://dev.to/this-is-learning/resolving-merge-conflicts-with-visual-studio-code-1mn1)).
+* [30+ Commonly Asked Git Interview Questions](https://www.interviewbit.com/git-interview-questions/)
+  on InterviewBit.
 <!-- this is humor, and should be last entry -->
 * [Extremely Linear Git History](https://westling.dev/b/extremely-linear-git),
   where first commit in a repo hash a hash that starts with `0000000`,
