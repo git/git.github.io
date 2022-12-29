@@ -143,6 +143,8 @@ __Various__
 
 * [Highlights from Git 2.39](https://github.blog/2022-12-12-highlights-from-git-2-39/)
   by Taylor Blau on GitHub Blog.
+* [Put `glab` at your fingertips with the GitLab CLI](https://about.gitlab.com/blog/2022/12/07/introducing-the-gitlab-cli/)
+  by Kai Armstrong on GitLab Blog.
 * [Andrew Morton's first pull request](https://lwn.net/Articles/895689/)
   by Jonathan Corbet on LWN\.net (from May 2022).
     * [Git Rev News: Edition 14 (April 20th, 2016)](https://git.github.io/rev_news/2016/04/20/edition-14/)
