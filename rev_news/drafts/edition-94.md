@@ -228,6 +228,12 @@ This edition covers what happened during the months of November 2022 and Decembe
 
 __Various__
 
+* Siddharth Asthana,
+  [who worked on Git during his GSoC 2022 for GitLab](https://summerofcode.withgoogle.com/archive/2022/projects/yaKP2iJK),
+  is looking for a 6-month Engineering internship, either full-time
+  starting from mid-July 2023 or part time starting now. See
+  [his resume](https://github.com/git/git.github.io/files/10180136/Siddharth_Asthana_Resume.pdf)
+  for more information.
 * [Highlights from Git 2.39](https://github.blog/2022-12-12-highlights-from-git-2-39/)
   by Taylor Blau on GitHub Blog.
 * [Put `glab` at your fingertips with the GitLab CLI](https://about.gitlab.com/blog/2022/12/07/introducing-the-gitlab-cli/)
@@ -239,7 +245,6 @@ __Various__
       (part 1, about big repos and big files), that Andrew Morton uses (used?)
       [quilt](https://savannah.nongnu.org/projects/quilt)
       to maintain his "-mm" kernels, and that he sent patches by email.
-
 
 __Light reading__
 
