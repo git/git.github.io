@@ -27,7 +27,7 @@ This edition covers what happened during the months of November 2022 and Decembe
 
 ### Support
 
-* [Git Bug Report: out of memory using git tag](https://lore.kernel.org/git/CABYbkvP=fMmaFUD3bQbeQ-XKiMSP6g-u0p7Vq1Qt_K5=D5WJ+A@mail.gmail.com/)
+* [Git Bug Report: out of memory using `git tag`](https://lore.kernel.org/git/CABYbkvP=fMmaFUD3bQbeQ-XKiMSP6g-u0p7Vq1Qt_K5=D5WJ+A@mail.gmail.com/)
 
   Martin Englund sent a bug report to the Git mailing list saying that
   after creating a signed tag using a ssh-agent key, he ran the
@@ -42,11 +42,11 @@ This edition covers what happened during the months of November 2022 and Decembe
 
   Peff, alias Jeff King, thanked Martin for the report and said he had
   found the function where the crash happened and the reason why it
-  happened. He also provided minimal reproduction instruction as well
+  happened. He also provided minimal reproduction instructions as well
   as the commit that introduced the bug, and he put the author of that
   commit in CC of his email.
 
-  Philippe Blain, the author of that commit, thanked Peff for the
+  Philippe Blain, the author of the commit, thanked Peff for the
   information and said he would try to find a fix for the bug.
 
   Peff replied to Philippe that after sleeping on the issue, he fully
@@ -65,15 +65,15 @@ This edition covers what happened during the months of November 2022 and Decembe
   which was then converted to a huge value as the variable for the
   signature length used an unsigned type. In turn when allocating
   memory for the signature, this would lead to the crash as it wasn't
-  possible to allocate a huge amount of memory for it.
+  possible to allocate the requested amount of memory for it.
 
   The [second patch](https://lore.kernel.org/git/Y2IfwL96Ku%2FdGuJR@coredump.intra.peff.net/)
-  fix a similar bug that happened when there is a blank line in the
-  signature but not before it, and this blank line ends with both the
+  fixed a similar bug that occurred when there was a blank line in the
+  signature but not before it, and this blank line ended with both the
   CR (Carriage Return) and LF (Line Feed) characters instead of only
   the latter.
 
-  In that case too, the start of the signature wasn't properly
+  In that case, the start of the signature was also not properly
   detected, so a negative value was assigned to the variable for the
   signature length, which led to a crash when allocating memory for
   the signature.
@@ -90,7 +90,7 @@ This edition covers what happened during the months of November 2022 and Decembe
   script would show "a few in the 100's".
 
   Ævar Arnfjörð Bjarmason then replied to Peff contesting the method
-  used in Peff's scripts and suggesting computing "the levenshtein
+  used in Peff's scripts and suggesting computing "the Levenshtein
   distance of the pre- and post-image", and then using that distance
   to commit message length instead of the previous ratio, which would
   find other winners.
@@ -111,7 +111,7 @@ This edition covers what happened during the months of November 2022 and Decembe
   confirmed that this would be properly handled by his first patch.
 
   Taylor Blau, who was handling the maintainer's role in the project
-  at that time, as Junio Hamano was having a vacation, also agreed
+  at that time, as Junio Hamano was having vacation, also agreed
   that the patches were very well explained, and agreed to take
   them. The patches were then merged and part of the Git v2.39.0
   feature release.
@@ -127,9 +127,9 @@ This edition covers what happened during the months of November 2022 and Decembe
 
   When I used `git shortlog --author="ZheNing Hu"` to look at the patches
   I contributed, I was ashamed to find that my patches are quite small and
-  simple, because I'm more of a Git learner right now 😄
+  simple, because I'm more of a Git learner right now 😄.
 
-  If I had to pick one, I'd say it's adding the `--trailer` option to git commit.
+  If I had to pick one, I'd say it's adding the `--trailer` option to `git commit`.
   It is very convenient to add something like "Signed-off-by", "Reviewed-by"
   at the end of the commit message.
 
@@ -140,9 +140,9 @@ This edition covers what happened during the months of November 2022 and Decembe
   [sparse specification](https://github.com/git/git/blob/7c2ef319c52c4997256f5807564523dfd4acdfc7/Documentation/technical/sparse-checkout.txt#L73).
 
   The reason I wanted to implement this feature is that I was researching
-  how monorepo collaborates and discovered that `git pull` might download
+  how monorepo users collaborate and discovered that `git pull` might download
   Git objects outside of the sparse specification. Meanwhile, Elijah Newren
-  is contributing [technical documentation of git-sparse-checkout](https://git-scm.com/docs/sparse-checkout)
+  is contributing the [technical documentation of git-sparse-checkout](https://git-scm.com/docs/sparse-checkout)
   [ [source](https://github.com/git/git/blob/7c2ef319c52c4997256f5807564523dfd4acdfc7/Documentation/technical/sparse-checkout.txt) ],
   the article details how other Git commands should properly recognize
   sparse-checkout, and suggests implementing the `--scope` option, which
@@ -161,7 +161,7 @@ This edition covers what happened during the months of November 2022 and Decembe
   backwards compatibility, what would it be?
 
   `git checkout`. It can be used to switch branches or restore working tree files,
-  I think two functions are somewhat coupled. I don't know if `git switch` and
+  I think these two functions are somewhat coupled. I don't know if `git switch` and
   `git restore` would be perfect replacements for it.
 
 * What is your favorite Git-related tool/library, outside of
@@ -170,11 +170,11 @@ This edition covers what happened during the months of November 2022 and Decembe
   [scalar](https://git-scm.com/docs/scalar). Now I really like to use scalar to
   download Git repositories to save time.
 
-* Do you happen to have any memorable experience w.r.t contributing to
+* Do you happen to have any memorable experience w.r.t. contributing to
   the Git project? If yes, could you share it with us?
 
   Mainly during GSOC, my mentor Christian Couder and many people in the Git
-  community helped me and I learned how to participate in open source for the
+  community helped me, and I learned how to participate in open source for the
   first time. It was a great experience to be brave and discuss technology with
   people from all over the world.
 
@@ -240,8 +240,8 @@ __Various__
   by Kai Armstrong on GitLab Blog.
 * [Andrew Morton's first pull request](https://lwn.net/Articles/895689/)
   by Jonathan Corbet on LWN\.net (from May 2022).
-    * [Git Rev News: Edition 14 (April 20th, 2016)](https://git.github.io/rev_news/2016/04/20/edition-14/)
-      mentions, when describing discussions at the Git Contributor Summit
+    * [Git Rev News Edition 14 (April 20th, 2016)](https://git.github.io/rev_news/2016/04/20/edition-14/)
+      mentioned, when describing discussions at the Git Contributor Summit
       (part 1, about big repos and big files), that Andrew Morton uses (used?)
       [quilt](https://savannah.nongnu.org/projects/quilt)
       to maintain his "-mm" kernels, and that he sent patches by email.
@@ -252,7 +252,7 @@ __Light reading__
   and Git repositories in general, due to missing or lacking
   [`.gitignore`](https://git-scm.com/docs/gitignore)
   files.  Article by Gabor Szabo on DEV\.to (also known as The Practical Dev).
-  There is also some good information in comments.
+  There is also some good information in the comments.
 * [What are your git aliases?](https://dev.to/imjoseangel/what-are-your-git-aliases-43om)
   by Jose Angel Munoz on DEV\.to.
 * [How to Close a Pull Request - Merge Commit vs Squash vs Rebase on GitHub](https://leonardomontini.dev/close-pr-strategy-merge-commit-squash-rebase/)
@@ -292,7 +292,7 @@ __Light reading__
   by Flavio Poletti (@polettix) on his ETOOBUSY blog.
 * [Git Notes: Git's Coolest, Most Unloved Feature](https://tylercipriani.com/blog/2022/11/19/git-notes-gits-coolest-most-unloved-feature/)
   by Tyler Cipriani on his blog.
-    * You can find various uses of _git notes_ feature mentioned in Git Rev News:
+    * You can find various uses of the _Git notes_ feature mentioned in Git Rev News:
       [marking test suite successes](http://who-t.blogspot.de/2015/07/using-git-notes-for-marking-test-suite.html)
       in [#6](https://git.github.io/rev_news/2015/08/05/edition-6/),
       and [maintaining a high quality change log](https://harrow.io/blog/effortlessly-maintain-a-high-quality-change-log-with-little-known-git-tricks/)
@@ -303,7 +303,7 @@ __Light reading__
 * [Learn Git: 3 commands to level up your skill](https://opensource.com/article/22/11/advanced-git-commands)
   by Dwayne McDaniel on Opensource\.com.
 * [Code version best practices with clean commit formats](https://blogs.halodoc.io/code-version-best-practices-with-clean-commit-formats/),
-  following [angular commit convention guidelines](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#commit),
+  following [Angular commit convention guidelines](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#commit),
   by Chaitanya S. on Halodoc blog.
     * [Conventional Commit specification](https://www.conventionalcommits.org/)
       was first mentioned in [Git Rev News Edition #52](https://git.github.io/rev_news/2019/06/28/edition-52/).
@@ -327,8 +327,8 @@ __Light reading__
   (aka `git linearize`) tool.  Article and tool by Gustav Westling.  ☺
     * [Git Rev News Edition #24](https://git.github.io/rev_news/2017/02/22/edition-24/)
       mentions in passing the <s>[git-sham](https://bitbucket.org/tpettersen/git-sham)</s> tool,
-      with which you can make it so that subsequent commits have SHA-1 identifiers
-      beginning with subsequent numbers - but the tool no longer exists at provided URL.
+      which can be used to produce subsequent commits with SHA-1 identifiers
+      beginning with subsequent numbers - but the tool doesn't seem to exist anymore at its original URL.
 
 
 <!---
@@ -345,15 +345,15 @@ __Git tools and sites__
   is a fully automated version management and package publishing Node\.js tool.
 * [Release Please](https://github.com/googleapis/release-please) is a Node\.js too that
   automates CHANGELOG generation, the creation of GitHub releases,
-  and version bumps for your projects; it does so by parsing your git history,
-  and looking for [Conventional Commit](https://www.conventionalcommits.org/) messages
+  and version bumps for your projects; it does so by parsing your Git history
+  and looking for [Conventional Commit](https://www.conventionalcommits.org/) messages.
 * [gitignore.io](https://www.toptal.com/developers/gitignore/) by Toptal
   is a service that creates useful `.gitignore` files for your project.
     * [github/gitignore](https://github.com/github/gitignore)
       is GitHub's collection of `.gitignore` file templates.
-    * Atlassian's Bitbucket has [`.gitignore` Tutorial](https://www.atlassian.com/git/tutorials/saving-changes/gitignor)
-    * GitLab provides [.gitignore API](https://docs.gitlab.com/ee/api/templates/gitignores.html)
-      for all tiers.
+    * Atlassian's Bitbucket has a [`.gitignore` tutorial](https://www.atlassian.com/git/tutorials/saving-changes/gitignore).
+    * GitLab provides a [.gitignore API](https://docs.gitlab.com/ee/api/templates/gitignores.html)
+      on all tiers.
     * [gig](https://github.com/hackrslab/gig),
       a Node\.js command-line tool for quickly setting up `.gitignore` files,
       which uses GitHub's gitignore repository for gitignore templates,
@@ -365,8 +365,8 @@ __Git tools and sites__
   will compare text to find the difference between two text files; there is also
   an option for comparing [images](https://www.diffchecker.com/image-compare/),
   [PDFs](https://www.diffchecker.com/pdf-compare/),
-  and [spreadsheets](https://www.diffchecker.com/excel-compare/) in xls/xlsx/xlsm/xlsb, csv, txt, dif, ods formats.
-  There is also paid Diffchecker Pro and Diffchecker Desktop app.
+  and [spreadsheets](https://www.diffchecker.com/excel-compare/) in `xls`/`xlsx`/`xlsm`/`xlsb`, `csv`, `txt`, `dif`, and `ods` formats.
+  There are also commercial Diffchecker Pro and Diffchecker Desktop apps.
 * [OpenGitOps](https://opengitops.dev/) is a set of open-source standards,
   best practices, and community-focused education to help organizations
   adopt a structured, standardized approach to implementing GitOps.
