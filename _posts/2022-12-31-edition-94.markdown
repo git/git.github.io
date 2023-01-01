@@ -341,7 +341,7 @@ __Light reading__
   is possible with [extremely-linear](https://github.com/zegl/extremely-linear)
   (aka `git linearize`) tool.  Article and tool by Gustav Westling.  ☺
     * [Git Rev News Edition #24](https://git.github.io/rev_news/2017/02/22/edition-24/)
-      mentions in passing the <s>[git-sham](https://bitbucket.org/tpettersen/git-sham)</s> tool,
+      mentions in passing the [git-sham](https://bitbucket.org/tpettersen/git-sham) tool,
       which can be used to produce subsequent commits with SHA-1 identifiers
       beginning with subsequent numbers - but the tool doesn't seem to exist anymore at its original URL.
 
@@ -358,7 +358,7 @@ __Git tools and sites__
 * [semantic-release](https://github.com/semantic-release/semantic-release)
   ([documentation](https://semantic-release.gitbook.io/semantic-release/))
   is a fully automated version management and package publishing Node\.js tool.
-* [Release Please](https://github.com/googleapis/release-please) is a Node\.js too that
+* [Release Please](https://github.com/googleapis/release-please) is a Node\.js tool that
   automates CHANGELOG generation, the creation of GitHub releases,
   and version bumps for your projects; it does so by parsing your Git history
   and looking for [Conventional Commit](https://www.conventionalcommits.org/) messages.
@@ -381,7 +381,7 @@ __Git tools and sites__
   an option for comparing [images](https://www.diffchecker.com/image-compare/),
   [PDFs](https://www.diffchecker.com/pdf-compare/),
   and [spreadsheets](https://www.diffchecker.com/excel-compare/) in `xls`/`xlsx`/`xlsm`/`xlsb`, `csv`, `txt`, `dif`, and `ods` formats.
-  There are also commercial Diffchecker Pro and Diffchecker Desktop apps.
+  There are also commercial Diffchecker Pro service and Diffchecker Desktop apps.
 * [OpenGitOps](https://opengitops.dev/) is a set of open-source standards,
   best practices, and community-focused education to help organizations
   adopt a structured, standardized approach to implementing GitOps.
