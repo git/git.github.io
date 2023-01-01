@@ -111,7 +111,7 @@ This edition covers what happened during the months of November 2022 and Decembe
   confirmed that this would be properly handled by his first patch.
 
   Taylor Blau, who was handling the maintainer's role in the project
-  at that time, as Junio Hamano was having vacation, also agreed
+  at that time, as Junio Hamano was having a vacation, also agreed
   that the patches were very well explained, and agreed to take
   them. The patches were then merged and part of the Git v2.39.0
   feature release.
