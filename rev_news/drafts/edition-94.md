@@ -17,9 +17,24 @@ This edition covers what happened during the months of November 2022 and Decembe
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [What's cooking in git.git (Nov 2022, #05; Tue, 22)](https://lore.kernel.org/git/xmqqfseargo4.fsf@gitster.g/)
+
+  Junio Hamano, the Git maintainer, sent one of his usual "What's
+  cooking in git.git" emails to the mailing list. At the beginning of
+  the email though he thanked everybody for "successfully concluding
+  the 'bus factor' exercise".
+
+  It was indeed the first time in a few years that he temporarily
+  handed over the maintainership of the project to someone else, in
+  this case Taylor Blau, as he was having a vacation. It's called a
+  'bus factor' exercise as it's supposed to make a transition smoother
+  in case the current maintainer would be "hit by a bus".
+
+  The [previous "What's cooking in git.git" email](https://lore.kernel.org/git/Y3g95OYdwzq2OP3z@nand.local/)
+  had been sent a few days before by Taylor, who also thanked
+  everyone, as he saw that Junio was back online again.
 
 <!---
 ### Reviews
