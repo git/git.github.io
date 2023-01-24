@@ -47,8 +47,6 @@ This allows the student to gain partial success early in the project and
 the student can complete as many as possible in the timeframe (without
 expectation that _all_ will be completed during the project).
 
-* `git rm`
-* `git grep`
 * `git rev-parse`
 * `git fsck`
 * `git check-attr`
