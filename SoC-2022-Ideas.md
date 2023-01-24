@@ -1,6 +1,7 @@
 ---
 layout: default
 title: SoC 2022 Ideas
+navbar: false
 ---
 
 This is the idea page for Summer of Code 2022 for Git.
