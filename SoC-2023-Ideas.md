@@ -1,9 +1,9 @@
 ---
 layout: default
-title: SoC 2022 Ideas
+title: SoC 2023 Ideas
 ---
 
-This is the idea page for Summer of Code 2022 for Git.
+This is the idea page for Summer of Code 2023 for Git.
 
 *Please completely read the [general application information](https://git.github.io/General-Application-Information)
 page before reading the idea list below.*
