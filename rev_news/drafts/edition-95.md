@@ -41,12 +41,16 @@ This edition covers what happened during the months of November 2022 and Decembe
 __Various__
 
 * [Git security vulnerabilities announced](https://github.blog/2023-01-17-git-security-vulnerabilities-announced-2/)
-  that affect versions 2.39 and older.
+  that affect versions 2.39 and older.  Fixes were authored by engineers from
+  the [GitLab Security Research Team](https://about.gitlab.com/handbook/security/threat-management/security-research/),
+  as well as GitHub Engineers, and members of the git-security mailing list.
     * Two of three vulnerabilities were found as part of an audit of the Git codebase
       conducted by [X41](https://x41-dsec.de/). This audit was sponsored by the
       [Open Source Technology Improvement Fund (OSTIF)](https://ostif.org/).
       X41 have also published information about this
       [Security Audit of Git](https://x41-dsec.de/security/research/news/2023/01/17/git-security-audit-ostif/).
+    * [Git security audit: Inside the hunt for - and discovery of - CVEs](https://about.gitlab.com/blog/2023/01/24/git-security-audit/)
+      by Joern Schneeweisz on GitLab Blog.
     * [This Week In Security: Git Deep Dive, Mailchimp, And SPF](https://hackaday.com/2023/01/20/this-week-in-security-git-deep-dive-mailchimp-and-spf)
       by Jonathan Bennett on Hackaday.
 * [GitHub Sponsors will stop supporting PayPal](https://github.blog/changelog/2023-01-23-github-sponsors-will-stop-supporting-paypal/),
