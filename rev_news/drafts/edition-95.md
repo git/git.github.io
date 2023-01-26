@@ -52,7 +52,8 @@ __Various__
     * [Git security audit: Inside the hunt for - and discovery of - CVEs](https://about.gitlab.com/blog/2023/01/24/git-security-audit/)
       by Joern Schneeweisz on GitLab Blog.
     * [This Week In Security: Git Deep Dive, Mailchimp, And SPF](https://hackaday.com/2023/01/20/this-week-in-security-git-deep-dive-mailchimp-and-spf)
-      by Jonathan Bennett on Hackaday.
+      by Jonathan Bennett on Hackaday, and
+      [A security audit of Git](https://lwn.net/Articles/921067/) brief on LWN\.net.
 * [GitHub Sponsors will stop supporting PayPal](https://github.blog/changelog/2023-01-23-github-sponsors-will-stop-supporting-paypal/),
   starting on February 23, 2023.
 * GitHub is [sunsetting Subversion support](https://github.blog/2023-01-20-sunsetting-subversion-support/).
