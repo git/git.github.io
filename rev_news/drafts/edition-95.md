@@ -110,11 +110,14 @@ __Git tools and sites__
   Run a one-liner git-sim command in the terminal,
   for example `git-sim reset HEAD^` or `git-sim merge dev`, 
   to generate a custom Git command visualization (.jpg, .mp4) from your repository.
+  Written in Python, available as [package on PyPI](https://pypi.org/project/git-sim/).
 * [heatwave](https://github.com/james-stoup/heatwave)
   is a tool to visualize your git commits with a heat map in the terminal,
   similar to how GitHub's heat map looks.
+  Written in Python, also available as [package on PyPI](https://pypi.org/project/heatwave/).
 * [git-stats](https://github.com/IonicaBizau/git-stats) is a similar tool
   to visualize local git statistics, including GitHub-like contributions calendars.
+  Written in JavaScript + HTML, available as [npm.js package](https://www.npmjs.com/package/git-stats).
     * Note that [Git-Stats](https://gitstats.me/), also known as GitStats\.me
       is an unrelated open-source GitHub contribution analyzer as a web service,
       which was mentioned in [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/).
@@ -125,7 +128,7 @@ __Git tools and sites__
       [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/).
 * [gptcommit](https://github.com/zurawiki/gptcommit) is a
   git prepare-commit-msg [hook](https://git-scm.com/docs/githooks)
-  for authoring commit messages with GPT-3 language model.
+  for authoring commit messages with GPT-3 language model.  Written in Rust.<br />
   Note: you need to ensure you have sufficient credits in your OpenAI account to use it.
 * There are a few software forges working on implementing ForgeFed and/or ActivityPub federation.
   [ForgeFed](https://notabug.org/peers/forgefed) (formerly GitPub) is a federation protocol
@@ -134,7 +137,7 @@ __Git tools and sites__
       and management application, with a focus on software projects and decentralization.
       Self-hosted on <https://vervis.peers.community> instance.  Supports Git and Darcs,
       and [ForgeFed/ActivityPub federation](https://vervis.peers.community/repos/WvWbo/source/FEDERATION.md).
-      It is currently very much a work in progress.
+      It is currently very much a work in progress.  Written in Haskell.
     * [ForgeFlux](https://forgeflux.org/) is [API-space software forge](https://github.com/forgeflux-org/website/blob/master/content/about/index.md)
       federation with ForgeFed for Gitea, Sourcehut, GitLab, and GitHub.
       Repositories are (also) [hosted on GitHub](https://github.com/forgeflux-org).
