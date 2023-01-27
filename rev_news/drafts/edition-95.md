@@ -35,6 +35,28 @@ This edition covers what happened during the months of November 2022 and Decembe
 
 ## Releases
 
++ Git [2.39.1 and others](https://public-inbox.org/git/xmqq7cxl9h0i.fsf@gitster.g/)
++ Git for Windows [2.39.1(1)](https://github.com/git-for-windows/git/releases/tag/v2.39.1.windows.1)
++ libgit2 [1.5.1](https://github.com/libgit2/libgit2/releases/tag/v1.5.1)
++ GitLab [15.8](https://about.gitlab.com/releases/2023/01/22/gitlab-15-8-released/)
+[15.7.5, 15.6.6, and 15.5.9](https://about.gitlab.com/releases/2023/01/17/critical-security-release-gitlab-15-7-5-released/),
+[15.7.3](https://about.gitlab.com/releases/2023/01/11/gitlab-15-7-3-released/),
+[15.7.2](https://about.gitlab.com/releases/2023/01/09/security-release-gitlab-15-7-2-released/),
+[15.7.1](https://about.gitlab.com/releases/2023/01/05/gitlab-15-7-1-released/)
++ Bitbucket Server [8.7](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ GitHub Enterprise [3.7.4](https://help.github.com/enterprise-server@3.7/admin/release-notes#3.7.4),
+[3.6.7](https://help.github.com/enterprise-server@3.6/admin/release-notes#3.6.7),
+[3.5.11](https://help.github.com/enterprise-server@3.5/admin/release-notes#3.5.11),
+[3.4.14](https://help.github.com/enterprise-server@3.4/admin/release-notes#3.4.14),
+[3.3.19](https://help.github.com/enterprise-server@3.3/admin/release-notes#3.3.19),
+[3.7.3](https://help.github.com/enterprise-server@3.7/admin/release-notes#3.7.3),
+[3.6.6](https://help.github.com/enterprise-server@3.6/admin/release-notes#3.6.6),
+[3.5.10](https://help.github.com/enterprise-server@3.5/admin/release-notes#3.5.10),
+[3.4.13](https://help.github.com/enterprise-server@3.4/admin/release-notes#3.4.13),
+[3.3.18](https://help.github.com/enterprise-server@3.3/admin/release-notes#3.3.18)
++ GitKraken [9.0.1](https://help.gitkraken.com/gitkraken-client/current/)
++ GitHub Desktop [3.1.5](https://desktop.github.com/release-notes/),
+[3.1.4](https://desktop.github.com/release-notes/)
 
 ## Other News
 
