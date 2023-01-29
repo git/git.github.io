@@ -25,9 +25,97 @@ This edition covers what happened during the months of November 2022 and Decembe
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [Question: How to execute git-gc correctly on the git server](https://lore.kernel.org/git/CAOLTT8Tt3jW2yvm6BRU3yG+EvW1WG9wWFq6PuOcaHNNLQAaGjg@mail.gmail.com/)
+
+  ZheNing Hu asked about how he could run `git gc` correctly on his
+  own Git server. He seemed to be afraid by
+  [the `git gc` documentation](https://git-scm.com/docs/git-gc)
+  saying that there is a risk of failures and repository corruption
+  when the command is run concurrently with other Git processes.
+
+  He said that he
+  [read about `git gc --cruft`](https://github.blog/2022-09-13-scaling-gits-garbage-collection/)
+  which could overcome these issues, but that he was still using Git
+  v2.35 on his server while `--cruft` was introduced in v2.38.
+
+  He also wondered if before v2.38 a repository level lock blocking
+  some Git operations was needed and what any Git command run when the
+  lock is taken should do and report.
+
+  Ævar Arnfjörð Bjarmason replied that running `git gc` on a "live"
+  repo was always racy, but the odds of corrupting the repo were
+  becoming very small when the value of the `gc.pruneExpire` config
+  option was increased. He said that the default setting for this
+  option, 2 weeks, was "more than enough for even the most paranoid
+  user".
+
+  About `--cruft`, Ævar thought that its purpose was not only to avoid
+  possible repo corruption, but also to allow more aggressive gc
+  (garbage collection).
+
+  He also wondered if this question was about large hosting sites like
+  GitHub, and GitLab where `git gc` is run on live repos, and
+  suggested not to worry in this case, but to take backups.
+
+  Jeff King, alias Peff, replied to Ævar saying he was "a bit less
+  optimistic" about the corruption risk decreasing when
+  `gc.pruneExpire` is increased because there was no atomic view of
+  the ref namespace. So renaming a branch for example was risky
+  because it could be seen as removing a branch and adding a different
+  one by any concurrent process. Such a process could be another push,
+  not just a gc.
+
+  Peff also said that using `--cruft` was not so much about avoiding
+  corruption, but about keeping cruft objects out of the main pack to
+  reduce the cost of lookups and bitmaps, and about avoiding to
+  explode a lot of old objects into loose objects, which could be very
+  bad for performance.
+
+  Ævar replied to Peff discussing further when corruption was likely
+  or not to happen, which issues `--cruft` could help with, and a
+  patch he sent in the past to reduce possible corruption. He also
+  suggested running `git gc` on the least busy hours of the day.
+
+  Later Taylor Blau replied to Ævar and Peff discussing `--cruft` in
+  the context of single-pack bitmaps or multi-pack (MIDX) bitmaps, and
+  in the context of GitHub.
+
+  In the meantime, Michal Suchánek replied to Ævar's first email
+  asking what the 2 week default expiration time applied to. He also
+  said that he got corrupted repos with less than 100 users "and some
+  scripting" which went away when gc was disabled.
+
+  Peff replied to Michal, saying that the expiration time applied to
+  the `mtime` on the object file (or the pack containing it), and
+  confirmed that it was "far from a complete race-free solution".
+
+  ZheNing also replied to Michal saying that he prefered "no error at
+  all" rather than a "small probability of error".
+
+  Michal replied to Peff listing some workflows that are more likely
+  to lead to a corrupt repo, like deleting branches but pushing other
+  branches that are variant of these branches, and different people
+  pushing files from the same external source.
+
+  Peff confirmed that these workflows were indeed risky, and detailed
+  a bit further how the race conditions can happen.
+
+  ZheNing then replied to Peff asking if there was a way like a lock
+  on the repository to avoid for example concurrent push and gc
+  processes.
+
+  Ævar replied that there was no such way but that we should have
+  one. He explained that it could perhaps be done using hooks,
+  [like 'pre-receive' and 'post-receive'](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks),
+  when we are sure that all relevant operations are going through
+  these hooks. (For example no local branch deletion should be
+  possible.)
+
+  ZheNing and Michal, discussed a bit further the details related to
+  how a repo corruption can happen with concurrent push and gc
+  processes, and how that could possibly be avoided.
 
 <!---
 ## Developer Spotlight:
