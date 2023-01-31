@@ -117,9 +117,112 @@ This edition covers what happened during the months of November 2022 and Decembe
   how a repo corruption can happen with concurrent push and gc
   processes, and how that could possibly be avoided.
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Teng Long
+
+* Who are you and what do you do?
+
+  My work is related to R&D efficiency tools development at Alibaba Cloud.
+  Our team have currently built a code hosting service as codeup.aliyun.com
+  which provides free and high-quality code services for Chinese developers
+  on the public cloud. In addition, I used to be a Gerrit contributor, because
+  I wrote Java for nearly 10 years, and this process made me almost forget
+  the C language, LOL.
+
+  For the contributions of Git community, apart from me, Jiang Xin (the Git
+  localization coordinator), ZheNing Hu, Chen BoJun are also in my team.
+
+* What would you name your most important contribution to Git?
+
+  First of all, I know Git for some years, but I'm new in the community,
+  because Git's technical depth is obvious which involves algorithms,
+  operating systems, testing techniques, etc. Also, Git have many
+  subcommands, which makes the implementation of Git itself involve
+  many aspects, I think it is difficult for a new contributor to understand
+  everything, but long-term participation may make you an expert in one
+  aspect of Git. Sadly, my time devoted to the Git community is actually
+  limited.
+
+  I contributed a feature last year to allow the `git ls-tree` subcommand
+  to support the `--format` option which let you print out the result as you
+  want, this is helpful for some automated tools or scripted work I think. If
+  you want to know about it further, a better way is to read [the blog by
+  Taylor Blau](https://github.blog/2022-04-18-highlights-from-git-2-36/#tidbits).
+
+* What are you doing on the Git project these days, and why?
+
+  I've been following the evolution of the `bundle-uri` feature recently, I think
+  the idea of this feature is great and attractive. If used properly, it can not
+  only improve the speed of code download in some scenarios, but also
+  reduce the load on the server.
+
+  I'm also reading about algorithms related code (like bitmap, multi-pack bitmap,
+  bloom-filter), I want to know some details about the combination of Git and
+  algorithm. I think it's interesting.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+  We all know that it can be a pain in terms of resource load and cost to
+  provide large-scale Git services. I hope to be able to solve the problem
+  with Git's storage and computing coupling to let Git be better
+  to integrate with cloud-native architecture. Like, should it be possible
+  to store the refs, loose objects and packs on a Distributed Database？
+
+  I think this is one of the future development direction of the Git
+  architecture, starting from lower cost and cloud friendliness. If you want to
+  do these tasks based on Git, you may need to make the internal related
+  implementations more adaptable, which requires a lot of professional work
+  I think.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+  Actually I don't know, for reviewers, they are weighing the impact of
+  compatibility, although some patches are doing the right thing, which may
+  be contradictory, but there is no way to solve it perfectly, because Git
+  is one of the most widely used tools for developers in the world now.
+
+* What is your favorite Git-related tool/library, outside of
+  Git itself?
+
+  I prefer [git-repo](https://github.com/alibaba/git-repo-go) which supports
+  doing code reviews or pull requests on the client, just like using a native
+  Git subcommand.
+
+* Do you happen to have any memorable experience w.r.t contributing to
+  the Git project? If yes, could you share it with us?
+
+  Still memorable when my first commit was merged in, even though it was
+  a small fix. This process made me understand that contributing to Git is
+  completely different from other workflows, and the process and results both
+  feel good.
+
+* What is your toolbox for interacting with the mailing list and for
+  development of Git?
+
+  First, I use "https://public-inbox.org/git/?q=a%3Adyroneteng" to check if
+  there is any new mails related to me.
+
+  Then, I've been using `git format-patch` to create patchsets and `git send-email`
+  to post them, and `git am` for local reviews. I don't know if there's a better
+  way, but it seems to be enough for me.
+
+* What is your advice for people who want to start Git development?
+  Where and how should they start?
+
+  Contributing to Git is not an easy task, after all, you are working with
+  other excellent contributors in the community, but continuous understanding
+  and participation may make you an expert in a certain direction.
+
+* If there's one tip you would like to share with other Git
+  developers, what would it be?
+
+  I think it would be "get used to the process of contribution slowly".
+
+  The review process is sometimes frustrating, but most of the suggestions by
+  reviewers are still valuable, we can learn a lot from the process, then you
+  can better participate in the next contribution.
+
 
 ## Releases
 
