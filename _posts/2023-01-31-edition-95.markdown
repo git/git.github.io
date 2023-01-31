@@ -27,7 +27,7 @@ This edition covers what happened during the months of January 2023 and December
 
 ### Support
 
-* [Question: How to execute git-gc correctly on the git server](https://lore.kernel.org/git/CAOLTT8Tt3jW2yvm6BRU3yG+EvW1WG9wWFq6PuOcaHNNLQAaGjg@mail.gmail.com/)
+* [Question: How to execute git-gc correctly on the Git server?](https://lore.kernel.org/git/CAOLTT8Tt3jW2yvm6BRU3yG+EvW1WG9wWFq6PuOcaHNNLQAaGjg@mail.gmail.com/)
 
   ZheNing Hu asked about how he could run `git gc` correctly on his
   own Git server. He seemed to be afraid by
@@ -40,9 +40,10 @@ This edition covers what happened during the months of January 2023 and December
   which could overcome these issues, but that he was still using Git
   v2.35 on his server while `--cruft` was introduced in v2.38.
 
-  He also wondered if before v2.38 a repository level lock blocking
-  some Git operations was needed and what any Git command run when the
-  lock is taken should do and report.
+  He also wondered if there was a need for `git gc` to set a
+  repository level lock blocking most or all other Git operations,
+  and what these operations -- especially `git clone` and `git push` --
+  should do or report when hitting this lock.
 
   Ævar Arnfjörð Bjarmason replied that running `git gc` on a "live"
   repo was always racy, but the odds of corrupting the repo were
@@ -56,16 +57,16 @@ This edition covers what happened during the months of January 2023 and December
   (garbage collection).
 
   He also wondered if this question was about large hosting sites like
-  GitHub, and GitLab where `git gc` is run on live repos, and
+  GitHub and GitLab, where `git gc` is run on live repos, and
   suggested not to worry in this case, but to take backups.
 
   Jeff King, alias Peff, replied to Ævar saying he was "a bit less
   optimistic" about the corruption risk decreasing when
-  `gc.pruneExpire` is increased because there was no atomic view of
+  `gc.pruneExpire` was increased because there was no atomic view of
   the ref namespace. So renaming a branch for example was risky
   because it could be seen as removing a branch and adding a different
-  one by any concurrent process. Such a process could be another push,
-  not just a gc.
+  one by any concurrent process. Such a process could be another `push`,
+  not just a `gc`.
 
   Peff also said that using `--cruft` was not so much about avoiding
   corruption, but about keeping cruft objects out of the main pack to
@@ -80,41 +81,41 @@ This edition covers what happened during the months of January 2023 and December
 
   Later Taylor Blau replied to Ævar and Peff discussing `--cruft` in
   the context of single-pack bitmaps or multi-pack (MIDX) bitmaps, and
-  in the context of GitHub.
+  also in the context of GitHub.
 
   In the meantime, Michal Suchánek replied to Ævar's first email
   asking what the 2 week default expiration time applied to. He also
   said that he got corrupted repos with less than 100 users "and some
-  scripting" which went away when gc was disabled.
+  scripting" which went away when `gc` was disabled.
 
   Peff replied to Michal, saying that the expiration time applied to
   the `mtime` on the object file (or the pack containing it), and
   confirmed that it was "far from a complete race-free solution".
 
-  ZheNing also replied to Michal saying that he prefered "no error at
-  all" rather than a "small probability of error".
+  ZheNing also replied to Michal saying that he preferred "no error at
+  all" to a "small probability of error".
 
   Michal replied to Peff listing some workflows that are more likely
   to lead to a corrupt repo, like deleting branches but pushing other
-  branches that are variant of these branches, and different people
+  branches that are variants of these branches, and different people
   pushing files from the same external source.
 
   Peff confirmed that these workflows were indeed risky, and detailed
   a bit further how the race conditions can happen.
 
-  ZheNing then replied to Peff asking if there was a way like a lock
-  on the repository to avoid for example concurrent push and gc
-  processes.
+  ZheNing then replied to Peff asking if there was "an easy and poor
+  performance" way like a lock on a repository to avoid for example
+  concurrent `push` and `gc` processes.
 
   Ævar replied that there was no such way but that we should have
   one. He explained that it could perhaps be done using hooks,
   [like 'pre-receive' and 'post-receive'](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks),
-  when we are sure that all relevant operations are going through
+  when we were sure that all relevant operations were going through
   these hooks. (For example no local branch deletion should be
   possible.)
 
-  ZheNing and Michal, discussed a bit further the details related to
-  how a repo corruption can happen with concurrent push and gc
+  ZheNing and Michal discussed a bit further the details related to
+  how a repo corruption can happen with concurrent `push` and `gc`
   processes, and how that could possibly be avoided.
 
 ## Developer Spotlight: Teng Long
@@ -129,15 +130,15 @@ This edition covers what happened during the months of January 2023 and December
   the C language, LOL.
 
   For the contributions of Git community, apart from me, Jiang Xin (the Git
-  localization coordinator), ZheNing Hu, Chen BoJun are also in my team.
+  localization coordinator), ZheNing Hu, and Chen BoJun are also in my team.
 
 * What would you name your most important contribution to Git?
 
   First of all, I know Git for some years, but I'm new in the community,
   because Git's technical depth is obvious which involves algorithms,
-  operating systems, testing techniques, etc. Also, Git have many
+  operating systems, testing techniques, etc. Also, Git has many
   subcommands, which makes the implementation of Git itself involve
-  many aspects, I think it is difficult for a new contributor to understand
+  many aspects, and I think it is difficult for a new contributor to understand
   everything, but long-term participation may make you an expert in one
   aspect of Git. Sadly, my time devoted to the Git community is actually
   limited.
@@ -156,8 +157,8 @@ This edition covers what happened during the months of January 2023 and December
   reduce the load on the server.
 
   I'm also reading about algorithms related code (like bitmap, multi-pack bitmap,
-  bloom-filter), I want to know some details about the combination of Git and
-  algorithm. I think it's interesting.
+  bloom-filter), as I want to know some details about the combination of Git and
+  algorithms. I think it's interesting.
 
 * If you could get a team of expert developers to work full time on
   something in Git for a full year, what would it be?
@@ -189,7 +190,7 @@ This edition covers what happened during the months of January 2023 and December
   doing code reviews or pull requests on the client, just like using a native
   Git subcommand.
 
-* Do you happen to have any memorable experience w.r.t contributing to
+* Do you happen to have any memorable experience w.r.t. contributing to
   the Git project? If yes, could you share it with us?
 
   Still memorable when my first commit was merged in, even though it was
@@ -200,10 +201,10 @@ This edition covers what happened during the months of January 2023 and December
 * What is your toolbox for interacting with the mailing list and for
   development of Git?
 
-  First, I use "https://public-inbox.org/git/?q=a%3Adyroneteng" to check if
-  there is any new mails related to me.
+  First, I use [https://public-inbox.org/git/?q=a%3Adyroneteng](https://public-inbox.org/git/?q=a%3Adyroneteng)
+  to check if there is any new mails related to me.
 
-  Then, I've been using `git format-patch` to create patchsets and `git send-email`
+  Then, I've been using `git format-patch` to create patch sets and `git send-email`
   to post them, and `git am` for local reviews. I don't know if there's a better
   way, but it seems to be enough for me.
 
@@ -220,7 +221,7 @@ This edition covers what happened during the months of January 2023 and December
   I think it would be "get used to the process of contribution slowly".
 
   The review process is sometimes frustrating, but most of the suggestions by
-  reviewers are still valuable, we can learn a lot from the process, then you
+  reviewers are still valuable; you can learn a lot from the process, then you
   can better participate in the next contribution.
 
 
@@ -278,9 +279,9 @@ __Various__
 __Light reading__
 
 * [Beyond Git: The other version control systems developers use](https://stackoverflow.blog/2023/01/09/beyond-git-the-other-version-control-systems-developers-use/)
-  by Ryan Donovan on The Overflow (StackOverflow\.Blog).
+  by Ryan Donovan on The Overflow (stackoverflow\.blog).
 * [Never write a commit message again (with the help of GPT-3)](https://zura.wiki/post/never-write-a-commit-message-again-with-the-help-of-gpt-3/)
-  by Roger Zurawicki on his blog _(though read proposed commit message before accepting it, please)_.
+  by Roger Zurawicki on his blog _(though read the proposed commit message before accepting it, please)_.
 * [Sending a kernel patch with b4 (part 1)](https://people.kernel.org/monsieuricon/sending-a-kernel-patch-with-b4-part-1)
   by Konstantin Ryabitsev (sending patch with [b4](https://git.kernel.org/pub/scm/utils/b4/b4.git)
   is described in [Contributor overview](https://b4.docs.kernel.org/en/stable-0.11.y/contributor/overview.html)
@@ -309,14 +310,14 @@ __Light reading__
   by Alicia Sykes on DEV\.to.
 * [How to Checkout a Remote Git Branch](https://www.howtogeek.com/864263/how-to-checkout-a-remote-git-branch/)
   by Dave McKay on How-To Geek;
-  though the article missed <abbr title="Do What I Mean">DWIM</abbr> `git checkout <remote-branch>` trick,
-  and do not mention newer `git switch <branch>` command as alternative to `git checkout <branch>`.
+  though the article misses the <abbr title="Do What I Mean">DWIM</abbr> `git checkout <remote-branch>` trick,
+  and does not mention the newer `git switch <branch>` command as alternative to `git checkout <branch>`.
 * [Git tutorials - understanding of rebase and merge](https://dev.to/bitethecode/git-tutorials-understanding-of-rebase-and-merge-2cg4)
-  by Joonhyeok Ahn (Joon) on DEV\.to is the final part in 4 part
+  by Joonhyeok Ahn (Joon) on DEV\.to is the final part in the 4 part
   [Git Cookbook](https://dev.to/bitethecode/series/20767) series.
 <!-- Humor, or tangentially related -->
 * [Golang (and thus `git-lfs`) is evil on shitty networks](https://withinboredom.info/blog/2022/12/29/golang-is-evil-on-shitty-networks/)
-  on Somewhere Within Boredom blog _(may be fixed by the time you are reading this)_.
+  on the Somewhere Within Boredom blog _(may be fixed by the time you are reading this)_.
 
 <!---
 __Easy watching__
@@ -325,18 +326,18 @@ __Easy watching__
 __Git tools and sites__
 
 * [Git-Sim: Visually Simulate Git Operations In Your Own Repos](https://initialcommit.com/blog/git-sim).
-  Run a one-liner git-sim command in the terminal,
+  Run a one-liner `git-sim` command in the terminal,
   for example `git-sim reset HEAD^` or `git-sim merge dev`, 
   to generate a custom Git command visualization (.jpg, .mp4) from your repository.
   Written in Python, available as [package on PyPI](https://pypi.org/project/git-sim/).
 * [heatwave](https://github.com/james-stoup/heatwave)
-  is a tool to visualize your git commits with a heat map in the terminal,
+  is a tool to visualize your Git commits with a heat map in the terminal,
   similar to how GitHub's heat map looks.
   Written in Python, also available as [package on PyPI](https://pypi.org/project/heatwave/).
 * [git-stats](https://github.com/IonicaBizau/git-stats) is a similar tool
   to visualize local git statistics, including GitHub-like contributions calendars.
   Written in JavaScript + HTML, available as [npm.js package](https://www.npmjs.com/package/git-stats).
-    * Note that [Git-Stats](https://gitstats.me/), also known as GitStats\.me
+    * Note that [Git-Stats](https://gitstats.me/), also known as GitStats\.me,
       is an unrelated open-source GitHub contribution analyzer as a web service,
       which was mentioned in [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/).
 * [scmrepo](https://github.com/iterative/scmrepo) by Iterative
@@ -346,20 +347,20 @@ __Git tools and sites__
       [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/).
 * [gptcommit](https://github.com/zurawiki/gptcommit) is a
   git prepare-commit-msg [hook](https://git-scm.com/docs/githooks)
-  for authoring commit messages with GPT-3 language model.  Written in Rust.<br />
+  for authoring commit messages with the GPT-3 language model.  Written in Rust.<br />
   Note: you need to ensure you have sufficient credits in your OpenAI account to use it.
 * There are a few software forges working on implementing ForgeFed and/or ActivityPub federation.
   [ForgeFed](https://notabug.org/peers/forgefed) (formerly GitPub) is a federation protocol
   for forge services, first mentioned in [Git Rev News Edition #69](https://git.github.io/rev_news/2020/11/27/edition-69/) in 2020.
     * [Vervis](https://vervis.peers.community/repos/WvWbo/source) is a project hosting
       and management application, with a focus on software projects and decentralization.
-      Self-hosted on <https://vervis.peers.community> instance.  Supports Git and Darcs,
+      Self-hosted on the <https://vervis.peers.community> instance.  Supports Git and Darcs,
       and [ForgeFed/ActivityPub federation](https://vervis.peers.community/repos/WvWbo/source/FEDERATION.md).
       It is currently very much a work in progress.  Written in Haskell.
     * [ForgeFlux](https://forgeflux.org/) is [API-space software forge](https://github.com/forgeflux-org/website/blob/master/content/about/index.md)
       federation with ForgeFed for Gitea, Sourcehut, GitLab, and GitHub.
       Repositories are (also) [hosted on GitHub](https://github.com/forgeflux-org).
-      Note: project homepage on <https://forgeflux.org/> seems to be down at the time of writing.
+      Note: the project homepage on <https://forgeflux.org/> seems to be down at the time of writing.
     * [Forgefriends](https://forgefriends.org/) is a [self-hosted](https://lab.forgefriends.org/forgefriends/forgefriends)
       forge federation project, which purpose is to allow every Free Software developer
       to use their favorite forge to contribute to software projects hosted on other forges.
