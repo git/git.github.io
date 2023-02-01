@@ -130,7 +130,7 @@ This edition covers what happened during the months of January 2023 and December
   the C language, LOL.
 
   For the contributions of Git community, apart from me, Jiang Xin (the Git
-  localization coordinator), ZheNing Hu, and Chen BoJun are also in my team.
+  localization coordinator), ZheNing Hu, and Chen BoJun are also in the team.
 
 * What would you name your most important contribution to Git?
 
@@ -178,10 +178,13 @@ This edition covers what happened during the months of January 2023 and December
 * If you could remove something from Git without worrying about
   backwards compatibility, what would it be?
 
-  Actually I don't know, for reviewers, they are weighing the impact of
-  compatibility, although some patches are doing the right thing, which may
-  be contradictory, but there is no way to solve it perfectly, because Git
-  is one of the most widely used tools for developers in the world now.
+  Maybe introduce a new option "--branches" in "git-push" to replace "--all".
+  Option "--all" means to push all branches, "--tags" means to push all tags, but
+  many people misunderstand it (at least around me), because they think "--all"
+  means to push "all" the branches and tags together. In fact, I made an [RFC
+  patch](https://public-inbox.org/git/20221205133525.60464-1-tenglong.tl@alibaba-inc.com/)
+  before, hoping to support the "--branches" parameter in the first step, and
+  I'll consider following up with this patch.
 
 * What is your favorite Git-related tool/library, outside of
   Git itself?
@@ -204,7 +207,7 @@ This edition covers what happened during the months of January 2023 and December
   First, I use [https://public-inbox.org/git/?q=a%3Adyroneteng](https://public-inbox.org/git/?q=a%3Adyroneteng)
   to check if there is any new mails related to me.
 
-  Then, I've been using `git format-patch` to create patch sets and `git send-email`
+  Then, I've been using `git format-patch` to create patchsets and `git send-email`
   to post them, and `git am` for local reviews. I don't know if there's a better
   way, but it seems to be enough for me.
 
