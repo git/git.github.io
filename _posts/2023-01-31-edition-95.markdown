@@ -178,12 +178,12 @@ This edition covers what happened during the months of January 2023 and December
 * If you could remove something from Git without worrying about
   backwards compatibility, what would it be?
 
-  Maybe introduce a new option "--branches" in "git-push" to replace "--all".
-  Option "--all" means to push all branches, "--tags" means to push all tags, but
-  many people misunderstand it (at least around me), because they think "--all"
-  means to push "all" the branches and tags together. In fact, I made an [RFC
+  Maybe introduce a new option `--branches` in `git push` to replace `--all`.
+  Option `--all` means to push all branches, `--tags` means to push all tags, but
+  many people misunderstand it (at least those around me), because they think
+  `--all` means to push `all` the branches and tags together. In fact, I made an [RFC
   patch](https://public-inbox.org/git/20221205133525.60464-1-tenglong.tl@alibaba-inc.com/)
-  before, hoping to support the "--branches" parameter in the first step, and
+  before, hoping to support the `--branches` parameter in the first step, and
   I'll consider following up with this patch.
 
 * What is your favorite Git-related tool/library, outside of
