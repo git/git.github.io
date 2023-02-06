@@ -68,7 +68,7 @@ Difficulty: Medium
 
 Languages: C, shell(bash)
 
-Possible mentors:
+Possible mentor:  Victoria Dye < <vdye@github.com> >
 
 ### Unify ref-filter formats with other pretty formats
 
@@ -97,4 +97,5 @@ Languages: C, shell(bash)
 
 Possible mentors:
 * Christian Couder < <christian.couder@gmail.com> >
+* Hariom Verma < <hariom18599@gmail.com> >
 
