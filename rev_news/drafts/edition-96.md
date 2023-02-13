@@ -35,6 +35,8 @@ This edition covers what happened during the months of February 2023 and January
 
 ## Releases
 
++ Tower for Mac [9.2](https://www.git-tower.com/release-notes/mac?show_tab=release-notes)
++ Tower for Windows [4.2](https://www.git-tower.com/release-notes/windows?show_tab=release-notes) ([blog post](https://www.git-tower.com/blog/tower-win-4-2/))
 
 ## Other News
 
