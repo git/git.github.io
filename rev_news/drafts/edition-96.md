@@ -25,9 +25,67 @@ This edition covers what happened during the months of February 2023 and January
 ### Reviews
 -->
 
-<!---
+
 ### Support
--->
+
+* [bug?: ORIG_HEAD incorrect after reset during git-rebase -i](https://lore.kernel.org/git/CA+JQ7M-ynq1cLN-3ZodXae=x-H5k7Ab6uPBwUFhG+kgtOvCgtA@mail.gmail.com/)
+
+  Erik Cervin Edin sent an email to the mailing list with steps to
+  reproduce a behavior that he didn't like. The steps consisted in an
+  interactive rebase during which a commit was edited and a reset was
+  performed while editing the commit.
+
+  After editing, `git rebase --continue` finished the rebase. But then
+  Erik expected `ORIG_HEAD` to point to the tip
+  of the rebased branch before the rebase, while instead it pointed to
+  the HEAD before the reset.
+
+  `ORIG_HEAD` is one of the pseudo-references that some Git commands
+  use, like `FETCH_HEAD`, `MERGE_HEAD` and a few others.
+
+  Phillip Wood replied to Erik saying that it was expected that `git
+  reset` would change `ORIG_HEAD` to `HEAD` just before it was
+  performed. He suggested using the reflog with something like
+  `branch-name@{1}` where `branch-name` is the branch that was
+  rebased and the `@{1}` part indicates the previous entry in the
+  reflog for the branch.
+
+  Erik replied that he knew about the reflog but just expected
+  `ORIG_HEAD` to be reset to `.git/rebase-merge/orig-head` at the end of
+  the rebase. `.git/rebase-merge/orig-head` is an internal file that
+  stores the tip of the branch before it was rebased.
+
+  Philippe Blain replied to Erik that he just hit the same bug. He
+  also said that he was confused by the rebase documentation and gave
+  the series of commands he used to get hit.
+
+  Phillip Wood replied to both Erik and Philippe Blain that if we
+  changed the behavior to make `ORIG_HEAD` point to the tip of the
+  branch before it was rebased, some people might not be happy as they
+  might expect `git reset` to have changed `ORIG_HEAD`. Other people
+  might expect on the contrary that `ORIG_HEAD` was always set to the
+  tip of the branch before the rebase when the rebase stoped, which
+  would mean that `git rebase --continue` would always need to make
+  sure `ORIG_HEAD` fulfills that expectation.
+
+  Phillip said he thought the situation was confusing and he didn't
+  see a way to make it clearer.
+
+  Philippe Blain agreed that some people might rely on the current
+  behavior and said he would send documentation updates to make things
+  clearer.
+
+  He then sent
+  [a patch series](https://lore.kernel.org/git/pull.1456.git.1673120359.gitgitgadget@gmail.com/)
+  consisting of small changes to the documentation of a number of
+  commands: `cherry-pick`, `merge`, `rebase` and `reset`, as well as
+  in the [documentation about Git revisions](https://git-scm.com/docs/gitrevisions).
+
+  Junio Hamano, the Git maintainer, commented on some wordings which
+  led Philippe to send
+  [a version 2 of his series](https://lore.kernel.org/git/pull.1456.v2.git.1673356521.gitgitgadget@gmail.com/).
+
+  This version was accepted and later merged to the master branch.
 
 <!---
 ## Developer Spotlight:
