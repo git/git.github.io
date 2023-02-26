@@ -82,10 +82,11 @@ This edition covers what happened during the months of February 2023 and January
   in the [documentation about Git revisions](https://git-scm.com/docs/gitrevisions).
 
   Junio Hamano, the Git maintainer, commented on some wordings which
-  led Philippe to send
-  [a version 2 of his series](https://lore.kernel.org/git/pull.1456.v2.git.1673356521.gitgitgadget@gmail.com/).
+  after short discussions led Philippe to send
+  [a version 2 of his series](https://lore.kernel.org/git/pull.1456.v2.git.1673356521.gitgitgadget@gmail.com/)
+  with very few changes.
 
-  This version was accepted and later merged to the master branch.
+  This version was accepted and later merged into the master branch.
 
 <!---
 ## Developer Spotlight:
