@@ -47,18 +47,17 @@ This allows the student to gain partial success early in the project and
 the student can complete as many as possible in the timeframe (without
 expectation that _all_ will be completed during the project).
 
-* `git rev-parse`
-* `git fsck`
-* `git check-attr`
 * `git describe`
+* `git write-tree`
 * `git diff-files`
 * `git diff-index`
 * `git diff-tree`
 * `git worktree`
-* `git write-tree`
+* `git check-attr`
+* `git checkout--worker` (for parallel checkout)
 * `git apply`
 * `git am`
-* `git checkout--worker` (for parallel checkout)
+* `git fsck`
 * `git merge-index`
 * `git rerere`
 
