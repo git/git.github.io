@@ -139,6 +139,7 @@ __Easy watching__
 
 __Git tools and sites__
 
++ [Gitifi](https://github.com/gelstudios/gitfiti) gitfiti noun : Carefully crafted graffiti in a github commit history calendar.
 
 ## Credits
 
