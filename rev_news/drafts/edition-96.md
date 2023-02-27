@@ -129,15 +129,112 @@ This edition covers what happened during the months of February 2023 and January
 ## Other News
 
 __Various__
+* [GitLab Improves Merge Requests, GitOps Functionality and More](https://www.infoq.com/news/2023/02/gitlab-15-3-through-15-8-release/)
+  by Matt Saunders on InfoQ, about versions 15.3 through 15.8.
+* [Git archive generation meets Hyrum's law](https://lwn.net/Articles/921787/)
+  by Jonathan Corbet on LWN\.net (affecting Git and GitHub).
 
 
 __Light reading__
+* [Will GitOps Change Software Development Forever?](https://www.analyticsinsight.net/will-gitops-change-software-development-forever/)
+  by Harshini on Analytics Insight.
+* [Git signoff and signing like a champ](https://dev.to/janderssonse/git-signoff-and-signing-like-a-champ-41f3)
+  by Josef Andersson on DEV\.to.
+* [How to Merge a Git Feature Branch with a Squash Commit](https://dev.to/esaraviam/how-to-merge-a-git-feature-branch-with-a-squash-commit-8af)
+  by Luis Esteban Saravia M on DEV\.to.<br>
+  This is an alternative to repeatedly using the `squash` command of the [interactive rebase](https://git-scm.com/docs/git-rebase#_interactive_mode).
+* [Why I love GitLens in my VsCode - Part 1](https://blog.delpuppo.net/why-i-love-gitlens-in-my-vscode-part-1)
+  and [Part 2](https://blog.delpuppo.net/why-i-love-gitlens-in-my-vscode-part-2)
+  by Luca Del Puppo on his blog.<br>
+  Also available [on DEV\.to](https://dev.to/this-is-learning/why-i-love-gitlens-in-my-vscode-part-1-5cmp).
+* [Data versioning](https://danmackinlay.name/notebook/data_versioning.html),
+  a rough work-in-progress notebook by Dan MacKinlay.
+  Includes descriptions of
+    * [Data Version Control (DVC)](https://dvc.org/) (first mentioned in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/)),
+    * [Dolt](https://www.dolthub.com/), which is a [version controlled SQL database](https://www.dolthub.com/blog/2021-09-17-database-version-control/)
+      (first mentioned in [Git Rev News Edition #62](https://git.github.io/rev_news/2020/04/23/edition-62/)),
+    * [Pachyderm](https://www.pachyderm.com/) (first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/)),
+    * [git-annex](http://git-annex.branchable.com/) - not targetted specifically at data science
+      (first mentioned in passing in [Git Rev News #3](https://git.github.io/rev_news/2015/05/13/edition-3/)),
+    * [DataLad](https://www.datalad.org/),
+    * [Go Get Data (ggd)](https://gogetdata.github.io/) from the genomics community;
+      it seems to be a lighter version of Pachyderm,
+    * [Splitgraph](https://www.splitgraph.com/docs/getting-started/introduction),
+      that works on top of PostgreSQL,
+    * [Sno](https://sno.earth/) to store geospatial and tabular data in Git<br>
+      (see also [Kart](https://kartproject.org/), mentioned in [Git Rev News #85](https://git.github.io/rev_news/2022/03/31/edition-85/),
+      _which is not listed in this notebook_).
+  The notebook also mentions
+  [Pangeo Forge](https://github.com/pangeo-forge/roadmap) (like Conda Forge, but for data),
+  [Intake](https://intake.readthedocs.io/en/latest/index.html) (lightweight package for finding, investigating, loading and disseminating data), and
+  [Flat Data](https://githubnext.com/projects/flat-data) - formerly GitHub OCTO
+  (to bring working sets of data to your repositories, based on
+  [“git scraping” approach pioneered by Simon Willison](https://simonwillison.net/2020/Oct/9/git-scraping/)
+  (mentioned in [Git Rev News Edition #68](https://git.github.io/rev_news/2020/10/30/edition-68/))).<br>
+  See also [Git Rev News #82](https://git.github.io/rev_news/2021/12/30/edition-82/),
+  which mentions tools for version controlling database schema, version controlling queries,
+  data versioning, etc. - all taken from articles on DoltHub Blog.
+* [The Git source code audit, viewed as a Rust programmer](https://litchipi.github.io/infosec/2023/01/24/git-code-audit-viewed-as-rust-programmer.html)
+  by Litchi Pi (Tim); the audit itself was mentioned in [previous Git Rev News](https://git.github.io/rev_news/2023/01/31/edition-95/).
+* [An Easy git Workflow](https://dev.to/ovid/an-easy-git-workflow-4gm0)
+  by Curtis “Ovid” Poe on DEV\.to.<br>
+  Also available as [Easy Git Workflow](https://ovid.github.io/articles/easy-git-workflow.html) (2020)
+  on [(Technical) Articles by Ovid](https://ovid.github.io/articles.html).
 
-<!---
+<!-- Separated, because they are less connected to Git -->
+* [The technology behind GitHub’s new code search](https://github.blog/2023-02-06-the-technology-behind-githubs-new-code-search/)
+  by Timothy Clem in the Engineering section of the GitHub Blog.
+* [Mobile Price Classification: An Open Source Data Science Project with Dagshub](https://hackernoon.com/mobile-price-classification-an-open-source-data-science-project-with-dagshub)
+  by Davis David (@davisdavid) on HackerNoon.
+    * The workflow described in this article uses
+      [DVC](https://dvc.org/) (first mentioned in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/)),
+      [DAGsHub](https://dagshub.com/) (first mentioned in [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/)),
+      MLflow, and Streamlit library.
+* [FAIR data pipeline: provenance-driven data management for traceable scientific workflows](https://royalsocietypublishing.org/doi/full/10.1098/rsta.2021.0300);
+  an open access research article in Volume 380, Issue 2233
+  of Philosophical Transactions of The Royal Society&nbsp;A
+  ([DOI:10.1098/rsta.2021.0300](https://doi.org/10.1098/rsta.2021.0300)).
+
+
 __Easy watching__
--->
+* [Move Commits Between Branches in Git](https://www.youtube.com/watch?v=0pzFGXvemvA)
+  by Leonardo Montini, also known as Dev Leonardo.<br>
+  You can read accompanying [Move Commits Between Branches in Git - 3 Different Methods](https://dev.to/this-is-learning/move-commits-between-branches-in-git-3-different-methods-22bb)
+  article on DEV\.to (for This is Learning), 5th part of the
+  [git better - Improve your git skills](https://dev.to/balastrong/series/21372) series.
+
 
 __Git tools and sites__
+* **[conventional: comments](https://conventionalcomments.org/)** are a set of conventions
+  to make code review comments to be easy to grok and grep.
+    * This can be considered a companionn to [Conventional Commits](https://www.conventionalcommits.org/) specification,
+      first mentioned in [Git Rev News Edition #52](https://git.github.io/rev_news/2019/06/28/edition-52/).
+* [Flipt](https://www.flipt.io/) is an [open source](https://github.com/flipt-io/flipt),
+  self-hosted feature flag solution.
+    * [Feature Flags](https://featureflags.io/) or [Feature Toggles](https://martinfowler.com/articles/feature-toggles.html)
+      are a technique that allows to modify system behavior without changing code.
+      They are often used with [Trunk Based Development](https://trunkbaseddevelopment.com/),
+      as described in [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html)
+      by Martin Fowler, which was mentioned in [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/).
+* [git-workflow](https://github.com/Ovid/git-workflow)
+  by Curtis “Ovid” Poe
+  a simplified subset of the git tools used by
+  [All Around the World](https://allaroundtheworld.fr/) company for software development.
+  It provides three new commands: `git refresh`, `git pushback` and `git done`.
+* [Git-Heat-Map](https://github.com/jmforsythe/Git-Heat-Map)
+  is tool to visualise a git repository by diff activity using a treemap chart.
+* [Diff/merge tools](https://danmackinlay.name/notebook/diffing.html) and
+  [Git GUIs](https://danmackinlay.name/notebook/git_guis.html) - notebooks
+  of Dan MacKinlay.
+* [Git tricks](https://danmackinlay.name/notebook/git.html):
+  Dan MacKinlay's notes and links, not intended to be tutorial.
+* [Awesome CLI Apps](https://github.com/agarrharr/awesome-cli-apps),
+  is a curated list of command line apps, including the ones
+  [for Version Control](https://github.com/agarrharr/awesome-cli-apps#version-control).
+* [Automerge 2.0](https://automerge.org/blog/automerge-2/)
+  is a [CRDT](https://crdt.tech/), or "Conflict-free Replicated Data Type",
+  that one can use to implement real-time collaboration for an application,
+  which is focused on optimizing editing of plaintext.
 
 
 ## Credits
