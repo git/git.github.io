@@ -129,6 +129,9 @@ This edition covers what happened during the months of January and February 2023
 ## Other News
 
 __Various__
+* The Git project has been accepted as
+  [a Mentor Organization](https://summerofcode.withgoogle.com/programs/2023/organizations/git)
+  for Google Summer of Code (GSoC) 2023.
 * [GitLab Improves Merge Requests, GitOps Functionality and More](https://www.infoq.com/news/2023/02/gitlab-15-3-through-15-8-release/)
   by Matt Saunders on InfoQ, about versions 15.3 through 15.8.
 * [Git archive generation meets Hyrum's law](https://lwn.net/Articles/921787/)
