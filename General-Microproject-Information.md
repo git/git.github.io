@@ -369,6 +369,12 @@ willing to interact with the mailing list. It will also increase the
 workload of mentors for possibly no good reason which is not something
 they like.
 
+Mentors will be willing to properly mentor those who have been
+selected to participate in the mentoring program, but until then they
+cannot, and don't want to, privately mentor several people to help
+them be selected. It wouldn't be fair to those who are doing the right
+thing and interacting with the mailing list directly.
+
 ## Some conventions and tips
 
 It can be intimidating to introduce yourself or send your first patch
