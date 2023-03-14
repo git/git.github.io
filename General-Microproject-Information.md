@@ -350,6 +350,25 @@ expected. Something like "I couldn't find a good micro-project for
 me", for example, doesn't tell us much, and doesn't give us any idea
 about how we could help you.
 
+## Why it's better to introduce yourself by directly emailing the mailing list
+
+We understand that some people are a bit shy or reluctant to email the
+mailing list directly and interact with people there, but that's
+something that is required to contribute to Git. So you will have to
+do it at one point anyway.
+
+Also please understand that there are often a significant number of
+people interested in participating in programs like GSoC or Outreachy,
+and mentors prefer to answer questions once and for all on the mailing
+list instead of many times privately to everyone interested in
+participating.
+
+Emailing mentors privately will not give you any advantage. On the
+contrary it might just signal potential mentors that you are not very
+willing to interact with the mailing list. It will also increase the
+workload of mentors for possibly no good reason which is not something
+they like.
+
 ## Some conventions and tips
 
 It can be intimidating to introduce yourself or send your first patch
