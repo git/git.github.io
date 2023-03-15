@@ -42,7 +42,7 @@ __Various__
 
 
 __Light reading__
-
++ [How to Improve Performance in Git: The Complete Guide](https://www.git-tower.com/blog/git-performance/) by Bruno Brito on Tower’s blog.
 <!---
 __Easy watching__
 -->
