@@ -46,16 +46,64 @@ functions.
 If you can't find one please tell us, along with the command you used
 to search, so that we can remove this microproject idea.
 
-### Avoid pipes in git related commands in test scripts
+### Avoid suppressing `git`'s exit code in test scripts
+
+The Git project uses a large collection of integration tests written in
+Shell to guard against regressions when adding new features or fixing
+bugs. The scripts in question can be found in the `t` directory
+[here][git-t].
+
+While it is perfectly OK to use [pipes][wikipedia-pipes] when writing
+integration tests, we must be careful to avoid writing a pipeline that
+suppresses the exit code of a Git process, like so:
+
+```
+git <subcommand> | <some other command>
+```
+
+...since the exit code of `git <subcommand>` would be suppressed by the
+pipe. If `git <subcommand>` crashed, we would not catch it in the above
+example when running the integration suite.
+
+Other examples to avoid include:
+
+```
+# bad:
+<some command> $(git <subcommand>)
+
+# also bad:
+<some command> <<EOF
+... some text ...
+$(git <subcommand>)
+EOF
+```
+
+...since the exit code of `git <subcommand>` is hidden behind the
+subshell in both instances.
+
+On the other hand, both of the following examples are OK, since neither
+hides the exit code of running `git <subcommand>`:
+
+```
+# good:
+var=$(git <subcommand>)
+
+# also good:
+<some command> | <some other command> | git <subcommand>
+```
+
+(provided that neither `<some command>` or `<some other command>` are
+`git`).
 
 See the commit
 [c6f44e1da5](https://github.com/git/git/commit/c6f44e1da5e88e34)
 for example, and then do the same thing in one other test script.
 
-The git command should be on the left side of the pipe.
-
 If you can't find one please tell us, along with the command you used
 to search, so that we can remove this microproject idea.
+
+[git-t]: https://github.com/git/git/tree/master/t
+[wikipedia-pipes]: https://en.wikipedia.org/wiki/Pipeline_(Unix)
 
 ### Use unsigned integral type for collection of bits.
 
