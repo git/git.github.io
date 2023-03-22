@@ -44,6 +44,7 @@ __Various__
 __Light reading__
 
 + [How to Improve Performance in Git: The Complete Guide](https://www.git-tower.com/blog/git-performance/) by Bruno Brito on Tower’s blog.
++ [Integrating 1Password SSH with Git (and Tower!)](https://www.git-tower.com/blog/1password-ssh-tower/) by Bruno Brito on Tower’s blog.
 
 <!---
 __Easy watching__
