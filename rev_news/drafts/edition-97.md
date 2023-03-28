@@ -34,7 +34,7 @@ This edition covers what happened during the months of February 2023 and March 2
 -->
 
 ## Releases
-
++ Tower for Windows [4.3](https://www.git-tower.com/release-notes/windows?show_tab=release-notes)
 
 ## Other News
 
