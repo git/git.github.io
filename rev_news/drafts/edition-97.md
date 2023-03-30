@@ -86,7 +86,7 @@ This edition covers what happened during the months of February 2023 and March 2
   based on his previous patch which fixed a leak and made the changes
   easier to follow.
 
-  Juni and Eric reviewed the series and then discussed with Peff a bug
+  Junio and Eric reviewed the series and then discussed with Peff a bug
   Junio found in it. Then Peff sent
   [a version 2](https://lore.kernel.org/git/Y+z3MtgayoXsxaHA@coredump.intra.peff.net/)
   of the patch series that fixed the bug and added tests.
