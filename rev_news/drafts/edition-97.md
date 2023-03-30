@@ -145,6 +145,8 @@ __Various__
     + There is https://lore.kernel.org/git/ if there are problems with public-inbox\.org instance.
 + [Unleash your potential with GitHub Octernships: a path to a thriving tech career](https://github.blog/2023-03-06-unleash-your-potential-with-github-octernships-a-path-to-a-thriving-tech-career/)
   by Arkodyuti Saha on GitHub Blog.
++ [Future-proofing Git repository maintenance](https://about.gitlab.com/blog/2023/03/20/scaling-repository-maintenance/)
+  by Patrick Steinhardt on GitLab blog.
 
 __Light reading__
 
