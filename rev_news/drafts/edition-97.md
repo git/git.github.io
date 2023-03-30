@@ -25,9 +25,78 @@ This edition covers what happened during the months of February 2023 and March 2
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [bug report: symbolic-ref --short command echos the wrong text while use Chinese language](https://lore.kernel.org/git/CAGF3oAcCi+fG12j-1U0hcrWwkF5K_9WhOi6ZPHBzUUzfkrZDxA@mail.gmail.com/)
+
+  Mengzi Yi (孟子易) sent a bug report to the mailing list saying that
+  when a Chinese name like 测试-加-增加-加-增加 was given to a branch,
+  then using `git symbolic-ref --short HEAD` on that branch didn't
+  give the right output (for example 测试-� instead of maybe 测试-加).
+
+  Peff, alias Jeff King, replied saying that he couldn't reproduce the
+  issue on Linux and wondered if it was related to using MacOS as its
+  HFS+ filesystem might do some unicode normalization. He said that it
+  might alternatively be related to the shortening code in
+  `shorten_unambiguous_ref()` treating the names as bytes instead of
+  characters. Another possibility he mentioned was that the shortening
+  code, which used `scanf()`, was assuming that the resulting string
+  could not be longer than the input, but that this might be wrong
+  when some unicode normalization and locale are used.
+
+  Eric Sunshine replied to Peff saying he was able to reproduce the
+  bug on MacOS 10.13 (while Mengzi used MacOS 13.2), but that it
+  didn't appear to be related to HFS+ unicode normalization as the on
+  disk bytes of the branch name he got were the same as what Peff got
+  on Linux.
+
+  Peff replied to Eric asking if he could test a patch that would add
+  debug output and allocate twice as much memory for the shortened
+  name that would store the output from `scanf()` than for the input
+  of that function. Peff said the debug output on his Linux machine
+  showed that the input was 39 bytes long while the output was 28.
+
+  Eric tested Peff's patch and initially reported 39 and 9 for the
+  input and output respectively. When setting `LANG=zh-CN.UTF-8`, he
+  got the same input and output lengths as Peff though, which pointed
+  to `scanf()` being indeed the culprit.
+
+  Junio Hamano, the Git maintainer, replied to Eric's findings saying
+  "Well, that's ... criminal." and wondering if setting `LANG` to
+  `$ANY_VALID_ONE.UTF-8` would work the same way.
+
+  This made Eric realize that the `zh-CN` language code he used was
+  invalid (it should have been `zh_CN`, so with an underscore
+  character instead of a dash). Eric anyway found out that using valid
+  LANG codes like `en_US`, `fr_FR`, `de_DE`, `ru_RU` and `zh_CN` gave
+  the 测试-? truncated output, while using `LANG=C` gave the correct
+  测试-加-增加-加-增加 output.
+
+  Junio, Peff and Eric discussed these results further wondering what
+  `scanf()` on MacOS could be doing wrong. Then Peff suggested
+  replacing the call to this function with some manual parsing, and
+  sent a sample in-email patch to do that.
+
+  Eric tested Peff's patch and reported that it looked correct, worked
+  nicely and fixed the issue. He also agreed with the approach of
+  getting rid of `scanf()` calls in general.
+
+  Peff then sent
+  [a regular small patch series](https://lore.kernel.org/git/Y+vVFFCRem6t4IGM@coredump.intra.peff.net/)
+  based on his previous patch which fixed a leak and made the changes
+  easier to follow.
+
+  Juni and Eric reviewed the series and then discussed with Peff a bug
+  Junio found in it. Then Peff sent
+  [a version 2](https://lore.kernel.org/git/Y+z3MtgayoXsxaHA@coredump.intra.peff.net/)
+  of the patch series that fixed the bug and added tests.
+
+  Torsten Bögershausen in the meantime tried to reproduce the original
+  bug and discussed how to do that with Eric. He also commented on the
+  new tests in the version 2 of the patch series as he found that it
+  wasn't clear in which context the bug could appear. Junio suggested
+  some clarifications that were approved by others. The resulting
+  patches were merged and included in the recent Git v2.40.0 release.
 
 <!---
 ## Developer Spotlight:
