@@ -191,6 +191,8 @@ __Light reading__
   (note that it is not about vulnerability in Git).<br>
   References [Securing Developer Tools: Git Integrations](https://www.sonarsource.com/blog/securing-developer-tools-git-integrations/)
   blog post.
++ [What the ML is up with DevSecOps and AI?](https://about.gitlab.com/blog/2023/03/16/what-the-ml-ai/)
+  by Taylor McCaslin on GitLab Blog.
 
 <!---
 __Easy watching__
