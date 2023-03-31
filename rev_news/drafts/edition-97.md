@@ -27,27 +27,27 @@ This edition covers what happened during the months of February 2023 and March 2
 
 ### Support
 
-* [bug report: symbolic-ref --short command echos the wrong text while use Chinese language](https://lore.kernel.org/git/CAGF3oAcCi+fG12j-1U0hcrWwkF5K_9WhOi6ZPHBzUUzfkrZDxA@mail.gmail.com/)
+* [Bug report: symbolic-ref --short command echos the wrong text while use Chinese language](https://lore.kernel.org/git/CAGF3oAcCi+fG12j-1U0hcrWwkF5K_9WhOi6ZPHBzUUzfkrZDxA@mail.gmail.com/)
 
   Mengzi Yi (孟子易) sent a bug report to the mailing list saying that
   when a Chinese name like 测试-加-增加-加-增加 was given to a branch,
-  then using `git symbolic-ref --short HEAD` on that branch didn't
-  give the right output (for example 测试-� instead of maybe 测试-加).
+  then calling `git symbolic-ref --short HEAD` on that branch didn't
+  result in the right output (for example 测试-� instead of maybe 测试-加).
 
   Peff, alias Jeff King, replied saying that he couldn't reproduce the
   issue on Linux and wondered if it was related to using MacOS as its
-  HFS+ filesystem might do some unicode normalization. He said that it
+  HFS+ filesystem might do some Unicode normalization. He said that it
   might alternatively be related to the shortening code in
   `shorten_unambiguous_ref()` treating the names as bytes instead of
   characters. Another possibility he mentioned was that the shortening
-  code, which used `scanf()`, was assuming that the resulting string
+  code, which uses `scanf()`, was assuming that the resulting string
   could not be longer than the input, but that this might be wrong
-  when some unicode normalization and locale are used.
+  when some Unicode normalization and locale were used.
 
   Eric Sunshine replied to Peff saying he was able to reproduce the
   bug on MacOS 10.13 (while Mengzi used MacOS 13.2), but that it
-  didn't appear to be related to HFS+ unicode normalization as the on
-  disk bytes of the branch name he got were the same as what Peff got
+  didn't appear to be related to HFS+ Unicode normalization as on disk
+  the bytes of the branch name he got were the same as what Peff got
   on Linux.
 
   Peff replied to Eric asking if he could test a patch that would add
@@ -68,11 +68,11 @@ This edition covers what happened during the months of February 2023 and March 2
   This made Eric realize that the `zh-CN` language code he used was
   invalid (it should have been `zh_CN`, so with an underscore
   character instead of a dash). Eric anyway found out that using valid
-  LANG codes like `en_US`, `fr_FR`, `de_DE`, `ru_RU` and `zh_CN` gave
-  the 测试-? truncated output, while using `LANG=C` gave the correct
+  LANG codes like `en_US`, `fr_FR`, `de_DE`, `ru_RU` and `zh_CN` resulted
+  in the 测试-? truncated output, while using `LANG=C` yielded the correct
   测试-加-增加-加-增加 output.
 
-  Junio, Peff and Eric discussed these results further wondering what
+  Junio, Peff and Eric discussed these results further, wondering what
   `scanf()` on MacOS could be doing wrong. Then Peff suggested
   replacing the call to this function with some manual parsing, and
   sent a sample in-email patch to do that.
@@ -83,7 +83,7 @@ This edition covers what happened during the months of February 2023 and March 2
 
   Peff then sent
   [a regular small patch series](https://lore.kernel.org/git/Y+vVFFCRem6t4IGM@coredump.intra.peff.net/)
-  based on his previous patch which fixed a leak and made the changes
+  based on his previous patch, which fixed a leak and made the changes
   easier to follow.
 
   Junio and Eric reviewed the series and then discussed with Peff a bug
@@ -142,7 +142,7 @@ __Various__
   by Taylor Blau on GitHub Blog.
 + [public-inbox.org/git to be downgraded](https://public-inbox.org/git/20230313225507.M626677@dcvr/T/)
   to a cheaper VPS.
-    + There is https://lore.kernel.org/git/ if there are problems with public-inbox\.org instance.
+    + There is [https://lore.kernel.org/git/](https://lore.kernel.org/git/) if there are problems with the public-inbox\.org instance.
 + [Unleash your potential with GitHub Octernships: a path to a thriving tech career](https://github.blog/2023-03-06-unleash-your-potential-with-github-octernships-a-path-to-a-thriving-tech-career/)
   by Arkodyuti Saha on GitHub Blog.
 + [Future-proofing Git repository maintenance](https://about.gitlab.com/blog/2023/03/20/scaling-repository-maintenance/)
@@ -155,7 +155,7 @@ __Light reading__
 + [Slice, Dice, and Squash Your Git Commit History](https://webdeveloperdiary.substack.com/p/slice-dice-and-squash-your-git-commit)
   by Anthony Fung on _Diary of a Web Developer_ Substack and 
   [on DEV.to](https://dev.to/ant_f_dev/slice-dice-and-squash-your-git-commit-history-2dk3)
-  is 3rd part in [The Secret of Tidy Git Repositories Series](https://dev.to/ant_f_dev/series/22124).
+  in part 3 of [The Secret of Tidy Git Repositories Series](https://dev.to/ant_f_dev/series/22124).
 + [Git fundamentals, a complete guide](https://dev.to/leandronsp/git-fundamentals-a-complete-guide-do7)
   by Leandro Proença on DEV\.to.<br>
   See also:
@@ -169,7 +169,7 @@ __Light reading__
 + [How to Reset a File or Commit in Git](https://www.freecodecamp.org/news/git-revert-how-to-reset-a-file-or-commit/)
   by Ihechikara Vincent Abba on freeCodeCamp.
 + [How atomic Git commits dramatically increased my productivity - and will increase yours too](https://dev.to/samuelfaure/how-atomic-git-commits-dramatically-increased-my-productivity-and-will-increase-yours-too-4a84)
-  by Samuel Faure on DEV\.to and [on Such Dev Blog](https://suchdevblog.com/lessons/AtomicGitCommits.html).
+  by Samuel Faure on DEV\.to and on [Such Dev Blog](https://suchdevblog.com/lessons/AtomicGitCommits.html).
 + [Working with Git in JetBrains' Rider IDE](https://andrewlock.net/working-with-git-in-jetbrains-rider/)
   by Andrew Lock on his .NET Escapades blog.
 + [GitHub Desktop 3.2 adds pull request preview – but is a GUI needed for Git?](https://devclass.com/2023/03/06/github-desktop-3-2-adds-pull-request-preview-but-is-a-gui-needed-for-git/)
@@ -178,18 +178,18 @@ __Light reading__
   by Zoumana Keita on DagsHub Blog.
     + See also links about data versioning
       in [previous Git Rev News](https://git.github.io/rev_news/2023/02/28/edition-96/).
-+ [A better git workflow?](https://discourse.julialang.org/t/a-better-git-workflow/95248)
-  proposal by uje on Julia Language Discourse forum.
++ [A better Git workflow?](https://discourse.julialang.org/t/a-better-git-workflow/95248)
+  proposal by uje on the Julia Language Discourse forum.
 + [Code Commit Guidelines using Conventional Commits](https://proandroiddev.com/code-commit-guidelines-using-conventional-commits-379321ce3785)
   by Pragnesh Ghoda on ProAndroidDev, a Medium blog.
-  The [Conventional Commits](https://www.conventionalcommits.org) specification
-  was first mentioned in [Git Rev News Edition #52](https://git.github.io/rev_news/2019/06/28/edition-52/).
+    + The [Conventional Commits](https://www.conventionalcommits.org) specification
+      was first mentioned in [Git Rev News Edition #52](https://git.github.io/rev_news/2019/06/28/edition-52/).
 
 <!-- Only tangentially related to Git -->
 + [Empowering weak primitives: file truncation to code execution with Git](https://www.sonarsource.com/blog/empowering-weak-primitives-file-truncation-to-code-execution-with-git/)
   by Thomas Chauchefoin on Sonar(Source) Blog
-  (note that it is not about vulnerability in Git).<br>
-  References [Securing Developer Tools: Git Integrations](https://www.sonarsource.com/blog/securing-developer-tools-git-integrations/)
+  (note that it is not about a vulnerability in Git).<br>
+  References the [Securing Developer Tools: Git Integrations](https://www.sonarsource.com/blog/securing-developer-tools-git-integrations/)
   blog post.
 + [What the ML is up with DevSecOps and AI?](https://about.gitlab.com/blog/2023/03/16/what-the-ml-ai/)
   by Taylor McCaslin on GitLab Blog.
@@ -205,43 +205,42 @@ __Git tools and sites__
   accepting it, especially for more complex changes. Those tools, as far as I
   understand it, do not take information from an issue tracker, or from
   code review comments attached to a pull request (or contained in a specialized
-  tool such as Gerrit) - so they cannot add this information to the proposed
-  commit message, they can only halucinate it.
+  tool such as Gerrit) -- so they cannot add this information to the proposed
+  commit message, they can only halucinate it.<br>
+  All tools listed here require an [API key from OpenAI](https://platform.openai.com/account/api-keys).
     + [OpenCommit](https://github.com/di-sukharev/opencommit)
-      is GPT CLI to auto-generate impressive commits in 1 second;
-      needs API key from [OpenAI](https://platform.openai.com/account/api-keys).
-      Uses [Conventional Commits](https://www.conventionalcommits.org),
-      can use [GitMoji](https://gitmoji.dev/).
+      is a GPT CLI to auto-generate impressive commits in 1 second;
+      it uses [Conventional Commits](https://www.conventionalcommits.org),
+      and can use [GitMoji](https://gitmoji.dev/).
       Written as Node\.js CLI app.
         + See also [OpenCommit: GPT generates impressive commits in 1 second (open-source)](https://dev.to/disukharev/opencommit-gpt-cli-to-auto-generate-impressive-commits-in-1-second-46dh)
           by Dima Sukharev on DEV\.to.
     + [AI Commits](https://github.com/Nutlope/aicommits)
-      is a CLI app that writes your git commit messages for you with AI,
+      is a CLI app (`aicommits`) that writes your Git commit messages for you with AI,
       that can also be used as [`prepare-commit-msg` hook](https://git-scm.com/docs/githooks#_prepare_commit_msg).
-      Requires [API key from OpenAI](https://platform.openai.com/account/api-keys).
       Written as Node\.js v14+ CLI app.
-        + See also [AI generated git commit messages](https://dev.to/bdougieyo/ai-generated-git-commit-messages-4j7g)
+        + See also [AI generated Git commit messages](https://dev.to/bdougieyo/ai-generated-git-commit-messages-4j7g)
           by Brian Douglas on DEV\.to.
-    + [AI-Commit](https://github.com/nguyenvanduocit/ai-commit)
+    + [`ai-commit`](https://github.com/nguyenvanduocit/ai-commit)
       is a command line tool that uses [OpenAI](https://openai.com/)'s
       language generation capabilities to generate
       [conventional commit](https://www.conventionalcommits.org)
       messages for your Git repositories.  Written in Go.
     + [gptcommit](https://github.com/zurawiki/gptcommit) is
-      a git prepare-commit-msg [hook](https://git-scm.com/docs/githooks)
-      for authoring commit messages with the [OpenAI](https://openai.com/)'s GPT-3 language model.
+      a Git `prepare-commit-msg` [hook](https://git-scm.com/docs/githooks)
+      for authoring commit messages with [OpenAI](https://openai.com/)'s GPT-3 language model.
       Written in Rust.
         + Mentioned in [Git Rev News Edition #95](https://git.github.io/rev_news/2023/01/31/edition-95/);
           see also [an article](https://zura.wiki/post/never-write-a-commit-message-again-with-the-help-of-gpt-3/)
           about this tool there.
 
 + [Planar](https://www.useplanar.com/) is a Chrome extension
-  that adds features used internally by big tech to GitHub code review.
+  that adds features used internally by big tech to speed up and simplify GitHub code review.
     + See also [Planar - Add 10x features to GitHub code review](https://www.ycombinator.com/launches/ICU-planar-add-10x-features-to-github-code-review)
       by Eshan Agarwal on Y Combinator (Launch YC).
 + [Git for Computer Scientists](https://eagain.net/articles/git-for-computer-scientists/)
-  by Tommi Virtanen is a quick introduction to git internals for people
-  who are not scared by words like Directed Acyclic Graph.
+  by Tommi Virtanen is a quick introduction to Git internals for people
+  who are not scared by words like directed acyclic graph.
 + [Think Like (a) Git: a guide for the perplexed](https://think-like-a-git.net/)
   by Sam Livingston-Gray, intended for "advanced beginners" with Git
   to help them achieve some level of _Git enlightenment_.
