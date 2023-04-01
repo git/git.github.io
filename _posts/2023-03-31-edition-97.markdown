@@ -147,6 +147,10 @@ __Various__
   by Arkodyuti Saha on GitHub Blog.
 + [Future-proofing Git repository maintenance](https://about.gitlab.com/blog/2023/03/20/scaling-repository-maintenance/)
   by Patrick Steinhardt on GitLab blog.
++ [Notes from a video conference](https://lore.kernel.org/git/CAJoAoZm7147oH9ECr=y+OXonK5WSgc9H0b95sF7BhKjMn+oMZg@mail.gmail.com/)
+  on Thursday March 30 named
+  [libification eng discussion](https://lore.kernel.org/git/CAJoAoZ=KrnAWV3PpfBkYNs_KHFP5O2dVYOWY3jF=CM9+d89Dpg@mail.gmail.com/)
+  organized by Emily Shaffer are available.
 
 __Light reading__
 
