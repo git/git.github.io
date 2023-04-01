@@ -159,7 +159,7 @@ __Light reading__
 + [Slice, Dice, and Squash Your Git Commit History](https://webdeveloperdiary.substack.com/p/slice-dice-and-squash-your-git-commit)
   by Anthony Fung on _Diary of a Web Developer_ Substack and 
   [on DEV.to](https://dev.to/ant_f_dev/slice-dice-and-squash-your-git-commit-history-2dk3)
-  in part 3 of [The Secret of Tidy Git Repositories Series](https://dev.to/ant_f_dev/series/22124).
+  is 3rd part of [The Secret of Tidy Git Repositories Series](https://dev.to/ant_f_dev/series/22124).
 + [Git fundamentals, a complete guide](https://dev.to/leandronsp/git-fundamentals-a-complete-guide-do7)
   by Leandro Proença on DEV\.to.<br>
   See also:
