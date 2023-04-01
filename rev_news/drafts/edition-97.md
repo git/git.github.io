@@ -40,7 +40,7 @@ This edition covers what happened during the months of February 2023 and March 2
   might alternatively be related to the shortening code in
   `shorten_unambiguous_ref()` treating the names as bytes instead of
   characters. Another possibility he mentioned was that the shortening
-  code, which uses `scanf()`, was assuming that the resulting string
+  code, which used `scanf()`, was assuming that the resulting string
   could not be longer than the input, but that this might be wrong
   when some Unicode normalization and locale were used.
 
