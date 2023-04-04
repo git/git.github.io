@@ -159,7 +159,7 @@ __Light reading__
 + [Slice, Dice, and Squash Your Git Commit History](https://webdeveloperdiary.substack.com/p/slice-dice-and-squash-your-git-commit)
   by Anthony Fung on _Diary of a Web Developer_ Substack and 
   [on DEV.to](https://dev.to/ant_f_dev/slice-dice-and-squash-your-git-commit-history-2dk3)
-  is 3rd part of [The Secret of Tidy Git Repositories Series](https://dev.to/ant_f_dev/series/22124).
+  as 3rd part of [The Secret of Tidy Git Repositories Series](https://dev.to/ant_f_dev/series/22124).
 + [Git fundamentals, a complete guide](https://dev.to/leandronsp/git-fundamentals-a-complete-guide-do7)
   by Leandro Proença on DEV\.to.<br>
   See also:
@@ -206,7 +206,7 @@ __Git tools and sites__
 
 + There are a few tools that use GPT-3 / ChatGPT Large Language Model (LLM) to
   help write commit messages. Please read the proposed commit message before
-  accepting it, especially for more complex changes. Those tools, as far as I
+  accepting it, especially for more complex changes. Those tools, as far as we
   understand it, do not take information from an issue tracker, or from
   code review comments attached to a pull request (or contained in a specialized
   tool such as Gerrit) -- so they cannot add this information to the proposed
