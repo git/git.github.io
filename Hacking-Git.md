@@ -108,6 +108,8 @@ suggest improvements. Thanks!
 
 * [Philippe Blain's "Debugging Git" Gist](https://gist.github.com/phil-blain/17c67740bd26e66f4851fe0c07230ea4)
 
+* [Debugging test failure using gdb example](https://public-inbox.org/git/CAP8UFD3Bd4Af1XZ00VyuHnQs=MFrdUufKeePO1tyedWoReRjwQ@mail.gmail.com/)
+
 ## Tests
 
 * ["`t/README`"](https://github.com/git/git/blob/master/t/README)
