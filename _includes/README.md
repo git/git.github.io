@@ -1,41 +1,22 @@
-# About Git Developer Pages
+This is a website for information on Git development. If you stumbled into this
+by mistake, you may want:
+  - Information on running Git and links to download the latest version from
+    [HERE](https://git-scm.com/)
+  - Wiki that has historically contained developer information from
+    [HERE](https://git.wiki.kernel.org/index.php/Main_Page)
 
-This is a website to help Git Developers.
+These pages are intended to collect information useful to Git developers. This
+is also the web home of:
+  - the [Hacking Git](https://git.github.io/Hacking-Git/) page,
+  - the [Git Rev News newsletter](https://git.github.io/rev_news/),
+  - the [involvement of the Git project in mentoring
+    programs](https://git.github.io/General-Application-Information/) like
+    [Outreachy](https://www.outreachy.org/) and the [GSoC (Google Summer of
+    Code)](https://summerofcode.withgoogle.com/)
 
-It is NOT a place to discuss Git issues. Please see
-[git-scm.org's community page](https://git-scm.com/community)
-for information about bug reporting or interacting with the
-community.
-
-The pages are maintained by editing files in the
-[git/git.github.io](https://github.com/git/git.github.io) repository on
-GitHub. It is then published on the
-[https://git.github.io](https://git.github.io) GitHub page.
-
-It is meant to be edited collaboratively like a wiki, except that
-instead of a web form, you get to use a text editor and Git. What could
-be better?
-
-These pages also host the [Git Rev News](https://git.github.io/rev_news/),
-see the [About Git Rev News](https://git.github.io/rev_news/rev_news/) page.
-
-If you want push access, contact Christian Couder
-< <christian.couder@gmail.com> > or Taylor Blau < <me@ttaylorr.com> > and
-provide your GitHub username. You may also send patches by mail (and
-feel free to cc git@vger.kernel.org if appropriate).
-
-
-# Development
-
-* Make sure you've got ruby2 with dev-packages installed
-* `sudo gem install bundler`
-* Clone this repo
-* `sudo apt-get install zlib1g-dev` # ref [1]
-* `bundle install`
-* `bundle exec jekyll serve`
-* browse the site on http://localhost:4000
-
-Based on https://help.github.com/articles/using-jekyll-with-pages/
-
-[1] http://www.nokogiri.org/tutorials/installing_nokogiri.html#ubuntu___debian
-
+These pages are intended to be edited collaboratively (i.e., it is an
+alternative to us having a wiki, but one that is edited entirely via Git pushes.
+The [repository](https://github.com/git/git.github.io) could be found on GitHub.
+You could also send your changes as patches by email to Christian Couder <
+<christian.couder@gmail.com> > / Kaartic Sivaraam < <kaartic.sivaraam@gmail.com> >
+(and feel free to cc git@vger.kernel.org if appropriate).

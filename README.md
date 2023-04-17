@@ -11,6 +11,25 @@
   
 - These pages are intended to be edited collaboratively (i.e., it is an alternative to us having a wiki, but one that is edited entirely via Git pushes).
 
+  You could also send your changes as patches by email to Christian Couder < <christian.couder@gmail.com> > / Kaartic Sivaraam < <kaartic.sivaraam+git@gmail.com> > (and feel free to cc git@vger.kernel.org if appropriate).
+
+
+### Development
+
+If you wish to spin up the site locally, you could follow the steps below.
+
+* Make sure you've got ruby2 with dev-packages installed
+* `sudo gem install bundler`
+* Clone this repo
+* `sudo apt-get install zlib1g-dev` # [
+  [ref](http://www.nokogiri.org/tutorials/installing_nokogiri.html#ubuntu___debian)
+  ]
+* `bundle install`
+* `bundle exec jekyll serve`
+* browse the site on http://localhost:4000
+
+Based on https://help.github.com/articles/using-jekyll-with-pages/
+
 
 <br>
 
