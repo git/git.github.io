@@ -42,7 +42,7 @@ __Various__
 
 
 __Light reading__
-
++ [Git and GitHub for Designers](https://www.git-tower.com/blog/git-for-designers/) by Bruno Brito on Tower’s blog.
 <!---
 __Easy watching__
 -->
