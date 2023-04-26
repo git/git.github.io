@@ -35,6 +35,8 @@ This edition covers what happened during the months of March 2023 and April 2023
 
 ## Releases
 
++ Gitea [1.19.1](https://blog.gitea.io/2023/04/gitea-1.19.1-is-released/)
+
 
 ## Other News
 
