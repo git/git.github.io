@@ -97,6 +97,8 @@ __Light reading__
 + [GitHub Copilot for CLI makes Terminal scripting and Git as easy as asking a question](https://dev.to/codepo8/github-copilot-for-cli-makes-terminal-scripting-and-git-as-easy-as-asking-a-question-3m81)
   by Christian Heilmann on DEV\.to.
 
+<!-- next list -->
+
 + [sqlite-history: tracking changes to SQLite tables using triggers](https://simonwillison.net/2023/Apr/15/sqlite-history/)
   by Simon Willison on his Weblog.
 + [SmartCommit: A Graph-Based Interactive Assistant for Activity-Oriented Commits](https://www.cs.cmu.edu/~ckaestne/pdf/fse21_sc.pdf) \[PDF]
