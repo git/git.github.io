@@ -65,7 +65,7 @@ __Light reading__
   (with its own domain-specific programming language)
   used for making and checking models of other software.
 + [Avoiding the merge trap](https://lwn.net/Articles/926240/)
-  by Jonathan Corbet on LWN.net ([free preview](https://lwn.net/SubscriberLink/926240/7568dd3f6d66385f/);
+  by Jonathan Corbet on LWN.net
   describes how one should explain merges in pull requests sent to Linus Torvalds.
 + [Notes on graphics programming and version control](https://tyler.cafe/graphics-and-versions)
   Tyler Angert on tyler\.cafe blog.
