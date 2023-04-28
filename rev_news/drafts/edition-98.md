@@ -25,9 +25,99 @@ This edition covers what happened during the months of March 2023 and April 2023
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [Suspected git grep regression in git 2.40.0](https://lore.kernel.org/git/7E83DAA1-F9A9-4151-8D07-D80EA6D59EEA@clumio.com/)
+
+  Stephane Odul reported that running the following command:
+
+  `git grep -cP '^\w+ = json.load'`
+
+  on some files of a private repo started failing consistently with an
+  exit code of -11 in Git v2.40.0 while it worked with previous Git
+  versions.
+
+  Bagas Sanjaya replied to Stephane asking him if he could use `git
+  bisect` between v2.39.0 and v2.40.0 to see which commit in Git's
+  history broke the feature.
+
+  Junio Hamano, the Git maintainer, thought the issue might have been
+  created by a recent change in how Git uses the
+  [PCRE2 library](https://www.pcre.org/). This change made Git try to
+  run PCRE2's JIT (Just In Time) compiler on a sample pattern and fall
+  back to not using the JIT compiler if it failed.
+
+  Junio said it could alternatively be that the version of the PCRE2
+  library linked to v2.40 has been updated compared to the one in
+  previous Git versions, but asked if it made a difference to disable
+  the JIT compiler by prefixing the pattern with `(*NO_JIT)`.
+
+  Mathias Krause, who had worked on PCRE2 related issues recently,
+  replied that another commit with the subject "grep: correctly
+  identify utf-8 characters with \{b,w} in -P" seemed more suspect to
+  him as it was about both the `-P` option and the `\w` pattern.
+
+  Looking at the diff of that commit, Mathias found that it added the
+  `PCRE2_UCP` flag to the PCRE2 library call when an UF8 locale was
+  used, and that PCRE2 had a PCRE2_ERROR_UTF8_ERR9 (-11) error code
+  described with "5th-byte's two top bits are not 0x80" that matched
+  the exit code of -11 that Stephane got.
+
+  Mathias then asked Stephane if a file in his repo might contain
+  invalid UTF-8 output, and suggested testing this using the following
+  command:
+
+  ```
+  $ iconv -f UTF-8 your_file > /dev/null && echo OK || echo "Not valid"
+  ```
+
+  Stephane replied that he created a custom pipeline to try to
+  reproduce the issue and found that restricting the `git grep`
+  command to Python files (using `'*.py'`) was a good workaround, and
+  that the issue was likely related to other files in "various
+  formats, including potentially some binaries that would definitely
+  not be proper UTF-8". He also noted that using `(*NO_JIT)` as
+  suggested by Junio prevented the issue but slowed down the command a
+  lot for some different patterns.
+
+  Mathias, in the meantime, was able to reproduce the error on the Git
+  repo. He got a segfault and also a backtrace under gdb, but the
+  backtrace was very short and without any debug symbols so he
+  supposed that it happened in the call stack of PCRE2's JIT
+  compiler. Looking at the memory mapping and the instructions also
+  seemed to point to a JIT compiler bug.
+
+  Mathias then reverted the commit that added the `PCRE2_UCP` flag to
+  the PCRE2 library call, and found that it fixed the bug, which
+  confirmed his early suspicion about that commit.
+
+  Stephane thanked Mathias for his great work and left saying he was
+  happy with the workaround he had found and did not believe there was
+  much more he could contribute to the issue.
+
+  Mathias replied to his previous email saying he had found "an
+  interesting entry in the PCRE2's changelog for version 10.35":
+
+  https://github.com/PCRE2Project/pcre2/blob/pcre2-10.35/ChangeLog#L66:
+
+  "17. Fix a crash which occurs when the character type of an invalid UTF
+  character is decoded in JIT."
+
+  He concluded that it was needed to implement "yet another quirk to
+  handle these broken versions", and came up with an in-email patch
+  that was not using the `PCRE2_UCP` flag when Git was compiled to
+  link to a PCRE2 version lower than 10.35. He wondered though if it
+  was better to just revert the commit that had introduced the
+  `PCRE2_UCP` flag.
+
+  Junio replied to Mathias by first thanking him for "all the
+  investigation and a prompt fix" and then saying that the approach in
+  his patch was more sensible than reverting the commit. He suggested
+  a small code change though.
+
+  Mathias agreed with Junio's suggestion and sent
+  [a version 2 of his patch](https://lore.kernel.org/git/20230323172539.25230-1-minipli@grsecurity.net/)
+  that was then merged into the `master` branch.
 
 <!---
 ## Developer Spotlight:
