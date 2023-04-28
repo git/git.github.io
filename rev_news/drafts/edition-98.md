@@ -35,8 +35,26 @@ This edition covers what happened during the months of March 2023 and April 2023
 
 ## Releases
 
++ Git [2.40.1 and friends](https://public-inbox.org/git/xmqqa5yv3n93.fsf@gitster.g/)
++ Git for Windows [2.40.1(1)](https://github.com/git-for-windows/git/releases/tag/v2.40.1.windows.1)
++ libgit2 [1.6.4](https://github.com/libgit2/libgit2/releases/tag/v1.6.4)
++ GitLab [15.11](https://about.gitlab.com/releases/2023/04/22/gitlab-15-11-released/)
+[15.10.4](https://about.gitlab.com/releases/2023/04/21/gitlab-15-10-4-15-9-5-released/),
+[15.7.9](https://about.gitlab.com/releases/2023/04/20/gitlab-15-7-9-released/),
+[15.8.6](https://about.gitlab.com/releases/2023/04/19/gitlab-15-8-6-released/),
+[15.10.3](https://about.gitlab.com/releases/2023/04/14/gitlab-15-10-3-released/),
+[15.10.2](https://about.gitlab.com/releases/2023/04/05/gitlab-15-10-2-released/),
+[15.10.1](https://about.gitlab.com/releases/2023/03/30/security-release-gitlab-15-10-1-released/)
++ Bitbucket Server [8.9](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
 + Gitea [1.19.1](https://blog.gitea.io/2023/04/gitea-1.19.1-is-released/)
-
++ GitHub Enterprise [3.8.2](https://help.github.com/enterprise-server@3.8/admin/release-notes#3.8.2),
+[3.5.16](https://help.github.com/enterprise-server@3.5/admin/release-notes#3.5.16),
+[3.7.9](https://help.github.com/enterprise-server@3.7/admin/release-notes#3.7.9),
+[3.6.12](https://help.github.com/enterprise-server@3.6/admin/release-notes#3.6.12)
++ GitKraken [9.3.0](https://help.gitkraken.com/gitkraken-client/current/)
++ GitHub Desktop [3.2.2](https://desktop.github.com/release-notes/),
+[3.2.1](https://desktop.github.com/release-notes/)
++ git-credential-oauth [0.6.0](https://github.com/hickford/git-credential-oauth/releases/tag/v0.6.0)
 
 ## Other News
 
