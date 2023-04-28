@@ -34,7 +34,6 @@ This edition covers what happened during the months of March 2023 and April 2023
 -->
 
 ## Releases
-
 + Git [2.40.1 and friends](https://public-inbox.org/git/xmqqa5yv3n93.fsf@gitster.g/)
 + Git for Windows [2.40.1(1)](https://github.com/git-for-windows/git/releases/tag/v2.40.1.windows.1)
 + libgit2 [1.6.4](https://github.com/libgit2/libgit2/releases/tag/v1.6.4)
@@ -162,4 +161,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from XXX.
+with help from Bruno Brito.
