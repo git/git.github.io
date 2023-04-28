@@ -43,7 +43,7 @@ This edition covers what happened during the months of March 2023 and April 2023
 [15.8.6](https://about.gitlab.com/releases/2023/04/19/gitlab-15-8-6-released/),
 [15.10.3](https://about.gitlab.com/releases/2023/04/14/gitlab-15-10-3-released/),
 [15.10.2](https://about.gitlab.com/releases/2023/04/05/gitlab-15-10-2-released/),
-[15.10.1](https://about.gitlab.com/releases/2023/03/30/security-release-gitlab-15-10-1-released/)
+[15.10.1, 15.9.4, and 15.8.5](https://about.gitlab.com/releases/2023/03/30/security-release-gitlab-15-10-1-released/)
 + Bitbucket Server [8.9](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
 + Gitea [1.19.1](https://blog.gitea.io/2023/04/gitea-1.19.1-is-released/)
 + GitHub Enterprise [3.8.2](https://help.github.com/enterprise-server@3.8/admin/release-notes#3.8.2),
