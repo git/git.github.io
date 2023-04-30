@@ -29,7 +29,7 @@ This edition covers what happened during the months of March 2023 and April 2023
 
 * [Suspected git grep regression in git 2.40.0](https://lore.kernel.org/git/7E83DAA1-F9A9-4151-8D07-D80EA6D59EEA@clumio.com/)
 
-  Stephane Odul reported that running the following command:
+  Stephane Odul reported that running the command
 
   `git grep -cP '^\w+ = json.load'`
 
@@ -45,10 +45,10 @@ This edition covers what happened during the months of March 2023 and April 2023
   created by a recent change in how Git uses the
   [PCRE2 library](https://www.pcre.org/). This change made Git try to
   run PCRE2's JIT (Just In Time) compiler on a sample pattern and fall
-  back to not using the JIT compiler if it failed.
+  back to not using the JIT compiler if the attempt failed.
 
   Junio said it could alternatively be that the version of the PCRE2
-  library linked to v2.40 has been updated compared to the one in
+  library linked to v2.40 had been updated compared to the one in
   previous Git versions, but asked if it made a difference to disable
   the JIT compiler by prefixing the pattern with `(*NO_JIT)`.
 
@@ -58,10 +58,10 @@ This edition covers what happened during the months of March 2023 and April 2023
   him as it was about both the `-P` option and the `\w` pattern.
 
   Looking at the diff of that commit, Mathias found that it added the
-  `PCRE2_UCP` flag to the PCRE2 library call when an UF8 locale was
-  used, and that PCRE2 had a PCRE2_ERROR_UTF8_ERR9 (-11) error code
-  described with "5th-byte's two top bits are not 0x80" that matched
-  the exit code of -11 that Stephane got.
+  `PCRE2_UCP` flag to the PCRE2 library call when an UTF-8 locale was
+  used, and that PCRE2 had a `PCRE2_ERROR_UTF8_ERR9` (-11) error code
+  described as "5th-byte's two top bits are not 0x80" that matched
+  the exit code of -11 which Stephane got.
 
   Mathias then asked Stephane if a file in his repo might contain
   invalid UTF-8 output, and suggested testing this using the following
@@ -78,28 +78,26 @@ This edition covers what happened during the months of March 2023 and April 2023
   formats, including potentially some binaries that would definitely
   not be proper UTF-8". He also noted that using `(*NO_JIT)` as
   suggested by Junio prevented the issue but slowed down the command a
-  lot for some different patterns.
+  lot for some patterns.
 
   Mathias, in the meantime, was able to reproduce the error on the Git
   repo. He got a segfault and also a backtrace under gdb, but the
-  backtrace was very short and without any debug symbols so he
+  backtrace was very short and without any debug symbols, so he
   supposed that it happened in the call stack of PCRE2's JIT
   compiler. Looking at the memory mapping and the instructions also
   seemed to point to a JIT compiler bug.
 
   Mathias then reverted the commit that added the `PCRE2_UCP` flag to
   the PCRE2 library call, and found that it fixed the bug, which
-  confirmed his early suspicion about that commit.
+  confirmed his earlier suspicion about that commit.
 
   Stephane thanked Mathias for his great work and left saying he was
   happy with the workaround he had found and did not believe there was
   much more he could contribute to the issue.
 
   Mathias replied to his previous email saying he had found "an
-  interesting entry in the PCRE2's changelog for version 10.35":
-
-  https://github.com/PCRE2Project/pcre2/blob/pcre2-10.35/ChangeLog#L66:
-
+  interesting entry in the PCRE2's changelog for version 10.35":<br/>
+  <https://github.com/PCRE2Project/pcre2/blob/pcre2-10.35/ChangeLog#L66>:<br/>
   "17. Fix a crash which occurs when the character type of an invalid UTF
   character is decoded in JIT."
 
@@ -192,8 +190,8 @@ __Light reading__
   with proper escaping, on Simon Willison’s TILs (Today I've Learned).
 + [Quickly formatting a stack of commits](https://blog.waleedkhan.name/formatting-a-commit-stack/)
   by Waleed Khan on Steno & PL personal blog.
-  It uses `git test` command from [git-branchless](https://github.com/arxanas/git-branchless)
-  suite of tools, which suite was first mentioned 
+  It uses the `git test` command from the [git-branchless](https://github.com/arxanas/git-branchless)
+  suite of tools, which was first mentioned 
   in [Git Rev News Edition #76](https://git.github.io/rev_news/2021/06/27/edition-76/).
 + [How to Install GitQlient on Your Synology NAS](https://mariushosting.com/how-to-install-gitqlient-on-your-synology-nas/)
   by Marius Bogdan Lixandru on his personal blog: Marius Hosting.
@@ -210,14 +208,14 @@ __Light reading__
   by Simon Willison on his Weblog.
 + [SmartCommit: A Graph-Based Interactive Assistant for Activity-Oriented Commits](https://www.cs.cmu.edu/~ckaestne/pdf/fse21_sc.pdf) \[PDF]
   ([DOI:10.1145/3468264.3468551](https://doi.org/10.1145/3468264.3468551)) describes
-  graph-partitioning-based interactive tool to help split tangled changeset.
-  The paper is accompanied by the [code for core algorithm](https://github.com/Symbolk/SmartCommitCore)
+  a graph-partitioning-based interactive tool to help split tangled changesets.
+  The paper is accompanied by the [code for the core algorithm](https://github.com/Symbolk/SmartCommitCore)
   of SmartCommit, a [demo GUI client](https://github.com/Symbolk/SmartCommit),
   and [dataset and the visualization scripts](https://github.com/Symbolk/SmartCommitEvaluation-Viz)
-  used in the article.  There since have been since other similar research conducted,
+  used in the article.  Since then, similar research studies have been conducted,
   like [ComUnt](https://doi.org/10.1145/3545258.3545267)
   and [UTango](https://doi.org/10.1145/3540250.3549171),
-  which cite SmartCommit article.
+  which cite the SmartCommit article.
 
 <!---
 __Easy watching__
@@ -231,9 +229,9 @@ __Git tools and sites__
   This list was originally a clone of 
   [StackOverflow - List of Freely Available Programming Books](https://web.archive.org/web/20140606191453/http://stackoverflow.com/questions/194812/list-of-freely-available-programming-books/392926).
   Has a dynamic webpage for searching the list at 
-  <https://ebookfoundation.github.io/free-programming-books-search/>
+  <https://ebookfoundation.github.io/free-programming-books-search/>.
 + [GitQlient](https://github.com/francescmm/GitQlient) is a multi-platform Git client written with Qt,
-  originally forked from [QGit](https://github.com/tibirna/qgit)
+  originally forked from [QGit](https://github.com/tibirna/qgit).
 + [Gut](https://gut-cli.dev/) is a user-friendly Git CLI for Windows, Mac, and GNU/Linux.
   Written in Go, still in alpha stage of development.
 + [srcsnap](http://srcsnap.glitch.me/) ([repository](https://github.com/LingDong-/srcsnap))
@@ -242,7 +240,7 @@ __Git tools and sites__
   on [Future Sketches](https://www.media.mit.edu/groups/future-sketches/overview/)
   MIT Media Lab group blog.
 + [diff2html](https://github.com/rtfpessoa/diff2html) is a JavaScript library
-  that generates pretty HTML diffs from git diff or unified diff output.
+  that generates pretty HTML diffs from `git diff` or unified `diff` output.
 
 ## Credits
 
