@@ -35,6 +35,7 @@ This edition covers what happened during the months of April 2023 and May 2023.
 
 ## Releases
 
++ Tower for Mac [9.3](https://www.git-tower.com/release-notes/mac?show_tab=release-notes) ([blog post](https://www.git-tower.com/blog/tower-mac-93/))
 
 ## Other News
 
