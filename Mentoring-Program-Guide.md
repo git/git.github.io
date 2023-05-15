@@ -56,6 +56,17 @@ abilities and dedication. A good example is Matheus' GSoC blog posts:
 
 [Matheus Tavares' GSoC posts](https://matheustavares.gitlab.io/tags/gsoc/)
 
+Tip: It's better if you can decide the day for your weekly blog post
+as soon as you set up you blog. Then tell your mentor about that day
+right away, and try as much as possible to post every week on that
+day. This will help establish a routine, that will make things easier
+for both you and your mentors.
+
+Tip: It's also better if you can prepare the content of your weekly
+blog post during the week as you are working on your project. This way
+it can also serve you as a todo list, a notebook, a list of current
+issues, etc.
+
 ## Regular updates
 
 Mentors should be regularly updated about your work, so they can know
