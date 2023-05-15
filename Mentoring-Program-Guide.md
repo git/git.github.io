@@ -342,13 +342,127 @@ A few things that you might want to do are:
 
 - Don't forget using [RFC] or [WIP], if it's relevant.
 
+# Resources, rules, documentation and links
+
+We encourage you to get as much help as you can from your mentors and
+the Git community according to the suggestions in the "Communication"
+section above.
+
+Nevertheless you are also welcome to get help in many different ways
+that might not be mentioned above. Such help can come from the
+community, its people, tools, documentation or websites, as well as
+other people, tools or websites. You have to do most of the actual
+work and follow some rules though.
+
+The following sections list some of these resources (people, tools,
+documentation, websites, etc.), sometimes along with suggestions about
+when they might be useful.
+
+Some of these resources are also important as they can help you learn
+about the rules.
+
+## People
+
+When communicating with other people, we encourage you to keep your
+mentors (or perhaps the whole community) in the loop though, if
+possible.
+
+  - Individual contributors
+
+    When someone contributed to something very relevant to your work,
+    you might want to privately ask for help from them as they might
+    know more and might be able to help you better than your mentors
+    in some areas of your work.
+
+  - Org Admins (people responsible for Git being involved in the
+    mentoring program)
+
+    They could be useful if, for example, you, along perhaps with your
+    mentors, want to extend or change the duration of your mentoring
+    program (if it is allowed by the mentoring program).
+
+  - Mentoring Program organizers
+
+    If you have issues related to the mentoring program, you can
+    likely reach out to them.
+
+  - Git PLC (Project Leadership Committee) members
+
+    They are responsible for communicating with the
+    [Software Freedom Conservancy](https://sfconservancy.org/),
+    which is Git's parent nonprofit organization. They are also
+    responsible for enforcing Git's Code of Conduct, especially on the
+    Git mailing list.
+
+## Important community documentation and rules
+
+Please read, and try to keep in mind, the important documentation
+below:
+
+  - [Git's Code of Conduct](https://github.com/git/git/blob/master/CODE_OF_CONDUCT.md)
+
+    This can be useful if others' behavior annoys you or if your
+    behavior might annoy other people.
+
+  - [Git's SubmittingPatches doc](https://github.com/git/git/blob/master/Documentation/SubmittingPatches)
+
+    This documentation contains the
+    [Developer's Certificate of Origin, or DCO for short](https://github.com/git/git/blob/master/Documentation/SubmittingPatches#L227-L263),
+    which you have to know about when contributing to Git.
+
+  - [Git's license](https://github.com/git/git/blob/master/COPYING)
+
+    It makes sure that Git, and the contribution you make to it, are
+    free and open source software. You also have to know about it to
+    fully make sense of the DCO above.
+
+## Other community websites
+
+Please take a quick tour of those websites, if you haven't already, to
+know about all the resources that they make available to you.
+
+Also note that you are very much encouraged to contribute to improving
+these sites during your mentoring program. It's very much appreciated,
+as it shows that you care about those who will come after you, even if
+it's not part of your main work.
+
+  - [Git Developer Pages](https://git.github.io/)
+
+    This is the home of this very documentation and Git's mentoring
+    program related documentation. It also contains the
+    [Hacking-Git page](https://git.github.io/Hacking-Git/)
+    which has a number of helpful links.
+
+    This website is maintained through
+    [its GitHub repo](https://github.com/git/git.github.io).
+
+  - [Git Documentation website](https://git-scm.com/)
+
+    This is the main Git website, with Git reference documentation
+    automatically generated from the
+    [Documentation folder](https://github.com/git/git/tree/master/Documentation)
+    of the Git repo, as well as a free book, and general information
+    about Git, including community information.
+
+    This website is maintained through
+    [its GitHub repo](https://github.com/git/git-scm.com).
+
+## Other links
+
+  - [Outreachy website](https://www.outreachy.org)
+
+  - [GSoC website](https://summerofcode.withgoogle.com)
+
 # Conclusion
 
 Hope you got an idea about how things usually go during the mentoring
-period of a mentoring program such as GSoC or Outreachy. As a reminder,
-don't be surprised if your mentors ask for things that are a bit different
-than what is described here. Typically your mentors will expect that you
-become more autonomous over time and will adjust things depending on
-how autonomous you already are.
+period of a mentoring program such as GSoC or Outreachy. Hope you are
+also aware of the people, communication means and resources available
+to help you, as well as the rules you have to follow.
+
+As a reminder, don't be surprised if your mentors ask for things that
+are a bit different than what is described here. Typically your
+mentors will expect that you become more autonomous over time and will
+adjust things depending on how autonomous you already are.
 
 Wishing you luck during your mentoring period!
