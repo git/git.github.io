@@ -27,7 +27,7 @@ This edition covers what happened during the months of April 2023 and May 2023.
 
 ### Support
 
-+ [Weird behavior of 'git log --before' or 'git log --date-order'](https://lore.kernel.org/git/7728e059-d58d-cce7-c011-fbc16eb22fb9@cs.uni-saarland.de/)
++ [Weird behavior of `git log --before` or `git log --date-order`](https://lore.kernel.org/git/7728e059-d58d-cce7-c011-fbc16eb22fb9@cs.uni-saarland.de/)
 
   Thomas Bock reported an issue in
   [a LibreOffice repository](https://github.com/LibreOffice/core)
@@ -43,8 +43,8 @@ This edition covers what happened during the months of April 2023 and May 2023.
   Git bug.
 
   Peff, alias Jeff King, thanked Thomas "for providing a clear example
-  and reproduction recipe", and pointed out that the commits that
-  appear to be from before 1980 were "malformed, but only
+  and reproduction recipe" and pointed out that the commits that
+  appeared to be from before 1980 were "malformed, but only
   slightly". It appeared that their "author" and "committer" headers
   contained something like:
 
@@ -52,35 +52,35 @@ This edition covers what happened during the months of April 2023 and May 2023.
 
   instead of simply:
 
-  `Firstname Lastname<firstname.lastname@example.com> 1297247749 +0100`
+  `Firstname Lastname <firstname.lastname@example.com> 1297247749 +0100`
 
-  so with an extra weird set of angle brackets.
+  that is, with an extra weird set of angle brackets.
 
   Peff also found that there were two different code paths for commit
   parsing and they behaved differently when there was an extra set of
-  angle brackets. One, which is used to fill in the fields of a
-  `struct commit`, only parses the "parents", "tree", and "committer
-  timestamp" fields. For that last field, it's using the
-  parse_commit_date() function which stops at the first `>` and then
-  tries to parse the rest of the line as a timestamp, which fails and
-  returns a 0 timestamp if there is a second `>`.
+  angle brackets. One, which was used to fill in the fields of a
+  `struct commit`, only parsed the "parents", "tree", and "committer
+  timestamp" fields. For that last field, it was using the
+  `parse_commit_date()` function which stopped at the first '>' and then
+  tried to parse the rest of the line as a timestamp, which failed and
+  returned a 0 timestamp if there was a second '>'.
 
-  The other code path, used when the commit is displayed, calls the
-  split_ident_line() function to parse the "author" and "committer"
-  headers, but this function is trying to find the last '>' in these
-  headers instead of the first one, which yields the correct timestamp
-  when there are two or more '>'.
+  The other code path, used when the commit was displayed, called the
+  `split_ident_line()` function to parse the "author" and "committer"
+  headers, but this function was trying to find the last '>' in these
+  headers instead of the first one, which yielded the correct timestamp
+  when there were two or more '>'.
 
-  Peff then suggested a patch to make parse_commit_date() behave like
-  split_ident_line() and find the last '>' instead of the first
+  Peff then suggested a patch to make `parse_commit_date()` behave like
+  `split_ident_line()` and find the last '>' instead of the first
   one. He also discussed other possible ways to fix the issue,
-  including doing nothing as the commits are indeed malformed.
+  including doing nothing as the commits were indeed malformed.
 
   Kristoffer Haugsbakk replied to Peff saying he was using a tool
-  called [git repair](https://git-repair.branchable.com) to try to fix
-  the original repo. But Peff said he wasn't sure git repair would be
+  called [`git repair`](https://git-repair.branchable.com) to try to fix
+  the original repo. But Peff said he wasn't sure `git repair` would be
   able to fix it. He mentioned that
-  [git filter-repo](https://github.com/newren/git-filter-repo) or other
+  [`git filter-repo`](https://github.com/newren/git-filter-repo) or other
   tools would be able to fix it, but would require the commit history
   to be rewritten, which might not be "worth it for a minor problem
   like this".
@@ -92,7 +92,7 @@ This edition covers what happened during the months of April 2023 and May 2023.
 
   Peff suggested carrying on with git-filter-repo's
   `--commit-callback` option, or alternatively piping `git
-  fast-export` through sed, and then back to `git fast-import`, as he
+  fast-export` through `sed`, and then back to `git fast-import`, as he
   was almost certain `git log` would properly work if the repo was
   fixed.
 
@@ -114,7 +114,7 @@ This edition covers what happened during the months of April 2023 and May 2023.
   broken values stored in those files.
 
   Peff also discussed modifying the commit-graph code so that when a 0
-  timestamp is recorded for a commit, this commit is parsed again, but
+  timestamp was recorded for a commit, this commit would be parsed again, but
   thought it might not be worth the effort. Derrick Stolee discussed
   this idea too, but agreed with Peff saying "this seems like quite a
   big hammer for a small case".
@@ -129,7 +129,7 @@ This edition covers what happened during the months of April 2023 and May 2023.
   Peff then sent
   [a first version of a small patch series](https://lore.kernel.org/git/20230422134150.GA3516940@coredump.intra.peff.net/)
   to properly fix the parsing of the broken commits and to fix another
-  parsing bug he found in the same parse_commit_date() function.
+  parsing bug he found in the same `parse_commit_date()` function.
 
   Junio reviewed Peff's patches and made a few suggestions, mostly
   about code comments. Peff took them into account and sent
@@ -138,21 +138,21 @@ This edition covers what happened during the months of April 2023 and May 2023.
   code comments.
 
   Phillip Wood then wondered if it would be better to not use
-  strtoumax(3) to parse timestamps as this standard C library function
-  is using the standard isspace(3) while we are using our own version
-  of isspace(3) which is different. Possible issues with strtoumax(3)
+  `strtoumax`(3) to parse timestamps as this standard C library function
+  is using the standard `isspace`(3) while we are using our own version
+  of `isspace`(3) which is different. Possible issues with strtoumax(3)
   could also be related to different characters being considered
   digits than in our code. This kind of issues come from the fact that
-  strtoumax(3), like many other standard C library function is taking
+  `strtoumax`(3), like many other standard C library functions, is taking
   the current
   [locale](https://en.wikipedia.org/wiki/Locale_(computer_software))
   into account.
 
   After some discussions between Peff, Phillip and Junio, Peff sent
   [a version 3 of his patch series](https://lore.kernel.org/git/20230427081330.GA1461786@coredump.intra.peff.net/)
-  with small changes. Especially the new version makes sure we reject
+  with small changes. Especially the new version makes sure Git rejects
   timestamps that start with a character that we don't consider a
-  whitespace or a digit or the `-` character before using strtoumax(3)
+  whitespace or a digit or the '-' character before using `strtoumax`(3)
   as this was considered enough to avoid issues related to this
   function.
 
@@ -186,7 +186,7 @@ This edition covers what happened during the months of April 2023 and May 2023.
 [16.0](https://about.gitlab.com/releases/2023/05/22/gitlab-16-0-released/),
 [15.11.5](https://about.gitlab.com/releases/2023/05/19/gitlab-15-11-5-released/),
 [15.11.4](https://about.gitlab.com/releases/2023/05/17/gitlab-15-11-4-released/),
-[15.11.3, 15.10.7, 15.9.8](https://about.gitlab.com/releases/2023/05/10/security-release-gitlab-15-11-3-released/),
+[15.11.3, 15.10.7, and 15.9.8](https://about.gitlab.com/releases/2023/05/10/security-release-gitlab-15-11-3-released/),
 [15.11.2, 15.10.6, and 15.9.7](https://about.gitlab.com/releases/2023/05/05/critical-security-release-gitlab-15-11-2-released/),
 [15.11.1, 15.10.5, and 15.9.6](https://about.gitlab.com/releases/2023/05/02/security-release-gitlab-15-11-1-released/)
 + GitKraken [9.4.0](https://help.gitkraken.com/gitkraken-client/current/)
