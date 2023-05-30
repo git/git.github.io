@@ -192,7 +192,7 @@ This edition covers what happened during the months of April 2023 and May 2023.
 + GitKraken [9.4.0](https://help.gitkraken.com/gitkraken-client/current/)
 + GitHub Desktop [3.2.3](https://desktop.github.com/release-notes/)
 + Sourcetree [4.2.3](https://product-downloads.atlassian.com/software/sourcetree/ReleaseNotes/Sourcetree_4.2.3.html)
-+ Tower for Mac [9.3](https://www.git-tower.com/release-notes/mac?show_tab=release-notes) ([blog post](https://www.git-tower.com/blog/tower-mac-93/))
++ Tower for Mac [9.3, 9.4](https://www.git-tower.com/release-notes/mac?show_tab=release-notes) ([9.4 blog post](https://www.git-tower.com/blog/tower-mac-94/))
 + git-credential-oauth [0.7.0](https://github.com/hickford/git-credential-oauth/releases/tag/v0.7.0)
 
 ## Other News
