@@ -211,6 +211,8 @@ __Various__
 
 __Light reading__
 
+* [Modeling Git Internals in Alloy, Part 3: Operations on Blobs and Trees](https://bytes.zone/posts/modeling-git-internals-in-alloy-part-3-operations-on-blobs-and-trees/)
+  by Brian Hicks on bytes\.zone continues the series of articles from [previous edition](https://git.github.io/rev_news/2023/04/30/edition-98/).
 * [Why I prefer trunk-based development](https://trishagee.com/2023/05/29/why-i-prefer-trunk-based-development/)
   by Trisha Gee.
     * This article references [Perceived Barriers to Trunk Based Development](https://www.davefarley.net/?p=269)
@@ -232,10 +234,20 @@ __Light reading__
   and [Diversion](https://www.diversion.dev/) (cloud SCM, in beta).
 * [9 best GitHub [Android App] alternatives in 2023](https://www.androidpolice.com/best-github-alternatives/)
   by Charnita Fance on Android Police.
+* [Git Merge – The Definitive Guide](https://www.freecodecamp.org/news/the-definitive-guide-to-git-merge/)
+  by Omer Rosenbaum on freeCodeCamp.
 * [Undo a [published] commit in Git](https://www.30secondsofcode.org/git/s/undo-commit-without-rewriting-history/)
   by Angelos Chalaris on 30 Seconds of Code.
 * [Git Best Practices – A Guide to Version Control for Beginners](https://www.freecodecamp.org/news/how-to-use-git-best-practices-for-beginners/)
   by Adekola Olawale on freeCodeCamp.
+* [Common Git Issues and How to Troubleshoot Them](https://dev.to/abdelrahmanallam/common-git-issues-and-how-to-troubleshoot-them-3jmd)
+  by Abdelrahman Mohamed Allam on DEV\.to, part of the
+  [Mastering Git: Essential and Advanced Commands for Developers](https://dev.to/abdelrahmanallam/series/22744) series.
+* [The Power of Pre-Commit for Python Developers: Tips and Best Practices](https://dev.to/techishdeep/maximize-your-python-efficiency-with-pre-commit-a-complete-but-concise-guide-39a5)
+  by Deep Singh on DEV\.to.
+    * [Pre-Commit](https://pre-commit.com) framework for managing and maintaining
+      multiple multi-language pre-commit hooks (written as Python module) was first mentioned
+      in [Git Rev News Edition #45](https://git.github.io/rev_news/2018/11/21/edition-45/).
 * [Creating effective pull requests](https://madhadron.com/programming/effective_pull_requests.html),
   by madhadron (Frederick J. Ross).
 * [How to Make your [Python] Code Shine with GitLab CI Pipelines](https://medium.com/semantixbr/how-to-make-your-code-shine-with-gitlab-ci-pipelines-48ade99192d1)
@@ -246,6 +258,18 @@ __Light reading__
   by Drew DeVault on Drew DeVault's blog (2022).
     * See also for example [The advantages of an email-driven git workflow](https://drewdevault.com/2018/07/02/Email-driven-git.html)
       by Drew DeVault, mentioned in [Git Rev News Edition #41](https://git.github.io/rev_news/2018/07/18/edition-41/).
+* [Connect to multiple Git accounts of the same vendor (GitHub, Gitlab) portal](https://dev.to/mahadikrahul/connect-to-multiple-git-accounts-of-the-same-vendor-github-gitlab-portal-33l4)
+  by Rahul Mahadik on DEV\.to, originally guest-published at [theonetechnologies.com](https://theonetechnologies.com/blog/post/connect-to-multiple-git-accounts-of-the-same-vendor-github-gitlab-portal).
+* [Database branching: three-way merge for schema changes](https://planetscale.com/blog/database-branching-three-way-merge-schema-changes):
+  Learn how PlanetScale uses Git-like three-way diff to resolve schema change conflicts across database branches.
+  Article by Shlomi Noach on PlanetScale Blog.
+    * You can find few tools to help version-control database schemas
+      in [Git Rev News Edition #60](https://git.github.io/rev_news/2020/02/19/edition-60/);
+      you can also find there [another article](https://github.blog/2020-02-14-automating-mysql-schema-migrations-with-github-actions-and-more/) by Shlomi Noach.
+    * In [Git Rev News Edition #82](https://git.github.io/rev_news/2021/12/30/edition-82/)
+      you can find articles about different ways version control and databases connect,
+      and tools that can version control database schema (perform database migrations),
+      or version control queries, or version data within schema, etc.
 * [Version Control Your ML (Machine Learning) Model Deployment With Git using Modelbit](https://towardsdatascience.com/version-control-your-ml-model-deployment-with-git-using-modelbit-1b3d76411436)
   by Avi Chawla, published in Towards Data Science, a Medium blog.
 * [GitOps - Operations by Pull Request](https://www.weave.works/blog/gitops-operations-by-pull-request) (2017)
@@ -313,6 +337,14 @@ __Git tools and sites__
   Source code on GitHub: [jcubic/git](https://github.com/jcubic/git).
     * [isomorphic-git](https://isomorphic-git.org/) was first mentioned in
       [Git Rev News Edition #40](https://git.github.io/rev_news/2018/06/20/edition-40/).
+* [schemadiff](https://vitess.io/blog/2023-04-24-schemadiff/)
+  is a declarative, programmatic library in Vitess
+  that can produce a diff in SQL format of two entities:
+  tables, views, or full blown database schemas.
+    * Compare [sqldiff.exe](https://www.sqlite.org/sqldiff.html),
+      which is a command-line utility program (Windows binary)
+      that displays content differences between two SQLite databases.
+      Mentioned in [Git Rev News Edition #87](https://git.github.io/rev_news/2022/05/26/edition-87/).
 
 
 ## Credits
