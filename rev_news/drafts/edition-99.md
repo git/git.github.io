@@ -202,11 +202,67 @@ __Various__
 
 __Light reading__
 
-<!---
-__Easy watching__
--->
+* [Why I prefer trunk-based development](https://trishagee.com/2023/05/29/why-i-prefer-trunk-based-development/)
+  by Trisha Gee.
+    * This article references [Perceived Barriers to Trunk Based Development](https://www.davefarley.net/?p=269)
+      by Dave Farley on his weblog (2018).
+    * You can find more about this workflow
+      on [Trunk Based Development](https://trunkbaseddevelopment.com/) site,
+      first mentioned in [Git Rev News Edition #24](https://git.github.io/rev_news/2017/02/22/edition-24/).
+    * Martin Fowler describes advantages and disadvantages of trunk-based development versus feature branches
+      in [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html)
+      (biased towards better support for Continuous Integration),
+      mentioned first in [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/).
+    * For the other side of this discussion, see for example
+      [Working with Feature Branches](https://www.git-tower.com/blog/working-with-feature-branches/)
+      by Bruno Brito on Tower’s blog, mentioned in
+      [Git Rev News Edition #88](https://git.github.io/rev_news/2022/06/30/edition-88/).
+* [Undo a [published] commit in Git](https://www.30secondsofcode.org/git/s/undo-commit-without-rewriting-history/)
+  by Angelos Chalaris on 30 Seconds of Code.
+* [Git Best Practices – A Guide to Version Control for Beginners](https://www.freecodecamp.org/news/how-to-use-git-best-practices-for-beginners/)
+  by Adekola Olawale on freeCodeCamp.
+* [How to Make your [Python] Code Shine with GitLab CI Pipelines](https://medium.com/semantixbr/how-to-make-your-code-shine-with-gitlab-ci-pipelines-48ade99192d1)
+  by fernanda rodríguez on Medium.
+* [CI/CD with KiCad and GitLab](https://sschueller.github.io/posts/ci-cd-with-kicad-and-gitlab/)
+  by Stefan Schüller on his blog (on GitHub Pages).
+* [Code review at the speed of email](https://drewdevault.com/2022/07/25/Code-review-with-aerc.html)
+  by Drew DeVault on Drew DeVault's blog (2022).
+    * See also for example [The advantages of an email-driven git workflow](https://drewdevault.com/2018/07/02/Email-driven-git.html)
+      by Drew DeVault, mentioned in [Git Rev News Edition #41](https://git.github.io/rev_news/2018/07/18/edition-41/).
+* [Version Control Your ML (Machine Learning) Model Deployment With Git using Modelbit](https://towardsdatascience.com/version-control-your-ml-model-deployment-with-git-using-modelbit-1b3d76411436)
+  by Avi Chawla, published in Towards Data Science, a Medium blog.
+* [GitOps - Operations by Pull Request](https://www.weave.works/blog/gitops-operations-by-pull-request) (2017)
+  and [What Is GitOps](https://www.weave.works/blog/what-is-gitops-really) (2018)
+  by Alex on Weaveworks blog.
+    * [Another article](https://www.weave.works/blog/kubernetes-anti-patterns-let-s-do-gitops-not-ciops)
+      from Weaveworks about GitOps can be found
+      in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/) (2018).
+    * You can find more about GitOps / GitDevOps on
+      [GitOps.tech](https://www.gitops.tech/) and [OpenGitOps](https://opengitops.dev/) sites,
+      first mentioned in [Git Rev News Edition #62](https://git.github.io/rev_news/2020/04/23/edition-62/)
+      and [#94](https://git.github.io/rev_news/2022/12/31/edition-94/), respectively.
+      
+<!-- Humor -->
+* [BranchGPT: The AI-Powered Solution to Branch Names](https://stateful.com/blog/branchgpt-ai-powered-branch-names)
+  by Sebastian Tiedtke on Stateful\.com blog (_Tongue-in-cheek_ over the top take on AI).
+
+
+__Easy watching and listening__
+
+* [For those who just don’t Git it (The Stack Overflow Podcast | Ep. 573)](https://stackoverflow.blog/2023/05/23/for-those-who-just-dont-git-it-ep-573/)
+  where Pierre-Étienne Meunier, creator and lead developer
+  of open-source version control system [Pijul](https://pijul.org/)
+  (mentioned in [Git Rev News Edition #9](https://git.github.io/rev_news/2015/11/11/edition-9/),
+  [#24](https://git.github.io/rev_news/2017/02/22/edition-24/) and
+  [#38](https://git.github.io/rev_news/2018/04/18/edition-38/)),
+  talks about version control, functional programming, and OCaml.
+
 
 __Git tools and sites__
+
+* [Bytebase](https://www.bytebase.com/) - database schema change and version control
+  (the GitLab for Database DevOps): web-based collaboration workspace to help DBAs
+  and developers manage the database development lifecycle.
 
 
 ## Credits
