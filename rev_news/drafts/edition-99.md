@@ -199,6 +199,15 @@ This edition covers what happened during the months of April 2023 and May 2023.
 
 __Various__
 
+* [GitHub code search is generally available](https://github.blog/2023-05-08-github-code-search-is-generally-available/)
+  by Colin Merkel on GitHub Blog.
+    * See also [A brief history of code search at GitHub](https://github.blog/2021-12-15-a-brief-history-of-code-search-at-github/)
+      in [Git Rev News Edition #82](https://git.github.io/rev_news/2021/12/30/edition-82/), and
+      [The technology behind GitHub’s new code search](https://github.blog/2023-02-06-the-technology-behind-githubs-new-code-search/)
+      in [edition #96](https://git.github.io/rev_news/2023/02/28/edition-96/).
+    * [GitHub’s New Code Search is Bad for Finding Code](https://stackdiary.com/githubs-new-code-search-is-bad/)
+      by Alex Ivanovs on Stackdiary (complaining about lack of sort by _new_).
+
 
 __Light reading__
 
@@ -217,10 +226,18 @@ __Light reading__
       [Working with Feature Branches](https://www.git-tower.com/blog/working-with-feature-branches/)
       by Bruno Brito on Tower’s blog, mentioned in
       [Git Rev News Edition #88](https://git.github.io/rev_news/2022/06/30/edition-88/).
+* [5 Version-Control Systems that Game Developers Should Know About](https://thenewstack.io/5-version-control-tools-game-developers-should-know-about/)
+  by Sharone Zitzman on The New Stack.
+  Those 5 VCS are: Git, Perforce, Plastic SCM (now Unity Version Control),
+  and [Diversion](https://www.diversion.dev/) (cloud SCM, in beta).
+* [9 best GitHub [Android App] alternatives in 2023](https://www.androidpolice.com/best-github-alternatives/)
+  by Charnita Fance on Android Police.
 * [Undo a [published] commit in Git](https://www.30secondsofcode.org/git/s/undo-commit-without-rewriting-history/)
   by Angelos Chalaris on 30 Seconds of Code.
 * [Git Best Practices – A Guide to Version Control for Beginners](https://www.freecodecamp.org/news/how-to-use-git-best-practices-for-beginners/)
   by Adekola Olawale on freeCodeCamp.
+* [Creating effective pull requests](https://madhadron.com/programming/effective_pull_requests.html),
+  by madhadron (Frederick J. Ross).
 * [How to Make your [Python] Code Shine with GitLab CI Pipelines](https://medium.com/semantixbr/how-to-make-your-code-shine-with-gitlab-ci-pipelines-48ade99192d1)
   by fernanda rodríguez on Medium.
 * [CI/CD with KiCad and GitLab](https://sschueller.github.io/posts/ci-cd-with-kicad-and-gitlab/)
@@ -241,6 +258,25 @@ __Light reading__
       [GitOps.tech](https://www.gitops.tech/) and [OpenGitOps](https://opengitops.dev/) sites,
       first mentioned in [Git Rev News Edition #62](https://git.github.io/rev_news/2020/04/23/edition-62/)
       and [#94](https://git.github.io/rev_news/2022/12/31/edition-94/), respectively.
+* [4 Core Principles of GitOps](https://thenewstack.io/4-core-principles-of-gitops/) by Alex Williams, and
+  [GitOps as an Evolution of Kubernetes](https://thenewstack.io/gitops-as-an-evolution-of-kubernetes/) by Steven J. Vaughan-Nichols
+  on The New Stack.
+* [Reproducible Data Dependencies for Python [with Quilt]](https://blog.jupyter.org/reproducible-data-dependencies-for-python-guest-post-d0f68293a99),
+  a guest post by Aneesh Karve published in Jupyter Blog (Medium-based blog).
+    * [DagsHub](https://dagshub.com/), a web platform for storing, versioning and managing data (data hub),
+      similar to [Quilt Data](https://quiltdata.com/) mentioned in this blog post,
+      was mentioned in various articles linked to in 
+      [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/),
+      [#85](https://git.github.io/rev_news/2022/03/31/edition-85/),
+      [#96](https://git.github.io/rev_news/2023/02/28/edition-96/), and
+      tangentially in [#97](https://git.github.io/rev_news/2023/02/28/edition-96/).
+    * See also links about data versioning in
+      [Git Rev News Edition #96](https://git.github.io/rev_news/2023/02/28/edition-96/).
+* [GitHub Copilot X CLI is your new GIT assistant](https://dev.to/this-is-learning/github-copilot-x-cli-is-your-new-git-assistant-1edn)
+  by Leonardo Montini for This is Learning, a part 3 in [GitHub Copilot X (5 Part Series)](https://dev.to/balastrong/series/23030)
+  on DEV\.to.  Originally published at [leonardomontini.dev](https://leonardomontini.dev/copilot-x-git-cli/).
+    * Similar article, [GitHub Copilot for CLI makes Terminal scripting and Git as easy as asking a question](https://dev.to/codepo8/github-copilot-for-cli-makes-terminal-scripting-and-git-as-easy-as-asking-a-question-3m81)
+      can be found in [Git Rev News Edition #98](https://git.github.io/rev_news/2023/04/30/edition-98/).
       
 <!-- Humor -->
 * [BranchGPT: The AI-Powered Solution to Branch Names](https://stateful.com/blog/branchgpt-ai-powered-branch-names)
@@ -263,6 +299,20 @@ __Git tools and sites__
 * [Bytebase](https://www.bytebase.com/) - database schema change and version control
   (the GitLab for Database DevOps): web-based collaboration workspace to help DBAs
   and developers manage the database development lifecycle.
+* [Quilt Data](https://quiltdata.com/) is a self-organizing data hub,
+  consisting of a Python API, web catalog, and backend to manage data sets in AWS S3.
+  The backend service is based on open-source [Quilt](https://github.com/quiltdata/quilt)
+  Python package ([documentation](https://docs.quiltdata.com/).
+  The development of [jupyterlab-quilt](https://github.com/quiltdata/jupyterlab)
+  extension seems to be stalled, though.
+* [GitOps Principles v0.1.0](https://github.com/open-gitops/documents/blob/v0.1.0/PRINCIPLES.md)
+  published by [OpenGitOps](https://opengitops.dev/)
+* [GIT Web Terminal](https://git-terminal.js.org/) (Git in your browser)
+  was created using [isomorphic-git](https://github.com/isomorphic-git/isomorphic-git)
+  (a pure JavaScript implementation of git for node and browsers).
+  Source code on GitHub: [jcubic/git](https://github.com/jcubic/git).
+    * [isomorphic-git](https://isomorphic-git.org/) was first mentioned in
+      [Git Rev News Edition #40](https://git.github.io/rev_news/2018/06/20/edition-40/).
 
 
 ## Credits
