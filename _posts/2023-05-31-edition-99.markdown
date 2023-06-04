@@ -234,7 +234,7 @@ __Light reading__
       [Git Rev News Edition #88](https://git.github.io/rev_news/2022/06/30/edition-88/).
 * [5 Version-Control Systems that Game Developers Should Know About](https://thenewstack.io/5-version-control-tools-game-developers-should-know-about/)
   by Sharone Zitzman on The New Stack.
-  Those 5 VCS are: Git, Perforce, Plastic SCM (now Unity Version Control),
+  Those 5 VCSs are: Git, Perforce, Plastic SCM (now Unity Version Control), SVN,
   and [Diversion](https://www.diversion.dev/) (cloud SCM, in beta).
 * [9 best GitHub [Android App] alternatives in 2023](https://www.androidpolice.com/best-github-alternatives/)
   by Charnita Fance on Android Police.
@@ -293,7 +293,7 @@ __Light reading__
   a guest post by Aneesh Karve published in Jupyter Blog (Medium-based blog).
     * [DagsHub](https://dagshub.com/), a web platform for storing, versioning and managing data (data hub),
       similar to [Quilt Data](https://quiltdata.com/) mentioned in this blog post,
-      was mentioned in various articles linked to in 
+      was mentioned in various articles linked to in
       [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/),
       [#85](https://git.github.io/rev_news/2022/03/31/edition-85/),
       [#96](https://git.github.io/rev_news/2023/02/28/edition-96/), and
@@ -334,7 +334,7 @@ __Git tools and sites__
   The development of [jupyterlab-quilt](https://github.com/quiltdata/jupyterlab)
   extension seems to be stalled, though.
 * [GitOps Principles v0.1.0](https://github.com/open-gitops/documents/blob/v0.1.0/PRINCIPLES.md)
-  published by [OpenGitOps](https://opengitops.dev/)
+  published by [OpenGitOps](https://opengitops.dev/).
 * [GIT Web Terminal](https://git-terminal.js.org/) (Git in your browser)
   was created using [isomorphic-git](https://github.com/isomorphic-git/isomorphic-git)
   (a pure JavaScript implementation of git for node and browsers).
