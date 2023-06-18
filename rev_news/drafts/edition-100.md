@@ -17,9 +17,26 @@ This edition covers what happened during the months of May 2023 and June 2023.
 
 ## Discussions
 
-<!---
+
 ### General
--->
+
+- [Git participates in GSoC (Google Summer of Code) 2023](https://summerofcode.withgoogle.com/programs/2023/organizations/git)
+
+  The following two contributors have been officially accepted to work on Git
+  as part of the [GSoC 2023](https://summerofcode.withgoogle.com/):
+
+    - Kousik Sanagavarapu will work on the "[Unify ref-filter formats with other pretty formats](https://summerofcode.withgoogle.com/programs/2023/projects/rck3kmq2)"
+      project. Kousik will be co-mentored by Hariom Verma and Christian Couder.
+      Some details about his work on the project could found in [his blog](https://five-sh.github.io/blog).
+
+    - Shuqi Liang will work on the "[More Sparse Index Integrations](https://summerofcode.withgoogle.com/programs/2023/projects/Rkbc1Abe)"
+      project. Shuqi will be mentored by Victoria Dye.
+
+  Congratulations to the selected contributors!
+
+  Thanks also to the other contributors who applied and worked on micro-projects,
+  but couldn’t be selected! We hope to continue to see you in the community!
+
 
 <!---
 ### Reviews
