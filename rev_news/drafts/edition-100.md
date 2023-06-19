@@ -30,7 +30,8 @@ This edition covers what happened during the months of May 2023 and June 2023.
       Some details about his work on the project could found in [his blog](https://five-sh.github.io/blog).
 
     - Shuqi Liang will work on the "[More Sparse Index Integrations](https://summerofcode.withgoogle.com/programs/2023/projects/Rkbc1Abe)"
-      project. Shuqi will be mentored by Victoria Dye.
+      project. Shuqi will be mentored by Victoria Dye. Further details about
+      the project and updates on progress can be found on [Shuqi's blog](https://cheskaqiqi.github.io/tags/GSoC/).
 
   Congratulations to the selected contributors!
 
