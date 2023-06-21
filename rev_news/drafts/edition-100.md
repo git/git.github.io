@@ -126,7 +126,7 @@ This edition covers what happened during the months of May 2023 and June 2023.
 
 
 ## Releases
-
++ Tower for Windows [5.0](https://www.git-tower.com/release-notes/windows?show_tab=release-notes) ([blog post](https://www.git-tower.com/blog/tower-windows-5/))
 
 ## Other News
 
@@ -134,7 +134,8 @@ __Various__
 
 
 __Light reading__
-
++ [Setting Up SSH for Commit Signing](https://www.git-tower.com/blog/setting-up-ssh-for-commit-signing/) by Bruno Brito on Tower’s blog.
++ [Coming Up on Tower's Roadmap (2023)](https://www.git-tower.com/blog/coming-up-on-the-roadmap-2023/) by Bruno Brito on Tower’s blog.
 <!---
 __Easy watching__
 -->
