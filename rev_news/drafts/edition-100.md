@@ -39,9 +39,79 @@ This edition covers what happened during the months of May 2023 and June 2023.
   but couldn’t be selected! We hope to continue to see you in the community!
 
 
-<!---
+
 ### Reviews
--->
+
+* [[PATCH 0/6] strbuf cleanups](https://lore.kernel.org/git/20230502211454.1673000-1-calvinwan@google.com/)
+
+  Calvin Wan sent a 6 patch long series to clean up `strbuf` related
+  code. `strbuf` is a basic structure along with related functions,
+  implemented mostly in the "strbuf.c" and "strbuf.h" files, that is
+  used to manipulate character strings.
+
+  The issue was that over time some functions with dependencies to
+  other code had been added into those files, and Calvin's series
+  wanted to get rid of these dependencies "with the goal of eventually
+  being able to stand up `strbuf` as a library".
+
+  Most of the patches moved some functions to other files that were
+  using them, and one of them removed the use of environment
+  variables.
+
+  Junio Hamano, the Git maintainer, suggested that some functions that
+  are moved to other files should be renamed so that they don't start
+  with "strbuf_" anymore, as they are not really string manipulating
+  functions.
+
+  The series was also reviewed by Jeff King, Elijah Newren and Felipe
+  Contreras who overall liked it. They commented on some patches
+  mostly to add some historical context or to ask for some
+  clarifications.
+
+  Calvin sent
+  [a version 2 of the series](https://lore.kernel.org/git/20230503184849.1809304-1-calvinwan@google.com/)
+  that added a new patch at the beginning of the series to clarify the
+  purpose of the strbuf functions at the top of "strbuf.h". The other
+  changes in this version were small clarifications in the commit
+  messages of some patches or in code comments.
+
+  Junio commented on the last patch of the series though. This patch
+  was supposed to remove the use of environment variables according to
+  its subject, but was in fact removing the dependencies of strbuf
+  functions on the `comment_line_char` global variable and adding a
+  new parameter to those functions instead.
+
+  Calvin sent
+  [a new version of this patch](https://lore.kernel.org/git/20230503194201.2360016-1-calvinwan@google.com/)
+  calling it a v3 even though the other patches in the series were not
+  resent. Elijah reviewed this v2/v3 patch series and suggested some minor
+  changes in some commit messages.
+
+  Calvin then sent
+  [a version 4 of the series](https://lore.kernel.org/git/20230508165728.525603-1-calvinwan@google.com/)
+  with the commit message changes suggested by Elijah and Junio.
+
+  Both Eric Sunshine and Phillip Wood chimed in to comment on this
+  version. Eric suggested moving further up in "strbuf.h" the comment
+  added by the first patch of the series and making it clear that this
+  comment is for developers instead of mere users of the strbuf
+  functions. Phillip suggested simplifying the parameters of a
+  function where a new parameter was added by the last patch of the
+  series.
+
+  Calvin then sent
+  [a version 5 of the series](https://lore.kernel.org/git/20230511194446.1492907-1-calvinwan@google.com/)
+  that included the suggestions made by Eric and Phillip. Eric replied
+  with some further small comments about the first and last patches of
+  the series
+
+  Calvin then sent
+  [a version 6 of the series](https://lore.kernel.org/git/20230512171429.2202982-1-calvinwan@google.com/)
+  with Eric's suggestions, and a few weeks later
+  [a version 7 of the series](https://lore.kernel.org/git/20230606194720.2053551-1-calvinwan@google.com/)
+  to fix a few minor issues related to the release of Git v2.41.0 in
+  the meantime. It looks like this series will be merged to the
+  'master' branch soon though.
 
 <!---
 ### Support
