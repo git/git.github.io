@@ -126,7 +126,33 @@ This edition covers what happened during the months of May 2023 and June 2023.
 
 
 ## Releases
+
++ Git [2.41.0](https://public-inbox.org/git/xmqqleh3a3wm.fsf@gitster.g/)
++ Git for Windows [2.41.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.1)
++ GitHub Enterprise [3.8.5](https://help.github.com/enterprise-server@3.8/admin/release-notes#3.8.5),
+[3.7.12](https://help.github.com/enterprise-server@3.7/admin/release-notes#3.7.12),
+[3.6.15](https://help.github.com/enterprise-server@3.6/admin/release-notes#3.6.15),
+[3.5.19](https://help.github.com/enterprise-server@3.5/admin/release-notes#3.5.19),
+[3.9.0](https://help.github.com/enterprise-server@3.9/admin/release-notes#3.9.0),
+[3.8.4](https://help.github.com/enterprise-server@3.8/admin/release-notes#3.8.4),
+[3.7.11](https://help.github.com/enterprise-server@3.7/admin/release-notes#3.7.11),
+[3.6.14](https://help.github.com/enterprise-server@3.6/admin/release-notes#3.6.14),
+[3.5.18](https://help.github.com/enterprise-server@3.5/admin/release-notes#3.5.18)
++ GitLab [16.1](https://about.gitlab.com/releases/2023/06/22/gitlab-16-1-released/)
+[16.0.5](https://about.gitlab.com/releases/2023/06/16/gitlab-16-0-5-released/),
+[15.11.9](https://about.gitlab.com/releases/2023/06/15/gitlab-15-11-9-released/),
+[16.0.4](https://about.gitlab.com/releases/2023/06/08/gitlab-16-0-4-released/),
+[16.0.3](https://about.gitlab.com/releases/2023/06/07/gitlab-16-0-3-released/),
+[15.11.8](https://about.gitlab.com/releases/2023/06/07/gitlab-15-11-8-released/),
+[16.0.2](https://about.gitlab.com/releases/2023/06/05/security-release-gitlab-16-0-2-released/)
++ Bitbucket Server [8.11](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ GitKraken [9.5.1](https://help.gitkraken.com/gitkraken-client/current/),
+[9.5.0](https://help.gitkraken.com/gitkraken-client/current/)
++ GitHub Desktop [3.2.6](https://desktop.github.com/release-notes/),
+[3.2.5](https://desktop.github.com/release-notes/),
+[3.2.4](https://desktop.github.com/release-notes/)
 + Tower for Windows [5.0](https://www.git-tower.com/release-notes/windows?show_tab=release-notes) ([blog post](https://www.git-tower.com/blog/tower-windows-5/))
++ git-credential-oauth [0.8.0](https://github.com/hickford/git-credential-oauth/releases/tag/v0.8.0)
 
 ## Other News
 
