@@ -33,7 +33,7 @@ This edition covers what happened during the months of May 2023 and June 2023.
       project. Shuqi will be mentored by Victoria Dye. Further details about
       the project and updates on progress can be found on [Shuqi's blog](https://cheskaqiqi.github.io/tags/GSoC/).
 
-  Congratulations to the selected contributors!
+  Congratulations to the accepted contributors!
 
   Thanks also to the other contributors who applied and worked on micro-projects,
   but couldn’t be selected! We hope to continue to see you in the community!
@@ -59,25 +59,25 @@ This edition covers what happened during the months of May 2023 and June 2023.
   variables.
 
   Junio Hamano, the Git maintainer, suggested that some functions that
-  are moved to other files should be renamed so that they don't start
-  with "strbuf_" anymore, as they are not really string manipulating
+  were moved to other files should be renamed so that they don't start
+  with "strbuf_" anymore, as they were not really string manipulating
   functions.
 
   The series was also reviewed by Jeff King, Elijah Newren and Felipe
-  Contreras who overall liked it. They commented on some patches
+  Contreras, who overall liked it. They commented on some patches
   mostly to add some historical context or to ask for some
   clarifications.
 
   Calvin sent
   [a version 2 of the series](https://lore.kernel.org/git/20230503184849.1809304-1-calvinwan@google.com/)
   that added a new patch at the beginning of the series to clarify the
-  purpose of the strbuf functions at the top of "strbuf.h". The other
+  purpose of the `strbuf` functions at the top of "strbuf.h". The other
   changes in this version were small clarifications in the commit
   messages of some patches or in code comments.
 
   Junio commented on the last patch of the series though. This patch
   was supposed to remove the use of environment variables according to
-  its subject, but was in fact removing the dependencies of strbuf
+  its subject, but was in fact removing the dependencies of `strbuf`
   functions on the `comment_line_char` global variable and adding a
   new parameter to those functions instead.
 
@@ -92,18 +92,18 @@ This edition covers what happened during the months of May 2023 and June 2023.
   with the commit message changes suggested by Elijah and Junio.
 
   Both Eric Sunshine and Phillip Wood chimed in to comment on this
-  version. Eric suggested moving further up in "strbuf.h" the comment
-  added by the first patch of the series and making it clear that this
-  comment is for developers instead of mere users of the strbuf
+  version. Eric suggested moving the comment added by the first patch
+  of the series further up in "strbuf.h" and making it clear that this
+  comment is for developers instead of mere users of the `strbuf`
   functions. Phillip suggested simplifying the parameters of a
   function where a new parameter was added by the last patch of the
   series.
 
   Calvin then sent
   [a version 5 of the series](https://lore.kernel.org/git/20230511194446.1492907-1-calvinwan@google.com/)
-  that included the suggestions made by Eric and Phillip. Eric replied
+  which included the suggestions made by Eric and Phillip. Eric replied
   with some further small comments about the first and last patches of
-  the series
+  the series.
 
   Calvin then sent
   [a version 6 of the series](https://lore.kernel.org/git/20230512171429.2202982-1-calvinwan@google.com/)
@@ -151,7 +151,7 @@ This edition covers what happened during the months of May 2023 and June 2023.
   something in Git for a full year, what would it be?
 
   Transition the project to a new refs backend! There have been plenty of great
-  discussion around this--whether to go with the reftables backend or a new
+  discussions around this -- whether to go with the reftables backend or a new
   format of the packed-refs file. Swapping out the refs backend would be a huge
   undertaking, but well worth it, in my opinion.
 
@@ -172,12 +172,12 @@ This edition covers what happened during the months of May 2023 and June 2023.
 
   It can definitely be intimidating since the codebase is so storied and
   technically deep. My suggestion is to just dive in and get started with
-  something small--whether that be a documentation improvement or a code cleanup
+  something small -- whether that be a documentation improvement or a code cleanup
   marked with TODO. Also, keep an eye out for bug reports on the mailing list.
   Fixing bugs also gives you experience with different parts of the code base.
 
   Part of my intimidation is not knowing how people on the mailing list would
-  respond to my contributions. Experiencing how hepful people were, and the
+  respond to my contributions. Experiencing how helpful people were, and the
   overall warmth of the community removed a lot of the emotional barrier of
   contributing.
 
@@ -192,7 +192,7 @@ This edition covers what happened during the months of May 2023 and June 2023.
   Spend more time than you think you need to on crafting commit messages. It goes
   a long way to clearly state the need, and how the patch addresses the need.
 
-  Also, look for existing APIs in the codebase 😄
+  Also, look for existing APIs in the codebase 😄.
 
 
 ## Releases
