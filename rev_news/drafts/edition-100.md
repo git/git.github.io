@@ -222,6 +222,7 @@ This edition covers what happened during the months of May 2023 and June 2023.
 [3.2.5](https://desktop.github.com/release-notes/),
 [3.2.4](https://desktop.github.com/release-notes/)
 + Tower for Windows [5.0](https://www.git-tower.com/release-notes/windows?show_tab=release-notes) ([blog post](https://www.git-tower.com/blog/tower-windows-5/))
++ Tower for Mac [10.0](https://www.git-tower.com/release-notes/mac?show_tab=release-notes) ([blog post](https://www.git-tower.com/blog/tower-mac-10/))
 + git-credential-oauth [0.8.0](https://github.com/hickford/git-credential-oauth/releases/tag/v0.8.0)
 
 ## Other News
