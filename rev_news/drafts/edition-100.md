@@ -237,6 +237,10 @@ __Various__
   was first mentioned in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/).
 + [Coming Up on Tower's Roadmap (2023)](https://www.git-tower.com/blog/coming-up-on-the-roadmap-2023/)
   by Bruno Brito on Tower’s blog.
++ [Meet GitLab Duo, the suite of AI capabilities powering your workflows](https://about.gitlab.com/blog/2023/06/22/meet-gitlab-duo-the-suite-of-ai-capabilities/)
+  by David DeSanto on GitLab Blog.
++ [Crafting a better, faster GitHub Code View](https://github.blog/2023-06-21-crafting-a-better-faster-code-view/)
+  by Joshua Brown on GitHub Blog.
 
 
 __Light reading__
