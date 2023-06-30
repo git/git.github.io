@@ -273,9 +273,13 @@ __Light reading__
 + [How to use Meld as a difftool for Git?](https://dev.to/abbazs/how-to-use-meld-as-a-difftool-for-git-5ai3)
   by abbazs on DEV\.to.
   
-<!---
+
 __Easy watching__
--->
++ [2023-06-20 GitLab Gitaly Community Office Hours](https://www.youtube.com/watch?v=INvu3C5oZWE)
+  on GitLab Unfiltered channel on YouTube,
+  showing a live coding session developing a small feature in Git
+  (the video is around 1 hour long, and included subtitles in English).
+
 
 __Git tools and sites__
 + [git-sweep](https://github.com/arc90/git-sweep) is a command-line tool
