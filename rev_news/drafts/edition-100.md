@@ -15,6 +15,43 @@ subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/)
 
 This edition covers what happened during the months of May 2023 and June 2023.
 
+
+### Some statistics about ongoing first Git Rev News Readers Survey
+
+The [Git Rev News Reader Survey](https://survs.com/survey/jo07oxsaom) was announced
+in the [previous edition](https://git.github.io/rev_news/2023/05/31/edition-99/)
+with the goal to gather responses from the community to help improve Git Rev News.
+Unfortunately, there we got only 11 responses to the survey (among 250 visits).
+Compare this number to 3236 to 11498 responses to various Git User's Surveys...
+
+The results cannot be considered statistically significant, but here is what we have
+gathered so far:
+
++ Most enjoyed Git Rev News section was "Developer Spotlight (aka Interview)",
+  followed closely by "Discussions (General, Reviews, Support)".
+  Least enjoyed was the "Releases" section.
++ The order of Git Rev News section(s) agrees with readers expectations,
+  with the exception of the "Releases" section thougt to better be near bottom,
+  and the "Other News (aka Links)" to better be in the middle, swapping the
+  order of those two sections.
++ The survey gathered various interesting suggestions, among others:
+    + more developer (or even _user_) interviews,
+    + include brief description of what is in the link,
+    + interviews with some of authors of Git tools,
+    + include short articles about how to do source control and how Git is being used,
+    + or add an *editorial* piece to start off the newsletter,
+    + add an index of previous Git Rev News (e.g. 'who have we interviewed')
++ For the "Discussion" section the suggestion include adding headlines or subheadings,
+  having some images (e.g. diagrams or screenshots) where appropriate,
+  and adding TLDR summary of longer articles (or making article shorter).
++ There were an idea of providing a simple web form to suggest contributors to be interviewed.
++ [VonC](https://stackoverflow.com/users/6309/vonc) was suggested for an interview,
+  and Jeff King (aka peff) and Junio C. Hamano for re-interview.
+  
+There will be further analysis of the responses in the future.
+Thank very much all of you that participated in the Reader Survey.
+
+
 ## Discussions
 
 
