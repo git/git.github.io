@@ -235,10 +235,12 @@ __Various__
 + [The DVC 3.0 Stack: Beyond the Command Line](https://iterative.ai/blog/dvc-3.0-ml-experiments-data-versioning)
   by Dave Berenbaum on Iterative\.ai blog.  [DVC (Data Version Control)](https://dvc.org)
   was first mentioned in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/).
++ [Coming Up on Tower's Roadmap (2023)](https://www.git-tower.com/blog/coming-up-on-the-roadmap-2023/)
+  by Bruno Brito on Tower’s blog.
+
 
 __Light reading__
 + [Setting Up SSH for Commit Signing](https://www.git-tower.com/blog/setting-up-ssh-for-commit-signing/) by Bruno Brito on Tower’s blog.
-+ [Coming Up on Tower's Roadmap (2023)](https://www.git-tower.com/blog/coming-up-on-the-roadmap-2023/) by Bruno Brito on Tower’s blog.
 + [Applying GitOps principles to your operations](https://github.blog/2023-06-02-applying-gitops-principles-to-your-operations/)
   by Chris Reddington on GitHub blog.  GitOps set of practices was first mentioned
   in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/);
