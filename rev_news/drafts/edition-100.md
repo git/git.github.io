@@ -1,7 +1,7 @@
 ---
 title: Git Rev News Edition 100 (June 30th, 2023)
 layout: default
-date: 2023-06-28 12:06:51 +0100
+date: 2023-06-30 12:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
