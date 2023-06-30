@@ -242,7 +242,7 @@ __Light reading__
 + [Applying GitOps principles to your operations](https://github.blog/2023-06-02-applying-gitops-principles-to-your-operations/)
   by Chris Reddington on GitHub blog.  GitOps set of practices was first mentioned
   in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/);
-  [previous edition (#99)](https://git.github.io/rev_news/2023/05/31/edition-99/)
+  [the previous edition (#99)](https://git.github.io/rev_news/2023/05/31/edition-99/)
   includes many links about GitOps / GitDevOps.
 + [3 great Git alternatives: Fossil, Mercurial, and Subversion](https://www.infoworld.com/article/3699116/3-great-git-alternatives-fossil-mercurial-and-subversion.html)
   by Serdar Yegulalp on InfoWorld.
@@ -284,11 +284,11 @@ __Git tools and sites__
       (first mentioned in [Git Rev News Edition #69](https://git.github.io/rev_news/2020/11/27/edition-69/)),
       [nbdime](http://nbdime.readthedocs.io/) tool for diffing Jupyter notebooks
       (first mentioned in [edition #37](https://git.github.io/rev_news/2018/03/21/edition-37/)),
-      and [jupytext](https://github.com/mwouts/jupytext) tool for bi--directionally converting
+      and [jupytext](https://github.com/mwouts/jupytext) tool for bi-directionally converting
       Jupyter notebooks to plain text files as either Markdown files or Python scripts
       (also mentioned in edition #69).
 + [Awesome git addons](https://github.com/stevemao/awesome-git-addons)
-  is curated list of add-ons that extend/enhance the git CLI,
+  is a curated list of add-ons that extend/enhance the git CLI,
   though a bit out of date (last change is from October 2021).
 
 ## Credits
