@@ -228,17 +228,68 @@ This edition covers what happened during the months of May 2023 and June 2023.
 ## Other News
 
 __Various__
-
++ [Highlights from Git 2.41](https://github.blog/2023-06-01-highlights-from-git-2-41/)
+  by Taylor Blau on GitHub Blog.
++ [Git 2.41 release - Here are five of our contributions in detail](https://about.gitlab.com/blog/2023/06/20/contributions-to-latest-git-release/)
+  by John Cai on GitLab Blog.
++ [The DVC 3.0 Stack: Beyond the Command Line](https://iterative.ai/blog/dvc-3.0-ml-experiments-data-versioning)
+  by Dave Berenbaum on Iterative\.ai blog.  [DVC (Data Version Control)](https://dvc.org)
+  was first mentioned in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/).
 
 __Light reading__
 + [Setting Up SSH for Commit Signing](https://www.git-tower.com/blog/setting-up-ssh-for-commit-signing/) by Bruno Brito on Tower’s blog.
 + [Coming Up on Tower's Roadmap (2023)](https://www.git-tower.com/blog/coming-up-on-the-roadmap-2023/) by Bruno Brito on Tower’s blog.
++ [Applying GitOps principles to your operations](https://github.blog/2023-06-02-applying-gitops-principles-to-your-operations/)
+  by Chris Reddington on GitHub blog.  GitOps set of practices was first mentioned
+  in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/);
+  [previous edition (#99)](https://git.github.io/rev_news/2023/05/31/edition-99/)
+  includes many links about GitOps / GitDevOps.
++ [3 great Git alternatives: Fossil, Mercurial, and Subversion](https://www.infoworld.com/article/3699116/3-great-git-alternatives-fossil-mercurial-and-subversion.html)
+  by Serdar Yegulalp on InfoWorld.
+    + An article about [Fossil](https://fossil-scm.org/) did appear 
+      in [Git Rev News Edition #11](https://git.github.io/rev_news/2016/01/13/edition-11/),
+      but is nowadays unavailable except through the [Internet Archive](https://web.archive.org/web/20160304055320/https://blog.kotur.org/posts/fossil-keeps-more-than-just-your-code.html).
+    + In [Git Rev News Edition #87](https://git.github.io/rev_news/2022/05/26/edition-87/)
+      you can find referenced an article about
+      [Why SQLite Does Not Use Git](https://sqlite.org/whynotgit.html) but Fossil.
++ [Too Much Git? Try Gitless](https://hackaday.com/2023/06/18/too-much-git-try-gitless/)
+  by Bryan Cockfield on Hackaday.  [Gitless](http://gitless.com/) was first mentioned
+  in [Git Rev News Edition #20](https://git.github.io/rev_news/2016/10/19/edition-20/).
++ [How to Clean Up Your Local Repository with Git Commands](https://dev.to/this-is-learning/how-to-clean-up-your-local-repository-with-git-commands-531o)
+  by Emanuele Bartolesi for This is Learning on DEV\.to.
++ [Git Change Commit Message – How to Edit Commit Messages with Git Amend](https://www.freecodecamp.org/news/how-to-edit-git-commit-messages-with-git-amend/)
+  by Shittu Olumide on freeCodeCamp.
++ [Git: rebase VS merge (simple)](https://dev.to/kristiyan_velkov/git-rebase-vs-merge-simple-2e7e)
+  by Kristiyan Velkov on DEV\.to is a second part of his
+  [series of articles about Git](https://dev.to/kristiyan_velkov/series/23390).
++ [The Ultimate Guide to Writing Effective Commit Messages: Best Practices and Conventional Commits](https://skerritt.blog/writing-better-commit-messages/)
+  by Autumn Skerritt on her blog.
++ [How to use Meld as a difftool for Git?](https://dev.to/abbazs/how-to-use-meld-as-a-difftool-for-git-5ai3)
+  by abbazs on DEV\.to.
+  
 <!---
 __Easy watching__
 -->
 
 __Git tools and sites__
-
++ [git-sweep](https://github.com/arc90/git-sweep) is a command-line tool
+  that helps you clean up Git branches that have been merged into master.
+  Written in Python.
++ [databooks](https://databooks.dev/) is a package and a CLI tool
+  to ease the collaboration between data scientists using Jupyter notebooks,
+  by reducing the number of git conflicts between different notebooks
+  and resolution of git conflicts when encountered.
+    + Alternatives include [nbdev](https://nbdev.fast.ai/) tool that creates
+      programming environment out of Jupyter notebooks
+      (first mentioned in [Git Rev News Edition #69](https://git.github.io/rev_news/2020/11/27/edition-69/)),
+      [nbdime](http://nbdime.readthedocs.io/) tool for diffing Jupyter notebooks
+      (first mentioned in [edition #37](https://git.github.io/rev_news/2018/03/21/edition-37/)),
+      and [jupytext](https://github.com/mwouts/jupytext) tool for bi--directionally converting
+      Jupyter notebooks to plain text files as either Markdown files or Python scripts
+      (also mentioned in edition #69).
++ [Awesome git addons](https://github.com/stevemao/awesome-git-addons)
+  is curated list of add-ons that extend/enhance the git CLI,
+  though a bit out of date (last change is from October 2021).
 
 ## Credits
 
