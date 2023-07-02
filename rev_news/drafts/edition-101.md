@@ -36,7 +36,7 @@ This edition covers what happened during the months of June 2023 and July 2023.
 ## Other News
 
 __Various__
-
+- A [Git community](https://programming.dev/c/git) has been created in the programming.dev Lemmy instance.
 
 __Light reading__
 
