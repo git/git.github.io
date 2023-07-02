@@ -16,7 +16,7 @@ subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/)
 This edition covers what happened during the months of May 2023 and June 2023.
 
 
-### Some statistics about ongoing first Git Rev News Readers Survey
+### Some statistics about the ongoing first Git Rev News Readers Survey
 
 The [Git Rev News Reader Survey](https://survs.com/survey/jo07oxsaom) was announced
 in the [previous edition](https://git.github.io/rev_news/2023/05/31/edition-99/)
