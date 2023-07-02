@@ -40,7 +40,7 @@ gathered so far:
     + interviews with some authors of Git tools,
     + include short articles about how to do source control and how Git is being used,
     + add an *editorial* piece to start off the newsletter,
-    + add an index of previous Git Rev News (e.g. 'who have we interviewed').
+    + add an index of previous Git Rev News (e.g. 'whom we interviewed').
 + For the "Discussion" section the suggestions include adding headlines or subheadings,
   having some images (e.g. diagrams or screenshots) where appropriate,
   and adding a tl;dr summary to longer articles (or shortening them).
