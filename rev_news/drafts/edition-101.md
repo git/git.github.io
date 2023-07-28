@@ -161,7 +161,30 @@ __Git tools and sites__
 
 
 ## Releases
+
++ Git for Windows [2.41.0(3)](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3),
+[2.41.0(2)](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.2)
++ libgit2 [1.7.0](https://github.com/libgit2/libgit2/releases/tag/v1.7.0)
++ GitLab [15.11.13](https://about.gitlab.com/releases/2023/07/27/gitlab-15-11-13-released/)
+[16.2.1](https://about.gitlab.com/releases/2023/07/25/gitlab-16-2-1-released/),
+[16.2](https://about.gitlab.com/releases/2023/07/22/gitlab-16-2-released/),
+[15.11.12](https://about.gitlab.com/releases/2023/07/17/gitlab-15-11-12-released/),
+[16.1.2, 16.0.7, and 15.11.11](https://about.gitlab.com/releases/2023/07/05/security-release-gitlab-16-1-2-released/),
+[16.1.1, 16.0.6, and 15.11.10](https://about.gitlab.com/releases/2023/06/29/security-release-gitlab-16-1-1-released/)
++ Bitbucket Server [8.12](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ Gerrit Code Review [3.6.6](https://www.gerritcodereview.com/3.6.html#366),
+[3.7.4](https://www.gerritcodereview.com/3.7.html#374),
+[3.8.1](https://www.gerritcodereview.com/3.8.html#381)
++ GitHub Enterprise [3.9.1](https://help.github.com/enterprise-server@3.9/admin/release-notes#3.9.1),
+[3.8.6](https://help.github.com/enterprise-server@3.8/admin/release-notes#3.8.6),
+[3.7.13](https://help.github.com/enterprise-server@3.7/admin/release-notes#3.7.13),
+[3.6.16](https://help.github.com/enterprise-server@3.6/admin/release-notes#3.6.16),
+[3.9.0](https://help.github.com/enterprise-server@3.9/admin/release-notes#3.9.0)
++ GitKraken [9.6.0](https://help.gitkraken.com/gitkraken-client/current/)
++ GitHub Desktop [3.2.7](https://desktop.github.com/release-notes/)
 + Tower for Mac [10.1](https://www.git-tower.com/release-notes/mac?show_tab=release-notes)
++ git-credential-oauth [0.9.1](https://github.com/hickford/git-credential-oauth/releases/tag/v0.9.1),
+[0.9.0](https://github.com/hickford/git-credential-oauth/releases/tag/v0.9.0)
 
 ## Credits
 
