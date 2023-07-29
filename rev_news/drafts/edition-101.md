@@ -21,9 +21,111 @@ This edition covers what happened during the months of June 2023 and July 2023.
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
++ [[RFC PATCH 0/8] Introduce Git Standard Library](https://public-inbox.org/git/20230627195251.1973421-1-calvinwan@google.com/)
+
+  Calvin Wan sent a 8 patch long RFC series to the mailing list to
+  introduce a "Git Standard Library". This new library was intended to
+  be a base library for other Git libraries to build upon.
+
+  This followed previous effort from Calvin and Elijah Newren to
+  cleanup [headers](https://lore.kernel.org/git/pull.1525.v3.git.1684218848.gitgitgadget@gmail.com/)
+  and internal APIs like the
+  [`strbuf` API](https://lore.kernel.org/git/20230606194720.2053551-1-calvinwan@google.com/)
+  to manipulate character strings and the
+  [git-compat-util API](https://lore.kernel.org/git/20230606170711.912972-1-calvinwan@google.com/)
+  to provide wrapper compatibility functions masking OS differences.
+  It also followed previous
+  [discussions about turning parts of Git into libraries](https://lore.kernel.org/git/CAJoAoZ=Cig_kLocxKGax31sU7Xe4==BGzC__Bg2_pr7krNq6MA@mail.gmail.com/)
+  and the ongoing
+  [video conferences](https://lore.kernel.org/git/CAJoAoZmBFTi5SFRuG8uh4ZyGs7pKQTYQLzZAC82zh2pMSggX3A@mail.gmail.com/)
+  that are regularly hosted by Google about libifying Git.
+
+  Building Git already involves creating an internal library called
+  `libgit.a` that contains a lot of common code used by many Git
+  commands. The Git executable is then created by linking all the
+  object files for the Git sub-commands (like `git log`) and the `git`
+  command itself against `libgit.a` and a few external
+  dependencies. The goal with the new Git Standard Library, also
+  called `git-std-lib.a`, and the Git libification effort is to have a
+  number of small independent libraries (like `object-store.a`, and
+  `config.a`) all using `git-std-lib.a`. These small independent
+  libraries would also be linked together to form `libgit.a`, which
+  would then be used to create the Git executable like today. The
+  benefit would be that "if someone wanted their own custom build of
+  Git with their own custom implementation of the object store, they
+  would only have to swap out `object-store.a` rather than do a hard
+  fork of Git".
+
+  The new Git Standard Library is considered necessary for the
+  libification effort, because there are a number of circular and
+  ubiquitous dependencies that are very difficult to untangle and it
+  probably wouldn't be worth it to untangle them. As the libification
+  effort doesn't promise stability of interfaces though, it would
+  still be possible to extract some small libraries from
+  `git-std-lib.a` later if there is ever a need to be able to swap
+  them out.
+
+  Calvin noted that a pitfall of this series was the introduction of
+  `#ifdef GIT_STD_LIB` preprocessor instructions to stub out some code
+  and hide some function headers. He asked for comments about how it
+  would be possible to avoid those instructions which make the code
+  harder to understand. He also mentioned that some of the
+  compatibility code in `compat/` still had dependencies outside
+  `git-std-lib.a`, but that it just meant that "some minor
+  compatibility work" might be needed in the future.
+
+  About testing the new library, he said that the temporary test file
+  added by the series will be replaced with unit tests once a unit
+  testing framework is decided upon, pointing to the
+  [related discussion](https://lore.kernel.org/git/8afdb215d7e10ca16a2ce8226b4127b3d8a2d971.1686352386.git.steadmon@google.com/).
+  That discussion is actually an RFC patch series that in its latest
+  version only adds an
+  [asciidoc document](https://github.com/steadmon/git/blob/unit-tests-asciidoc/Documentation/technical/unit-tests.adoc)
+  explaining the plan to add a unit test framework to Git and
+  containing a table comparing the possible unit test frameworks that
+  Git could adopt.
+
+  Victoria Dye and then Jeff Hostetler replied to the first patch in
+  Calvin's series saying that they didn't agree with the fact that the
+  trace2 code wouldn't be in `git-std-lib.a`. They think that it
+  should be possible to use the trace2 tracing functions everywhere in
+  the Git code even in low-level functions. Calvin replied that he
+  would look into redrawing the boundaries of the library, or stubbing
+  out tracing in it to accommodate that need.
+
+  Phillip Wood commented on a few patches saying he liked the idea,
+  but suggested that the library should also contain the code related
+  to [gettext](https://www.gnu.org/software/gettext/) and to some
+  basic data structures ("hashmap.c" and "string-list.c"). He also
+  suggested some improvements and a way to deal with the trace2 issue.
+
+  Junio Hamano, the Git maintainer, was happy that one patch removed
+  the dependency many files had on "config.c". He wondered though if
+  another patch that removed a wrapper function to remove a dependency
+  did the right thing, as the function had a number of callers. Glen
+  Choo then chimed in to suggest an alternative way to remove that
+  dependency and both Calvin and Junio agreed that this would be a
+  good way forward.
+
+  Glen separately reported that he had trouble building the series.
+  Calvin clarified that the series was based on Git v2.41 and sent a
+  [link to the code](https://github.com/calvin-wan-google/git/tree/git-std-lib-rfc).
+
+  Linus Arver also replied to Calvin's series by asking a number of
+  questions. He wondered if adding the standard library would make it
+  harder or not to refactor code into separate libraries or to create
+  separate programs that would use only some Git API, like for example
+  the API in "trailer.c" that helps parse commit message trailers
+  (e.g. "Signed-off-by: Author Name <author@example.com>). He asked
+  for more information about the tradeoffs between accepting the
+  circular dependencies and untangling them, and made a number of
+  other suggestions.
+
+  It's not clear yet if the libification effort and the idea of a Git
+  Standard Library will bring a lot of changes to the code base soon,
+  but that could be an interesting possibility.
 
 <!---
 ### Support
