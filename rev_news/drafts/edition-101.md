@@ -252,15 +252,116 @@ This edition covers what happened during the months of June 2023 and July 2023.
 
 __Various__
 - A [Git community](https://programming.dev/c/git) has been created in the programming.dev Lemmy instance.
+- [Passwordless authentication is now available on GitHub.com](https://github.blog/2023-07-12-introducing-passwordless-authentication-on-github-com/)
+  (with [passkeys](https://www.passkeys.io/)), as a public beta.
+- [Meet Smart Locks, a new way to reduce merge conflicts with Unity Version Control](https://blog.unity.com/engine-platform/unity-version-control-smart-locks)
+  (previously Plastic SCM).
+    + Locks in DVCS were [also supported](https://ericsink.com/vcbe/html/veracity_locks.html)
+      in SourceGear's [Veracity SCM](http://veracity-scm.com/)
+      (no longer developed, last version from 2013).
+    + See also [Git for games: current problems and solutions](https://www.youtube.com/watch?v=K3zOhU3NdWA&list=PL0lo9MOBetEFqBue4vNcTEnkBjgIQU1Q3&index=7)
+      video from Git Merge 2019.
 
 __Light reading__
++ [Scaling merge-ort across GitHub](https://github.blog/2023-07-27-scaling-merge-ort-across-github/)
+  by Matt Cooper on GitHub Blog, describing how and why GitHub have switched
+  from performing merges and rebases [using libgit2](https://github.blog/2015-12-15-move-fast/)
+  to using merge-ort ([available in Git since 2.33](https://github.blog/2021-08-16-highlights-from-git-2-33/#merge-ort-a-new-merge-strategy)),
+  and [worktree-less] rebases using new git-replay command.
+  [Merge commits were created using the merge-ort strategy](https://github.blog/changelog/2022-09-12-merge-commits-now-created-using-the-merge-ort-strategy/)
+  on GitHub since September 2022, as mentioned in [Git Rev News Edition #91](https://git.github.io/rev_news/2022/09/30/edition-91/).
++ [Git and Jupyter Notebooks: The Ultimate Guide](https://www.reviewnb.com/git-jupyter-notebook-ultimate-guide)
+  by ReviewNB.  The article mentions the following tools:
+    + [nbdime](https://nbdime.readthedocs.io/en/latest/),
+      mentioned first in [Git Rev News Edition #37](https://git.github.io/rev_news/2018/03/21/edition-37/),
+    + [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git) extension,
+      described in more detail in [How to use the JupyterLab Git extension](https://blog.reviewnb.com/jupyterlab-git-extension/)
+      on ReviewNB Blog.
+    + [ReviewNB](https://www.reviewnb.com/) app for GitHub, for when
+      [rich notebook diffs on GitHub](https://github.blog/changelog/2023-03-01-feature-preview-rich-jupyter-notebook-diffs/) fail,
+    + [nbdev](https://nbdev.fast.ai/), which includes support for better Git handling
+      (see [Fix merge conflicts in jupyter notebooks](https://nbdev1.fast.ai/merge.html) for nbdev1,
+      and [Git-Friendly Jupyter](https://nbdev.fast.ai/tutorials/git_friendly_jupyter.html) for nbdev2),
+      first mentioned in [Git Rev News Edition #69](https://git.github.io/rev_news/2020/11/27/edition-69/),
+      and also mentioned in [Edition #100](https://git.github.io/rev_news/2023/06/30/edition-100/)
+      as one of alternatives for [databooks](https://databooks.dev/) tool,
+    + [NBviewer](https://nbviewer.org/) and [Binder](https://mybinder.org/) services.
++ [How To Automate Your Server Database Backup Using Git](https://confidence.sh/blog/automate-your-server-database-backup/)
+  and cron,
+  by Confidence Okoghenun on his blog (also on [DEV\.to](https://dev.to/megaconfidence/how-to-automate-your-server-database-backup-using-git-2pc2)).
++ [How to Use Git Shallow Clone for Faster Repository Cloning](https://www.howtogeek.com/devops/how-to-use-git-shallow-clone-for-faster-repository-cloning/)
+  (and cloning only a single branch, and creating sparse blobless and treeless clones)
+  by Anthony Heddings on How-To Geek.
+  This can be useful when you want to examine Git repos with long histories,
+  and is also useful for Continuous Integration pipelines (CI/CD),
+  since the CI/CD process likely does not need to know the entire Git history.
++ [How To Undo or Reverse a Git Merge](https://www.howtogeek.com/devops/how-to-reverse-a-git-merge/)
+  by Anthony Heddings on How-To Geek.
++ [The Git Rebase Handbook – A Definitive Guide to Rebasing](https://www.freecodecamp.org/news/git-rebase-handbook/)
+  by Omer Rosenbaum on freeCodeCamp,
+  continuing from [Git Merge – The Definitive Guide](https://www.freecodecamp.org/news/the-definitive-guide-to-git-merge/)
+  mentioned in [Git Rev News Edition #99](https://git.github.io/rev_news/2023/05/31/edition-99/)
+  (and other posts).
++ [Mastering Git Shortcuts: A Guide to Git Aliases](https://dev.to/pradumnasaraf/mastering-git-shortcuts-a-guide-to-git-aliases-324j)
+  by Pradumna Saraf on DEV\.to - though the guide is limited to simple aliases,
+  and do not cover forcing alias to be treated as a shell command,
+  or tricks that one can use for advanced handling of alias parameters.
++ [The Magic of Empty Git Commit](https://dev.to/pradumnasaraf/the-magic-of-empty-git-commit-1di4)
+  by Pradumna Saraf on DEV\.to - a simple description on how to create
+  an empty commit, and why one would might want one.
++ [.gitattributes Best Practices](https://rehansaeed.com/gitattributes-best-practices/)
+  by Muhammad Rehan Saeed on his blog (2020).
++ [The Power of Git: A Guide to Collaborative Version Control](https://dev.to/opensauced/the-power-of-git-a-guide-to-collaborative-version-control-dl6)
+  by BekahHW for OpenSauced on DEV\.to.
++ [A Guide to Perfecting Pull Requests](https://dev.to/karaluton/a-guide-to-perfecting-pull-requests-2b66)
+  by Kara Luton on DEV\.to.
++ [Effective Code Reviews](https://addyosmani.com/blog/code-reviews/)
+  by Addy Osmani on his blog.
++ [The Gentle Art Of Patch Review](https://sage.thesharps.us/2014/09/01/the-gentle-art-of-patch-review/)
+  by Sage Sharp on their blog (2014).
+
 
 <!---
 __Easy watching__
 -->
 
 __Git tools and sites__
-
++ [Emoji-Log](https://github.com/ahmadawais/Emoji-Log) — An Emoji Git commit log messages spec standard.
+    + Similar [GitMoji](https://gitmoji.dev/) standard — an emoji guide for your commit messages,
+      was mentioned in [Git Rev News Edition #47](https://git.github.io/rev_news/2019/01/23/edition-47/).
++ [thefuck](https://github.com/nvbn/thefuck)
+  is a command line application
+  which corrects your previous console command.
+  Among other rules it includes series of rules for mistakes when using Git
+  (like typos in command names, trying to `git add` ignored file, etc.).
+  Written in Python.
++ New Relic [CodeStream](https://www.codestream.com/) is a free [open-source](https://github.com/TeamCodeStream/codestream)
+  extension for VS Code, Visual Studio, and JetBrains
+  (with support for more IDEs on the way).
+  for putting collaboration tools in the IDE:
+  supporting pull requests, issue management, observability, and code discussion.
++ [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git)
+  is a JupyterLab extension for version control using Git.
++ [ReviewNB](https://www.reviewnb.com/) is a paid GitHub and Bitbucket app
+  for rich diffs and commenting (including code review) for Jupyter Notebooks,
+  free for open source (for public repositories) and academic use:
+  see [pricing](https://www.reviewnb.com/#pricing).
+  You can request self hosted installation (distributed as Docker image).
++ [pwclient](https://github.com/getpatchwork/pwclient) is the command-line client for 
+  the [Patchwork](http://jk.ozlabs.org/projects/patchwork/) web-based patch tracking tool.
+  Patchwork was mentioned in [Git Rev News Edition #20](https://git.github.io/rev_news/2016/10/19/edition-20/),
+  in passing in [Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/)
+  (as then base for [snowpatch](https://github.com/ruscur/snowpatch) CI for patches,
+  now also supporting GitHub Actions),
+  in passing in [Edition #55](https://git.github.io/rev_news/2019/09/25/edition-55/)
+  (as being similar to [patchew](https://github.com/patchew-project/patchew)
+  patch tracking and testing system),
+  and in passing in [Edition #88](https://git.github.io/rev_news/2022/06/30/edition-88/)
+  (as being used by [Sourceware](https://sourceware.org/) service).
+  Patchwork is used for [some Linux kernel development](https://patchwork.kernel.org/).
++ JetBrains Academy [offers Master Git and GitHub in 5 Hours](https://blog.jetbrains.com/education/2023/07/06/introduction-to-git-track/)
+  course [on Hyperskill](https://hyperskill.org/tracks/48) for free,
+  with project-based part available for paid users (Premium).
 
 ## Releases
 
@@ -287,6 +388,8 @@ __Git tools and sites__
 + Tower for Mac [10.1](https://www.git-tower.com/release-notes/mac?show_tab=release-notes)
 + git-credential-oauth [0.9.1](https://github.com/hickford/git-credential-oauth/releases/tag/v0.9.1),
 [0.9.0](https://github.com/hickford/git-credential-oauth/releases/tag/v0.9.0)
++ gitolite [v3.6.13](https://groups.google.com/g/gitolite-announce/c/Ba5yVnkf_lQ/m/xB72ygAIDQAJ)
+
 
 ## Credits
 
