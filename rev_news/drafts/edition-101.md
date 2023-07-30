@@ -45,7 +45,7 @@ This edition covers what happened during the months of June 2023 and July 2023.
   Building Git already involves creating an internal library called
   `libgit.a` that contains a lot of common code used by many Git
   commands. The Git executable is then created by linking all the
-  object files for the Git sub-commands (like `git log`) and the `git`
+  object files for the Git subcommands (like `git log`) and the `git`
   command itself against `libgit.a` and a few external
   dependencies. The goal with the new Git Standard Library, also
   called `git-std-lib.a`, and the Git libification effort is to have a
@@ -59,9 +59,9 @@ This edition covers what happened during the months of June 2023 and July 2023.
   fork of Git".
 
   The new Git Standard Library is considered necessary for the
-  libification effort, because there are a number of circular and
+  libification effort, because there are numerous circular and
   ubiquitous dependencies that are very difficult to untangle and it
-  probably wouldn't be worth it to untangle them. As the libification
+  probably wouldn't be worth untangling them. As the libification
   effort doesn't promise stability of interfaces though, it would
   still be possible to extract some small libraries from
   `git-std-lib.a` later if there is ever a need to be able to swap
@@ -76,9 +76,9 @@ This edition covers what happened during the months of June 2023 and July 2023.
   `git-std-lib.a`, but that it just meant that "some minor
   compatibility work" might be needed in the future.
 
-  About testing the new library, he said that the temporary test file
+  As to the testing of the new library, he said that "the temporary test file
   added by the series will be replaced with unit tests once a unit
-  testing framework is decided upon, pointing to the
+  testing framework is decided upon", pointing to the
   [related discussion](https://lore.kernel.org/git/8afdb215d7e10ca16a2ce8226b4127b3d8a2d971.1686352386.git.steadmon@google.com/).
   That discussion is actually an RFC patch series that in its latest
   version only adds an
@@ -89,17 +89,17 @@ This edition covers what happened during the months of June 2023 and July 2023.
 
   Victoria Dye and then Jeff Hostetler replied to the first patch in
   Calvin's series saying that they didn't agree with the fact that the
-  trace2 code wouldn't be in `git-std-lib.a`. They think that it
-  should be possible to use the trace2 tracing functions everywhere in
-  the Git code even in low-level functions. Calvin replied that he
-  would look into redrawing the boundaries of the library, or stubbing
+  Trace2 code wouldn't be in `git-std-lib.a`. They pointed out that it
+  should be possible to use the Trace2 tracing functions everywhere in
+  the Git code, even in low-level functions. Calvin replied that he
+  would look into possible solutions like redrawing the boundaries of the library or stubbing
   out tracing in it to accommodate that need.
 
   Phillip Wood commented on a few patches saying he liked the idea,
   but suggested that the library should also contain the code related
   to [gettext](https://www.gnu.org/software/gettext/) and to some
   basic data structures ("hashmap.c" and "string-list.c"). He also
-  suggested some improvements and a way to deal with the trace2 issue.
+  suggested some improvements and a way to deal with the Trace2 issue.
 
   Junio Hamano, the Git maintainer, was happy that one patch removed
   the dependency many files had on "config.c". He wondered though if
@@ -163,7 +163,7 @@ This edition covers what happened during the months of June 2023 and July 2023.
 
   Complete the hash function transition. brian m. carlson has done a
   tremendous job making sure there are these two parallel worlds, if you
-  will. What's missing now is making them interoperable. This is not
+  want. What's missing now is making them interoperable. This is not
   necessarily the biggest *problem* in current Git, but it could be
   something that won't be fixed by short-term, this-quarter,
   profit-maximizing actors, so if I could decree a team to work on that
@@ -177,7 +177,7 @@ This edition covers what happened during the months of June 2023 and July 2023.
   to commit early, commit often. Whatever crap you have ever had in your
   working tree, there's an object containing it. Use `git reset --hard`,
   `git rebase`, `git cherry-pick`, whatever floats your boat, you will be
-  able to bring it back and polish it up into a git history that looks
+  able to bring it back and polish it up into a Git history that looks
   like you knew what you were doing all along.
 
   I think this is really the point about Git: it teaches you how to
@@ -200,7 +200,7 @@ This edition covers what happened during the months of June 2023 and July 2023.
   especially sexy, but I probably use it every single day and I find it
   extremely helpful.
 
-* Do you happen to have any memorable experience w.r.t contributing to
+* Do you happen to have any memorable experience w.r.t. contributing to
   the Git project? If yes, could you share it with us?
 
   I still sometimes think back to when I posted my first patch series to
@@ -217,11 +217,11 @@ This edition covers what happened during the months of June 2023 and July 2023.
   development of Git?
 
   For the list, it's gmail.com, lore.kernel.org/git, `git am`, `git format-patch`,
-  `git send-email`. I keep thinking I should set up something
+  and `git send-email`. I keep thinking I should set up something
   more advanced, but for the limited volumes I'm handling, it's fine. For
   development of Git [and other stuff], it's Vim, `git diff`, `git add -p`,
   `git commit --amend`, `git rebase -i`, `git range-diff`, `tig blame`,
-  `git jump` (grep,merge,diff) and ... maybe that's about it. Well, `git show`
+  `git jump` (grep, merge, diff) and ... maybe that's about it. Well, `git show`
   and `git log` of course. Please note the `-p` in `git add -p`. I would like
   to live in a world where no-one blindly does `git add . && git commit`.
 
@@ -276,7 +276,7 @@ __Light reading__
       mentioned first in [Git Rev News Edition #37](https://git.github.io/rev_news/2018/03/21/edition-37/),
     + [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git) extension,
       described in more detail in [How to use the JupyterLab Git extension](https://blog.reviewnb.com/jupyterlab-git-extension/)
-      on ReviewNB Blog.
+      on ReviewNB Blog,
     + [ReviewNB](https://www.reviewnb.com/) app for GitHub, for when
       [rich notebook diffs on GitHub](https://github.blog/changelog/2023-03-01-feature-preview-rich-jupyter-notebook-diffs/) fail,
     + [nbdev](https://nbdev.fast.ai/), which includes support for better Git handling
@@ -304,7 +304,7 @@ __Light reading__
   (and other posts).
 + [Mastering Git Shortcuts: A Guide to Git Aliases](https://dev.to/pradumnasaraf/mastering-git-shortcuts-a-guide-to-git-aliases-324j)
   by Pradumna Saraf on DEV\.to - though the guide is limited to simple aliases,
-  and do not cover forcing alias to be treated as a shell command,
+  and does not cover forcing an alias to be treated as a shell command,
   or tricks that one can use for advanced handling of alias parameters.
 + [The Magic of Empty Git Commit](https://dev.to/pradumnasaraf/the-magic-of-empty-git-commit-1di4)
   by Pradumna Saraf on DEV\.to - a simple description on how to create
@@ -333,11 +333,11 @@ __Git tools and sites__
   is a command line application
   which corrects your previous console command.
   Among other rules it includes series of rules for mistakes when using Git
-  (like typos in command names, trying to `git add` ignored file, etc.).
+  (like typos in command names, trying to `git add` an ignored file, etc.).
   Written in Python.
 + New Relic [CodeStream](https://www.codestream.com/) is a free [open-source](https://github.com/TeamCodeStream/codestream)
   extension for VS Code, Visual Studio, and JetBrains
-  (with support for more IDEs on the way).
+  (with support for more IDEs on the way)
   for putting collaboration tools in the IDE:
   supporting pull requests, issue management, observability, and code discussion.
 + [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git)
@@ -359,9 +359,9 @@ __Git tools and sites__
   and in passing in [Edition #88](https://git.github.io/rev_news/2022/06/30/edition-88/)
   (as being used by [Sourceware](https://sourceware.org/) service).
   Patchwork is used for [some Linux kernel development](https://patchwork.kernel.org/).
-+ JetBrains Academy [offers Master Git and GitHub in 5 Hours](https://blog.jetbrains.com/education/2023/07/06/introduction-to-git-track/)
++ JetBrains Academy [offers a Master Git and GitHub in 5 Hours](https://blog.jetbrains.com/education/2023/07/06/introduction-to-git-track/)
   course [on Hyperskill](https://hyperskill.org/tracks/48) for free,
-  with project-based part available for paid users (Premium).
+  with the project-based part available for paid users (Premium).
 
 ## Releases
 
