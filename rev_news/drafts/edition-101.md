@@ -92,8 +92,8 @@ This edition covers what happened during the months of June 2023 and July 2023.
   Trace2 code wouldn't be in `git-std-lib.a`. They pointed out that it
   should be possible to use the Trace2 tracing functions everywhere in
   the Git code, even in low-level functions. Calvin replied that he
-  would look into possible solutions like redrawing the boundaries of the library or stubbing
-  out tracing in it to accommodate that need.
+  would look into possible solutions like redrawing the boundaries of
+  the library or stubbing out tracing in it to accommodate that need.
 
   Phillip Wood commented on a few patches saying he liked the idea,
   but suggested that the library should also contain the code related
