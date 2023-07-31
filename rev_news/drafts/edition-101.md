@@ -307,9 +307,6 @@ __Light reading__
   by Pradumna Saraf on DEV\.to - though the guide is limited to simple aliases,
   and does not cover forcing an alias to be treated as a shell command,
   or tricks that one can use for advanced handling of alias parameters.
-+ [The Magic of Empty Git Commit](https://dev.to/pradumnasaraf/the-magic-of-empty-git-commit-1di4)
-  by Pradumna Saraf on DEV\.to - a simple description on how to create
-  an empty commit, and why one might want one.
 + [.gitattributes Best Practices](https://rehansaeed.com/gitattributes-best-practices/)
   by Muhammad Rehan Saeed on his blog (2020).
 + [The Power of Git: A Guide to Collaborative Version Control](https://dev.to/opensauced/the-power-of-git-a-guide-to-collaborative-version-control-dl6)
@@ -322,9 +319,10 @@ __Light reading__
   by Sage Sharp on their blog (2014).
 
 
-<!---
-__Easy watching__
--->
+__Easy listening__
++ [Git with Derrick Stolee](https://podrocket.logrocket.com/git-scalar)
+  on PodRocket (a web development podcast from LogRocket).
+
 
 __Git tools and sites__
 + [Emoji-Log](https://github.com/ahmadawais/Emoji-Log) — A simple Emoji Git commit log messages spec standard.
