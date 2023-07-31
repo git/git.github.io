@@ -17,9 +17,18 @@ This edition covers what happened during the months of June 2023 and July 2023.
 
 ## Discussions
 
-<!---
 ### General
--->
+
++ [[ANNOUNCE] Virtual Contributor's Summit 2023](https://public-inbox.org/git/ZMATKIaU1A1D0wJg@nand.local/)
+
+  Taylor Blau from GitHub announced that GitHub will host a Virtual
+  Contributor's Summit this year. Previously he
+  [announced](https://lore.kernel.org/git/ZJoDjnr+FkgrDsKA@nand.local/)
+  that there would be no Git Merge in-person event this year.
+
+  The announce of the Virtual Contributor's Summit 2023 contained
+  links for participants to register, to suggest topics and to vote on
+  proposed topics.
 
 ### Reviews
 
