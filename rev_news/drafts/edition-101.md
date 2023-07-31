@@ -92,8 +92,8 @@ This edition covers what happened during the months of June 2023 and July 2023.
   Trace2 code wouldn't be in `git-std-lib.a`. They pointed out that it
   should be possible to use the Trace2 tracing functions everywhere in
   the Git code, even in low-level functions. Calvin replied that he
-  would look into possible solutions like redrawing the boundaries of the library or stubbing
-  out tracing in it to accommodate that need.
+  would look into possible solutions like redrawing the boundaries of
+  the library or stubbing out tracing in it to accommodate that need.
 
   Phillip Wood commented on a few patches saying he liked the idea,
   but suggested that the library should also contain the code related
@@ -309,7 +309,7 @@ __Light reading__
   or tricks that one can use for advanced handling of alias parameters.
 + [The Magic of Empty Git Commit](https://dev.to/pradumnasaraf/the-magic-of-empty-git-commit-1di4)
   by Pradumna Saraf on DEV\.to - a simple description on how to create
-  an empty commit, and why one would might want one.
+  an empty commit, and why one might want one.
 + [.gitattributes Best Practices](https://rehansaeed.com/gitattributes-best-practices/)
   by Muhammad Rehan Saeed on his blog (2020).
 + [The Power of Git: A Guide to Collaborative Version Control](https://dev.to/opensauced/the-power-of-git-a-guide-to-collaborative-version-control-dl6)
