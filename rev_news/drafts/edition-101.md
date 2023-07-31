@@ -258,7 +258,7 @@ __Various__
   (previously Plastic SCM).
     + Locks in DVCS were [also supported](https://ericsink.com/vcbe/html/veracity_locks.html)
       in SourceGear's [Veracity SCM](http://veracity-scm.com/)
-      (no longer developed, last version from 2013).
+      (which is no longer developed, it's last version was from 2013).
     + See also [Git for games: current problems and solutions](https://www.youtube.com/watch?v=K3zOhU3NdWA&list=PL0lo9MOBetEFqBue4vNcTEnkBjgIQU1Q3&index=7)
       video from Git Merge 2019.
 
@@ -266,8 +266,9 @@ __Light reading__
 + [Scaling merge-ort across GitHub](https://github.blog/2023-07-27-scaling-merge-ort-across-github/)
   by Matt Cooper on GitHub Blog, describing how and why GitHub have switched
   from performing merges and rebases [using libgit2](https://github.blog/2015-12-15-move-fast/)
-  to using merge-ort ([available in Git since 2.33](https://github.blog/2021-08-16-highlights-from-git-2-33/#merge-ort-a-new-merge-strategy)),
-  and [worktree-less] rebases using new git-replay command.
+  to using merge-ort for it ([available in Git since 2.33](https://github.blog/2021-08-16-highlights-from-git-2-33/#merge-ort-a-new-merge-strategy)),
+  and performing worktree-less rebases using the new [work-in-progress](https://public-inbox.org/git/20230407072415.1360068-1-christian.couder@gmail.com/t/#u)
+  [`git replay` command](https://github.com/newren/git/commits/replay).
   [Merge commits were created using the merge-ort strategy](https://github.blog/changelog/2022-09-12-merge-commits-now-created-using-the-merge-ort-strategy/)
   on GitHub since September 2022, as mentioned in [Git Rev News Edition #91](https://git.github.io/rev_news/2022/09/30/edition-91/).
 + [Git and Jupyter Notebooks: The Ultimate Guide](https://www.reviewnb.com/git-jupyter-notebook-ultimate-guide)
@@ -279,10 +280,10 @@ __Light reading__
       on ReviewNB Blog,
     + [ReviewNB](https://www.reviewnb.com/) app for GitHub, for when
       [rich notebook diffs on GitHub](https://github.blog/changelog/2023-03-01-feature-preview-rich-jupyter-notebook-diffs/) fail,
-    + [nbdev](https://nbdev.fast.ai/), which includes support for better Git handling
+    + [nbdev](https://nbdev.fast.ai/), which includes support for better Git handling for Jupyter notebooks
       (see [Fix merge conflicts in jupyter notebooks](https://nbdev1.fast.ai/merge.html) for nbdev1,
       and [Git-Friendly Jupyter](https://nbdev.fast.ai/tutorials/git_friendly_jupyter.html) for nbdev2),
-      first mentioned in [Git Rev News Edition #69](https://git.github.io/rev_news/2020/11/27/edition-69/),
+      and was mentioned in [Git Rev News Edition #69](https://git.github.io/rev_news/2020/11/27/edition-69/),
       and also mentioned in [Edition #100](https://git.github.io/rev_news/2023/06/30/edition-100/)
       as one of alternatives for [databooks](https://databooks.dev/) tool,
     + [NBviewer](https://nbviewer.org/) and [Binder](https://mybinder.org/) services.
@@ -326,13 +327,13 @@ __Easy watching__
 -->
 
 __Git tools and sites__
-+ [Emoji-Log](https://github.com/ahmadawais/Emoji-Log) — An Emoji Git commit log messages spec standard.
++ [Emoji-Log](https://github.com/ahmadawais/Emoji-Log) — A simple Emoji Git commit log messages spec standard.
     + Similar [GitMoji](https://gitmoji.dev/) standard — an emoji guide for your commit messages,
       was mentioned in [Git Rev News Edition #47](https://git.github.io/rev_news/2019/01/23/edition-47/).
 + [thefuck](https://github.com/nvbn/thefuck)
   is a command line application
   which corrects your previous console command.
-  Among other rules it includes series of rules for mistakes when using Git
+  Among others it includes series of rules for correcting mistakes when using Git
   (like typos in command names, trying to `git add` an ignored file, etc.).
   Written in Python.
 + New Relic [CodeStream](https://www.codestream.com/) is a free [open-source](https://github.com/TeamCodeStream/codestream)
@@ -359,9 +360,9 @@ __Git tools and sites__
   and in passing in [Edition #88](https://git.github.io/rev_news/2022/06/30/edition-88/)
   (as being used by [Sourceware](https://sourceware.org/) service).
   Patchwork is used for [some Linux kernel development](https://patchwork.kernel.org/).
-+ JetBrains Academy [offers a Master Git and GitHub in 5 Hours](https://blog.jetbrains.com/education/2023/07/06/introduction-to-git-track/)
++ JetBrains Academy [offers a 'Master Git and GitHub in 5 Hours'](https://blog.jetbrains.com/education/2023/07/06/introduction-to-git-track/)
   course [on Hyperskill](https://hyperskill.org/tracks/48) for free,
-  with the project-based part available for paid users (Premium).
+  with the project-based part of the course available only for paid users (Premium).
 
 ## Releases
 
