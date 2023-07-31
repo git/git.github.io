@@ -322,9 +322,10 @@ __Light reading__
   by Sage Sharp on their blog (2014).
 
 
-<!---
-__Easy watching__
--->
+__Easy listening__
++ [Git with Derrick Stolee](https://podrocket.logrocket.com/git-scalar)
+  on PodRocket (a web development podcast from LogRocket).
+
 
 __Git tools and sites__
 + [Emoji-Log](https://github.com/ahmadawais/Emoji-Log) — A simple Emoji Git commit log messages spec standard.
