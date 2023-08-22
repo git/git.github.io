@@ -40,6 +40,8 @@ __Various__
 
 __Light reading__
 
++ [7 Git Mistakes a Developer Should Avoid](https://www.git-tower.com/blog/7-git-mistakes-a-developer-should-avoid/) by Bruno Brito on Tower’s blog.
+
 <!---
 __Easy watching__
 -->
