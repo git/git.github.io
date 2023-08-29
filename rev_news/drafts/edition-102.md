@@ -29,9 +29,62 @@ This edition covers what happened during the months of July 2023 and August 2023
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+
+## Developer Spotlight: Calvin Wan
+
+* Who are you and what do you do?
+
+  My name is Calvin Wan and I'm a Software Engineer on the Git Core team
+  at Google.
+
+* What would you name your most important contribution to Git?
+
+  I'm hoping my in-flight [series for a Git Standard Library](https://public-inbox.org/git/20230810163346.274132-1-calvinwan@google.com/)
+  will become my most important contribution to Git...at least for now 😄
+
+* What are you doing on the Git project these days, and why?
+
+  Currently working on getting Git Standard Library merged -- to
+  summarize it will serve as the foundation for other libraries in Git
+  to be built off of. When we first embarked on this journey towards
+  libification, we had many reasons for doing so, most of which Emily
+  captured in the [initial proposal](https://lore.kernel.org/git/CAJoAoZ=Cig_kLocxKGax31sU7Xe4==BGzC__Bg2_pr7krNq6MA@mail.gmail.com/).
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+  Old style submodules. Submodule development is already difficult to
+  work on and having extra bits and pieces in the codebase that exist
+  for the sole purpose of not breaking old style submodules added an
+  extra layer of complexity I wish I didn't have to reason about.
+
+* Do you happen to have any memorable experience w.r.t contributing to
+  the Git project? If yes, could you share it with us?
+
+  Attending Git Merge 2022! I enjoyed meeting the people I had been
+  interacting with on list -- putting a face to the name was
+  particularly exciting. I also enjoyed the discussions at the
+  Contributor Summit and the talks that followed.
+
+* What is your toolbox for interacting with the mailing list and for
+  development of Git?
+
+  I develop using VSCode and send my patches with `git format-patch` and
+  `git send-email`. For patches upstream, I use `b4 am` + `git am` to
+  test locally. When I reply to patches I use a script I modified from
+  Jonathan Tan to set up the replies for `git send-email`. For simple
+  replies and emails, I use Gmail's plaintext mode.
+
+* What is your advice for people who want to start Git development?
+  Where and how should they start?
+
+  I think there are plenty of good resources out there that others have
+  probably mentioned before ([Pro Git book](https://git-scm.com/book/en/v2),
+  [MyFirstContribution](https://git-scm.com/docs/MyFirstContribution),
+  [git-mentoring list](https://groups.google.com/g/git-mentoring/about)),
+  but the one suggestion I would have is spend less time worrying about
+  getting the right setup and spend more time getting your patches to list!
+
 
 ## Other News
 
