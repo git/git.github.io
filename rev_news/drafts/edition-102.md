@@ -291,7 +291,7 @@ __Light reading__
 
 __Easy watching__
 + [Git Hidden Gems - Enrico Campidoglio - NDC Oslo 2023](https://www.youtube.com/watch?v=WtUCZYyv-_w)
-  (length: 59:11).  Talks about
+  (length: 59:11).<br>  Talks about
   [04:15](https://www.youtube.com/watch?v=WtUCZYyv-_w&t=255s) pretty logs,
   [08:23](https://www.youtube.com/watch?v=WtUCZYyv-_w&t=503s) pretty diffs,
   [10:24](https://www.youtube.com/watch?v=WtUCZYyv-_w&t=624s) staging,
@@ -302,7 +302,7 @@ __Easy watching__
   [38:24](https://www.youtube.com/watch?v=WtUCZYyv-_w&t=2304s) reflog, and
   [45:44](https://www.youtube.com/watch?v=WtUCZYyv-_w&t=2744s) rerere.
 + [Pijul: Version-Control Post-Git • Pierre-Étienne Meunier • GOTO 2023](https://www.youtube.com/watch?v=7MpdZkGj5AI):
-  the presentation recorded at GOTO Aarhus 2023 (length: 50:10).
+  the presentation recorded at GOTO Aarhus 2023 (length: 50:10).<br>
   [Pijul](https://pijul.org/) was first mentioned in
   [Git Rev News Edition #9](https://git.github.io/rev_news/2015/11/11/edition-9/).
 
