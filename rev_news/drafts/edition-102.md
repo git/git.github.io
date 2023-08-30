@@ -220,15 +220,15 @@ __Various__
 
 __Light reading__
 + [7 Git Mistakes a Developer Should Avoid](https://www.git-tower.com/blog/7-git-mistakes-a-developer-should-avoid/)
-  by Bruno Brito on Tower Blog, describing why:
-    + commiting unrelated changes together,
-    + writing bad commit messages,
-    + not using `.gitignore`,
-    + leaving outdated merged-in branches,
-    + using force push in shared repository,
-    + storing API keys and other secrets in repository,
-    + and storing large binary files
-  are a problem, and how to prevent them
+  by Bruno Brito on Tower Blog, describing why
+  commiting unrelated changes together,
+  writing bad commit messages,
+  not using `.gitignore`,
+  leaving outdated merged-in branches,
+  using force push in shared repository,
+  storing API keys and other secrets in repository,
+  and storing large binary files - all
+  are problem s, and how to prevent them
   (often how to do it with the help of the Tower Git client).
 + [Simplified: 8 Guidelines for Commit Message](https://dev.to/titusnjuguna/simplified-8-guidelines-for-commit-message-536g)
   by Tito (titusnjuguna) on DEV\.to.
