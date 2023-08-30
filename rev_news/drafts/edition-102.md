@@ -25,10 +25,118 @@ This edition covers what happened during the months of July 2023 and August 2023
 ### Reviews
 -->
 
-<!---
 ### Support
--->
 
++ [Git Privacy](https://public-inbox.org/git/CTZ9RD9RQ5UO.3OIJX50PKMIR0@anonymous/)
+
+  Nick, alias Nicholas Johnson, asked on the Git mailing list if it
+  would be possible to implement an integrated feature in Git, perhaps
+  a config option, to obfuscate the committer and author timestamps
+  that are stored in commits when they are created.
+
+  Nick is the creator of [Git Privacy](https://git.nicholasjohnson.ch/git-privacy/)
+  which is a repository containing
+  [instructions in a README.md file](https://git.nicholasjohnson.ch/git-privacy/tree/README.md)
+  that already helps developers obfuscate Git timestamps, and also
+  explains why it can be a good idea to do so.
+
+  The instructions suggest setting the `GIT_AUTHOR_DATE` and
+  `GIT_COMMITTER_DATE` environment variables when committing, so that
+  the timestamps in these variables are recorded instead of the
+  current date, time and timezone.
+
+  Nick thought that using such environment variables or other not
+  fully integrated mechanisms like Git hooks was too cumbersome and
+  asked for ideas or feedback about how to do it.
+
+  Junio Hamano, the Git maintainer, replied to Nick, saying that his
+  opinion was that it might not be worth implementing an integrated
+  feature, as using such a feature removed "half the value of keeping
+  your work in source code management system". Especially it would
+  make it harder to refute possible claims that the source code
+  contains stolen proprietary IP (Intellectual Property).
+
+  Nick replied that he conceded it might not be worth it to implement
+  his original suggestion. He said that having Git automatically
+  converting local time to UTC in the timestamps it records could still
+  be useful to avoid leaking the developer's time zone. He pointed to
+  [a Gerrit issue](https://git.issues.gerritcodereview.com/issues/40000039)
+  about this.
+
+  Junio replied that he still thought it wasn't worth the effort as
+  there was not enough reason to go against Git's initial design to
+  store the timezone.
+
+  Nick replied to Junio saying that storing the timezone revealed
+  private information about developers without much gain, and that a
+  config option could let users decide about doing this or not.
+
+  This led to a separate sub-thread where Nick and Jason Pyeron
+  started to design a `--privacy=option1,option2` with corresponding
+  config variables to change the timezone, specify a date precision,
+  etc. brian m. carlson said he would support timezone and timestamp
+  tweeking options and made some technical suggestions too.
+
+  René Scharfe also in the main sub-thread chimed in saying that
+  "timezone and timestamps are personal data, which may only be
+  collected and processed for a lawful purpose according to the GDPR",
+  referring to the European Union's
+  [General Data Protection Regulation](https://gdpr-info.eu/).
+  So he thought that the user should be able to control if that data
+  should be stored or not, and it was a usability issue if he could
+  not easily do that. He also noticed that `git commit` already has a
+  `--date=<date>` option to change the author date and a `--signoff`
+  option for adding `Signed-off-by: Author Name <author@example.com>`
+  trailers. He concluded by saying "adding config options for
+  controlling timestamp granularity is hard to say no to".
+
+  Nick replied that he was asking for this feature for moral reasons
+  not for legal ones. He took the example of the
+  [I2P project](https://geti2p.net/en/) which is a layer on top of
+  Internet to protect people's activity and location, saying that most
+  developers of the project don't want their timezones leaked as they
+  are known only under pseudonyms
+
+  Junio replied to René saying that the `--date=<date>` option had
+  good reasons to exist. For example, the committer might be relaying
+  somebody else's changes, or a system clock might have an issue. He
+  also thought that the existing two environment variables are the
+  right place to draw the line, as Git developers shouldn't be
+  pretending to be security engineers and invent their own time
+  obfuscating mechanisms.
+
+  In another email, Junio explained in more detail why it's more
+  important to be able to tweek the author timestamp than the
+  committer timestamp. He also repeated that two environment variables
+  were a good place for other security minded people to build on a
+  quality "privacy enhancing `date` command" that could also be used
+  outside the Git context.
+
+  Junio replied to himself saying that a "--useless-time" option, or a
+  "core.uselesstime" configuration variable to make timestamps only
+  use UTC and be otherwise nearly meaningless could be Ok though, as
+  they wouldn't have "privacy" in their name and wouldn't pretend to be
+  a quality privacy feature. He laid out how such a feature could
+  work, and noticed that features like `git log --since=...` wouldn't
+  then be expected to properly work.
+
+  Nick agreed that such a feature shouldn't use "privacy" in its name,
+  and said that Junio's proposed feature would satisfy the privacy use
+  case he was interested in, and that he didn't want more than that.
+
+  Theodore Ts'o then chimed in to point out that "someone still might
+  be able to figure out information from when a branch gets pushed to
+  a git repo". He mentioned that for example GitHub, GitHub actions
+  and integration systems could also leak information about when users
+  are active.
+
+  Nick replied to Ted saying that protecting privacy had to start
+  somewhere, even if not all the tools were already doing it.
+
+  Future will tell if someone will actually implement something along
+  the lines that have been discussed, and whether it will be a quality
+  "privacy enhancing `date` command" usable outside the Git context,
+  or an option integrated into Git.
 
 ## Developer Spotlight: Calvin Wan
 
