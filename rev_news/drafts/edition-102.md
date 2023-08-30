@@ -258,10 +258,9 @@ __Light reading__
       in [Git Rev News Edition #47](https://git.github.io/rev_news/2019/01/23/edition-47/),
       and list of pros and cons of monorepos in
       [Edition #81](https://git.github.io/rev_news/2021/11/29/edition-81/).
-      [monorepo.tools](https://monorepo.tools/) is a place where you can find
+      [Monorepo.tools](https://monorepo.tools/) is a place where you can find
       information about monorepos and tools for handling them
-      (this site was first mentioned in [Git Rev News Edition #84](https://git.g
-ithub.io/rev_news/2022/02/28/edition-84/)).
+      (this site was first mentioned in [Git Rev News Edition #84](https://git.github.io/rev_news/2022/02/28/edition-84/)).
 + [You won’t believe how much time you will save with this Git pre-push hook](https://www.ivanmorgillo.com/2023/07/23/you-wont-believe-how-much-time-you-will-save-with-this-git-pre-push-hook/)
   by Ivan Morgillo on his blog,
   about integrating [Git hooks](https://git-scm.com/docs/githooks) with static code analysis tools,
