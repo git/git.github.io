@@ -209,6 +209,11 @@ __Various__
   and other changes.
 + [Git 2.42 Released With Less Warnings For SHA-256 Usage](https://www.phoronix.com/news/Git-2.42-Released)
   by Michael Larabel on Phoronix.
++ [GitLab Gitaly project now supports the SHA-256 hashing algorithm](https://about.gitlab.com/blog/2023/08/28/sha256-support-in-gitaly/)
+  by John Cai on GitLab Blog.
+    + [Gitaly](https://gitlab.com/gitlab-org/gitaly) is
+      an RPC interface to Git used by GitLab,
+      first mentioned in [Git Rev News Edition #24](https://git.github.io/rev_news/2017/02/22/edition-24/).
 + [Sourceware 25 Roadmap](https://sourceware.org/sourceware-25-roadmap.html):
   roadmap for the next 25 years on \[almost] the 25th anniversary
   (Sourceware came online on 6 September 1998).
