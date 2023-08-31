@@ -95,7 +95,7 @@ This edition covers what happened during the months of July 2023 and August 2023
   [I2P project](https://geti2p.net/en/) which is a layer on top of
   Internet to protect people's activity and location, saying that most
   developers of the project don't want their timezones leaked as they
-  are known only under pseudonyms
+  are known only under pseudonyms.
 
   Junio replied to René saying that the `--date=<date>` option had
   good reasons to exist. For example, the committer might be relaying
@@ -106,7 +106,7 @@ This edition covers what happened during the months of July 2023 and August 2023
   obfuscating mechanisms.
 
   In another email, Junio explained in more detail why it's more
-  important to be able to tweek the author timestamp than the
+  important to be able to tweak the author timestamp than the
   committer timestamp. He also repeated that two environment variables
   were a good place for other security minded people to build on a
   quality "privacy enhancing `date` command" that could also be used
@@ -204,7 +204,7 @@ __Various__
 + [Highlights from Git 2.42](https://github.blog/2023-08-21-highlights-from-git-2-42/)
   by Taylor Blau on GitHub Blog.  Those include
   faster object traversals with reachability bitmaps,
-  exclude references by pattern in `git for-each-ref`,
+  excluding references by pattern in `git for-each-ref`,
   preserving precious objects from garbage collection via `gc.recentObjectsHook`,
   and other changes.
 + [Git 2.42 Released With Less Warnings For SHA-256 Usage](https://www.phoronix.com/news/Git-2.42-Released)
@@ -230,21 +230,21 @@ __Various__
 __Light reading__
 + [7 Git Mistakes a Developer Should Avoid](https://www.git-tower.com/blog/7-git-mistakes-a-developer-should-avoid/)
   by Bruno Brito on Tower Blog, describing why
-  commiting unrelated changes together,
+  committing unrelated changes together,
   writing bad commit messages,
   not using `.gitignore`,
   leaving outdated merged-in branches,
   using force push in shared repository,
   storing API keys and other secrets in repository,
-  and storing large binary files - all
-  are problem s, and how to prevent them
+  and storing large binary files -
+  are problems, and how to prevent them
   (often how to do it with the help of the Tower Git client).
 + [Simplified: 8 Guidelines for Commit Message](https://dev.to/titusnjuguna/simplified-8-guidelines-for-commit-message-536g)
   by Tito (titusnjuguna) on DEV\.to.
 + [Security in Code Reviews: Ensuring Secure and Robust Software Development](https://dev.to/documatic/security-in-code-reviews-ensuring-secure-and-robust-software-development-17kp)
   by Jatin Sharma for Documatic, lists some common security vulnearabilities,
-  presentss few examples of real-world incidents, and explains how to
-  incorporate security into the code review process (and what are the challenges).
+  presents a few examples of real-world incidents, and explains how to
+  incorporate security into the code review process (and what the challenges are).
 + [One Git Trick for Perfect Commits](https://0ro.github.io/posts/one-git-trick-for-perfect-commits/)
   by Raman Nikitsenka (0ro) on his blog (and [also on DEV\.to](https://dev.to/0ro/one-git-trick-for-perfect-commits-3728)).
   The trick to avoid "fix: ..." commits littering history
@@ -265,7 +265,7 @@ __Light reading__
       was first mentioned in [Git Rev News Edition #4](https://git.github.io/rev_news/2015/06/03/edition-4/).
       You can find links to articles advocating for and against monorepos
       in [Git Rev News Edition #47](https://git.github.io/rev_news/2019/01/23/edition-47/),
-      and list of pros and cons of monorepos in
+      and a list of pros and cons of monorepos in
       [Edition #81](https://git.github.io/rev_news/2021/11/29/edition-81/).
       [Monorepo.tools](https://monorepo.tools/) is a place where you can find
       information about monorepos and tools for handling them
@@ -283,7 +283,7 @@ __Light reading__
   by Curtis Castrapel on Noq company blog.  IAMbic detects IAM changes,
   whether you're using Terraform, Cloudformation,
   or directly making changes via the AWS Management Console,
-  and creates Git commit to represents the exact state of your IAM
+  and creates Git commits to represent the exact state of your IAM
   in a Git repository.
 + [Delta: A new git diff tool to rock your productivity](https://dev.to/cloudx/delta-a-new-git-diff-tool-to-rock-your-productivity-2773)
   by Axel Navarro for Cloud(x); on DEV\.to
