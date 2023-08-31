@@ -145,6 +145,10 @@ This edition covers what happened during the months of July 2023 and August 2023
   My name is Calvin Wan and I'm a Software Engineer on the Git Core team
   at Google.
 
+  I also enjoy playing poker, volleyball, and ping pong. I play the
+  World Series of Poker Main Event every year and one of these years I'm
+  hoping to make the final table 😄
+
 * What would you name your most important contribution to Git?
 
   I'm hoping my in-flight [series for a Git Standard Library](https://public-inbox.org/git/20230810163346.274132-1-calvinwan@google.com/)
