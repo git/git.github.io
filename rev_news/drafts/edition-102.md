@@ -47,14 +47,14 @@ This edition covers what happened during the months of July 2023 and August 2023
 
   Nick thought that using such environment variables or other not
   fully integrated mechanisms like Git hooks was too cumbersome and
-  asked for ideas or feedback about how to do it.
+  asked for ideas or feedback about how to improve the situation.
 
   Junio Hamano, the Git maintainer, replied to Nick, saying that his
   opinion was that it might not be worth implementing an integrated
   feature, as using such a feature removed "half the value of keeping
-  your work in source code management system". Especially it would
+  your work in [a] source code management system". Especially it would
   make it harder to refute possible claims that the source code
-  contains stolen proprietary IP (Intellectual Property).
+  contained stolen proprietary IP (Intellectual Property).
 
   Nick replied that he conceded it might not be worth it to implement
   his original suggestion. He said that having Git automatically
@@ -77,7 +77,7 @@ This edition covers what happened during the months of July 2023 and August 2023
   etc. brian m. carlson said he would support timezone and timestamp
   tweeking options and made some technical suggestions too.
 
-  René Scharfe also in the main sub-thread chimed in saying that
+  René Scharfe chimed in on the main thread saying that
   "timezone and timestamps are personal data, which may only be
   collected and processed for a lawful purpose according to the GDPR",
   referring to the European Union's
@@ -114,7 +114,7 @@ This edition covers what happened during the months of July 2023 and August 2023
 
   Junio replied to himself saying that a "--useless-time" option, or a
   "core.uselesstime" configuration variable to make timestamps only
-  use UTC and be otherwise nearly meaningless could be Ok though, as
+  use UTC and be otherwise nearly meaningless could be OK though, as
   they wouldn't have "privacy" in their name and wouldn't pretend to be
   a quality privacy feature. He laid out how such a feature could
   work, and noticed that features like `git log --since=...` wouldn't
@@ -134,7 +134,7 @@ This edition covers what happened during the months of July 2023 and August 2023
   somewhere, even if not all the tools were already doing it.
 
   Future will tell if someone will actually implement something along
-  the lines that have been discussed, and whether it will be a quality
+  the lines that have been discussed, and whether it will be a
   "privacy enhancing `date` command" usable outside the Git context,
   or an option integrated into Git.
 
@@ -166,11 +166,11 @@ This edition covers what happened during the months of July 2023 and August 2023
   backwards compatibility, what would it be?
 
   Old style submodules. Submodule development is already difficult to
-  work on and having extra bits and pieces in the codebase that exist
+  work on, and having extra bits and pieces in the codebase that exist
   for the sole purpose of not breaking old style submodules added an
   extra layer of complexity I wish I didn't have to reason about.
 
-* Do you happen to have any memorable experience w.r.t contributing to
+* Do you happen to have any memorable experience w.r.t. contributing to
   the Git project? If yes, could you share it with us?
 
   Attending Git Merge 2022! I enjoyed meeting the people I had been
@@ -218,10 +218,10 @@ __Various__
   roadmap for the next 25 years on \[almost] the 25th anniversary
   (Sourceware came online on 6 September 1998).
     + [Sourceware](https://sourceware.org/) service was first mentioned in
-      [Git Rev News Edition #88](https://git.github.io/rev_news/2022/06/30/edition-88/)
+      [Git Rev News Edition #88](https://git.github.io/rev_news/2022/06/30/edition-88/).
 + [Lazygit Turns 5: Musings on Git, TUIs, and Open Source](https://jesseduffield.com/Lazygit-5-Years-On/)
   by Jesse Duffield on his Pursuit Of Laziness blog.
-    + [lazygit](https://github.com/jesseduffield/lazygit) is simple [windowed] terminal UI for Git,
+    + [lazygit](https://github.com/jesseduffield/lazygit) is a simple [windowed] terminal UI for Git,
       written in Go.  It was first mentioned in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/);
       you can find links to other articles about this tool in [Edition #61](https://git.github.io/rev_news/2020/03/25/edition-61/)
       and [#81](https://git.github.io/rev_news/2021/11/29/edition-81/).
@@ -229,20 +229,20 @@ __Various__
 
 __Light reading__
 + [7 Git Mistakes a Developer Should Avoid](https://www.git-tower.com/blog/7-git-mistakes-a-developer-should-avoid/)
-  by Bruno Brito on Tower Blog, describing why
+  by Bruno Brito on Tower Blog, describing why some habits --
   committing unrelated changes together,
   writing bad commit messages,
   not using `.gitignore`,
   leaving outdated merged-in branches,
-  using force push in shared repository,
-  storing API keys and other secrets in repository,
-  and storing large binary files -
-  are problems, and how to prevent them
+  using force push in a shared repository,
+  storing API keys and other secrets in a repository,
+  and storing large binary files --
+  cause problems, and how to prevent them
   (often how to do it with the help of the Tower Git client).
 + [Simplified: 8 Guidelines for Commit Message](https://dev.to/titusnjuguna/simplified-8-guidelines-for-commit-message-536g)
   by Tito (titusnjuguna) on DEV\.to.
 + [Security in Code Reviews: Ensuring Secure and Robust Software Development](https://dev.to/documatic/security-in-code-reviews-ensuring-secure-and-robust-software-development-17kp)
-  by Jatin Sharma for Documatic, lists some common security vulnearabilities,
+  by Jatin Sharma for Documatic, lists some common security vulnerabilities,
   presents a few examples of real-world incidents, and explains how to
   incorporate security into the code review process (and what the challenges are).
 + [One Git Trick for Perfect Commits](https://0ro.github.io/posts/one-git-trick-for-perfect-commits/)
@@ -260,7 +260,7 @@ __Light reading__
       [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/);
       you can find links to other articles talking about it in
       [#87](https://git.github.io/rev_news/2022/05/26/edition-87/) and
-      [#89](https://git.github.io/rev_news/2022/07/31/edition-89/)
+      [#89](https://git.github.io/rev_news/2022/07/31/edition-89/).
     + The idea of Monorepos (using a single repository for the whole codebase)
       was first mentioned in [Git Rev News Edition #4](https://git.github.io/rev_news/2015/06/03/edition-4/).
       You can find links to articles advocating for and against monorepos
@@ -295,7 +295,7 @@ __Light reading__
 + [Git Files Hidden In Plain Sight 🫥](https://tylercipriani.com/blog/2023/07/31/git-files-hidden-in-plain-sight/)
   by Tyler Cipriani on his blog,
   about some wonderful bad ideas,
-  like storing data in a repository in such way that GitHub thinks it is empty.
+  like storing data in a repository in a way that GitHub thinks it is empty.
 
 
 __Easy watching__
@@ -326,8 +326,8 @@ __Git tools and sites__
     + [DVC](https://dvc.org/) and GitOps were first mentioned in
       [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/).
 + [Turtle](https://gitlab.gnome.org/philippun1/turtle)
-  is a graphical interface for version control intended to run on GNOME and Nautilus file manager.
-  Written in Python using GTK4 and libadwaita for GUI,
+  is a graphical interface for version control intended to run on GNOME and the Nautilus file manager.
+  Written in Python using GTK4 and libadwaita for the GUI,
   and [pygit2](https://www.pygit2.org/) for interacting with Git,
   with Nautilus plugin support.
     + See [TortoiseGit](https://tortoisegit.org/),
@@ -341,8 +341,8 @@ __Git tools and sites__
   is a command palette-style Git client for blazing-fast commits.
   You open it with a keyboard shortcut, write your commit,
   and Commit will automatically detect which repo you've been working on.
-  Written using [Tauri](https://tauri.app/) toolkit
-  in TypeScript and Node.js for UI, and Rust for backend.
+  Written using the [Tauri](https://tauri.app/) toolkit
+  in TypeScript and Node.js for UI, and Rust for the backend.
   Inspired by [TailwindUI's Commit template](https://tailwindui.com/templates/commit).
 + [GitButler](https://docs.gitbutler.com/) (currently in _alpha_ phase)
   is intended to be a Source Code Management system designed to manage your branches,
@@ -387,7 +387,7 @@ __Git tools and sites__
       to store data, and which provides shell API
       and (limited) Python API for querying data
       from 173 million Git repositories on their infrastructure.
-      Described in [article on arXiv from 2020](https://arxiv.org/abs/2010.16196).
+      Described in an [article on arXiv from 2020](https://arxiv.org/abs/2010.16196).
 + [git-com](https://github.com/masukomi/masuconfigs/blob/master/bin/git-scripts/git-com)
   by masukomi is an interactive CLI tool to help you create commit messages
   that are not only readable, but follow a standardized format.
