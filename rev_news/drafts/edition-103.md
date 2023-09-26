@@ -40,6 +40,8 @@ __Various__
 
 __Light reading__
 
+* [Don’t create `.gitkeep` files, use `.gitignore` instead](https://adamj.eu/tech/2023/09/18/git-dont-create-gitkeep/) by Adam Johnson.
+
 <!---
 __Easy watching__
 -->
