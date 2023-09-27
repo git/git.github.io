@@ -17,9 +17,24 @@ This edition covers what happened during the months of August 2023 and September
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [Git participated in GSoC (Google Summer of Code) 2023](https://summerofcode.withgoogle.com/programs/2023/organizations/git)
+
+  The following contributors have successfully passed their final
+  evaluation and published a final report:
+
+  - Shuqi Liang worked on the
+    [More Sparse Index Integrations](https://summerofcode.withgoogle.com/programs/2023/projects/Rkbc1Abe)
+    project. They were mentored by Victoria Dye. The final
+    report could be found on [their website](https://cheskaqiqi.github.io/2023/08/22/Final/).
+
+  - Kousik Sanagavarapu worked on the
+    [Unify ref-filter formats with other --pretty formats](https://summerofcode.withgoogle.com/programs/2023/projects/rck3kmq2)
+    project. He was co-mentored by Christian Couder and Hariom Verma.
+    The final report could be found on [his website](https://five-sh.github.io/2023/08/26/the-final-report).
+
+  Congratulations to these contributors and their mentors!
 
 <!---
 ### Reviews
