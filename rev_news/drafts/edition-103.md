@@ -40,9 +40,59 @@ This edition covers what happened during the months of August 2023 and September
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [Fetching too many tags?](https://lore.kernel.org/git/274ec1a2152b0fd53b35c1591f5177e0b0713430@rjp.ie/)
+
+  Ronan Pigott noticed that when he fetched from some repos, for
+  example from the
+  ["Linux Stable" repo](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux)
+  on [kernel.org](https://git.kernel.org/), most of the time seemed to
+  be spent transfering tags from the remote to the client.
+
+  When his local repo was up-to-date and `git fetch` was used with
+  `--no-tags` (or its `-n` shortcut), it took less than 0.4 seconds
+  versus more than 1.7 seconds without it.
+
+  He asked if there was a reason for this seemingly useless transfer of
+  tags even when the remote didn't have to send any commit.
+
+  Peff, alias Jeff King, replied that "this is how the Git protocol
+  works". He explained that the server only lists all the refs it
+  knows about, and expects the client to select the refs it wants
+  among them. "Only the client knows what it already has." For
+  example, there could be new tags on the server pointing to commits
+  that the client already has.
+
+  Peff also mentioned that in recent Git versions an extension of the
+  Git protocol allows clients to list only the refs they are
+  interested in, so that the server can send "a much smaller ref
+  advertisement".
+
+  Ronan asked if Peff was talking about the `--negotiation-tip`
+  option, as some tests using this option didn't result in better
+  performance.
+
+  Peff replied that `--negotiation-tip` was only useful when there are
+  commits that should be transferred. When histories on the client and
+  the server have diverged, this option helps them find a common
+  commit that can be the base for the commits that will be
+  transferred.
+
+  Peff said the extension of the Git protocol he was talking about are
+  "ref-prefix" lines in Git's "v2" protocol, which is the default
+  protocol since Git v2.29. This protocol allows the client to speak
+  first and specify which ref prefixes it's interested in in these
+  "ref-prefix" lines.
+
+  Setting the `GIT_TRACE_PACKET` to `1` allows one to see the packets
+  exchanged between the client and the server, especially the
+  "ref-prefix" lines when for example `git fetch --no-tags origin
+  master` is launched using a recent Git, or the "have" and "want"
+  lines when client and server have to negotiate a common commit.
+
+  Ronan tested Peff's suggestions and thanked him as he then
+  understood why the tag advertisement was useful.
 
 <!---
 ## Developer Spotlight:
