@@ -102,18 +102,105 @@ This edition covers what happened during the months of August 2023 and September
 
 __Various__
 
+* [Critical GitHub Vulnerability Exposes 4,000+ Repositories to Repojacking Attack](https://thehackernews.com/2023/09/critical-github-vulnerability-exposes.html)
+  on The Hacker News.  The vulnerability was caused by a race condition
+  within GitHub's repository creation and username renaming operations.
+* [Nx lands $16M to build ‘monorepo’ tools for software devs](https://techcrunch.com/2023/09/25/nx-lands-16m-to-build-monorepo-tools-for-software-devs/)
+  by Kyle Wiggers on TechCrunch.  The funding will be used to expand
+  [Nx](https://nx.dev/)’s fully managed product,
+  [Nx Cloud](https://nx.dev/nx-cloud/intro/what-is-nx-cloud),
+  a replacement for existing continuous integration tools, such as Jenkins,
+  with first class [monorepo](https://monorepo.tools/) support.
+* [Harness launches Gitness, an open-source GitHub competitor](https://techcrunch.com/2023/09/21/oh-gitness-harness-launches-gitness-an-open-source-github-competitor/)
+  by Frederic Lardinois on TechCrunch.
+
 
 __Light reading__
 
+* [In a git repository, where do your files live?](https://jvns.ca/blog/2023/09/14/in-a-git-repository--where-do-your-files-live-/)
+  by Julia Evans on her blog.
 * [Don’t create `.gitkeep` files, use `.gitignore` instead](https://adamj.eu/tech/2023/09/18/git-dont-create-gitkeep/) by Adam Johnson.
+* [Signing Commits in Git, Explained](https://blog.gitbutler.com/signing-commits-in-git-explained/)
+  by Scott Chacon on [GitButler](https://gitbutler.com/) Blog.
+* [Selecting the Right Git Merging Strategy: Merge Commit, Squash and Merge, or Rebase and Merge](https://akashrajpurohit.com/blog/selecting-the-right-git-merging-strategy-merge-commit-squash-and-merge-or-rebase-and-merge/)
+  by Akash Rajpurohit on his blog.
+* [Drop git pull for fetch and rebase](https://developers.redhat.com/articles/2023/09/07/drop-git-pull-fetch-and-rebase)
+  by Yftach Herzog on RedHat Developer Blog, arguing that `git fetch` followed
+  by `git rebase` is a safer alternative (with a feature branch workflow).
+* [Advanced Git Commands and Workflows: A Comprehensive Guide for Developers](https://dev.to/documatic/advanced-git-commands-and-workflows-a-comprehensive-guide-for-developers-5865)
+  by Matías Hernández Arellano for Documatic on DEV\.to;
+  covers interactive rebase, cherry-picking, `git bisect`, reflog, `git blame`,
+  and various Git collaboration workflows.
+* [Git Delta is a Syntax Highlighting Pager for git, diff, and grep output](https://laravel-news.com/git-delta)
+  by Paul Redmond on Laravel News blog.  [Delta](https://dandavison.github.io/delta/)
+  was first mentioned in [Git Rev News Edition #86](https://git.github.io/rev_news/2022/04/30/edition-86/);
+  there is link to [another article about Delta](https://dev.to/cloudx/delta-a-new-git-diff-tool-to-rock-your-productivity-2773)
+  in [Edition #102](https://git.github.io/rev_news/2023/08/31/edition-102/).
+    * There is also [Delta](https://github.com/octavore/delta) command-line diff tool
+      implemented in Go, with [dead homepage](http://delta.octavore.com/)
+      ([archive](https://web.archive.org/web/20201108092055/http://delta.octavore.com/)),
+      mentioned in [Git Rev News Edition #9](https://git.github.io/rev_news/2015/11/11/edition-9/).
+* [Delving Deeper into Gitamic: Power and Flexibility Beyond Statamic's Built-In Git Features](https://laravel-news.com/gitamic)
+  by Eric L. Barnes on Laravel News blog.
+  [Gitamic](https://marketplace.anystack.sh/item/gitamic) is a premium
+  [Statamic CMS](https://statamic.com/) add-on that allows you
+  to take full control of your Git workflow from within your CMS.
+* [GitLab CI: 10+ Best Practices to Avoid Widespread Anti-patterns](https://dev.to/zenika/gitlab-ci-10-best-practices-to-avoid-widespread-anti-patterns-2mb5)
+  by Benoit COUETIL for Zenika on DEV\.to.
+* [Fossil Versus Git](https://www.fossil-scm.org/home/doc/trunk/www/fossil-v-git.wiki)
+  on Fossil Wiki.
 
-<!---
+
+
 __Easy watching__
--->
+
+* [The Git Parable: a different approach to understanding Git](https://www.youtube.com/watch?v=ANNboouhNHE),
+  a talk by Johan Herland for Tweag, based on Tom Preston-Werner's
+  [essay of the same name](https://tom.preston-werner.com/2009/05/19/the-git-parable.html) (2009)
+  covered in [Git Rev News #30](https://git.github.io/rev_news/2017/08/16/edition-30/)
+
 
 __Git tools and sites__
 
-* [git-credential-azure](https://github.com/hickford/git-credential-azure) is a credential helper that authenticates to [Azure Repos](https://azure.microsoft.com/en-us/products/devops/repos)
+* [git-credential-azure](https://github.com/hickford/git-credential-azure) is a credential helper
+  that authenticates to [Azure Repos](https://azure.microsoft.com/en-us/products/devops/repos).
+* [Gitness](https://gitness.com/) by [Harness](https://www.harness.io/)
+  is an open-source code hosting and pipeline engine,
+  with source control management, Continuous Integration and Continuous Delivery,
+  that can be easily installed using Docker.  Written in Go.
+  Can be considered next generation of [Drone](https://www.drone.io/).
+* [Cup](https://cup.flipt.io/) is an extensible server for building automation
+  around introspection and contributions to Git and SCMs like GitHub.
+  It is an active experiment into the benefits of managing an API over Git.
+  Written in Go by [Flipt](https://www.flipt.io/) - the open source, self-hosted
+  feature flag solution.
+    * [Flipt](https://www.flipt.io/) itself was mentioned in
+      [Git Rev News Edition #96](https://git.github.io/rev_news/2023/02/28/edition-96/).
+* [Gitopia](https://docs.gitopia.com) is the next-generation
+  Decentralized Code Collaboration Platform
+  fueled by a decentralized network and interactive token economy.
+  It is designed to optimize the software development process through collaboration,
+  transparency, and open source incentivization.
+  You need to have a [supported wallet](https://docs.gitopia.com/wallet-overview)
+  with sufficient LORE tokens to use Gitopia's services.
+  Pushing changes to Gitopia is done with the help of `git-remote-gitopia` helper.
+    * Compare with [git-ssb](https://scuttlebot.io/apis/community/git-ssb.html)
+      (see [git-ssb-intro](https://github.com/hackergrrl/git-ssb-intro) guide):
+      decentralized git repo hosting and issue tracking on secure-scuttlebutt (SSB),
+      mentioned in [Git Rev News Edition #26](https://git.github.io/rev_news/2017/04/19/edition-26/)
+      and [#40](https://git.github.io/rev_news/2018/06/20/edition-40/).
+    * Contrast with [ForgeFed](https://forgefed.org/) (formerly GitPub),
+      a federation protocol for forge services (ActivityPub extension), mentioned in 
+      [Git Rev News Edition #69](https://git.github.io/rev_news/2020/11/27/edition-69/)
+      and [#95](https://git.github.io/rev_news/2023/01/31/edition-95/),
+      and various projects in different stages of development that implement it:
+      [Vervis](https://vervis.peers.community/), [Forgejo](https://forgejo.org/),
+      [ForgeFlux](https://forgeflux.org/), and [Forgefriends](https://forgefriends.org/).
+* [Mermaid](https://mermaid.js.org/) JavaScript based diagramming and charting tool
+  that can be embedded in Markdown documents 
+  (which [is supported on GitHub](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/)),
+  has now support for [Gitgraph Diagrams](https://mermaid.js.org/syntax/gitgraph.html).
+
 
 ## Releases
 
