@@ -164,11 +164,14 @@ __Git tools and sites__
 
 * [git-credential-azure](https://github.com/hickford/git-credential-azure) is a credential helper
   that authenticates to [Azure Repos](https://azure.microsoft.com/en-us/products/devops/repos).
-* [Gitness](https://gitness.com/) by [Harness](https://www.harness.io/)
-  is an open-source code hosting and pipeline engine,
-  with source control management, Continuous Integration and Continuous Delivery,
-  that can be easily installed using Docker.  Written in Go.
-  Can be considered next generation of [Drone](https://www.drone.io/).
+* [git-vain](https://git.anna.lgbt/anna/git-vain) is a tool to generate
+  vanity hashes quickly; it can be used for example to make SHA-1 hash
+  of the HEAD begin with `c0ffee`.  Written in Rust.
+    * [git-vanity-sha](https://github.com/mattbaker/git-vanity-sha), written in Ruby,
+      was mentioned in [Git Rev News Edition #39](https://git.github.io/rev_news/2018/05/16/edition-39/).
+    * There was similar ~~[git-sham](https://bitbucket.org/tpettersen/git-sham)~~ tool
+      (no longer available, was on Bitbucket); it was
+      first mentioned in [Git Rev News Edition #4](https://git.github.io/rev_news/2015/06/03/edition-4/).
 * [Cup](https://cup.flipt.io/) is an extensible server for building automation
   around introspection and contributions to Git and SCMs like GitHub.
   It is an active experiment into the benefits of managing an API over Git.
@@ -176,6 +179,11 @@ __Git tools and sites__
   feature flag solution.
     * [Flipt](https://www.flipt.io/) itself was mentioned in
       [Git Rev News Edition #96](https://git.github.io/rev_news/2023/02/28/edition-96/).
+* [Gitness](https://gitness.com/) by [Harness](https://www.harness.io/)
+  is an open-source code hosting and pipeline engine,
+  with source control management, Continuous Integration and Continuous Delivery,
+  that can be easily installed using Docker.  Written in Go.
+  Can be considered next generation of [Drone](https://www.drone.io/).
 * [Gitopia](https://docs.gitopia.com) is the next-generation
   Decentralized Code Collaboration Platform
   fueled by a decentralized network and interactive token economy.
