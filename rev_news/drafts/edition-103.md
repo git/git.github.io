@@ -48,7 +48,7 @@ This edition covers what happened during the months of August 2023 and September
   example from the
   ["Linux Stable" repo](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux)
   on [kernel.org](https://git.kernel.org/), most of the time seemed to
-  be spent transfering tags from the remote to the client.
+  be spent transferring tags from the remote to the client.
 
   When his local repo was up-to-date and `git fetch` was used with
   `--no-tags` (or its `-n` shortcut), it took less than 0.4 seconds
@@ -134,9 +134,9 @@ __Light reading__
 * [Git Delta is a Syntax Highlighting Pager for git, diff, and grep output](https://laravel-news.com/git-delta)
   by Paul Redmond on Laravel News blog.  [Delta](https://dandavison.github.io/delta/)
   was first mentioned in [Git Rev News Edition #86](https://git.github.io/rev_news/2022/04/30/edition-86/);
-  there is link to [another article about Delta](https://dev.to/cloudx/delta-a-new-git-diff-tool-to-rock-your-productivity-2773)
+  there is a link to [another article about Delta](https://dev.to/cloudx/delta-a-new-git-diff-tool-to-rock-your-productivity-2773)
   in [Edition #102](https://git.github.io/rev_news/2023/08/31/edition-102/).
-    * There is also [Delta](https://github.com/octavore/delta) command-line diff tool
+    * There is also a [Delta](https://github.com/octavore/delta) command-line diff tool
       implemented in Go, with [dead homepage](http://delta.octavore.com/)
       ([archive](https://web.archive.org/web/20201108092055/http://delta.octavore.com/)),
       mentioned in [Git Rev News Edition #9](https://git.github.io/rev_news/2015/11/11/edition-9/).
@@ -153,9 +153,9 @@ __Light reading__
   Artifactory (storing Docker images and CI/CD artifacts), and
   Gerrit (code review).
     * [Git Rev News Edition #43](https://git.github.io/rev_news/2018/09/19/edition-43/)
-      includes list of similar tools and links related to them.
+      includes a list of similar tools and links related to them.
     * [git-appraise](https://github.com/google/git-appraise) was first mentioned
-      in [Git Rev News Edition #11](https://git.github.io/rev_news/2016/01/13/edition-11/)
+      in [Git Rev News Edition #11](https://git.github.io/rev_news/2016/01/13/edition-11/).
 * [Delving Deeper into Gitamic: Power and Flexibility Beyond Statamic's Built-In Git Features](https://laravel-news.com/gitamic)
   by Eric L. Barnes on Laravel News blog.
   [Gitamic](https://marketplace.anystack.sh/item/gitamic) is a premium
@@ -173,7 +173,7 @@ __Easy watching__
 * [The Git Parable: a different approach to understanding Git](https://www.youtube.com/watch?v=ANNboouhNHE),
   a talk by Johan Herland for Tweag, based on Tom Preston-Werner's
   [essay of the same name](https://tom.preston-werner.com/2009/05/19/the-git-parable.html) (2009)
-  covered in [Git Rev News #30](https://git.github.io/rev_news/2017/08/16/edition-30/)
+  covered in [Git Rev News #30](https://git.github.io/rev_news/2017/08/16/edition-30/).
 
 
 __Git tools and sites__
@@ -182,15 +182,15 @@ __Git tools and sites__
   that authenticates to [Azure Repos](https://azure.microsoft.com/en-us/products/devops/repos).
 * [git-vain](https://git.anna.lgbt/anna/git-vain) is a tool to generate
   vanity hashes quickly; it can be used for example to make SHA-1 hash
-  of the HEAD begin with `c0ffee`.  Written in Rust.
+  of the HEAD begin with `c0ffee`.  Written in Rust.  Other similar tools:
     * [git-vanity-sha](https://github.com/mattbaker/git-vanity-sha), written in Ruby,
-      was mentioned in [Git Rev News Edition #39](https://git.github.io/rev_news/2018/05/16/edition-39/).
-    * There was similar ~~[git-sham](https://bitbucket.org/tpettersen/git-sham)~~ tool
-      (no longer available, was on Bitbucket); it was
-      first mentioned in [Git Rev News Edition #4](https://git.github.io/rev_news/2015/06/03/edition-4/).
+      mentioned in [Git Rev News Edition #39](https://git.github.io/rev_news/2018/05/16/edition-39/).
+    * ~~[git-sham](https://bitbucket.org/tpettersen/git-sham)~~
+      (no longer available); first mentioned in
+      [Git Rev News Edition #4](https://git.github.io/rev_news/2015/06/03/edition-4/).
 * [git-issue](https://github.com/dspinellis/git-issue) is a minimalist
   decentralized issue management system based on Git,
-  offering (optional) biderectional integration with GitHub and GitLab issue management.
+  offering (optional) bidirectional integration with GitHub and GitLab issue management.
   Written as set of shell scripts.
     * Similarly named [git-issues](https://github.com/duplys/git-issues), written in Python,
       was mentioned in [Git Rev News Edition #43](https://git.github.io/rev_news/2018/09/19/edition-43/).
@@ -205,7 +205,7 @@ __Git tools and sites__
   is an open-source code hosting and pipeline engine,
   with source control management, Continuous Integration and Continuous Delivery,
   that can be easily installed using Docker.  Written in Go.
-  Can be considered next generation of [Drone](https://www.drone.io/).
+  Can be considered the next generation of [Drone](https://www.drone.io/).
 * [Gitopia](https://docs.gitopia.com) is the next-generation
   Decentralized Code Collaboration Platform
   fueled by a decentralized network and interactive token economy.
@@ -226,10 +226,10 @@ __Git tools and sites__
       and various projects in different stages of development that implement it:
       [Vervis](https://vervis.peers.community/), [Forgejo](https://forgejo.org/),
       [ForgeFlux](https://forgeflux.org/), and [Forgefriends](https://forgefriends.org/).
-* [Mermaid](https://mermaid.js.org/) JavaScript based diagramming and charting tool
+* [Mermaid](https://mermaid.js.org/), a JavaScript-based diagramming and charting tool
   that can be embedded in Markdown documents 
   (which [is supported on GitHub](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/)),
-  has now support for [Gitgraph Diagrams](https://mermaid.js.org/syntax/gitgraph.html).
+  now supports [Gitgraph Diagrams](https://mermaid.js.org/syntax/gitgraph.html).
 
 
 ## Releases
