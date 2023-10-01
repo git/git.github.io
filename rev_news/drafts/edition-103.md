@@ -27,12 +27,12 @@ This edition covers what happened during the months of August 2023 and September
   - Shuqi Liang worked on the
     [More Sparse Index Integrations](https://summerofcode.withgoogle.com/programs/2023/projects/Rkbc1Abe)
     project. She was mentored by Victoria Dye. The final
-    report could be found on [her website](https://cheskaqiqi.github.io/2023/08/22/Final/).
+    report can be found on [her website](https://cheskaqiqi.github.io/2023/08/22/Final/).
 
   - Kousik Sanagavarapu worked on the
     [Unify ref-filter formats with other --pretty formats](https://summerofcode.withgoogle.com/programs/2023/projects/rck3kmq2)
     project. He was co-mentored by Christian Couder and Hariom Verma.
-    The final report could be found on [his website](https://five-sh.github.io/2023/08/26/the-final-report).
+    The final report can be found on [his website](https://five-sh.github.io/2023/08/26/the-final-report).
 
   Congratulations to these contributors and their mentors!
 
@@ -82,7 +82,7 @@ This edition covers what happened during the months of August 2023 and September
   Peff said the extension of the Git protocol he was talking about are
   "ref-prefix" lines in Git's "v2" protocol, which is the default
   protocol since Git v2.29. This protocol allows the client to speak
-  first and specify which ref prefixes it's interested in in these
+  first and specify which ref prefixes it's interested in with these
   "ref-prefix" lines.
 
   Setting the `GIT_TRACE_PACKET` to `1` allows one to see the packets
@@ -137,13 +137,13 @@ __Light reading__
   there is a link to [another article about Delta](https://dev.to/cloudx/delta-a-new-git-diff-tool-to-rock-your-productivity-2773)
   in [Edition #102](https://git.github.io/rev_news/2023/08/31/edition-102/).
     * There is also a [Delta](https://github.com/octavore/delta) command-line diff tool
-      implemented in Go, with [dead homepage](http://delta.octavore.com/)
+      implemented in Go, with a [dead homepage](http://delta.octavore.com/)
       ([archive](https://web.archive.org/web/20201108092055/http://delta.octavore.com/)),
       mentioned in [Git Rev News Edition #9](https://git.github.io/rev_news/2015/11/11/edition-9/).
 * [Git-Based Software Development Life-Cycle](https://nordstroem.ch/posts/2023-09-10-git-sdlc.html)
-  by Kris, considers whether tools like 
-  [git-appraise](https://github.com/google/git-appraise), and
-  [git-issue](https://github.com/dspinellis/git-issue) or
+  by Kris considers whether tools like 
+  [git-appraise](https://github.com/google/git-appraise),
+  [git-issue](https://github.com/dspinellis/git-issue), and
   [git-bug](https://github.com/MichaelMure/git-bug)
   that store their information, history, and artifacts directly in the repository
   can replace development tools such as 
