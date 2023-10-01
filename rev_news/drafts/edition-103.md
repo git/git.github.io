@@ -274,4 +274,5 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Adam Johnson, Bruno Brito and Mirth Hickford.
+with help from Adam Johnson, Bruno Brito, Mirth Hickford
+and Štěpán Němec.
