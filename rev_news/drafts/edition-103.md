@@ -140,6 +140,22 @@ __Light reading__
       implemented in Go, with [dead homepage](http://delta.octavore.com/)
       ([archive](https://web.archive.org/web/20201108092055/http://delta.octavore.com/)),
       mentioned in [Git Rev News Edition #9](https://git.github.io/rev_news/2015/11/11/edition-9/).
+* [Git-Based Software Development Life-Cycle](https://nordstroem.ch/posts/2023-09-10-git-sdlc.html)
+  by Kris, considers whether tools like 
+  [git-appraise](https://github.com/google/git-appraise), and
+  [git-issue](https://github.com/dspinellis/git-issue) or
+  [git-bug](https://github.com/MichaelMure/git-bug)
+  that store their information, history, and artifacts directly in the repository
+  can replace development tools such as 
+  Jira (planning, issue tracking),
+  Confluence (wiki, documentation platform),
+  Bamboo (CI/CD server),
+  Artifactory (storing Docker images and CI/CD artifacts), and
+  Gerrit (code review).
+    * [Git Rev News Edition #43](https://git.github.io/rev_news/2018/09/19/edition-43/)
+      includes list of similar tools and links related to them.
+    * [git-appraise](https://github.com/google/git-appraise) was first mentioned
+      in [Git Rev News Edition #11](https://git.github.io/rev_news/2016/01/13/edition-11/)
 * [Delving Deeper into Gitamic: Power and Flexibility Beyond Statamic's Built-In Git Features](https://laravel-news.com/gitamic)
   by Eric L. Barnes on Laravel News blog.
   [Gitamic](https://marketplace.anystack.sh/item/gitamic) is a premium
@@ -172,6 +188,12 @@ __Git tools and sites__
     * There was similar ~~[git-sham](https://bitbucket.org/tpettersen/git-sham)~~ tool
       (no longer available, was on Bitbucket); it was
       first mentioned in [Git Rev News Edition #4](https://git.github.io/rev_news/2015/06/03/edition-4/).
+* [git-issue](https://github.com/dspinellis/git-issue) is a minimalist
+  decentralized issue management system based on Git,
+  offering (optional) biderectional integration with GitHub and GitLab issue management.
+  Written as set of shell scripts.
+    * Similarly named [git-issues](https://github.com/duplys/git-issues), written in Python,
+      was mentioned in [Git Rev News Edition #43](https://git.github.io/rev_news/2018/09/19/edition-43/).
 * [Cup](https://cup.flipt.io/) is an extensible server for building automation
   around introspection and contributions to Git and SCMs like GitHub.
   It is an active experiment into the benefits of managing an API over Git.
