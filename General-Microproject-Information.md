@@ -326,20 +326,64 @@ to"...
 It's likely that you will introduce yourself to the community around
 the same time you are going to start working on a micro-project.
 
+### Tell us about you, or not
+
 We don't require you to send us a special introductory email or to
 tell us about your skills, interests, experience, background,
 etc. Feel free to tell us what you want about yourself if you wish
 though.
 
+### Specify the mentoring program in the subject
+
 But please, make it clear that you are interested in a specific
-mentoring program and use the right tag, like [GSoC], [Outreachy], etc
-at the beginning of the subject of your emails.
+mentoring program and use the right tag, like "[GSoC]", "[Outreachy]",
+etc at the beginning of the subject of your emails.
+
+### Thoroughly check your eligibility in the program
+
+Before you introduce yourself, it's very important that you thoroughly
+check as soon as possible that you are eligible for the mentoring
+program you are interested in.
+
+This is especially important for Outreachy, which has strict rules and
+is enforcing them. Their rules are available on:
+
+https://www.outreachy.org/docs/applicant/#eligibility
+
+Especially if you are a student, please check the section about the
+rules for students, and especially check this one:
+
+"University students must have 42 consecutive days free from school
+and exams during the internship period."
+
+The Outreachy organizers will check this rule with your university.
+They will disqualify you if there is any requirement, especially this
+one, that you don't meet.
+
+If you start applying to the Git project, this will deter others from
+applying. We usually have very few projects and can only accept very
+few applicants. So if others want to apply, they know they will have
+to compete with you and possibly others, and they might prefer to find
+another project with less competition.
+
+It happened recently that only two people applied for a project we
+proposed, and both were later found to not be eligible because of
+their university requirements. So in the end, we couldn't mentor
+anyone for the project we proposed, which is bad for everyone.
+
+So please thoroughly check your eligibility before introducing
+yourself, and please confirm in your introduction that you have
+checked all the requirements and that you indeed meet them all.
+
+### Don't ask us to find a micro-project for you
 
 As we usually don't know your interests, skills, experience,
 background, etc, it's hard for us to select a micro-project for
 you, and it's part of your job as an applicant to research a good
 micro-project for you. It will show us that you will be able to
 select a good project for you and properly research it.
+
+### Do ask for help, but be specific
 
 You can ask for help if there are things you don't understand in a
 micro-project description, or if you have some trouble working on your
@@ -460,10 +504,14 @@ or another pronoun to talk about you.
 
 Programs like Outreachy or GSoC usually have requirements for
 applicants. Sometimes applicants have to be accepted by the program
-after they have shown they satisfy the requirements.
+organizers after they have shown they satisfy the requirements.
 
-In any case it's interesting for us to know soon how you currently
-stand regarding the requirements and maybe the acceptance process.
+In any case it's interesting for us and others to know soon how you
+currently stand regarding the requirements and maybe the acceptance
+process.
+
+See also the "Thoroughly check your eligibility in the program"
+section above.
 
 ### Tell us what steps you have already taken
 
