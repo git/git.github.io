@@ -178,6 +178,10 @@ with "tXXXX: " where tXXXX is the start of the filename of the test
 script you change. If you change "foo.c" or "foo.h", the title of your
 patch should probably start with "foo: ".
 
+If you create a function to refactor existing code, it's possible that
+more files would be changed, but the changes should be trivial in most
+of them.
+
 ### Research existing related work
 
 In general it's a good idea to check on the mailing list archive
