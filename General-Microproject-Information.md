@@ -310,6 +310,9 @@ But don't forget to search to check if what you find has already been
 addressed. If it has not been addressed, please ask first on the
 mailing list if it's a good idea to work on that.
 
+As for bugs, and many things really, you can also ask if you are not
+sure it's simple enough to fix.
+
 ### Searching the code base itself
 
 Your best bet is probably to search for strings like "FIXME", "TODO",
