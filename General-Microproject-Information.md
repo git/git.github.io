@@ -292,6 +292,11 @@ list.
 In general it's a very good idea to check that you can reproduce the
 bug on the latest version of Git before working on it.
 
+Also some bugs are difficult to understand and require too much or too
+difficult work for a microproject, so don't spend too much time on
+them if it appears that they might not be simple to fix, and don't
+hesitate to ask on the mailing list if they are a good microproject.
+
 ### Searching for #leftoverbits in the mailing list
 
 People have recently started to add "#leftoverbits" to their emails
