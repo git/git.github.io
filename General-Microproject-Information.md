@@ -210,7 +210,7 @@ questions on the mailing list or in IRC, or writing new tests, etc.,
 etc. In short, start doing things that other Git developers do!
 Alternatively you can of course focus on your project proposal.
 
-## How to find other ideas for microprojects
+## How to find ideas for microprojects
 
 First check the specific page(s) or information about Git
 microprojects related to your program that should have been published
