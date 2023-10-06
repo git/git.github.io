@@ -49,6 +49,8 @@ ask for clarifications when questions/suggestions you are offered are
 not clear enough), the pace at which the discussion takes place, and
 the general tone of the discussion, to learn what is expected of you.
 
+## Summary of the steps needed to complete a microproject
+
 To complete a microproject, you will have to go through approximately
 the following steps:
 
@@ -71,8 +73,8 @@ the following steps:
   on various topics related to working on Git.
 
 * Select a microproject and check that it has not yet been taken or
-  discussed by searching the mailing list.
-  [Public Inbox](http://public-inbox.org/git/) is your friend.
+  discussed by searching the mailing list. Please read all the
+  sections below related to finding or selecting a microproject.
 
 * Send an email to the mailing list where you describe the
   microproject you want to work on, the way you want to do it, and
@@ -167,7 +169,9 @@ with "tXXXX: " where tXXXX is the start of the filename of the test
 script you change. If you change "foo.c" or "foo.h", the title of your
 patch should probably start with "foo: ".
 
-In general it's a good idea to check on the mailing list archive what
+In general it's a good idea to check on the mailing list archive
+([lore.kernel.org](https://lore.kernel.org/git/) and
+[Public Inbox](http://public-inbox.org/git/) are your friends) what
 other GSoC or Outreachy applicants attempting a microproject have
 already been told this year or any previous year, as hopefully it will
 help you avoid some mistakes. As some microproject ideas haven't
@@ -196,10 +200,20 @@ microprojects related to your program that should have been published
 on this site or on the GSoC or Outreachy site. But then still read on
 everything below!
 
-Any small code-related change would be suitable. Just remember to keep
-the change small! It is much better for you to finish a small but
-complete change than to try something too ambitious and not get it
-done.
+It's also possible that we haven't taken the time to put up a page
+listing microprojects ideas for your program. The pages we used to
+create for that were named "XXXX Applicant Microprojects" where XXXX
+is the program name and a date, for example "SoC 2016 Applicant
+Microprojects" for the GSoC in 2016, or "Outreachy Winter 2021-2022
+Applicant Microprojects" for Outreachy in 2021-2022. See the following
+directory to find these old pages that might still be useful:
+
+https://git.github.io/Historical-SoC-Outreachy/
+
+Any small code-related change would be suitable for a
+microproject. Just remember to keep the change small! It is much
+better for you to finish a small but complete change than to try
+something too ambitious and not get it done.
 
 Though we don't require that your patch be accepted into the "master"
 branch by the time of your formal application, we still expect that a
