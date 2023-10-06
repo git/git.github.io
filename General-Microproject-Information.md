@@ -165,6 +165,8 @@ Applicants please attempt only **ONE** microproject. We want quality,
 not quantity! (Also, it takes work to collect the ideas, and it would
 be nice to have enough microprojects for everybody.)
 
+### Change only a few files
+
 This means that for a microproject that consists in refactoring or
 rewriting a small amount of code, your patch should change only
 **ONE** file, or perhaps 2 files if they are closely related, like
@@ -175,6 +177,8 @@ If you change a test file, the title of your patch (after the
 with "tXXXX: " where tXXXX is the start of the filename of the test
 script you change. If you change "foo.c" or "foo.h", the title of your
 patch should probably start with "foo: ".
+
+### Research existing related work
 
 In general it's a good idea to check on the mailing list archive
 ([lore.kernel.org](https://lore.kernel.org/git/) and
@@ -191,6 +195,8 @@ the more confident we can be that you will be able to solve many
 problems when working on your real GSoC or Outreachy project. So it's
 a very good thing to show that you have researched your microproject
 and taken into account what you have found.
+
+### After it's done, work on different things
 
 If you've already done a microproject and are itching to do more, then
 get involved in other ways, like finding and fixing other problems in
