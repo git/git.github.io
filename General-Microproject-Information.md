@@ -9,13 +9,20 @@ It is strongly recommended that people who want to apply to the Git
 project for the Google Summer of Code (GSoC), Outreachy, or other such
 mentoring programs, called "applicants" in this document, submit a
 small code-related patch to the Git project as part of their
-application.
+application. We call the whole process of submitting such a small
+code-related patch a "microproject".
 
 People who want to get involved in Git development outside mentoring
 programs can also benefit from information on this page to get
 started, though it might be a bit less relevant to them. If they want,
 they can use something like "[FirstTimer]", "[Newbie]", "[Newcomer]"
 instead of "[GSoC]" or "[Outreachy]" in the emails they send.
+
+Anyway if you want to work on a microproject, or more generally if you
+want to start getting involved in Git development, please read on
+*all* the rest of this page.
+
+## What is a microproject?
 
 Think of these microprojects as the "Hello, world" of getting involved
 with the Git project; the coding aspect of the change can be almost
