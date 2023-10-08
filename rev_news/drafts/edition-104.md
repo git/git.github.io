@@ -36,7 +36,7 @@ This edition covers what happened during the months of September 2023 and Octobe
 ## Other News
 
 __Various__
-
+* [New book “Boost Your Git DX”](https://adamchainz.gumroad.com/l/bygdx) by Git contributor Adam Johnson, covering tools and configuration to improve your command line workflow.
 
 __Light reading__
 
