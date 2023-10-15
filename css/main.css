@@ -65,9 +65,10 @@ body {
   display: flex;
   margin: 0 auto;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 993px) {
     #wrapper {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
