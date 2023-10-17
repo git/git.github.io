@@ -39,7 +39,7 @@ __Various__
 * [New book “Boost Your Git DX”](https://adamchainz.gumroad.com/l/bygdx) by Git contributor Adam Johnson, covering tools and configuration to improve your command line workflow.
 
 __Light reading__
-
++ [Investigating Git History](https://www.git-tower.com/blog/investigating-git-history/) by Kristian Lumme on Tower’s blog.
 <!---
 __Easy watching__
 -->
