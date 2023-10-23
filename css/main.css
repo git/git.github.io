@@ -47,6 +47,8 @@ body {
   padding-right: 0;
 }
 
+
+
 #menuLinkBar {
     background-color: #a09a93;
     text-align: right;
@@ -92,6 +94,24 @@ body {
     #menuLinkBar {
         display: block;
     }
+}
+
+@media (max-width: 750px) {
+
+  h2 {
+      font-size: 2.5em !important;
+      letter-spacing: 0.1em; 
+      line-height: 3; 
+  }
+  p {
+      font-size: 2.2em !important;
+      /* letter-spacing: 0.1em;  */
+      line-height: 2; 
+  }
+  .site {
+      font-size: 1em;
+      line-height: 2; 
+  } 
 }
 
 ol, ul {
@@ -517,7 +537,7 @@ table.benchmarks tr td {
 p {
   margin: 0 0 11px;
   font-size: 14px;
-  line-height: 22px;
+  /* line-height: 22px; */
 }
 
 p small {
