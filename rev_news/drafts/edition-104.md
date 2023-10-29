@@ -59,6 +59,7 @@ __Git tools and sites__
 [9.9.1](https://help.gitkraken.com/gitkraken-client/current/),
 [9.9.0](https://help.gitkraken.com/gitkraken-client/current/)
 + GitHub Desktop [3.3.4](https://desktop.github.com/release-notes/)
++ TortoiseGit [2.15.0](https://tortoisegit.org/download/)
 + git-credential-oauth [0.11.0](https://github.com/hickford/git-credential-oauth/releases/tag/v0.11.0)
 
 ## Credits
