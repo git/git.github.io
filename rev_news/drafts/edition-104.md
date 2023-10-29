@@ -49,6 +49,17 @@ __Git tools and sites__
 
 ## Releases
 
++ GitHub Enterprise [3.10.3](https://help.github.com/enterprise-server@3.10/admin/release-notes#3.10.3),
+[3.9.6](https://help.github.com/enterprise-server@3.9/admin/release-notes#3.9.6),
+[3.8.11](https://help.github.com/enterprise-server@3.8/admin/release-notes#3.8.11),
+[3.7.18](https://help.github.com/enterprise-server@3.7/admin/release-notes#3.7.18)
++ GitLab [16.5](https://about.gitlab.com/releases/2023/10/22/gitlab-16-5-released/)
++ Bitbucket Server [8.15](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ GitKraken [9.9.2](https://help.gitkraken.com/gitkraken-client/current/),
+[9.9.1](https://help.gitkraken.com/gitkraken-client/current/),
+[9.9.0](https://help.gitkraken.com/gitkraken-client/current/)
++ GitHub Desktop [3.3.4](https://desktop.github.com/release-notes/)
++ git-credential-oauth [0.11.0](https://github.com/hickford/git-credential-oauth/releases/tag/v0.11.0)
 
 ## Credits
 
