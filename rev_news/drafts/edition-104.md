@@ -17,9 +17,16 @@ This edition covers what happened during the months of September 2023 and Octobe
 
 ## Discussions
 
-<!---
 ### General
--->
+
++ [Git Virtual Contributor’s Summit 2023](https://docs.google.com/document/d/1GKoYtVhpdr_N2BAonYsxVTpPToP1CgCS9um0K7Gx9gQ)
+
+  A virtual summit happened on September 26th and 27th where the
+  contributors discussed
+  [topics that they had previously voted on](https://docs.google.com/spreadsheets/d/1EnhmTeEqRBlEI2pMAO3oZ4rO1xEwBzYp2vS4CMtvge8).
+  Taylor Blau, who organized the summit, polished and then sent
+  [the notes that were taken during the summit](https://lore.kernel.org/git/ZRregi3JJXFs4Msb@nand.local/#r)
+  to the mailing list.
 
 <!---
 ### Reviews
