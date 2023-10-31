@@ -21,7 +21,7 @@ This edition covers what happened during the months of September 2023 and Octobe
 
 + [Git Virtual Contributor’s Summit 2023](https://docs.google.com/document/d/1GKoYtVhpdr_N2BAonYsxVTpPToP1CgCS9um0K7Gx9gQ)
 
-  A virtual summit happened on September 26th and 27th where the
+  A virtual summit happened on September 26th and 27th, where the
   contributors discussed
   [topics that they had previously voted on](https://docs.google.com/spreadsheets/d/1EnhmTeEqRBlEI2pMAO3oZ4rO1xEwBzYp2vS4CMtvge8).
   Taylor Blau, who organized the summit, polished and then sent
@@ -36,9 +36,9 @@ This edition covers what happened during the months of September 2023 and Octobe
   Dragan Simic sent a patch to the mailing list that added a new
   `diff.statNameWidth=<width>` configuration option. The goal with
   this option was to make it possible to limit the width of the
-  filepath part of the "stat" output of diff commands.
+  filepath part of the "stat" output of `git diff` commands.
 
-  The "stat" output of a diff command contains lines like for example:
+  For example, the "stat" output of a `git diff` command contains lines like this:
 
   ```
   path/to/file.txt                         | 11 +++++++--
@@ -49,25 +49,25 @@ This edition covers what happened during the months of September 2023 and Octobe
   `11 +++++++--`.
 
   There were already a `diff.statGraphWidth=<width>` configuration
-  option to limit the width of the graph part, and
+  option to limit the width of the graph part, and also
   `--stat-name-width=<width>` and `--stat-graph-width=<width>` command
-  line options to limit the width of the name and graph part
+  line options to limit the width of the name and graph part,
   respectively. So it was logical to add the missing configuration
   option.
 
   These options are especially useful for people using very large
-  terminals, to prevent stat output from using a lot of columns.
+  terminals, to prevent "stat" output from using a lot of columns.
 
   The new `diff.statNameWidth=<width>` was designed to be ignored by
-  `git format-patch`, in the same way as
+  `git format-patch` in the same way as
   `diff.statGraphWidth=<width>`, because that command already respects
   the traditional 80-column standard.
 
   Before sending this patch, Dragan had sent
   [an RFC email](https://lore.kernel.org/git/eb8f524eca3975f086715ec32a8a1fbb@manjaro.org/)
-  asking if such a patch would be accepted which led to an interesting
+  asking if such a patch would be accepted, which led to an interesting
   discussion between him and Junio Hamano, the Git maintainer, about
-  the fact that we often cannot promise anything about an hypothetical
+  the fact that we often cannot promise anything about a hypothetical
   patch before actually seeing it on the mailing list.
 
   Junio reviewed the actual patch and wondered if it would be possible
@@ -87,12 +87,12 @@ This edition covers what happened during the months of September 2023 and Octobe
   patch would have been merged.
 
   Junio and Dragan agreed with doing the refactoring later and
-  discussed a bit more if more changes were needed in this patch, but
+  discussed a bit deeper if more changes were needed in this patch, but
   it appeared that it could be merged as is, and so it was.
 
   A few days later Dragan sent
-  [a patch to refactor the code that initialized the variables](https://lore.kernel.org/git/166396f0a98e248fc3d1236757632c5d648ddc0b.1695364961.git.dsimic@manjaro.org/)
-  Junio reviewed it and suggested some improvements which Dragan
+  [a patch to refactor the code that initialized the variables](https://lore.kernel.org/git/166396f0a98e248fc3d1236757632c5d648ddc0b.1695364961.git.dsimic@manjaro.org/).
+  Junio reviewed it and suggested some improvements, which Dragan
   implemented in [a second version of the patch](https://lore.kernel.org/git/d45d1dac1a20699e370905b88b6fd0ec296751e7.1695441501.git.dsimic@manjaro.org/).
 
   This second version was also reviewed by Junio and then merged.
@@ -108,7 +108,7 @@ This edition covers what happened during the months of September 2023 and Octobe
 ## Other News
 
 __Various__
-* [New book “Boost Your Git DX”](https://adamchainz.gumroad.com/l/bygdx) by Git contributor Adam Johnson, covering tools and configuration to improve your command line workflow.
+* [New book “Boost Your Git DX”](https://adamchainz.gumroad.com/l/bygdx) by Git contributor Adam Johnson, covering tools and configurations to improve your command line workflow.
 
 __Light reading__
 + [Investigating Git History](https://www.git-tower.com/blog/investigating-git-history/) by Kristian Lumme on Tower’s blog.
