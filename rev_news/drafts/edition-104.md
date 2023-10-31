@@ -117,7 +117,7 @@ __Various__
 __Light reading__
 + [Some miscellaneous git facts](https://jvns.ca/blog/2023/10/20/some-miscellaneous-git-facts/)
   by Julia Evans on her blog.  The facts are:
-    + the “index”, “staging area” and “-{}-cached” are all the same thing
+    + the “index”, “staging area” and “--cached” are all the same thing
     + the stash is a bunch of commits
     + not all references are branches or tags
     + merge commits aren’t empty
@@ -130,7 +130,7 @@ __Light reading__
     + Various attempts to make Git or version control easier include
       [Gitless](http://gitless.com/) - first mentioned in [Git Rev News Edition #20](https://git.github.io/rev_news/2016/10/19/edition-20/),
       [Jujutsu](https://github.com/martinvonz/jj) - mentioned in [#85](https://git.github.io/rev_news/2022/03/31/edition-85/),
-      and [EasyGit (eg)](https://github.com/dfabulich/easygit) - seem to be not actively developed.
+      and [EasyGit (eg)](https://github.com/dfabulich/easygit) - seem to not be actively developed.
 + [Investigating Git History](https://www.git-tower.com/blog/investigating-git-history/)
   by Kristian Lumme on Tower’s blog.
 + [Measuring Git performance with OpenTelemetry](https://github.blog/2023-10-16-measuring-git-performance-with-opentelemetry/)
@@ -156,7 +156,7 @@ __Light reading__
       was mentioned in [Git Rev News Edition #51](https://git.github.io/rev_news/2019/05/22/edition-51/).
 + [Embracing Database Deployments in CI/CD Practices with Git](https://thenewstack.io/embracing-database-deployments-in-ci-cd-practices-with-git/)
   by Vanessa Fox from PlanetScale on TheNewStack.
-    + [An article]((https://planetscale.com/blog/database-branching-three-way-merge-schema-changes)
+    + [An article](https://planetscale.com/blog/database-branching-three-way-merge-schema-changes)
       about [PlanetScale branching support for MySQL](https://planetscale.com/docs/concepts/branching)
       was mentioned in [Git Rev News Edition #99](https://git.github.io/rev_news/2023/05/31/edition-99/),
       while PlanetScale as solution was mentioned in set of article about databases and versioning
