@@ -117,7 +117,7 @@ __Various__
 __Light reading__
 + [Some miscellaneous git facts](https://jvns.ca/blog/2023/10/20/some-miscellaneous-git-facts/)
   by Julia Evans on her blog.  The facts are:
-    + the “index”, “staging area” and “--cached” are all the same thing
+    + the “index”, “staging area” and “`--cached`” are all the same thing
     + the stash is a bunch of commits
     + not all references are branches or tags
     + merge commits aren’t empty
@@ -125,12 +125,12 @@ __Light reading__
   by Nick Eff on his Roadrunner Twice Dreamwidth's journal,
   in response to Julia Evans ending her StrangeLoop 2023 keynote talk with
   “I still don’t know why Git is hard.”
-    + There is some discussion on [programming.dev Lemmy instance](https://programming.dev/post/4051745)
+    + There is some discussion on the [programming.dev Lemmy instance](https://programming.dev/post/4051745)
       about this post.
     + Various attempts to make Git or version control easier include
       [Gitless](http://gitless.com/) - first mentioned in [Git Rev News Edition #20](https://git.github.io/rev_news/2016/10/19/edition-20/),
       [Jujutsu](https://github.com/martinvonz/jj) - mentioned in [#85](https://git.github.io/rev_news/2022/03/31/edition-85/),
-      and [EasyGit (eg)](https://github.com/dfabulich/easygit) - seem to not be actively developed.
+      and [EasyGit (eg)](https://github.com/dfabulich/easygit) - seems not to be actively developed.
 + [Investigating Git History](https://www.git-tower.com/blog/investigating-git-history/)
   by Kristian Lumme on Tower’s blog.
 + [Measuring Git performance with OpenTelemetry](https://github.blog/2023-10-16-measuring-git-performance-with-opentelemetry/)
@@ -164,7 +164,7 @@ __Light reading__
 + [TypeScript Monorepo with NPM workspaces](https://www.yieldcode.blog/post/npm-workspaces/)
   by Dmitry Kudryavtsev on yield code(); blog.
 + [The "Schrödinger's tree object": is it there or not?](https://matheustavares.gitlab.io/posts/empty-tree):
-  Matheus Tavares finds about hard-coded empty tree object (2022).
+  Matheus Tavares finds about the hard-coded empty tree object (2022).
 
 <!---
 __Easy watching__
@@ -191,7 +191,7 @@ __Git tools and sites__
   By running this software, you can self-host a bundle server.
   Written in Go, under active development.  Installation on Windows is currently unsupported.
 + [Awesome GitHub Alternatives](https://github.com/ianchanning/awesome-github-alternatives)
-  is a list of alternatives to GitHub, that by default offer Git management in some way.
+  is a list of alternatives to GitHub that by default offer Git management in some way.
   All self-hosted options are free and open source, with GPL-compatibile licenses.
   Not exhaustive.
 + [src (Simple Revision Control)](http://www.catb.org/esr/src/)
