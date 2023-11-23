@@ -133,47 +133,47 @@ discussions.)
 ## Note about the number of slots
 
 The Git organization usually has very limited mentoring capacity.
-These days we usually accept around 2 or 3 students per season
-(Winter or Summer).
+These days we usually accept between around 1 to 3 GSoC contributors
+(in the Summer) or Outreachy interns (in the Winter).
 
 ## Note about giving back and mentoring
 
-We appreciate very much students and interns who stay around after the
-mentoring period is over. It is very nice to see them on the mailing
-list, even if they don't contribute much. It's of course better when
-they continue to contribute though, even by just reviewing a patch
-from time to time.
+We appreciate very much GSoC contributors and Outreachy interns who
+stay around after the mentoring period is over. It is very nice to see
+them on the mailing list, even if they don't contribute much. It's of
+course better when they continue to contribute though, even by just
+reviewing a patch from time to time.
 
 Some people have been around for more than 10 years, others have
 become regular contributors and that's great!
 
 One very nice way to contribute and to give back is to mentor or
-co-mentor other students or interns coming after you. It helps create
-more opportunities for more students and interns like you, as
-mentoring capacity is the main factor preventing us from accepting
-more students and interns. If each student or intern accepted to
-co-mentor twice (for example once in Summer and once in Winter) just
-after they have been mentored, our mentoring capacity could increase
-significantly each year.
+co-mentor other contributors or interns coming after you. It helps
+create more opportunities for more contributors and interns like you,
+as mentoring capacity is the main factor preventing us from accepting
+more contributors and interns. If each contributor or intern accepted
+to co-mentor twice (for example once in the Summer and once in the
+Winter) just after they have been mentored, our mentoring capacity
+could increase significantly each year.
 
-Even though successful former students/interns usually have adequate
-technical ability to be a successful mentor, unfortunately few of them
-have been willing to just co-mentor once along with an experienced
-mentor.
+Even though successful former contributors/interns usually have
+adequate technical ability to be a successful mentor, unfortunately
+few of them have been willing to just co-mentor once along with an
+experienced mentor.
 
 Other free or open source projects have done better than us on
 this. At the Google Summer of Code Mentor Summit for example, more
-than 30% of the mentors were former students.
+than 30% of the mentors are usually former contributors.
 
 Here is a quote by a mentor (Carlos Fernandez Sanz) on the GSoC
 Mentors List, that describes very well how we see GSoC and Outreachy:
 
 "GSoC is (for us, anyway) more about growing the community than
 getting stuff done. If they don't stick around their value diminishes
-a lot, even if they do a great job [...]. The students that did a
-great job but completely left the community [...] are just a memory...
-the ones that have been with us and that are now mentors [...], long
-after they participated in GSoC, are the ones we love :-)"
+a lot, even if they do a great job [...]. The [contributors] that did
+a great job but completely left the community [...] are just a
+memory...  the ones that have been with us and that are now mentors
+[...], long after they participated in GSoC, are the ones we love :-)"
 
 Consider showing us in your application previous mentoring, giving
 back and community activities that you have done, especially related
@@ -187,21 +187,22 @@ Refactoring projects are usually easier to do step by step, and to get
 code merged step by step which is encouraging.
 
 In general refactoring projects are worthwhile to do even if the
-project is not finished at the end of the GSoC and even if the student
-or intern stops contributing after that. In those cases it is often a
-good idea to later finish the refactoring either by ourselves or by
-proposing it to another GSoC student or Outreachy intern. This way the
-work of both students and mentors is not likely to be wasted.
+project is not finished at the end of the GSoC and even if the
+contributor or intern stops contributing after that. In those cases it
+is often a good idea to later finish the refactoring either by
+ourselves or by proposing it to another GSoC contributor or Outreachy
+intern. This way the work of contributors, interns and mentors is not
+likely to be wasted.
 
 With a project that implements a feature, there is a risk, if it's too
 complex or too difficult, that the feature will not be finished and
 that nothing, or nearly nothing, will have been merged during the GSoC
 or Outreachy internship. There is also the risk that another way to
 implement the feature will appear later in the GSoC or Outreachy
-internship, and all, or nearly all, the work of the student or intern
-and mentors will have been mostly wasted. It could also appear that
-the use cases the feature was envisioned to be used in, are better
-addressed by other improvements or a different workflow.
+internship, and all, or nearly all, the work of the contributor or
+intern and mentors will have been mostly wasted. It could also appear
+that the use cases the feature was envisioned to be used in, are
+better addressed by other improvements or a different workflow.
 
 Another potential issue is that a new feature might be prone to naming
 or user interface discussions which could last for a long time or
