@@ -66,6 +66,13 @@ does [Junio's "What's cooking in git.git" emails](https://lore.kernel.org/git/?q
 say about it? In general it's a good idea to describe all your Git
 related work so far with a good amount of detail.
 
+If the mentoring program allows different project "sizes", like for
+example 'Small', 'Medium' and 'Large', or different project
+"duration", like from 12 weeks to 22 weeks, please tell us in you
+application which project size or duration you prefer. It's usually
+not difficult for us to adapt a project we propose to different sizes
+or durations.
+
 Applicants must send drafts of their proposal on the mailing-list
 before submitting it officially to GSoC or Outreachy to get feedback
 from the community. They are strongly encouraged to publish a draft on
