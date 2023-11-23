@@ -35,7 +35,7 @@ actually starts, (GSoC calls this the "Community Bonding" period,) is a
 blog.
 
 You might want to check which blogging tools previous Outreachy
-interns and GSoC students used. Using a Git related tools is of course
+interns and GSoC contributors used. Using a Git related tools is of course
 a good idea.
 
 - [Miriam Rubio's Outreachy intership experiences](https://mirucam.gitlab.io/outreachy_blog/)
@@ -110,15 +110,15 @@ mailing list, it is important that you cover all the following topics:
 4. what things you think should be easier
 5. what you are planning to work on and how
 
-The reason we ask for 2), 3) and 4) is that often interns or students
-don't know about things, like existing documentation, historical
-discussions, debugging scripts, features, tools or techniques, that
-could help them understand what's going on, or work in a more
-efficient way. If a mentor doesn't know that the intern or student is
-blocked or slowed by something or has a hard time moving forward, it's
-difficult for the mentor to help. So it's important for interns or
-students to reflect on the issues, blocks, inefficiencies, complex
-things that they are facing.
+The reason we ask for 2), 3) and 4) is that often interns or
+contributors don't know about things, like existing documentation,
+historical discussions, debugging scripts, features, tools or
+techniques, that could help them understand what's going on, or work
+in a more efficient way. If a mentor doesn't know that the intern or
+contributor is blocked or slowed by something or has a hard time
+moving forward, it's difficult for the mentor to help. So it's
+important for interns or contributors to reflect on the issues,
+blocks, inefficiencies, complex things that they are facing.
 
 Notifying the mailing list or your mentors about a blog post, should
 not prevent you from emailing or contacting the mailing list or your
@@ -178,9 +178,9 @@ list that people debug together or discuss together
 something over email in a very real-time way (at least similar as
 instant messaging chat).
 
-Such chats can sometimes help a student or intern (or even long timers
-on the project) move very fast in a short amount of time. So consider
-taking advantage of that.
+Such chats can sometimes help a contributor or intern (or even long
+timers on the project) move very fast in a short amount of time. So
+consider taking advantage of that.
 
 It's also easier for mentors to help (or understand how they could
 help) when discussing informally using a real time or near real time
