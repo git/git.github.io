@@ -48,7 +48,8 @@ __Git tools and sites__
 
 
 ## Releases
-
++ Tower for Windows [5.2](https://www.git-tower.com/blog/tower-windows-52/)
++ Tower for Mac [10.2](https://www.git-tower.com/blog/tower-mac-102/)
 
 ## Credits
 
