@@ -161,6 +161,26 @@ __Git tools and sites__
 
 
 ## Releases
+
++ Git [2.43.0](https://public-inbox.org/git/xmqqzfz8l5or.fsf@gitster.g/),
+[2.43.0-rc2](https://public-inbox.org/git/xmqqo7fwxn4s.fsf@gitster.g/),
+[2.43.0-rc1](https://public-inbox.org/git/xmqq8r785ev1.fsf@gitster.g/),
+[2.43.0-rc0](https://public-inbox.org/git/xmqqy1fgkqg1.fsf@gitster.g/),
+[2.42.1](https://public-inbox.org/git/xmqq4ji4m50l.fsf@gitster.g/)
++ Git for Windows [2.43.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.43.0.windows.1),
+[2.43.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.43.0-rc2.windows.1),
+[2.43.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.43.0-rc1.windows.1),
+[2.43.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.43.0-rc0.windows.1)
++ GitLab [16.6](https://about.gitlab.com/releases/2023/11/16/gitlab-16-6-released/)
+[16.5.2](https://about.gitlab.com/releases/2023/11/14/gitlab-16-5-2-released/),
+[16.5.1, 16.4.2, 16.3.6](https://about.gitlab.com/releases/2023/10/31/security-release-gitlab-16-5-1-16-4-2-16-3-6-released/)
++ Gerrit Code Review [3.6.8](https://www.gerritcodereview.com/3.6.html#368),
+[3.7.6](https://www.gerritcodereview.com/3.7.html#376),
+[3.8.3](https://www.gerritcodereview.com/3.8.html#383),
+[3.9.0](https://www.gerritcodereview.com/3.9.html#390)
++ GitHub Enterprise [3.11.0](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.0)
++ GitKraken [9.10.0](https://help.gitkraken.com/gitkraken-client/current/)
++ GitHub Desktop [3.3.5](https://desktop.github.com/release-notes/)
 + Tower for Windows [5.2](https://www.git-tower.com/blog/tower-windows-52/)
 + Tower for Mac [10.2](https://www.git-tower.com/blog/tower-mac-102/)
 
