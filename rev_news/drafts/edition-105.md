@@ -150,14 +150,190 @@ This edition covers what happened during the months of October 2023 and November
 
 __Various__
 
++ [Highlights from Git 2.43](https://github.blog/2023-11-20-highlights-from-git-2-43/)
+  by Taylor Blau on GitHub Blog.  Those include new `git repack` tricks
+  (including adjusting sparse clone filters), nicer looking revers of reverts
+  with `git revert`, fixed interaction between `--subject-prefix` and `--rfc`
+  in `git format-patch`, custom log format options that simulate the decorations, etc.
++ [Gitea Cloud: A brand new platform for managed Gitea Instances](https://blog.gitea.com/gitea-cloud/),
+  designed for enterprise organizations to set up and run
+  their own Gitea instances more easily and efficiently.
++ [Announcing DoltgreSQL](https://www.dolthub.com/blog/2023-11-01-announcing-doltgresql/)
+  by Daylon Wilkins on DoltHub Blog.
+    + [Git-for-Data, Version-Controlled Database Dolt Gets PostgreSQL-Flavor](https://www.infoq.com/news/2023/11/DoltgreSQL-git-for-data-postgres/)
+      by Sergio De Simone on InfoQ.
+    + [Dolt](https://github.com/dolthub/dolt), a version-controlled database,
+      was first mentioned in [Git Rev News Edition #62](https://git.github.io/rev_news/2020/04/23/edition-62/).
++ [An Interesting CMS With Version Control is Now Open-Source!](https://news.itsfoss.com/tinacms-open-source/)
+  by Sourav Rudra on It's FOSS News (it's [TinaCMS](https://tina.io/)).
++ [Introducing the Space Git Subtree](https://blog.jetbrains.com/space/2023/11/21/space-git-subtree/)
+  by Ilia Afanasiev on The Space Blog (where Space is JetBrains' code collaboration platform).
++ [Developers can’t seem to stop exposing credentials in publicly accessible code](https://arstechnica.com/security/2023/11/developers-cant-seem-to-stop-exposing-credentials-in-publicly-accessible-code/)
+  by Dan Goodin on Ars Technica, and<br>
+  [Uncovering thousands of unique secrets in PyPI packages](https://blog.gitguardian.com/uncovering-thousands-of-unique-secrets-in-pypi-packages/)
+  by Tom Forbes on GitGuardian Blog.
+
 
 __Light reading__
+    
++ [How I (kind of) killed Mercurial at Mozilla](https://glandium.org/blog/?p=4346)
+  by Mike Hommey (author of [git-cinnabar](https://github.com/glandium/git-cinnabar),
+  Git remote helper to interact with Mercurial repositories).
++ Julia Evans continues the series of articles about Git (started in
+  [Git Rev News #103](https://git.github.io/rev_news/2023/09/30/edition-103/)
+  with [In a git repository, where do your files live?](https://jvns.ca/blog/2023/09/14/in-a-git-repository--where-do-your-files-live-/)
+  and
+  [Git Rev News #104](https://git.github.io/rev_news/2023/10/31/edition-104/)
+  with [Some miscellaneous git facts](https://jvns.ca/blog/2023/10/20/some-miscellaneous-git-facts/));
+  currently there are available the following additional posts:
+  [Confusing git terminology](https://jvns.ca/blog/2023/11/01/confusing-git-terminology/),
+  [git rebase: what can go wrong?](https://jvns.ca/blog/2023/11/06/rebasing-what-can-go-wrong-/),
+  [How git cherry-pick and revert use 3-way merge](https://jvns.ca/blog/2023/11/10/how-cherry-pick-and-revert-work/),
+  and [git branches: intuition & reality](https://jvns.ca/blog/2023/11/23/branches-intuition-reality/)
+  (so far).
+    + Julia Evans (@b0rk@jvns.ca) asked about read-only FUSE filesystem for a git repository
+      where every commit is a folder and the folder contains all the files in that commit
+      [on Mastodon](https://fosstodon.org/@b0rk@jvns.ca/111462737333140668), so this series may continue
+      (so far it led to very experimental [git-commit-folders](https://github.com/jvns/git-commit-folders) tool).
+    + See also [Pain in the dots](https://matthew-brett.github.io/pydagogue/pain_in_dots.html)
+      by Matthew Brett (part of [Notes and tutorials on git](https://matthew-brett.github.io/pydagogue/git.html)),
+      about confusing difference in how two-dot and three-dot notation
+      behaves in `git log` and in `git diff`, as an adition to the Julia Evans' article
+      about confusing git terminology, the [.. and ... section](https://jvns.ca/blog/2023/11/01/confusing-git-terminology/#and).
++ [How I teach Git](https://blog.ltgt.net/teaching-git/) by Thomas Broyer
+  on his blog (also [on DEV.to](https://dev.to/tbroyer/how-i-teach-git-3nj3)).
+  inspired to write it down by Julia Evans' (renewed) interest in Git,
+  and her questions on social networks.
++ [Stacked Diffs (and why you should know about them)](https://newsletter.pragmaticengineer.com/p/stacked-diffs)
+  by Gergely Orosz in The Pragmatic Engineer blog.  Another article about Stacked Diffs
+  can be found in [Git Rev News Edition #44](https://git.github.io/rev_news/2018/10/24/edition-44/).
+    + Compare and contrast  [Ship / Show / Ask: A modern branching strategy](https://martinfowler.com/articles/ship-show-ask.html)
+      mentioned in [Edition #79](https://git.github.io/rev_news/2021/09/30/edition-79/).
++ [Why I Prefer Trunk-Based Development](https://koenvangilst.nl/blog/trunkbased-development)
+  by Koen van Gilst on his blog.
+    + See also [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html)
+      in [Git Rev News Edition #73](https://git.github.io/rev_news/2021/03/27/edition-73/).
++ A bit controversial [Dependencies Belong in Version Control](https://www.forrestthewoods.com/blog/dependencies-belong-in-version-control/)
+  (even if it's not practical today due to Git's limitations)
+  by Forrest Smith on his blog.
++ [Managing My Resume with Git: A Version Control Approach](https://dev.to/dunkbing/managing-my-resume-with-git-a-version-control-approach-7hk)
+  by Bui Dang Binh (dunkbing) on DEV\.to.
++ [See the History of a Method with `git log -L`](https://calebhearth.com/git-method-history)
+  by Caleb Hearth on his blog; the post lists also a few his other articles about Git:
+    + [Stash only what `git commit` wouldn't commit](https://calebhearth.com/stash-what-git-wouldnt-commit).
+    + [Ignore refactoring commits in `git blame`](https://calebhearth.com/rubocop-git-blame).
+    + [Use your SSH key to sign commits](https://calebhearth.com/sign-git-with-ssh).
+        + See also for example
+          [Signing Git Commits with SSH Keys](https://blog.dbrgn.ch/2021/11/16/git-ssh-signatures/)
+          from [Git Rev News Edition #83](https://git.github.io/rev_news/2022/01/31/edition-83/).
++ [Why Git blame sucks for understanding WTF code (and what to use instead)](https://tekin.co.uk/2020/11/patterns-for-searching-git-revision-histories)
+  by Tekin Süleyman (2020); the author recommend "pickaxe" search with `git log -S` and
+  `git log -G`, or searching commit messages with `git log --grep`.
++ [How to Resolve Merge Conflicts Using the Merge Editor Feature on VS Code](https://adiati.com/how-to-resolve-merge-conflicts-using-the-merge-editor-feature-on-vs-code)
+  by Ayu Adiati on Ayu's Notes On Blog (also [on DEV\.to](https://dev.to/adiatiayu/how-to-resolve-merge-conflicts-using-the-merge-editor-feature-on-vs-code-pic),
+  as part of larger [Open-Source Series' Articles](https://dev.to/adiatiayu/series/15234)).
++ [The Ultimate "git nah" Alias](https://laravel-news.com/the-ultimate-git-nah-alias)
+  for abort their current changes and any possible operation in progress,
+  by Paul Redmond on Laravel News.
++ [Understanding Git: The history and internals](https://graphite.dev/blog/understanding-git)
+  by Kenneth DuMez on the Graphite Blog (more about history and internals than about
+  understanding Git).  See also:
+    + [GitHistory page in the archives of Git SCM Wiki](https://archive.kernel.org/oldwiki/git.wiki.kernel.org/index.php/GitHistory.html),
+    + [The Git Parable](http://tom.preston-werner.com/2009/05/19/the-git-parable.html),
+      by Tom Preston-Werner (2009) - the ideas behind the architecture of Git;
+      covered in [Git Rev News #30](https://git.github.io/rev_news/2017/08/16/edition-30/),
+    + Will Hay Jr.’s [The Architecture and History of Git: A Distributed Version Control System](https://medium.com/@willhayjr/the-architecture-and-history-of-git-a-distributed-version-control-system-62b17dd37742),
+      mentioned in [Git Rev News #46](https://git.github.io/rev_news/2018/12/19/edition-46/),
+    + [The History of Git: The Road to Domination in Software Version Control](https://git.github.io/rev_news/2020/02/19/edition-60/)
+      referenced in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/).
++ [Tracking SQLite Database Changes in Git](https://garrit.xyz/posts/2023-11-01-tracking-sqlite-database-changes-in-git)
+  with appropriate `textconv` gitattribute, by Garrit Franke on Garrit's Notes.
++ [GitHub’s all-in bet on AI may overlook Git](https://www.infoworld.com/article/3710428/githubs-all-in-bet-on-ai-may-overlook-git.html)
+  by Matt Asay on InfoWorld.
++ [🙏 Please Add .gitattributes To Your Git Repository](https://dev.to/deadlybyte/please-add-gitattributes-to-your-git-repository-1jld)
+  by Carl Saunders on DEV\.to (2020).
+    + A `.gitattributes` file [can be used to improve](https://github.com/github-linguist/linguist/blob/master/docs/overrides.md#using-gitattributes)
+     language detection on GitHub, which is using
+     [Linguist](https://github.com/github-linguist/linguist) library.
 
-<!---
-__Easy watching__
--->
+
+__Easy watching and listening__
+
++ [Git Training](https://www.youtube.com/playlist?list=PL1gv5yv3DoZNIPVAlZRGPEB0fBvflO-xN)
+  playlist of 45 short YouTube videos by Joost De Cock
+  provides git training materials for people who would like to understand
+  how Git works rather than try to memorize all of its commands
+  without knowing what they do.
++ The Real Python Podcast:
+  [Episode 179: Improving Your Git Developer Experience in Python](https://realpython.com/podcasts/rpp/179/)
+
+
 
 __Git tools and sites__
+
++ [gitattributes.io](https://gitattributes.io/) is a service to generate 
+  [`.gitattributes`](https://git-scm.com/docs/gitattributes) file,
+  similar to [gitignore.io](https://www.toptal.com/developers/gitignore/).
++ [githistory.xyz](https://githistory.xyz/) is a service that allows to
+  quickly browse the history of files in any git repo (from GitHub, GitLab, Bitbucket).
+  Also available as Chrome, Firefox, and Visual Studio extensions,
+  and as `git-file-history` command line tool (in Node.js).
+  Mentioned in passing in [Git Rev News Edition #48]().
++ Josh Branchaud (jbranchaud) list of
+  [Today I Learned (TIL) tips about Git](https://github.com/jbranchaud/til#git).
++ [lei](https://public-inbox.org/lei.html) is a command-line tool
+  for importing and searching email, regardless of whether it is from a personal mailbox
+  or a public-inbox instance, like [public-inbox.org](https://public-inbox.org/README.html)
+  or [lore.kernel.org](https://lore.kernel.org/).<br>
+  Warning: lei is still in its early stages and may destroy mail.
+    + See also [lore+lei: part 1, getting started](https://people.kernel.org/monsieuricon/lore-lei-part-1-getting-started)
+      article by Konstantin Ryabitsev (2021).
++ [git-fame](https://github.com/casperdcl/git-fame): Pretty-print
+  git repository collaborators sorted by contributions (includes computing
+  code survival).  Written in Python.
++ [git-fame-rb](https://github.com/oleander/git-fame-rb) is a command-line tool
+  that helps you summarize and pretty-print collaborators, based on the number of contributions.
+  The statistics are mostly based on the output of `git blame` (counting surviving lines).
+  Written in Ruby.
++ [GQL (Git Query Language)](https://amrdeveloper.github.io/GQL/)
+  [[repo](https://github.com/AmrDeveloper/GQL)]
+  is a SQL like language to perform queries on .git files,
+  with supports of most of SQL features
+  such as grouping, ordering and aggregations functions.<br>
+  You can find more in [How I Created a SQL-like Language to Run Queries on Local Git Repositories](https://www.freecodecamp.org/news/gql-design-and-implementation/)
+  article by Amr Hesham on freeCodeCamp.<br>
+  See also the following tools:
+   + [Gitana](https://github.com/SOM-Research/Gitana): SQL-based Project Activity Inspector
+     (repo archived in 2022),
+     first mentioned in [Git Rev News Edition #7](https://git.github.io/rev_news/2015/09/09/edition-7/)
+   + [gitbase](https://github.com/src-d/gitbase): SQL interface to git repositories, written in Go;
+     (last release from 2019, [homepage](https://docs.sourced.tech/gitbase) is not working),
+     first mentioned in [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/)
+   + [git-history](https://datasette.io/tools/git-history) is a tool
+     for analyzing Git history using SQLite (last release in 2021),
+     first mentioned in [Git Rev News Edition #82](https://git.github.io/rev_news/2021/12/30/edition-82/)
+   + [MergeStat](https://github.com/mergestat/mergestat) enables SQL queries
+     for data in git repositories (and related sources, such as the GitHub API).
+     There is also [mergestat-lite](https://github.com/mergestat/mergestat-lite)
+     command line tool, which runs SQL queries against local git repositories.
+     First mentioned in [Git Rev News Edition #82](https://git.github.io/rev_news/2021/12/30/edition-82/).
+     Actively developed, mergestat-lite is written in Go.
++ [GibleFS](https://github.com/fanzeyi/giblefs) is a toy project
+  that maps a Git repository to a virtual filesystem, which then can be used
+  to access the repository at any given commit.  Written in Rust, does not seem
+  to be actively developed.
++ `Git/fs` binary in [Git9](https://orib.dev/git9.html)
+  (Git client for Plan 9 non-POSIX filesystem)
+  serves repository history as a file system.
++ [gitfs](https://github.com/presslabs/gitfs) is a FUSE file system
+  that fully integrates with git. You can mount a remote repository's branch locally,
+  and any subsequent changes made to the files will be automatically committed to the remote.
+  Written in Python, last release in 2019.
+    + Note: that is not the only project named gitfs or git-fs.
++ [SlothFS](https://github.com/google/slothfs) is a FUSE filesystem
+  that provides light-weight, lazily downloaded, read-only checkouts
+  of manifest-based Git projects. It is intended for use with Android.
+  Written in Go, repository archived in 2022.
 
 
 ## Releases
