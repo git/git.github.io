@@ -71,8 +71,9 @@ This edition covers what happened during the months of October 2023 and November
   Sadly not that much. On rare occasions I improve messages and mark
   strings for translations. Perhaps that will be the way I contribute
   unless I find a mentor and something that I find particularly
-  interesting and important for me. The rest of the developer community
-  is competent, motivated and fast. Git can do so many things already.
+  interesting and important for me. So if anyone is willing to mentor
+  me, especially in making large repos faster - [ping me](mailto:ash@kambanaria.org).
+  I can be a competent tester at least.
 
 * If you could get a team of expert developers to work full time on
   something in Git for a full year, what would it be?
@@ -85,10 +86,21 @@ This edition covers what happened during the months of October 2023 and November
 * If you could remove something from Git without worrying about
   backwards compatibility, what would it be?
 
-  Backwards compatibility is massively important, so I prefer things
-  evolving for some releases and having gradual deprecation of features.
-  I think most users are like this and thankfully most developers are on
-  the same page.
+  Backwards compatibility is massively important and I am thankful
+  developers and users are all invested in this.
+
+  If we treat this as a hypothetical question: there are 3 things to Git:
+  - The command-line interface;
+  - The wire protocol;
+  - The storage format;
+
+  The command-line interface is gradually being improved. The wire
+  protocol is also a place where there are workarounds for versioning.
+  The storage format however is another (quite conservative and public)
+  API. I would remove the old versions and try to design it targeting
+  projects that are 10-100 times larger than the linux kernel first. In
+  for a penny, in for a pound. If we break things, let us break them so
+  hard that bards will sing songs about us!
 
 * What is your favorite Git-related tool/library, outside of Git itself?
 
