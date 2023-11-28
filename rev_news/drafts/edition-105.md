@@ -17,9 +17,19 @@ This edition covers what happened during the months of October 2023 and November
 
 ## Discussions
 
-<!---
 ### General
--->
+
+- Git participates in [Outreachy's December 2023 to March 2024 round](https://www.outreachy.org/alums/2023-12/)
+
+  Achu Luma will work on the "Move existing tests to a unit testing
+  framework" project. They will be mentored by Christian Couder.
+
+  Congratulations to Luma for being selected!
+
+  Thanks also to the other contributors who applied and worked on
+  micro-projects, but couldn’t be selected! We hope to continue to see
+  you in the community!
+
 
 <!---
 ### Reviews
