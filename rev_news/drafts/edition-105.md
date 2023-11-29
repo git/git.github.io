@@ -266,7 +266,9 @@ __Light reading__
     + Julia Evans (@b0rk@jvns.ca) asked about read-only FUSE filesystem for a git repository
       where every commit is a folder and the folder contains all the files in that commit
       [on Mastodon](https://fosstodon.org/@b0rk@jvns.ca/111462737333140668), so this series may continue
-      (so far it led to very experimental [git-commit-folders](https://github.com/jvns/git-commit-folders) tool).
+      (so far it led to very experimental [git-commit-folders](https://github.com/jvns/git-commit-folders)
+      tool from her, and [GitMounter](https://belkadan.com/blog/2023/11/GitMounter/) from
+      Jordan Rose being made public).
     + See also [Pain in the dots](https://matthew-brett.github.io/pydagogue/pain_in_dots.html)
       by Matthew Brett (part of [Notes and tutorials on git](https://matthew-brett.github.io/pydagogue/git.html)),
       about confusing difference in how two-dot and three-dot notation
@@ -406,6 +408,10 @@ __Git tools and sites__
   that provides light-weight, lazily downloaded, read-only checkouts
   of manifest-based Git projects. It is intended for use with Android.
   Written in Go, repository archived in 2022.
++ [GitMounter](https://belkadan.com/source/GitMounter/) is
+  a toy FUSE browser for Git repos based on [Suffusion](https://belkadan.com/source/Suffusion/).
+  Requires FUSE, libgit2, pkg-config, and Swift installed.
+  Written in Swift.
 
 
 ## Releases
