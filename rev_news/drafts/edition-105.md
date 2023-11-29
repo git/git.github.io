@@ -31,9 +31,81 @@ This edition covers what happened during the months of October 2023 and November
   you in the community!
 
 
-<!---
 ### Reviews
--->
+
++ [[PATCH v2 0/2] Prevent re-reading 4 GiB files on every status](https://lore.kernel.org/git/20231012160930.330618-1-sandals@crustytoothpaste.net/)
+
+  In May 2022 Jason Hatton sent
+  [an email to the mailing list](https://lore.kernel.org/git/CY4PR16MB1655A1F7DD8B2FABCC30C9DAAFC39@CY4PR16MB1655.namprd16.prod.outlook.com/)
+  about the fact any file with a size that is an exact multiple of
+  8GBi makes Git extremely slow on the repository.
+
+  He said that he had already opened
+  [an issue about this on the Git for Windows issue tracker](https://github.com/git-for-windows/git/issues/3833#issuecomment-1116544918)
+  where Jason, Philip Oakley, brian m. carlson and Dscho, alias
+  Johannes Schindelin had already discussed the issue.
+
+  Git uses an `uint32_t` type, a 32 bit long unsigned integer, for
+  storing the file size in the index. This rolls over if the value is
+  greater than 2 to the power 32, so with file sizes over 4GB. When
+  the size is exactly 4GBi or a multiple of it, like 8GBi, the roll
+  over makes it zero.
+
+  A zero file size in the index has a special meaning for Git
+  though. It tells Git that the file needs to be hashed again. Hashing
+  a file is supposed to reset its file size in the index to a non zero
+  value, but with a 4GBi file size the roll over happens and the file
+  size is still zero. So the hashing will be performed again and again
+  by many different Git commands which will make Git very slow.
+
+  Jason proposed, as a solution to this problem, to detect when the
+  roll over would happen, and in that case set the size to 1 instead
+  of zero.
+
+  Junio C Hamano, the Git maintainer, replied to Jason confirming the
+  issue and explaining it a bit more in detail. Jason and Junio then
+  discussed the issue a bit more, while Jason tested locally his
+  suggested fix and proposed to send a real patch to fix the issue.
+
+  René Scharfe then chimed into the discussion asking if a value other
+  than one would be better and would avoid other possible issues.
+  Philip Oakley replied to René suggesting using 0x80000000 instead of
+  1 when the roll over is detected. This would make it easier to
+  detect "almost all incremental and decremental changes in file
+  sizes", as the file size in the index helps detecting file changes.
+
+  Jason and Philip discussed the issue a bit more and agreed that
+  using 0x80000000 only for exact multiples of 4GiB would likely be
+  the best solution.
+
+  Philip and Carlo Marcelo Arenas Belón also tried to help Jason
+  properly submit a patch to the mailing list.
+
+  Jason then sent
+  [a patch to the mailing list](https://lore.kernel.org/git/CY4PR16MB16552D74E064638BEC11ECB1AFC59@CY4PR16MB1655.namprd16.prod.outlook.com/)
+  with the changes and explanation that had been discussed. Torsten
+  Bögershausen, Philip and Junio reviewed it, and suggested some
+  improvements. Junio especially requested some tests to be added.
+
+  After some discussions with Jason to clarify what should be
+  improved, Jason sent
+  [another version of his patch](https://lore.kernel.org/git/20220507185813.1403802-1-jhatton@globalfinishing.com/).
+
+  It looked like Jason found an issue with the patch due to using
+  0x80000000 instead of 1. René and Philip discussed it with Jason,
+  but there was no clear conclusion. It wasn't even clear if there was
+  an issue at all. But anyway the work on this stopped for more than
+  one year.
+
+  Fortunately a few weeks ago, brian m. carlson sent
+  [a new version of Jason's patch](https://lore.kernel.org/git/20231012160930.330618-1-sandals@crustytoothpaste.net/)
+  along with another patch adding tests.
+
+  These patches were reviewed by Eric Sunshine, Peff, alias Jeff King,
+  Junio and Jason. After some discussions it appeared that the patches
+  were good enough for Junio so that he decided to make a small change
+  in them and then merge them. This issue is therefore fixed in the
+  Git 2.43.0 version released on November 20.
 
 <!---
 ### Support
