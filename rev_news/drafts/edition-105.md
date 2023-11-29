@@ -224,7 +224,7 @@ __Various__
 
 + [Highlights from Git 2.43](https://github.blog/2023-11-20-highlights-from-git-2-43/)
   by Taylor Blau on GitHub Blog.  Those include new `git repack` tricks
-  (including adjusting sparse clone filters), nicer looking revers of reverts
+  (including adjusting sparse clone filters), nicer looking reverts of reverts
   with `git revert`, fixed interaction between `--subject-prefix` and `--rfc`
   in `git format-patch`, custom log format options that simulate the decorations, etc.
 + [Gitea Cloud: A brand new platform for managed Gitea Instances](https://blog.gitea.com/gitea-cloud/),
