@@ -37,29 +37,29 @@ This edition covers what happened during the months of October 2023 and November
 
   In May 2022 Jason Hatton sent
   [an email to the mailing list](https://lore.kernel.org/git/CY4PR16MB1655A1F7DD8B2FABCC30C9DAAFC39@CY4PR16MB1655.namprd16.prod.outlook.com/)
-  about the fact any file with a size that is an exact multiple of
-  8GBi makes Git extremely slow on the repository.
+  about the fact that any file of a size that is an exact multiple
+  of 8GiB makes Git extremely slow on the repository.
 
   He said that he had already opened
   [an issue about this on the Git for Windows issue tracker](https://github.com/git-for-windows/git/issues/3833#issuecomment-1116544918)
-  where Jason, Philip Oakley, brian m. carlson and Dscho, alias
-  Johannes Schindelin had already discussed the issue.
+  where Jason, Philip Oakley, brian m. carlson and Johannes
+  Schindelin, alias Dscho, had already discussed the issue.
 
   Git uses an `uint32_t` type, a 32 bit long unsigned integer, for
   storing the file size in the index. This rolls over if the value is
-  greater than 2 to the power 32, so with file sizes over 4GB. When
-  the size is exactly 4GBi or a multiple of it, like 8GBi, the roll
-  over makes it zero.
+  greater than 2 to the power 32, so with file sizes over 4GiB. When
+  the size is exactly 4GiB or a multiple of it, like 8GiB,
+  the rollover makes it zero.
 
-  A zero file size in the index has a special meaning for Git
+  A zero file size in the index has a special meaning for Git,
   though. It tells Git that the file needs to be hashed again. Hashing
-  a file is supposed to reset its file size in the index to a non zero
-  value, but with a 4GBi file size the roll over happens and the file
+  a file is supposed to reset its file size in the index to a non-zero
+  value, but with a 4GiB file size the rollover happens and the file
   size is still zero. So the hashing will be performed again and again
-  by many different Git commands which will make Git very slow.
+  by many different Git commands, making Git very slow.
 
   Jason proposed, as a solution to this problem, to detect when the
-  roll over would happen, and in that case set the size to 1 instead
+  rollover would happen, and in that case set the size to 1 instead
   of zero.
 
   Junio C Hamano, the Git maintainer, replied to Jason confirming the
@@ -70,7 +70,7 @@ This edition covers what happened during the months of October 2023 and November
   René Scharfe then chimed into the discussion asking if a value other
   than one would be better and would avoid other possible issues.
   Philip Oakley replied to René suggesting using 0x80000000 instead of
-  1 when the roll over is detected. This would make it easier to
+  1 when the rollover is detected. This would make it easier to
   detect "almost all incremental and decremental changes in file
   sizes", as the file size in the index helps detecting file changes.
 
@@ -101,7 +101,7 @@ This edition covers what happened during the months of October 2023 and November
   [a new version of Jason's patch](https://lore.kernel.org/git/20231012160930.330618-1-sandals@crustytoothpaste.net/)
   along with another patch adding tests.
 
-  These patches were reviewed by Eric Sunshine, Peff, alias Jeff King,
+  These patches were reviewed by Eric Sunshine, Jeff King, alias Peff,
   Junio and Jason. After some discussions it appeared that the patches
   were good enough for Junio so that he decided to make a small change
   in them and then merge them. This issue is therefore fixed in the
@@ -126,8 +126,8 @@ This edition covers what happened during the months of October 2023 and November
   I made and now maintain the Bulgarian translation of the text
   interface of Git, Gitk and Git Gui.
 
-* What is the typical workflow of a contributor contributor engaged
-  in translation for Git?
+* What is the typical workflow of a contributor engaged in Git
+  translation?
 
   There are 19 translations of the text interface of Git and only 13 of
   them are above 80% so I am not sure about "typical". It is a fairly
@@ -198,7 +198,7 @@ This edition covers what happened during the months of October 2023 and November
   Git to reach 100%. Getting to 100% was immensely hard, rewarding and
   memorable. Afterwards keeping the translation at 100% was much easier.
 
-* Is there something you feel that could be done to ease the life of
+* Is there something you feel could be done to ease the life of
   translators?
 
   The terminology glossary of Git is much larger than 7 years ago and we
@@ -258,12 +258,11 @@ __Light reading__
   and
   [Git Rev News #104](https://git.github.io/rev_news/2023/10/31/edition-104/)
   with [Some miscellaneous git facts](https://jvns.ca/blog/2023/10/20/some-miscellaneous-git-facts/));
-  currently there are available the following additional posts:
+  currently there are the following additional posts:
   [Confusing git terminology](https://jvns.ca/blog/2023/11/01/confusing-git-terminology/),
   [git rebase: what can go wrong?](https://jvns.ca/blog/2023/11/06/rebasing-what-can-go-wrong-/),
   [How git cherry-pick and revert use 3-way merge](https://jvns.ca/blog/2023/11/10/how-cherry-pick-and-revert-work/),
-  and [git branches: intuition & reality](https://jvns.ca/blog/2023/11/23/branches-intuition-reality/)
-  (so far).
+  and [git branches: intuition & reality](https://jvns.ca/blog/2023/11/23/branches-intuition-reality/).
     + Julia Evans (@b0rk@jvns.ca) asked about read-only FUSE filesystem for a git repository
       where every commit is a folder and the folder contains all the files in that commit
       [on Mastodon](https://fosstodon.org/@b0rk@jvns.ca/111462737333140668), so this series may continue
@@ -277,8 +276,7 @@ __Light reading__
       about confusing git terminology, the [.. and ... section](https://jvns.ca/blog/2023/11/01/confusing-git-terminology/#and).
 + [How I teach Git](https://blog.ltgt.net/teaching-git/) by Thomas Broyer
   on his blog (also [on DEV.to](https://dev.to/tbroyer/how-i-teach-git-3nj3)).
-  inspired to write it down by Julia Evans' (renewed) interest in Git,
-  and her questions on social networks.
+  Inspired by Julia Evans' (renewed) interest in Git and her questions on social networks.
 + [Stacked Diffs (and why you should know about them)](https://newsletter.pragmaticengineer.com/p/stacked-diffs)
   by Gergely Orosz in The Pragmatic Engineer blog.  Another article about Stacked Diffs
   can be found in [Git Rev News Edition #44](https://git.github.io/rev_news/2018/10/24/edition-44/).
@@ -308,7 +306,7 @@ __Light reading__
   by Ayu Adiati on Ayu's Notes On Blog (also [on DEV\.to](https://dev.to/adiatiayu/how-to-resolve-merge-conflicts-using-the-merge-editor-feature-on-vs-code-pic),
   as part of larger [Open-Source Series' Articles](https://dev.to/adiatiayu/series/15234)).
 + [The Ultimate "git nah" Alias](https://laravel-news.com/the-ultimate-git-nah-alias)
-  for abort their current changes and any possible operation in progress,
+  to throw away current changes, untracked files and rebase state,
   by Paul Redmond on Laravel News.
 + [Understanding Git: The history and internals](https://graphite.dev/blog/understanding-git)
   by Kenneth DuMez on the Graphite Blog (more about history and internals than about
@@ -328,7 +326,7 @@ __Light reading__
 + [🙏 Please Add .gitattributes To Your Git Repository](https://dev.to/deadlybyte/please-add-gitattributes-to-your-git-repository-1jld)
   by Carl Saunders on DEV\.to (2020).
     + A `.gitattributes` file [can be used to improve](https://github.com/github-linguist/linguist/blob/master/docs/overrides.md#using-gitattributes)
-     language detection on GitHub, which is using
+     language detection on GitHub, which is using the
      [Linguist](https://github.com/github-linguist/linguist) library.
 
 
@@ -347,13 +345,13 @@ __Easy watching and listening__
 __Git tools and sites__
 
 + [gitattributes.io](https://gitattributes.io/) is a service to generate 
-  [`.gitattributes`](https://git-scm.com/docs/gitattributes) file,
+  [`.gitattributes`](https://git-scm.com/docs/gitattributes) files,
   similar to [gitignore.io](https://www.toptal.com/developers/gitignore/).
 + [githistory.xyz](https://githistory.xyz/) is a service that allows to
   quickly browse the history of files in any git repo (from GitHub, GitLab, Bitbucket).
   Also available as Chrome, Firefox, and Visual Studio extensions,
   and as `git-file-history` command line tool (in Node.js).
-  Mentioned in passing in [Git Rev News Edition #48]().
+  Mentioned in passing in [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/).
 + Josh Branchaud (jbranchaud) list of
   [Today I Learned (TIL) tips about Git](https://github.com/jbranchaud/til#git).
 + [lei](https://public-inbox.org/lei.html) is a command-line tool
@@ -372,9 +370,9 @@ __Git tools and sites__
   Written in Ruby.
 + [GQL (Git Query Language)](https://amrdeveloper.github.io/GQL/)
   [[repo](https://github.com/AmrDeveloper/GQL)]
-  is a SQL like language to perform queries on .git files,
-  with supports of most of SQL features
-  such as grouping, ordering and aggregations functions.<br>
+  is a SQL-like language to perform queries on .git files,
+  with support for many SQL features
+  such as grouping, ordering and aggregation functions.<br>
   You can find more in [How I Created a SQL-like Language to Run Queries on Local Git Repositories](https://www.freecodecamp.org/news/gql-design-and-implementation/)
   article by Amr Hesham on freeCodeCamp.<br>
   See also the following tools:
@@ -426,7 +424,7 @@ __Git tools and sites__
 [2.43.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.43.0-rc2.windows.1),
 [2.43.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.43.0-rc1.windows.1),
 [2.43.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.43.0-rc0.windows.1)
-+ GitLab [16.6](https://about.gitlab.com/releases/2023/11/16/gitlab-16-6-released/)
++ GitLab [16.6](https://about.gitlab.com/releases/2023/11/16/gitlab-16-6-released/),
 [16.5.2](https://about.gitlab.com/releases/2023/11/14/gitlab-16-5-2-released/),
 [16.5.1, 16.4.2, 16.3.6](https://about.gitlab.com/releases/2023/10/31/security-release-gitlab-16-5-1-16-4-2-16-3-6-released/)
 + Gerrit Code Review [3.6.8](https://www.gerritcodereview.com/3.6.html#368),
