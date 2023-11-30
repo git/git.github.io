@@ -103,9 +103,9 @@ This edition covers what happened during the months of October 2023 and November
 
   These patches were reviewed by Eric Sunshine, Jeff King, alias Peff,
   Junio and Jason. After some discussions it appeared that the patches
-  were good enough for Junio so that he decided to make a small change
-  in them and then merge them. This issue is therefore fixed in the
-  Git 2.43.0 version released on November 20.
+  were good enough for Junio, so he decided to apply a small change
+  and then merge them. This issue is therefore fixed in
+  Git 2.43.0 released on November 20th.
 
 <!---
 ### Support
@@ -117,31 +117,31 @@ This edition covers what happened during the months of October 2023 and November
 
   I am Alexander Shopov - a backend engineer in the Amsterdam office of
   Uber working on money related systems. I am a long time translator of
-  FOSS software in Bulgarian - I am coordinating translations of GNOME,
+  FOSS software to Bulgarian - I am coordinating translations of GNOME,
   Translation Project and many GNU modules. Bulgarian is an Eastern
   South Slavic language written in the Cyrillic alphabet.
 
 * What would you name your most important contribution to Git?
 
   I made and now maintain the Bulgarian translation of the text
-  interface of Git, Gitk and Git Gui.
+  interface of Git, Gitk, and Git Gui.
 
 * What is the typical workflow of a contributor engaged in Git
   translation?
 
-  There are 19 translations of the text interface of Git and only 13 of
-  them are above 80% so I am not sure about "typical". It is a fairly
+  There are 19 translations of the text interface of Git, and only 13 of
+  them are above 80%, so I am not sure about "typical". It is a fairly
   standard workflow for a FOSS project.
 
   Generally one needs to do the following:
 
   1. Read the translator-targeted README.md in the po directory
-  2. Sync pace with the [calendar of git releases](https://tinyurl.com/gitcal)
+  2. Sync pace with the [calendar of Git releases](https://tinyurl.com/gitcal)
   3. Use the [l10n coordinator repository](https://github.com/git-l10n/git-po)
      maintained by Jiang Xin who makes sure translations get integrated upstream.
 
-  Currently the translation is a bit above 5500 messages which is about
-  40k words, 250k of characters or about 150 pages of text. It can be
+  Currently the translation is a bit above 5500 messages, which is about
+  40k words, 250k of characters, or about 150 pages of text. It can be
   intimidating for a new translator. But you can definitely make it: be
   patient and translate some messages every release, merge, publish and
   repeat. Even better though harder is getting more than one person
@@ -163,7 +163,7 @@ This edition covers what happened during the months of October 2023 and November
   Due to its enormous success, Git is being used on humongous code bases
   with a crazy number of files, directories, commits and branches.
   Working with repos larger than 10GB can be a bit slow. Improving the
-  experience will be a great thing.
+  experience would be a great thing.
 
 * If you could remove something from Git without worrying about
   backwards compatibility, what would it be?
@@ -171,25 +171,25 @@ This edition covers what happened during the months of October 2023 and November
   Backwards compatibility is massively important and I am thankful
   developers and users are all invested in this.
 
-  If we treat this as a hypothetical question: there are 3 things to Git:
-  - The command-line interface;
-  - The wire protocol;
-  - The storage format;
+  If we treat this as a hypothetical question, there are 3 things to Git:
+  - the command-line interface
+  - the wire protocol
+  - the storage format
 
   The command-line interface is gradually being improved. The wire
   protocol is also a place where there are workarounds for versioning.
   The storage format however is another (quite conservative and public)
   API. I would remove the old versions and try to design it targeting
-  projects that are 10-100 times larger than the linux kernel first. In
+  projects that are 10-100 times larger than the Linux kernel first. In
   for a penny, in for a pound. If we break things, let us break them so
   hard that bards will sing songs about us!
 
 * What is your favorite Git-related tool/library, outside of Git itself?
 
-  I mainly use commandline git plus gitk and git-gui. I do like using
+  I mainly use command line `git` plus `gitk` and `git-gui`. I do like using
   the meld diff tool when I work on translations.
 
-* Do you happen to have any memorable experience w.r.t contributing
+* Do you happen to have any memorable experience w.r.t. contributing
   to the Git project? If yes, could you share it with us?
 
   The initial getting to 100% translated messages was a challenge. I
@@ -201,8 +201,8 @@ This edition covers what happened during the months of October 2023 and November
 * Is there something you feel could be done to ease the life of
   translators?
 
-  The terminology glossary of Git is much larger than 7 years ago and we
-  (the translators) should actually update git://repo.or.cz/git-gui.git::po/glossary
+  The terminology glossary of Git is much larger than 7 years ago, and we
+  (the translators) should actually update `git://repo.or.cz/git-gui.git::po/glossary`
   and merge it in Git.
 
 * What is your advice for people who want to start Git development?
@@ -215,7 +215,7 @@ This edition covers what happened during the months of October 2023 and November
 
   That would be the tip of master two years in the future. On a more
   serious note - perhaps more tools for migration out of the still
-  existing proprietary version control systems will be helpful.
+  existing proprietary version control systems would be helpful.
 
 
 ## Other News
@@ -263,7 +263,7 @@ __Light reading__
   [git rebase: what can go wrong?](https://jvns.ca/blog/2023/11/06/rebasing-what-can-go-wrong-/),
   [How git cherry-pick and revert use 3-way merge](https://jvns.ca/blog/2023/11/10/how-cherry-pick-and-revert-work/),
   and [git branches: intuition & reality](https://jvns.ca/blog/2023/11/23/branches-intuition-reality/).
-    + Julia Evans (@b0rk@jvns.ca) asked about read-only FUSE filesystem for a git repository
+    + Julia Evans (@b0rk@jvns.ca) asked about a read-only FUSE filesystem for a Git repository
       where every commit is a folder and the folder contains all the files in that commit
       [on Mastodon](https://fosstodon.org/@b0rk@jvns.ca/111462737333140668), so this series may continue
       (so far it led to very experimental [git-commit-folders](https://github.com/jvns/git-commit-folders)
@@ -271,9 +271,9 @@ __Light reading__
       Jordan Rose being made public).
     + See also [Pain in the dots](https://matthew-brett.github.io/pydagogue/pain_in_dots.html)
       by Matthew Brett (part of [Notes and tutorials on git](https://matthew-brett.github.io/pydagogue/git.html)),
-      about confusing difference in how two-dot and three-dot notation
-      behaves in `git log` and in `git diff`, as an adition to the Julia Evans' article
-      about confusing git terminology, the [.. and ... section](https://jvns.ca/blog/2023/11/01/confusing-git-terminology/#and).
+      about the confusing difference in how two-dot and three-dot notations
+      behave in `git log` and `git diff`, as an addition to the Julia Evans' article
+      about confusing Git terminology, the [.. and ... section](https://jvns.ca/blog/2023/11/01/confusing-git-terminology/#and).
 + [How I teach Git](https://blog.ltgt.net/teaching-git/) by Thomas Broyer
   on his blog (also [on DEV.to](https://dev.to/tbroyer/how-i-teach-git-3nj3)).
   Inspired by Julia Evans' (renewed) interest in Git and her questions on social networks.
@@ -296,7 +296,7 @@ __Light reading__
     + [Stash only what `git commit` wouldn't commit](https://calebhearth.com/stash-what-git-wouldnt-commit).
     + [Ignore refactoring commits in `git blame`](https://calebhearth.com/rubocop-git-blame).
     + [Use your SSH key to sign commits](https://calebhearth.com/sign-git-with-ssh).
-        + See also for example
+        + See also, for example,
           [Signing Git Commits with SSH Keys](https://blog.dbrgn.ch/2021/11/16/git-ssh-signatures/)
           from [Git Rev News Edition #83](https://git.github.io/rev_news/2022/01/31/edition-83/).
 + [Why Git blame sucks for understanding WTF code (and what to use instead)](https://tekin.co.uk/2020/11/patterns-for-searching-git-revision-histories)
@@ -320,7 +320,7 @@ __Light reading__
     + [The History of Git: The Road to Domination in Software Version Control](https://git.github.io/rev_news/2020/02/19/edition-60/)
       referenced in [Git Rev News #60](https://git.github.io/rev_news/2020/02/19/edition-60/).
 + [Tracking SQLite Database Changes in Git](https://garrit.xyz/posts/2023-11-01-tracking-sqlite-database-changes-in-git)
-  with appropriate `textconv` gitattribute, by Garrit Franke on Garrit's Notes.
+  with an appropriate `textconv` gitattribute, by Garrit Franke on Garrit's Notes.
 + [GitHub’s all-in bet on AI may overlook Git](https://www.infoworld.com/article/3710428/githubs-all-in-bet-on-ai-may-overlook-git.html)
   by Matt Asay on InfoWorld.
 + [🙏 Please Add .gitattributes To Your Git Repository](https://dev.to/deadlybyte/please-add-gitattributes-to-your-git-repository-1jld)
@@ -334,7 +334,7 @@ __Easy watching and listening__
 
 + [Git Training](https://www.youtube.com/playlist?list=PL1gv5yv3DoZNIPVAlZRGPEB0fBvflO-xN)
   playlist of 45 short YouTube videos by Joost De Cock
-  provides git training materials for people who would like to understand
+  provides Git training materials for people who would like to understand
   how Git works rather than try to memorize all of its commands
   without knowing what they do.
 + The Real Python Podcast:
@@ -348,21 +348,21 @@ __Git tools and sites__
   [`.gitattributes`](https://git-scm.com/docs/gitattributes) files,
   similar to [gitignore.io](https://www.toptal.com/developers/gitignore/).
 + [githistory.xyz](https://githistory.xyz/) is a service that allows to
-  quickly browse the history of files in any git repo (from GitHub, GitLab, Bitbucket).
+  quickly browse the history of files in any Git repo (from GitHub, GitLab, Bitbucket).
   Also available as Chrome, Firefox, and Visual Studio extensions,
   and as `git-file-history` command line tool (in Node.js).
   Mentioned in passing in [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/).
-+ Josh Branchaud (jbranchaud) list of
++ Josh Branchaud (jbranchaud) collected a list of
   [Today I Learned (TIL) tips about Git](https://github.com/jbranchaud/til#git).
-+ [lei](https://public-inbox.org/lei.html) is a command-line tool
++ [`lei`](https://public-inbox.org/lei.html) is a command-line tool
   for importing and searching email, regardless of whether it is from a personal mailbox
   or a public-inbox instance, like [public-inbox.org](https://public-inbox.org/README.html)
   or [lore.kernel.org](https://lore.kernel.org/).<br>
-  Warning: lei is still in its early stages and may destroy mail.
+  Warning: `lei` is still in its early stages and may destroy mail.
     + See also [lore+lei: part 1, getting started](https://people.kernel.org/monsieuricon/lore-lei-part-1-getting-started)
       article by Konstantin Ryabitsev (2021).
 + [git-fame](https://github.com/casperdcl/git-fame): Pretty-print
-  git repository collaborators sorted by contributions (includes computing
+  Git repository collaborators sorted by contributions (includes computing
   code survival).  Written in Python.
 + [git-fame-rb](https://github.com/oleander/git-fame-rb) is a command-line tool
   that helps you summarize and pretty-print collaborators, based on the number of contributions.
@@ -370,7 +370,7 @@ __Git tools and sites__
   Written in Ruby.
 + [GQL (Git Query Language)](https://amrdeveloper.github.io/GQL/)
   [[repo](https://github.com/AmrDeveloper/GQL)]
-  is a SQL-like language to perform queries on .git files,
+  is a SQL-like language to perform queries on `.git` files,
   with support for many SQL features
   such as grouping, ordering and aggregation functions.<br>
   You can find more in [How I Created a SQL-like Language to Run Queries on Local Git Repositories](https://www.freecodecamp.org/news/gql-design-and-implementation/)
@@ -378,28 +378,28 @@ __Git tools and sites__
   See also the following tools:
    + [Gitana](https://github.com/SOM-Research/Gitana): SQL-based Project Activity Inspector
      (repo archived in 2022),
-     first mentioned in [Git Rev News Edition #7](https://git.github.io/rev_news/2015/09/09/edition-7/)
-   + [gitbase](https://github.com/src-d/gitbase): SQL interface to git repositories, written in Go;
+     first mentioned in [Git Rev News Edition #7](https://git.github.io/rev_news/2015/09/09/edition-7/).
+   + [gitbase](https://github.com/src-d/gitbase): SQL interface to Git repositories, written in Go;
      (last release from 2019, [homepage](https://docs.sourced.tech/gitbase) is not working),
-     first mentioned in [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/)
+     first mentioned in [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/).
    + [git-history](https://datasette.io/tools/git-history) is a tool
      for analyzing Git history using SQLite (last release in 2021),
-     first mentioned in [Git Rev News Edition #82](https://git.github.io/rev_news/2021/12/30/edition-82/)
+     first mentioned in [Git Rev News Edition #82](https://git.github.io/rev_news/2021/12/30/edition-82/).
    + [MergeStat](https://github.com/mergestat/mergestat) enables SQL queries
-     for data in git repositories (and related sources, such as the GitHub API).
-     There is also [mergestat-lite](https://github.com/mergestat/mergestat-lite)
-     command line tool, which runs SQL queries against local git repositories.
+     for data in Git repositories (and related sources, such as the GitHub API).
+     There is also the [`mergestat-lite`](https://github.com/mergestat/mergestat-lite)
+     command line tool, which runs SQL queries against local Git repositories.
      First mentioned in [Git Rev News Edition #82](https://git.github.io/rev_news/2021/12/30/edition-82/).
      Actively developed, mergestat-lite is written in Go.
 + [GibleFS](https://github.com/fanzeyi/giblefs) is a toy project
   that maps a Git repository to a virtual filesystem, which then can be used
   to access the repository at any given commit.  Written in Rust, does not seem
   to be actively developed.
-+ `Git/fs` binary in [Git9](https://orib.dev/git9.html)
++ The `Git/fs` binary in [Git9](https://orib.dev/git9.html)
   (Git client for Plan 9 non-POSIX filesystem)
   serves repository history as a file system.
 + [gitfs](https://github.com/presslabs/gitfs) is a FUSE file system
-  that fully integrates with git. You can mount a remote repository's branch locally,
+  that fully integrates with Git. You can mount a remote repository's branch locally,
   and any subsequent changes made to the files will be automatically committed to the remote.
   Written in Python, last release in 2019.
     + Note: that is not the only project named gitfs or git-fs.
@@ -444,5 +444,5 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Alexander Shopov, Luca Milanesio and
-Bruno Brito.
+with help from Alexander Shopov, Luca Milanesio,
+Bruno Brito, and stepnem.
