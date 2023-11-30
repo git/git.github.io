@@ -244,6 +244,7 @@ __Various__
   by Dan Goodin on Ars Technica, and<br>
   [Uncovering thousands of unique secrets in PyPI packages](https://blog.gitguardian.com/uncovering-thousands-of-unique-secrets-in-pypi-packages/)
   by Tom Forbes on GitGuardian Blog.
++ [14 years of JGit/EGit Code Reviews migrated to GerritHub](https://gitenterprise.me/2023/11/21/14-years-of-jgit-egit-code-reviews-migrated-to-gerrithub/) by Luca Milanesio on GerritForge Blog.
 
 
 __Light reading__
@@ -431,7 +432,7 @@ __Git tools and sites__
 + Gerrit Code Review [3.6.8](https://www.gerritcodereview.com/3.6.html#368),
 [3.7.6](https://www.gerritcodereview.com/3.7.html#376),
 [3.8.3](https://www.gerritcodereview.com/3.8.html#383),
-[3.9.0](https://www.gerritcodereview.com/3.9.html#390)
+[3.9.0-rc6](https://www.gerritcodereview.com/3.9.html#390)
 + GitHub Enterprise [3.11.0](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.0)
 + GitKraken [9.10.0](https://help.gitkraken.com/gitkraken-client/current/)
 + GitHub Desktop [3.3.5](https://desktop.github.com/release-notes/)
