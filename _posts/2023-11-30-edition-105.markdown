@@ -26,7 +26,8 @@ This edition covers what happened during the months of October 2023 and November
 
   Congratulations to Luma for being selected!
 
-  Thanks also to the other contributors who applied and worked on
+  Thanks to GitLab for sponsoring this Outreachy internship! Thanks
+  also to the other contributors who applied and worked on
   micro-projects, but couldn’t be selected! We hope to continue to see
   you in the community!
 
