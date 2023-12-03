@@ -549,9 +549,10 @@ participants a significant amount of money.
 
 And it's not limited to the first time you participate. The more you
 participate, the more benefits you will reap. Participating as a
-mentor or a co-mentor after you have been mentored or becoming a
-regular contributor will also reflect very well on you and increase a
-number of benefits you get.
+mentor or a co-mentor after you have been mentored, or becoming a
+regular contributor, will also reflect very well on you and increase a
+number of benefits you get. It's also relatively easy, as you have
+already overcome the most difficult parts.
 
 ### Career boost
 
