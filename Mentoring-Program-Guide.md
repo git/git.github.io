@@ -587,6 +587,13 @@ We also mention participants in our Git Rev News newsletter both after
 they have been selected into a mentoring program, and after they
 successfully finished it.
 
+Sometimes they get mentioned, or interviewed, in the blog posts of
+some well known Git related companies too, like for example:
+
+  - [this GitLab blog post about Outreachy](https://about.gitlab.com/blog/2021/04/15/outreachy-sponsorship-winter-2020/), or
+  - [this GitHub blog post about the Git 2.43 release](https://github.blog/2023-11-20-highlights-from-git-2-43/),
+    where Kousik's GSoC 2023 work is mentioned.
+
 ### Meeting us at some conferences
 
 We try to help successful participants come to the
