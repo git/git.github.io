@@ -464,12 +464,142 @@ it's not part of your main work.
 
   - [GSoC website](https://summerofcode.withgoogle.com)
 
+# Roadblocks and Benefits
+
+Successfully participating in a mentoring program with Git can boost
+your career in a number of different ways. Also even if it requires
+working regularly and being open to mentoring, it's not very
+difficult. We estimate that around 80% or more of the people we accept
+succeed.
+
+## Roadblocks
+
+It's possible that you will encounter difficulties in moving forward
+in your project. We try to list a few common ones here, along with
+some advice to help overcome them.
+
+In general it's a good idea to discuss such issues with your mentor(s)
+as early as possible. This way you might get some help and be able to
+try different solutions before it's too late. One possible way to
+alleviate some issues could be to extend the mentoring period if the
+mentoring program allows it.
+
+### Dedicated time
+
+The main thing that could prevent you from succeeding is not having or
+dedicating enough time to work on your project. Some people we
+mentored had university classes, or found a full time job, or took
+some long vacation, or spent a lot of time with their family, which
+prevented them from dedicating enough time to their project. This
+resulted in us having to fail them, which is sad for everyone.
+
+If you are planning to spend a significant amount of time doing other
+things than working on your project during the mentoring program, it
+might be better to not participate in it in the first place. You will
+save yourself and your mentor(s) a significant amount of frustration,
+and you will likely allow someone else to be successfully mentored and
+gain a lot from that experience.
+
+Other roadblocks can more easily be overcome than not dedicating
+enough time. Even if you can work a lot, you will need a bit of free
+time during the mentoring program, so you may make things very
+difficult for yourself if you are planning to work on both your
+project and other things at the same time. Be considerate towards
+yourself and do not put yourself in such a bad situation in the first
+place.
+
+### Asking for help
+
+Another thing that could slow you is if it's difficult for you to
+share with your mentor(s) about the technical hurdles you face. It
+could be that you have trouble debugging or understanding how things
+work or are supposed to work, and are afraid of asking for help.
+
+When we review your work, we provide technical suggestions, but when
+you are starting it or in the middle of it, you are usually alone and
+it can be difficult for you to ask your mentor(s) to take a look at
+it. Please consider that the more transparent you are about your work,
+and the more precise and specific you are in your questions, the
+easier it is for us to help you, and for you to move forward.
+
+We only request that you spend around 10 minutes trying to find a
+solution by yourself before you ask us about something. When you have
+tried to find a solution, it's also a good idea to tell us what you
+have tried or how you searched, as we can often help you be more
+efficient in this too.
+
+### Personal issues
+
+Yet another roadblock that could sometimes prevent you from succeeding
+is personal issues of different kinds. They are sometimes related to
+your family or your partner. They are sometimes related to the other
+potential roadblocks above.
+
+In general it's a good idea to talk about them early with your mentor,
+as we just cannot properly handle difficult personal situations we are
+not aware of. And regular communication, even using video chat, might
+not be enough to suspect that your personal situation might be
+difficult, if you are not explicit about it.
+
+## Benefits
+
+There are a lot of benefits in participating in mentoring programs
+with the Git project, not just the fact that the programs pay the
+participants a significant amount of money.
+
+And it's not limited to the first time you participate. The more you
+participate, the more benefits you will reap. Participating as a
+mentor or a co-mentor after you have been mentored or becoming a
+regular contributor will also reflect very well on you and increase a
+number of benefits you get.
+
+### Career boost
+
+A number of former participants in a mentoring program with us have
+reported that it significantly boost their career, as they much more
+easily got job interviews, and then job offers with more well known
+companies.
+
+### Improved technical skills
+
+Former participants also reported that they felt their software
+engineering skills improved significantly.
+
+### Improved self confidence
+
+We believe that being able to contribute significantly to a well known
+project like Git, also helps improve participants' self-confidence.
+They are likely to be less afraid to participate in and contribute to
+more complex software projects.
+
+### Improved Internet credibility
+
+We strongly encourage the participants we mentor to create a blog
+about their work and regularly post on their blog, as we believe that
+it helps them in many ways. We encourage them to post on social media
+too.
+
+We also mention participants in our Git Rev News newsletter both after
+they have been selected into a mentoring program, and after they
+successfully finished it.
+
+### Meeting us at some conferences
+
+We try to help successful participants come to the
+[Git Merge conference](https://git-merge.com/)
+and meet the community, often including their mentor(s), there.
+
+This is sometimes not possible due to visa issues or the fact that the
+Git Merge unfortunately doesn't happen every year, though.
+
 # Conclusion
 
-Hope you got an idea about how things usually go during the mentoring
-period of a mentoring program such as GSoC or Outreachy. Hope you are
-also aware of the people, communication means and resources available
-to help you, as well as the rules you have to follow.
+We hope you got an idea about how you will likely work with your
+mentor(s) and how things usually go during the mentoring period of a
+program such as GSoC or Outreachy. We hope you are also aware of the
+people, communication means and resources available to help you, as
+well as the rules you have to follow, the roadblocks you might
+encounter and the benefits you may reap.
 
 As a reminder, don't be surprised if your mentors ask for things that
 are a bit different than what is described here. Typically your
