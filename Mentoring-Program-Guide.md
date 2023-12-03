@@ -598,10 +598,12 @@ some well known Git related companies too, like for example:
 
 We try to help successful participants come to the
 [Git Merge conference](https://git-merge.com/)
-and meet the community, often including their mentor(s), there.
+and meet the community, often including their mentor(s), there. For
+that the Git project offers to reimburse the participants' travel
+expenses.
 
-This is sometimes not possible due to visa issues or the fact that the
-Git Merge unfortunately doesn't happen every year, though.
+This is sometimes not possible due to visa issues, or the fact that
+the Git Merge unfortunately doesn't happen every year, though.
 
 # Conclusion
 
