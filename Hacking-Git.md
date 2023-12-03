@@ -58,7 +58,7 @@ suggest improvements. Thanks!
 
 * [GitGitGadget](https://gitgitgadget.github.io/) makes it easy to send patches to the mailing list.
 
-* [Sending patches by email with git](https://flusp.ime.usp.br/git/sending-patches-by-email-with-git/) is Matheus' git send-email tutorial. 
+* [Sending patches by email with git](https://flusp.ime.usp.br/git/sending-patches-by-email-with-git/) is Matheus' git send-email tutorial.
 
 * [lore.kernel.org/git](https://lore.kernel.org/git/) is our prefered mailing list archive.
 
