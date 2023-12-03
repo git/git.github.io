@@ -565,6 +565,10 @@ companies.
 Former participants also reported that they felt their software
 engineering skills improved significantly.
 
+This is not just that they became more proficient with Git and source
+code management in general. It's a also at least about improved
+programming, testing, reviewing and collaborating skills.
+
 ### Improved self confidence
 
 We believe that being able to contribute significantly to a well known
