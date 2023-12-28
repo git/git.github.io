@@ -127,7 +127,7 @@ for suggesting to interview, VonC!_
   Start with understanding Git **branching**, and operations around branches
   (switch, merge, rebase, cherry-pick)
 
-  For that, I always redirect people to "[Learn Git Branching](learngitbranching.js.org)"
+  For that, I always redirect people to "[Learn Git Branching](https://learngitbranching.js.org)"
   (`learngitbranching.js.org`): nothing to install, all exercices are done
   directly in the browser, and it is very visual.
 
