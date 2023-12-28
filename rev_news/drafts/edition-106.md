@@ -87,7 +87,7 @@ for suggesting to interview, VonC!_
   in name only, and are here to stay.
 
 
-* **What is one of my most favorite features of Git?**
+* **What is one of your most favorite features of Git?**
 
   Coming from CVS/SVN, one of my favorite features of Git is its powerful
   branching and merging capabilities. Branches in Git are lightweight and
