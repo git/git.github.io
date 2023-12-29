@@ -256,6 +256,11 @@ __Git tools and sites__
   In the style of the undo features in [GitUp](https://gitup.co/), [jj](https://github.com/martinvonz/jj), and [git-branchless](https://github.com/arxanas/git-branchless).
   Meant to be just a prototype, to serve _as an inspiration_ for a better tool that actually works reliably.
   Written in Python, MIT license.
+    + Contrast [thefuck](https://github.com/nvbn/thefuck), a command line application
+      which corrects your previous console command (for example git command)
+      if you made an error and it _didn't_ do what you wanted;
+      the tool was mentioned in
+      [Git Rev News Edition #101](https://git.github.io/rev_news/2023/07/31/edition-101/).
 + [git-vee](https://github.com/mjdominus/git-util/blob/master/bin/git-vee)
   is a shell script that prepares a brief summary of how your current branch
   has diverged from a corresponding remote branch.  Mentioned on 
