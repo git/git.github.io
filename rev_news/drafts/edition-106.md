@@ -190,6 +190,20 @@ __Git tools and sites__
 
 ## Releases
 
++ Gerrit Code Review [3.9.1](https://www.gerritcodereview.com/3.9.html#391)
++ GitHub Enterprise [3.11.2](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.2),
+[3.11.1](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.1),
+[3.10.4](https://help.github.com/enterprise-server@3.10/admin/release-notes#3.10.4),
+[3.9.7](https://help.github.com/enterprise-server@3.9/admin/release-notes#3.9.7),
+[3.8.12](https://help.github.com/enterprise-server@3.8/admin/release-notes#3.8.12),
+[3.7.19](https://help.github.com/enterprise-server@3.7/admin/release-notes#3.7.19),
+[3.11.0](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.0)
++ GitLab [16.7](https://about.gitlab.com/releases/2023/12/21/gitlab-16-7-released/)
+[16.6.2, 16.5.4, 16.4.4](https://about.gitlab.com/releases/2023/12/13/security-release-gitlab-16-6-2-released/),
+[16.6.1, 16.5.3, 16.4.3](https://about.gitlab.com/releases/2023/11/30/security-release-gitlab-16-6-1-released/)
++ GitKraken [9.11.0](https://help.gitkraken.com/gitkraken-client/current/)
++ GitHub Desktop [3.3.6](https://desktop.github.com/release-notes/)
++ Sourcetree [4.2.6](https://product-downloads.atlassian.com/software/sourcetree/ReleaseNotes/Sourcetree_4.2.6.html)
 
 ## Credits
 
