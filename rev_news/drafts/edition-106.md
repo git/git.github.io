@@ -178,14 +178,117 @@ email to &lt;<kaartic.sivaraam@gmail.com>&gt;._
 
 __Various__
 
++ [Google Summer of Code 2024: Contribute to GitLab and Git to prepare](https://about.gitlab.com/blog/2023/12/20/google-summer-of-code-2024-contribute-to-gitlab-and-git-to-prepare/)
+  by Christian Couder and Nick Veenhof on GitLab Blog.
++ [Upcoming changes to repository insights [on GitHub]](https://github.blog/changelog/2023-11-29-upcoming-changes-to-repository-insights/)
+  on GitHub Blog.
++ [Git platform AllSpice now curries favor with enterprises](https://techcrunch.com/2023/12/05/git-allspice-enterprise-6m/)
+  by Christine Hall on TechCrunch.
++ [GitLab Duo Code Suggestions is generally available](https://about.gitlab.com/blog/2023/12/22/gitlab-duo-code-suggestions-is-generally-available/)
+  by David DeSanto on GitLab Blog.
+  [GitLab Code Suggestions](https://about.gitlab.com/solutions/code-suggestions/)
+  is an alternative to [GitHub Copilot](https://github.com/features/copilot)
+  and [OpenAI ChatGPT](https://chat.openai.com/) (to a lesser extent).
+
 
 __Light reading__
 
-<!---
++ Julia Evans continues her streak of Git-related blog posts with
+  [Mounting git commits as folders with NFS](https://jvns.ca/blog/2023/12/04/mounting-git-commits-as-folders-with-nfs/)
+  (and FUSE), about experimental [git-commit-folders](https://github.com/jvns/git-commit-folders)
+  tool.  This tool was mentioned in [previous Git Rev News](https://git.github.io/rev_news/2023/11/30/edition-105/).
++ Julia Evans also published a few comics about Git at [Wizard Zines comics](https://wizardzines.com/comics/),
+  for a zine on Git that she is currently writing
+  (these are only the most recent ones; some of earlier ones made it into
+  [Oh Shit, Git! Recipes for getting out of git mess](https://wizardzines.com/zines/oh-shit-git/) zine):
+    + [every git jargon](https://wizardzines.com/comics/every-git-jargon/)
+    + [git discussion bingo](https://wizardzines.com/comics/git-discussion-bingo/)
+    + [every git command I use](https://wizardzines.com/comics/every-git-command/)
+    + [meet the branch](https://wizardzines.com/comics/meet-the-branch/)
+    + [branches have no rules](https://wizardzines.com/comics/branches-have-no-rules/)
+      (at least no built-in ones, though you can try to enforce some with [git hooks](https://githooks.com/))
+    + [`HEAD` and heads](https://wizardzines.com/comics/head-and-heads/)
+    + [my rules for rebasing](https://wizardzines.com/comics/rules-for-rebasing/)
++ [Every engineer should understand git reflog](https://graphite.dev/blog/every-engineer-should-understand-git-reflog)
+  by Harsh Siriah on Graphite Blog.
++ [Fine-grained file differences](https://www.johndcook.com/blog/2023/12/13/fine-grained-file-differences/)
+  by John D. Cook on his blog.
++ [DiffDebugging](https://martinfowler.com/bliki/DiffDebugging.html)
+  by Martin Fowler on his blog/wiki.  Page created in 2004, rewritten in 2013.
++ [Monorepo, Poly-repo, or No Repo at all?
+   Using Bit to make “irreversible decisions” easy to make and change.](https://blog.bitsrc.io/monorepo-poly-repo-or-no-repo-at-all-830328c7a546)
+  by Eden Ella on Bits and Pieces blog.
+    + [Bit](https://bit.dev/), a build system for composable software,
+      was first mentioned in [Git Rev News Edition #45](https://git.github.io/rev_news/2018/11/21/edition-45/),
+      (then at old bitsrc.io URL, instead of current bit.dev URL).
+    + It was mentioned again in [Git Rev News Edition #77](https://git.github.io/rev_news/2021/07/31/edition-77/)
+      in [How to Collaborate on Components across Projects with Bit](https://dev.to/giteden/how-to-collaborate-on-components-across-projects-with-bit-29c3) by Eden Ella onn DEV\.to.
++ [Recovering Deleted Files From Your Git Working Tree](https://www.smashingmagazine.com/2023/12/recovering-deleted-files-git-working-tree/)
+  by Oluwasanmi Akande on Smashing Magazine.
++ [Git Grep Like a Pro: The Complete Guide](https://www.kosli.com/blog/git-grep-like-a-pro-the-complete-guide/)
+  by Bruce Johnston on Kosli Blog (2022).
++ [Flexible Identities in git](https://belkadan.com/blog/2020/02/Flexible-Identities-in-git/)
+  proposal (to avoid "deadnaming", and bury old name, while preserving link to things done under old name)
+  by Jordan Rose on -dealloc blog (2020).
+
+
 __Easy watching__
--->
+
++ [Git From the Bits Up](https://www.youtube.com/watch?v=mdvlu_R8EWE)
+  by Tim Berglund, DataStax.  Recorded at [Jfokus](http://www.jfokus.com) 2016.
+
 
 __Git tools and sites__
+
++ [dyff](https://github.com/homeport/dyff) /ˈdʏf/ is a diff tool for YAML files,
+  and sometimes JSON.  Can be used as Git diff driver (see documentation).
+  Written in Go, uses MIT license.
++ [Git-LaTeXdiff](https://gitlab.com/git-latexdiff/git-latexdiff) is a tool
+  to graphically visualize differences between different versions of a LaTeX file.
+  It is a wrapper around Git and [latexdiff](https://www.ctan.org/pkg/latexdiff)
+  (which is present [on CTAN](https://www.ctan.org/pkg/latexdiff), Comprehensive TeX Archive Network).
+  git-latexdiff is written as BSD-licensed Bash script,
+  while latexdiff is written in Perl (and is GPLv3 licensed).
+  The git-latexdiff tool was mentioned in passing in 
+  [Git Rev News Edition #8](https://git.github.io/rev_news/2015/10/14/edition-8/).
++ [git-oops](https://github.com/jvns/git-oops) is a **very experimental** tool
+  allowing to undo a git operation, without having to remember specific invocation.
+  In the style of the undo features in [GitUp](https://gitup.co/), [jj](https://github.com/martinvonz/jj), and [git-branchless](https://github.com/arxanas/git-branchless).
+  Meant to be just a prototype, to serve _as an inspiration_ for a better tool that actually works reliably.
+  Written in Python, MIT license.
++ [git-vee](https://github.com/mjdominus/git-util/blob/master/bin/git-vee)
+  is a shell script that prepares a brief summary of how your current branch
+  has diverged from a corresponding remote branch.  Mentioned on 
+  [git-vee](https://www.plover.com/misc/stop-merging/slide019.html) slide
+  in [Cleaner `git` history](https://www.plover.com/misc/stop-merging/slide001.html)
+  (also known as "Stop merging master") by Mark Jason Dominus (the author of the tool),
+  from 2013.
++ [Breezy](https://www.breezy-vcs.org/) is a version control system implemented in Python
+  with multi-format support and an emphasis on hackability.
+  Currently, Breezy has built-in support for the Git and Bazaar file formats and network protocols.
+  GPLv2 licensed.
++ [FlatGitHub](https://flatgithub.com/) or Flat View is a simple tool for exploring
+  flat data files in GitHub repositories.
+  Implements [Flat Data](https://githubnext.com/projects/flat-data) project (formerly GitHub OCTO),
+  mentioned in [Git Rev News Edition #75](https://git.github.io/rev_news/2021/05/27/edition-75/)
+  (under old URL) and [Edition #96](https://git.github.io/rev_news/2023/02/28/edition-96/),
+  which in turn was based on [“git scraping” approach pioneered by Simon Willison](https://githubnext.com/projects/flat-data),
+  mentioned in [Git Rev News Edition #82](https://git.github.io/rev_news/2021/12/30/edition-82/).
+  See the example of [flat-demo-bitcoin-price](https://flatgithub.com/githubocto/flat-demo-bitcoin-price?filename=btc-price-postprocessed.json&sha=78b38f641f8f1ffccae733749545ea42cf5eddf9).
++ [AllSpice.io](https://allspice.io/) is a Git platform for hardware developers
+  (named after SPICE ("Simulation Program with Integrated Circuit Emphasis"),
+  a general-purpose, open-source analog electronic circuit simulator).
+  No free tier.
++ [typos](https://github.com/crate-ci/typos) is a source code spell checker,
+  which finds and corrects spelling mistakes among source code;
+  intended to be fast enough to run on monorepos, and with low false positives
+  so you can run on PRs.  Written in Rust.
+    + Mentioned in [Perl Advent Calendar 2023 - Elves Versus Typos](https://perladvent.org/2023/2023-12-21.html).
++ [dat](https://github.com/dat-ecosystem/dat) is a tool for peer-to-peer sharing
+  & live synchronization of files via command line.  Part of [dat-ecosystem](dat-ecosystem.org).
+  You can use `dat` command line to share files with version control,
+  back up data to servers, browse remote files on demand, and automate long-term data preservation.
+  Written in JavaScript for running with Node.js.
 
 
 ## Releases
