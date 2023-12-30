@@ -126,7 +126,7 @@ for suggesting to interview, VonC!_
   by **[Ryan Donovan](https://twitter.com/RThorDonovan)**, this is a way to
   give back to the community, and to learn in the process.
 
-  I learn Git itself even before installing it, by answering a few
+  I learnt Git itself even before installing it, by answering a few
   questions on Stack Overflow, as I detailed in "[How'd you get started?](https://meta.stackexchange.com/a/367773/6309)".
 
 * **If you could get a team of expert developers to work full-time on something in Git for a full year, what would it be?**
