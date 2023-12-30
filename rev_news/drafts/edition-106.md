@@ -1,13 +1,13 @@
 ---
-title: Git Rev News Edition 106 (December 27th, 2023)
+title: Git Rev News Edition 106 (December 31th, 2023)
 layout: default
-date: 2023-12-27 12:06:51 +0100
+date: 2023-12-31 12:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 106 (December 27th, 2023)
+## Git Rev News: Edition 106 (December 31th, 2023)
 
 Welcome to the 106th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
