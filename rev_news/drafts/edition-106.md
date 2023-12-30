@@ -21,9 +21,73 @@ This edition covers what happened during the months of November 2023 and Decembe
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
++ [[PATCH 0/4] Switch links to https](https://lore.kernel.org/git/pull.1589.git.1695392027.gitgitgadget@gmail.com/)
+
+  Last September Josh Soref posted a 4 patch long series on the
+  mailing list to improve the URLs used throughout the documentation
+  and the code base of the project.
+
+  The main goal was to use HTTPS instead of HTTP in the URLs to
+  improve user security, but along the way some patches replaced URLs
+  that didn't work anymore with some new ones pointing to the same
+  content.
+
+  Eric Sunshine replied to Josh's patches asking why one ULR was
+  changed from `http://json.org/` to `https://www.json.org/` instead
+  of just replacing `http` with `https`. Josh replied that it was
+  because that website was self-identifying with the later URL using a
+  [meta refresh](https://en.wikipedia.org/wiki/Meta_refresh).
+
+  In the meantime, Junio Hamano, the Git maintainer, replied to some
+  patches saying that it might not be worth updating some URLs, either
+  because it was clear from the context that they were old, or because
+  they were part of some code we borrowed from other projects. In some
+  cases, they were an argument of a Git command and still just worked,
+  while the meaning of the command changed a bit when `http` was
+  replaced with `https`. Junio liked the fact that some broken links
+  were fixed by the series though.
+
+  Josh then sent a
+  [version 2 of his patch series](https://lore.kernel.org/git/pull.1589.v2.git.1695553041.gitgitgadget@gmail.com/).
+  This took into account Eric's comments as a commit message was
+  improved to say that some changes were made to respect a site's
+  self-identification. Junio's comments were also taken into account
+  as a number of URLs that were previously changed were now left
+  as-is.
+
+  Elijah Newren and Junio commented on this new version. They both
+  suggested improving commit messages or the cover letter of the
+  series to better explain the reasons for the changes that were made.
+  In one case, Elijah and Josh discussed replacing the URL of a
+  website that seemed to be often down with a link to its content on
+  the [Internet Archive](https://archive.org/).
+
+  Last November, Josh then sent a
+  [version 3 of his patch series](https://lore.kernel.org/git/pull.1589.v3.git.1700796916.gitgitgadget@gmail.com/)
+  where the first and second patches had been swapped to avoid some
+  confusion for reviewers who would ask why some URLs weren't changed
+  in the first patch overlooking that the second one would change them.
+
+  The other significant change compared to version 2 was that Josh
+  decided not to replace the URL of the website that was often down
+  saying "we'll risk users getting hacked content from an arbitrary
+  [MITM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)
+  instead of taking archived authenticated content based on the last
+  time their web site was properly maintained".
+
+  Elijah replied that he would be fine with using the archived link if
+  it was better justified in the commit message. But said that he also
+  agreed with merging the whole series as-is, as he had checked all
+  the links and they all looked good to him.
+
+  Josh replied he could come back later to change the URL and prefered
+  the series to be merged as-is. He thanked Elijah for taking the time
+  to re-check every link, saying he knew exactly how tedious that is.
+
+  Junio agreed with merging the series, which is now part of the
+  'master' branch.
 
 <!---
 ### Support
