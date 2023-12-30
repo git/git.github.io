@@ -261,6 +261,21 @@ __Git tools and sites__
       if you made an error and it _didn't_ do what you wanted;
       the tool was mentioned in
       [Git Rev News Edition #101](https://git.github.io/rev_news/2023/07/31/edition-101/).
+    + Contrast [git-undo-el](https://github.com/jwiegley/git-undo-el),
+      a command for Emacs editor to "undo" changes to selected region of a file
+      through its Git history, mentioned in
+      [Git Rev News Edition #34](https://git.github.io/rev_news/2017/12/20/edition-34/).
+    + One of git-oops inspirations, the [undo command in git-branchless](https://github.com/arxanas/git-branchless/wiki/Command:-git-undo),
+      was described in [git undo: We can do better](https://blog.waleedkhan.name/git-undo/),
+      which was mentioned in [Git Rev News Edition #76](https://git.github.io/rev_news/2021/06/27/edition-76/).
+    + A very basic and limited [Git Undo [alias]](https://megakemp.com/2016/08/25/git-undo/)
+      was mentioned in [Git Rev News Edition #19](https://git.github.io/rev_news/2016/09/14/edition-19/)
+      (resets state using reflog).
+    + Many IDE and programming editors, their Git-related extensions/plugins,
+      and Git GUIs have some kind of universal "git undo".  One example is
+      Tower Git GUI, which undo abilities are described in
+      [CMD+Z for Git is Here](https://css-tricks.com/cmdz-for-git-is-here/)
+      (mentioned in [Git Rev News Edition #65](https://git.github.io/rev_news/2020/07/29/edition-65/).
 + [git-vee](https://github.com/mjdominus/git-util/blob/master/bin/git-vee)
   is a shell script that prepares a brief summary of how your current branch
   has diverged from a corresponding remote branch.  Mentioned on 
