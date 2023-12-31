@@ -34,7 +34,7 @@ This edition covers what happened during the months of November 2023 and Decembe
   that didn't work anymore with some new ones pointing to the same
   content.
 
-  Eric Sunshine replied to Josh's patches asking why one ULR was
+  Eric Sunshine replied to Josh's patches asking why one URL was
   changed from `http://json.org/` to `https://www.json.org/` instead
   of just replacing `http` with `https`. Josh replied that it was
   because that website was self-identifying with the later URL using a
