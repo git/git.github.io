@@ -13,7 +13,7 @@ Welcome to the 106th edition of [Git Rev News](https://git.github.io/rev_news/re
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
-This edition covers what happened during the months of November 2023 and December 2023.
+This edition covers what happened during the months of November and December 2023.
 
 ## Discussions
 
@@ -25,7 +25,7 @@ This edition covers what happened during the months of November 2023 and Decembe
 
 + [[PATCH 0/4] Switch links to https](https://lore.kernel.org/git/pull.1589.git.1695392027.gitgitgadget@gmail.com/)
 
-  Last September Josh Soref posted a 4 patch long series on the
+  In September, Josh Soref had posted a 4 patch long series on the
   mailing list to improve the URLs used throughout the documentation
   and the code base of the project.
 
@@ -64,7 +64,7 @@ This edition covers what happened during the months of November 2023 and Decembe
   website that seemed to be often down with a link to its content on
   the [Internet Archive](https://archive.org/).
 
-  Last November, Josh then sent a
+  In November, Josh then sent a
   [version 3 of his patch series](https://lore.kernel.org/git/pull.1589.v3.git.1700796916.gitgitgadget@gmail.com/)
   where the first and second patches had been swapped to avoid some
   confusion for reviewers who would ask why some URLs weren't changed
@@ -78,11 +78,11 @@ This edition covers what happened during the months of November 2023 and Decembe
   time their web site was properly maintained".
 
   Elijah replied that he would be fine with using the archived link if
-  it was better justified in the commit message. But said that he also
+  it was better justified in the commit message, but said that he also
   agreed with merging the whole series as-is, as he had checked all
   the links and they all looked good to him.
 
-  Josh replied he could come back later to change the URL and prefered
+  Josh replied he could come back later to change the URL and preferred
   the series to be merged as-is. He thanked Elijah for taking the time
   to re-check every link, saying he knew exactly how tedious that is.
 
@@ -97,7 +97,7 @@ This edition covers what happened during the months of November 2023 and Decembe
 
 _[VonC](https://stackoverflow.com/users/6309/vonc) is a
 prolific contributor to the Git topic on Stack Overflow. This edition features an
-interview with them. Thanks to our [survey respondents](https://git.github.io/rev_news/2023/06/30/edition-100#some-statistics-about-the-ongoing-first-git-rev-news-readers-survey)
+    interview with him. Thanks to our [survey respondents](https://git.github.io/rev_news/2023/06/30/edition-100#some-statistics-about-the-ongoing-first-git-rev-news-readers-survey)
 for suggesting to interview, VonC!_
 
 * **Who are you and what do you do?**
@@ -185,7 +185,7 @@ for suggesting to interview, VonC!_
   goes in hand with the debate around monolith vs. microservices), but I found
   in the subsequent years that working with multiple small Git repositories was
   much more manageable than working with a single large one, as I used to do
-  before, using huge [ClearCase Vobs](https://www.ibm.com/docs/en/rational-clearcase/9.0.0?topic=clearcase-about-vobs-versioned-objects).
+  before, using huge [ClearCase VOBs](https://www.ibm.com/docs/en/rational-clearcase/9.0.0?topic=clearcase-about-vobs-versioned-objects).
 
 * **What is your advice for people who want to start using Git? Where and how should they start?**
 
@@ -196,7 +196,7 @@ for suggesting to interview, VonC!_
   (`learngitbranching.js.org`): nothing to install, all exercises are done
   directly in the browser, and it is very visual.
 
-  I also discourage people from blindly follow "[Git Branching Model](https://nvie.com/posts/a-successful-git-branching-model/)",
+  I also discourage people from blindly following the "[Git Branching Model](https://nvie.com/posts/a-successful-git-branching-model/)",
   where an integration branch like `develop` is merged to another integration
   one like `master`. See the links above for "gitworkflow" where I explain
   why one should merge to an integration branch, not from it: merging *from*
@@ -206,7 +206,7 @@ for suggesting to interview, VonC!_
 
 * **There's a common conception that "Git is confusing". What are your thoughts about the same?**
 
-  Right... you mean [XKCD 1597, Oct. 2015, "Git"](https://explainxkcd.com/wiki/index.php/1597:_Git)
+  Right... you mean [XKCD 1597, Oct. 2015, "Git"](https://explainxkcd.com/wiki/index.php/1597:_Git).
 
   The level of integration of Git in IDEs (like Eclipse, IntelliJ, VSCode, ...)
   has made Git more accessible to beginners. I often redirect them to a combo
@@ -218,7 +218,7 @@ for suggesting to interview, VonC!_
   (you rebase your local feature branch on top of the target branch,
   before force pushing it to the remote repository, [with lease](https://stackoverflow.com/a/52937476/6309)
   or [if-includes](https://stackoverflow.com/a/64627761/6309)), the users
-  manage to get by. The bulk of my training is about PR (Pull Request)
+  manage to get by. The bulk of my training is about the PR (Pull Request)
   workflow, which involves `git rebase` (`--onto`), and
   `git push --force-with-lease `or `--force-if-includes`.
 
@@ -259,7 +259,7 @@ __Light reading__
 
 + Julia Evans continues her streak of Git-related blog posts with
   [Mounting git commits as folders with NFS](https://jvns.ca/blog/2023/12/04/mounting-git-commits-as-folders-with-nfs/)
-  (and FUSE), about experimental [git-commit-folders](https://github.com/jvns/git-commit-folders)
+  (and FUSE), about the experimental [git-commit-folders](https://github.com/jvns/git-commit-folders)
   tool.  This tool was mentioned in [previous Git Rev News](https://git.github.io/rev_news/2023/11/30/edition-105/).
 + Julia Evans also published a few comics about Git at [Wizard Zines comics](https://wizardzines.com/comics/),
   for a zine on Git that she is currently writing
@@ -286,13 +286,13 @@ __Light reading__
       was first mentioned in [Git Rev News Edition #45](https://git.github.io/rev_news/2018/11/21/edition-45/),
       (then at old bitsrc.io URL, instead of current bit.dev URL).
     + It was mentioned again in [Git Rev News Edition #77](https://git.github.io/rev_news/2021/07/31/edition-77/)
-      in [How to Collaborate on Components across Projects with Bit](https://dev.to/giteden/how-to-collaborate-on-components-across-projects-with-bit-29c3) by Eden Ella onn DEV\.to.
+      in [How to Collaborate on Components across Projects with Bit](https://dev.to/giteden/how-to-collaborate-on-components-across-projects-with-bit-29c3) by Eden Ella on DEV\.to.
 + [Recovering Deleted Files From Your Git Working Tree](https://www.smashingmagazine.com/2023/12/recovering-deleted-files-git-working-tree/)
   by Oluwasanmi Akande on Smashing Magazine.
 + [Git Grep Like a Pro: The Complete Guide](https://www.kosli.com/blog/git-grep-like-a-pro-the-complete-guide/)
   by Bruce Johnston on Kosli Blog (2022).
 + [Flexible Identities in git](https://belkadan.com/blog/2020/02/Flexible-Identities-in-git/)
-  proposal (to avoid "deadnaming", and bury old name, while preserving link to things done under old name)
+  proposal (to avoid "deadnaming", and bury an old name, while preserving link to things done under the old name)
   by Jordan Rose on -dealloc blog (2020).
 
 
@@ -311,17 +311,17 @@ __Git tools and sites__
   to graphically visualize differences between different versions of a LaTeX file.
   It is a wrapper around Git and [latexdiff](https://www.ctan.org/pkg/latexdiff)
   (which is present [on CTAN](https://www.ctan.org/pkg/latexdiff), Comprehensive TeX Archive Network).
-  git-latexdiff is written as BSD-licensed Bash script,
-  while latexdiff is written in Perl (and is GPLv3 licensed).
+  `git-latexdiff` is written as BSD-licensed Bash script,
+  while `latexdiff` is written in Perl (and is GPLv3 licensed).
   The git-latexdiff tool was mentioned in passing in 
   [Git Rev News Edition #8](https://git.github.io/rev_news/2015/10/14/edition-8/).
 + [git-oops](https://github.com/jvns/git-oops) is a **very experimental** tool
-  allowing to undo a git operation, without having to remember specific invocation.
+  allowing to undo a Git operation, without having to remember specific invocation.
   In the style of the undo features in [GitUp](https://gitup.co/), [jj](https://github.com/martinvonz/jj), and [git-branchless](https://github.com/arxanas/git-branchless).
   Meant to be just a prototype, to serve _as an inspiration_ for a better tool that actually works reliably.
   Written in Python, MIT license.
     + Contrast [thefuck](https://github.com/nvbn/thefuck), a command line application
-      which corrects your previous console command (for example git command)
+      which corrects your previous console command (for example Git command)
       if you made an error and it _didn't_ do what you wanted;
       the tool was mentioned in
       [Git Rev News Edition #101](https://git.github.io/rev_news/2023/07/31/edition-101/).
@@ -339,7 +339,7 @@ __Git tools and sites__
       and Git GUIs have some kind of universal "git undo".  One example is
       Tower Git GUI, which undo abilities are described in
       [CMD+Z for Git is Here](https://css-tricks.com/cmdz-for-git-is-here/)
-      (mentioned in [Git Rev News Edition #65](https://git.github.io/rev_news/2020/07/29/edition-65/).
+      (mentioned in [Git Rev News Edition #65](https://git.github.io/rev_news/2020/07/29/edition-65/)).
 + [git-vee](https://github.com/mjdominus/git-util/blob/master/bin/git-vee)
   is a shell script that prepares a brief summary of how your current branch
   has diverged from a corresponding remote branch.  Mentioned on 
@@ -369,8 +369,8 @@ __Git tools and sites__
   so you can run on PRs.  Written in Rust.
     + Mentioned in [Perl Advent Calendar 2023 - Elves Versus Typos](https://perladvent.org/2023/2023-12-21.html).
 + [dat](https://github.com/dat-ecosystem/dat) is a tool for peer-to-peer sharing
-  & live synchronization of files via command line.  Part of [dat-ecosystem](dat-ecosystem.org).
-  You can use `dat` command line to share files with version control,
+  & live synchronization of files via command line.  Part of the [dat-ecosystem](dat-ecosystem.org).
+  You can use the `dat` command line to share files with version control,
   back up data to servers, browse remote files on demand, and automate long-term data preservation.
   Written in JavaScript for running with Node.js.
 
