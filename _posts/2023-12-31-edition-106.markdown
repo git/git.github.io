@@ -321,15 +321,6 @@ __Git tools and sites__
   "as inspiration for a better tool that actually works reliably"
   (see the repository README for details).  Written in Python, MIT license.
   Prior art includes:
-    + [thefuck](https://github.com/nvbn/thefuck), a command line application
-      which corrects your previous console command (for example Git command)
-      if you made an error and it _didn't_ do what you wanted;
-      the tool was mentioned in
-      [Git Rev News Edition #101](https://git.github.io/rev_news/2023/07/31/edition-101/).
-    + [git-undo-el](https://github.com/jwiegley/git-undo-el),
-      a command for Emacs editor to "undo" changes to selected region of a file
-      through its Git history, mentioned in
-      [Git Rev News Edition #34](https://git.github.io/rev_news/2017/12/20/edition-34/).
     + One of git-oops inspirations, the [undo command in git-branchless](https://github.com/arxanas/git-branchless/wiki/Command:-git-undo),
       described in [git undo: We can do better](https://blog.waleedkhan.name/git-undo/),
       which was mentioned in [Git Rev News Edition #76](https://git.github.io/rev_news/2021/06/27/edition-76/).
@@ -341,6 +332,16 @@ __Git tools and sites__
       Tower Git GUI, whose undo abilities are described in
       [CMD+Z for Git is Here](https://css-tricks.com/cmdz-for-git-is-here/)
       (mentioned in [Git Rev News Edition #65](https://git.github.io/rev_news/2020/07/29/edition-65/)).
+  Contrast with tools of similar scope and/or name, but which do something different:
+    + [thefuck](https://github.com/nvbn/thefuck), a command line application
+      which corrects your previous console command (for example Git command)
+      if you made an error and it _didn't_ do what you wanted;
+      the tool was mentioned in
+      [Git Rev News Edition #101](https://git.github.io/rev_news/2023/07/31/edition-101/).
+    + [git-undo-el](https://github.com/jwiegley/git-undo-el),
+      a command for Emacs editor to "undo" changes to selected region of a file
+      through its Git history, mentioned in
+      [Git Rev News Edition #34](https://git.github.io/rev_news/2017/12/20/edition-34/).  
 + [git-vee](https://github.com/mjdominus/git-util/blob/master/bin/git-vee)
   is a shell script that prepares a brief summary of how your current branch
   has diverged from a corresponding remote branch.  Mentioned on 
