@@ -25,7 +25,7 @@ This edition covers what happened during the months of November and December 202
 
 + [[PATCH 0/4] Switch links to https](https://lore.kernel.org/git/pull.1589.git.1695392027.gitgitgadget@gmail.com/)
 
-  In September, Josh Soref had posted a 4 patch long series on the
+  In September, Josh Soref posted a 4-patch series on the
   mailing list to improve the URLs used throughout the documentation
   and the code base of the project.
 
@@ -37,7 +37,7 @@ This edition covers what happened during the months of November and December 202
   Eric Sunshine replied to Josh's patches asking why one URL was
   changed from `http://json.org/` to `https://www.json.org/` instead
   of just replacing `http` with `https`. Josh replied that it was
-  because that website was self-identifying with the later URL using a
+  because that website was self-identifying with the latter URL using a
   [meta refresh](https://en.wikipedia.org/wiki/Meta_refresh).
 
   In the meantime, Junio Hamano, the Git maintainer, replied to some
@@ -97,8 +97,8 @@ This edition covers what happened during the months of November and December 202
 
 _[VonC](https://stackoverflow.com/users/6309/vonc) is a
 prolific contributor to the Git topic on Stack Overflow. This edition features an
-    interview with him. Thanks to our [survey respondents](https://git.github.io/rev_news/2023/06/30/edition-100#some-statistics-about-the-ongoing-first-git-rev-news-readers-survey)
-for suggesting to interview, VonC!_
+interview with him. Thanks to our [survey respondents](https://git.github.io/rev_news/2023/06/30/edition-100#some-statistics-about-the-ongoing-first-git-rev-news-readers-survey)
+for suggesting to interview VonC!_
 
 * **Who are you and what do you do?**
 
@@ -106,7 +106,7 @@ for suggesting to interview, VonC!_
   company in France. By night, I am [VonC on Stack Overflow](https://stackoverflow.com/users/6309),
   and I have contributed to various topics since its early days (Sept. 2008).
   I do that [every single day](https://meta.stackexchange.com/q/122976/6309).
-  It includes answering questions about Git: [almost 16K answer](https://stackoverflow.com/search?q=user:6309+[git])
+  It includes answering questions about Git: [almost 16K answers](https://stackoverflow.com/search?q=user:6309+[git])
   in 15 years.
 
 * **What would you name your most important contribution to Git?**
@@ -149,7 +149,6 @@ for suggesting to interview, VonC!_
   the `git switch`/`git restore` commands are "[experimental](https://github.com/git/git/commit/4e43b7ff1ea4b6f16b93a432b6718e9ab38749bd)"
   in name only, and are here to stay.
 
-
 * **What is one of your most favorite features of Git?**
 
   Coming from CVS/SVN, one of my favorite features of Git is its powerful
@@ -190,7 +189,7 @@ for suggesting to interview, VonC!_
 * **What is your advice for people who want to start using Git? Where and how should they start?**
 
   Start with understanding Git **branching**, and operations around branches
-  (switch, merge, rebase, cherry-pick)
+  (switch, merge, rebase, cherry-pick).
 
   For that, I always redirect people to "[Learn Git Branching](https://learngitbranching.js.org)"
   (`learngitbranching.js.org`): nothing to install, all exercises are done
@@ -252,7 +251,7 @@ __Various__
   by David DeSanto on GitLab Blog.
   [GitLab Code Suggestions](https://about.gitlab.com/solutions/code-suggestions/)
   is an alternative to [GitHub Copilot](https://github.com/features/copilot)
-  and [OpenAI ChatGPT](https://chat.openai.com/) (to a lesser extent).
+  and (to a lesser extent) [OpenAI ChatGPT](https://chat.openai.com/).
 
 
 __Light reading__
@@ -263,7 +262,7 @@ __Light reading__
   tool.  This tool was mentioned in [previous Git Rev News](https://git.github.io/rev_news/2023/11/30/edition-105/).
 + Julia Evans also published a few comics about Git at [Wizard Zines comics](https://wizardzines.com/comics/),
   for a zine on Git that she is currently writing
-  (these are only the most recent ones; some of earlier ones made it into
+  (these are only the most recent ones; some earlier comics made it into
   [Oh Shit, Git! Recipes for getting out of git mess](https://wizardzines.com/zines/oh-shit-git/) zine):
     + [every git jargon](https://wizardzines.com/comics/every-git-jargon/)
     + [git discussion bingo](https://wizardzines.com/comics/git-discussion-bingo/)
@@ -283,8 +282,8 @@ __Light reading__
    Using Bit to make “irreversible decisions” easy to make and change.](https://blog.bitsrc.io/monorepo-poly-repo-or-no-repo-at-all-830328c7a546)
   by Eden Ella on Bits and Pieces blog.
     + [Bit](https://bit.dev/), a build system for composable software,
-      was first mentioned in [Git Rev News Edition #45](https://git.github.io/rev_news/2018/11/21/edition-45/),
-      (then at old bitsrc.io URL, instead of current bit.dev URL).
+      was first mentioned in [Git Rev News Edition #45](https://git.github.io/rev_news/2018/11/21/edition-45/)
+      (then at the old bitsrc\.io URL).
     + It was mentioned again in [Git Rev News Edition #77](https://git.github.io/rev_news/2021/07/31/edition-77/)
       in [How to Collaborate on Components across Projects with Bit](https://dev.to/giteden/how-to-collaborate-on-components-across-projects-with-bit-29c3) by Eden Ella on DEV\.to.
 + [Recovering Deleted Files From Your Git Working Tree](https://www.smashingmagazine.com/2023/12/recovering-deleted-files-git-working-tree/)
@@ -292,7 +291,7 @@ __Light reading__
 + [Git Grep Like a Pro: The Complete Guide](https://www.kosli.com/blog/git-grep-like-a-pro-the-complete-guide/)
   by Bruce Johnston on Kosli Blog (2022).
 + [Flexible Identities in git](https://belkadan.com/blog/2020/02/Flexible-Identities-in-git/)
-  proposal (to avoid "deadnaming", and bury an old name, while preserving link to things done under the old name)
+  proposal (to avoid "deadnaming" and bury an old name while preserving a link to things done under the old name)
   by Jordan Rose on -dealloc blog (2020).
 
 
@@ -311,33 +310,35 @@ __Git tools and sites__
   to graphically visualize differences between different versions of a LaTeX file.
   It is a wrapper around Git and [latexdiff](https://www.ctan.org/pkg/latexdiff)
   (which is present [on CTAN](https://www.ctan.org/pkg/latexdiff), Comprehensive TeX Archive Network).
-  `git-latexdiff` is written as BSD-licensed Bash script,
-  while `latexdiff` is written in Perl (and is GPLv3 licensed).
+  `git-latexdiff` is written as a BSD-licensed Bash script,
+  while `latexdiff` is written in Perl (and is GPLv3-licensed).
   The git-latexdiff tool was mentioned in passing in 
   [Git Rev News Edition #8](https://git.github.io/rev_news/2015/10/14/edition-8/).
 + [git-oops](https://github.com/jvns/git-oops) is a **very experimental** tool
-  allowing to undo a Git operation, without having to remember specific invocation.
-  In the style of the undo features in [GitUp](https://gitup.co/), [jj](https://github.com/martinvonz/jj), and [git-branchless](https://github.com/arxanas/git-branchless).
-  Meant to be just a prototype, to serve _as an inspiration_ for a better tool that actually works reliably.
-  Written in Python, MIT license.
-    + Contrast [thefuck](https://github.com/nvbn/thefuck), a command line application
+  allowing to undo a Git operation without having to remember the specific
+  invocation, in the style of the undo features in [GitUp](https://gitup.co/), [jj](https://github.com/martinvonz/jj), and [git-branchless](https://github.com/arxanas/git-branchless).
+  According to its author, it is meant as just a prototype serving
+  "as inspiration for a better tool that actually works reliably"
+  (see the repository README for details).  Written in Python, MIT license.
+  Prior art includes:
+    + [thefuck](https://github.com/nvbn/thefuck), a command line application
       which corrects your previous console command (for example Git command)
       if you made an error and it _didn't_ do what you wanted;
       the tool was mentioned in
       [Git Rev News Edition #101](https://git.github.io/rev_news/2023/07/31/edition-101/).
-    + Contrast [git-undo-el](https://github.com/jwiegley/git-undo-el),
+    + [git-undo-el](https://github.com/jwiegley/git-undo-el),
       a command for Emacs editor to "undo" changes to selected region of a file
       through its Git history, mentioned in
       [Git Rev News Edition #34](https://git.github.io/rev_news/2017/12/20/edition-34/).
     + One of git-oops inspirations, the [undo command in git-branchless](https://github.com/arxanas/git-branchless/wiki/Command:-git-undo),
-      was described in [git undo: We can do better](https://blog.waleedkhan.name/git-undo/),
+      described in [git undo: We can do better](https://blog.waleedkhan.name/git-undo/),
       which was mentioned in [Git Rev News Edition #76](https://git.github.io/rev_news/2021/06/27/edition-76/).
-    + A very basic and limited [Git Undo [alias]](https://megakemp.com/2016/08/25/git-undo/)
-      was mentioned in [Git Rev News Edition #19](https://git.github.io/rev_news/2016/09/14/edition-19/)
+    + A very basic and limited [Git Undo [alias]](https://megakemp.com/2016/08/25/git-undo/),
+      mentioned in [Git Rev News Edition #19](https://git.github.io/rev_news/2016/09/14/edition-19/)
       (resets state using reflog).
     + Many IDE and programming editors, their Git-related extensions/plugins,
       and Git GUIs have some kind of universal "git undo".  One example is
-      Tower Git GUI, which undo abilities are described in
+      Tower Git GUI, whose undo abilities are described in
       [CMD+Z for Git is Here](https://css-tricks.com/cmdz-for-git-is-here/)
       (mentioned in [Git Rev News Edition #65](https://git.github.io/rev_news/2020/07/29/edition-65/)).
 + [git-vee](https://github.com/mjdominus/git-util/blob/master/bin/git-vee)
@@ -353,10 +354,10 @@ __Git tools and sites__
   GPLv2 licensed.
 + [FlatGitHub](https://flatgithub.com/) or Flat View is a simple tool for exploring
   flat data files in GitHub repositories.
-  Implements [Flat Data](https://githubnext.com/projects/flat-data) project (formerly GitHub OCTO),
+  Part of the [Flat Data](https://githubnext.com/projects/flat-data) project (formerly GitHub OCTO),
   mentioned in [Git Rev News Edition #75](https://git.github.io/rev_news/2021/05/27/edition-75/)
   (under old URL) and [Edition #96](https://git.github.io/rev_news/2023/02/28/edition-96/),
-  which in turn was based on [“git scraping” approach pioneered by Simon Willison](https://githubnext.com/projects/flat-data),
+  which in turn was based on the [“git scraping” approach pioneered by Simon Willison](https://simonwillison.net/2020/Oct/9/git-scraping/),
   mentioned in [Git Rev News Edition #82](https://git.github.io/rev_news/2021/12/30/edition-82/).
   See the example of [flat-demo-bitcoin-price](https://flatgithub.com/githubocto/flat-demo-bitcoin-price?filename=btc-price-postprocessed.json&sha=78b38f641f8f1ffccae733749545ea42cf5eddf9).
 + [AllSpice.io](https://allspice.io/) is a Git platform for hardware developers
@@ -364,13 +365,13 @@ __Git tools and sites__
   a general-purpose, open-source analog electronic circuit simulator).
   No free tier.
 + [typos](https://github.com/crate-ci/typos) is a source code spell checker,
-  which finds and corrects spelling mistakes among source code;
-  intended to be fast enough to run on monorepos, and with low false positives
-  so you can run on PRs.  Written in Rust.
+  which finds and corrects spelling mistakes in source code;
+  intended to be fast enough to run on monorepos and have few false positives,
+  so it can safely run unassisted, for example on PRs.  Written in Rust.
     + Mentioned in [Perl Advent Calendar 2023 - Elves Versus Typos](https://perladvent.org/2023/2023-12-21.html).
 + [dat](https://github.com/dat-ecosystem/dat) is a tool for peer-to-peer sharing
   & live synchronization of files via command line.  Part of the [dat-ecosystem](dat-ecosystem.org).
-  You can use the `dat` command line to share files with version control,
+  You can use the `dat` command line tool to share files with version control,
   back up data to servers, browse remote files on demand, and automate long-term data preservation.
   Written in JavaScript for running with Node.js.
 
@@ -385,7 +386,7 @@ __Git tools and sites__
 [3.8.12](https://help.github.com/enterprise-server@3.8/admin/release-notes#3.8.12),
 [3.7.19](https://help.github.com/enterprise-server@3.7/admin/release-notes#3.7.19),
 [3.11.0](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.0)
-+ GitLab [16.7](https://about.gitlab.com/releases/2023/12/21/gitlab-16-7-released/)
++ GitLab [16.7](https://about.gitlab.com/releases/2023/12/21/gitlab-16-7-released/),
 [16.6.2, 16.5.4, 16.4.4](https://about.gitlab.com/releases/2023/12/13/security-release-gitlab-16-6-2-released/),
 [16.6.1, 16.5.3, 16.4.3](https://about.gitlab.com/releases/2023/11/30/security-release-gitlab-16-6-1-released/)
 + GitKraken [9.11.0](https://help.gitkraken.com/gitkraken-client/current/)
