@@ -48,7 +48,7 @@ __Git tools and sites__
 
 
 ## Releases
-
++ Tower for Mac [10.3](https://www.git-tower.com/release-notes?show_tab=release-notes)
 
 ## Credits
 
