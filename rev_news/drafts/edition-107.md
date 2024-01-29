@@ -48,6 +48,19 @@ __Git tools and sites__
 
 
 ## Releases
+
++ GitHub Enterprise [3.11.3](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.3),
+[3.10.5](https://help.github.com/enterprise-server@3.10/admin/release-notes#3.10.5),
+[3.9.8](https://help.github.com/enterprise-server@3.9/admin/release-notes#3.9.8),
+[3.8.13](https://help.github.com/enterprise-server@3.8/admin/release-notes#3.8.13)
++ GitLab [16.8.1, 16.7.4, 16.6.6, 16.5.8](https://about.gitlab.com/releases/2024/01/25/critical-security-release-gitlab-16-8-1-released/)
+[16.8](https://about.gitlab.com/releases/2024/01/18/gitlab-16-8-released/),
+[16.7.3](https://about.gitlab.com/releases/2024/01/12/gitlab-16-7-3-released/),
+[16.7.2, 16.6.4, 16.5.6](https://about.gitlab.com/releases/2024/01/11/critical-security-release-gitlab-16-7-2-released/)
++ Bitbucket Server [8.17](https://confluence.atlassian.com/bitbucketserver/bitbucket-server-release-notes-872139866.html)
++ GitKraken [9.11.1](https://help.gitkraken.com/gitkraken-client/current/)
++ GitHub Desktop [3.3.8](https://desktop.github.com/release-notes/),
+[3.3.7](https://desktop.github.com/release-notes/)
 + Tower for Mac [10.3](https://www.git-tower.com/release-notes?show_tab=release-notes)
 
 ## Credits
