@@ -118,6 +118,7 @@ __Various__
 
 __Light reading__
 + [How Framer Manages Their Codebase with Tower](https://www.git-tower.com/blog/how-framer-uses-tower/) by Bruno Brito on Tower’s blog.
++ [Git Config Settings I Always Recommend](https://dev.to/bpugh/git-config-settings-i-always-recommend-11fa) by Brandon Pugh on DEV.to.
 <!---
 __Easy watching__
 -->
