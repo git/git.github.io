@@ -62,6 +62,7 @@ __Git tools and sites__
 + GitHub Desktop [3.3.8](https://desktop.github.com/release-notes/),
 [3.3.7](https://desktop.github.com/release-notes/)
 + Tower for Mac [10.3](https://www.git-tower.com/release-notes?show_tab=release-notes)
++ Tower for Windows [5.5](https://www.git-tower.com/release-notes/windows?show_tab=release-notes)
 
 ## Credits
 
