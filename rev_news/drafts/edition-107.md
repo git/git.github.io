@@ -27,83 +27,119 @@ This edition covers what happened during the months of December 2023 and January
 
 ### Support
 
-* [Git Rename Detection Bug](https://public-inbox.org/git/LO6P265MB6736043BE8FB607DB671D21EFAAAA@LO6P265MB6736.GBRP265.PROD.OUTLOOK.COM/)
+* [Git Rename Detection Surprises](https://public-inbox.org/git/LO6P265MB6736043BE8FB607DB671D21EFAAAA@LO6P265MB6736.GBRP265.PROD.OUTLOOK.COM/)
 
-  Jeremy Pridmore reported a bug to the Git mailing list. He used
+  Jeremy Pridmore reported an issue to the Git mailing list. He used
   [`git bugreport`](https://git-scm.com/docs/git-bugreport), so his
   message looks like a filled out form with questions and answers.
 
   He was trying to cherry-pick changes from one repo A to another B,
   while both A and B came from the same original TFS server but with
   different set of changes. He was disappointed though because some
-  files that had been moved in repo A weren't matched by the rename
-  detection mechanism to the original files in repo B, and he wondered
-  if the reason for this was the new 'ort' merge strategy described in
-  a [blog post by Elijah Newren](https://blog.palantir.com/optimizing-gits-merge-machinery-1-127ceb0ef2a1).
+  files that had been moved in repo A were matched up by the rename
+  detection mechanism to files other than what he expected in repo B,
+  and he wondered if the reason for this was the new 'ort' merge
+  strategy described in a [blog post by Elijah
+  Newren](https://blog.palantir.com/optimizing-gits-merge-machinery-1-127ceb0ef2a1).
+
+  While not obvious at first, Jeremy's primary problem specifically
+  centered around cases where there were multiple files with 100%
+  identical content.  Perhaps an example would help.  There could have
+  originally been an `orig/foo.txt` file, while one side of history
+  does not have that file anymore but instead has both a
+  `dir2/foo.txt` and a `dir3/foo.txt`; further, both of the new
+  foo.txt files are identical to the original `orig/foo.txt`.  So, Git
+  has to figure out which foo.txt file the `orig/foo.txt` was renamed
+  to, whether to `dir2/foo.txt` or `dir3/foo.txt`.
 
   Elijah replied to Jeremy explaining extensively how rename detection
-  works in Git. He said that the new 'ort' merge strategy, which he
-  implemented, and which replaced the old 'recursive' strategy, uses
-  the same rename detection rules as that old strategy. He suggested
-  adding the `-s recursive` option to the cherry-pick command to check
-  if it worked differently using the old 'recursive' strategy.
+  works in Git.  Elijah pointed out that Jeremy's problem, as
+  described, did not involve directory rename detection (despite
+  looking kind of like a directory rename detection problem).  Also,
+  since Jeremy pointed out that the contents of the "mis-detected"
+  renames had identical contents to what they were paired with, that
+  meant that only exact renames were involved.  Because of these two
+  factors, Elijah said that the new 'ort' merge strategy, which he
+  implemented, and which replaced the old 'recursive' strategy, should
+  use the same rename detection rules as that old strategy for
+  Jeremy's problem. Elijah suggested adding the `-s recursive` option
+  to the cherry-pick command to verify this and check if it worked
+  differently using the old 'recursive' strategy.
 
-  Elijah mentioned especially that "exact renames" are detected first
-  when performing rename detection, and if files have different names
-  they are matched randomly as renames.
+  Elijah also pointed out that for exact renames in a setup like this,
+  other than Git giving a preference to files with the same basename,
+  if there are multiple choices with identical content then it will
+  just pick one essentially at random.
 
-  Jeremy replied to Elijah saying that he observed a similar
-  behavior. He gave examples of some issues he was seeing, and he
-  suggested to match files using a "difference value" between the paths
-  and filenames of the different files. He also said he wrote a script
-  to help him resolve conflicts.
+  Jeremy replied to Elijah saying that this sounded like what he was
+  observing. He gave some more examples, showing that when there are
+  multiple 100% matches, Git didn't always match up the files that he
+  wanted but matched files differently.  Jeremy suggested that
+  filename similarity (beyond just basename matching) be added as a
+  secondary criteria to content similarity for rename detection, since
+  it would help in his case.
 
-  Elijah replied to Jeremy with further explanations about the fact
-  that renames are just a help for developers as they are not
-  recorded but computed from scratch in response to user commands. He
-  also asked for clarification about some points, and suggested that
-  some files Jeremy had issues with had been added in both repos A
-  and B, which created conflicts but were not rename issues.
-  Similarly, when a file has been removed in both repo A and B, there is
-  no rename issue. The file should just be deleted.
+  Elijah replied that he had tried a few filename similarity ideas,
+  and added a "same basename" criteria for inexact renames in the
+  `ort` merge strategy along these lines.  However, he said other
+  filename similarity measurements he tried didn't work out so well.
+  He mentioned that they risk being repository-specific (in a way
+  where they help with merges in some repositories but actually hurt
+  in others).  He also mentioned a rather counter-intuitive result
+  that filename comparisons could rival the cost of content
+  comparisons, which means such measurements could adversely affect
+  performance and possibly even throw a monkey wrench in multiple of
+  the existing performance optimizations in the current merge
+  algorithm.
 
-  About the idea of matching files using a "difference value" between
-  the paths and filenames of the different files, Elijah replied that
-  he had tried similar ideas, but found that in practice it could take
-  significant time and would not provide much benefit.
+  The thread also involved additional explanations about various facts
+  involving rename detection.  This included details about how renames
+  are just a help for developers as they are not recorded, but are
+  instead computed from scratch in response to user commands. It also
+  included details about what things like "added by both" means
+  (namely that both sides added the same filename but with different
+  contents), why you never see "deleted by both" as a conflict status
+  (there is no conflict; the file can just be deleted), and other
+  minor points.
 
-  Elijah also discussed the case of having a "base" version with a
-  directory named "library-x-1.7/", while a "stable" version has many
-  changes in that directory and a "development" branch has removed
-  that directory but has added both a "library-x-1.8/" and a
-  "library-x-1.9/" directory with many changes compared to
-  "library-x-1.7/". This case would be somewhat similar to Jeremy's
-  case, and Elijah suggested a hack to workaround rename detection in
-  such cases.
+  Elijah also brought up a slightly more common case that mirrors the
+  problems Jeremy saw, where users could be surprised by the per-file
+  content similarity matching that Git does.  This more general case
+  arises from having multiple copies of a versioned library.  For
+  example, you may have a "base" version with a directory named
+  "library-x-1.7/", and a "stable" version has many changes in that
+  directory, while a "development" branch has removed that directory
+  but has added both a "library-x-1.8/" and a "library-x-1.9/"
+  directory which both have changes compared to "library-x-1.7/".  In
+  such a case, if you are trying to cherry-pick a commit involving
+  several files modified under "library-x-1.7/", where do the changes
+  get applied?  Some users might expect the changes in that commit to
+  get applied to "library-x-1.8/", while others might expect them to
+  get applied to "library-x-1.9/".  In practice, though, it would not
+  be uncommon for Git to apply the changes from some of the files in
+  the commit to "library-x-1.8/" and changes from other files in the
+  commit to "library-x-1.9/".  Elijah explained why this happens and
+  suggested a hack for users dealing with this particular kind of case
+  to workaround rename detection.
 
   Philip Oakley then chimed into the discussion to suggest using
   "BLOBSAME" for exact renames in the same way as "TREESAME" is used
-  in `git log` for history simplification.
+  in `git log` for history simplification.  Elijah replied to Philip
+  that he thinks that 'exact rename' already works.  Junio C Hamano,
+  the Git maintainer, then chimed into the discussion saying that
+  "TREESAME" is a property of commits, not trees. So he suggested
+  using different words than "BLOBSAME" and "TREESAME" in the context
+  of rename detection.
 
-  Elijah replied to Philip that he thinks that 'exact rename' already
-  works. He then discussed the possible simplifications in the rename
-  detection algorithm that can be made when 'exact rename' happens for
-  a file or a directory.
+  Philip and Elijah discussed terminology at more length, agreeing
+  that good terminology can sometimes help people coming from an "old
+  centralised VCS" make the mind shift to understand Git's model, but
+  didn't find anything that would help in this case though.
 
-  Junio C Hamano, the Git maintainer, then chimed into the discussion
-  saying that "TREESAME" is a property of commits, not trees. So he
-  suggested using different words than "BLOBSAME" and "TREESAME" in
-  the context of rename detection.
-
-  Philip and Elijah discussed terminology again, agreeing that a good
-  one could help people coming from an "old centralised VCS" make the
-  mind shift to understand Git's model. They didn't find something
-  better than 'exact rename' to help in this case though.
-
-  As Elijah used the "spanhash representation" words, Philip asked for
-  more information about this way of computing file content
-  similarity. As for rename detection, Elijah explained it
-  comprehensively and supported with a number of arguments his claim
+  Finally, Philip requested more information about how Git computes
+  file content similarity (for inexact rename detection), referencing
+  Elijah's mention of "spanhash representation".  Elijah explained the
+  internal data structure in detail, and supported his earlier claim
   that "comparison of filenames can rival cost of file content
   similarity".
 
