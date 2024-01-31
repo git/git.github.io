@@ -29,8 +29,6 @@ Our previous Outreachy intern ported some of the unit tests
 See:
 
   - this discussion <https://lore.kernel.org/git/cover.1692297001.git.steadmon@google.com/>
-  - Hariom Verma's GSoC 2020 final report <https://harry-hov.github.io/blogs/posts/the-final-report>
-  - Nsengiyumva Wilberforce's recent work on this <https://lore.kernel.org/git/?q=f%3A+Nsengiyumva+Wilberforce>
 
 Expected Project Size: 175 hours or 350 hours
 
