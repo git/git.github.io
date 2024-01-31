@@ -234,10 +234,6 @@ __Git tools and sites__
       (mentioned in [Edition #98](https://git.github.io/rev_news/2023/04/30/edition-98/)).
 + [List of git mistakes](https://gist.github.com/jvns/f7d2db163298423751a9d1a823d7c7c1)
   people have listed on Mastodon, gathered by Julia Evans (@b0rk@jvns.ca).
-+ [Building Git](https://shop.jcoglan.com/building-git/) book by James Coglan
-  presents a deep dive into the internals of the Git version control system
-  by rebuilding it in a high-level programming language (in Ruby).<br>
-  Free table of contents and a sample chapter; the book costs £36.00.
 
 
 ## Releases
