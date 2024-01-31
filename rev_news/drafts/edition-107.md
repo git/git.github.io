@@ -33,7 +33,7 @@ This edition covers what happened during the months of December 2023 and January
   [`git bugreport`](https://git-scm.com/docs/git-bugreport), so his
   message looks like a filled out form with questions and answers.
 
-  He was trying to cherry-pick changes from one repo A to another B,
+  He was trying to cherry-pick changes from one repo (A) to another (B),
   while both A and B came from the same original TFS server but with
   different set of changes. He was disappointed though because some
   files that had been moved in repo A were matched up by the rename
@@ -44,19 +44,19 @@ This edition covers what happened during the months of December 2023 and January
 
   While not obvious at first, Jeremy's primary problem specifically
   centered around cases where there were multiple files with 100%
-  identical content.  Perhaps an example would help.  There could have
-  originally been an `orig/foo.txt` file, while one side of history
-  does not have that file anymore but instead has both a
-  `dir2/foo.txt` and a `dir3/foo.txt`; further, both of the new
-  foo.txt files are identical to the original `orig/foo.txt`.  So, Git
-  has to figure out which foo.txt file the `orig/foo.txt` was renamed
-  to, whether to `dir2/foo.txt` or `dir3/foo.txt`.
+  identical content.  For example, originally there could have
+  been an `orig/foo.txt` file, while one of the descendant repos
+  does not have that file anymore but instead has two files,
+  `dir2/foo.txt` and `dir3/foo.txt`, both with contents identical
+  to the original `orig/foo.txt`.  So, Git has to figure out which
+  one of `dir2/foo.txt` and `dir3/foo.txt` is the result of renaming
+  `orig/foo.txt`.
 
   Elijah replied to Jeremy explaining extensively how rename detection
   works in Git.  Elijah pointed out that Jeremy's problem, as
   described, did not involve directory rename detection (despite
   looking kind of like a directory rename detection problem).  Also,
-  since Jeremy pointed out that the contents of the "mis-detected"
+  since Jeremy pointed out that the contents of the "misdetected"
   renames had identical contents to what they were paired with, that
   meant that only exact renames were involved.  Because of these two
   factors, Elijah said that the new 'ort' merge strategy, which he
@@ -94,7 +94,7 @@ This edition covers what happened during the months of December 2023 and January
 
   The thread also involved additional explanations about various facts
   involving rename detection.  This included details about how renames
-  are just a help for developers as they are not recorded, but are
+  are just a hint for developers as they are not recorded, but are
   instead computed from scratch in response to user commands. It also
   included details about what things like "added by both" means
   (namely that both sides added the same filename but with different
@@ -120,28 +120,27 @@ This edition covers what happened during the months of December 2023 and January
   the commit to "library-x-1.8/" and changes from other files in the
   commit to "library-x-1.9/".  Elijah explained why this happens and
   suggested a hack for users dealing with this particular kind of case
-  to workaround rename detection.
+  to work around rename detection.
 
   Philip Oakley then chimed into the discussion to suggest using
   "BLOBSAME" for exact renames in the same way as "TREESAME" is used
   in `git log` for history simplification.  Elijah replied to Philip
   that he thinks that 'exact rename' already works.  Junio C Hamano,
-  the Git maintainer, then chimed into the discussion saying that
-  "TREESAME" is a property of commits, not trees. So he suggested
-  using different words than "BLOBSAME" and "TREESAME" in the context
-  of rename detection.
+  the Git maintainer, then pointed out that "TREESAME" is a property
+  of commits, not trees, and suggested using words other than
+  "BLOBSAME" and "TREESAME" in the context of rename detection.
 
   Philip and Elijah discussed terminology at more length, agreeing
   that good terminology can sometimes help people coming from an "old
   centralised VCS" make the mind shift to understand Git's model, but
-  didn't find anything that would help in this case though.
+  didn't find anything that would help in this case.
 
   Finally, Philip requested more information about how Git computes
   file content similarity (for inexact rename detection), referencing
   Elijah's mention of "spanhash representation".  Elijah explained the
   internal data structure in detail, and supported his earlier claim
-  that "comparison of filenames can rival cost of file content
-  similarity".
+  that "comparison of filenames can rival the cost of file content
+  similarity computations".
 
 <!---
 ## Developer Spotlight:
@@ -166,10 +165,10 @@ __Light reading__
   by Coluzzi Andrea on his blog (and also [on DEV\.to](https://dev.to/coluzziandrea/i-taught-git-to-high-school-students-3a16)).
 + [How Framer Manages Their Codebase with Tower](https://www.git-tower.com/blog/how-framer-uses-tower/)
   by Bruno Brito on Tower’s blog.
-+ Julia Evans continues her series articles about Git with
++ Julia Evans continues her series of articles about Git with
   [Do we think of git commits as diffs, snapshots, and/or histories?](https://jvns.ca/blog/2024/01/05/do-we-think-of-git-commits-as-diffs--snapshots--or-histories/)
   and [Inside .git](https://jvns.ca/blog/2024/01/26/inside-git/)
-  (the latter both as comic and a text version).
+  (the latter in both a comic and a text version).
 + [Minimal contents of a .git folder](https://manuel-strehl.de/minimal_git_folder)
   by Manuel Strehl on A Peculiar Zoo of Thoughts blog.
 + [Git Config Settings I Always Recommend](https://dev.to/bpugh/git-config-settings-i-always-recommend-11fa)
@@ -179,7 +178,7 @@ __Light reading__
 + [Git Lesson: How to Use .gitignore and .gitkeep?](https://dev.to/ritaly/git-lesson-how-to-use-gitignore-and-gitkeep-5edm)
   by Rita {FlyNerd} Lyczywek on DEV\.to (translated [from original article in Polish](https://www.flynerd.pl/2024/01/gitignore-i-gitkeep.html)),
 + [Git Prom! My Favorite Git Alias](https://dev.to/technosophos/git-prom-my-favorite-git-alias-2mbd)
-  (to update own branch with the latest from the upstream repository)
+  (to fetch the latest upstream HEAD and rebase your current branch on top of it)
   by Matt Butcher on DEV\.to.
 + [Integrating DVC and Git LFS via libgit2 filters](https://dvc.ai/blog/dvc-git-lfs)
   by Peter Rowlands on DVC AI Blog. [DVC](https://dvc.org/) (Data Version Control)
@@ -191,9 +190,9 @@ __Light reading__
   [#72](https://git.github.io/rev_news/2021/02/27/edition-72/),
   and [#100](https://git.github.io/rev_news/2023/06/30/edition-100/).
 + [Version Control for Machine Learning](https://dagshub.com/blog/version-control/)
-  by Nikitha Narendra on DagsHub Blog. [DAGsHub](https://dagshub.com/) service was
+  by Nikitha Narendra on DagsHub Blog. The [DAGsHub](https://dagshub.com/) service was
   first mentioned in [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/);
-  there also articles about this web platform for dataversion control
+  further articles about this web platform for data version control
   linked in [Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/),
   [#96](https://git.github.io/rev_news/2023/02/28/edition-96/)
   and [#97](https://git.github.io/rev_news/2023/03/31/edition-97/).
@@ -202,7 +201,7 @@ __Light reading__
 + [Jujutsu: a new, Git-compatible version control system](https://lwn.net/Articles/958468/)
   by Daroc Alden on LWN\.net ([free link](https://lwn.net/SubscriberLink/958468/09ff53915f2ae020/)).
   Jujutsu was first mentioned in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/);
-  there was also [Jujutsu: A Git-Compatible VCS](https://www.youtube.com/watch?v=bx_LGilOuE4)
+  there was also a [Jujutsu: A Git-Compatible VCS](https://www.youtube.com/watch?v=bx_LGilOuE4)
   talk by Martin von Zweigbergk at Git Merge 2022, mentioned in passing
   in [Git Rev News Edition #91](https://git.github.io/rev_news/2022/09/30/edition-91/).
 
@@ -223,51 +222,52 @@ __Git tools and sites__
   It interfaces Git with data hosting services to manage the curation of version controlled files
   using persistent, citable repositories.  Access to hosting services is managed with
   [PyRDM library](https://pyrdm.readthedocs.io/), which supports Figshare, Zenodo,
-  and in limited fashion DSpace-based services using SWORD protocol version 2.
+  and (in a limited fashion) DSpace-based services using SWORD protocol version 2.
   Written in Python, last released in 2016.
-    + See also "[Git-RDM: A research data management plugin for the Git version control system](https://joss.theoj.org/papers/10.21105/joss.00029)"
+    + See also the "[Git-RDM: A research data management plugin for the Git version control system](https://joss.theoj.org/papers/10.21105/joss.00029)"
       article in The Journal of Open Source Software (2016).
 + [GitVision](https://github.com/gaspardIV/gitvision) is a web tool
   designed to visualize Git repositories in virtual, augmented, and 3D reality.
   Developed with Vue 3 in Vite by Kacper Konecki (GaspardIV).
-  There is live demo of GitVision at [gitvis.web.app](https://gitvis.web.app/),
-  which includes prepared quite a few tiny, small, medium and large example repositories;
+  There is a live demo of GitVision at [gitvis.web.app](https://gitvis.web.app/),
+  including quite a few tiny, small, medium and large example repositories;
   you can also visualize your own repository by uploading data prepared using
   [GitVision script](https://github.com/GaspardIV/gitvision/tree/main/tool)
   (or you can use the tool locally).
-    + It provides different type of 3D visualization than much better known
+    + It provides a type of 3D visualization different from the much better known
       [Gource](https://gource.io/) visualization tool for source control repositories.
-      There the repository is displayed as a tree where the root of the repository is the centre,
+      There the repository is displayed as a tree where the root of the repository is the center,
       directories are branches and files are leaves. Contributors to the source code
       appear and disappear as they contribute to specific files and directories.
     + Has different purpose than [Git History.xyz](https://githistory.xyz/)
       web app that allows to quickly browse the history of files in any git repo,
       mentioned in [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/)
       and [#105](https://git.github.io/rev_news/2023/11/30/edition-105/).
-    + See also [VR-Git: Git Repository Visualization and Immersion in Virtual Reality](https://opus-htw-aalen.bsz-bw.de/frontdoor/deliver/index/docId/2472/file/ICSEA22-VRGit_OberhauserCR2.pdf) (PDF)
+    + See also the [VR-Git: Git Repository Visualization and Immersion in Virtual Reality](https://opus-htw-aalen.bsz-bw.de/frontdoor/deliver/index/docId/2472/file/ICSEA22-VRGit_OberhauserCR2.pdf) (PDF)
       paper by Roy Oberhauser (2022).
-+ [Visualize Git](http://git-school.github.io/visualizing-git/) web app illustrates what's going on
-  underneath the hood when you use common Git operations. You'll see what exactly is happening
++ The [Visualize Git](http://git-school.github.io/visualizing-git/) web app illustrates what's going on
+  under the hood when you use common Git operations. You'll see what exactly is happening
   to your commit graph. Powered by D3. Sources on GitHub as [git-school/visualizing-git](https://github.com/git-school/visualizing-git).
-    + This web app is quite similar to free playground mode of
-      [Visualizing Git Concepts with D3](https://onlywei.github.io/explain-git-with-d3/),
-      first mentioned in [Git Rev News #69](https://git.github.io/rev_news/2020/11/27/edition-69/).
-    + Compare [Learn Git Branching](https://learngitbranching.js.org/),
-      mentioned first in [Git Rev News Editon #30](https://git.github.io/rev_news/2017/08/16/edition-30/).
-    + Compare [Git Gud](https://nic-hartley.github.io/git-gud/) visual web-based Git simulator,
-      meant to help understand Git better, which got announced by its author Nic Hartley in
+  This app is quite similar to the free playground mode of
+  [Visualizing Git Concepts with D3](https://onlywei.github.io/explain-git-with-d3/),
+  first mentioned in [Git Rev News #69](https://git.github.io/rev_news/2020/11/27/edition-69/).
+  Compare with:
+    + [Learn Git Branching](https://learngitbranching.js.org/),
+      mentioned first in [Git Rev News Edition #30](https://git.github.io/rev_news/2017/08/16/edition-30/).
+    + [Git Gud](https://nic-hartley.github.io/git-gud/), a visual web-based Git simulator,
+      meant to help understand Git better, announced by its author Nic Hartley in
       [Git Gud at git](https://dev.to/nichartley/git-gud-at-git-5d9k).
-      Mentioned first in [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/).
-    + Compare [Git Gud](https://github.com/benthayer/git-gud), a command line game
+      First mentioned in [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/).
+    + [Git Gud](https://github.com/benthayer/git-gud), a command line game
       designed to help you learn how to use the Git version control system.
       Written in Python by Ben Thayer. First mentioned in
       [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/).
-    + Compare [Oh My Git!](https://ohmygit.org/), an open source game about learning Git,
+    + [Oh My Git!](https://ohmygit.org/), an open source game about learning Git,
       written using the Godot game engine ([source](https://github.com/git-learning-game/oh-my-git)).
-      There was a lightning talk about this game:
+      There was a lightning talk about this game at FOSDEM 2021:
       [Building a Git learning game: A playful approach to version control](https://fosdem.org/2021/schedule/event/git_learning_game/)
-      at FOSSDEM 2021. First mentioned in [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/).
-    + Compare [Git-Sim](https://github.com/initialcommit-com/git-sim) tool (written in Python)
+      First mentioned in [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/).
+    + [Git-Sim](https://github.com/initialcommit-com/git-sim) tool (written in Python)
       to visually simulate Git operations in your own repos with a single terminal command.
       Described in [Git-Sim: Visually Simulate Git Operations In Your Own Repos](https://initialcommit.com/blog/git-sim)
       (mentioned in [Git Rev News Edition #95](https://git.github.io/rev_news/2023/01/31/edition-95/))
@@ -283,7 +283,7 @@ __Git tools and sites__
 [3.10.5](https://help.github.com/enterprise-server@3.10/admin/release-notes#3.10.5),
 [3.9.8](https://help.github.com/enterprise-server@3.9/admin/release-notes#3.9.8),
 [3.8.13](https://help.github.com/enterprise-server@3.8/admin/release-notes#3.8.13)
-+ GitLab [16.8.1, 16.7.4, 16.6.6, 16.5.8](https://about.gitlab.com/releases/2024/01/25/critical-security-release-gitlab-16-8-1-released/)
++ GitLab [16.8.1, 16.7.4, 16.6.6, 16.5.8](https://about.gitlab.com/releases/2024/01/25/critical-security-release-gitlab-16-8-1-released/),
 [16.8](https://about.gitlab.com/releases/2024/01/18/gitlab-16-8-released/),
 [16.7.3](https://about.gitlab.com/releases/2024/01/12/gitlab-16-7-3-released/),
 [16.7.2, 16.6.4, 16.5.6](https://about.gitlab.com/releases/2024/01/11/critical-security-release-gitlab-16-7-2-released/)
