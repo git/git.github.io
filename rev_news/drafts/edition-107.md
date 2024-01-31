@@ -39,8 +39,8 @@ This edition covers what happened during the months of December 2023 and January
   files that had been moved in repo A were matched up by the rename
   detection mechanism to files other than what he expected in repo B,
   and he wondered if the reason for this was the new 'ort' merge
-  strategy described in a [blog post by Elijah
-  Newren](https://blog.palantir.com/optimizing-gits-merge-machinery-1-127ceb0ef2a1).
+  strategy described in a
+  [blog post by Elijah Newren](https://blog.palantir.com/optimizing-gits-merge-machinery-1-127ceb0ef2a1).
 
   While not obvious at first, Jeremy's primary problem specifically
   centered around cases where there were multiple files with 100%
