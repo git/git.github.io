@@ -1,6 +1,7 @@
 ---
 layout: default
 title: SoC 2023 Ideas
+navbar: false
 ---
 
 This is the idea page for Summer of Code 2023 for Git.
