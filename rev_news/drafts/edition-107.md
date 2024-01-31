@@ -31,10 +31,10 @@ This edition covers what happened during the months of December 2023 and January
 
   Jeremy Pridmore reported a bug to the Git mailing list. He used
   [`git bugreport`](https://git-scm.com/docs/git-bugreport), so his
-  message looks like a filled up form with questions and answers.
+  message looks like a filled out form with questions and answers.
 
   He was trying to cherry-pick changes from one repo A to another B,
-  while both A and B came from the same orginal TFS server but with
+  while both A and B came from the same original TFS server but with
   different set of changes. He was disappointed though because some
   files that had been moved in repo A weren't matched by the rename
   detection mechanism to the original files in repo B, and he wondered
@@ -46,31 +46,31 @@ This edition covers what happened during the months of December 2023 and January
   implemented, and which replaced the old 'recursive' strategy, uses
   the same rename detection rules as that old strategy. He suggested
   adding the `-s recursive` option to the cherry-pick command to check
-  if it works differently using the old 'recursive' strategy.
+  if it worked differently using the old 'recursive' strategy.
 
   Elijah mentioned especially that "exact renames" are detected first
   when performing rename detection, and if files have different names
   they are matched randomly as renames.
 
-  Jeremy replied to Elijah saying that he is seeing similar
+  Jeremy replied to Elijah saying that he observed a similar
   behavior. He gave examples of some issues he was seeing, and he
   suggested to match files using a "difference value" between the paths
   and filenames of the different files. He also said he wrote a script
   to help him resolve conflicts.
 
   Elijah replied to Jeremy with further explanations about the fact
-  that renames are just an help for developers as they are not
+  that renames are just a help for developers as they are not
   recorded but computed from scratch in response to user commands. He
   also asked for clarification about some points, and suggested that
-  some files Jeremy has issues with have been added in both repos A
-  and B, which creates a conflict, which is not a rename issue. In the
-  same way when a file has been removed in both repo A and B, there is
+  some files Jeremy had issues with had been added in both repos A
+  and B, which created conflicts but were not rename issues.
+  Similarly, when a file has been removed in both repo A and B, there is
   no rename issue. The file should just be deleted.
 
   About the idea of matching files using a "difference value" between
   the paths and filenames of the different files, Elijah replied that
   he had tried similar ideas, but found that in practice it could take
-  significant time and not provide much benefit.
+  significant time and would not provide much benefit.
 
   Elijah also discussed the case of having a "base" version with a
   directory named "library-x-1.7/", while a "stable" version has many
