@@ -114,16 +114,130 @@ This edition covers what happened during the months of December 2023 and January
 ## Other News
 
 __Various__
++ GitHub has [Copilot](https://github.com/features/copilot),
+  GitLab has [Duo Code Suggestions](https://about.gitlab.com/solutions/code-suggestions/);
+  now Bitbucket has [integration with Tabnine](https://marketplace.atlassian.com/apps/1227931/tabnine-teams-for-bitbucket-cloud):
+  [Accelerate your development process with Tabnine AI and Bitbucket](https://community.atlassian.com/t5/Bitbucket-articles/Accelerate-your-development-process-with-Tabnine-AI-and/ba-p/2576062).
 
 
 __Light reading__
-+ [How Framer Manages Their Codebase with Tower](https://www.git-tower.com/blog/how-framer-uses-tower/) by Bruno Brito on Tower’s blog.
-+ [Git Config Settings I Always Recommend](https://dev.to/bpugh/git-config-settings-i-always-recommend-11fa) by Brandon Pugh on DEV.to.
++ [I Taught GIT to High School Students: My Experience as Linux Day Mentor](https://blog.coluzziandrea.com/git-00-linux-day)
+  by Coluzzi Andrea on his blog (and also [on DEV\.to](https://dev.to/coluzziandrea/i-taught-git-to-high-school-students-3a16)).
++ [How Framer Manages Their Codebase with Tower](https://www.git-tower.com/blog/how-framer-uses-tower/)
+  by Bruno Brito on Tower’s blog.
++ Julia Evans continues her series articles about Git with
+  [Do we think of git commits as diffs, snapshots, and/or histories?](https://jvns.ca/blog/2024/01/05/do-we-think-of-git-commits-as-diffs--snapshots--or-histories/)
+  and [Inside .git](https://jvns.ca/blog/2024/01/26/inside-git/)
+  (the latter both as comic and a text version).
++ [Minimal contents of a .git folder](https://manuel-strehl.de/minimal_git_folder)
+  by Manuel Strehl on A Peculiar Zoo of Thoughts blog.
++ [Git Config Settings I Always Recommend](https://dev.to/bpugh/git-config-settings-i-always-recommend-11fa)
+  by Brandon Pugh on DEV\.to (and also [on his blog](https://www.brandonpugh.com/blog/git-config-settings-i-always-recommend/));
+  though setting `pull.rebase` to `true` depends on whether project prefers merges or rebases,
+  and is very project-dependent.
++ [Git Lesson: How to Use .gitignore and .gitkeep?](https://dev.to/ritaly/git-lesson-how-to-use-gitignore-and-gitkeep-5edm)
+  by Rita {FlyNerd} Lyczywek on DEV\.to (translated [from original article in Polish](https://www.flynerd.pl/2024/01/gitignore-i-gitkeep.html)),
++ [Git Prom! My Favorite Git Alias](https://dev.to/technosophos/git-prom-my-favorite-git-alias-2mbd)
+  (to update own branch with the latest from the upstream repository)
+  by Matt Butcher on DEV\.to.
++ [Integrating DVC and Git LFS via libgit2 filters](https://dvc.ai/blog/dvc-git-lfs)
+  by Peter Rowlands on DVC AI Blog. [DVC](https://dvc.org/) (Data Version Control)
+  was first mentioned in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/),
+  with links to different articles about it in 
+  [#42](https://git.github.io/rev_news/2018/08/22/edition-42/),
+  [#63](https://git.github.io/rev_news/2020/05/28/edition-63/),
+  [#64](https://git.github.io/rev_news/2020/06/25/edition-64/),
+  [#72](https://git.github.io/rev_news/2021/02/27/edition-72/),
+  and [#100](https://git.github.io/rev_news/2023/06/30/edition-100/).
++ [Version Control for Machine Learning](https://dagshub.com/blog/version-control/)
+  by Nikitha Narendra on DagsHub Blog. [DAGsHub](https://dagshub.com/) service was
+  first mentioned in [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/);
+  there also articles about this web platform for dataversion control
+  linked in [Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/),
+  [#96](https://git.github.io/rev_news/2023/02/28/edition-96/)
+  and [#97](https://git.github.io/rev_news/2023/03/31/edition-97/).
++ [RFC: Bridging GitHub workflows with b4](https://lore.kernel.org/tools/20231213-fluffy-roaring-capuchin-8024ac@meerkat/T/)
+  by Konstantin Ryabitsev on Linux kernel tools mailing list via lore.kernel.org
++ [Jujutsu: a new, Git-compatible version control system](https://lwn.net/Articles/958468/)
+  by Daroc Alden on LWN\.net ([free link](https://lwn.net/SubscriberLink/958468/09ff53915f2ae020/)).
+  Jujutsu was first mentioned in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/);
+  there was also [Jujutsu: A Git-Compatible VCS](https://www.youtube.com/watch?v=bx_LGilOuE4)
+  talk by Martin von Zweigbergk at Git Merge 2022, mentioned in passing
+  in [Git Rev News Edition #91](https://git.github.io/rev_news/2022/09/30/edition-91/).
+
++ [Praise, Criticism, and Dialogue](https://rhaas.blogspot.com/2023/12/praise-criticism-and-dialogue.html)
+  (in open source code review process)
+  by Robert Haas (PostgreSQL contributor) on his Blogspot blog.
++ [Being friendly: friendly forks 101](https://github.blog/2022-04-25-the-friend-zone-friendly-forks-101/)
+  and [Being friendly: Strategies for friendly fork management](https://github.blog/2022-05-02-friend-zone-strategies-friendly-fork-management/)
+  by Lessley Dennington on GitHub Blog (2022).
+
 <!---
 __Easy watching__
 -->
 
 __Git tools and sites__
++ [Git-RDM](https://github.com/ctjacobs/git-rdm) had intended to be
+  a Research Data Management (RDM) plugin for the Git version control system.
+  It interfaces Git with data hosting services to manage the curation of version controlled files
+  using persistent, citable repositories.  Access to hosting services is managed with
+  [PyRDM library](https://pyrdm.readthedocs.io/), which supports Figshare, Zenodo,
+  and in limited fashion DSpace-based services using SWORD protocol version 2.
+  Written in Python, last released in 2016.
+    + See also "[Git-RDM: A research data management plugin for the Git version control system](https://joss.theoj.org/papers/10.21105/joss.00029)"
+      article in The Journal of Open Source Software (2016).
++ [GitVision](https://github.com/gaspardIV/gitvision) is a web tool
+  designed to visualize Git repositories in virtual, augmented, and 3D reality.
+  Developed with Vue 3 in Vite by Kacper Konecki (GaspardIV).
+  There is live demo of GitVision at [gitvis.web.app](https://gitvis.web.app/),
+  which includes prepared quite a few tiny, small, medium and large example repositories;
+  you can also visualize your own repository by uploading data prepared using
+  [GitVision script](https://github.com/GaspardIV/gitvision/tree/main/tool)
+  (or you can use the tool locally).
+    + It provides different type of 3D visualization than much better known
+      [Gource](https://gource.io/) visualization tool for source control repositories.
+      There the repository is displayed as a tree where the root of the repository is the centre,
+      directories are branches and files are leaves. Contributors to the source code
+      appear and disappear as they contribute to specific files and directories.
+    + Has different purpose than [Git History.xyz](https://githistory.xyz/)
+      web app that allows to quickly browse the history of files in any git repo,
+      mentioned in [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/)
+      and [#105](https://git.github.io/rev_news/2023/11/30/edition-105/).
+    + See also [VR-Git: Git Repository Visualization and Immersion in Virtual Reality](https://opus-htw-aalen.bsz-bw.de/frontdoor/deliver/index/docId/2472/file/ICSEA22-VRGit_OberhauserCR2.pdf) (PDF)
+      paper by Roy Oberhauser (2022).
++ [Visualize Git](http://git-school.github.io/visualizing-git/) web app illustrates what's going on
+  underneath the hood when you use common Git operations. You'll see what exactly is happening
+  to your commit graph. Powered by D3. Sources on GitHub as [git-school/visualizing-git](https://github.com/git-school/visualizing-git).
+    + This web app is quite similar to free playground mode of
+      [Visualizing Git Concepts with D3](https://onlywei.github.io/explain-git-with-d3/),
+      first mentioned in [Git Rev News #69](https://git.github.io/rev_news/2020/11/27/edition-69/).
+    + Compare [Learn Git Branching](https://learngitbranching.js.org/),
+      mentioned first in [Git Rev News Editon #30](https://git.github.io/rev_news/2017/08/16/edition-30/).
+    + Compare [Git Gud](https://nic-hartley.github.io/git-gud/) visual web-based Git simulator,
+      meant to help understand Git better, which got announced by its author Nic Hartley in
+      [Git Gud at git](https://dev.to/nichartley/git-gud-at-git-5d9k).
+      Mentioned first in [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/).
+    + Compare [Git Gud](https://github.com/benthayer/git-gud), a command line game
+      designed to help you learn how to use the Git version control system.
+      Written in Python by Ben Thayer. First mentioned in
+      [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/).
+    + Compare [Oh My Git!](https://ohmygit.org/), an open source game about learning Git,
+      written using the Godot game engine ([source](https://github.com/git-learning-game/oh-my-git)).
+      There was a lightning talk about this game:
+      [Building a Git learning game: A playful approach to version control](https://fosdem.org/2021/schedule/event/git_learning_game/)
+      at FOSSDEM 2021. First mentioned in [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/).
+    + Compare [Git-Sim](https://github.com/initialcommit-com/git-sim) tool (written in Python)
+      to visually simulate Git operations in your own repos with a single terminal command.
+      Described in [Git-Sim: Visually Simulate Git Operations In Your Own Repos](https://initialcommit.com/blog/git-sim)
+      (mentioned in [Git Rev News Edition #95](https://git.github.io/rev_news/2023/01/31/edition-95/))
+      and [Git-Sim 3 Month Dev Update: Community Response, New Features, & The Future](https://initialcommit.com/blog/git-sim-3-month-dev-update)
+      (mentioned in [Edition #98](https://git.github.io/rev_news/2023/04/30/edition-98/)).
++ [List of git mistakes](https://gist.github.com/jvns/f7d2db163298423751a9d1a823d7c7c1)
+  people have listed on Mastodon, gathered by Julia Evans (@b0rk@jvns.ca).
++ [Building Git](https://shop.jcoglan.com/building-git/) book by James Coglan
+  presents a deep dive into the internals of the Git version control system
+  by rebuilding it in a high-level programming language (in Ruby).<br>
+  Free table of contents and a sample chapter; the book costs £36.00.
 
 
 ## Releases
