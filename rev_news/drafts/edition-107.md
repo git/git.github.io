@@ -27,7 +27,7 @@ This edition covers what happened during the months of December 2023 and January
 
 ### Support
 
-* [Git Rename Detection Surprises](https://public-inbox.org/git/LO6P265MB6736043BE8FB607DB671D21EFAAAA@LO6P265MB6736.GBRP265.PROD.OUTLOOK.COM/)
+* [Git Rename Detection Bug](https://public-inbox.org/git/LO6P265MB6736043BE8FB607DB671D21EFAAAA@LO6P265MB6736.GBRP265.PROD.OUTLOOK.COM/)
 
   Jeremy Pridmore reported an issue to the Git mailing list. He used
   [`git bugreport`](https://git-scm.com/docs/git-bugreport), so his
