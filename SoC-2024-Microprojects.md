@@ -1,7 +1,6 @@
 ---
 layout: default
-title: SoC 2022 Applicant Microprojects
-navbar: false
+title: SoC 2024 Applicant Microprojects
 ---
 
 ## Introduction
