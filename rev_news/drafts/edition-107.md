@@ -114,6 +114,11 @@ This edition covers what happened during the months of December 2023 and January
 ## Other News
 
 __Various__
++ [The contributions GitLab's Git team made to the Git 2.43 release](https://about.gitlab.com/blog/2024/01/11/the-contributions-we-made-to-the-git-2-43-release/)
+  by John Cai on GitLab Blog.
+    + See also [Highlights from Git 2.43](https://github.blog/2023-11-20-highlights-from-git-2-43/)
+      by Taylor Blau on GitHub Blog, covering different changes,
+      included in [Git Rev News Edition #105](https://git.github.io/rev_news/2023/11/30/edition-105/).
 + GitHub has [Copilot](https://github.com/features/copilot),
   GitLab has [Duo Code Suggestions](https://about.gitlab.com/solutions/code-suggestions/);
   now Bitbucket has [integration with Tabnine](https://marketplace.atlassian.com/apps/1227931/tabnine-teams-for-bitbucket-cloud):
