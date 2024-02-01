@@ -176,7 +176,7 @@ __Light reading__
   though setting `pull.rebase` to `true` depends on whether project prefers merges or rebases,
   and is very project-dependent.
 + [Git Lesson: How to Use .gitignore and .gitkeep?](https://dev.to/ritaly/git-lesson-how-to-use-gitignore-and-gitkeep-5edm)
-  by Rita {FlyNerd} Lyczywek on DEV\.to (translated [from original article in Polish](https://www.flynerd.pl/2024/01/gitignore-i-gitkeep.html)),
+  by Rita {FlyNerd} Lyczywek on DEV\.to (translated [from original article in Polish](https://www.flynerd.pl/2024/01/gitignore-i-gitkeep.html)).
 + [Git Prom! My Favorite Git Alias](https://dev.to/technosophos/git-prom-my-favorite-git-alias-2mbd)
   (to fetch the latest upstream HEAD and rebase your current branch on top of it)
   by Matt Butcher on DEV\.to.
@@ -194,10 +194,10 @@ __Light reading__
   first mentioned in [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/);
   further articles about this web platform for data version control
   linked in [Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/),
-  [#96](https://git.github.io/rev_news/2023/02/28/edition-96/)
+  [#96](https://git.github.io/rev_news/2023/02/28/edition-96/),
   and [#97](https://git.github.io/rev_news/2023/03/31/edition-97/).
 + [RFC: Bridging GitHub workflows with b4](https://lore.kernel.org/tools/20231213-fluffy-roaring-capuchin-8024ac@meerkat/T/)
-  by Konstantin Ryabitsev on Linux kernel tools mailing list via lore.kernel.org
+  by Konstantin Ryabitsev on Linux kernel tools mailing list via lore.kernel.org.
 + [Jujutsu: a new, Git-compatible version control system](https://lwn.net/Articles/958468/)
   by Daroc Alden on LWN\.net ([free link](https://lwn.net/SubscriberLink/958468/09ff53915f2ae020/)).
   Jujutsu was first mentioned in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/);
@@ -301,4 +301,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Elijah Newren, Bruno Brito and Brandon Pugh.
+with help from Elijah Newren, Bruno Brito, Brandon Pugh and Štěpán Němec.
