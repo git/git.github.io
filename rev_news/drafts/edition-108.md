@@ -40,12 +40,19 @@ __Various__
 
 __Light reading__
 
++ [Git Trailers](https://alchemists.io/articles/git_trailers) by Brooke Kuhlmann. Learn how to
+  leverage commit metadata for powerful automations and more human readable commit messages.
+
 <!---
 __Easy watching__
 -->
 
 __Git tools and sites__
 
++ [Milestoner](https://alchemists.io/projects/milestoner) by Brooke Kuhlmann. Significant updates
+  have been made where you can build release notes from your commit messages based on Git notes and
+  trailers in multiple formats: Text, ASCII Doc, Markdown, and HTML. Includes automatic calculation
+  of your next version and automatic tagging too.
 
 ## Releases
 
