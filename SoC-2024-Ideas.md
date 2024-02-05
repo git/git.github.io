@@ -33,9 +33,9 @@ Our Outreachy intern ported some of the unit tests.
 See:
 
   - this discussion <https://lore.kernel.org/git/cover.1692297001.git.steadmon@google.com/>
-  - https://lore.kernel.org/git/20240112102743.1440-1-ach.lumap@gmail.com/
-  - https://lore.kernel.org/git/20240205162506.1835-1-ach.lumap@gmail.com/
-  - https://lore.kernel.org/git/20240112102122.1422-1-ach.lumap@gmail.com/
+  - <https://lore.kernel.org/git/20240112102743.1440-1-ach.lumap@gmail.com/>
+  - <https://lore.kernel.org/git/20240205162506.1835-1-ach.lumap@gmail.com/>
+  - <https://lore.kernel.org/git/20240112102122.1422-1-ach.lumap@gmail.com/>
 
 Expected Project Size: 175 hours or 350 hours
 
@@ -85,8 +85,8 @@ effort may be extended.
 
 See:
 
-  - https://lore.kernel.org/git/6cfee0e4-3285-4f18-91ff-d097da9de737@rd10.de/
-  - https://lore.kernel.org/git/cover.1706601199.git.ps@pks.im/
+  - <https://lore.kernel.org/git/6cfee0e4-3285-4f18-91ff-d097da9de737@rd10.de/>
+  - <https://lore.kernel.org/git/cover.1706601199.git.ps@pks.im/>
 
 Expected Project Size: 175 hours or 350 hours
 
@@ -127,7 +127,7 @@ backwards compatibility.
 
 See:
 
-  - https://lore.kernel.org/git/Za-gF_Hp_lXViGWw@tanuki/
+  - <https://lore.kernel.org/git/Za-gF_Hp_lXViGWw@tanuki/>
 
 Expected Project Size: 175 hours or 350 hours
 
