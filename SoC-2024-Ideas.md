@@ -19,16 +19,23 @@ page though.
 
 ### Move existing tests to a unit testing framework
 
-Git has a lot of test cases that need to migrated to use a
-new unit testing framework. This typically involves moving
-t/helper/test-foo.c + a sh test to invoke test-foo over to
-using the unit testing framework.
+Git has a lot of test cases that need to be migrated to use a new unit
+testing framework. This typically involves moving code from both:
 
-Our previous Outreachy intern ported some of the unit tests
+  - a "t/helper/test-*.c" test helper in C, and
+  - a "t/*.sh" test script in shell that invokes the test helper
+
+over to a single "t/unit-tests/t-*.c" in C using the unit testing
+framework.
+
+Our Outreachy intern ported some of the unit tests.
 
 See:
 
   - this discussion <https://lore.kernel.org/git/cover.1692297001.git.steadmon@google.com/>
+  - https://lore.kernel.org/git/20240112102743.1440-1-ach.lumap@gmail.com/
+  - https://lore.kernel.org/git/20240205162506.1835-1-ach.lumap@gmail.com/
+  - https://lore.kernel.org/git/20240112102122.1422-1-ach.lumap@gmail.com/
 
 Expected Project Size: 175 hours or 350 hours
 
