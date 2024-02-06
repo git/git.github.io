@@ -265,7 +265,7 @@ __Git tools and sites__
     + [Oh My Git!](https://ohmygit.org/), an open source game about learning Git,
       written using the Godot game engine ([source](https://github.com/git-learning-game/oh-my-git)).
       There was a lightning talk about this game at FOSDEM 2021:
-      [Building a Git learning game: A playful approach to version control](https://fosdem.org/2021/schedule/event/git_learning_game/)
+      [Building a Git learning game: A playful approach to version control](https://fosdem.org/2021/schedule/event/git_learning_game/).
       First mentioned in [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/).
     + [Git-Sim](https://github.com/initialcommit-com/git-sim) tool (written in Python)
       to visually simulate Git operations in your own repos with a single terminal command.
