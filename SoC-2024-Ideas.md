@@ -36,6 +36,7 @@ See:
   - <https://lore.kernel.org/git/20240112102743.1440-1-ach.lumap@gmail.com/>
   - <https://lore.kernel.org/git/20240205162506.1835-1-ach.lumap@gmail.com/>
   - <https://lore.kernel.org/git/20240112102122.1422-1-ach.lumap@gmail.com/>
+  - <https://github.com/git/git/blob/master/Documentation/technical/unit-tests.txt>
 
 Expected Project Size: 175 hours or 350 hours
 
@@ -56,6 +57,8 @@ the new framework.
 See:
 
   - this discussion <https://lore.kernel.org/git/cover.1692297001.git.steadmon@google.com/>
+  - <https://github.com/git/git/blob/master/Documentation/technical/unit-tests.txt>
+  - <https://git-scm.com/docs/reftable>
 
 Expected Project Size: 175 hours or 350 hours
 
@@ -87,6 +90,7 @@ See:
 
   - <https://lore.kernel.org/git/6cfee0e4-3285-4f18-91ff-d097da9de737@rd10.de/>
   - <https://lore.kernel.org/git/cover.1706601199.git.ps@pks.im/>
+  - <https://git-scm.com/docs/reftable>
 
 Expected Project Size: 175 hours or 350 hours
 
@@ -165,6 +169,10 @@ the "reftable" backend though, which breaks this protocol.
 
 The goal of this project is to implement "reftable" support
 for "dumb" fetches.
+
+See:
+
+  - <https://git-scm.com/docs/reftable>
 
 Expected Project Size: 175 hours or 350 hours
 
