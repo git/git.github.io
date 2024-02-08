@@ -30,7 +30,13 @@ framework.
 
 Our Outreachy intern ported some of the unit tests.
 
-See:
+**Note**: Owing to additional care needed to convert
+reftable unit tests in `t0032-reftable-unittest.sh`,
+it is covered as a separate project below.
+So, this project solely focuses on unit tests _other than_
+the reftable ones.
+
+- See:
 
   - this discussion <https://lore.kernel.org/git/cover.1692297001.git.steadmon@google.com/>
   - <https://lore.kernel.org/git/20240112102743.1440-1-ach.lumap@gmail.com/>
@@ -49,7 +55,7 @@ Possible mentors:
 
 ### Convert reftable unit tests to use the unit testing framework
 
-The "reftable" unit tests in "t0032-reftable-unittest.sh"
+The "reftable" unit tests in `t0032-reftable-unittest.sh`
 predate the unit testing framework that was recently
 introduced into Git. These tests should be converted to use
 the new framework.
