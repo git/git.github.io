@@ -36,6 +36,8 @@ it is covered as a separate project below.
 So, this project solely focuses on unit tests _other than_
 the reftable ones.
 
+- See:
+
   - this discussion <https://lore.kernel.org/git/cover.1692297001.git.steadmon@google.com/>
   - <https://lore.kernel.org/git/20240112102743.1440-1-ach.lumap@gmail.com/>
   - <https://lore.kernel.org/git/20240205162506.1835-1-ach.lumap@gmail.com/>
