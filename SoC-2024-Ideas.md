@@ -52,6 +52,7 @@ Languages: C, shell(bash)
 
 Possible mentors:
 * Christian Couder < <christian.couder@gmail.com> >
+* Kaartic Sivaraam < <kaartic.sivaraam@gmail.com> >
 
 ### Convert reftable unit tests to use the unit testing framework
 
