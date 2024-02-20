@@ -42,6 +42,7 @@ __Light reading__
 
 + [Git Trailers](https://alchemists.io/articles/git_trailers) by Brooke Kuhlmann. Learn how to
   leverage commit metadata for powerful automations and more human readable commit messages.
++ [More Expressive Commits with Gitmoji ☺️](https://www.git-tower.com/blog/gitmoji/) by Bruno Brito on Tower’s blog.
 
 <!---
 __Easy watching__
@@ -56,7 +57,8 @@ __Git tools and sites__
 
 ## Releases
 
-
++ Tower for Mac [10.4](https://www.git-tower.com/release-notes/mac?show_tab=release-notes)
+  
 ## Credits
 
 This edition of Git Rev News was curated by
