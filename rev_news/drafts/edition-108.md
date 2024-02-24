@@ -37,6 +37,8 @@ This edition covers what happened during the months of January 2024 and February
 
 __Various__
 
+- The Git project has been accepted as a [Mentor Organization](https://summerofcode.withgoogle.com/programs/2024/organizations/git) for Google Summer of Code (GSoC) 2024. We could still add project ideas to our [idea page](https://git.github.io/SoC-2024-Ideas/) and volunteers to (co-)mentor are still welcome. Feel free to chime in [the corresponding thread](https://public-inbox.org/git/1de82b27-116a-450e-98c0-52eb65a8f608@gmail.com/). Also, feel free to spread the word about Git's participation.
+
 
 __Light reading__
 
