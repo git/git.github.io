@@ -2062,3 +2062,30 @@ img {
   padding-left: 2em;
   text-indent: -2em;
 }
+
+@media screen and (min-width: 800px) {
+  img[alt$=">"] {
+    float: right;
+  }
+
+  /*
+   * Below styles could be useful when we position
+   * images to left / center. They're commented now
+   * since we don't use images in our site much.
+   *
+   * Ref: https://stackoverflow.com/a/39614958/5614968
+   */
+  /*
+  img[alt$="<"] {
+    float: left;
+  }
+
+  img[alt$="><"] {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    float: none!important;
+  }
+  */
+}
