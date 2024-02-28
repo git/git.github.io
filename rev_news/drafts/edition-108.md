@@ -38,12 +38,16 @@ This edition covers what happened during the months of January 2024 and February
 __Various__
 
 - The Git project has been accepted as a [Mentor Organization](https://summerofcode.withgoogle.com/programs/2024/organizations/git) for Google Summer of Code (GSoC) 2024. We could still add project ideas to our [idea page](https://git.github.io/SoC-2024-Ideas/) and volunteers to (co-)mentor are still welcome. Feel free to chime in [the corresponding thread](https://public-inbox.org/git/1de82b27-116a-450e-98c0-52eb65a8f608@gmail.com/). Also, feel free to spread the word about Git's participation.
++ [Highlights from Git 2.44](https://github.blog/2024-02-23-highlights-from-git-2-44/)
+  by Taylor Blau on GitHub Blog.
++ [GitLab's contributions to Git 2.44.0](https://about.gitlab.com/blog/2024/02/26/gitlabs-contributions-to-git-2-44-0/)
+  by Patrick Steinhardt on GitLab Blog.
 
 
 __Light reading__
 
 + [Git Tips and Tricks: a 3 part series](https://blog.gitbutler.com/git-tips-and-tricks/)
-  by Scott Chacon on [GitButler]() blog,
+  by Scott Chacon on [GitButler](https://gitbutler.com/) blog,
   accompanying the video from the talk
   [So You Think You Know Git - FOSDEM 2024](https://www.youtube.com/watch?v=aolI_Rz0ZqY)
   (available on YouTube)
