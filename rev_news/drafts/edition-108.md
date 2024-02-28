@@ -25,9 +25,57 @@ This edition covers what happened during the months of January 2024 and February
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [[Bug?] "git diff --no-rename A B"](https://lore.kernel.org/git/xmqq34uvtpob.fsf@gitster.g/)
+
+  Junio Hamano, the Git maintainer, sent an email to the mailing list
+  saying that when `git diff` is used with `--no-rename` instead of
+  `--no-renames`, then rename detection is still performed. He
+  wondered if that was a bug because either `--no-rename` should be
+  interpreted as being a shortened version of `--no-renames` which is
+  [a valid option name](https://git-scm.com/docs/git-diff#Documentation/git-diff.txt---no-renames),
+  that should disable rename detection, or `--no-rename` should be
+  rejected with an error message and that should terminate `git diff`.
+
+  Dragan Simic replied to Junio that indeed, in case the option is not
+  recognized, an error message should be emitted.
+
+  Peff, alias Jeff King, also replied to Junio saying he tried
+  `--no-foo` which properly errored out. He then wondered if it could
+  be a bug in the parse-option code that could be confused because
+  `git diff` has both `--[no-]rename-empty` and `--no-renames`. As
+  there is an abbreviation ambiguity between `--no-rename-empty` and
+  `--no-renames` when `--no-rename` is used, the parse-option code
+  should not allow such an abbreviation and should error out.
+
+  He suggested, as an alternative to fixing the bug, that a new
+  `--renames` option could be introduced. It would be synonymous to
+  `--find-renames` which is currently the only opposite to
+  `--no-renames`. He proposed a patch to do that and showed that after
+  his patch, `--no-rename` would properly error out.
+
+  René Scharfe replied to Peff that the issue came from a patch
+  written in 2019 that disabled abbreviated options when there could
+  be an ambiguity. The code handling abbreviations would trigger not
+  only if the condition guarding it was satisfied but also if it was
+  reached through a `goto` statement. The patch disabling abbreviated
+  options only took care of condition guarding that code, but not of
+  the goto statement. Along with these explanations, René provided a
+  patch fixing the bug.
+
+  Junio thanked René for spotting the "nasty" bug and said he agreed
+  that the code was confusing.
+
+  René replied to Junio providing a simplification patch that removed
+  the goto statement on top of his previous patch.
+
+  Peff also replied to René's first patch wondering if it fixed all
+  the possible issues. But then in a reply to himself Peff agreed that
+  René's patch was indeed fixing all the issues discussed.
+
+  Junio later merged both of René's patches, and they were part of the
+  recently released Git 2.43.2, 2.43.3 and 2.44.0.
 
 <!---
 ## Developer Spotlight:
