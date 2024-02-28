@@ -117,7 +117,36 @@ __Git tools and sites__
 
 ## Releases
 
++ Git [2.44.0](https://public-inbox.org/git/xmqqbk87w164.fsf@gitster.g/),
+[2.43.3](https://public-inbox.org/git/xmqqil2fw16c.fsf@gitster.g/),
+[2.44.0-rc2](https://public-inbox.org/git/xmqqbk8brrj3.fsf@gitster.g/),
+[2.43.2](https://public-inbox.org/git/xmqqo7cjvuht.fsf@gitster.g/),
+[2.44.0-rc1](https://public-inbox.org/git/xmqqttmbvuyh.fsf@gitster.g/),
+[2.44.0-rc0](https://public-inbox.org/git/xmqqo7cph7ov.fsf@gitster.g/),
+[2.43.1](https://public-inbox.org/git/xmqqttmhh7ow.fsf@gitster.g/)
++ Git for Windows [2.44.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.44.0.windows.1),
+[2.44.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.44.0-rc2.windows.1),
+[2.44.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.44.0-rc1.windows.1),
+[2.44.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.44.0-rc0.windows.1)
++ GitLab [16.9.1, 16.8.3, 16.7.6](https://about.gitlab.com/releases/2024/02/21/security-release-gitlab-16-9-1-released/)
+[16.9](https://about.gitlab.com/releases/2024/02/15/gitlab-16-9-released/),
+[16.8.2, 16.7.5, 16.6.7](https://about.gitlab.com/releases/2024/02/07/security-release-gitlab-16-8-2-released/)
++ Gerrit Code Review [3.7.7](https://www.gerritcodereview.com/3.7.html#377),
+[3.8.4](https://www.gerritcodereview.com/3.8.html#384)
++ GitHub Enterprise [3.12.0](https://help.github.com/enterprise-server@3.12/admin/release-notes#3.12.0),
+[3.11.5](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.5),
+[3.10.7](https://help.github.com/enterprise-server@3.10/admin/release-notes#3.10.7),
+[3.9.10](https://help.github.com/enterprise-server@3.9/admin/release-notes#3.9.10),
+[3.8.15](https://help.github.com/enterprise-server@3.8/admin/release-notes#3.8.15),
+[3.11.4](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.4),
+[3.10.6](https://help.github.com/enterprise-server@3.10/admin/release-notes#3.10.6),
+[3.9.9](https://help.github.com/enterprise-server@3.9/admin/release-notes#3.9.9),
+[3.8.14](https://help.github.com/enterprise-server@3.8/admin/release-notes#3.8.14)
++ GitKraken [9.12.0](https://help.gitkraken.com/gitkraken-client/current/)
++ GitHub Desktop [3.3.9](https://desktop.github.com/release-notes/)
++ Sourcetree [4.2.7](https://product-downloads.atlassian.com/software/sourcetree/ReleaseNotes/Sourcetree_4.2.7.html)
 + Tower for Mac [10.4](https://www.git-tower.com/release-notes/mac?show_tab=release-notes)
++ git-credential-oauth [0.11.1](https://github.com/hickford/git-credential-oauth/releases/tag/v0.11.1)
   
 ## Credits
 
