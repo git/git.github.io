@@ -1,19 +1,19 @@
 ---
 title: Git Rev News Edition 108 (February 28th, 2024)
 layout: default
-date: 2024-02-28 12:06:51 +0100
+date: 2024-03-01 12:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 108 (February 28th, 2024)
+## Git Rev News: Edition 108 (March 1st, 2024)
 
 Welcome to the 108th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
-This edition covers what happened during the months of January 2024 and February 2024.
+This edition covers what happened during the months of January and February 2024.
 
 ## Discussions
 
@@ -27,22 +27,22 @@ This edition covers what happened during the months of January 2024 and February
 
 ### Support
 
-* [[Bug?] "git diff --no-rename A B"](https://lore.kernel.org/git/xmqq34uvtpob.fsf@gitster.g/)
+* [[Bug?] "`git diff --no-rename A B`"](https://lore.kernel.org/git/xmqq34uvtpob.fsf@gitster.g/)
 
   Junio Hamano, the Git maintainer, sent an email to the mailing list
-  saying that when `git diff` is used with `--no-rename` instead of
-  `--no-renames`, then rename detection is still performed. He
+  saying that when `git diff` was used with `--no-rename` instead of
+  `--no-renames`, then rename detection was still performed. He
   wondered if that was a bug because either `--no-rename` should be
-  interpreted as being a shortened version of `--no-renames` which is
-  [a valid option name](https://git-scm.com/docs/git-diff#Documentation/git-diff.txt---no-renames),
-  that should disable rename detection, or `--no-rename` should be
-  rejected with an error message and that should terminate `git diff`.
+  interpreted as being a shortened form of `--no-renames`, which is
+  [a valid option](https://git-scm.com/docs/git-diff#Documentation/git-diff.txt---no-renames),
+  and should disable rename detection, or `--no-rename` should be
+  rejected with an error message and termination of `git diff`.
 
   Dragan Simic replied to Junio that indeed, in case the option is not
   recognized, an error message should be emitted.
 
   Peff, alias Jeff King, also replied to Junio saying he tried
-  `--no-foo` which properly errored out. He then wondered if it could
+  `--no-foo`, which properly errored out. He then wondered if it could
   be a bug in the parse-option code that could be confused because
   `git diff` has both `--[no-]rename-empty` and `--no-renames`. As
   there is an abbreviation ambiguity between `--no-rename-empty` and
@@ -51,7 +51,7 @@ This edition covers what happened during the months of January 2024 and February
 
   He suggested, as an alternative to fixing the bug, that a new
   `--renames` option could be introduced. It would be synonymous to
-  `--find-renames` which is currently the only opposite to
+  `--find-renames`, which is currently the only opposite to
   `--no-renames`. He proposed a patch to do that and showed that after
   his patch, `--no-rename` would properly error out.
 
@@ -75,7 +75,7 @@ This edition covers what happened during the months of January 2024 and February
   René's patch was indeed fixing all the issues discussed.
 
   Junio later merged both of René's patches, and they were part of the
-  recently released Git 2.43.2, 2.43.3 and 2.44.0.
+  recently released Git versions 2.43.2, 2.43.3 and 2.44.0.
 
 <!---
 ## Developer Spotlight:
@@ -85,7 +85,7 @@ This edition covers what happened during the months of January 2024 and February
 
 __Various__
 
-- The Git project has been accepted as a [Mentor Organization](https://summerofcode.withgoogle.com/programs/2024/organizations/git) for Google Summer of Code (GSoC) 2024. We could still add project ideas to our [idea page](https://git.github.io/SoC-2024-Ideas/) and volunteers to (co-)mentor are still welcome. Feel free to chime in [the corresponding thread](https://public-inbox.org/git/1de82b27-116a-450e-98c0-52eb65a8f608@gmail.com/). Also, feel free to spread the word about Git's participation.
+- The Git project has been accepted as a [Mentor Organization](https://summerofcode.withgoogle.com/programs/2024/organizations/git) for Google Summer of Code (GSoC) 2024. We could still add project ideas to our [idea page](https://git.github.io/SoC-2024-Ideas/), and volunteers to (co-)mentor are still welcome. Feel free to chime in in [the corresponding thread](https://public-inbox.org/git/1de82b27-116a-450e-98c0-52eb65a8f608@gmail.com/). Also, feel free to spread the word about Git's participation.
 + [Highlights from Git 2.44](https://github.blog/2024-02-23-highlights-from-git-2-44/)
   by Taylor Blau on GitHub Blog.
 + [GitLab's contributions to Git 2.44.0](https://about.gitlab.com/blog/2024/02/26/gitlabs-contributions-to-git-2-44-0/)
@@ -98,7 +98,7 @@ __Light reading__
   by Scott Chacon on [GitButler](https://gitbutler.com/) blog,
   accompanying the video from the talk
   [So You Think You Know Git - FOSDEM 2024](https://www.youtube.com/watch?v=aolI_Rz0ZqY)
-  (available on YouTube)
+  (available on YouTube); find the talk slides (and later the "official" video) in the [FOSDEM archive](https://fosdem.org/2024/schedule/event/fosdem-2024-3611-so-you-think-you-know-git/).
     + [Git Tips 1: Oldies but Goodies](https://blog.gitbutler.com/git-tips-1-theres-a-git-config-for-that/):
       conditional configs, git blame and log with line ranges (`-L`),
       git blame with following, word diff, resolution reuse (`git rerere`).
@@ -113,9 +113,9 @@ __Light reading__
 + [More Expressive Commits with Gitmoji ☺️](https://www.git-tower.com/blog/gitmoji/)
   by Bruno Brito on Tower’s blog.
     + [Gitmoji](https://gitmoji.dev/) was first mentioned in [Git Rev News Edition #47](https://git.github.io/rev_news/2019/01/23/edition-47/),
-      though then under [different URL](https://gitmoji.carloscuesta.me/)
+      though then under a [different URL](https://gitmoji.carloscuesta.me/)
       (which now redirects to the current one).
-    + Similar [Emoji-Log](https://github.com/ahmadawais/Emoji-Log) commit log messages spec standard
+    + The similar [Emoji-Log](https://github.com/ahmadawais/Emoji-Log) commit log messages spec standard
       was mentioned in [Git Rev News Edition #101](https://git.github.io/rev_news/2023/07/31/edition-101/).
 + [My Git pre-commit hook contained a footgun](https://blog.plover.com/prog/git/hook-disaster.html)
   by Mark Dominus (陶敏修) on his The Universe of Discourse blog.
@@ -127,7 +127,7 @@ __Light reading__
   by Hana Klingová on her blog (and also [on DEV.to](https://dev.to/hankadev/git-battle-yolo-mode-vs-clean-history-594d)):
   about usefulness of `git commit --fixup` and `rebase.autosquash`.
 + [Restore deleted/lost files with git](https://dev.to/this-is-learning/restore-deletedlost-files-with-git-3lf7)
-  by Leonardo Montini for This is Learning, a part 6 of
+  by Leonardo Montini for This is Learning, part 6 of
   [git better - Improve your git skills (6 Part Series)](https://dev.to/balastrong/series/21372).
   Originally published [at leonardomontini.dev](https://leonardomontini.dev/git-restore-deleted-file/)
   (includes [video version](https://youtu.be/TL_t3aOXumo)).
@@ -135,8 +135,8 @@ __Light reading__
   by David Thompson on his blog,
   about the benefits of good commit messages (the example is one character change).<br>
   Includes links to the following recommended articles on the same topic:
-    + [Telling stories through your commits](https://blog.mocoso.co.uk/posts/talks/telling-stories-through-your-commits/) by Joel Chippindale (2016)
-    + [A branch in time](https://tekin.co.uk/2019/02/a-talk-about-revision-histories) by Tekin Süleyman (2019)
+    + [Telling stories through your commits](https://blog.mocoso.co.uk/posts/talks/telling-stories-through-your-commits/) by Joel Chippindale (2016).
+    + [A branch in time](https://tekin.co.uk/2019/02/a-talk-about-revision-histories) by Tekin Süleyman (2019).
     
 + [Contribution experience report: Git](https://antonin.delpeuch.eu/posts/contribution-experience-report-git/)
   by Antonin Delpeuch on his blog.
@@ -155,16 +155,16 @@ __Git tools and sites__
   trailers in multiple formats: Text, ASCII Doc, Markdown, and HTML. Includes automatic calculation
   of your next version and automatic tagging too.
 + [git-cliff](https://git-cliff.org/) is a highly customizable changelog generator
-  using regex-powered custom parsers, that can generate changelog files for any Git repository
-  that follows the [conventional commits](https://www.conventionalcommits.org/) specification.
+  using regex-powered custom parsers that can generate changelog files for any Git repository
+  which follows the [conventional commits](https://www.conventionalcommits.org/) specification.
   Written in Rust as a command-line application.
 + [pg-diff](https://michaelsogos.github.io/pg-diff/) is a PostgreSQL schema and data comparing tool.
   Written in JavaScript by Michael Sogos.
 + [Another trivial utility: git-q](https://blog.plover.com/prog/git-q.html) by Mark Dominus
   available from [mjdominus personal git-util repository](https://github.com/mjdominus/git-util)
-  as [git-q](https://github.com/mjdominus/git-util).
+  as [`git-q`](https://github.com/mjdominus/git-util/blob/master/bin/git-q).
 + [Aho](https://github.com/djanderson/aho) is a Git implementation in AWK.
-  It is a _toy project_ to explore some of the internals of Git and newer features of GNU AWK.
+  It is a _toy project_ to explore some of the internals of Git and newer features of GNU AWK (aka Gawk).
 
 
 ## Releases
