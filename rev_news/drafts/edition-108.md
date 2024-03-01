@@ -77,6 +77,9 @@ This edition covers what happened during the months of January and February 2024
   Junio later merged both of René's patches, and they were part of the
   recently released Git versions 2.43.2, 2.43.3 and 2.44.0.
 
+  _Bonus reading_: ["A Case against the GO TO Statement"](https://www.cs.utexas.edu/users/EWD/transcriptions/EWD02xx/EWD215.html)
+  by Edsger W. Dijkstra
+
 <!---
 ## Developer Spotlight:
 -->
