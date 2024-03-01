@@ -156,7 +156,7 @@ __Git tools and sites__
 + [LearnGit.io](https://learngit.io) is an upcoming resource for learning Git using videos with
   motion graphics. The project is by Jack Lot who posts Git videos on
   [The Modern Coder](https://www.youtube.com/@themoderncoder YouTube channel. Jack is looking for
-  intermediate/advanced Git users for feedback. If interested email <jack@learngit.io>.
+  intermediate/advanced Git users for feedback. If interested email  &lt;<jack@learngit.io>&gt;.
 + [git-cliff](https://git-cliff.org/) is a highly customizable changelog generator
   using regex-powered custom parsers that can generate changelog files for any Git repository
   which follows the [conventional commits](https://www.conventionalcommits.org/) specification.
