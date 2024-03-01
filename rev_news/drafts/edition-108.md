@@ -153,6 +153,10 @@ __Git tools and sites__
   have been made where you can build release notes from your commit messages based on Git notes and
   trailers in multiple formats: console, AsciiDoc, Markdown, and HTML. Includes automatic calculation
   of your next version and automatic tagging.
++ [LearnGit.io](https://learngit.io) is an upcoming resource for learning Git using videos with
+  motion graphics. The project is by Jack Lot who posts Git videos on
+  [The Modern Coder](https://www.youtube.com/@themoderncoder YouTube channel. Jack is looking for
+  intermediate/advanced Git users for feedback. If interested email jack@learngit.io.
 + [git-cliff](https://git-cliff.org/) is a highly customizable changelog generator
   using regex-powered custom parsers that can generate changelog files for any Git repository
   which follows the [conventional commits](https://www.conventionalcommits.org/) specification.
@@ -206,4 +210,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Brooke Kuhlmann and Bruno Brito.
+with help from Brooke Kuhlmann, Jack Lot and Bruno Brito.
