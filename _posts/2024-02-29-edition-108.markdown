@@ -1,13 +1,13 @@
 ---
-title: Git Rev News Edition 108 (February 28th, 2024)
+title: Git Rev News Edition 108 (February 29th, 2024)
 layout: default
-date: 2024-03-01 12:06:51 +0100
+date: 2024-02-29 12:06:51 +0100
 author: chriscool
 categories: [news]
 navbar: false
 ---
 
-## Git Rev News: Edition 108 (March 1st, 2024)
+## Git Rev News: Edition 108 (February 29th, 2024)
 
 Welcome to the 108th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
