@@ -31,22 +31,22 @@ This edition covers what happened during the months of January and February 2024
 
   Junio Hamano, the Git maintainer, sent an email to the mailing list
   saying that when `git diff` was used with `--no-rename` instead of
-  `--no-renames`, then rename detection was still performed. He
-  wondered if that was a bug because either `--no-rename` should be
+  `--no-renames`, rename detection was still performed. He
+  wondered if that was a bug, because either `--no-rename` should be
   interpreted as being a shortened form of `--no-renames`, which is
-  [a valid option](https://git-scm.com/docs/git-diff#Documentation/git-diff.txt---no-renames),
+  [a valid option](https://git-scm.com/docs/git-diff#Documentation/git-diff.txt---no-renames)
   and should disable rename detection, or `--no-rename` should be
   rejected with an error message and termination of `git diff`.
 
   Dragan Simic replied to Junio that indeed, in case the option is not
   recognized, an error message should be emitted.
 
-  Peff, alias Jeff King, also replied to Junio saying he tried
+  Jeff King, alias Peff, also replied to Junio saying he tried
   `--no-foo`, which properly errored out. He then wondered if it could
-  be a bug in the parse-option code that could be confused because
+  be a bug in the `parse-options` code that could be confused because
   `git diff` has both `--[no-]rename-empty` and `--no-renames`. As
   there is an abbreviation ambiguity between `--no-rename-empty` and
-  `--no-renames` when `--no-rename` is used, the parse-option code
+  `--no-renames` when `--no-rename` is used, the `parse-options` code
   should not allow such an abbreviation and should error out.
 
   He suggested, as an alternative to fixing the bug, that a new
@@ -58,20 +58,20 @@ This edition covers what happened during the months of January and February 2024
   René Scharfe replied to Peff that the issue came from a patch
   written in 2019 that disabled abbreviated options when there could
   be an ambiguity. The code handling abbreviations would trigger not
-  only if the condition guarding it was satisfied but also if it was
+  only if the condition guarding it was satisfied, but also if it was
   reached through a `goto` statement. The patch disabling abbreviated
-  options only took care of condition guarding that code, but not of
-  the goto statement. Along with these explanations, René provided a
+  options only took care of the condition guarding that code, but not of
+  the `goto` statement. Along with these explanations, René provided a
   patch fixing the bug.
 
   Junio thanked René for spotting the "nasty" bug and said he agreed
   that the code was confusing.
 
-  René replied to Junio providing a simplification patch that removed
-  the goto statement on top of his previous patch.
+  René replied to Junio with a follow-up patch removing the
+  `goto` statement.
 
   Peff also replied to René's first patch wondering if it fixed all
-  the possible issues. But then in a reply to himself Peff agreed that
+  the possible issues, but then in a reply to himself agreed that
   René's patch was indeed fixing all the issues discussed.
 
   Junio later merged both of René's patches, and they were part of the
@@ -85,7 +85,7 @@ This edition covers what happened during the months of January and February 2024
 
 __Various__
 
-- The Git project has been accepted as a [Mentor Organization](https://summerofcode.withgoogle.com/programs/2024/organizations/git) for Google Summer of Code (GSoC) 2024. We could still add project ideas to our [idea page](https://git.github.io/SoC-2024-Ideas/), and volunteers to (co-)mentor are still welcome. Feel free to chime in in [the corresponding thread](https://public-inbox.org/git/1de82b27-116a-450e-98c0-52eb65a8f608@gmail.com/). Also, feel free to spread the word about Git's participation.
+- The Git project has been accepted as a [Mentor Organization](https://summerofcode.withgoogle.com/programs/2024/organizations/git) for Google Summer of Code (GSoC) 2024. We can still add project ideas to our [idea page](https://git.github.io/SoC-2024-Ideas/), and volunteers to (co-)mentor are still welcome. Feel free to join the discussion in [the corresponding thread](https://public-inbox.org/git/1de82b27-116a-450e-98c0-52eb65a8f608@gmail.com/). Also, feel free to spread the word about Git's participation.
 + [Highlights from Git 2.44](https://github.blog/2024-02-23-highlights-from-git-2-44/)
   by Taylor Blau on GitHub Blog.
 + [GitLab's contributions to Git 2.44.0](https://about.gitlab.com/blog/2024/02/26/gitlabs-contributions-to-git-2-44-0/)
@@ -103,22 +103,22 @@ __Light reading__
       conditional configs, git blame and log with line ranges (`-L`),
       git blame with following, word diff, resolution reuse (`git rerere`).
     + [Git Tips 2: Some Subtle New Things](https://blog.gitbutler.com/git-tips-2-new-stuff-in-git/):
-      git branch stuff (`--sort`, `--column`), safe force pushing (`--force-with-lease`),
+      git branch stuff (`--sort`, `--column`), safe force-pushing (`--force-with-lease`),
       SSH commit signing, push signing, `git maintenance`.
     + [Git Tips 3: Really Large Repositories and Monorepos](https://blog.gitbutler.com/git-tips-3-really-large-repositories/):
       prefetching, commit graph, filesystem monitor, partial cloning, sparse checkouts,
-      [scalar](https://git-scm.com/docs/scalar) tool.
+      the [scalar](https://git-scm.com/docs/scalar) tool.
 + [Git Trailers](https://alchemists.io/articles/git_trailers) by Brooke Kuhlmann. Learn how to
-  leverage commit metadata for powerful automations and more human readable commit messages.
+  leverage commit metadata for powerful automations and more human-readable commit messages.
 + [More Expressive Commits with Gitmoji ☺️](https://www.git-tower.com/blog/gitmoji/)
   by Bruno Brito on Tower’s blog.
     + [Gitmoji](https://gitmoji.dev/) was first mentioned in [Git Rev News Edition #47](https://git.github.io/rev_news/2019/01/23/edition-47/),
       though then under a [different URL](https://gitmoji.carloscuesta.me/)
       (which now redirects to the current one).
-    + The similar [Emoji-Log](https://github.com/ahmadawais/Emoji-Log) commit log messages spec standard
+    + The similar [Emoji-Log](https://github.com/ahmadawais/Emoji-Log) commit log messages standard
       was mentioned in [Git Rev News Edition #101](https://git.github.io/rev_news/2023/07/31/edition-101/).
 + [My Git pre-commit hook contained a footgun](https://blog.plover.com/prog/git/hook-disaster.html)
-  by Mark Dominus (陶敏修) on his The Universe of Discourse blog.
+  by Mark Dominus (陶敏修) on his blog (The Universe of Discourse).
 + Julia Evans continues her series of blog posts about Git with
   [Dealing with diverged git branches](https://jvns.ca/blog/2024/02/01/dealing-with-diverged-git-branches/)
   and [Popular git config options](https://jvns.ca/blog/2024/02/16/popular-git-config-options/).
@@ -133,11 +133,10 @@ __Light reading__
   (includes [video version](https://youtu.be/TL_t3aOXumo)).
 + [My favourite Git commit](https://dhwthompson.com/2019/my-favourite-git-commit) (2019)
   by David Thompson on his blog,
-  about the benefits of good commit messages (the example is one character change).<br>
+  about the benefits of good commit messages (the example is a one-character change).<br>
   Includes links to the following recommended articles on the same topic:
     + [Telling stories through your commits](https://blog.mocoso.co.uk/posts/talks/telling-stories-through-your-commits/) by Joel Chippindale (2016).
     + [A branch in time](https://tekin.co.uk/2019/02/a-talk-about-revision-histories) by Tekin Süleyman (2019).
-    
 + [Contribution experience report: Git](https://antonin.delpeuch.eu/posts/contribution-experience-report-git/)
   by Antonin Delpeuch on his blog.
 
@@ -145,15 +144,15 @@ __Light reading__
 __Easy watching__
 
 + [So You Think You Know Git - FOSDEM 2024](https://www.youtube.com/watch?v=aolI_Rz0ZqY)
-  on YouTube, 47 minutes long.
+  by Scott Chacon on YouTube, 47 minutes long (mentioned above).
 
 
 __Git tools and sites__
 
 + [Milestoner](https://alchemists.io/projects/milestoner) by Brooke Kuhlmann. Significant updates
   have been made where you can build release notes from your commit messages based on Git notes and
-  trailers in multiple formats: Text, ASCII Doc, Markdown, and HTML. Includes automatic calculation
-  of your next version and automatic tagging too.
+  trailers in multiple formats: console, AsciiDoc, Markdown, and HTML. Includes automatic calculation
+  of your next version and automatic tagging.
 + [git-cliff](https://git-cliff.org/) is a highly customizable changelog generator
   using regex-powered custom parsers that can generate changelog files for any Git repository
   which follows the [conventional commits](https://www.conventionalcommits.org/) specification.
@@ -180,7 +179,7 @@ __Git tools and sites__
 [2.44.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.44.0-rc2.windows.1),
 [2.44.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.44.0-rc1.windows.1),
 [2.44.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.44.0-rc0.windows.1)
-+ GitLab [16.9.1, 16.8.3, 16.7.6](https://about.gitlab.com/releases/2024/02/21/security-release-gitlab-16-9-1-released/)
++ GitLab [16.9.1, 16.8.3, 16.7.6](https://about.gitlab.com/releases/2024/02/21/security-release-gitlab-16-9-1-released/),
 [16.9](https://about.gitlab.com/releases/2024/02/15/gitlab-16-9-released/),
 [16.8.2, 16.7.5, 16.6.7](https://about.gitlab.com/releases/2024/02/07/security-release-gitlab-16-8-2-released/)
 + Gerrit Code Review [3.7.7](https://www.gerritcodereview.com/3.7.html#377),
