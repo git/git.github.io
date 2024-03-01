@@ -156,14 +156,14 @@ __Git tools and sites__
   have been made where you can build release notes from your commit messages based on Git notes and
   trailers in multiple formats: console, AsciiDoc, Markdown, and HTML. Includes automatic calculation
   of your next version and automatic tagging.
-+ [LearnGit.io](https://learngit.io) is an upcoming resource for learning Git using videos with
-  motion graphics. The project is by Jack Lot who posts Git videos on
-  [The Modern Coder](https://www.youtube.com/@themoderncoder YouTube channel. Jack is looking for
-  intermediate/advanced Git users for feedback. If interested email  &lt;<jack@learngit.io>&gt;.
 + [git-cliff](https://git-cliff.org/) is a highly customizable changelog generator
   using regex-powered custom parsers that can generate changelog files for any Git repository
   which follows the [conventional commits](https://www.conventionalcommits.org/) specification.
   Written in Rust as a command-line application.
++ [LearnGit.io](https://learngit.io) is an upcoming resource for learning Git using videos with
+  motion graphics. The project is by Jack Lot who posts Git videos on
+  [The Modern Coder](https://www.youtube.com/@themoderncoder) YouTube channel. Jack is looking for
+  intermediate/advanced Git users for feedback. If interested email  &lt;<jack@learngit.io>&gt;.
 + [pg-diff](https://michaelsogos.github.io/pg-diff/) is a PostgreSQL schema and data comparing tool.
   Written in JavaScript by Michael Sogos.
 + [Another trivial utility: git-q](https://blog.plover.com/prog/git-q.html) by Mark Dominus
