@@ -44,7 +44,9 @@ appropriate `test_path_is_file`, `test_path_is_dir`, etc. helper
 functions. Note that this conversion does not directly apply to control
 flow constructs like `if test -e ./path; then ...; fi` because the
 replacements are intended to assert the condition instead of merely
-testing for it.
+testing for it. Check [this link](https://public-inbox.org/git/CAPig+cRfO8t1tdCL6MB4b9XopF3HkZ==hU83AFZ38b-2zsXDjQ@mail.gmail.com/)
+for an elaborate clarification on identifying `test -e`
+instances that should / should not be replaced.
 
 If you can't find one please tell us, along with the command you used
 to search, so that we can remove this microproject idea.
