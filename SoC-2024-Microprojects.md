@@ -41,7 +41,10 @@ to search, so that we can remove this microproject idea.
 Find one test script that verifies the presence/absence of
 files/directories with 'test -(e|f|d|...)' and replace them with the
 appropriate `test_path_is_file`, `test_path_is_dir`, etc. helper
-functions.
+functions. Note that this conversion does not directly apply to control
+flow constructs like `if test -e ./path; then ...; fi` because the
+replacements are intended to assert the condition instead of merely
+testing for it.
 
 If you can't find one please tell us, along with the command you used
 to search, so that we can remove this microproject idea.
