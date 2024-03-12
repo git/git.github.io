@@ -48,7 +48,7 @@ __Git tools and sites__
 
 
 ## Releases
-
++ Tower for Windows [6.0](https://www.git-tower.com/release-notes/windows?show_tab=release-notes)
 
 ## Credits
 
