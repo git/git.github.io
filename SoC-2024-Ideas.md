@@ -19,6 +19,16 @@ about refactoring projects versus projects that implement new
 features" in the [general application information](https://git.github.io/General-Application-Information)
 page though.
 
+### Note about limit of project selection
+
+Kindly note that considering the bandwidth of available mentors, the
+Git project could only mentor upto 2 to 3 contributors this year.
+
+This is not a hard and fast rule. It may change if more community members are
+willing to mentor in the coming days. For instance, this may happen when
+a new project is proposed and some community member volunteers to mentor
+the same.
+
 ### Move existing tests to a unit testing framework
 
 Git has a lot of test cases that need to be migrated to use a new unit
