@@ -88,6 +88,7 @@ Languages: C, shell(bash)
 Possible mentors:
 * Patrick Steinhardt < <ps@pks.im> >
 * Karthik Nayak < <karthik.188@gmail.com> >
+* Christian Couder < <christian.couder@gmail.com> >
 
 ### Implement consistency checks for refs
 
@@ -161,6 +162,7 @@ Languages: C, shell(bash)
 Possible mentors:
 * Patrick Steinhardt < <ps@pks.im> >
 * Karthik Nayak < <karthik.188@gmail.com> >
+* Christian Couder < <christian.couder@gmail.com> >
 
 ### Implement support for reftables in "dumb" HTTP transport
 
