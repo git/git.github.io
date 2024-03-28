@@ -261,11 +261,108 @@ __Various__
 
 __Light reading__
 
-<!---
+* Julia Evans continues her series of blog posts about Git with
+  [How HEAD works in git](https://jvns.ca/blog/2024/03/08/how-head-works-in-git/) and
+  [The "current branch" in git](https://jvns.ca/blog/2024/03/22/the-current-branch-in-git/).
+  First entry in this series of blog posts can be found 
+  in [Git Rev News Edition #103](https://git.github.io/rev_news/2023/09/30/edition-103/).
+* [Keeping repository maintainer information accurate](https://github.blog/2024-03-04-keeping-repository-maintainer-information-accurate/):
+  ensuring that [CODEOWNERS file](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
+  is up to date with the help of [cleanowners](https://github.com/github/cleanowners) tool.
+  By Zack Koppert on GitHub Blog.
+* [De Programmatica Ipsum, Issue #66: Version Control - Twenty Years Is Nothing](https://deprogrammaticaipsum.com/twenty-years-is-nothing/)
+  by Adrian Kosmaczewski.
+* [Git Worktrees and GitButler](https://blog.gitbutler.com/git-worktrees/):
+  How do git worktrees help you work on more than one branch at the same time,
+  and how does that differ from virtual branches in GitButler?
+  Written by Scott Chacon on GitButler Blog.
+* [Fixing up [a seried of] Git [commits] with Autosquash](https://blog.gitbutler.com/git-autosquash/)
+  by Scott Chacon on GitButler Blog.
+* [Advanced git commands every senior software developer needs to know](https://optimizedbyotto.com/post/advanced-git-commands/)
+  by Otto Kekäläinen on Optimized by Otto blog.
+* [Five Ways to Be More Productive with Git](https://laravel-news.com/five-ways-to-be-more-productive-with-git)
+  by Paul Redmond on Laravel News blog.  The blog post lists
+  a few useful git aliases, setting up a commit template, using password manager for SSH keys
+  (that can be used for signing commits), making use of GitHub CLI tool (`gh`), 
+  and configuring mergetool and difftool.
+* [Git: programmatic staging](https://choly.ca/post/git-programmatic-staging/)
+  (with the help of the [expect](https://linux.die.net/man/1/expect) tool,
+  or with [grepdiff](https://linux.die.net/man/1/grepdiff))
+  by Ilia Choly on Choly's Blog.  The author uses described technique
+  as a cleanup step after rewriting/refactoring code using automatic tools,
+  such as [semgrep](https://semgrep.dev/), [ast-grep](https://ast-grep.github.io/),
+  LLMs (Large Language Models) such as ChatGPT, and one-off scripts.
+    * [semgrep](https://semgrep.dev/) was mentioned in [Git Rev News Editio #75](https://git.github.io/rev_news/2021/05/27/edition-75/);
+      you can test it with [Semgrep Playground](https://semgrep.dev/playground/new).
+    * [Another article](https://choly.ca/post/semgrep-autofix-llm/)
+      by the same author mentions other similar tools, namely
+      [CodeQL](https://codeql.github.com/) (mentioned in passing
+      in [Git Rev News Edition #79](https://git.github.io/rev_news/2021/09/30/edition-79/)),
+      and [Comby](https://comby.dev/).  It also talks about newly created
+      [semgrepx](https://github.com/icholy/semgrepx) tool for rewriting semgrep matches
+      using externals tools (such as Datasette's [`llm`](https://llm.datasette.io/) CLI tool
+      and Python library).
+* [Unleashing the Power of Git Bisect](https://dzone.com/articles/unleashing-the-power-of-git-bisect)
+  by Shai Almog on DZone (DevOps Zone).
+* [Moving Code from One Repository to Another Using Git Patch](https://joelcolaco.hashnode.dev/moving-code-from-one-repository-to-another-using-git-patch)
+  by Joel Colaco on his blog - though a better solution would be to use
+  `git format-patch` and `git am` (or alternates and `git cherry-pick`).
+* [Extremely Linear Git History](https://westling.dev/b/extremely-linear-git),
+  with first commit in a repo having a hash that starts with `0000000`,
+  the second commit is `0000001`, and so on; written by Gustav Westling
+  on his blog (2022).
+* [Witty.rb - A very simple Ruby Script demonstrating how to parse a Git index file (`.git/index`)](https://gist.github.com/Chubek/1fa1c037d280dfc7952676cb4ee89e11).
+  Published as Gist by Chubak Bidpaa.
+* [Dr. Git-Love or: How I Learned to Stop Worrying and Love the Rebase](https://escodebar.github.io/trainings/git/meetup/#/)
+  are HTML slides for Git training course by Pablo Vergés (escodebar).
+
+
 __Easy watching__
--->
+
+* [So You Think You Know Git Part 2 - DevWorld 2024](https://www.youtube.com/watch?v=Md44rcw13k4)
+  by Scott Chacon on GitButler YouTube channel, continues the
+  [FOSDEM version](https://www.youtube.com/watch?v=aolI_Rz0ZqY) of the talk,
+  which was mentioned in [previous Git Rev News](https://git.github.io/rev_news/2024/02/29/edition-108/).
+  [DevWorld Git Slides](https://blog.gitbutler.com/devworld-git-slides/)
+  are available on GitButler Blog.
+
 
 __Git tools and sites__
+
+* [extremely-linear](https://github.com/zegl/extremely-linear), also known as `git-linearize`,
+  is a tool to create commits with SHA-1 identifier beginning with `0000000` for the first commit,
+  `0000001` for the second, `0000002` for the third, and so on.  This tool uses 
+  [lucky_commit](https://github.com/not-an-aardvark/lucky-commit),
+  which inserts invisible whitespace characters at the end of the commit message
+  until it gets a SHA-1 (or SHA-256) hash with the desired prefix.
+    * Compare and contrast with [git-vain](https://git.anna.lgbt/anna/git-vain)
+      (mentioned in [Git Rev News Edition #103](https://git.github.io/rev_news/2023/09/30/edition-103/))
+      and [git-vanity-sha](https://github.com/mattbaker/git-vanity-sha)
+      (mentioned in [Git Rev News Edition #39](https://git.github.io/rev_news/2018/05/16/edition-39/))
+      tools to generate vanity hashes, for example to make SHA-1 hash of the HEAD begin with `c0ffee`.
+* [Nosey Parker](https://github.com/praetorian-inc/noseyparker/) is a command-line program
+  that finds secrets and sensitive information in textual data and Git history.
+  Written in Rust, under Apache 2.0 license.
+* [gitu](https://github.com/altsem/gitu) - a TUI Git client inspired by Magit.
+  Written in Rust, under MIT license.
+* [Vim-Flog](https://github.com/rbong/vim-flog) is a powerful git branch viewer for Vim.
+  In Vim 8/9, it requires LuaJIT (preferred) or Lua installed.
+* [gcd](https://github.com/davvid/gcd) - Git worktree navigator,
+  lets you quickly navigate to Git worktrees on your filesystem,
+  and quickly navigate to directories within your current worktree.
+  Written as a set of shell functions, to be sourced into `~/.zshrc` or `~/.bashrc`.
+* [grepdiff](https://pkg.go.dev/rsc.io/grepdiff) is a command line tool that reads unified diffs
+  from the files passed as arguments (or standard input), and prints a reduced diff
+  containing only the hunks matching the regular expression.  Written in Go.
+* [Gitstr](https://github.com/fiatjaf/gitstr) is a tool to send and receive git patches
+  over [Nostr][], using [NIP-34](https://github.com/nostr-protocol/nips/pull/997).
+    * Compare and contrast with [git-ssb](https://scuttlebot.io/apis/community/git-ssb.html)
+      (see [git-ssb-intro](https://github.com/hackergrrl/git-ssb-intro) guide):
+      decentralized git repo hosting and issue tracking on Secure-ScuttleButt (SSB),
+      mentioned in [Git Rev News Edition #26](https://git.github.io/rev_news/2017/04/19/edition-26/)
+      and [#40](https://git.github.io/rev_news/2018/06/20/edition-40/).
+
+[Nostr]: https://nostr.com/ "A decentralized social network with a chance of working"
 
 
 ## Releases
