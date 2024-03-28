@@ -89,7 +89,7 @@ This edition covers what happened during the months of February 2024 and March 2
   unreadable code) suffers from stagnation because people become afraid
   of touching it, because it's hard to understand. It becomes harder to
   extend and grow, which is required of any software worth maintaining
-  (we call it _soft_ ware for a reason).
+  (we call it <em>soft</em>ware for a reason).
 
   Going back to the question (sorry for rambling a bit there), in my
   $DAYJOB I work on microservices, APIs, and backend systems.
@@ -118,7 +118,9 @@ This edition covers what happened during the months of February 2024 and March 2
   Last year I started trying to add unit tests to the (perhaps obscure)
   `git interpret-trailers` command, but this effort has morphed into
   "let's also overhaul the entire subsystem around how trailers are
-  handled, with the aim of creating a reusable C library around it".
+  handled, with the aim of creating a reusable C library around it"
+  [ [ref 1](https://lore.kernel.org/git/pull.1563.git.1691211879.gitgitgadget@gmail.com/) ]
+  [ [ref 2](https://lore.kernel.org/git/pull.1632.git.1704869487.gitgitgadget@gmail.com/) ].
 
   I'm afraid I've bitten off more than I can chew, but I do have a
   backlog of about 60 patches that I need to get sent up for review. Not
@@ -159,8 +161,8 @@ This edition covers what happened during the months of February 2024 and March 2
   Git itself?
 
   [tig](https://jonas.github.io/tig/). I use it all the time, every
-  suday. It's so good that I basically never use `git log`, unless I'm
-  piping it through to search it.
+  day. It's so good that I basically never use `git log`, unless I'm
+  searching through it interactively with the pager.
 
   Every time I see someone proudly showing off their latest "git-log"
   incantation (with all its bells and whistles), I think to myself "I
@@ -168,9 +170,10 @@ This edition covers what happened during the months of February 2024 and March 2
 
   Being an Emacs user, I tried to get into [Magit](https://magit.vc/)
   but could not get used to the keybindings that conflicted with my
-  Vim-styled bindings. (Yes, I use Evil mode if you're into that sort
-  of thing.) OTOH I get so much done with the basic git-* commands and
-  tig that I'm rather happy with my workflow.
+  Vim-styled bindings. (Yes, I use [Evil](https://github.com/emacs-evil/evil)
+  mode via [Doom](https://github.com/doomemacs/doomemacs) Emacs if you're
+  into that sort of thing.) OTOH I get so much done with the basic
+  `git-*` commands and `tig` that I'm rather happy with my workflow.
 
 * Do you happen to have any memorable experience w.r.t contributing to
   the Git project? If yes, could you share it with us?
@@ -200,7 +203,7 @@ This edition covers what happened during the months of February 2024 and March 2
   unusual. One window for Emacs, one window for (re)compiling Git and
   running tests, and maybe one more for tig. From Emacs I use [notmuch](https://wiki.archlinux.org/title/Notmuch)
   to browse the mailing list emails (which I sync to Gmail with
-  [lieer](https://github.com/gauteh/lieer).
+  [lieer](https://github.com/gauteh/lieer)).
 
   I use Orgmode in Emacs heavily for organizing code snippets and ideas.
 
@@ -247,6 +250,8 @@ This edition covers what happened during the months of February 2024 and March 2
   Junio sends out regularly to look for patches that need help from
   reviewers. They are commented as "Needs review" or "Comments?", so
   they're easy enough to spot.
+
+  Cheers!
 
 
 ## Other News
