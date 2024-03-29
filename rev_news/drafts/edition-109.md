@@ -316,6 +316,9 @@ __Light reading__
 * [Dr. Git-Love or: How I Learned to Stop Worrying and Love the Rebase](https://escodebar.github.io/trainings/git/meetup/#/)
   are HTML slides for Git training course by Pablo Vergés (escodebar).
 
+- [Toy/demo: using ChatGPT to summarize lengthy LKML threads (b4 integration)](https://lore.kernel.org/all/20240227-flawless-capybara-of-drama-e09653@lemur/t/#u)
+  thread on Linux kernel mailing list, started by Konstantin Ryabitsev.
+
 
 __Easy watching__
 
