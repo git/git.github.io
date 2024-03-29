@@ -369,8 +369,30 @@ __Git tools and sites__
 
 
 ## Releases
+
++ libgit2 [1.8.0](https://github.com/libgit2/libgit2/releases/tag/v1.8.0)
++ Gerrit Code Review [3.7.8](https://www.gerritcodereview.com/3.7.html#378),
+[3.9.2](https://www.gerritcodereview.com/3.9.html#392)
++ GitHub Enterprise [3.12.1](https://help.github.com/enterprise-server@3.12/admin/release-notes#3.12.1),
+[3.11.7](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.7),
+[3.10.9](https://help.github.com/enterprise-server@3.10/admin/release-notes#3.10.9),
+[3.9.12](https://help.github.com/enterprise-server@3.9/admin/release-notes#3.9.12),
+[3.8.17](https://help.github.com/enterprise-server@3.8/admin/release-notes#3.8.17),
+[3.12.0](https://help.github.com/enterprise-server@3.12/admin/release-notes#3.12.0),
+[3.11.6](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.6),
+[3.10.8](https://help.github.com/enterprise-server@3.10/admin/release-notes#3.10.8),
+[3.9.11](https://help.github.com/enterprise-server@3.9/admin/release-notes#3.9.11),
+[3.8.16](https://help.github.com/enterprise-server@3.8/admin/release-notes#3.8.16)
++ GitLab [16.10.1, 16.9.3, 16.8.5](https://about.gitlab.com/releases/2024/03/27/security-release-gitlab-16-10-1-released/),
+[16.10](https://about.gitlab.com/releases/2024/03/21/gitlab-16-10-released/),
+[16.9.2](https://about.gitlab.com/releases/2024/03/06/security-release-gitlab-16-9-2-released/)
++ GitKraken [9.13.0](https://help.gitkraken.com/gitkraken-client/current/)
++ GitHub Desktop [3.3.12](https://desktop.github.com/release-notes/),
+[3.3.11](https://desktop.github.com/release-notes/),
+[3.3.10](https://desktop.github.com/release-notes/)
 + Tower for Windows [6.0](https://www.git-tower.com/release-notes/windows?show_tab=release-notes) ([Release blog post](https://www.git-tower.com/blog/tower-windows-6/))
 + Tower for Mac [10.5](https://www.git-tower.com/release-notes/mac?show_tab=release-notes)
++ git-credential-azure [0.3.0](https://github.com/hickford/git-credential-azure/releases/tag/v0.3.0)
 
 ## Credits
 
