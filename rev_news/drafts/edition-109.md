@@ -21,9 +21,74 @@ This edition covers what happened during the months of February 2024 and March 2
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
+* [[PATCH] rebase: make warning less passive aggressive](https://lore.kernel.org/git/pull.1669.git.1708442603395.gitgitgadget@gmail.com/)
+
+  Harmen Stoppels sent a patch to the mailing list that changed an
+  error message from "No rebase in progress?" to "No rebase in
+  progress". The rationale is that this error appears when one runs
+  `git rebase --continue` while there is no rebase going on, so there
+  is no reason for the question mark.
+
+  Junio Hamano, the Git maintainer, replied to Harmen suggesting using
+  the imperative mood in the commit message, and saying that the
+  change in itself is good but that the patch shouldn't have touched
+  the `po/*.po` files in the project that are used for localization.
+  Junio also said that we could later add tests for this as it
+  appeared there was none.
+
+  Michal Suchánek replied to Junio saying that it might have been Ok
+  to touch the `po/*.po` files if the patch had updated the
+  translations in those files but it didn't.
+
+  Junio replied to Michal saying that knowing the target language was
+  needed before removing question marks in those files as it might not
+  be enough to change a question into a statement. And even if the
+  author of the patch knows enough, reviewers of the patch might
+  not. But the biggest problem was bypassing languages teams.
+
+  Michal replied to Junio asking what was the problem "with not
+  involving several language teams to remove a question mark?"
+
+  Jean-Noël Avila, who is a translator, replied that it didn't bother
+  him much to edit a sentence to remove a question mark and possibly
+  adjust it, compared to "translating again and again similar
+  sentences".
+
+  This led to some confusion as Junio thought that Jean-Noël said that
+  the "everything in one patch" approach would help translators by not
+  having them translate "again and again". But Jean-Noël clarified
+  that he didn't consider changing a question to an assertion is
+  translating "again and again". He agreed that it was perfectly fine
+  for translators to have to do those kinds of changes. With "again
+  and again" he was referring to strings like "could not stat '%s'"
+  and then "could not stat file '%s'".
+
+  In the meantime Patrick Steinhardt replied to Harmen's initial
+  message. He suggested converting the error message to start with a
+  lowercase letter as our guidelines for error messages recommend.
+
+  Harmen, then sent
+  [a version 2 of his patch](https://lore.kernel.org/git/pull.1669.v2.git.1708537097448.gitgitgadget@gmail.com/)
+  which didn't change any `po/*.po` file and had the error message
+  start with a lowercase letter. Patrick reviewed that patch and found
+  it good.
+
+  Kristoffer Haugsbakk chimed into the discussion saying he had
+  interpreted the original error message as saying "I’m not quite sure
+  but it looks like you are not in the middle of a rebase?"
+
+  Junio replied to Kristoffer saying that there are indeed examples of
+  "less assertive" messages in the same rebase command, like "It looks
+  like 'git am' is in progress. Cannot rebase." But we should be more
+  assertive as it could help us get valuable bug reports saying for
+  example "The command said I was not rebasing, but I was! Here is
+  what I did..." Such bug reports could help us improve how we
+  determine the state we are in.
+
+  The version 2 of Harmen's patch was later merged to the 'master'
+  branch.
 
 <!---
 ### Support
