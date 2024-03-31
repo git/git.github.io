@@ -149,7 +149,7 @@ This edition covers what happened during the months of February 2024 and March 2
 
   And I believe that readability is the most important attribute when it
   comes to code --- even before correctness! Because at least if the
-  intent of the author is clear, we can have a fairly (easy) way to fix
+  intent of the author is clear, we can have a (fairly) easy way to fix
   things to make it correct. The other way around (correct, but
   unreadable code) suffers from stagnation because people become afraid
   of touching it, because it's hard to understand. It becomes harder to
@@ -305,7 +305,7 @@ This edition covers what happened during the months of February 2024 and March 2
 * If there's one tip you would like to share with other Git
   developers, what would it be?
 
-  Junio has been our maintainer for over a decade. It's a tough job and
+  Junio has been our maintainer for nearly two decades. It's a tough job and
   somehow he's kept going at it all this time. Still, let's do our best
   to help make his job easier, because honestly we are truly lucky to
   have someone of his caliber lead our project.
