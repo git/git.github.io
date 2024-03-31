@@ -13,7 +13,7 @@ Welcome to the 109th edition of [Git Rev News](https://git.github.io/rev_news/re
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
-This edition covers what happened during the months of February 2024 and March 2024.
+This edition covers what happened during the months of February and March 2024.
 
 ## Discussions
 
@@ -38,18 +38,18 @@ This edition covers what happened during the months of February 2024 and March 2
   Junio also said that we could later add tests for this as it
   appeared there was none.
 
-  Michal Suchánek replied to Junio saying that it might have been Ok
+  Michal Suchánek replied to Junio saying that it might have been OK
   to touch the `po/*.po` files if the patch had updated the
-  translations in those files but it didn't.
+  translations in those files but it hadn't.
 
   Junio replied to Michal saying that knowing the target language was
   needed before removing question marks in those files as it might not
-  be enough to change a question into a statement. And even if the
-  author of the patch knows enough, reviewers of the patch might
-  not. But the biggest problem was bypassing languages teams.
+  be enough to change a question into a statement. Even if the
+  author of the patch knew enough, reviewers of the patch might
+  not, but the biggest problem was bypassing the languages teams.
 
   Michal replied to Junio asking what was the problem "with not
-  involving several language teams to remove a question mark?"
+  involving several language teams to remove a question mark".
 
   Jean-Noël Avila, who is a translator, replied that it didn't bother
   him much to edit a sentence to remove a question mark and possibly
@@ -126,9 +126,9 @@ This edition covers what happened during the months of February 2024 and March 2
   them to HTML. For better or worse, all this happened before I
   discovered Emacs and Orgmode (or even Markdown).
 
-  Anyway I first wrote a plaintext-to-HTML converter in Ruby. Then I
+  Anyway, I first wrote a plaintext-to-HTML converter in Ruby. Then I
   rewrote it in C just for fun. Then again in Haskell (using a minimal
-  subset of Orgmode syntax). As you can see I sort of got carried away,
+  subset of Orgmode syntax). As you can see, I sort of got carried away,
   haha.
 
   I would go on to write dozens of pet projects (rudimentary chess
@@ -169,7 +169,7 @@ This edition covers what happened during the months of February 2024 and March 2
   well worth the trouble, and I am most proud of my work in this area so
   far.
 
-  If I had more time I would overhaul the documentation to make things
+  If I had more time, I would overhaul the documentation to make things
   easier to understand. Truly, Git has a very simple conceptual model
   (thanks to the brilliance of its original author). You just have to
   understand that commits come from one or more other commits (sort of
@@ -225,13 +225,13 @@ This edition covers what happened during the months of February 2024 and March 2
 * What is your favorite Git-related tool/library, outside of
   Git itself?
 
-  [tig](https://jonas.github.io/tig/). I use it all the time, every
+  [Tig](https://jonas.github.io/tig/). I use it all the time, every
   day. It's so good that I basically never use `git log`, unless I'm
   searching through it interactively with the pager.
 
   Every time I see someone proudly showing off their latest "git-log"
   incantation (with all its bells and whistles), I think to myself "I
-  guess they've never heard of tig".
+  guess they've never heard of `tig`".
 
   Being an Emacs user, I tried to get into [Magit](https://magit.vc/)
   but could not get used to the keybindings that conflicted with my
@@ -240,7 +240,7 @@ This edition covers what happened during the months of February 2024 and March 2
   into that sort of thing.) OTOH I get so much done with the basic
   `git-*` commands and `tig` that I'm rather happy with my workflow.
 
-* Do you happen to have any memorable experience w.r.t contributing to
+* Do you happen to have any memorable experience w.r.t. contributing to
   the Git project? If yes, could you share it with us?
 
   Nine years ago, I contributed my first patch series. I was so proud of
@@ -266,14 +266,14 @@ This edition covers what happened during the months of February 2024 and March 2
 
   For local Git development, honestly I don't do anything special or
   unusual. One window for Emacs, one window for (re)compiling Git and
-  running tests, and maybe one more for tig. From Emacs I use [notmuch](https://wiki.archlinux.org/title/Notmuch)
+  running tests, and maybe one more for Tig. From Emacs I use [notmuch](https://wiki.archlinux.org/title/Notmuch)
   to browse the mailing list emails (which I sync to Gmail with
   [lieer](https://github.com/gauteh/lieer)).
 
   I use Orgmode in Emacs heavily for organizing code snippets and ideas.
 
-  Lastly but not least, I use tmux to organize terminal windows and
-  nagivate quickly across them, even if I'm not using SSH.
+  Last but not least, I use [tmux](https://github.com/tmux/tmux/wiki) to organize terminal windows and
+  navigate quickly across them, even if I'm not using SSH.
 
 * What is your advice for people who want to start Git development?
   Where and how should they start?
@@ -329,42 +329,42 @@ __Light reading__
 * Julia Evans continues her series of blog posts about Git with
   [How HEAD works in git](https://jvns.ca/blog/2024/03/08/how-head-works-in-git/) and
   [The "current branch" in git](https://jvns.ca/blog/2024/03/22/the-current-branch-in-git/).
-  First entry in this series of blog posts can be found 
+  The first entry in this series of blog posts can be found 
   in [Git Rev News Edition #103](https://git.github.io/rev_news/2023/09/30/edition-103/).
 * [Keeping repository maintainer information accurate](https://github.blog/2024-03-04-keeping-repository-maintainer-information-accurate/):
   ensuring that [CODEOWNERS file](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
-  is up to date with the help of [cleanowners](https://github.com/github/cleanowners) tool.
+  is up to date with the help of tools like the [cleanowners](https://github.com/github/cleanowners) tool.
   By Zack Koppert on GitHub Blog.
 * [De Programmatica Ipsum, Issue #66: Version Control - Twenty Years Is Nothing](https://deprogrammaticaipsum.com/twenty-years-is-nothing/)
   by Adrian Kosmaczewski.
 * [Git Worktrees and GitButler](https://blog.gitbutler.com/git-worktrees/):
-  How do git worktrees help you work on more than one branch at the same time,
+  How do Git worktrees help you work on more than one branch at the same time,
   and how does that differ from virtual branches in GitButler?
   Written by Scott Chacon on GitButler Blog.
-* [Fixing up [a seried of] Git [commits] with Autosquash](https://blog.gitbutler.com/git-autosquash/)
+* [Fixing up [a series of] Git [commits] with Autosquash](https://blog.gitbutler.com/git-autosquash/)
   by Scott Chacon on GitButler Blog.
 * [Advanced git commands every senior software developer needs to know](https://optimizedbyotto.com/post/advanced-git-commands/)
   by Otto Kekäläinen on Optimized by Otto blog.
 * [Five Ways to Be More Productive with Git](https://laravel-news.com/five-ways-to-be-more-productive-with-git)
   by Paul Redmond on Laravel News blog.  The blog post lists
-  a few useful git aliases, setting up a commit template, using password manager for SSH keys
+  a few useful Git aliases, setting up a commit template, using password manager for SSH keys
   (that can be used for signing commits), making use of GitHub CLI tool (`gh`), 
-  and configuring mergetool and difftool.
+  and configuring `mergetool` and `difftool`.
 * [Git: programmatic staging](https://choly.ca/post/git-programmatic-staging/)
-  (with the help of the [expect](https://linux.die.net/man/1/expect) tool,
-  or with [grepdiff](https://linux.die.net/man/1/grepdiff))
+  (with the help of the [`expect`](https://linux.die.net/man/1/expect) tool,
+  or with [`grepdiff`](https://linux.die.net/man/1/grepdiff))
   by Ilia Choly on Choly's Blog.  The author uses described technique
   as a cleanup step after rewriting/refactoring code using automatic tools,
-  such as [semgrep](https://semgrep.dev/), [ast-grep](https://ast-grep.github.io/),
+  such as [Semgrep](https://semgrep.dev/), [ast-grep](https://ast-grep.github.io/),
   LLMs (Large Language Models) such as ChatGPT, and one-off scripts.
-    * [semgrep](https://semgrep.dev/) was mentioned in [Git Rev News Editio #75](https://git.github.io/rev_news/2021/05/27/edition-75/);
+    * [Semgrep](https://semgrep.dev/) was mentioned in [Git Rev News Edition #75](https://git.github.io/rev_news/2021/05/27/edition-75/);
       you can test it with [Semgrep Playground](https://semgrep.dev/playground/new).
     * [Another article](https://choly.ca/post/semgrep-autofix-llm/)
       by the same author mentions other similar tools, namely
       [CodeQL](https://codeql.github.com/) (mentioned in passing
       in [Git Rev News Edition #79](https://git.github.io/rev_news/2021/09/30/edition-79/)),
       and [Comby](https://comby.dev/).  It also talks about newly created
-      [semgrepx](https://github.com/icholy/semgrepx) tool for rewriting semgrep matches
+      [`semgrepx`](https://github.com/icholy/semgrepx) tool for rewriting `semgrep` matches
       using externals tools (such as Datasette's [`llm`](https://llm.datasette.io/) CLI tool
       and Python library).
 * [Unleashing the Power of Git Bisect](https://dzone.com/articles/unleashing-the-power-of-git-bisect)
@@ -390,7 +390,7 @@ __Easy watching__
 * [So You Think You Know Git Part 2 - DevWorld 2024](https://www.youtube.com/watch?v=Md44rcw13k4)
   by Scott Chacon on GitButler YouTube channel, continues the
   [FOSDEM version](https://www.youtube.com/watch?v=aolI_Rz0ZqY) of the talk,
-  which was mentioned in [previous Git Rev News](https://git.github.io/rev_news/2024/02/29/edition-108/).
+  which was mentioned in the [previous Git Rev News](https://git.github.io/rev_news/2024/02/29/edition-108/).
   [DevWorld Git Slides](https://blog.gitbutler.com/devworld-git-slides/)
   are available on GitButler Blog.
 
@@ -422,11 +422,11 @@ __Git tools and sites__
 * [grepdiff](https://pkg.go.dev/rsc.io/grepdiff) is a command line tool that reads unified diffs
   from the files passed as arguments (or standard input), and prints a reduced diff
   containing only the hunks matching the regular expression.  Written in Go.
-* [Gitstr](https://github.com/fiatjaf/gitstr) is a tool to send and receive git patches
+* [Gitstr](https://github.com/fiatjaf/gitstr) is a tool to send and receive Git patches
   over [Nostr][], using [NIP-34](https://github.com/nostr-protocol/nips/pull/997).
     * Compare and contrast with [git-ssb](https://scuttlebot.io/apis/community/git-ssb.html)
       (see [git-ssb-intro](https://github.com/hackergrrl/git-ssb-intro) guide):
-      decentralized git repo hosting and issue tracking on Secure-ScuttleButt (SSB),
+      decentralized Git repo hosting and issue tracking on Secure-ScuttleButt (SSB),
       mentioned in [Git Rev News Edition #26](https://git.github.io/rev_news/2017/04/19/edition-26/)
       and [#40](https://git.github.io/rev_news/2018/06/20/edition-40/).
 
