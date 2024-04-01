@@ -69,7 +69,7 @@ This edition covers what happened during the months of February and March 2024.
   message. He suggested converting the error message to start with a
   lowercase letter as our guidelines for error messages recommend.
 
-  Harmen, then sent
+  Harmen then sent
   [a version 2 of his patch](https://lore.kernel.org/git/pull.1669.v2.git.1708537097448.gitgitgadget@gmail.com/)
   which didn't change any `po/*.po` file and had the error message
   start with a lowercase letter. Patrick reviewed that patch and found
@@ -124,11 +124,11 @@ This edition covers what happened during the months of February and March 2024.
   notes using plaintext. Soon after I had the idea of converting these
   plaintext notes to prettified outlines, so I needed a way to convert
   them to HTML. For better or worse, all this happened before I
-  discovered Emacs and Orgmode (or even Markdown).
+  discovered Emacs and Org mode (or even Markdown).
 
   Anyway, I first wrote a plaintext-to-HTML converter in Ruby. Then I
   rewrote it in C just for fun. Then again in Haskell (using a minimal
-  subset of Orgmode syntax). As you can see, I sort of got carried away,
+  subset of Org mode syntax). As you can see, I sort of got carried away,
   haha.
 
   I would go on to write dozens of pet projects (rudimentary chess
@@ -270,7 +270,7 @@ This edition covers what happened during the months of February and March 2024.
   to browse the mailing list emails (which I sync to Gmail with
   [lieer](https://github.com/gauteh/lieer)).
 
-  I use Orgmode in Emacs heavily for organizing code snippets and ideas.
+  I use Org mode in Emacs heavily for organizing code snippets and ideas.
 
   Last but not least, I use [tmux](https://github.com/tmux/tmux/wiki) to organize terminal windows and
   navigate quickly across them, even if I'm not using SSH.
@@ -329,11 +329,11 @@ __Light reading__
 * Julia Evans continues her series of blog posts about Git with
   [How HEAD works in git](https://jvns.ca/blog/2024/03/08/how-head-works-in-git/) and
   [The "current branch" in git](https://jvns.ca/blog/2024/03/22/the-current-branch-in-git/).
-  The first entry in this series of blog posts can be found 
+  The first entry in this series of blog posts can be found
   in [Git Rev News Edition #103](https://git.github.io/rev_news/2023/09/30/edition-103/).
 * [Keeping repository maintainer information accurate](https://github.blog/2024-03-04-keeping-repository-maintainer-information-accurate/):
-  ensuring that [CODEOWNERS file](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
-  is up to date with the help of tools like the [cleanowners](https://github.com/github/cleanowners) tool.
+  ensuring that the [CODEOWNERS file](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
+  is up to date with the help of tools like [cleanowners](https://github.com/github/cleanowners).
   By Zack Koppert on GitHub Blog.
 * [De Programmatica Ipsum, Issue #66: Version Control - Twenty Years Is Nothing](https://deprogrammaticaipsum.com/twenty-years-is-nothing/)
   by Adrian Kosmaczewski.
@@ -348,7 +348,7 @@ __Light reading__
 * [Five Ways to Be More Productive with Git](https://laravel-news.com/five-ways-to-be-more-productive-with-git)
   by Paul Redmond on Laravel News blog.  The blog post lists
   a few useful Git aliases, setting up a commit template, using password manager for SSH keys
-  (that can be used for signing commits), making use of GitHub CLI tool (`gh`), 
+  (that can be used for signing commits), making use of the GitHub CLI tool (`gh`),
   and configuring `mergetool` and `difftool`.
 * [Git: programmatic staging](https://choly.ca/post/git-programmatic-staging/)
   (with the help of the [`expect`](https://linux.die.net/man/1/expect) tool,
@@ -363,7 +363,7 @@ __Light reading__
       by the same author mentions other similar tools, namely
       [CodeQL](https://codeql.github.com/) (mentioned in passing
       in [Git Rev News Edition #79](https://git.github.io/rev_news/2021/09/30/edition-79/)),
-      and [Comby](https://comby.dev/).  It also talks about newly created
+      and [Comby](https://comby.dev/).  It also talks about the newly created
       [`semgrepx`](https://github.com/icholy/semgrepx) tool for rewriting `semgrep` matches
       using externals tools (such as Datasette's [`llm`](https://llm.datasette.io/) CLI tool
       and Python library).
@@ -406,22 +406,22 @@ __Git tools and sites__
     * Compare and contrast with [git-vain](https://git.anna.lgbt/anna/git-vain)
       (mentioned in [Git Rev News Edition #103](https://git.github.io/rev_news/2023/09/30/edition-103/))
       and [git-vanity-sha](https://github.com/mattbaker/git-vanity-sha)
-      (mentioned in [Git Rev News Edition #39](https://git.github.io/rev_news/2018/05/16/edition-39/))
-      tools to generate vanity hashes, for example to make SHA-1 hash of the HEAD begin with `c0ffee`.
+      (mentioned in [Git Rev News Edition #39](https://git.github.io/rev_news/2018/05/16/edition-39/)),
+      tools to generate vanity hashes (for example to make the SHA-1 hash of HEAD begin with `c0ffee`).
 * [Nosey Parker](https://github.com/praetorian-inc/noseyparker/) is a command-line program
   that finds secrets and sensitive information in textual data and Git history.
   Written in Rust, under Apache 2.0 license.
 * [gitu](https://github.com/altsem/gitu) - a TUI Git client inspired by Magit.
   Written in Rust, under MIT license.
-* [Vim-Flog](https://github.com/rbong/vim-flog) is a powerful git branch viewer for Vim.
-  In Vim 8/9, it requires LuaJIT (preferred) or Lua installed.
+* [Vim-Flog](https://github.com/rbong/vim-flog) is a powerful Git branch viewer for Vim.
+  Requires Neovim or Vim with Lua support.
 * [gcd](https://github.com/davvid/gcd) - Git worktree navigator,
   lets you quickly navigate to Git worktrees on your filesystem,
-  and quickly navigate to directories within your current worktree.
-  Written as a set of shell functions, to be sourced into `~/.zshrc` or `~/.bashrc`.
-* [grepdiff](https://pkg.go.dev/rsc.io/grepdiff) is a command line tool that reads unified diffs
+  and to directories within your current worktree.
+  Written as a set of shell functions to be sourced into `~/.zshrc` or `~/.bashrc`.
+* [grepdiff](https://pkg.go.dev/rsc.io/grepdiff) is a command-line tool that reads unified diffs
   from the files passed as arguments (or standard input), and prints a reduced diff
-  containing only the hunks matching the regular expression.  Written in Go.
+  containing only the hunks matching a regular expression.  Written in Go.
 * [Gitstr](https://github.com/fiatjaf/gitstr) is a tool to send and receive Git patches
   over [Nostr][], using [NIP-34](https://github.com/nostr-protocol/nips/pull/997).
     * Compare and contrast with [git-ssb](https://scuttlebot.io/apis/community/git-ssb.html)
