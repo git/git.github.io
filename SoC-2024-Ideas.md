@@ -22,7 +22,7 @@ page though.
 ### Note about limit of project selection
 
 Kindly note that considering the bandwidth of available mentors, the
-Git project would only mentor up to 2 or 3 contributors this year.
+Git project would only mentor up to 3 contributors this year.
 
 This is not a hard and fast rule. It may change if more community members are
 willing to mentor in the coming days. For instance, this may happen when
