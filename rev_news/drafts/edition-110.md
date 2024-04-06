@@ -39,7 +39,8 @@ __Various__
 
 * Adam Johnson’s book “Boost Your Git DX”
   [has been updated](https://adamj.eu/tech/2024/04/04/bygdx-update/) with ten
-  new pages of content.
+  new pages of content. This book was mentioned in
+  [Git Rev News Edition #104](https://git.github.io/rev_news/2023/10/31/edition-104/).
 
 __Light reading__
 
