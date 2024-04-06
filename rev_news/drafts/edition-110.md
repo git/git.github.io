@@ -37,6 +37,9 @@ This edition covers what happened during the months of March 2024 and April 2024
 
 __Various__
 
+* Adam Johnson’s book “Boost Your Git DX”
+  [has been updated](https://adamj.eu/tech/2024/04/04/bygdx-update/) with ten
+  new pages of content.
 
 __Light reading__
 
