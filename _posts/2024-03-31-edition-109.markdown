@@ -321,8 +321,10 @@ This edition covers what happened during the months of February and March 2024.
 
 ## Other News
 
+<!--
 __Various__
 
+-->
 
 __Light reading__
 
