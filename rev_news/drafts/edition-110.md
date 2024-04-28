@@ -53,6 +53,25 @@ __Git tools and sites__
 
 ## Releases
 
++ Git [2.45.0-rc1](https://public-inbox.org/git/xmqq4jbqzo3j.fsf@gitster.g/),
+[2.45.0-rc0](https://public-inbox.org/git/xmqqcyqljmuu.fsf@gitster.g/)
++ Git for Windows [2.45.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.45.0-rc1.windows.1),
+[2.45.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.45.0-rc0.windows.1)
++ GitHub Enterprise [3.12.2](https://help.github.com/enterprise-server@3.12/admin/release-notes#3.12.2),
+[3.11.8](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.8),
+[3.10.10](https://help.github.com/enterprise-server@3.10/admin/release-notes#3.10.10),
+[3.9.13](https://help.github.com/enterprise-server@3.9/admin/release-notes#3.9.13)
++ GitLab [16.11.1, 16.10.4, 16.9.6](https://about.gitlab.com/releases/2024/04/24/patch-release-gitlab-16-11-1-released/)
+[16.11](https://about.gitlab.com/releases/2024/04/18/gitlab-16-11-released/),
+[16.10.3, 16.9.5, 16.8.7](https://about.gitlab.com/releases/2024/04/15/gitlab-16-10-3-released/),
+[16.10.2, 16.9.4, 16.8.6](https://about.gitlab.com/releases/2024/04/10/patch-release-gitlab-16-10-2-released/)
++ Gerrit Code Review [3.8.5](https://www.gerritcodereview.com/3.8.html#385),
+[3.9.3](https://www.gerritcodereview.com/3.9.html#393),
+[3.9.4](https://www.gerritcodereview.com/3.9.html#394)
++ GitHub Desktop [3.3.14](https://desktop.github.com/release-notes/),
+[3.3.13](https://desktop.github.com/release-notes/)
++ tig [2.5.9](https://github.com/jonas/tig/releases/tag/tig-2.5.9)
++ git-credential-oauth [0.11.2](https://github.com/hickford/git-credential-oauth/releases/tag/v0.11.2)
 
 ## Credits
 
