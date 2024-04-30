@@ -164,11 +164,112 @@ __Various__
 
 __Light reading__
 
-<!---
+* Julia Evans continues her series of blog posts about Git, preparing for a new Git zine,
+  with [Notes on git's error messages](https://jvns.ca/blog/2024/04/10/notes-on-git-error-messages/).
+  There is also [Some Git poll results](https://jvns.ca/blog/2024/03/28/git-poll-results/)
+  (which are, as admitted by the author, highly unscientific, and might be not representative).
+  The first entry in this series of blog posts can be found in [Git Rev News Edition #103](https://git.github.io/rev_news/2023/09/30/edition-103/),
+  and it continues since, edition after edition so far.
+* [Modern Git Commands and Features You Should Be Using](https://martinheinz.dev/blog/109)
+  by Martin Heinz on his blog.  The list includes: `git switch`, `git restore`,
+  `git sparse-checkout`, `git worktree`, and (not new) `git bisect`.
+* [Learn Git Fundamentals – A Handbook on Day-to-Day Development Tasks](https://www.freecodecamp.org/news/learn-git-basics/)
+  by Samyak Jain on freeCodeCamp.
+* [Navigating the Stormy Waters of Git Merge Conflicts: A Guide for basic git conflicts](https://dev.to/kadea-academy/navigating-the-stormy-waters-of-git-merge-conflicts-a-complete-guide-38n9)
+  by Jomagene for KADEA ACADEMY on DEV\.to.
+* [The guide to Git I never had.](https://glasskube.dev/guides/git/)
+  under Philip Miglinci byline, as Glasskube's guide to Git
+  (also [on DEV\.to](https://dev.to/glasskube/the-guide-to-git-i-never-had-1450),
+  by Jake Page for Glasskube).
+* [How to get somebody fired using Git](https://dev.to/mauroaccorinti/how-to-get-somebody-fired-using-git-31if)
+  (or: how to NOT use Git), by Mauro Accorinti on DEV\.to.
+* [What Happens on GitLab When You do git push?](https://nanmu.me/en/posts/2022/what-happens-on-gitlab-when-you-do-git-push/)
+  by LI Zhennan, on personal blog.
+* [Radicle: peer-to-peer collaboration with Git](https://lwn.net/Articles/966869/)
+  article by Lars Wirzenius on LWN\.net.
+    * [Radicle](https://radicle.xyz/) was first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/), then in [Edition #70](https://git.github.io/rev_news/2020/12/26/edition-70/).
+      There was also [article about Radicle from The New Stack](https://thenewstack.io/radicle-a-decentralized-alternative-to-github-for-web3/)
+      in [Git Rev News Edition #86](https://git.github.io/rev_news/2022/04/30/edition-86/).
+    * Compare with [ForgeFed](https://notabug.org/peers/forgefed) (formerly GitPub),
+      a federation protocol for software forges, mentioned in [Git Rev News Edition #69](https://git.github.io/rev_news/2020/11/27/edition-69/).
+    * There is also [Gitstr](https://github.com/fiatjaf/gitstr), a tool to send and receive Git patches
+      over [Nostr](https://nostr.com/), using [NIP-34](https://github.com/nostr-protocol/nips/pull/997)
+      (mentioned in [Git Rev News Edition #109](https://git.github.io/rev_news/2024/03/31/edition-109/)),
+      and [git-ssb](https://scuttlebot.io/apis/community/git-ssb.html)
+      (see [git-ssb-intro](https://github.com/hackergrrl/git-ssb-intro) guide):
+      decentralized Git repo hosting and issue tracking on [Secure-ScuttleButt (SSB)](https://www.scuttlebutt.nz/)
+      (mentioned in [Git Rev News Edition #26](https://git.github.io/rev_news/2017/04/19/edition-26/)
+      and [#40](https://git.github.io/rev_news/2018/06/20/edition-40/)).
+* [Git as debugging tool](https://lucasoshiro.github.io/posts-en/2023-02-13-git-debug/)
+  by Lucas Seiki Oshiro on his GitHub Pages-powered personal blog (2023).
+
+
 __Easy watching__
--->
+
+* [re:bass](https://www.youtube.com/watch?v=S9Do2p4PwtE) by Dylan Beattie [4:34].
+  If Git was music, what would it sound like? 
+  An original composition inspired by the Git version control system.
+
 
 __Git tools and sites__
+
+* [git-bisect-find](https://gitlab.com/kevincox/git-bisect-find) is
+  a simple command to find where to start your bisection.  Written in Rust.
+    * See also [Announcing git bisect-find](https://kevincox.ca/2024/04/19/git-bisect-find/)
+      by Kevin Cox on his blog.
+* [git-cz](https://github.com/streamich/git-cz) is a command-line tool
+  to help you make semantic Git commits.  Written in JavaScript for Node.js.
+  Can be installed standalone, or with [Commitizen](https://commitizen-tools.github.io/commitizen/)
+  (which was mentioned in [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/)).
+  Has non-interactive mode; you can configure it (for example turning off emoji).
+* [Ydiff](https://github.com/ymattw/ydiff) is a term based tool
+  to view _colored, incremental diff_ in a version controlled workspace
+  (supports Git, Mercurial, Perforce and Subversion so far)
+  or from stdin, with _side by side_ (similar to `diff -y`) and _auto pager_ support.
+  Written in Python.  (There also exists outdated [cdiff](https://github.com/amigrave/cdiff) fork of it.)
+* [gws](https://github.com/StreakyCobra/gws) is a text user-interface colorful helper
+  to manage workspaces composed of Git repositories.  Written in bash.
+* [Giftless](https://giftless.datopian.com/) ([GitHub repo](https://github.com/datopian/giftless))
+  is a Python implementation of a [Git LFS](https://git-lfs.com/) Server.
+  It is designed with flexibility in mind, to allow pluggable storage backends,
+  transfer methods and authentication methods.
+* [Gil](https://github.com/chronoxor/gil) (git links tool) is a tool to manage
+  complex recursive repositories dependencies with cross references and cycles.
+  This tool provides a solution to the _git recursive submodules dependency_ problem.
+  Written in Python.
+* [git-subrepo](https://github.com/ingydotnet/git-subrepo) "clones" an external git repo
+  into a subdirectory of your repo.  It is an alternative to `git submodule` and `git subtree`.
+  The subrepo history is _squashed_ into a single commit that contains the reference information.
+  Recommended as replacement for no longer maintained [Git STree](https://deliciousinsights.github.io/git-stree/)
+  project.
+* [tomono](https://github.com/hraban/tomono): Multi- to Monorepo Migration,
+  is a script that merges multiple independent tiny repositories into a single “[monorepo](https://monorepo.tools/)”.
+  Every original repo is moved into its own subdirectory, branches with the same name are all merged.
+    * Can be considered the reverse of [splitsh/lite](https://github.com/splitsh/lite) tool, which goal is
+      to make splitting a monolithic repository to read-only standalone repositories easy and fast
+      (mentioned in [Git Rev News: Edition #16](https://git.github.io/rev_news/2016/06/15/edition-16/)).
+* [Gitdm](https://github.com/npalix/gitdm) (the "git data miner")
+  is the tool that Greg KH and Jonathan Corbet have used
+  to create statistics on where kernel patches come from.
+  Written in Python.  Original at git://git.lwn.net/gitdm.git
+* [lolcommits](https://github.com/lolcommits/lolcommits): git-based selfies for software developers.
+  lolcommits takes a snapshot with your webcam every time you git commit code,
+  and archives a lolcat style image with it (image with embedded caption).
+  Written in Ruby, requires a webcam and ImageMagick installed.
+  See also [Lolcommits from around the world!](https://github.com/lolcommits/lolcommits/wiki/Lolcommits-from-around-the-world%21)
+  page on the project Wiki.
+* [Steve's Jujutsu Tutorial](https://steveklabnik.github.io/jujutsu-tutorial/introduction/introduction.html).
+    * [Jujutsu (jj)](https://github.com/martinvonz/jj) is a version control system,
+      first mentioned in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/);
+      additionally, link to both [LWN.net article]((https://lwn.net/Articles/958468/)
+      and [Jujutsu: A Git-Compatible VCS](https://www.youtube.com/watch?v=bx_LGilOuE4)
+      video of Git Merge 2022 talk
+      about this version control system can be found in 
+      [Git Rev News Edition #107](https://git.github.io/rev_news/2024/01/31/edition-107/).
+* [Awesome Git](https://github.com/dictcp/awesome-git)
+  is a curated list of amazingly awesome Git tools, resources and shiny things.
+* [Awesome Git Hooks](https://github.com/compscilauren/awesome-git-hooks)
+  is a curated list of easy-to-use git hooks for automating tasks during git workflows.
 
 
 ## Releases
