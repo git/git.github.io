@@ -157,6 +157,10 @@ This edition covers what happened during the months of March 2024 and April 2024
 
 __Various__
 
+* [Highlights from Git 2.45](https://github.blog/2024-04-29-highlights-from-git-2-45/)
+  by Taylor Blau on GitHub Blog.
+* [What’s new in Git 2.45.0?](https://about.gitlab.com/blog/2024/04/30/whats-new-in-git-2-45-0/)
+  by Patrick Steinhardt on GitLab Blog.
 * Adam Johnson’s book “Boost Your Git DX”
   [has been updated](https://adamj.eu/tech/2024/04/04/bygdx-update/) with ten
   new pages of content. This book was mentioned in
