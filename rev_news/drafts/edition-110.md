@@ -276,9 +276,11 @@ __Git tools and sites__
 
 ## Releases
 
-+ Git [2.45.0-rc1](https://public-inbox.org/git/xmqq4jbqzo3j.fsf@gitster.g/),
++ Git [2.45.0](https://public-inbox.org/git/xmqq8r0ww0sj.fsf@gitster.g/),
+[2.45.0-rc1](https://public-inbox.org/git/xmqq4jbqzo3j.fsf@gitster.g/),
 [2.45.0-rc0](https://public-inbox.org/git/xmqqcyqljmuu.fsf@gitster.g/)
-+ Git for Windows [2.45.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.45.0-rc1.windows.1),
++ Git for Windows [2.45.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.45.0.windows.1),
+[2.45.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.45.0-rc1.windows.1),
 [2.45.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.45.0-rc0.windows.1)
 + GitHub Enterprise [3.12.2](https://help.github.com/enterprise-server@3.12/admin/release-notes#3.12.2),
 [3.11.8](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.8),
