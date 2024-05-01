@@ -13,7 +13,7 @@ Welcome to the 110th edition of [Git Rev News](https://git.github.io/rev_news/re
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
-This edition covers what happened during the months of March 2024 and April 2024.
+This edition covers what happened during the months of March and April 2024.
 
 ## Discussions
 
@@ -21,21 +21,20 @@ This edition covers what happened during the months of March 2024 and April 2024
 
 * [What's cooking in git.git (Mar 2024, #05; Tue, 19)](https://lore.kernel.org/git/xmqqil1iqi37.fsf@gitster.g/)
 
-  Last March, Junio Hamano, the Git maintainer, sent one of the usual
+  In March, Junio Hamano, the Git maintainer, sent one of the usual
   "What's cooking in git.git" emails that describe the current state
   of the patch series that might be merged into the development
   branches (mostly "master", "next" and "seen").
 
   The patch series are listed in these emails along with some related
-  information using a custom format. That format consists in the
-  following elements:
+  information in a custom format, including the following elements:
 
     - a title line, for example:
 
     > * bl/cherry-pick-empty (2024-03-11) 7 commits
 
 	where `bl` are the initials of the author, and `cherry-pick-empty`
-    an actual title,
+    the series title,
 
 	- a patch list, for example:
 
@@ -66,22 +65,22 @@ This edition covers what happened during the months of March 2024 and April 2024
   automatically used to create the release notes that Junio prepares
   and sends when he creates a new release.
 
-  Brian Lyles, replied to Junio that the description of the patch
+  Brian Lyles replied to Junio that the description of the patch
   series used as an example above, which Brian had sent, was "a little
   out-of-date". He suggested a different wording for it, and said that
   he was going to send a version 4 of the series.
 
-  Junio replied that the wording suggestion for the description was
+  Junio said that the wording suggestion for the description was
   very much appreciated, and wondered if the project could adopt a
   better workflow where contributors could write a short description
   at the top of the cover letter of their patch series and that
-  description could be packed up automatically by some tools to appear
+  description could be picked up automatically by some tools to appear
   in Junio's "What's cooking in git.git" emails.
 
-  Brian Lyles replied that he agreed improving the process could be a
-  good idea. He mentioned a strategy used by other projects which
-  consists in adding an entry in a "CHANGELOG.NEXT.md" file in each
-  important enough commit. At release time all the entries in that
+  Brian Lyles agreed that improving the process could be a
+  good idea. He mentioned a strategy used by other projects, namely
+  adding an entry in a "CHANGELOG.NEXT.md" file in each
+  important commit. At release time, all the entries in that
   file would be moved into a standard "CHANGELOG.md" file. He then
   showed how the entry in the "CHANGELOG.NEXT.md" file would look like
   for his series as an example.
@@ -108,7 +107,7 @@ This edition covers what happened during the months of March 2024 and April 2024
   suggested having guidelines, like for commit messages, to help
   authors and reviewers standardize the style of these descriptions.
 
-  In the meantime, in a separate email, Junio also replied that a
+  In the meantime, in a separate email, Junio also pointed out that a
   "CHANGELOG.NEXT.md" file would make merges more difficult compared
   to having the description in the cover letter.
 
@@ -121,7 +120,7 @@ This edition covers what happened during the months of March 2024 and April 2024
   phrase, or other structured text" to mark the description and make
   it easy to notice and extract.
 
-  Dragan Simic chimed into the discussion saying that writing the
+  Dragan Simic joined the discussion saying that writing the
   description should not be a strict requirement and then agreed with
   Junio's patch. Max Gautier also chimed in, agreeing with Brian and
   Dragan about using a format to mark the description. Dragan replied
@@ -171,7 +170,7 @@ __Light reading__
 * Julia Evans continues her series of blog posts about Git, preparing for a new Git zine,
   with [Notes on git's error messages](https://jvns.ca/blog/2024/04/10/notes-on-git-error-messages/).
   There is also [Some Git poll results](https://jvns.ca/blog/2024/03/28/git-poll-results/)
-  (which are, as admitted by the author, highly unscientific, and might be not representative).
+  (which are, as admitted by the author, highly unscientific, and might not be representative).
   The first entry in this series of blog posts can be found in [Git Rev News Edition #103](https://git.github.io/rev_news/2023/09/30/edition-103/),
   and it continues since, edition after edition so far.
 * [Modern Git Commands and Features You Should Be Using](https://martinheinz.dev/blog/109)
@@ -188,11 +187,11 @@ __Light reading__
 * [How to get somebody fired using Git](https://dev.to/mauroaccorinti/how-to-get-somebody-fired-using-git-31if)
   (or: how to NOT use Git), by Mauro Accorinti on DEV\.to.
 * [What Happens on GitLab When You do git push?](https://nanmu.me/en/posts/2022/what-happens-on-gitlab-when-you-do-git-push/)
-  by LI Zhennan, on personal blog.
+  by Li Zhennan, on personal blog.
 * [Radicle: peer-to-peer collaboration with Git](https://lwn.net/Articles/966869/)
   article by Lars Wirzenius on LWN\.net.
     * [Radicle](https://radicle.xyz/) was first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/), then in [Edition #70](https://git.github.io/rev_news/2020/12/26/edition-70/).
-      There was also [article about Radicle from The New Stack](https://thenewstack.io/radicle-a-decentralized-alternative-to-github-for-web3/)
+      There was also an [article about Radicle from The New Stack](https://thenewstack.io/radicle-a-decentralized-alternative-to-github-for-web3/)
       in [Git Rev News Edition #86](https://git.github.io/rev_news/2022/04/30/edition-86/).
     * Compare with [ForgeFed](https://notabug.org/peers/forgefed) (formerly GitPub),
       a federation protocol for software forges, mentioned in [Git Rev News Edition #69](https://git.github.io/rev_news/2020/11/27/edition-69/).
@@ -200,7 +199,7 @@ __Light reading__
       over [Nostr](https://nostr.com/), using [NIP-34](https://github.com/nostr-protocol/nips/pull/997)
       (mentioned in [Git Rev News Edition #109](https://git.github.io/rev_news/2024/03/31/edition-109/)),
       and [git-ssb](https://scuttlebot.io/apis/community/git-ssb.html)
-      (see [git-ssb-intro](https://github.com/hackergrrl/git-ssb-intro) guide):
+      (see the [git-ssb-intro](https://github.com/hackergrrl/git-ssb-intro) guide):
       decentralized Git repo hosting and issue tracking on [Secure-ScuttleButt (SSB)](https://www.scuttlebutt.nz/)
       (mentioned in [Git Rev News Edition #26](https://git.github.io/rev_news/2017/04/19/edition-26/)
       and [#40](https://git.github.io/rev_news/2018/06/20/edition-40/)).
@@ -225,12 +224,12 @@ __Git tools and sites__
   to help you make semantic Git commits.  Written in JavaScript for Node.js.
   Can be installed standalone, or with [Commitizen](https://commitizen-tools.github.io/commitizen/)
   (which was mentioned in [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/)).
-  Has non-interactive mode; you can configure it (for example turning off emoji).
+  Has non-interactive mode; is configurable (for example turning off emoji).
 * [Ydiff](https://github.com/ymattw/ydiff) is a term based tool
   to view _colored, incremental diff_ in a version controlled workspace
   (supports Git, Mercurial, Perforce and Subversion so far)
   or from stdin, with _side by side_ (similar to `diff -y`) and _auto pager_ support.
-  Written in Python.  (There also exists outdated [cdiff](https://github.com/amigrave/cdiff) fork of it.)
+  Written in Python.  (There also exists the outdated [cdiff](https://github.com/amigrave/cdiff) fork of it.)
 * [gws](https://github.com/StreakyCobra/gws) is a text user-interface colorful helper
   to manage workspaces composed of Git repositories.  Written in bash.
 * [Giftless](https://giftless.datopian.com/) ([GitHub repo](https://github.com/datopian/giftless))
@@ -238,18 +237,18 @@ __Git tools and sites__
   It is designed with flexibility in mind, to allow pluggable storage backends,
   transfer methods and authentication methods.
 * [Gil](https://github.com/chronoxor/gil) (git links tool) is a tool to manage
-  complex recursive repositories dependencies with cross references and cycles.
+  complex recursive repository dependencies with cross references and cycles.
   This tool provides a solution to the _git recursive submodules dependency_ problem.
   Written in Python.
 * [git-subrepo](https://github.com/ingydotnet/git-subrepo) "clones" an external git repo
   into a subdirectory of your repo.  It is an alternative to `git submodule` and `git subtree`.
   The subrepo history is _squashed_ into a single commit that contains the reference information.
-  Recommended as replacement for no longer maintained [Git STree](https://deliciousinsights.github.io/git-stree/)
+  Recommended as replacement for the (no longer maintained) [Git STree](https://deliciousinsights.github.io/git-stree/)
   project.
 * [tomono](https://github.com/hraban/tomono): Multi- to Monorepo Migration,
   is a script that merges multiple independent tiny repositories into a single “[monorepo](https://monorepo.tools/)”.
   Every original repo is moved into its own subdirectory, branches with the same name are all merged.
-    * Can be considered the reverse of [splitsh/lite](https://github.com/splitsh/lite) tool, which goal is
+    * Can be considered the reverse of [splitsh/lite](https://github.com/splitsh/lite) tool, whose goal is
       to make splitting a monolithic repository to read-only standalone repositories easy and fast
       (mentioned in [Git Rev News: Edition #16](https://git.github.io/rev_news/2016/06/15/edition-16/)).
 * [Gitdm](https://github.com/npalix/gitdm) (the "git data miner")
@@ -263,12 +262,11 @@ __Git tools and sites__
   See also [Lolcommits from around the world!](https://github.com/lolcommits/lolcommits/wiki/Lolcommits-from-around-the-world%21)
   page on the project Wiki.
 * [Steve's Jujutsu Tutorial](https://steveklabnik.github.io/jujutsu-tutorial/introduction/introduction.html).
-    * [Jujutsu (jj)](https://github.com/martinvonz/jj) is a version control system,
+    * [Jujutsu (jj)](https://github.com/martinvonz/jj) is a version control system
       first mentioned in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/);
-      additionally, link to both [LWN.net article]((https://lwn.net/Articles/958468/)
-      and [Jujutsu: A Git-Compatible VCS](https://www.youtube.com/watch?v=bx_LGilOuE4)
-      video of Git Merge 2022 talk
-      about this version control system can be found in 
+      additionally, links to the [LWN.net article]((https://lwn.net/Articles/958468/)
+      and the [Jujutsu: A Git-Compatible VCS](https://www.youtube.com/watch?v=bx_LGilOuE4)
+      talk about this version control system at Git Merge 2022 can be found in
       [Git Rev News Edition #107](https://git.github.io/rev_news/2024/01/31/edition-107/).
 * [Awesome Git](https://github.com/dictcp/awesome-git)
   is a curated list of amazingly awesome Git tools, resources and shiny things.
@@ -286,7 +284,7 @@ __Git tools and sites__
 [3.11.8](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.8),
 [3.10.10](https://help.github.com/enterprise-server@3.10/admin/release-notes#3.10.10),
 [3.9.13](https://help.github.com/enterprise-server@3.9/admin/release-notes#3.9.13)
-+ GitLab [16.11.1, 16.10.4, 16.9.6](https://about.gitlab.com/releases/2024/04/24/patch-release-gitlab-16-11-1-released/)
++ GitLab [16.11.1, 16.10.4, 16.9.6](https://about.gitlab.com/releases/2024/04/24/patch-release-gitlab-16-11-1-released/),
 [16.11](https://about.gitlab.com/releases/2024/04/18/gitlab-16-11-released/),
 [16.10.3, 16.9.5, 16.8.7](https://about.gitlab.com/releases/2024/04/15/gitlab-16-10-3-released/),
 [16.10.2, 16.9.4, 16.8.6](https://about.gitlab.com/releases/2024/04/10/patch-release-gitlab-16-10-2-released/)
