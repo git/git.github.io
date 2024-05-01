@@ -102,7 +102,7 @@ This edition covers what happened during the months of March and April 2024.
   and cover letter. Junio agreed that "the distribution of burden is
   certainly attractive" though.
 
-  Brain replied that he thought the author should still write
+  Brian replied that he thought the author should still write
   something and that at least he was willing to do it. He also
   suggested having guidelines, like for commit messages, to help
   authors and reviewers standardize the style of these descriptions.
