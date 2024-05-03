@@ -57,7 +57,7 @@ abilities and dedication. A good example is Matheus' GSoC blog posts:
 [Matheus Tavares' GSoC posts](https://matheustavares.gitlab.io/tags/gsoc/)
 
 Tip: It's better if you can decide the day for your weekly blog post
-as soon as you set up you blog. Then tell your mentor about that day
+as soon as you set up you blog. Then tell your mentors about that day
 right away, and try as much as possible to post every week on that
 day. This will help establish a routine, that will make things easier
 for both you and your mentors.
@@ -66,6 +66,29 @@ Tip: It's also better if you can prepare the content of your weekly
 blog post during the week as you are working on your project. This way
 it can also serve you as a todo list, a notebook, a list of current
 issues, etc.
+
+## Social media and blog post content
+
+In general posting about your GSoC on social media (like LinkedIn) is
+nice too. You can put links to your blog post in your social media
+posts, as they are usually shorter than blog posts.
+
+You can start blogging as soon as your mentors contact you after you
+have been officially selected to participate in the mentoring
+program. It's in fact a nice idea to start blogging right after they
+have contacted you.
+
+In all your posts (on your blog or social media), when you mention
+your mentors and when they are mentoring you as part of their job,
+it's nice to mention the companies they are working for too. In case
+of Outreachy if some company sponsors your internship, it's a very
+good idea to mention them too.
+
+The more these companies get good mentions in the media about your
+GSoC, and the more good work you deliver during it, the more likely
+they are to allow their employees to mentor others, or even to sponsor
+mentoring programs (like Outreachy internships for example), or maybe
+to hire or help you in the future.
 
 ## Regular updates
 
