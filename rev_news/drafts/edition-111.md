@@ -51,6 +51,7 @@ __Git tools and sites__
 
 + TortoiseGit [2.16.0](https://tortoisegit.org/download/)
 + Git Cola [4.7.1](https://github.com/git-cola/git-cola/releases/tag/v4.7.1)
++ Garden [1.5.0](https://github.com/garden-rs/garden/releases/tag/v1.5.0)
 
 ## Credits
 
@@ -59,4 +60,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Sven Strickroth.
+with help from Sven Strickroth and David Aguilar.
