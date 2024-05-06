@@ -50,6 +50,7 @@ __Git tools and sites__
 ## Releases
 
 + TortoiseGit [2.16.0](https://tortoisegit.org/download/)
++ Git Cola [4.7.1](https://github.com/git-cola/git-cola/releases/tag/v4.7.1)
 
 ## Credits
 
