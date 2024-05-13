@@ -80,9 +80,12 @@ have contacted you.
 
 In all your posts (on your blog or social media), when you mention
 your mentors and when they are mentoring you as part of their job,
-it's nice to mention the companies they are working for too. In case
-of Outreachy if some company sponsors your internship, it's a very
-good idea to mention them too.
+it's nice to mention the companies they are working for too. Some
+mentors could mentor you in their free time, and might not want their
+employer mentioned though. So if you are not sure that it's part of
+their job, just ask them before posting. In case of Outreachy if some
+company sponsors your internship, it's a very good idea to mention
+them too.
 
 The more these companies get good mentions in the media about your
 GSoC, and the more good work you deliver during it, the more likely
