@@ -17,9 +17,36 @@ This edition covers what happened during the months of April 2024 and May 2024.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [[GSoC] Welcoming our 2024 contributors and thanking our applicants](https://public-inbox.org/git/406aa31f-4ea0-496c-aeb6-443be86385c0@gmail.com/)
+
+  The Git project was accepted in the
+  [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/)
+  this year again, and 3 applicants were selected:
+
+  - Jialuo She will work on the
+    ["Implement consistency check for refs" project](https://summerofcode.withgoogle.com/programs/2024/projects/ukm4PTEF)
+    mentored by Karthik Nayak and Patrick Steinhardt. He already
+    started posting on [his blog](https://luolibrary.com/categories/GSoC-2024/),
+	and will push his work to his [Git repo](https://github.com/shejialuo/git).
+
+  - Ghanshyam Thakkar will work on the
+    [" Move existing tests to a unit testing framework" project](https://summerofcode.withgoogle.com/programs/2024/projects/e9C4rhrv)
+	mentored by Kaartic Sivaraam and Christian Couder. He already
+    started posting on [his blog](https://spectre10.github.io/posts/),
+	and will push his work to his [Git repo](https://github.com/spectre10/git).
+
+  - Chandra Pratap will work on the
+    ["Move and improve reftable tests in the unit testing framework" project](https://summerofcode.withgoogle.com/programs/2024/projects/tlh611d7)
+	mentored by Patrick Steinhardt and Christian Couder. He already
+    started posting on [his blog](https://chand-ra.github.io/),
+	and will push his work to his [Git repo](https://github.com/Chand-ra/git).
+
+  Congratulations to them, and thanks a lot to all the applicants who
+  worked on Git and submitted proposals! It was tough to choose from
+  multiple potential contributors who all were good in their own
+  respect.
 
 <!---
 ### Reviews
