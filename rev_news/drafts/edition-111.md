@@ -79,6 +79,8 @@ __Git tools and sites__
 + TortoiseGit [2.16.0](https://tortoisegit.org/download/)
 + Git Cola [4.7.1](https://github.com/git-cola/git-cola/releases/tag/v4.7.1)
 + Garden [1.5.0](https://github.com/garden-rs/garden/releases/tag/v1.5.0)
++ Tower for Mac [11.0](https://www.git-tower.com/release-notes/windows?show_tab=release-notes) ([blog post](https://www.git-tower.com/blog/tower-mac-11/))
++ Tower for Windows [7.0](https://www.git-tower.com/release-notes/windows?show_tab=release-notes)
 
 ## Credits
 
