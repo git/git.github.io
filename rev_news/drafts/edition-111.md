@@ -48,6 +48,19 @@ This edition covers what happened during the months of April 2024 and May 2024.
   multiple potential contributors who all were good in their own
   respect.
 
+* [Git Merge conference](https://public-inbox.org/git/Zj0JyL1b+g1G3zWx@nand.local/) and Contributor's Summit
+
+  Taylor Blau from GitHub announced that Git Merge 2024 is happening
+  in-person on September 19th and 20th in Berlin. It is being co-hosted
+  by GitHub and [GitButler](https://gitbutler.com/).
+
+  The talks are scheduled on September 19th and the birds of a feather
+  are scheduled on September 20th. Registration is yet to open.
+
+  The announcment welcomes call for proposals, ideas on the format,
+  topics for discussions, venue setup, applications for financial
+  assistance.
+
 <!---
 ### Reviews
 -->
