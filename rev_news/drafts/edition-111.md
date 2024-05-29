@@ -89,11 +89,40 @@ __Git tools and sites__
 
 ## Releases
 
++ Git [2.45.1 and friends](https://public-inbox.org/git/xmqqv83g4937.fsf@gitster.g/)
++ Git for Windows [2.45.1(1)](https://github.com/git-for-windows/git/releases/tag/v2.45.1.windows.1)
++ libgit2 [1.8.1](https://github.com/libgit2/libgit2/releases/tag/v1.8.1)
++ GitLab [17.0.1, 16.11.3, 16.10.6](https://about.gitlab.com/releases/2024/05/22/patch-release-gitlab-17-0-1-released/)
+[17.0](https://about.gitlab.com/releases/2024/05/16/gitlab-17-0-released/),
+[16.9.8](https://about.gitlab.com/releases/2024/05/09/gitlab-16-9-8-released/),
+[16.11.2, 16.10.5, 16.9.7](https://about.gitlab.com/releases/2024/05/08/patch-release-gitlab-16-11-2-released/)
++ Gerrit Code Review [3.10.0](https://www.gerritcodereview.com/3.10.html#3100),
+[3.7.9](https://www.gerritcodereview.com/3.7.html#379),
+[3.8.6](https://www.gerritcodereview.com/3.8.html#386),
+[3.9.5](https://www.gerritcodereview.com/3.9.html#395)
++ GitHub Enterprise [3.12.4](https://help.github.com/enterprise-server@3.12/admin/release-notes#3.12.4),
+[3.11.10](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.10),
+[3.10.12](https://help.github.com/enterprise-server@3.10/admin/release-notes#3.10.12),
+[3.9.15](https://help.github.com/enterprise-server@3.9/admin/release-notes#3.9.15),
+[3.13.0](https://help.github.com/enterprise-server@3.13/admin/release-notes#3.13.0),
+[3.12.3](https://help.github.com/enterprise-server@3.12/admin/release-notes#3.12.3),
+[3.11.9](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.9),
+[3.10.11](https://help.github.com/enterprise-server@3.10/admin/release-notes#3.10.11),
+[3.9.14](https://help.github.com/enterprise-server@3.9/admin/release-notes#3.9.14)
++ GitKraken [10.0.1](https://help.gitkraken.com/gitkraken-client/current/),
+[10.0.0](https://help.gitkraken.com/gitkraken-client/current/)
++ GitHub Desktop [3.4.0](https://desktop.github.com/release-notes/),
+[3.3.18](https://desktop.github.com/release-notes/),
+[3.3.17](https://desktop.github.com/release-notes/),
+[3.3.16](https://desktop.github.com/release-notes/),
+[3.3.15](https://desktop.github.com/release-notes/)
 + TortoiseGit [2.16.0](https://tortoisegit.org/download/)
 + Git Cola [4.7.1](https://github.com/git-cola/git-cola/releases/tag/v4.7.1)
 + Garden [1.5.0](https://github.com/garden-rs/garden/releases/tag/v1.5.0)
 + Tower for Mac [11.0](https://www.git-tower.com/release-notes/windows?show_tab=release-notes) ([blog post](https://www.git-tower.com/blog/tower-mac-11/))
 + Tower for Windows [7.0](https://www.git-tower.com/release-notes/windows?show_tab=release-notes)
++ tig [2.5.10](https://github.com/jonas/tig/releases/tag/tig-2.5.10)
++ git-credential-oauth [0.11.3](https://github.com/hickford/git-credential-oauth/releases/tag/v0.11.3)
 
 ## Credits
 
