@@ -57,7 +57,7 @@ This edition covers what happened during the months of April 2024 and May 2024.
   The talks are scheduled on September 19th and the birds of a feather
   are scheduled on September 20th. Registration is yet to open.
 
-  The announcment welcomes call for proposals, ideas on the format,
+  The announcement welcomes calls for proposals, ideas on the format,
   topics for discussions, venue setup, applications for financial
   assistance.
 
