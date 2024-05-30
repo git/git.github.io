@@ -129,14 +129,87 @@ This edition covers what happened during the months of April 2024 and May 2024.
 
 __Various__
 
++ [Securing Git: Addressing 5 new vulnerabilities](https://github.blog/2024-05-14-securing-git-addressing-5-new-vulnerabilities/)
+  fixed in v2.45.1, by Johannes Schindelin on GitHub Blog.
+  The main theme of fixes in v2.45.1 is to improve the security of cloning Git repositories.
+
 
 __Light reading__
 
-<!---
++ [A beginner's guide to the Git reftable format](https://about.gitlab.com/blog/2024/05/30/a-beginners-guide-to-the-git-reftable-format/)
+  (available since the [release of Git 2.45.0](https://about.gitlab.com/blog/2024/04/30/whats-new-in-git-2-45-0/)).
+  Article by Patrick Steinhardt on GitLab Blog.
++ Julia Evans [announced](https://fosstodon.org/@b0rk@jvns.ca/112497238141791283)
+  that she will be publishing her git zine, “How Git Works”, on Friday May 31, on [WizardZines](https://wizardzines.com/).
+  She [counted](https://fosstodon.org/@b0rk@jvns.ca/112519150131306917)
+  that she apparently wrote 28,000 words of blog posts while writing this Git zine.
+  These posts were covered here, starting from [Git Rev News Edition #103](https://git.github.io/rev_news/2023/09/30/edition-103/),
+  and continuing, edition after edition, until [the previous edition: #110](https://git.github.io/rev_news/2024/04/30/edition-110/).<br>
+  As a companion to this zine, there is a little [git cheat sheet](https://wizardzines.com/git-cheat-sheet.pdf) (PDF) freely available.
+    + Julia Evans had also published “[Oh Shit, Git](https://wizardzines.com/zines/oh-shit-git/)” zine in 2018;
+      as she [describes](https://fosstodon.org/@b0rk@jvns.ca/112338598244430472):
+      “Oh Shit, Git” is about how to get out of git messes,
+      “How Git Works” explains why those messes happen in the first place.
+    + [Oh, shit, git!](http://ohshitgit.com/) website by Katie Sylor-Miller
+      was first mentioned in [Git Rev News Edition #19](https://git.github.io/rev_news/2016/09/14/edition-19/).
++ [Securing Git repositories with gittuf](https://lwn.net/Articles/972467/)
+  by Joe Brockmeier on LWN\.net is a report of talk by Aditya Sirish A Yelgundhalli and Billy Lynch
+  at Open Source Summit North America (OSSNA).
+  The vide of the talk [is available on YouTube](https://www.youtube.com/watch?v=eCSeIEdMbCw).
+  [Gittuf](https://gittuf.dev/) was mentioned
+  in [Git Rev News Editionn #104](https://git.github.io/rev_news/2023/10/31/edition-104/).
++ [Clone arbitrary single Git commit](https://blog.hartwork.org/posts/clone-arbitrary-single-git-commit/)
+  by Sebastian Pipping on Hartwork Blog.  Inspired by GitHub Action [`actions/checkout`](https://github.com/actions/checkout).
++ [Reverting File Changes in Git: A Comprehensive Guide](https://dev.to/mochafreddo/reverting-file-changes-in-git-a-comprehensive-guide-80i)
+  by Geoffrey Kim on DEV\.to.
+
++ [What is Git? GitHub beginner’s guide to version control](https://github.blog/2024-05-27-what-is-git-our-beginners-guide-to-version-control/)
+  by Kedasha Kerr on GitHub Blog.
++ [Signed Git commits with Sigstore, Gitsign and OpenID Connect (OIDC)](https://buildkite.com/blog/securing-your-software-supply-chain-signed-git-commits-with-oidc-and-sigstore)
+  by James Healy on Buildkite Blog.
+  [Sigstore](https://www.sigstore.dev/) and [Gitsign](https://github.com/sigstore/gitsign)
+  tools for keyless Git signing were both mentioned
+  in [Git Rev News Edition #91](https://git.github.io/rev_news/2022/09/30/edition-91/).
++ [How short can Git abbreviate?](https://blog.cuviper.com/2013/11/10/how-short-can-git-abbreviate/)
+  by Josh Stone on his WordPress-based blog (2013).
+
+
 __Easy watching__
--->
+
++ [Securing Git Repositories with Gittuf](https://www.youtube.com/watch?v=eCSeIEdMbCw) -
+  Aditya Sirish A Yelgundhalli, New York University & Billy Lynch, Chainguard.
+  The 30 minute long video on The Linux Foundationn channel on YouTube.
+
 
 __Git tools and sites__
+
++ [KSDB](https://lwn.net/ksdb/) is the LWN\.net kernel source database, a site
+  which can answer a wide range of questions about the Linux kernel's development history.
++ [Kernel.org Transparency Log Monitor](https://tlog.linderud.dev/)
+  webpage is a monitor of the kernel.org transparency log for git-receive operations.
+  Among others, it tracks signed pushes (compare with [gittuf](https://gittuf.dev/)).
+  Runs [kernel.org-git-verifier](https://github.com/Foxboron/kernel.org-git-verifier).
+    + There is also [Gitolite transparency log](https://korg.docs.kernel.org/gitolite/transparency-log.html),
+      with git-receive operations published at the [transparency-logs/gitolite/git](https://git.kernel.org/pub/scm/infra/transparency-logs/gitolite/git/)
+      repositories in [the public-inbox v2 format](https://public-inbox.org/public-inbox-v2-format.html).
+      [Gitolite](http://gitolite.com/gitolite/) was first mentioned in
+      [Git Rev News Edition #17](https://git.github.io/rev_news/2016/07/20/edition-17/)
+      and [#22](https://git.github.io/rev_news/2016/12/14/edition-22/).
++ [Sigstore Rekor](https://github.com/sigstore/rekor) is meant to
+  provide an immutable tamper resistant ledger of metadata
+  generated within a software projects supply chain.
+  It enables software maintainers and build systems to record signed metadata
+  to an immutable record, and to query this metadata.
+  Can be run as part of [Sigstore](https://sigstore.dev/), or on its own.
++ [Quickhook](https://github.com/dirk/quickhook/) is a Git hook runner designed for speed.
+  Written in Go.
++ [etckeeper](https://etckeeper.branchable.com/) is a collection of tools
+  to let `/etc` be stored in a Git repository, and use Git
+  to review or revert changes that were made to `/etc`.
+  Written as collection of shell scripts (with some plugins in Python).
++ [Oh Shit, Git!?!](https://ohshitgit.com/) website
+  (first mentioned in [Git Rev News Edition #19](https://git.github.io/rev_news/2016/09/14/edition-19/))
+  has the same contents without swears at [Dangit, Git!?!](https://dangitgit.com/en).
 
 
 ## Releases
