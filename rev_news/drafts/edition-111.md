@@ -121,9 +121,82 @@ This edition covers what happened during the months of April 2024 and May 2024.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Beat Bolli
+
+* Who are you and what do you do?
+
+  I'm a software engineer currently working in an Integration Engineer role
+  for the Swiss government. When I'm not coding, I read, ride any of my three
+  bikes or play the guitar or electric bass.
+
+* What would you name your most important contribution to Git?
+
+  I'm more a drive-by contributor. There are no big issues that I work on.
+  For example, my very first commit was "just" a spelling correction.
+
+  The biggest contribution in terms of the number of commits was a cleanup of
+  the test scripts that eliminated redundant processes in long pipelines.
+
+  Others topics that come to mind are the strict ISO date format, the
+  "copy commit reference" menu item in [gitk](https://git-scm.com/docs/gitk),
+  and some cleanups to get a warning-free compile with `-Wpedantic`.
+
+* What are you doing on the Git project these days, and why?
+
+  As explained in the previous question, I mostly see small things that I try
+  to improve, like [recently adding the 12-bit RGB color format](#reviews).
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+  Honestly, I'm pretty content with the state of Git. I've been using Git since
+  2009 and I guess I got used to its idiosyncrasies (but see the next question!).
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+  There are too many different options and/or subcommands to remove things.
+  Compare `git remote remove`, `git branch (-d/-D)`, `git rm` (for files).
+  I understand that these are different situations but from time to time I
+  have to really think about which is the right syntax in a given case.
+
+* What is your favorite Git-related tool/library, outside of
+  Git itself?
+
+  First, I'm a fan of the commandline, so Git itself does over 80% of what
+  I need. Next up are [tig](https://jonas.github.io/tig/) and [vim-fugitive](https://github.com/tpope/vim-fugitive).
+  I also use a comprehensive set of Git-related shell aliases that improve
+  my efficiency.
+
+* Do you happen to have any memorable experience w.r.t contributing to
+  the Git project? If yes, could you share it with us?
+
+  Nothing out of the ordinary, but then I'm old-school and have no problems
+  with an email-based workflow. My first commits were accepted without much
+  fanfare, and this encouraged me to continue to submit things.
+
+* What is your toolbox for interacting with the mailing list and for
+  development of Git?
+
+  I follow the mailing list on [lore.kernel.org](https://lore.kernel.org/git/), and
+  have also subscribed to the NNTP feed in Thunderbird. For submitting patches I
+  have configured a few send-email options, probably like everyone else who
+  contributes. I do most of my development on a Mac mini in [iTerm2](https://iterm2.com/)
+  and Vim.
+
+* What is your advice for people who want to start Git development?
+  Where and how should they start?
+
+  First, don't think you're not good enough. By following [SubmittingPatches](https://git-scm.com/docs/SubmittingPatches)
+  and the rest of the [beginner's documentation](https://git-scm.com/docs/MyFirstContribution),
+  everyone can contribute. I experience the "mood" on the mailing list as very
+  supportive and helpful.
+
+* If there's one tip you would like to share with other Git
+  developers, what would it be?
+
+  Just a tiny pet peeve of mine: sizeof is not a function 😉
+
 
 ## Other News
 
