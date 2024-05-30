@@ -61,9 +61,61 @@ This edition covers what happened during the months of April 2024 and May 2024.
   topics for discussions, venue setup, applications for financial
   assistance.
 
-<!---
 ### Reviews
--->
+
++ [[PATCH 0/3] color: add support for 12-bit RGB colors](https://lore.kernel.org/git/20240429164849.78509-1-dev+git@drbeat.li/)
+
+  Beat Bolli sent a patch series made of 3 patches to add 12 bit RGB
+  color support to the color parsing code. That code is used
+  especially when parsing configuration files, as
+  [a lot of configuration options](https://git-scm.com/docs/git-config#Documentation/git-config.txt-coloradvice)
+  allow users to customize how Git colorizes its output.
+
+  Before Beat's patch series, the code supported the following:
+    - fixed strings, like `normal`, `blue`, `red`, etc,
+	- 256-color-modes from the terminal, like `[1;38;5;254;48;5;255m` , and
+	- 24-bit color values in the form `#RRGGBB`.
+
+  With Beat's patch, it also supports 12-bit colors in the form
+  `#RGB`, where in both the 24-bit and 12-bit forms, `R`, `G` and `B`
+  are hexadecimal digits for the red, green and blue components of the
+  color respectively.
+
+  The first patch in the series fixed a typo. The second patch added
+  tests for invalid non-hexadecimal characters in `#RRGGBB`
+  values.
+
+  The last patch added support for the `#RGB` form and mentioned in
+  its commit message that such a shortened 12 bit form is already
+  supported in Cascading Style Sheets (CSS). When used in CSS, each of
+  the hexadecimal digits in this form is duplicated to convert the
+  color to 24 bits, and the same duplication is performed in Beat's
+  patch. For example `#f1b` specifies the same color as `#ff11bb`.
+
+  Junio Hamano, the Git maintainer, replied to Beat's third patch
+  saying that it looks good. Junio noticed that a wrong `#0xFF0000`
+  value in a code comment was converted to the right `#FF0000` value
+  by removing `Ox`. He wondered if there were instances of the same
+  mistake in our documentation. Beat replied that it was the only
+  place he found such a mistake.
+
+  Taylor Blau then reviewed the patch series and said it looked "very
+  nice". Peff, alias Jeff King, also reviewed Beat's series and
+  commented on the third patch. Looking at the tests that checked that
+  invalid values were rejected, Peff wondered what would happen if
+  values like "#1", "#12", "#1234" were passed. Junio replied to Peff
+  that such values would be worth covering in the tests but doing that
+  in a separate cleanup patch outside this series would be fine.
+
+  Then Junio replied to himself and suggested adding such tests in the
+  second patch of the series which already added tests for invalid
+  values. Junio even sent a 'fixup!' patch to add these tests to the
+  second patch. Peff replied that this 'fixup!' patch looked good.
+
+  Beat then sent a
+  [version 2 of his series](https://lore.kernel.org/git/20240502110331.6347-1-dev+git@drbeat.li/)
+  that incorporated Junio's patch. Both Junio and Peff found it good,
+  so it was later merged into the 'master' branch.
 
 <!---
 ### Support
