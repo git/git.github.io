@@ -137,9 +137,9 @@ This edition covers what happened during the months of April 2024 and May 2024.
   The biggest contribution in terms of the number of commits was a cleanup of
   the test scripts that eliminated redundant processes in long pipelines.
 
-  Others topics that come to mind are the strict ISO date format, the
+  Other topics that come to mind are the strict ISO date format, the
   "copy commit reference" menu item in [gitk](https://git-scm.com/docs/gitk),
-  and some cleanups to get a warning-free compile with `-Wpedantic`.
+  and some cleanups to get a warning-free compile with `-pedantic`.
 
 * What are you doing on the Git project these days, and why?
 
@@ -195,7 +195,7 @@ This edition covers what happened during the months of April 2024 and May 2024.
 * If there's one tip you would like to share with other Git
   developers, what would it be?
 
-  Just a tiny pet peeve of mine: sizeof is not a function 😉
+  Just a tiny pet peeve of mine: `sizeof` is not a function 😉
 
 
 ## Other News
