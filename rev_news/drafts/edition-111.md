@@ -244,6 +244,7 @@ __Light reading__
   in [Git Rev News Edition #91](https://git.github.io/rev_news/2022/09/30/edition-91/).
 + [How short can Git abbreviate?](https://blog.cuviper.com/2013/11/10/how-short-can-git-abbreviate/)
   by Josh Stone on his WordPress-based blog (2013).
++ [Understanding the Stacked Pull Requests Workflow](https://www.git-tower.com/blog/stacked-prs/) by Bruno Brito on Tower's blog.
 
 
 __Easy watching__
