@@ -228,7 +228,7 @@ __Light reading__
 + [Securing Git repositories with gittuf](https://lwn.net/Articles/972467/)
   by Joe Brockmeier on LWN\.net is a report of talk by Aditya Sirish A Yelgundhalli and Billy Lynch
   at Open Source Summit North America (OSSNA).
-  The vide of the talk [is available on YouTube](https://www.youtube.com/watch?v=eCSeIEdMbCw).
+  The video of the talk [is available on YouTube](https://www.youtube.com/watch?v=eCSeIEdMbCw).
   [Gittuf](https://gittuf.dev/) was mentioned
   in [Git Rev News Editionn #104](https://git.github.io/rev_news/2023/10/31/edition-104/).
 + [Clone arbitrary single Git commit](https://blog.hartwork.org/posts/clone-arbitrary-single-git-commit/)
