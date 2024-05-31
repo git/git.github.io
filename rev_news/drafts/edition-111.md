@@ -1,4 +1,4 @@
----
+ --
 title: Git Rev News Edition 111 (May 31st, 2024)
 layout: default
 date: 2024-05-31 12:06:51 +0100
@@ -13,7 +13,7 @@ Welcome to the 111th edition of [Git Rev News](https://git.github.io/rev_news/re
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
-This edition covers what happened during the months of April 2024 and May 2024.
+This edition covers what happened during the months of April and May 2024.
 
 ## Discussions
 
@@ -29,19 +29,19 @@ This edition covers what happened during the months of April 2024 and May 2024.
     ["Implement consistency check for refs" project](https://summerofcode.withgoogle.com/programs/2024/projects/ukm4PTEF)
     mentored by Karthik Nayak and Patrick Steinhardt. He already
     started posting on [his blog](https://luolibrary.com/categories/GSoC-2024/),
-	and will push his work to his [Git repo](https://github.com/shejialuo/git).
+    and will push his work to his [Git repo](https://github.com/shejialuo/git).
 
   - Ghanshyam Thakkar will work on the
-    [" Move existing tests to a unit testing framework" project](https://summerofcode.withgoogle.com/programs/2024/projects/e9C4rhrv)
-	mentored by Kaartic Sivaraam and Christian Couder. He already
+    ["Move existing tests to a unit testing framework" project](https://summerofcode.withgoogle.com/programs/2024/projects/e9C4rhrv)
+    mentored by Kaartic Sivaraam and Christian Couder. He already
     started posting on [his blog](https://spectre10.github.io/posts/),
-	and will push his work to his [Git repo](https://github.com/spectre10/git).
+    and will push his work to his [Git repo](https://github.com/spectre10/git).
 
   - Chandra Pratap will work on the
     ["Move and improve reftable tests in the unit testing framework" project](https://summerofcode.withgoogle.com/programs/2024/projects/tlh611d7)
-	mentored by Patrick Steinhardt and Christian Couder. He already
+    mentored by Patrick Steinhardt and Christian Couder. He already
     started posting on [his blog](https://chand-ra.github.io/),
-	and will push his work to his [Git repo](https://github.com/Chand-ra/git).
+    and will push his work to his [Git repo](https://github.com/Chand-ra/git).
 
   Congratulations to them, and thanks a lot to all the applicants who
   worked on Git and submitted proposals! It was tough to choose from
@@ -58,7 +58,7 @@ This edition covers what happened during the months of April 2024 and May 2024.
   are scheduled on September 20th. Registration is yet to open.
 
   The announcement welcomes calls for proposals, ideas on the format,
-  topics for discussions, venue setup, applications for financial
+  topics for discussions, venue setup, and applications for financial
   assistance.
 
 ### Reviews
@@ -101,8 +101,8 @@ This edition covers what happened during the months of April 2024 and May 2024.
 
   Taylor Blau then reviewed the patch series and said it looked "very
   nice". Peff, alias Jeff King, also reviewed Beat's series and
-  commented on the third patch. Looking at the tests that checked that
-  invalid values were rejected, Peff wondered what would happen if
+  commented on the third patch. Looking at the tests that checked the
+  rejection of invalid values, Peff wondered what would happen if
   values like "#1", "#12", "#1234" were passed. Junio replied to Peff
   that such values would be worth covering in the tests but doing that
   in a separate cleanup patch outside this series would be fine.
@@ -114,7 +114,7 @@ This edition covers what happened during the months of April 2024 and May 2024.
 
   Beat then sent a
   [version 2 of his series](https://lore.kernel.org/git/20240502110331.6347-1-dev+git@drbeat.li/)
-  that incorporated Junio's patch. Both Junio and Peff found it good,
+  that incorporated Junio's patch. Both Junio and Peff approved of it,
   so it was later merged into the 'master' branch.
 
 <!---
@@ -143,7 +143,7 @@ This edition covers what happened during the months of April 2024 and May 2024.
 
 * What are you doing on the Git project these days, and why?
 
-  As explained in the previous question, I mostly see small things that I try
+  As explained in the previous answer, I mostly see small things that I try
   to improve, like [recently adding the 12-bit RGB color format](#reviews).
 
 * If you could get a team of expert developers to work full time on
@@ -163,12 +163,12 @@ This edition covers what happened during the months of April 2024 and May 2024.
 * What is your favorite Git-related tool/library, outside of
   Git itself?
 
-  First, I'm a fan of the commandline, so Git itself does over 80% of what
+  First, I'm a fan of the command line, so Git itself does over 80% of what
   I need. Next up are [tig](https://jonas.github.io/tig/) and [vim-fugitive](https://github.com/tpope/vim-fugitive).
   I also use a comprehensive set of Git-related shell aliases that improve
   my efficiency.
 
-* Do you happen to have any memorable experience w.r.t contributing to
+* Do you happen to have any memorable experience w.r.t. contributing to
   the Git project? If yes, could you share it with us?
 
   Nothing out of the ordinary, but then I'm old-school and have no problems
@@ -212,29 +212,28 @@ __Light reading__
 + [A beginner's guide to the Git reftable format](https://about.gitlab.com/blog/2024/05/30/a-beginners-guide-to-the-git-reftable-format/)
   (available since the [release of Git 2.45.0](https://about.gitlab.com/blog/2024/04/30/whats-new-in-git-2-45-0/)).
   Article by Patrick Steinhardt on GitLab Blog.
-+ Julia Evans have just published her new git zine, “[How Git Works](https://wizardzines.com/zines/git/)”.
++ Julia Evans has just published her new Git zine, “[How Git Works](https://wizardzines.com/zines/git/)”.
   She [counted](https://fosstodon.org/@b0rk@jvns.ca/112519150131306917)
-  that she apparently wrote 28,000 words of blog posts while writing this Git zine.
+  that she apparently wrote 28,000 words of blog posts while writing the zine.
   These posts were covered here, starting from [Git Rev News Edition #103](https://git.github.io/rev_news/2023/09/30/edition-103/),
-  and continuing, edition after edition, until [the previous edition: #110](https://git.github.io/rev_news/2024/04/30/edition-110/).<br>
+  and continuing, edition after edition, until [the previous edition #110](https://git.github.io/rev_news/2024/04/30/edition-110/).<br>
   As a companion to this zine, there is a little [git cheat sheet](https://wizardzines.com/git-cheat-sheet.pdf) (PDF) freely available.
-    + Julia Evans had also published “[Oh Shit, Git](https://wizardzines.com/zines/oh-shit-git/)” zine in 2018;
+    + Julia Evans had also published the “[Oh Shit, Git](https://wizardzines.com/zines/oh-shit-git/)” zine in 2018;
       as she [describes](https://fosstodon.org/@b0rk@jvns.ca/112338598244430472):
-      “Oh Shit, Git” is about how to get out of git messes,
+      “Oh Shit, Git” is about how to get out of Git messes, while
       “How Git Works” explains why those messes happen in the first place.
-    + [Oh, shit, git!](http://ohshitgit.com/) website by Katie Sylor-Miller
+    + The [Oh Shit, Git!?!](http://ohshitgit.com/) website by Katie Sylor-Miller
       was first mentioned in [Git Rev News Edition #19](https://git.github.io/rev_news/2016/09/14/edition-19/).
 + [Securing Git repositories with gittuf](https://lwn.net/Articles/972467/)
   by Joe Brockmeier on LWN\.net is a report of talk by Aditya Sirish A Yelgundhalli and Billy Lynch
   at Open Source Summit North America (OSSNA).
   The video of the talk [is available on YouTube](https://www.youtube.com/watch?v=eCSeIEdMbCw).
   [Gittuf](https://gittuf.dev/) was mentioned
-  in [Git Rev News Editionn #104](https://git.github.io/rev_news/2023/10/31/edition-104/).
+  in [Git Rev News Edition #104](https://git.github.io/rev_news/2023/10/31/edition-104/).
 + [Clone arbitrary single Git commit](https://blog.hartwork.org/posts/clone-arbitrary-single-git-commit/)
   by Sebastian Pipping on Hartwork Blog.  Inspired by GitHub Action [`actions/checkout`](https://github.com/actions/checkout).
 + [Reverting File Changes in Git: A Comprehensive Guide](https://dev.to/mochafreddo/reverting-file-changes-in-git-a-comprehensive-guide-80i)
   by Geoffrey Kim on DEV\.to.
-
 + [What is Git? GitHub beginner’s guide to version control](https://github.blog/2024-05-27-what-is-git-our-beginners-guide-to-version-control/)
   by Kedasha Kerr on GitHub Blog.
 + [Signed Git commits with Sigstore, Gitsign and OpenID Connect (OIDC)](https://buildkite.com/blog/securing-your-software-supply-chain-signed-git-commits-with-oidc-and-sigstore)
@@ -244,25 +243,37 @@ __Light reading__
   in [Git Rev News Edition #91](https://git.github.io/rev_news/2022/09/30/edition-91/).
 + [How short can Git abbreviate?](https://blog.cuviper.com/2013/11/10/how-short-can-git-abbreviate/)
   by Josh Stone on his WordPress-based blog (2013).
-+ [Understanding the Stacked Pull Requests Workflow](https://www.git-tower.com/blog/stacked-prs/) by Bruno Brito on Tower's blog.
++ [Understanding the Stacked Pull Requests Workflow](https://www.git-tower.com/blog/stacked-prs/) by Bruno Brito on Tower's blog.  
+    There are a quite some approaches to add stacks to Git workflows:
+    + [Stacked Git](https://stacked-git.github.io/) (aka StGit) was mentioned in
+      [Git Rev News Edition #17](https://git.github.io/rev_news/2016/07/20/edition-17/),
+      [#21](https://git.github.io/rev_news/2016/11/16/edition-21/),
+      and [#74](https://git.github.io/rev_news/2021/04/30/edition-74/),
+      and finally presented as a tool in [#93](https://git.github.io/rev_news/2022/11/30/edition-93/).
+    + Stacked diffs were discussed in blogs [Stacked Diffs Versus Pull Requests](https://jg.gg/2018/09/29/stacked-diffs-versus-pull-requests/)
+      (mentioned in [Git Rev News Edition #44](https://git.github.io/rev_news/2018/10/24/edition-44/))
+      and [Stacked Diffs (and why you should know about them)](https://newsletter.pragmaticengineer.com/p/stacked-diffs) (mentioned
+      in [#105](https://git.github.io/rev_news/2023/11/30/edition-105/)).
+    + [Working with stacked branches](https://andrewlock.net/working-with-stacked-branches-in-git-is-easier-with-update-refs/)
+      was mentioned in [Git Rev News Edition #93](https://git.github.io/rev_news/2022/11/30/edition-93/).
 
 
 __Easy watching__
 
 + [Securing Git Repositories with Gittuf](https://www.youtube.com/watch?v=eCSeIEdMbCw) -
   Aditya Sirish A Yelgundhalli, New York University & Billy Lynch, Chainguard.
-  The 30 minute long video on The Linux Foundationn channel on YouTube.
+  A 30 minute long video on The Linux Foundation channel on YouTube.
 
 
 __Git tools and sites__
 
 + [KSDB](https://lwn.net/ksdb/) is the LWN\.net kernel source database, a site
   which can answer a wide range of questions about the Linux kernel's development history.
-+ [Kernel.org Transparency Log Monitor](https://tlog.linderud.dev/)
++ The [Kernel.org Transparency Log Monitor](https://tlog.linderud.dev/)
   webpage is a monitor of the kernel.org transparency log for git-receive operations.
   Among others, it tracks signed pushes (compare with [gittuf](https://gittuf.dev/)).
   Runs [kernel.org-git-verifier](https://github.com/Foxboron/kernel.org-git-verifier).
-    + There is also [Gitolite transparency log](https://korg.docs.kernel.org/gitolite/transparency-log.html),
+    + There is also the [Gitolite transparency log](https://korg.docs.kernel.org/gitolite/transparency-log.html),
       with git-receive operations published at the [transparency-logs/gitolite/git](https://git.kernel.org/pub/scm/infra/transparency-logs/gitolite/git/)
       repositories in [the public-inbox v2 format](https://public-inbox.org/public-inbox-v2-format.html).
       [Gitolite](http://gitolite.com/gitolite/) was first mentioned in
@@ -272,22 +283,23 @@ __Git tools and sites__
   provide an immutable tamper resistant ledger of metadata
   generated within a software projects supply chain.
   It enables software maintainers and build systems to record signed metadata
-  to an immutable record, and to query this metadata.
-  Can be run as part of [Sigstore](https://sigstore.dev/), or on its own.
+  to an immutable record, and to query these metadata.
+  Can be run as part of [Sigstore](https://sigstore.dev/) or on its own.
 + [Quickhook](https://github.com/dirk/quickhook/) is a Git hook runner designed for speed.
   Written in Go.
 + [etckeeper](https://etckeeper.branchable.com/) is a collection of tools
   to let `/etc` be stored in a Git repository, and use Git
   to review or revert changes that were made to `/etc`.
-  Written as collection of shell scripts (with some plugins in Python).
-+ [Oh Shit, Git!?!](https://ohshitgit.com/) website
-  (first mentioned in [Git Rev News Edition #19](https://git.github.io/rev_news/2016/09/14/edition-19/))
-  has the same contents without swears at [Dangit, Git!?!](https://dangitgit.com/en).
+  Written as shell scripts (with some plugins in Python).
++ [Dangit, Git!?!](https://dangitgit.com/en) has the same contents, though without swears,
+  as the [Oh Shit, Git!?!](https://ohshitgit.com/) website
+  (first mentioned in [Git Rev News Edition #19](https://git.github.io/rev_news/2016/09/14/edition-19/)).
 
 
 ## Releases
 
 + Git [2.45.1 and friends](https://public-inbox.org/git/xmqqv83g4937.fsf@gitster.g/)
+  (2.44.1, 2.43.4, 2.42.2, 2.41.1, 2.40.2, and 2.39.4)
 + Git for Windows [2.45.1(1)](https://github.com/git-for-windows/git/releases/tag/v2.45.1.windows.1)
 + libgit2 [1.8.1](https://github.com/libgit2/libgit2/releases/tag/v1.8.1)
 + GitLab [17.0.1, 16.11.3, 16.10.6](https://about.gitlab.com/releases/2024/05/22/patch-release-gitlab-17-0-1-released/)
