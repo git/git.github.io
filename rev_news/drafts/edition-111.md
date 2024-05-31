@@ -241,8 +241,6 @@ __Light reading__
   [Sigstore](https://www.sigstore.dev/) and [Gitsign](https://github.com/sigstore/gitsign)
   tools for keyless Git signing were both mentioned
   in [Git Rev News Edition #91](https://git.github.io/rev_news/2022/09/30/edition-91/).
-+ [How short can Git abbreviate?](https://blog.cuviper.com/2013/11/10/how-short-can-git-abbreviate/)
-  by Josh Stone on his WordPress-based blog (2013).
 + [Understanding the Stacked Pull Requests Workflow](https://www.git-tower.com/blog/stacked-prs/) by Bruno Brito on Tower's blog.  
     There are a quite some approaches to add stacks to Git workflows:
     + [Stacked Git](https://stacked-git.github.io/) (aka StGit) was mentioned in
@@ -256,6 +254,8 @@ __Light reading__
       in [#105](https://git.github.io/rev_news/2023/11/30/edition-105/)).
     + [Working with stacked branches](https://andrewlock.net/working-with-stacked-branches-in-git-is-easier-with-update-refs/)
       was mentioned in [Git Rev News Edition #93](https://git.github.io/rev_news/2022/11/30/edition-93/).
++ [How short can Git abbreviate?](https://blog.cuviper.com/2013/11/10/how-short-can-git-abbreviate/)
+  by Josh Stone on his WordPress-based blog (2013).
 
 
 __Easy watching__
