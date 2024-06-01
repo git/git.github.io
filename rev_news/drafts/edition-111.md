@@ -241,7 +241,7 @@ __Light reading__
   [Sigstore](https://www.sigstore.dev/) and [Gitsign](https://github.com/sigstore/gitsign)
   tools for keyless Git signing were both mentioned
   in [Git Rev News Edition #91](https://git.github.io/rev_news/2022/09/30/edition-91/).
-+ [Understanding the Stacked Pull Requests Workflow](https://www.git-tower.com/blog/stacked-prs/) by Bruno Brito on Tower's blog.  
++ [Understanding the Stacked Pull Requests Workflow](https://www.git-tower.com/blog/stacked-prs/) by Bruno Brito on Tower's blog.
     There have been various approaches to adding stacks to Git workflows:
     + [Stacked Git](https://stacked-git.github.io/) (aka StGit) was mentioned in
       [Git Rev News Edition #17](https://git.github.io/rev_news/2016/07/20/edition-17/),
