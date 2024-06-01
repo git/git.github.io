@@ -1,4 +1,4 @@
- --
+---
 title: Git Rev News Edition 111 (May 31st, 2024)
 layout: default
 date: 2024-05-31 12:06:51 +0100
