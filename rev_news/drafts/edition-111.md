@@ -45,7 +45,7 @@ This edition covers what happened during the months of April and May 2024.
 
   Congratulations to them, and thanks a lot to all the applicants who
   worked on Git and submitted proposals! It was tough to choose from
-  multiple potential contributors who all were good in their own
+  multiple potential contributors, all of them good in their own
   respect.
 
 * [Git Merge conference](https://public-inbox.org/git/Zj0JyL1b+g1G3zWx@nand.local/) and Contributor's Summit
@@ -65,7 +65,7 @@ This edition covers what happened during the months of April and May 2024.
 
 + [[PATCH 0/3] color: add support for 12-bit RGB colors](https://lore.kernel.org/git/20240429164849.78509-1-dev+git@drbeat.li/)
 
-  Beat Bolli sent a patch series made of 3 patches to add 12 bit RGB
+  Beat Bolli sent a patch series consisting of 3 patches to add 12 bit RGB
   color support to the color parsing code. That code is used
   especially when parsing configuration files, as
   [a lot of configuration options](https://git-scm.com/docs/git-config#Documentation/git-config.txt-coloradvice)
@@ -93,14 +93,14 @@ This edition covers what happened during the months of April and May 2024.
   patch. For example `#f1b` specifies the same color as `#ff11bb`.
 
   Junio Hamano, the Git maintainer, replied to Beat's third patch
-  saying that it looks good. Junio noticed that a wrong `#0xFF0000`
+  saying that it looked good. Junio noticed that a wrong `#0xFF0000`
   value in a code comment was converted to the right `#FF0000` value
   by removing `Ox`. He wondered if there were instances of the same
   mistake in our documentation. Beat replied that it was the only
   place he found such a mistake.
 
   Taylor Blau then reviewed the patch series and said it looked "very
-  nice". Peff, alias Jeff King, also reviewed Beat's series and
+  nice". Jeff King, alias Peff, also reviewed Beat's series and
   commented on the third patch. Looking at the tests that checked the
   rejection of invalid values, Peff wondered what would happen if
   values like "#1", "#12", "#1234" were passed. Junio replied to Peff
@@ -225,7 +225,7 @@ __Light reading__
     + The [Oh Shit, Git!?!](http://ohshitgit.com/) website by Katie Sylor-Miller
       was first mentioned in [Git Rev News Edition #19](https://git.github.io/rev_news/2016/09/14/edition-19/).
 + [Securing Git repositories with gittuf](https://lwn.net/Articles/972467/)
-  by Joe Brockmeier on LWN\.net is a report of talk by Aditya Sirish A Yelgundhalli and Billy Lynch
+  by Joe Brockmeier on LWN\.net is a report of a talk by Aditya Sirish A Yelgundhalli and Billy Lynch
   at Open Source Summit North America (OSSNA).
   The video of the talk [is available on YouTube](https://www.youtube.com/watch?v=eCSeIEdMbCw).
   [Gittuf](https://gittuf.dev/) was mentioned
@@ -242,13 +242,13 @@ __Light reading__
   tools for keyless Git signing were both mentioned
   in [Git Rev News Edition #91](https://git.github.io/rev_news/2022/09/30/edition-91/).
 + [Understanding the Stacked Pull Requests Workflow](https://www.git-tower.com/blog/stacked-prs/) by Bruno Brito on Tower's blog.  
-    There are a quite some approaches to add stacks to Git workflows:
+    There have been various approaches to adding stacks to Git workflows:
     + [Stacked Git](https://stacked-git.github.io/) (aka StGit) was mentioned in
       [Git Rev News Edition #17](https://git.github.io/rev_news/2016/07/20/edition-17/),
       [#21](https://git.github.io/rev_news/2016/11/16/edition-21/),
       and [#74](https://git.github.io/rev_news/2021/04/30/edition-74/),
       and finally presented as a tool in [#93](https://git.github.io/rev_news/2022/11/30/edition-93/).
-    + Stacked diffs were discussed in blogs [Stacked Diffs Versus Pull Requests](https://jg.gg/2018/09/29/stacked-diffs-versus-pull-requests/)
+    + Stacked diffs were discussed in [Stacked Diffs Versus Pull Requests](https://jg.gg/2018/09/29/stacked-diffs-versus-pull-requests/)
       (mentioned in [Git Rev News Edition #44](https://git.github.io/rev_news/2018/10/24/edition-44/))
       and [Stacked Diffs (and why you should know about them)](https://newsletter.pragmaticengineer.com/p/stacked-diffs) (mentioned
       in [#105](https://git.github.io/rev_news/2023/11/30/edition-105/)).
@@ -281,9 +281,9 @@ __Git tools and sites__
       and [#22](https://git.github.io/rev_news/2016/12/14/edition-22/).
 + [Sigstore Rekor](https://github.com/sigstore/rekor) is meant to
   provide an immutable tamper resistant ledger of metadata
-  generated within a software projects supply chain.
-  It enables software maintainers and build systems to record signed metadata
-  to an immutable record, and to query these metadata.
+  generated within a software project's supply chain.
+  It enables software maintainers and build systems to record and query
+  signed metadata.
   Can be run as part of [Sigstore](https://sigstore.dev/) or on its own.
 + [Quickhook](https://github.com/dirk/quickhook/) is a Git hook runner designed for speed.
   Written in Go.
@@ -291,7 +291,7 @@ __Git tools and sites__
   to let `/etc` be stored in a Git repository, and use Git
   to review or revert changes that were made to `/etc`.
   Written as shell scripts (with some plugins in Python).
-+ [Dangit, Git!?!](https://dangitgit.com/en) has the same contents, though without swears,
++ [Dangit, Git!?!](https://dangitgit.com/en) has the same contents, only without swears,
   as the [Oh Shit, Git!?!](https://ohshitgit.com/) website
   (first mentioned in [Git Rev News Edition #19](https://git.github.io/rev_news/2016/09/14/edition-19/)).
 
@@ -302,7 +302,7 @@ __Git tools and sites__
   (2.44.1, 2.43.4, 2.42.2, 2.41.1, 2.40.2, and 2.39.4)
 + Git for Windows [2.45.1(1)](https://github.com/git-for-windows/git/releases/tag/v2.45.1.windows.1)
 + libgit2 [1.8.1](https://github.com/libgit2/libgit2/releases/tag/v1.8.1)
-+ GitLab [17.0.1, 16.11.3, 16.10.6](https://about.gitlab.com/releases/2024/05/22/patch-release-gitlab-17-0-1-released/)
++ GitLab [17.0.1, 16.11.3, 16.10.6](https://about.gitlab.com/releases/2024/05/22/patch-release-gitlab-17-0-1-released/),
 [17.0](https://about.gitlab.com/releases/2024/05/16/gitlab-17-0-released/),
 [16.9.8](https://about.gitlab.com/releases/2024/05/09/gitlab-16-9-8-released/),
 [16.11.2, 16.10.5, 16.9.7](https://about.gitlab.com/releases/2024/05/08/patch-release-gitlab-16-11-2-released/)
