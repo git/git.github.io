@@ -36,6 +36,8 @@ body {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
+    max-height: 100svh;
+    overflow-y: scroll;
     max-width: 700px;
 }
 
