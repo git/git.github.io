@@ -212,7 +212,8 @@ __Light reading__
 + [A beginner's guide to the Git reftable format](https://about.gitlab.com/blog/2024/05/30/a-beginners-guide-to-the-git-reftable-format/)
   (available since the [release of Git 2.45.0](https://about.gitlab.com/blog/2024/04/30/whats-new-in-git-2-45-0/)).
   Article by Patrick Steinhardt on GitLab Blog.
-+ Julia Evans has just published her new Git zine, “[How Git Works](https://wizardzines.com/zines/git/)”.
++ Julia Evans has just [published her new Git zine](https://jvns.ca/blog/2024/04/25/new-zine--how-git-works-/),
+  “[How Git Works](https://wizardzines.com/zines/git/)”.
   She [counted](https://fosstodon.org/@b0rk@jvns.ca/112519150131306917)
   that she apparently wrote 28,000 words of blog posts while writing the zine.
   These posts were covered here, starting from [Git Rev News Edition #103](https://git.github.io/rev_news/2023/09/30/edition-103/),
