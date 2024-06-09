@@ -36,13 +36,13 @@ body {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    max-height: 100svh;
-    overflow-y: scroll;
     max-width: 700px;
 }
 
 .navbar {
   float: left;
+  position: sticky;
+  top: 0;
   text-align: left;
   width: 15em;
   padding: 2em;
@@ -66,6 +66,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
+  max-height: 100vh;
+  overflow-y: scroll;
   justify-content: center;
 }
 
