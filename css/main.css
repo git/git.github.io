@@ -35,7 +35,6 @@ body {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
-    flex: 1;
     max-width: 700px;
 }
 
@@ -44,9 +43,24 @@ body {
   position: sticky;
   top: 0;
   text-align: left;
-  width: 15em;
   padding: 2em;
-  padding-right: 0;
+  width: 15em;
+}
+
+.navbar > ul {
+  margin: 0;
+  list-style: none;
+  position: relative;
+  line-height: 0;
+}
+
+.navbar > ul > li {
+  margin: .5rem 0;
+}
+
+.navbar > ul > li.active {
+  font-weight: bold;
+  font-stretch: normal;
 }
 
 #menuLinkBar {
@@ -65,6 +79,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: .5rem;
   margin: 0 auto;
   max-height: 100vh;
   overflow-y: scroll;
@@ -86,7 +101,7 @@ body {
         order: 2;
     }
     .navbar {
-        width: auto;
+        width: 100%;
         -webkit-box-ordinal-group:4;
         -webkit-order:3;
         -ms-flex-order:3;
@@ -799,10 +814,10 @@ pre {
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
+  white-space: pre-wrap;
   border-radius: 3px;
   display: block;
   padding: 10px 15px 13px 15px;
-  margin: 0 3em 1em 3em;
   background-color: #fff;
   border: solid 1px #efeee6;
   line-height: 18px;
@@ -2019,7 +2034,7 @@ th, td {
 }
 
 img {
-  max-width: 100%;
+  max-width: 50%;
 }
 
 /* Table of contents */
