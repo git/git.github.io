@@ -29,30 +29,27 @@ body {
 }
 
 .site {
-    text-align: left;
-    padding: 2em 2em 0;
-    float: left;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    max-width: 700px;
+  text-align: left;
+  padding: 2em 2em 0;
+  flex-grow: 1;
+  max-width: 700px;
 }
 
 .navbar {
-  float: left;
+  position: -webkit-sticky; /* For Safari */
   position: sticky;
   top: 0;
-  overflow-y: scroll;
   text-align: left;
   width: 15em;
+  height: fit-content; /* Ensures the sidebar height adapts to its content */
+  max-height: 100vh;
   padding: 2em;
 }
 
 .navbar > ul {
   margin: 0;
+  padding: 0;
   list-style: none;
-  position: relative;
-  line-height: 0;
 }
 
 .navbar > ul > li {
@@ -64,14 +61,14 @@ body {
 }
 
 #menuLinkBar {
-    background-color: #a09a93;
-    text-align: right;
-    padding: 0.3em 2em;
-    -webkit-box-ordinal-group: 2;
-    -webkit-order: 1;
-    -ms-flex-order: 1;
-    order: 1;
-    display: none;
+  background-color: #a09a93;
+  text-align: right;
+  padding: 0.3em 2em;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  display: none;
 }
 
 #wrapper {
@@ -79,11 +76,9 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto;
-  max-height: 100vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
   justify-content: center;
+  margin: 0 auto;
+  width: 100%;
 }
 
 @media (max-width: 700px) {
