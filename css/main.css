@@ -40,10 +40,11 @@ body {
 
 .navbar {
   float: left;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  overflow-y: scroll;
   text-align: left;
+  height: fit-content;
   width: 15em;
   padding: 2em;
 }
@@ -80,9 +81,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  max-height: 100vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  width: 100%;
   justify-content: center;
 }
 
@@ -93,7 +92,6 @@ body {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-        max-height: fit-content;
     }
     .site {
         -webkit-box-ordinal-group: 3;
