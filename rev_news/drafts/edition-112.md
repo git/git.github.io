@@ -48,7 +48,7 @@ __Git tools and sites__
 
 
 ## Releases
-
++ Tower for Mac 12.0 (BETA) — [Release blog post](https://www.git-tower.com/blog/tower-mac-12/)
 
 ## Credits
 
