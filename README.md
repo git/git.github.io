@@ -1,6 +1,6 @@
 ## Git Developer Pages
 
-- This is a website for information on Git development. If you stumbled into this by mistake, you may want:
+ - This is a website for information on Git development. If you stumbled into this by mistake, you may want:
   - Information on running Git and links to download the latest version from [HERE](https://git-scm.com/)
   - Wiki that has historically contained developer information from [HERE](https://git.wiki.kernel.org/index.php/Main_Page)
 
