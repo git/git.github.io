@@ -10,35 +10,48 @@ to Git via GSoC.
 
 ### 2023
 
-*TODO*
+1. Shuqi Liang [ [project](https://summerofcode.withgoogle.com/archive/2023/projects/Rkbc1Abe) ] [ [final report](https://cheskaqiqi.github.io/2023/08/22/Final/) ] [ [blog](https://cheskaqiqi.github.io/tags/GSoC/) ]
+2. Kousik Sanagavarapu [ [project](https://summerofcode.withgoogle.com/archive/2023/projects/rck3kmq2) ]  [ [final report](https://five-sh.github.io/2023/08/26/the-final-report) ] [ [blog](https://five-sh.github.io/blog) ]
 
 #### References
 
 - [GSoC archive](https://summerofcode.withgoogle.com/archive/2023/organizations/git)
+- [Rev News article](https://git.github.io/rev_news/2023/06/30/edition-100/)
 
 ### 2022
 
-*TODO*
+1. Shaoxuan Yuan [ [project](https://summerofcode.withgoogle.com/archive/2022/projects/hz4rcOUB) ] [ [final report](https://ffyuanda.github.io/blog/GSoC-final-blog/) ] [ [blog](https://ffyuanda.github.io/tags/#learn) ]
+2. Abhradeep Chakraborty [ [project](https://summerofcode.withgoogle.com/archive/2022/projects/UPtA6qdf) ]  [ [final report](https://medium.com/@abhra303/gsoc-final-report-feaaacfae737) ] [ [blog](https://medium.com/@abhra303) ]
 
 #### References
 
 - [GSoC archive](https://summerofcode.withgoogle.com/archive/2022/organizations/git)
+- [Rev News article](https://git.github.io/rev_news/2022/06/30/edition-88/)
+
 
 ### 2021
 
-*TODO*
+1. ZheNing Hu [ [project](https://summerofcode.withgoogle.com/archive/2021/projects/5443907994779648) ] [ [final report](https://github.com/adlternative/adlternative.github.io/blob/gh-pages/blogs/gsoc/GSOC-Git-Final-Blog.md) ] [ [blog](https://github.com/adlternative/adlternative.github.io/tree/gh-pages/blogs/gsoc/) ]
+2. Atharva Raykar [ [project](https://summerofcode.withgoogle.com/archive/2021/projects/5071550033690624) ] [ [final report](https://github.com/tfidfwastaken/gitnotes/blob/main/final-report.md) ] [ [blog](https://github.com/tfidfwastaken/gitnotes/tree/main) ]
 
 #### References
 
 - [GSoC archive](https://summerofcode.withgoogle.com/archive/2021/organizations/6398200235163648)
+- [Rev News article](https://git.github.io/rev_news/2021/05/27/edition-75/)
+
 
 ### 2020
 
-*TODO*
+1. Shourya Shukla [ [project](https://summerofcode.withgoogle.com/archive/2020/projects/4541259818991616) ] [ [final report](https://shouryashukla.blogspot.com/2020/08/the-final-report.html) ] [ [blog](https://shouryashukla.blogspot.com/search/label/GSoC) ]
+2. Abhishek Kumar [ [project](https://summerofcode.withgoogle.com/archive/2020/projects/6510085276172288) ] [ [final report](https://github.com/abhishekkumar2718/GSoC20/blob/master/README.md) ] [ [blog](https://abhishekkumar2718.github.io/gsoc/) ]
+3. Hariom Verma [ [project](https://summerofcode.withgoogle.com/archive/2020/projects/6123927484497920) ] [ [final report](https://harry-hov.github.io/blogs/posts/the-final-report) ] [ [blog](https://harry-hov.github.io/blogs/posts/) ]
+
 
 #### References
 
 - [GSoC archive](https://summerofcode.withgoogle.com/archive/2020/organizations/5445576591671296)
+- [Rev News article](https://git.github.io/rev_news/2020/05/28/edition-63/)
+
 
 ### 2019
 
@@ -92,35 +105,49 @@ to Git via GSoC.
 
 ### 2014
 
-*TODO*
+1. Tanay Abhra [ [project](https://www.google-melange.com/archive/gsoc/2014/orgs/git/projects/tanayabh.html) ] <!-- [ [final report]() ] [ [blog]() ] ] -->
+2. Fabian Ruch [ [project](https://www.google-melange.com/archive/gsoc/2014/orgs/git/projects/bafain.html) ] <!-- [ [final report]() ] [ [blog]() ] ] -->
+
 
 #### References
 
 - [GSoC archive](https://www.google-melange.com/archive/gsoc/2014/orgs/git)
+- [GSoC retrospective](https://public-inbox.org/git/vpqsik1yg1l.fsf@anie.imag.fr/)
+
 
 ### 2013
 
-*Did not participate*
+***Did not participate***
+
 
 ### 2012
 
-*TODO*
+1. Thomas Gummerer [ [project](https://www.google-melange.com/archive/gsoc/2012/orgs/git/projects/tgummerer.html) ] <!-- [ [final report]() ] [ [blog]() ] ] -->
+1. Michael Schubert [ [project](https://www.google-melange.com/archive/gsoc/2012/orgs/git/projects/schu.html) ] <!-- [ [final report]() ] [ [blog]() ] ] -->
+1. Florian Achleitner [ [project](https://www.google-melange.com/archive/gsoc/2012/orgs/git/projects/flyingflo.html) ] <!-- [ [final report]() ] [ [blog]() ] ] -->
 
 #### References
 
 - [GSoC archive](https://www.google-melange.com/archive/gsoc/2012/orgs/git)
 
+
 ### 2011
 
-*TODO*
+1. Carlos Martín Nieto [ [project](https://www.google-melange.com/archive/gsoc/2011/orgs/git/projects/carlosmn.html) ] <!-- [ [final report]() ] [ [blog]() ] ] -->
+1. Ramkumar Ramachandra [ [project](https://www.google-melange.com/archive/gsoc/2011/orgs/git/projects/artagnon.html) ] <!-- [ [final report]() ] [ [blog]() ] ] -->
+1. Fredrik Gustafsson [ [project](https://www.google-melange.com/archive/gsoc/2011/orgs/git/projects/iveqy.html) ] <!-- [ [final report]() ] [ [blog]() ] ] -->
+
 
 #### References
 
 - [GSoC archive](https://www.google-melange.com/archive/gsoc/2011/orgs/git)
 
+
 ### 2010
 
-*TODO*
+1. Vicent Marti [ [project](https://www.google-melange.com/archive/gsoc/2010/orgs/git/projects/tanoku.html) ] <!-- [ [final report]() ] [ [blog]() ] ] -->
+1. Ramkumar Ramachandra [ [project](https://www.google-melange.com/archive/gsoc/2010/orgs/git/projects/artagnon.html) ] <!-- [ [final report]() ] [ [blog]() ] ] -->
+1. Bo Yang [ [project](https://www.google-melange.com/archive/gsoc/2010/orgs/git/projects/struggleyb.html) ] <!-- [ [final report]() ] [ [blog]() ] ] -->
 
 #### References
 
@@ -128,8 +155,35 @@ to Git via GSoC.
 
 ### 2009
 
-*TODO*
+1. Nick Edelen [ [project](https://www.google-melange.com/archive/gsoc/2009/orgs/git/projects/sirnot.html) ] <!-- [ [final report]() ] [ [blog]() ] ] -->
 
 #### References
 
 - [GSoC archive](https://www.google-melange.com/archive/gsoc/2009/orgs/git)
+
+
+### 2008
+
+1. Joshua Roys (_project_: GitTorrent) [ [final e-mail](https://lore.kernel.org/git/48C05FB5.3010901@gmail.com/) ]
+2. Sverre Rabbelier (_project_: git-statistics) [ [final e-mail](https://lore.kernel.org/git/bd6139dc0809041544o427356c9i40a28b1c182817eb@mail.gmail.com/) ]
+3. Lea Wiemann (_project_: Gitweb caching) [ [idea discussion](https://lore.kernel.org/git/483C4CFF.2070101@gmail.com/#t) ]
+4. Marek Zawirski (_project_: Eclipse plugin push support) [ [final e-mail](https://lore.kernel.org/git/48C564ED.7050402@gmail.com/) ]
+5. Miklos Vajna (_project_: git-merge builtin) [ [final e-mail](https://lore.kernel.org/git/20080904225559.GP16514@genesis.frugalware.org/) ]
+6. Stephan Beyer (_project_: git-sequencer) [ [final e-mail](https://lore.kernel.org/git/20080904223653.GA15170@leksak.fem-net/) ]
+
+#### References
+
+- [GSoC archive](https://developers.google.com/open-source/gsoc/2008?csw=1#git-development-community)
+- [Mail about GSoC participant summary](https://lore.kernel.org/git/200809042315.58898.jnareb@gmail.com/)
+- [GSoC selection summary](https://lore.kernel.org/git/20080422013201.GA4828@spearce.org/)
+
+
+### 2007
+
+1. Carlos Rica (_project_: Shell script to C builtin conversions)
+2. Luiz Capitulino (_project_: Libification)
+
+#### References
+
+- [GSoC archive](https://developers.google.com/open-source/gsoc/2007?csw=1#git-development-community)
+- [GSoC report](https://lore.kernel.org/git/20070903034201.GP18160@spearce.org/)
