@@ -186,6 +186,9 @@ __Git tools and sites__
 + GitHub Desktop [3.4.2](https://desktop.github.com/release-notes/),
 [3.4.1](https://desktop.github.com/release-notes/)
 + Tower for Mac 12.0 (BETA) — [Release blog post](https://www.git-tower.com/blog/tower-mac-12/)
++ garden [1.7.0](https://github.com/garden-rs/garden/releases/tag/v1.7.0),
+[1.6.0](https://github.com/garden-rs/garden/releases/tag/v1.6.0)
++ git-cola [4.8.0](https://github.com/git-cola/git-cola/releases/tag/v4.8.0)
 + git-credential-oauth [0.12.1](https://github.com/hickford/git-credential-oauth/releases/tag/v0.12.1),
 [0.12.0](https://github.com/hickford/git-credential-oauth/releases/tag/v0.12.0)
 
@@ -196,4 +199,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Bruno Brito and Dragan Simic.
+with help from Bruno Brito, David Aguilar and Dragan Simic.
