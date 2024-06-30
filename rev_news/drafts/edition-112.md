@@ -73,8 +73,8 @@ This edition covers what happened during the months of May 2024 and June 2024.
   Patrick agreed to Junio's suggestion and proposed a "superseded"
   section for the features we don't want to drop.
 
-  Dragan Simic, who add participated in the previous discussions in
-  the `git config` thread, repeated that he didn't want to see neither
+  Dragan Simic, who participated in the previous discussions in the
+  `git config` thread, repeated that he didn't want to see neither
   `git restore`, `git switch` or `git checkout` deprecated, which
   Patrick agreed shouldn't be done.
 
@@ -196,4 +196,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Bruno Brito.
+with help from Bruno Brito and Dragan Simic.
