@@ -44,7 +44,7 @@ This edition covers what happened during the months of May and June 2024.
   document to keep track of upcoming removals for a potential Git 3.0
   release, Junio Hamano, the Git maintainer, replied to Patrick that
   in a few of his ["What's cooking" emails](https://lore.kernel.org/git/?q=s%3A%22What%27s+cooking+in+git.git%22)
-  before the Git 2.44.0 release, he wrote:
+  before the Git 2.44.0 release, he had written:
 
   > It may not be a bad idea to reflect on what technical debt and UI
   > warts we have accumulated so far to see if we have enough of them to
@@ -73,17 +73,17 @@ This edition covers what happened during the months of May and June 2024.
   Patrick agreed to Junio's suggestion and proposed a "superseded"
   section for the features we don't want to drop.
 
-  Dragan Simic, who participated in the previous discussions in the
+  Dragan Simic, who had participated in the discussions of the preceding
   `git config` thread, repeated that he didn't want to see any of
   `git restore`, `git switch` or `git checkout` deprecated, which
   Patrick agreed shouldn't be done.
 
   Phillip Wood, replying to Patrick's patch, asked if the document
   should track the progress of some unfinished work, like the config
-  based hooks implementation, but Patrick said he was planning on
+  based hooks implementation. Patrick said he was planning on
   creating a separate document for long running projects, projects
-  already discussed and perhaps also small or micro projects to help
-  newcomers looking for something to work on too.
+  already discussed, and also small or micro projects, with the
+  additional intent to help newcomers looking for something to work on.
 
   Justin Tobler also replied to Patrick's patch suggesting adding the
   removal of double dot and triple dot syntax (".." and "...") from
@@ -95,9 +95,9 @@ This edition covers what happened during the months of May and June 2024.
   [version 2 of his patch](https://lore.kernel.org/git/2ef53ff98b12fe9373a15ec3a795235f040d9049.1715667067.git.ps@pks.im/)
   adding a section about features "that are _not_ to be
   deprecated" and proposing some further deprecations, while withdrawing
-  the $GITDIR/hooks directory deprecation proposal.
+  the `$GITDIR/hooks` directory deprecation proposal.
 
-  Karthik Nayak replied to the version 2 patch, listing a number of
+  Karthik Nayak replied to the patch version 2, listing a number of
   commands not mentioned in the document that do similar things, which
   might indicate that some of them could be deprecated too. Patrick,
   Junio and Dragan discussed these commands, but decided that only
@@ -105,7 +105,7 @@ This edition covers what happened during the months of May and June 2024.
   for now.
 
   So Patrick sent a
-  [version 3 of his patch](https://lore.kernel.org/git/84c01f1b0a2d24d7de912606f548623601c0d715.1716555034.git.ps@pks.im/)
+  [version 3 of his patch](https://lore.kernel.org/git/84c01f1b0a2d24d7de912606f548623601c0d715.1716555034.git.ps@pks.im/),
   which only added the removal of `git pickaxe`.
 
   Junio replied to this version 3 with a lot of comments to discuss
@@ -138,13 +138,13 @@ This edition covers what happened during the months of May and June 2024.
   to "BreakingChanges.txt" for format compatibility with most other
   documents in the codebase.
 
-  Junio, Phillip Wood and Patrick discussed other small improvements
-  which Patrick integrated into the
+  Junio, Phillip Wood and Patrick discussed other small improvements,
+  which Patrick integrated into
   [version 6 of the patch series](https://lore.kernel.org/git/cover.1717504292.git.ps@pks.im/).
 
-  Junio then suggested a few more small improvements which Patrick
-  integrated into the
-  [version 7 of the patch series](https://lore.kernel.org/git/cover.1718345026.git.ps@pks.im/)
+  Junio then suggested a few more small improvements, which Patrick
+  finally integrated into
+  [version 7 of the patch series](https://lore.kernel.org/git/cover.1718345026.git.ps@pks.im/),
   which was later merged into the 'master' branch.
 
 <!---
@@ -221,7 +221,7 @@ __Git tools and sites__
   The preferred way to configure setuptools-scm is via `pyproject.toml`.<br>
   The [latest version](https://setuptools-scm.readthedocs.io/en/latest/)
   and the [stable version documentation](https://setuptools-scm.readthedocs.io/en/stable/)
-  are available on Read the Docs).
+  are available on Read the Docs.
 * [`piku`](https://piku.github.io/), which was inspired by [`dokku`](https://dokku.com/),
   allows you to do `git push` deployments to your own servers, no matter how small they are.
   An open source PaaS (Platform as a Service) alternative to services such as Heroku.
@@ -232,16 +232,16 @@ __Git tools and sites__
     * Compare with for example [git-cliff](https://git-cliff.org/) changelog generator,
       mentioned in [Git Rev News Edition #108](https://git.github.io/rev_news/2024/02/29/edition-108/).
 * [git-open-remote](https://github.com/masukomi/masuconfigs/blob/master/bin/git-scripts/git-open-remote)
-  is a shell script by [masukomi](https://masukomi.org) to open the web page for the repo's remote(s).
+  is a shell script by [masukomi](https://masukomi.org) to open the web page(s) for the repo's remote(s).
   With this script you can simply cd into a git repo and type `git open-remote`.
   Requires [`open`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/open.1.html)
   or [`xdg-open`](https://linux.die.net/man/1/xdg-open)
   (aliased or linked to `open`) to open the web browser,
   and [charm gum](https://github.com/charmbracelet/gum)
-  to implement the selection UI when the git repo has more than one remote.
+  to implement the selection UI when the Git repo has more than one remote.
 * [Git EOL Conversion Diagram](https://gist.github.com/DecimalTurn/3f99a3903366bf9fb2c1f513bd3c5a83) for checkout
-  as Gist providing [SVG version](https://raw.githubusercontent.com/gist/DecimalTurn/3f99a3903366bf9fb2c1f513bd3c5a83/raw/d54d0e842c1f22e0b04d7a044dde1489993d87bf/Git-EOL-Conversion-Diagram.svg)
-  and [editable version on Mindmup](https://app.mindmup.com/map/_free/2024/06/982eaeb032cf11ef93d0a9d7af4d6195),
+  as Gist providing an [SVG version](https://raw.githubusercontent.com/gist/DecimalTurn/3f99a3903366bf9fb2c1f513bd3c5a83/raw/d54d0e842c1f22e0b04d7a044dde1489993d87bf/Git-EOL-Conversion-Diagram.svg)
+  and an [editable version on Mindmup](https://app.mindmup.com/map/_free/2024/06/982eaeb032cf11ef93d0a9d7af4d6195),
   by Martin Leduc (@DecimalTurn).
 
 ## Releases
