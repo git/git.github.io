@@ -13,7 +13,7 @@ Welcome to the 112th edition of [Git Rev News](https://git.github.io/rev_news/re
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
-This edition covers what happened during the months of May 2024 and June 2024.
+This edition covers what happened during the months of May and June 2024.
 
 ## Discussions
 
@@ -54,9 +54,9 @@ This edition covers what happened during the months of May 2024 and June 2024.
 
   So Junio was happy that "somebody has bit it ;-)" and suggested a
   number of topics that could be added to the document Patrick wanted
-  to create. This started a discussion about deprecating or not some
-  features like the `restore`, `switch`, `submodules` and `worktrees`
-  subcommands.
+  to create. This started a discussion about the possibility of
+  deprecating some features, such as the `restore`, `switch`,
+  `submodules` and `worktrees` subcommands.
 
   In the RFC patch to add the document, Patrick mentioned some of the
   topics suggested by Junio, but not others that seemed controversial
@@ -74,7 +74,7 @@ This edition covers what happened during the months of May 2024 and June 2024.
   section for the features we don't want to drop.
 
   Dragan Simic, who participated in the previous discussions in the
-  `git config` thread, repeated that he didn't want to see neither
+  `git config` thread, repeated that he didn't want to see any of
   `git restore`, `git switch` or `git checkout` deprecated, which
   Patrick agreed shouldn't be done.
 
@@ -93,15 +93,15 @@ This edition covers what happened during the months of May 2024 and June 2024.
 
   Patrick then sent a
   [version 2 of his patch](https://lore.kernel.org/git/2ef53ff98b12fe9373a15ec3a795235f040d9049.1715667067.git.ps@pks.im/)
-  which added section about features "that are _not_ to be
-  deprecated". Some features were also added while deprecating the
-  hook directory was removed for now.
+  adding a section about features "that are _not_ to be
+  deprecated" and proposing some further deprecations, while withdrawing
+  the $GITDIR/hooks directory deprecation proposal.
 
-  Karthik Nayak replied to the version 2 patch listing a number of
-  commands not mentioned in the document that do similar things which
+  Karthik Nayak replied to the version 2 patch, listing a number of
+  commands not mentioned in the document that do similar things, which
   might indicate that some of them could be deprecated too. Patrick,
   Junio and Dragan discussed these commands, but decided that only
-  `git pickaxe`, which is an alias for `git blame` could be removed
+  `git pickaxe`, which is an alias for `git blame`, could be removed
   for now.
 
   So Patrick sent a
@@ -116,11 +116,11 @@ This edition covers what happened during the months of May 2024 and June 2024.
   Patrick sent a
   [version 4](https://lore.kernel.org/git/cover.1717141598.git.ps@pks.im/)
   where the single patch had been broken down into 4 patches. In the
-  process a lot of the proposed deprecation from the previous version
+  process a lot of the proposed deprecations from the previous version
   were removed and the document name was changed from
   "UpcomingBreakingChanges.md" to "BreakingChanges.md" as some changes
   listed in the "Superseded features that will not be deprecated"
-  section should not be considered as upcoming.
+  section should not be considered upcoming.
 
   The goal was to introduce the document in a skeletal form in the
   first patch and then add only one item to each of the three sections
@@ -133,9 +133,8 @@ This edition covers what happened during the months of May 2024 and June 2024.
 
   Patrick sent a
   [version 5 of the patch series](https://lore.kernel.org/git/cover.1717402497.git.ps@pks.im/)
-
   where the main change was that the document was converted to
-  AsciiDoc instead of MarkDown and renamed from "BreakingChanges.md"
+  AsciiDoc instead of Markdown and renamed from "BreakingChanges.md"
   to "BreakingChanges.txt" for format compatibility with most other
   documents in the codebase.
 
@@ -145,7 +144,7 @@ This edition covers what happened during the months of May 2024 and June 2024.
 
   Junio then suggested a few more small improvements which Patrick
   integrated into the
-  [version 6 of the patch series](https://lore.kernel.org/git/cover.1718345026.git.ps@pks.im/)
+  [version 7 of the patch series](https://lore.kernel.org/git/cover.1718345026.git.ps@pks.im/)
   which was later merged into the 'master' branch.
 
 <!---
@@ -170,20 +169,20 @@ __Light reading__
   and other links that were mentioned in that edition.
 * [Git Workflows for API Technical Writers](https://bump.sh/blog/git-workflows-for-api-technical-writers)
   by James Higginbotham on Bump\.sh.
-  Mentions [Bump.sh](https://bump.sh/) API doc platform for tech writers and engineers
+  Mentions [Bump.sh](https://bump.sh/), an API doc platform for tech writers and engineers,
   at the end of the article.
 * [What is Git? Our beginner’s guide to version control](https://github.blog/2024-05-27-what-is-git-our-beginners-guide-to-version-control/) and
   [Top 12 Git commands every developer must know](https://github.blog/2024-06-10-top-12-git-commands-every-developer-must-know/)
-  by Kedasha Kerr on GitHub Blog.  This blog post accompany the
+  by Kedasha Kerr on GitHub Blog.  This blog post accompanies the
   [GitHub for Beginners](https://youtube.com/playlist?list=PL0lo9MOBetEFcp4SCWinBdpml9B2U25-f&feature=shared)
-  series (playlist on YouTube).
+  series (YouTube playlist).
 * [Stop Wasting Hours! Git Bisect: Your Ultimate Bug Hunting Tool](https://ionixjunior.dev/en/stop-wasting-hours-git-bisect-your-ultimate-bug-hunting-tool/)
   by Ione Souza Junior on his blog; also available [on DEV.to](https://dev.to/ionixjunior/stop-wasting-hours-git-bisect-your-ultimate-bug-hunting-tool-4ebc)
   as a part of [mastering-git series](https://dev.to/ionixjunior/series/26070).
 * [The Magic of Git Stash: How It Saved My Day](https://dev.to/waqaryounis7564/the-magic-of-git-stash-how-it-saved-my-day-119k)
   by waqaryounis7564 on DEV\.to.
 * [Prevent Hidden Merge Conflicts](https://dev.to/shinigami92/prevent-hidden-merge-conflicts-2lem)
-  by Shinnigami on DEV\.to; though described solutions might require some more thought
+  by Shinnigami on DEV\.to; but note that the described solutions might warrant some more thought
   (linearizing history by requiring rebase instead of merge to integrate changes
   versus requiring branch to be up to date before merging), and are not the only possible
   solutions (for example: post-merge checks).
@@ -195,13 +194,14 @@ __Light reading__
 * [Ten Things You Didn’t Know Git And GitHub Could Do](https://owenou.com/ten-things-you-didnt-know-git-and-github-could-do/)
   by Owen Ou on Owen Ou's blog (2012).
 * [Versioning FreeCAD files with git](https://blog.lambda.cx/posts/freecad-and-git/)
-  (which are zip archives containing text documents) by Dante Catalfamo on lambda.cx blog (2021).
+  (FreeCAD files are zip archives containing text documents) by Dante Catalfamo on lambda.cx blog (2021).
 
+<!-- intentionally split into separate list -->
 &nbsp;
 
 * [Programming in Unison](https://lwn.net/Articles/978955/)
   by Daroc Alden on LWN\.net ([free subscriber link](https://lwn.net/SubscriberLink/978955/cd8dffc792b86313/)).
-  [Unison](https://www.unison-lang.org/) is a MIT-licensed programming language,
+  [Unison](https://www.unison-lang.org/) is an MIT-licensed programming language,
   where programs are stored in an append-only, content-addressed database
   (though still displayed to the user for editing as text, using the editor of their choice)...
   just like information about project versions is stored in Git.
@@ -214,7 +214,7 @@ __Git tools and sites__
 
 * [setuptools-scm](https://github.com/pypa/setuptools_scm)
   is a tool that extracts Python package versions from `git` or `hg` metadata
-  instead of declaring them as the version argument, or in an SCM managed file.
+  instead of declaring them as the version argument or in an SCM managed file.
   Additionally, it provides setuptools with a list of files that are managed by the SCM
   (i.e. it automatically adds all of the SCM-managed files to the sdist).
   Unwanted files must be excluded via `MANIFEST.in`.
@@ -223,22 +223,22 @@ __Git tools and sites__
   and the [stable version documentation](https://setuptools-scm.readthedocs.io/en/stable/)
   are available on Read the Docs).
 * [`piku`](https://piku.github.io/), which was inspired by [`dokku`](https://dokku.com/),
-  allows you do `git push` deployments to your own servers, no matter how small they are.
+  allows you to do `git push` deployments to your own servers, no matter how small they are.
   An open source PaaS (Platform as a Service) alternative to services such as Heroku.
   Written in Python.
 * [gitchangelog](https://github.com/vaab/gitchangelog) is a tool that
   creates a changelog from git log history.  Written in Python;
-  though it is no longer actively developed (version 3.0.4 is from 2018).
+  no longer actively developed (version 3.0.4 is from 2018).
     * Compare with for example [git-cliff](https://git-cliff.org/) changelog generator,
       mentioned in [Git Rev News Edition #108](https://git.github.io/rev_news/2024/02/29/edition-108/).
 * [git-open-remote](https://github.com/masukomi/masuconfigs/blob/master/bin/git-scripts/git-open-remote)
-  is a shell script by [masukomi](https://masukomi.org) open the web page for the repo's remote(s).
+  is a shell script by [masukomi](https://masukomi.org) to open the web page for the repo's remote(s).
   With this script you can simply cd into a git repo and type `git open-remote`.
   Requires [`open`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/open.1.html)
-  or [`xdg-open`](https://linux.die.net/man/1/xdg-open) installed to open the web browser
-  (and aliased or linked to `open` command in the latter case),
-  and [charm gum](https://github.com/charmbracelet/gum) to implement UI
-  for choosing the remote if the git repo has more than one remote.
+  or [`xdg-open`](https://linux.die.net/man/1/xdg-open)
+  (aliased or linked to `open`) to open the web browser,
+  and [charm gum](https://github.com/charmbracelet/gum)
+  to implement the selection UI when the git repo has more than one remote.
 * [Git EOL Conversion Diagram](https://gist.github.com/DecimalTurn/3f99a3903366bf9fb2c1f513bd3c5a83) for checkout
   as Gist providing [SVG version](https://raw.githubusercontent.com/gist/DecimalTurn/3f99a3903366bf9fb2c1f513bd3c5a83/raw/d54d0e842c1f22e0b04d7a044dde1489993d87bf/Git-EOL-Conversion-Diagram.svg)
   and [editable version on Mindmup](https://app.mindmup.com/map/_free/2024/06/982eaeb032cf11ef93d0a9d7af4d6195),
@@ -260,9 +260,9 @@ __Git tools and sites__
 + GitHub Desktop [3.4.2](https://desktop.github.com/release-notes/),
 [3.4.1](https://desktop.github.com/release-notes/)
 + Tower for Mac 12.0 (BETA) — [Release blog post](https://www.git-tower.com/blog/tower-mac-12/)
-+ garden [1.7.0](https://github.com/garden-rs/garden/releases/tag/v1.7.0),
++ Garden [1.7.0](https://github.com/garden-rs/garden/releases/tag/v1.7.0),
 [1.6.0](https://github.com/garden-rs/garden/releases/tag/v1.6.0)
-+ git-cola [4.8.0](https://github.com/git-cola/git-cola/releases/tag/v4.8.0)
++ Git-Cola [4.8.0](https://github.com/git-cola/git-cola/releases/tag/v4.8.0)
 + git-credential-oauth [0.12.1](https://github.com/hickford/git-credential-oauth/releases/tag/v0.12.1),
 [0.12.0](https://github.com/hickford/git-credential-oauth/releases/tag/v0.12.0)
 
@@ -273,4 +273,5 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Bruno Brito, David Aguilar and Dragan Simic.
+with help from Štěpán Němec, Bruno Brito, David Aguilar,
+Brandon Pugh and Dragan Simic.
