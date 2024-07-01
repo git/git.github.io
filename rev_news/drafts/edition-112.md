@@ -177,8 +177,6 @@ __Light reading__
   by Kedasha Kerr on GitHub Blog.  This blog post accompany the
   [GitHub for Beginners](https://youtube.com/playlist?list=PL0lo9MOBetEFcp4SCWinBdpml9B2U25-f&feature=shared)
   series (playlist on YouTube).
-* [Pull Request vs. Merge Request: Essential Differences](https://www.codium.ai/blog/pull-request-vs-merge-request-essential-differences/)
-  by CodiumAI Team (with some promotion of their AI tool at the end of the article).
 * [Stop Wasting Hours! Git Bisect: Your Ultimate Bug Hunting Tool](https://ionixjunior.dev/en/stop-wasting-hours-git-bisect-your-ultimate-bug-hunting-tool/)
   by Ione Souza Junior on his blog; also available [on DEV.to](https://dev.to/ionixjunior/stop-wasting-hours-git-bisect-your-ultimate-bug-hunting-tool-4ebc)
   as a part of [mastering-git series](https://dev.to/ionixjunior/series/26070).
@@ -198,6 +196,8 @@ __Light reading__
   by Owen Ou on Owen Ou's blog (2012).
 * [Versioning FreeCAD files with git](https://blog.lambda.cx/posts/freecad-and-git/)
   (which are zip archives containing text documents) by Dante Catalfamo on lambda.cx blog (2021).
+
+&nbsp;
 
 * [Programming in Unison](https://lwn.net/Articles/978955/)
   by Daroc Alden on LWN\.net ([free subscriber link](https://lwn.net/SubscriberLink/978955/cd8dffc792b86313/)).
