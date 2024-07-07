@@ -157,8 +157,9 @@ This edition covers what happened during the months of May and June 2024.
 
 ## Other News
 
+<!--
 __Various__
-
+-->
 
 __Light reading__
 
