@@ -40,6 +40,8 @@ suggest improvements. Thanks!
 
 * [Matheus' tutorial](https://matheustavares.gitlab.io/posts/first-steps-contributing-to-git)
 
+* [Eric Ju's "Contribute-to-Git: A beginner's Guide" wiki](https://gitlab.com/gitlab-org/git/-/wikis/Contribute-to-Git:-A-beginner's-Guide)
+
 * ["Hacking Git"](https://git-scm.com/docs/user-manual#hacking-git) in the Git User's Manual
 
 * ["`Documentation/technical`"](https://github.com/git/git/tree/master/Documentation/technical), technical documentation (also viewable at `https://git-scm.com/docs/<file-name-without-.txt>`)
