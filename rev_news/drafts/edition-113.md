@@ -109,13 +109,13 @@ This edition covers what happened during the months of June 2024 and July 2024.
 
   Yuri suggested using a virtual machine to avoid a self-mount.
 
-  Gabor Gombas replied to Yuri reporting results of his tests. He got
-  a "Directory not empty", or a "Device or resource busy" error
+  Gabor Gombas replied to Yuri reporting the results of his tests. He
+  got a "Directory not empty", or a "Device or resource busy" error
   message when he used `git clean -dfx`, but he also got no error
   message when using `git clean -df`.
 
   This led Yuri to reply that with `-dfx` Git indeed warns about NFS
-  file on his machine, but with `-df` it doesn't, because the NFS
+  files on his machine, but with `-df` it doesn't, because the NFS
   files are in the ignore list.
 
   It is indeed expected that ignored files are not deleted and are
