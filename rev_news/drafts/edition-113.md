@@ -54,9 +54,9 @@ This edition covers what happened during the months of June 2024 and July 2024.
   such files, or that there should be a verbosity option that should
   make it complain in such cases.
 
-  Randall Becker replied to Yuri that he tried to reproduce the issue
-  without using NFS and couldn't. So he asked Yuri if he could share
-  "a reproducible set of commands" and said that it was probably
+  Randall S. Becker replied to Yuri that he tried to reproduce the
+  issue without using NFS and couldn't. So he asked Yuri if he could
+  share "a reproducible set of commands" and said that it was probably
   caused by NFS.
 
   Junio replied to Randall and Yuri that removing a '.nfsXXXXXXXXXXX'
