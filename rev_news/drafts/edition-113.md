@@ -129,14 +129,150 @@ This edition covers what happened during the months of June 2024 and July 2024.
 
 __Various__
 
++ [Highlights from Git 2.46](https://github.blog/open-source/git/highlights-from-git-2-46/)
+  Taylor Blau on GitHub Blog.  Those include pseudo-merge reachability bitmaps,
+  subcommands in [git-config](https://git-scm.com/docs/git-config/2.46.0) (like `git config list`),
+  enhanced credential helper protocol, and improving though still experrimental reftable support.
++ [Anyone can Access Deleted and Private Repository Data on GitHub](https://trufflesecurity.com/blog/anyone-can-access-deleted-and-private-repo-data-github)
+  via Cross Fork Object Reference (CFOR) from another [public] fork.
+  Any code committed to a public repository may be accessible forever
+  as long as there is at least one public fork of that repository.
+  This is intentional design decision by GitHub; see [the documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/what-happens-to-forks-when-a-repository-is-deleted-or-changes-visibility).
+  There is though a separate fork network for public and for private versions
+  of the same repository.<br>
+  Posted on Truffle Security blog.
++ [Debian debate over tag2upload reaches compromise](https://lwn.net/Articles/978324/)
+  by Joe Brockmeier on LWN\.net.  The [tag2upload service](https://salsa.debian.org/dgit-team/dgit/-/blob/master/TAG2UPLOAD-DESIGN.txt)
+  promises a streamlined way for Debian developers using Git to upload packages to
+  the [Debian Archive](https://wiki.debian.org/Services/Debian%20Archive).
+
 
 __Light reading__
 
-<!---
++ [A Git story: Not so fun this time](https://blog.brachiosoft.com/en/posts/git/)
+  on Brachiosoft Blog.  The title refers to the ["Just for Fun"](https://www.amazon.com/Just-Fun-Story-Accidental-Revolutionary/dp/0066620732/)
+  book, the 2001 autobiography of Linux kernel creator Linus Torvalds,
+  and how Git origin story wasn't so much fun, at least for Linus.
+  The article provides list of references.  Includes new material
+  not seen in earlier retelling of the Git history, like the ones linked in 
+  [Git Rev News Edition #2](https://git.github.io/rev_news/2015/04/05/edition-2/) (on 10 years of Git),
+  [Edition #52](https://git.github.io/rev_news/2019/06/28/edition-52/),
+  [Edition #62](https://git.github.io/rev_news/2020/04/23/edition-62/) (on 15 years of Git),
+  [Edition #105](https://git.github.io/rev_news/2023/11/30/edition-105/)
+  and [Edition #112](https://git.github.io/rev_news/2024/06/30/edition-112/)
+  (among others).
++ [Pull requests via git push](https://blog.sesse.net/blog/tech/2024-07-15-13-04_pull_requests_via_git_push.html)
+  and a specially crafted `pre-receive` hook (and `git-http-backend` configured
+  to allow anonymous push) that turns `git push` into series of patch emails.
+  (Though this approach has some limitations.)  Written by Steinar H. Gunderson on his blog.
+    + See also [git-pr](https://pr.pico.sh/) in "Git tools and sites" section.
++ [How I Use Git Worktrees](https://matklad.github.io/2024/07/25/git-worktrees.html)
+  by Alex Kladov (matklad) on his GitHub Pages-based blog.
+  TL;DR: consider using worktrees not as a replacement for branches,
+  but as a means to manage concurrency in your tasks (for example: view, work, review, fuzz, scratch).
++ [Git autocorrect needs more marketing](https://dev.to/cloudx/git-autocorrect-needs-more-marketing-20gg)
+  by Axel Navarro for Cloud(x); on DEV\.to.
++ [commit messages are optional](https://schpet.com/note/git-commit-messages-are-optional)
+  by Peter Schilling in schpet’s notebook (though for some of mentioned uses,
+  commits with empty commit messages are better replaced with `git commit --fixup`).
++ [Git-ifying SVN: How I Brought Modern Version Control to an Age-Old System](https://ionixjunior.dev/en/gitifying-svn-how-i-brought-modern-version-control-to-an-ageold-system/)
+  by Ione Souza Junior on his blog; also available [on DEV.to](https://dev.to/ionixjunior/git-ifying-svn-how-i-brought-modern-version-control-to-an-age-old-system-4o3e)
+  as a last part of the [mastering-git series](https://dev.to/ionixjunior/series/26070).
+  Another article from this series was mentioned in [Git Rev News Edition #112](https://git.github.io/rev_news/2024/06/30/edition-112/).
++ [Benchmarking the Modern Development Experience across Versioning Tools: S3, DVC, Git LFS, and XetHub](https://about.xethub.com/blog/benchmarking-the-modern-development-experience)
+  by Ann Huang on XetHub blog.
+    + [XetHub](https://about.xethub.com/) is development platform for datasets and models,
+      which automatically versions and tracks assets across the Machine Learning stack
+      to guarantee reproducibility.  Mentioned in passing in [Git Rev News Edition #95](https://git.github.io/rev_news/2023/01/31/edition-95/) news.
+    + The comparison does not include [DagsHub's Direct Data Access / Data Streaming](https://dagshub.com/docs/feature_guide/dagshub_storage/data_streaming/),
+      which was [announced](https://dagshub.com/blog/launching-data-streaming-and-upload/) in 2022.
+      [DagsHub](https://dagshub.com/), a web platform for storing, versioning and managing data (data hub),
+      was first mentioned in [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/)
++ [The visualization and analysis of git commit statistics for IT team leaders.](https://dev.to/responsivecrocodile/the-visualization-and-analysis-of-git-commit-statistics-for-it-team-leaders-2pof)
+  by Aleksei Bakhirev (Responsive Crocodile) on DEV\.to.  Uses the [Assayo](https://github.com/bakhirev/assayo)
+  tool written by the author for plots (see also the [assayo.online](https://assayo.online/) webpage).
++ [Reorient GitHub Pull Requests Around Changesets](https://mitchellh.com/writing/github-changesets)
+  from one giant mutable changeset, by Mitchell Hashimoto on his blog (2023).
++ [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+  (2008) by Tim Pope on tbaggery blog; it also explains some of reasoning behind recommendations.
+
+
+&nbsp;
+
++ git good (My Hero Academia fanfiction, humor/horror) - Izuku's quirk is Git, 
+  the version control software (some artistic license taken in order to make a good story).
+  By Unknownlight. Available [on Archive of Our Own](https://archiveofourown.org/works/55773742/chapters/141591955),
+  [on FanFiction.net](https://www.fanfiction.net/s/14369888/1/git-good) (not recommended by the author),
+  and [on SpaceBattles](https://forums.spacebattles.com/threads/git-good-my-hero-academia-izukus-quirk-is-git-the-version-control-software.1163142/).<br>
+  Summary:
+  > Reality shattered like broken glass. The firmament that separated the real world from the eldritch beyond had broken. Two timelines had collided in the center of the street—an incongruous synthesis of two different chains of events. A building collapsed, and it did not. An explosion devastated the surroundings, and it did not. Screaming faces and laughs of joy overlapped each other as if viewed through a kaleidoscopic prism.
+  >
+  > The crowd looked on in horror and awe. Who was responsible for tearing apart the fabric of reality?
+  >
+  > Izuku groaned. _'Great, another merge conflict'_, he thought. _'What a pain'_.
+
+
 __Easy watching__
--->
+
++ [I was wrong about `git stash`...](https://www.youtube.com/watch?v=ntM7utSjeVU)
+  (or rather, how one can use `git worktree`), by Philomatics on YouTube [5:18].
+
 
 __Git tools and sites__
+
++ [pico/git-pr](https://pr.pico.sh/) (Patch Requests) is a new Git collaboration service,
+  where you send and retrieve patches not via email but via SSH to a `git-pr` server:
+  ```bash
+  # Contributor submits his/her changes:
+  git format-patch origin/main --stdout | ssh pr.pico.sh pr create test
+  # > Patch Request has been created (ID: 1)
+
+  # Owner can apply those changes via patch request:
+  ssh pr.pico.sh pr print 1 | git am -3
+  ```
+  Can be self-hosted.  Written in Go, MIT licensed.
++ [eza](https://github.com/eza-community/eza) is a modern replacement
+  for the venerable file-listing command-line program `ls`.  It knows about symlinks,
+  extended attributes, and Git (like file status in Git repo, Git repo status,
+  or ignoring files mentioned in `.gitignore`).  Written in Rust, MIT licensed.
+  See the [documentation](https://eza.rocks/).
++ [BlenderBIM](https://blenderbim.org/) is an add-on for detailed and
+  data-rich [OpenBIM](https://www.buildingsmart.org/about/openbim/)
+  (Building Information Modeling) with Blender.
+  BlenderBIM supports [tracking the development of your IFC files with Git](https://docs.blenderbim.org/users/git_support.html)
+  (Industry Foundation Classes, or IFC, is an international standard for BIM).
+  Note that merging requires the [ifcmerge](https://github.com/brunopostle/ifcmerge)
+  tool to be installed (`ifcmerge` is written in Perl, and uses GPLv3 license).
++ [_diff-pdf_](https://vslavik.github.io/diff-pdf/) is a tool for visually comparing two PDFs,
+  which can produces a PDF file with visually highlighted differences.
+  Note that [the repository](https://github.com/vslavik/diff-pdf) states that
+  the code is not being actively developed.  Written in C++, GPLv2 licensed.
+    + See also [pdf-diff](https://github.com/JoshData/pdf-diff) in Python, CC0-1.0 licensed;
+      another [pdf-diff](https://github.com/serhack/pdf-diff) in Go, MIT licensed;
+      and [diff-pdf-visually](https://github.com/bgeron/diff-pdf-visually) in Python,
+      dual licensed under both MIT License and Apache License, Version 2.0 - with
+      a slightly different goal.
++ [vdm: A General-Purpose Versioned-Dependency Manager](https://github.com/opensourcecorp/vdm)
+  is an alternative to e.g. git submodules for managing arbitrary external dependencies.
+  Written in Go, MIT licensed.
+    + Contrast [Gil (git links) tool](https://github.com/chronoxor/gil)
+      to manage complex recursive repositories dependencies with cross references and cycles,
+      mentioned in [Git Rev News Edition #110](https://git.github.io/rev_news/2024/04/30/edition-110/).
++ [Bit-Booster is an Offline Commit Graph Drawing Tool](https://bit-booster.com/graph.html),
+  using HTML and SVG, generating graph by pasting result of running 
+  `git log --all --date-order --pretty="%h|%p|%d"` into a textarea.
+    + It is also an [add-on for Atlassian Bitbucket Server](https://bit-booster.com/graph.html)
+    + The webpage includes [comparison with other various commit graph add-ons](https://bit-booster.com/best.html) (2016)
+
+&nbsp;
+
++ [How To Rotate](https://howtorotate.com/) is an open-source collection
+  of API Key Rotation tutorials for different SaaS providers.
++ [Act](https://github.com/nektos/act) is a command line tool
+  to run your GitHub Actions locally, using Docker Engine API.  Written in Go.
+  Please look at the [`act` user guide](https://nektosact.com/) for more documentation.
+    + There is also [Act runner](https://gitea.com/gitea/act_runner),
+      a runner for Gitea based on Gitea fork of act.
 
 
 ## Releases
