@@ -29,9 +29,99 @@ This edition covers what happened during the months of June 2024 and July 2024.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+
+## Developer Spotlight: Rubén Justo
+
+* Who are you and what do you do?
+
+  My name is Rubén, and that's how it's spelled correctly.  However,
+  some old friends call me Ruben because when we were kids changing
+  names was a sign of friendship.  Changing the accent from "ben" to
+  "ru", makes the letter 'e' lose its tilde when writing my name.
+
+  My $dayjob is not related to Git, but I use it quite often during the
+  workday.  Using it sometimes gives me an itch that I often can't
+  resist trying to scratch.
+
+* What would you name your most important contribution to Git?
+
+  I can't think of any worth mentioning.  But I'll say something in the
+  other direction;  contributing to Git has not only meant solving some
+  itches, but it has clearly made me improve my overall work style.
+  I'm grateful for that.
+
+* What are you doing on the Git project these days, and why?
+
+  This can be read at any time: polishing up some itches that has come
+  up for me or a colleague.
+
+  Lately, though, I find myself exploring more and more side issues
+  that arise during iterations of the changes I was originally
+  interested in.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+  I'll say a feasible one: something _in Git_ that allows me to avoid
+  writing shortcuts like `@{-1}`, `@{1}`, `@{...`
+
+  At least on my keyboard, it's a pain to type `@`, `{...}`.  And I
+  tend to type those shortcuts a lot.
+
+  Perhaps too easy for the experts and they'll have a lot of spare time
+  during the year?
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+  I think that backwards compatibility is overrated most of the time.
+  It's usually a matter of getting on with it and time;  sometimes a lot
+  of time, I admit.
+
+  The steps being taken towards Git 3.0 seem very interesting to me.
+  Perhaps there is an opportunity to do some breaking changes.  I don't
+  have any in mind, though.
+
+ * What is your favorite Git-related tool/library, outside of
+   Git itself?
+
+   Definitely: ["tig"](https://jonas.github.io/tig/).
+
+* Do you happen to have any memorable experience w.r.t. contributing
+  to the Git project? If yes, could you share it with us?
+
+  Nope.
+
+* What is your toolbox for interacting with the mailing list and for
+  development of Git?
+
+  To interact with the list, I mainly use ["lei"](https://people.kernel.org/monsieuricon/lore-lei-part-1-getting-started),
+  ["mutt"](http://www.mutt.org/) and ["thunderbird"](https://www.thunderbird.net/en-US/)
+  in a rather makeshift way.  Maybe someday I'll finally configure
+  [git send-email](https://git-send-email.io/).
+
+  In fact, more often than not, when I send a patch, I have the feeling
+  that someone is going to come along and say: "Come on, Rubén.  That
+  User-Agent?  Set up a decent environment to send this properly".
+
+  To develop, I use Vim.
+
+* What is your advice for people who want to start Git development?
+  Where and how should they start?
+
+  Perhaps I would say that writing and reading code are not the most
+  important skills in a project like Git.  Empathy and the development
+  of effective arguments to convey ideas or intentions are much more
+  crucial.
+
+  Realizing and internalizing that, is a solid starting point, I think.
+
+* If there's one tip you would like to share with other Git
+  developers, what would it be?
+
+  Keep in mind that reviewing code is much harder than writing it, but
+  writing a good message for the commit is even harder.
+
 
 ## Other News
 
