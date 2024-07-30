@@ -161,6 +161,10 @@ __Light reading__
   [Edition #105](https://git.github.io/rev_news/2023/11/30/edition-105/)
   and [Edition #112](https://git.github.io/rev_news/2024/06/30/edition-112/)
   (among others).
++ [Why Facebook doesn’t use Git](https://graphite.dev/blog/why-facebook-doesnt-use-git)
+  by Greg Foster on Graphite Blog.
+    + See also [Scaling Mercurial at Facebook](https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook/),
+      mentioned in [Git Rev News Edition #24](https://git.github.io/rev_news/2017/02/22/edition-24/).
 + [Pull requests via git push](https://blog.sesse.net/blog/tech/2024-07-15-13-04_pull_requests_via_git_push.html)
   and a specially crafted `pre-receive` hook (and `git-http-backend` configured
   to allow anonymous push) that turns `git push` into series of patch emails.
