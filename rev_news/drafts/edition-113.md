@@ -78,7 +78,9 @@ This edition covers what happened during the months of June 2024 and July 2024.
   It's usually a matter of getting on with it and time;  sometimes a lot
   of time, I admit.
 
-  The steps being taken towards Git 3.0 seem very interesting to me.
+  The steps being taken towards Git 3.0 seem very interesting to me
+  [[ref 1](https://public-inbox.org/git/xmqqa5l2y6aa.fsf_-_@gitster.g/)]
+  [[ref 2](https://public-inbox.org/git/cover.1718345026.git.ps@pks.im/)].
   Perhaps there is an opportunity to do some breaking changes.  I don't
   have any in mind, though.
 
@@ -104,7 +106,7 @@ This edition covers what happened during the months of June 2024 and July 2024.
   that someone is going to come along and say: "Come on, Rubén.  That
   User-Agent?  Set up a decent environment to send this properly".
 
-  To develop, I use Vim.
+  To develop, I use Vim (without any additional plugins).
 
 * What is your advice for people who want to start Git development?
   Where and how should they start?
