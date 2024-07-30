@@ -25,9 +25,101 @@ This edition covers what happened during the months of June 2024 and July 2024.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [[BUG] "git clean -df ." silently doesn't delete folders with stale .nfs* files](https://lore.kernel.org/git/ae862adb-1475-48e9-bd50-0c07dc42a520@rawbw.com/)
+
+  Yuri reported that `git clean -df .`, which was supposed to delete a
+  directory and all its content, didn't work when there were files
+  named '.nfsXXXXXXXXXXX' managed by NFS in that directory. He
+  expected that `git clean -df .` would warn or error out when it
+  cannot remove such a file, instead of ignoring the fact that it
+  could not remove the file and the containing directory and
+  terminating with a success exit code.
+
+  Junio Hamano, the Git maintainer, replied to Yuri saying that it's
+  expected that directories that were not empty were not removed.
+
+  Yuri replied that he expected the '.nfsXXXXXXXXXXX' files to be
+  removed as they were untracked, so not added nor part of the repo,
+  and the command is expected to remove such untracked files.
+
+  Junio replied that the '.nfsXXXXXXXXXXX' files were "a limitation"
+  of NFS that applications, including Git, couldn't and weren't
+  supposed to remove. He pointed to some documentation which explained
+  what these special NFS files are, and which said that they are the
+  result of "silly rename" operations.
+
+  Yuri replied that Git should still complain when it cannot remove
+  such files, or that there should be a verbosity option that should
+  make it complain in such cases.
+
+  Randall Becker replied to Yuri that he tried to reproduce the issue
+  without using NFS and couldn't. So he asked Yuri if he could share
+  "a reproducible set of commands" and said that it was probably
+  caused by NFS.
+
+  Junio replied to Randall and Yuri that removing a '.nfsXXXXXXXXXXX'
+  files under a real NFSv3 client would likely result in the file
+  being automatically resurrected, and that failure to remove a file
+  should indeed be reported as Git does when it cannot remove a
+  regular file.
+
+  Yuri replied to Randall listing a series of instructions to
+  reproduce the issue. He agreed that Git reported failures when it
+  couldn't remove a file because of "permissions and special flags
+  reasons", but he repeated that it should also do it in the case of
+  such NFS files.
+
+  Randall replied to Yuri saying he thought that Git didn't even see
+  the NFS files. He asked if a second `git clean -df .` removed the
+  NFS files and put new ones, with different names, in place.
+
+  Yuri replied that it wasn't the case and there seemed to be a single
+  NFS file.
+
+  Chris Torek then chimed into the discussion replying to Yuri. He
+  explained in details how "NFS silly renames" work, and listed some
+  cases which could result in NFS lying to Git by reporting that an
+  unlink(2) operation succeeded when in fact the file was renamed but
+  not deleted. In such a case Git could not report that it couldn't
+  remove a file. It could report that it couldn't remove the
+  containing directory though.
+
+  Chris finished his explanations saying "Anyway, that's the OS view
+  of this mess. I leave the work on Git itself to others. :-)"
+
+  Jeff King, alias Peff, replied to Yuri's email that contained a
+  series of instructions to reproduce the issue. He said he got the
+  following warning when trying to reproduce:
+
+  "warning: failed to remove xx/.nfs0000000002c8197f00000002: Device or resource busy"
+
+  So Peff thought Git worked properly on his system and then detailed
+  elements of the OS and NFS mount he used.
+
+  Yuri replied by giving information about his system. He also said
+  that when using `rm -rf` to remove the NFS file, he got a "Device or
+  resource busy" error message, but not when using Git.
+
+  Randall replied to Peff that doing a self-mount to reproduce as Peff
+  did was perhaps not the best, as the NFS client might be aware of
+  the self-mount and things might not behave the same as in a regular
+  mount.
+
+  Yuri suggested using a virtual machine to avoid a self-mount.
+
+  Gabor Gombas replied to Yuri reporting results of his tests. He got
+  a "Directory not empty", or a "Device or resource busy" error
+  message when he used `git clean -dfx`, but he also got no error
+  message when using `git clean -df`.
+
+  This led Yuri to reply that with `-dfx` Git indeed warns about NFS
+  file on his machine, but with `-df` it doesn't, because the NFS
+  files are in the ignore list.
+
+  It is indeed expected that ignored files are not deleted and are
+  just ignored without the `x` option.
 
 
 ## Developer Spotlight: Rubén Justo
