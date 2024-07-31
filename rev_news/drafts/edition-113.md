@@ -222,9 +222,13 @@ This edition covers what happened during the months of June 2024 and July 2024.
 __Various__
 
 + [Highlights from Git 2.46](https://github.blog/open-source/git/highlights-from-git-2-46/)
-  Taylor Blau on GitHub Blog.  Those include pseudo-merge reachability bitmaps,
+  by Taylor Blau on GitHub Blog.  Those include pseudo-merge reachability bitmaps,
   subcommands in [git-config](https://git-scm.com/docs/git-config/2.46.0) (like `git config list`),
-  enhanced credential helper protocol, and improving though still experrimental reftable support.
+  enhanced credential helper protocol, and improving still experimental reftable support.
++ [What’s new in Git 2.46.0?](https://about.gitlab.com/blog/2024/07/29/whats-new-in-git-2-46-0/)
+  by Justin Tobler on GitLab Blog.  Higlights include tooling to migrate reference backends
+  (from files backend to reftables), symref update instructions for `git update-ref --stdin`,
+  `git config` interface improvements (mentioned in the previous article linked), and bundle URI fixes.
 + [Anyone can Access Deleted and Private Repository Data on GitHub](https://trufflesecurity.com/blog/anyone-can-access-deleted-and-private-repo-data-github)
   via Cross Fork Object Reference (CFOR) from another [public] fork.
   Any code committed to a public repository may be accessible forever
