@@ -198,7 +198,7 @@ This edition covers what happened during the months of June 2024 and July 2024.
   that someone is going to come along and say: "Come on, Rubén.  That
   User-Agent?  Set up a decent environment to send this properly".
 
-  To develop, I use Vim (without any additional plugins).
+  To develop, I mainly use vanilla Vim.
 
 * What is your advice for people who want to start Git development?
   Where and how should they start?
