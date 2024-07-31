@@ -20,6 +20,13 @@ This edition covers what happened during the months of June 2024 and July 2024.
 
 ### General
 
+* [[ANNOUNCE] Tickets available for Git Merge 2024](https://lore.kernel.org/git/ZpU0WwsrXCF8BC1f@nand.local/)
+
+  Taylor Blau announced that [tickets for Git Merge 2024, Berlin, September 19th and 20th](https://git-merge.com)
+  are now on sale. People who would like to come but need financial
+  assistance with travel costs can contact the Git PLC or Scott
+  Chacon directly.
+
 * [[ANNOUNCE] Berlin Git Meetup on August 14th, 6pm CEST](https://lore.kernel.org/git/ZqoQcuKz_ynYaBNM@tanuki/)
 
   Patrick Steinhardt announced that some Git developers are trying to
