@@ -17,9 +17,14 @@ This edition covers what happened during the months of June 2024 and July 2024.
 
 ## Discussions
 
-<!---
+
 ### General
--->
+
+* [[ANNOUNCE] Berlin Git Meetup on August 14th, 6pm CEST](https://lore.kernel.org/git/ZqoQcuKz_ynYaBNM@tanuki/)
+
+  Patrick Steinhardt announced that some Git developers are trying to
+  revive the Git user group in Berlin and will host their first
+  session together with GitButler soon.
 
 <!---
 ### Reviews
