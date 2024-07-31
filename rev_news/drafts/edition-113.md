@@ -268,6 +268,11 @@ __Light reading__
   but as a means to manage concurrency in your tasks (for example: view, work, review, fuzz, scratch).
 + [Git autocorrect needs more marketing](https://dev.to/cloudx/git-autocorrect-needs-more-marketing-20gg)
   by Axel Navarro for Cloud(x); on DEV\.to.
+    + See also [thefuck](https://github.com/nvbn/thefuck), a command line application
+      which corrects your previous console command (for example Git command)
+      if you made an error (like typos in command name), and it _didn't_ do what you wanted;
+      the tool was first mentioned in 
+      [Git Rev News Edition #101](https://git.github.io/rev_news/2023/07/31/edition-101/).
 + [commit messages are optional](https://schpet.com/note/git-commit-messages-are-optional)
   by Peter Schilling in schpet’s notebook (though for some of mentioned uses,
   commits with empty commit messages are better replaced with `git commit --fixup`).
@@ -286,7 +291,10 @@ __Light reading__
       was first mentioned in [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/)
 + [The visualization and analysis of git commit statistics for IT team leaders.](https://dev.to/responsivecrocodile/the-visualization-and-analysis-of-git-commit-statistics-for-it-team-leaders-2pof)
   by Aleksei Bakhirev (Responsive Crocodile) on DEV\.to.  Uses the [Assayo](https://github.com/bakhirev/assayo)
-  tool written by the author for plots (see also the [assayo.online](https://assayo.online/) webpage).
+  tool written by the author for plots (see also the [assayo.online](https://assayo.online/) webpage).<br>
+  Thought beware the [Goodhart's law](https://en.wikipedia.org/wiki/Goodhart%27s_law):
+  _"When a measure becomes a target, it ceases to be a good measure"_.
+  For examples from IT, see Joel on Software "[Measurement](https://www.joelonsoftware.com/2002/07/15/20020715/)" (2002).
 + [Reorient GitHub Pull Requests Around Changesets](https://mitchellh.com/writing/github-changesets)
   from one giant mutable changeset, by Mitchell Hashimoto on his blog (2023).
 + [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
