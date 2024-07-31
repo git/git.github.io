@@ -27,6 +27,12 @@ This edition covers what happened during the months of June 2024 and July 2024.
   assistance with travel costs can contact the Git PLC or Scott
   Chacon directly.
 
+* [[ANNOUNCE] Git Merge 2024 CFP deadline extended](https://lore.kernel.org/git/ZqkHxvDx7dlh0RX6@nand.local/)
+
+  Taylor Blau announced that the Git Merge 2024 CFP (Call For
+  Proposals) limit has been extended by a week from August 1 to August 8.
+  So there are a few more days are left to propose talks.
+
 * [[ANNOUNCE] Berlin Git Meetup on August 14th, 6pm CEST](https://lore.kernel.org/git/ZqoQcuKz_ynYaBNM@tanuki/)
 
   Patrick Steinhardt announced that some Git developers are trying to
