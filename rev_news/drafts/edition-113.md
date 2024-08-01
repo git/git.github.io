@@ -13,7 +13,7 @@ Welcome to the 113th edition of [Git Rev News](https://git.github.io/rev_news/re
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
-This edition covers what happened during the months of June 2024 and July 2024.
+This edition covers what happened during the months of June and July 2024.
 
 ## Discussions
 
@@ -30,8 +30,8 @@ This edition covers what happened during the months of June 2024 and July 2024.
 * [[ANNOUNCE] Git Merge 2024 CFP deadline extended](https://lore.kernel.org/git/ZqkHxvDx7dlh0RX6@nand.local/)
 
   Taylor Blau announced that the Git Merge 2024 CFP (Call For
-  Proposals) limit has been extended by a week from August 1 to August 8.
-  So there are a few more days are left to propose talks.
+  Proposals) limit has been extended by a week from August 1st to August 8th.
+  So there are a few more days left to propose talks.
 
 * [[ANNOUNCE] Berlin Git Meetup on August 14th, 6pm CEST](https://lore.kernel.org/git/ZqoQcuKz_ynYaBNM@tanuki/)
 
@@ -55,18 +55,18 @@ This edition covers what happened during the months of June 2024 and July 2024.
   could not remove the file and the containing directory and
   terminating with a success exit code.
 
-  Junio Hamano, the Git maintainer, replied to Yuri saying that it's
+  Junio Hamano, the Git maintainer, replied to Yuri saying that it was
   expected that directories that were not empty were not removed.
 
   Yuri replied that he expected the '.nfsXXXXXXXXXXX' files to be
-  removed as they were untracked, so not added nor part of the repo,
-  and the command is expected to remove such untracked files.
+  removed as they were untracked, that is, neither added nor part of the repo,
+  and the command was expected to remove such untracked files.
 
   Junio replied that the '.nfsXXXXXXXXXXX' files were "a limitation"
   of NFS that applications, including Git, couldn't and weren't
-  supposed to remove. He pointed to some documentation which explained
-  what these special NFS files are, and which said that they are the
-  result of "silly rename" operations.
+  supposed to remove. He pointed to some documentation which explain
+  what these special NFS files are, and that they originate from an NFS
+  protocol based implementation strategy commonly known as "silly rename".
 
   Yuri replied that Git should still complain when it cannot remove
   such files, or that there should be a verbosity option that should
@@ -110,11 +110,12 @@ This edition covers what happened during the months of June 2024 and July 2024.
   Jeff King, alias Peff, replied to Yuri's email that contained a
   series of instructions to reproduce the issue. He said he got the
   following warning when trying to reproduce:
+  ```
+  warning: failed to remove xx/.nfs0000000002c8197f00000002: Device or resource busy
+  ```
 
-  "warning: failed to remove xx/.nfs0000000002c8197f00000002: Device or resource busy"
-
-  So Peff thought Git worked properly on his system and then detailed
-  elements of the OS and NFS mount he used.
+  So Peff thought Git worked properly on his system and then
+  communicated details of the OS and NFS mount he used.
 
   Yuri replied by giving information about his system. He also said
   that when using `rm -rf` to remove the NFS file, he got a "Device or
@@ -128,7 +129,7 @@ This edition covers what happened during the months of June 2024 and July 2024.
   Yuri suggested using a virtual machine to avoid a self-mount.
 
   Gabor Gombas replied to Yuri reporting the results of his tests. He
-  got a "Directory not empty", or a "Device or resource busy" error
+  got a "Directory not empty" or a "Device or resource busy" error
   message when he used `git clean -dfx`, but he also got no error
   message when using `git clean -df`.
 
@@ -137,7 +138,7 @@ This edition covers what happened during the months of June 2024 and July 2024.
   files are in the ignore list.
 
   It is indeed expected that ignored files are not deleted and are
-  just ignored without the `x` option.
+  just ignored without the `-x` option.
 
 
 ## Developer Spotlight: Rubén Justo
@@ -197,7 +198,7 @@ This edition covers what happened during the months of June 2024 and July 2024.
  * What is your favorite Git-related tool/library, outside of
    Git itself?
 
-   Definitely: ["tig"](https://jonas.github.io/tig/).
+   Definitely: [`tig`](https://jonas.github.io/tig/).
 
 * Do you happen to have any memorable experience w.r.t. contributing
   to the Git project? If yes, could you share it with us?
@@ -207,14 +208,14 @@ This edition covers what happened during the months of June 2024 and July 2024.
 * What is your toolbox for interacting with the mailing list and for
   development of Git?
 
-  To interact with the list, I mainly use ["lei"](https://people.kernel.org/monsieuricon/lore-lei-part-1-getting-started),
-  ["mutt"](http://www.mutt.org/) and ["thunderbird"](https://www.thunderbird.net/en-US/)
+  To interact with the list, I mainly use [`lei`](https://people.kernel.org/monsieuricon/lore-lei-part-1-getting-started),
+  [`mutt`](http://www.mutt.org/) and [`thunderbird`](https://www.thunderbird.net/en-US/)
   in a rather makeshift way.  Maybe someday I'll finally configure
-  [git send-email](https://git-send-email.io/).
+  [`git send-email`](https://git-send-email.io/).
 
   In fact, more often than not, when I send a patch, I have the feeling
   that someone is going to come along and say: "Come on, Rubén.  That
-  User-Agent?  Set up a decent environment to send this properly".
+  user agent?  Set up a decent environment to send this properly".
 
   To develop, I mainly use vanilla Vim.
 
@@ -242,16 +243,16 @@ __Various__
 + [Highlights from Git 2.46](https://github.blog/open-source/git/highlights-from-git-2-46/)
   by Taylor Blau on GitHub Blog.  Those include pseudo-merge reachability bitmaps,
   subcommands in [git-config](https://git-scm.com/docs/git-config/2.46.0) (like `git config list`),
-  enhanced credential helper protocol, and improving still experimental reftable support.
+  an enhanced credential helper protocol, and improving the still experimental reftable support.
 + [What’s new in Git 2.46.0?](https://about.gitlab.com/blog/2024/07/29/whats-new-in-git-2-46-0/)
-  by Justin Tobler on GitLab Blog.  Higlights include tooling to migrate reference backends
+  by Justin Tobler on GitLab Blog.  Highlights include tooling to migrate reference backends
   (from files backend to reftables), symref update instructions for `git update-ref --stdin`,
   `git config` interface improvements (mentioned in the previous article linked), and bundle URI fixes.
 + [Anyone can Access Deleted and Private Repository Data on GitHub](https://trufflesecurity.com/blog/anyone-can-access-deleted-and-private-repo-data-github)
   via Cross Fork Object Reference (CFOR) from another [public] fork.
   Any code committed to a public repository may be accessible forever
   as long as there is at least one public fork of that repository.
-  This is intentional design decision by GitHub; see [the documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/what-happens-to-forks-when-a-repository-is-deleted-or-changes-visibility).
+  This is an intentional design decision by GitHub; see [the documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/what-happens-to-forks-when-a-repository-is-deleted-or-changes-visibility).
   There is though a separate fork network for public and for private versions
   of the same repository.<br>
   Posted on Truffle Security blog.
@@ -266,8 +267,8 @@ __Light reading__
 + [A Git story: Not so fun this time](https://blog.brachiosoft.com/en/posts/git/)
   on Brachiosoft Blog.  The title refers to the ["Just for Fun"](https://www.amazon.com/Just-Fun-Story-Accidental-Revolutionary/dp/0066620732/)
   book, the 2001 autobiography of Linux kernel creator Linus Torvalds,
-  and how Git origin story wasn't so much fun, at least for Linus.
-  The article provides list of references.  Includes new material
+  and how Git's origin story wasn't so much fun, at least for Linus.
+  The article provides a list of references.  Includes new material
   not seen in earlier retelling of the Git history, like the ones linked in 
   [Git Rev News Edition #2](https://git.github.io/rev_news/2015/04/05/edition-2/) (on 10 years of Git),
   [Edition #52](https://git.github.io/rev_news/2019/06/28/edition-52/),
@@ -283,7 +284,7 @@ __Light reading__
   and a specially crafted `pre-receive` hook (and `git-http-backend` configured
   to allow anonymous push) that turns `git push` into series of patch emails.
   (Though this approach has some limitations.)  Written by Steinar H. Gunderson on his blog.
-    + See also [git-pr](https://pr.pico.sh/) in "Git tools and sites" section.
+    + See also [git-pr](https://pr.pico.sh/) in the "Git tools and sites" section.
 + [How I Use Git Worktrees](https://matklad.github.io/2024/07/25/git-worktrees.html)
   by Alex Kladov (matklad) on his GitHub Pages-based blog.
   TL;DR: consider using worktrees not as a replacement for branches,
@@ -304,24 +305,23 @@ __Light reading__
   Another article from this series was mentioned in [Git Rev News Edition #112](https://git.github.io/rev_news/2024/06/30/edition-112/).
 + [Benchmarking the Modern Development Experience across Versioning Tools: S3, DVC, Git LFS, and XetHub](https://about.xethub.com/blog/benchmarking-the-modern-development-experience)
   by Ann Huang on XetHub blog.
-    + [XetHub](https://about.xethub.com/) is development platform for datasets and models,
+    + [XetHub](https://about.xethub.com/) is a development platform for datasets and models,
       which automatically versions and tracks assets across the Machine Learning stack
       to guarantee reproducibility.  Mentioned in passing in [Git Rev News Edition #95](https://git.github.io/rev_news/2023/01/31/edition-95/) news.
     + The comparison does not include [DagsHub's Direct Data Access / Data Streaming](https://dagshub.com/docs/feature_guide/dagshub_storage/data_streaming/),
       which was [announced](https://dagshub.com/blog/launching-data-streaming-and-upload/) in 2022.
       [DagsHub](https://dagshub.com/), a web platform for storing, versioning and managing data (data hub),
-      was first mentioned in [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/)
+      was first mentioned in [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/).
 + [The visualization and analysis of git commit statistics for IT team leaders.](https://dev.to/responsivecrocodile/the-visualization-and-analysis-of-git-commit-statistics-for-it-team-leaders-2pof)
   by Aleksei Bakhirev (Responsive Crocodile) on DEV\.to.  Uses the [Assayo](https://github.com/bakhirev/assayo)
   tool written by the author for plots (see also the [assayo.online](https://assayo.online/) webpage).<br>
-  Thought beware the [Goodhart's law](https://en.wikipedia.org/wiki/Goodhart%27s_law):
+  Some personal thought: beware of [Goodhart's law](https://en.wikipedia.org/wiki/Goodhart%27s_law):
   _"When a measure becomes a target, it ceases to be a good measure"_.
   For examples from IT, see Joel on Software "[Measurement](https://www.joelonsoftware.com/2002/07/15/20020715/)" (2002).
 + [Reorient GitHub Pull Requests Around Changesets](https://mitchellh.com/writing/github-changesets)
   from one giant mutable changeset, by Mitchell Hashimoto on his blog (2023).
 + [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
   (2008) by Tim Pope on tbaggery blog; it also explains some of reasoning behind recommendations.
-
 
 &nbsp;
 
@@ -331,7 +331,7 @@ __Light reading__
   [on FanFiction.net](https://www.fanfiction.net/s/14369888/1/git-good) (not recommended by the author),
   and [on SpaceBattles](https://forums.spacebattles.com/threads/git-good-my-hero-academia-izukus-quirk-is-git-the-version-control-software.1163142/).<br>
   Summary:
-  > Reality shattered like broken glass. The firmament that separated the real world from the eldritch beyond had broken. Two timelines had collided in the center of the street—an incongruous synthesis of two different chains of events. A building collapsed, and it did not. An explosion devastated the surroundings, and it did not. Screaming faces and laughs of joy overlapped each other as if viewed through a kaleidoscopic prism.
+  > Reality shattered like broken glass. The firmament that separated the real world from the eldritch beyond had broken. Two timelines had collided in the center of the street - an incongruous synthesis of two different chains of events. A building collapsed, and it did not. An explosion devastated the surroundings, and it did not. Screaming faces and laughs of joy overlapped each other as if viewed through a kaleidoscopic prism.
   >
   > The crowd looked on in horror and awe. Who was responsible for tearing apart the fabric of reality?
   >
@@ -368,9 +368,9 @@ __Git tools and sites__
   BlenderBIM supports [tracking the development of your IFC files with Git](https://docs.blenderbim.org/users/git_support.html)
   (Industry Foundation Classes, or IFC, is an international standard for BIM).
   Note that merging requires the [ifcmerge](https://github.com/brunopostle/ifcmerge)
-  tool to be installed (`ifcmerge` is written in Perl, and uses GPLv3 license).
-+ [_diff-pdf_](https://vslavik.github.io/diff-pdf/) is a tool for visually comparing two PDFs,
-  which can produces a PDF file with visually highlighted differences.
+  tool to be installed (`ifcmerge` is written in Perl and published under the GPLv3 license).
++ [_diff-pdf_](https://vslavik.github.io/diff-pdf/) is a tool for visually comparing two PDFs
+  which produces a PDF file with visually highlighted differences.
   Note that [the repository](https://github.com/vslavik/diff-pdf) states that
   the code is not being actively developed.  Written in C++, GPLv2 licensed.
     + See also [pdf-diff](https://github.com/JoshData/pdf-diff) in Python, CC0-1.0 licensed;
@@ -379,16 +379,16 @@ __Git tools and sites__
       dual licensed under both MIT License and Apache License, Version 2.0 - with
       a slightly different goal.
 + [vdm: A General-Purpose Versioned-Dependency Manager](https://github.com/opensourcecorp/vdm)
-  is an alternative to e.g. git submodules for managing arbitrary external dependencies.
+  is an alternative to e.g. `git submodules` for managing arbitrary external dependencies.
   Written in Go, MIT licensed.
     + Contrast [Gil (git links) tool](https://github.com/chronoxor/gil)
       to manage complex recursive repositories dependencies with cross references and cycles,
       mentioned in [Git Rev News Edition #110](https://git.github.io/rev_news/2024/04/30/edition-110/).
 + [Bit-Booster is an Offline Commit Graph Drawing Tool](https://bit-booster.com/graph.html),
-  using HTML and SVG, generating graph by pasting result of running 
+  using HTML and SVG, generating a graph by pasting the result of running 
   `git log --all --date-order --pretty="%h|%p|%d"` into a textarea.
-    + It is also an [add-on for Atlassian Bitbucket Server](https://bit-booster.com/graph.html)
-    + The webpage includes [comparison with other various commit graph add-ons](https://bit-booster.com/best.html) (2016)
+    + It is also an [add-on for Atlassian Bitbucket Server](https://bit-booster.com/graph.html).
+    + The webpage includes [comparison with other various commit graph add-ons](https://bit-booster.com/best.html) (2016).
 
 &nbsp;
 
