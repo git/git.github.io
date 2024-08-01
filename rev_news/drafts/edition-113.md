@@ -267,9 +267,9 @@ __Light reading__
 + [A Git story: Not so fun this time](https://blog.brachiosoft.com/en/posts/git/)
   on Brachiosoft Blog.  The title refers to the ["Just for Fun"](https://www.amazon.com/Just-Fun-Story-Accidental-Revolutionary/dp/0066620732/)
   book, the 2001 autobiography of Linux kernel creator Linus Torvalds,
-  and how Git's origin story wasn't so much fun, at least for Linus.
+  and how the Git origin story wasn't so much fun, at least for Linus.
   The article provides a list of references.  Includes new material
-  not seen in earlier retelling of the Git history, like the ones linked in 
+  not seen in earlier retellings of the Git history, like the ones linked in 
   [Git Rev News Edition #2](https://git.github.io/rev_news/2015/04/05/edition-2/) (on 10 years of Git),
   [Edition #52](https://git.github.io/rev_news/2019/06/28/edition-52/),
   [Edition #62](https://git.github.io/rev_news/2020/04/23/edition-62/) (on 15 years of Git),
@@ -385,7 +385,7 @@ __Git tools and sites__
       to manage complex recursive repositories dependencies with cross references and cycles,
       mentioned in [Git Rev News Edition #110](https://git.github.io/rev_news/2024/04/30/edition-110/).
 + [Bit-Booster is an Offline Commit Graph Drawing Tool](https://bit-booster.com/graph.html),
-  using HTML and SVG, generating a graph by pasting the result of running 
+  using HTML and SVG, generating graphs by pasting the result of running 
   `git log --all --date-order --pretty="%h|%p|%d"` into a textarea.
     + It is also an [add-on for Atlassian Bitbucket Server](https://bit-booster.com/graph.html).
     + The webpage includes [comparison with other various commit graph add-ons](https://bit-booster.com/best.html) (2016).
@@ -395,7 +395,7 @@ __Git tools and sites__
 + [How To Rotate](https://howtorotate.com/) is an open-source collection
   of API Key Rotation tutorials for different SaaS providers.
 + [Act](https://github.com/nektos/act) is a command line tool
-  to run your GitHub Actions locally, using Docker Engine API.  Written in Go.
+  to run your GitHub Actions locally, using the Docker Engine API.  Written in Go.
   Please look at the [`act` user guide](https://nektosact.com/) for more documentation.
     + There is also [Act runner](https://gitea.com/gitea/act_runner),
       a runner for Gitea based on Gitea fork of act.
@@ -432,4 +432,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from XXX.
+with help from Štěpán Němec.
