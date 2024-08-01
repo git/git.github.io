@@ -48,7 +48,7 @@ This edition covers what happened during the months of June and July 2024.
 * [[BUG] "git clean -df ." silently doesn't delete folders with stale .nfs* files](https://lore.kernel.org/git/ae862adb-1475-48e9-bd50-0c07dc42a520@rawbw.com/)
 
   Yuri reported that `git clean -df .`, which was supposed to delete a
-  directory and all its content, didn't work when there were files
+  directory and all its contents, didn't work when there were files
   named '.nfsXXXXXXXXXXX' managed by NFS in that directory. He
   expected that `git clean -df .` would warn or error out when it
   cannot remove such a file, instead of ignoring the fact that it
@@ -64,7 +64,7 @@ This edition covers what happened during the months of June and July 2024.
 
   Junio replied that the '.nfsXXXXXXXXXXX' files were "a limitation"
   of NFS that applications, including Git, couldn't and weren't
-  supposed to remove. He pointed to some documentation which explain
+  supposed to remove. He pointed to some documentation which explains
   what these special NFS files are, and that they originate from an NFS
   protocol based implementation strategy commonly known as "silly rename".
 
@@ -297,7 +297,7 @@ __Light reading__
       the tool was first mentioned in 
       [Git Rev News Edition #101](https://git.github.io/rev_news/2023/07/31/edition-101/).
 + [commit messages are optional](https://schpet.com/note/git-commit-messages-are-optional)
-  by Peter Schilling in schpet’s notebook (though for some of mentioned uses,
+  by Peter Schilling in schpet’s notebook (though for some of the mentioned uses,
   commits with empty commit messages are better replaced with `git commit --fixup`).
 + [Git-ifying SVN: How I Brought Modern Version Control to an Age-Old System](https://ionixjunior.dev/en/gitifying-svn-how-i-brought-modern-version-control-to-an-ageold-system/)
   by Ione Souza Junior on his blog; also available [on DEV.to](https://dev.to/ionixjunior/git-ifying-svn-how-i-brought-modern-version-control-to-an-age-old-system-4o3e)
@@ -307,7 +307,7 @@ __Light reading__
   by Ann Huang on XetHub blog.
     + [XetHub](https://about.xethub.com/) is a development platform for datasets and models,
       which automatically versions and tracks assets across the Machine Learning stack
-      to guarantee reproducibility.  Mentioned in passing in [Git Rev News Edition #95](https://git.github.io/rev_news/2023/01/31/edition-95/) news.
+      to guarantee reproducibility.  Mentioned in passing in [Git Rev News Edition #95](https://git.github.io/rev_news/2023/01/31/edition-95/).
     + The comparison does not include [DagsHub's Direct Data Access / Data Streaming](https://dagshub.com/docs/feature_guide/dagshub_storage/data_streaming/),
       which was [announced](https://dagshub.com/blog/launching-data-streaming-and-upload/) in 2022.
       [DagsHub](https://dagshub.com/), a web platform for storing, versioning and managing data (data hub),
@@ -321,7 +321,7 @@ __Light reading__
 + [Reorient GitHub Pull Requests Around Changesets](https://mitchellh.com/writing/github-changesets)
   from one giant mutable changeset, by Mitchell Hashimoto on his blog (2023).
 + [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-  (2008) by Tim Pope on tbaggery blog; it also explains some of reasoning behind recommendations.
+  (2008) by Tim Pope on tbaggery blog; it also explains some of the reasoning behind recommendations.
 
 &nbsp;
 
@@ -382,7 +382,7 @@ __Git tools and sites__
   is an alternative to e.g. `git submodules` for managing arbitrary external dependencies.
   Written in Go, MIT licensed.
     + Contrast [Gil (git links) tool](https://github.com/chronoxor/gil)
-      to manage complex recursive repositories dependencies with cross references and cycles,
+      to manage complex recursive repository dependencies with cross references and cycles,
       mentioned in [Git Rev News Edition #110](https://git.github.io/rev_news/2024/04/30/edition-110/).
 + [Bit-Booster is an Offline Commit Graph Drawing Tool](https://bit-booster.com/graph.html),
   using HTML and SVG, generating graphs by pasting the result of running 
@@ -398,7 +398,7 @@ __Git tools and sites__
   to run your GitHub Actions locally, using the Docker Engine API.  Written in Go.
   Please look at the [`act` user guide](https://nektosact.com/) for more documentation.
     + There is also [Act runner](https://gitea.com/gitea/act_runner),
-      a runner for Gitea based on Gitea fork of act.
+      a runner for Gitea based on the Gitea fork of `act`.
 
 
 ## Releases
