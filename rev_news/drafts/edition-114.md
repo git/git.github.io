@@ -49,6 +49,21 @@ __Git tools and sites__
 
 ## Releases
 
++ Gerrit Code Review [3.10.1](https://www.gerritcodereview.com/3.10.html#3101),
+[3.8.8](https://www.gerritcodereview.com/3.8.html#388),
+[3.9.6](https://www.gerritcodereview.com/3.9.html#396)
++ GitHub Enterprise [3.14.0](https://help.github.com/enterprise-server@3.14/admin/release-notes#3.14.0),
+[3.13.3](https://help.github.com/enterprise-server@3.13/admin/release-notes#3.13.3),
+[3.12.8](https://help.github.com/enterprise-server@3.12/admin/release-notes#3.12.8),
+[3.11.14](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.14),
+[3.10.16](https://help.github.com/enterprise-server@3.10/admin/release-notes#3.10.16)
++ GitLab [17.3.1, 17.2.4, 17.1.6](https://about.gitlab.com/releases/2024/08/21/patch-release-gitlab-17-3-1-released/)
+[17.3](https://about.gitlab.com/releases/2024/08/15/gitlab-17-3-released/),
+[17.2.2, 17.1.4, 17.0.6](https://about.gitlab.com/releases/2024/08/07/patch-release-gitlab-17-2-2-released/)
++ GitKraken [10.2.0](https://help.gitkraken.com/gitkraken-client/current/)
++ GitHub Desktop [3.4.3](https://desktop.github.com/release-notes/)
++ git-credential-oauth [0.13.2](https://github.com/hickford/git-credential-oauth/releases/tag/v0.13.2),
+[0.13.1](https://github.com/hickford/git-credential-oauth/releases/tag/v0.13.1)
 
 ## Credits
 
