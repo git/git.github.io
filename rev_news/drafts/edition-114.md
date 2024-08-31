@@ -90,6 +90,12 @@ __Various__
       It was mentioned in passing in [Git Rev News Edition #103](https://git.github.io/rev_news/2023/09/30/edition-103/),
       as one of forges working on implementing [ForgeFed](https://forgefed.org/)
       federation protocol for forge services.
++ Packt recently published the second edition of the “Mastering Git” book
+  by Jakub Narębski, one of editors of the Git Rev News.
+  The book is available [on PacktPub](https://www.packtpub.com/en-us/product/mastering-git-9781835086070)
+  and [on Amazon](https://www.amazon.com/Mastering-Git-expert-level-proficiency-distributed-ebook/dp/B0D98BR1T7).
+  The first edition of the book was mentioned in [Git Rev News Edition #16](https://git.github.io/rev_news/2016/06/15/edition-16/);
+  you can find the interview with Jakub Narębski in [Edition #17](https://git.github.io/rev_news/2016/07/20/edition-17/).
 
 __Light reading__
 + [Different ways to use “--patch” in Git](https://tekin.co.uk/2024/08/the-many-uses-for-git-patch)
