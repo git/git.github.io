@@ -26,10 +26,10 @@ This edition covers what happened during the months of July and August 2024.
 * [[PATCH] ReviewingGuidelines: encourage positive reviews more](https://lore.kernel.org/git/xmqqsevysdaa.fsf@gitster.g/)
 
   Junio Hamano, the Git maintainer, sent a patch to the mailing list
-  which updated the ReviewingGuidelines.txt documentation with the
+  which updated the 'ReviewingGuidelines.txt' documentation with the
   goal of encouraging positive reviews even more.
 
-  The ReviewingGuidelines.txt documentation was
+  The 'ReviewingGuidelines.txt' documentation was
   [created a few years ago](https://lore.kernel.org/git/pull.1348.v2.git.1663614767058.gitgitgadget@gmail.com/)
   by Victoria Dye to provide "consistent definitions for common
   review terminology" and to give advice to reviewers, in a similar
@@ -98,15 +98,15 @@ __Various__
   you can find the interview with Jakub Narębski in [Edition #17](https://git.github.io/rev_news/2016/07/20/edition-17/).
 
 __Light reading__
-+ [Different ways to use “--patch” in Git](https://tekin.co.uk/2024/08/the-many-uses-for-git-patch)
++ [Different ways to use `--patch` in Git](https://tekin.co.uk/2024/08/the-many-uses-for-git-patch)
   by Tekin Süleyman on his blog.  It describes selectively stashing changes,
   selectively discarding changes, and selectively restoring changes.
   This article expands on the
-  "[interactively stage changes with --patch](https://tekin.co.uk/2017/03/git-tips-you-possibly-did-not-know-you-needed#3-interactively-stage-changes-with---patch)" advice
+  "[interactively stage changes with \-\-patch](https://tekin.co.uk/2017/03/git-tips-you-possibly-did-not-know-you-needed#3-interactively-stage-changes-with---patch)" advice
   in [Git Tips you (Possibly) Didn't Know You Needed](https://tekin.co.uk/2017/03/git-tips-you-possibly-did-not-know-you-needed).
 + [Tracing the evolution of a Python function with git log](https://nerderati.com/tracing-the-evolution-of-a-python-function-with-git-log/)
   by Joël Perras on his Nerderati blog.  It shows a detailed example on using `git log -L`
-  (and `diff=python` gitattribute) to diagnose a real-life bug that was ostensibly
+  (and the `diff=python` gitattribute) to diagnose a real-life bug that was ostensibly
   caused by an upgrade to Authlib.
     + This technique is also described in the
       [See the History of a Method with `git log -L`](https://calebhearth.com/git-method-history) article,
@@ -121,17 +121,17 @@ __Light reading__
 + [Back-dating Git commits based on file modification dates](https://til.simonwillison.net/git/backdate-git-commits)
   by Simon Willison in his [TILs on Git](https://til.simonwillison.net/git)
   (Today I’ve Learned).
-    + It was used by the author to create [1991-WWW-NeXT-Implementation](https://github.com/simonw/1991-WWW-NeXT-Implementation)
+    + It was used by the author to create the [1991-WWW-NeXT-Implementation](https://github.com/simonw/1991-WWW-NeXT-Implementation)
       repository out of [the archive](https://www.w3.org/History/1991-WWW-NeXT/Implementation/)
       of Tim Berner-Lee's original code for the WorldWideWeb application for NeXT.
       This endeavor was described in a short blog post, [1991-WWW-NeXT-Implementation on GitHub](https://simonwillison.net/2024/Aug/1/www-next-implementation-on-github/).
 + [Store Code Discussions in Git using Git Notes](https://wouterj.nl/2024/08/git-notes)
   by Wouter de Jong on his blog.  The article includes some code (in PHP)
   that uses the GitHub API to fetch the pull request comments and store them
-  in notes (under `github-comments` notes reference).
+  in notes (under the `github-comments` notes reference).
 + [Attaching notes to git branches](https://dev.to/pinotattari/attaching-notes-to-git-branches-503k)
-  by Riccardo Bernardini on DEV\.to.  The article describes why this feature is useful,
-  and how `git branch --edit-description` and `git notes` fall short; which led to
+  by Riccardo Bernardini on DEV\.to.  The article describes why this feature is useful
+  and how `git branch --edit-description` and `git notes` fall short; this led to
   the creation of the [git-branchnotes](https://gitlab.com/mockturtle/git-branchnotes) tool.
 + [This developer tool is 40 years old: can it be improved?](https://stackoverflow.blog/2024/08/05/this-developer-tool-is-40-years-old-can-it-be-improved)
   by Bill Harding (CEO at GitClear) on StackOverflow Blog.
@@ -142,14 +142,14 @@ __Light reading__
   is not the only one available in [`git diff`](https://git-scm.com/docs/git-diff):
   there are also `minimal`, `patience` and `histogram` diff algorithms available
   (via the `--diff-algorithm` option);
-  this was not stated in the article.
+  this is not stated in the article.
 + [How Different Are Different diff Algorithms in Git?](https://cs.paperswithcode.com/paper/how-different-are-different-diff-algorithms):
   a paper with code by Yusuf Sulistyo Nugroho, Hideaki Hata, Kenichi Matsumoto
   from 2019.
 + [Git Things: A grab bag of less frequently talked about git adjacent points](https://matklad.github.io/2023/12/31/git-things.html)
   by Alex Kladov (matklad) on his GitHub Pages-based blog, from 2023.
 + [Unified Versus Split Diff](https://matklad.github.io/2023/10/23/unified-vs-split-diff.html):
-  for code reviews (and what the author uses)
+  a discussion what is better for code reviews (and what the author uses)
   by Alex Kladov (matklad) on his GitHub Pages-based blog, from 2023.
 + [How Does Git Store Files?](https://blog.git-init.com/how-does-git-store-files/)
   — from a conceptual point of view.  An article by by Alexis Määttä Vinkler
@@ -159,7 +159,7 @@ __Light reading__
 
 + [Code review antipatterns](https://www.chiark.greenend.org.uk/~sgtatham/quasiblog/code-review-antipatterns/)
   for the dark side developers, a joke article by Simon Tatham
-  (don’t do the things described in this article).
+  (don’t do any of the things described in this article).
 
 <!---
 __Easy watching__
@@ -195,7 +195,7 @@ __Git tools and sites__
   that performs semantic searches on text input using word embeddings (word2vec).
   It's designed to find semantically similar matches to the query,
   going beyond simple string matching.  Supports multiple languages.
-  Written in Go, uses MIT license.
+  Written in Go under the MIT license.
 + [Collective Code Construction Contract](https://rfc.zeromq.org/spec/42/) (C4)
   is an evolution of the github.com [Fork + Pull Model](https://help.github.com/articles/about-pull-requests/),
   aimed at providing an optimal collaboration model for free software projects.
@@ -227,4 +227,5 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from XXX.
+with help from from Štěpán Němec, Brandon Pugh, Ralf Steube
+and Toon Claes.
