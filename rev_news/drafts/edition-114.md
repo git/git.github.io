@@ -13,7 +13,7 @@ Welcome to the 114th edition of [Git Rev News](https://git.github.io/rev_news/re
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
-This edition covers what happened during the months of July 2024 and August 2024.
+This edition covers what happened during the months of July and August 2024.
 
 ## Discussions
 
@@ -50,7 +50,7 @@ This edition covers what happened during the months of July 2024 and August 2024
   feedback goes a long way towards encouraging contributors to
   participate more actively in the Git community."
 
-  Eric Sunshine then replied to Junio pointing a minor typo in his
+  Eric Sunshine then replied to Junio pointing out a minor typo in his
   patch. Patrick Steinhardt replied to Junio too. He said that he had
   already guided some of his GitLab colleagues who review patches
   and suggested them to do what Junio describes.
@@ -88,10 +88,10 @@ __Various__
     + [Forgejo](https://forgejo.org/) is a self-hosted lightweight software forge,
       written in Go; nowadays a hard fork of Gitea (which in turn was based on Gogs).
       It was mentioned in passing in [Git Rev News Edition #103](https://git.github.io/rev_news/2023/09/30/edition-103/),
-      as one of forges working on implementing [ForgeFed](https://forgefed.org/)
+      as one of the forges working on implementing the [ForgeFed](https://forgefed.org/)
       federation protocol for forge services.
 + Packt recently published the second edition of the “Mastering Git” book
-  by Jakub Narębski, one of editors of the Git Rev News.
+  by Jakub Narębski, one of the Git Rev News editors.
   The book is available [on PacktPub](https://www.packtpub.com/en-us/product/mastering-git-9781835086070)
   and [on Amazon](https://www.amazon.com/Mastering-Git-expert-level-proficiency-distributed-ebook/dp/B0D98BR1T7).
   The first edition of the book was mentioned in [Git Rev News Edition #16](https://git.github.io/rev_news/2016/06/15/edition-16/);
@@ -105,7 +105,7 @@ __Light reading__
   "[interactively stage changes with --patch](https://tekin.co.uk/2017/03/git-tips-you-possibly-did-not-know-you-needed#3-interactively-stage-changes-with---patch)" advice
   in [Git Tips you (Possibly) Didn't Know You Needed](https://tekin.co.uk/2017/03/git-tips-you-possibly-did-not-know-you-needed).
 + [Tracing the evolution of a Python function with git log](https://nerderati.com/tracing-the-evolution-of-a-python-function-with-git-log/)
-  by Joël Perras on his Nerderati blog.  It shows detailed example on using `git log -L`
+  by Joël Perras on his Nerderati blog.  It shows a detailed example on using `git log -L`
   (and `diff=python` gitattribute) to diagnose a real-life bug that was ostensibly
   caused by an upgrade to Authlib.
     + This technique is also described in the
@@ -124,8 +124,7 @@ __Light reading__
     + It was used by the author to create [1991-WWW-NeXT-Implementation](https://github.com/simonw/1991-WWW-NeXT-Implementation)
       repository out of [the archive](https://www.w3.org/History/1991-WWW-NeXT/Implementation/)
       of Tim Berner-Lee's original code for the WorldWideWeb application for NeXT.
-      This endeavor was described in [1991-WWW-NeXT-Implementation on GitHub](https://simonwillison.net/2024/Aug/1/www-next-implementation-on-github/)
-      short blog post.
+      This endeavor was described in a short blog post, [1991-WWW-NeXT-Implementation on GitHub](https://simonwillison.net/2024/Aug/1/www-next-implementation-on-github/).
 + [Store Code Discussions in Git using Git Notes](https://wouterj.nl/2024/08/git-notes)
   by Wouter de Jong on his blog.  The article includes some code (in PHP)
   that uses the GitHub API to fetch the pull request comments and store them
@@ -133,15 +132,15 @@ __Light reading__
 + [Attaching notes to git branches](https://dev.to/pinotattari/attaching-notes-to-git-branches-503k)
   by Riccardo Bernardini on DEV\.to.  The article describes why this feature is useful,
   and how `git branch --edit-description` and `git notes` fall short; which led to
-  creation of [git-branchnotes](https://gitlab.com/mockturtle/git-branchnotes) tool.
+  the creation of the [git-branchnotes](https://gitlab.com/mockturtle/git-branchnotes) tool.
 + [This developer tool is 40 years old: can it be improved?](https://stackoverflow.blog/2024/08/05/this-developer-tool-is-40-years-old-can-it-be-improved)
   by Bill Harding (CEO at GitClear) on StackOverflow Blog.
   The article describes how GitClear's "Commit Cruncher" diff algorithm works,
   which was created with the goal of making code reviews easier.
-  Note that Myers diff algorithm (created by Eugene Myers in his
+  Note that the Myers diff algorithm (created by Eugene Myers in his
   [seminal work](http://www.xmailserver.org/diff2.pdf) in 1986)
   is not the only one available in [`git diff`](https://git-scm.com/docs/git-diff):
-  there are also `minimal`, `patience` and `histogram` diff algoritms available
+  there are also `minimal`, `patience` and `histogram` diff algorithms available
   (via the `--diff-algorithm` option);
   this was not stated in the article.
 + [How Different Are Different diff Algorithms in Git?](https://cs.paperswithcode.com/paper/how-different-are-different-diff-algorithms):
@@ -159,8 +158,8 @@ __Light reading__
 <!-- -->
 
 + [Code review antipatterns](https://www.chiark.greenend.org.uk/~sgtatham/quasiblog/code-review-antipatterns/)
-  for dark side developers, a joke article by Simon Tatham
-  (don’t do things described in this article).
+  for the dark side developers, a joke article by Simon Tatham
+  (don’t do the things described in this article).
 
 <!---
 __Easy watching__
@@ -171,17 +170,17 @@ __Git tools and sites__
   note that some articles are paid members only.  Powered by Ghost.
 + [Carapace-bin](https://github.com/carapace-sh/carapace-bin) provides argument completion
   for multiple CLI commands ([full list](https://carapace-sh.github.io/carapace-bin/completers.html)
-  includes Git, [git-extras](https://github.com/tj/git-extras), `gh` GitHub CLI, `glab` GitLab CLI,
+  including Git, [git-extras](https://github.com/tj/git-extras), `gh` GitHub CLI, `glab` GitLab CLI,
   `tea` Gitea CLI, etc.), and works across multiple POSIX and non-POSIX shells.
-  Details about complete support for Git can be found in issue [#99](https://github.com/carapace-sh/carapace-bin/issues/99).
-  Written in Go, under MIT license.<br>
-  Carapace-bin is a part of [Carapace](https://carapace.sh/) multi-shell completion library and binary.
-  A high-level overview of carapace itself is available at <https://pixi.carapace.sh>.
+  Details about the Git completion support can be found in issue [#99](https://github.com/carapace-sh/carapace-bin/issues/99).
+  Written in Go under the MIT license.<br>
+  Carapace-bin is a part of the [Carapace](https://carapace.sh/) multi-shell completion library and binary.
+  A high-level overview of Carapace itself is available at <https://pixi.carapace.sh>.
 + [git-random](https://git-random.olets.dev/): quickly build random-content Git
   graphs with a specified shape.
-  It is a tool that can work as an aid for learning and experimenting with Git.
+  This is a tool that can work as an aid for learning and experimenting with Git.
   Source code available [on GitHub](https://github.com/olets/git-random/).
-  Written as single-file Bash script, under custom
+  Written as a single-file Bash script under a custom
   CC BY-NC-SA 4.0 license with Hippocratic License v3 ethical requirements.
     + The author mentions that this tool was inspired by seeing Lorna Jane Mitchell
       use Matthew J. McCullough's [generaterandomchanges](https://github.com/matthewmccullough/scripts/blob/master/generaterandomchanges)
@@ -213,7 +212,7 @@ __Git tools and sites__
 [3.12.8](https://help.github.com/enterprise-server@3.12/admin/release-notes#3.12.8),
 [3.11.14](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.14),
 [3.10.16](https://help.github.com/enterprise-server@3.10/admin/release-notes#3.10.16)
-+ GitLab [17.3.1, 17.2.4, 17.1.6](https://about.gitlab.com/releases/2024/08/21/patch-release-gitlab-17-3-1-released/)
++ GitLab [17.3.1, 17.2.4, 17.1.6](https://about.gitlab.com/releases/2024/08/21/patch-release-gitlab-17-3-1-released/),
 [17.3](https://about.gitlab.com/releases/2024/08/15/gitlab-17-3-released/),
 [17.2.2, 17.1.4, 17.0.6](https://about.gitlab.com/releases/2024/08/07/patch-release-gitlab-17-2-2-released/)
 + GitKraken [10.2.0](https://help.gitkraken.com/gitkraken-client/current/)
