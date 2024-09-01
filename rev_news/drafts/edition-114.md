@@ -116,6 +116,8 @@ __Light reading__
 + [Seriously, You Need to Learn Git](https://blog.derlin.ch/seriously-you-need-to-learn-git)
   by Lucy Linder on her blog (also available [on DEV\.to](https://dev.to/derlin/seriously-you-need-to-learn-git-1n8j)).  The article defines various levels of Git knowledge,
   and explains how knowing Git might improve one's development process.
++ [Tips for creating merge commits](https://www.brandonpugh.com/blog/tips-for-creating-merge-commits/)
+  by Brandon Pugh on his blog.
 + [Back-dating Git commits based on file modification dates](https://til.simonwillison.net/git/backdate-git-commits)
   by Simon Willison in his [TILs on Git](https://til.simonwillison.net/git)
   (Today I’ve Learned).
