@@ -51,9 +51,10 @@ _Editor's note: We're starting a new initiative in Git Rev News where
   and what motivated you to choose it as your GSoC project?
 
   When I was a student, I read [the book "Pro Git"](https://git-scm.com/book/en/v2)
-  to learn how to use Git in my daily development process. One day, I found
-  a tutorial that teaches how to write a mini Git step by step, and I really
-  appreciated the design of Git.
+  to learn how to use Git in my daily development process. One day, I
+  found [a tutorial](https://www.leshenko.net/p/ugit/) that teaches
+  how to write a mini Git step by step, and I really appreciated the
+  design of Git.
 
   As I was approaching my graduate school graduation, I hoped to use the
   opportunity provided by GSoC to do something meaningful for the long
