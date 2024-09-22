@@ -83,7 +83,7 @@ _Editor's note: We're starting a new initiative in Git Rev News where
   they clearly explain the background, motivation, and implementation
   details.
 
- * What was the biggest challenge you faced during your contributions
+* What was the biggest challenge you faced during your contributions
    to Git, and how did you overcome it?
 
   When building the ref consistency check infrastructure, I encountered
