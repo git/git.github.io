@@ -59,7 +59,7 @@ This edition covers what happened during the months of August and September 2024
 
   Congratulations to the contributors and their mentors!
 
-  * Git will [participate in the next Outreachy round](https://www.outreachy.org/communities/cfp/git/)
+* Git will [participate in the next Outreachy round](https://www.outreachy.org/communities/cfp/git/)
 
   Git applied to participate in the next
   [Outreachy](https://www.outreachy.org/) round from December 2024 to
