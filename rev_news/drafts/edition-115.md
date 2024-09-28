@@ -19,7 +19,7 @@ This edition covers what happened during the months of August and September 2024
 
 ### General
 
-* [Git Merge 2024 conference](https://git-merge.com/) and Contributor's Summit 2024
+* [Git Merge 2024 conference](https://git-merge.com/) and [Contributor's Summit 2024](https://lore.kernel.org/git/Zu2DmS30E0kKug2a@nand.local/)
 
   The Git Merge conference happened on
   [September 19th and 20th](https://github.com/git/git-merge) in
