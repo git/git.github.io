@@ -175,6 +175,29 @@ __Git tools and sites__
 
 ## Releases
 
++ Git [2.47.0-rc0](https://public-inbox.org/git/xmqqv7yijq33.fsf@gitster.g/),
+[2.46.2](https://public-inbox.org/git/xmqqa5fyytg0.fsf@gitster.g/),
+[2.46.1](https://public-inbox.org/git/xmqqikuytbxd.fsf@gitster.g/)
++ Git for Windows [2.47.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.47.0-rc0.windows.1),
+[2.46.2(1)](https://github.com/git-for-windows/git/releases/tag/v2.46.2.windows.1),
+[2.46.1(1)](https://github.com/git-for-windows/git/releases/tag/v2.46.1.windows.1)
++ GitHub Enterprise [3.14.1](https://help.github.com/enterprise-server@3.14/admin/release-notes#3.14.1),
+[3.13.4](https://help.github.com/enterprise-server@3.13/admin/release-notes#3.13.4),
+[3.12.9](https://help.github.com/enterprise-server@3.12/admin/release-notes#3.12.9),
+[3.11.15](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.15),
+[3.10.17](https://help.github.com/enterprise-server@3.10/admin/release-notes#3.10.17)
++ GitLab [16.10.10, 16.9.11, 16.8.10, 16.7.10, 16.6.10, 16.5.10, 16.4.7, 16.3.9, 16.2.11, 16.1.8, 16.0.10](https://about.gitlab.com/releases/2024/09/25/patch-release-gitlab-16-10-10-released/),
+[17.4.1, 17.3.4, 17.2.8](https://about.gitlab.com/releases/2024/09/25/patch-release-gitlab-17-4-1-released/),
+[17.4](https://about.gitlab.com/releases/2024/09/19/gitlab-17-4-released/),
+[17.3.3, 17.2.7, 17.1.8, 17.0.8, 16.11.10](https://about.gitlab.com/releases/2024/09/17/patch-release-gitlab-17-3-3-released/),
+[16.11.9](https://about.gitlab.com/releases/2024/09/11/gitlab-16-11-9-released/),
+[17.0.7](https://about.gitlab.com/releases/2024/09/11/gitlab-17-0-7-released/),
+[17.3.2, 17.2.5, 17.1.7](https://about.gitlab.com/releases/2024/09/11/patch-release-gitlab-17-3-2-released/)
++ GitKraken [10.3.0](https://help.gitkraken.com/gitkraken-client/current/)
++ GitHub Desktop [3.4.5](https://desktop.github.com/release-notes/),
+[3.4.4](https://desktop.github.com/release-notes/)
++ Garden [1.8.0](https://github.com/garden-rs/garden/releases/tag/v1.8.0)
++ Git Cola [4.8.2](https://github.com/git-cola/git-cola/releases/tag/v4.8.2)
 
 ## Credits
 
