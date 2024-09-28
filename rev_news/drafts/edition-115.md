@@ -35,6 +35,30 @@ This edition covers what happened during the months of August and September 2024
   there was [the Contributor's Summit](https://lore.kernel.org/git/Zu2DmS30E0kKug2a@nand.local/) in parallel
   with [breakout unconference sessions](https://github.com/git/git-merge/tree/main/breakouts).
 
+* [Git participated in GSoC (Google Summer of Code) 2024](https://summerofcode.withgoogle.com/programs/2024/organizations/git)
+
+  All the contributors have successfully passed their final evaluation
+  and published a final report:
+
+  - Jialuo She [worked](https://luolibrary.com/) on the
+    [Implement consistency check for refs](https://summerofcode.withgoogle.com/programs/2024/projects/ukm4PTEF)
+    project. He was mentored by Karthik Nayak and Patrick Steinhardt. The final
+    report can be found on
+	[his website](https://luolibrary.com/2024/08/25/GSoC-Final-Report/).
+
+  - Chandra Pratap [worked](https://chand-ra.github.io/) on the
+    [Move and improve reftable tests in the unit testing framework](https://summerofcode.withgoogle.com/programs/2024/projects/tlh611d7)
+    project. He was mentored by Patrick Steinhardt and Christian Couder. The final
+    report can be found on
+	[his website](https://chand-ra.github.io/2024/08/24/GSoC-Final-Report.html).
+
+  - Ghanshyam Thakkar [worked](https://spectre10.github.io/posts/) on the
+    [Move existing tests to a unit testing framework](https://summerofcode.withgoogle.com/programs/2024/projects/e9C4rhrv)
+    project. He was mentored by Christian Couder and Kaartic Sivaraam. The final
+    report can be found on [his website](https://spectre10.github.io/posts/gsoc_final_report/).
+
+  Congratulations to the contributors and their mentors!
+
 <!---
 ### Reviews
 -->
