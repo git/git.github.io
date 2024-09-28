@@ -198,6 +198,8 @@ __Git tools and sites__
 [3.4.4](https://desktop.github.com/release-notes/)
 + Garden [1.8.0](https://github.com/garden-rs/garden/releases/tag/v1.8.0)
 + Git Cola [4.8.2](https://github.com/git-cola/git-cola/releases/tag/v4.8.2)
++ GitButler [0.12.26](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.12.26),
+[0.12.25](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.12.25)
 
 ## Credits
 
