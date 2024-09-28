@@ -59,6 +59,23 @@ This edition covers what happened during the months of August and September 2024
 
   Congratulations to the contributors and their mentors!
 
+  * Git will [participate in the next Outreachy round](https://www.outreachy.org/communities/cfp/git/)
+
+  Git applied to participate in the next
+  [Outreachy](https://www.outreachy.org/) round from December 2024 to
+  March 2025 and was accepted.
+  [Two projects](https://www.outreachy.org/apply/project-selection/#git)
+  are proposed:
+
+   - "Convert unit tests to use the clar testing framework" which will
+     be mentored by Patrick Steinhardt and Phillip Wood.
+
+   - "Finish adding a 'os-version' capability to Git protocol v2"
+     which will be mentored by Christian Couder.
+
+  See this [Outreachy webpage](https://www.outreachy.org/docs/applicant/),
+  for more information about the application process for contributors.
+
 <!---
 ### Reviews
 -->
