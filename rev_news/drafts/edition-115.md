@@ -17,9 +17,23 @@ This edition covers what happened during the months of August and September 2024
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [Git Merge 2024 conference](https://git-merge.com/) and Contributor's Summit 2024
+
+  The Git Merge conference happened on
+  [September 19th and 20th](https://github.com/git/git-merge) in
+  Berlin, hosted by [GitButler](https://gitbutler.com/) and
+  [GitHub](https://github.com/).
+
+  The first day consisted of
+  [talks](https://github.com/git/git-merge#day-one-talks) and an
+  afterparty in the evening sponsored by
+  [GerritForge](https://www.gerritforge.com/).
+
+  On the [second day](https://github.com/git/git-merge?tab=readme-ov-file#day-two-unconference),
+  there was [the Contributor's Summit](https://lore.kernel.org/git/Zu2DmS30E0kKug2a@nand.local/) in parallel
+  with [breakout unconference sessions](https://github.com/git/git-merge/tree/main/breakouts).
 
 <!---
 ### Reviews
