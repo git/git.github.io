@@ -76,9 +76,57 @@ This edition covers what happened during the months of August and September 2024
   See this [Outreachy webpage](https://www.outreachy.org/docs/applicant/),
   for more information about the application process for contributors.
 
-<!---
 ### Reviews
--->
+
+* [[PATCH] tests: drop use of 'tee' that hides exit status](https://lore.kernel.org/git/xmqq4j7uhfvm.fsf@gitster.g/)
+
+  Junio Hamano, the Git maintainer, sent a patch removing uses of the
+  `tee` command from test scripts.
+  [tee(1)](https://en.wikipedia.org/wiki/Tee_(command)) is a shell
+  command that duplicates its input to both its output and to one or
+  more files. The issue was that in some test scripts it was used
+  after a [pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix)) to
+  directly duplicate the output of a Git command, so using a format
+  like:
+
+  `git COMMAND OPTIONS... | tee FILE...`
+
+  And it's not a good idea to use a pipe after a Git command because
+  pipes discard the exit code of the command before them, so the exit
+  code of the whole line is only the exit code of the command after
+  the pipe, here `tee`. In Git tests though, we wouldn't want a test
+  to pass if the Git command fails when it should succeed.
+
+  As there was no reason to hide the exit code of the Git commands in
+  the tests that used `tee`, Junio's patch basically just replaced
+  `| tee` with a simple `>`
+  [redirection](https://en.wikipedia.org/wiki/Redirection_(computing)).
+
+  Rubén Justo replied to Junio suggesting a wording improvement in the
+  commit message, but otherwise agreeing with the patch.
+
+  Johannes Schindelin, alias Dscho, also replied to Junio saying that
+  having something that duplicates the output of the Git command to
+  standard output could still be useful for debugging, especially when
+  dealing with CI failures. He showed an implementation of a
+  `redirect_and_show()` helper function that could perhaps be used
+  instead of `tee`, but agreed that it might be overkill and hoped that
+  having more unit tests written in C could help.
+
+  Jeff King, alias Peff, replied to Dscho saying that a better help
+  for debugging CI failures might be to have a way to automatically
+  save the state of the test directory, called
+  `trash directory.tXXXX-YYYY` where `tXXXX-YYYY` is related to the
+  name of the test script.
+
+  Junio also replied to Dscho saying that a simple `cat FILE`
+  instruction could be added after the lines where `| tee` was
+  replaced with a redirection to make sure the Git command output
+  appeared on standard output. Junio also agreed with Peff that saving
+  the state of test directories would be best to debug CI failures.
+
+  A version of Junio's patch taking into account the wording
+  improvement suggested by Rubén was eventually merged.
 
 <!---
 ### Support
