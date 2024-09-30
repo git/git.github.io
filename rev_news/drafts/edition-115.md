@@ -73,7 +73,7 @@ This edition covers what happened during the months of August and September 2024
    - "Finish adding a 'os-version' capability to Git protocol v2"
      which will be mentored by Christian Couder.
 
-  See this [Outreachy webpage](https://www.outreachy.org/docs/applicant/),
+  See this [Outreachy webpage](https://www.outreachy.org/docs/applicant/)
   for more information about the application process for contributors.
 
 ### Reviews
@@ -91,11 +91,16 @@ This edition covers what happened during the months of August and September 2024
 
   `git COMMAND OPTIONS... | tee FILE...`
 
-  And it's not a good idea to use a pipe after a Git command because
-  pipes discard the exit code of the command before them, so the exit
-  code of the whole line is only the exit code of the command after
-  the pipe, here `tee`. In Git tests though, we wouldn't want a test
+  However, it's not a good idea to use a pipe after a Git command because
+  pipes discard the exit code of the command before them, so the
+  standard (Unix) shell behaviour is that the exit code of the whole
+  sequence is simply the exit code of the last command of a pipe sequence,
+  here `tee`. In Git tests though, we wouldn't want a test
   to pass if the Git command fails when it should succeed.
+  \[For shell intimates: there are ways to override this default behaviour,
+  such as the option pipefail for shells that support it, or _named pipes_
+  in other cases.
+  In summary, the root problem can be understood as a portability one.\]
 
   As there was no reason to hide the exit code of the Git commands in
   the tests that used `tee`, Junio's patch basically just replaced
@@ -212,14 +217,14 @@ _Editor's note: We're starting a new initiative in Git Rev News where
 * What is your favorite Git-related tool/library, outside of Git
   itself?
 
-  I very like [GitLens tool](https://gitlens.amod.io/) when using
+  I very much like the [GitLens tool](https://gitlens.amod.io/) when using
   VSCode. By using this tool, I hardly use the bare `git blame` command.
 
 * What is your toolbox for interacting with the mailing list and for
   development of Git?
 
   When reviewing patches, I will firstly use [`b4`](https://b4.docs.kernel.org/en/latest/)
-  or simply fetch the branch stored in the Junio's tree and then I will
+  or simply fetch the branch stored in Junio's tree, and then I will
   see the diffs just in the VSCode. To reply to a patch, I download the
   raw email and use [`mutt`](http://www.mutt.org/) to write contents.
   When sending patches, I still use `mutt` to make the environment as
