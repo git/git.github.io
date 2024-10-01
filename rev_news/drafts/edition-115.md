@@ -192,7 +192,7 @@ _Editor's note: We're starting a new initiative in Git Rev News where
   details.
 
 * What was the biggest challenge you faced during your contributions
-   to Git, and how did you overcome it?
+  to Git, and how did you overcome it?
 
   When building the ref consistency check infrastructure, I encountered
   an exceptionally long review process that lasted about three months.
@@ -285,24 +285,24 @@ __Various__
 
 __Light reading__
 + [Why GitHub Actually Won](https://blog.gitbutler.com/why-github-actually-won/):
-  How GitHub _actually_ became the dominant force it is today, from one of it's cofounders.
+  How GitHub _actually_ became the dominant force it is today, from one of its cofounders.
   Written by Scott Chacon on GitButler Blog.<br>
   Nice companion to various articles on Git history, like the latest
   [A Git story: Not so fun this time](https://git.github.io/rev_news/2024/07/31/edition-113/)
-  in [Git Rev News #113](https://git.github.io/rev_news/2024/07/31/edition-113/) - you can
-  find in #113 links to other editions with links to other retellings of the Git history.
+  in [Git Rev News #113](https://git.github.io/rev_news/2024/07/31/edition-113/) - in #113 you
+  can also find links to other editions with links to other retellings of the Git history.
 + [Rethinking code reviews with stacked PRs](https://www.aviator.co/blog/rethinking-code-reviews-with-stacked-prs/#)
   on Aviator blog by Ankit Jain (also available [on DEV\.to](https://dev.to/dphenomenal/rethinking-code-reviews-with-stacked-prs-3dih),
-  published by Ibrahim Salami.  Aviator provides [`av`](https://github.com/aviator-co/av) CLI tool
+  published by Ibrahim Salami.  Aviator provides [`av`](https://github.com/aviator-co/av), a CLI tool
   to help with managing stacked PRs on GitHub.
-    + Under Stacked Pull Requests, but also under the name Stacked Diffs,
-      it was most recently mentioned in
-      [Git Rev News Edition #111](https://git.github.io/rev_news/2024/05/31/edition-111/);
-      you can find there links to other editions with other articles, and to related tools.
+    + Stacked Pull Requests, also under the name Stacked Diffs,
+      were most recently mentioned in
+      [Git Rev News Edition #111](https://git.github.io/rev_news/2024/05/31/edition-111/),
+      where you can find links to other editions with other articles, and to related tools.
     + See also [Stacked PRs CLI Product Comparison (Public)](https://docs.google.com/spreadsheets/d/1riYPbdprf6E3QP1wX1BeASn2g8FKBgbJlrnKmwfU3YE/edit?gid=0#gid=0)
       Google Sheet spreadsheet.
     + Contrast [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html),
-      which strongly recomments patterns that are best suited to Continuous Integration,
+      which strongly recommends patterns that are best suited to Continuous Integration,
       first mentioned in [Git Rev News Edtion #63](https://git.github.io/rev_news/2020/05/28/edition-63/),
       and [Ship / Show / Ask: A modern branching strategy](https://martinfowler.com/articles/ship-show-ask.html),
       mentioned in [Edition #79](https://git.github.io/rev_news/2021/09/30/edition-79/).
@@ -313,7 +313,7 @@ __Light reading__
   Covers git-bisect, git-rerere, gitattributes, git-notes, and git-worktree.
 + [Mastering Tower (Windows Edition)](https://www.git-tower.com/blog/mastering-tower-windows)
   and [Mastering Tower (Mac Edition)](https://www.git-tower.com/blog/mastering-tower/)
-  by Bruno Brito on GitTower Blog.  Tower is proprietary Git client for Mac and Windows,
+  by Bruno Brito on GitTower Blog.  Tower is a proprietary Git client for Mac and Windows,
   with 30-day free trial.
 + [Git bisect run techniques](https://paperless.blog/git-bisect-run-techniques)
   by Victor Engmark on paperless\.blog.
@@ -383,12 +383,12 @@ __Git tools and sites__
     + [git-branchstack](https://github.com/krobelus/git-branchstack) in Python,
     + [git-chain](https://github.com/dashed/git-chain) in Rust,
     + [git-machete](https://github.com/VirtusLab/git-machete) in Python
-      - also available [as plugin](https://github.com/VirtusLab/git-machete-intellij-plugin)
+      - also available as a [plugin](https://github.com/VirtusLab/git-machete-intellij-plugin)
       for the IntelliJ Platform products,
     + [git-ps-rs - Git Patch Stack](https://github.com/drewdeponte/git-ps-rs) in Rust,
     + [git-series](https://github.com/git-series/git-series) in Rust
       (first mentioned in [Git Rev News Edition #18](https://git.github.io/rev_news/2016/08/17/edition-18/),
-      with link to presentation in [#19](https://git.github.io/rev_news/2016/09/14/edition-19/)),
+      with a link to the presentation in [#19](https://git.github.io/rev_news/2016/09/14/edition-19/)),
     + [git-stack](https://github.com/gitext-rs/git-stack) in Rust,
     + [graphite-desktop](https://github.com/withgraphite/graphite-desktop)
       (formerly [graphite-cli](https://github.com/withgraphite/graphite-cli))
