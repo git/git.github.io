@@ -279,7 +279,7 @@ __Various__
   and [#110](https://git.github.io/rev_news/2024/04/30/edition-110/) - where one
   can find similar and related tools.
 + [git-scm.com is now a static website](https://lore.kernel.org/all/ZvrNmsycmamx2dcR@nand.local/t/#m72b3c0f77102fe9964e77d6c10d9166485e13c0e)
-  by Johannes Schindelin on Git mailing list.
+  by Johannes Schindelin on the Git mailing list.
   Can also be discussed using [GitHub issue #729](https://github.com/git/git.github.io/issues/729).
 
 __Light reading__
@@ -297,7 +297,7 @@ __Light reading__
     + Under Stacked Pull Requests, but also under the name Stacked Diffs,
       it was most recently mentioned in
       [Git Rev News Edition #111](https://git.github.io/rev_news/2024/05/31/edition-111/);
-      you can find there links to other editions with other articles, and to xsrelated tools.
+      you can find there links to other editions with other articles, and to xs-related tools.
     + See also [Stacked PRs CLI Product Comparison (Public)](https://docs.google.com/spreadsheets/d/1riYPbdprf6E3QP1wX1BeASn2g8FKBgbJlrnKmwfU3YE/edit?gid=0#gid=0)
       Google Sheet spreadsheet.
     + Contrast [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html),
@@ -400,7 +400,7 @@ __Git tools and sites__
       [#21](https://git.github.io/rev_news/2016/11/16/edition-21/),
       and [#74](https://git.github.io/rev_news/2021/04/30/edition-74/),
       and finally presented as a tool in [#93](https://git.github.io/rev_news/2022/11/30/edition-93/)).
-+ [degit](https://github.com/Rich-Harris/degit) is CLI tool
++ [degit](https://github.com/Rich-Harris/degit) is a CLI tool
   that makes copies of Git repositories faster than ordinary `git clone`.
   Supports GitHub, GitLab, Bitbucket, and Sourcehut (sr\.ht).
   Written in JavaScript for Node.js, under MIT license.
