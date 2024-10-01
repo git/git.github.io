@@ -265,15 +265,146 @@ _Editor's note: We're starting a new initiative in Git Rev News where
 ## Other News
 
 __Various__
-
++ [Radicle 1.0](https://radicle.xyz/2024/09/10/radicle-1.0.html).<br>
+  Radicle is a peer-to-peer, local-first code collaboration stack built on Git.
+  [Radicle](https://radicle.xyz/) was first mentioned in
+  [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/),
+  then in [Edition #70](https://git.github.io/rev_news/2020/12/26/edition-70/),
+  [#86](https://git.github.io/rev_news/2022/04/30/edition-86/),
+  and [#110](https://git.github.io/rev_news/2024/04/30/edition-110/) - where one
+  can find similar and related tools.
++ [git-scm.com is now a static website](https://lore.kernel.org/all/ZvrNmsycmamx2dcR@nand.local/t/#m72b3c0f77102fe9964e77d6c10d9166485e13c0e)
+  by Johannes Schindelin on Git mailing list.
 
 __Light reading__
++ [Why GitHub Actually Won](https://blog.gitbutler.com/why-github-actually-won/):
+  How GitHub _actually_ became the dominant force it is today, from one of it's cofounders.
+  Written by Scott Chacon on GitButler Blog.<br>
+  Nice companion to various articles on Git history, like the latest
+  [A Git story: Not so fun this time](https://git.github.io/rev_news/2024/07/31/edition-113/)
+  in [Git Rev News #113](https://git.github.io/rev_news/2024/07/31/edition-113/) - you can
+  find in #113 links to other editions with links to other retellings of the Git history.
++ [Rethinking code reviews with stacked PRs](https://www.aviator.co/blog/rethinking-code-reviews-with-stacked-prs/#)
+  on Aviator blog by Ankit Jain (also available [on DEV\.to](https://dev.to/dphenomenal/rethinking-code-reviews-with-stacked-prs-3dih),
+  published by Ibrahim Salami.  Aviator provides [`av`](https://github.com/aviator-co/av) CLI tool
+  to help with managing stacked PRs on GitHub.
+    + Under Stacked Pull Requests, but also under the name Stacked Diffs,
+      it was most recently mentioned in
+      [Git Rev News Edition #111](https://git.github.io/rev_news/2024/05/31/edition-111/);
+      you can find there links to other editions with other articles, and to xsrelated tools.
+    + See also [Stacked PRs CLI Product Comparison (Public)](https://docs.google.com/spreadsheets/d/1riYPbdprf6E3QP1wX1BeASn2g8FKBgbJlrnKmwfU3YE/edit?gid=0#gid=0)
+      Google Sheet spreadsheet.
+    + Contrast [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html),
+      which strongly recomments patterns that are best suited to Continuous Integration,
+      first mentioned in [Git Rev News Edtion #63](https://git.github.io/rev_news/2020/05/28/edition-63/),
+      and [Ship / Show / Ask: A modern branching strategy](https://martinfowler.com/articles/ship-show-ask.html),
+      mentioned in [Edition #79](https://git.github.io/rev_news/2021/09/30/edition-79/).
++ [Git With Python HowTo: GitPython Tutorial And PyGit2 Tutorial](https://grimoire.carcano.ch/blog/git-with-python-howto-gitpython-tutorial-and-pygit2-tutorial/)
+  by Marco Antonio Carcano on his blog 'The grimoire of a modern Linux professional'.
++ [Beyond “Commit” and “Push”: 5 Advanced Git Features You Should Know](https://www.git-tower.com/blog/5-advanced-git-features)
+  by Bruno Brito on GitTower Blog.
+  Covers git-bisect, git-rerere, gitattributes, git-notes, and git-worktree.
++ [Mastering Tower (Windows Edition)](https://www.git-tower.com/blog/mastering-tower-windows)
+  and [Mastering Tower (Mac Edition)](https://www.git-tower.com/blog/mastering-tower/)
+  by Bruno Brito on GitTower Blog.  Tower is proprietary Git client for Mac and Windows,
+  with 30-day free trial.
++ [Git bisect run techniques](https://paperless.blog/git-bisect-run-techniques)
+  by Victor Engmark on paperless\.blog.
++ [Semantic Versioning with GitVersion (GitFlow)](https://blog.raulnq.com/semantic-versioning-with-gitversion-gitflow)
+  by Raul Naupari on his blog; Featured on daily\.dev, also available
+  [on DEV\.to](https://dev.to/raulnq/semantic-versioning-with-gitversion-gitflow-1gb4).
++ [Host your own Radicle seed node](https://dev.to/raulnq/semantic-versioning-with-gitversion-gitflow-1gb4)
+  by Eduard on Ed's Site.  Also available [on DEV\.to](https://dev.to/viiik/how-to-host-your-own-radicle-node-contribute-to-decentralized-source-control-5cgm).
++ [Creating a Git commit: The Hard Way](https://avestura.dev/blog/creating-a-git-commit-the-hard-way)
+  (with low-level plumbing commands) by Aryan Ebrahimpour
+  on Avestura's Personal Website.
++ [My Git cheatsheet](https://write.as/pylapp/my-git-cheatsheet) - a list
+  of some useful commands, as a cheatsheet or a simple reminder to keep and share.
+  Written by Pierre-Yves Lapersonne, on pylapp blog (in the fediverse (write\.as)),
+  who posts mainly in French.
+
 
 <!---
 __Easy watching__
 -->
 
 __Git tools and sites__
++ [b4](https://github.com/mricon/b4) is a tool created to make it easier
+  for project developers and maintainers to use a distributed development
+  workflow that relies on patches, e-mail and distribution lists for code
+  contributions and review (like those used in Linux kernel development).
+  This tool was first mentioned in [Git Rev News Edition #61](https://git.github.io/rev_news/2020/03/25/edition-61/);
+  you can find links to various articles and posts about this tool
+  in [Edition #61](https://git.github.io/rev_news/2020/03/25/edition-61/),
+  [#91](https://git.github.io/rev_news/2022/09/30/edition-91/),
+  [#95](https://git.github.io/rev_news/2023/01/31/edition-95/),
+  [#107](https://git.github.io/rev_news/2024/01/31/edition-107/) and
+  [#109](https://git.github.io/rev_news/2024/03/31/edition-109/).
+  Written in Python, under GPL-2.0 license.
++ [Phabricator.KDE.org](http://phabricator.kde.org/) is KDE's desktop environment task management system.
+  It was used for patch review and other functions in the past, but KDE has since transitioned to GitLab,
+  at <https://invent.kde.org>. Bug tracking is done using <https://bugs.kde.org>.
+  Phabricator is still used for task tracking by KDE until this functionality is migrated to GitLab.
+    + [Phabricator](https://www.phacility.com/phabricator/) is/was a suite
+      of web-based development collaboration tools, which includes a code review tool called Differential,
+      a repository browser called Diffusion, a change monitoring tool called Herald,
+      a bug tracker called Maniphest, and a wiki called Phriction.<br>
+      Phabricator is [no longer actively maintained](https://admin.phacility.com/phame/post/view/11/phacility_is_winding_down_operations/)
+      by Phacility since June 1, 2021.  This tool was mentioned
+      in [Git Rev News Edition #13](https://git.github.io/rev_news/2016/03/16/edition-13/).
+      Written in PHP, under Apache 2.0 license.
+    + [Phorge](https://we.phorge.it/) is a community-maintained fork of Phabricator,
+      public [since Sep 7, 2022](https://we.phorge.it/phame/post/view/1/going_public/).
+      It seems to be actively developed.
++ [nb-clean](https://github.com/srstevenson/nb-clean) cleans Jupyter notebooks
+  of cell execution counts, metadata, outputs, and (optionally) empty cells,
+  preparing them for committing to version control.
+  Written in Python, under short ISC license.
++ [av](https://github.com/aviator-co/av) (Aviator) is a command-line tool
+  that helps you manage your stacked PRs on GitHub.
+  Written in Go, under MIT license.
++ [Stacked PRs CLI Product Comparison (Public)](https://docs.google.com/spreadsheets/d/1riYPbdprf6E3QP1wX1BeASn2g8FKBgbJlrnKmwfU3YE/edit?gid=0#gid=0)
+  is a Google Sheet spreadsheet by Aviator, listing various stacked PR/stacked diff tools:
+    + [ghstack](https://github.com/ezyang/ghstack) in Python,
+    + [gh-stack](https://github.com/timothyandrew/gh-stack) in Rust - no longer developed,
+    + [git-branchless](https://github.com/arxanas/git-branchless) in Rust
+      (mentioned in [Git Rev News Edition #76](https://git.github.io/rev_news/2021/06/27/edition-76/),
+      [#90](https://git.github.io/rev_news/2022/08/31/edition-90/),
+      [#93](https://git.github.io/rev_news/2022/11/30/edition-93/),
+      [#98](https://git.github.io/rev_news/2023/04/30/edition-98/),
+      and [#106](https://git.github.io/rev_news/2023/12/31/edition-106/)),
+    + [git-branchstack](https://github.com/krobelus/git-branchstack) in Python,
+    + [git-chain](https://github.com/dashed/git-chain) in Rust,
+    + [git-machete](https://github.com/VirtusLab/git-machete) in Python
+      - also available [as plugin](https://github.com/VirtusLab/git-machete-intellij-plugin)
+      for the IntelliJ Platform products,
+    + [git-ps-rs - Git Patch Stack](https://github.com/drewdeponte/git-ps-rs) in Rust,
+    + [git-series](https://github.com/git-series/git-series) in Rust
+      (first mentioned in [Git Rev News Edition #18](https://git.github.io/rev_news/2016/08/17/edition-18/),
+      with link to presentation in [#19](https://git.github.io/rev_news/2016/09/14/edition-19/)),
+    + [git-stack](https://github.com/gitext-rs/git-stack) in Rust,
+    + [graphite-desktop](https://github.com/withgraphite/graphite-desktop)
+      (formerly [graphite-cli](https://github.com/withgraphite/graphite-cli))
+      in JavaScript/TypeScript - no longer actively developed,
+    + [Sapling SCM](https://github.com/facebook/sapling) Git-compatible source control system
+      by Facebook (mentioned in [Git Rev News Edition #93](https://git.github.io/rev_news/2022/11/30/edition-93/)),
+    + [spr](https://github.com/ejoffe/spr) - Stacked Pull Requests on GitHub, in Go,
+    + [Stacked Git (StGit)](https://stacked-git.github.io/) in Rust
+      (mentioned in Git Rev News Edition [#17](https://git.github.io/rev_news/2016/07/20/edition-17/),
+      [#21](https://git.github.io/rev_news/2016/11/16/edition-21/),
+      and [#74](https://git.github.io/rev_news/2021/04/30/edition-74/),
+      and finally presented as a tool in [#93](https://git.github.io/rev_news/2022/11/30/edition-93/)).
++ [degit](https://github.com/Rich-Harris/degit) is CLI tool
+  that makes copies of Git repositories faster than ordinary `git clone`.
+  Supports GitHub, GitLab, Bitbucket, and Sourcehut (sr\.ht).
+  Written in JavaScript for Node.js, under MIT license.
++ [GitVersion](https://gitversion.net/) is a tool that generates
+  a [Semantic Version](https://semver.org/) number based on your Git history.
+  Available as Continuous Server pipeline, CLI tool, MSBuild task, and software library.
+  Written in C#, under MIT license.  Works on Windows, Linux, and Mac.
++ [ugit: DIY Git in Python](https://www.leshenko.net/p/ugit/) is a tutorial on Git internals,
+  where you learn about how Git works on the inside by trying to implement
+  (micro) Git in Python.
 
 
 ## Releases
