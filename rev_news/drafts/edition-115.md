@@ -97,10 +97,13 @@ This edition covers what happened during the months of August and September 2024
   sequence is simply the exit code of the last command of a pipe sequence,
   here `tee`. In Git tests though, we wouldn't want a test
   to pass if the Git command fails when it should succeed.
+
   \[For shell intimates: there are ways to override this default behaviour,
-  such as the option pipefail for shells that support it, or _named pipes_
-  in other cases.
-  In summary, the root problem can be understood as a portability one.\]
+  such as [the `pipefail` option](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_09_02),
+  or [named pipes](https://en.wikipedia.org/wiki/Named_pipe), but
+  there are a number of reasons, like shell portability and making
+  it easy to understand small parts of the code, why Git developers
+  try to avoid using those features in the Git codebase.\]
 
   As there was no reason to hide the exit code of the Git commands in
   the tests that used `tee`, Junio's patch basically just replaced
