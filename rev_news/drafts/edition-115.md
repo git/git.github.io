@@ -280,6 +280,7 @@ __Various__
   can find similar and related tools.
 + [git-scm.com is now a static website](https://lore.kernel.org/all/ZvrNmsycmamx2dcR@nand.local/t/#m72b3c0f77102fe9964e77d6c10d9166485e13c0e)
   by Johannes Schindelin on Git mailing list.
+  Can also be discussed using [GitHub issue #729](https://github.com/git/git.github.io/issues/729).
 
 __Light reading__
 + [Why GitHub Actually Won](https://blog.gitbutler.com/why-github-actually-won/):
