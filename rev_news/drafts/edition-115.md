@@ -298,7 +298,7 @@ __Light reading__
     + Under Stacked Pull Requests, but also under the name Stacked Diffs,
       it was most recently mentioned in
       [Git Rev News Edition #111](https://git.github.io/rev_news/2024/05/31/edition-111/);
-      you can find there links to other editions with other articles, and to xs-related tools.
+      you can find there links to other editions with other articles, and to related tools.
     + See also [Stacked PRs CLI Product Comparison (Public)](https://docs.google.com/spreadsheets/d/1riYPbdprf6E3QP1wX1BeASn2g8FKBgbJlrnKmwfU3YE/edit?gid=0#gid=0)
       Google Sheet spreadsheet.
     + Contrast [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html),
