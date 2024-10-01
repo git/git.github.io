@@ -323,7 +323,7 @@ __Light reading__
 + [Semantic Versioning with GitVersion (GitFlow)](https://blog.raulnq.com/semantic-versioning-with-gitversion-gitflow)
   by Raul Naupari on his blog; Featured on daily\.dev, also available
   [on DEV\.to](https://dev.to/raulnq/semantic-versioning-with-gitversion-gitflow-1gb4).
-+ [Host your own Radicle seed node](https://dev.to/raulnq/semantic-versioning-with-gitversion-gitflow-1gb4)
++ [Host your own Radicle seed node](https://edzz.de/posts/host-your-own-radicle-seed-node/)
   by Eduard on Ed's Site.  Also available [on DEV\.to](https://dev.to/viiik/how-to-host-your-own-radicle-node-contribute-to-decentralized-source-control-5cgm).
 + [Creating a Git commit: The Hard Way](https://avestura.dev/blog/creating-a-git-commit-the-hard-way)
   (with low-level plumbing commands) by Aryan Ebrahimpour
