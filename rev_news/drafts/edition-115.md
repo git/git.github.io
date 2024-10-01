@@ -279,8 +279,9 @@ __Various__
   and [#110](https://git.github.io/rev_news/2024/04/30/edition-110/) - where one
   can find similar and related tools.
 + [git-scm.com is now a static website](https://lore.kernel.org/all/ZvrNmsycmamx2dcR@nand.local/t/#m72b3c0f77102fe9964e77d6c10d9166485e13c0e)
-  by Johannes Schindelin on the Git mailing list.
-  Can also be discussed using [GitHub issue #729](https://github.com/git/git.github.io/issues/729).
+  by Johannes Schindelin on the Git mailing list.<br>
+  Moving git.github.io, Git Developer Pages and Git Rev News' website
+  into git-scm.com is discussed in [GitHub issue #729](https://github.com/git/git.github.io/issues/729).
 
 __Light reading__
 + [Why GitHub Actually Won](https://blog.gitbutler.com/why-github-actually-won/):
