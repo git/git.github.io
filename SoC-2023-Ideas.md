@@ -77,7 +77,7 @@ logic. For example, Git had at least 4 different implementations to
 format command output for different commands.
 
 Our previous GSoC students and Outreachy interns unified some of the
-formating logic into
+formatting logic into
 [ref-filter](https://github.com/git/git/blob/master/ref-filter.h) and
 got rid of similar logic in some command specific files. Current task
 is to continue this work and reuse ref-filter formatting logic in

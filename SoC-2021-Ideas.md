@@ -32,7 +32,7 @@ possible the same code and syntax as the ref-filter formats.
 Git used to have an old problem of duplicated implementations of some
 logic. For example, Git had at least 4 different implementations to
 format command output for different commands. Our previous GSoC
-students and Outreachy interns unified some of the formating logic
+students and Outreachy interns unified some of the formatting logic
 into [ref-filter](https://github.com/git/git/blob/master/ref-filter.h)
 and got rid of similar logic in some command specific files.
 

@@ -77,7 +77,7 @@ look for the commit which fixed a bug. It is already possible using
 "git bisect", but the user has to type "good" to mean "the bug is
 there" and "bad" to mean "the bug is fixed", which isn't convenient.
 
-It would be nice to allow the user to explicitely say "git bisect
+It would be nice to allow the user to explicitly say "git bisect
 fixed" and "git bisect unfixed" instead. It is actually much harder
 than defining "fixed"/"unfixed" as aliases for "bad"/"good".
 
