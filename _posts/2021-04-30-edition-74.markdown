@@ -152,7 +152,7 @@ This edition covers what happened during the month of March 2021.
 * What are you doing on the Git project these days, and why?
 
   I've been mostly dormant there lately, and I've been a happy user all
-  that time, both in dayjob and in personnal projects.  To me that tells
+  that time, both in dayjob and in personal projects.  To me that tells
   a lot on the maturity of the project.
 
   I've started to feel a new itch regarding `git rebase -i`, when iterative work

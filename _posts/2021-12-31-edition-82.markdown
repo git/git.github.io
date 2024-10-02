@@ -162,7 +162,7 @@ This edition covers what happened during the month of November 2021.
   way.
 
   This patch series started a small inconclusive discussion between
-  Ævar, Eric, Peff and Junio about automating the synopsys and maybe
+  Ævar, Eric, Peff and Junio about automating the synopsis and maybe
   other parts of the documentation from the code or other ways to
   avoid duplication and mismatches.
 
