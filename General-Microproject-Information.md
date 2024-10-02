@@ -51,7 +51,7 @@ and after several iterations an improved version of the patch was
 accepted into our codebase. As a GSoC contributor, or Outreachy intern,
 you will be playing the role of the developer and engaging in a
 similar discussion. Get familar with the flow, need for clarity on
-both sides (i.e. you need to clearly defend your design, and need to
+both sides (i.e. you need to clearly explain your design, and need to
 ask for clarifications when questions/suggestions you are offered are
 not clear enough), the pace at which the discussion takes place, and
 the general tone of the discussion, to learn what is expected of you.
