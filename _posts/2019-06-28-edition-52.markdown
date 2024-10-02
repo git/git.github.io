@@ -53,7 +53,7 @@ This edition covers what happened during the month of May 2019.
 
   Gábor Szeder commented on Stolee's commands to ask why `GIT_TR2`
   instead of `GIT_TRACE2` was used in the environment variables
-  related to the Trace2 API. Gábor refered to Ken Thompson "who
+  related to the Trace2 API. Gábor referred to Ken Thompson "who
   (allegedly?) later regretted spelling `creat()`/`O_CREAT` without the
   'e'...".
 
@@ -174,7 +174,7 @@ This edition covers what happened during the month of May 2019.
   >    time soon.
 
   For 2.), Stolee noticed that generation number v2 (corrected
-  commit date) [can be made backward compatibile](https://public-inbox.org/git/bb0c22f9-9d0b-0fa6-e826-8e2ac146c6f9@gmail.com/)
+  commit date) [can be made backward compatible](https://public-inbox.org/git/bb0c22f9-9d0b-0fa6-e826-8e2ac146c6f9@gmail.com/)
 
   > Since we can make the "corrected commit date" offset for a commit be
   > strictly larger than the offset of a parent, we can make it so an old client
