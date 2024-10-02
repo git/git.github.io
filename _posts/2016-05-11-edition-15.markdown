@@ -52,7 +52,7 @@ Another activity is related to defending the license, which is the
 GPLv2. For example, there have previously been vendors distributing
 Git with some changes, but without providing the source code for the Git version they
 were distributing. So far it has been possible to resolve these cases, but
-it is not completely clear if all vendors are currently fullfilling all of
+it is not completely clear if all vendors are currently fulfilling all of
 their obligations. If any developers who have contributed to Git
 want to take a closer look at what the vendors are doing, Conservancy is
 able to help them.
@@ -165,7 +165,7 @@ just after having run `git grep`.
 
 This year only one student, Pranit Bauva, will participate in the
 Google Summer of Code 2016 under the Git project. He will work on
-incrementaly rewriting in C the parts of "git bisect" that are still
+incrementally rewriting in C the parts of "git bisect" that are still
 in shell. He will be mentored by Lars Schneider and Christian Couder.
 
 ## Developer Spotlight: David Turner
@@ -253,7 +253,7 @@ __Various__
 * [Fun with a new feature in recent Git](https://git-blame.blogspot.de/2016/05/fun-with-new-feature-in-recent-git.html) by Junio C Hamano
 * [4200 miles, 5GBs, 1 min: cloning with mirrors and Git LFS](http://blogs.atlassian.com/2016/04/bitbucket-data-center-smart-mirroring-with-git-lfs-support/) from Atlassian's Kelvin Yap
 * [GitHub: Import repositories with large files](https://github.com/blog/2163-import-repositories-with-large-files), by Jonathan Hoyt
-* [Git Tips, Tricks and Workflows](http://www.fullstackradio.com/41) from the Full Stack Radio podcast epsiode 41, featuring Jason McCreary
+* [Git Tips, Tricks and Workflows](http://www.fullstackradio.com/41) from the Full Stack Radio podcast episode 41, featuring Jason McCreary
 * [One Commit. One Change.](https://medium.com/@fagnerbrack/one-commit-one-change-3d10b10cebbf#.1zqmjhd8q) by Fagner Brack
 * [Fast-Forward and parent reversal](http://dwim.me/2016/01/11/fast-foward-and-parent-reversal.html) by Carlos Martín Nieto
 * An interesting way of collecting your Git tricks using the [Gingko App](https://gingkoapp.com/git-notes)

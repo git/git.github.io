@@ -219,7 +219,7 @@ Junio Hamano [reminded](https://public-inbox.org/git/xmqqy42afvy1.fsf@gitster.mt
 that `contrib/` area is not the place for random git-related things.
 
 > Unlike the earlier days of Git, if a custom command that uses Git is
-> very userful, it can live its own life and flourish within the much
+> very useful, it can live its own life and flourish within the much
 > larger Git userbase we have these days.
 
 The proposed script was then therefore published as
