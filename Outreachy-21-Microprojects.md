@@ -89,6 +89,6 @@ untracked file in the submodule directory.  This is inconsistent with
 what `git describe --dirty` says when run in the submodule directory in
 that state.
 
-Fix `git diff` to use the same definition of dirtyness for such a
+Fix `git diff` to use the same definition of dirtiness for such a
 submodule directory (or the other way around).
 [[cf](https://lore.kernel.org/git/xmqqo8m1k542.fsf@gitster.c.googlers.com)]
