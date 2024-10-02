@@ -129,7 +129,7 @@ Ondrej listed commands using `cd src && git status` to reproduce the
 issue which is that "`git status` reports as if all files in the
 repository are deleted".
 
-As noone had replied, Ondrej asked on May 27th if anyone had time to
+As no one had replied, Ondrej asked on May 27th if anyone had time to
 look at this.
 
 Philip Oakley replied to Ondrej asking for more information about the
