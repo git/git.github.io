@@ -169,7 +169,7 @@ His patch does basically:
 ```
 
 Duy Nguyen suggested instead to avoid any FILE* interface and either
-mmap the entire file, or read (with bufferring) from a file
+mmap the entire file, or read (with buffering) from a file
 descriptor, as Git already does to read the index-pack file. But Peff
 said that it would be very inefficient too, and that there are no good
 NUL safe function to read from a file descriptor.

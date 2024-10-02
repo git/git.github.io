@@ -212,7 +212,7 @@ entries has only two bytes. The limit is then 65535 entries.
 René then sent a patch series to add tests for this problem and then
 fix it. The first patch contains the following code, which tests that
 a suitable `zipinfo` command is available on the current machine, and
-sets the ZIPINFO prerequesite if this is the case:
+sets the ZIPINFO prerequisite if this is the case:
 
 ```
 +ZIPINFO=zipinfo

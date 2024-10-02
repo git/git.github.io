@@ -122,7 +122,7 @@ Then Linus Torvalds explained the situation this way:
 > an "evil merge" is something that makes changes that came from neither
 > side and aren't actually resolving a conflict.
 
-Linus then started a discussion about wether the `-p` option in `git
+Linus then started a discussion about whether the `-p` option in `git
 log` should imply `--cc`:
 
 > That said, I do wonder if we should just make "-p" imply "--cc". Right

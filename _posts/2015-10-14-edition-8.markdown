@@ -84,7 +84,7 @@ to git/git, and Lars has since posted
 [a version 2](https://public-inbox.org/git/1443981977-64604-1-git-send-email-larsxschneider%40gmail.com/)
 and [a version 3 of his
 patches](https://public-inbox.org/git/1444586102-82557-1-git-send-email-larsxschneider%40gmail.com/),
-so an interesting way to test patchs will perhaps be available soon
+so an interesting way to test patches will perhaps be available soon
 to Git developers.
 
 
@@ -271,7 +271,7 @@ __Git tools and sites__
 
 * [git-nerps](https://github.com/mk-fg/git-nerps) - Tool to encrypt and manage selected files (or parts of files) in a Git repository. See also the [blog post](http://blog.fraggod.net/2015/09/01/transparent-and-easy-encryption-for-files-in-git-repositories.html) by its creator, Mike Kazantsev.
 * [git-ftp](http://git-ftp.github.io/git-ftp/) - Git powered FTP client written as shell script
-* [git-punish](http://git-punish.io/) - more for fun than anything else, this is a shortcut for runnig git blame and posting it's output to [git-punish.io](http://git-punish.io)
+* [git-punish](http://git-punish.io/) - more for fun than anything else, this is a shortcut for running git blame and posting it's output to [git-punish.io](http://git-punish.io)
 * [git:ghost](http://gitghost.org/) -  Publish posts to your Ghost blog using git
 * [Helix GitSwarm](http://www.perforce.com/downloads/helix-gitswarm) - a joint effort between Perforce and GitLab
 * [Tower's resources for learning Git](http://www.git-tower.com/learn/) - not sure if this is new, but it hasn't been in our newsletter yet.
