@@ -306,7 +306,7 @@ __Light reading__
       Google Sheet spreadsheet.
     + Contrast [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html),
       which strongly recommends patterns that are best suited to Continuous Integration,
-      first mentioned in [Git Rev News Edtion #63](https://git.github.io/rev_news/2020/05/28/edition-63/),
+      first mentioned in [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/),
       and [Ship / Show / Ask: A modern branching strategy](https://martinfowler.com/articles/ship-show-ask.html),
       mentioned in [Edition #79](https://git.github.io/rev_news/2021/09/30/edition-79/).
 + [Git With Python HowTo: GitPython Tutorial And PyGit2 Tutorial](https://grimoire.carcano.ch/blog/git-with-python-howto-gitpython-tutorial-and-pygit2-tutorial/)
