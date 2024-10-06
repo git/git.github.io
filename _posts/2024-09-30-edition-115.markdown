@@ -330,8 +330,7 @@ __Light reading__
   on Avestura's Personal Website.
 + [My Git cheatsheet](https://write.as/pylapp/my-git-cheatsheet) - a list
   of some useful commands, as a cheatsheet or a simple reminder to keep and share.
-  Written by Pierre-Yves Lapersonne, on pylapp blog (in the fediverse (write\.as)),
-  who posts mainly in French.
+  Written by Pierre-Yves Lapersonne on his French and English pylapp blog in the fediverse (write\.as).
 
 
 <!---
