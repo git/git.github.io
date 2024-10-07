@@ -338,7 +338,7 @@ __Git tools and sites__
 
 + [Guiffy](https://www.guiffy.com/), the advanced cross-platform diff/merge
 + [gitworkflow repository](https://github.com/rocketraman/gitworkflow) is a documentation repository for [gitworkflows](https://mirrors.edge.kernel.org/pub/software/scm/git/docs/gitworkflows.html): see [How the Creators of Git do Branching](https://hackernoon.com/how-the-creators-of-git-do-branches-e6fcc57270fb), by Raman Gupta (mentioned in [Git Rev News Edition 27](https://git.github.io/rev_news/2017/05/17/edition-27/))
-+ [git-immersion](https://github.com/jce-il/git-immersion) repository for [git-immersion excercise](http://jce-il.github.io/git-immersion/index.html) guided tour
++ [git-immersion](https://github.com/jce-il/git-immersion) repository for [git-immersion exercise](http://jce-il.github.io/git-immersion/index.html) guided tour
 + [commit -> public-inbox link helper](https://public-inbox.org/git/nycvar.QRO.7.76.6.1804041821420.55@ZVAVAG-6OXH6DA.rhebcr.pbec.zvpebfbsg.pbz/) script by Johannes Schindelin was posted on git mailing list
 + [kaizenboard](https://kaizenboard.xyz/#/) - GitHub issues on a Kanban board
 

@@ -92,7 +92,7 @@ This edition covers what happened during the month of July 2020.
 
 ### Support
 
-* [How can I search git log with ceratin keyword but without the other keyword?](https://public-inbox.org/git/CAAvDm6Z2HcQkyinCD4hKTnqGR3gcXodhoo0YKSnbB-vDJcn3MQ@mail.gmail.com/t/#u)
+* [How can I search git log with certain keyword but without the other keyword?](https://public-inbox.org/git/CAAvDm6Z2HcQkyinCD4hKTnqGR3gcXodhoo0YKSnbB-vDJcn3MQ@mail.gmail.com/t/#u)
 
   孙世龙 sunshilong asked how to search for commits in `git log` that include
   certain keyword A, but at the same time do not have another keyword B in them.
@@ -107,7 +107,7 @@ This edition covers what happened during the month of July 2020.
   search result.
 
   Carlo Arenas proposed using features of [PCRE syntax](https://perldoc.perl.org/perlre.html)
-  (Perl Compatibile Regular Expressions) with a negative lookahead assertion and
+  (Perl Compatible Regular Expressions) with a negative lookahead assertion and
   word boundary to generate expression that matches one but not the other:
 
   > `git log -P --all-match --grep '12' --grep '\b(?!t123\b)\w+'`

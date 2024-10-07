@@ -31,7 +31,7 @@ Merge conference that took place on January 31th and February 1st.
 
     * Ivan Frade and Minh Thai in _"Tales in scalability: how Google has seen users break Git"_
       talked about solving problems with Android (many repos, huge binary assets, many commits)
-      and Chromium monorepo (many unique commiters).  Some of the problems were caused by legacy
+      and Chromium monorepo (many unique committers).  Some of the problems were caused by legacy
       practices of trying to keep Subversion-like monotonic version number -- it turned out
       that attempts to provide it got into troubles and were cause of much of churn.  Another
       problem was the change in Gerrit, which now stores patch history in git repo, resulting
@@ -241,7 +241,7 @@ __Light reading__
 * [France enters the Matrix [LWN.net]](https://lwn.net/Articles/779331/) by Tom Yates
   covers Matthew Hodgson talk about [Matrix](https://matrix.org/blog/home/) at [FOSDEM 2019](https://fosdem.org/2019/);
   Matrix is an open standard and lightweight protocol for real-time communication,
-  allowing to create decentralized federated instant messenging system with end-to-end encryption;
+  allowing to create decentralized federated instant messaging system with end-to-end encryption;
   the video of the whole talk [is available](https://fosdem.org/2019/schedule/event/matrix_french_state/).
 
   > [...] the "first-class citizen" in Matrix is not the message, but
@@ -304,7 +304,7 @@ __Git tools and sites__
   There is also a [web client](https://github.com/src-d/gitbase-web) for it.
 
 * [Gitana](http://modeling-languages.com/gitana-a-sql-based-git-repository-inspector/): a SQL-based Project Activity Inspector,
-  written in Python ([GitHub reposiotory](https://github.com/SOM-Research/Gitana)),
+  written in Python ([GitHub repository](https://github.com/SOM-Research/Gitana)),
   was mentioned in [Git Rev News Edition #7](https://git.github.io/rev_news/2015/09/09/edition-7/#other-news).
   Nowadays it imports and digests the data of Git repositories, issue trackers (including Bugzilla and GitHub),
   Q&amp;A web-sites (including forums and StackOverflow) and instant messaging services to a relational database

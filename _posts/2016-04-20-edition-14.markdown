@@ -97,7 +97,7 @@ must be run manually for now, and running daemons on Windows
 might require some admin rights.
 
 The recently merged effort on improving the untracked cache in the
-index was also mentionned.
+index was also mentioned.
 
 * [Linux Kernel Development - Going Faster Than You Think](https://github.com/gregkh/kernel-development)
 
@@ -129,7 +129,7 @@ This makes the Linux Kernel the largest software project ever.
 Around 10 000 lines are added, 5300 lines are removed, and 1800 lines
 are modified, everyday!
 
-That's on average 7.8 changes per hour accross the whole tree with 5%
+That's on average 7.8 changes per hour across the whole tree with 5%
 in the core, 10% in the networking subsystem, and 55% in the drivers.
 
 This goes against any previously thought methodology for stable

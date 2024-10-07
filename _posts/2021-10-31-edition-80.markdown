@@ -196,7 +196,7 @@ This edition covers what happened during the month of September 2021.
   attention recently. I don't think I would remove them without a
   compelling replacement in their place.
 
-  Sometimes the downsides of submodules are moreso about how they are
+  Sometimes the downsides of submodules are more so about how they are
   used than how they are implemented. Whenever I encounter a project
   that does `git submodule update` or `git clone` in their `make` build
   process, I get a bit nervous. That's not really Git's fault, though.

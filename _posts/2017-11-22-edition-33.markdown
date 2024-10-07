@@ -89,7 +89,7 @@ Jonathan Nieder answered:
 > want to switch to LF endings, in which case I suggest the "single
 > fixup commit" strategy.
 
-He suggested though to declare explicitely all the files as non text
+He suggested though to declare explicitly all the files as non text
 files in `.gitattributes` using the `-text` flag, so that Git will not be
 tempted to change line endings.
 

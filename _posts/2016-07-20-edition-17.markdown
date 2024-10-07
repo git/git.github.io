@@ -99,7 +99,7 @@ Recently David replied to the above:
 > real-world work, I am convinced it is a great complementary tool to
 > git-submodule.  It seems odd to me to have one in core and one not.
 
-And David also detailled some of the work he plans to do on `git
+And David also detailed some of the work he plans to do on `git
 subtree`.
 
 ### Support
@@ -116,7 +116,7 @@ Ovatta Bianca asked:
 
 Philip Oakley answered:
 
-> A snaphot is like a tar or zip of all your tracked files. This means it is
+> A snapshot is like a tar or zip of all your tracked files. This means it is
 > easier to determine (compared to lots of diffs) the current content.
 >
 > Keeping all the snapshots as separate loose items, when the majority of
@@ -240,7 +240,7 @@ One hard problem in Git that would probably need such team of experts for
 a full year is resumable clone / resumable fetching. It is something that
 people want to have, but it turns out it is something really hard to implement
 reasonably. It can be worked around by using git bundles, which hopefully
-be automated and standarized; but it is still a workaround, not a solution.
+be automated and standardized; but it is still a workaround, not a solution.
 
 * If you could remove something from Git without worrying about backwards compatibility, what would it be?
 

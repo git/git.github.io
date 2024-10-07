@@ -101,7 +101,7 @@ similar as Dscho's alternative strategy. Phillip suggested using
 
 In a subsequent email replying to himself Dscho elaborated on a
 possible new subcommand. He proposed
-`git rebase --replay-latest-commits 3` and a sightly different way to
+`git rebase --replay-latest-commits 3` and a slightly different way to
 copy commits to the git-rebase-todo file so that it contains commits
 with resolved merge conflicts.
 

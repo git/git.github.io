@@ -38,7 +38,7 @@ and:
 
 It's interesting because there has been a lot of work during the past
 years to develop news ways to store refs. Especially there has been
-[attemps to store refs in databases like LMDB](https://public-inbox.org/git/1441245313-11907-1-git-send-email-dturner%40twopensource.com/), that have been covered in
+[attempts to store refs in databases like LMDB](https://public-inbox.org/git/1441245313-11907-1-git-send-email-dturner%40twopensource.com/), that have been covered in
 [Git Rev News edition 7](https://git.github.io/rev_news/2015/09/09/edition-7/).
 
 This new approach tries to store refs using git's own object database
@@ -52,7 +52,7 @@ Following some comments by Junio, Shawn agreed that his implementation
 has some hacks to handle "HEAD", which is a special ref, and to handle
 the fact that gitlinks were made to only point to commits, not tags.
 
-Michael Haggerty wondered if the negociation phase that happens when
+Michael Haggerty wondered if the negotiation phase that happens when
 doing a 'git fetch' could be sped up by such an implementation. This
 started a discussion between Shawn, Junio and Michael about how the
 "refs/" hierarchy could be improved.
@@ -85,7 +85,7 @@ specific to each worktree and some that are not.
 There are two pattern lists. One is a default pattern list built into
 the git binary, and the other one in ".git/info/config.worktree" is a
 user writable pattern list. Those two pattern lists are merged
-internaly to specify which config options are worktree specific.
+internally to specify which config options are worktree specific.
 
 The worktree specific config options should then be put in
 ".git/worktrees/NAME/config.worktree" where NAME is a specific
@@ -101,7 +101,7 @@ Max Kirillov first suggested the following:
 > mark repositories which use per-worktree config with an
 > extension?
 
-Max is refered to the extension mechanism that has been released in
+Max is referred to the extension mechanism that has been released in
 the brand new Git 2.7.0 and that
 [was mentioned in some places](http://lwn.net/Articles/668163/).
 

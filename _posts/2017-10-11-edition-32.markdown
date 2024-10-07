@@ -345,7 +345,7 @@ have. It would be as if the worktree was partitioned into separate
 using submodule commit hashes. Importantly, it should be possible for
 the user's local server repo (is there a word for this 'on-server
 personal fork'?) to also be a narrow clone, as distinct from the
-golden server which would alway a full width, and able to serve narrow
+golden server which would always a full width, and able to serve narrow
 packs.
 
 The other aspect of Git would be to include practical user examples on

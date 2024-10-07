@@ -247,7 +247,7 @@ earlier than you. This means that you might have to find a project
 idea that we haven't proposed in our idea list.
 
 The good side of this is that this project idea along with your
-enthousiasm for it and the skills you show might encourage Git
+enthusiasm for it and the skills you show might encourage Git
 developers to mentor you even if they weren't planning to mentor in
 the first place. It could also happen that someone, who was only
 planning to co-mentor, could agree to fully mentor you alone.

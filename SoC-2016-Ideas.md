@@ -267,7 +267,7 @@ compressed data from one packfile to another.
 
 This would involve looking at the code in git to copy over
 optimisations as well as figuring out what parts of libgit2 should be
-changed to accomodate these new capabilities.
+changed to accommodate these new capabilities.
 
 - Language: C
 - Difficulty: medium

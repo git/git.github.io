@@ -139,7 +139,7 @@ __Various__
   - [Supercharging the Git Commit Graph III: Generations and Graph Algorithms](https://blogs.msdn.microsoft.com/devops/2018/07/09/supercharging-the-git-commit-graph-iii-generations/)
   - [Supercharing the Git Commit Graph IV: Bloom Filters](https://blogs.msdn.microsoft.com/devops/2018/07/16/super-charging-the-git-commit-graph-iv-bloom-filters/)
 
-* Echoes of Microsoft acquring GitHub (see [Git RevNews Edition #40](https://git.github.io/rev_news/2018/06/20/edition-40/))
+* Echoes of Microsoft acquiring GitHub (see [Git RevNews Edition #40](https://git.github.io/rev_news/2018/06/20/edition-40/))
 
   - [Microsoft Buys GitHub: Three Weeks Later](https://www.linuxjournal.com/content/microsoft-buys-github-three-weeks-later) by Marcel Gagné
   - [Opinion: GitHub vs GitLab](https://www.linuxjournal.com/content/opinion-github-vs-gitlab) by Matt Lee (with a bit of history)

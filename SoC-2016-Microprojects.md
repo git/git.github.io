@@ -40,7 +40,7 @@ and the implementation of that design were all reviewed and discussed,
 and after several iterations an improved version of the patch was
 accepted into our codebase.  As a GSoC student, you will be playing
 the role of the developer and engaging in a similar discussion.  Get
-familar with the flow, need for clarity on both sides (i.e. you need
+familiar with the flow, need for clarity on both sides (i.e. you need
 to clearly defend your design, and need to ask clarifications when
 questions/suggestions you are offered are not clear enough), the pace
 at which the discussion takes place, and the general tone of the
@@ -272,7 +272,7 @@ When you find something you are interested to work on, please ask
 first on the mailing list if it's worth doing and if it's appropriate
 for a microproject before starting to work on what you find. Even if
 it looks straitforward, there could be hidden reasons why it is too
-difficult or just innappropriate.
+difficult or just inappropriate.
 
 ### Searching the code base itself
 

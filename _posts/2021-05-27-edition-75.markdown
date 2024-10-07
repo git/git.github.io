@@ -44,8 +44,8 @@ This edition covers what happened during the month of April 2021.
   trailers (`reviewed-by`, `tested-by`, etc) appear in the git.git project.
   
   Setting aside `signed-off-by` (which all contributions must include),
-  the most common trailers are `acked-by` (1945 occurences) and
-  `reviewed-by` (1729 occurences), together accounting for almost half
+  the most common trailers are `acked-by` (1945 occurrences) and
+  `reviewed-by` (1729 occurrences), together accounting for almost half
   of all trailers.
   
   The next 4 most common trailers give a great insight into just how

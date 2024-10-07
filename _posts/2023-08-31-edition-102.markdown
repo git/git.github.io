@@ -75,7 +75,7 @@ This edition covers what happened during the months of July 2023 and August 2023
   started to design a `--privacy=option1,option2` with corresponding
   config variables to change the timezone, specify a date precision,
   etc. brian m. carlson said he would support timezone and timestamp
-  tweeking options and made some technical suggestions too.
+  tweaking options and made some technical suggestions too.
 
   René Scharfe chimed in on the main thread saying that
   "timezone and timestamps are personal data, which may only be

@@ -62,9 +62,9 @@ suggest improvements. Thanks!
 
 * [Sending patches by email with git](https://flusp.ime.usp.br/git/sending-patches-by-email-with-git/) is Matheus' git send-email tutorial.
 
-* [lore.kernel.org/git](https://lore.kernel.org/git/) is our prefered mailing list archive.
+* [lore.kernel.org/git](https://lore.kernel.org/git/) is our preferred mailing list archive.
 
-* [public-inbox](https://public-inbox.org/README.html) is the software behing lore.kernel.org.
+* [public-inbox](https://public-inbox.org/README.html) is the software behind lore.kernel.org.
 
 * [lore+lei](https://people.kernel.org/monsieuricon/lore-lei-part-1-getting-started) helps take advantage of lore/public-inbox.
 

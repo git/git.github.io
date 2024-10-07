@@ -56,12 +56,12 @@ colors.
 When people have finished documenting everything, which is anyway a
 good thing, then Git commands can be introduced in the context in
 which they are useful. For example as people are drawing boxes and
-arrows on diagrams, they can be teached the `git clone`, `git push`
+arrows on diagrams, they can be taught the `git clone`, `git push`
 and other Git commands that can be associated with the code sharing
 arrows.
 
 Teaching this way makes people 'build' their knowledge, talk to each
-other about their workflows and visualy document their use of
+other about their workflows and visually document their use of
 Git.
 
 This whole process makes Git more accessible and friendly, which is
@@ -141,8 +141,8 @@ Sébastien's work is very welcome.
 
 Unfortunately git developers can have different views on how to group
 commands together. So it can be difficult for them to agree on such
-kind of changes. Long discussions because of small personnal
-preferences - we call that bikesheedding - can sometimes go on for a
+kind of changes. Long discussions because of small personal
+preferences - we call that bikeshedding - can sometimes go on for a
 while.
 
 In the case of Sébastien's patch series, many developers helped or got
