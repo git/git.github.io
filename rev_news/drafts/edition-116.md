@@ -208,6 +208,31 @@ __Git tools and sites__
 
 ## Releases
 
++ Git [2.47.0](https://public-inbox.org/git/xmqqa5fg9bsz.fsf@gitster.g/),
+[2.47.0-rc1](https://public-inbox.org/git/xmqqploiphj3.fsf@gitster.g/)
++ Git for Windows [2.47.0(2)](https://github.com/git-for-windows/git/releases/tag/v2.47.0.windows.2),
+[2.47.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.47.0.windows.1),
+[2.47.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.47.0-rc1.windows.1)
++ libgit2 [1.8.3](https://github.com/libgit2/libgit2/releases/tag/v1.8.3)
++ GitLab [17.5.1, 17.4.3, 17.3.6](https://about.gitlab.com/releases/2024/10/23/patch-release-gitlab-17-5-1-released/)
+[17.5](https://about.gitlab.com/releases/2024/10/17/gitlab-17-5-released/),
+[17.4.2, 17.3.5, 17.2.9](https://about.gitlab.com/releases/2024/10/09/patch-release-gitlab-17-4-2-released/)
++ Gerrit Code Review [3.10.2](https://www.gerritcodereview.com/3.10.html#3102),
+[3.8.9](https://www.gerritcodereview.com/3.8.html#389),
+[3.9.7](https://www.gerritcodereview.com/3.9.html#397)
++ GitHub Enterprise [3.14.2](https://help.github.com/enterprise-server@3.14/admin/release-notes#3.14.2),
+[3.13.5](https://help.github.com/enterprise-server@3.13/admin/release-notes#3.13.5),
+[3.12.10](https://help.github.com/enterprise-server@3.12/admin/release-notes#3.12.10),
+[3.11.16](https://help.github.com/enterprise-server@3.11/admin/release-notes#3.11.16)
++ GitKraken [10.4.1](https://help.gitkraken.com/gitkraken-client/current/),
+[10.4.0](https://help.gitkraken.com/gitkraken-client/current/)
++ GitHub Desktop [3.4.8](https://desktop.github.com/release-notes/),
+[3.4.7](https://desktop.github.com/release-notes/),
+[3.4.6](https://desktop.github.com/release-notes/)
++ Garden [1.9.0](https://github.com/garden-rs/garden/releases/tag/v1.9.0),
+[1.8.0](https://github.com/garden-rs/garden/releases/tag/v1.8.0)
++ GitButler [0.13.7](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.13.7),
+[0.13.6](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.13.6)
 
 ## Credits
 
