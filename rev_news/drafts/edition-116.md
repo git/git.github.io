@@ -25,10 +25,75 @@ This edition covers what happened during the months of September 2024 and Octobe
 ### Reviews
 -->
 
-<!---
 ### Support
--->
 
+* [fatal from submodule status --recursive when used with grep -q](https://lore.kernel.org/git/CAKDm0rNaHbzoiPg=DeuCoxzooNAsxw2BJfc0wg7fC_-=o9uJ7w@mail.gmail.com/)
+
+  Matt Liberty reported that when he tried using
+  `git submodule status --recursive | grep -q "^+"` on a repo with
+  a submodule, he got an error message like "fatal: failed to recurse
+  into submodule XXX", where XXX is the name of the submodule.
+
+  He expected no error message, no output and a 0 exit code from the
+  whole command line as it should have succeeded. He guessed that Git
+  didn't like that `grep` when used with `-q` exits immediately
+  (without printing anything) when there is a match.
+
+  Phillip Wood replied to Matt saying he assumed that `grep`'s exit
+  broke the pipe between `git` and `grep`, so `git` received a
+  'SIGPIPE' signal which killed it. Phillip suggested consuming the
+  whole output from Git if the exit code from it was wanted.
+
+  Matt replied to Phillip that he was interested in the exit code from
+  `grep` not from `git` and that Git shouldn't output any error when
+  its output is connected to a pipe that gets broken, in the same way
+  as the `yes` command, for example, doesn't output any error when
+  piped to `grep -q y`.
+
+  Junio Hamano, the Git maintainer, also replied to Phillip's first
+  message that the error Git emitted in such a case wasn't useful to
+  the user.
+
+  Matt replied to Junio that he thought no error at all should be
+  emitted as most Unix tools don't output any error.
+
+  Then Phillip replied to Matt's first reply to him. He asked if all
+  Matt wanted was that `git submodule status` did not print any error
+  message when it receives a SIGPIPE signal. Matt replied that he
+  wanted both no error message and a 0 exit code from it.
+
+  Junio replied to Matt that it was reasonable to ask for no error
+  message, but it should be OK if the exit code was related to the
+  SIGPIPE message that the Git command received and that killed
+  it. Junio used the example that even `yes` exited with code 130 when
+  killed using the Control-C keys on a terminal.
+
+  The exit code associated with a signal is '128 + the signal number',
+  for example as the Control-C keys send a SIGINT signal, which signal
+  number is 2, processes killed this way should exit with code '128 + 2',
+  so 130.
+
+  Eric Sunshine replied to Junio that it wasn't clear how the exit
+  code from Git was important in the discussion as in the original
+  command line, Git appears before the pipe, so its exit code might be
+  lost.
+
+  Matt replied to Eric that the exit code mattered if the `pipefail`
+  shell option was used.
+
+  Phillip replied to Matt suggesting he remap the exit code
+  associated with SIGPIPE, which is 141 (128 + 13) to 0, if he was
+  using `pipefail` but still wanted a 0 exit code. Phillip also gave
+  an example shell function to help with that remapping, and sent
+  [a first version of a patch](https://lore.kernel.org/git/pull.1799.git.1726837642511.gitgitgadget@gmail.com/)
+  to fix the error message.
+
+  Junio reviewed that patch and found that it was unnecessarily
+  including the "signal.h" system header.
+
+  Phillip fixed that issue in
+  [version 2 of the patch](https://lore.kernel.org/git/pull.1799.v2.git.1726925150113.gitgitgadget@gmail.com/)
+  which was merged and part of Git v2.47.0.
 
 ## Developer Spotlight: Chandra Pratap
 
