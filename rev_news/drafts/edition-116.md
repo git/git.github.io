@@ -13,7 +13,7 @@ Welcome to the 116th edition of [Git Rev News](https://git.github.io/rev_news/re
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
-This edition covers what happened during the months of September 2024 and October 2024.
+This edition covers what happened during the months of September and October 2024.
 
 ## Discussions
 
@@ -27,7 +27,7 @@ This edition covers what happened during the months of September 2024 and Octobe
 
 ### Support
 
-* [fatal from submodule status --recursive when used with grep -q](https://lore.kernel.org/git/CAKDm0rNaHbzoiPg=DeuCoxzooNAsxw2BJfc0wg7fC_-=o9uJ7w@mail.gmail.com/)
+* [fatal from `submodule status --recursive` when used with `grep -q`](https://lore.kernel.org/git/CAKDm0rNaHbzoiPg=DeuCoxzooNAsxw2BJfc0wg7fC_-=o9uJ7w@mail.gmail.com/)
 
   Matt Liberty reported that when he tried using
   `git submodule status --recursive | grep -q "^+"` on a repo with
@@ -41,11 +41,11 @@ This edition covers what happened during the months of September 2024 and Octobe
 
   Phillip Wood replied to Matt saying he assumed that `grep`'s exit
   broke the pipe between `git` and `grep`, so `git` received a
-  'SIGPIPE' signal which killed it. Phillip suggested consuming the
+  `SIGPIPE` signal which killed it. Phillip suggested consuming the
   whole output from Git if the exit code from it was wanted.
 
   Matt replied to Phillip that he was interested in the exit code from
-  `grep` not from `git` and that Git shouldn't output any error when
+  `grep`, not from `git`, and that Git shouldn't output any error when
   its output is connected to a pipe that gets broken, in the same way
   as the `yes` command, for example, doesn't output any error when
   piped to `grep -q y`.
@@ -59,17 +59,17 @@ This edition covers what happened during the months of September 2024 and Octobe
 
   Then Phillip replied to Matt's first reply to him. He asked if all
   Matt wanted was that `git submodule status` did not print any error
-  message when it receives a SIGPIPE signal. Matt replied that he
+  message when it receives a `SIGPIPE` signal. Matt replied that he
   wanted both no error message and a 0 exit code from it.
 
   Junio replied to Matt that it was reasonable to ask for no error
   message, but it should be OK if the exit code was related to the
-  SIGPIPE message that the Git command received and that killed
+  `SIGPIPE` message that the Git command received and that killed
   it. Junio used the example that even `yes` exited with code 130 when
   killed using the Control-C keys on a terminal.
 
   The exit code associated with a signal is '128 + the signal number',
-  for example as the Control-C keys send a SIGINT signal, which signal
+  for example as the Control-C keys send a `SIGINT` signal, which signal
   number is 2, processes killed this way should exit with code '128 + 2',
   so 130.
 
@@ -82,7 +82,7 @@ This edition covers what happened during the months of September 2024 and Octobe
   shell option was used.
 
   Phillip replied to Matt suggesting he remap the exit code
-  associated with SIGPIPE, which is 141 (128 + 13) to 0, if he was
+  associated with `SIGPIPE`, which is 141 (128 + 13), to 0, if he was
   using `pipefail` but still wanted a 0 exit code. Phillip also gave
   an example shell function to help with that remapping, and sent
   [a first version of a patch](https://lore.kernel.org/git/pull.1799.git.1726837642511.gitgitgadget@gmail.com/)
@@ -114,23 +114,23 @@ _Editor's note: Just like in our previous edition, we return with another
 
   C was the first programming language that I learnt, and I wanted to
   try working on a non-trivial software project. I watched a YouTube
-  video on open-source and that’s where I got the idea of looking for
+  video on open source and that’s where I got the idea of looking for
   open-source projects to contribute to. Git and VLC were the only
   open-source C-written software that I was familiar with and used in
   day-to-day life, so I decided to start contributing to Git out of the two.
-  By the time GSoC came around, Git was the only open-source
+  By the time GSoC came around, Git was the only open source
   community that I was familiar with, so I decided to choose it as my
   GSoC organization.
 
 * How do you feel your contribution has impacted the Git community
-  or the broader open-source ecosystem?
+  or the broader open source ecosystem?
 
   [My project](https://summerofcode.withgoogle.com/programs/2024/projects/tlh611d7)
   was about moving and improving reftable tests, so I think
   my contributions made life somewhat easier for other Git hackers,
-  especially those that frequent the reftable sub-project. My project
+  especially those who frequent the reftable sub-project. My project
   didn’t really affect any user-facing aspect of Git, so I don’t think it had
-  a huge impact on the broader open-source ecosystem, besides the
+  a huge impact on the broader open source ecosystem, besides the
   fact that it gained another lifelong contributor.
 
 * Is there any aspect of Git that you now see differently after having
@@ -140,8 +140,8 @@ _Editor's note: Just like in our previous edition, we return with another
   my project completely changed my mental model for the tool. Before
   GSoC, Git was a clunky tool reserved for software development work
   but post-Git, I know the most frequent commands like the back of my
-  hand, and I’ve already used Git to version control many of my non
-  software files. I feel like I’ve learnt enough Git to last my entire career.
+  hand, and I’ve already used Git to version control many of my non-software
+  files. I feel like I’ve learnt enough Git to last my entire career.
 
 * How do you balance your contributions with other responsibilities like
   work or school?
@@ -149,8 +149,8 @@ _Editor's note: Just like in our previous edition, we return with another
   I had summer vacation for the entire duration of GSoC and no other work
   commitments, so I had no problems finding time for my GSoC project.
 
-* Can you share how GSoC helped enhance your technical and non
-  technical skills (like communication, project management, etc.)?
+* Can you share how GSoC helped enhance your technical and non-technical
+  skills (like communication, project management, etc.)?
 
   In terms of technical skills, I think my C and Git skills saw the biggest jump.
   I am a lot more comfortable working with those two tools than when I
@@ -195,7 +195,7 @@ _Editor's note: Just like in our previous edition, we return with another
 
   The [Git GUI](https://git-scm.com/docs/git-gui) tool. I believe that
   would make Git far more accessible than it currently is and get it
-  incorporated in a lot more people’s day-to-day works.
+  incorporated in a lot more peoples’ day-to-day works.
 
 * If you could remove something from Git without worrying about
   backwards compatibility, what would it be?
@@ -212,7 +212,7 @@ _Editor's note: Just like in our previous edition, we return with another
 * What is your toolbox for interacting with the mailing list and for
   development of Git?
 
-  I used git’s `send-email` to send patches to the mailing list (especially
+  I used Git’s `send-email` to send patches to the mailing list (especially
   the `--compose` and `--annotate` flags) and Gmail’s online client to
   convey non-patch mails. For developing Git, I used Vim as the editor
   on an Ubuntu machine and Git as the version control software (duh).
@@ -232,7 +232,7 @@ _Editor's note: Just like in our previous edition, we return with another
   Go through Git’s [‘My First Contribution tutorial’](https://git-scm.com/docs/MyFirstContribution)
   for the initial setup and to get an idea of what’s it like
   to work on Git. Then work on a few ‘microprojects’ ([more information on
-  the Git Developer's website](https://git.github.io/General-Microproject-Information/) )
+  the Git Developer's website](https://git.github.io/General-Microproject-Information/))
   to dip your toes in the Git Development community. From there, you
   can figure out interesting stuff to work on by yourself.
 
@@ -241,7 +241,7 @@ _Editor's note: Just like in our previous edition, we return with another
   have advice for them?
 
   Yes. I believe that Git is a tool that every working professional can find
-  useful regardless of whether they work in the software industry or not
+  useful regardless of whether they work in the software industry or not,
   and working on Git through an open-source program is an excellent way
   to get good at it in a short period of time. There’s also the added benefit
   of joining a large and active community of amazingly experienced
