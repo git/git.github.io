@@ -263,7 +263,7 @@ _Editor's note: Just like in our previous edition, we return with another
 __Various__
 + [Highlights from Git 2.47](https://github.blog/open-source/git/highlights-from-git-2-47/)
   by Taylor Blau on GitHub Blog.  Those include features like incremental multi-pack indexes,
-  `%(is-base:)` atom for `git for-each-ref`, 
+  `%(is-base:)` atom for `git for-each-ref`,
   “[Platform Support Policy](https://github.com/git/git/blob/v2.47.0/Documentation/technical/platform-support.txt)” document,
   `git mergetool` directly supporting Visual Studio Code merge tool, and others.
 + [What's new in Git 2.47.0?](https://about.gitlab.com/blog/2024/10/07/whats-new-in-git-2-47-0/)
@@ -286,7 +286,7 @@ __Light reading__
   by Munem Prionto on DEV\.to - more as a way of learning Git by the way of managing
   a TODO list, rather than for practical reasons.
     + Contrast with [Using Git to Manage Todos](https://jezenthomas.com/2015/10/using-git-to-manage-todos/
-      by Jezen Thomas (2015), mentioned in [Git Rev News Edition #](https://git.github.io/rev_news/2015/11/11/edition-9/),
+      by Jezen Thomas (2015), mentioned in [Git Rev News Edition #9](https://git.github.io/rev_news/2015/11/11/edition-9/),
       which is about using Git to help manage TODO or FIXME comments in the codebase
       (assuming that for example your IDE does not have plugin for managing TODOs).
     + One can also consider using a CLI tool that stores data in plain text files
@@ -309,9 +309,9 @@ __Scientific papers__
   An Empirical Study of Its Performance"_,
   [arXiv:2409.13590]((https://arxiv.org/abs/2409.13590)),
   with dataset at <https://doi.org/10.5281/zenodo.13618978> (but no source code).
-    + based on a prior study: 
+    + based on a prior study:
       Nugroho, et al.: _"How different are different diff algorithms in Git?:
-      Use --histogram for code changes"_ (2019), 
+      Use --histogram for code changes"_ (2019),
       <https://doi.org/10.1007/s10664-019-09772-z>
 
 __Git tools and sites__
