@@ -301,7 +301,9 @@ __Light reading__
   by Joe Brockmeier on LWN\.net.
 
 + [Git For Each Ref](https://alchemists.io/articles/git_for_each_ref) by Brooke Kuhlmann. Learn how
-  to use this command to make use of references for information dumping, statistcs, and much more. Included in this article is use of the new `is-base` field name recently added in link:https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.47.0.txt[Git 2.47.0].
+  to use this command to make use of references for information dumping, statistcs, and much more.
+  Included in this article is use of the new `is-base` field name recently added in
+  [Git 2.47.0](https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.47.0.txt).
 
 + [Searching for and navigating Git commits](https://alexharri.com/blog/searching-and-navigating-git-commits)
   by Alex Harri.
