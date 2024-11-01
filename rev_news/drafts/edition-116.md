@@ -366,7 +366,8 @@ __Git tools and sites__
 + Git for Windows [2.47.0(2)](https://github.com/git-for-windows/git/releases/tag/v2.47.0.windows.2),
 [2.47.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.47.0.windows.1),
 [2.47.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.47.0-rc1.windows.1)
-+ libgit2 [1.8.3](https://github.com/libgit2/libgit2/releases/tag/v1.8.3)
++ libgit2 [1.8.4](https://github.com/libgit2/libgit2/releases/tag/v1.8.4),
+[1.8.3](https://github.com/libgit2/libgit2/releases/tag/v1.8.3)
 + GitLab [17.5.1, 17.4.3, 17.3.6](https://about.gitlab.com/releases/2024/10/23/patch-release-gitlab-17-5-1-released/),
 [17.5](https://about.gitlab.com/releases/2024/10/17/gitlab-17-5-released/),
 [17.4.2, 17.3.5, 17.2.9](https://about.gitlab.com/releases/2024/10/09/patch-release-gitlab-17-4-2-released/)
@@ -384,7 +385,9 @@ __Git tools and sites__
 [3.4.6](https://desktop.github.com/release-notes/)
 + Garden [1.9.0](https://github.com/garden-rs/garden/releases/tag/v1.9.0),
 [1.8.0](https://github.com/garden-rs/garden/releases/tag/v1.8.0)
-+ GitButler [0.13.7](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.13.7),
++ git-credential-oauth [0.13.3](https://github.com/hickford/git-credential-oauth/releases/tag/v0.13.3)
++ GitButler [0.13.8](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.13.8),
+[0.13.7](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.13.7),
 [0.13.6](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.13.6)
 
 ## Credits
