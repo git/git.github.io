@@ -263,8 +263,8 @@ _Editor's note: Just like in our previous edition, we return with another
 __Various__
 + [Highlights from Git 2.47](https://github.blog/open-source/git/highlights-from-git-2-47/)
   by Taylor Blau on GitHub Blog.  Includes features like incremental multi-pack indexes,
-  `%(is-base:)` atom for `git for-each-ref`, the new
-  “[Platform Support Policy](https://github.com/git/git/blob/v2.47.0/Documentation/technical/platform-support.txt)” document,
+  `%(is-base:)` atom for `git for-each-ref` (see also the [Brooke Kuhlmann article](https://alchemists.io/articles/git_for_each_ref), mentioned below),
+  the new “[Platform Support Policy](https://github.com/git/git/blob/v2.47.0/Documentation/technical/platform-support.txt)” document,
   `git mergetool` directly supporting Visual Studio Code merge tool, and others.
 + [What's new in Git 2.47.0?](https://about.gitlab.com/blog/2024/10/07/whats-new-in-git-2-47-0/)
   by Justin Tobler on GitLab Blog.  Highlights include
@@ -285,13 +285,28 @@ __Light reading__
 + [Using Git as Your Personal To-Do List](https://dev.to/munemprionto/using-git-as-your-personal-to-do-list-3kkd)
   by Munem Prionto on DEV\.to - more as a way of learning Git by the way of managing
   a TODO list, rather than for practical reasons.
-    + Contrast with [Using Git to Manage Todos](https://jezenthomas.com/2015/10/using-git-to-manage-todos/
+    + Contrast with [Using Git to Manage Todos](https://jezenthomas.com/2015/10/using-git-to-manage-todos/)
       by Jezen Thomas (2015), mentioned in [Git Rev News Edition #9](https://git.github.io/rev_news/2015/11/11/edition-9/),
       which is about using Git to help manage TODO or FIXME comments in the codebase
       (assuming that for example your IDE does not have a plugin for managing TODOs).
     + One can also consider using a CLI tool that stores data in plain text files
       for managing TODOs, like [Taskwarrior](https://taskwarrior.org/).  Plain text
       files work well with Git.
++ [Git For Each Ref](https://alchemists.io/articles/git_for_each_ref)
+  by Brooke Kuhlmann in Alchemists Collective articles.
+  Learn how to use this command to make use of references
+  for information dumping, statistcs, and much more.
+  Included in this article is use of the new `is-base` field name recently added in
+  [Git 2.47.0](https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.47.0.txt).
++ [Searching for and navigating Git commits](https://alexharri.com/blog/searching-and-navigating-git-commits)
+  by Alex Harri on his blog.
++ [Why some of us like "interdiff" code review](https://gist.github.com/thoughtpolice/9c45287550a56b2047c6311fbadebed2)
+  by Austin Seipp (a Gist).  Describes problems with the UI of multi-commit GitHub Pull Requests
+  for responding to reviewer comments by provinding new version of patch series,
+  and how `git range-diff` and interactive rebase can help with this task.
++ [How I Review GitHub PRs](https://www.bitquabit.com/post/how-i-do-github-prs/)
+  by Benjamin Pollack on bitquabit.
+
 
 + [Python PGP proposal poses packaging puzzles](https://lwn.net/Articles/993787/)
   by Joe Brockmeier on LWN\.net - [Sigstore](https://docs.sigstore.dev/) vs [OpenPGP](https://www.openpgp.org/).
@@ -299,18 +314,6 @@ __Light reading__
   and [#111](https://git.github.io/rev_news/2024/05/31/edition-111/).
 + [A look at the aerc mail client](https://lwn.net/Articles/993498/)
   by Joe Brockmeier on LWN\.net.
-
-+ [Git For Each Ref](https://alchemists.io/articles/git_for_each_ref) by Brooke Kuhlmann. Learn how
-  to use this command to make use of references for information dumping, statistcs, and much more.
-  Included in this article is use of the new `is-base` field name recently added in
-  [Git 2.47.0](https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.47.0.txt).
-
-+ [Searching for and navigating Git commits](https://alexharri.com/blog/searching-and-navigating-git-commits)
-  by Alex Harri.
-+ [Why some of us like "interdiff" code review](https://gist.github.com/thoughtpolice/9c45287550a56b2047c6311fbadebed2)
-  by Austin Seipp.
-+ [How I Review GitHub PRs](https://www.bitquabit.com/post/how-i-do-github-prs/)
-  by Benjamin Pollack.
 
 <!---
 __Easy watching__
@@ -321,7 +324,7 @@ __Scientific papers__
   An Empirical Study of Its Performance"_,
   [arXiv:2409.13590]((https://arxiv.org/abs/2409.13590)),
   with dataset at <https://doi.org/10.5281/zenodo.13618978> (but no source code).
-    + based on a prior study:
+    + It is based on a prior study:
       Nugroho, et al.: _"How different are different diff algorithms in Git?:
       Use --histogram for code changes"_ (2019),
       <https://doi.org/10.1007/s10664-019-09772-z>
