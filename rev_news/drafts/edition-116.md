@@ -69,7 +69,7 @@ This edition covers what happened during the months of September and October 202
   killed using the Control-C keys on a terminal.
 
   The exit code associated with a signal is '128 + the signal number',
-  for example as the Control-C keys send a `SIGINT` signal, which signal
+  for example as the Control-C keys send a `SIGINT` signal, whose signal
   number is 2, processes killed this way should exit with code '128 + 2',
   so 130.
 
@@ -119,19 +119,19 @@ _Editor's note: Just like in our previous edition, we return with another
   open-source projects to contribute to. Git and VLC were the only
   open-source C-written software that I was familiar with and used in
   day-to-day life, so I decided to start contributing to Git out of the two.
-  By the time GSoC came around, Git was the only open source
+  By the time GSoC came around, Git was the only open-source
   community that I was familiar with, so I decided to choose it as my
   GSoC organization.
 
 * How do you feel your contribution has impacted the Git community
-  or the broader open source ecosystem?
+  or the broader open-source ecosystem?
 
   [My project](https://summerofcode.withgoogle.com/programs/2024/projects/tlh611d7)
   was about moving and improving reftable tests, so I think
   my contributions made life somewhat easier for other Git hackers,
   especially those who frequent the reftable sub-project. My project
   didn’t really affect any user-facing aspect of Git, so I don’t think it had
-  a huge impact on the broader open source ecosystem, besides the
+  a huge impact on the broader open-source ecosystem, besides the
   fact that it gained another lifelong contributor.
 
 * Is there any aspect of Git that you now see differently after having
@@ -196,7 +196,7 @@ _Editor's note: Just like in our previous edition, we return with another
 
   The [Git GUI](https://git-scm.com/docs/git-gui) tool. I believe that
   would make Git far more accessible than it currently is and get it
-  incorporated in a lot more peoples’ day-to-day works.
+  incorporated in a lot more people’s day-to-day works.
 
 * If you could remove something from Git without worrying about
   backwards compatibility, what would it be?
@@ -262,7 +262,7 @@ _Editor's note: Just like in our previous edition, we return with another
 
 __Various__
 + [Highlights from Git 2.47](https://github.blog/open-source/git/highlights-from-git-2-47/)
-  by Taylor Blau on GitHub Blog.  Those include features like incremental multi-pack indexes,
+  by Taylor Blau on GitHub Blog.  Includes features like incremental multi-pack indexes,
   `%(is-base:)` atom for `git for-each-ref`, 
   “[Platform Support Policy](https://github.com/git/git/blob/v2.47.0/Documentation/technical/platform-support.txt)” document,
   `git mergetool` directly supporting Visual Studio Code merge tool, and others.
@@ -272,7 +272,7 @@ __Various__
   (see [Beginner's guide to the Git reftable format](https://about.gitlab.com/blog/2024/05/30/a-beginners-guide-to-the-git-reftable-format/)),
   `init.defaultObjectFormat` configuration option that can be set to `sha256`,
   `git refs verify`, and others.
-+ Tower is running [Git GUIs User's Survey](https://gittower.typeform.com/git-survey)
++ Tower is running a [Git GUIs User's Survey](https://gittower.typeform.com/git-survey)
   for people who do not 100% of the time use Git in the terminal.
 
 
@@ -288,7 +288,7 @@ __Light reading__
     + Contrast with [Using Git to Manage Todos](https://jezenthomas.com/2015/10/using-git-to-manage-todos/
       by Jezen Thomas (2015), mentioned in [Git Rev News Edition #](https://git.github.io/rev_news/2015/11/11/edition-9/),
       which is about using Git to help manage TODO or FIXME comments in the codebase
-      (assuming that for example your IDE does not have plugin for managing TODOs).
+      (assuming that for example your IDE does not have a plugin for managing TODOs).
     + One can also consider using a CLI tool that stores data in plain text files
       for managing TODOs, like [Taskwarrior](https://taskwarrior.org/).  Plain text
       files work well with Git.
@@ -317,12 +317,12 @@ __Scientific papers__
 __Git tools and sites__
 + [Reviewing git contributions via email](https://git-am.io/) (<https://git-am.io/>)
   is a companion piece to [interactive guide on sending patches with git send-email](https://git-send-email.io/)
-  (<https://git-send-email.io/>) - which guide was mentioned in
+  (<https://git-send-email.io/>); the latter was mentioned in
   [Git Rev News Edition #50](https://git.github.io/rev_news/2019/04/26/edition-50/)
   [#68](https://git.github.io/rev_news/2020/10/30/edition-68/), and
   [#92](https://git.github.io/rev_news/2022/10/26/edition-92/).
 + ["Data Management" section of Awesome MLOps](https://github.com/kelvins/awesome-mlops#data-management)
-  include also tools related to versioning data like
+  also includes tools related to versioning data like
     + [Dolt](https://github.com/dolthub/dolt) ([Git Rev News #62](https://git.github.io/rev_news/2020/04/23/edition-62/)),
     + [DVC](https://dvc.org/) (first mentioned in [Git Rev News #42](https://git.github.io/rev_news/2018/08/22/edition-42/),
       then in [#63](https://git.github.io/rev_news/2020/05/28/edition-63/),
@@ -333,7 +333,7 @@ __Git tools and sites__
       among others),
     + [Dud](https://kevin-hanselman.github.io/dud/), improving on DVC, but with narrowed scope,
     + [Intake](https://intake.readthedocs.io/) ([Git Rev News #96](https://git.github.io/rev_news/2023/02/28/edition-96/)),
-        + See also the discussion in issue #337 in Intake repository:
+        + See also the discussion in issue #337 in the Intake repository:
           [Data versioning/validation: Comparing Intake with DVC, Quilt and Great Expectations](https://github.com/intake/intake/issues/337)
     + [lakeFS](https://lakefs.io/) ([Git Rev News #78](https://git.github.io/rev_news/2021/08/31/edition-78/)),
     + [Quilt](https://www.quiltdata.com/) / [Quilt Data](https://www.quiltdata.com/)
@@ -342,9 +342,9 @@ __Git tools and sites__
   a local-first task manager/bug tracker that stores everything within your git repository,
   and which can sync issues to/from GitHub or GitLab.
   Written in Rust, under MIT license.
-+ [Bruno](https://www.usebruno.com/) is fast and <b>Git</b>-friendly opensource API client,
++ [Bruno](https://www.usebruno.com/) is a fast and <b>Git</b>-friendly open-source API client,
   similar to Postman, Insomnia and similar tools.  It stores collections directly
-  in a folder on your filesystem, in a plain text markup language, Bru.
+  in a folder on your filesystem in a plain text markup language, Bru.
     + Compare with [Simple Web Application Test (SWAT)](https://github.com/melezhik/swat),
       web application oriented testing framework, with test plan stored as plain text files
       in specially named directories.
@@ -357,7 +357,7 @@ __Git tools and sites__
 [2.47.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.47.0.windows.1),
 [2.47.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.47.0-rc1.windows.1)
 + libgit2 [1.8.3](https://github.com/libgit2/libgit2/releases/tag/v1.8.3)
-+ GitLab [17.5.1, 17.4.3, 17.3.6](https://about.gitlab.com/releases/2024/10/23/patch-release-gitlab-17-5-1-released/)
++ GitLab [17.5.1, 17.4.3, 17.3.6](https://about.gitlab.com/releases/2024/10/23/patch-release-gitlab-17-5-1-released/),
 [17.5](https://about.gitlab.com/releases/2024/10/17/gitlab-17-5-released/),
 [17.4.2, 17.3.5, 17.2.9](https://about.gitlab.com/releases/2024/10/09/patch-release-gitlab-17-4-2-released/)
 + Gerrit Code Review [3.10.2](https://www.gerritcodereview.com/3.10.html#3102),
