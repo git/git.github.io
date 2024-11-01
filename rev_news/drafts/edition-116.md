@@ -95,6 +95,7 @@ This edition covers what happened during the months of September and October 202
   [version 2 of the patch](https://lore.kernel.org/git/pull.1799.v2.git.1726925150113.gitgitgadget@gmail.com/)
   which was merged and part of Git v2.47.0.
 
+
 ## Developer Spotlight: Chandra Pratap
 
 _Editor's note: Just like in our previous edition, we return with another
@@ -260,16 +261,93 @@ _Editor's note: Just like in our previous edition, we return with another
 ## Other News
 
 __Various__
++ [Highlights from Git 2.47](https://github.blog/open-source/git/highlights-from-git-2-47/)
+  by Taylor Blau on GitHub Blog.  Those include features like incremental multi-pack indexes,
+  `%(is-base:)` atom for `git for-each-ref`, 
+  “[Platform Support Policy](https://github.com/git/git/blob/v2.47.0/Documentation/technical/platform-support.txt)” document,
+  `git mergetool` directly supporting Visual Studio Code merge tool, and others.
++ [What's new in Git 2.47.0?](https://about.gitlab.com/blog/2024/10/07/whats-new-in-git-2-47-0/)
+  by Justin Tobler on GitLab Blog.  Highlights include
+  `init.defaultRefFormat` configuration option that can be set to use `reftable` backend
+  (see [Beginner's guide to the Git reftable format](https://about.gitlab.com/blog/2024/05/30/a-beginners-guide-to-the-git-reftable-format/)),
+  `init.defaultObjectFormat` configuration option that can be set to `sha256`,
+  `git refs verify`, and others.
++ Tower is running [Git GUIs User's Survey](https://gittower.typeform.com/git-survey)
+  for people who do not 100% of the time use Git in the terminal.
 
 
 __Light reading__
++ [How Typefully Uses Tower [Git GUI Client] to Conquer Social Media Publishing](https://www.git-tower.com/blog/how-typefully-uses-tower)
+  by Bruno Brito on Tower Blog.
++ [Moving all our Python code to a monorepo: pytendi](https://attendi.nl/moving-all-our-python-code-to-a-monorepo-pytendi/).
++ [Bruno — An API Client Using Git to Fight for Developer Experience](https://www.git-tower.com/blog/bruno-api-client-using-git/)
+  by Ryan Reynolds on Tower Blog.
++ [Using Git as Your Personal To-Do List](https://dev.to/munemprionto/using-git-as-your-personal-to-do-list-3kkd)
+  by Munem Prionto on DEV\.to - more as a way of learning Git by the way of managing
+  a TODO list, rather than for practical reasons.
+    + Contrast with [Using Git to Manage Todos](https://jezenthomas.com/2015/10/using-git-to-manage-todos/
+      by Jezen Thomas (2015), mentioned in [Git Rev News Edition #](https://git.github.io/rev_news/2015/11/11/edition-9/),
+      which is about using Git to help manage TODO or FIXME comments in the codebase
+      (assuming that for example your IDE does not have plugin for managing TODOs).
+    + One can also consider using a CLI tool that stores data in plain text files
+      for managing TODOs, like [Taskwarrior](https://taskwarrior.org/).  Plain text
+      files work well with Git.
+
++ [Python PGP proposal poses packaging puzzles](https://lwn.net/Articles/993787/)
+  by Joe Brockmeier on LWN\.net - [Sigstore](https://docs.sigstore.dev/) vs [OpenPGP](https://www.openpgp.org/).
+  Sigstore was mentioned in [Git Rev News Edition #91](https://git.github.io/rev_news/2022/09/30/edition-91/)
+  and [#111](https://git.github.io/rev_news/2024/05/31/edition-111/).
++ [A look at the aerc mail client](https://lwn.net/Articles/993498/)
+  by Joe Brockmeier on LWN\.net.
 
 <!---
 __Easy watching__
 -->
 
-__Git tools and sites__
+__Scientific papers__
++ Tsukasa Yagi, Shinpei Hayashi: _"Toward Interactive Optimization of Source Code Differences:
+  An Empirical Study of Its Performance"_,
+  [arXiv:2409.13590]((https://arxiv.org/abs/2409.13590)),
+  with dataset at <https://doi.org/10.5281/zenodo.13618978> (but no source code).
+    + based on a prior study: 
+      Nugroho, et al.: _"How different are different diff algorithms in Git?:
+      Use --histogram for code changes"_ (2019), 
+      <https://doi.org/10.1007/s10664-019-09772-z>
 
+__Git tools and sites__
++ [Reviewing git contributions via email](https://git-am.io/) (<https://git-am.io/>)
+  is a companion piece to [interactive guide on sending patches with git send-email](https://git-send-email.io/)
+  (<https://git-send-email.io/>) - which guide was mentioned in
+  [Git Rev News Edition #50](https://git.github.io/rev_news/2019/04/26/edition-50/)
+  [#68](https://git.github.io/rev_news/2020/10/30/edition-68/), and
+  [#92](https://git.github.io/rev_news/2022/10/26/edition-92/).
++ ["Data Management" section of Awesome MLOps](https://github.com/kelvins/awesome-mlops#data-management)
+  include also tools related to versioning data like
+    + [Dolt](https://github.com/dolthub/dolt) ([Git Rev News #62](https://git.github.io/rev_news/2020/04/23/edition-62/)),
+    + [DVC](https://dvc.org/) (first mentioned in [Git Rev News #42](https://git.github.io/rev_news/2018/08/22/edition-42/),
+      then in [#63](https://git.github.io/rev_news/2020/05/28/edition-63/),
+      [#64](https://git.github.io/rev_news/2020/06/25/edition-64/),
+      [#100](https://git.github.io/rev_news/2023/06/30/edition-100/),
+      [#107](https://git.github.io/rev_news/2024/01/31/edition-107/), and
+      [#113](https://git.github.io/rev_news/2024/07/31/edition-113/),
+      among others),
+    + [Dud](https://kevin-hanselman.github.io/dud/), improving on DVC, but with narrowed scope,
+    + [Intake](https://intake.readthedocs.io/) ([Git Rev News #96](https://git.github.io/rev_news/2023/02/28/edition-96/)),
+        + See also the discussion in issue #337 in Intake repository:
+          [Data versioning/validation: Comparing Intake with DVC, Quilt and Great Expectations](https://github.com/intake/intake/issues/337)
+    + [lakeFS](https://lakefs.io/) ([Git Rev News #78](https://git.github.io/rev_news/2021/08/31/edition-78/)),
+    + [Quilt](https://www.quiltdata.com/) / [Quilt Data](https://www.quiltdata.com/)
+      ([Git Rev News #99](https://git.github.io/rev_news/2023/05/31/edition-99/)).
++ [git-task](https://github.com/jhspetersson/git-task) is
+  a local-first task manager/bug tracker that stores everything within your git repository,
+  and which can sync issues to/from GitHub or GitLab.
+  Written in Rust, under MIT license.
++ [Bruno](https://www.usebruno.com/) is fast and <b>Git</b>-friendly opensource API client,
+  similar to Postman, Insomnia and similar tools.  It stores collections directly
+  in a folder on your filesystem, in a plain text markup language, Bru.
+    + Compare with [Simple Web Application Test (SWAT)](https://github.com/melezhik/swat),
+      web application oriented testing framework, with test plan stored as plain text files
+      in specially named directories.
 
 ## Releases
 
