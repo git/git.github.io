@@ -342,7 +342,7 @@ __Git tools and sites__
   a local-first task manager/bug tracker that stores everything within your git repository,
   and which can sync issues to/from GitHub or GitLab.
   Written in Rust, under MIT license.
-+ [Bruno](https://www.usebruno.com/) is a fast and <b>Git</b>-friendly open-source API client,
++ [Bruno](https://www.usebruno.com/) is a fast and Git-friendly open-source API client,
   similar to Postman, Insomnia and similar tools.  It stores collections directly
   in a folder on your filesystem in a plain text markup language, Bru.
     + Compare with [Simple Web Application Test (SWAT)](https://github.com/melezhik/swat),
