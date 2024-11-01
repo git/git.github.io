@@ -303,6 +303,13 @@ __Light reading__
 + [Git For Each Ref](https://alchemists.io/articles/git_for_each_ref) by Brooke Kuhlmann. Learn how
   to use this command to make use of references for information dumping, statistcs, and much more. Included in this article is use of the new `is-base` field name recently added in link:https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.47.0.txt[Git 2.47.0].
 
++ [Searching for and navigating Git commits](https://alexharri.com/blog/searching-and-navigating-git-commits)
+  by Alex Harri.
++ [Why some of us like "interdiff" code review](https://gist.github.com/thoughtpolice/9c45287550a56b2047c6311fbadebed2)
+  by Austin Seipp.
++ [How I Review GitHub PRs](https://www.bitquabit.com/post/how-i-do-github-prs/)
+  by Benjamin Pollack.
+
 <!---
 __Easy watching__
 -->
