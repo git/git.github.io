@@ -295,14 +295,14 @@ __Light reading__
 + [Git For Each Ref](https://alchemists.io/articles/git_for_each_ref)
   by Brooke Kuhlmann in Alchemists Collective articles.
   Learn how to use this command to make use of references
-  for information dumping, statistcs, and much more.
+  for information dumping, statistics, and much more.
   Included in this article is use of the new `is-base` field name recently added in
   [Git 2.47.0](https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.47.0.txt).
 + [Searching for and navigating Git commits](https://alexharri.com/blog/searching-and-navigating-git-commits)
   by Alex Harri on his blog.
 + [Why some of us like "interdiff" code review](https://gist.github.com/thoughtpolice/9c45287550a56b2047c6311fbadebed2)
   by Austin Seipp (a Gist).  Describes problems with the UI of multi-commit GitHub Pull Requests
-  for responding to reviewer comments by provinding new version of patch series,
+  for responding to reviewer comments by providing a new version of the patch series,
   and how `git range-diff` and interactive rebase can help with this task.
 + [How I Review GitHub PRs](https://www.bitquabit.com/post/how-i-do-github-prs/)
   by Benjamin Pollack on bitquabit.
