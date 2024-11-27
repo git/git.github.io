@@ -49,6 +49,8 @@ __Git tools and sites__
 
 ## Releases
 
++ Tower for Windows [8.0](https://www.git-tower.com/release-notes/windows?show_tab=release-notes), [8.1](https://www.git-tower.com/release-notes/windows?show_tab=release-notes) ([Release blog post](https://www.git-tower.com/blog/tower-windows-8/))
++ Tower for Mac [12.3](https://www.git-tower.com/release-notes/mac?show_tab=release-notes)
 
 ## Credits
 
