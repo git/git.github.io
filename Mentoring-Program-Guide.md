@@ -444,7 +444,7 @@ below:
   - [Git's SubmittingPatches doc](https://github.com/git/git/blob/master/Documentation/SubmittingPatches)
 
     This documentation contains the
-    [Developer's Certificate of Origin, or DCO for short](https://github.com/git/git/blob/master/Documentation/SubmittingPatches#L227-L263),
+    [Developer's Certificate of Origin, or DCO for short](https://git-scm.com/docs/SubmittingPatches#sign-off),
     which you have to know about when contributing to Git.
 
   - [Git's license](https://github.com/git/git/blob/master/COPYING)
