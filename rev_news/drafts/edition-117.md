@@ -223,9 +223,6 @@ This edition covers what happened during the months of October and November 2024
 
 ## Other News
 
-__Various__
-
-
 __Light reading__
 
 + [The Bus Factor](https://mclare.blog/posts/the-bus-factor/)
