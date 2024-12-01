@@ -101,7 +101,7 @@ This edition covers what happened during the months of October and November 2024
 * How did you initially become interested in contributing to Git,
   and what motivated you to choose it as your GSoC project?
 
-  Before GSoC, I was quite familiar with the Linux ecosystem and it had
+  Before GSoC, I was quite familiar with the Linux ecosystem, and it had
   been my primary OS for the majority of my college years. And during
   those times I felt Git was the most impactful project enabling the vastly
   collaborative Linux Desktop Ecosystem. So, I felt like contributing
@@ -185,7 +185,7 @@ This edition covers what happened during the months of October and November 2024
   itself?
 
   I quite frequently find myself using [`lazygit`](https://github.com/jesseduffield/lazygit)
-  on the command line for some quick and dirty git operations.
+  on the command line for some quick and dirty Git operations.
 
 * What is your toolbox for interacting with the mailing list and for
   development of Git?
@@ -193,7 +193,7 @@ This edition covers what happened during the months of October and November 2024
   I use [aerc](https://aerc-mail.org/) and `send-email`/`format-patch`
   for email interactions. And for development, I use [Neovim](https://neovim.io/)
   and [clangd LSP](https://gist.github.com/Strus/042a92a00070a943053006bf46912ae9)
-  with `GENERATE_COMPILATION_DATABASE` build flag.
+  with the `GENERATE_COMPILATION_DATABASE` build flag.
 
 * How do you envision your own involvement with Git or other open
   source projects in the future?
@@ -248,15 +248,15 @@ __Light reading__
   and to the new experimental [`git survey`](https://github.com/microsoft/git/pull/667) command
   (that for now is present in Microsoft's fork of Git),
 + [Deleted your fork. Is it gone? Not really…](https://ygreky.com/2024/07/deleted-your-fork-is-it-gone-not-really/)
-  Marta Rybczynska on Ygreky Blog.  Provides some recommendations for best practices
+  by Marta Rybczynska on Ygreky Blog.  Provides some recommendations for best practices
   when using public forges.
     + References [Anyone can Access Deleted and Private Repository Data on GitHub](https://trufflesecurity.com/blog/anyone-can-access-deleted-and-private-repo-data-github)
       blog post by Truffle Security, mentioned in [Git Rev News Edition #113](https://git.github.io/rev_news/2024/07/31/edition-113/).
     + See also [Demystifying GitHub Private Forks - The Hidden Danger of Cached View](https://blog.gitguardian.com/demystifying-github-cached-views-the-hidden-danger/)
       by Guillaume Valadon on GitGuardian Blog.
 + [How I configure my Git identities](https://www.benji.dog/articles/git-config/)
-  with the help of `git config` features: `includeIf` with `gitdir:` and with `hasconfig:`,
-  and with `~/.ssh/config` (and `insteadOf`, where needed).
+  with the help of `git config` features: `includeIf` with `gitdir:` and `hasconfig:`,
+  complex `~/.ssh/config` setups (and the use of `insteadOf`, where needed).
   Written by Benji Encalada Mora on their blog
   (with a comment of "This may be overkill, but it works on my machine").
 + [When to rewrite Git history?](https://drewdeponte.com/blog/when-to-rewrite-git-history/)
@@ -301,7 +301,7 @@ __Git tools and sites__
   Written in TypeScript, under MIT license.
     + For an explanation of the "monorepo" concept see
       [What is a Monorepo?](https://monorepo.tools/#what-is-a-monorepo)
-      on <monorepo.tools> (this site was mentioned first in
+      on monorepo.tools (this site was mentioned first in
       [Git Rev News Edition #84](https://git.github.io/rev_news/2022/02/28/edition-84/)).
 + [Beachball](https://microsoft.github.io/beachball/): The Sunniest Semantic Version Bumper.
   Tool for automating npm publishing.
@@ -345,7 +345,7 @@ __Git tools and sites__
   adding them as a comment to the pull request.
   Available as a [GitHub app](https://github.com/marketplace/difflens)
   or a [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=DiffLens.difflens).
-  Proprietary tool, with 14 days free trial, and [demo](https://www.difflensapp.com/difflensDemo2_849ca26f9ee09faa084cbdcdc90b6f90f8ce8495).
+  Proprietary tool, with 14 days free trial and [demo](https://www.difflensapp.com/difflensDemo2_849ca26f9ee09faa084cbdcdc90b6f90f8ce8495).
   See above for possible alternatives.
 
 
