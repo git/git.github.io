@@ -35,7 +35,7 @@ This edition covers what happened during the months of October and November 2024
   v2.47.0 there is an error message indicating that some index files
   "differ in contents".
 
-  Using `git bisect` fox found the commit that introduced the
+  Using `git bisect`, fox found the commit that introduced the
   issue. That commit implemented a check that verified that the index
   file downloaded from the remote was byte-for-byte identical with the
   index file generated locally from the Git objects downloaded as part
@@ -50,7 +50,7 @@ This edition covers what happened during the months of October and November 2024
   Jeff King, alias Peff, also replied to fox saying that the breakage
   was not intended. He thought that it was better to rely on the
   locally generated index, but that there should be no guarantee for
-  it to be identical to the one downloaded.
+  it to be identical to the downloaded one.
 
   Peff proposed a draft patch that discarded the downloaded version
   before generating an index, but said it was hacky and didn't check
@@ -81,7 +81,7 @@ This edition covers what happened during the months of October and November 2024
 
   Peff then sent
   [a series made of 11 patches](https://lore.kernel.org/git/20241025064148.GA2110169@coredump.intra.peff.net/)
-  to fix the issue, cleanup the dumb HTTP code and fix a couple of
+  to fix the issue, clean up the dumb HTTP code and fix a couple of
   other bugs or potential bugs he found in the process.
 
   Taylor reviewed the patch series and discussed a few technical
@@ -159,7 +159,7 @@ This edition covers what happened during the months of October and November 2024
   More than the technical challenges solving a problem, I would say it was
   more challenging finding the relevant work to do, as there is no
   official issue tracker. I would search for #leftoverbits on the mailing
-  list and #TODOs in the codebase to the find the things to do. However,
+  list and #TODOs in the codebase to find things to do. However,
   most of them seemed quite out of reach in terms of difficulty. However,
   I attempted them anyway and learned a lot in the process. The mailing
   list folks were quite helpful in guiding me in the right direction.
@@ -173,7 +173,7 @@ This edition covers what happened during the months of October and November 2024
   something in Git for a full year, what would it be?
 
   Honestly, I find Git to be quite mature and complete. I can't
-  think of anything, of the top of my head, that I would like
+  think of anything, off the top of my head, that I would like
   people to work on for a full year.
 
 * What upcoming features or changes in Git are you particularly
@@ -239,12 +239,12 @@ __Light reading__
     + Based on the ["A Novel Approach for Estimating Truck Factors"](https://arxiv.org/abs/1604.06766)
       paper from 2016 by Guilherme Avelino, Leonardo Passos, Andre Hora, and Marco Tulio Valente,
       with many citations since.
-      Original implemetation available at <https://github.com/aserg-ufmg/Truck-Factor>.
+      Original implementation available at <https://github.com/aserg-ufmg/Truck-Factor>.
 + [How we shrunk our Javascript monorepo git size by 94%](https://www.jonathancreamer.com/how-we-shrunk-our-git-repo-size-by-94-percent/)
-  Mentions using [git-sizer](https://github.com/github/git-sizer) tool
+  Mentions using the [git-sizer](https://github.com/github/git-sizer) tool
   which was mentioned in passing in [Git Rev News Edition #37](https://git.github.io/rev_news/2018/03/21/edition-37/).
-  The work described in the article also led to adding `--path-walk` option to `git repack`
-  and `pack.usePathWalk` config option to Git,
+  The work described in the article also led to adding the `--path-walk` option to `git repack`
+  and the `pack.usePathWalk` config option to Git,
   and to the new experimental [`git survey`](https://github.com/microsoft/git/pull/667) command
   (that for now is present in Microsoft's fork of Git),
 + [Deleted your fork. Is it gone? Not really…](https://ygreky.com/2024/07/deleted-your-fork-is-it-gone-not-really/)
@@ -258,7 +258,7 @@ __Light reading__
   with the help of `git config` features: `includeIf` with `gitdir:` and with `hasconfig:`,
   and with `~/.ssh/config` (and `insteadOf`, where needed).
   Written by Benji Encalada Mora on their blog
-  (with comment "This may be overkill, but it works on my machine").
+  (with a comment of "This may be overkill, but it works on my machine").
 + [When to rewrite Git history?](https://drewdeponte.com/blog/when-to-rewrite-git-history/)
   (beside "Don't rewrite history once it is shared.").  Written by Drew De Ponte on his blog.
 + [[The Ultimate Guide to] Git Commit Creation](https://drewdeponte.com/blog/git-commit-creation/)
@@ -266,11 +266,11 @@ __Light reading__
 + [How to Use Git Stash to Efficiently Manage Your Code](https://www.freecodecamp.org/news/how-to-use-git-stash-to-manage-code)
   by Okoro Emmanuel Nzube on freeCodeCamp.
 + [Finding when a bug was fixed with git bisect](https://jvns.ca/til/finding-when-a-bug-was-fixed-with-git-bisect/)
-  in Julia Evans [TILs](https://jvns.ca/til/) (<b>T</b>oday <b>I</b> have <b>L</b>earned).
-    + Julia Evans wrote earlier a series of articles on Git, which were referenced in
+  in Julia Evans [TILs](https://jvns.ca/til/) (<b>T</b>oday <b>I</b> <b>L</b>earned).
+    + Julia Evans has written a series of articles on Git, which were referenced in
       Git Rev News from [Edition #103](https://git.github.io/rev_news/2023/09/30/edition-103/)
       to [#111](https://git.github.io/rev_news/2024/05/31/edition-111/).
-    + She wrote two [zines](https://wizardzines.com/) about Git:
+    + She has also published two [zines](https://wizardzines.com/) about Git:
       _[Oh shit, git!](https://wizardzines.com/zines/oh-shit-git/)_ and
       _[How Git Works](https://wizardzines.com/zines/git/)_
 + [Quick tip: Ignore commits in Git blame using a file](https://marijkeluttekes.dev/blog/articles/2024/11/17/quick-tip-ignore-commits-in-git-blame-using-a-file/)
@@ -294,13 +294,14 @@ __Easy watching__
 __Git tools and sites__
 
 + [GitFourchette](https://gitfourchette.org/) - The comfortable Git UI for Linux.
-  Under development; you can currenrly install it [with AppImage or from source](https://github.com/jorio/gitfourchette/releases).
+  Under development; you can currently install it [with AppImage or from source](https://github.com/jorio/gitfourchette/releases).
   Written in Python, using the Qt UI (via PyQt6/PySide6) and pygit2.  Under GPLv3 license.
 + [Changesets](https://github.com/changesets/changesets) is a tool
   to manage versioning and changelogs with a focus on multi-package repositories (monorepos).
   Written in TypeScript, under MIT license.
-    + See [What is a Monorepo?](https://monorepo.tools/#what-is-a-monorepo)
-      definition on <monorepo.tools> (this site was mentioned first in
+    + For an explanation of the "monorepo" concept see
+      [What is a Monorepo?](https://monorepo.tools/#what-is-a-monorepo)
+      on <monorepo.tools> (this site was mentioned first in
       [Git Rev News Edition #84](https://git.github.io/rev_news/2022/02/28/edition-84/)).
 + [Beachball](https://microsoft.github.io/beachball/): The Sunniest Semantic Version Bumper.
   Tool for automating npm publishing.
@@ -311,7 +312,7 @@ __Git tools and sites__
     + This tool was mentioned in passing in
       [Git Rev News Edition #37](https://git.github.io/rev_news/2018/03/21/edition-37/).
 + [git-remote-s3](https://github.com/awslabs/git-remote-s3) is a library
-  that enables you to use Amazon S3 as a git remote and as a LFS server.<br>
+  that enables you to use Amazon S3 as a git remote and as an LFS server.<br>
   It provides an implementation of a [git remote-helper](https://github.com/awslabs/git-remote-s3)
   to use S3 (Amazon Simple Storage Service) as a serverless Git server, and
   of the [git-lfs custom transfer](https://github.com/git-lfs/git-lfs/blob/main/docs/custom-transfers.md)
@@ -322,18 +323,18 @@ __Git tools and sites__
   and performs statistical analysis on diffs and on the generated annotation data.
   It also includes a web app, displaying various data visualizations.
   Written in Python, under MIT license.
-    + Its README includes the [list of similar tools and sites](https://github.com/ncusi/PatchScope/blob/main/README.md#related-projects),
+    + Its README includes a [list of similar tools and sites](https://github.com/ncusi/PatchScope/blob/main/README.md#related-projects),
       many of which were mentioned here on Git Rev News.
 + [Mergiraf](https://mergiraf.org/) is a syntax-aware [git merge driver](https://git-scm.com/docs/gitattributes#_performing_a_three_way_merge)
   (and a `mergiraf` command line tool that helps solving merge conflicts)
   for a growing collection of programming languages and file formats.
-  Adding new language to Mergiraf is done in a declarative way.
+  Adding a new language to Mergiraf is done in a declarative way.
   Written in Rust, under GPLv3 license.
     + The author recommends using Mergiraf together with [Difftastic](https://difftastic.wilfred.me.uk/),
       a structural diff tool that understands syntax, mentioned in
       [Git Rev News Edition #86](https://git.github.io/rev_news/2022/04/30/edition-86/).
 + [Diffdiff.net](https://diffdiff.net/) (formerly diff.so) is a web application
-  that provides fast, [private](https://diffdiff.net/privacy) way to compare two pieces of text
+  that provides a fast, [private](https://diffdiff.net/privacy) way to compare two pieces of text
   in a "split diff"/"side diff" view, side by side with highlighting the text that is different
   from the text on the other side.
 
@@ -342,8 +343,8 @@ __Git tools and sites__
 + [DiffLens](https://www.difflens.com/) - The Developer's Diff Tool.
   Provides language-aware semantic diffs for GitHub Pull Requests,
   adding them as a comment to the pull request.
-  Available as the [GitHub app](https://github.com/marketplace/difflens)
-  or the [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=DiffLens.difflens).
+  Available as a [GitHub app](https://github.com/marketplace/difflens)
+  or a [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=DiffLens.difflens).
   Proprietary tool, with 14 days free trial, and [demo](https://www.difflensapp.com/difflensDemo2_849ca26f9ee09faa084cbdcdc90b6f90f8ce8495).
   See above for possible alternatives.
 
