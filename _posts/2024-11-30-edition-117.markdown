@@ -381,4 +381,4 @@ Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
 with help from Ghanshyam Thakkar, Johannes Schindelin,
-Bruno Brito and Toon Claes.
+Štěpán Němec, Bruno Brito and Toon Claes.
