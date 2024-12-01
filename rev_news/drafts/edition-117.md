@@ -191,6 +191,13 @@ __Git tools and sites__
   of the [git-lfs custom transfer](https://github.com/git-lfs/git-lfs/blob/main/docs/custom-transfers.md)
   to enable pushing LFS managed files to the same S3 bucket used as remote.
   Written in Python, under Apache 2.0 license.
++ [PatchScope](https://github.com/ncusi/PatchScope) is a tool that
+  annotates files and lines of diffs (patches) with their purpose and type,
+  and performs statistical analysis on diffs and on the generated annotation data.
+  It also includes a web app, displaying various data visualizations.
+  Written in Python, under MIT license.
+    + Its README includes the [list of similar tools and sites](https://github.com/ncusi/PatchScope/blob/main/README.md#related-projects),
+      many of which were mentioned here on Git Rev News.
 + [Mergiraf](https://mergiraf.org/) is a syntax-aware [git merge driver](https://git-scm.com/docs/gitattributes#_performing_a_three_way_merge)
   (and a `mergiraf` command line tool that helps solving merge conflicts)
   for a growing collection of programming languages and file formats.
