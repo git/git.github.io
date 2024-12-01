@@ -88,9 +88,138 @@ This edition covers what happened during the months of October and November 2024
   details with Peff. Overall he found the series good to go and
   eventually merged it.
 
-<!---
-## Developer Spotlight:
--->
+
+## Developer Spotlight: Ghanshyam Thakkar
+
+* Who are you and what do you do?
+
+  I am Ghanshyam Thakkar. I was an undergrad student in Electronics
+  when I started contributing to Git. I am now a Software Engineer at a
+  startup. I sometimes contribute to open source projects in my free time,
+  and explore/learn new technologies.
+
+* How did you initially become interested in contributing to Git,
+  and what motivated you to choose it as your GSoC project?
+
+  Before GSoC, I was quite familiar with the Linux ecosystem and it had
+  been my primary OS for the majority of my college years. And during
+  those times I felt Git was the most impactful project enabling the vastly
+  collaborative Linux Desktop Ecosystem. So, I felt like contributing
+  to Git would be a great opportunity to learn and contribute to a
+  project that had been so crucial to my everyday workflow.
+
+* How do you feel your contribution has impacted the Git community
+  or the broader open source ecosystem?
+
+  Before my GSoC project, I had contributed some small patches, which
+  could be considered as bug fix, general code cleanup, expanding test
+  coverage, etc. Some of which can be observed in user-space. But my GSoC
+  project was about migrating Git's test suite to a purely C-based
+  test framework, which was not user-facing, however, was a step in the
+  right direction for the project as a whole.
+
+* Is there any aspect of Git that you now see differently after
+  having contributed to it?
+
+  The mailing list workflow. Although, I was skeptical about it at first
+  because I had never used mailing lists before, I now see it as a very
+  effective way to communicate and collaborate on a project of such
+  massive scale. Although, I still am not a big fan of the all or nothing
+  nature of the mailing lists. Subscribing to mails of a specific area
+  would have been great. Although, I do understand that it can
+  probably be done with filtering using a script.
+
+* How do you balance your contributions with other responsibilities
+  like work or school?
+
+  When I was contributing to Git as part of GSoC, I was a student and I
+  also had summer vacation, so it was quite easy for me to balance my
+  contributions with my personal life. However, now that I am quite busy with my
+  $DAYJOB, I don't have much bandwidth to contribute to open
+  source in the short term. But I am planning to start contributing again
+  after some time.
+
+* Can you share how GSoC helped enhance your technical and
+  non-technical skills (like communication, project management, etc.)?
+
+  I would say it helped me improve my technical communication skills immensely.
+  Going back and forth with the reviewers on the list, I learned quite a
+  bit about how to communicate effectively. Also, this was my first time
+  working in a C based project, so I learned some C hacks as well!
+
+* What was your biggest takeaway or learning from GSoC that you now
+  apply regularly in your work?
+
+  Technical communication and effective code review. Also more effective
+  Git usage.
+
+* What was the biggest challenge you faced during your contributions
+  to Git, and how did you overcome it?
+
+  More than the technical challenges solving a problem, I would say it was
+  more challenging finding the relevant work to do, as there is no
+  official issue tracker. I would search for #leftoverbits on the mailing
+  list and #TODOs in the codebase to the find the things to do. However,
+  most of them seemed quite out of reach in terms of difficulty. However,
+  I attempted them anyway and learned a lot in the process. The mailing
+  list folks were quite helpful in guiding me in the right direction.
+
+* Have you thought about mentoring new GSoC students?
+
+  Yes, although I don't have the bandwidth to become a primary mentor,
+  I would love to be a co-mentor.
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+  Honestly, I find Git to be quite mature and complete. I can't
+  think of anything, of the top of my head, that I would like
+  people to work on for a full year.
+
+* What upcoming features or changes in Git are you particularly
+  excited about?
+
+  Rust adoption.
+
+* What is your favorite Git-related tool/library, outside of Git
+  itself?
+
+  I quite frequently find myself using [`lazygit`](https://github.com/jesseduffield/lazygit)
+  on the command line for some quick and dirty git operations.
+
+* What is your toolbox for interacting with the mailing list and for
+  development of Git?
+
+  I use [aerc](https://aerc-mail.org/) and `send-email`/`format-patch`
+  for email interactions. And for development, I use [Neovim](https://neovim.io/)
+  and [clang LSP](https://gist.github.com/Strus/042a92a00070a943053006bf46912ae9)
+  with `GENERATE_COMPILATION_DATABASE` build flag.
+
+* How do you envision your own involvement with Git or other open
+  source projects in the future?
+
+  I think I will continue to be a part of the open source community in some
+  way or the other. My perspective towards open source has always been
+  very positive and I would like to continue contributing to it.
+
+* What is your advice for people who want to start Git development?
+  Where and how should they start?
+
+  I would suggest to start from reading the docs, particularly
+  [MyFirstContribution](https://git-scm.com/docs/MyFirstContribution)
+  and [SubmittingPatches](https://git-scm.com/docs/SubmittingPatches).
+  And then start with some [#leftoverbits](https://lore.kernel.org/git/?q=%23leftoverbits)
+  or if you are particularly interested in a specific area, you can
+  even reach out to people working on those areas to ask for guidance.
+
+* Would you recommend other students or contributors to participate in
+  the GSoC, or other mentoring programs, working on Git? Why? Do you
+  have advice for them?
+
+  Absolutely! GSoC is a great opportunity to learn and contribute to open
+  source projects. It is a great way to learn how a project of such
+  massive scale is managed and developed.
+
 
 ## Other News
 
