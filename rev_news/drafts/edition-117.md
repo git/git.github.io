@@ -192,7 +192,7 @@ This edition covers what happened during the months of October and November 2024
 
   I use [aerc](https://aerc-mail.org/) and `send-email`/`format-patch`
   for email interactions. And for development, I use [Neovim](https://neovim.io/)
-  and [clang LSP](https://gist.github.com/Strus/042a92a00070a943053006bf46912ae9)
+  and [clangd LSP](https://gist.github.com/Strus/042a92a00070a943053006bf46912ae9)
   with `GENERATE_COMPILATION_DATABASE` build flag.
 
 * How do you envision your own involvement with Git or other open
