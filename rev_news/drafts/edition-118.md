@@ -138,8 +138,8 @@ This edition covers what happened during the months of November and December 202
   Jones tested the patches on various platforms including
   Cygwin. Phillip Wood reviewed CMake-related changes and provided
   technical feedback. Johannes Sixt commented on changes to the
-  gitk-git subtree. Your own Christian Couder provided feedback on the
-  documentation.
+  gitk-git subtree. Eric Sunshine provided technical feedback. Your
+  own Christian Couder provided feedback on the documentation.
 
   Over the iterations, Patrick updated the series to improve
   documentation, fix conflicts with in-flight patches, and address the
