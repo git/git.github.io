@@ -52,7 +52,8 @@ This edition covers what happened during the months of November and December 202
 
   In fact, our own Jakub Narębski
   [initially added the 'configure' script](https://lore.kernel.org/git/200607030156.50455.jnareb@gmail.com/)
-  back in 2006 to make it much easier to create RPM spec files when
+  back in 2006 to make it much easier to create RPM spec file for Git.
+  Creating `*.spec` file is especially easy when the
   compilation follows traditional `configure && make && make install`
   steps.
 
@@ -121,7 +122,8 @@ This edition covers what happened during the months of November and December 202
   three build systems simultaneously during any transition period.
 
   David Aguilar expressed concerns about Python being a dependency
-  through Meson. Eli replied that muon, a C99 implementation of Meson,
+  through Meson. Eli replied that [muon](https://github.com/muon-build/muon),
+  a C99 implementation of Meson,
   could be used instead and demonstrated it working with Git's build.
 
   Jeff King, alias Peff, asked about reliability for bisecting and
@@ -155,9 +157,12 @@ This edition covers what happened during the months of November and December 202
 
   The merged patch series especially adds
   [some documentation](https://lore.kernel.org/git/20241206-pks-meson-v11-24-525ed4792b88@pks.im/#Z31meson.build)
+  (via comments in [`meson.build`](https://git.kernel.org/pub/scm/git/git.git/tree/meson.build))
   to help build Git with Meson and
   [a build system comparison](https://lore.kernel.org/git/20241206-pks-meson-v11-23-525ed4792b88@pks.im/#Z31Documentation:technical:build-systems.txt)
+  (in [`Documentation/technical/build-systems.txt`](https://git.kernel.org/pub/scm/git/git.git/tree/Documentation/technical/build-systems.txt))
   that might be interesting to read.
+
 
 <!---
 ## Developer Spotlight:
