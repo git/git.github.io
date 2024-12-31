@@ -167,14 +167,198 @@ This edition covers what happened during the months of November and December 202
 
 __Various__
 
++ [Git 2.48-rc0 Released With git-fsck Warning Over "Curiously Formatted" Ref Contents](https://www.phoronix.com/news/Git-2.48-rc0)
+  by Michael Larabel on Phoronix.
++ [Git Merge 2024 Talks are Up (on YouTube)](https://blog.gitbutler.com/git-merge-2024-talks/)
+  by Scott Chacon on GitButler Blog.  The article includes a quick summary
+  of each of the talks.
++ [Forgejo makes a full break from Gitea](https://lwn.net/Articles/963095/)
+  by Joe Brockmeier on LWN\.net (from February 23, 2024).
+    + [Gitea](https://about.gitea.com/), which is Go-based software forge, a fork of [Gogs](https://gogs.io/),
+      was first mentioned in [Git Rev News Edition #23](https://git.github.io/rev_news/2017/01/25/edition-23/);<br>
+      [Forgejo](https://forgejo.org/), which started as a "soft" fork of Gitea,
+      was first mentioned in passing in [Git Rev News Edition #103](https://git.github.io/rev_news/2023/09/30/edition-103/),
+      and again in [Edition #114](https://git.github.io/rev_news/2024/08/31/edition-114/).
++ [EMERALDWHALE exploits vulnerable Git configuration files](https://www.developer-tech.com/news/emeraldwhale-exploits-vulnerable-git-configuration-files/)
+  by Ryan Daws on Developer Tech News, about a global operation known as EMERALDWHALE,
+  which has stolen over 15000 cloud service credentials by exploiting exposed Git configuration files
+  (via misconfigured web services, which were exposing `.git` directory of a private repository).
++ [Abusing Git branch names to compromise a PyPI package](https://lwn.net/Articles/1001215/)
+  (caused by project automatically processing pull requests with a flawed script),
+  short post by daroc on LWN\.net.
+
 
 __Light reading__
+
++ [NonStop discussion around adding Rust to Git](https://lwn.net/Articles/998115/)
+  by Daroc Alden on LWN\.net.  The Git project discussed the prospect in January 2024,
+  and then again at the Git Contributor's Summit in September 2024.
+    + Git Contributor's Summit 2024 was mentioned in
+      [Git Rev News Edition #115](https://git.github.io/rev_news/2024/09/30/edition-115/),
+      with link to notes as posts to git mailing list (also available in read-only Google Docs),
+      and repo with notes from breakout unconference sessions.
++ [Vigilante Justice on GitHub: GitHub Graffiti](https://trufflesecurity.com/blog/vigilante-justice-on-github)
+  by Dylan Ayrey on The Dig (Truffle Security Co. blog), about
+  how you can paint funny pixel art (graffiti) with fake commit Git histories 
+  on spammer/phisher's GitHub profiles (on their activity heatmap plot) -
+  which is [only] possible because of spammer attempts to leverage GitHub issues for phishing,
+  on a repo one has push access to.
++ [Facing the Git commit-ID collision catastrophe](https://lwn.net/Articles/1001526/)
+  (in Linux kernel repository) by  Jonathan Corbet on LWN\.net,
+  about the concern that, given the growth of the kernel repository, soon 12 digits will not be enough;
+  on the other hand, commits only make up about 1/8 of the total objects in the repository,
+  and abbreviated hashes should be accompanied by the short-form version of the changelog
+  (`--format=reference`).
++ [Optimizing Your Repository for Speed and Efficiency](https://dev.to/this-is-learning/optimizing-your-repository-for-speed-and-efficiency-5co2) and
+  [Using Git Maintenance in GitHub Actions: Optimize Your Repositories Automatically](https://dev.to/this-is-learning/using-git-maintenance-in-github-actions-optimize-your-repositories-automatically-39ka)
+  by Emanuele Bartolesi for This is Learning on DEV\.to create 2 part series
+  [Streamline Your Workflow with the Git Maintenance Command](https://dev.to/kasuken/series/29808).
+    + The [`git maintenance`](https://git-scm.com/docs/git-maintenance) command
+      was mentioned in [Git Tips 2: Some Subtle New Things](https://blog.gitbutler.com/git-tips-2-new-stuff-in-git/)
+      article on GitButler Blog by Scott Chacon, which in turn was mentioned in
+      [Git Rev News Edition #108](https://git.github.io/rev_news/2024/02/29/edition-108/).
++ [Demystifying git submodules](https://www.cyberdemon.org/2024/03/20/submodules.html)
+  by Dmitry Mazin on his blog.
++ [Fearless Rebasing](https://blog.gitbutler.com/fearless-rebasing/) by Scott Chacon on GitButler Blog
+  is about "first class" conflict support in GitButler, based on Jujutsu concept of
+  "[first class conflicts](https://martinvonz.github.io/jj/latest/conflicts/)".
+    + The article does not mention the built-in (but optional) [git rerere](https://git-scm.com/docs/git-rerere)
+      mechanism of reusing recorded resolution of conflicted merges
+      (described for example in [Git Tools - Rerere](https://git-scm.com/book/en/v2/Git-Tools-Rerere)
+      section in "Pro Git" 2nd Edition), that can help when repeatedly rebasing.
+    + In order to reduce the pain of resolving merge conflicts,
+      and allow a merge or a rebase to be saved, tested, interrupted, published,
+      and collaborated on while it is in progress, one can also use
+      [git-imerge](https://github.com/mhagger/git-imerge) tool
+      (see also [git-imerge: A Practical Introduction](https://softwareswirl.blogspot.com/2013/05/git-imerge-practical-introduction.html) article).<br>
+      `git-imerge` was first mentioned in passing in [Git Rev News Edition #17](https://git.github.io/rev_news/2016/07/20/edition-17/),
+      while Edition #34 includes [Developer Spotlight: Michael Haggerty](https://git.github.io/rev_news/2017/12/20/edition-34/#developer-spotlight-michael-haggerty),
+      an interview with the author of this tool.
+    + [Jujutsu (`jj`)](https://jj-vcs.github.io/jj/), a Git-compatible version control system,
+      written in Rust, was first mentioned in
+      [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/).
++ [Stacked Branches with GitButler](https://blog.gitbutler.com/stacked-branches-with-gitbutler/)
+  by Scott Chacon on GitButler Blog.
+  With 0.14 release GitButler can now manage dependent branches that are stacked,
+  including managing stacked GitHub PRs (Pull Requests).
+    + See also [Understanding the Stacked Pull Requests Workflow](https://www.git-tower.com/blog/stacked-prs/) by Bruno Brito on Tower's blog,
+      mentioned in [Git Rev News Edition #111](https://git.github.io/rev_news/2024/05/31/edition-111/)
+      together with various other articles and tools about stacked diffs, stacked PRs, and stacked branches.
+    + See also [Rethinking code reviews with stacked PRs](https://www.aviator.co/blog/rethinking-code-reviews-with-stacked-prs/#)
+      by Ankit Jain on Aviator blog,
+      mentioned in [Git Rev News Edition #115](https://git.github.io/rev_news/2024/09/30/edition-115/)
+      with links to more sites and tools related to stacked PRs, etc.
++ [~~Enforcing~~ Git Branch Naming Standards: ~~Tools and~~ Tips for Developers](https://dev.to/oj_redifined/enforcing-git-branch-naming-standards-tools-and-tips-for-developers-1p27)
+  by Ojay on DEV\.to (despite the title, the article does not include any technical way of
+  helping to enforce or even remind about branch naming conventions).
++ [9 ways to manage large creative projects with version control tools](https://www.xda-developers.com/manage-large-creative-projects-with-version-control-tools/)
+  by Ruby Helyer on XDA Developers.  Mentions CI/CD, Git LFS, commit message and file naming conventions.
++ Adam Ruka posted a series of articles on working with the Git source control system:
+    1. [GitFlow considered harmful](https://www.endoflineblog.com/gitflow-considered-harmful) (2015)
+    2. [Follow-up to 'GitFlow considered harmful'](https://www.endoflineblog.com/follow-up-to-gitflow-considered-harmful) (2015)
+    3. [OneFlow – a Git branching model and workflow](https://www.endoflineblog.com/oneflow-a-git-branching-model-and-workflow) (2017)
+    4. [Implementing OneFlow on GitHub, BitBucket and GitLab](https://www.endoflineblog.com/implementing-oneflow-on-github-bitbucket-and-gitlab) (2021)
+  [GitFlow: A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+  was a blog post by Vincent Driessen from 2010, with note of reflection from 2020;
+  the original author now suggest to adopt a much simpler workflow (like 
+  [GitHub flow](https://guides.github.com/introduction/flow/)) if the team is doing
+  continuous delivery of software, and use GitFlow only when necessary,
+  for explicitly versioned software - with multiple versions of it in the wild to be supported.<br>
+  See also [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html)
+  by Martin Fowler, mentioned in [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/).
+
 
 <!---
 __Easy watching__
 -->
 
 __Git tools and sites__
+
++ [bus-factor-explorer](https://github.com/JetBrains-Research/bus-factor-explorer)
+  by JetBrains Research is a web app for exploring Bus Factor of GitHub projects
+  by analyzing the commit history.  Available as to install as a Docker image.
+  The repository includes evaluation results for 935 popular repositories on GitHub.
+  There is also a short video about the tool on YouTube: <https://youtu.be/uIoV79N14z8>.
+  Written in Kotlin (with evaluation done with Jupyter notebooks), under MIT license.
+    + See [The Bus Factor](https://mclare.blog/posts/the-bus-factor/) and
+      [The github plugin my coworkers asked me not to write](https://scannedinavian.com/the-github-plugin-my-coworkers-asked-me-not-to-write.html)
+      articles mentioned in [Git Rev News Edition #117](https://git.github.io/rev_news/2024/11/30/edition-117/)
+      (the previous edition), together with accompanying links.
++ [Anonymous GitHub](https://anonymous.4open.science/) is a service
+  that allows you to anonymize your GitHub repository for double-blind scientific review
+  (of scientific article where source code is to be made available for open science reasons).
+  Several anonymization options are available to ensure that you do not break the double-anonymize,
+  such as removing links, images or specific terms.
+  The goal is to make is as easy as possible for the reviewer to explore and review the repository.
++ [Git.News](https://git.news/) is a website which provides infinite newsfeed of
+  trending repositories from GitHub, HackerNews & Reddit
+  (which you can then filter by programming language).
++ [Octobox](https://octobox.io/) is a service to help manage GitHub notifications.
+  Includes optional GitHub app to add live information on issue, PR, and CI status, labels, authors, etc.
+  Octobox is free for open source projects with basic notifications for private projects.
++ [Filestash](https://www.filestash.app/) is Dropbox-like enterprise-grade file manager,
+  connecting your storage with your identity provider and authorisations.
+  It adds a web interface to storage solutions like S3 buckets, SFTP/FTPS server, Git repositories, etc.
+  Self-hosted solution is free; it can be done using Docker image.
+  Written in Go and JavaScript, under AGPLv3 license.
+  Demo available at <https://demo.filestash.app/>,
+  source code at <https://github.com/mickael-kerjean/filestash>.
++ [DistGit (Distribution Git)](https://github.com/release-engineering/dist-git)
+  is Git with additional data storage, designed to hold content of source RPMs
+  (Linux distribution packages).  Written in Python, under the MIT license,
+  but with scripts/httpd/upload.cgi under GPLv1,
+  and dist-git-client sub-directory under GPLv2+.
++ [wikmd](https://linbreux.github.io/wikmd/) is a file-based wiki, with
+  documents written in Markdown, and which uses Git for version control.
+  It is possible to connect Wikmd with an online repo.
+  Written in Python, under MIT license.
++ [Mycorrhiza Wiki](https://mycorrhiza.wiki/) is a free and open-source wiki engine,
+  with data stored as simple files, and changes [stored in Git](https://mycorrhiza.wiki/hypha/git).
+  It uses [Mycomarkup](https://mycorrhiza.wiki/hypha/mycomarkup), a custom-made markup language,
+  with support for transcluding units of contents.
+  Written in Go, under AGPLv3 license.
++ [Gitit](https://github.com/jgm/gitit) is a wiki engine written in Haskell,
+  that uses [Happstack](http://happstack.com/) (HAppS) for the web server
+  and [pandoc](http://pandoc.org/) for markup processing (with extended Markdown format as default).
+  Pages and uploaded files are stored in a git, darcs, or mercurial repository
+  and may be modified through the wiki's web interface.
+  Under GPLv2 license.
++ [Xandikos](https://www.xandikos.org/) is a lightweight CardDAV/CalDAV server
+  that backs onto a Git repository.
+  It allows to share calendars (events, todo items, journal entries) via CalDAV
+  and contacts (vCard) via CardDAV.
+  Written in Python using Dulwich, Jinja2, icalendar, and defusedxml,
+  licensed under GPLv3+.
++ [Opengist](https://github.com/thomiceli/opengist) is a self-hosted pastebin powered by Git,
+  similar to [GitHub Gist](https://gist.github.com/).
+  Demo available at <https://demo.opengist.io/>.
+  Written in Go, under AGPLv3 license.
++ [rgit](https://github.com/w4/rgit) is a gitweb/cgit-like fast web frontend for git repositories.
+  You can see it in action at <https://git.inept.dev/>.
+  Written in Rust using Axum, gitoxide, Askama and RocksDB.
+  Under WTFPL license
+  (which is not on the list of [OSI approved Licenses](https://opensource.org/licenses),
+  but is on the list of [licenses that meet Debian Free Software Guidelines](https://wiki.debian.org/DFSGLicenses#DO_WHAT_THE_FUCK_YOU_WANT_TO_PUBLIC_LICENSE)).
++ [klaus](https://github.com/jonashaag/klaus) is a simple, easy-to-set-up Git web viewer.
+  Supports syntax highlighting, Markdown + RestructuredText (reST) rendering support,
+  and code navigation using Exuberant ctags.  Can be installed as Docker image of via `pip`.
+  You can see its demo at <http://klausdemo.lophus.org/>.
+  Written in Python, under unamed custom permissive license.
++ [git-activity](https://git-activity.olets.dev/) is a tool
+  to record your Git activity across multiple (or all) repos,
+  and read it optionally filtered by date,
+  activity type (e.g. commit, branch creation, etc) regex pattern,
+  repo name regex pattern, branch name regex pattern, commit message regex pattern,
+  and/or commit SHA (first seven characters) regex pattern.
+  Useful for retroactively filling out a time sheet (or correcting a time sheet),
+  finding that time you solved a problem similar to the one you're working on now, etc.
+  The log is stored in a plain text file.  Source code [on GitHub](https://github.com/olets/git-activity).
+  Written as bash shell script using AWK, licensed under (custom)
+  CC BY-NC-SA 4.0 with Hippocratic License v3 ethical requirements.
++ [git-branches-script](https://github.com/conorsheppard/git-branches-script)
+  is a convenience script that prints a menu of recent git branches
+  and allows you to switch to a new branch by selecting its corresponding number.
+  Written as bash shell script, no license provided.
 
 
 ## Releases
