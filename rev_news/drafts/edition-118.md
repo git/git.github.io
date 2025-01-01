@@ -234,7 +234,7 @@ __Light reading__
   (`--format=reference`).
 + [Optimizing Your Repository for Speed and Efficiency](https://dev.to/this-is-learning/optimizing-your-repository-for-speed-and-efficiency-5co2) and
   [Using Git Maintenance in GitHub Actions: Optimize Your Repositories Automatically](https://dev.to/this-is-learning/using-git-maintenance-in-github-actions-optimize-your-repositories-automatically-39ka)
-  by Emanuele Bartolesi for [This is Learning on DEV\.](https://dev.to/this-is-learning), which constitute the 2 part series
+  posts by Emanuele Bartolesi for [This is Learning on DEV\.to](https://dev.to/this-is-learning) constitute the 2 part series
   [Streamline Your Workflow with the Git Maintenance Command](https://dev.to/kasuken/series/29808).
     + The [`git maintenance`](https://git-scm.com/docs/git-maintenance) command
       was mentioned in [Git Tips 2: Some Subtle New Things](https://blog.gitbutler.com/git-tips-2-new-stuff-in-git/)
@@ -377,7 +377,7 @@ __Git tools and sites__
   Useful for retroactively filling out a time sheet (or correcting a time sheet),
   finding that time you solved a problem similar to the one you're working on now, etc.
   The log is stored in a plain text file.  Source code [on GitHub](https://github.com/olets/git-activity).
-  Written as Bash shell script using awk, licensed under (custom)
+  Written as Bash shell script using AWK, licensed under (custom)
   CC BY-NC-SA 4.0 with Hippocratic License v3 ethical requirements.
 + [git-branches-script](https://github.com/conorsheppard/git-branches-script)
   is a convenience script that prints a menu of recent Git branches
