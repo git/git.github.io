@@ -22,11 +22,11 @@ This edition covers what happened during the months of November and December 202
 - Git participates in [Outreachy's December 2024 to March 2025 round](https://www.outreachy.org/alums/2024-12/):
 
   - Seyi Kuforiji is working on the "Convert unit tests to use the
-    clar testing framework" project. He is mentored by Patrick
+    [clar testing framework](https://github.com/clar-test)" project. He is mentored by Patrick
     Steinhardt and Phillip Wood and posting updates [on his gitlab.io blog](https://seyi-kuforiji-902b48.gitlab.io/posts/index.html)
     while his work is on [his GitHub repository](https://github.com/Seyi007/git).
 
-  - Usman Akinyemi is working on the "Finish adding a 'os-version'
+  - Usman Akinyemi is working on the "Finish adding an 'os-version'
     capability to Git protocol v2" project. He is mentored by
     Christian Couder and posting updates [on his hashnode.dev blog](https://uniqueusman.hashnode.dev/)
     while his work is on [his GitLab repository](https://gitlab.com/Unique-Usman/git/-/branches).
@@ -45,14 +45,14 @@ This edition covers what happened during the months of November and December 202
 
 ### Support
 
-+ [./configure fails to link test program due to missing dependencies](https://lore.kernel.org/git/GV1PR02MB848925A79A9DD733848182D58D662@GV1PR02MB8489.eurprd02.prod.outlook.com/)
++ [`./configure` fails to link test program due to missing dependencies](https://lore.kernel.org/git/GV1PR02MB848925A79A9DD733848182D58D662@GV1PR02MB8489.eurprd02.prod.outlook.com/)
 
   Last September Henrik Holst reported an issue when trying to compile
-  Git 2.44.0 with HTTPS/curl support on LFS 12.1. The 'configure' script
+  Git 2.44.0 with HTTPS/curl support on [LFS](https://www.linuxfromscratch.org/) 12.1. The `configure` script
   failed to detect libcurl's dependencies properly when trying to link
   statically.
 
-  The issue occurred because the 'configure' script only used the
+  The issue occurred because the `configure` script only used the
   `-lcurl` build flag without running `pkg-config --libs libcurl` to
   add build flags for dependencies like `zstd` that libcurl
   needs. Henrik found that manually setting the LDFLAGS environment
@@ -61,17 +61,17 @@ This edition covers what happened during the months of November and December 202
   succeed. This sparked a broader discussion about Git's build system
   situation.
 
-  Looking at 'configure.ac', Junio Hamano, the Git maintainer, noted
+  Looking at `configure.ac`, Junio Hamano, the Git maintainer, noted
   that `pkg-config` isn't used at all, instead `curl-config --libs` is
-  used to detect curl's flags. Even if the 'configure' script was
+  used to detect curl's flags. Even if the `configure` script was
   added early in the history of the Git project, Junio said it was an
   afterthought and nobody has considered "upgrading" from
   `curl-config` to `pkg-config` for dependency detection.
 
   In fact, our own Jakub Narębski
-  [initially added the 'configure' script](https://lore.kernel.org/git/200607030156.50455.jnareb@gmail.com/)
-  back in 2006 to make it much easier to create RPM spec file for Git.
-  Creating `*.spec` file is especially easy when the
+  [initially added the `configure` script](https://lore.kernel.org/git/200607030156.50455.jnareb@gmail.com/)
+  back in 2006 to make it much easier to create the RPM spec file for Git.
+  Creating `*.spec` files is especially easy when the
   compilation follows traditional `configure && make && make install`
   steps.
 
@@ -94,7 +94,7 @@ This edition covers what happened during the months of November and December 202
   by Sibi Siddharthan as a third build system with the main goal of
   improving the build experience for developers on Windows.
 
-  Soon after Patrick's reply, the Git Contributors' Summit happened
+  Soon after Patrick's reply, the Git Contributors' Summit took place,
   and the
   ["Modern Build System" topic](https://lore.kernel.org/git/Zu2E3vIcTzywWOx3@nand.local/)
   was discussed there. Patrick Steinhardt raised concerns about
@@ -165,12 +165,12 @@ This edition covers what happened during the months of November and December 202
   documentation, fix conflicts with in-flight patches, and address the
   various technical concerns raised during review.
 
-  Eventually the
+  Eventually
   [version 11 of the patch series](https://lore.kernel.org/git/20241206-pks-meson-v11-0-525ed4792b88@pks.im/)
   was merged and will be part of Git v2.48.0 that should be released
   in the next few weeks. It should be a properly supported modern
   build system that can be faster and more easily configurable than
-  the three existing ones which will hopefully get deprecated over
+  the three existing ones, which will hopefully get deprecated over
   time.
 
   The merged patch series especially adds
@@ -205,9 +205,9 @@ __Various__
 + [EMERALDWHALE exploits vulnerable Git configuration files](https://www.developer-tech.com/news/emeraldwhale-exploits-vulnerable-git-configuration-files/)
   by Ryan Daws on Developer Tech News, about a global operation known as EMERALDWHALE,
   which has stolen over 15000 cloud service credentials by exploiting exposed Git configuration files
-  (via misconfigured web services, which were exposing `.git` directory of a private repository).
+  (via misconfigured web services, which were exposing the `.git` directories of private repositories).
 + [Abusing Git branch names to compromise a PyPI package](https://lwn.net/Articles/1001215/)
-  (caused by project automatically processing pull requests with a flawed script),
+  (caused by a project automatically processing pull requests with a flawed script),
   short post by daroc on LWN\.net.
 
 
@@ -215,11 +215,11 @@ __Light reading__
 
 + [NonStop discussion around adding Rust to Git](https://lwn.net/Articles/998115/)
   by Daroc Alden on LWN\.net.  The Git project discussed the prospect in January 2024,
-  and then again at the Git Contributor's Summit in September 2024.
-    + Git Contributor's Summit 2024 was mentioned in
+  and then again at the Git Contributors' Summit in September 2024.
+    + The Git Contributors' Summit 2024 was mentioned in
       [Git Rev News Edition #115](https://git.github.io/rev_news/2024/09/30/edition-115/),
-      with link to notes as posts to git mailing list (also available in read-only Google Docs),
-      and repo with notes from breakout unconference sessions.
+      with links to notes as posts to the Git mailing list (also available in read-only Google Docs)
+      and a repo with notes from the breakout unconference sessions.
 + [Vigilante Justice on GitHub: GitHub Graffiti](https://trufflesecurity.com/blog/vigilante-justice-on-github)
   by Dylan Ayrey on The Dig (Truffle Security Co. blog), about
   how you can paint funny pixel art (graffiti) with fake commit Git histories 
@@ -234,7 +234,7 @@ __Light reading__
   (`--format=reference`).
 + [Optimizing Your Repository for Speed and Efficiency](https://dev.to/this-is-learning/optimizing-your-repository-for-speed-and-efficiency-5co2) and
   [Using Git Maintenance in GitHub Actions: Optimize Your Repositories Automatically](https://dev.to/this-is-learning/using-git-maintenance-in-github-actions-optimize-your-repositories-automatically-39ka)
-  by Emanuele Bartolesi for This is Learning on DEV\.to create 2 part series
+  by Emanuele Bartolesi for [This is Learning on DEV\.](https://dev.to/this-is-learning), which constitute the 2 part series
   [Streamline Your Workflow with the Git Maintenance Command](https://dev.to/kasuken/series/29808).
     + The [`git maintenance`](https://git-scm.com/docs/git-maintenance) command
       was mentioned in [Git Tips 2: Some Subtle New Things](https://blog.gitbutler.com/git-tips-2-new-stuff-in-git/)
@@ -243,12 +243,12 @@ __Light reading__
 + [Demystifying git submodules](https://www.cyberdemon.org/2024/03/20/submodules.html)
   by Dmitry Mazin on his blog.
 + [Fearless Rebasing](https://blog.gitbutler.com/fearless-rebasing/) by Scott Chacon on GitButler Blog
-  is about "first class" conflict support in GitButler, based on Jujutsu concept of
+  is about "first class" conflict support in GitButler, based on the Jujutsu concept of
   "[first class conflicts](https://martinvonz.github.io/jj/latest/conflicts/)".
     + The article does not mention the built-in (but optional) [git rerere](https://git-scm.com/docs/git-rerere)
-      mechanism of reusing recorded resolution of conflicted merges
+      mechanism of reusing recorded resolutions of conflicting merges
       (described for example in [Git Tools - Rerere](https://git-scm.com/book/en/v2/Git-Tools-Rerere)
-      section in "Pro Git" 2nd Edition), that can help when repeatedly rebasing.
+      section in "Pro Git" 2nd Edition), that can help when rebasing repeatedly.
     + In order to reduce the pain of resolving merge conflicts,
       and allow a merge or a rebase to be saved, tested, interrupted, published,
       and collaborated on while it is in progress, one can also use
@@ -261,19 +261,19 @@ __Light reading__
       written in Rust, was first mentioned in
       [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/).
 + [Stacked Branches with GitButler](https://blog.gitbutler.com/stacked-branches-with-gitbutler/)
-  by Scott Chacon on GitButler Blog.
-  With 0.14 release GitButler can now manage dependent branches that are stacked,
+  by Scott Chacon on the GitButler Blog.
+  With the 0.14 release, GitButler can now manage dependent branches that are stacked,
   including managing stacked GitHub PRs (Pull Requests).
     + See also [Understanding the Stacked Pull Requests Workflow](https://www.git-tower.com/blog/stacked-prs/) by Bruno Brito on Tower's blog,
       mentioned in [Git Rev News Edition #111](https://git.github.io/rev_news/2024/05/31/edition-111/)
       together with various other articles and tools about stacked diffs, stacked PRs, and stacked branches.
     + See also [Rethinking code reviews with stacked PRs](https://www.aviator.co/blog/rethinking-code-reviews-with-stacked-prs/#)
-      by Ankit Jain on Aviator blog,
+      by Ankit Jain on the Aviator blog,
       mentioned in [Git Rev News Edition #115](https://git.github.io/rev_news/2024/09/30/edition-115/)
       with links to more sites and tools related to stacked PRs, etc.
 + [~~Enforcing~~ Git Branch Naming Standards: ~~Tools and~~ Tips for Developers](https://dev.to/oj_redifined/enforcing-git-branch-naming-standards-tools-and-tips-for-developers-1p27)
   by Ojay on DEV\.to (despite the title, the article does not include any technical way of
-  helping to enforce or even remind about branch naming conventions).
+  helping to enforce or even remind of branch naming conventions).
 + [9 ways to manage large creative projects with version control tools](https://www.xda-developers.com/manage-large-creative-projects-with-version-control-tools/)
   by Ruby Helyer on XDA Developers.  Mentions CI/CD, Git LFS, commit message and file naming conventions.
 + Adam Ruka posted a series of articles on working with the Git source control system:
@@ -281,6 +281,7 @@ __Light reading__
     2. [Follow-up to 'GitFlow considered harmful'](https://www.endoflineblog.com/follow-up-to-gitflow-considered-harmful) (2015)
     3. [OneFlow – a Git branching model and workflow](https://www.endoflineblog.com/oneflow-a-git-branching-model-and-workflow) (2017)
     4. [Implementing OneFlow on GitHub, BitBucket and GitLab](https://www.endoflineblog.com/implementing-oneflow-on-github-bitbucket-and-gitlab) (2021)
+   
   [GitFlow: A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
   was a blog post by Vincent Driessen from 2010, with note of reflection from 2020;
   the original author now suggest to adopt a much simpler workflow (like 
@@ -298,8 +299,8 @@ __Easy watching__
 __Git tools and sites__
 
 + [bus-factor-explorer](https://github.com/JetBrains-Research/bus-factor-explorer)
-  by JetBrains Research is a web app for exploring Bus Factor of GitHub projects
-  by analyzing the commit history.  Available as to install as a Docker image.
+  by JetBrains Research is a web app for exploring the Bus Factor of GitHub projects
+  by analyzing the commit history.  Preferably run as a Docker image.
   The repository includes evaluation results for 935 popular repositories on GitHub.
   There is also a short video about the tool on YouTube: <https://youtu.be/uIoV79N14z8>.
   Written in Kotlin (with evaluation done with Jupyter notebooks), under MIT license.
@@ -308,31 +309,31 @@ __Git tools and sites__
       articles mentioned in [Git Rev News Edition #117](https://git.github.io/rev_news/2024/11/30/edition-117/)
       (the previous edition), together with accompanying links.
 + [Anonymous GitHub](https://anonymous.4open.science/) is a service
-  that allows you to anonymize your GitHub repository for double-blind scientific review
-  (of scientific article where source code is to be made available for open science reasons).
+  that allows you to anonymize your GitHub repository for double-blind scientific reviews
+  (of scientific articles where source code is to be made available for open science reasons).
   Several anonymization options are available to ensure that you do not break the double-anonymize,
   such as removing links, images or specific terms.
   The goal is to make is as easy as possible for the reviewer to explore and review the repository.
-+ [Git.News](https://git.news/) is a website which provides infinite newsfeed of
++ [Git.News](https://git.news/) is a website which provides an infinite newsfeed of
   trending repositories from GitHub, HackerNews & Reddit
   (which you can then filter by programming language).
 + [Octobox](https://octobox.io/) is a service to help manage GitHub notifications.
   Includes optional GitHub app to add live information on issue, PR, and CI status, labels, authors, etc.
-  Octobox is free for open source projects with basic notifications for private projects.
-+ [Filestash](https://www.filestash.app/) is Dropbox-like enterprise-grade file manager,
+  Octobox is free for open source projects and the use of basic notifications for private projects.
++ [Filestash](https://www.filestash.app/) is a Dropbox-like enterprise-grade file manager,
   connecting your storage with your identity provider and authorisations.
   It adds a web interface to storage solutions like S3 buckets, SFTP/FTPS server, Git repositories, etc.
-  Self-hosted solution is free; it can be done using Docker image.
+  Self-hosted deployment is free; it can be done using a Docker image.
   Written in Go and JavaScript, under AGPLv3 license.
   Demo available at <https://demo.filestash.app/>,
   source code at <https://github.com/mickael-kerjean/filestash>.
 + [DistGit (Distribution Git)](https://github.com/release-engineering/dist-git)
   is Git with additional data storage, designed to hold content of source RPMs
-  (Linux distribution packages).  Written in Python, under the MIT license,
+  (Linux distribution packages).  Written in Python, under MIT license,
   but with scripts/httpd/upload.cgi under GPLv1,
-  and dist-git-client sub-directory under GPLv2+.
+  and the dist-git-client subdirectory under GPLv2+.
 + [wikmd](https://linbreux.github.io/wikmd/) is a file-based wiki, with
-  documents written in Markdown, and which uses Git for version control.
+  documents written in Markdown, which uses Git for version control.
   It is possible to connect Wikmd with an online repo.
   Written in Python, under MIT license.
 + [Mycorrhiza Wiki](https://mycorrhiza.wiki/) is a free and open-source wiki engine,
@@ -343,7 +344,7 @@ __Git tools and sites__
 + [Gitit](https://github.com/jgm/gitit) is a wiki engine written in Haskell,
   that uses [Happstack](http://happstack.com/) (HAppS) for the web server
   and [pandoc](http://pandoc.org/) for markup processing (with extended Markdown format as default).
-  Pages and uploaded files are stored in a git, darcs, or mercurial repository
+  Pages and uploaded files are stored in a Git, darcs, or Mercurial repository
   and may be modified through the wiki's web interface.
   Under GPLv2 license.
 + [Xandikos](https://www.xandikos.org/) is a lightweight CardDAV/CalDAV server
@@ -356,7 +357,7 @@ __Git tools and sites__
   similar to [GitHub Gist](https://gist.github.com/).
   Demo available at <https://demo.opengist.io/>.
   Written in Go, under AGPLv3 license.
-+ [rgit](https://github.com/w4/rgit) is a gitweb/cgit-like fast web frontend for git repositories.
++ [rgit](https://github.com/w4/rgit) is a gitweb/cgit-like fast web frontend for Git repositories.
   You can see it in action at <https://git.inept.dev/>.
   Written in Rust using Axum, gitoxide, Askama and RocksDB.
   Under WTFPL license
@@ -366,7 +367,7 @@ __Git tools and sites__
   Supports syntax highlighting, Markdown + RestructuredText (reST) rendering support,
   and code navigation using Exuberant ctags.  Can be installed as Docker image of via `pip`.
   You can see its demo at <http://klausdemo.lophus.org/>.
-  Written in Python, under unamed custom permissive license.
+  Written in Python, under an unnamed custom permissive license.
 + [git-activity](https://git-activity.olets.dev/) is a tool
   to record your Git activity across multiple (or all) repos,
   and read it optionally filtered by date,
@@ -376,12 +377,12 @@ __Git tools and sites__
   Useful for retroactively filling out a time sheet (or correcting a time sheet),
   finding that time you solved a problem similar to the one you're working on now, etc.
   The log is stored in a plain text file.  Source code [on GitHub](https://github.com/olets/git-activity).
-  Written as bash shell script using AWK, licensed under (custom)
+  Written as Bash shell script using awk, licensed under (custom)
   CC BY-NC-SA 4.0 with Hippocratic License v3 ethical requirements.
 + [git-branches-script](https://github.com/conorsheppard/git-branches-script)
-  is a convenience script that prints a menu of recent git branches
+  is a convenience script that prints a menu of recent Git branches
   and allows you to switch to a new branch by selecting its corresponding number.
-  Written as bash shell script, no license provided.
+  Written as Bash shell script, no license provided.
 
 
 ## Releases
