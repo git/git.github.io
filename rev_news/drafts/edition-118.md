@@ -17,9 +17,29 @@ This edition covers what happened during the months of November and December 202
 
 ## Discussions
 
-<!---
 ### General
--->
+
+- Git participates in [Outreachy's December 2024 to March 2025 round](https://www.outreachy.org/alums/2024-12/):
+
+  - Seyi Kuforiji is working on the "Convert unit tests to use the
+    clar testing framework" project. He is mentored by Patrick
+    Steinhardt and Phillip Wood and posting updates [on his gitlab.io blog](https://seyi-kuforiji-902b48.gitlab.io/posts/index.html)
+	while his work is on [his GitHub repository](https://github.com/Seyi007/git).
+
+  - Usman Akinyemi is working on the "Finish adding a 'os-version'
+    capability to Git protocol v2" project. He is mentored by
+    Christian Couder and posting updates [on his hashnode.dev blog](https://uniqueusman.hashnode.dev/)
+	while his work is on [his GitLab repository](https://gitlab.com/Unique-Usman/git/-/branches).
+
+  Congratulations to Usman and Seyi for being selected!
+
+  We are still looking for corporate sponsors to fund these two
+  Outreachy internship. Thank you in advance for contacting the Git
+  PLC (git@sfconservancy.org) if you are interested.
+
+  Many thanks also to the other contributors who applied and worked on
+  micro-projects, but couldn’t be selected! We hope to continue to see
+  you in the community!
 
 <!---
 ### Reviews
