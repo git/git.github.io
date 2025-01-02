@@ -63,7 +63,7 @@ This edition covers what happened during the months of November and December 202
 
   Looking at `configure.ac`, Junio Hamano, the Git maintainer, noted
   that `pkg-config` isn't used at all, instead `curl-config --libs` is
-  used to detect curl's flags. Even if the `configure` script was
+  used to detect curl's flags. Even though the `configure` script was
   added early in the history of the Git project, Junio said it was an
   afterthought and nobody has considered "upgrading" from
   `curl-config` to `pkg-config` for dependency detection.
@@ -91,7 +91,7 @@ This edition covers what happened during the months of November and December 202
   [Meson](https://mesonbuild.com/) as an alternative.
 
   CMake was [added more recently in 2020](https://lore.kernel.org/git/pull.614.git.1587700897.gitgitgadget@gmail.com/)
-  by Sibi Siddharthan as a third build system with the main goal of
+  by Sibi Siddharthan as the third build system with the main goal of
   improving the build experience for developers on Windows.
 
   Soon after Patrick's reply, the Git Contributors' Summit took place,
@@ -283,10 +283,10 @@ __Light reading__
     4. [Implementing OneFlow on GitHub, BitBucket and GitLab](https://www.endoflineblog.com/implementing-oneflow-on-github-bitbucket-and-gitlab) (2021)
    
   [GitFlow: A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
-  was a blog post by Vincent Driessen from 2010, with note of reflection from 2020;
-  the original author now suggest to adopt a much simpler workflow (like 
+  was a blog post by Vincent Driessen from 2010, with a note of reflection from 2020;
+  the original author now suggests adopting a much simpler workflow (like
   [GitHub flow](https://guides.github.com/introduction/flow/)) if the team is doing
-  continuous delivery of software, and use GitFlow only when necessary,
+  continuous delivery of software, and using GitFlow only when necessary,
   for explicitly versioned software - with multiple versions of it in the wild to be supported.<br>
   See also [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html)
   by Martin Fowler, mentioned in [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/).
@@ -311,18 +311,18 @@ __Git tools and sites__
 + [Anonymous GitHub](https://anonymous.4open.science/) is a service
   that allows you to anonymize your GitHub repository for double-blind scientific reviews
   (of scientific articles where source code is to be made available for open science reasons).
-  Several anonymization options are available to ensure that you do not break the double-anonymize,
+  Several anonymization options are available to ensure that you do not break the double anonymization,
   such as removing links, images or specific terms.
   The goal is to make is as easy as possible for the reviewer to explore and review the repository.
 + [Git.News](https://git.news/) is a website which provides an infinite newsfeed of
   trending repositories from GitHub, HackerNews & Reddit
   (which you can then filter by programming language).
 + [Octobox](https://octobox.io/) is a service to help manage GitHub notifications.
-  Includes optional GitHub app to add live information on issue, PR, and CI status, labels, authors, etc.
-  Octobox is free for open source projects and the use of basic notifications for private projects.
+  Includes an optional GitHub app to add live information on issue, PR, CI status, labels, authors, etc.
+  Octobox is free for open source projects and the use of basic notifications is free for private projects.
 + [Filestash](https://www.filestash.app/) is a Dropbox-like enterprise-grade file manager,
   connecting your storage with your identity provider and authorisations.
-  It adds a web interface to storage solutions like S3 buckets, SFTP/FTPS server, Git repositories, etc.
+  It adds a web interface to storage solutions like S3 buckets, SFTP/FTPS servers, Git repositories, etc.
   Self-hosted deployment is free; it can be done using a Docker image.
   Written in Go and JavaScript, under AGPLv3 license.
   Demo available at <https://demo.filestash.app/>,
@@ -348,7 +348,7 @@ __Git tools and sites__
   and may be modified through the wiki's web interface.
   Under GPLv2 license.
 + [Xandikos](https://www.xandikos.org/) is a lightweight CardDAV/CalDAV server
-  that backs onto a Git repository.
+  that keeps history and backups in a Git repository.
   It allows to share calendars (events, todo items, journal entries) via CalDAV
   and contacts (vCard) via CardDAV.
   Written in Python using Dulwich, Jinja2, icalendar, and defusedxml,
@@ -371,7 +371,7 @@ __Git tools and sites__
 + [git-activity](https://git-activity.olets.dev/) is a tool
   to record your Git activity across multiple (or all) repos,
   and read it optionally filtered by date,
-  activity type (e.g. commit, branch creation, etc) regex pattern,
+  activity type (e.g. commit, branch creation, etc.) regex pattern,
   repo name regex pattern, branch name regex pattern, commit message regex pattern,
   and/or commit SHA (first seven characters) regex pattern.
   Useful for retroactively filling out a time sheet (or correcting a time sheet),
