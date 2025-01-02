@@ -365,7 +365,7 @@ __Git tools and sites__
   but is on the list of [licenses that meet Debian Free Software Guidelines](https://wiki.debian.org/DFSGLicenses#DO_WHAT_THE_FUCK_YOU_WANT_TO_PUBLIC_LICENSE)).
 + [klaus](https://github.com/jonashaag/klaus) is a simple, easy-to-set-up Git web viewer.
   Supports syntax highlighting, Markdown + RestructuredText (reST) rendering support,
-  and code navigation using Exuberant ctags.  Can be installed as Docker image of via `pip`.
+  and code navigation using Exuberant ctags.  Can be installed as Docker image or via `pip`.
   You can see its demo at <http://klausdemo.lophus.org/>.
   Written in Python, under an unnamed custom permissive license.
 + [git-activity](https://git-activity.olets.dev/) is a tool
