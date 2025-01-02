@@ -389,7 +389,8 @@ __Git tools and sites__
 
 + Git [2.48.0-rc1](https://public-inbox.org/git/xmqqjzbhxeho.fsf@gitster.g/),
 [2.48.0-rc0](https://public-inbox.org/git/xmqqfrmn4hr9.fsf@gitster.g/)
-+ Git for Windows [2.48.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.48.0-rc0.windows.1)
++ Git for Windows [2.48.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.48.0-rc1.windows.1),
+[2.48.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.48.0-rc0.windows.1)
 + libgit2 [1.9.0](https://github.com/libgit2/libgit2/releases/tag/v1.9.0)
 + GitHub Enterprise [3.15.1](https://help.github.com/enterprise-server@3.15/admin/release-notes#3.15.1),
 [3.14.6](https://help.github.com/enterprise-server@3.14/admin/release-notes#3.14.6),
