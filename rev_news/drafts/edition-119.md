@@ -91,7 +91,7 @@ This edition covers what happened during the months of December 2024 and January
   useful to get started without having to be super familiar with
   `git format-patch` and `git send-email`. Other than that, I also
   find it very helpful to observe how other contributors submit
-  patches and interact on the mailing list. 
+  patches and interact on the mailing list.
 
 * If there's one tip you would like to share with other Git
   developers, what would it be?
