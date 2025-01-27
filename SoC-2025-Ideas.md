@@ -1,7 +1,6 @@
 ---
 layout: default
-title: SoC 2024 Ideas
-navbar: false
+title: SoC 2025 Ideas
 ---
 
 ![git logo >](https://git-scm.com/images/logos/downloads/Git-Logo-2Color.svg)
