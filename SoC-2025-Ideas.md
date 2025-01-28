@@ -115,3 +115,45 @@ _Languages_: C, shell(bash)
 _Possible mentors_:
 
 * Patrick Steinhardt < <ps@pks.im> >
+
+
+### Implement support for reftables in "dumb" HTTP transport
+
+Fetching Git repositories uses one of two major protocols:
+
+  - The "dumb" protocol works without requiring any kind of
+    interactive negotiation like a CGI module. It can thus
+    be served by a static web server.
+
+  - The "smart" protocol works by having the client and
+    server exchange multiple messages with each other. It is
+    more efficient, but requires support for Git in the
+    server.
+
+While almost all servers nowadays use the "smart" protocol,
+there are still some that use the "dumb" protocol.
+
+The "dumb" protocol cannot serve repositories which use the
+"reftable" backend though. While there exists a "info/refs"
+file that is supposed to be backend-agnostic, this file does
+not contain information about the default branch. Instead,
+clients are expected to download the "HEAD" file and derive
+the default branch like that. This file is a mere stub in
+the "reftable" backend though, which breaks this protocol.
+
+The goal of this project is to implement "reftable" support
+for "dumb" fetches.
+
+See:
+
+  - <https://git-scm.com/docs/reftable>
+
+_Expected Project Size_: 175 hours or 350 hours
+
+_Difficulty_: Medium
+
+_Languages_: C, shell(bash)
+
+_Possible mentors_:
+* Patrick Steinhardt < <ps@pks.im> >
+* Karthik Nayak < <karthik.188@gmail.com> >
