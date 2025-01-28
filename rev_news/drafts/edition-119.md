@@ -106,6 +106,10 @@ This edition covers what happened during the months of December 2024 and January
 
 __Various__
 
+* Adam Johnson’s book “Boost Your Git DX”
+  [has been updated](https://adamj.eu/tech/2025/01/28/bygdx-second-update/)
+  with 28 new pages of content. This book was first mentioned in
+  [Git Rev News Edition #104](https://git.github.io/rev_news/2023/10/31/edition-104/).
 
 __Light reading__
 
