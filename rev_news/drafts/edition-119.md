@@ -122,14 +122,15 @@ __Git tools and sites__
 
 ## Releases
 
-+ Git [2.48.1 and friends](https://public-inbox.org/git/xmqq5xmh46oc.fsf@gitster.g/),
++ Git [2.48.1 and friends (security releases)](https://public-inbox.org/git/xmqq5xmh46oc.fsf@gitster.g/),
 [2.48.0](https://public-inbox.org/git/xmqqplku7cvm.fsf@gitster.g/),
 [2.48.0-rc2](https://public-inbox.org/git/xmqqbjwjyalr.fsf@gitster.g/)
-+ Git for Windows [2.48.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.48.0-rc2.windows.1)
-+ GitLab [17.8.1](https://about.gitlab.com/releases/2025/01/22/patch-release-gitlab-17-8-1-released/),
++ Git for Windows [2.47.1(2) (security release)](https://github.com/git-for-windows/git/releases/tag/v2.47.1.windows.2)
+[2.48.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.48.0-rc2.windows.1)
++ GitLab [17.8.1, 17.7.3, 17.6.4](https://about.gitlab.com/releases/2025/01/22/patch-release-gitlab-17-8-1-released/),
 [17.8](https://about.gitlab.com/releases/2025/01/16/gitlab-17-8-released/),
 [17.7.2](https://about.gitlab.com/releases/2025/01/15/gitlab-17-7-2-released/),
-[17.7.1](https://about.gitlab.com/releases/2025/01/08/patch-release-gitlab-17-7-1-released/)
+[17.7.1, 17.6.3, 17.5.5](https://about.gitlab.com/releases/2025/01/08/patch-release-gitlab-17-7-1-released/)
 + Gerrit Code Review [3.10.4](https://www.gerritcodereview.com/3.10.html#3104),
 [3.11.1](https://www.gerritcodereview.com/3.11.html#3111),
 [3.9.9](https://www.gerritcodereview.com/3.9.html#399)
