@@ -122,6 +122,32 @@ __Git tools and sites__
 
 ## Releases
 
++ Git [2.48.1 and friends](https://public-inbox.org/git/xmqq5xmh46oc.fsf@gitster.g/),
+[2.48.0](https://public-inbox.org/git/xmqqplku7cvm.fsf@gitster.g/),
+[2.48.0-rc2](https://public-inbox.org/git/xmqqbjwjyalr.fsf@gitster.g/)
++ Git for Windows [2.48.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.48.0-rc2.windows.1)
++ GitLab [17.8.1](https://about.gitlab.com/releases/2025/01/22/patch-release-gitlab-17-8-1-released/),
+[17.8](https://about.gitlab.com/releases/2025/01/16/gitlab-17-8-released/),
+[17.7.2](https://about.gitlab.com/releases/2025/01/15/gitlab-17-7-2-released/),
+[17.7.1](https://about.gitlab.com/releases/2025/01/08/patch-release-gitlab-17-7-1-released/)
++ Gerrit Code Review [3.10.4](https://www.gerritcodereview.com/3.10.html#3104),
+[3.11.1](https://www.gerritcodereview.com/3.11.html#3111),
+[3.9.9](https://www.gerritcodereview.com/3.9.html#399)
++ GitHub Enterprise [3.15.2](https://help.github.com/enterprise-server@3.15/admin/release-notes#3.15.2),
+[3.14.7](https://help.github.com/enterprise-server@3.14/admin/release-notes#3.14.7),
+[3.13.10](https://help.github.com/enterprise-server@3.13/admin/release-notes#3.13.10),
+[3.12.14](https://help.github.com/enterprise-server@3.12/admin/release-notes#3.12.14)
++ GitKraken [10.6.3](https://help.gitkraken.com/gitkraken-client/current/),
+[10.6.2](https://help.gitkraken.com/gitkraken-client/current/),
+[10.6.1](https://help.gitkraken.com/gitkraken-client/current/)
++ GitHub Desktop [3.4.15](https://desktop.github.com/release-notes/),
+[3.4.14](https://desktop.github.com/release-notes/),
+[3.4.13](https://desktop.github.com/release-notes/)
++ Garden [2.0.0](https://github.com/garden-rs/garden/releases/tag/v2.0.0),
+[1.10.1](https://github.com/garden-rs/garden/releases/tag/v1.10.1)
++ Git Cola [4.11.0](https://github.com/git-cola/git-cola/releases/tag/v4.11.0)
++ GitButler [0.14.6](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.6),
+[0.14.5](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.5)
 
 ## Credits
 
