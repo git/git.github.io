@@ -25,9 +25,49 @@ This edition covers what happened during the months of December 2024 and January
 ### Reviews
 -->
 
-<!---
+
 ### Support
--->
+
++ [git support for "xattrs" (extended filesystem attributes)?](https://lore.kernel.org/git/5b4c09a9-64bb-e672-e604-120563fc1ad6@das-werkstatt.com/)
+
+  Peter B. asked in the Git mailing list if there was a way to store
+  [extended attributes (xattrs)](https://en.wikipedia.org/wiki/Extended_file_attributes)
+  in Git. His use case was professional archival collection and he
+  needed bit-proof preservation of all xattrs, even larger ones.
+
+  Junio Hamano, the Git maintainer, replied that Git only tracks
+  "contents, pathnames where these contents are stored, and the
+  executable bit".
+
+  Peff, alias Jeff King, also replied to Peter confirming that Git,
+  like most other version control systems, doesn't store most
+  metadata, but pointing to other tools,
+  [etckeeper](https://etckeeper.branchable.com/) and
+  [metastore](https://github.com/przemoc/metastore), that can help
+  with storing that in a separate file and restoring it on checkout.
+
+  Junio agreed with Peff that Git is extensible that way.
+
+  brian m. carlson replied to Peter mentioning other
+  possibilities. One is to use the `.gitattributes` files to store a
+  few xattrs with values that are "well stored as text", and then
+  `git ls-attr` and a `post-checkout`
+  [hook](https://git-scm.com/book/ms/v2/Customizing-Git-Git-Hooks)
+  to restore them.
+
+  Another possibility is to use
+  [mtree](https://linux.die.net/man/8/mtree) utilities to store or
+  restore metadata from or into mtree files. brian especially pointed
+  to [go-mtree](https://github.com/vbatts/go-mtree) which supports
+  xattrs. As `mtree` is an extensible key-value format, brian uses it
+  to store the install location of his
+  [dotfiles](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory).
+
+  Peter replied to brian thanking everyone for the suggestions and
+  saying he would especially take a look at `mtree` and
+  `metastore`. He thanked again brian later saying that `go-mtree`
+  looked very promising and that he was going to look at
+  `post-checkout` hooks.
 
 ## Developer Spotlight: Justin Tobler
 
