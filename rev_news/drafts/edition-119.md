@@ -44,7 +44,7 @@ This edition covers what happened during the months of December 2024 and January
   metadata, but pointing to other tools,
   [etckeeper](https://etckeeper.branchable.com/) and
   [metastore](https://github.com/przemoc/metastore), that can help
-  with storing that in a separate file and restoring it on checkout.
+  with storing them in a separate file and restoring them on checkout.
 
   Junio agreed with Peff that Git is extensible that way.
 
