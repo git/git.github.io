@@ -30,7 +30,7 @@ This edition covers what happened during the months of December 2024 and January
 
 + [git support for "xattrs" (extended filesystem attributes)?](https://lore.kernel.org/git/5b4c09a9-64bb-e672-e604-120563fc1ad6@das-werkstatt.com/)
 
-  Peter B. asked in the Git mailing list if there was a way to store
+  Peter B. asked on the Git mailing list if there was a way to store
   [extended attributes (xattrs)](https://en.wikipedia.org/wiki/Extended_file_attributes)
   in Git. His use case was professional archival collection and he
   needed bit-proof preservation of all xattrs, even larger ones.
@@ -39,7 +39,7 @@ This edition covers what happened during the months of December 2024 and January
   "contents, pathnames where these contents are stored, and the
   executable bit".
 
-  Peff, alias Jeff King, also replied to Peter confirming that Git,
+  Jeff King, alias Peff, also replied to Peter confirming that Git,
   like most other version control systems, doesn't store most
   metadata, but pointing to other tools,
   [etckeeper](https://etckeeper.branchable.com/) and
@@ -65,9 +65,9 @@ This edition covers what happened during the months of December 2024 and January
 
   Peter replied to brian thanking everyone for the suggestions and
   saying he would especially take a look at `mtree` and
-  `metastore`. He thanked again brian later saying that `go-mtree`
-  looked very promising and that he was going to look at
-  `post-checkout` hooks.
+  `metastore`. He thanked brian again in the following message,
+  saying that `go-mtree` looked very promising and that he was going
+  to look at `post-checkout` hooks.
 
 ## Developer Spotlight: Justin Tobler
 
@@ -165,7 +165,7 @@ __Git tools and sites__
 + Git [2.48.1 and friends (security releases)](https://public-inbox.org/git/xmqq5xmh46oc.fsf@gitster.g/),
 [2.48.0](https://public-inbox.org/git/xmqqplku7cvm.fsf@gitster.g/),
 [2.48.0-rc2](https://public-inbox.org/git/xmqqbjwjyalr.fsf@gitster.g/)
-+ Git for Windows [2.47.1(2) (security release)](https://github.com/git-for-windows/git/releases/tag/v2.47.1.windows.2)
++ Git for Windows [2.47.1(2) (security release)](https://github.com/git-for-windows/git/releases/tag/v2.47.1.windows.2),
 [2.48.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.48.0-rc2.windows.1)
 + GitLab [17.8.1, 17.7.3, 17.6.4](https://about.gitlab.com/releases/2025/01/22/patch-release-gitlab-17-8-1-released/),
 [17.8](https://about.gitlab.com/releases/2025/01/16/gitlab-17-8-released/),
