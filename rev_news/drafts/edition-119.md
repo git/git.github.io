@@ -153,6 +153,29 @@ __Various__
 
 __Light reading__
 
+* [Commit subject case in Git history](https://benknoble.github.io/blog/2025/01/04/git-subject-case/)
+  analysis by D. Ben Knoble, as a blog post on his Junk Drawer site.
+* [Is there a way to split the git history of a file or combine the histories of two files without a merge commit?](https://devblogs.microsoft.com/oldnewthing/20241218-00/?p=110655),
+  a short exploration by Raymond Chen on The Old New Thing, part of Microsoft Dev Blogs.
+    * One of other blog posts referenced in the above mentioned exploration was in Git Rev News:
+      [Mundane git tricks: Combining two files into one while preserving line history](https://devblogs.microsoft.com/oldnewthing/20190514-00/?p=102493)
+      was mentioned in [Edition #51](https://git.github.io/rev_news/2019/05/22/edition-51/), while
+      [How do I split a file into two while preserving git line history?](https://devblogs.microsoft.com/oldnewthing/20190916-00/?p=102892)
+      was not present, but related
+      [How to split off an older copy of a file while preserving git line history](https://devblogs.microsoft.com/oldnewthing/20230728-00/?p=108498)
+      was in [Edition #104](https://git.github.io/rev_news/2023/10/31/edition-104/).
+* [Edit commit message with git reword (`git commit --fixup:reword=<commit>`)](https://www.brandonpugh.com/til/git/edit-commit-message-with-reword/)
+  in Brandon Pugh's TILs: Today I learned... (2024)
+* [How I use git worktrees](https://notes.billmill.org/blog/2024/03/How_I_use_git_worktrees.html)
+  (with the help of custom [worktree](https://github.com/llimllib/personal_code/blob/daab9eb1/homedir/.local/bin/worktree#L1) script)
+  by Bill Mill on their blog (2024).
+    * See also [How I Use Git Worktrees](https://matklad.github.io/2024/07/25/git-worktrees.html)
+      by Alex Kladov (matklad) on his GitHub Pages-based blog,
+      mentioned in [Git Rev News Edition #113](https://git.github.io/rev_news/2024/07/31/edition-113/)
+* [Git Trailers](https://alchemists.io/articles/git_trailers) by Brooke Kuhlmann
+  was mentioned in [Git Rev News Edition #108](https://git.github.io/rev_news/2024/02/29/edition-108/),
+  but was since then updated.
+
 <!---
 __Easy watching__
 -->
