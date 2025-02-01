@@ -1,7 +1,6 @@
 ---
 layout: default
-title: SoC 2024 Applicant Microprojects
-navbar: false
+title: SoC 2025 Applicant Microprojects
 ---
 
 ## Introduction
@@ -12,6 +11,85 @@ First make sure you read and understand
 There are some suggestions on how you can find some microprojects on your own in the document.
 
 ## Ideas for microprojects
+
+### Fix Sign Comparison Warnings in Git's Codebase
+
+Help improve Git's code quality by fixing sign comparison warnings in files that
+currently disable these warnings. The goal is to remove instances of
+`DISABLE_SIGN_COMPARE_WARNINGS` macro and fix the underlying issues properly.
+
+#### Steps to Complete
+1. Find a C source file that contains `#define DISABLE_SIGN_COMPARE_WARNINGS`
+2. Remove this #define
+3. Build Git with `DEVELOPER=1` to enable compiler warnings. The `DEVLEOPER`
+   can be specified in your `config.mak` or as follows
+
+   ```sh
+   make DEVELOPER=1 -j4
+   ```
+
+4. Fix all `-Wsign-compare` warnings that appear for that file:
+   - Pay attention to comparisons between signed and unsigned integers
+   - Modify variable types or add appropriate casts as needed
+   - Ensure the fixes don't change the code's behavior
+
+#### Notes
+- Each file should be handled in a separate patch
+- Follow Git's commit message conventions
+- Test your changes thoroughly
+- This is part of an ongoing effort to enable `-Wsign-compare` globally
+
+#### Related Patches
+For context on why this is a crucial improvement to Git's codebase, checkout
+[this e-mail](https://public-inbox.org/git/20241206-pks-sign-compare-v4-0-0344c6dfb219@pks.im/)
+by Patrick Steinhardt.
+
+
+### Modernize Test Path Checking in Git's Test Suite
+
+Help improve Git's test suite by converting old-style path checks to use modern
+helper functions. We'll be replacing basic shell test commands like `test -f`
+with Git's dedicated test helpers like `test_path_is_file`.
+
+#### Steps to Complete
+1. Find a test script using old-style path checks:
+```sh
+git grep "test -[efd]" t/
+```
+
+2. Look for patterns like:
+```sh
+test -f path/to/file      # old way
+test_path_is_file path/to/file    # new way
+
+test -d some/directory    # old way
+test_path_is_dir some/directory   # new way
+```
+
+3. Important: Only replace checks that are actually testing for conditions, not
+   those used in flow control. For example:
+```sh
+# DON'T change this - it's flow control
+if test -e "file.txt"; then
+    do_something
+fi
+
+# DO change this - it's a test assertion
+test -e "file.txt" || error "file.txt should exist"
+```
+
+#### Notes
+- Start small: Pick a test file with just a few instances to convert
+- Run the test suite after your changes to ensure nothing breaks
+- Follow Git's commit message style
+- Include which command you used to find the instances in your commit message
+
+#### Need Help?
+- Reference [this discussion](https://public-inbox.org/git/CAPig+cRfO8t1tdCL6MB4b9XopF3HkZ==hU83AFZ38b-2zsXDjQ@mail.gmail.com/)
+  for detailed examples.
+- If you can't find any instances to fix, let us know what search command you
+  used
+
 
 ### Add more builtin patterns for userdiff
 
@@ -33,21 +111,6 @@ already been done for a number of languages.
 See for example what Junio did in
 [ffcb4e94d3](https://github.com/git/git/commit/ffcb4e94d3) (bisect: do
 not run show-branch just to show the current commit, 2021-07-27).
-
-If you can't find one please tell us, along with the command you used
-to search, so that we can remove this microproject idea.
-
-### Use `test_path_is_*` functions in test scripts
-
-Find one test script that verifies the presence/absence of
-files/directories with 'test -(e|f|d|...)' and replace them with the
-appropriate `test_path_is_file`, `test_path_is_dir`, etc. helper
-functions. Note that this conversion does not directly apply to control
-flow constructs like `if test -e ./path; then ...; fi` because the
-replacements are intended to assert the condition instead of merely
-testing for it. Check [this link](https://public-inbox.org/git/CAPig+cRfO8t1tdCL6MB4b9XopF3HkZ==hU83AFZ38b-2zsXDjQ@mail.gmail.com/)
-for an elaborate clarification on identifying `test -e`
-instances that should / should not be replaced.
 
 If you can't find one please tell us, along with the command you used
 to search, so that we can remove this microproject idea.
@@ -142,3 +205,4 @@ worked on by asking on the mailing list before starting to work on it.
 There should be only one kind of change per commit. For example if one
 of your commits indents test bodies with TABs, instead of spaces, then
 this should be the only kind of change in this commit.
+
