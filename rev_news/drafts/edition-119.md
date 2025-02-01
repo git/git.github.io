@@ -146,15 +146,65 @@ This edition covers what happened during the months of December 2024 and January
 
 __Various__
 
+* [Highlights from Git 2.48](https://github.blog/open-source/git/highlights-from-git-2-48/)
+  by Taylor Blau on GitHub Blog, about
+  faster SHA-1s computations for checksums, adding `--remerge-diff` option to `git range-diff` command,
+  memory-leak free tests, introducing the Meson build system, and more.
+* [What’s new in Git 2.48.0?](https://about.gitlab.com/blog/2025/01/10/whats-new-in-git-2-48-0/)
+  by Christian Couder on GitLab Blog, about
+  the Meson build system, Git becoming memory-leak free, improved bundle URI checks,
+  adding reference consistency checks, more performant 'reftables' implementation,
+  support for reflogs in `git-refs migrate` (to migrate to 'reftables'),
+  the 'ref-filter' subsystem optimizations, and more.
+* [Git security vulnerabilities announced](https://github.blog/open-source/git/git-security-vulnerabilities-announced-5/)
+  by Taylor Blau on GitHub Blog:
+  CVE-2024-50349 (ANSI escape sequences in hostname, and prompt for interactive credentials),
+  CVE-2024-52006 (specially-crafted repository URL, and credential helpers).
+    * See also [Clone2Leak: Your Git Credentials Belong To Us](https://flatt.tech/research/posts/clone2leak-your-git-credentials-belong-to-us/)
+      by RyotaK (@ryotkak), a security engineer at GMO Flatt Security Inc.
 * Adam Johnson’s book “Boost Your Git DX”
   [has been updated](https://adamj.eu/tech/2025/01/28/bygdx-second-update/)
   with 28 new pages of content. This book was first mentioned in
   [Git Rev News Edition #104](https://git.github.io/rev_news/2023/10/31/edition-104/).
 
+
 __Light reading__
 
+* [Off-the-shelf governance models for small FOSS projects?](https://antonin.delpeuch.eu/posts/off-the-shelf-governance-models-for-small-foss-projects/)
+  by Antonin Delpeuch, about an idea for `GOVERNANCE.md` file template or generator,
+  as another recommended addition to `README.md`, `LICENSE`, and Code of Conduct.
+  Mergiraf's [`GOVERNANCE.md`](https://codeberg.org/mergiraf/mergiraf/src/branch/main/GOVERNANCE.md)
+  is his example - the goal here is to make it clear for project users about
+  what one can do if there is an issue/bug, or if one wants to add some new feature to a project.
+* [Re: DCO](https://inbox.sourceware.org/gdb/Z5esfoH+wMxmDyRP@ebb.org/)
+  by Bradley M. Kuhn of Software Freedom Conservancy on GDB Development mailing list (via GDB public-inbox instance), 
+  about considering implementing Digital Certificate of Origin for a project (like Linux kernel and Git project do).
+* [The many names of commit 55039832f98c](https://lwn.net/Articles/1005222/)
+  by Jonathan Corbet on LWN\.net, about difficuties finding the commit in mainline kernel repository
+  that corresponds to the specific commit/patch sent to stable-update mailing list,
+  in the presence of DRM community's wide use of cherry-picking
+  (without something like "change ID" that is used by Gerrit).
+* [The slow death of TuxFamily](https://lwn.net/Articles/1004988/), a French free-software-hosting service,
+  by Joe Brockmeier on LWN\.net.
+* [A Retrospective on the Source Code Control System](https://www.mrochkind.com/mrochkind/docs/SCCSretro2.pdf)
+  by Marc J. Rochkind (PDF).
+* [Considerations for making a tree view component (in a web Git UI) accessible](https://github.blog/engineering/user-experience/considerations-for-making-a-tree-view-component-accessible/)
+  by Eric Bailey on GitHub Blog.
 * [Commit subject case in Git history](https://benknoble.github.io/blog/2025/01/04/git-subject-case/)
   analysis by D. Ben Knoble, as a blog post on his Junk Drawer site.
+* [Colliding with the SHA prefix of Linux's initial Git commit](https://people.kernel.org/kees/colliding-with-the-sha-prefix-of-linuxs-initial-git-commit)
+  Or, how to break all the tools that parse the “Fixes:” tag,
+  by Kees Cook on people\.kernel\.org.  Note that the 12-character prefix collision
+  was generated with the help of the [lucky-commit](https://github.com/not-an-aardvark/lucky-commit) project;
+  this tool was mentioned in [Git Rev News Edition #109](https://git.github.io/rev_news/2024/03/31/edition-109/).
+    * See also [Facing the Git commit-ID collision catastrophe](https://lwn.net/Articles/1001526/)
+      by Jonathan Corbet on LWN\.net, mentioned in [the previous edition](https://git.github.io/rev_news/2024/12/31/edition-118/).
+* [How to set up your ~~own Git server~~ Gitea instance at home for your personal projects](https://www.xda-developers.com/set-up-your-own-git-server-at-home/)
+  by Ty Sherback on XDA Developers.
+    * [Gitea](https://about.gitea.com/), a Go-based software forge (fork of [Gogs](https://gogs.io/)),
+      was first mentioned in [Git Rev News Edition #23](https://git.github.io/rev_news/2017/01/25/edition-23/).
+      There is also [Forgejo](https://forgejo.org/), fork of Gitea,
+      mentioned in [Git Rev News Edition #114](https://git.github.io/rev_news/2024/08/31/edition-114/).
 * [Is there a way to split the git history of a file or combine the histories of two files without a merge commit?](https://devblogs.microsoft.com/oldnewthing/20241218-00/?p=110655),
   a short exploration by Raymond Chen on The Old New Thing, part of Microsoft Dev Blogs.
     * One of other blog posts referenced in the above mentioned exploration was in Git Rev News:
@@ -181,6 +231,19 @@ __Easy watching__
 -->
 
 __Git tools and sites__
+
+* [Project Harmony (Harmony Agreements)](https://www.harmonyagreements.org/)
+  is a community-centered group focused on _contributor agreements_
+  for free and open source software (FOSS).
+* [todo-md](https://codeberg.org/lig/todo-md) is a pre-commit hook written in Bash
+  that automatically maintains a `TODO.md` file in your repository.
+  It collects `TODO:` comments from your code and organizes them into a markdown file,
+  making it easy to track tasks and improvements.
+  Under MIT license.
+* [Yek](https://github.com/bodo-run/yek) (يک) is a fast Rust based tool
+  to serialize (selected) text-based files in a repository or directory
+  into a single file meant for LLM consumption.  Mentions similar projects.
+  Under MIT license.
 
 
 ## Releases
