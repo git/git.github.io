@@ -284,4 +284,4 @@ Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
 with help from Justin Tobler, D. Ben Knoble,
-Brandon Pugh and Adam Johnson.
+Brandon Pugh, Štěpán Němec and Adam Johnson.
