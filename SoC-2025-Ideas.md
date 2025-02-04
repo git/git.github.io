@@ -84,6 +84,8 @@ _Languages_: C, shell(bash)
 _Possible mentors_:
 
 * Patrick Steinhardt < <ps@pks.im> >
+* Karthik Nayak < <karthik.188@gmail.com> >
+* Jialuo She < <shejialuo@gmail.com> >
 
 
 ### Machine-Readable Repository Information Query Tool
@@ -115,6 +117,7 @@ _Languages_: C, shell(bash)
 _Possible mentors_:
 
 * Patrick Steinhardt < <ps@pks.im> >
+* Karthik Nayak < <karthik.188@gmail.com> >
 
 
 ### Implement support for reftables in "dumb" HTTP transport
