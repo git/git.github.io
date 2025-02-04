@@ -148,11 +148,11 @@ __Various__
 
 * [Highlights from Git 2.48](https://github.blog/open-source/git/highlights-from-git-2-48/)
   by Taylor Blau on GitHub Blog, about
-  faster SHA-1s computations for checksums, adding `--remerge-diff` option to `git range-diff` command,
-  memory-leak free tests, introducing the Meson build system, and more.
+  faster SHA-1 computations for checksums, adding `--remerge-diff` option to `git range-diff` command,
+  memory-leak-free tests, introducing the Meson build system, and more.
 * [What’s new in Git 2.48.0?](https://about.gitlab.com/blog/2025/01/10/whats-new-in-git-2-48-0/)
   by Christian Couder on GitLab Blog, about
-  the Meson build system, Git becoming memory-leak free, improved bundle URI checks,
+  the Meson build system, Git becoming memory-leak-free, improved bundle URI checks,
   adding reference consistency checks, more performant 'reftables' implementation,
   support for reflogs in `git-refs migrate` (to migrate to 'reftables'),
   the 'ref-filter' subsystem optimizations, and more.
@@ -174,14 +174,14 @@ __Light reading__
   by Antonin Delpeuch, about an idea for `GOVERNANCE.md` file template or generator,
   as another recommended addition to `README.md`, `LICENSE`, and Code of Conduct.
   Mergiraf's [`GOVERNANCE.md`](https://codeberg.org/mergiraf/mergiraf/src/branch/main/GOVERNANCE.md)
-  is his example - the goal here is to make it clear for project users about
-  what one can do if there is an issue/bug, or if one wants to add some new feature to a project.
+  is his example - the goal here is to make it clear for project users
+  what one can do if there is an issue/bug, or if one wants to add a new feature to a project.
 * [Re: DCO](https://inbox.sourceware.org/gdb/Z5esfoH+wMxmDyRP@ebb.org/)
   by Bradley M. Kuhn of Software Freedom Conservancy on GDB Development mailing list (via GDB public-inbox instance), 
-  about considering implementing Digital Certificate of Origin for a project (like Linux kernel and Git project do).
+  about the considerations when adopting the Developer Certificate of Origin for a project (similarly to the Linux kernel and Git).
 * [The many names of commit 55039832f98c](https://lwn.net/Articles/1005222/)
-  by Jonathan Corbet on LWN\.net, about difficuties finding the commit in mainline kernel repository
-  that corresponds to the specific commit/patch sent to stable-update mailing list,
+  by Jonathan Corbet on LWN\.net, about difficulties finding the commit in mainline kernel repository
+  that corresponds to the specific commit/patch sent to the stable-update mailing list,
   in the presence of DRM community's wide use of cherry-picking
   (without something like "change ID" that is used by Gerrit).
 * [The slow death of TuxFamily](https://lwn.net/Articles/1004988/), a French free-software-hosting service,
@@ -203,17 +203,17 @@ __Light reading__
   by Ty Sherback on XDA Developers.
     * [Gitea](https://about.gitea.com/), a Go-based software forge (fork of [Gogs](https://gogs.io/)),
       was first mentioned in [Git Rev News Edition #23](https://git.github.io/rev_news/2017/01/25/edition-23/).
-      There is also [Forgejo](https://forgejo.org/), fork of Gitea,
+      There is also [Forgejo](https://forgejo.org/), a fork of Gitea,
       mentioned in [Git Rev News Edition #114](https://git.github.io/rev_news/2024/08/31/edition-114/).
 * [Is there a way to split the git history of a file or combine the histories of two files without a merge commit?](https://devblogs.microsoft.com/oldnewthing/20241218-00/?p=110655),
   a short exploration by Raymond Chen on The Old New Thing, part of Microsoft Dev Blogs.
-    * One of other blog posts referenced in the above mentioned exploration was in Git Rev News:
+    * Some of the other blog posts referenced in the above-mentioned exploration also made their appearance in Git Rev News:
       [Mundane git tricks: Combining two files into one while preserving line history](https://devblogs.microsoft.com/oldnewthing/20190514-00/?p=102493)
-      was mentioned in [Edition #51](https://git.github.io/rev_news/2019/05/22/edition-51/), while
+      was mentioned in [Edition #51](https://git.github.io/rev_news/2019/05/22/edition-51/).
       [How do I split a file into two while preserving git line history?](https://devblogs.microsoft.com/oldnewthing/20190916-00/?p=102892)
-      was not present, but related
+      was not present, but the related
       [How to split off an older copy of a file while preserving git line history](https://devblogs.microsoft.com/oldnewthing/20230728-00/?p=108498)
-      was in [Edition #104](https://git.github.io/rev_news/2023/10/31/edition-104/).
+      appeared in [Edition #104](https://git.github.io/rev_news/2023/10/31/edition-104/).
 * [Edit commit message with git reword (`git commit --fixup:reword=<commit>`)](https://www.brandonpugh.com/til/git/edit-commit-message-with-reword/)
   in Brandon Pugh's TILs: Today I learned... (2024)
 * [How I use git worktrees](https://notes.billmill.org/blog/2024/03/How_I_use_git_worktrees.html)
@@ -237,7 +237,7 @@ __Git tools and sites__
   for free and open source software (FOSS).
 * [todo-md](https://codeberg.org/lig/todo-md) is a pre-commit hook written in Bash
   that automatically maintains a `TODO.md` file in your repository.
-  It collects `TODO:` comments from your code and organizes them into a markdown file,
+  It collects `TODO:` comments from your code and organizes them into a Markdown file,
   making it easy to track tasks and improvements.
   Under MIT license.
 * [Yek](https://github.com/bodo-run/yek) (يک) is a fast Rust based tool
