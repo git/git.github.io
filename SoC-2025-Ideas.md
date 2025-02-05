@@ -57,6 +57,7 @@ _Possible mentors_:
 
 * Patrick Steinhardt < <ps@pks.im> >
 * Jialuo She < <shejialuo@gmail.com> >
+* Christian Couder < <christian.couder@gmail.com> >
 
 
 ### Refactoring in order to reduce Git's global state
@@ -86,6 +87,7 @@ _Possible mentors_:
 * Patrick Steinhardt < <ps@pks.im> >
 * Karthik Nayak < <karthik.188@gmail.com> >
 * Jialuo She < <shejialuo@gmail.com> >
+* Christian Couder < <christian.couder@gmail.com> >
 
 
 ### Machine-Readable Repository Information Query Tool
