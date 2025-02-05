@@ -53,30 +53,30 @@ with Git's dedicated test helpers like `test_path_is_file`.
 
 #### Steps to Complete
 1. Find a test script using old-style path checks:
-```sh
-git grep "test -[efd]" t/
-```
+   ```sh
+   git grep "test -[efd]" t/
+   ```
 
 2. Look for patterns like:
-```sh
-test -f path/to/file      # old way
-test_path_is_file path/to/file    # new way
+   ```sh
+   test -f path/to/file      # old way
+   test_path_is_file path/to/file    # new way
 
-test -d some/directory    # old way
-test_path_is_dir some/directory   # new way
-```
+   test -d some/directory    # old way
+   test_path_is_dir some/directory   # new way
+   ```
 
 3. Important: Only replace checks that are actually testing for conditions, not
    those used in flow control. For example:
-```sh
-# DON'T change this - it's flow control
-if test -e "file.txt"; then
-    do_something
-fi
+   ```sh
+   # DON'T change this - it's flow control
+   if test -e "file.txt"; then
+       do_something
+   fi
 
-# DO change this - it's a test assertion
-test -e "file.txt" || error "file.txt should exist"
-```
+   # DO change this - it's a test assertion
+   test -e "file.txt" || error "file.txt should exist"
+   ```
 
 #### Notes
 - Start small: Pick a test file with just a few instances to convert
