@@ -148,7 +148,7 @@ __Various__
 
 * [Highlights from Git 2.48](https://github.blog/open-source/git/highlights-from-git-2-48/)
   by Taylor Blau on GitHub Blog, about
-  faster SHA-1 computations for checksums, adding `--remerge-diff` option to `git range-diff` command,
+  faster SHA-1 computations for checksums, adding option `--remerge-diff` to the `git range-diff` command,
   memory-leak-free tests, introducing the Meson build system, and more.
 * [What’s new in Git 2.48.0?](https://about.gitlab.com/blog/2025/01/10/whats-new-in-git-2-48-0/)
   by Christian Couder on GitLab Blog, about
@@ -158,8 +158,8 @@ __Various__
   the 'ref-filter' subsystem optimizations, and more.
 * [Git security vulnerabilities announced](https://github.blog/open-source/git/git-security-vulnerabilities-announced-5/)
   by Taylor Blau on GitHub Blog:
-  CVE-2024-50349 (ANSI escape sequences in hostname, and prompt for interactive credentials),
-  CVE-2024-52006 (specially-crafted repository URL, and credential helpers).
+  [CVE-2024-50349](https://nvd.nist.gov/vuln/detail/CVE-2024-50349) (ANSI escape sequences in hostname and prompt for interactive credentials) and
+  [CVE-2024-52006](https://nvd.nist.gov/vuln/detail/CVE-2024-52006) (specially-crafted repository URL and credential helpers).
     * See also [Clone2Leak: Your Git Credentials Belong To Us](https://flatt.tech/research/posts/clone2leak-your-git-credentials-belong-to-us/)
       by RyotaK (@ryotkak), a security engineer at GMO Flatt Security Inc.
 * Adam Johnson’s book “Boost Your Git DX”
@@ -215,13 +215,13 @@ __Light reading__
       [How to split off an older copy of a file while preserving git line history](https://devblogs.microsoft.com/oldnewthing/20230728-00/?p=108498)
       appeared in [Edition #104](https://git.github.io/rev_news/2023/10/31/edition-104/).
 * [Edit commit message with git reword (`git commit --fixup:reword=<commit>`)](https://www.brandonpugh.com/til/git/edit-commit-message-with-reword/)
-  in Brandon Pugh's TILs: Today I learned... (2024)
+  in Brandon Pugh's TILs: Today I learned... (2024).
 * [How I use git worktrees](https://notes.billmill.org/blog/2024/03/How_I_use_git_worktrees.html)
   (with the help of custom [worktree](https://github.com/llimllib/personal_code/blob/daab9eb1/homedir/.local/bin/worktree#L1) script)
   by Bill Mill on their blog (2024).
     * See also [How I Use Git Worktrees](https://matklad.github.io/2024/07/25/git-worktrees.html)
       by Alex Kladov (matklad) on his GitHub Pages-based blog,
-      mentioned in [Git Rev News Edition #113](https://git.github.io/rev_news/2024/07/31/edition-113/)
+      mentioned in [Git Rev News Edition #113](https://git.github.io/rev_news/2024/07/31/edition-113/).
 * [Git Trailers](https://alchemists.io/articles/git_trailers) by Brooke Kuhlmann
   was mentioned in [Git Rev News Edition #108](https://git.github.io/rev_news/2024/02/29/edition-108/),
   but was since then updated.
