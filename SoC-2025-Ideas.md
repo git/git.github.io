@@ -153,6 +153,11 @@ See:
 
   - <https://git-scm.com/docs/reftable>
 
+**Note**: While both ideas are valuable, we prioritize the 'Consolidate ref-related
+functionality into git-refs' proposal. If we receive applications for both
+projects, preference will be given to applications focusing on the git-refs
+consolidation work.
+
 _Expected Project Size_: 175 hours or 350 hours
 
 _Difficulty_: Medium
