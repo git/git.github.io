@@ -120,7 +120,7 @@ _Possible mentors_:
 
 * Patrick Steinhardt < <ps@pks.im> >
 * Karthik Nayak < <karthik.188@gmail.com> >
-
+* Ghanshyam Thakkar < <shyamthakkar001@gmail.com> >
 
 ### Implement support for reftables in "dumb" HTTP transport
 
