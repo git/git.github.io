@@ -71,6 +71,7 @@ __Git tools and sites__
 + Git Cola [4.12.0](https://github.com/git-cola/git-cola/releases/tag/v4.12.0)
 + GitButler [0.14.8](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.8),
 [0.14.7](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.7)
++ Tower for Mac [12.5, 12.5.1, 12.5.2](https://www.git-tower.com/release-notes/mac?show_tab=release-notes) — [Release blog post](https://www.git-tower.com/blog/tower-mac-125/)
 
 ## Credits
 
