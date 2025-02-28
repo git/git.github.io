@@ -150,6 +150,11 @@ ouitside of our mailing list. Our first interview was [with VonC in edition 106]
 
 __Various__
 
+- The Git project has been accepted as a [Mentor Organization](https://summerofcode.withgoogle.com/programs/2025/organizations/git)
+  for Google Summer of Code (GSoC) 2025. We can still add project ideas to our
+  [idea page](https://git.github.io/SoC-2025-Ideas/), and volunteers to (co-)mentor
+  are still welcome. Feel free to join the discussion in the [corresponding thread](http://public-inbox.org/git/6C29409D-691B-471F-B08C-83E14D35EE13@gmail.com/T/#mb087c1b0ed06fcbd56d4ffa320efbeb42fd4983f).
+  Also, feel free to spread the word about Git’s participation.
 
 __Light reading__
 
