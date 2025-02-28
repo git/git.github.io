@@ -21,9 +21,115 @@ This edition covers what happened during the months of January and February 2025
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
++ [[PATCH] worktree: detect from secondary worktree if main worktree is bare](https://lore.kernel.org/git/pull.1829.git.1731653548549.gitgitgadget@gmail.com/)
+
+  Last November, Olga Pilipenco sent a patch to the mailing list
+  addressing an issue she encountered while working with multiple
+  [worktrees](https://git-scm.com/docs/git-worktree).
+
+  Git worktrees allow developers to check out multiple branches from
+  the same repository simultaneously, each in its own working
+  directory. Unlike creating separate clones, worktrees share the same
+  object database and references, saving disk space and avoiding the
+  need to push and fetch between copies of the repository. They can be
+  very useful when working on multiple features in parallel or when
+  needing to make a quick fix while in the middle of other development
+  work.
+
+  The issue happened when a repository had a main worktree that was
+  bare with `core.bare = true` in `config.worktree`. If a new
+  secondary worktree was created, then from that secondary worktree
+  the main worktree appeared as non-bare. This prevented users from
+  checking out or working with the default branch of the main worktree
+  (typically "main" or "master") in the secondary worktree.
+
+  When `extensions.worktreeConfig` is enabled, each worktree has its
+  own configuration settings in a `config.worktree` file that can
+  override repository-wide settings in the common `config` file. This
+  allows different worktrees to have different configurations, but it
+  also means that settings from one worktree aren't automatically
+  visible to commands running in another worktree.
+
+  Olga found that when inside the secondary worktree, the main
+  worktree's configuration wasn't initialized, and her patch fixed
+  that by loading the main worktree's `config.worktree` file only when
+  required.
+
+  Unfortunately Olga's email fell through the cracks, receiving no
+  response. But last January she sent a
+  [version 2](https://lore.kernel.org/git/pull.1829.v2.git.1737063335673.gitgitgadget@gmail.com/)
+  of her patch. There was no code change compared to the first
+  version, but she added people in "Cc:", and she had rebased the
+  patch on top of the "maint" branch.
+
+  This time Eric Sunshine replied. He acknowledged that this was a
+  real problem and noted that it had been documented in a "NEEDSWORK"
+  comment added in 2019 into the code that mentioned it. He then
+  attempted to rewrite the commit message of the patch in a way that
+  was "more idiomatic" to the project and that added more details to
+  help understand the problem.
+
+  The suggested commit message especially mentioned that when
+  `extensions.worktreeConfig` is true, commands run in a secondary
+  worktree only consulted `$commondir/config` and
+  `$commondir/worktrees/<id>/config.worktree`. Thus they never saw
+  that the main worktree's `core.bare` setting was true in
+  `$commondir/config.worktree`.
+
+  Eric also suggested removing some parts of Olga's commit message
+  that talked about other solutions she had considered, or that
+  repeated in which circumstances the problem appeared. Then there
+  were a number of small comments on the code part of the patch.
+
+  Olga replied to Eric saying that the commit message he proposed was
+  "so much better" than the original one. She agreed with most of
+  Eric's suggestions and answered the few questions he asked.
+
+  Eric replied explaining some technical details and making a few more
+  suggestions.
+
+  Junio Hamano, the Git maintainer then replied to Eric thanking him
+  "for an easy-to-read review" and thanking Olga for working on this
+  issue.
+
+  Eric and Olga further discussed technical improvements to the
+  patch. In the course of that discussion, Eric explained the
+  historical context related to using the "bare main worktree"
+  expression:
+
+  > It's a historic "accident" that when worktree support was designed,
+  > the idea of linking worktrees to a bare repository was not considered.
+  > Support for using worktrees with a bare repository was added later.
+  > However, by that time, the term "main worktree" was already well
+  > established, with the very unfortunate result that even when there is
+  > no actual "main worktree" but only a bare repository with "linked
+  > worktrees" hanging off it, the repository itself is usually referred
+  > to as the "bare main worktree", which is an obvious misnomer; the
+  > repository is just a repository (i.e. the object database and other
+  > meta-information) and there is no actual main worktree.
+
+  Olga then sent a
+  [version 3](https://lore.kernel.org/git/pull.1829.v3.git.1738346881907.gitgitgadget@gmail.com/)
+  of her patch. It used the commit message suggested by Eric, and
+  implemented his suggestions.
+
+  Junio reviewed this new version of the patch and had a single
+  question about the code that decided when it was necessary to read
+  the main worktree's `config.worktree` file. Olga and Junio further
+  discussed how to make it clearer what that code was doing, and
+  eventually agreed on adding a four line long comment on top of it.
+
+  Olga then sent a
+  [version 4](https://lore.kernel.org/git/pull.1829.v4.git.1738737014194.gitgitgadget@gmail.com/)
+  of her patch which only added that four line long comment.
+
+  The patch was later merged into the 'master' branch, so the next
+  2.49 version of Git that should be released in a few weeks will
+  finally resolve a long-standing issue and significantly enhance the
+  usability of Git worktrees for developers working with bare
+  repositories.
 
 <!---
 ### Support
