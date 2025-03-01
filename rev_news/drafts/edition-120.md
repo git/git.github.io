@@ -140,8 +140,8 @@ This edition covers what happened during the months of January and February 2025
 
 _[Chris Torek](https://stackoverflow.com/users/1256452/torek) has been a prolific
 contributor to the Git topic on Stack Overflow. This edition features an interview
-with him. This a continuation of our initiative to interview community contributors
-ouitside of our mailing list. Our first interview was [with VonC in edition 106](https://git.github.io/rev_news/2023/12/31/edition-106/#community-spotlight-vonc)_.
+with him. This is a continuation of our initiative to interview community contributors
+outside of our mailing list. Our first interview was [with VonC in edition 106](https://git.github.io/rev_news/2023/12/31/edition-106/#community-spotlight-vonc)_.
 
 
 * **Who are you and what do you do?**
@@ -216,7 +216,7 @@ ouitside of our mailing list. Our first interview was [with VonC in edition 106]
   having it take only seconds. The distributed nature is also pretty
   crucial, though it has its pluses and minuses.
 
-* **Could you brief a bit about one of your most memorable experience with Git?**
+* **Could you brief a bit about one of your most memorable experiences with Git?**
 
   Hah, the most memorable one was probably one of the worst, back in the
   days of Git 1.5 or so. Back then, an initial `git pull` wasn't always
