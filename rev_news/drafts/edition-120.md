@@ -26,7 +26,7 @@ This edition covers what happened during the months of January and February 2025
 + [[PATCH] worktree: detect from secondary worktree if main worktree is bare](https://lore.kernel.org/git/pull.1829.git.1731653548549.gitgitgadget@gmail.com/)
 
   Last November, Olga Pilipenco sent a patch to the mailing list
-  addressing an issue she encountered while working with multiple
+  addressing an issue she had encountered while working with multiple
   [worktrees](https://git-scm.com/docs/git-worktree).
 
   Git worktrees allow developers to check out multiple branches from
@@ -39,8 +39,8 @@ This edition covers what happened during the months of January and February 2025
   work.
 
   The issue happened when a repository had a main worktree that was
-  bare with `core.bare = true` in `config.worktree`. If a new
-  secondary worktree was created, then from that secondary worktree
+  bare with `core.bare = true` in `config.worktree`. After creation of a new
+  secondary worktree, from that secondary worktree's point-of-view
   the main worktree appeared as non-bare. This prevented users from
   checking out or working with the default branch of the main worktree
   (typically "main" or "master") in the secondary worktree.
@@ -66,7 +66,7 @@ This edition covers what happened during the months of January and February 2025
 
   This time Eric Sunshine replied. He acknowledged that this was a
   real problem and noted that it had been documented in a "NEEDSWORK"
-  comment added in 2019 into the code that mentioned it. He then
+  comment added in 2019 to the code which now got patched. He then
   attempted to rewrite the commit message of the patch in a way that
   was "more idiomatic" to the project and that added more details to
   help understand the problem.
@@ -79,8 +79,8 @@ This edition covers what happened during the months of January and February 2025
   `$commondir/config.worktree`.
 
   Eric also suggested removing some parts of Olga's commit message
-  that talked about other solutions she had considered, or that
-  repeated in which circumstances the problem appeared. Then there
+  that talked about other solutions she had considered, or
+  repeated in which circumstances the problem appeared. Finally, there
   were a number of small comments on the code part of the patch.
 
   Olga replied to Eric saying that the commit message he proposed was
@@ -90,7 +90,7 @@ This edition covers what happened during the months of January and February 2025
   Eric replied explaining some technical details and making a few more
   suggestions.
 
-  Junio Hamano, the Git maintainer then replied to Eric thanking him
+  Junio Hamano, the Git maintainer, then replied to Eric thanking him
   "for an easy-to-read review" and thanking Olga for working on this
   issue.
 
@@ -125,8 +125,8 @@ This edition covers what happened during the months of January and February 2025
   [version 4](https://lore.kernel.org/git/pull.1829.v4.git.1738737014194.gitgitgadget@gmail.com/)
   of her patch which only added that four line long comment.
 
-  The patch was later merged into the 'master' branch, so the next
-  2.49 version of Git that should be released in a few weeks will
+  The patch was later merged into the 'master' branch, so
+  version 2.49 of Git, which should be released in a few weeks, will
   finally resolve a long-standing issue and significantly enhance the
   usability of Git worktrees for developers working with bare
   repositories.
@@ -153,7 +153,7 @@ outside of our mailing list. Our first interview was [with VonC in edition 106](
   I used to do a lot of embedded systems programming, and a lot of
   internal company education at times (about programming languages,
   various hardware functions and limitations, software tools, and such).
-  That's what led me to [answering StackOverflow questions](https://stackoverflow.com/users/1256452/torek?tab=summary).
+  That's what led me to [answering Stack Overflow questions](https://stackoverflow.com/users/1256452/torek?tab=summary).
 
 * **What would you name your most important contribution to Git?**
 
@@ -167,7 +167,7 @@ outside of our mailing list. Our first interview was [with VonC in edition 106](
   Here, well, I got roped into explaining Git to a group that was moving
   from Mercurial. I found existing descriptions to be lacking.
   Eventually that particular job went away but the question-answering
-  persisted, until I got sufficiently annoyed at StackOverflow itself
+  persisted, until I got sufficiently annoyed at Stack Overflow itself
   (for various reasons) to take a break that continues to this day.
 
 * **If you could get a team of expert developers to work full time on
