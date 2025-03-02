@@ -261,7 +261,7 @@ __Various__
   [idea page](https://git.github.io/SoC-2025-Ideas/), and volunteers to (co-)mentor
   are still welcome. Feel free to join the discussion in the [corresponding thread](http://public-inbox.org/git/6C29409D-691B-471F-B08C-83E14D35EE13@gmail.com/T/#mb087c1b0ed06fcbd56d4ffa320efbeb42fd4983f).
   Also, feel free to spread the word about Git’s participation.
-+ [GitHub - Repositories – Updated insight views (General Availability)(https://github.blog/changelog/2025-02-25-repositories-updated-insight-views-general-availability/)
++ [GitHub - Repositories – Updated insight views (General Availability)](https://github.blog/changelog/2025-02-25-repositories-updated-insight-views-general-availability/)
   in GitHub Changelog.
 
 
