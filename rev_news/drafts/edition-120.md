@@ -261,14 +261,51 @@ __Various__
   [idea page](https://git.github.io/SoC-2025-Ideas/), and volunteers to (co-)mentor
   are still welcome. Feel free to join the discussion in the [corresponding thread](http://public-inbox.org/git/6C29409D-691B-471F-B08C-83E14D35EE13@gmail.com/T/#mb087c1b0ed06fcbd56d4ffa320efbeb42fd4983f).
   Also, feel free to spread the word about Git’s participation.
++ [GitHub - Repositories – Updated insight views (General Availability)(https://github.blog/changelog/2025-02-25-repositories-updated-insight-views-general-availability/)
+  in GitHub Changelog.
+
 
 __Light reading__
+
++ [Why was Git Autocorrect too fast for Formula One drivers?](https://blog.gitbutler.com/why-is-git-autocorrect-too-fast-for-formula-one-drivers/)
+  Why did Git's autocorrect wait 0.1s before executing a mistyped command?
+  Post by Scott Chacon on GitButler Blog.
++ [How Core Git Developers Configure Git](https://blog.gitbutler.com/how-git-core-devs-configure-git/)
+  by Scott Chacon on GitButler Blog.
+    + See also [Popular git config options](https://jvns.ca/blog/2024/02/16/popular-git-config-options/)
+      by Julia Evans on her blog, which was mentioned in [Git Rev News Edition #108](https://git.github.io/rev_news/2024/02/29/edition-108/).
++ [Markdown's Big Brother: Say Hello to AsciiDoc](https://www.git-tower.com/blog/asciidoc-quick-guide)
+  by Marvin Blome on Git-Tower Blog.
+    + Another similar file format for textual data and technical documentation
+      is [reStructuredText](https://docutils.sourceforge.io/rst.html) (RST, ReST, or reST).
+      It is used, among others, by the Python programming language community,
+      and is is part of the Docutils project of the Python Doc-SIG.
++ [Understanding the Trunk-Based Development Workflow](https://www.git-tower.com/blog/trunk-based-development)
+  by Bruno Brito on Git-Tower Blog (2024).
+    + See also the <https://trunkbaseddevelopment.com> site,
+      first mentioned in [Git Rev News Edition #24](https://git.github.io/rev_news/2017/02/22/edition-24/).
++ [One PC, Multiple Git Configs (This Will Save You Time!)](https://medium.com/@matteopampana/one-pc-multiple-git-configs-this-will-save-you-time-f702880744f7)
+  with `includeIf`, a short post by Matteo Pampana on Medium\.com.
++ [Why Some Source Code Files Shouldn’t Be Managed via Git-Based Version Control](https://www.itsecurityguru.org/2025/01/27/why-some-source-code-files-shouldnt-be-managed-via-git-based-version-control/)
+  on IT Security Guru.
++ [Microsoft Engineers Highlight Git Repository Bloat Flaw](https://devops.com/microsoft-engineers-highlight-git-repository-bloat-flaw/)
+  by Adrian Bridgwater on DevOps\.com blog (2024).
+
 
 <!---
 __Easy watching__
 -->
 
 __Git tools and sites__
+
++ [JJ (Jujutsu) Cheat Sheet](https://justinpombrio.net/2025/02/11/jj-cheat-sheet.html)
+  by Justin Pombrio.
+    + [Jujutsu (`jj`)](https://jj-vcs.github.io/jj/), a Git-compatible version control system,
+      written in Rust, was first mentioned in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/).
++ [Beej's Guide to Git](https://beej.us/guide/bggit/).
++ [Gookme](https://lmaxence.github.io/gookme/) is simple and easy-to-use,
+  yet powerful and language agnostic git hook manager for [monorepos](https://monorepo.tools/).
+  Successor of Mookme.  Written in Go, under MIT license.
 
 
 ## Releases
