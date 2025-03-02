@@ -274,6 +274,8 @@ __Light reading__
   by Scott Chacon on GitButler Blog.
     + See also [Popular git config options](https://jvns.ca/blog/2024/02/16/popular-git-config-options/)
       by Julia Evans on her blog, which was mentioned in [Git Rev News Edition #108](https://git.github.io/rev_news/2024/02/29/edition-108/).
++ [How to do patch-based review with git range-diff](https://blog.gitbutler.com/interdiff-review-with-git-range-diff/)
+  by Scott Chacon on GitButler Blog.
 + [Markdown's Big Brother: Say Hello to AsciiDoc](https://www.git-tower.com/blog/asciidoc-quick-guide)
   by Marvin Blome on Git-Tower Blog.
     + Another similar file format for textual data and technical documentation
@@ -288,6 +290,8 @@ __Light reading__
   with `includeIf`, a short post by Matteo Pampana on Medium\.com.
 + [Why Some Source Code Files Shouldn’t Be Managed via Git-Based Version Control](https://www.itsecurityguru.org/2025/01/27/why-some-source-code-files-shouldnt-be-managed-via-git-based-version-control/)
   on IT Security Guru.
++ [Git Stash Without the Branch Name](https://www.brandonpugh.com/blog/git-stash-without-the-branch-name/)
+  post by Brandon Pugh.
 + [Microsoft Engineers Highlight Git Repository Bloat Flaw](https://devops.com/microsoft-engineers-highlight-git-repository-bloat-flaw/)
   by Adrian Bridgwater on DevOps\.com blog (2024).
 
