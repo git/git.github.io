@@ -281,7 +281,7 @@ __Light reading__
     + Another similar file format for textual data and technical documentation
       is [reStructuredText](https://docutils.sourceforge.io/rst.html) (RST, ReST, or reST).
       It is used, among others, by the Python programming language community,
-      and is is part of the Docutils project of the Python Doc-SIG.
+      and is part of the Docutils project of the Python Doc-SIG.
 + [Understanding the Trunk-Based Development Workflow](https://www.git-tower.com/blog/trunk-based-development)
   by Bruno Brito on Git-Tower Blog (2024).
     + See also the <https://trunkbaseddevelopment.com> site,
