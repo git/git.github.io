@@ -39,7 +39,7 @@ well using the Git development process.
 
 It is *expected* that what you send will need several rounds of
 reviews and discussions. If you are not sure at all about a patch you
-can put "[GSoC][RFC/PATCH]" or "[Outreachy][RFC/PATCH]", depending on
+can put "[GSoC RFC/PATCH]" or "[Outreachy RFC/PATCH]", depending on
 the mentoring program you are applying for, at the beginning of its
 subject.
 
@@ -140,8 +140,8 @@ the following steps:
   [submitGit](https://submitgit.herokuapp.com/).
 
   When you submit your patch, please mention that you plan to apply
-  for the GSoC or Outreachy. You can use "[GSoC][PATCH ...]" or
-  "[Outreachy][PATCH ...]" in the subject of the emails you send for
+  for the GSoC or Outreachy. You can use "[GSoC PATCH ...]" or
+  "[Outreachy PATCH ...]" in the subject of the emails you send for
   that purpose. This will ensure that we take special care not to
   overlook your application among the large pile of others.
 
@@ -173,7 +173,7 @@ rewriting a small amount of code, your patch should change only
 "foo.c" and "foo.h".
 
 If you change a test file, the title of your patch (after the
-"[GSoC][PATCH ...]" or "[Outreachy][PATCH ...]" part) should start
+"[GSoC PATCH ...]" or "[Outreachy PATCH ...]" part) should start
 with "tXXXX: " where tXXXX is the start of the filename of the test
 script you change. If you change "foo.c" or "foo.h", the title of your
 patch should probably start with "foo: ".
