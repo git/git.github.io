@@ -18,7 +18,9 @@ suggest improvements. Thanks!
 
 ## Building Git
 
-* ["`INSTALL`"](https://github.com/git/git/blob/master/INSTALL)
+* ["`INSTALL`"](https://github.com/git/git/blob/master/INSTALL) to build using [Make](https://www.gnu.org/software/make/).
+
+* ["`meson.build`"](https://github.com/git/git/blob/master/meson.build) to build using [Meson](https://mesonbuild.com/).
 
 * ["Installing from Source"](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_from_source) in the Pro Git book
 
