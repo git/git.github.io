@@ -50,14 +50,14 @@ This edition covers what happened during the months of February 2025 and March 2
   something in Git for a full year, what would it be?**
 
   I think [`git gui`](https://git-scm.com/docs/git-gui) and
-  [gitk](https://git-scm.com/docs/gitk) could need some extra love,
+  [`gitk`](https://git-scm.com/docs/gitk) could need some extra love,
   these are my daily drivers, in addition to the command line.
 
 * **Is there something that developers could do to ease the life of
   translators?**
 
   My main gripe is using library function names as verbs,
-  like "cannot fsync". That's hard to read even in the original
+  like `cannot fsync`. That's hard to read even in the original
   language, even for a C developer like myself.
 
 * **What is your favorite Git-related tool/library, outside of
