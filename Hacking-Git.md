@@ -56,7 +56,7 @@ suggest improvements. Thanks!
 
 * ["`SubmittingPatches`"](https://git-scm.com/docs/SubmittingPatches/)
 
-* [Git for Windows' "Good commits"](https://github.com/git-for-windows/git/wiki/Good-commits)
+* [Git for Windows' "Good commits"](https://gitforwindows.org/good-commits)
 
 ## Process related tools and sites
 
@@ -108,7 +108,7 @@ suggest improvements. Thanks!
 
 ## Debugging
 
-* [Git for Windows' Debugging Git](https://github.com/git-for-windows/git/wiki/Debugging-Git)
+* [Git for Windows' Debugging Git](https://gitforwindows.org/debugging-git)
 
 * [Launching GDB explanations in CodingGuidelines](https://github.com/git/git/blob/v2.27.0/Documentation/CodingGuidelines#L441-L445)
 
