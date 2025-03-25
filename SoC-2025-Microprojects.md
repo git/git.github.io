@@ -207,7 +207,8 @@ of your commits indents test bodies with TABs, instead of spaces, then
 this should be the only kind of change in this commit.
 
 #### Notes
-- only work on t/t????-*.sh scripts.
+- only work on `t/t????-*.sh` scripts.
 - pick just one script (so as to avoid exhausting the pool for other candidates).
-- only convert `test -[def]` instances which semantically are assertions
-  (i.e. used as part of a &&-chain).
+- When converting `test -[def]` to use `test_path_exists()` and cousins
+  only convert instances which semantically are assertions (i.e. used as part
+  of a &&-chain).
