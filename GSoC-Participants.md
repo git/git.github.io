@@ -8,6 +8,17 @@ to Git via GSoC.
 
 <!-- [ [project]() ] [ [final report]() ] [ [blog]() ] -->
 
+### 2024
+
+1. Jialuo She [ [project](https://summerofcode.withgoogle.com/archive/2024/projects/ukm4PTEF) ] [ [final report](https://luolibrary.com/2024/08/25/GSoC-Final-Report/) ] [ [blog](https://luolibrary.com/) ]
+2. Ghanshyam Thakkar [ [project](https://summerofcode.withgoogle.com/archive/2024/projects/e9C4rhrv) ]  [ [final report](https://spectre10.github.io/posts/gsoc_final_report/) ] [ [blog](https://spectre10.github.io/) ]
+3. Chandra Pratap [ [project](https://summerofcode.withgoogle.com/archive/2024/projects/tlh611d7) ]  [ [final report](https://chand-ra.github.io/2024/08/24/GSoC-Final-Report.html) ] [ [blog](https://chand-ra.github.io/) ]
+
+#### References
+
+- [GSoC archive](https://summerofcode.withgoogle.com/archive/2024/organizations/git)
+- [Rev News article](https://git.github.io/rev_news/2024/05/31/edition-111/)
+
 ### 2023
 
 1. Shuqi Liang [ [project](https://summerofcode.withgoogle.com/archive/2023/projects/Rkbc1Abe) ] [ [final report](https://cheskaqiqi.github.io/2023/08/22/Final/) ] [ [blog](https://cheskaqiqi.github.io/tags/GSoC/) ]
