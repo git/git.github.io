@@ -72,6 +72,7 @@ This edition covers what happened during the months of February and March 2025.
 	- Total interviews: 73
 	- Repeat interviews: 2 (David Aguilar and Eric Sunshine have been interviewed twice)
 
+  + More stats to come soon...
 
 * [Git participated in the December 2024 Outreachy round](https://www.outreachy.org/alums/2024-12/)
 
