@@ -126,8 +126,8 @@ the following steps:
 
   If a branch did not pass all test cases then it is marked with a red cross. In
   that case you can click on the failing job and navigate to
-  "ci/run-build-and-tests.sh" and/or \
-  "ci/print-test-failures.sh". You can also
+  `ci/run-build-and-tests.sh` and/or \
+  `ci/print-test-failures.sh`. You can also
   download "Artifacts" which are tarred (or zipped) archives with test data
   relevant for debugging. Fix the problem and push your fix to your GitHub fork.
   This will trigger a new CI build. Ensure all tests pass.
