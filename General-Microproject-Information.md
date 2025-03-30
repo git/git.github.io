@@ -105,7 +105,9 @@ the following steps:
   Remember to make sure
   that you agree with our "Developer's Certificate of Origin" (whose
   text is contained in `Documentation/SubmittingPatches`), and to
-  signify your agreement by adding a `Signed-off-by` line.
+  signify your agreement by adding a `Signed-off-by` line. Instructions
+  on how to add the sign-off is covered in the `SubmittingPatches`
+  document.
 
 * *Optional, but recommended:*
   With an account at GitHub, you can use GitHub CI to test your changes
