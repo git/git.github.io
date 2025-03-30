@@ -49,9 +49,9 @@ This edition covers what happened during the months of February and March 2025.
     - Matthieu Moy: 6 editions and 14 commits
     - Lars Schneider: 6 editions and 14 commits
 
-    In total more than 125 people helped this way.
+    In total, more than 125 people helped this way.
 
-    Former members of the editor team helped a lot too:
+    Former members of the editor team helped a lot, too:
 
     - Thomas Ferris Nicolaisen: 33 editions and 135 commits
     - Gabriel Alcaras: 22 editions and 7 commits
@@ -66,7 +66,7 @@ This edition covers what happened during the months of February and March 2025.
     - Mirth Hickford: 2 commits
 
   + A number of people helped by accepting to be interviewed. Thanks
-    to them too:
+    to them, too:
 
 	- Unique interviewees: 71
 	- Total interviews: 73
@@ -111,7 +111,7 @@ This edition covers what happened during the months of February and March 2025.
 
 * **What are you doing on the Git project these days, and why?**
 
-  My answer to these two are the same, I am the maintainer of the
+  My answers to these two are the same, I am the maintainer of the
   [Swedish translation of Git](https://github.com/git-l10n/git-po/blob/master/po/sv.po).
   I like having software running in my own language, and sometimes
   you have to take matters in your own hands.
@@ -150,8 +150,8 @@ This edition covers what happened during the months of February and March 2025.
 
   Find some small part you want to improve, and work on that. Git is a
   fairly complex piece of software, implemented in several different
-  languages, making it hard to get an overview. I most definitely do not,
-  even if I have read (and translated) most of the user-visible strings.
+  languages, making it hard to get an overview. I most definitely do not have that,
+  even after having read (and translated) most of the user-visible strings.
 
 
 ## Other News
