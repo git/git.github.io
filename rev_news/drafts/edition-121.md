@@ -17,9 +17,24 @@ This edition covers what happened during the months of February 2025 and March 2
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [Git participated in the December 2024 Outreachy round](https://www.outreachy.org/alums/2024-12/)
+
+  All the Outreachy interns have successfully completed their
+  internship:
+
+  - Seyi Kuforiji worked on the "Convert unit tests to use the clar
+    testing framework" project, mentored by Patrick Steinhardt and
+    Phillip Wood. See
+	[his completion email](https://lore.kernel.org/git/CAGedMtcLRjr0GVNYmUU_tacrA0aRvOCYFGyOy0FACTBL=X3cwA@mail.gmail.com/)
+	and
+	[his retrospect blog post](https://seyi-kuforiji-902b48.gitlab.io/posts/a-retrospect-on-new-test-conversions).
+
+  - Usman Akinyemi worked on the "Finish adding a 'os-version'
+    capability to Git protocol v2" project, mentored by Christian
+    Couder. See
+	[his completion blog post](https://uniqueusman.hashnode.dev/my-outreachy-internship-experience-at-git).
 
 <!---
 ### Reviews
