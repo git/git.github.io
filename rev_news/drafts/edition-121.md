@@ -65,6 +65,13 @@ This edition covers what happened during the months of February and March 2025.
     - David Aguilar: 3 commits
     - Mirth Hickford: 2 commits
 
+  + A number of people helped by accepting to be interviewed. Thanks
+    to them too:
+
+	- Unique interviewees: 71
+	- Total interviews: 73
+	- Repeat interviews: 2 (David Aguilar and Eric Sunshine have been interviewed twice)
+
 
 * [Git participated in the December 2024 Outreachy round](https://www.outreachy.org/alums/2024-12/)
 
