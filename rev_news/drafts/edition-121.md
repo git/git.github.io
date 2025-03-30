@@ -44,16 +44,16 @@ This edition covers what happened during the months of February and March 2025.
     - Philip Oakley: 10 editions and 10 commits
     - Elijah Newren: 10 editions and 9 commits
     - Andrew Ardill: 8 editions and 15 commits
+    - David Pursehouse: 8 editions and 12 commits
     - Jeff King: 8 editions and 5 commits
     - Matthieu Moy: 6 editions and 14 commits
     - Lars Schneider: 6 editions and 14 commits
-    - Brandon Pugh: 6 editions and 2 commits
 
     In total more than 125 people helped this way.
 
     Former members of the editor team helped a lot too:
 
-    - Ferris Nicolaisen: 33 editions and 130 commits
+    - Thomas Ferris Nicolaisen: 33 editions and 135 commits
     - Gabriel Alcaras: 22 editions and 7 commits
     - Nicola Paolucci: 16 editions and 5 commits
 
