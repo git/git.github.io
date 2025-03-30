@@ -13,7 +13,7 @@ Welcome to the 121st edition of [Git Rev News](https://git.github.io/rev_news/re
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
-This edition covers what happened during the months of February 2025 and March 2025.
+This edition covers what happened during the months of February and March 2025.
 
 ## Discussions
 
