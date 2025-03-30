@@ -19,6 +19,53 @@ This edition covers what happened during the months of February and March 2025.
 
 ### General
 
+* [10 years of Git Rev News](https://git.github.io/rev_news/archive/)
+
+  Git Rev News started 10 years ago with
+  [edition 1 published on March 25, 2015](https://git.github.io/rev_news/2015/03/25/edition-1/),
+  and then one edition per month.
+
+  To celebrate, let's look at some stats that we have gathered about
+  these first 120 editions.
+
+  + First we would like to thank all those who helped us so far.
+
+    This includes those who helped with ideas, links, PRs, small
+    corrections, letting us know about a Git related software release,
+    and even sometimes full articles without being part of our editor
+    team. Here is the top 12 along with the number of editions they
+    helped us with and the number of commits they contributed:
+
+    - Johannes Schindelin: 29 editions and 71 commits
+    - Bruno Brito: 25 editions and 36 commits
+    - Luca Milanesio: 19 editions and 23 commits
+    - Štěpán Němec: 18 editions and 22 commits
+    - Junio Hamano: 13 editions and 22 commits
+    - Philip Oakley: 10 editions and 10 commits
+    - Elijah Newren: 10 editions and 9 commits
+    - Andrew Ardill: 8 editions and 15 commits
+    - Jeff King: 8 editions and 5 commits
+    - Matthieu Moy: 6 editions and 14 commits
+    - Lars Schneider: 6 editions and 14 commits
+    - Brandon Pugh: 6 editions and 2 commits
+
+    In total more than 125 people helped this way.
+
+    Former members of the editor team helped a lot too:
+
+    - Ferris Nicolaisen: 33 editions and 130 commits
+    - Gabriel Alcaras: 22 editions and 7 commits
+    - Nicola Paolucci: 16 editions and 5 commits
+
+    A small number of people have also helped us by contributing to
+    [our scripts](https://github.com/chriscool/getreleases/) to
+    automate parts of the edition and publication process:
+
+    - Gabriel Alcaras: 9 commits
+    - David Aguilar: 3 commits
+    - Mirth Hickford: 2 commits
+
+
 * [Git participated in the December 2024 Outreachy round](https://www.outreachy.org/alums/2024-12/)
 
   All the Outreachy interns have successfully completed their
