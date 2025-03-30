@@ -72,7 +72,51 @@ This edition covers what happened during the months of February and March 2025.
 	- Total interviews: 73
 	- Repeat interviews: 2 (David Aguilar and Eric Sunshine have been interviewed twice)
 
-  + More stats to come soon...
+  + Most of the long articles are in a "Discussions" section and in
+    one of its subsections: "General", "Reviews" or "Support". Here
+    are some related stats:
+
+	Total over all the editions:
+
+    - Discussions articles: 254
+	- General articles: 106
+    - Reviews articles: 79
+    - Support articles: 69
+
+    Average per edition:
+
+    - Discussions: 2.12
+    - General: 0.88
+    - Reviews: 0.66
+    - Support: 0.57
+
+  + Among those long articles, 16 articles were written by people
+    outside the editor team. Big thanks to them! The top 3 is:
+
+    - Junio Hamano: 4
+    - Matthieu Moy: 3
+	- Jacob Keller: 2
+
+    While the following people wrote one article each:
+
+    Andrew Ardill, Elijah Newren, Eric S. Raymond, Eric Sunshine,
+    Jiang Xin, Lars Schneider.
+
+	An article was also written collaboratively by the following
+    students:
+
+    François BEUTIN, Jordan DE GEA, William DUCLOT, Samuel GROOT,
+    Erwan MATHONIERE, Antoine QUERU, Simon RABOURG and Tom RUSSELLO.
+
+    These articles were mostly written towards the first years of Git
+    Rev News:
+
+	- 2015: 8 articles
+	- 2016: 2 articles
+	- 2018: 2 articles
+	- 2019: 1 article
+	- 2020: 3 articles
+
 
 * [Git participated in the December 2024 Outreachy round](https://www.outreachy.org/alums/2024-12/)
 
