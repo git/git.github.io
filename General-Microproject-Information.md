@@ -39,9 +39,8 @@ well using the Git development process.
 
 It is *expected* that what you send will need several rounds of
 reviews and discussions. If you are not sure at all about a patch you
-can put "[GSoC RFC/PATCH]" or "[Outreachy RFC/PATCH]", depending on
-the mentoring program you are applying for, at the beginning of its
-subject.
+can mark it as RFC in the subject. See [section below](#use-a-tag-like-gsoc-outreachy-etc-in-your-subject)
+about how to mark patches as RFC.
 
 Consider [a sample email thread](http://public-inbox.org/git/1386590745-4412-1-git-send-email-t.gummerer@gmail.com/T/#u),
 which shows how a developer proposed a change and a patch to implement
@@ -372,11 +371,8 @@ tell us about your skills, interests, experience, background,
 etc. Feel free to tell us what you want about yourself if you wish
 though.
 
-### Specify the mentoring program in the subject
-
-But please, make it clear that you are interested in a specific
-mentoring program and use the right tag, like "[GSoC]", "[Outreachy]",
-etc at the beginning of the subject of your emails.
+Make sure to specify your mentoring program clearly as
+[suggested below](#use-a-tag-like-gsoc-outreachy-etc-in-your-subject).
 
 ### Thoroughly check your eligibility in the program
 
@@ -482,6 +478,27 @@ done. And applicants should be very interested in searching for what
 other applicants or contributors participating in GSoC or Outreachy
 have been doing in the past, for example what kind of microproject
 they have chosen, how their proposal looked like, etc.
+
+If you're using `format-patch` for sending your patches to the mailing list,
+you can add this tag as follows:
+
+```
+git format-patch --subject-prefix='GSoC PATCH' <other-arguments>
+
+(or)
+
+git format-patch --subject-prefix='Outreachy PATCH' <other-arguments>
+```
+
+If you want to mark your patch as RFC, use
+
+```
+git format-patch --rfc --subject-prefix='GSoC PATCH' <other-arguments>
+
+(or)
+
+git format-patch  --rfc --subject-prefix='Outreachy PATCH' <other-arguments>
+```
 
 ### Reply inline
 
