@@ -136,10 +136,10 @@ __Git tools and sites__
 [3.12.16](https://help.github.com/enterprise-server@3.12/admin/release-notes#3.12.16)
 + GitKraken [10.8.0](https://help.gitkraken.com/gitkraken-client/current/)
 + GitHub Desktop [3.4.18](https://desktop.github.com/release-notes/)
-+ git-credential-azure [0.3.1](https://github.com/hickford/git-credential-azure/releases/tag/v0.3.1)
-+ git-credential-oauth [0.15.0](https://github.com/hickford/git-credential-oauth/releases/tag/v0.15.0)
 + GitButler [0.14.14](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.14),
 [0.14.13](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.13)
++ git-credential-azure [0.3.1](https://github.com/hickford/git-credential-azure/releases/tag/v0.3.1)
++ git-credential-oauth [0.15.0](https://github.com/hickford/git-credential-oauth/releases/tag/v0.15.0)
 
 ## Credits
 
