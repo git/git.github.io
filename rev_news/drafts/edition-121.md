@@ -100,6 +100,31 @@ __Git tools and sites__
 
 ## Releases
 
++ Git [2.49.0](https://public-inbox.org/git/xmqqfrjfilc8.fsf@gitster.g/),
+[2.49.0-rc2](https://public-inbox.org/git/xmqq34fk958s.fsf@gitster.g/),
+[2.49.0-rc1](https://public-inbox.org/git/xmqqjz94r8p0.fsf@gitster.g/)
++ Git for Windows [2.49.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.49.0.windows.1),
+[2.49.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.49.0-rc2.windows.1),
+[2.49.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.49.0-rc1.windows.1)
++ GitLab [17.10.1, 17.9.3, 17.8.6](https://about.gitlab.com/releases/2025/03/26/patch-release-gitlab-17-10-1-released/),
+[17.10](https://about.gitlab.com/releases/2025/03/20/gitlab-17-10-released/),
+[17.9.2, 17.8.5, 17.7.7](https://about.gitlab.com/releases/2025/03/12/patch-release-gitlab-17-9-2-released/)
++ GitHub Enterprise [3.16.1](https://help.github.com/enterprise-server@3.16/admin/release-notes#3.16.1),
+[3.15.5](https://help.github.com/enterprise-server@3.15/admin/release-notes#3.15.5),
+[3.14.10](https://help.github.com/enterprise-server@3.14/admin/release-notes#3.14.10),
+[3.13.13](https://help.github.com/enterprise-server@3.13/admin/release-notes#3.13.13),
+[3.12.17](https://help.github.com/enterprise-server@3.12/admin/release-notes#3.12.17),
+[3.16.0](https://help.github.com/enterprise-server@3.16/admin/release-notes#3.16.0),
+[3.15.4](https://help.github.com/enterprise-server@3.15/admin/release-notes#3.15.4),
+[3.14.9](https://help.github.com/enterprise-server@3.14/admin/release-notes#3.14.9),
+[3.13.12](https://help.github.com/enterprise-server@3.13/admin/release-notes#3.13.12),
+[3.12.16](https://help.github.com/enterprise-server@3.12/admin/release-notes#3.12.16)
++ GitKraken [10.8.0](https://help.gitkraken.com/gitkraken-client/current/)
++ GitHub Desktop [3.4.18](https://desktop.github.com/release-notes/)
++ git-credential-azure [0.3.1](https://github.com/hickford/git-credential-azure/releases/tag/v0.3.1)
++ git-credential-oauth [0.15.0](https://github.com/hickford/git-credential-oauth/releases/tag/v0.15.0)
++ GitButler [0.14.14](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.14),
+[0.14.13](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.13)
 
 ## Credits
 
