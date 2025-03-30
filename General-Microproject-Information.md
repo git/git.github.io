@@ -42,7 +42,7 @@ reviews and discussions. If you are not sure at all about a patch you
 can mark it as RFC in the subject. See [section below](#use-a-tag-like-gsoc-outreachy-etc-in-your-subject)
 about how to mark patches as RFC.
 
-Consider [a sample email thread](http://public-inbox.org/git/1386590745-4412-1-git-send-email-t.gummerer@gmail.com/T/#u),
+Consider [a sample email thread](https://public-inbox.org/git/1386590745-4412-1-git-send-email-t.gummerer@gmail.com/T/#u),
 which shows how a developer proposed a change and a patch to implement
 it. The problem being solved, the design of the proposed solution,
 and the implementation of that design were all reviewed and discussed,
@@ -61,7 +61,7 @@ To complete a microproject, you will have to go through approximately
 the following steps:
 
 * Download the source code: clone the repository using the
-  [Git via Git](http://git-scm.com/downloads) instructions and read
+  [Git via Git](https://git-scm.com/downloads) instructions and read
   the `README` file.
 
 * Build the source code: this is described in the file `INSTALL`.
@@ -74,7 +74,7 @@ the following steps:
   described in `Documentation/SubmittingPatches`. A more detailed
   step-by-step guide could be found in [`Documentation/MyFirstContribution.txt`](https://git-scm.com/docs/MyFirstContribution).
 
-* The "[Hacking Git](https://git.github.io/Hacking-Git/)" page
+* The "[Hacking Git](/Hacking-Git/)" page
   could also serve as a handy resource. It points to resources
   on various topics related to working on Git.
 
@@ -97,7 +97,7 @@ the following steps:
 
 * Commit your change. Surprise: we use Git for that, so you will need
   to gain at least
-  [a basic familiarity](http://git-scm.com/documentation) with using
+  [a basic familiarity](https://git-scm.com/docs) with using
   Git. Make sure to write a good commit message that explains the
   reason for the change and any ramifications. You can find information
   on writing a good commit message in the
@@ -185,7 +185,7 @@ of them.
 
 In general it's a good idea to check on the mailing list archive
 ([lore.kernel.org](https://lore.kernel.org/git/) and
-[Public Inbox](http://public-inbox.org/git/) are your friends) what
+[Public Inbox](https://public-inbox.org/git/) are your friends) what
 other GSoC or Outreachy applicants attempting a microproject have
 already been told this year or any previous year, as hopefully it will
 help you avoid some mistakes. As some microproject ideas haven't
