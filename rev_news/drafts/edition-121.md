@@ -70,20 +70,20 @@ This edition covers what happened during the months of February and March 2025.
     "Developer Spotlight" or "Community Spotlight" sections. Thanks to
     them, too:
 
-	- Total interviews: 73
-	- Unique interviewees: 71
-	- Repeat interviews: 2 (David Aguilar and Eric Sunshine have been interviewed twice)
-	- Developer interviews: 71
-	- Community interviews: 2
+    - Total interviews: 73
+    - Unique interviewees: 71
+    - Repeat interviews: 2 (David Aguilar and Eric Sunshine have been interviewed twice)
+    - Developer interviews: 71
+    - Community interviews: 2
 
   + Most of the long articles are in a "Discussions" section and in
     one of its subsections: "General", "Reviews" or "Support". Here
     are some related stats:
 
-	Total over all the editions:
+    Total over all the editions:
 
     - Discussions articles: 254
-	- General articles: 106
+    - General articles: 106
     - Reviews articles: 79
     - Support articles: 69
 
@@ -106,20 +106,20 @@ This edition covers what happened during the months of February and March 2025.
     Andrew Ardill, Elijah Newren, Eric S. Raymond, Eric Sunshine,
     Jiang Xin, Lars Schneider.
 
-	An article was also written collaboratively by the following
+    An article was also written collaboratively by the following
     students:
 
-    François BEUTIN, Jordan DE GEA, William DUCLOT, Samuel GROOT,
-    Erwan MATHONIERE, Antoine QUERU, Simon RABOURG and Tom RUSSELLO.
+    François Beutin, Jordan De Gea, William Duclot, Samuel Groot,
+    Erwan Mathonière, Antoine Queru, Simon Rabourg and Tom Russello.
 
     These articles were mostly written towards the first years of Git
     Rev News:
 
-	- 2015: 8 articles
-	- 2016: 2 articles
-	- 2018: 2 articles
-	- 2019: 1 article
-	- 2020: 3 articles
+    - 2015: 8 articles
+    - 2016: 2 articles
+    - 2018: 2 articles
+    - 2019: 1 article
+    - 2020: 3 articles
 
 
 * [Git participated in the December 2024 Outreachy round](https://www.outreachy.org/alums/2024-12/)
@@ -130,14 +130,14 @@ This edition covers what happened during the months of February and March 2025.
   - Seyi Kuforiji worked on the "Convert unit tests to use the clar
     testing framework" project, mentored by Patrick Steinhardt and
     Phillip Wood. See
-	[his completion email](https://lore.kernel.org/git/CAGedMtcLRjr0GVNYmUU_tacrA0aRvOCYFGyOy0FACTBL=X3cwA@mail.gmail.com/)
-	and
-	[his retrospect blog post](https://seyi-kuforiji-902b48.gitlab.io/posts/a-retrospect-on-new-test-conversions).
+    [his completion email](https://lore.kernel.org/git/CAGedMtcLRjr0GVNYmUU_tacrA0aRvOCYFGyOy0FACTBL=X3cwA@mail.gmail.com/)
+    and
+    [his retrospect blog post](https://seyi-kuforiji-902b48.gitlab.io/posts/a-retrospect-on-new-test-conversions).
 
   - Usman Akinyemi worked on the "Finish adding a 'os-version'
     capability to Git protocol v2" project, mentored by Christian
     Couder. See
-	[his completion blog post](https://uniqueusman.hashnode.dev/my-outreachy-internship-experience-at-git).
+    [his completion blog post](https://uniqueusman.hashnode.dev/my-outreachy-internship-experience-at-git).
 
 <!---
 ### Reviews
