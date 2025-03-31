@@ -68,9 +68,11 @@ This edition covers what happened during the months of February and March 2025.
   + A number of people helped by accepting to be interviewed. Thanks
     to them, too:
 
-	- Unique interviewees: 71
 	- Total interviews: 73
+	- Unique interviewees: 71
 	- Repeat interviews: 2 (David Aguilar and Eric Sunshine have been interviewed twice)
+	- Developer interviews: 71
+	- Community interviews: 2
 
   + Most of the long articles are in a "Discussions" section and in
     one of its subsections: "General", "Reviews" or "Support". Here
