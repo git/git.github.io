@@ -34,7 +34,8 @@ This edition covers what happened during the months of February and March 2025.
     corrections, letting us know about a Git related software release,
     and even sometimes full articles without being part of our editor
     team. Here is the top 12 along with the number of editions they
-    helped us with and the number of commits they contributed:
+    helped us with, according to our "Credit" section, and the number
+    of commits they contributed:
 
     - Johannes Schindelin: 29 editions and 71 commits
     - Bruno Brito: 25 editions and 36 commits
@@ -65,8 +66,9 @@ This edition covers what happened during the months of February and March 2025.
     - David Aguilar: 3 commits
     - Mirth Hickford: 2 commits
 
-  + A number of people helped by accepting to be interviewed. Thanks
-    to them, too:
+  + A number of people helped by accepting to be interviewed in our
+    "Developer Spotlight" or "Community Spotlight" sections. Thanks to
+    them, too:
 
 	- Total interviews: 73
 	- Unique interviewees: 71
