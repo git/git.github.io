@@ -95,7 +95,7 @@ This edition covers what happened during the months of February and March 2025.
 
     - Junio Hamano: 4
     - Matthieu Moy: 3
-	- Jacob Keller: 2
+    - Jacob Keller: 2
 
     While the following people wrote one article each:
 
