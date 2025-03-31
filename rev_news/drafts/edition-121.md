@@ -243,6 +243,8 @@ __Git tools and sites__
 [0.14.13](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.13)
 + git-credential-azure [0.3.1](https://github.com/hickford/git-credential-azure/releases/tag/v0.3.1)
 + git-credential-oauth [0.15.0](https://github.com/hickford/git-credential-oauth/releases/tag/v0.15.0)
++ Tower for Mac [12.6](https://www.git-tower.com/release-notes/mac?show_tab=release-notes)
++ Tower for Windows [9.0](https://www.git-tower.com/release-notes/windows) ([Release blog post](https://www.git-tower.com/blog/tower-windows-9/))
 
 ## Credits
 
