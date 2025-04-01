@@ -341,9 +341,16 @@ __Light reading__
       by manipulating the commit date or message.
 
 
-<!---
 __Easy watching__
--->
+
++ [What Git Clone REALLY Does (and why it matters)](https://www.youtube.com/watch?v=zigbUJHBsL4)
+  on The Modern Coder YouTube channel, 3:16 minutes long.
+  It's made by @JackLot who created the [LearnGit.io](https://learngit.io) resource,
+  which site was mentioned in [Git Rev News Edition #108](https://git.github.io/rev_news/2024/02/29/edition-108/).
++ [Git Interview Part 1: Easy | Ep. 8 Bits and Booze](https://www.youtube.com/watch?v=SdSllNeQuVc) [29:09], and<br>
+  [Git Interview Part 2: Hard | Ep. 9 Bits and Booze](https://www.youtube.com/watch?v=FbW9wlve8sI) [17:45],<br>
+  on GitButler YouTube channel.  Join Nico as he (mock) interviews Scott [Chacon] about Git.
+
 
 __Git tools and sites__
 
@@ -382,7 +389,6 @@ __Git tools and sites__
     + [My Beancount books are 95% automatic after 3 years](https://fangpenlin.com/posts/2024/12/30/my-beancount-books-are-95-percent-automatic/).
     + [How BeanHub works part 1: the danger of processing Beancount data with sandbox](https://beanhub.io/blog/2024/04/23/how-beanhub-works-part1-sandboxing/).
     + [How BeanHub works part 2: large-scale auditable Git repository system based on container layers](https://beanhub.io/blog/2024/06/26/how-beanhub-works-part2-layer-based-git-repos/).
-      
 
 
 ## Releases
