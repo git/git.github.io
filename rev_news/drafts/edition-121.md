@@ -70,10 +70,10 @@ This edition covers what happened during the months of February and March 2025.
     "Developer Spotlight" or "Community Spotlight" sections. Thanks to
     them, too:
 
-    - Total interviews: 73
-    - Unique interviewees: 71
+    - Total interviews: 72
+    - Unique interviewees: 70
     - Repeat interviews: 2 (David Aguilar and Eric Sunshine have been interviewed twice)
-    - Developer interviews: 71
+    - Developer interviews: 70
     - Community interviews: 2
 
   + Most of the long articles are in a "Discussions" section and in
