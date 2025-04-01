@@ -272,6 +272,12 @@ __Light reading__
   because it was easier to justify its adoption for the rest of the team.
     + You can find a definition of "monorepo" and a list of various tools on the [Monorepo.tools](https://monorepo.tools/) site,
       which was first mentioned in [Git Rev News Edition #84](https://git.github.io/rev_news/2022/02/28/edition-84/).
++ [Gerrit Code Review: A How-To Guide for new users!](https://gitenterprise.me/2025/03/10/gerrit-code-review-a-how-to-guide-for-new-users/)
+  by Daniele Sassoli on GerritForge Blog.  See also:
+    + [How GitHub taught the world code review the wrong way](https://medium.com/@danielesassoli/how-github-taught-the-world-code-reviews-the-wrong-way-f840a072f5be)
+      by Daniele Sassoli (2024) on his Medium-based blog.
+    + [Pull requests / Collaborate with pull requests / Getting started / Helping others review your changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/helping-others-review-your-changes)
+      on GitHub Docs.
 + [TIL: Hugo's GitInfo](https://blog.erethon.com/log/2025-03-03-hugo-git-info/)
   by Dionysis Grigoropoulos, about the [GitInfo](https://gohugo.io/methods/page/gitinfo/) method
   of [Hugo](https://gohugo.io/), the static site generator
