@@ -310,7 +310,12 @@ __Light reading__
   by Kissaki on programming\.dev Lemmy instance.<br>
   [Lemmy](https://join-lemmy.org/docs/index.html) is self-hosted, federated social link aggregation and discussion forum,
   somewhat similar to Reddit.
-  
+    + Note that there are tools like [git-vain](https://git.anna.lgbt/anna/git-vain)
+      and [git-vanity-sha](https://github.com/mattbaker/git-vanity-sha),
+      most recently listed in [Git Rev News Edition #103](https://git.github.io/rev_news/2023/09/30/edition-103/),
+      which can be used to make SHA-1 hash of commit start with specific pattern, like `000000`,
+      by manipulating commit date or commit message.
+
 
 <!---
 __Easy watching__
