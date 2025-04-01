@@ -427,4 +427,4 @@ Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
 with help from Peter Krefting, Bruno Brito,
-Daniele Sassoli and Štěpán Němec.
+Daniele Sassoli, Toon Claes and Štěpán Němec.
