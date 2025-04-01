@@ -121,6 +121,28 @@ This edition covers what happened during the months of February and March 2025.
     - 2019: 1 article
     - 2020: 3 articles
 
+  + There were 2298 entries in "Other News" section,
+    which gathers links to various news, articles, sites, tools,
+    and sometimes media about Git (or related to Git).
+
+    Those entries include:
+
+    - 1090 entries in "Light reading" over 114 editions
+      with 1777 links; around 13.76% of entries mentions previous edition.
+    - 691 entries in "Git tools and sites" over 118 editions
+      with 1270 links; around 11.72% of entries mentions previous edition.
+    - 411 entries in "Various" over 110 editions
+      with 635 links; around 7.06% of entries mentions previous edition.
+    - 20 entries in "Events" over 12 editions
+      with 39 links
+    - 15 entries in "Light reading" over 12 editions
+      with 31 links; of those, 3 entries mentions previous edition.
+
+    There were quite a few one-off names of sub-lists, like
+    "Slightly heavier reading", "April Fool's", "Listening and watching".
+    The template with standarized names was not present at 1st edition,
+    but was created later.
+
 
 * [Git participated in the December 2024 Outreachy round](https://www.outreachy.org/alums/2024-12/)
 
