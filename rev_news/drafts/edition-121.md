@@ -206,14 +206,154 @@ This edition covers what happened during the months of February and March 2025.
 
 __Various__
 
++ [What's new in Git 2.49.0?](https://about.gitlab.com/blog/2025/03/14/whats-new-in-git-2-49-0/)
+  by Toon Claes on GitLab Blog.  This blog post mentions, among others,
+  improved performance thanks to zlib-ng, a new name-hashing algorithm, and git-backfill.
++ [Highlights from Git 2.49](https://github.blog/open-source/git/highlights-from-git-2-49/)
+  by Taylor Blau on GitHub Blog.  This posts mentions, among others, faster packing with name-hash v2,
+  backfilling historical blobs in partial clones, building Git with zlib-ng,
+  and libgit-sys and libgit Rust crates.
+
 
 __Light reading__
+
++ [Going down the rabbit hole of Git's new bundle-uri](https://blog.gitbutler.com/going-down-the-rabbit-hole-of-gits-new-bundle-uri/)
+  by Scott Chacon on GitButler blog.<br>
+  The [`bundle-uri`](https://git-scm.com/docs/bundle-uri) was mentioned in passing in [Git Rev News Edition #95](https://git.github.io/rev_news/2023/01/31/edition-95/)
+  (in _"Developer Spotlight"_), and in [Edition #104](https://git.github.io/rev_news/2023/10/31/edition-104/)
+  (in _"Git tools and sites"_, when mentioning [git-bundle-server](https://github.com/git-ecosystem/git-bundle-server)).
++ [No Longer My Favorite Git Commit](https://mtlynch.io/no-longer-my-favorite-git-commit/)
+  by Michael Lynch on his blog, talks about how one could _improve_ the commit message
+  described in David Thompson's [“My favourite Git commit”](https://dhwthompson.com/2019/my-favourite-git-commit) - which
+  was mentioned in [Git Rev News Edition #57](https://git.github.io/rev_news/2019/11/20/edition-57/)
+  and [#108](https://git.github.io/rev_news/2024/02/29/edition-108/).
+    + The article mentions [How to Write Useful Commit Messages](https://refactoringenglish.com/chapters/commit-messages/)
+      guide by Michael Lynch, one of available sample chapters in
+      _"Refactoring English: Effective Writing for Software Developers"_ book (in writing).
+    + Another post by Michael Lunch, [How to Make Your Code Reviewer Fall in Love with You](https://mtlynch.io/code-review-love/),
+      was mentioned in [Git Rev News Edition #70](https://git.github.io/rev_news/2020/12/26/edition-70/).
++ [19000 curl commits](https://daniel.haxx.se/blog/2025/03/14/19000-curl-commits/)
+  by Daniel Stenberg on on his blog, presenting some statistics about those commits.
++ [Why fastDOOM is fast](https://fabiensanglard.net/fastdoom/index.html)
+  by Fabien Sanglard, examines FastDOOM performance evolution over time,
+  doing some nice Git archeology.
++ [Personal Agency With Git Time Logging](https://doocot.sh/blog/2025/03/28/time-tracking-with-git)
+  by Doug Bridgens on doocot blog.  The `commit-msg` and `pre-push` hooks from
+  [git-time-hooks](https://github.com/thisdougb/git-time-hooks) are used to measure time spans
+  from creating a new branch to merging that branch.
++ [git bisect …](https://theweeklychallenge.org/blog/git-bisect/)
+  by Mohammad Sajid Anwar (MANWAR) on The Weekly Challenge blog.
+  The blog post shows how to use `git bisect` on a detailed example (in Perl).
++ [Python monorepo with uv and pex](https://chrismati.cz/posts/uv-pex-monorepo/)
+  by Christoph Pröschel on his blog.  The solution of using regular Python tooling
+  over, for example, [Pants](https://www.pantsbuild.org/) build tool,
+  because it was easier to justify its adoption for the rest of the team.
+    + You can find definition of monorepo and list of various tools on [Monorepo.tools](https://monorepo.tools/) site,
+      which was first mentioned in [Git Rev News Edition #84](https://git.github.io/rev_news/2022/02/28/edition-84/).
++ [TIL: Hugo's GitInfo](https://blog.erethon.com/log/2025-03-03-hugo-git-info/)
+  by Dionysis Grigoropoulos, how [Hugo](https://gohugo.io/) static site generator in Go
+  has the [GitInfo](https://gohugo.io/methods/page/gitinfo/) method.
++ [GitHub meets GitLab](https://theweeklychallenge.org/blog/github-meets-gitlab/)
+  by Mohammad Sajid Anwar (MANWAR) on The Weekly Challenge blog,
+  about difference in terms used by GitHub and used by GitLab
+  (part of the learning process to pick up GitLab).
++ [Comparing Git Mirror Options](https://www.lloydatkinson.net/posts/2025/comparing-git-mirror-options/):
+  by Lloyd Atkinson on own blog.
+  The tools considered include gitweb, cgit, and Forgejo;
+  the last option (Forgejo) was ultimately selected.
++ [Migrating git.adyxax.org from gitolite and cgit to Forgejo](https://www.adyxax.org/blog/2025/03/25/migrating-git.adyxax.org-from-gitolite-and-cgit-to-forgejo/):
+  How I am deploying [Forgejo](https://forgejo.org/) with [Ansible](https://www.ansible.com/).
+  By Julien (Adyxax) Dessaux on his blog.
++ [Learn Git through Gamification – A Visual Guide to Key Version Control Concepts](https://www.freecodecamp.org/news/learn-git-through-gamification)
+  by Jacob Stopak on freeCodeCamp.
++ [4 reasons you need to run a Git server on your NAS (even if you're not a developer)](https://www.xda-developers.com/reasons-run-git-server-nas/)
+  by Adam Conway on XDA Developers.
++ [Manage DNS Records with GitHub Actions and DNSControl](https://runtimeterror.dev/manage-dns-records-github-actions-dnscontrol)
+  by John Wq on [runtimeerror] blog.
++ [WSL SSH agent and Git](https://www.patriktrefil.com/posts/wsl_ssh_agent_and_git/)
+  by Patrik Trefil (2024) on his blog.
+  This article describes how you can say avoid the hassle of copying and pasting your SSH passphrase
+  every time you want to connect to a machine via ssh.
++ [Accessing git Servers Over Another Port When 22 is Blocked and Cloning Hangs Waiting for Connection](https://jdsalaro.com/howto/fix-git-hang-connection-blocked-port-22-github-gitlab-bitbucket/)
+  by Jayson Salazar Rodriguez (2024) on his site.
++ [Automatic Versioning with Xcode and Git](https://blog.reiterate.app/software/2024/07/09/automatic-versioning-with-xcode-and-git/)
+  by Rat Troupe on Reiterations blog (2024).
++ [Version controlling Jenkins config](https://scripter.co/version-controlling-jenkins-config)
+  by Kaushal Modi (2022) on A Scripter's Notes;
+  mentions `jenkins-plugin-cli` from [Plugin Installation Manager Tool for Jenkins](https://github.com/jenkinsci/plugin-installation-manager-tool).
+    + Compare [How to use the Jenkins Git Plugin: Tips and tricks](https://www.theserverside.com/video/Tips-and-tricks-on-how-to-use-Jenkins-Git-Plugin)
+      by Cameron McKenzie from [Git Rev News Edition #44](https://git.github.io/rev_news/2018/10/24/edition-44/),
+      about [Git | Jenkins Plugin](https://plugins.jenkins.io/git/).
++ [Using Git Delta with Magit](https://scripter.co/using-git-delta-with-magit/)
+  by Kaushal Modi (2022) on A Scripter's Notes.
+    + [Delta](https://github.com/dandavison/delta) is a highly configurable command line utility
+      that makes the git diffs look better, while also syntax-highlighting the code in the diffs.
+      First mentioned in [Git Rev News Edition #86](https://git.github.io/rev_news/2022/04/30/edition-86/).
+    + [Magit](https://magit.vc/) is a popular Emacs interface to Git,
+      first mentioned (in passing) in [Git Rev News Edition #6](https://git.github.io/rev_news/2015/08/05/edition-6/).
++ [How to Proxy Git Connections: using socat to ...Git... through a corporate firewall](https://bryanbrattlof.com/how-to-proxy-git-connections/)
+  by Bryan Brattlof (2022) on his blog.
++ [Git aliases supporting main and master: How to make your aliases agnostic to the default branch](https://phili.pe/posts/git-aliases-supporting-main-and-master/)
+  by Philipe Fatio (2022) on his blog.
++ [Keeping ‘live‘ dotfiles in a Git repo](https://probablerobot.net/2021/05/keeping-'live'-dotfiles-in-a-git-repo/)
+  by creating (git-dir) directory named `.dotfiles/` rather than `.git/` via `--git-dir` Git wrapper option.
+  From <https://probablerobot.net/> (2021).
++ [On mainline merges and fast forwards](https://vcscompare.blogspot.com/2008/06/on-mainline-merges-and-fast-forwards.html)
+  by aoeuo (2008) on Blogger-based DVCS Comparison blog.
+  Compares Bazaar with Git and Mercurial.
+
++ [GPLv2 is not impressed by git](https://www.thomas-huehn.com/gplv2-is-not-impressed-by-git/)
+  by Thomas Huehn on his Bear-powered blog, short musing about the following phrase from the license:
+  > You must cause the modified files to carry prominent notices stating that you changed the files and the date of any change.
++ [I found commit 0](https://programming.dev/post/27187038)
+  (or rather commit which SHA-1 identifier begins with 0000000),
+  by Kissaki on programming\.dev Lemmy instance.<br>
+  [Lemmy](https://join-lemmy.org/docs/index.html) is self-hosted, federated social link aggregation and discussion forum,
+  somewhat similar to Reddit.
+  
 
 <!---
 __Easy watching__
 -->
 
 __Git tools and sites__
+
++ [git-who](https://github.com/sinclairtarget/git-who) is a command-line tool for finding
+  the people responsible for entire components or subsystems in a codebase.
+  You can think of `git-who` sort of like `git blame` but for file trees rather than individual files.
+  Written in Go, under MIT license.
++ [chrondb](https://chrondb.moclojer.com/) ([repo](https://github.com/moclojer/chrondb))
+  is a chronological key/value database,
+  where storing data is based on database-shaped `git` (core) architecture and Lucene for indexing.
+  Written in Clojure, uses MIT license.
++ [Calendar.txt](https://terokarvinen.com/2021/calendar-txt/) is a solution
+  to keep your calendar in a plain text file.
+  One of it's advantages is that it is versionable: because it's plain text, you can keep it in git.
+  You can also easily take diff of calendar files, as it's one day one line.
+    + See also [Todo.txt](http://todotxt.org/) to keep your TODO list in a plain text file,
+      and tools like [Taskwarrior](https://taskwarrior.org/), and
+      [Plain Text Accounting (PTA)](https://plaintextaccounting.org/).
++ [YSK there are open-source (gamified) tutorials to learn git](https://programming.dev/post/26285997)
+  post provides list of some tutorials and interactive learning tools, like
+    + [Oh My Git!](https://ohmygit.org/), an open source game about learning Git,
+      first mentioned in [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/).
+    + [Learn Git Branching](http://learngitbranching.js.org/), visual and interactive way to learn Git on the web,
+      first mentioned in [Git Rev News Edition #30](https://git.github.io/rev_news/2017/08/16/edition-30/).
+    + [Git Gud: Master Git Through Play](https://www.gitmastery.me/), a modern website
+      to learn Git commands and concepts through an interactive game.
+    + [Git+ Coach](https://github.com/vishal2376/git-coach), a free education app
+      designed to help users learn Git and its commands.  Written in Kotlin, for Android.
+    + [Git-it](https://github.com/jlord/git-it-electron) is a desktop (Mac, Windows and Linux) Electron app
+      that teaches you how to use Git and GitHub on the command line.
+      First mentioned in [Git Rev News Edition #7](https://git.github.io/rev_news/2015/09/09/edition-7/)
++ [BeanHub](https://beanhub.io/) is a modern accounting book app
+  based on the most popular open source version control system Git
+  and text-based double entry accounting book software [Beancount](https://beancount.github.io/docs/index.html).
+  [Mostly open-sourced](https://beanhub.io/open-source/).  See also the following posts by Fang-Pen Lin:
+    + [My Beancount books are 95% automatic after 3 years](https://fangpenlin.com/posts/2024/12/30/my-beancount-books-are-95-percent-automatic/).
+    + [How BeanHub works part 1: the danger of processing Beancount data with sandbox](https://beanhub.io/blog/2024/04/23/how-beanhub-works-part1-sandboxing/).
+    + [How BeanHub works part 2: large-scale auditable Git repository system based on container layers](https://beanhub.io/blog/2024/06/26/how-beanhub-works-part2-layer-based-git-repos/).
+      
 
 
 ## Releases
