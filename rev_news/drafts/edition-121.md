@@ -391,6 +391,9 @@ __Git tools and sites__
 + Git for Windows [2.49.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.49.0.windows.1),
 [2.49.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.49.0-rc2.windows.1),
 [2.49.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.49.0-rc1.windows.1)
++ Gerrit Code Review [3.10.5](https://www.gerritcodereview.com/3.10.html#3105),
+[3.11.2](https://www.gerritcodereview.com/3.11.html#3112),
+[3.9.10](https://www.gerritcodereview.com/3.9.html#3910)
 + GitLab [17.10.1, 17.9.3, 17.8.6](https://about.gitlab.com/releases/2025/03/26/patch-release-gitlab-17-10-1-released/),
 [17.10](https://about.gitlab.com/releases/2025/03/20/gitlab-17-10-released/),
 [17.9.2, 17.8.5, 17.7.7](https://about.gitlab.com/releases/2025/03/12/patch-release-gitlab-17-9-2-released/)
@@ -404,7 +407,8 @@ __Git tools and sites__
 [3.14.9](https://help.github.com/enterprise-server@3.14/admin/release-notes#3.14.9),
 [3.13.12](https://help.github.com/enterprise-server@3.13/admin/release-notes#3.13.12),
 [3.12.16](https://help.github.com/enterprise-server@3.12/admin/release-notes#3.12.16)
-+ GitKraken [10.8.0](https://help.gitkraken.com/gitkraken-client/current/)
++ GitKraken [11.0.0](https://help.gitkraken.com/gitkraken-client/current/),
+[10.8.0](https://help.gitkraken.com/gitkraken-client/current/)
 + GitHub Desktop [3.4.18](https://desktop.github.com/release-notes/)
 + GitButler [0.14.14](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.14),
 [0.14.13](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.13)
