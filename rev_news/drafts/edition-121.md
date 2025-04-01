@@ -94,6 +94,24 @@ This edition covers what happened during the months of February and March 2025.
     - Reviews: 0.66
     - Support: 0.57
 
+    Text Statistics:
+
+    - Total words: 100,434
+    - Total lines: 14,090
+    - Total paragraphs: 3,097
+
+    Average per article:
+
+    - Words: 395.4
+    - Lines: 55.5
+    - Paragraphs: 12.2
+
+    Total words per section:
+
+    - General: 29,220 words
+    - Reviews: 35,912 words
+    - Support: 35,302 words
+
   + Among those long articles, 16 articles were written by people
     outside the editor team. Big thanks to them! The top 3 is:
 
