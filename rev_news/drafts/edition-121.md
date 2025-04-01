@@ -234,7 +234,7 @@ __Various__
 + [Highlights from Git 2.49](https://github.blog/open-source/git/highlights-from-git-2-49/)
   by Taylor Blau on GitHub Blog.  Mentioned items include faster packing with name-hash v2,
   backfilling historical blobs in partial clones, building Git with zlib-ng,
-  and libgit-sys and libgit Rust crates.
+  and the libgit-sys and libgit Rust crates.
 
 
 __Light reading__
@@ -242,7 +242,7 @@ __Light reading__
 + [Going down the rabbit hole of Git's new bundle-uri](https://blog.gitbutler.com/going-down-the-rabbit-hole-of-gits-new-bundle-uri/)
   by Scott Chacon on GitButler blog.<br>
   The [`bundle-uri`](https://git-scm.com/docs/bundle-uri) was mentioned in passing in [Git Rev News Edition #95](https://git.github.io/rev_news/2023/01/31/edition-95/)
-  (in _"Developer Spotlight"_), and in [Edition #104](https://git.github.io/rev_news/2023/10/31/edition-104/)
+  (in _"Developer Spotlight"_) and in [Edition #104](https://git.github.io/rev_news/2023/10/31/edition-104/)
   (in _"Git tools and sites"_, when mentioning [git-bundle-server](https://github.com/git-ecosystem/git-bundle-server)).
 + [No Longer My Favorite Git Commit](https://mtlynch.io/no-longer-my-favorite-git-commit/)
   by Michael Lynch on his blog, talks about how one could _improve_ the commit message
@@ -267,7 +267,8 @@ __Light reading__
   by Mohammad Sajid Anwar (MANWAR) on The Weekly Challenge blog.
   The blog post shows how to use `git bisect` on a detailed example (in Perl).
 + [Python monorepo with uv and pex](https://chrismati.cz/posts/uv-pex-monorepo/)
-  by Christoph Pröschel on his blog.  The solution of using regular Python tooling
+  by Christoph Pröschel on his blog.  The article discusses the benefits of a
+  lightweight solution built with regular Python tooling
   over, for example, the [Pants](https://www.pantsbuild.org/) build tool,
   because it was easier to justify its adoption for the rest of the team.
     + You can find a definition of "monorepo" and a list of various tools on the [Monorepo.tools](https://monorepo.tools/) site,
@@ -353,9 +354,9 @@ __Easy watching__
   on The Modern Coder YouTube channel, 3:16 minutes long.
   It's made by @JackLot who created the [LearnGit.io](https://learngit.io) resource,
   which site was mentioned in [Git Rev News Edition #108](https://git.github.io/rev_news/2024/02/29/edition-108/).
-+ [Git Interview Part 1: Easy | Ep. 8 Bits and Booze](https://www.youtube.com/watch?v=SdSllNeQuVc) [29:09], and<br>
-  [Git Interview Part 2: Hard | Ep. 9 Bits and Booze](https://www.youtube.com/watch?v=FbW9wlve8sI) [17:45],<br>
-  on GitButler YouTube channel.  Join Nico as he (mock) interviews Scott [Chacon] about Git.
++ [Git Interview Part 1: Easy | Ep. 8 Bits and Booze](https://www.youtube.com/watch?v=SdSllNeQuVc) [29:09] and<br>
+  [Git Interview Part 2: Hard | Ep. 9 Bits and Booze](https://www.youtube.com/watch?v=FbW9wlve8sI) [17:45]<br>
+  on the GitButler YouTube channel.  Join Nico as he (mock) interviews Scott [Chacon] about Git.
 
 
 __Git tools and sites__
@@ -373,7 +374,7 @@ __Git tools and sites__
   One of its advantages is that it is versionable: because it's plain text, you can keep it in Git.
   You can also easily take diffs of calendar files, as it's one day one line.
     + See also [Todo.txt](http://todotxt.org/) to keep your TODO list in a plain text file,
-      and tools like [Taskwarrior](https://taskwarrior.org/), and
+      and tools like [Taskwarrior](https://taskwarrior.org/) and
       [Plain Text Accounting (PTA)](https://plaintextaccounting.org/).
 + [YSK there are open-source (gamified) tutorials to learn git](https://programming.dev/post/26285997)
   provides a list of some tutorials and interactive learning tools, including:
@@ -387,7 +388,7 @@ __Git tools and sites__
       designed to help users learn Git and its commands.  Written in Kotlin, for Android.
     + [Git-it](https://github.com/jlord/git-it-electron) is a desktop (Mac, Windows and Linux) Electron app
       that teaches you how to use Git and GitHub on the command line.
-      First mentioned in [Git Rev News Edition #7](https://git.github.io/rev_news/2015/09/09/edition-7/)
+      First mentioned in [Git Rev News Edition #7](https://git.github.io/rev_news/2015/09/09/edition-7/).
 + [BeanHub](https://beanhub.io/) is a modern accounting book app
   based on the most popular open source version control system Git
   and the text-based double entry accounting book software [Beancount](https://beancount.github.io/docs/index.html).
