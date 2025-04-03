@@ -270,7 +270,7 @@ __Light reading__
     + The article mentions the [How to Write Useful Commit Messages](https://refactoringenglish.com/chapters/commit-messages/)
       guide by Michael Lynch, one of the sample chapters for his prospective book,
       _"Refactoring English: Effective writing for software developers"_.
-    + Another post by Michael Lunch, [How to Make Your Code Reviewer Fall in Love with You](https://mtlynch.io/code-review-love/),
+    + Another post by Michael Lynch, [How to Make Your Code Reviewer Fall in Love with You](https://mtlynch.io/code-review-love/),
       was mentioned in [Git Rev News Edition #70](https://git.github.io/rev_news/2020/12/26/edition-70/).
 + [19000 curl commits](https://daniel.haxx.se/blog/2025/03/14/19000-curl-commits/)
   by Daniel Stenberg on his blog, presenting some statistics about those commits.
