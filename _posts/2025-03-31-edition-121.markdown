@@ -336,7 +336,7 @@ __Light reading__
 + [Using Git Delta with Magit](https://scripter.co/using-git-delta-with-magit/)
   by Kaushal Modi (2022) on A Scripter's Notes.
     + [Delta](https://github.com/dandavison/delta) is a highly configurable command line utility
-      that makes the git diffs look better, while also syntax-highlighting the code in the diffs.
+      that makes the Git diffs look better, while also syntax-highlighting the code in the diffs.
       First mentioned in [Git Rev News Edition #86](https://git.github.io/rev_news/2022/04/30/edition-86/).
     + [Magit](https://magit.vc/) is a popular Emacs interface to Git,
       first mentioned (in passing) in [Git Rev News Edition #6](https://git.github.io/rev_news/2015/08/05/edition-6/).
