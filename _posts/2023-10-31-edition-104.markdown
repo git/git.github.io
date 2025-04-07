@@ -135,7 +135,7 @@ __Light reading__
   by Kristian Lumme on Tower’s blog.
 + [Measuring Git performance with OpenTelemetry](https://github.blog/2023-10-16-measuring-git-performance-with-opentelemetry/)
   by Jeff Hostetler on GitHub Blog.  It describes how to use open source
-  [Trace2](https://github.com/git/git/blob/master/Documentation/technical/api-trace2.txt)
+  [Trace2](https://github.com/git/git/blob/master/Documentation/technical/api-trace2.adoc)
   [receiver component (trace2receiver)](https://github.com/git-ecosystem/trace2receiver)
   and [OpenTelemetry](https://opentelemetry.io/docs/what-is-opentelemetry/)
   to capture and visualize telemetry from your Git commands.

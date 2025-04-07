@@ -29,7 +29,7 @@ This edition covers what happened during the month of May 2019.
   where Git's test suite spends its time.
 
   His script also uses the new
-  [Git Trace2 API](https://github.com/git/git/blob/master/Documentation/technical/api-trace2.txt)
+  [Git Trace2 API](https://github.com/git/git/blob/master/Documentation/technical/api-trace2.aodc)
   which has been developed mostly by Jeff Hostetler
   [starting nearly one year ago](https://public-inbox.org/git/20180713165621.52017-1-git@jeffhostetler.com/)
   and then through different versions:
@@ -104,7 +104,7 @@ This edition covers what happened during the month of May 2019.
 
 * [[PATCH 00/17] [RFC] Commit-graph: Write incremental files](https://public-inbox.org/git/6d9c0911-6f36-3fb7-2be9-2be9bc68fc69@gmail.com/t/)
 
-  The road to incremental serialized [commit-graph](https://github.com/git/git/blob/master/Documentation/technical/commit-graph.txt)
+  The road to incremental serialized [commit-graph](https://github.com/git/git/blob/master/Documentation/technical/commit-graph.adoc)
   started with [an attempt to create commit-graph file format v2](https://public-inbox.org/git/pull.112.git.gitgitgadget@gmail.com/t/#u)
 
   > The commit-graph file format has some shortcomings that were discussed
