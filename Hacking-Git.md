@@ -38,7 +38,7 @@ suggest improvements. Thanks!
 
 * ["My First Contribution"](https://git-scm.com/docs/MyFirstContribution)
 
-* ["My First Object Walk"](https://github.com/git/git/blob/master/Documentation/MyFirstObjectWalk.txt)
+* ["My First Object Walk"](https://github.com/git/git/blob/master/Documentation/MyFirstObjectWalk.adoc)
 
 * [Matheus' tutorial](https://matheustavares.gitlab.io/posts/first-steps-contributing-to-git)
 
@@ -102,7 +102,7 @@ suggest improvements. Thanks!
 
 * [`gitworkflows`](https://git-scm.com/docs/gitworkflows) manual page
 
-* ["How to maintain Git"](https://github.com/git/git/blob/master/Documentation/howto/maintain-git.txt)
+* ["How to maintain Git"](https://github.com/git/git/blob/master/Documentation/howto/maintain-git.adoc)
 
 * ["How the Creators of Git do Branching"](https://hackernoon.com/how-the-creators-of-git-do-branches-e6fcc57270fb), and the associated [gitworkflow](https://github.com/rocketraman/gitworkflow) repository
 

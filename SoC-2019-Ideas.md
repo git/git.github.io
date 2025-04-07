@@ -137,7 +137,7 @@ See discussion in:
  - Possible mentors: Christian Couder, Thomas Gummerer
 
 A number of Git commands, like `git log`, can show commit information
-in a configurable way using ["pretty" formats](https://github.com/git/git/blob/master/Documentation/pretty-formats.txt).
+in a configurable way using ["pretty" formats](https://github.com/git/git/blob/master/Documentation/pretty-formats.adoc).
 Such formats though don't yet support some features that users would
 like, for example to display a log like the following:
 

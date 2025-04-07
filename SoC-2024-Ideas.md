@@ -55,7 +55,7 @@ the reftable ones.
   - <https://lore.kernel.org/git/20240112102743.1440-1-ach.lumap@gmail.com/>
   - <https://lore.kernel.org/git/20240205162506.1835-1-ach.lumap@gmail.com/>
   - <https://lore.kernel.org/git/20240112102122.1422-1-ach.lumap@gmail.com/>
-  - <https://github.com/git/git/blob/master/Documentation/technical/unit-tests.txt>
+  - <https://github.com/git/git/blob/master/Documentation/technical/unit-tests.adoc>
 
 Expected Project Size: 175 hours or 350 hours
 
@@ -77,7 +77,7 @@ the new framework.
 See:
 
   - this discussion <https://lore.kernel.org/git/cover.1692297001.git.steadmon@google.com/>
-  - <https://github.com/git/git/blob/master/Documentation/technical/unit-tests.txt>
+  - <https://github.com/git/git/blob/master/Documentation/technical/unit-tests.adoc>
   - <https://git-scm.com/docs/reftable>
 
 Expected Project Size: 175 hours or 350 hours
