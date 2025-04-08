@@ -106,7 +106,7 @@ This edition covers what happened during the month of October 2018.
 
 * [[RFC] Generation Number v2](https://public-inbox.org/git/86tvl0zhos.fsf@gmail.com/t/#u)
 
-  The [commit-graph](https://github.com/git/git/blob/master/Documentation/technical/commit-graph.txt)
+  The [commit-graph](https://github.com/git/git/blob/master/Documentation/technical/commit-graph.adoc)
   file mechanism (see the description above) accelerates commit graph
   walks in the two following ways:
   

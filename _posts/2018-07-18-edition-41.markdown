@@ -36,7 +36,7 @@ With Brian's latest patches Git would work using NewHash, including
 passing the test suite, though it would be incompatible with current
 Git.
 
-As the [hash function transition plan](https://github.com/git/git/blob/master/Documentation/technical/hash-function-transition.txt)
+As the [hash function transition plan](https://github.com/git/git/blob/master/Documentation/technical/hash-function-transition.adoc)
 tells that a Git using NewHash should be able to communicate through
 fetching and pushing with a Git using SHA-1, the next step is to
 implement such kind of communication and that's what Brian started to

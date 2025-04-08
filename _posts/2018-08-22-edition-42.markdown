@@ -25,7 +25,7 @@ This edition covers what happened during the month of July 2018.
 discussed the state of NewHash work, i.e. the process of selecting
 Git's next-generation hash function. [This discussion has concluded](https://public-inbox.org/git/20180724190136.GA5@0f3cdde9c159/)
 with the selection of SHA-256. An
-[update to `hash-function-transition.txt` to change `NewHash` to `SHA-256`](https://github.com/git/git/blob/master/Documentation/technical/hash-function-transition.txt)
+[update to `hash-function-transition.txt` to change `NewHash` to `SHA-256`](https://github.com/git/git/blob/master/Documentation/technical/hash-function-transition.adoc)
 is queued in the `next` branch.
 
 <!---

@@ -87,7 +87,7 @@ This edition covers what happened during the months of March and April 2024.
 
   Junio replied by summarizing the current process related to these
   descriptions and pointing to the
-  ["Documentation/howto/maintain-git.txt" file](https://github.com/git/git/blob/master/Documentation/howto/maintain-git.txt),
+  ["Documentation/howto/maintain-git.adoc" file](https://github.com/git/git/blob/master/Documentation/howto/maintain-git.adoc),
   which describes his workflow and says that maintaining these topic
   descriptions is his responsibility as the project maintainer. He
   then mentioned some downsides of giving that responsibility to the

@@ -178,7 +178,7 @@ This edition covers what happened during the months of November and December 202
   (via comments in [`meson.build`](https://git.kernel.org/pub/scm/git/git.git/tree/meson.build))
   to help build Git with Meson and
   [a build system comparison](https://lore.kernel.org/git/20241206-pks-meson-v11-23-525ed4792b88@pks.im/#Z31Documentation:technical:build-systems.txt)
-  (in [`Documentation/technical/build-systems.txt`](https://git.kernel.org/pub/scm/git/git.git/tree/Documentation/technical/build-systems.txt))
+  (in [`Documentation/technical/build-systems.txt`](https://git.kernel.org/pub/scm/git/git.git/tree/Documentation/technical/build-systems.adoc))
   that might be interesting to read.
 
 

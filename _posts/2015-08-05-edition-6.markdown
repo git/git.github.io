@@ -25,7 +25,7 @@ Git 2.5 is out! The project maintainer, Junio C. Hamano, has [shared his thought
 
 He goes on to talk about some of his favourite new features included in the release, such as a new short hand `branch@{push}` that "denotes the remote-tracking branch that tracks the branch at the remote the branch would be pushed to", and a new option `--ws-error-highlight` that can be used with `git diff` and friends to show whitespace breakages in deleted and context lines.
 
-Be sure to see the post for more on the new features, or checkout the [release notes in the source](https://github.com/git/git/blob/master/Documentation/RelNotes/2.5.0.txt) for all the nitty gritty details.
+Be sure to see the post for more on the new features, or checkout the [release notes in the source](https://github.com/git/git/blob/master/Documentation/RelNotes/2.5.0.adoc) for all the nitty gritty details.
 
 
 ### Did you know?
