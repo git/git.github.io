@@ -110,26 +110,27 @@ the following steps:
   document.
 
 * *Optional, but recommended:*
-  With an account at GitHub, you can use GitHub CI to test your changes
-  on Linux, Mac and Windows. See
-  [examples](https://github.com/git/git/actions/workflows/main.yml)
-  of recent CI runs.
 
-  To run these tests against your own branch,
-  [create a fork](https://help.github.com/articles/fork-a-repo/)
-  of [Git](https://github.com/git/git) on GitHub and switch to it. At the
+  With an account at GitHub or GitLab, you can use the CI to test your changes
+  on Linux, Mac and Windows. See
+  [GitHub exmamples](https://github.com/git/git/actions/workflows/main.yml), [GitLab examples](https://gitlab.com/git-scm/git/-/pipelines) of recent CI runs.
+
+  To run these tests against your own branch:
+  * **GitHub**: [create a fork](https://help.github.com/articles/fork-a-repo/) of [Git](https://github.com/git/git) on GitHub and switch to it. At the
   top bar select [Actions tab](https://github.com/git/git/actions)
   and perform the initial setup to enable it for your fork. After enabling it,
   CI will run for a specific branch of your fork whenever you push new changes
   to it in GitHub. You can monitor the test state of all your branches in the
   same [Actions tab](https://github.com/git/git/actions) of your fork.
+  * **GitLab**: [create a fork](https://docs.gitlab.com/user/project/repository/forking_workflow/#create-a-fork) of [Git](https://gitlab.com/git-scm/git) on GitLab and switch to it. CI will run for a specific branch of your fork whenever you push new changes
+  to it in GitHub. You can monitor the test state of all your branches in the [Build > Pipeline](https://gitlab.com/git-scm/git/-/pipelines) section of your fork.
 
   If a branch did not pass all test cases then it is marked with a red cross. In
   that case you can click on the failing job and navigate to
   `ci/run-build-and-tests.sh` and/or \
   `ci/print-test-failures.sh`. You can also
   download "Artifacts" which are tarred (or zipped) archives with test data
-  relevant for debugging. Fix the problem and push your fix to your GitHub fork.
+  relevant for debugging. Fix the problem and push your fix to your fork.
   This will trigger a new CI build. Ensure all tests pass.
 
 * Submit your change to the Git mailing list. For this step you
