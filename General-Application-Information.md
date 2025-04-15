@@ -9,7 +9,9 @@ programs can get information about what the Git project would like to
 see in an application.
 
 *Please read this page completely before focusing on a project or a
- microproject ideas, or microproject general information.*
+ microproject ideas, or microproject general information.
+ Specifically, also read the "AI guidelines" section to know our
+ stance regarding the usage of AI tools.*
 
 
 ## Microproject (required)
@@ -129,6 +131,110 @@ are interested in, it is a good idea to:
 ([lore.kernel.org](https://lore.kernel.org/git/) can be
 used for searching the mailing list and linking to previous
 discussions.)
+
+## AI guidelines
+
+The use of Artificial Intelligence related tools ("AI" or "AIs" for
+short), like Large Language Models ("LLMs"), by developers is becoming
+more and more popular, but that's not a reason to blindly use them,
+especially when working on the Git project.
+
+### Legal issues
+
+In general, it's not clear if AI generated code or documentation are
+acceptable in the Git project. Authors contributing to Git are
+required to "sign off" the patches they contribute, and to agree with
+the Developer’s Certificate of Origin, also called DCO, (see
+<https://git-scm.com/docs/SubmittingPatches#sign-off>), while the DCO
+says basically that authors of a patch should be sure about the origin
+of its content.
+
+As we cannot usually be sure how AIs have been trained and that they
+are not just repeating proprietary existing code or documentation they
+saw during their training, we cannot accept much AI generated code or
+documentation in general. Now, if it's only a few lines to fix a bug
+or to implement a common pattern or summarize something, and if that
+looks specific enough to a current concrete problem a developer is
+working on, that might be OK.
+
+Anyway as the situation is not clear for the Git project and probably
+many other open source projects, you should be very prudent regarding
+this.
+
+### Be very careful with AI output
+
+For a number of reasons, not just legal ones, developers should really
+make sure that they treat what AIs produce very carefully. They
+should:
+
+  - triple check everything, especially regarding our guidelines
+    (indent, style, commit message guidelines, etc, see especially the
+    SubmittingPatches and CodingGuidelines docs as well as the other
+    pages on this website) and the feedback reviewers already gave
+    them or others,
+
+  - build and test changes, using existing, new or manual tests, to
+    check that the changes are correct, perform well and don't produce
+    garbage output,
+
+  - doubt anything they don't fully understand, or anything that might
+    not match our guidelines or feedback, and
+
+  - fix, simplify, adapt, reword or change anything that is
+    suspicious, bloated, too formal, or that they don't understand, or
+    that doesn't match our guidelines or our feedback.
+
+Yeah, AIs still often hallucinate or just produce bad code, commit
+messages, documentation or output, even when you point out their
+mistakes.
+
+### We don't accept AI output as-is
+
+It's unacceptable to send us something that is obvious AI slop, or
+that sounds overly formal or bloated, or that looks good on the
+surface but makes no sense, or that senders don’t understand or cannot
+explain. It just wastes our time and we cannot accept it. We want to
+interact with and mentor humans, not AIs.
+
+For example, it's unacceptable to have an AI generate a commit message
+where it just describes what the code in the commit does, instead of
+the purpose of the change, and then send that to us.
+
+In general, it's unacceptable to send AI-generated patches or messages
+as-is to the mailing list or to mentors' or developers' personal email
+addresses. We won't consider candidates doing that.
+
+For another, unfortunately common, example, it's unacceptable to send
+us an application that has obviously been AI generated and doesn't
+follow our guidelines or the feedback we previously gave to other
+applicants. Those applications will be dropped.
+
+### Blindly using AI is far worse than not applying
+
+As bad AI use is growing in general, not just to apply to mentoring
+programs, more and more tools and ways are being developed to find out
+and fight against bad AI use.
+
+So people who apply by sending us AI generated output as-is, not only
+waste their time, and our time, for no result, but they also leave
+evidence on our mailing list archive of their bad behavior.
+
+For example, employers already use social media screening tools or
+candidate assessment software when hiring people, and it's likely that
+those tools, which often already use AI, are, or will be able to find
+out soon about such bad behavior.
+
+### Better ways to use AIs
+
+Developers would often likely get better results, learn more and have
+a better overall experience by asking AIs to only explain things, and
+guide them step by step towards producing a solution by themselves,
+rather than by asking for a full solution that they would then mostly
+copy-paste.
+
+They can also use AIs to help with debugging, or with checking for
+obvious mistakes, things that can be improved, things that don't match
+our style, guidelines or our feedback, before sending it to us.
 
 ## Note about the number of slots
 

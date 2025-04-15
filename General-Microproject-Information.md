@@ -212,6 +212,15 @@ questions on the mailing list or in IRC, or writing new tests, etc.,
 etc. In short, start doing things that other Git developers do!
 Alternatively you can of course focus on your project proposal.
 
+## Be very careful when using AI tools
+
+There is an "AI guidelines" section on our
+General-Application-Information page:
+
+https://git.github.io/General-Application-Information/
+
+Please read it and make sure you use AI very carefully.
+
 ## How to find ideas for microprojects
 
 First check the specific page(s) or information about Git
