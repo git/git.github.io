@@ -49,6 +49,23 @@ __Git tools and sites__
 
 ## Releases
 
++ GitHub Enterprise [3.16.2](https://docs.github.com/enterprise-server@3.16/admin/release-notes#3.16.2),
+[3.15.6](https://docs.github.com/enterprise-server@3.15/admin/release-notes#3.15.6),
+[3.14.11](https://docs.github.com/enterprise-server@3.14/admin/release-notes#3.14.11),
+[3.13.14](https://docs.github.com/enterprise-server@3.13/admin/release-notes#3.13.14)
++ GitLab [17.11.1, 17.10.5, 17.9.7](https://about.gitlab.com/releases/2025/04/23/patch-release-gitlab-17-11-1-released/),
+[17.11](https://about.gitlab.com/releases/2025/04/17/gitlab-17-11-released/),
+[17.10.4, 17.9.6, 17.8.7](https://about.gitlab.com/releases/2025/04/09/patch-release-gitlab-17-10-4-released/),
+[17.10.3](https://about.gitlab.com/releases/2025/04/02/gitlab-17-10-3-released/),
+[17.9.5](https://about.gitlab.com/releases/2025/04/02/gitlab-17-9-5-released/)
++ Gerrit Code Review [3.12.0-rc0](https://www.gerritcodereview.com/3.12.html#3120),
+[3.12.0-rc1](https://www.gerritcodereview.com/3.12.html#3120),
+[3.12.0-rc2](https://www.gerritcodereview.com/3.12.html#3120),
+[3.12.0-rc3](https://www.gerritcodereview.com/3.12.html#3120),
+[3.12.0-rc4](https://www.gerritcodereview.com/3.12.html#3120)
++ GitHub Desktop [3.4.19](https://desktop.github.com/release-notes/)
++ GitButler [0.14.19](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.19),
+[0.14.18](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.18)
 
 ## Credits
 
