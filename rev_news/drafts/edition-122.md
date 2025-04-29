@@ -39,7 +39,7 @@ __Various__
 
 
 __Light reading__
-
++ [How to Exclude Commits from Git Blame](https://www.git-tower.com/blog/how-to-exclude-commits-from-git-blame) by Bruno Brito on Tower's blog.
 <!---
 __Easy watching__
 -->
@@ -48,7 +48,7 @@ __Git tools and sites__
 
 
 ## Releases
-
++ Tower for Mac [13.0 (BETA)](https://www.git-tower.com/beta) ([Release blog post](https://www.git-tower.com/blog/tower-mac-13/))
 
 ## Credits
 
