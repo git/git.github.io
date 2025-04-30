@@ -40,6 +40,144 @@ This edition covers what happened during the months of March 2025 and April 2025
   open. Requests for financial assistance with travel costs can be
   sent to the Git PLC at <git@sfconservancy.org>.
 
+* [Patch (apply) vs. Pull](https://lore.kernel.org/git/1119284365.3926.15.camel@localhost.localdomain/)
+
+  To celebrate Git's 20th anniversary in our own way, let's talk about
+  a discussion on the Git mailing list that happened nearly 20 years
+  ago.
+
+  On June 20, 2005, Darrin Thompson sent an email about a discrepancy
+  he was perceiving between his mental model of how Git worked and a
+  common practice he observed on mailing lists.
+
+  He understood that on one hand Git was about people duplicating
+  locally the remote history they were interested in, which provided
+  common points in history that enabled "intelligent merging", while
+  on the other hand mailing lists were filled with emailed patches.
+
+  He asked how the patches were created and handled to ensure they
+  could be properly dealt with by the receivers and those who would
+  later pull from those initial receivers.
+
+  He was basically trying to reconcile the patch-based workflow on
+  mailing lists with Git's design, especially its merging philosophy
+  based on a common history.
+
+  Junio Hamano, who would later become the Git maintainer, then
+  replied to Darrin acknowledging that emailed patches are essentially
+  "out of band" communications. Merges could still work if the same
+  patch had been applied independently. Even if that wasn't ideal, it
+  was "manageable".
+
+  Junio then described his workflow, which consisted of regularly
+  pulling from Linus, discarding his HEAD, using Linus' HEAD instead,
+  and reapplying onto it some patches that Linus had rejected but he
+  still considered good. Then he would work on new changes and commit
+  them on top.
+
+  Darrin, questioning this approach, asked for ways to manage patches
+  as a series of commits, and wondered if that would still allow
+  cherry-picking patches.
+
+  Then Daniel Barkalow and Catalin Marinas chimed into the discussion
+  to talk about [StGit (Stacked Git)](https://stacked-git.github.io/)
+  which helps manage Git commits as a stack of patches. Catalin
+  Marinas was the creator of StGit, which seems to still be developed
+  these days as there was a 2.5.0 release in January 2025.
+
+  Daniel suggested integrating functionality similar to StGit into Git
+  to help with applying patches and bridging the gap between the
+  patch-based workflow and Git's commit-based model in general, even
+  though he thought that commits are "fundamentally resistant to
+  cherry-picking".
+
+  Catalin over the course of the discussion provided specific details
+  about how StGit could address Junio's workflow. For example, StGit
+  would automatically detect when a patch was already merged upstream
+  and warn the user. It could also handle conflicts during the
+  reapplication process using `diff3`.
+
+  Catalin also mentioned that StGit would soon support pulling changes
+  from a remote tree along with patch series information, making it
+  easier to apply patches from different branches.
+
+  Meanwhile, Linus also replied to the email where Junio described his
+  workflow, proposing "a different kind of merge logic" to automate
+  some of the steps, as individual developers often want to move their
+  work forward to the current tip, instead of merging it. The new
+  script would "try to re-base all the local commits from the common
+  parent onwards on top of the new remote head".
+
+  Linus showed some steps that the script would perform, some of them
+  using a new `git-cherry-pick` script that "basically takes an old
+  commit ID, and tries to re-apply it as a patch (with author data and
+  commit messages, of course) on top of the current head".
+
+  Then Linus, Junio and Daniel discussed how to implement this. One
+  problem appeared to be how to automatically detect patches that had
+  already been merged even where there were small changes, like typo
+  fixes or whitespace changes, in the patches.
+
+  Daniel suggested that authors could give an ID that would be
+  preserved across various later modifications to each of their
+  patches. Linus didn't like this idea because he thought that they
+  could be useful for specific projects but should be tracked outside
+  of Git. Inside Git, he thought they could create confusion as it
+  wouldn't be clear if a patch has been modified or not.
+
+  Daniel then asked Linus if he actually modified patches before
+  applying them. Linus replied that he very often did modify them and
+  that he absolutely didn't want to apply them first and then modify
+  them as he didn't want "crap" in his code. He further elaborated
+  that his `git-apply` tool was strict and refused to apply patches
+  with any 'fuzz' (mismatched context lines), only allowing patches
+  that matched exactly, potentially after adjusting for line number
+  offsets. He said:
+
+  "So I want things to be cleaned up before they hit the tree, rather
+  than have a really dirty history. A dirty history just makes it
+  harder to read, and I don't believe in a second that it's 'closer to
+  reality' like some people claim."
+
+  "I don't believe anybody wants to see the 'true' history. If they
+  did, we'd be logging keystrokes, and sending all of that
+  around. Nope, people want (and need, in order to be able to follow
+  it) an 'idealized' history."
+
+  Martin Langhoff also contributed to the discussion, noting that
+  rebasing and replaying local history was an approach he had used
+  successfully with [Arch](https://en.wikipedia.org/wiki/GNU_arch). He
+  suggested that the rebasing process should be restartable after
+  encountering a failed cherry-pick, and proposed adding features like
+  a "skip list" for patches already merged upstream and a `--stop-at`
+  option to handle batches of commits incrementally.
+
+  Daniel and Linus continued to discuss practical ways to identify and
+  manage patches across repositories. Linus proposed hashing the
+  actual changes in a patch, ignoring line numbers and whitespaces,
+  rather than relying on explicit IDs or commit metadata. He
+  implemented this idea in the form of a `git-patch-id` and tested it
+  on the Linux kernel repository where it found 15 duplicate patches
+  in the kernel history and processed around 2788 patches in under a
+  minute with no false positives.
+
+  Junio replied with a series of three patches to the email where
+  Linus had suggested some steps that the script to re-base all the
+  local commits would perform. The cover letter of his series was
+  named "Rebasing for 'individual developer' usage".
+
+  The first patch added a `-m` flag to the `git-commit-script` which
+  allowed committing using the commit message and author information
+  from an existing commit.
+
+  The second patch implemented a new `git-cherry` script to find
+  commits that are in the current branch but not in another branch, so
+  it can help find commits that haven't been merged upstream.
+
+  The third patch implemented a new `git-rebase-script` that used the
+  functionality from the two previous patches to actually implement
+  rebasing.
+
 <!---
 ### Reviews
 -->
