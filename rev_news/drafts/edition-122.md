@@ -17,9 +17,18 @@ This edition covers what happened during the months of March 2025 and April 2025
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [Let's celebrate Git's 20th anniversary this coming Monday!](https://lore.kernel.org/git/89757bec-4d7e-1d90-5697-44651c6128df@gmx.de/)
+
+  Johannes Schindelin (alias Dscho) posted on the mailing list that
+  the oldest Git commit was performed on April 7th, 2005. So Monday
+  April 7th, 2025 was the 20th anniversary of Git!
+
+  To celebrate this event, Dscho created
+  [a channel on Git's Discord, called `#20th-anniversary`](https://discord.gg/UcjvsNQR)
+  where everyone is welcome, especially to talk about their encounter
+  with Git.
 
 <!---
 ### Reviews
