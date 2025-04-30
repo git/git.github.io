@@ -36,9 +36,9 @@ This edition covers what happened during the months of March 2025 and April 2025
   conference on September 29-30 at GitHub HQ in San Francisco along
   with a Contributor's Summit on September 30.
 
-  Registration and a Call for Proposals are open. Requests for
-  financial assistance with travel costs can be sent to the Git PLC at
-  <git@sfconservancy.org>.
+  Registration and a Call for Proposals, which closes on May 13th, are
+  open. Requests for financial assistance with travel costs can be
+  sent to the Git PLC at <git@sfconservancy.org>.
 
 <!---
 ### Reviews
