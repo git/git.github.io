@@ -186,9 +186,104 @@ This edition covers what happened during the months of March and April 2025.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+## Community interview
+
+_Editor note: For Git's 20th anniversary, we are doing an exclusive collaborative
+community interview and curating answers from various community members. Also,
+there's a short Q&A with our zealous, inclusive and tireless maintainer that
+follows below._
+
+TODO
+
+### Short Q&A with our maintainer, Junio C Hamano
+
+- **Looking back over ~20 years of maintaining Git, what has been the
+  most surprising or unexpected evolution in the project — technically
+  or community-wise?**
+
+  Technically, one of the things I found surprising is how many lines
+  from Linus's original version still survive in today's codebase. The
+  [initial version of Git](https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23ca2e25604af290)
+  was 1244 lines spread across 11 files, which is miniscule compared
+  to 300+ thousands of lines in 4600+ files in v2.49.0, but it is not
+  fair to say Linus's original genius is less than 0.3% of what we have.
+  If you try running `git blame` in reverse, you'll see that about 10%
+  of lines we have in our tree came from the original version Linus
+  released 20 years ago. You can check out a
+  [little script called "Linus"](https://git.kernel.org/pub/scm/git/git.git/tree/Linus?h=todo)
+  out of my "todo" branch and run it to see for yourself.
+
+  Community-wise, there weren't many things that surprised me. I
+  expected a bit more developers who are interested in the core part of
+  system to stick around, say for more than 10 years, and I hoped that
+  some of them would be from younger generations who have never seen any
+  version control system other than Git, but how many among the active
+  contributors we see on the list every week fall into that category? We
+  have long-timers who are respected in the community, but we want to
+  grow that pool by say 5 every year or so, some of them ready to stick
+  around for another 10 years. In [a recent interview](https://github.blog/open-source/git/git-turns-20-a-qa-with-linus-torvalds/),
+  Linus said he wanted somebody with good taste who sticks around, and
+  I do believe it is essential to have a sufficient number of long-timers
+  who can guide new folks into the community.
+
+  So that is a bit of surprise that makes me a little sad, but at the
+  same time, I think what is happening is that a development community
+  of an extremely popular and successful system that is mature with
+  friendly atmosphere has attracted many aspiring new folks, they
+  scratch their own itches and have fun, but then they find more
+  interesting things to do and go back to be happy end-users, which is
+  totally expected and natural thing.
+
+- **What are your thoughts about AI-assisted development tools in the
+  context of Git? Do you see a place for Git itself to become more
+  "intelligent"?**
+
+  I've kept saying that
+  <https://lore.kernel.org/git/Pine.LNX.4.58.0504150753440.7211@ppc970.osdl.org/>
+  is one of the most important design discussion in the early days of
+  Git. In that article, Linus outlines how his "ideal" SCM tool would
+  let you follow the historyz of a single function in today's codebase
+  backwards, notice that at certain revision the function appeared, but
+  the tool finds five functions disappeared in the same revision, all
+  looking very similar to the function we are interested in that was
+  added there, and the tool can explain that the commit consolidated
+  duplicated reimplementations done in various subdirectories into a
+  single common function and adjusted the existing callers of them to
+  the SCM user (if you want to learn more details, go to the original
+  and read it twice, I'll wait).
+
+  We can do `git log -S<the-body-of-that-function>` repeatedly to drill
+  down the history to find the revision that introduced that new
+  (possibly consolidated) function.  In fact, the `-S<pickaxe>` feature
+  was invented exactly for the purpose of serving as the first step of
+  Linus's "ideal" SCM tool described in the article. But "finding
+  similar existing (and possibly getting lost) code in the same or
+  possibly nearby revisions" have been nebulous. I do not think anybody
+  in the Git circle tried it yet. I wonder, after 20 years, perhaps we
+  can feed a project's codebase to LLMs and let them figure out such a
+  fact?
+
+- **What's your boldest prediction about how version control might look in
+  another 20 years?**
+
+  I do not even foresee what software development in 20 years would look
+  like. I am not an insight kind of person.
+
+- **What advice would you give to someone who might one day step into your
+  role as Git maintainer?**
+
+  Be original. I didn't aim to duplicate the style Linus ran his tree
+  during the first four months of the project. My successor does not
+  have to duplicate my style of running the project, either. Having said
+  that, personally I would like to see more distribution of
+  responsibility. The maintainer may play a role of the final arbiter,
+  but it would be great if we can come up with a mechanism to allow list
+  participants to bear more of the burden of picking and choosing good
+  direction to go, deciding if a particular change is worth doing or the
+  are better ways to do the same thing, etc. I've been trying to nudge
+  the list discussions in that direction for the past few years, but
+  without much success, I think.
+
 
 ## Other News
 
