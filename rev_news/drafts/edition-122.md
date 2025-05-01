@@ -228,6 +228,7 @@ __Light reading__
   and force others - like [Linux' kernel.org](https://git.kernel.org/) - to use tools like [Anubis](https://github.com/TecharoHQ/anubis).
 * [Fedora change aims for 99% package reproducibility](https://lwn.net/Articles/1014979/)
   by Joe Brockmeier on LWN\.net.
+* [How to Exclude Commits from Git Blame](https://www.git-tower.com/blog/how-to-exclude-commits-from-git-blame) by Bruno Brito on Tower's blog.
 
 
 __Easy watching__
@@ -313,6 +314,8 @@ __Git tools and sites__
 + GitHub Desktop [3.4.19](https://desktop.github.com/release-notes/)
 + GitButler [0.14.19](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.19),
 [0.14.18](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.18)
++ Tower for Mac [13.0 (BETA)](https://www.git-tower.com/beta) ([Release blog post](https://www.git-tower.com/blog/tower-mac-13/))
+
 
 ## Credits
 
@@ -321,4 +324,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from XXX.
+with help from Bruno Brito.
