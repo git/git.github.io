@@ -79,7 +79,7 @@ This edition covers what happened during the months of March and April 2025.
   as a series of commits, and wondered if that would still allow
   cherry-picking patches.
 
-  Then Daniel Barkalow and Catalin Marinas chimed into the discussion
+  Then Daniel Barkalow and Catalin Marinas chimed in
   to talk about [StGit (Stacked Git)](https://stacked-git.github.io/)
   which helps manage Git commits as a stack of patches. Catalin
   Marinas was the creator of StGit, which seems to still be developed
@@ -154,7 +154,7 @@ This edition covers what happened during the months of March and April 2025.
 
   Daniel and Linus continued to discuss practical ways to identify and
   manage patches across repositories. Linus proposed hashing the
-  actual changes in a patch, ignoring line numbers and whitespaces,
+  actual changes in a patch, ignoring line numbers and whitespace,
   rather than relying on explicit IDs or commit metadata. He
   implemented this idea in the form of a `git-patch-id` and tested it
   on the Linux kernel repository where it found 15 duplicate patches
@@ -420,7 +420,7 @@ zealous, inclusive and tireless maintainer that follows below._
   based on the wrong idea of what they are and then using them incorrectly.
 
 
-  What I think it is underutilized is the full power of commits of being
+  What I think is underutilized is the full power of commits being
   a good source of documentation and good resource for, again, performing
   code archaeology that may help understanding what the code does and
   debugging it. Several developers treat the commits as just checkpoints.
@@ -435,8 +435,8 @@ zealous, inclusive and tireless maintainer that follows below._
   [_Lucas Seiki Oshiro_][seiki]: Perhaps it would be better to leave this
   question for other less known tools. But if you want an answer, I think:
 
-   - [Delta](https://github.com/dandavison/delta) is a really cool to
-   format the diff-related outputs;
+   - [Delta](https://github.com/dandavison/delta) is a really cool tool
+   for formatting the diff-related outputs;
 
    - [Kworkflow](https://kworkflow.org/) is a powerful tool for
    contributing to the Linux kernel source code (I should also
@@ -633,7 +633,7 @@ __Various__
   by Patrick Steinhardt on GitLab blog.
 * [GitHub MCP Server is now available in public preview](https://github.blog/changelog/2025-04-04-github-mcp-server-public-preview/).
   [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction)
-  is an AI tool calling standard that give LLMs (Large Language Models)
+  is an AI tool calling standard that gives LLMs (Large Language Models)
   a standardized way to call functions, look up data, and interact with the world.
 
 
@@ -643,7 +643,7 @@ __Light reading__
   by Andrew Lock on his .NET Escapades blog.
 * [Mirroring my git repositories](https://dustri.org/b/mirroring-my-git-repositories.html)
   using [cgit](https://git.zx2c4.com/cgit/about/) for the interface and nginx as a web server.
-  By Julien (jvoisin) Voisin on their7 blog.
+  By Julien (jvoisin) Voisin on their blog.
 * [Mirroring my Repositories from GitHub to GitLab](https://cleberg.net/blog/git-mirror.html),
   including both public and private repositories on GitLab Free tier.
   By Christian Cleberg on his blog.
