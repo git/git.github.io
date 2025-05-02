@@ -752,4 +752,5 @@ Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
 with help from Junio Hamano, Lucas Seiki Oshiro,
-Thalia Rose, Elijah Newren, Bruno Brito and Štěpán Němec.
+Luca Milanesio, Thalia Rose, Elijah Newren,
+Bruno Brito and Štěpán Němec.
