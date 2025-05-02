@@ -189,11 +189,343 @@ This edition covers what happened during the months of March and April 2025.
 ## Community interview
 
 _Editor note: For Git's 20th anniversary, we are doing an exclusive collaborative
-community interview and curating answers from various community members. Also,
-there's a short Q&A with our zealous, inclusive and tireless maintainer that
-follows below._
+community interview and curating answers of various community members. Also,
+there's a [short Q&A](#short-qa-with-our-maintainer-junio-c-hamano) with our
+zealous, inclusive and tireless maintainer that follows below._
 
-TODO
+
+- **What's your favorite Git trick or workflow that you wish more people
+  knew about?**
+
+  [_Thalia Rose_][thalia]: For rebase-heavy workflows, `git range-diff` is incredibly
+  useful. To compare against upstream, use `git range-diff @{u}...@`,
+  and to compare against the previous HEAD, use `git range-diff @{1}...@`.
+
+  [_Lucas Seiki Oshiro_][seiki]: Everything related to code archaeology
+  (`git grep`, `git log -S/-G`, `git log -L` and `git bisect`). Those are
+  my primary debugging tools and every time I explained them to other
+  people they find them mind-blowing and useful.
+  And they also started loving it :-)
+
+  [_Elijah Newren_][elijah]: [`range-diff`][range-diff]. The ideas behind
+  it ought to be the basis for code review, IMO.  Commits should be the
+  unit of review (including commit messages as a fundamental and primary
+  thing to be reviewed), and a series of commits should be the unit of
+  merging.  I dislike most code review tools, because they get one or
+  both of those things wrong. Getting both of those things right naturally
+  leads to `range-diff` or something like it being a very important part
+  of the workflow, at a minimum for detecting which commits in a series
+  are unmodified and which have been updated and need to be further reviewed.
+
+
+- **What was your worst Git disaster, and how did you recover from it?**
+
+  [_Thalia Rose_][thalia]: When I was first starting with Git, I wanted to make a repo
+  to preserve my first coding project when I was twelve, a bunch of VBS scripts.
+  I had assumed that Git maintained file modification timestamps, so I deleted
+  the originals because they were now redundant. I now no longer know exactly
+  when I wrote them and have been careful about timestamps ever since.
+
+  [_Luca Milanesio_][luca]: I suspect to be one of the worst offenders :-) [ [ref](https://www.infoq.com/news/2013/11/use-the-force) ]
+
+  Thankfully I was using Gerrit Code Review and the replication plugin:
+  the refs were not lost but just rewind and we could reset all the
+  correct SHA1s for all of them.
+
+  [_Lucas Seiki Oshiro_][seiki]: I don't remember something that I did,
+  but I remember a simple and curious disaster: our deploy workflows
+  stopped working, only leaving a message like "cannot fetch
+  ambiguous reference `master`". I decided to investigate what happened
+  and I found out that someone by mistake (I don't know how) created a
+  tag called `master` and pushed it to GitHub. By the time we used the
+  `master` branch for deploy, and the workflows didn't know if they
+  should use the `master` branch or tag. GitHub didn't have a feature
+  for deleting tags through the web interface, so we thought
+  "what should we do?".
+
+  The solution was to run `git push origin :refs/tags/master`. Simple,
+  but not obvious. A classic case where it only required a screw to be
+  turned, but all the hard work was to find which screw should be turned.
+
+  [_Elijah Newren_][elijah]:
+  My worst Git-related disaster wasn't with Git directly but with our
+  Git hosting software we used at a prior job, Gerrit.  'twas a
+  "startup" that was still forming good practices.  We had both a
+  production and a staging instance.  The staging instance was seeded
+  with a copy of production data so we could do scale testing...but that
+  seeding process was a multi-step manual thing; it hadn't been
+  automated.  One step was, as best I recall, "drop database gerrit",
+  followed by loading the production copy of the mysql database (this
+  was long before [NoteDB][notedb] arrived).  And as many readers
+  probably have guessed by now, I was on the wrong host one day when
+  I ran that command.
+
+  The actual git repositories were still intact, but the review metadata
+  was toast.  Luckily, we had a backup from about 7 hours earlier, so we
+  could recover the older review metadata and with some hackery fix the
+  mysql metadata mismatch with the newer repository contents.  And since
+  Gerrit emailed folks comments from reviews as they were posted, we
+  could tell people to look at their emails for the pieces we couldn't
+  recover.
+
+  It was a really long night trying to fix things.  Some folks told me
+  they thought I was going to throw up just looking at me.  But I
+  learned how wonderful it was to be at a company with blameless
+  post-mortems, and I appreciated the many folks who reached out to tell
+  me stories of mistakes they had made.  They were more interested in
+  whether we learned our lesson and put processes into place to prevent
+  repeats, and I definitely did both.
+
+  I did, of course, also get some good-natured ribbing, such as people
+  saying I got to play the part of little Bobby Tables once (see
+  [this xkcd comic][bobby-tables] if you don't know that reference).
+  I kindly reminded them that I didn't drop a table -- I dropped the whole
+  database (plus, it wasn't injection, it was just running a command in
+  the wrong location).  Also, one of my colleagues helpfully modified
+  the prompt on production to be red and bold, "This is PROD Gerrit",
+  and the prompt on staging to be green, "This is staging Gerrit; it's
+  okay to drop database here!"  The prompts ended up not mattering since
+  I automated the process, and made sure the process just error'ed out
+  if run on prod instead of staging.  But the prompt persisted for many
+  years anyway, because I thought it was a hilarious way to poke fun at
+  my blunder.
+
+
+- **If you could go back in time and change one design decision in Git,
+  what would it be?**
+
+  [_Luca Milanesio_][luca]: Use SHA-256 straight away, as it was
+  published 24 years ago and already existed at the time Git was designed.
+
+  [_Lucas Seiki Oshiro_][seiki]: Perhaps writing a more abstract CLI. After
+  studying Git a little more deeper it makes sense for me, but I would group
+  the functionality into more high-level subcommands and would make the flags
+  and options more consistent across the subcommands.
+
+  For example, Docker CLI have all the image operations under
+  `docker image` and all the network operations under `docker network`.
+  If I want to delete an image, I use `docker image rm`, if I want to
+  delete a network, I use `docker network rm`, and so on. I would make
+  Git CLI work based on that idea, for example:
+
+    - `git branch add my_branch`
+    - `git branch delete my_branch`
+    - `git branch list`
+    - `git remote add my_remote ...`
+    - `git remote delete my_remote`
+    - `git remote list`
+    - `git tag add my_tag`
+    - `git tag delete my_tag`
+    - `git tag list`
+
+  With some shorter alias, just like Docker has `docker rmi` and
+  `docker rm`.
+
+  [_Elijah Newren_][elijah]: The index.  For a few reasons.
+
+  1. Performance.
+     1. The index is pervasive throughout the codebase, and while it works
+     great for small repositories, it means that many operations are O(size
+     of repository) instead of O(size of changes).  [sparse indices][sparse-index]
+     help, but the code has to be carefully audited for sparse indices to
+     work with each codepath, and even then there tends to be a fallback of
+     just-load-everything-anyway because the data structure doesn't lend
+     nicely to just expanding a little more.
+
+     2. An under-appreciated aspect of the performance improvements that
+     came from our new merge strategy, [`merge-ort`][merge-ort], were due
+     to dispensing with the index as the primary data structure.  The index
+     had two problems:
+        1. first of all it meant loading every path in the repository,
+        which would have prevented ort's optimization to avoid recursing into
+        subtrees when unnecessary (an optimization that often made merges e.g.
+        50x faster).  Sparse indices didn't exist back then, but even if they
+        had we would have had to complicate them significantly in order to
+        have their sparseness be determined by renames and the intersection of
+        modified paths on the two sides of history instead of having
+        sparseness determined by user-defined path rules; I think that'd have
+        been much more complicated than just dispensing with the index as the
+        data structure, but we didn't even have sparse indices back then
+        anyway.
+
+        2. Second, the use of the index as done in the old merge strategy,
+        `merge-recursive`, resulted in O(N^2) behavior since entries (including
+        conflicted higher order stages) had to be inserted in sorted order.
+        Deleting entries didn't have the same O(N^2) problem due to some
+        tricks to queue the deletion for later, but attempting to do the same
+        for insertions was far from straightforward and I believe would have
+        required making some other data structure primary and then forming the
+        index at the end. (Note that the primary data structure used, whatever
+        it is, cannot just have a list of things to insert, it also needs to
+        be checked for various properties intermingled with insertions...and
+        those sometimes relied on the fact that the index was sorted for quick
+        lookups.) <br/><br />
+        (Note that a tree-structured index rather than a linear index would
+        resolve these problems.  But retrofitting the entire codebase is
+        probably never going to happen...)
+
+    2. Cognitive Complexity. <br/>The funny thing is, although I say this,
+    I use the index all the time. I use `git add -p` a lot.  I very much
+    need to slice and dice my changes into different commits, and tend to
+    have dirty changes that I don't want pushed. <br /> <br />
+    But slicing and dicing before things are committed, as opposed to
+    being able to slice and dice after, is a choice that adds a lot of
+    complexity to the user interface and does so even for users who aren't
+    interested in slicing and dicing commits.  We don't have a
+    sufficiently flexible set of tooling for slicing and dicing commits
+    after-the-fact within git to switch to a post-commit-slice-and-dice
+    workflow even today, but I suspect that some of the ideas from [JJ][jujutsu]
+    would or could be much better than the methods I use today in git to
+    slice and dice commits.
+
+
+- **Which Git feature or improvement over the past 20 years do you think
+  had the biggest impact on your workflow?**
+
+  [_Lucas Seiki Oshiro_][seiki]: Sorry, but I can't answer. I am from a
+  generation that started programming when Git was already the de facto
+  VCS so I can't compare a world that has it with a world that doesn't have.
+
+  [_Elijah Newren_][elijah]: Speed.
+
+  Being able to instantly switch branches (in smaller repos, sure, but
+  CVS and SVN couldn't pull it off even in small repos) was a game
+  changer.
+
+
+- **What Git problem that existed 10 years ago has been most
+  successfully solved?**
+
+  [_Lucas Seiki Oshiro_][seiki]: Sorry again, but 10 years ago I was only
+  starting to use Git and when I started to use more complex features they
+  already were there.
+
+  [_Elijah Newren_][elijah]: Merging and rebasing with lots of renames
+  (and generally merging without a worktree or index).  I'm obviously
+  a bit biased on this point, but that doesn't mean I'm wrong.  ;-)
+  It used to be awful and works great now.
+
+  Relatedly, merging without a worktree or index was problematic; you
+  had to either use an alternative merge strategy with limited
+  capabilities, or use something other than git (e.g. [libgit2][libgit2]).
+  But now git handles it well with its default merge strategy.
+
+
+- **Which Git commands or workflows do you think are still misunderstood
+  or underutilized today?**
+
+  [_Lucas Seiki Oshiro_][seiki]: I think [squash merges][squash-merge] and
+  [submodules][submodule] are really misunderstood, yet they are the opposite
+  of being underutilized. Sadly I saw several people using them in daily basis,
+  based on the wrong idea of what they are and then using them incorrectly.
+
+
+  What I think it is underutilized is the full power of commits of being
+  a good source of documentation and good resource for, again, performing
+  code archaeology that may help understanding what the code does and
+  debugging it. Several developers treat the commits as just checkpoints.
+
+  [_Elijah Newren_][elijah]: `range-diff` is very under-utilized, but I
+  already discussed that above.
+
+
+- **What's one Git based project, tool, or extension you think deserves
+  more recognition from the community?**
+
+  [_Lucas Seiki Oshiro_][seiki]: Perhaps it would be better to leave this
+  question for other less known tools. But if you want an answer, I think:
+
+   - [Delta](https://github.com/dandavison/delta) is a really cool to
+   format the diff-related outputs;
+
+   - [Kworkflow](https://kworkflow.org/) is a powerful tool for
+   contributing to the Linux kernel source code (I should also
+   try it for contributing to the Git source code);
+
+    - Merge drivers in general. `diff3` works in most cases but it is
+    only based on pure diffs, without performing deeper operations based
+    on the file format they are merging.
+
+
+- **What Git feature or capability surprised you most when you first
+  discovered it?**
+
+  [_Lucas Seiki Oshiro_][seiki]:  As you may have noticed, I'm really
+  a fan of Git archaeology :-), so I would say all that I mentioned
+  in the first answer (i.e., `git grep`, `git log -S/-G`, `git log -L`
+  and `git bisect`). But my favorite is still [bisect][bisect].
+  It's an egg of Columbus and everyone that I have shown it to
+  was equally amazed by it!
+
+
+- **What's your boldest prediction about how version control might look
+  in another 20 years?**
+
+  [_Lucas Seiki Oshiro_][seiki]: I still see Git as the dominant VCS
+  in the future, but I think more Git-based VCSs (like [Jujutsu][jujutsu]
+  will arise. Just like we have today programming languages built on top
+  of the stack of the other languages (e.g. Clojure, Kotlin and Scala on
+  JVM, TypeScript on JS), networking protocols written on top of other
+  protocols (e.g. QUIC on UDP, gRPC on HTTP) and so on.
+
+  The Git core is simple, flexible, transparent and powerful and there's
+  still room for people using it directly in several creative ways. Once
+  I saw [a project using it as a backend for a NoSQL database][git-backend-nosql],
+  who knows how many use cases we still have for it.
+
+  [_Elijah Newren_][elijah]: I'm more interested in what storms might be
+  brewing along that path, and what we might be able to do to avoid them.
+  In particular, some questions and observations in that area:
+
+  * With monorepos growing ever larger, do we have hard-to-workaround-or-fix
+    design decisions that pose scaling challenges?  e.g.
+      * the index data structure
+      * per-directory .gitignore files, per-directory .gitattribute files, etc.
+  * ...or do the prominent Git forges have hard-to-workaround-or-fix
+    design decisions that'll give Git a reputation for not scaling?  e.g.
+     * making refs/pull/NNN/merge a public ref and excessively
+       implicitly updating it
+  * Will we face a crisis of interest?  e.g.
+     * `git` is currently written in C.  Even if that's not a liability
+       already, coupled with "decades" I think it is.  Young developers
+       probably don't want to learn C, and older ones who already know C
+       may worry about C becoming a Fortran or Cobol.
+     * Companies employing Git developers think "git already won" and
+       redeploy those engineers on other problems
+  * Will the combination of issues above result in folks who want improvements
+    deciding their best bet is not improving Git but in creating/funding
+    an alternative? Will that snowball?
+
+  <br />
+  To me, the entry of new projects like [JJ][jujutsu] and [sapling][sapling]
+  suggest the above are real concerns already rather than just theoretical.
+  Both projects have compelling things that git lacks.  I like the friendly
+  competition, and the JJ and sapling developers are awesome to talk to
+  at Git Merge conferences.  But there is a risk that this friendly
+  competition mirrors that of Git and Mercurial from years past, and
+  that Git at some future point down the road ends up on the other side
+  of that history and gets largely displaced by the alternatives.  I'd
+  rather not see that happen, but I sometimes wonder if we're taking
+  enough measures to avoid marching towards such an outcome.
+
+
+[thalia]: https://discord.com/channels/1042895022950994071/1361310935427584213/1361316878819131452
+[luca]: https://public-inbox.org/git/04A328E9-1146-4D4A-84E7-456FFEB66A5A@gmail.com/
+[seiki]: https://public-inbox.org/git/AE27429C-97B1-4226-8F30-5B635A050498@gmail.com/
+[elijah]: https://public-inbox.org/git/CABPp-BH2yH4iJ28Bo7Q=uryu68LLk7a0Tvb2SzAbAiHK8QpRug@mail.gmail.com/
+[squash-merge]: https://git-scm.com/docs/git-merge#Documentation/git-merge.txt---squash
+[submodule]: https://git-scm.com/docs/git-submodule
+[bisect]: https://git-scm.com/docs/git-bisect
+[range-diff]: https://git-scm.com/docs/git-range-diff
+[sparse-index]: https://git-scm.com/docs/sparse-index
+[merge-ort]: https://git-scm.com/docs/merge-strategies#Documentation/merge-strategies.txt-ort
+[jujutsu]: https://github.com/jj-vcs/jj?tab=readme-ov-file#introduction
+[git-backend-nosql]: https://www.kenneth-truyers.net/2016/10/13/git-nosql-database
+[notedb]: https://www.gerritcodereview.com/notedb.html
+[bobby-tables]: https://xkcd.com/327/
+[libgit2]: https://libgit2.org/
+[sapling]: https://sapling-scm.com/
+
 
 ### Short Q&A with our maintainer, Junio C Hamano
 
