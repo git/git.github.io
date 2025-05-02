@@ -753,4 +753,4 @@ Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
 with help from Junio Hamano, Lucas Seiki Oshiro,
 Luca Milanesio, Thalia Rose, Elijah Newren,
-Bruno Brito and Štěpán Němec.
+Toon Claes, Bruno Brito and Štěpán Němec.
