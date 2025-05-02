@@ -574,7 +574,7 @@ zealous, inclusive and tireless maintainer that follows below._
   <https://lore.kernel.org/git/Pine.LNX.4.58.0504150753440.7211@ppc970.osdl.org/>
   is one of the most important design discussion in the early days of
   Git. In that article, Linus outlines how his "ideal" SCM tool would
-  let you follow the historyz of a single function in today's codebase
+  let you follow the history of a single function in today's codebase
   backwards, notice that at certain revision the function appeared, but
   the tool finds five functions disappeared in the same revision, all
   looking very similar to the function we are interested in that was
@@ -611,10 +611,10 @@ zealous, inclusive and tireless maintainer that follows below._
   responsibility. The maintainer may play a role of the final arbiter,
   but it would be great if we can come up with a mechanism to allow list
   participants to bear more of the burden of picking and choosing good
-  direction to go, deciding if a particular change is worth doing or the
-  are better ways to do the same thing, etc. I've been trying to nudge
-  the list discussions in that direction for the past few years, but
-  without much success, I think.
+  direction to go, deciding if a particular change is worth doing or
+  are there better ways to do the same thing, etc. I've been trying to
+  nudge the list discussions in that direction for the past few years,
+  but without much success, I think.
 
 
 ## Other News
