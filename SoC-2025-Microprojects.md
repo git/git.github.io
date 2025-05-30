@@ -12,39 +12,6 @@ There are some suggestions on how you can find some microprojects on your own in
 
 ## Ideas for microprojects
 
-### Fix Sign Comparison Warnings in Git's Codebase
-
-Help improve Git's code quality by fixing sign comparison warnings in files that
-currently disable these warnings. The goal is to remove instances of
-`DISABLE_SIGN_COMPARE_WARNINGS` macro and fix the underlying issues properly.
-
-#### Steps to Complete
-1. Find a C source file that contains `#define DISABLE_SIGN_COMPARE_WARNINGS`
-2. Remove this #define
-3. Build Git with `DEVELOPER=1` to enable compiler warnings. The `DEVLEOPER`
-   can be specified in your `config.mak` or as follows
-
-   ```sh
-   make DEVELOPER=1 -j4
-   ```
-
-4. Fix all `-Wsign-compare` warnings that appear for that file:
-   - Pay attention to comparisons between signed and unsigned integers
-   - Modify variable types or add appropriate casts as needed
-   - Ensure the fixes don't change the code's behavior
-
-#### Notes
-- Each file should be handled in a separate patch
-- Follow Git's commit message conventions
-- Test your changes thoroughly
-- This is part of an ongoing effort to enable `-Wsign-compare` globally
-
-#### Related Patches
-For context on why this is a crucial improvement to Git's codebase, checkout
-[this e-mail](https://public-inbox.org/git/20241206-pks-sign-compare-v4-0-0344c6dfb219@pks.im/)
-by Patrick Steinhardt.
-
-
 ### Modernize Test Path Checking in Git's Test Suite
 
 Help improve Git's test suite by converting old-style path checks to use modern
