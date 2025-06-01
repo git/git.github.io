@@ -27,8 +27,8 @@ This edition covers what happened during the months of April and May 2025.
 * [[PATCH] git: add --no-hooks global option](https://lore.kernel.org/git/pull.1899.git.1743719888430.gitgitgadget@gmail.com/)
 
   Derrick Stolee, who prefers to be called just Stolee, sent a patch
-  to the mailing list that added a new `--no-hooks` global option, and
-  an equivalent `GIT_HOOKS` environment variable, to Git. The goal was
+  to the mailing list that added a new `--no-hooks` global option and
+  an equivalent `GIT_HOOKS` environment variable to Git. The goal was
   to allow users to disable all Git hooks during command execution.
 
   This could be useful for expert users who would want to bypass
@@ -36,7 +36,7 @@ This edition covers what happened during the months of April and May 2025.
   checks.
 
   Switching between enabled and disabled hooks and other workarounds,
-  like setting `core.hooksPath` to a "bogus path" did not look
+  like setting `core.hooksPath` to a "bogus path", did not look
   convenient and very safe.
 
   brian m. carlson, who spell their name using only lowercase letters,
@@ -70,16 +70,16 @@ This edition covers what happened during the months of April and May 2025.
 
   Junio Hamano, the Git maintainer, then replied to Phillip thanking
   him for pushing back on the idea, and saying that there should be a
-  "compelling reason" to justify applying a change.
+  "compelling reason" to justify a change.
 
   Also instead of implementing options to disable hooks or
   configuration in some user facing "porcelain" commands, Junio
   advocated for cleaning up and refactoring these commands into new
   stable "plumbing" commands designed to be easily used in scripts.
 
-  Lucas Seiki Oshiro in the meantime replied to Phillip. Lucas had
+  In the meantime, Lucas Seiki Oshiro replied to Phillip. Lucas had
   noticed that using `/dev/null` to disable hooks wasn't mentioned in
-  the documentation of `core.hooksPath` even though it was tested in a
+  the documentation of `core.hooksPath`, even though it was tested in a
   test script. He asked if Stolee's patch should therefore be turned
   into a documentation patch.
 
@@ -101,8 +101,8 @@ This edition covers what happened during the months of April and May 2025.
   would only document that setting `core.hooksPath` to `/dev/null` was
   the supported mechanism to disable hooks.
 
-  In [the version 2 of his patch](https://lore.kernel.org/git/pull.1899.v2.git.1744818135435.gitgitgadget@gmail.com/)
-  indeed Stolee only updated the documentation of the `core.hooksPath`
+  In [the version 2 of his patch](https://lore.kernel.org/git/pull.1899.v2.git.1744818135435.gitgitgadget@gmail.com/),
+  Stolee just updated the documentation of the `core.hooksPath`
   configuration option, adding the following small paragraph:
 
   > You can also disable all hooks entirely by setting `core.hooksPath`
