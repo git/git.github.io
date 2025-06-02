@@ -29,13 +29,13 @@ This edition covers what happened during the months of April and May 2025.
     [the "Consolidate ref-related functionality into git-refs" project](https://summerofcode.withgoogle.com/programs/2025/projects/xVrT5e2q)
     mentored by Patrick Steinhardt and Jialuo She. See Meet's
     [blog](https://inosmeet.github.io/posts/) and
-	[repository](https://github.com/inosmeet/git) for more.
+    [repository](https://github.com/inosmeet/git) for more.
 
   - Lucas Seiki Oshiro will work on
     [the "Machine-Readable Repository Information Query Tool" project](https://summerofcode.withgoogle.com/programs/2025/projects/fGgMYHwl)
-	mentored by Karthik Nayak and Patrick
-    Steinhardt. See Lucas' [blog](https://lucasoshiro.github.io/en/)
-	and [repository](https://github.com/lucasoshiro/git) for more.
+    mentored by Karthik Nayak and Patrick
+    Steinhardt. See Lucas's [blog](https://lucasoshiro.github.io/en/)
+    and [repository](https://github.com/lucasoshiro/git) for more.
 
   - Ayush Chandekar will work on
     [the "Refactoring in order to reduce Git’s global state" project](https://summerofcode.withgoogle.com/programs/2025/projects/no7dVMeG)
@@ -45,7 +45,7 @@ This edition covers what happened during the months of April and May 2025.
 
 ### Reviews
 
-* [[PATCH] git: add --no-hooks global option](https://lore.kernel.org/git/pull.1899.git.1743719888430.gitgitgadget@gmail.com/)
+* [[PATCH] git: add `--no-hooks` global option](https://lore.kernel.org/git/pull.1899.git.1743719888430.gitgitgadget@gmail.com/)
 
   Derrick Stolee, who prefers to be called just Stolee, sent a patch
   to the mailing list that added a new `--no-hooks` global option and
@@ -170,16 +170,16 @@ __Light reading__
 + [Git aliases](https://heitorpb.github.io/bla/git-aliases/)
   by Heitor de Bittencourt on Heitor's Log blog,
   which includes comparison with shell aliases,
-  and is only missing the trick to set git completion for `!` alias.
+  and is only missing the trick to set `git` completion for the `!` alias.
 + [Pushing a whole stack of branches with a single Git command](https://andrewlock.net/pushing-a-whole-stack-of-branches-with-a-single-git-command/)
   (with the help of git aliases)
-  by Andrew Lock on .NET Escapades
+  by Andrew Lock on .NET Escapades.
 + [Tally All Git Trailers in a Repository](https://calebhearth.com/tally-git-trailers.page),
   with a list of interesting and useful trailers _(with many links)_,
   by Caleb Hearth on his blog.
 + [You can use Git to version control your notes, and here’s how I do it](https://www.xda-developers.com/you-can-use-git-to-version-control-your-notes/)
   by Ayush Pande on XDA Developers
-  (with Joplin as an example of note-taking application one can use with Git).
+  (with Joplin as an example of a note-taking application one can use with Git).
 + [A Short Guide on Git for Vibe Coders](https://anfalmushtaq.com/articles/a-short-guide-on-git-for-vibe-coders)
   by Anfal Mushtaq on his blog.
 + [Version Control To The Max](https://hackaday.com/2025/05/14/version-control-to-the-max/)
@@ -187,11 +187,11 @@ __Light reading__
   about backing up the entire development environment
   (with QEMU or VirtualBox or VMWare).
 + [Converting a Git repo from tabs to spaces](https://eev.ee/blog/2016/06/04/converting-a-git-repo-from-tabs-to-spaces/)
-  with the help of "filter" gitattribute and `expand` tool (part of the _coreutils_),
+  with the help of the "filter" gitattribute and the `expand` tool (part of the _coreutils_),
   by Eevee on Fuzzy Notepad blog (2016).
 + [How the GitHub CLI can now enable triangular workflows](https://github.blog/open-source/git/how-the-github-cli-can-now-enable-triangular-workflows/)
   by Tyler McGoffin on GitHub Blog.
-+ [Using git-upload-pack for a simpler CI integration](https://blog.screenshotbot.io/2025/05/09/using-git-upload-pack-for-a-simpler-ci-integration/),
++ [Using `git-upload-pack` for a simpler CI integration](https://blog.screenshotbot.io/2025/05/09/using-git-upload-pack-for-a-simpler-ci-integration/),
   on how Screenshotbot can now extract commit graph data from remote repositories
   (assuming one has SSH access to their Git repositories),
   by Arnold Noronha on Screenshotbot Blog.
@@ -216,16 +216,16 @@ __Git tools and sites__
 
 + [A modern theme for cgit](https://yingtongli.me/blog/2025/05/16/cgit.html)
   by Lee Yingtong Li on Inane Observations blog.
-  Source code for described themed fork of [cgit](https://git.zx2c4.com/cgit/tree/README)
+  The source code for this themed fork of [cgit](https://git.zx2c4.com/cgit/tree/README)
   is available at <https://yingtongli.me/git/cgit-yli-theme>.
   Under GPL v2 license.
 + [AutoGit-o-Matic](https://github.com/FPGArtktic/AutoGit-o-Matic) is a Bash script
   that automates Git operations across multiple repositories. It helps you
   pull or fetch updates from multiple repositories with a single command
   (with dry-run capability),
-  and scan directories for Git repositories automatically;
-  it logs operations in both TXT and JSON formats,
-  and is configurable via INI file.
+  scans directories for Git repositories automatically,
+  logs operations in both TXT and JSON formats,
+  and is configurable via an INI file.
   Under GPL-3.0 license.
 + [StatsCat](https://github.com/z1cheng/statscat) is a CLI tool
   to get per-author and per-directory statistics of all your Git repositories.
