@@ -156,7 +156,9 @@ This edition covers what happened during the months of April and May 2025.
 
 ## Other News
 
+<!--
 __Various__
+-->
 
 
 __Light reading__
