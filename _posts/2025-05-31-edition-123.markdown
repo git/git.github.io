@@ -195,7 +195,15 @@ __Light reading__
   by Arnold Noronha on Screenshotbot Blog.
 + [Fixing SSH Conflicts: Using a Separate SSH Key for GitHub](https://dev.to/hastycodea/fixing-ssh-conflicts-using-a-separate-ssh-key-for-github-4in1)
   by Hastycode Andreh on DEV\.to.
-  One trick to add is the use of `url.<base>.insteadOf`.
+  One trick to add is the possible use of `url.<base>.insteadOf`.
++ [The reductionist theory or rethinking of .gitignore bloat](https://dev.to/iegik/the-reductionist-theory-or-rethinking-of-gitignore-bloat-4gfo)
+  by Arturs Jansons on DEV\.to.
+  Mentions [gitignore.io](https://www.gitignore.io/),
+  first mentioned in passing in [Git Rev News Edition #6](https://git.github.io/rev_news/2015/08/05/edition-6/),
+  then linked to (with new final URL) in [Git Rev News Edition #94](https://git.github.io/rev_news/2022/12/31/edition-94/),
+  and [github/gitignore](https://github.com/github/gitignore) - which was
+  first mentioned in passing in [Git Rev News Edition #21](https://git.github.io/rev_news/2016/11/16/edition-21/),
+  then also linked to in [Edition #94](https://git.github.io/rev_news/2022/12/31/edition-94/),
 
 
 <!---
@@ -206,8 +214,20 @@ __Git tools and sites__
 
 + [A modern theme for cgit](https://yingtongli.me/blog/2025/05/16/cgit.html)
   by Lee Yingtong Li on Inane Observations blog.
-  Source code for described themed fork of cgit is available
-  at <https://yingtongli.me/git/cgit-yli-theme>.
+  Source code for described themed fork of [cgit](https://git.zx2c4.com/cgit/tree/README)
+  is available at <https://yingtongli.me/git/cgit-yli-theme>.
+  Under GPL v2 license.
++ [AutoGit-o-Matic](https://github.com/FPGArtktic/AutoGit-o-Matic) is a Bash script
+  that automates Git operations across multiple repositories. It helps you
+  pull or fetch updates from multiple repositories with a single command
+  (with dry-run capability),
+  and scan directories for Git repositories automatically;
+  it logs operations in both TXT and JSON formats,
+  and is configurable via INI file.
+  Under GPL-3.0 license.
++ [StatsCat](https://github.com/z1cheng/statscat) is a CLI tool
+  to get per-author and per-directory statistics of all your Git repositories.
+  Written in Go, under MIT license.
 
 
 ## Releases
