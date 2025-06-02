@@ -17,10 +17,31 @@ This edition covers what happened during the months of April and May 2025.
 
 ## Discussions
 
-<!---
 ### General
--->
 
+* [[GSoC] Welcoming our 2025 contributors and thanking our applicants](https://lore.kernel.org/git/A2C60325-F96A-49FC-8910-035BFC209EB5@gmail.com/)
+
+  The Git project was accepted in the
+  [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/)
+  this year again, and 3 applicants were selected:
+
+  - Meet Soni will work on
+    [the "Consolidate ref-related functionality into git-refs" project](https://summerofcode.withgoogle.com/programs/2025/projects/xVrT5e2q)
+    mentored by Patrick Steinhardt and Jialuo She. See Meet's
+    [blog](https://inosmeet.github.io/posts/) and
+	[repository](https://github.com/inosmeet/git) for more.
+
+  - Lucas Seiki Oshiro will work on
+    [the "Machine-Readable Repository Information Query Tool" project](https://summerofcode.withgoogle.com/programs/2025/projects/fGgMYHwl)
+	mentored by Karthik Nayak and Patrick
+    Steinhardt. See Lucas' [blog](https://lucasoshiro.github.io/en/)
+	and [repository](https://github.com/lucasoshiro/git) for more.
+
+  - Ayush Chandekar will work on
+    [the "Refactoring in order to reduce Git’s global state" project](https://summerofcode.withgoogle.com/programs/2025/projects/no7dVMeG)
+    mentored by Christian Couder and Ghanshyam Thakkar. See Ayush's
+    [blog](https://ayu-ch.github.io/archive.html) and
+    [repository](https://github.com/ayu-ch/git) for more.
 
 ### Reviews
 
