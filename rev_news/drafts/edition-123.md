@@ -140,11 +140,53 @@ __Various__
 
 __Light reading__
 
++ [What I've learned from jj (Jujutsu)](https://zerowidth.com/2025/what-ive-learned-from-jj/)
+  by Nathan Witmer on zerowidth positive lookahead blog.<br>
+  [Jujutsu](https://jj-vcs.github.io/) (`jj`) is an experimental Git-compatible DVCS,
+  first mentioned in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/).
++ [Git aliases](https://heitorpb.github.io/bla/git-aliases/)
+  by Heitor de Bittencourt on Heitor's Log blog,
+  which includes comparison with shell aliases,
+  and is only missing the trick to set git completion for `!` alias.
++ [Pushing a whole stack of branches with a single Git command](https://andrewlock.net/pushing-a-whole-stack-of-branches-with-a-single-git-command/)
+  (with the help of git aliases)
+  by Andrew Lock on .NET Escapades
++ [Tally All Git Trailers in a Repository](https://calebhearth.com/tally-git-trailers.page),
+  with a list of interesting and useful trailers _(with many links)_,
+  by Caleb Hearth on his blog.
++ [You can use Git to version control your notes, and here’s how I do it](https://www.xda-developers.com/you-can-use-git-to-version-control-your-notes/)
+  by Ayush Pande on XDA Developers
+  (with Joplin as an example of note-taking application one can use with Git).
++ [A Short Guide on Git for Vibe Coders](https://anfalmushtaq.com/articles/a-short-guide-on-git-for-vibe-coders)
+  by Anfal Mushtaq on his blog.
++ [Version Control To The Max](https://hackaday.com/2025/05/14/version-control-to-the-max/)
+  by Al Williams on Hackaday,
+  about backing up the entire development environment
+  (with QEMU or VirtualBox or VMWare).
++ [Converting a Git repo from tabs to spaces](https://eev.ee/blog/2016/06/04/converting-a-git-repo-from-tabs-to-spaces/)
+  with the help of "filter" gitattribute and `expand` tool (part of the _coreutils_),
+  by Eevee on Fuzzy Notepad blog (2016).
++ [How the GitHub CLI can now enable triangular workflows](https://github.blog/open-source/git/how-the-github-cli-can-now-enable-triangular-workflows/)
+  by Tyler McGoffin on GitHub Blog.
++ [Using git-upload-pack for a simpler CI integration](https://blog.screenshotbot.io/2025/05/09/using-git-upload-pack-for-a-simpler-ci-integration/),
+  on how Screenshotbot can now extract commit graph data from remote repositories
+  (assuming one has SSH access to their Git repositories),
+  by Arnold Noronha on Screenshotbot Blog.
++ [Fixing SSH Conflicts: Using a Separate SSH Key for GitHub](https://dev.to/hastycodea/fixing-ssh-conflicts-using-a-separate-ssh-key-for-github-4in1)
+  by Hastycode Andreh on DEV\.to.
+  One trick to add is the use of `url.<base>.insteadOf`.
+
+
 <!---
 __Easy watching__
 -->
 
 __Git tools and sites__
+
++ [A modern theme for cgit](https://yingtongli.me/blog/2025/05/16/cgit.html)
+  by Lee Yingtong Li on Inane Observations blog.
+  Source code for described themed fork of cgit is available
+  at <https://yingtongli.me/git/cgit-yli-theme>.
 
 
 ## Releases
