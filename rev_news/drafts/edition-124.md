@@ -39,6 +39,7 @@ __Various__
 
 
 __Light reading__
++ [How to Install Gitea (with SQLite3 and HTTPS!) on a VPS](https://www.git-tower.com/blog/how-to-install-gitea)
 
 <!---
 __Easy watching__
@@ -74,6 +75,8 @@ __Git tools and sites__
 [3.4.21](https://desktop.github.com/release-notes/)
 + GitButler [0.14.35](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.35),
 [0.14.34](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.34)
++ Tower for Mac [13](https://www.git-tower.com/release-notes/mac) - [Release Blog Post](https://www.git-tower.com/blog/posts/tower-mac-13) / [YouTube video](https://youtu.be/2hjLn9mq9fY)
++ Tower for Windows [9.1](https://www.git-tower.com/beta/windows) (Beta) - [Release Blog Post](https://www.git-tower.com/blog/posts/tower-windows-91)
 
 ## Credits
 
