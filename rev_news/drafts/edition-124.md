@@ -49,6 +49,31 @@ __Git tools and sites__
 
 ## Releases
 
++ Git [2.50.0](https://public-inbox.org/git/xmqq1prj1umb.fsf@gitster.g/),
+[2.50.0-rc2](https://public-inbox.org/git/xmqqfrg8surr.fsf@gitster.g/),
+[2.50.0-rc1](https://public-inbox.org/git/xmqqsekgn4gk.fsf@gitster.g/)
++ Git for Windows [2.50.0.windows.1](https://github.com/git-for-windows/git/releases/tag/v2.50.0.windows.1),
+[2.50.0-rc2.windows.1 (pre-release)](https://github.com/git-for-windows/git/releases/tag/v2.50.0-rc2.windows.1),
+[2.50.0-rc1.windows.1 (pre-release)](https://github.com/git-for-windows/git/releases/tag/v2.50.0-rc1.windows.1),
+[2.50.0-rc0.windows.1 (pre-release)](https://github.com/git-for-windows/git/releases/tag/v2.50.0-rc0.windows.1)
++ libgit2 [1.9.1](https://github.com/libgit2/libgit2/releases/tag/v1.9.1)
++ GitLab [18.1.1, 18.0.3, 17.11.5](https://about.gitlab.com/releases/2025/06/25/patch-release-gitlab-18-1-1-released/),
+[18.1](https://about.gitlab.com/releases/2025/06/19/gitlab-18-1-released/),
+[18.0.2, 17.11.4, 17.10.8](https://about.gitlab.com/releases/2025/06/11/patch-release-gitlab-18-0-2-released/)
++ GitHub Enterprise [3.17.1](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.1),
+[3.16.4](https://docs.github.com/enterprise-server@3.16/admin/release-notes#3.16.4),
+[3.15.8](https://docs.github.com/enterprise-server@3.15/admin/release-notes#3.15.8),
+[3.14.13](https://docs.github.com/enterprise-server@3.14/admin/release-notes#3.14.13),
+[3.13.16](https://docs.github.com/enterprise-server@3.13/admin/release-notes#3.13.16),
+[3.17.0](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.0)
++ GitKraken [11.2.0](https://help.gitkraken.com/gitkraken-client/current/),
+[11.1.1](https://help.gitkraken.com/gitkraken-client/current/),
+[11.1.0](https://help.gitkraken.com/gitkraken-client/current/),
+[11.0.0](https://help.gitkraken.com/gitkraken-client/current/)
++ GitHub Desktop [3.5.0](https://desktop.github.com/release-notes/),
+[3.4.21](https://desktop.github.com/release-notes/)
++ GitButler [0.14.35](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.35),
+[0.14.34](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.14.34)
 
 ## Credits
 
