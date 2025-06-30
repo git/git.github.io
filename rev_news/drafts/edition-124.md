@@ -25,9 +25,62 @@ This edition covers what happened during the months of May 2025 and June 2025.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [[BUG] git stash incorrectly showing submodule branch instead of superproject branch](https://lore.kernel.org/git/TO1PPF29324B4CE6D3518208073452C3C51CD97A@TO1PPF29324B4CE.CANPRD01.PROD.OUTLOOK.COM/)
+
+  Stuart MacDonald sent a bug report to the mailing list. The report
+  described a workflow where people worked on a UI project that
+  included a hardware SDK as a submodule. Both the UI project (the
+  "superproject") and the SDK project (the submodule) had their own
+  branches.
+
+  When using `git stash` on a bug fix branch on the superproject,
+  while the submodule was on a feature branch, it appeared that the
+  command `git stash list` output a message, like:
+
+  `stash@{0}: On feature_sdk_foo: debugging`
+
+  indicating the stash had been created on the submodule's branch
+  instead of the superproject's branch. The branch `feature_sdk_foo`
+  didn't even exist in the superproject.
+
+  Stuart mentioned he thought this used to work correctly around 2021,
+  though he wasn't 100% certain.
+
+  K Jayatheerth replied to Stuart confirming the bug happened on
+  different OSes, showing minimal steps to reproduce it, and saying it
+  was "one of the most interesting Git bugs" he had seen in a while.
+
+  Jayatheerth came back later with
+  [a patch](https://lore.kernel.org/git/20250512164001.62065-1-jayatheerthkulkarni2005@gmail.com/)
+  that fixed the bug. It appeared that the branch name was obtained
+  via the `refs_resolve_ref_unsafe()` function, which returns a
+  pointer to a static buffer, but that static buffer was overwritten.
+  To fix this, the patch copied the branch name instead of pointing to
+  the static buffer.
+
+  Stuart thanked Jayatheerth even though he couldn't rebuild Git with
+  the patch.
+
+  Junio Hamano, the Git maintainer, replied to the patch with small
+  suggestions, while Eric Sunshine noted that the change should also
+  be accompanied by a new test.
+
+  Jayatheerth replied to Eric and Junio saying he would fix the small
+  issues and add tests, which he later did in
+  [an updated patch](https://lore.kernel.org/git/20250608063537.233243-1-jayatheerthkulkarni2005@gmail.com/).
+
+  René Scharfe reviewed the updated patch and suggested a number of
+  improvements to the code and the test.
+
+  Jayatheerth then sent
+  [a v2 of his patch](https://lore.kernel.org/git/20250608144542.275836-1-jayatheerthkulkarni2005@gmail.com/)
+  which addressed René's comments. Junio reviewed it and suggested
+  further improvements.
+
+  [The v3 patch from Jayatheerth](https://lore.kernel.org/git/20250611014204.24994-1-jayatheerthkulkarni2005@gmail.com/)
+  addressed Junio's comment and was merged.
 
 ## Community Spotlight: Luca Milanesio
 
