@@ -536,6 +536,7 @@ __Various__
 
 __Light reading__
 + [How to Install Gitea (with SQLite3 and HTTPS!) on a VPS](https://www.git-tower.com/blog/how-to-install-gitea)
+  by Bruno Brito on Tower Blog.
 + [Reduce the load on GitLab Gitaly with bundle URI](https://about.gitlab.com/blog/reduce-the-load-on-gitlab-gitaly-with-bundle-uri/).
   Discover what the bundle URI Git feature is, how it is integrated into Gitaly,
   configuration best practices, and how GitLab users can benefit from it.
