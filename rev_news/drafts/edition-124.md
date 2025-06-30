@@ -37,6 +37,8 @@ This edition covers what happened during the months of May 2025 and June 2025.
 
 __Various__
 
++ The Git Merge 2025 [speaker list](https://git-merge.com/#speakers)
+  and [schedule](https://git-merge.com/#schedule) have been announced.
 
 __Light reading__
 + [How to Install Gitea (with SQLite3 and HTTPS!) on a VPS](https://www.git-tower.com/blog/how-to-install-gitea)
