@@ -85,8 +85,8 @@ This edition covers what happened during the months of May 2025 and June 2025.
 ## Community Spotlight: Luca Milanesio
 
 _Luca Milanesio is a long standing contributor to both JGit and Gerrit
-Code Review, an open-source veteran who's been accelerating Git
-workflows for 30+ years—from founding GerritHub.io to pioneering
+Code Review, an open-source veteran who's been accelerating Application
+Lifecycle workflows for 30+ years—from founding GerritHub.io to pioneering
 AI-powered repository optimization research._
 
 _This is a continuation of our initiative to interview community
@@ -275,7 +275,7 @@ were with [VonC in edition 106][vonc] and [Chris Torek in edition 120][torek]._
   snapshot of the reftable read in memory, and restart the
   whole transaction from scratch.
 
-  The issue here is that the reftable is simply configured
+  The issue here is that reftable is simply configured
   as a storage format for the refs, and the higher layers
   are currently unprepared to manage the difference in
   behaviour. This is currently causing trouble in the
@@ -536,7 +536,6 @@ __Various__
 
 __Light reading__
 + [How to Install Gitea (with SQLite3 and HTTPS!) on a VPS](https://www.git-tower.com/blog/how-to-install-gitea)
-  by Bruno Brito on Tower Blog.
 + [Reduce the load on GitLab Gitaly with bundle URI](https://about.gitlab.com/blog/reduce-the-load-on-gitlab-gitaly-with-bundle-uri/).
   Discover what the bundle URI Git feature is, how it is integrated into Gitaly,
   configuration best practices, and how GitLab users can benefit from it.
