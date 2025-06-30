@@ -506,6 +506,8 @@ were with [VonC in edition 106][vonc] and [Chris Torek in edition 120][torek]._
 ## Other News
 
 __Various__
++ The Git Merge 2025 [speaker list](https://git-merge.com/#speakers)
+  and [schedule](https://git-merge.com/#schedule) have been announced.
 + [[ANNOUNCE] Git v2.50.0](https://lore.kernel.org/git/xmqq1prj1umb.fsf@gitster.g/T/#u)
   by Junio C Hamano on the Git mailing list.
 + [Highlights from Git 2.50](https://github.blog/open-source/git/highlights-from-git-2-50/)
@@ -530,6 +532,7 @@ __Various__
   (used by GitLab to generate repository backups
   and also as part of the [bundle-URI](https://git-scm.com/docs/bundle-uri) mechanism),
   and better bundle URI unbundling.
+
 
 __Light reading__
 + [How to Install Gitea (with SQLite3 and HTTPS!) on a VPS](https://www.git-tower.com/blog/how-to-install-gitea)
