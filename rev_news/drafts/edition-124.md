@@ -462,6 +462,12 @@ __Light reading__
 __Easy watching__
 -->
 
+__Scientific papers__
++ Shane McIntosh, <u>Luca Milanesio</u>, Antonio Barone, Jacek Centkowski, Marcin Czech, Fabio Ponciroli:
+  _"Using Reinforcement Learning to Sustain the Performance of Version Control Repositories"_,
+  ICSE 2025: 47th International Conference on Software Engineering,
+  <https://rebels.cs.uwaterloo.ca/papers/icse2025nier_mcintosh.pdf> (preprint)
+
 __Git tools and sites__
 
 
