@@ -13,7 +13,7 @@ Welcome to the 124th edition of [Git Rev News](https://git.github.io/rev_news/re
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
-This edition covers what happened during the months of May 2025 and June 2025.
+This edition covers what happened during the months of May and June 2025.
 
 ## Discussions
 
@@ -27,7 +27,7 @@ This edition covers what happened during the months of May 2025 and June 2025.
 
 ### Support
 
-* [[BUG] git stash incorrectly showing submodule branch instead of superproject branch](https://lore.kernel.org/git/TO1PPF29324B4CE6D3518208073452C3C51CD97A@TO1PPF29324B4CE.CANPRD01.PROD.OUTLOOK.COM/)
+* [[BUG] `git stash` incorrectly showing submodule branch instead of superproject branch](https://lore.kernel.org/git/TO1PPF29324B4CE6D3518208073452C3C51CD97A@TO1PPF29324B4CE.CANPRD01.PROD.OUTLOOK.COM/)
 
   Stuart MacDonald sent a bug report to the mailing list. The report
   described a workflow where people worked on a UI project that
@@ -80,13 +80,13 @@ This edition covers what happened during the months of May 2025 and June 2025.
   further improvements.
 
   [The v3 patch from Jayatheerth](https://lore.kernel.org/git/20250611014204.24994-1-jayatheerthkulkarni2005@gmail.com/)
-  addressed Junio's comment and was merged.
+  addressed Junio's comments and was merged.
 
 ## Community Spotlight: Luca Milanesio
 
 _Luca Milanesio is a long standing contributor to both JGit and Gerrit
-Code Review, an open-source veteran who's been accelerating Git
-workflows for 30+ years—from founding GerritHub.io to pioneering
+Code Review, an open-source veteran who's been accelerating Application
+Lifecycle workflows for 30+ years—from founding GerritHub.io to pioneering
 AI-powered repository optimization research._
 
 _This is a continuation of our initiative to interview community
@@ -105,8 +105,8 @@ were with [VonC in edition 106][vonc] and [Chris Torek in edition 120][torek]._
   including Jenkins, JGit, GitBlit, Swagger/Open-API, Kibana, Avro,
   and Gerrit Code Review.
 
-  I am a maintainer and release manager of Gerrit Code Review and a
-  member of its Engineering Steering Committee and committer of the
+  I am a maintainer and release manager of Gerrit Code Review, a
+  member of its Engineering Steering Committee, and committer of the
   JGit project.
 
   I introduced GerritHub.io 11 years ago, a free Gerrit Code Review
@@ -275,7 +275,7 @@ were with [VonC in edition 106][vonc] and [Chris Torek in edition 120][torek]._
   snapshot of the reftable read in memory, and restart the
   whole transaction from scratch.
 
-  The issue here is that the reftable is simply configured
+  The issue here is that reftable is simply configured
   as a storage format for the refs, and the higher layers
   are currently unprepared to manage the difference in
   behaviour. This is currently causing trouble in the
@@ -290,7 +290,7 @@ were with [VonC in edition 106][vonc] and [Chris Torek in edition 120][torek]._
   of what it is and how it should be used, and cannot be simply used
   blindly, assuming that it works exactly as a loose-ref or
   packed-refs. Reftable is ready, Git and Gerrit Code Review aren’t
-  ready yet to leverage it and I am sure they will soon be adjusted
+  ready yet to leverage it, and I am sure they will soon be adjusted
   to get the best use of it.
 
 - **What's your approach to load testing Git repositories \- which
@@ -514,20 +514,20 @@ __Various__
   by Taylor Blau on GitHub Blog.<br>
   Mentions
   improvements for multiple cruft packs, including `git repack --combine-cruft-below-size`
-  (and improvements to it's `--max-cruft-size` option),
+  (and improvements to its `--max-cruft-size` option),
   incremental multi-pack reachability bitmaps (highly experimental),
-  "ort" merge strategy replacing "recursive" strategy entirely,
+  the "ort" merge strategy replacing the "recursive" strategy entirely,
   various `git cat-file` improvements, `git maintenance` new tricks, and more.
 + [What’s new in Git 2.50.0?](https://about.gitlab.com/blog/what-s-new-in-git-2-50-0/)
   by Justin Tobler on GitLab Blog.<br>
-  Mentions
+  Mentions the
   new [git-diff-pairs(1)](https://git-scm.com/docs/git-diff-pairs) command
   which accepts "raw" formatted filepair info (from e.g. `git diff-tree`)
   as input on stdin to determine exactly which patches to output,
   batched reference updates with [git-update-ref(1)](https://git-scm.com/docs/git-update-ref)
   and its new `--batch-updates` option
   (which allows the updates to proceed even when one or more reference updates fails),
-  new `--filter` option for [git-cat-file(1)](https://git-scm.com/docs/git-cat-file),
+  the new `--filter` option for [git-cat-file(1)](https://git-scm.com/docs/git-cat-file),
   improved performance when generating bundles with [git-bundle(1)](https://git-scm.com/docs/git-bundle)
   (used by GitLab to generate repository backups
   and also as part of the [bundle-URI](https://git-scm.com/docs/bundle-uri) mechanism),
@@ -543,7 +543,7 @@ __Light reading__
   GitLab Blog post writen by Olivier Campeau.
 + [How we decreased GitLab repo backup times from 48 hours to 41 minutes](https://about.gitlab.com/blog/how-we-decreased-gitlab-repo-backup-times-from-48-hours-to-41-minutes/)
   by Karthik Nayak and Manuel Kraft on GitLab Blog.
-  Describes how GitLab team tracked a performance bottleneck in `git bundle create`
+  Describes how the GitLab team tracked a performance bottleneck in `git bundle create`
   to a 15-year-old Git function and fixed it.
 + [Working with stacked branches in git (part 2)](https://andrewlock.net/working-with-stacked-branches-in-git-part-2/)
   by Andrew Lock on his blog, \.NET Escapades, continues where
@@ -597,7 +597,7 @@ __Light reading__
   used by Linux kernel.
 + [The history of change-packing tools at Microsoft (so far)](https://devblogs.microsoft.com/oldnewthing/20180122-00/)
   by Raymond Chen on Microsoft Dev Blogs: The Old New Thing (2018).<br>
-  Change-packing is a way to save whole changeset or commit to a single file,
+  Change-packing is a way to save a whole changeset or commit to a single file,
   to be able to save changes without committing them (like `git stash`),
   or to get another developer’s opinion on code you’ve written (_buddy build_), etc.
 + [GIF: The Git Interchange Format](https://willhbr.net/2025/06/16/gif-the-git-interchange-format/)
@@ -612,7 +612,7 @@ __Scientific papers__
 + Shane McIntosh, <u>Luca Milanesio</u>, Antonio Barone, Jacek Centkowski, Marcin Czech, Fabio Ponciroli:
   _"Using Reinforcement Learning to Sustain the Performance of Version Control Repositories"_,
   ICSE 2025: 47th International Conference on Software Engineering,
-  <https://rebels.cs.uwaterloo.ca/papers/icse2025nier_mcintosh.pdf> (preprint)
+  <https://rebels.cs.uwaterloo.ca/papers/icse2025nier_mcintosh.pdf> (preprint).
 + Jakub Narębski, Mikołaj Fejzer, Krzysztof Stencel, Piotr Przymus:
   _"PatchScope - A Modular Tool for Annotating and Analyzing Contributions"_,
   ISSTA 2025: 34th ACM SIGSOFT International Symposium on Software Testing and Analysis,
