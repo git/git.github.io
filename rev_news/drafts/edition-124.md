@@ -29,9 +29,9 @@ This edition covers what happened during the months of May 2025 and June 2025.
 ### Support
 -->
 
-## Community Spotlight: Luca Milanesi
+## Community Spotlight: Luca Milanesio
 
-_Luca Milanesio is long standing contributor to both JGit and Gerrit
+_Luca Milanesio is a long standing contributor to both JGit and Gerrit
 Code Review, an open-source veteran who's been accelerating Git
 workflows for 30+ years—from founding GerritHub.io to pioneering
 AI-powered repository optimization research._
