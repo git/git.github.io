@@ -609,6 +609,12 @@ __Scientific papers__
   _"Using Reinforcement Learning to Sustain the Performance of Version Control Repositories"_,
   ICSE 2025: 47th International Conference on Software Engineering,
   <https://rebels.cs.uwaterloo.ca/papers/icse2025nier_mcintosh.pdf> (preprint)
++ Jakub Narębski, Mikołaj Fejzer, Krzysztof Stencel, Piotr Przymus:
+  _"PatchScope - A Modular Tool for Annotating and Analyzing Contributions"_,
+  ISSTA 2025: 34th ACM SIGSOFT International Symposium on Software Testing and Analysis,
+  [DOI:10.1145/3713081.3731727](https://dl.acm.org/doi/10.1145/3713081.3731727) (short paper, free access).
+    + [PatchScope](https://github.com/ncusi/PatchScope) was first mentioned in
+      [Git Rev News Edition #117](https://git.github.io/rev_news/2024/11/30/edition-117/).
 
 __Git tools and sites__
 + [GetHooky](https://ezpieco.github.io/GetHooky/) is a simple git hook manager for everyone.
