@@ -506,10 +506,99 @@ were with [VonC in edition 106][vonc] and [Chris Torek in edition 120][torek]._
 ## Other News
 
 __Various__
-
++ [[ANNOUNCE] Git v2.50.0](https://lore.kernel.org/git/xmqq1prj1umb.fsf@gitster.g/T/#u)
+  by Junio C Hamano on the Git mailing list.
++ [Highlights from Git 2.50](https://github.blog/open-source/git/highlights-from-git-2-50/)
+  by Taylor Blau on GitHub Blog.<br>
+  Mentions
+  improvements for multiple cruft packs, including `git repack --combine-cruft-below-size`
+  (and improvements to it's `--max-cruft-size` option),
+  incremental multi-pack reachability bitmaps (highly experimental),
+  "ort" merge strategy replacing "recursive" strategy entirely,
+  various `git cat-file` improvements, `git maintenance` new tricks, and more.
++ [What’s new in Git 2.50.0?](https://about.gitlab.com/blog/what-s-new-in-git-2-50-0/)
+  by Justin Tobler on GitLab Blog.<br>
+  Mentions
+  new [git-diff-pairs(1)](https://git-scm.com/docs/git-diff-pairs) command
+  which accepts "raw" formatted filepair info (from e.g. `git diff-tree`)
+  as input on stdin to determine exactly which patches to output,
+  batched reference updates with [git-update-ref(1)](https://git-scm.com/docs/git-update-ref)
+  and its new `--batch-updates` option
+  (which allows the updates to proceed even when one or more reference updates fails),
+  new `--filter` option for [git-cat-file(1)](https://git-scm.com/docs/git-cat-file),
+  improved performance when generating bundles with [git-bundle(1)](https://git-scm.com/docs/git-bundle)
+  (used by GitLab to generate repository backups
+  and also as part of the [bundle-URI](https://git-scm.com/docs/bundle-uri) mechanism),
+  and better bundle URI unbundling.
 
 __Light reading__
 + [How to Install Gitea (with SQLite3 and HTTPS!) on a VPS](https://www.git-tower.com/blog/how-to-install-gitea)
++ [Reduce the load on GitLab Gitaly with bundle URI](https://about.gitlab.com/blog/reduce-the-load-on-gitlab-gitaly-with-bundle-uri/).
+  Discover what the bundle URI Git feature is, how it is integrated into Gitaly,
+  configuration best practices, and how GitLab users can benefit from it.
+  GitLab Blog post writen by Olivier Campeau.
++ [How we decreased GitLab repo backup times from 48 hours to 41 minutes](https://about.gitlab.com/blog/how-we-decreased-gitlab-repo-backup-times-from-48-hours-to-41-minutes/)
+  by Karthik Nayak and Manuel Kraft on GitLab Blog.
+  Describes how GitLab team tracked a performance bottleneck in `git bundle create`
+  to a 15-year-old Git function and fixed it.
++ [Working with stacked branches in git (part 2)](https://andrewlock.net/working-with-stacked-branches-in-git-part-2/)
+  by Andrew Lock on his blog, \.NET Escapades, continues where
+  [Working with stacked branches](https://andrewlock.net/working-with-stacked-branches-in-git-is-easier-with-update-refs/) left
+  (which was mentioned in [Git Rev News Edition #93](https://git.github.io/rev_news/2022/11/30/edition-93/))
++ [Git: please stop squash merging!](https://lucasoshiro.github.io/posts-en/2024-04-08-please_dont_squash/)
+  and [Git: the danger of squash merging submodules](https://lucasoshiro.github.io/posts-en/2024-06-27-squash-submodule/)
+  by Lucas Seiki Oshiro on his GitHub Pages-powered personal blog.
+    + The first of those blog posts mentions
+      [Squash commits considered harmful](https://dev.to/wesen/squash-commits-considered-harmful-ob1) by Manuel Odendahl and
+      [Squash merges are evil](https://medium.com/bananatag-engineering-blog/squash-merges-are-evil-171f55139c51) by L. Holanda.
+   + See for example [Combining branches](https://programming.dev/pictrs/image/0fe7c7bd-b762-453f-bac7-ed2e34d44ba0.png) (PNG)
+      comic by Julia Evans (@b0rk) about differences between merge, rebase, and squash merge.
++ [Cleaning up gone branches](https://haacked.com/archive/2025/04/17/git-gone/)
+  by Phil Haack on his You've Been Haacked blog.
+  Describes how to delete all the branches that have been merged into the default branch,
+  even if the project uses Squash and Merge when merging PRs
+  (also known as squash merge).
++ [Part 7: Office Migration from Source Depot to Git, or how I learned to love DevEx](https://danielsada.tech/blog/carreer-part-7-how-office-moved-to-git-and-i-loved-devex/)
+  by Daniel Sada on his personal blog
+  (part of his [My career so far](https://danielsada.tech/series/my-career-so-far/) series).
+    + Nicely complements [Microsoft’s Performance Contributions to Git in 2017](https://devblogs.microsoft.com/devops/microsofts-performance-contributions-to-git-in-2017/)
+      by Derrick Stolee on Microsoft Dev Blogs, mentioned in
+      [Git Rev News Edition #40](https://git.github.io/rev_news/2018/06/20/edition-40/),
+      and other posts at <https://stolee.dev/>.
++ [Git Branch Manager: a manager for git branches](https://daveschumaker.net/git-branch-manager-a-manager-for-git-branches/)
+  by Dave Schumaker on his blog,
+  describes how he created [Git Branch Manager](https://github.com/daveschumaker/gbm)
+  tool by "vibe coding" with Claude Code.  The 'P.S.' part just kills it...
++ [no more gitmojis](https://kjelsrud.dev/blog/no-more-gitmojis/)
+  on Sids' blog; moving from [gitmojis](https://gitmoji.dev/)
+  to just using [conventional commits](https://conventionalcommits.org/).
+    + [Gitmoji](https://gitmoji.dev/) was first mentioned in [Git Rev News Edition #47](https://git.github.io/rev_news/2019/01/23/edition-47/),
+      though then under a [different URL](https://gitmoji.carloscuesta.me/)
+      (which now redirects to the current one).
+    + The similar [Emoji-Log](https://github.com/ahmadawais/Emoji-Log) commit log messages standard
+      was mentioned in [Git Rev News Edition #101](https://git.github.io/rev_news/2023/07/31/edition-101/).
+    + The [Conventional Commits](https://www.conventionalcommits.org/) specification
+      was first mentioned in [Git Rev News Edition #52](https://git.github.io/rev_news/2019/06/28/edition-52/),
+      and in many editions since.
++ [`git diff --ignore-all-space` makes code review way easier](https://garrit.xyz/posts/2025-06-11-git-diff-ignore-all-space-makes-code-reviews-way-easier)
+  by Garrit Franke on Garrit's Notes blog;
+  a TIL (Today I've Learned) style post.
++ [Per-project git commit templates](https://tylercipriani.com/blog/2025/05/21/git-commits/)
+  by Tyler Cipriani on his blog.
+  Mentions in passing different commit guidelines used by various projects, like
+  [Conventional Commits](https://www.conventionalcommits.org/),
+    [Gitmoji](https://gitmoji.dev/),
+  [Problem/Solution format](https://zeromq.org/how-to-contribute/#write-good-commit-messages) used by ZeroMQ, and
+  [Acked-by:, Cc:, and Co-developed-by: trailers](https://docs.kernel.org/process/submitting-patches.html#when-to-use-acked-by-cc-and-co-developed-by)
+  used by Linux kernel.
++ [The history of change-packing tools at Microsoft (so far)](https://devblogs.microsoft.com/oldnewthing/20180122-00/)
+  by Raymond Chen on Microsoft Dev Blogs: The Old New Thing (2018).<br>
+  Change-packing is a way to save whole changeset or commit to a single file,
+  to be able to save changes without committing them (like `git stash`),
+  or to get another developer’s opinion on code you’ve written (_buddy build_), etc.
++ [GIF: The Git Interchange Format](https://willhbr.net/2025/06/16/gif-the-git-interchange-format/)
+  by Will Richardson on his blog,
+  about how to cram a whole git repo (with history) into an animated GIF.
 
 <!---
 __Easy watching__
@@ -522,6 +611,31 @@ __Scientific papers__
   <https://rebels.cs.uwaterloo.ca/papers/icse2025nier_mcintosh.pdf> (preprint)
 
 __Git tools and sites__
++ [GetHooky](https://ezpieco.github.io/GetHooky/) is a simple git hook manager for everyone.
+  Inspired by [Husky](https://typicode.github.io/husky/),
+  but is a CLI tool, thus works for every stack.
+  Written in Go, under MIT license.
+    + [Husky](https://github.com/typicode/husky), a Git hook management tool, was first mentioned in
+      [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/);
+      you can find links to other articles talking about it in
+      [#87](https://git.github.io/rev_news/2022/05/26/edition-87/),
+      [#89](https://git.github.io/rev_news/2022/07/31/edition-89/), and
+      [#102](https://git.github.io/rev_news/2023/08/31/edition-102/).
++ [Git Branch Manager](https://github.com/daveschumaker/gbm) is
+  a terminal-based (TUI) Git branch management tool
+  that provides an interactive interface for managing Git branches,
+  with rich visual feedback and advanced features.
+  Written in Python (with the help of Claude Code), under MIT license.
++ [Gittyup](https://github.com/Murmele/Gittyup) is a graphical Git client
+  designed to help you understand and manage your source code history.
+  Written in C++ using Qt, under MIT license.
+  It is a continuation of the [GitAhead](https://github.com/gitahead/gitahead) client,
+  mentioned in [Git Rev News Edition #59](https://git.github.io/rev_news/2020/01/22/edition-59/).
++ [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog)
+  is an npm tool to generate changelogs and release notes
+  from a project's commit messages and metadata.
+  Written in TypeScript and JavaScript, under ISC license.
+  First mentioned in [Git Rev News Edition #81](https://git.github.io/rev_news/2021/11/29/edition-81/).
 
 
 ## Releases
