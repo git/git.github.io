@@ -508,6 +508,7 @@ were with [VonC in edition 106][vonc] and [Chris Torek in edition 120][torek]._
 __Various__
 + The Git Merge 2025 [speaker list](https://git-merge.com/#speakers)
   and [schedule](https://git-merge.com/#schedule) have been announced.
+  It will be held on September 29 - 30, 2025, in San Francisco, CA, USA.
 + [[ANNOUNCE] Git v2.50.0](https://lore.kernel.org/git/xmqq1prj1umb.fsf@gitster.g/T/#u)
   by Junio C Hamano on the Git mailing list.
 + [Highlights from Git 2.50](https://github.blog/open-source/git/highlights-from-git-2-50/)
