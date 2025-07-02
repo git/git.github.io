@@ -556,7 +556,7 @@ __Light reading__
     + The first of those blog posts mentions
       [Squash commits considered harmful](https://dev.to/wesen/squash-commits-considered-harmful-ob1) by Manuel Odendahl and
       [Squash merges are evil](https://medium.com/bananatag-engineering-blog/squash-merges-are-evil-171f55139c51) by L. Holanda.
-    + See the [Combining branches](https://programming.dev/pictrs/image/0fe7c7bd-b762-453f-bac7-ed2e34d44ba0.png) (PNG)
+    + See the [Combining branches](https://wizardzines.com/comics/combining-branches/)
       comic by Julia Evans (@b0rk) for an explanation about the differences between merge, rebase, and squash merge.
 + [Cleaning up gone branches](https://haacked.com/archive/2025/04/17/git-gone/)
   by Phil Haack on his You've Been Haacked blog.
