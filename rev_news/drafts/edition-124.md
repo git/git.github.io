@@ -157,7 +157,7 @@ were with [VonC in edition 106][vonc] and [Chris Torek in edition 120][torek]._
   I started using RCS on my Unix box for tracking the local version of files
   and avoiding bad surprises, and since then I’ve seen so many so-called
   revolutions of the version control that promised “the moon” but ended up
-  creating yet another commercial silos. To name a few, consider
+  creating yet another commercial silo. To name a few, consider
   [Rational ClearCase][clearcase] and [Perforce][perforce], and the legacy
   they have made for the software industry.
 
@@ -167,7 +167,7 @@ were with [VonC in edition 106][vonc] and [Chris Torek in edition 120][torek]._
   forever as-is, even though it would be difficult to imagine an
   Open-Source project starting today not using Git as version control.
 
-  But if you roll back to the year 2000s, you could have swapped Microsoft
+  But if you roll back to the year 2000, you could have swapped Microsoft
   with VA Software and Git with Subversion, and asked the same question:
   _`“What version control and hosting site should a new Open-Source project
   use?”_ I believe the answer would differ significantly from the one you
@@ -426,7 +426,7 @@ were with [VonC in edition 106][vonc] and [Chris Torek in edition 120][torek]._
 
   Also, my unfortunate mistake highlighted the resilience of the
   Git repository model, where there isn’t a “single source of truth”
-  and GitHub’s repository is just “one of the repositories peers”
+  and GitHub’s repository is just “one of the peer repositories”
   around the globe. You can always recover from any type of damage
   with Git, at least from what I’ve seen in my 15 years of
   contributing and using it with real-life large-scale repositories
@@ -548,16 +548,16 @@ __Light reading__
   to a 15-year-old Git function and fixed it.
 + [Working with stacked branches in git (part 2)](https://andrewlock.net/working-with-stacked-branches-in-git-part-2/)
   by Andrew Lock on his blog, \.NET Escapades, continues where
-  [Working with stacked branches](https://andrewlock.net/working-with-stacked-branches-in-git-is-easier-with-update-refs/) left
-  (which was mentioned in [Git Rev News Edition #93](https://git.github.io/rev_news/2022/11/30/edition-93/))
+  [Working with stacked branches](https://andrewlock.net/working-with-stacked-branches-in-git-is-easier-with-update-refs/)
+  (mentioned in [Git Rev News Edition #93](https://git.github.io/rev_news/2022/11/30/edition-93/)) left off.
 + [Git: please stop squash merging!](https://lucasoshiro.github.io/posts-en/2024-04-08-please_dont_squash/)
   and [Git: the danger of squash merging submodules](https://lucasoshiro.github.io/posts-en/2024-06-27-squash-submodule/)
   by Lucas Seiki Oshiro on his GitHub Pages-powered personal blog.
     + The first of those blog posts mentions
       [Squash commits considered harmful](https://dev.to/wesen/squash-commits-considered-harmful-ob1) by Manuel Odendahl and
       [Squash merges are evil](https://medium.com/bananatag-engineering-blog/squash-merges-are-evil-171f55139c51) by L. Holanda.
-   + See for example [Combining branches](https://programming.dev/pictrs/image/0fe7c7bd-b762-453f-bac7-ed2e34d44ba0.png) (PNG)
-      comic by Julia Evans (@b0rk) about differences between merge, rebase, and squash merge.
+    + See the [Combining branches](https://programming.dev/pictrs/image/0fe7c7bd-b762-453f-bac7-ed2e34d44ba0.png) (PNG)
+      comic by Julia Evans (@b0rk) for an explanation about the differences between merge, rebase, and squash merge.
 + [Cleaning up gone branches](https://haacked.com/archive/2025/04/17/git-gone/)
   by Phil Haack on his You've Been Haacked blog.
   Describes how to delete all the branches that have been merged into the default branch,
@@ -572,7 +572,7 @@ __Light reading__
       and other posts at <https://stolee.dev/>.
 + [Git Branch Manager: a manager for git branches](https://daveschumaker.net/git-branch-manager-a-manager-for-git-branches/)
   by Dave Schumaker on his blog,
-  describes how he created [Git Branch Manager](https://github.com/daveschumaker/gbm)
+  describes how he created the [Git Branch Manager](https://github.com/daveschumaker/gbm)
   tool by "vibe coding" with Claude Code.  The 'P.S.' part just kills it...
 + [no more gitmojis](https://kjelsrud.dev/blog/no-more-gitmojis/)
   on Sids' blog; moving from [gitmojis](https://gitmoji.dev/)
@@ -595,7 +595,7 @@ __Light reading__
     [Gitmoji](https://gitmoji.dev/),
   [Problem/Solution format](https://zeromq.org/how-to-contribute/#write-good-commit-messages) used by ZeroMQ, and
   [Acked-by:, Cc:, and Co-developed-by: trailers](https://docs.kernel.org/process/submitting-patches.html#when-to-use-acked-by-cc-and-co-developed-by)
-  used by Linux kernel.
+  used by Linux kernel developers.
 + [The history of change-packing tools at Microsoft (so far)](https://devblogs.microsoft.com/oldnewthing/20180122-00/)
   by Raymond Chen on Microsoft Dev Blogs: The Old New Thing (2018).<br>
   Change-packing is a way to save a whole changeset or commit to a single file,
@@ -624,7 +624,7 @@ __Scientific papers__
 __Git tools and sites__
 + [GetHooky](https://ezpieco.github.io/GetHooky/) is a simple git hook manager for everyone.
   Inspired by [Husky](https://typicode.github.io/husky/),
-  but is a CLI tool, thus works for every stack.
+  but a CLI tool, thus works for every stack.
   Written in Go, under MIT license.
     + [Husky](https://github.com/typicode/husky), a Git hook management tool, was first mentioned in
       [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/);
