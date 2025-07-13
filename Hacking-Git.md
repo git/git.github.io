@@ -88,10 +88,6 @@ suggest improvements. Thanks!
 
 * [Git Merge conference](https://git-merge.com/).
 
-* [Review Club announces and discussions on the list](https://lore.kernel.org/git/?q=s%3A%22Review+Club%22).
-
-* [Review Club meeting notes](https://docs.google.com/document/d/14L8BAumGTpsXpjDY8VzZ4rRtpAjuGrFSRqn3stCuS_w) Google doc.
-
 * [Discussions about Contributor(s) Summits on the list](https://lore.kernel.org/git/?q=s%3AContributor*+Summit)
 
 ## Branching workflow
