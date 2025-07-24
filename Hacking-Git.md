@@ -78,6 +78,9 @@ suggest improvements. Thanks!
 
 * [git-related](https://github.com/felipec/git-related) finds people who might be interested in a patch.
 
+* [git-phoenix](https://github.com/yaitskov/git-phoenix) does repository recovery.
+
+
 ## Development status, news and events
 
 * [Junio's "What's cooking in git.git" emails](https://lore.kernel.org/git/?q=s%3A%22What%27s+cooking+in+git.git%22) list the status of various development topics.
