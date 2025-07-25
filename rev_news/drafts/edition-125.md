@@ -46,6 +46,7 @@ __Easy watching__
 
 __Git tools and sites__
 
+- [git-phoenix](https://github.com/yaitskov/git-phoenix) does repository recovery.
 
 ## Releases
 - Tower for Mac [13.1](https://www.git-tower.com/release-notes/mac?show_tab=release-notes)
