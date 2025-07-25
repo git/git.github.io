@@ -32,6 +32,8 @@ suggest improvements. Thanks!
 
 * [Fabien Sanglar's Git Source Code Review](https://fabiensanglard.net/git_code_review/architecture.php)
 
+* [DeepWiki git/git, an AI generated introduction level overview](https://deepwiki.com/git/git)
+
 * [Boost Your Programming Skills by Reading Git's Code](https://www.freecodecamp.org/news/boost-programming-skills-read-git-code/)
 
 ## Getting started hacking and contributing
