@@ -3,12 +3,15 @@ layout: default
 title: Hacking Git
 ---
 
-The goal of this document is not to be a tutorial, but rather to
-point to interesting material that has already been written.
+The goal of this document is not to be a tutorial, but rather to point
+to interesting material that has already been written.
 
-The goal is also not to list all the articles about Git or its
-internals. There are a lot of good resources, including free
-[books](http://git-scm.com/book/en/v2/), about that elsewhere.
+The goal is also not to list all the articles, tools or resources
+about Git or its internals. There are a lot of good resources,
+including [free books](http://git-scm.com/book/en/v2/), and the
+[archive of our newsletter](https://git.github.io/rev_news/archive/),
+about that elsewhere. So on this page we focus on what is the most
+interesting for developers starting to work on Git.
 
 Contributions are welcome though! Please contact us on the Git Mailing
 list (at [git@vger.kernel.org](mailto:git@vger.kernel.org)) or open an
