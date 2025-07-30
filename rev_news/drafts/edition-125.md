@@ -20,6 +20,22 @@ This edition covers what happened during the months of June 2025 and July 2025.
 
 ### General
 
+* 20 years ago: [Meet the new maintainer..](https://lore.kernel.org/git/Pine.LNX.4.58.0507262004320.3227@g5.osdl.org/)
+
+  On July 26 Jul 2005, so 20 years ago, Linus Torvalds announced on
+  the mailing list that Junio Hamano accepted the maintainership of
+  the Git project and that Junio "was the obvious choice". Linus said
+  he wasn't dropping Git but he just prefered working on it as a
+  contributor.
+
+  Junio replied with an [A note from the new GIT maintainer](https://lore.kernel.org/git/7vmzo8ss2l.fsf@assigned-by-dhcp.cox.net/)
+  email where he acknowledged his new role as Git maintainer, thanked
+  the community for their support and collaboration, and promised to
+  take a more careful and deliberate approach in shepherding the
+  project. He also said he would post his own patches to the mailing
+  list for review before including them in the repository, and
+  encouraged community feedback.
+
 * [[ANNOUNCE] Git Mini Summit at Open Source Summit Europe, Amsterdam, August 28th](https://lore.kernel.org/git/aGwHt9HCd86hVuKh@pks.im/)
 
   Patrick Steinhardt announced a Git Mini Summit co-located with the
@@ -30,7 +46,7 @@ This edition covers what happened during the months of June 2025 and July 2025.
   connect. For the lightning talks proposals should be sent to
   Patrick, while the possibility to have remote talks is still
   investigated.
-  
+
   [Registration is open](https://events.linuxfoundation.org/open-source-summit-europe/features/co-located-events/#git-mini-summit-2025)
   for only the Git Mini Summit and for the Open Source Summit Europe including the Git Mini Summit.
 
