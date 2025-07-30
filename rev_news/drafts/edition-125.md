@@ -17,9 +17,22 @@ This edition covers what happened during the months of June 2025 and July 2025.
 
 ## Discussions
 
-<!---
+
 ### General
--->
+
+* [[ANNOUNCE] Git Mini Summit at Open Source Summit Europe, Amsterdam, August 28th](https://lore.kernel.org/git/aGwHt9HCd86hVuKh@pks.im/)
+
+  Patrick Steinhardt announced a Git Mini Summit co-located with the
+  [Open Source Summit Europe](https://events.linuxfoundation.org/open-source-summit-europe/)
+  in Amsterdam on August 28th 2025.
+
+  There will be lightning talks and some time for people to
+  connect. For the lightning talks proposals should be sent to
+  Patrick, while the possibility to have remote talks is still
+  investigated.
+  
+  [Registration is open](https://events.linuxfoundation.org/open-source-summit-europe/features/co-located-events/#git-mini-summit-2025)
+  for only the Git Mini Summit and for the Open Source Summit Europe including the Git Mini Summit.
 
 <!---
 ### Reviews
