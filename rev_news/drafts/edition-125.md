@@ -78,8 +78,41 @@ __Git tools and sites__
 - [git-phoenix](https://github.com/yaitskov/git-phoenix) does repository recovery.
 
 ## Releases
-- Tower for Mac [13.1](https://www.git-tower.com/release-notes/mac?show_tab=release-notes)
-- Tower for Windows [9.1](https://www.git-tower.com/release-notes/windows?show_tab=release-notes) - [YT video](https://youtu.be/4pNRUz0bNIU)
+
++ Git [2.50.1 and friends](https://lore.kernel.org/git/xmqq5xg2wrd1.fsf@gitster.g/)
++ Git for Windows [2.50.1(1)](https://github.com/git-for-windows/git/releases/tag/v2.50.1.windows.1),
+[2.50.0(2)](https://github.com/git-for-windows/git/releases/tag/v2.50.0.windows.2),
+[2.49.1](https://github.com/git-for-windows/git/releases/tag/v2.49.1.windows.1)
++ GitHub Enterprise [3.17.4](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.4),
+[3.16.7](https://docs.github.com/enterprise-server@3.16/admin/release-notes#3.16.7),
+[3.15.11](https://docs.github.com/enterprise-server@3.15/admin/release-notes#3.15.11),
+[3.14.16](https://docs.github.com/enterprise-server@3.14/admin/release-notes#3.14.16),
+[3.17.3](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.3),
+[3.16.6](https://docs.github.com/enterprise-server@3.16/admin/release-notes#3.16.6),
+[3.15.10](https://docs.github.com/enterprise-server@3.15/admin/release-notes#3.15.10),
+[3.14.15](https://docs.github.com/enterprise-server@3.14/admin/release-notes#3.14.15),
+[3.17.2](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.2),
+[3.16.5](https://docs.github.com/enterprise-server@3.16/admin/release-notes#3.16.5),
+[3.15.9](https://docs.github.com/enterprise-server@3.15/admin/release-notes#3.15.9),
+[3.14.14](https://docs.github.com/enterprise-server@3.14/admin/release-notes#3.14.14)
++ GitLab [18.2.1, 18.1.3, 18.0.5](https://about.gitlab.com/releases/2025/07/23/patch-release-gitlab-18-2-1-released/),
+[18.2](https://about.gitlab.com/releases/2025/07/17/gitlab-18-2-released/),
+[18.1.2, 18.0.4, 17.11.6](https://about.gitlab.com/releases/2025/07/09/patch-release-gitlab-18-1-2-released/)
++ Gerrit Code Review [3.10.7](https://www.gerritcodereview.com/3.10.html#3107),
+[3.11.4](https://www.gerritcodereview.com/3.11.html#3114),
+[3.12.1](https://www.gerritcodereview.com/3.12.html#3121)
++ GitKraken [11.2.1](https://help.gitkraken.com/gitkraken-client/current/),
+[11.2.0](https://help.gitkraken.com/gitkraken-client/current/),
+[11.1.1](https://help.gitkraken.com/gitkraken-client/current/),
+[11.1.0](https://help.gitkraken.com/gitkraken-client/current/),
+[11.0.0](https://help.gitkraken.com/gitkraken-client/current/)
++ GitHub Desktop [3.5.2](https://desktop.github.com/release-notes/),
+[3.5.1](https://desktop.github.com/release-notes/)
++ Sourcetree [4.2.13](https://product-downloads.atlassian.com/software/sourcetree/ReleaseNotes/Sourcetree_4.2.13.html)
++ GitButler [0.15.8](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.15.8),
+[0.15.7](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.15.7)
++ Tower for Mac [13.1](https://www.git-tower.com/release-notes/mac?show_tab=release-notes)
++ Tower for Windows [9.1](https://www.git-tower.com/release-notes/windows?show_tab=release-notes) - [YT video](https://youtu.be/4pNRUz0bNIU)
 
 ## Credits
 
