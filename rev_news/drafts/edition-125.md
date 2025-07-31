@@ -50,9 +50,92 @@ This edition covers what happened during the months of June 2025 and July 2025.
   [Registration is open](https://events.linuxfoundation.org/open-source-summit-europe/features/co-located-events/#git-mini-summit-2025)
   for only the Git Mini Summit and for the Open Source Summit Europe including the Git Mini Summit.
 
-<!---
+
 ### Reviews
--->
+
+* [[PATCH v4 0/3] send-email: add oauth2 support and fix outlook breaking threads](https://lore.kernel.org/git/PN3PR01MB9597A83D537E3AE96144227EB8BA2@PN3PR01MB9597.INDPRD01.PROD.OUTLOOK.COM/)
+
+  Last April, Aditya Garg sent a patch series containing three main
+  changes to `git send-email`. He mentioned that he was sending the
+  email series using the very patches he is proposing, via Outlook.
+
+  The first patch, which was a rebased version of
+  [an earlier patch by Julian Swagemakers](https://lore.kernel.org/git/20250125190131.48717-1-julian@swagemakers.org/)
+  added support for OAuth2 authentication, which started to be
+  required by Microsoft. Julian's patch unfortunately had been waiting
+  for review for over a year before Aditya picked it up.
+
+  The second patch fixed thread breaking caused by Outlook's
+  proprietary Message-ID handling.
+
+  The final patch added a new option for generating passwords, such as
+  OAuth2 tokens, via an external script.
+
+  Junio Hamano, the Git maintainer, reviewed the three patches saying
+  he liked the commit messages, documentation and code comments even
+  though he suggested a few small style improvements to the code
+  style, and a number of grammar and formatting changes to the
+  documentation.
+
+  He also asked for reviews from others as he said he was not familiar
+  with the `Authen::SASL` library.
+
+  Aditya replied to Junio's review acknowledging the need for more
+  reviews and saying that OAuth2 was a significant and more secure
+  technology. He then took the initiative to Cc Greg Kroah-Hartman,
+  who wrote a precursor of `git send-email` for the Linux kernel.
+
+  M Hickford also replied to Aditya expressing enthusiasm for the work
+  but wondering why the v4 version of the patch series was sent in a
+  new email thread rather than as a reply to the previous version.
+
+  brian m. carlson commented on the second patch saying that replacing
+  message IDs like Outlook does is technically allowed by
+  standards. He raised concerns about hardcoding only two Outlook
+  server hostnames, and suggested adding configuration options for
+  Message-ID generation modes.
+
+  Julian Swagemakers then pointed out that the goal of the third patch
+  could already be achieved using Git's existing custom credential
+  helper mechanism. Aditya confirmed this worked and said he was
+  unaware of this feature, which led to the decision to drop the third
+  patch. Recognizing that the existing feature was poorly
+  discoverable, the discussion led to improvements in Git's
+  documentation, adding clearer examples of using credential helpers
+  for OAuth2 tokens.
+
+  Erik Huelsmann, the maintainer of the `Authen::SASL` Perl module,
+  joined the conversation after Aditya emailed him directly
+  referencing a GitHub issue about the lack of OAuth2 support in
+  `Authen::SASL`. In that issue Erik had
+  [commented that he would be happy to support XOAUTH2](https://github.com/gbarr/perl-authen-sasl/issues/18#issuecomment-2453040190),
+  but needed a patch and a way to test it.
+
+  Aditya and Julian then worked together, with guidance from Erik, to
+  add the necessary XOAUTH2 and OAUTHBEARER support directly into
+  `Authen::SASL`. Shortly after, a new version of the `Authen::SASL`
+  module was officially released with this new functionality. This
+  successful collaboration meant the first patch in the series, which
+  was a workaround for the missing library support, was no longer
+  needed and was subsequently dropped. Instead the new version of
+  `Authen::SASL` started to benefit all Perl users.
+
+  Greg Kroah-Hartman echoed what brian had suggested about using a
+  configurable solution in the second patch. Greg noted that the
+  initial approach would not cover company-hosted Outlook servers.
+
+  That suggestion was then refined by Junio Hamano, who proposed a
+  concrete implementation for the new option by providing an example
+  patch. The final `--[no-]outlook-id-fix` option auto-detects known
+  Outlook servers but allows manual override for other deployments.
+
+  After several iterations on its name and behavior, Aditya submitted
+  a final, simplified patch series (v6). It now contained only the
+  single, refined patch to fix Outlook thread breaking, with the other
+  two patches having been made obsolete by the `Authen::SASL` library
+  update and the use of existing Git features.
+
+  Aditya's patch was merged and released as part of Git v2.50.0.
 
 <!---
 ### Support
