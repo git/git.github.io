@@ -122,7 +122,10 @@ This edition covers what happened during the months of June 2025 and July 2025.
 
   Greg Kroah-Hartman echoed what brian had suggested about using a
   configurable solution in the second patch. Greg noted that the
-  initial approach would not cover company-hosted Outlook servers.
+  initial approach would not cover company-hosted Outlook servers. Yao
+  Zi also contributed to this discussion, noting that Tencent's mail
+  service had similar issues, further reinforcing the need for a
+  flexible solution beyond just hardcoding specific server names.
 
   That suggestion was then refined by Junio Hamano, who proposed a
   concrete implementation for the new option by providing an example
