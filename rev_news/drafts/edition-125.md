@@ -111,6 +111,7 @@ __Git tools and sites__
 + Sourcetree [4.2.13](https://product-downloads.atlassian.com/software/sourcetree/ReleaseNotes/Sourcetree_4.2.13.html)
 + GitButler [0.15.8](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.15.8),
 [0.15.7](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.15.7)
++ Sublime Merge [Build 2110](https://www.sublimemerge.com/download)
 + Tower for Mac [13.1](https://www.git-tower.com/release-notes/mac?show_tab=release-notes)
 + Tower for Windows [9.1](https://www.git-tower.com/release-notes/windows?show_tab=release-notes) - [YT video](https://youtu.be/4pNRUz0bNIU)
 
