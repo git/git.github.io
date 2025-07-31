@@ -132,11 +132,12 @@ This edition covers what happened during the months of June 2025 and July 2025.
   patch. The final `--[no-]outlook-id-fix` option auto-detects known
   Outlook servers but allows manual override for other deployments.
 
-  After several iterations on its name and behavior, Aditya submitted
-  a final, simplified patch series (v6). It now contained only the
-  single, refined patch to fix Outlook thread breaking, with the other
-  two patches having been made obsolete by the `Authen::SASL` library
-  update and the use of existing Git features.
+  After several iterations on its name and behavior, with Eric
+  Sunshine helping refine the user-facing documentation, Aditya
+  submitted a final, simplified patch series (v6). It now contained
+  only the single, refined patch to fix Outlook thread breaking, with
+  the other two patches having been made obsolete by the
+  `Authen::SASL` library update and the use of existing Git features.
 
   Aditya's patch was merged and released as part of Git v2.50.0.
 
