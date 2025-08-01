@@ -68,3 +68,5 @@ The site serves multiple purposes:
 2. Ensure links to external resources are still valid
 3. Update any outdated information about application processes
 4. Test locally with `bundle exec jekyll serve`
+
+this project is using github claude code action
