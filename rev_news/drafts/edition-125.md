@@ -43,7 +43,7 @@ This edition covers what happened during the months of June 2025 and July 2025.
   in Amsterdam on August 28th 2025.
 
   There will be lightning talks and some time for people to
-  connect. For the lightning talks proposals should be sent to
+  connect. Proposals for the lightning talks should be sent to
   Patrick, while the possibility to have remote talks is still
   investigated.
 
