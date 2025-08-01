@@ -91,7 +91,7 @@ This edition covers what happened during the months of June 2025 and July 2025.
 
   brian m. carlson commented on the second patch saying that replacing
   message IDs like Outlook does is technically allowed by
-  standards. He raised concerns about hardcoding only two Outlook
+  standards. They raised concerns about hardcoding only two Outlook
   server hostnames, and suggested adding configuration options for
   Message-ID generation modes.
 
