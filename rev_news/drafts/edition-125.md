@@ -145,9 +145,247 @@ This edition covers what happened during the months of June and July 2025.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight:Usman Akinyemi
+
+_Editor’s note: This edition features a retrospective interview with a
+contributor who contributed to Git through a mentoring program. We hope
+the reflections shared by the Outreachy contributor will provide an
+insightful perspective that benefits the community. As always, we
+welcome your thoughts and feedback!_
+
+* **Who are you and what do you do?**
+
+  I’m Usman Akinyemi, a final-year CS and AI student, and an open-source
+  contributor passionate about Linux, distributed systems, and developer
+  tools. I’ve contributed to core projects like Git, systemd, LLVM, and
+  LibreOffice. During [my Outreachy internship](https://uniqueusman.hashnode.dev/my-outreachy-internship-experience-at-git),
+  I improved Git’s v2 protocol by adding OS-level metadata for better
+  diagnostics and security.
+
+  Currently, I’m a [Google Summer of Code contributor](https://summerofcode.withgoogle.com/programs/2025/projects/wBCitF8F)
+  building a containerized pipeline for medical imaging using Kaapana,
+  Kubernetes and Airflow. I am also currently working on creating a
+  new subtype for RISC-V assembly instructions through the
+  Linux Foundation’s LFX program.
+
+  Outside code, I mentor new contributors, volunteer with DesignIT and
+  LEAD and CODE to teach digital skills, and organize a tech webinar for
+  Nigerian students. I’ll be [speaking at Git Merge 2025](https://git-merge.com/#usman-akinyemi),
+  sharing insights from my open-source journey. I believe in the power of
+  community, collaboration, and curiosity to build a career that crosses
+  borders.
+
+* **How did you initially become interested in contributing to Git,
+  and what motivated you to choose it as your Outreachy project?**
+
+  Though I have been contributing to other projects before applying for
+  Outreachy (Dec 2024), I was just a user of the Git project. When it
+  comes to the Outreachy contribution period when I had to pick a
+  project, I picked both Git and LibreOffice. I picked Git as it is a
+  project I use every time, also the thought of contributing to a
+  project used by almost all the developers in the whole world was
+  definitely a dream coming true. To also maximize my getting selected
+  for Outreachy, I picked Git because it is written in C programming
+  which many other participants are always scared to pick (going for the
+  hard thing). The story did not end there as I got selected for both
+  LibreOffice and Git and I had to choose one as my Outreachy projects.
+  It was a hard decision but I picked it mainly because the Git
+  community is a community where it is so easy to communicate with other
+  team members, it is a community where I clearly know who is who and
+  what they do in the community. Also Git is more well recognised.
+
+* **How do you feel your contribution has impacted the Git community
+  or the broader open source ecosystem?**
+
+  [My contribution](https://lore.kernel.org/git/20250215155130.1756934-1-usmanakinyemi202@gmail.com/)
+  makes a fundamental improvement to the Git v2 protocol by enabling
+  Git clients to share their operating system information via the user
+  agent string. This helps platforms like GitHub, GitLab, and others
+  gain visibility into which OS environments are interacting
+  with their servers. It significantly improves debugging, security
+  auditing, and telemetry, helping maintainers understand usage patterns
+  and tailor support or upgrade strategies accordingly. Since this
+  change is part of the core Git client, it means it is used by all Git
+  users. I’m proud to have contributed something with such
+  wide-reaching, foundational impact.
+
+* **Is there any aspect of Git that you now see differently after
+  having contributed to it?**
+
+  Before contributing to Git, I saw it as a complex tool that "just
+  works". Although I knew Git was different from GitHub, I struggled to
+  clearly differentiate between the two. But after contributing, I could
+  clearly differentiate between the two and I now see Git as a carefully
+  designed software project with a strong emphasis on performance,
+  cross-platform compatibility, and community-driven development.
+
+  I’ve come to appreciate the level of thought and care that goes into
+  every change, from writing clean patches and commit messages to
+  engaging in technical discussions and defending your design decisions.
+
+  Contributing to Git isn’t also about hierarchical review; instead,
+  it’s a collaborative process where every contributor is expected to
+  take full ownership of their patches, understand the problem they are
+  trying to fix, the solution and explain their rationale clearly by
+  writing clean patches, commit messages and engaging in technical
+  discussions and defending your design decisions. In fact, there have
+  been moments when some of my contributions led to insights even long
+  time contributors hadn’t considered, including Junio Hamano. That
+  boosted my confidence not just in contributing to Git, but to other
+  software projects as well i.e I can get my patches accepted anywhere,
+  I just need to convince others that it actually solves a problem.
+
+* **How do you balance your contributions with other responsibilities
+  like work or school?**
+
+  Seriously, it has not been easy, most of my contributions to all
+  open source projects have always been during college. But, I have sort
+  of made contributions to open source as one important aspect of my
+  life and also as a way to learn new technologies and also practice
+  whatever new skills I learnt. Contributing to projects millions of
+  people use is also definitely rewarding and satisfying.
+
+* **Can you share how Outreachy helped enhance your technical and
+  non-technical skills (like communication, project management, etc.)?**
+
+  Technically, I have been able to improve my C programming and bash
+  scripting skills. Also reading and understanding very large codebases
+  like Git. Of course now, I can call myself an expert in using Git as a
+  tool itself.
+
+  To contribute to Git, you must be able to communicate well as all the
+  Git workflows happen remotely and over mailing lists. Most of the time
+  in the Git community, it is not about the correctness of your code, it
+  is about how well you can communicate your rationale to the community
+  before your patches can be accepted. So, over time, as a Git
+  contributor, my communication skills in a technical environment have
+  really improved.
+
+  I have also learnt to write clean code, organize my changes into well
+  formatted patches and write clear commit messages.
+
+* **What was your biggest takeaway or learning from Outreachy that
+  you now apply regularly in your work?**
+
+  I’d say my biggest takeaway from Outreachy is learning how to write
+  clear, structured commit messages. Git commits, like those in the
+  Linux kernel, follow a thoughtful format: describe the current state,
+  the problem, and the fix. From reading most of the commit messages in
+  Git, you would have understood and been to visualize what the changes
+  will look like. It also makes it easy to track the changes to other
+  prerequisite commits. I have been using the Git commit messages format
+  in other projects and I really love it.
+
+* **What was the biggest challenge you faced during your contributions
+  to Git, and how did you overcome it?**
+
+  I think the challenge which I initially faced is sending patches to
+  Git, not really a big challenge though as I was able to make my first
+  patch in a few days after joining the community. And the reason is
+  that Git does not use GitHub or GitLab, something someone would have
+  thought they will be using. Git uses a mailing list just like the
+  Linux kernel. While writing this, I remember that I had a challenge
+  retrieving patches from the mailing list as my project depends on some
+  patches that were sent by my mentor previously. I had to use `git am`,
+  something I never used before.  Help from my mentor really helped
+  and reading through the the "[Hacking Git](https://git.github.io/Hacking-Git/)"
+  page.
+
+* **Have you thought about mentoring new GSoC / Outreachy students?**
+
+  Yeah, I am planning to put in as a mentor for the coming Outreachy
+  period and hopefully for GSoC also. I will be starting as a co-mentor
+  though.
+
+* **If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?**
+
+  Smile, I will definitely say the Rustication of some parts of Git
+  which has been going on currently, I think one that has already been
+  integrated to Git is [libgit-rs](https://lore.kernel.org/git/cover.1738187176.git.steadmon@google.com/).
+  Rust seems to be a language that focuses more on safety/security
+  and safety/security in Git is very important. I am also a Rustacean
+  so I should be able to help hopefully if that happens.
+
+* **If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?**
+
+  I really do not have anything in mind for now.
+
+* **What upcoming features or changes in Git are you particularly
+  excited about?**
+
+  I think it is one of the [GSoC projects by Lucas](https://summerofcode.withgoogle.com/programs/2025/projects/fGgMYHwl).
+  I have been passively following the project. It is about introducing
+  a new Git sub-command (currently intended to be called `git repo-info`)
+  that will centralize data currently retrieved by `git rev-parse` in a
+  JSON format.
+
+* **What is your favorite Git-related tool/library, outside of Git
+  itself?**
+
+  I think is GitHub and GitLab, if I have to choose one, I will say GitHub.
+
+* **What is your toolbox for interacting with the mailing list and for
+  development of Git?**
+
+  I started with [GitGitGadget](https://gitgitgadget.github.io/) initially
+  just to get my patches to the mailing list faster but, along the line
+  I switched to `git send-email` and really, it is more flexible and easy
+  to use than I thought of it. For my machine, I basically use Arch Linux
+  and Neovim for my text editor.
+
+* **How do you envision your own involvement with Git or other open
+  source projects in the future?**
+
+  As I said earlier, open source has really been part of my life and it
+  has really helped me a lot in improving my skills, meeting new people
+  and even making some few bucks through internships. After my
+  internship at Outreachy, I did send patches to the Git community and I
+  planned to keep doing that. After Outreachy, I have contributed to a
+  few other projects like RISCV and OSIPI (through GSoC). I currently
+  mentor people who want to start their open source journey and I plan
+  to do more of it. I planned to keep contributing to open source
+  projects and hopefully get a job in open source.
+
+* **What is your advice for people who want to start Git development?
+  Where and how should they start?**
+
+  I have been in many open source projects and see how their workflows
+  are, I will definitely say Git is one of the easiest and most
+  interesting projects to contribute to. The community members are
+  really supportive. Seriously, it is one of the best open source
+  communities I have been to. The best place to start is going through
+  the "[Hacking Git](https://git.github.io/Hacking-Git/)" page. It has
+  all the information on how to start contributing and you can make
+  your first contribution to Git. You should generally start with a
+  microproject which aims to introduce you to the Git contribution
+  workflow. Everything can be found above. Making your first contribution
+  to Git is actually very much easier than you might have thought.
+  Also, do not be scared to ask for help, Git developers are always ready to render help.
+
+* **Would you recommend other students or contributors to participate in
+  the GSoC, Outreachy or other mentoring programs, working on Git?
+  Why? Do you have advice for them?**
+
+  Definitely, Outreachy and GSoC are very much interesting mentoring
+  programs to start your open source journey. They both really make it
+  easy to start contributing to open source. You get assigned to mentors
+  who are experts in open source and the organization. It is a way to get
+  skills you will never be able to get in your classroom and skills
+  needed to thrive and excel in the software engineering world. Apart
+  from skills, it is a way to have proof of work before graduation and
+  also gain global recognition. As I have said, Git is a well known and
+  recognized software project in the whole world, contributing to it is
+  an achievement on its own.
+
+  _Shout session_
+
+  I would like to shout out to all Git contributors, you are doing a
+  great job! I would also like to shout out to my Outreachy mentor
+  Christian Couder, he was really supportive during my Outreachy
+  program! Thanks to the Git Rev teams also!
+
 
 ## Other News
 
