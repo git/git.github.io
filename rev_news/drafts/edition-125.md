@@ -471,7 +471,10 @@ __Git tools and sites__
   a new file format specification for Extensible Diffs,
   fully backwards-compatible with existing tools,
   while also being future-proof and remaining human-readable.
-- [git-phoenix](https://github.com/yaitskov/git-phoenix) does repository recovery.
++ [git-phoenix](https://github.com/yaitskov/git-phoenix) is a command line tool
+  that does repository recovery after accidental removal or file system failure,
+  using [photorec](https://www.cgsecurity.org/wiki/PhotoRec) (or similar tool).
+  Written in Haskell, under 3-clause BSD license.
 + [wtp (Worktree Plus)](https://github.com/satococoa/wtp) is a Git worktree management tool
   that extends git's worktree functionality with
   automated setup, branch tracking, and project-specific hooks.
