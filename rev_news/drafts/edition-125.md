@@ -391,8 +391,74 @@ welcome your thoughts and feedback!_
 
 __Various__
 
++ [[LWN.net] A set of Git security-fix releases](https://lwn.net/Articles/1029182/)
+  by Jonathan Corbet on LWN\.net, and<br>
+  [Multiple vulnerabilities fixed in Git](https://www.openwall.com/lists/oss-security/2025/07/08/4)
+  by Taylor Blau on oss-security mailing list
++ [[ANNOUNCE] Git v2.50.1 and friends](https://public-inbox.org/git/xmqqzfdevcov.fsf@gitster.g/t/#u)
+  by Junio C Hamano on the git mailing list.
++ [Launchpad](https://launchpad.net/) is [phasing out Bazaar code hosting](https://discourse.ubuntu.com/t/phasing-out-bazaar-code-hosting/62189).
+  This post provides link to the [Migrate a Repository From Bazaar to Git](https://jugmac00.github.io/blog/migrate-a-repository-from-bazaar-to-git/) article.
+
 
 __Light reading__
+
++ [Artisanal Handcrafted Git Repositories](https://drew.silcock.dev/blog/artisanal-git/)
+  by Drew Silcock on drew's dev blog.
+  This article talks about how to handmake your Git repositories without using git commands.
+  You might also learn a bit more about how Git works under the hood during the process.
++ [How to use git worktree effectively with Python projects](https://www.andreagrandi.it/posts/how-to-use-git-worktree-effectively-with-python-projects/)
+  (with the help of a simple [git-add-worktree.sh](https://gist.github.com/andreagrandi/542b438bf0017d93aff2b640037e3ce1) Bash script)
+  by Andrea Grandi on his blog.
++ [Managing Multiple Claude Code Sessions Without Worktrees](https://blog.gitbutler.com/parallel-claude-code/)
+  by Scott Chacon on Butler's Log (GitButler Blog).
+  With [Claude Code](https://www.anthropic.com/claude-code)'s new [lifecycle hooks](https://docs.anthropic.com/en/docs/claude-code/hooks),
+  [GitButler](https://gitbutler.com/) Git client auto-sorts simultaneous AI coding into separate branches,
+  without manual [use of `git worktree`](https://www.anthropic.com/engineering/claude-code-best-practices#c-use-git-worktrees).
+  With this feature you can write three features, and get three clean branches.
++ [wtp: A Better Git Worktree CLI Tool](https://dev.to/satococoa/wtp-a-better-git-worktree-cli-tool-4i8l)
+  by Satoshi Ebisawa on DEV\.to.
+  The [wtp](https://github.com/satococoa/wtp) tool was created to make
+  working with multiple tasks in parallel using [Claude Code](https://www.anthropic.com/claude-code)
+  easier than with `git worktree`.
++ [Automated repo maintenance via GitHub Copilot coding agent](https://blog.pamelafox.org/2025/07/automated-repo-maintenance-with-github.html)
+  by Pamela Fox on her Blogger-based blog.
++ [Git Worktrees: Git Done Right](https://www.nickyt.co/blog/git-worktrees-git-done-right-2p7f/)
+  by Nick Taylor on Just Some Dev blog (and also [on DEV\.to](https://dev.to/nickytonline/git-worktrees-git-done-right-2p7f)).
++ [I Lost My Git Stash, So I Built a Tool (VS Code Extension) to Share It](https://dev.to/karandeepsingh7070/i-lost-my-git-stash-so-i-built-a-tool-to-share-it-27bn)
+  by Karandeep Singh on DEV\.to.
++ [Git: share a full repository as a file with `git fast-export`](https://adamj.eu/tech/2025/07/15/git-share-fast-export/)
+  by Adam Johnson on his blog
+  (for some reason the post does not mention the alternative of using
+  [`git bundle`](https://git-scm.com/docs/git-bundle)).
+    + Adam Johnson is the author of "[Boost Your Git DX](https://adamchainz.gumroad.com/l/bygdx)" book,
+	  first mentioned in [Git Rev News Edition #104](https://git.github.io/rev_news/2023/10/31/edition-104/),
+	  then its updates in [#110](https://git.github.io/rev_news/2024/04/30/edition-110/)
+	  and [#119](https://git.github.io/rev_news/2025/01/31/edition-119/).
++ [Conventional Commits makes me sad](https://srazkvt.codeberg.page/posts/2025-07-06-conventional-commits-makes-me-sad.html)
+  by Sarah Mathey on her Codeberg Pages powered Sarah's Website blog.<br>
+  The [Conventional Commits](https://www.conventionalcommits.org/) specification
+  was first mentioned in [Git Rev News Edition #52](https://git.github.io/rev_news/2019/06/28/edition-52/).
++ [Git experts should try Jujutsu](https://pksunkara.com/thoughts/git-experts-should-try-jujutsu/)
+  by Pavan Sunkara on his personal blog.<br>
+  [Jujutsu (`jj`)](https://github.com/martinvonz/jj) is a version control system
+  first mentioned in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/).
++ [Jujutsu For Busy Devs](https://maddie.wtf/posts/2025-07-21-jujutsu-for-busy-devs) and
+  by Madeleine Mortensen on her personal blog.
++ [Using Radicle CI for Development](https://radicle.xyz/2025/07/23/using-radicle-ci-for-development)
+  by Lars Wirzenius on Radicle Blog.<br>
+  [Radicle](https://radicle.xyz/) is the distributed git hosting system,
+  first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/).
++ [Cutting GitHub out of the loop](https://www.circusscientist.com/2025/07/23/cutting-github-out-of-the-loop/)
+  (by deploying to VPS with Git and SSH).
+  Written by tomjuggler on The Circus Scientist Site.
++ [Super Easy* 2-Stage Git Deployment](https://ratfactor.com/cards/super-easy-2-stage-git-deployment)
+  by Dave Gauer on Dave's Virtual Box of Cards.
++ [Guest Post: How I Scanned all of GitHub’s “Oops Commits” for Leaked Secrets](https://trufflesecurity.com/blog/guest-post-how-i-scanned-all-of-github-s-oops-commits-for-leaked-secrets)
+  by Sharon Brizinov on The Dig, the Truffle Security blog.
++ [Top 17 Essential Git Tools for Enhanced Developer Productivity](https://dev.to/vaib/top-17-essential-git-tools-for-enhanced-developer-productivity-7f3)
+  by vAlber on DEV\.to.
+
 
 <!---
 __Easy watching__
@@ -400,7 +466,132 @@ __Easy watching__
 
 __Git tools and sites__
 
++ [DiffX - Next-Generation Extensible Diff Format](https://diffx.org/):
+  describes problem with Unified Diff format, and proposes as a solution
+  a new file format specification for Extensible Diffs,
+  fully backwards-compatible with existing tools,
+  while also being future-proof and remaining human-readable.
 - [git-phoenix](https://github.com/yaitskov/git-phoenix) does repository recovery.
++ [wtp (Worktree Plus)](https://github.com/satococoa/wtp) is a Git worktree management tool
+  that extends git's worktree functionality with
+  automated setup, branch tracking, and project-specific hooks.
+  Written in Go, under the MIT license.
++ [GitNifty](https://gitnifty.js.org/index.html) is a robust and promise-based Git utility for Node.js,
+  offering developers smart, automation-ready commands for common Git operations.
+  Created for building CLI tools, automation scripts, or custom Git workflows.
+  Written in TypeScript, and released under the Apache License.
++ [difit](https://github.com/yoshiko-pg/difit) is a CLI tool
+  that lets you view and review local git diffs with a GitHub-style viewer
+  (in a browser).  Written in TypeScript, under MIT license.<br>
+  See [difit: Preview GitHub-like diffs locally before you push](https://dev.to/unhappychoice/difit-preview-github-like-diffs-locally-before-you-push-37gc)
+  by Yuji Ueki on DEV\.to.
++ [Flint](https://flintable.com/docs/flint/) is a Git-integrated code formatter
+  that lets each developer work in their preferred style locally,
+  while maintaining a consistent style remotely.
+  By automatically applying “local” and “remote” formatting passes during pull and push operations,
+  Flint prevents formatting noise in commits and code reviews.
+  It is currently in _alpha_ and is available exclusively on npm.
+  Written in Bash, under MIT license.
++ [DotProj](https://dotproj.ac-jr.com/) is a developer-centric CLI tool
+  designed to manage project-specific configuration files with Git versioning.
+  It helps keep your development environment settings organized, versioned, and synchronized
+  across multiple machines and projects.
+  DotProj uses Git commands (commit, push, pull, clone) making it intuitive for developers.
+  Written as Bash shell script, under MIT license.
++ [git-remote-sqlite](https://github.com/chrislloyd/git-remote-sqlite)
+  is a [Git protocol helper](https://git-scm.com/docs/gitremote-helpers)
+  that helps you store a Git repository in a SQLite database.
+  Written in Zig, under MIT license.
++ [Backlog.md](https://backlog.md/) is a tool that turns any folder with a Git repo
+  into a self‑contained project board, powered by plain Markdown files
+  and a zero‑config CLI.  Written in TypeScript, under MIT license.  AI ready.
++ [git-resolve.sh](https://elixir.bootlin.com/linux/v6.16-rc3/source/scripts/git-resolve.sh)
+  is a Bash script that resolves a short git commit ID to its full SHA-1 hash,
+  which is particularly useful for fixing references in commit messages.
+  Under GPL-2.0 license.  
++ [GitHub Trends](https://www.githubtrends.io/) is a service that
+  uses GitHub API to bring you insightful metrics on your contributions,
+  broken by repository and language.
++ [DeepWiki](https://deepwiki.com/): AI-generated docs for any repo.
+  This service turns any public GitHub repo into up-to-date documentation you can talk to
+  (see for example [DeepWiki: git/git](https://deepwiki.com/git/git).
+  DeepWiki is the free public version of [Devin Wiki](https://docs.devin.ai/work-with-devin/devin-wiki) and [Devin Search](https://docs.devin.ai/work-with-devin/devin-search).<br>
+  There are a few silimar projects, like
+  [Open Source DeepWiki](https://github.com/AsyncFuncAI/deepwiki-open) and
+  [OpenDeepWiki](https://github.com/AIDotNet/OpenDeepWiki).
++ [GitHub Repository Maintenance Agent](https://github.com/pamelafox/github-repo-maintainer-agent/)
+  is an AI-powered agent for triaging failed [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) pull requests
+  across one GitHub repositories. The agent uses [Pydantic AI](https://ai.pydantic.dev/)
+  for LLM-based decisions and the GitHub API for repository, PR, and issue management.
+  Written in Python, under MIT license.
++ [tangled](https://tangled.sh/) is new social-enabled git collaboration platform
+  built on [AT Protocol](https://atproto.com/) (that powers the Bluesky social network).
+  Written in Go, under MIT license; note that it is in alpha stage of development.<br>
+  Compare with:
+    + [Radicle](https://radicle.xyz/), a peer-to-peer, local-first code collaboration stack built on Git
+	  (first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/)).
+	+ [ForgeFed](https://forgefed.org/) (formerly GitPub), a federation protocol for software forges
+	  (first mentioned in [Git Rev News Edition #69](https://git.github.io/rev_news/2020/11/27/edition-69/)).
+    + [`git-ssb`](https://scuttlebot.io/apis/community/git-ssb.html)
+      (see the [git-ssb-intro](https://github.com/hackergrrl/git-ssb-intro) guide), a
+      decentralized Git repo hosting and issue tracking on [Secure-ScuttleButt (SSB)](https://www.scuttlebutt.nz/)
+      (first mentioned in [Git Rev News Edition #26](https://git.github.io/rev_news/2017/04/19/edition-26/).
+	+ [gitstr (`git str`)](https://github.com/fiatjaf/gitstr),
+	  a tool to send and receive Git patches
+      over [Nostr](https://nostr.com/), using [NIP-34](https://github.com/nostr-protocol/nips/pull/997)
+      (first mentioned in [Git Rev News Edition #109](https://git.github.io/rev_news/2024/03/31/edition-109/)).
++ [Git With Me](https://sr.ht/~meejah/git-withme/) is a tool for
+  peer-to-peer, encrypted, ephemeral Git collaboration.
+  `git withme` provides a way for a single host to invite numerous peers
+   with short, one-time secure codes. The peers connect directly via
+   [Dilated Magic Wormhole channels](https://meejah.ca/blog/fow-wormhole-forward),
+   allowing collaborators to `git clone git://localhost/<repo-name>`.
++ [Radicle Desktop](https://desktop.radicle.xyz/) is a desktop application
+  that lets you interact with [Radicle](https://radicle.xyz/),
+  a peer-to-peer code collaboration and publishing stack.
+  Written in TypeScript for Node.js and Rust, using the Tauri framework.
+  Under GPLv3 license.
++ [GitBug: Git Learning Simulator](https://github.com/dvig14/gitbug)
+  is a CLI app that teaches Git through hands-on bug fixing.
+  It uses a realistic merge conflict scenario with visual feedback at every step
+  The goal of the app is to help you learn by doing, not just reading.
+  Written in Python, under MIT license, in early stage (alpha).<br>
+  Compare with:
+    + [Learn Git Branching](https://learngitbranching.js.org/),
+      mentioned first in [Git Rev News Edition #30](https://git.github.io/rev_news/2017/08/16/edition-30/).
+    + [Git Gud](https://nic-hartley.github.io/git-gud/), a visual web-based Git simulator,
+      meant to help understand Git better, announced by its author Nic Hartley in
+      [Git Gud at git](https://dev.to/nichartley/git-gud-at-git-5d9k).
+      First mentioned in [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/).
+    + [Git Gud](https://github.com/benthayer/git-gud), a command line game
+      designed to help you learn how to use the Git version control system.
+      Written in Python by Ben Thayer. First mentioned in
+      [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/).
+    + [Oh My Git!](https://ohmygit.org/), an open source game about learning Git,
+      written using the Godot game engine ([source](https://github.com/git-learning-game/oh-my-git)).
+      There was a lightning talk about this game at FOSDEM 2021:
+      [Building a Git learning game: A playful approach to version control](https://fosdem.org/2021/schedule/event/git_learning_game/).
+      First mentioned in [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/).
+    + [Git-Sim](https://github.com/initialcommit-com/git-sim) tool (written in Python)
+      to visually simulate Git operations in your own repos with a single terminal command.
+      Described in [Git-Sim: Visually Simulate Git Operations In Your Own Repos](https://initialcommit.com/blog/git-sim)
+      (mentioned in [Git Rev News Edition #95](https://git.github.io/rev_news/2023/01/31/edition-95/))
+      and [Git-Sim 3 Month Dev Update: Community Response, New Features, & The Future](https://initialcommit.com/blog/git-sim-3-month-dev-update)
+      (mentioned in [Edition #98](https://git.github.io/rev_news/2023/04/30/edition-98/)).
+    + [Visualize Git](http://git-school.github.io/visualizing-git/) web app
+	  that illustrates what's going on under the hood when you use common Git operations,
+	  first mentioned in [Git Rev News Edition #107](https://git.github.io/rev_news/2024/01/31/edition-107/).
+    + [Devlands](https://devlands.com/), which is the game that creates
+	  immersive experience to help learning Git.
+	  First mentioned in [Git Rev News Edition #122](https://git.github.io/rev_news/2025/04/30/edition-122/).
++ [Ferriby](https://github.com/dawedawe/ferriby) is a CLI game
+  where you try to keep Ferrises alive and happy
+  by feeding them commits in your repositories.
+  Written in Rust, under MIT license.
++ [Pride Versioning](https://pridever.org/),
+  a [joking take](https://mastodon.online/@nikitonsky/113691789641950263)
+  on [Semantic Versioning (SemVer)](https://semver.org/).
+
 
 ## Releases
 
