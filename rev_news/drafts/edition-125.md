@@ -22,10 +22,10 @@ This edition covers what happened during the months of June and July 2025.
 
 * 20 years ago: [Meet the new maintainer..](https://lore.kernel.org/git/Pine.LNX.4.58.0507262004320.3227@g5.osdl.org/)
 
-  On July 26 Jul 2005, so 20 years ago, Linus Torvalds announced on
+  On July 26 2005, so 20 years ago, Linus Torvalds announced on
   the mailing list that Junio Hamano accepted the maintainership of
   the Git project and that Junio "was the obvious choice". Linus said
-  he wasn't dropping Git but he just prefered working on it as a
+  he wasn't dropping Git but he just preferred working on it as a
   contributor.
 
   Junio replied with an [A note from the new GIT maintainer](https://lore.kernel.org/git/7vmzo8ss2l.fsf@assigned-by-dhcp.cox.net/)
@@ -48,7 +48,7 @@ This edition covers what happened during the months of June and July 2025.
   investigated.
 
   [Registration is open](https://events.linuxfoundation.org/open-source-summit-europe/features/co-located-events/#git-mini-summit-2025)
-  for only the Git Mini Summit and for the Open Source Summit Europe including the Git Mini Summit.
+  for both the Git Mini Summit only and for the Open Source Summit Europe including the Git Mini Summit.
 
 
 ### Reviews
@@ -57,11 +57,11 @@ This edition covers what happened during the months of June and July 2025.
 
   Last April, Aditya Garg sent a patch series containing three main
   changes to `git send-email`. He mentioned that he was sending the
-  email series using the very patches he is proposing, via Outlook.
+  email series using the very patches he was proposing, via Outlook.
 
   The first patch, which was a rebased version of
   [an earlier patch by Julian Swagemakers](https://lore.kernel.org/git/20250125190131.48717-1-julian@swagemakers.org/)
-  added support for OAuth2 authentication, which started to be
+  adding support for OAuth2 authentication, which started to be
   required by Microsoft. Julian's patch unfortunately had been waiting
   for review for over a year before Aditya picked it up.
 
@@ -74,7 +74,7 @@ This edition covers what happened during the months of June and July 2025.
   Junio Hamano, the Git maintainer, reviewed the three patches saying
   he liked the commit messages, documentation and code comments even
   though he suggested a few small style improvements to the code
-  style, and a number of grammar and formatting changes to the
+  style plus a number of grammar and formatting changes to the
   documentation.
 
   He also asked for reviews from others as he said he was not familiar
@@ -117,7 +117,7 @@ This edition covers what happened during the months of June and July 2025.
   module was officially released with this new functionality. This
   successful collaboration meant the first patch in the series, which
   was a workaround for the missing library support, was no longer
-  needed and was subsequently dropped. Instead the new version of
+  needed and was subsequently dropped. Instead, the new version of
   `Authen::SASL` started to benefit all Perl users.
 
   Greg Kroah-Hartman echoed what brian had suggested about using a
@@ -145,7 +145,7 @@ This edition covers what happened during the months of June and July 2025.
 ### Support
 -->
 
-## Developer Spotlight:Usman Akinyemi
+## Developer Spotlight: Usman Akinyemi
 
 _Editor’s note: This edition features a retrospective interview with a
 contributor who contributed to Git through a mentoring program. We hope
@@ -185,13 +185,13 @@ welcome your thoughts and feedback!_
   project I use every time, also the thought of contributing to a
   project used by almost all the developers in the whole world was
   definitely a dream coming true. To also maximize my getting selected
-  for Outreachy, I picked Git because it is written in C programming
+  for Outreachy, I picked Git because it is written in C,
   which many other participants are always scared to pick (going for the
   hard thing). The story did not end there as I got selected for both
   LibreOffice and Git and I had to choose one as my Outreachy projects.
   It was a hard decision but I picked it mainly because the Git
   community is a community where it is so easy to communicate with other
-  team members, it is a community where I clearly know who is who and
+  team members, and it is a community where I clearly know who is who and
   what they do in the community. Also Git is more well recognised.
 
 * **How do you feel your contribution has impacted the Git community
@@ -250,19 +250,19 @@ welcome your thoughts and feedback!_
 
   Technically, I have been able to improve my C programming and bash
   scripting skills. Also reading and understanding very large codebases
-  like Git. Of course now, I can call myself an expert in using Git as a
+  like Git. Of course now I can call myself an expert in using Git as a
   tool itself.
 
-  To contribute to Git, you must be able to communicate well as all the
+  To contribute to Git, you must be able to communicate well, as all the
   Git workflows happen remotely and over mailing lists. Most of the time
-  in the Git community, it is not about the correctness of your code, it
+  in the Git community it is not about the correctness of your code -- it
   is about how well you can communicate your rationale to the community
   before your patches can be accepted. So, over time, as a Git
   contributor, my communication skills in a technical environment have
   really improved.
 
   I have also learnt to write clean code, organize my changes into well
-  formatted patches and write clear commit messages.
+  formatted patches, and write clear commit messages.
 
 * **What was your biggest takeaway or learning from Outreachy that
   you now apply regularly in your work?**
@@ -285,10 +285,10 @@ welcome your thoughts and feedback!_
   that Git does not use GitHub or GitLab, something someone would have
   thought they will be using. Git uses a mailing list just like the
   Linux kernel. While writing this, I remember that I had a challenge
-  retrieving patches from the mailing list as my project depends on some
+  retrieving patches from the mailing list as my project depended on some
   patches that were sent by my mentor previously. I had to use `git am`,
-  something I never used before.  Help from my mentor really helped
-  and reading through the the "[Hacking Git](https://git.github.io/Hacking-Git/)"
+  something I never used before.  Help from my mentor really helped,
+  as well as reading through the "[Hacking Git](https://git.github.io/Hacking-Git/)"
   page.
 
 * **Have you thought about mentoring new GSoC / Outreachy students?**
@@ -303,8 +303,8 @@ welcome your thoughts and feedback!_
   Smile, I will definitely say the Rustication of some parts of Git
   which has been going on currently, I think one that has already been
   integrated to Git is [libgit-rs](https://lore.kernel.org/git/cover.1738187176.git.steadmon@google.com/).
-  Rust seems to be a language that focuses more on safety/security
-  and safety/security in Git is very important. I am also a Rustacean
+  Rust seems to be a language that focuses more on safety/security,
+  and safety/security is very important in Git. I am also a Rustacean
   so I should be able to help hopefully if that happens.
 
 * **If you could remove something from Git without worrying about
@@ -324,7 +324,7 @@ welcome your thoughts and feedback!_
 * **What is your favorite Git-related tool/library, outside of Git
   itself?**
 
-  I think is GitHub and GitLab, if I have to choose one, I will say GitHub.
+  I think it's both GitHub and GitLab -- if I have to choose one, I will say GitHub.
 
 * **What is your toolbox for interacting with the mailing list and for
   development of Git?**
@@ -333,7 +333,7 @@ welcome your thoughts and feedback!_
   just to get my patches to the mailing list faster but, along the line
   I switched to `git send-email` and really, it is more flexible and easy
   to use than I thought of it. For my machine, I basically use Arch Linux
-  and Neovim for my text editor.
+  and Neovim as my text editor.
 
 * **How do you envision your own involvement with Git or other open
   source projects in the future?**
@@ -343,8 +343,8 @@ welcome your thoughts and feedback!_
   and even making some few bucks through internships. After my
   internship at Outreachy, I did send patches to the Git community and I
   planned to keep doing that. After Outreachy, I have contributed to a
-  few other projects like RISCV and OSIPI (through GSoC). I currently
-  mentor people who want to start their open source journey and I plan
+  few other projects like RISC-V and OSIPI (through GSoC). I currently
+  mentor people who want to start their open source journey, and I plan
   to do more of it. I planned to keep contributing to open source
   projects and hopefully get a job in open source.
 
