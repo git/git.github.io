@@ -232,7 +232,7 @@ welcome your thoughts and feedback!_
   been moments when some of my contributions led to insights even long
   time contributors hadn’t considered, including Junio Hamano. That
   boosted my confidence not just in contributing to Git, but to other
-  software projects as well i.e I can get my patches accepted anywhere,
+  software projects as well, i.e., I can get my patches accepted anywhere,
   I just need to convince others that it actually solves a problem.
 
 * **How do you balance your contributions with other responsibilities
@@ -271,7 +271,7 @@ welcome your thoughts and feedback!_
   clear, structured commit messages. Git commits, like those in the
   Linux kernel, follow a thoughtful format: describe the current state,
   the problem, and the fix. From reading most of the commit messages in
-  Git, you would have understood and been to visualize what the changes
+  Git, you would have understood and been able to visualize what the changes
   will look like. It also makes it easy to track the changes to other
   prerequisite commits. I have been using the Git commit messages format
   in other projects and I really love it.
@@ -394,11 +394,11 @@ __Various__
 + [[LWN.net] A set of Git security-fix releases](https://lwn.net/Articles/1029182/)
   by Jonathan Corbet on LWN\.net, and<br>
   [Multiple vulnerabilities fixed in Git](https://www.openwall.com/lists/oss-security/2025/07/08/4)
-  by Taylor Blau on oss-security mailing list
+  by Taylor Blau on oss-security mailing list.
 + [[ANNOUNCE] Git v2.50.1 and friends](https://public-inbox.org/git/xmqqzfdevcov.fsf@gitster.g/t/#u)
-  by Junio C Hamano on the git mailing list.
+  by Junio C Hamano on the Git mailing list.
 + [Launchpad](https://launchpad.net/) is [phasing out Bazaar code hosting](https://discourse.ubuntu.com/t/phasing-out-bazaar-code-hosting/62189).
-  This post provides link to the [Migrate a Repository From Bazaar to Git](https://jugmac00.github.io/blog/migrate-a-repository-from-bazaar-to-git/) article.
+  This post provides a link to the [Migrate a Repository From Bazaar to Git](https://jugmac00.github.io/blog/migrate-a-repository-from-bazaar-to-git/) article.
 
 
 __Light reading__
@@ -450,7 +450,7 @@ __Light reading__
   [Radicle](https://radicle.xyz/) is the distributed git hosting system,
   first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/).
 + [Cutting GitHub out of the loop](https://www.circusscientist.com/2025/07/23/cutting-github-out-of-the-loop/)
-  (by deploying to VPS with Git and SSH).
+  (by deploying to a VPS with Git and SSH).
   Written by tomjuggler on The Circus Scientist Site.
 + [Super Easy* 2-Stage Git Deployment](https://ratfactor.com/cards/super-easy-2-stage-git-deployment)
   by Dave Gauer on Dave's Virtual Box of Cards.
@@ -500,35 +500,35 @@ __Git tools and sites__
   It helps keep your development environment settings organized, versioned, and synchronized
   across multiple machines and projects.
   DotProj uses Git commands (commit, push, pull, clone) making it intuitive for developers.
-  Written as Bash shell script, under MIT license.
+  Written as a Bash shell script, under MIT license.
 + [git-remote-sqlite](https://github.com/chrislloyd/git-remote-sqlite)
   is a [Git protocol helper](https://git-scm.com/docs/gitremote-helpers)
   that helps you store a Git repository in a SQLite database.
   Written in Zig, under MIT license.
 + [Backlog.md](https://backlog.md/) is a tool that turns any folder with a Git repo
-  into a self‑contained project board, powered by plain Markdown files
-  and a zero‑config CLI.  Written in TypeScript, under MIT license.  AI ready.
+  into a self-contained project board, powered by plain Markdown files
+  and a zero-config CLI.  Written in TypeScript, under MIT license.  AI ready.
 + [git-resolve.sh](https://elixir.bootlin.com/linux/v6.16-rc3/source/scripts/git-resolve.sh)
   is a Bash script that resolves a short git commit ID to its full SHA-1 hash,
   which is particularly useful for fixing references in commit messages.
-  Under GPL-2.0 license.  
+  Under GPL-2.0 license.
 + [GitHub Trends](https://www.githubtrends.io/) is a service that
-  uses GitHub API to bring you insightful metrics on your contributions,
+  uses the GitHub API to bring you insightful metrics on your contributions,
   broken by repository and language.
 + [DeepWiki](https://deepwiki.com/): AI-generated docs for any repo.
   This service turns any public GitHub repo into up-to-date documentation you can talk to
   (see for example [DeepWiki: git/git](https://deepwiki.com/git/git).
   DeepWiki is the free public version of [Devin Wiki](https://docs.devin.ai/work-with-devin/devin-wiki) and [Devin Search](https://docs.devin.ai/work-with-devin/devin-search).<br>
-  There are a few silimar projects, like
+  There are a few similar projects, like
   [Open Source DeepWiki](https://github.com/AsyncFuncAI/deepwiki-open) and
   [OpenDeepWiki](https://github.com/AIDotNet/OpenDeepWiki).
 + [GitHub Repository Maintenance Agent](https://github.com/pamelafox/github-repo-maintainer-agent/)
   is an AI-powered agent for triaging failed [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) pull requests
-  across one GitHub repositories. The agent uses [Pydantic AI](https://ai.pydantic.dev/)
+  across one's GitHub repositories. The agent uses [Pydantic AI](https://ai.pydantic.dev/)
   for LLM-based decisions and the GitHub API for repository, PR, and issue management.
   Written in Python, under MIT license.
-+ [tangled](https://tangled.sh/) is new social-enabled git collaboration platform
-  built on [AT Protocol](https://atproto.com/) (that powers the Bluesky social network).
++ [tangled](https://tangled.sh/) is a new social-enabled git collaboration platform
+  built on the [AT Protocol](https://atproto.com/) (that powers the Bluesky social network).
   Written in Go, under MIT license; note that it is in alpha stage of development.<br>
   Compare with:
     + [Radicle](https://radicle.xyz/), a peer-to-peer, local-first code collaboration stack built on Git
@@ -556,7 +556,7 @@ __Git tools and sites__
   Under GPLv3 license.
 + [GitBug: Git Learning Simulator](https://github.com/dvig14/gitbug)
   is a CLI app that teaches Git through hands-on bug fixing.
-  It uses a realistic merge conflict scenario with visual feedback at every step
+  It uses a realistic merge conflict scenario with visual feedback at every step.
   The goal of the app is to help you learn by doing, not just reading.
   Written in Python, under MIT license, in early stage (alpha).<br>
   Compare with:
