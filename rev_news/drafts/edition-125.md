@@ -405,7 +405,7 @@ __Light reading__
 
 + [Artisanal Handcrafted Git Repositories](https://drew.silcock.dev/blog/artisanal-git/)
   by Drew Silcock on drew's dev blog.
-  This article talks about how to handmake your Git repositories without using git commands.
+  This article talks about how to handmake your Git repositories without using `git` commands.
   You might also learn a bit more about how Git works under the hood during the process.
 + [How to use git worktree effectively with Python projects](https://www.andreagrandi.it/posts/how-to-use-git-worktree-effectively-with-python-projects/)
   (with the help of a simple [git-add-worktree.sh](https://gist.github.com/andreagrandi/542b438bf0017d93aff2b640037e3ce1) Bash script)
@@ -642,4 +642,4 @@ Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
 with help from Usman Akinyemi, brian m. carlson, Aditya Garg,
-Erik-B. Ernst and Bruno Brito.
+Erik-B. Ernst, Bruno Brito and Štěpán Němec.
