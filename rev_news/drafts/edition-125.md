@@ -59,7 +59,7 @@ This edition covers what happened during the months of June and July 2025.
   changes to `git send-email`. He mentioned that he was sending the
   email series using the very patches he was proposing, via Outlook.
 
-  The first patch, which was a rebased version of
+  The first patch was a rebased version of
   [an earlier patch by Julian Swagemakers](https://lore.kernel.org/git/20250125190131.48717-1-julian@swagemakers.org/)
   adding support for OAuth2 authentication, which started to be
   required by Microsoft. Julian's patch unfortunately had been waiting
