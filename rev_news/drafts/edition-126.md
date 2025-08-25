@@ -39,6 +39,7 @@ __Various__
 
 
 __Light reading__
+- [Git Branching Explained: Base, Topic, and Parent Branches](https://www.git-tower.com/blog/base-topic-parent-branches) by Bruno Brito on Tower Blog.
 
 <!---
 __Easy watching__
@@ -48,7 +49,7 @@ __Git tools and sites__
 
 
 ## Releases
-
+- Tower for Mac [14](https://www.git-tower.com/blog/tower-mac-14) ([YouTube video](https://youtu.be/WYhtxBAzOB0))
 
 ## Credits
 
