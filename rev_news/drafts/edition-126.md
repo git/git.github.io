@@ -270,6 +270,28 @@ __Git tools and sites__
 
 ## Releases
 
++ Git [2.51.0](https://lore.kernel.org/git/xmqqikikk1hr.fsf@gitster.g/),
+[2.51.0-rc2](https://lore.kernel.org/git/xmqqh5ybcfwt.fsf@gitster.g/),
+[2.51.0-rc1](https://lore.kernel.org/git/xmqqikizoybn.fsf@gitster.g/),
+[2.51.0-rc0](https://lore.kernel.org/git/xmqqms8f5889.fsf@gitster.g/)
++ Git for Windows [v2.51.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.51.0.windows.1)
++ GitHub Enterprise [3.17.5](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.5),
+[3.16.8](https://docs.github.com/enterprise-server@3.16/admin/release-notes#3.16.8),
+[3.15.12](https://docs.github.com/enterprise-server@3.15/admin/release-notes#3.15.12),
+[3.14.17](https://docs.github.com/enterprise-server@3.14/admin/release-notes#3.14.17)
++ GitLab [18.3.1, 18.2.5, 18.1.5](https://about.gitlab.com/releases/2025/08/27/patch-release-gitlab-18-3-1-released/),
+[18.3](https://about.gitlab.com/releases/2025/08/21/gitlab-18-3-released/),
+[18.2.4](https://about.gitlab.com/releases/2025/08/18/gitlab-18-2-4-released/),
+[17.11.7](https://about.gitlab.com/releases/2025/08/15/gitlab-17-11-7-released/),
+[18.2.2, 18.1.4, 18.0.6](https://about.gitlab.com/releases/2025/08/13/patch-release-gitlab-18-2-2-released/)
++ Gerrit Code Review [3.10.8](https://www.gerritcodereview.com/3.10.html#3108),
+[3.11.5](https://www.gerritcodereview.com/3.11.html#3115),
+[3.12.2](https://www.gerritcodereview.com/3.12.html#3122)
++ GitKraken [11.3.0](https://help.gitkraken.com/gitkraken-client/current/)
++ Git Cola [4.14.0](https://github.com/git-cola/git-cola/releases/tag/v4.14.0)
++ GitButler [0.15.16](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.15.16),
+[0.15.15](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.15.15)
++ Sublime Merge [Build 2112](https://www.sublimemerge.com/download)
 
 ## Credits
 
