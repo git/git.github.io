@@ -13,7 +13,7 @@ Welcome to the 126th edition of [Git Rev News](https://git.github.io/rev_news/re
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
 subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
 
-This edition covers what happened during the months of July 2025 and August 2025.
+This edition covers what happened during the months of July and August 2025.
 
 ## Discussions
 
