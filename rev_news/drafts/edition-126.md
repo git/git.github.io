@@ -274,11 +274,10 @@ __Git tools and sites__
 [2.51.0-rc2](https://lore.kernel.org/git/xmqqh5ybcfwt.fsf@gitster.g/),
 [2.51.0-rc1](https://lore.kernel.org/git/xmqqikizoybn.fsf@gitster.g/),
 [2.51.0-rc0](https://lore.kernel.org/git/xmqqms8f5889.fsf@gitster.g/)
-+ Git for Windows [v2.51.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.51.0.windows.1)
-+ GitHub Enterprise [3.17.5](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.5),
-[3.16.8](https://docs.github.com/enterprise-server@3.16/admin/release-notes#3.16.8),
-[3.15.12](https://docs.github.com/enterprise-server@3.15/admin/release-notes#3.15.12),
-[3.14.17](https://docs.github.com/enterprise-server@3.14/admin/release-notes#3.14.17)
++ Git for Windows [v2.51.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.51.0.windows.1),
+[v2.51.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.51.0-rc2.windows.1),
+[v2.51.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.51.0-rc1.windows.1),
+[v2.51.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.51.0-rc0.windows.1)
 + GitLab [18.3.1, 18.2.5, 18.1.5](https://about.gitlab.com/releases/2025/08/27/patch-release-gitlab-18-3-1-released/),
 [18.3](https://about.gitlab.com/releases/2025/08/21/gitlab-18-3-released/),
 [18.2.4](https://about.gitlab.com/releases/2025/08/18/gitlab-18-2-4-released/),
@@ -287,6 +286,10 @@ __Git tools and sites__
 + Gerrit Code Review [3.10.8](https://www.gerritcodereview.com/3.10.html#3108),
 [3.11.5](https://www.gerritcodereview.com/3.11.html#3115),
 [3.12.2](https://www.gerritcodereview.com/3.12.html#3122)
++ GitHub Enterprise [3.17.5](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.5),
+[3.16.8](https://docs.github.com/enterprise-server@3.16/admin/release-notes#3.16.8),
+[3.15.12](https://docs.github.com/enterprise-server@3.15/admin/release-notes#3.15.12),
+[3.14.17](https://docs.github.com/enterprise-server@3.14/admin/release-notes#3.14.17)
 + GitKraken [11.3.0](https://help.gitkraken.com/gitkraken-client/current/)
 + Git Cola [4.14.0](https://github.com/git-cola/git-cola/releases/tag/v4.14.0)
 + GitButler [0.15.16](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.15.16),
