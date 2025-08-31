@@ -25,9 +25,84 @@ This edition covers what happened during the months of July 2025 and August 2025
 ### Reviews
 -->
 
-<!---
+
 ### Support
--->
+
+* [[BUG] git pull ignores pull.autostash=true configuration when used with --git-dir and --work-tree flags on a bare repository](https://lore.kernel.org/git/010001980c1ee007-2797fc86-fdf3-46e9-bec9-f8da2c9ebb8d-000000@email.amazonses.com/)
+
+  Bryan Lee posted a bug report about the `pull.autostash`
+  configuration variable being ignored in a repository used to manage
+  his dotfiles.
+
+  He expected his unstaged changes to be automatically stashed before
+  a pull when that configuration variable is set to `true`. Instead,
+  the command failed with an error message telling him to "Please
+  commit or stash them". So he thought Git ignored the autostash
+  configuration completely due to the setup, which consisted of a bare
+  repository and a separate work tree accessed through the following
+  alias:
+
+  `$ alias dot='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'`
+
+  Lidong Yan replied to Bryan admitting that he wasn't sure why the
+  autostash feature would be ignored when using the `--git-dir` and
+  `--work-tree` flags. He suggested setting `rebase.autostash` instead
+  of `pull.autostash` to `true` though.
+
+  Bryan Lee thanked Lidong saying that `pull.autostash` is not a Git
+  configuration option and that `rebase.autostash` does work for
+  rebase operations. But he raised the issue that Git silently accepts
+  invalid configuration keys without any warning, which can cause
+  users to waste a lot of time debugging.
+
+  Lidong replied with a suggestion to add a `git config verify`
+  subcommand. But Junio Hamano, the Git maintainer, chimed in
+  expressing doubts about such a command, as Git cannot distinguish
+  between a typo of a known variable and a legitimate custom variable
+  that a user or a third-party tool might be using. Lidong elaborated
+  that such a command could work by having Git maintain an internal
+  registry of all valid keys, which could also be extended by users
+  and tools for their own custom configurations.
+
+  Johannes Sixt suggested that instead of building a complex
+  verification system, it would be easier to fix the origin of the
+  misconception that `pull.autostash` was the correct configuration.
+
+  Junio replied to Johannes that having `git pull` pay attention to
+  `rebase.autostash` was at least a documentation failure, if not a
+  bug. He argued that users have different expectations for a
+  relatively safe local rebase compared to a pull from a remote, which
+  could be riskier. Also it didn't make sense for `git pull` to
+  respect `rebase.autostash` but not `merge.autostash`.
+
+  Ben Knoble then chimed in with a counter-argument to Junio. He
+  reasoned that since a `git pull` that rebases is conceptually a
+  fetch followed by a rebase, it would be "far more inconsistent" if
+  it didn't honor the rebase configuration. Breaking that expectation
+  would be unnatural for users taught to think of pull in that
+  way. Following this logic, he also supported the idea that a merging
+  pull should respect `merge.autostash`.
+
+  Then Junio wondered if introducing a new, dedicated `pull.autostash`
+  variable would be a good idea. But soon Lidong came up with
+  [a patch](https://lore.kernel.org/git/20250717030732.75106-1-yldhome2d2@gmail.com/)
+  to actually add this configuration variable.
+
+  Eric Sunshine reviewed the patch and left a number of suggestions to
+  improve it in many ways. After some discussions with Lidong and
+  Junio, Lidong posted
+  [a version 2 of the patch](https://lore.kernel.org/git/20250720124334.12045-1-yldhome2d2@gmail.com/).
+
+  This new version implemented a number of improvements based on the
+  discussion. Some tests were added. The logic was updated to fall
+  back to either `rebase.autostash` or `merge.autostash` depending on
+  whether the pull performed a rebase or a merge. The order of
+  precedence was also clarified: `pull.autostash` now overrode the
+  more general `rebase.autostash` and `merge.autostash`
+  settings. Finally, the documentation was updated with more precise
+  explanations.
+
+  This feature was released recently as part of Git v2.51.0.
 
 ## Developer Spotlight: Seyi Kuforiji
 
