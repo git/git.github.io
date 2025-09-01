@@ -528,6 +528,13 @@ __Git tools and sites__
       This tool is written to make it easier to participate in a patch-based workflows,
       like those used in the Linux kernel development.
       First mentioned in [Git Rev News Edition #61](https://git.github.io/rev_news/2020/03/25/edition-61/).
++ [patch-hub](https://github.com/kworkflow/patch-hub/tree/unstable) is a TUI tool
+  that streamlines the interaction of Linux developers
+  with patches archived on [lore.kernel.org](https://lore.kernel.org/).
+  Written in Rust, under GPL 2.0 license.<br>
+  It is a spin-off of [kw](https://github.com/kworkflow/kworkflow),
+  a tool for helping Linux kernel developers in everyday tasks
+  (which is written in shell, and is under GPL 2.0 license).
 + [GitGenius](https://selvaneyas.github.io/gitgenius) is a smart and simple CLI tool
   that explains Git errors in plain English and helps you fix them quickly.
   Written in Python, under MIT license.
