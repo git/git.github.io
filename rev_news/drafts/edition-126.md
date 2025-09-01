@@ -153,8 +153,8 @@ welcome your thoughts and feedback!_
   wizardry. These days, some say I’m a wizard, others say I’m a maestro,
   but I’m just a humble guy who enjoys learning and sharing knowledge.
 
-* How do you feel your contribution has impacted the Git community
-  or the broader open source ecosystem?
+* **How do you feel your contribution has impacted the Git community
+  or the broader open source ecosystem?**
 
   My contribution to Git, which was modernizing its homegrown unit
   testing framework to use Clar, has helped improve Git’s testing
@@ -257,7 +257,7 @@ welcome your thoughts and feedback!_
 
 * **Have you thought about mentoring new GSoC / Outreachy students?**
 
-Yes, I hope to mentor future Outreachy interns if the opportunity arise.
+  Yes, I hope to mentor future Outreachy interns if the opportunity arise.
 
 * **If you could get a team of expert developers to work full time on
   something in Git for a full year, what would it be?**
