@@ -596,6 +596,13 @@ __Git tools and sites__
   Written in Rust, under MIT license.
 + [Ayllu](https://ayllu-forge.org/) is a code forge optimized for single instance deployments.
   It is still a work in progress.  Written in Rust, under AGPL license.
++ [DiffMem](https://github.com/Growth-Kinetics/DiffMem) is a lightweight,
+  git-based memory backend designed for AI agents and conversational systems.
+  It uses Markdown files for human-readable storage,
+  Git for tracking temporal evolution through differentials,
+  and an in-memory BM25 index for fast, explainable retrieval.
+  This project is a proof-of-concept (PoC).
+  Written in Python, no license (!).
 
 
 ## Releases
