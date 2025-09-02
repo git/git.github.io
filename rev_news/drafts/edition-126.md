@@ -28,7 +28,7 @@ This edition covers what happened during the months of July and August 2025.
 
 ### Support
 
-* [[BUG] git pull ignores pull.autostash=true configuration when used with --git-dir and --work-tree flags on a bare repository](https://lore.kernel.org/git/010001980c1ee007-2797fc86-fdf3-46e9-bec9-f8da2c9ebb8d-000000@email.amazonses.com/)
+* [[BUG] `git pull` ignores `pull.autostash=true` configuration when used with `--git-dir` and `--work-tree` flags on a bare repository](https://lore.kernel.org/git/010001980c1ee007-2797fc86-fdf3-46e9-bec9-f8da2c9ebb8d-000000@email.amazonses.com/)
 
   Bryan Lee posted a bug report about the `pull.autostash`
   configuration variable being ignored in a repository used to manage
@@ -49,8 +49,8 @@ This edition covers what happened during the months of July and August 2025.
   `--work-tree` flags. He suggested setting `rebase.autostash` instead
   of `pull.autostash` to `true` though.
 
-  Bryan Lee thanked Lidong saying that `pull.autostash` is not a Git
-  configuration option and that `rebase.autostash` does work for
+  Bryan Lee thanked Lidong saying that `pull.autostash` was not a Git
+  configuration option and that `rebase.autostash` did work for
   rebase operations. But he raised the issue that Git silently accepts
   invalid configuration keys without any warning, which can cause
   users to waste a lot of time debugging.
@@ -97,7 +97,7 @@ This edition covers what happened during the months of July and August 2025.
   discussion. Some tests were added. The logic was updated to fall
   back to either `rebase.autostash` or `merge.autostash` depending on
   whether the pull performed a rebase or a merge. The order of
-  precedence was also clarified: `pull.autostash` now overrode the
+  precedence was also clarified: `pull.autostash` now overrides the
   more general `rebase.autostash` and `merge.autostash`
   settings. Finally, the documentation was updated with more precise
   explanations.
@@ -144,7 +144,7 @@ welcome your thoughts and feedback!_
   `git clone`, `git add .`, and `git commit -m "<message>"`, and I was
   living life with just those. I remember during my 12-month software
   engineering bootcamp, I helped some of my colleagues with Git because
-  I had this so-called “prior knowledge” and for a while, I was treated
+  I had this so-called “prior knowledge”, and for a while, I was treated
   like a genius, at least until they caught up!
 
   So when I saw Git on the list of Outreachy projects, I knew right away
@@ -335,7 +335,7 @@ __Various__
 
 + [What’s new in Git 2.51.0?](https://about.gitlab.com/blog/what-s-new-in-git-2-51-0/)
   by Karthik Nayak on GitLab Blog.  It describes performance optimizations
-  for `git push` and `git fetch` (most significant when using "reftable"
+  for `git push` and `git fetch` (most significant when using the "reftable"
   backend for references), further plans for Git 3.0 (which can be
   found in the [BreakingChanges document](https://gitlab.com/gitlab-org/git/-/blob/master/Documentation/BreakingChanges.adoc)), semi-removal of `git whatchanged`
   (still available with `--i-still-use-this` flag), and marking
@@ -345,7 +345,7 @@ __Various__
 + [Highlights from Git 2.51](https://github.blog/open-source/git/highlights-from-git-2-51/)
   by Taylor Blau on GitHub Blog.  It describes cruft-free multi-pack indexes
   (which currently require setting a new `repack.MIDXMustContainCruft` config option),
-  smaller packs with "path walk" method of collecting objects when repacking
+  smaller packs with a "path walk" method of collecting objects when repacking
   (which you can try out with the new `--path-walk` command-line option),
   a variant of the internal stash representation that can be used for stash interchange
   (with new `export` and `import` commands for `git stash`), etc.
@@ -372,33 +372,33 @@ __Light reading__
 + [The future of large files in Git is Git](https://tylercipriani.com/blog/2025/08/15/git-lfs/)
   by Tyler Cipriani on his blog.  It describes how can one use
   partial clone today (and large object promisors in the future,
-  which are work in progress), instead of using [Git LFS](https://git-lfs.com/)
+  which are work in progress) instead of using [Git LFS](https://git-lfs.com/)
   or similar solutions like [git-annex](https://git-annex.branchable.com/)
-  (or no longer actively developed solutions like git-media and git-fat),
+  (or no longer actively developed solutions like git-media and git-fat)
   or [DVC](https://dvc.org/) (Data Version Control).
 + [Code Review Can Be Better](https://tigerbeetle.com/blog/2025-08-04-code-review-can-be-better/)
   (than GitHub's default code review process)
   by matklad (Alex Kladov) on the TigerBeetle blog.<br>
   Mentions their [`git-review`](https://github.com/tigerbeetle/tigerbeetle/pull/2732)
-  work-in-progress tool, and also
+  work-in-progress tool, and also the
     + [Fossil](https://fossil-scm.org/) version control system with built-in project management
-      (first mentioned in [Git Rev News Edition #11](https://git.github.io/rev_news/2016/01/13/edition-11/)),
+      (first mentioned in [Git Rev News Edition #11](https://git.github.io/rev_news/2016/01/13/edition-11/)), the
     + [NoteDb](https://gerrit-review.googlesource.com/Documentation/note-db.html) backend
       for [Gerrit](https://www.gerritcodereview.com/) - which allows storing review state in Git,
-      (NoteDb was first mentioned in [Git Rev News Edition #40](https://git.github.io/rev_news/2018/06/20/edition-40/)),
-    + [git-bug](https://github.com/git-bug/git-bug) tool that uses git to store information about issues / bugs
-      (first mentioned in [Git Rev News Edition #43](https://git.github.io/rev_news/2018/09/19/edition-43/)),
-    + [git-appraise](https://github.com/google/git-appraise) tool that uses git to store information about reviews
-      (first mentioned in [Git Rev News Edition #11](https://git.github.io/rev_news/2016/01/13/edition-11/)),
-    + [prr](https://doc.dxuuu.xyz/prr/index.html) ('pull request review') tool that brings mailing list style code reviews to Github PRs
-      (mentioned in [Git Rev News Edition #90](https://git.github.io/rev_news/2022/08/31/edition-90/)),
-    + [git-pr](https://pr.pico.sh/) project that leverages git native features to replace the entire pull request workflow,
-      (mentioned in [Git Rev News Edition #113](https://git.github.io/rev_news/2024/07/31/edition-113/)), and
+      (NoteDb was first mentioned in [Git Rev News Edition #40](https://git.github.io/rev_news/2018/06/20/edition-40/)), the
+    + [git-bug](https://github.com/git-bug/git-bug) tool that uses Git to store information about issues / bugs
+      (first mentioned in [Git Rev News Edition #43](https://git.github.io/rev_news/2018/09/19/edition-43/)), the
+    + [git-appraise](https://github.com/google/git-appraise) tool that uses Git to store information about reviews
+      (first mentioned in [Git Rev News Edition #11](https://git.github.io/rev_news/2016/01/13/edition-11/)), the
+    + [prr](https://doc.dxuuu.xyz/prr/index.html) ('pull request review') tool that brings mailing list style code reviews to GitHub PRs
+      (mentioned in [Git Rev News Edition #90](https://git.github.io/rev_news/2022/08/31/edition-90/)), the
+    + [git-pr](https://pr.pico.sh/) project that leverages Git native features to replace the entire pull request workflow,
+      (mentioned in [Git Rev News Edition #113](https://git.github.io/rev_news/2024/07/31/edition-113/)), and the
     + [How Jane Street Does Code Review](https://www.janestreet.com/tech-talks/janestreet-code-review/)
       article by Ian Henry on Jane Street Tech Talks site.
 + [Jujutsu + Radicle = ❤️](https://radicle.xyz/2025/08/14/jujutsu-with-radicle)
-  by fintohaps on Radicle Blog, describing how the author use Jujutsu in tandem with Radicle.
-    + [Jujutsu (`jj`)](https://jj-vcs.github.io/jj/) is a Git-compatibile version control system
+  by fintohaps on Radicle Blog, describing how the author uses Jujutsu in tandem with Radicle.
+    + [Jujutsu (`jj`)](https://jj-vcs.github.io/jj/) is a Git-compatible version control system
       written in Rust, and was first mentioned in
       [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/).
     + [Radicle](https://radicle.xyz/), a peer-to-peer, local-first code collaboration stack built on Git,
@@ -411,7 +411,7 @@ __Light reading__
       First mentioned in [the previous edition of Git Rev News](https://git.github.io/rev_news/2025/07/31/edition-125/).
     + Compare [Using Radicle CI for Development](https://radicle.xyz/2025/07/23/using-radicle-ci-for-development)
       article by Lars Wirzenius, also mentioned in [Git Rev News #125](https://git.github.io/rev_news/2025/07/31/edition-125/).
-      [Radicle](https://radicle.xyz/) is another distributed git hosting system,
+      [Radicle](https://radicle.xyz/) is another distributed Git hosting system,
       first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/).
 + [How we used Radicle with GitHub Actions](https://radicle.xyz/2025/05/30/radicle-with-github-actions):
   Quick guide to trying Radicle without dropping GitHub or whatever CI you’re using.
@@ -423,16 +423,16 @@ __Light reading__
 + [I'll think twice before using Github Actions again](https://ninkovic.dev/blog/2025/think-twice-before-using-github-actions)
   by Nemanja Ninković on their blog.
 + [Git without a forge](https://www.chiark.greenend.org.uk/~sgtatham/quasiblog/git-no-forge/)
-  by Simon Tatham on his quasiblog, describing how to interact with a bare git repo,
-  and explaining why he personally does not use any of Git forges.
+  by Simon Tatham on his quasiblog, describing how to interact with a bare Git repo,
+  and explaining why he personally does not use any of the Git forges.
 + [How I Cleaned Up My Git History Like a Boss (a.k.a. Fixing Wrong Author Emails)](https://dev.to/emrahg/how-i-cleaned-up-my-git-history-like-a-boss-aka-fixing-wrong-author-emails-19lb)
-  by Emrah G. on DEV\.to.  The solution uses (deprecated) `git filter-branch` tool;
+  by Emrah G. on DEV\.to.  The solution uses the (deprecated) `git filter-branch` tool;
   the recommended replacement is [`git filter-repo`](https://github.com/newren/git-filter-repo).
   Also, you can correct the _visible_ e-mail with the [`.mailmap`](https://git-scm.com/docs/gitmailmap) file
   (changing what Git shows, without having to rewrite history).
 + [Revolutionizing Git Workflows: The MCP Git Commit Generator](https://www.bampouris.eu/blog/mcp-git-commit-generator/)
   by Theoklitos Bampouris on his blog (and also [on DEV\.to](https://dev.to/theoklitosbam7/revolutionizing-git-workflows-the-mcp-git-commit-generator-530m)),
-  about using Agentic AI and LLM chatbot,
+  about using Agentic AI and an LLM chatbot,
   leveraging the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction).
   The generated commit message will follow [Conventional Commits](https://www.conventionalcommits.org/) conventions.<br>
   Note: please read the proposed commit message before accepting it,
@@ -440,15 +440,15 @@ __Light reading__
   from changes and from an issue tracker, they cannot write whys of the change;
   they cannot access your thoughts.
     + [Git Rev News Edition #97](https://git.github.io/rev_news/2023/03/31/edition-97/)
-      lists a few other tools that use GPT-3 / ChatGPT Large Language Model (LLM)
+      lists a few other tools that use the GPT-3 / ChatGPT Large Language Model (LLM)
       to help write commit messages.
 + [Better git status](https://purpleidea.com/blog/2025/08/04/better-git-status/)
-  by James (@purpleidea) on his blog.  He uses git alias which examines
-  the terminal width, and uses `git status --column=nodense` if terminal is wide enough.
+  by James (@purpleidea) on his blog.  He uses `git alias` which examines
+  the terminal width, and then `git status --column=nodense` if the terminal is wide enough.
 + [Some Pretty Cool Git Tools To Save Your Sanity](https://fev.al/posts/git-tools/)
   by Charles Féval on his blog.
   Mentions `git revise` for splitting pull requests (PRs),
-  and own `git backup`, `git reparent`, `git split`, `git move-branch`, and `git bookmark`.
+  and own `git backup`, `git reparent`, `git split`, `git move-branch`, and `git bookmark` commands.
 + [Using Git worktrees for development](https://blog.kulman.sk/git-worktree/)
   by Igor Kulman on his blog.
 + [Curing A Case Of Git-UX](https://oppi.li/posts/curing_a_case_of_git-UX/)
@@ -459,8 +459,8 @@ __Light reading__
     + See also [Improving shell workflows with fzf](https://seb.jambor.dev/posts/improving-shell-workflows-with-fzf/),
       mentioned in [Git Rev News Edition #74](https://git.github.io/rev_news/2021/04/30/edition-74/).
 + [Making my GitHub heatmap widget](https://leanrada.com/notes/github-heatmap-widget/)
-  Lean Rada on their blog.  The created tool scrapes an HTML partial, and reformats it,
-  but is constructed in such way that it could have consume JSON from GitHub API instead.
+  Lean Rada on their blog.  The created tool scrapes an HTML input partially and reformats it,
+  but is constructed in such way that it could have consumed JSON from GitHub API instead.
 + [TryHackMe - Git Happens](https://jacen.moe/blog/20250805-tryhackme-git-happens/)
   by Jacen Sekai on his blog, about [Git Happens](https://tryhackme.com/room/githappens):
   an easy-ranked box on [TryHackMe](https://tryhackme.com/), website for
@@ -469,6 +469,8 @@ __Light reading__
   by Sean Gillespie on his misguided thoughts blog.
     + You can find a definition of "monorepo" and a list of various tools on the [Monorepo.tools](https://monorepo.tools/) site,
        which was first mentioned in [Git Rev News Edition #84](https://git.github.io/rev_news/2022/02/28/edition-84/).
++ [Git Branching Explained: Base, Topic, and Parent Branches](https://www.git-tower.com/blog/base-topic-parent-branches)
+  by Bruno Brito on Tower Blog.
 + [Git and jujutsu: in miniature](https://lottia.net/notes/0013-git-jujutsu-miniature.html)
   by Charlotte (lottia) on her blog (2024).
 + [Git Interactive Rebase TODO Order is Wrong](https://salferrarello.com/git-interactive-rebase-order-is-wrong/)
@@ -476,11 +478,11 @@ __Light reading__
   with latest commits appearing on the top.<br>
   The author even wrote a Vim plugin,
   [Interactive Rebase Reverse Vim](https://github.com/salcode/vim-interactive-rebase-reverse),
-  to reverse the order of the commits in an interactive git rebase.
+  to reverse the order of the commits in an interactive `git rebase`.
 + [Every line of code is always documented](https://mislav.net/2014/02/hidden-documentation/)
   by Mislav Marohnić on his blog (2014).  The article describes how to
   extract information about code snippet from project history using `git blame`,
-  'pickaxe' search with `git log -S`, and
+  'pickaxe' search with `git log -S`, and a
   [git-churn](https://github.com/garybernhardt/dotfiles/blob/f0c0ff92209e5aed4fa3ef6faf056eb9944a8f12/bin/git-churn) script,
   and how to stay on the right side of history
   (among others, to be able to use this technique effectively).
@@ -498,15 +500,15 @@ __Git tools and sites__
   It helps developers test their workflows directly on their machines
   before pushing changes to GitHub.
   Written in Rust, under MIT license.
-    + Compare with [Act](https://github.com/nektos/act) command line tool
+    + Compare with the [Act](https://github.com/nektos/act) command line tool
       to run your GitHub Actions locally, using the Docker Engine API.
       Written in Go, under MIT license.
       Mentioned in [Git Rev News Edition #113](https://git.github.io/rev_news/2024/07/31/edition-113/).
 + [Setup DVC Action](https://github.com/marketplace/actions/setup-dvc-data-version-control)
   by Iterative is a JavaScript action that can be used as a step in GitHub Actions.<br>
   [DVC](https://dvc.org) (Data Version Control) was first mentioned
-  in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/),
-  and many times since (most recent in [Edition #116](https://git.github.io/rev_news/2024/10/31/edition-116/)).
+  in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/)
+  and many times since (most recently in [Edition #116](https://git.github.io/rev_news/2024/10/31/edition-116/)).
 + [Lappverk](https://codeberg.org/natkr/lappverk/) is a tool for modifying other people's software.
   It works by keeping a series of `.patch` files as its source of truth
   (like [quilt](https://savannah.nongnu.org/projects/quilt)),
@@ -559,7 +561,7 @@ __Git tools and sites__
     + [Forgejo](https://forgejo.org/) is a self-hosted lightweight software forge,
       which started as a “soft” fork of Gitea (itself a fork of Gogs),
       and was first mentioned in passing in [Git Rev News Edition #103](https://git.github.io/rev_news/2023/09/30/edition-103/).
-+ [git-revise](https://git-revise.readthedocs.io/) is a Git subcommand, and Python library
++ [git-revise](https://git-revise.readthedocs.io/) is a Git subcommand and Python library
   for efficiently updating, splitting, and rearranging commits.
   Under MIT License.<br>
   The [Introducing git-revise](https://mystor.github.io/git-revise.html)
@@ -570,7 +572,7 @@ __Git tools and sites__
   `git split`, `git bookmark`, `git newbranch`, and `git get`.
   Written in Go, under GPL 2.0 license.
 + [git-fetch-file](https://github.com/andrewmcwattersandco/git-fetch-file) is a utility
-  for importing specific files from other Git repositories into your own project
+  for importing specific files from other Git repositories into your own project,
   while keeping a manifest (`.git-remote-files`) that remembers where they came from
   and what commit they belong to.
   Written in Python, under GPL 2.0 license.
@@ -578,7 +580,7 @@ __Git tools and sites__
   is a tool that shows word-by-word authors of a file, creating TSV and HTML files.
   Written in Python, under GPL 3.0 license.
   The README includes links to a few alternative tools in "See also" section.
-+ [gguser](https://github.com/withshubh/gguser) is a CLI tool
++ [`gguser`](https://github.com/withshubh/gguser) is a CLI tool
   to easily switch between different Git user profiles.
   It simplifies managing multiple GitHub or GitLab accounts
   by allowing users to switch between profiles effortlessly.
@@ -589,7 +591,7 @@ __Git tools and sites__
   Written in Python, under MIT license.<br>
   See [GitlabForm for Gitlab repository automation](https://www.mikestreety.co.uk/blog/gitlabform-for-gitlab-repository-automation/)
   blog post by Mike Street on his blog.
-+ [gmap](https://github.com/seeyebe/gmap) is a fast command-line tool
++ [`gmap`](https://github.com/seeyebe/gmap) is a fast command-line tool
   (with terminal interface) to explore Git activity - heatmaps, churn, authorship, and more.
   It helps you understand your Git repository at a glance - not just what changed,
   but when, how much, and by whom.
@@ -597,7 +599,7 @@ __Git tools and sites__
 + [Ayllu](https://ayllu-forge.org/) is a code forge optimized for single instance deployments.
   It is still a work in progress.  Written in Rust, under AGPL license.
 + [DiffMem](https://github.com/Growth-Kinetics/DiffMem) is a lightweight,
-  git-based memory backend designed for AI agents and conversational systems.
+  Git-based memory backend designed for AI agents and conversational systems.
   It uses Markdown files for human-readable storage,
   Git for tracking temporal evolution through differentials,
   and an in-memory BM25 index for fast, explainable retrieval.
@@ -632,6 +634,7 @@ __Git tools and sites__
 + GitButler [0.15.16](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.15.16),
 [0.15.15](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.15.15)
 + Sublime Merge [Build 2112](https://www.sublimemerge.com/download)
++ Tower for Mac [14](https://www.git-tower.com/blog/tower-mac-14) ([YouTube video](https://youtu.be/WYhtxBAzOB0))
 
 ## Credits
 
@@ -640,4 +643,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Seyi Kuforiji.
+with help from Seyi Kuforiji and Bruno Brito.
