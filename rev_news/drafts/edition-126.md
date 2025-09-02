@@ -635,6 +635,7 @@ __Git tools and sites__
 [0.15.15](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.15.15)
 + Sublime Merge [Build 2112](https://www.sublimemerge.com/download)
 + Tower for Mac [14](https://www.git-tower.com/blog/tower-mac-14) ([YouTube video](https://youtu.be/WYhtxBAzOB0))
++ Kinetic Merge [1.9.0](https://github.com/sageserpent-open/kineticMerge/releases/tag/v1.9.0)
 
 ## Credits
 
