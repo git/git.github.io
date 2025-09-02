@@ -257,7 +257,7 @@ welcome your thoughts and feedback!_
 
 * **Have you thought about mentoring new GSoC / Outreachy students?**
 
-  Yes, I hope to mentor future Outreachy interns if the opportunity arise.
+  Yes, I hope to mentor future Outreachy interns if the opportunity arises.
 
 * **If you could get a team of expert developers to work full time on
   something in Git for a full year, what would it be?**
@@ -281,7 +281,7 @@ welcome your thoughts and feedback!_
 * **What is your favorite Git-related tool/library, outside of Git
   itself?**
 
-  GitHub and GitLab
+  GitHub and GitLab.
 
 * **What is your toolbox for interacting with the mailing list and for
   development of Git?**
@@ -370,7 +370,7 @@ __Various__
 __Light reading__
 
 + [The future of large files in Git is Git](https://tylercipriani.com/blog/2025/08/15/git-lfs/)
-  by Tyler Cipriani on his blog.  It describes how can one use
+  by Tyler Cipriani on his blog.  It describes how one can use
   partial clone today (and large object promisors in the future,
   which are work in progress) instead of using [Git LFS](https://git-lfs.com/)
   or similar solutions like [git-annex](https://git-annex.branchable.com/)
@@ -404,12 +404,12 @@ __Light reading__
     + [Radicle](https://radicle.xyz/), a peer-to-peer, local-first code collaboration stack built on Git,
       was first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/).
 + [introducing spindle](https://blog.tangled.sh/ci) by Anirudh & Akshay on Tangled blog;
-  spindle is Tangled’s new CI runner built atop Nix and AT Protocol.
+  spindle is Tangled’s new CI runner built atop Nix and the AT Protocol.
     + [Tangled.sh](https://blog.tangled.sh/intro) is a new social-enabled Git collaboration platform
-      build on top of AT Protocol (which is behind [BlueSky](https://bsky.app/)
+      built on top of the AT Protocol (which is behind [BlueSky](https://bsky.app/)
       microblogging federated social media service).
       First mentioned in [the previous edition of Git Rev News](https://git.github.io/rev_news/2025/07/31/edition-125/).
-    + Compare [Using Radicle CI for Development](https://radicle.xyz/2025/07/23/using-radicle-ci-for-development)
+    + Compare the [Using Radicle CI for Development](https://radicle.xyz/2025/07/23/using-radicle-ci-for-development)
       article by Lars Wirzenius, also mentioned in [Git Rev News #125](https://git.github.io/rev_news/2025/07/31/edition-125/).
       [Radicle](https://radicle.xyz/) is another distributed Git hosting system,
       first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/).
@@ -448,7 +448,7 @@ __Light reading__
 + [Some Pretty Cool Git Tools To Save Your Sanity](https://fev.al/posts/git-tools/)
   by Charles Féval on his blog.
   Mentions `git revise` for splitting pull requests (PRs),
-  and own `git backup`, `git reparent`, `git split`, `git move-branch`, and `git bookmark` commands.
+  and custom `git backup`, `git reparent`, `git split`, `git move-branch`, and `git bookmark` commands.
 + [Using Git worktrees for development](https://blog.kulman.sk/git-worktree/)
   by Igor Kulman on his blog.
 + [Curing A Case Of Git-UX](https://oppi.li/posts/curing_a_case_of_git-UX/)
@@ -458,15 +458,15 @@ __Light reading__
   and shell functions.
     + See also [Improving shell workflows with fzf](https://seb.jambor.dev/posts/improving-shell-workflows-with-fzf/),
       mentioned in [Git Rev News Edition #74](https://git.github.io/rev_news/2021/04/30/edition-74/).
-+ [Making my GitHub heatmap widget](https://leanrada.com/notes/github-heatmap-widget/)
-  Lean Rada on their blog.  The created tool scrapes an HTML input partially and reformats it,
-  but is constructed in such way that it could have consumed JSON from GitHub API instead.
++ [Making my GitHub heatmap widget](https://leanrada.com/notes/github-heatmap-widget/) by
+  Lean Rada on their blog.  The created tool partially scrapes and reformats HTML input,
+  but is constructed in such way that it could consume JSON from GitHub API instead.
 + [TryHackMe - Git Happens](https://jacen.moe/blog/20250805-tryhackme-git-happens/)
   by Jacen Sekai on his blog, about [Git Happens](https://tryhackme.com/room/githappens):
   an easy-ranked box on [TryHackMe](https://tryhackme.com/), website for
   hands-on cyber security training through real-world scenarios.
 + [The Ingredients of a Productive Monorepo](https://blog.swgillespie.me/posts/monorepo-ingredients/)
-  by Sean Gillespie on his misguided thoughts blog.
+  by Sean Gillespie on his blog.
     + You can find a definition of "monorepo" and a list of various tools on the [Monorepo.tools](https://monorepo.tools/) site,
        which was first mentioned in [Git Rev News Edition #84](https://git.github.io/rev_news/2022/02/28/edition-84/).
 + [Git Branching Explained: Base, Topic, and Parent Branches](https://www.git-tower.com/blog/base-topic-parent-branches)
@@ -481,7 +481,7 @@ __Light reading__
   to reverse the order of the commits in an interactive `git rebase`.
 + [Every line of code is always documented](https://mislav.net/2014/02/hidden-documentation/)
   by Mislav Marohnić on his blog (2014).  The article describes how to
-  extract information about code snippet from project history using `git blame`,
+  extract information about a code snippet from project history using `git blame`,
   'pickaxe' search with `git log -S`, and a
   [git-churn](https://github.com/garybernhardt/dotfiles/blob/f0c0ff92209e5aed4fa3ef6faf056eb9944a8f12/bin/git-churn) script,
   and how to stay on the right side of history
@@ -517,17 +517,17 @@ __Git tools and sites__
   Written in Rust, under Apache 2.0 License.
   Started out as Patchable internal tool.<br>
   You might also be interested in reading the announcement blog post:
-  [Modifying Other People's Software]()
+  [Modifying Other People's Software](https://natkr.com/2025-08-14-modifying-other-peoples-software/)
   by Natalie Klestrup Röijezon (natkr) on natkr's ramblings.
     + Compare [patchwork](http://jk.ozlabs.org/projects/patchwork/) - a web-based patch tracking system
-      designed to facilitate the contribution and management of contributions to an open-source project,
+      designed to facilitate contribution and management of contributions to an open-source project,
       first mentioned in [Git Rev News Edition #20](https://git.github.io/rev_news/2016/10/19/edition-20/).
     + Compare [Stacked Git (StGit)](https://stacked-git.github.io/),
       an application for managing Git commits as a stack of patches,
       first mentioned in [Git Rev News Edition #17](https://git.github.io/rev_news/2016/07/20/edition-17/).
     + Compare [B4 Tools](https://github.com/mricon/b4), a helper utility
       to work with patches made available via a [public-inbox](https://public-inbox.org/README.html) archive like [lore.kernel.org](https://lore.kernel.org/).
-      This tool is written to make it easier to participate in a patch-based workflows,
+      This tool is written to make it easier to participate in patch-based workflows,
       like those used in the Linux kernel development.
       First mentioned in [Git Rev News Edition #61](https://git.github.io/rev_news/2020/03/25/edition-61/).
 + [patch-hub](https://github.com/kworkflow/patch-hub/tree/unstable) is a TUI tool
@@ -567,7 +567,7 @@ __Git tools and sites__
   The [Introducing git-revise](https://mystor.github.io/git-revise.html)
   blog post was mentioned in [Git Rev News Edition #54](https://git.github.io/rev_news/2019/08/21/edition-54/).
 + [git-tools](https://github.com/cfe84/git-tools) is a set of additional Git commands
-  to help you make crazy stuff in a very unsafe way.
+  to "help you make crazy stuff in a very unsafe way".
   Includes `git backup`, `git move-branch`, `git reparent` (similar to `git rebase --onto`),
   `git split`, `git bookmark`, `git newbranch`, and `git get`.
   Written in Go, under GPL 2.0 license.
@@ -579,7 +579,7 @@ __Git tools and sites__
 + [git-word-blame](https://framagit.org/mdamien/git-word-blame)
   is a tool that shows word-by-word authors of a file, creating TSV and HTML files.
   Written in Python, under GPL 3.0 license.
-  The README includes links to a few alternative tools in "See also" section.
+  The README includes links to a few alternative tools in the "See also" section.
 + [`gguser`](https://github.com/withshubh/gguser) is a CLI tool
   to easily switch between different Git user profiles.
   It simplifies managing multiple GitHub or GitLab accounts
@@ -589,7 +589,7 @@ __Git tools and sites__
   for GitLab's application settings, groups, projects, and more,
   using hierarchical configuration written in YAML.
   Written in Python, under MIT license.<br>
-  See [GitlabForm for Gitlab repository automation](https://www.mikestreety.co.uk/blog/gitlabform-for-gitlab-repository-automation/)
+  See the [GitlabForm for Gitlab repository automation](https://www.mikestreety.co.uk/blog/gitlabform-for-gitlab-repository-automation/)
   blog post by Mike Street on his blog.
 + [`gmap`](https://github.com/seeyebe/gmap) is a fast command-line tool
   (with terminal interface) to explore Git activity - heatmaps, churn, authorship, and more.
