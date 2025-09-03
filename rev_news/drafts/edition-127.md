@@ -53,7 +53,7 @@ __Git tools and sites__
 
 + [Kinetic Merge](https://github.com/sageserpent-open/kineticMerge) is a command-line tool that helps you merge a heavily refactored codebase and stay sane.
   Its goals are to:
-    + Merge two branches of a Git repository *holistically across the entire codebase*.
+    + Merge two branches of a Git repository *holistically across the entire codebase*.
     + Take into account the motion of code in either branch due to refactoring.
     + Handle file renames, file splits, file concatenation.
     + Handle code being excised from one place in a file and moved elsewhere in that file or to somewhere within another file, or hived off all by itself in its own new file.
