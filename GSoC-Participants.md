@@ -8,6 +8,17 @@ to Git via GSoC.
 
 <!-- [ [project]() ] [ [final report]() ] [ [blog]() ] -->
 
+### 2025
+
+1. Ayush Chandekar [ [project](TODO) ] [ [final report](https://ayu-ch.github.io/2025/08/29/gsoc-final-report.html) ] [ [blog](https://ayu-ch.github.io/) ]
+2. Meet Soni [ [project](TODO) ] [ [final report](TODO) ] [ [blog](https://inosmeet.github.io/posts/gsoc25/) ]
+3. Lucas Seiki Oshiro [ [project](TODO) ] [ [final report](https://lucasoshiro.github.io/gsoc-en/#final-report) ] [ [blog](https://lucasoshiro.github.io/gsoc-en/#weeks) ]
+
+#### References
+
+- [GSoC archive](TODO)
+- [Rev News article](https://git.github.io/rev_news/2025/05/31/edition-123/)
+
 ### 2024
 
 1. Jialuo She [ [project](https://summerofcode.withgoogle.com/archive/2024/projects/ukm4PTEF) ] [ [final report](https://luolibrary.com/2024/08/25/GSoC-Final-Report/) ] [ [blog](https://luolibrary.com/) ]
