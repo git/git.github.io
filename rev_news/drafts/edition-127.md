@@ -45,10 +45,11 @@ __Easy watching__
 -->
 
 __Git tools and sites__
-
+- [git-flow-next: The Next Iteration of Advanced Git Workflows](https://www.git-tower.com/blog/git-flow-next) by Bruno Brito on Tower Blog.
 
 ## Releases
-
+- Tower for Mac [14.4, 14.5](https://www.git-tower.com/release-notes/mac) 
+- git-flow-next [0.1](https://git-flow.sh/)
 
 ## Credits
 
