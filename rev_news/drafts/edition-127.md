@@ -46,6 +46,7 @@ __Easy watching__
 
 __Git tools and sites__
 
+* [LearnGit.io](https://learngit.io/) teaches version control using animated visualizations of Git internals—and is [now free](https://learngit.io/posts/learngit-io-is-now-free-for-students) for students and teachers. Created by Jack Lot of [The Modern Coder](https://www.youtube.com/@themoderncoder) YouTube channel, LearnGit offers 41 video lessons across 11 modules, along with quizzes, a Git command search, and high-quality written documentation. Educators can email jack@learngit.io for bulk vouchers. First mentioned in [Git Rev News Edition #108](https://git.github.io/rev_news/2024/02/29/edition-108/).
 
 ## Releases
 
