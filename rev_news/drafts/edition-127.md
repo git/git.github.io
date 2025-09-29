@@ -31,7 +31,7 @@ This edition covers what happened during the months of August and September 2025
 
 ## Developer Spotlight: Toon Claes
 
-* Who are you and what do you do?
+* **Who are you and what do you do?**
 
   I'm Toon from Belgium. My name is pronounced like "tone" (rhymes with
   "bone"), and not like the "toon" in "cartoon", but usually I'm already
@@ -45,7 +45,7 @@ This edition covers what happened during the months of August and September 2025
   been circling back to more lower-level programming, contributing to Git
   using C.
 
-* What would you name your most important contribution to Git?
+* **What would you name your most important contribution to Git?**
 
   I'm fairly new in the Git community, but recently I've been working on
   adding [`git last-modified`(1)](https://git.github.io/htmldocs/git-last-modified.html).
@@ -54,14 +54,14 @@ This edition covers what happened during the months of August and September 2025
   be used on forges (like GitLab, GitHub, Codeberg), to show commit
   data in a tree view.
 
-* What are you doing on the Git project these days, and why?
+* **What are you doing on the Git project these days, and why?**
 
   The subcommand [`git last-modified`(1)](https://git.github.io/htmldocs/git-last-modified.html)
   was recently merged in the 'master'. But there's more work to be
   done to improve it's performance.
 
-* If you could get a team of expert developers to work full time on
-  something in Git for a full year, what would it be?
+* **If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?**
 
   Once data is committed to Git, and it's made part of the history (i.e.
   committed or merged into the default branch), it's trapped forever. This
@@ -82,15 +82,15 @@ This edition covers what happened during the months of August and September 2025
   slope, because from experience I know Git users are very creative and
   might use this feature in ways that were not intended for.
 
-* If you could remove something from Git without worrying about
-  backwards compatibility, what would it be?
+* **If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?**
 
   The use of the double `..` and triple `...` dot notation in
   [`gitrevisions(7)`](https://git-scm.com/docs/gitrevisions#_dotted_range_notations)
   and `git diff(1)`. I even once ranted about it in [a video](https://www.youtube.com/watch?v=phThP8DwJVs).
 
-* What is your favorite Git-related tool/library, outside of
-  Git itself?
+* **What is your favorite Git-related tool/library, outside of
+  Git itself?**
 
   I'm a big fan of [Magit][1]. It's arguably the best tool to interact
   with Git and I also learned a lot from it. I consider myself an
@@ -99,8 +99,8 @@ This edition covers what happened during the months of August and September 2025
 
 [1]: https://magit.vc/
 
-* Do you happen to have any memorable experience w.r.t. contributing
-  to the Git project? If yes, could you share it with us?
+* **Do you happen to have any memorable experience w.r.t. contributing
+  to the Git project? If yes, could you share it with us?**
 
   One of my earliest contributions to Git was a bug fix in the code used
   by `git bundle create`. We noticed sometimes references didn't end up in
@@ -120,8 +120,8 @@ This edition covers what happened during the months of August and September 2025
 [2]: https://lore.kernel.org/git/20241211-fix-bundle-create-race-v3-1-0587f6f9db1b@iotcl.com/
 [3]: https://lore.kernel.org/git/xmqqzfl4l22t.fsf@gitster.g/
 
-* What is your toolbox for interacting with the mailing list and for
-  development of Git?
+* **What is your toolbox for interacting with the mailing list and for
+  development of Git?**
 
   I mostly live in Emacs and my terminal (zsh). I consume email in Emacs
   using [notmuch][4]. To submit patches I use [b4][5], which I also
@@ -143,8 +143,8 @@ This edition covers what happened during the months of August and September 2025
 [7]: https://lore.kernel.org/git/20241206-pks-meson-v11-0-525ed4792b88@pks.im/
 [8]: https://mesonbuild.com/Feature-autodetection.html#ccache
 
-* What is your advice for people who want to start Git development?
-  Where and how should they start?
+* **What is your advice for people who want to start Git development?
+  Where and how should they start?**
 
   Learn to navigate [the mailing list archive][9]. It lacks structure so
   things can be hard to find, but there's so much information up there. If
