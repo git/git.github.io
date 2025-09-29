@@ -148,7 +148,7 @@ This edition covers what happened during the months of August and September 2025
 
   Learn to navigate [the mailing list archive][9]. It lacks structure so
   things can be hard to find, but there's so much information up there. If
-  you're interested in a topic, or you think you find the bug, start digging.
+  you're interested in a topic, or you think you've found the bug, start digging.
   Use [`git blame(1)`][10] to find the commit that introduced the changes
   and look up the conversation around it in the mailing list archive.
   This will help you understand why some decisions are made. Also it
