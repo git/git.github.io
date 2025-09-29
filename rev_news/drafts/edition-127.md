@@ -48,7 +48,7 @@ This edition covers what happened during the months of August and September 2025
 * What would you name your most important contribution to Git?
 
   I'm fairly new in the Git community, but recently I've been working on
-  adding [`git last-modified`](https://git.github.io/htmldocs/git-last-modified.html).
+  adding [`git last-modified`(1)](https://git.github.io/htmldocs/git-last-modified.html).
   It's a sub-command that will be released in Git v2.52. This command
   finds the commit that last modified each path in a tree. This can
   be used on forges (like GitLab, GitHub, Codeberg), to show commit
