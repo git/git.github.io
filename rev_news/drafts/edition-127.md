@@ -196,9 +196,25 @@ __Light reading__
 	  and now is part of Git: [scalar - A tool for managing large Git repositories](https://git-scm.com/docs/scalar).
 	  [The Story of Scalar](https://github.blog/2022-10-13-the-story-of-scalar/)
 	  was mentioned in [Edition #92](https://git.github.io/rev_news/2022/10/26/edition-92/).
++ [The Origin Story of Merge Queues](https://mergify.com/blog/the-origin-story-of-merge-queues)
+  by Julien Danjou on Mergify Blog.
+  This article traces merge queues history,
+  (from Bors and Homu to Bulldozer, Kodiak, Mergify, GitHub and GitLab),
+  why they emerged, and how they became a standard in modern software development.
+    + [Mergify.com](https://mergify.com/),
+	  a web service for automatizing pull requests (free for open-source projects),
+	  was mentioned in [Git Rev News Edition #87](https://git.github.io/rev_news/2022/05/26/edition-87/).
 + [Git - Fun Facts](https://dev.to/rubansi/git-fun-fact-45de)
   by Rubansi Vincent on DEV\.to:
   a mix of fun and surprising facts about Git.
++ [diff --stat for binary files (in the Jujutsu version control system)](https://neugierig.org/software/blog/2025/08/jj-binary-stat.html)
+  by Evan Martin on neugierig\.org: Tech Notes.
+    + [Jujutsu (`jj`)](https://jj-vcs.github.io/jj/) is a Git-compatible version control system
+	  written in Rust, first mentioned in
+	  [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/).
++ [Jujutsu For Busy Devs, Part 2: "How Do I...?"](https://maddie.wtf/posts/2025-07-21-jujutsu-for-busy-devs/entry/1)
+  by Madeleine Mortensen, continues [Jujutsu For Busy Devs](https://maddie.wtf/posts/2025-07-21-jujutsu-for-busy-devs)
+  series, mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/).
 + [Dear GitHub: no YAML anchors, please](https://blog.yossarian.net/2025/09/22/dear-github-no-yaml-anchors)
   by William Woodruff (yossarian) on his ENOSUCHBLOG blog.
   He says that they are redundant with existing functionality,
@@ -212,6 +228,8 @@ __Light reading__
 + [finding deleted content using git logs](https://kjelsrud.dev/blog/finding-deleted-content-using-git-logs/)
   by Sindre Kjelsrud, also known as “Sid”, on Sids' blog:
   a short note on `git log -S`.
++ [Git exclude, a handy feature you might not know about](https://marijkeluttekes.dev/blog/articles/2025/09/03/git-exclude-a-handy-feature-you-might-not-know-about/)
+  by Marijke Luttekes on her blog, about `.git/info/exclude`.
 + [Git Dual Remotes](https://zanshin.net/2025/09/02/git-dual-remotes/):
   a short note by Mark H. Nichols on his Zanshin.net personal site,
   about the difference between `git push` and `git fetch` with multiple URLs,
@@ -221,6 +239,8 @@ __Light reading__
   [Gitea](https://about.gitea.com/) and [Forgejo](https://forgejo.org/) are software forges.
 + [Some thoughts on personal git hosting](https://shkspr.mobi/blog/2025/09/some-thoughts-on-personal-git-hosting/)
   by Terence Eden on Terence Eden’s Blog.
++ [Setting up cgit with Caddy v2 web server](https://www.sixfoisneuf.fr/posts/setting-up-cgit-with-caddy2/)
+  by Simon Garrelou on his SixFoisNeuf blog (2022).
 + [Sourcegraph went dark](https://www.eric-fritz.com/articles/sourcegraph-went-dark/)
   by Eric Fritz on his blog (2024),
   about the work that went into ensuring that references are kept alive
@@ -268,6 +288,10 @@ __Easy watching__
     + [Merging code embedded inside an if-statement](https://www.youtube.com/watch?v=sm4Naq_zJU0&t=2s)
 + [12 Git commands visualized in 3D: a spatial approach to understanding version control](https://www.youtube.com/watch?v=C2aFC8wFp2A)
   [4:58], on Initial Commit channel on YouTube.
++ [Stacked Branches With Lazygit](https://www.youtube.com/watch?v=M6S-9Y8peDY)
+  [12:18] by Jesse Duffield (Lazygit author) on YouTube.
+    + [lazygit](https://github.com/jesseduffield/lazygit) is a simple [windowed] terminal UI for Git,
+	  written in Go.  It was first mentioned in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/).
 
 
 __Git tools and sites__
@@ -287,6 +311,13 @@ __Git tools and sites__
   is a comprehensive benchmarking tool for comparing different Git clone strategies,
   especially for large repositories.
   Written as Bash shell script, under MIT license.
++ [_prek_](https://prek.j178.dev/) is a reimagined version of [pre-commit](https://pre-commit.com/), built in Rust.
+  It is is a framework to run hooks written in many languages,
+  and it manages the language toolchain and dependencies for running the hooks.
+  prek is not production-ready yet: some subcommands and languages are not implemented.
+  Under MIT license.
+    + See also [Ready prek go!](https://hugovk.dev/blog/2025/ready-prek-go/)
+	  article by Hugo van Kemenade on his blog.
 + [git-sqlite](https://github.com/cannadayr/git-sqlite)
   is a collection of shell scripts,
   including a custom diff and merge driver for sqlite,
