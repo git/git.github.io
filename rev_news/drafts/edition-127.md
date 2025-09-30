@@ -177,6 +177,24 @@ __Git tools and sites__
 
 ## Releases
 
++ Git for Windows [v2.51.0(2)](https://github.com/git-for-windows/git/releases/tag/v2.51.0.windows.2)
++ Gerrit Code Review [3.13.0-rc0](https://www.gerritcodereview.com/3.13.html#3130)
++ GitHub Enterprise [3.17.6](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.6),
+[3.16.9](https://docs.github.com/enterprise-server@3.16/admin/release-notes#3.16.9),
+[3.15.13](https://docs.github.com/enterprise-server@3.15/admin/release-notes#3.15.13),
+[3.14.18](https://docs.github.com/enterprise-server@3.14/admin/release-notes#3.14.18)
++ GitLab [18.4.1, 18.3.3, 18.2.7](https://about.gitlab.com/releases/2025/09/25/patch-release-gitlab-18-4-1-released/),
+[18.4](https://about.gitlab.com/releases/2025/09/18/gitlab-18-4-released/),
+[18.3.2, 18.2.6, 18.1.6](https://about.gitlab.com/releases/2025/09/10/patch-release-gitlab-18-3-2-released/)
++ GitKraken [11.4.0](https://help.gitkraken.com/gitkraken-desktop/current/)
++ Sourcetree [4.2.14](https://product-downloads.atlassian.com/software/sourcetree/ReleaseNotes/Sourcetree_4.2.14.html)
++ tig [2.6.0](https://github.com/jonas/tig/releases/tag/tig-2.6.0)
++ Garden [2.3.0](https://github.com/garden-rs/garden/releases/tag/v2.3.0)
++ Git Cola [4.15.0](https://github.com/git-cola/git-cola/releases/tag/v4.15.0)
++ GitButler [0.16.8](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.16.8),
+[0.16.7](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.16.7)
++ Kinetic Merge [1.9.0](https://github.com/sageserpent-open/kineticMerge/releases/tag/v1.9.0)
++ git-credential-oauth [0.16.0](https://github.com/hickford/git-credential-oauth/releases/tag/v0.16.0)
 
 ## Credits
 
