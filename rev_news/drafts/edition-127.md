@@ -198,6 +198,7 @@ __Git tools and sites__
 
 + Git for Windows [v2.51.0(2)](https://github.com/git-for-windows/git/releases/tag/v2.51.0.windows.2)
 + Gerrit Code Review [3.13.0-rc0](https://www.gerritcodereview.com/3.13.html#3130)
++ Bitbucket Data Center [10.0](https://confluence.atlassian.com/bitbucketserver/release-notes-872139866.html)
 + GitHub Enterprise [3.17.6](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.6),
 [3.16.9](https://docs.github.com/enterprise-server@3.16/admin/release-notes#3.16.9),
 [3.15.13](https://docs.github.com/enterprise-server@3.15/admin/release-notes#3.15.13),
