@@ -165,6 +165,14 @@ This edition covers what happened during the months of August and September 2025
 
 __Various__
 
++ [What’s next for Git? 20 years in, the community is still pushing forward](https://github.blog/open-source/whats-next-for-git-20-years-in-the-community-is-still-pushing-forward/)
+  by Lee Reilly on GitHub Blog - mainly about
+  the [Git Merge 2025 talks lineup](https://git-merge.com/#speakers).
++ [Git Developers Debate Making Rust Mandatory](https://www.phoronix.com/news/Git-Weighs-Mandatory-Rust)
+  by Michael Larabel on Phoronix.
++ [A policy for `Link:` tags](https://lwn.net/Articles/1037069/) (for Linux),
+  by Jonathan Corbet on LWN\.net.
+
 
 __Light reading__
 
@@ -174,14 +182,92 @@ __Light reading__
   by D. Ben Knoble on his Junk Drawer personal Blog,
   about the new `git-greb` script that feeds `git grep` to `git blame`
   (with appropriate options) in order to blame matching lines.
++ [My new git utility `what-changed-twice` needs a new name](https://blog.plover.com/2025/09/21/#what-changed-twice)
+  by Mark Dominus (陶敏修) on his The Universe of Discourse blog,
+  about the tool to help get related changes into the same commit.
++ [Supercharge your Git workflows](https://about.gitlab.com/blog/supercharge-your-git-workflows/)
+  by Darwin Sanoy on GitLab Blog, about how to
+  optimize `git clone` operations in any environment, reducing clone time and disk space,
+  with the [Git Much Faster](https://gitlab.com/gitlab-accelerates-embedded/misc/git-much-faster) script.
+    + Compare with [Scalar](https://github.com/microsoft/scalar),
+	  a tool that helps Git scale to handle large Git repositories
+	  by enabling some advanced Git features.
+	  Scalar was first mentioned in [Git Rev News Edition #60](https://git.github.io/rev_news/2020/02/19/edition-60/),
+	  and now is part of Git: [scalar - A tool for managing large Git repositories](https://git-scm.com/docs/scalar).
+	  [The Story of Scalar](https://github.blog/2022-10-13-the-story-of-scalar/)
+	  was mentioned in [Edition #92](https://git.github.io/rev_news/2022/10/26/edition-92/).
++ [Git - Fun Facts](https://dev.to/rubansi/git-fun-fact-45de)
+  by Rubansi Vincent on DEV\.to:
+  a mix of fun and surprising facts about Git.
++ [Dear GitHub: no YAML anchors, please](https://blog.yossarian.net/2025/09/22/dear-github-no-yaml-anchors)
+  by William Woodruff (yossarian) on his ENOSUCHBLOG blog.
+  He says that they are redundant with existing functionality,
+  make CI/CD human and machine comprehension harder,
+  and their support in GitHub Actions does not introduce any new, previously unavailable features.
++ [Custom VC-Focused Emacs Functions I Created to Enhance My Git Workflow](https://www.rahuljuliato.com/posts/vc-git-functions)
+  by Rahul M. Juliato on Rahul's Blog.
++ [How to delete all squash-merged local git branches with one terminal command](https://whitep4nth3r.com/blog/how-to-delete-all-squash-merged-local-git-branches-with-one-terminal-command/)
+  (which you probably shouldn't use),
+  by Salma Alam-Naylor on her blog.
++ [finding deleted content using git logs](https://kjelsrud.dev/blog/finding-deleted-content-using-git-logs/)
+  by Sindre Kjelsrud, also known as “Sid”, on Sids' blog:
+  a short note on `git log -S`.
++ [Git Dual Remotes](https://zanshin.net/2025/09/02/git-dual-remotes/):
+  a short note by Mark H. Nichols on his Zanshin.net personal site,
+  about the difference between `git push` and `git fetch` with multiple URLs,
+  and `jj git push --all-remotes`.
++ [Migrating from Gitea to Forgejo the long way](https://msfjarvis.dev/posts/migrating-from-gitea-to-forgejo-the-long-way/)
+  by Harsh Shandilya on his blog.<br>
+  [Gitea](https://about.gitea.com/) and [Forgejo](https://forgejo.org/) are software forges.
++ [Some thoughts on personal git hosting](https://shkspr.mobi/blog/2025/09/some-thoughts-on-personal-git-hosting/)
+  by Terence Eden on Terence Eden’s Blog.
++ [Sourcegraph went dark](https://www.eric-fritz.com/articles/sourcegraph-went-dark/)
+  by Eric Fritz on his blog (2024),
+  about the work that went into ensuring that references are kept alive
+  after `sourcegraph/sourcegraph` repository went private
+  (there is a public snapshot available at [sourcegraph/sourcegraph-public-snapshot](https://github.com/sourcegraph/sourcegraph-public-snapshot),
+  which is read-only archived repository).
++ [How to use stacked PRs to unblock your entire team](https://graphite.dev/blog/stacked-prs)
+  by Ninad Pathak on Graphite Blog (2024), and<br>
+  [A guide to using Graphite's stacked PRs for GitHub users](https://dev.to/semgrep/a-guide-to-using-graphites-stacked-prs-for-github-users-5c47)
+  by Martin Jambon for Semgrep on DEV\.to.
+    + See also [Stacked Branches with GitButler](https://blog.gitbutler.com/stacked-branches-with-gitbutler/)
+	  by Scott Chacon on the GitButler Blog,
+	  mentioned in [Git Rev News Edition #118](https://git.github.io/rev_news/2024/12/31/edition-118/).
+    + See also [Understanding the Stacked Pull Requests Workflow](https://www.git-tower.com/blog/stacked-prs/) by Bruno Brito on Tower's blog,
+      mentioned in [Git Rev News Edition #111](https://git.github.io/rev_news/2024/05/31/edition-111/)
+      together with various other articles and tools about stacked diffs, stacked PRs, and stacked branches.
+    + See also [Rethinking code reviews with stacked PRs](https://www.aviator.co/blog/rethinking-code-reviews-with-stacked-prs/#)
+      by Ankit Jain on the Aviator blog,
+      mentioned in [Git Rev News Edition #115](https://git.github.io/rev_news/2024/09/30/edition-115/)
+      with links to more sites and tools related to stacked PRs, etc.
++ [GitButler's new patch based Code Review (Beta)](https://blog.gitbutler.com/gitbutlers-new-patch-based-code-review)
+  by Scott Chacon on GitButler's Blog.
++ [first-class merges and cover letters](https://dotat.at/@/2025-09-11-cover-letter.html)
+  by Tony Finch on his blog.
+
+
+__Slightly heavier reading__
+
++ [Quo Vadis, Code Review? Exploring the Future of Code Review](https://arxiv.org/abs/2508.06879),
+  a scientific article from August 2025, arXiv:2508.06879
+  (most authors of the paper are from Blekinge Institute of Technology, Karlskrona, Sweden).
++ [Code Review as Decision-Making -- Building a Cognitive Model from the Questions Asked During Code Review](https://arxiv.org/abs/2507.09637),
+  a scientific article from July 2025, arXiv:2507.09637
+  (all authors are from Lund University, Lund, Sweden).
+  Submitted to _Empirical Software Engineering_, Springer Nature.
 
 
 __Easy watching__
 
++ [Git Mini Summit 2025 Videos](https://blog.gitbutler.com/git-mini-summit-2025)
+  by Scott Chacon on GitButler's Blog.
 + Kinetic Merge in action
     + [Merging through a file split](https://youtu.be/JHb9DKK0LIA)
     + [Complex merge demonstration](https://youtu.be/6jry6NKxGJA)
     + [Merging code embedded inside an if-statement](https://www.youtube.com/watch?v=sm4Naq_zJU0&t=2s)
++ [12 Git commands visualized in 3D: a spatial approach to understanding version control](https://www.youtube.com/watch?v=C2aFC8wFp2A)
+  [4:58], on Initial Commit channel on YouTube.
 
 
 __Git tools and sites__
@@ -197,6 +283,15 @@ __Git tools and sites__
     + Be a simple command line tool that tries to do as much as it can without supervision, and with minimal supervision when complexities are encountered.
   
   Written in Scala, under an MIT license.
++ [Git Much Faster](https://gitlab.com/gitlab-accelerates-embedded/misc/git-much-faster)
+  is a comprehensive benchmarking tool for comparing different Git clone strategies,
+  especially for large repositories.
+  Written as Bash shell script, under MIT license.
++ [git-sqlite](https://github.com/cannadayr/git-sqlite)
+  is a collection of shell scripts,
+  including a custom diff and merge driver for sqlite,
+  that allows a sqlite database to be tracked using the git version control system.
+  Under MIT license.
 
 + [LearnGit.io](https://learngit.io/) teaches version control
   using animated visualizations of Git internals—and is
@@ -206,6 +301,12 @@ __Git tools and sites__
   a Git command search, and high-quality written documentation.
   Educators can email jack@learngit.io for bulk vouchers.
   First mentioned in [Git Rev News Edition #108](https://git.github.io/rev_news/2024/02/29/edition-108/).
++ [GitFichas](https://gitfichas.com/en) (also know as GitStudyCards)
+  is a collection of study cards about Git,
+  for devs that might need a refresher about Git commands.
+  GitFichas is now [open-source](https://github.com/jtemporal/gitfichas)
+  and undergoing some construction.
+
 
 ## Releases
 
