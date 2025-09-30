@@ -168,6 +168,9 @@ __Various__
 
 __Light reading__
 
++ [git-flow-next: The Next Iteration of Advanced Git Workflows](https://www.git-tower.com/blog/git-flow-next)
+  by Bruno Brito on Tower Blog.
+
 
 __Easy watching__
 
@@ -178,7 +181,6 @@ __Easy watching__
 
 
 __Git tools and sites__
-
 + [Kinetic Merge](https://github.com/sageserpent-open/kineticMerge) is a command-line tool that helps you merge a heavily refactored codebase and stay sane.
   Its goals are to:
     + Merge two branches of a Git repository *holistically across the entire codebase*.
@@ -189,6 +191,7 @@ __Git tools and sites__
     + Be a simple command line tool that tries to do as much as it can without supervision, and with minimal supervision when complexities are encountered.
   
   Written in Scala, under an MIT license.
+
 
 ## Releases
 
@@ -210,6 +213,9 @@ __Git tools and sites__
 [0.16.7](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.16.7)
 + Kinetic Merge [1.9.0](https://github.com/sageserpent-open/kineticMerge/releases/tag/v1.9.0)
 + git-credential-oauth [0.16.0](https://github.com/hickford/git-credential-oauth/releases/tag/v0.16.0)
++ Tower for Mac [14.4, 14.5](https://www.git-tower.com/release-notes/mac) 
++ git-flow-next [0.1](https://git-flow.sh/)
+
 
 ## Credits
 
