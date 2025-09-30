@@ -170,6 +170,10 @@ __Light reading__
 
 + [git-flow-next: The Next Iteration of Advanced Git Workflows](https://www.git-tower.com/blog/git-flow-next)
   by Bruno Brito on Tower Blog.
++ [A kludgy new way to git-blame](https://benknoble.github.io/blog/2025/09/17/blame/)
+  by D. Ben Knoble on his Junk Drawer personal Blog,
+  about the new `git-greb` script that feeds `git grep` to `git blame`
+  (with appropriate options) in order to blame matching lines.
 
 
 __Easy watching__
@@ -181,6 +185,7 @@ __Easy watching__
 
 
 __Git tools and sites__
+
 + [Kinetic Merge](https://github.com/sageserpent-open/kineticMerge)
   is a command-line tool that helps you merge a heavily refactored codebase and stay sane.
   Its goals are to:
