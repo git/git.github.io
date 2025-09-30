@@ -168,12 +168,27 @@ __Various__
 
 __Light reading__
 
-<!---
+
 __Easy watching__
--->
+
++ Kinetic Merge in action
+    + [Merging through a file split](https://youtu.be/JHb9DKK0LIA)
+    + [Complex merge demonstration](https://youtu.be/6jry6NKxGJA)
+    + [Merging code embedded inside an if-statement](https://www.youtube.com/watch?v=sm4Naq_zJU0&t=2s)
+
 
 __Git tools and sites__
 
++ [Kinetic Merge](https://github.com/sageserpent-open/kineticMerge) is a command-line tool that helps you merge a heavily refactored codebase and stay sane.
+  Its goals are to:
+    + Merge two branches of a Git repository *holistically across the entire codebase*.
+    + Take into account the motion of code in either branch due to refactoring.
+    + Handle file renames, file splits, file concatenation.
+    + Handle code being excised from one place in a file and moved elsewhere in that file or to somewhere within another file, or hived off all by itself in its own new file.
+    + Work alongside the usual Git workflows, allowing ordinary Git merge to take over at the end if necessary.
+    + Be a simple command line tool that tries to do as much as it can without supervision, and with minimal supervision when complexities are encountered.
+  
+  Written in Scala, under an MIT license.
 
 ## Releases
 
