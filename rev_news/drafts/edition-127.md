@@ -434,6 +434,7 @@ __Git tools and sites__
   for devs that might need a refresher about Git commands.
   GitFichas is now [open-source](https://github.com/jtemporal/gitfichas)
   and undergoing some construction.
++ Git's home page now has a [Learn](https://git-scm.com/learn) section, including [a handy Git Cheat Sheet](https://git-scm.com/cheat-sheet), contributed by the ever-industrious Julia Evans. These contributions are part of [the initiative to refresh the look and contents of git-scm.com](https://github.com/git/git-scm.com/issues/2046).
 
 
 ## Releases
