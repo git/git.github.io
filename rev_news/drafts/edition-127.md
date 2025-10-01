@@ -267,6 +267,7 @@ __Various__
   by Michael Larabel on Phoronix.
 + [A policy for `Link:` tags](https://lwn.net/Articles/1037069/) (for Linux),
   by Jonathan Corbet on LWN\.net.
++ [Working almost continuously for six months](https://www.linkedin.com/feed/update/urn:li:activity:7378744230275350528/), Yasin Dehfuli completed the [Persian translation of the ProGit book](https://git-scm.com/book/fa/v2).
 
 
 __Light reading__
