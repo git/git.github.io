@@ -267,6 +267,8 @@ __Various__
   by Michael Larabel on Phoronix.
 + [A policy for `Link:` tags](https://lwn.net/Articles/1037069/) (for Linux),
   by Jonathan Corbet on LWN\.net.
++ [Working almost continuously for six months](https://www.linkedin.com/feed/update/urn:li:activity:7378744230275350528/), Yasin Dehfuli completed the [Persian translation of the ProGit book](https://git-scm.com/book/fa/v2).
++ An initiative [to refresh the look and content of https://git-scm.com/](https://github.com/git/git-scm.com/issues/2046) has been kicked off by Toon Claes. Contributions welcome, especially from visual designers!
 
 
 __Light reading__
@@ -432,6 +434,7 @@ __Git tools and sites__
   for devs that might need a refresher about Git commands.
   GitFichas is now [open-source](https://github.com/jtemporal/gitfichas)
   and undergoing some construction.
++ Git's home page now has a [Learn](https://git-scm.com/learn) section, including [a handy Git Cheat Sheet](https://git-scm.com/cheat-sheet), contributed by the ever-industrious Julia Evans. These contributions are part of [the initiative to refresh the look and contents of git-scm.com](https://github.com/git/git-scm.com/issues/2046).
 
 
 ## Releases
