@@ -25,9 +25,104 @@ This edition covers what happened during the months of August and September 2025
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [Doing blobless clone by default; switching between blobless, treeless and full clones by a command](https://lore.kernel.org/git/79ed51fbd94ec2793ab0388b33963b366e48c590.camel@aegee.org/)
+
+  Dilyan Palauzov (Дилян Палаузов) sent an email to the Git mailing
+  list where he proposed making blobless cloning
+  (`--filter=blob:none`) the default behavior for `git clone` via a
+  global configuration option. He also suggested adding a command to
+  download all locally missing history, a command to convert a
+  repository to a pure treeless or pure blobless clone, and a config
+  option to make blobless clone the default behavior when running just
+  `git clone URL`.
+
+  He said that most users clone to build or change software, not to
+  immediately analyze history with commands like `git log`. Therefore,
+  a reduced data download would speed up initialization, save
+  bandwidth, and reduce server load.
+
+  Kristoffer Haugsbakk replied saying the proposed command to
+  "download all locally missing history" for treeless and blobless
+  clones "sounds like git-backfill(1)". He also noted that he had
+  "never used blob/treeless" clones himself.
+
+  Derrick Stolee, who likes to be called just "Stolee", and who
+  contributed the `git backfill` command, replied to Kristoffer
+  confirming that git backfill is intended to assist with downloading
+  the missing blobs in a blobless partial clone.
+
+  About treeless clones though, he noted that git backfill is not
+  optimized for them, and that treeless clones are generally not
+  intended for "refilling," as downloading missing trees is
+  "particularly expensive".
+
+  Stolee suggested using `scalar clone`, which is already shipped with
+  Git, instead of making blobless cloning the default, as
+  `scalar clone` was contributed partly to allow users to opt into a
+  version of `git clone` that incorporates "best practices and
+  advanced features as they are developed", while `git clone`
+  maintains backward compatibility. He recognized that `scalar clone`
+  might not be "discoverable enough" though.
+
+  Junio Hamano replied to Stolee's suggestion that a future command
+  like `git big-clone` could emerge from the feedback on
+  `scalar clone`. He said a separate command like `git big-clone`
+  would not be discoverable enough either. Instead as a new feature
+  matures, it should be a welcome change for `git clone` to borrow it
+  as a new option. Such optimizations (like those for large repos)
+  could be automatically enabled based on the repository's size,
+  provided it's done with end-user consent.
+
+  Patrick Steinhardt replied to Stolee about treeless clones. He
+  agreed that the existing command `git backfill` is not optimized for
+  refilling treeless clones, and proposed an idea to backfill trees by
+  batching based on depth, but concluded that this method is
+  "definitely not ideal" and would perform "way worse compared to
+  backfilling blobs".
+
+  Patrick also said that for these reasons he generally recommends not
+  to use treeless clones at all.
+
+  Stolee replied to Patrick agreeing with the general caution
+  regarding treeless clones, and that they are "not a good approach
+  for doing ongoing work as a human".
+
+  However he noted that they are useful if a user needs the speed of a
+  shallow clone combined with the ability to analyze commit history
+  (though with no path history) for an "ephemeral scenario like a CI
+  build". But they are a "tool for a very narrow case" and should only
+  be used by those who understand how to avoid their pitfalls. Patrick
+  then agreed with that point of view.
+
+  Konstantin Ryabitsev, the system administrator for kernel.org,
+  replied to the original email from Dilyan about making blobless
+  clones the default behavior for `git clone`. He said a
+  counter-rationale to this proposal was that shallow clones (which
+  include blobless clones) generate significantly more load on the
+  server side.
+
+  The reason is that for these partial clones, no pre-existing packs
+  are available for the operation, requiring more computation from the
+  server. So changing the default behavior for `git clone` could
+  likely result in slower clones for everyone and lead to more
+  unavailable servers due to the high load.
+
+  Ben Knoble also replied to Dilyan's original email by opposing the
+  proposal to make blobless clones the default behavior while agreeing
+  that managing this preference via a config option was a reasonable
+  compromise.
+
+  Ben's opinion was that such a default behavior would defeat the
+  "tremendous advantage of distributed version control" which is about
+  having the whole repository available independently. It would also
+  makes some of his use cases more difficult as he frequently clones
+  repositories specifically to run "history spelunking searches".
+
+  He noted that he primarily deals with repositories where the issue
+  isn't about clones, but about mismanaging large binary files in
+  history, which creates large blobs and clone times.
 
 ## Developer Spotlight: Toon Claes
 
