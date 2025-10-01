@@ -268,6 +268,7 @@ __Various__
 + [A policy for `Link:` tags](https://lwn.net/Articles/1037069/) (for Linux),
   by Jonathan Corbet on LWN\.net.
 + [Working almost continuously for six months](https://www.linkedin.com/feed/update/urn:li:activity:7378744230275350528/), Yasin Dehfuli completed the [Persian translation of the ProGit book](https://git-scm.com/book/fa/v2).
++ An initiative [to refresh the look and content of https://git-scm.com/](https://github.com/git/git-scm.com/issues/2046) has been kicked off by Toon Claes. Contributions welcome, especially from visual designers!
 
 
 __Light reading__
