@@ -36,9 +36,9 @@ This edition covers what happened during the months of August and September 2025
   download all locally missing history, a command to convert a
   repository to a pure treeless or pure blobless clone, and a config
   option to make blobless clone the default behavior when running just
-  `git clone URL`.
+  `git clone <URL>`.
 
-  He said that most users clone to build or change software, not to
+  He said that most users used `git clone` to build or change software, not to
   immediately analyze history with commands like `git log`. Therefore,
   a reduced data download would speed up initialization, save
   bandwidth, and reduce server load.
@@ -50,10 +50,10 @@ This edition covers what happened during the months of August and September 2025
 
   Derrick Stolee, who likes to be called just "Stolee", and who
   contributed the `git backfill` command, replied to Kristoffer
-  confirming that git backfill is intended to assist with downloading
+  confirming that `git backfill` is intended to assist with downloading
   the missing blobs in a blobless partial clone.
 
-  About treeless clones though, he noted that git backfill is not
+  About treeless clones though, he noted that `git backfill` is not
   optimized for them, and that treeless clones are generally not
   intended for "refilling," as downloading missing trees is
   "particularly expensive".
@@ -73,12 +73,12 @@ This edition covers what happened during the months of August and September 2025
   matures, it should be a welcome change for `git clone` to borrow it
   as a new option. Such optimizations (like those for large repos)
   could be automatically enabled based on the repository's size,
-  provided it's done with end-user consent.
+  provided it was done with end-user consent.
 
   Patrick Steinhardt replied to Stolee about treeless clones. He
   agreed that the existing command `git backfill` is not optimized for
   refilling treeless clones, and proposed an idea to backfill trees by
-  batching based on depth, but concluded that this method is
+  batching based on depth, but concluded that this method was
   "definitely not ideal" and would perform "way worse compared to
   backfilling blobs".
 
@@ -86,7 +86,7 @@ This edition covers what happened during the months of August and September 2025
   to use treeless clones at all.
 
   Stolee replied to Patrick agreeing with the general caution
-  regarding treeless clones, and that they are "not a good approach
+  regarding treeless clones, and that they were "not a good approach
   for doing ongoing work as a human".
 
   However he noted that they are useful if a user needs the speed of a
@@ -115,14 +115,14 @@ This edition covers what happened during the months of August and September 2025
   compromise.
 
   Ben's opinion was that such a default behavior would defeat the
-  "tremendous advantage of distributed version control" which is about
+  "tremendous advantage of distributed version control", which is about
   having the whole repository available independently. It would also
-  makes some of his use cases more difficult as he frequently clones
+  make some of his use cases more difficult as he frequently clones
   repositories specifically to run "history spelunking searches".
 
   He noted that he primarily deals with repositories where the issue
   isn't about clones, but about mismanaging large binary files in
-  history, which creates large blobs and clone times.
+  history, which causes large blobs and clone times.
 
 ## Developer Spotlight: Toon Claes
 
@@ -130,7 +130,7 @@ This edition covers what happened during the months of August and September 2025
 
   I'm Toon from Belgium. My name is pronounced like "tone" (rhymes with
   "bone"), and not like the "toon" in "cartoon", but usually I'm already
-  happy if people remember my name 😉
+  happy if people remember my name 😉.
 
   I'm employed by GitLab for more than 8 years, and since late 2024 I've
   been part of the Git team, contributing to the Git project. I've started
@@ -145,7 +145,7 @@ This edition covers what happened during the months of August and September 2025
   I'm fairly new in the Git community, but recently I've been working on
   adding [`git last-modified`(1)](https://git.github.io/htmldocs/git-last-modified.html).
   It's a sub-command that will be released in Git v2.52. This command
-  finds the commit that last modified each path in a tree. This can
+  finds the commit that last modified each path in a tree. It can
   be used on forges (like GitLab, GitHub, Codeberg), to show commit
   data in a tree view.
 
@@ -153,7 +153,7 @@ This edition covers what happened during the months of August and September 2025
 
   The subcommand [`git last-modified`(1)](https://git.github.io/htmldocs/git-last-modified.html)
   was recently merged in the 'master'. But there's more work to be
-  done to improve it's performance.
+  done to improve its performance.
 
 * **If you could get a team of expert developers to work full time on
   something in Git for a full year, what would it be?**
@@ -200,9 +200,9 @@ This edition covers what happened during the months of August and September 2025
   One of my earliest contributions to Git was a bug fix in the code used
   by `git bundle create`. We noticed sometimes references didn't end up in
   the bundle. After a lot of digging I submitted a patch that removed
-  about 30 lines of code written way back in 2007. The code from 2007,
+  about 30 lines of code written way back in 2007. The code from 2007
   caused references to be skipped if they were modified while the
-  `git bundle create` process is running. But it wasn't needed anymore
+  `git bundle create` process was running. But it wasn't needed anymore
   due some changes made in 2013, although no one ever realized that.
   You can read more about it [in the patch][2].
 
@@ -226,8 +226,8 @@ This edition covers what happened during the months of August and September 2025
 
   In Git, I compile and unit test changes using Meson. It's use was
   introduced in the Git project around the [end of 2024][7]. It's
-  reliable, because it prevents me from forgetting to recompile
-  before running tests; it's fast, because it parallelizes compilation
+  reliable because it prevents me from forgetting to recompile
+  before running tests; it's fast because it parallelizes compilation
   by default and automatically [uses Ccache][8]; it allows out-of-tree
   builds, which is really convenient if you want to benchmark various
   revisions of Git.
@@ -295,7 +295,7 @@ __Light reading__
 	  was mentioned in [Edition #92](https://git.github.io/rev_news/2022/10/26/edition-92/).
 + [The Origin Story of Merge Queues](https://mergify.com/blog/the-origin-story-of-merge-queues)
   by Julien Danjou on Mergify Blog.
-  This article traces merge queues history,
+  This article traces merge queues history
   (from Bors and Homu to Bulldozer, Kodiak, Mergify, GitHub and GitLab),
   why they emerged, and how they became a standard in modern software development.
     + [Mergify.com](https://mergify.com/),
@@ -341,9 +341,9 @@ __Light reading__
 + [Sourcegraph went dark](https://www.eric-fritz.com/articles/sourcegraph-went-dark/)
   by Eric Fritz on his blog (2024),
   about the work that went into ensuring that references are kept alive
-  after `sourcegraph/sourcegraph` repository went private
+  after the `sourcegraph/sourcegraph` repository went private
   (there is a public snapshot available at [sourcegraph/sourcegraph-public-snapshot](https://github.com/sourcegraph/sourcegraph-public-snapshot),
-  which is read-only archived repository).
+  which is a read-only archived repository).
 + [How to use stacked PRs to unblock your entire team](https://graphite.dev/blog/stacked-prs)
   by Ninad Pathak on Graphite Blog (2024), and<br>
   [A guide to using Graphite's stacked PRs for GitHub users](https://dev.to/semgrep/a-guide-to-using-graphites-stacked-prs-for-github-users-5c47)
@@ -384,7 +384,7 @@ __Easy watching__
     + [Complex merge demonstration](https://youtu.be/6jry6NKxGJA)
     + [Merging code embedded inside an if-statement](https://www.youtube.com/watch?v=sm4Naq_zJU0&t=2s)
 + [12 Git commands visualized in 3D: a spatial approach to understanding version control](https://www.youtube.com/watch?v=C2aFC8wFp2A)
-  [4:58], on Initial Commit channel on YouTube.
+  [4:58], on the Initial Commit channel on YouTube.
 + [Stacked Branches With Lazygit](https://www.youtube.com/watch?v=M6S-9Y8peDY)
   [12:18] by Jesse Duffield (Lazygit author) on YouTube.
     + [lazygit](https://github.com/jesseduffield/lazygit) is a simple [windowed] terminal UI for Git,
@@ -409,7 +409,7 @@ __Git tools and sites__
   especially for large repositories.
   Written as Bash shell script, under MIT license.
 + [_prek_](https://prek.j178.dev/) is a reimagined version of [pre-commit](https://pre-commit.com/), built in Rust.
-  It is is a framework to run hooks written in many languages,
+  It is a framework to run hooks written in many languages,
   and it manages the language toolchain and dependencies for running the hooks.
   prek is not production-ready yet: some subcommands and languages are not implemented.
   Under MIT license.
@@ -417,8 +417,8 @@ __Git tools and sites__
 	  article by Hugo van Kemenade on his blog.
 + [git-sqlite](https://github.com/cannadayr/git-sqlite)
   is a collection of shell scripts,
-  including a custom diff and merge driver for sqlite,
-  that allows a sqlite database to be tracked using the git version control system.
+  including a custom diff and merge driver for SQLite,
+  that allows a SQLite database to be tracked using the Git version control system.
   Under MIT license.
 
 + [LearnGit.io](https://learngit.io/) teaches version control
