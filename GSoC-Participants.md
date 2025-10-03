@@ -11,7 +11,7 @@ to Git via GSoC.
 ### 2025
 
 1. Ayush Chandekar [ [project](TODO) ] [ [final report](https://ayu-ch.github.io/2025/08/29/gsoc-final-report.html) ] [ [blog](https://ayu-ch.github.io/) ]
-2. Meet Soni [ [project](TODO) ] [ [final report](TODO) ] [ [blog](https://inosmeet.github.io/posts/gsoc25/) ]
+2. Meet Soni [ [project](TODO) ] [ [final report](https://inosmeet.github.io/posts/gsoc25/gsoc25_final/) ] [ [blog](https://inosmeet.github.io/posts/gsoc25/) ]
 3. Lucas Seiki Oshiro [ [project](TODO) ] [ [final report](https://lucasoshiro.github.io/gsoc-en/#final-report) ] [ [blog](https://lucasoshiro.github.io/gsoc-en/#weeks) ]
 
 #### References
