@@ -471,4 +471,4 @@ Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
 with help from Toon Claes, Johannes Schindelin,
-Bruno Brito, Gerard Murphy.
+Bruno Brito, Gerard Murphy, Jack Lot.
