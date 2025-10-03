@@ -175,7 +175,7 @@ This edition covers what happened during the months of August and September 2025
   Can we (and should we?) build something that removes and overwrites
   pieces of history, without changing commit hashes? It's a slippery
   slope, because from experience I know Git users are very creative and
-  might use this feature in ways that were not intended for.
+  might use this feature in ways it was not intended for.
 
 * **If you could remove something from Git without worrying about
   backwards compatibility, what would it be?**
@@ -224,7 +224,7 @@ This edition covers what happened during the months of August and September 2025
   the branches from [Junio's fork][6] or the fork shared across
   my colleagues.
 
-  In Git, I compile and unit test changes using Meson. It's use was
+  In Git, I compile and unit test changes using Meson. Its use was
   introduced in the Git project around the [end of 2024][7]. It's
   reliable because it prevents me from forgetting to recompile
   before running tests; it's fast because it parallelizes compilation
@@ -276,7 +276,7 @@ __Light reading__
 + [git-flow-next: The Next Iteration of Advanced Git Workflows](https://www.git-tower.com/blog/git-flow-next)
   by Bruno Brito on Tower Blog.
 + [A kludgy new way to git-blame](https://benknoble.github.io/blog/2025/09/17/blame/)
-  by D. Ben Knoble on his Junk Drawer personal Blog,
+  by D. Ben Knoble on his Junk Drawer personal blog,
   about the new `git-greb` script that feeds `git grep` to `git blame`
   (with appropriate options) in order to blame matching lines.
 + [My new git utility `what-changed-twice` needs a new name](https://blog.plover.com/2025/09/21/#what-changed-twice)
@@ -299,7 +299,7 @@ __Light reading__
   (from Bors and Homu to Bulldozer, Kodiak, Mergify, GitHub and GitLab),
   why they emerged, and how they became a standard in modern software development.
     + [Mergify.com](https://mergify.com/),
-	  a web service for automatizing pull requests (free for open-source projects),
+	  a web service for automating pull requests (free for open-source projects),
 	  was mentioned in [Git Rev News Edition #87](https://git.github.io/rev_news/2022/05/26/edition-87/).
 + [Git - Fun Facts](https://dev.to/rubansi/git-fun-fact-45de)
   by Rubansi Vincent on DEV\.to:
@@ -310,7 +310,7 @@ __Light reading__
 	  written in Rust, first mentioned in
 	  [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/).
 + [Jujutsu For Busy Devs, Part 2: "How Do I...?"](https://maddie.wtf/posts/2025-07-21-jujutsu-for-busy-devs/entry/1)
-  by Madeleine Mortensen, continues [Jujutsu For Busy Devs](https://maddie.wtf/posts/2025-07-21-jujutsu-for-busy-devs)
+  by Madeleine Mortensen, continues the [Jujutsu For Busy Devs](https://maddie.wtf/posts/2025-07-21-jujutsu-for-busy-devs)
   series, mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/).
 + [Dear GitHub: no YAML anchors, please](https://blog.yossarian.net/2025/09/22/dear-github-no-yaml-anchors)
   by William Woodruff (yossarian) on his ENOSUCHBLOG blog.
@@ -407,7 +407,7 @@ __Git tools and sites__
 + [Git Much Faster](https://gitlab.com/gitlab-accelerates-embedded/misc/git-much-faster)
   is a comprehensive benchmarking tool for comparing different Git clone strategies,
   especially for large repositories.
-  Written as Bash shell script, under MIT license.
+  Written as a Bash shell script, under MIT license.
 + [_prek_](https://prek.j178.dev/) is a reimagined version of [pre-commit](https://pre-commit.com/), built in Rust.
   It is a framework to run hooks written in many languages,
   and it manages the language toolchain and dependencies for running the hooks.
