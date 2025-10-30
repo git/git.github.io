@@ -28,7 +28,7 @@ This edition covers what happened during the months of September and October 202
     [Machine-Readable Repository Information Query Tool](https://summerofcode.withgoogle.com/programs/2025/projects/fGgMYHwl)
     project. He was mentored by Patrick Steinhardt and Karthik Nayak. The final
     report can be found on
-    [his website](https://lucasoshiro.github.io/gsoc-en/).
+    [his website](https://lucasoshiro.github.io/gsoc-en/#final-report).
 
   - Meet Soni [worked](https://inosmeet.github.io/posts/gsoc25/) on the
     [Consolidate ref-related functionality into git-refs](https://summerofcode.withgoogle.com/programs/2025/projects/xVrT5e2q)
