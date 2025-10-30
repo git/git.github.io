@@ -44,6 +44,19 @@ This edition covers what happened during the months of September and October 202
 
   Congratulations to the contributors and their mentors!
 
+* [Git Merge 2025 conference](https://git-merge.com/) and [Contributor's Summit 2025](https://lore.kernel.org/git/aOQVeVYY6zadPjln@nand.local/)
+
+  The Git Merge conference happened on
+  [September 29th and 30th](https://github.blog/open-source/git/20-years-of-git-2-days-at-github-hq-git-merge-2025-highlights/)
+  in San Francisco, hosted by [GitHub](https://github.com/) at their
+  GitHub HQ. The [session records](https://www.youtube.com/playlist?list=PLNXkW_le40U6Ms1XlsYKi_yUh5J2FOSlf)
+  are available.
+
+  On the second day, there was also
+  [the Contributor's Summit](https://lore.kernel.org/git/aOQVeVYY6zadPjln@nand.local/).
+  The [full notes](https://docs.google.com/document/d/1arvvXP8DrF3F8PCKQOmGvYh5jUg8P9Clx9m-FgDD4EI/)
+  as well as [notes broken down by topic](https://lore.kernel.org/git/aOQV6iM49QDhcC+C@nand.local/#r)
+  are avaialble.
 
 <!---
 ### Reviews
