@@ -58,6 +58,16 @@ This edition covers what happened during the months of September and October 202
   as well as [notes broken down by topic](https://lore.kernel.org/git/aOQV6iM49QDhcC+C@nand.local/#r)
   are avaialble.
 
+* [Git Mini Summit 2025](https://lore.kernel.org/git/aGwHt9HCd86hVuKh@pks.im/)
+
+  On August 28 in Amsterdam, a [Git Mini Summit](https://lore.kernel.org/git/aGwHt9HCd86hVuKh@pks.im/)
+  happened as
+  [a co-hosted event of the Open Source Summit Europe](https://osseu2025.sched.com/event/28R2Q/git-mini-summit-additional-fee-pre-registration-required),
+  sponsored by GerritForge, GitButler, GitLab, and Google.
+  The [schedule](https://drive.google.com/file/d/1vacimnS9NUTcYUsRe8100El8Hdl_C7GD/view)
+  and [session records](https://blog.gitbutler.com/git-mini-summit-2025)
+  are available.
+
 <!---
 ### Reviews
 -->
