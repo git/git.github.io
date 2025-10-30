@@ -17,9 +17,33 @@ This edition covers what happened during the months of September and October 202
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [Git participated in GSoC (Google Summer of Code) 2025](https://summerofcode.withgoogle.com/programs/2025/organizations/git)
+
+  All the contributors have successfully passed their final evaluation
+  and published a final report:
+
+  - Lucas Oshiro [worked](https://lucasoshiro.github.io/gsoc-en/#weeks) on the
+    [Machine-Readable Repository Information Query Tool](https://summerofcode.withgoogle.com/programs/2025/projects/fGgMYHwl)
+    project. He was mentored by Patrick Steinhardt and Karthik Nayak. The final
+    report can be found on
+    [his website](https://lucasoshiro.github.io/gsoc-en/).
+
+  - Meet Soni [worked](https://inosmeet.github.io/posts/gsoc25/) on the
+    [Consolidate ref-related functionality into git-refs](https://summerofcode.withgoogle.com/programs/2025/projects/xVrT5e2q)
+    project. He was mentored by Patrick Steinhardt and Jialuo She. The final
+    report can be found on
+    [his website](https://inosmeet.github.io/posts/gsoc25/gsoc25_final/).
+
+  - Ayush Chandekar [worked](https://ayu-ch.github.io/) on the
+    [Refactoring in order to reduce Git’s global state](https://summerofcode.withgoogle.com/programs/2025/projects/no7dVMeG)
+    project. He was mentored by Christian Couder and Ghanshyam Thakkar. The final
+    report can be found on
+    [his website](https://ayu-ch.github.io/2025/08/29/gsoc-final-report.html).
+
+  Congratulations to the contributors and their mentors!
+
 
 <!---
 ### Reviews
