@@ -138,14 +138,190 @@ This edition covers what happened during the months of September and October 202
 
 __Various__
 
++ [Git considers SHA-256, Rust, LLMs, and more](https://lwn.net/Articles/1042172/)
+  by Jonathan Corbet on LWN\.net.
++ [Git Developers Talk About Potentially Releasing Git 3.0 By The End Of Next Year](https://www.phoronix.com/news/Git-3.0-Release-Talk-2026)
+  by  Michael Larabel on Phoronix.
++ [GitHub is migrating to Azure! And goodbye to new development for a year.](https://www.redhotcyber.com/en/post/github-is-migrating-to-azure-and-goodbye-to-new-development-for-a-year/)
+  by Redazione RHC on Red Hot Cyber.
++ [Fedora Moves Towards Forgejo](https://fedoramagazine.org/fedora-moves-towards-forgejo-a-unified-decision/)
+  by Matthew Miller and Akashdeep Dhar on December 4, 2024
+  in Fedora Magazine.
+    + [Forgejo](https://forgejo.org/) is a self-hosted lightweight software forge,
+      written in Go; nowadays a hard fork of Gitea (which in turn was based on Gogs).
+      It was first mentioned in passing in [Git Rev News Edition #103](https://git.github.io/rev_news/2023/09/30/edition-103/).
+
 
 __Light reading__
 
-<!---
++ [building for the future: on tangled's existence and direction](https://anirudh.fi/future)
+  by Anirudh Oppiliappan on their blog;
+  also published [at icy takes blog](https://icy.leaflet.pub/3m47cll72hs25) on ATProto.
+    + [Tangled.sh](https://blog.tangled.sh/intro) is a new social-enabled Git collaboration platform
+      built on top of the AT Protocol / ATProto
+      (which is behind [BlueSky](https://bsky.app/) microblogging federated social media service).
+      It was first mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/).
++ [6 months of Tangled: a quick recap, and notes on the future](https://blog.tangled.org/6-months)
+  by by Anirudh Oppiliappan and Akshay Oppiliappan on Tangled Blog.
++ [Socially self-hosting source code with Tangled on Bluesky](https://anil.recoil.org/notes/disentangling-git-with-bluesky)
+  by Anil Madhavapeddy, Professor of Planetary Computing on his blog.
++ [Redistributing Git with Nostr](https://fiatjaf.com/18ff5416.html)
+  by início on their blog.
+    + There exists [gitstr (`git str`)](https://github.com/fiatjaf/gitstr),
+      which is a tool to send and receive Git patches
+      over [Nostr](https://nostr.com/), using [NIP-34](https://github.com/nostr-protocol/nips/pull/997)
+      (first mentioned in [Git Rev News Edition #109](https://git.github.io/rev_news/2024/03/31/edition-109/)).
+    + Note that the [git-credential-oauth](https://github.com/hickford/git-credential-oauth),
+      a Git credential helper that securely authenticates to GitHub, GitLab, BitBucket and Gerrit
+      using [OAuth](https://datatracker.ietf.org/wg/oauth/about/),
+      can replace the "create an account; pick a password; confirm an email address; setup SSH keys for pushing" step.
++ [How GitHub won software development](https://www.infoworld.com/article/4069045/how-github-won-software-development.html)
+  by Nick Hodges on Rubber Duck Reflections opinions blog on InfoWorld.
++ [You already have a git server](https://maurycyz.com/misc/easy_git/)
+  on Maurycy's blog;
+  describes how one can serve Git repositories via SSH (with SSH access)
+  or via dumb HTTP (with a web server).
++ [Simple automated deployments using git push](https://garrido.io/notes/simple-automated-deployments-git-push/)
+  by Gabriel Garrido on his blogs / notes (2024).
++ [Discussion of the Benefits and Drawbacks of the Git Pre-Commit Hook](https://yeldirium.de/2025/10/09/pre-commit-hooks/index.html)
+  by Hannes Leutloff on his blog.
++ [You can use `fzf` to review git commits](https://jvns.ca/til/fzf-preview-git-commits/)
+  by Julia Evans in her TIL (Today I've Learned) section.
+    + See also [Improving shell workflows with fzf](https://seb.jambor.dev/posts/improving-shell-workflows-with-fzf/),
+      mentioned in [Git Rev News Edition #74](https://git.github.io/rev_news/2021/04/30/edition-74/), and
+      [Curing A Case Of Git-UX](https://oppi.li/posts/curing_a_case_of_git-UX/),
+      mentioned in [Git Rev News Edition #126](https://git.github.io/rev_news/2025/08/31/edition-126/).
++ [Switch to Jujutsu already: a tutorial](https://www.stavros.io/posts/switch-to-jujutsu-already-a-tutorial/)
+  by Stavros on Stavros' Stuff.
+    + [Jujutsu (`jj`)](https://jj-vcs.github.io/jj/) is a Git-compatible version control system
+      written in Rust, which was first mentioned in
+      [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/).
++ [Magit Is Amazing!](https://heiwiper.com/posts/magit-is-awesome/)
+  by Abdallah Maouche (heiwiper) on his blog
+  (how it does things that others need to use Jujutsu over Git for).
+    + [Magit](https://magit.vc/) is a popular [Emacs](https://www.gnu.org/software/emacs) editor interface to Git,
+      first mentioned (in passing) in [Git Rev News Edition #6](https://git.github.io/rev_news/2015/08/05/edition-6/).
++ [Branching in a Sapling Monorepo](https://engineering.fb.com/2025/10/16/developer-tools/branching-in-a-sapling-monorepo/)
+    + [Sapling](https://sapling-scm.com/) is a scalable, user-friendly, and open-source source control system
+      that powers Meta's (Facebook's) monorepo.
+      It was first mentioned in [Git Rev News Edition #93](https://git.github.io/rev_news/2022/11/30/edition-93/).
++ [Stop Rebasing Everything: Your Git History Isn’t That Special](https://dev.to/dolig/stop-rebasing-everything-your-git-history-isnt-that-special-ln3),
+  an argument in the merge-vs-rebase debate.
+  by Guillaume on DEV\.to.
++ [Diff Algorithms](https://flo.znkr.io/diff/)
+  by Florian Zenker on Florian Zenker's website.<br>
+  The result of this exploration was [znkr.io/diff](https://znkr.io/diff),
+  a difference algorithm module for Go.
+    + Note that with [`git diff`](https://git-scm.com/docs/git-diff)
+      you can choose between `myers` (default), `minimal`, `patience` and `histogram` algorithms.
++ [Git Super-Power: The Three-Way Merge](https://qsantos.fr/2024/05/01/git-super-power-the-three-way-merge/)
+  by Quentin Santos on his blog (2024).<br>
+  Provides the following tl;dr: `git config --global merge.conflictstyle diff3`.
++ [Anyone Can Commit Code as You on GitHub (Here's How to Stop Them)](https://www.nickyt.co/blog/anyone-can-commit-code-as-you-on-github-heres-how-to-stop-them-2in7/)
+  with signed commits (with tutorial focusing on macOS using GPG Keychain).
+  Written by Nick Taylor on his Just Some Dev blog.
++ [GitHub Ensloppification](https://dbushell.com/2025/08/11/github-ensloppification/)
+  by David Bushell on his blog.
++ ["GitHub" Is Starting to Feel Like Legacy Software](https://www.mistys-internet.website/blog/blog/2024/07/12/github-is-starting-to-feel-like-legacy-software/)
+  rant by Misty De Méo on her blog (2024).
++ [Implementing Conventional Commits with Jira Ticket Prefix Validation](https://heristop.github.io/blog/2024-07-09-conventional-commit-jira/)
+  by Alexandre Mogère (heristop) on Zazen Code.
+    + The [Conventional Commits](https://www.conventionalcommits.org/) specification
+      was first mentioned in [Git Rev News Edition #52](https://git.github.io/rev_news/2019/06/28/edition-52/),
+      and in many editions since.
++ [Conventional Commits considered harmful](https://larr.net/p/cc.html)
+  (or rather overly strict enforcement of the standard),
+  rant by Salih Muhammed, with a few further links.
++ [Contribute to GitFichas](https://jtemporal.com/contribute-to-gitfichas/)
+  by Jessica Temporal on her blog.
+    + [GitFichas](https://gitfichas.com/en) (also know as GitStudyCards)
+      is a collection of study cards about Git,
+      for devs that might need a refresher about Git commands.
+      Mentioned in [the previous edition of Git Rev News](https://git.github.io/rev_news/2025/09/30/edition-127/).
+
+
 __Easy watching__
--->
+
++ [Jujutsu at Google](https://www.youtube.com/watch?v=v9Ob5yPpC0A&list=PLOU2XLYxmsILM5cRwAK6yKdtKnCK6Y4Oh&index=8)
+  ([slides](https://drive.google.com/file/d/1dVzug1lHoOxdbFu8gcCJCu-G_uVMUATI/edit))
+  on Google for Developers channel on YouTube;
+  part of [JJ Con 2025 playlist](https://www.youtube.com/playlist?list=PLOU2XLYxmsILM5cRwAK6yKdtKnCK6Y4Oh).<br>
+  In this talk from Martin von Zweigbergk presents
+  on Jujutsu architecture and future plans.<br>
+  JJ Con 2025 was a dedicated conference hosted by Google
+  for the [Jujutsu](https://jj-vcs.github.io/jj/latest/) version control system.
++ [Solving Git's Pain Points with Jujutsu (with Martin von Zweigbergk)](https://www.youtube.com/watch?v=ulJ_Pw8qqsE)
+  on Developer Voices channel on YouTube.
+
+
+__Scientific papers__
+
++ Ya-Nan Li, Yaqing Song, Qiang Tang, Moti Yung:
+  _"End-to-End Encrypted Git Services"_,
+  Cryptology {ePrint} Archive, Paper 2025/1208,
+  <https://eprint.iacr.org/2025/1208>,
+  DOI:10.1145/3719027.3744815
+    + See _"Scientists develop end-to-end encryption for git services"_
+      article by University of Sydney, edited by Stephanie Baum, reviewed by Robert Egan,
+      on TechXplore.
++ S.R.P. van Hal, M. Post, K. Wendel:
+  _"Generating Commit Messages from Git Diffs"_,
+  [arXiv:1911.11690](https://arxiv.org/abs/1911.11690) (2019)<br>
+  mentions "inherent shortcoming of current commit message generation models,
+  which perform well by memorizing certain constructs."
+
 
 __Git tools and sites__
+
++ [diff-modulo-base](https://git.sr.ht/~nhaehnle/diff-modulo-base)
+  is a tool that allows you to compare the relevant changes
+  of two versions of a rebased branch given three input diffs:
+  two _base_ diffs that show the changes since the respective merge bases
+  and a _target_ diff between the branches you are actually interested in.
+
+  It is very similar to (and actually builds on) `git range-diff`,
+  but differs in resulting output.
+  Written in Rust, under MIT License.
++ [Worktree Manager](https://github.com/jarredkenny/worktree-manager) (wtm)
+  is s fast, modern CLI tool for managing Git worktrees in bare repositories.
+  Written in TypeScript for Bun, under MIT License.
++ [git-metrics](https://github.com/jdrouet/git-metrics)
+  is a Git extension that makes it possible to track metrics about your project,
+  which are stored within the git repository (using `git notes`).
+  Written in Rust, under MIT License.<br>
+  Described in [Build metrics and budgets with git-metrics](https://dev.to/jdrouet/build-metrics-and-budgets-with-git-metrics-4pb4)
+  article by Jérémie Drouet on DEV\.to (2024).
+    + There is another [git-metrics](https://github.com/Praqma/git-metrics) tool,
+      by Praqma / Eficode DevOps company,
+      which consists of a set of scripts to analyse a Git repository for metrics
+      such as lead time and open branches.  Writen in Python, no license provided.
+      It was mentioned in passing in [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/).
++ [git-spice](https://abhinav.github.io/git-spice/) is a tool for stacking Git branches.
+  It lets you manage and navigate stacks of branches, conveniently modify and rebase them,
+  and create GitHub Pull Requests or GitLab Merge Requests from them.
+  Written in Go, under GPL 3.0 License.
+    + A _stacked branch_ refers to a set of branches that build upon each other in a linear sequence.
+      Stacked branches or stacked diffs were first mentioned in [Git Rev News #44](https://git.github.io/rev_news/2018/10/24/edition-44/),
+      and most recently in [Git Rev News #127](https://git.github.io/rev_news/2025/09/30/edition-127/),
+      where you can find even more links about this technique.
++ [Git Granary](https://git.dbushell.com/dbushell/granary)
+  is a [Git Large File Storage](https://git-lfs.com/) (LFS)
+  server implementation written in TypeScript.  Under MIT License.
+  Git Granary was designed for self-hosted personal use.<br>
+  See [Git Granary](https://dbushell.com/2024/07/25/git-granary/)
+  blog post by David Bushell on his blog (2024).
++ [gibr](https://github.com/ytreister/gibr) is a Git CLI tool
+  for intelligently creating branch names.
+  It connects your Git workflow to your issue tracker for that purpose;
+  currently supporting GitHub, GitLab, Jira, and Linear
+  (with Monday\.com support planned).
+  Written in Python, under MIT License.
++ [0github.com](https://0github.com/)
+  is a service offering a heatmap diff viewer for code reviews,
+  color-coding every diff line/token by how much human attention it probably needs.
+  To try it, replace github.com with 0github.com in any GitHub pull request url.
+  The [cmux](https://cmux.dev/) engine it uses is open source (MIT License).
+  It uses LLM (Large Language Model) to perform this task.
 
 
 ## Releases
