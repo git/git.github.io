@@ -180,7 +180,7 @@ This edition covers what happened during the months of September and October 202
   work. One example might be that a project does not want merge
   commits to land in the mainline. It should be simple to take that
   high-level goal and make sure that the in-effect central repository
-  never get any merge commits.
+  never gets any merge commits.
 
   Git will not be replaced any time soon, despite it being more
   difficult to use than it ought to be. But we can already see what
@@ -236,7 +236,7 @@ This edition covers what happened during the months of September and October 202
   the disease to me.
 
   The best I can do now when making updates is to investigate the
-  lines that I am changing and finding the histories of any possible
+  lines that I am changing and find the histories of any possible
   near-duplicate texts.
 
 [7]: https://git-scm.com/docs/gitglossary
@@ -265,7 +265,7 @@ This edition covers what happened during the months of September and October 202
   I use the builtin commands for making patches and sending them
   ([git-format-patch(1)][10] and [git-send-email(1)][11]). For programming and
   writing I use the basic, needed tools along with Emacs. Very
-  occassionally I will use GDB.
+  occasionally I will use GDB.
 
 [10]: https://git-scm.com/docs/git-format-patch
 [11]: https://git-scm.com/docs/git-send-email
