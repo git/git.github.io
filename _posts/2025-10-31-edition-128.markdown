@@ -446,7 +446,7 @@ __Scientific papers__
   Cryptology {ePrint} Archive, Paper 2025/1208,
   <https://eprint.iacr.org/2025/1208>,
   DOI:10.1145/3719027.3744815
-    + See _"Scientists develop end-to-end encryption for git services"_
+    + See [_"Scientists develop end-to-end encryption for git services"_](https://techxplore.com/news/2025-10-scientists-encryption-git.html)
       article by University of Sydney, edited by Stephanie Baum, reviewed by Robert Egan,
       on TechXplore.
 + S.R.P. van Hal, M. Post, K. Wendel:
