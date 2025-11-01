@@ -425,6 +425,8 @@ __Light reading__
 
 __Easy watching__
 
++ [Gerrit User Summit 2025, featuring also GitButler and Jujutsu](https://www.youtube.com/playlist?list=PLySCWiWz9cNuiJK2Uy3foHGvkxL3fBLUC)
+  by Luca Milanesio on GerritForge's YouTube channel.
 + [Jujutsu at Google](https://www.youtube.com/watch?v=v9Ob5yPpC0A&list=PLOU2XLYxmsILM5cRwAK6yKdtKnCK6Y4Oh&index=8)
   ([slides](https://drive.google.com/file/d/1dVzug1lHoOxdbFu8gcCJCu-G_uVMUATI/edit))
   on Google for Developers channel on YouTube;
