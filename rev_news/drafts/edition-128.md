@@ -56,7 +56,7 @@ This edition covers what happened during the months of September and October 202
   [the Contributor's Summit](https://lore.kernel.org/git/aOQVeVYY6zadPjln@nand.local/).
   The [full notes](https://docs.google.com/document/d/1arvvXP8DrF3F8PCKQOmGvYh5jUg8P9Clx9m-FgDD4EI/)
   as well as [notes broken down by topic](https://lore.kernel.org/git/aOQV6iM49QDhcC+C@nand.local/#r)
-  are avaialble.
+  are available.
 
 * [Git Mini Summit 2025](https://lore.kernel.org/git/aGwHt9HCd86hVuKh@pks.im/)
 
@@ -83,7 +83,7 @@ This edition covers what happened during the months of September and October 202
   displaying error messages in test failures (when pointer comparisons
   fail).
 
-  Peff, alias Jeff King, replied to Randall that `uintptr_t` was
+  Jeff King, alias Peff, replied to Randall that `uintptr_t` was
   already used in many places in the regular code, and guessed the
   issue might come from how clar defined that type. He noted though
   that the line in the clar test where `uintptr_t` appeared also
@@ -154,15 +154,15 @@ __Various__
 
 __Light reading__
 
-+ [building for the future: on tangled's existence and direction](https://anirudh.fi/future)
++ [building for the future: on Tangled's existence and direction](https://anirudh.fi/future)
   by Anirudh Oppiliappan on their blog;
   also published [at icy takes blog](https://icy.leaflet.pub/3m47cll72hs25) on ATProto.
     + [Tangled.sh](https://blog.tangled.sh/intro) is a new social-enabled Git collaboration platform
       built on top of the AT Protocol / ATProto
-      (which is behind [BlueSky](https://bsky.app/) microblogging federated social media service).
+      (which is behind the [BlueSky](https://bsky.app/) microblogging federated social media service).
       It was first mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/).
 + [6 months of Tangled: a quick recap, and notes on the future](https://blog.tangled.org/6-months)
-  by by Anirudh Oppiliappan and Akshay Oppiliappan on Tangled Blog.
+  by Anirudh Oppiliappan and Akshay Oppiliappan on Tangled Blog.
 + [Socially self-hosting source code with Tangled on Bluesky](https://anil.recoil.org/notes/disentangling-git-with-bluesky)
   by Anil Madhavapeddy, Professor of Planetary Computing on his blog.
 + [Redistributing Git with Nostr](https://fiatjaf.com/18ff5416.html)
@@ -171,10 +171,10 @@ __Light reading__
       which is a tool to send and receive Git patches
       over [Nostr](https://nostr.com/), using [NIP-34](https://github.com/nostr-protocol/nips/pull/997)
       (first mentioned in [Git Rev News Edition #109](https://git.github.io/rev_news/2024/03/31/edition-109/)).
-    + Note that the [git-credential-oauth](https://github.com/hickford/git-credential-oauth),
+    + Note that [git-credential-oauth](https://github.com/hickford/git-credential-oauth),
       a Git credential helper that securely authenticates to GitHub, GitLab, BitBucket and Gerrit
       using [OAuth](https://datatracker.ietf.org/wg/oauth/about/),
-      can replace the "create an account; pick a password; confirm an email address; setup SSH keys for pushing" step.
+      can replace the "create an account; pick a password; confirm an email address; set up SSH keys for pushing" step.
 + [How GitHub won software development](https://www.infoworld.com/article/4069045/how-github-won-software-development.html)
   by Nick Hodges on Rubber Duck Reflections opinions blog on InfoWorld.
 + [You already have a git server](https://maurycyz.com/misc/easy_git/)
@@ -209,7 +209,7 @@ __Light reading__
   an argument in the merge-vs-rebase debate.
   by Guillaume on DEV\.to.
 + [Diff Algorithms](https://flo.znkr.io/diff/)
-  by Florian Zenker on Florian Zenker's website.<br>
+  by Florian Zenker on his website.<br>
   The result of this exploration was [znkr.io/diff](https://znkr.io/diff),
   a difference algorithm module for Go.
     + Note that with [`git diff`](https://git-scm.com/docs/git-diff)
@@ -246,7 +246,7 @@ __Easy watching__
   ([slides](https://drive.google.com/file/d/1dVzug1lHoOxdbFu8gcCJCu-G_uVMUATI/edit))
   on Google for Developers channel on YouTube;
   part of [JJ Con 2025 playlist](https://www.youtube.com/playlist?list=PLOU2XLYxmsILM5cRwAK6yKdtKnCK6Y4Oh).<br>
-  In this talk from Martin von Zweigbergk presents
+  In this talk, Martin von Zweigbergk presents
   on Jujutsu architecture and future plans.<br>
   JJ Con 2025 was a dedicated conference hosted by Google
   for the [Jujutsu](https://jj-vcs.github.io/jj/latest/) version control system.
@@ -283,7 +283,7 @@ __Git tools and sites__
   but differs in resulting output.
   Written in Rust, under MIT License.
 + [Worktree Manager](https://github.com/jarredkenny/worktree-manager) (wtm)
-  is s fast, modern CLI tool for managing Git worktrees in bare repositories.
+  is a fast, modern CLI tool for managing Git worktrees in bare repositories.
   Written in TypeScript for Bun, under MIT License.
 + [git-metrics](https://github.com/jdrouet/git-metrics)
   is a Git extension that makes it possible to track metrics about your project,
@@ -294,7 +294,7 @@ __Git tools and sites__
     + There is another [git-metrics](https://github.com/Praqma/git-metrics) tool,
       by Praqma / Eficode DevOps company,
       which consists of a set of scripts to analyse a Git repository for metrics
-      such as lead time and open branches.  Writen in Python, no license provided.
+      such as lead time and open branches.  Written in Python, no license provided.
       It was mentioned in passing in [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/).
 + [git-spice](https://abhinav.github.io/git-spice/) is a tool for stacking Git branches.
   It lets you manage and navigate stacks of branches, conveniently modify and rebase them,
@@ -319,7 +319,7 @@ __Git tools and sites__
 + [0github.com](https://0github.com/)
   is a service offering a heatmap diff viewer for code reviews,
   color-coding every diff line/token by how much human attention it probably needs.
-  To try it, replace github.com with 0github.com in any GitHub pull request url.
+  To try it, replace github.com with 0github.com in any GitHub pull request URL.
   The [cmux](https://cmux.dev/) engine it uses is open source (MIT License).
   It uses LLM (Large Language Model) to perform this task.
 
