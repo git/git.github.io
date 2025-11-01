@@ -133,9 +133,166 @@ This edition covers what happened during the months of September and October 202
 
   The `%p` solution was eventually merged to the 'master' branch.
 
-<!---
-## Developer Spotlight:
--->
+
+## Developer Spotlight: Kristoffer Haugsbakk
+
+* Who are you and what do you do?
+
+  I’m Kristoffer from Norway. My day job is working on a Java webapp
+  primarily used for clinical mental health questionnaires.
+
+* What would you name your most important contribution to Git?
+
+  One I like was when I and the mailing list collaborators fixed a bug
+  related to Git notes handling by git-format-patch(1). It’s small and
+  niche but Git notes handling is very important to me; I think Notes
+  are a great way to maintain metadata between patch submissions. In
+  fact I think it’s great for most commit metadata that I am
+  interested in maintaining.
+
+* What are you doing on the Git project these days, and why?
+
+  The one I am focusing on is improving the git-patch-id(1)
+  documentation. It so happens that you can use that command to make a
+  commit—patch-id mapping for the whole repository, which you then in
+  turn can use to make an improved git-cherry(1) oneliner (one that
+  says what the upstream commit hash is) as well as, say, using
+  commands like git-range-diff to see if the upstream committer made
+  any changes to your submission like fixing commit message typos. But
+  most uses of this command that I see just use it to figure out what
+  the patch ID of one single commit is and have to script everything
+  around that, like loop over git-rev-list(1).
+
+* If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?
+
+  I would ask them to find a way for projects to define their own
+  conventions and preferences that can be easily shared with all
+  contributors. Something better than asking each contributor to
+  download and install hooks. Projects need a better and more
+  declarative way to configure how their project is supposed to
+  work. One example might be that a project does not want merge
+  commits to land in the mainline. It should be simple to take that
+  high-level goal and make sure that the in-effect central repository
+  never get any merge commits.
+
+  Git will not be replaced any time soon, despite it being more
+  difficult to use than it ought to be. But we can already see what
+  the effects of the high difficulty of using it is: some projects
+  outsource all commit messages to issue trackers, and change
+  proposals (pull requests and patch series descriptions) to webapp
+  forges. (Meaning they don’t even duplicate the PR description
+  somewhere in Git like in a commit message.)  What you end up with is
+  still Git but with all the interesting information living at least
+  one hyperlink away.
+
+* If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?
+
+  I can’t think of a single thing to remove that would have a big
+  impact.
+
+  I guess I would remove git-filter-branch(1). People can use
+  git-filter-repo(1). And with that one removed I wouldn’t have to ask
+  people to not use it any more. ;)
+
+* Documentation contributions require understanding both the technical
+  implementation and the user perspective. How do you approach
+  bridging that gap? Do you have strategies for ensuring documentation
+  stays accurate as code evolves?
+
+  Most of the challenge in bridging the gap for me is about trying to
+  describe things accurately while not being tedious and verbose. The
+  worst challenge is when I realistically have one paragraph to
+  explain something but there are eight factors to mention. (Not a
+  real case; just the feeling of a challenge that I have encountered
+  before.)
+
+  For things that are either just difficult or have many factors to
+  consider I think the best approach we have right now is to mention
+  other documentation pages in parentheses. An obvious candidate is
+  gitglossary(7) where can gather all kinds of jargon and be as verbose
+  as we want to. :)
+
+  I don’t have any strategies for ensuring that documentation stays
+  accurate as code evolves. Let’s take something concrete as an
+  example: an update to the documentation adds a very similar
+  paragraph to two documentation pages. That is an obvious maintenance
+  burden since a later update is likely to necessitate a change in
+  both places, but you are likely to only deal with one of them. The
+  obvious fix is to parameterize the paragraph. But I don’t have good
+  indirect experience with that in AsciiDoc; the last time I saw
+  something parameterized was when an AsciiDoc macro forced inline
+  formatting to be handled literally. The cure seems worse than the
+  disease to me.
+
+  The best I can do now when making updates is to investigate the
+  lines that I am changing and finding the histories of any possible
+  near-duplicate texts.
+
+* What is your favorite Git-related tool/library, outside of Git
+  itself?
+
+  Magit. An Emacs Git frontend.
+
+* Do you happen to have any memorable experience w.r.t. contributing
+  to the Git project? If yes, could you share it with us?
+
+  When I added a test case to `t/t7001-mv.sh` that made the continuous
+  build routine on Windows (CI) time out. The test was
+  `test_expect_failure` and triggered a C assertion, and the Windows
+  CI pops up a modal dialog on assertion failures. That dialog is of
+  course never dismissed by any operator and so the suite eventually
+  timed out.
+
+* What is your toolbox for interacting with the mailing list and for
+  development of Git?
+
+  I use the builtin commands for making patches and sending them
+  (git-format-patch(1) and git-send-email(1)). For programming and
+  writing I use the basic, needed tools along with Emacs. Very
+  occassionally I will use GDB.
+
+* What is your advice for people who want to start Git development?
+  Where and how should they start?
+
+  Find something technically wrong in the documentation and fix
+  it. That’s what I did in 2016; I wanted to test out this new (to me)
+  “email-based workflow”. Focus on fixing things instead of
+  subjectively improving something. Because someone might object and
+  propose that you send a new version. Making subjective documentation
+  improvements is the next step in terms of difficulty I guess.
+
+  It sounds trivial but someone used to Git forges will have enough
+  challenges just sending proper patches to the project over email.
+
+  Also read through `Documentation/SubmittingPatches`. I don’t really
+  see many corrections that refer to other documents. You could of
+  course get a correction that refers to some *lore* (email archive
+  link) but that is unlikely to happen for simple changes if you just
+  structure it similar to recent, accepted submissions that you find.
+
+* If there's one tip you would like to share with other Git
+  developers, what would it be?
+
+  You won’t get any C programming tips from me since I can’t write or
+  edit three lines of C code without segfaulting five times.
+
+  Take advantage of the fact that the Git history is so
+  well-structured. Maybe you find some questionable behavior or
+  code. Use the “pickaxe” technique (see git-log(1)) on some good
+  candidate text and trace the behavior back to the start. Maybe the
+  commit message explains the issue or behavior. If not use
+  `refs/notes/amlog` (which you should be “subscribed” to already) and
+  see if something relevant was discussed on the patch discussion. If
+  not there is likely to be no written record out there; another thing
+  that this project is disciplined about is keeping the relevant
+  discussion on the mailing list, not the mailing list and N other
+  satellite fora.
+
+  Those links (to commits and archived emails) are very valuable when
+  you want to discuss a change to something that has been in git(1)
+  for years and years.
 
 ## Other News
 
