@@ -80,7 +80,7 @@ This edition covers what happened during the months of September and October 202
   Randall S. Becker reported on the mailing list that CI tests on the
   NonStop x86 platform were broken after the `uintptr_t` type started
   to be used in [clar](https://github.com/clar-test/clar) tests when
-  displaying error messages in test failures (that is, when pointer comparisons
+  displaying error messages in test failures (in case pointer comparisons
   fail).
 
   Jeff King, alias Peff, replied to Randall that `uintptr_t` was
