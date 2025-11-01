@@ -80,7 +80,7 @@ This edition covers what happened during the months of September and October 202
   Randall S. Becker reported on the mailing list that CI tests on the
   NonStop x86 platform were broken after the `uintptr_t` type started
   to be used in [clar](https://github.com/clar-test/clar) tests when
-  displaying error messages in test failures (when pointer comparisons
+  displaying error messages in test failures (that is, when pointer comparisons
   fail).
 
   Jeff King, alias Peff, replied to Randall that `uintptr_t` was
@@ -154,7 +154,7 @@ __Various__
 
 __Light reading__
 
-+ [building for the future: on Tangled's existence and direction](https://anirudh.fi/future)
++ [Building for the future: on Tangled's existence and direction](https://anirudh.fi/future)
   by Anirudh Oppiliappan on their blog;
   also published [at icy takes blog](https://icy.leaflet.pub/3m47cll72hs25) on ATProto.
     + [Tangled.sh](https://blog.tangled.sh/intro) is a new social-enabled Git collaboration platform
@@ -164,7 +164,7 @@ __Light reading__
 + [6 months of Tangled: a quick recap, and notes on the future](https://blog.tangled.org/6-months)
   by Anirudh Oppiliappan and Akshay Oppiliappan on Tangled Blog.
 + [Socially self-hosting source code with Tangled on Bluesky](https://anil.recoil.org/notes/disentangling-git-with-bluesky)
-  by Anil Madhavapeddy, Professor of Planetary Computing on his blog.
+  by Anil Madhavapeddy, Professor of Planetary Computing, on his blog.
 + [Redistributing Git with Nostr](https://fiatjaf.com/18ff5416.html)
   by início on their blog.
     + There exists [gitstr (`git str`)](https://github.com/fiatjaf/gitstr),
@@ -174,7 +174,7 @@ __Light reading__
     + Note that [git-credential-oauth](https://github.com/hickford/git-credential-oauth),
       a Git credential helper that securely authenticates to GitHub, GitLab, BitBucket and Gerrit
       using [OAuth](https://datatracker.ietf.org/wg/oauth/about/),
-      can replace the "create an account; pick a password; confirm an email address; set up SSH keys for pushing" step.
+      can replace the "create an account; pick a password; confirm an email address; set up SSH keys for pushing" steps.
 + [How GitHub won software development](https://www.infoworld.com/article/4069045/how-github-won-software-development.html)
   by Nick Hodges on Rubber Duck Reflections opinions blog on InfoWorld.
 + [You already have a git server](https://maurycyz.com/misc/easy_git/)
@@ -292,7 +292,7 @@ __Git tools and sites__
   Described in [Build metrics and budgets with git-metrics](https://dev.to/jdrouet/build-metrics-and-budgets-with-git-metrics-4pb4)
   article by Jérémie Drouet on DEV\.to (2024).
     + There is another [git-metrics](https://github.com/Praqma/git-metrics) tool,
-      by Praqma / Eficode DevOps company,
+      by the Praqma / Eficode DevOps company,
       which consists of a set of scripts to analyse a Git repository for metrics
       such as lead time and open branches.  Written in Python, no license provided.
       It was mentioned in passing in [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/).
@@ -321,7 +321,7 @@ __Git tools and sites__
   color-coding every diff line/token by how much human attention it probably needs.
   To try it, replace github.com with 0github.com in any GitHub pull request URL.
   The [cmux](https://cmux.dev/) engine it uses is open source (MIT License).
-  It uses LLM (Large Language Model) to perform this task.
+  It uses a LLM (Large Language Model) to perform this task.
 
 
 ## Releases
