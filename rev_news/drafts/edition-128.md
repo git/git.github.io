@@ -42,7 +42,10 @@ This edition covers what happened during the months of September and October 202
     report can be found on
     [his website](https://ayu-ch.github.io/2025/08/29/gsoc-final-report.html).
 
-  Congratulations to the contributors and their mentors!
+  Kaartic Sivaraam and Christian Couder were
+  ["org admins"](https://developers.google.com/open-source/gsoc/help/oa-tips).
+
+  Congratulations to the contributors, their mentors and the org admins!
 
 * [Git Merge 2025 conference](https://git-merge.com/) and [Contributor's Summit 2025](https://lore.kernel.org/git/aOQVeVYY6zadPjln@nand.local/)
 
