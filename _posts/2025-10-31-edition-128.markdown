@@ -252,12 +252,14 @@ This edition covers what happened during the months of September and October 202
 * **Do you happen to have any memorable experience w.r.t. contributing
   to the Git project? If yes, could you share it with us?**
 
-  When I added a test case to `t/t7001-mv.sh` that made the continuous
-  build routine on Windows (CI) time out. The test was
+  When I added a test case to `t/t7001-mv.sh` that [made the continuous
+  build routine on Windows (CI) time out][16]. The test was
   `test_expect_failure` and triggered a C assertion, and the Windows
   CI pops up a modal dialog on assertion failures. That dialog is of
   course never dismissed by any operator and so the suite eventually
   timed out.
+
+[16]: https://lore.kernel.org/git/pull.1908.git.1745593515875.gitgitgadget@gmail.com/
 
 * **What is your toolbox for interacting with the mailing list and for
   development of Git?**
@@ -314,7 +316,7 @@ This edition covers what happened during the months of September and October 202
   you want to discuss a change to something that has been in
   [git(1)][15] for years and years.
 
-[14]: https://git-scm.com/docs/git-log
+[14]: https://git-scm.com/docs/git-log#Documentation/git-log.txt--Gregex
 [15]: https://git-scm.com/docs/git
 
 ## Other News
