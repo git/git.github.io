@@ -16,7 +16,7 @@ to Git via GSoC.
 
 #### References
 
-- [GSoC archive](TODO)
+- [GSoC archive](https://summerofcode.withgoogle.com/programs/2025/organizations/git)
 - [Rev News article](https://git.github.io/rev_news/2025/05/31/edition-123/)
 
 ### 2024
