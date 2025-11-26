@@ -39,7 +39,7 @@ __Various__
 
 
 __Light reading__
-
+- [Version Control in the Age of AI: The Complete Guide](https://www.git-tower.com/blog/version-control-in-the-age-of-ai)
 <!---
 __Easy watching__
 -->
@@ -48,7 +48,8 @@ __Git tools and sites__
 
 
 ## Releases
-
+- Tower for Mac [15](https://www.git-tower.com/blog/tower-mac-15) ([YouTube tour](https://youtu.be/xTrxb2dJP8M))
+- Tower for Windows [10](https://www.git-tower.com/blog/tower-windows-10)
 
 ## Credits
 
