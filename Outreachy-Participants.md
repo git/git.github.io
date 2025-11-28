@@ -8,8 +8,8 @@ to Git via Outreachy.
 
 ### Winter 2024-2025
 
-1. Seyi Kuforiji
-2. Usman Akinyemi
+1. Seyi Kuforiji [ [blog](https://seyi-kuforiji-902b48.gitlab.io/) ]
+2. Usman Akinyemi [ [blog](https://uniqueusman.hashnode.dev/tag/outreachy) ]
 
 #### References
 
@@ -17,7 +17,7 @@ to Git via Outreachy.
 
 ### Winter 2023-2024
 
-1. Achu Luma
+1. Achu Luma [ [blog](https://lumap.gitlab.io/posts/) ]
 
 #### References
 
@@ -25,9 +25,9 @@ to Git via Outreachy.
 
 ### Winter 2020-2021
 
-1. Sangeeta
-2. Joey Salazar
-3. Charvi Mendiratta
+1. Sangeeta  [ [blog](https://sangu09.github.io) ]
+2. Joey Salazar [ [blog](https://jsal.home.blog/) ]
+3. Charvi Mendiratta [ [blog](https://charvi-077.github.io/blog/) ]
 
 #### References
 
@@ -35,8 +35,8 @@ to Git via Outreachy.
 
 ### Winter 2019-2020
 
-1. Heba W.
-2. Miriam Rubio
+1. Heba W. [ [blog](https://medium.com/@heba.waly) ]
+2. Miriam Rubio [ [blog](https://mirucam.gitlab.io/outreachy_blog/) ]
 
 #### References
 
@@ -44,8 +44,8 @@ to Git via Outreachy.
 
 ### Winter 2018-2019
 
-1. Slavica Đukić
-2. Tanushree Tumane
+1. Slavica Đukić [ [blog](https://slavicadj.github.io/blog/) ]
+2. Tanushree Tumane [ [blog](https://tanu1596.blogspot.com/) ]
 
 #### References
 
@@ -53,7 +53,7 @@ to Git via Outreachy.
 
 ### Winter 2017-2018
 
-1. Olga Telezhnaia
+1. Olga Telezhnaia [ [blog](https://medium.com/@olyatelezhnaya) ]
 
 #### References
 
