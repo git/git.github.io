@@ -25,9 +25,53 @@ This edition covers what happened during the months of October and November 2025
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
++ [[Bug report] git cherry-pick silently ignores error whereas git apply fails for hunk apply](https://lore.kernel.org/git/CAEyHQXWd77_jJachC6FYbWMJ+L=KkKoUqiACQ7z8r-ZwYq8JYw@mail.gmail.com/)
+
+  Bhavik Bavishi filed and sent a bug report to the mailing
+  list. Running `git cherry-pick` failed to apply some changes but
+  didn't report any error. On the contrrary when creating a patch
+  using `git format-patch` from the same commit and applying it using
+  `git apply --verbose`, the latter command also failed to apply the
+  same changes but errored out. It seemed that there shouldn't be such
+  a behavior discrepancy and that `git cherry-pick` should have
+  reported an error too.
+
+  Johannes Sixt, suggested using `git apply --3way` to apply the
+  patch. He was interested not only on the success or failure of the
+  command but also on the end result of applying the patch. Was that
+  end result similar as the result from `git cherry-pick` or
+  different?
+
+  Bhavik reported back that indeed `git apply --3way` succeeded and
+  produced the same end result as `git cherry-pick`. Even if it looked
+  like `git cherry-pick` worked as expected, that still seemed a
+  strange behavior though.
+
+  Johannes Sixt replied that a merge strategy is used by both
+  `git cherry-pick` and `git apply --3way`. Unlike a simple patch
+  application, a merge strategy is intelligent enough to detect if a
+  change has already been applied. He illustrated this with an example
+  where text repeats in a file, but only specific instances are
+  modified.
+
+  In the meantime, Chris Torek also replied to Bhavik providing a
+  wealth of explanations. He explained that `git apply` works with a
+  *patch*, which is essentially a "we expect the file looks like this"
+  instruction. If the file doesn't match the expected context lines
+  exactly, the patch fails.
+
+  In contrast, `git cherry-pick` performs a *3-way merge*. It locates
+  a "common base version" (the ancestor), compares it to "Ours"
+  (current branch), and "Theirs" (the commit being picked) . If the
+  merge logic sees that "Theirs" introduces a change that "Ours" has
+  already made, it silently discards the duplicate change rather than
+  erroring out. This confirms that the command was working as
+  intended, using the full history to resolve what looked like a
+  conflict to the simpler `git apply` tool.
+
+  Bhavik thanked Chris for the helpful explanations.
 
 <!---
 ## Developer Spotlight:
