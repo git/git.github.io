@@ -93,7 +93,7 @@ __Various__
   advanced repository maintenance strategies for `git maintenance`,
   new sub-commands be added to `git refs`, new `git repo` command, etc.
 - [lakeFS Acquires DVC, Uniting Data Version Control Pioneers to Accelerate AI-ready Data](https://lakefs.io/media-mentions/lakefs-acquires-dvc-uniting-data-version-control-pioneers/)
-  announcement by LakeFS on their Mentions Media page
+  announcement by LakeFS on their Mentions Media page.
     - [DVC Joins lakeFS: Your Questions Answered!](https://dvc.org/blog/dvc-joins-lakefs-your-questions-answered/)
       by Jeny De Figueiredo on DVC Blog.
     - [A Shared Vision for the Future of DVC](https://dvc.org/blog/a-shared-vision-for-the-future-of-dvc/)
@@ -106,8 +106,8 @@ __Various__
 	  [Pachyderm](https://www.pachyderm.com/) (first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/)).
 - [20 Years of Git, 2 days at GitHub HQ: Git Merge 2025 highlights 🎉](https://github.blog/open-source/git/20-years-of-git-2-days-at-github-hq-git-merge-2025-highlights/)
   by Lee Reilly on GitHub Blog.
-  See also [the previous edition of Git Rev News](https://git.github.io/rev_news/2025/10/31/edition-128/)
-  for more links.
+    - See also [the previous edition of Git Rev News](https://git.github.io/rev_news/2025/10/31/edition-128/)
+      for more links about Git Merge 2025.
 
 
 __Light reading__
@@ -132,7 +132,7 @@ __Light reading__
 	  in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/).
 	- See also [Switch to Jujutsu already: a tutorial](https://www.stavros.io/posts/switch-to-jujutsu-already-a-tutorial/)
 	  by Stavros on Stavros’ Stuff,
-	  mentioned in [the previous edition](https://git.github.io/rev_news/2025/10/31/edition-128/)
+	  mentioned in [the previous edition](https://git.github.io/rev_news/2025/10/31/edition-128/).
 - [Why Git is the first tool every new developer needs to learn](https://www.howtogeek.com/beginning-git-what-it-is-and-why-its-crucial/)
   by Graeme Peacock on How-To Geek.
 - [Git for Vibe Coders](https://www.kdnuggets.com/git-for-vibe-coders),
@@ -196,7 +196,7 @@ __Light reading__
 __Easy watching__
 
 - [How to ensure the Git community is / stays healthy: Emily Shaffer / Patrick Steinhardt & guests](https://www.youtube.com/watch?v=vKsOFHNSb4Q)
-  on GitButler on YouTube [44:42].
+  on GitButler channel on YouTube [duration: 44:42].
 
 
 __Git tools and sites__
@@ -314,7 +314,8 @@ __Git tools and sites__
   by “starring”. It is using Latent Dirichlet Allocation (LDA) method.
   There is also [gitSuggest](http://www.gitsuggest.com/) service (in beta), on Heroku.
   Written on Python, under MIT License.
-- [Josh](Just One Single History) ([repo](https://github.com/josh-project/josh))
+- [Josh](https://josh-project.github.io/josh/) (Just One Single History)
+  ([repo](https://github.com/josh-project/josh))
   is a tool that combines the advantages of monorepos with those of multirepos
   by leveraging a blazingly-fast, incremental, and reversible implementation
   of git history filtering.
