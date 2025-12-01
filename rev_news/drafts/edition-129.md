@@ -73,9 +73,214 @@ This edition covers what happened during the months of October and November 2025
 
   Bhavik thanked Chris for the helpful explanations.
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Ayush Chandekar
+
+_Editor’s note: This edition features a retrospective interview with a
+contributor who contributed to Git through a mentoring program.
+We hope the reflections shared by the GSoC contributor will
+provide an insightful perspective that benefits the community.
+As always, we welcome your thoughts and feedback!_
+
+* **Who are you and what do you do?**
+
+  I am Ayush Chandekar, a GSoC 2025 alumnus under Git, my project was
+  titled '[Refactoring in order to reduce Git’s global state](https://summerofcode.withgoogle.com/programs/2025/projects/no7dVMeG)'.
+  Currently I am an engineering undergraduate at IIT Roorkee,
+  I consider myself to be a jack of all trades, with interests
+  ranging from low-level programming to game development,
+  cybersecurity, and blockchain. I am also a member of
+  [SDSLabs](https://sdslabs.co/), a student run technical club
+  at my university which also focuses on making software and
+  tech accessible for the campus.
+
+  As a kid I always enjoyed tinkering with computers and would
+  spend majority of my time on games, but slowly I started enjoying
+  the chance that development gave me to be the one behind the scene,
+  controlling and making stuff which works. My approach is driven by
+  curiosity and a desire to understnd how things really function.
+  Whenever I start learning something new, I naturally end up going
+  deeper and deeper into the smaller, niche details, not because
+  I have to, but because it genuinely fascinates me. I enjoy peeling
+  back the layers, figuring out the underlying mechanisms, and
+  understanding the “why” behind everything I work on. It’s that
+  curiosity that keeps pulling me into new domains and motivates me
+  to keep exploring.  Apart from this, for fun, I like to participate
+  in hackathons, GameJams and Cyber security Capture-The-Flag(CTFs)
+  competitions. Outside of tech, I enjoy listening to music, brewing
+  coffee, skateboarding, and learning guitar, they help me unwind
+  and keep a balance beyond the screen.
+
+* **How did you initially become interested in contributing to Git,
+  and what motivated you to choose it as your GSoC project?**
+
+  I wanted to start my journey of contributing to open source projects.
+  Before that, I was working on small C projects, and that’s when I
+  came across Git. I was immediately drawn to understanding how
+  developers actually work on Git itself. The workflow felt new to me,
+  kind of old-school in a good way, and it definitely took some time
+  to get used to, but I really enjoyed the process. As I dug deeper,
+  I realized how Git's internals work, and that made me even more
+  curious. The idea that I could learn from such a mature codebase,
+  while also improving a tool used globally, was extremely motivating.
+  It felt like the perfect place to challenge myself, improve my skills,
+  and contribute to a big project.
+
+* **Is there any aspect of Git that you now see differently after
+  having contributed to it?**
+
+  It is about how there are so many different commands. Before my GSoC,
+  I was only aware of the usual `git push`, `git pull`, `git clone`,
+  etc. Now, I know many more commands like `git bisect`, `git range-diff`,
+  etc. I even understand how some of them work internally. Contributing
+  to Git really opened my eyes to the depth and complexity of the tool.
+
+* **How do you balance your contributions with other responsibilities
+  like work or school?**
+
+  Balancing contributions with other responsibilities is a bit
+  challenging. As an undergrad student, I’m involved in various
+  activities at my university, including sports and other commitments,
+  so my schedule gets busy. But whenever I sit down to work or study,
+  I get very absorbed in it, and I often end up spending long stretches
+  of time without even realizing it. That focus helps me make steady
+  progress even with a packed routine.
+
+* **Can you share how GSoC helped enhance your technical and
+  non-technical skills (like communication, project management,
+  etc.)?**
+
+  GSoC helped me grow in both technical and non-technical areas.
+  On the technical side, I became much more comfortable reading
+  large codebases, debugging tricky issues, and writing clean,
+  well-structured patches. I also learned the importance of clear
+  and detailed commit messages. On the non-technical side, GSoC
+  improved my communication skills a lot, especially explaining
+  my ideas, asking the right questions, and discussing feedback
+  with the community. It also taught me how to plan my work, break
+  tasks into smaller steps, and manage my time over a long project.
+  Overall, it made me more confident in collaborating in an open-source
+  environment. I would also like to thank my mentor, Christian, for
+  his guidance and patience throughout the project. His feedback
+  played a big role in helping me improve.
+
+* **What was your biggest takeaway or learning from GSoC that
+  you now apply regularly in your work?**
+
+  My biggest takeaway from GSoC was the importance of writing
+  clear and detailed commit messages. Before the program, I
+  didn’t pay much attention to how a commit was explained,
+  but contributing to Git made me realise how essential it
+  is. A good commit message not only describes what changed
+  but also why the change was necessary, making it much easier
+  for reviewers and future contributors to understand the context.
+
+  Another major learning was understanding how to handle reviews
+  from multiple people. In the Git community, different contributors
+  often suggest different things, and figuring out how to take in
+  all that feedback while still taking ownership of my work was a
+  big shift for me. I learned how to look at each suggestion carefully,
+  understand the reasoning behind it, and decide what improves the
+  patch. It also taught me when to explain my choices and when to
+  adjust my approach. This experience helped me become more confident
+  in iterating on my work and communicating clearly, while staying
+  responsible for the decisions I make.
+
+* **What was the biggest challenge you faced during your contributions
+  to Git, and how did you overcome it?**
+
+  There were a few challenges which I faced. Initially, it was
+  getting accustomed to the mailing list workflow as it was new to
+  me. Most of the challenges were making sure that the community
+  accepted your patches. A lot of people reviewed my patches and
+  got different responses. Here, I learnt to take ownership of
+  my patches.
+
+* **Have you thought about mentoring new GSoC / Outreachy students?**
+
+  Yes, I’ve definitely thought about mentoring future GSoC students,
+  most likely as a co-mentor. I feel it would be a great way to
+  give back to the community and support newcomers the same way
+  I was supported.
+
+* **If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?**
+
+  It would be removing the global state from Git, which was my
+  GSoC project and is also an ongoing effort in the community
+  for the maintainability and modularity of the codebase.
+
+* **What upcoming features or changes in Git are you particularly
+  excited about?**
+
+  I've been following Patrick's [patch series on `git history`](https://public-inbox.org/git/20251027-b4-pks-history-builtin-v6-0-407dd3f57ad3@pks.im/).
+  I am excited for that feature to release.
+
+* **What is your favorite Git-related tool/library, outside of Git
+  itself?**
+
+  I have heard of [Jujutsu](https://jj-vcs.github.io/jj/latest/),
+  I haven't tried it yet but it seems cool, other than that
+  sticking to my essentials, GitLab and GitHub.
+
+* **What is your toolbox for interacting with the mailing list and for
+  development of Git?**
+
+  I just use Gmail to view and reply mails most of the time. But when
+  it comes to sending patches, I use the good ol' `git send-email`.
+  I had set up [mutt](http://www.mutt.org/) once, but didn't use it
+  as much.
+
+* **How do you envision your own involvement with Git or other open
+  source projects in the future?**
+
+  I don't have anything planned out in particular but I do really
+  admire the way my mentor and other contributors in the organisation
+  contribute, open source is something which basically runs the world,
+  organisations like Git and Linux function because of collective and
+  voluntary efforts and they are what makes the world as it is today
+  and carrying that forward I want to contribute in a way which makes
+  softwares accessible to everyone and help build up on these
+  foundational blocks.
+
+* **What is your advice for people who want to start Git development?
+  Where and how should they start?**
+
+  Git is an amazing project to learn all aspects of development.
+  It helps you to learn/improve your C and debugging skills. Another
+  important thing is how you get to work with different contributors
+  in the community. You get reviews from everyone which helps you
+  understand different perspectives. To start with, I would suggest
+  going through this page called '[Hacking Git](https://git.github.io/Hacking-Git/)'
+  and checking different articles mentioned there along with the
+  [Contribution Guidelines](https://git-scm.com/docs/MyFirstContribution).
+  It is quite difficult to decide what to work on initially, as there
+  are no traditional issues as other organizations have. Being active
+  on the mailing list, checking out the ongoing topics might help you
+  decide what to work on. Everyone on the mailing list and discord is
+  very friendly and is always looking forward to help you out so feel
+  free to ask if you have any doubts :)
+
+* **Would you recommend other students or contributors to participate
+  in the GSoC, Outreachy or other mentoring programs, working on Git?
+  Why? Do you have advice for them?**
+
+  As I answered before, it is sometimes difficult to decide what you
+  can work on. I feel that for Git, since projects are already listed
+  on the [GSoC and Outreachy pages](https://git.github.io/SoC-2025-Ideas/),
+  it takes away the pain of figuring out where to start. You just need
+  to pick a project that interests you and then spend some time studying
+  it. Other than that, you’re also mentored by someone experienced in
+  Git development, and with their guidance you’re able to follow best
+  practices and learn a lot of new things. These programs really help
+  build confidence, especially when contributing to a large and complex
+  codebase. You also get to improve your communication skills through
+  discussions, reviews, and patch iterations. And most importantly, it
+  opens doors for future contributions, networking, and long-term
+  involvement in open source. My advice would be to learn to be patient
+  with reviews. A lot of people in the community contribute voluntarily,
+  so you may not get reviews on your patches quickly, and that’s
+  completely normal.
+
 
 ## Other News
 
