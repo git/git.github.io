@@ -204,7 +204,7 @@ welcome your thoughts and feedback!_
   some weeks are more demanding than others, but having a framework
   keeps me grounded and ensures I can keep giving my best to Git.
 
-* **Can you share how GSoC helped enhance your technical and
+* **Can you share how Outreachy helped enhance your technical and
   non-technical skills (like communication, project management, etc.)?**
 
   My C and low-level engineering skills have improved immensely through
