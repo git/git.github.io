@@ -27,21 +27,21 @@ This edition covers what happened during the months of October and November 2025
 
 ### Support
 
-+ [[Bug report] git cherry-pick silently ignores error whereas git apply fails for hunk apply](https://lore.kernel.org/git/CAEyHQXWd77_jJachC6FYbWMJ+L=KkKoUqiACQ7z8r-ZwYq8JYw@mail.gmail.com/)
++ [[Bug report] `git cherry-pick` silently ignores error whereas `git apply` fails for hunk apply](https://lore.kernel.org/git/CAEyHQXWd77_jJachC6FYbWMJ+L=KkKoUqiACQ7z8r-ZwYq8JYw@mail.gmail.com/)
 
   Bhavik Bavishi filed and sent a bug report to the mailing
   list. Running `git cherry-pick` failed to apply some changes but
-  didn't report any error. On the contrrary when creating a patch
+  didn't report any error. On the contrary, when creating a patch
   using `git format-patch` from the same commit and applying it using
   `git apply --verbose`, the latter command also failed to apply the
   same changes but errored out. It seemed that there shouldn't be such
   a behavior discrepancy and that `git cherry-pick` should have
-  reported an error too.
+  reported an error, too.
 
-  Johannes Sixt, suggested using `git apply --3way` to apply the
+  Johannes Sixt suggested using `git apply --3way` to apply the
   patch. He was interested not only on the success or failure of the
-  command but also on the end result of applying the patch. Was that
-  end result similar as the result from `git cherry-pick` or
+  command, but also on the end result of applying the patch. Was that
+  end result similar to the result of `git cherry-pick` or
   different?
 
   Bhavik reported back that indeed `git apply --3way` succeeded and
@@ -97,7 +97,7 @@ As always, we welcome your thoughts and feedback!_
   spend majority of my time on games, but slowly I started enjoying
   the chance that development gave me to be the one behind the scene,
   controlling and making stuff which works. My approach is driven by
-  curiosity and a desire to understnd how things really function.
+  curiosity and a desire to understand how things really function.
   Whenever I start learning something new, I naturally end up going
   deeper and deeper into the smaller, niche details, not because
   I have to, but because it genuinely fascinates me. I enjoy peeling
@@ -105,7 +105,7 @@ As always, we welcome your thoughts and feedback!_
   understanding the “why” behind everything I work on. It’s that
   curiosity that keeps pulling me into new domains and motivates me
   to keep exploring.  Apart from this, for fun, I like to participate
-  in hackathons, GameJams and Cyber security Capture-The-Flag(CTFs)
+  in hackathons, GameJams and Cyber security Capture-The-Flag(CTF)
   competitions. Outside of tech, I enjoy listening to music, brewing
   coffee, skateboarding, and learning guitar, they help me unwind
   and keep a balance beyond the screen.
@@ -213,7 +213,7 @@ As always, we welcome your thoughts and feedback!_
   excited about?**
 
   I've been following Patrick's [patch series on `git history`](https://public-inbox.org/git/20251027-b4-pks-history-builtin-v6-0-407dd3f57ad3@pks.im/).
-  I am excited for that feature to release.
+  I am excited about that feature's release.
 
 * **What is your favorite Git-related tool/library, outside of Git
   itself?**
@@ -235,11 +235,11 @@ As always, we welcome your thoughts and feedback!_
 
   I don't have anything planned out in particular but I do really
   admire the way my mentor and other contributors in the organisation
-  contribute, open source is something which basically runs the world,
+  contribute. Open source is something which basically runs the world,
   organisations like Git and Linux function because of collective and
-  voluntary efforts and they are what makes the world as it is today
+  voluntary efforts; they are what makes the world as it is today,
   and carrying that forward I want to contribute in a way which makes
-  softwares accessible to everyone and help build up on these
+  software accessible to everyone and help build up on these
   foundational blocks.
 
 * **What is your advice for people who want to start Git development?
@@ -257,7 +257,7 @@ As always, we welcome your thoughts and feedback!_
   are no traditional issues as other organizations have. Being active
   on the mailing list, checking out the ongoing topics might help you
   decide what to work on. Everyone on the mailing list and discord is
-  very friendly and is always looking forward to help you out so feel
+  very friendly and is always looking forward to help you out, so feel
   free to ask if you have any doubts :)
 
 * **Would you recommend other students or contributors to participate
@@ -291,14 +291,14 @@ __Various__
   Highlights include `git last-modified` command,
   `git fast-export` and `git fast-import` signature-related improvements,
   new and improved `git maintenance` strategies,
-  new subcommand for new `git repo` to display repository metrics, etc.
+  a new subcommand for the new `git repo` to display repository metrics, etc.
 - [Highlights from Git 2.52](https://github.blog/open-source/git/highlights-from-git-2-52/)
   by Taylor Blau on GitHub Blog.
-  Mentions  `git last-modified` command for tree-level blame information,
+  Mentions the `git last-modified` command for tree-level blame information,
   advanced repository maintenance strategies for `git maintenance`,
-  new sub-commands be added to `git refs`, new `git repo` command, etc.
+  new subcommands added to `git refs`, the experimental `git repo` command, etc.
 - [lakeFS Acquires DVC, Uniting Data Version Control Pioneers to Accelerate AI-ready Data](https://lakefs.io/media-mentions/lakefs-acquires-dvc-uniting-data-version-control-pioneers/)
-  announcement by LakeFS on their Mentions Media page.
+  announcement by lakeFS on their Mentions Media page.
     - [DVC Joins lakeFS: Your Questions Answered!](https://dvc.org/blog/dvc-joins-lakefs-your-questions-answered/)
       by Jeny De Figueiredo on DVC Blog.
     - [A Shared Vision for the Future of DVC](https://dvc.org/blog/a-shared-vision-for-the-future-of-dvc/)
@@ -341,7 +341,7 @@ __Light reading__
 - [Why Git is the first tool every new developer needs to learn](https://www.howtogeek.com/beginning-git-what-it-is-and-why-its-crucial/)
   by Graeme Peacock on How-To Geek.
 - [Git for Vibe Coders](https://www.kdnuggets.com/git-for-vibe-coders),
-  just enough to stop Claude from accidently deleting your code and database.
+  just enough to stop Claude from accidentally deleting your code and database.
   By Abid Ali Awan on KDnuggets.
 - [4 advanced git commands you probably haven't heard of](https://www.howtogeek.com/advanced-git-commands-you-probably-havent-heard-of/):
   [`git clean`](https://git-scm.com/docs/git-clean),
@@ -351,15 +351,15 @@ __Light reading__
   by Bobby Jack on How-To Geek.
 - [Setting File Permissions in Git](https://www.tvaidyan.com/2025/11/13/setting-file-permissions-in-git/)
   by Tom Vaidyan on his personal blog;
-  though I wonder why he shows low-level `git update-index --chmod=+x <file>` ("plumbing")
-  first, instead of user-facing `git add --chmod=+x <file>` ("porcelain" command).
+  though I wonder why he shows the low-level `git update-index --chmod=+x <file>` "plumbing" command
+  first, instead of the corresponding user-facing `git add --chmod=+x <file>` "porcelain" command.
 - [Why You Should Be Using Git Worktrees](https://blog.randombits.host/why-you-should-be-using-git-worktrees/)
   by Conor in Quick Tip on their Random Bits personal blog
-  (it includes their helper `gwc`, i.e. git worktree create, shell script).
+  (it includes their helper `gwc`, i.e. `git worktree create`, shell script).
 - [tree-me: Because git worktrees shouldn't be a chore](https://haacked.com/archive/2025/11/21/tree-me/)
   by Phil Haack on his You've Been Haacked blog.
 - [Use skip-worktree to ignore modified files](https://www.brandonpugh.com/til/git/skip-worktree-ignore-modified-files/)
-  by Brandon Pugh in "TIL: Today I learned..." section on his blog.
+  by Brandon Pugh in the "TIL: Today I learned..." section on his blog.
 - [Managing Multiple Projects in One Repository: Submodules, Subtrees, Monorepos & Partial Cloning Explained](https://dev.to/k-kibet/managing-multiple-projects-in-one-repository-submodules-subtrees-monorepos-partial-cloning-21mc)
   by Kibet Korir (K-kibet) for Codespear on DEV\.to.
 - [Automatically switching Git Identities and SSH Keys on the same machine](https://dev.to/enbis/automatically-switching-git-identities-and-ssh-keys-on-the-same-machine-75n)
@@ -374,7 +374,7 @@ __Light reading__
 	- [One PC, Multiple Git Configs (This Will Save You Time!)](https://medium.com/@matteopampana/one-pc-multiple-git-configs-this-will-save-you-time-f702880744f7)
 	  mentioned in [Git Rev News Edition #120](https://git.github.io/rev_news/2025/02/28/edition-120/).
 - [Git: Amend any commit](https://ylan.segal-family.com/blog/2025/11/15/git-ammend-any-commit/)
-  (scripting around `git commit --amend`, and `git commit --fixup` + `git rebase --autosquash`)
+  (scripting around `git commit --amend`, `git commit --fixup`, and `git rebase --autosquash`)
   by Ylan Segal on his "on.code && such" blog.
 - [If You Think YOUR Commit Messages Are Bad, Just Wait...](https://dev.to/sylwia-lask/if-you-think-your-commit-messages-are-bad-just-wait-3fgk)
   by Sylwia Laskowska on DEV\.to,
@@ -400,7 +400,7 @@ __Light reading__
 
 __Easy watching__
 
-- [How to ensure the Git community is / stays healthy: Emily Shaffer / Patrick Steinhardt & guests](https://www.youtube.com/watch?v=vKsOFHNSb4Q)
+- [How to ensure the Git community is and stays healthy: Emily Shaffer / Patrick Steinhardt & guests](https://www.youtube.com/watch?v=vKsOFHNSb4Q)
   on GitButler channel on YouTube [duration: 44:42].
 
 
@@ -418,11 +418,11 @@ __Git tools and sites__
   commits, developers, modified files, diffs, and source code.
   Written in Python, under Apache 2.0 license.
 - [tree-me](https://github.com/haacked/dotfiles/blob/main/bin/tree-me)
-  is a minimal git worktree helper
-  that leverages git's native capabilities.
-  It uses git-like subcommands and follows conventions so you don’t have to think:
-  auto-detects repository name from your git remote,
-  auto-detects default branch, organizes by repo, provides tab completion, etc.
+  is a minimal `git worktree` helper
+  that leverages Git's native capabilities.
+  It uses Git-like subcommands and follows conventions so you don’t have to think:
+  auto-detects the repository name from your Git remote,
+  auto-detects the default branch, organizes by repo, provides tab completion, etc.
   Single bash script, part of [haacked dotfiles](https://github.com/haacked/dotfiles).
   No license.
     - See also [Worktree Manager](https://github.com/jarredkenny/worktree-manager) (wtm),
@@ -431,9 +431,9 @@ __Git tools and sites__
 - [Spelungit](https://github.com/haacked/spelungit) is a Model Context Protocol (MCP) server
   for exploring Git commit history using semantic search.
   With this tool you can search through commits with natural language commands
-  like "Search git history to find out why was this class added?",
+  like "Search Git history to find out why was this class added?",
   or "search_commits(query="authentication login changes", limit=5)".
-  Uses Microsoft's all-MiniLM-L6-v2 embeding model via [sentence-transformers](https://www.sbert.net/),
+  Uses Microsoft's all-MiniLM-L6-v2 embedding model via [sentence-transformers](https://www.sbert.net/),
   or deterministic hash-based embeddings when sentence-transformers is unavailable.
   Written in Python (with a few Bash scripts), under MIT License.
     - See also [Spelungit: When `git log --grep` isn't enough](https://haacked.com/archive/2025/09/29/announcing-spelungit/)
@@ -450,19 +450,19 @@ __Git tools and sites__
 - [`mani`](https://manicli.com/) is a CLI tool
   that helps you manage multiple repositories.
   It's useful when you are working with microservices, multi-project systems,
-  multiple libraries, or just a collection of repositories
+  multiple libraries, or just a collection of repositories,
   and want a central place for pulling all repositories and running commands across them.
   Written in Go, under MIT License.
 - [eget](https://github.com/zyedidia/eget) is a command-line tool
   for easily fetching and extracting pre-built binaries from GitHub releases.
   Written in Go, under MIT License.
 - [dunk](https://github.com/darrenburns/dunk) is a tool
-  to provide prettier git diffs in the terminal
-  by pipe-ing `git diff` output into it (`git diff | dunk` or `git diff | dunk | less -R`).
-  In is very early stages of development.
+  to provide prettier Git diffs in the terminal
+  by piping `git diff` output into it (`git diff | dunk` or `git diff | dunk | less -R`).
+  In its very early stages of development.
   Written in Python, under MIT License.
     - See also [git-delta](https://dandavison.github.io/delta/),
-	  a syntax-highlighting pager for git, diff, grep, and blame output.
+	  a syntax-highlighting pager for `git`, `diff`, `grep`, and `git blame` output.
 	  It was first mentioned in [Git Rev News Edition #86](https://git.github.io/rev_news/2022/04/30/edition-86/),
 	  though there is another [delta](https://github.com/octavore/delta)
 	  command-line diff tool which was first mentioned in [edition #9](https://git.github.io/rev_news/2015/11/11/edition-9/).
@@ -470,7 +470,7 @@ __Git tools and sites__
 	  which beside piping `git diff` output to it,
 	  can also be used as `core.pager` and `interactive.diffFilter`.
 	  It was first mentioned in [Git Rev News Edition #13](https://git.github.io/rev_news/2016/03/16/edition-13/).
-	- There is also [`contrib/diff-highlight`](https://github.com/git/git/tree/master/contrib/diff-highlight)
+	- There is also a [`contrib/diff-highlight`](https://github.com/git/git/tree/master/contrib/diff-highlight)
 	  diff pager script in the Git repository, written in Perl.
 	  It was mentioned in [Git Rev News Edition #53](https://git.github.io/rev_news/2019/07/24/edition-53/).
 - [GitType](https://github.com/unhappychoice/gittype) is a CLI tool
@@ -479,21 +479,21 @@ __Git tools and sites__
   when you can type your beautiful `fn main()` implementations?
   Written in Rust, under MIT License.
 - [Serie](https://github.com/lusingander/serie) is a TUI tool that
-  provides rich git commit graph in your terminal.
+  provides a rich Git commit graph in your terminal.
   Written in Rust, under MIT License.
     - See also [tig](https://jonas.github.io/tig/),
 	  an ncurses-based text-mode interface for Git,
 	  first mentioned in [Git Rev News Edition #18](https://git.github.io/rev_news/2016/08/17/edition-18/).
 - [prettydiff](https://github.com/prettydiff/prettydiff) is a beautifier and language aware
-  code comparison tool for many languages. It also minifies and a few other things.
-  There is web service showing how the tool works at <https://prettydiff.com/tool.xhtml>.
+  code comparison tool for many languages. It also minifies and does a few other things.
+  There is a web service showing how the tool works at <https://prettydiff.com/tool.xhtml>.
   Written in TypeScript and HTML,
   under [CC0](https://creativecommons.org/public-domain/cc0/) license.
 - [fnox: Fort Knox for your secrets](https://fnox.jdx.dev/)
   is a tool to manage secrets with encryption, or cloud providers, or both.
   Fnox uses a simple TOML config file (`fnox.toml`) that you check into Git;
   secrets are either encrypted inline, or provided as references
-  that points to a secret in age, AWS, 1Password, etc.
+  that point to a secret in age, AWS, 1Password, etc.
   Written in Rust, under MIT License.
 - [asdf](https://asdf-vm.com/guide/introduction.html) is a tool version manager.
   All tool version definitions are contained within one file (`.tool-versions`)
@@ -516,20 +516,20 @@ __Git tools and sites__
 	  [Cloudflare Pages](https://pages.cloudflare.com/) (JAMstack platform), etc.
 - [gitsuggest](https://github.com/csurfer/gitsuggest) is a tool
   to suggest GitHub repositories based on the repositories you have shown interest in
-  by “starring”. It is using Latent Dirichlet Allocation (LDA) method.
-  There is also [gitSuggest](http://www.gitsuggest.com/) service (in beta), on Heroku.
+  by “starring”. It is using the Latent Dirichlet Allocation (LDA) method.
+  There is also a [gitSuggest](http://www.gitsuggest.com/) service (in beta) on Heroku.
   Written on Python, under MIT License.
 - [Josh](https://josh-project.github.io/josh/) (Just One Single History)
   ([repo](https://github.com/josh-project/josh))
   is a tool that combines the advantages of monorepos with those of multirepos
-  by leveraging a blazingly-fast, incremental, and reversible implementation
-  of git history filtering.
+  by leveraging a blazingly fast, incremental, and reversible implementation
+  of Git history filtering.
   Note that to guarantee filters are reversible
   Josh restricts the kind of filter that can be used.
   Use cases include partial cloning, workspaces, simplified CI/CD;
-  this tool also provides GraphQL API.
+  this tool also provides a GraphQL API.
   Josh is distributed via [Docker Hub](https://hub.docker.com/r/joshproject/josh-proxy),
-  and you can start it with appropriate `docker run` command.
+  and you can start it with the appropriate `docker run` command.
   See its [Frequently Asked Questions](https://josh-project.github.io/josh/faq.html#frequently-asked-questions)
   for comparison with `git sparse-checkout`, partial clone, submodules, `git subtree`,
   and `git filter-repo`.
@@ -554,7 +554,7 @@ __Git tools and sites__
     - Contrast [Vigilante Justice on GitHub: GitHub Graffiti](https://trufflesecurity.com/blog/vigilante-justice-on-github) by Dylan Ayrey,
 	  mentioned in [Git Rev News Edition #118](https://git.github.io/rev_news/2024/12/31/edition-118/),
 	  about how you can paint funny pixel art (graffiti) with fake commit Git histories
-	  on spammer/phisher’s GitHub profiles (on their activity heatmap plot)
+	  on spammer/phisher’s GitHub profiles (that is, on their activity heatmap plot).
 
 
 ## Releases
