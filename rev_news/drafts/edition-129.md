@@ -39,15 +39,15 @@ This edition covers what happened during the months of October and November 2025
   reported an error, too.
 
   Johannes Sixt suggested using `git apply --3way` to apply the
-  patch. He was interested not only on the success or failure of the
-  command, but also on the end result of applying the patch. Was that
+  patch. He was interested not only in the success or failure of the
+  command, but also in the end result of applying the patch. Was that
   end result similar to the result of `git cherry-pick` or
   different?
 
   Bhavik reported back that indeed `git apply --3way` succeeded and
-  produced the same end result as `git cherry-pick`. Even if it looked
+  produced the same end result as `git cherry-pick`. Even though it looked
   like `git cherry-pick` worked as expected, that still seemed a
-  strange behavior though.
+  strange behavior.
 
   Johannes Sixt replied that a merge strategy is used by both
   `git cherry-pick` and `git apply --3way`. Unlike a simple patch
@@ -304,8 +304,8 @@ __Various__
     - [A Shared Vision for the Future of DVC](https://dvc.org/blog/a-shared-vision-for-the-future-of-dvc/)
       by Dmitry Petrov on DVC Blog.
 	- See also [“Data Management” section of Awesome MLOps](https://github.com/kelvins/awesome-mlops#data-management),
-	  mentioned in [Git Rev News Edition #116](https://git.github.io/rev_news/2024/10/31/edition-116/),
-	  in which edition you can also find references to DVC and lakeFS,
+	  mentioned in [Git Rev News Edition #116](https://git.github.io/rev_news/2024/10/31/edition-116/).
+	  That edition also includes references to DVC and lakeFS,
 	  and other similar tools (though the list there is missing
 	  [Meltano](https://meltano.com/) (first mentioned in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/)) and
 	  [Pachyderm](https://www.pachyderm.com/) (first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/)).
@@ -382,7 +382,7 @@ __Light reading__
 - [Mistakes I see engineers making in their code reviews](https://www.seangoedecke.com/good-code-reviews/)
   by Sean Goedecke on his blog.
 - [Testable Dotfiles Management With Chezmoi](https://shunk031.me/post/testable-dotfiles-management-with-chezmoi/)
-  by Shunsuke Kitada (北田 俊輔), Ph.D. on shunk031\.me.
+  by Shunsuke Kitada (北田俊輔), Ph.D. on shunk031\.me.
 - [Backing up my repositories to self-hosted Gitea](https://blog.kulman.sk/self-hosted-gitea-backup/)
   by Igor Kulman on his personal blog.
    - [Gitea](https://about.gitea.com/) is a Go-based software forge,
@@ -431,7 +431,7 @@ __Git tools and sites__
 - [Spelungit](https://github.com/haacked/spelungit) is a Model Context Protocol (MCP) server
   for exploring Git commit history using semantic search.
   With this tool you can search through commits with natural language commands
-  like "Search Git history to find out why was this class added?",
+  like "Search Git history to find out why this class was added",
   or "search_commits(query="authentication login changes", limit=5)".
   Uses Microsoft's all-MiniLM-L6-v2 embedding model via [sentence-transformers](https://www.sbert.net/),
   or deterministic hash-based embeddings when sentence-transformers is unavailable.
@@ -459,7 +459,7 @@ __Git tools and sites__
 - [dunk](https://github.com/darrenburns/dunk) is a tool
   to provide prettier Git diffs in the terminal
   by piping `git diff` output into it (`git diff | dunk` or `git diff | dunk | less -R`).
-  In its very early stages of development.
+  In very early stages of development.
   Written in Python, under MIT License.
     - See also [git-delta](https://dandavison.github.io/delta/),
 	  a syntax-highlighting pager for `git`, `diff`, `grep`, and `git blame` output.
@@ -543,7 +543,7 @@ __Git tools and sites__
   by small organizations and individuals.
   Under AGPL 3.0 license.
 - [git-embigenner](https://github.com/veqqq/git-embigenner)
-  is a very simple shell script to cheat a highscore on GitHub,
+  is a very simple shell script to cheat a high score on GitHub,
   which will spam commits to populate your profile's contribution graph.
     - Compare with [Git Draw](https://github.com/ben174/git-draw),
 	  a Chrome extension which will allow you to freely draw on your GitHub heatmap,
