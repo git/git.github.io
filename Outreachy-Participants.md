@@ -8,8 +8,8 @@ to Git via Outreachy.
 
 ### Winter 2024-2025
 
-1. Seyi Kuforiji [ [blog](https://seyi-kuforiji-902b48.gitlab.io/) ]
-2. Usman Akinyemi [ [blog](https://uniqueusman.hashnode.dev/tag/outreachy) ]
+1. Seyi Kuforiji [ [blog](https://seyi-kuforiji-902b48.gitlab.io/) ] [ [retrsopective interview](https://git.github.io/rev_news/2025/08/31/edition-126/#developer-spotlight-seyi-kuforiji) ]
+2. Usman Akinyemi [ [blog](https://uniqueusman.hashnode.dev/tag/outreachy) ] [ [retrsopective interview](https://git.github.io/rev_news/2025/07/31/edition-125/#developer-spotlight-usman-akinyemi) ]
 
 #### References
 
