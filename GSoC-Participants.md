@@ -10,7 +10,7 @@ to Git via GSoC.
 
 ### 2025
 
-1. Ayush Chandekar [ [project](https://summerofcode.withgoogle.com/programs/2025/projects/no7dVMeG) ] [ [final report](https://ayu-ch.github.io/2025/08/29/gsoc-final-report.html) ] [ [blog](https://ayu-ch.github.io/) ]
+1. Ayush Chandekar [ [project](https://summerofcode.withgoogle.com/programs/2025/projects/no7dVMeG) ] [ [final report](https://ayu-ch.github.io/2025/08/29/gsoc-final-report.html) ] [ [blog](https://ayu-ch.github.io/) ] [ [retrsopective interview](https://git.github.io/rev_news/2025/11/30/edition-129/#developer-spotlight-ayush-chandekar) ]
 2. Lucas Seiki Oshiro [ [project](https://summerofcode.withgoogle.com/programs/2025/projects/fGgMYHwl) ] [ [final report](https://lucasoshiro.github.io/gsoc-en/#final-report) ] [ [blog](https://lucasoshiro.github.io/gsoc-en/#weeks) ]
 3. Meet Soni [ [project](https://summerofcode.withgoogle.com/programs/2025/projects/xVrT5e2q) ] [ [final report](https://inosmeet.github.io/posts/gsoc25/gsoc25_final/) ] [ [blog](https://inosmeet.github.io/posts/gsoc25/) ]
 
@@ -21,9 +21,9 @@ to Git via GSoC.
 
 ### 2024
 
-1. Jialuo She [ [project](https://summerofcode.withgoogle.com/archive/2024/projects/ukm4PTEF) ] [ [final report](https://luolibrary.com/2024/08/25/GSoC-Final-Report/) ] [ [blog](https://luolibrary.com/) ]
-2. Ghanshyam Thakkar [ [project](https://summerofcode.withgoogle.com/archive/2024/projects/e9C4rhrv) ]  [ [final report](https://spectre10.github.io/posts/gsoc_final_report/) ] [ [blog](https://spectre10.github.io/) ]
-3. Chandra Pratap [ [project](https://summerofcode.withgoogle.com/archive/2024/projects/tlh611d7) ]  [ [final report](https://chand-ra.github.io/2024/08/24/GSoC-Final-Report.html) ] [ [blog](https://chand-ra.github.io/) ]
+1. Jialuo She [ [project](https://summerofcode.withgoogle.com/archive/2024/projects/ukm4PTEF) ] [ [final report](https://luolibrary.com/2024/08/25/GSoC-Final-Report/) ] [ [blog](https://luolibrary.com/) ] [ [retrsopective interview](https://git.github.io/rev_news/2024/09/30/edition-115/#developer-spotlight-jialuo-she) ]
+2. Ghanshyam Thakkar [ [project](https://summerofcode.withgoogle.com/archive/2024/projects/e9C4rhrv) ]  [ [final report](https://spectre10.github.io/posts/gsoc_final_report/) ] [ [blog](https://spectre10.github.io/) ] [ [retrsopective interview](https://git.github.io/rev_news/2024/11/30/edition-117#developer-spotlight-ghanshyam-thakkar) ]
+3. Chandra Pratap [ [project](https://summerofcode.withgoogle.com/archive/2024/projects/tlh611d7) ]  [ [final report](https://chand-ra.github.io/2024/08/24/GSoC-Final-Report.html) ] [ [blog](https://chand-ra.github.io/) ] [ [retrsopective interview](https://git.github.io/rev_news/2024/10/31/edition-116/#developer-spotlight-chandra-pratap) ]
 
 #### References
 
@@ -53,7 +53,7 @@ to Git via GSoC.
 
 ### 2021
 
-1. ZheNing Hu [ [project](https://summerofcode.withgoogle.com/archive/2021/projects/5443907994779648) ] [ [final report](https://github.com/adlternative/adlternative.github.io/blob/gh-pages/blogs/gsoc/GSOC-Git-Final-Blog.md) ] [ [blog](https://github.com/adlternative/adlternative.github.io/tree/gh-pages/blogs/gsoc/) ]
+1. ZheNing Hu [ [project](https://summerofcode.withgoogle.com/archive/2021/projects/5443907994779648) ] [ [final report](https://github.com/adlternative/adlternative.github.io/blob/gh-pages/blogs/gsoc/GSOC-Git-Final-Blog.md) ] [ [blog](https://github.com/adlternative/adlternative.github.io/tree/gh-pages/blogs/gsoc/) ] [ [retrsopective interview](https://git.github.io/rev_news/2022/12/31/edition-94/#developer-spotlight-zhening-hu) ]
 2. Atharva Raykar [ [project](https://summerofcode.withgoogle.com/archive/2021/projects/5071550033690624) ] [ [final report](https://github.com/tfidfwastaken/gitnotes/blob/main/final-report.md) ] [ [blog](https://github.com/tfidfwastaken/gitnotes/tree/main) ]
 
 #### References
@@ -78,7 +78,7 @@ to Git via GSoC.
 ### 2019
 
 1. Rohit Ashiwal [ [project](https://summerofcode.withgoogle.com/archive/2019/projects/5390155215536128) ] [ [final report](https://web.archive.org/web/20210727190950/https://rashiwal.me/2019/final-report/) ] [ [blog](https://web.archive.org/web/20210515085551/https://rashiwal.me/) ]
-2. Matheus Tavares [ [project](https://summerofcode.withgoogle.com/archive/2019/projects/4787791739748352) ] [ [final report](https://matheustavares.gitlab.io/posts/gsoc-final-report) ] [ [blog](https://matheustavares.gitlab.io/tags/git/) ]
+2. Matheus Tavares [ [project](https://summerofcode.withgoogle.com/archive/2019/projects/4787791739748352) ] [ [final report](https://matheustavares.gitlab.io/posts/gsoc-final-report) ] [ [blog](https://matheustavares.gitlab.io/tags/git/) ] [ [retrsopective interview](http://git.github.io/rev_news/2020/10/30/edition-68/#developer-spotlight-matheus-tavares-bernardino) ]
 
 #### References
 
@@ -117,8 +117,8 @@ to Git via GSoC.
 
 ### 2015
 
-1. Karthik Nayak [ [project](https://www.google-melange.com/archive/gsoc/2015/orgs/git/projects/karthiknayak94.html) ] [ [fork](https://github.com/KarthikNayak/git) ] [ [a mailing list mail](https://public-inbox.org/git/553F7A50.1080907@gmail.com/) ] 
-2. Paul Tan [ [project](https://www.google-melange.com/archive/gsoc/2015/orgs/git/projects/pyokagan.html) ] [ [fork](https://github.com/pyokagan/git) ] [ [a mailing list mail](https://public-inbox.org/git/CACRoPnQ5_r-26J4gBHc27KZt3X9KAU7eFkA3vz_GE6_dP-Uyug@mail.gmail.com/) ] 
+1. Karthik Nayak [ [project](https://www.google-melange.com/archive/gsoc/2015/orgs/git/projects/karthiknayak94.html) ] [ [fork](https://github.com/KarthikNayak/git) ] [ [a mailing list mail](https://public-inbox.org/git/553F7A50.1080907@gmail.com/) ]
+2. Paul Tan [ [project](https://www.google-melange.com/archive/gsoc/2015/orgs/git/projects/pyokagan.html) ] [ [fork](https://github.com/pyokagan/git) ] [ [a mailing list mail](https://public-inbox.org/git/CACRoPnQ5_r-26J4gBHc27KZt3X9KAU7eFkA3vz_GE6_dP-Uyug@mail.gmail.com/) ]
 
 #### References
 
@@ -144,7 +144,7 @@ to Git via GSoC.
 
 ### 2012
 
-1. Thomas Gummerer [ [project](https://www.google-melange.com/archive/gsoc/2012/orgs/git/projects/tgummerer.html) ] <!-- [ [final report]() ] [ [blog]() ] ] -->
+1. Thomas Gummerer [ [project](https://www.google-melange.com/archive/gsoc/2012/orgs/git/projects/tgummerer.html) ] [ [retrsopective interview](https://git.github.io/rev_news/2016/02/10/edition-12/#developer-spotlight-thomas-gummerer) ] <!-- [ [final report]() ] [ [blog]() ] ] -->
 1. Michael Schubert [ [project](https://www.google-melange.com/archive/gsoc/2012/orgs/git/projects/schu.html) ] <!-- [ [final report]() ] [ [blog]() ] ] -->
 1. Florian Achleitner [ [project](https://www.google-melange.com/archive/gsoc/2012/orgs/git/projects/flyingflo.html) ] <!-- [ [final report]() ] [ [blog]() ] ] -->
 
