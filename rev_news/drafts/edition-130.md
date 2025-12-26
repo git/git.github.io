@@ -33,7 +33,7 @@ This edition covers what happened during the months of November and December 202
 
 * **Who are you and what do you do?**
 
-  My name is Lucas Oshiro, I'm [one of the three](https://summerofcode.withgoogle.com/programs/2025/projects/fGgMYHwl)
+  My name is Lucas Oshiro, I'm one of the three
   GSoC '25 participants working on Git. I'm from São Paulo, Brazil
   and I'm a bachelor and master in Computer Science from the
   [University of São Paulo](https://www5.usp.br/#english). I don't
@@ -96,7 +96,7 @@ This edition covers what happened during the months of November and December 202
 
 * **Can you share how GSoC helped enhance your technical and
   non-technical skills (like communication, project management,
-  etc.)?
+  etc.)?**
 
   I see Git as a product created by developers, for developers, and I
   think that here we sometimes need to do the work that in other contexts
