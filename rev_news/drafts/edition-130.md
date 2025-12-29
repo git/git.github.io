@@ -220,6 +220,32 @@ __Git tools and sites__
 
 ## Releases
 
++ libgit2 [1.9.2](https://github.com/libgit2/libgit2/releases/tag/v1.9.2)
++ GitHub Enterprise [3.19.0](https://docs.github.com/enterprise-server@3.19/admin/release-notes#3.19.0),
+[3.18.3](https://docs.github.com/enterprise-server@3.18/admin/release-notes#3.18.3),
+[3.17.9](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.9),
+[3.16.12](https://docs.github.com/enterprise-server@3.16/admin/release-notes#3.16.12),
+[3.15.16](https://docs.github.com/enterprise-server@3.15/admin/release-notes#3.15.16),
+[3.14.21](https://docs.github.com/enterprise-server@3.14/admin/release-notes#3.14.21),
+[3.18.2](https://docs.github.com/enterprise-server@3.18/admin/release-notes#3.18.2),
+[3.17.8](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.8),
+[3.16.11](https://docs.github.com/enterprise-server@3.16/admin/release-notes#3.16.11),
+[3.15.15](https://docs.github.com/enterprise-server@3.15/admin/release-notes#3.15.15),
+[3.14.20](https://docs.github.com/enterprise-server@3.14/admin/release-notes#3.14.20)
++ GitLab [18.7](https://about.gitlab.com/releases/2025/12/18/gitlab-18-7-released/),
+[18.6.2, 18.5.4, 18.4.6](https://about.gitlab.com/releases/2025/12/10/patch-release-gitlab-18-6-2-released/)
++ GitKraken [11.7.0](https://help.gitkraken.com/gitkraken-desktop/current/)
++ Sourcetree [4.2.15](https://product-downloads.atlassian.com/software/sourcetree/ReleaseNotes/Sourcetree_4.2.15.html)
++ Garden [2.4.0](https://github.com/garden-rs/garden/releases/tag/v2.4.0)
++ GitButler [0.18.3](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.18.3),
+[0.18.2](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.18.2)
++ Sublime Merge [Build 2121](https://www.sublimemerge.com/download)
++ Kinetic Merge [1.13.2](https://github.com/sageserpent-open/kineticMerge/releases/tag/v1.13.2),
+[1.13.1](https://github.com/sageserpent-open/kineticMerge/releases/tag/v1.13.1),
+[1.13.0](https://github.com/sageserpent-open/kineticMerge/releases/tag/v1.13.0),
+[1.12.2](https://github.com/sageserpent-open/kineticMerge/releases/tag/v1.12.2),
+[1.12.1](https://github.com/sageserpent-open/kineticMerge/releases/tag/v1.12.1),
+[1.12.0](https://github.com/sageserpent-open/kineticMerge/releases/tag/v1.12.0)
 
 ## Credits
 
