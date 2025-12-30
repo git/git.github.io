@@ -25,9 +25,165 @@ This edition covers what happened during the months of November and December 202
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [git-2.51.0: Fetching tags does not work](https://lore.kernel.org/git/CAB9xhmPcHnB2%2Bi6WeA3doAinv7RAeGs04%2Bn0fHLGToJq%3DUKUNw%40mail.gmail.com)
+
+  Last September, David Bohman reported a regression in Git 2.51.0
+  where `git fetch --tags` failed to update tags in a bare
+  repository. He noted that the command output indicated tags would be
+  updated, but they were not actually added to the
+  repository. Reverting to version 2.50.1 resolved the issue.
+
+  Junio Hamano, the Git maintainer, attempted to reproduce the issue
+  using a simple bare clone setup but was unsuccessful, suggesting
+  that David needed to narrow down the specific conditions.
+
+  In early November, David returned to the thread reporting that the
+  issue persisted in Git 2.51.2. He provided a specific reproduction
+  case involving a bare clone of `bind9`. The output showed that one
+  tag update was rejected (with a `would clobber existing tag` error),
+  and consequently, all other valid new tags (`v9.18.41`, etc.)
+  failed to appear in the repository, despite being listed as "new
+  tag" in the output. The command exited with status code 1.
+
+  Randall S. Becker suggested using `git fetch --tags --force` to
+  clear the situation. David Bohman replied that while he could
+  reproduce it locally, the key behavioral change was that prior to
+  2.51, Git would fail the conflicting tag but still insert the
+  non-conflicting ones.
+
+  Chris Torek identified the root cause as the new reference
+  transaction system introduced in recent versions. He noted that the
+  behavior had shifted to "all or nothing" (either all tags get
+  updated, or none do) and questioned which behavior was actually
+  buggy. David Bohman argued that this was a risky change for a mature
+  tool and noted that the diagnostic messages were misleading because
+  they reported success for tags that were not actually inserted.
+
+  Karthik Nayak confirmed he could reproduce the issue and attributed
+  it to transaction reference updates.
+
+  Karthik submitted
+  [version 1](https://lore.kernel.org/git/20251103-fix-tags-not-fetching-v1-1-e63caeb6c113%40gmail.com)
+  of a patch to fix the issue. He explained that commit `0e358de64a`
+  (fetch: use batched reference updates, 2025-05-19) introduced
+  batched reference updates for `git fetch`. When fetching references,
+  updates are added to a transaction. However, specifically when
+  fetching tags, if a conflict occurs, the function
+  `fetch_and_consume_refs()` returns an error code immediately. This
+  caused the code to jump to the cleanup section, skipping the commit
+  of the transaction entirely, meaning even valid updates were
+  discarded.
+
+  The proposed fix involved extracting the transaction commit logic
+  into a new function, `commit_ref_transaction()`, and ensuring it is
+  called even when an error code is returned, provided the fetch is
+  not atomic.
+
+  Eric Sunshine reviewed the patch, asking why the test code was
+  wrapped in subshells and suggesting that `!` should be replaced with
+  `test_must_fail`. Karthik agreed to these changes.
+
+  Justin Tobler reviewed the code, agreeing with the logic. He
+  suggested adding a comment to `commit_ref_transaction()` to
+  distinguish it from `ref_transaction_commit()` and asked if the
+  return value of this new function should be checked.
+
+  Karthik submitted
+  [version 2](https://lore.kernel.org/git/20251106-fix-tags-not-fetching-v2-1-610cb4b0e7c8%40gmail.com)
+  of the patch. This version added comments, removed subshells from
+  tests, and extended the fix to the `backfill_tags()` function.
+
+  Patrick Steinhardt reviewed version 2. He questioned the commit
+  message's mention of the deprecated "branches/" format in relation
+  to tag backfilling. Karthik replied, clarifying that after
+  re-reading the code, he understood that backfilling happens when the
+  user does not specify `--tags` or `--no-tags`, confirming Patrick's
+  understanding.
+
+  Patrick noted that the code now had three different callsites
+  committing the transaction and felt it was "somewhat fragile."
+  Justin pointed out that the return code of
+  `commit_ref_transaction()` was being ignored in the new
+  implementation. Karthik agreed to check the return value.
+
+  Karthik submitted
+  [version 3](https://lore.kernel.org/git/20251108-fix-tags-not-fetching-v3-0-a12ab6c4daef%40gmail.com)
+  of the series. He split the changes into two commits: one for
+  extracting the logic and one for the fix. He also moved the commit
+  logic into the cleanup section to avoid calling it at every failure
+  point.
+
+  Patrick reviewed version 3. He suggested using `goto out` in
+  `commit_ref_transaction()` for better readability. He also asked for
+  clarification on why the condition `retcode > 0` was safe in the
+  cleanup section, specifically regarding `prune_refs()`. Karthik
+  replied, explaining that `prune_refs()` creates its own internal
+  transaction, but later realized he was mistaken about the timing and
+  promised to verify.
+
+  Karthik submitted
+  [version 4](https://lore.kernel.org/git/20251111-fix-tags-not-fetching-v4-0-185d836ec62a%40gmail.com).
+  This version simplified the code and changed the check from
+  `retcode > 0` to just `retcode`.
+
+  Patrick pointed out that the commit message regarding `prune_refs()`
+  behavior change seemed incorrect because no transaction exists at
+  that stage. Karthik verified this and confirmed there is no change
+  for `prune_refs()`.
+
+  Karthik submitted
+  [version 5](https://lore.kernel.org/git/20251113-fix-tags-not-fetching-v5-0-371ea7ec638d%40gmail.com)
+  with corrected commit messages and better test cleanup.
+
+  Junio reviewed version 5 and identified a remaining
+  issue. He noted that while the patch fixed the transaction commit,
+  jumping to the cleanup label early meant that subsequent operations
+  (specifically `commit_fetch_head()`, `set_upstream()`, and setting
+  remote HEADs) were still being skipped when errors occurred. He
+  argued that in non-atomic fetches, these should still run. Karthik
+  agreed and proposed a fix to only jump to cleanup if `--atomic` was
+  used.
+
+  Karthik submitted
+  [version 6](https://lore.kernel.org/git/20251118-fix-tags-not-fetching-v6-0-2a2f15fc137e%40gmail.com),
+  adding a third commit to the series to address the skipped
+  operations regression identified by Junio.
+
+  Junio reviewed version 6. He liked the tests but warned
+  against using `touch` to create files due to timestamp issues and
+  noted a missing test case for `--set-upstream` on a successful
+  fetch. Karthik agreed to fix these.
+
+  Karthik submitted
+  [version 7](https://lore.kernel.org/git/20251119-fix-tags-not-fetching-v7-0-0c8f9fb1f287%40gmail.com),
+  removing `touch` and adjusting the test prerequisites.
+
+  Eric reviewed the tests in version 7, asking if `! test -f` should
+  be `test_path_is_missing`. Junio suggested using `rm -f FETCH_HEAD`
+  before the test to ensure it is actually created during the run, and
+  inspecting the file content to verify what was recorded. Karthik
+  agreed.
+
+  Karthik submitted
+  [version 8](https://lore.kernel.org/git/20251121-fix-tags-not-fetching-v8-0-23b53a8a8334%40gmail.com).
+  This version verified the content of `FETCH_HEAD` and used
+  `test_path_is_missing`.
+
+  Junio commented that the series looked good. Patrick pointed out a
+  tiny grammar nit ("eventhough") and asked if the shell syntax
+  `>file` used in the test was compatible with all systems, noting
+  `: >file` is more typical. Karthik replied that existing tests use
+  the shorter syntax, so it should be fine.
+
+  The small patch series was eventually merged, and should be part of
+  Git 2.53.0 that should be released at the latest towards the
+  beginning of February 2026. With this not only the transaction logic
+  will be fixed, but related regressions regarding post-fetch
+  operations (like updating `FETCH_HEAD`) will also have been
+  identified and resolved.
+
 
 ## Developer Spotlight: Lucas Seiki Oshiro
 
