@@ -41,7 +41,8 @@ This edition covers what happened during the months of November and December 202
 
   In early November, David returned to the thread reporting that the
   issue persisted in Git 2.51.2. He provided a specific reproduction
-  case involving a bare clone of `bind9`. The output showed that one
+  case involving a bare clone of the [`bind9` source repository](https://gitlab.isc.org/isc-projects/bind9).
+  The output showed that one
   tag update was rejected (with a `would clobber existing tag` error),
   and consequently, all other valid new tags (`v9.18.41`, etc.)
   failed to appear in the repository, despite being listed as "new
@@ -50,11 +51,11 @@ This edition covers what happened during the months of November and December 202
   Randall S. Becker suggested using `git fetch --tags --force` to
   clear the situation. David Bohman replied that while he could
   reproduce it locally, the key behavioral change was that prior to
-  2.51, Git would fail the conflicting tag but still insert the
+  version 2.51, Git would fail regarding the conflicting tag but still insert the
   non-conflicting ones.
 
-  Chris Torek identified the root cause as the new reference
-  transaction system introduced in recent versions. He noted that the
+  Chris Torek identified the new reference transaction system
+  introduced in recent versions as the root cause. He noted that the
   behavior had shifted to "all or nothing" (either all tags get
   updated, or none do) and questioned which behavior was actually
   buggy. David Bohman argued that this was a risky change for a mature
@@ -73,8 +74,7 @@ This edition covers what happened during the months of November and December 202
   fetching tags, if a conflict occurs, the function
   `fetch_and_consume_refs()` returns an error code immediately. This
   caused the code to jump to the cleanup section, skipping the commit
-  of the transaction entirely, meaning even valid updates were
-  discarded.
+  of the transaction entirely, and thus discarding even valid updates.
 
   The proposed fix involved extracting the transaction commit logic
   into a new function, `commit_ref_transaction()`, and ensuring it is
@@ -102,7 +102,7 @@ This edition covers what happened during the months of November and December 202
   user does not specify `--tags` or `--no-tags`, confirming Patrick's
   understanding.
 
-  Patrick noted that the code now had three different callsites
+  Patrick noted that the code now had three different call sites
   committing the transaction and felt it was "somewhat fragile."
   Justin pointed out that the return code of
   `commit_ref_transaction()` was being ignored in the new
@@ -179,7 +179,7 @@ This edition covers what happened during the months of November and December 202
 
   The small patch series was eventually merged, and should be part of
   Git 2.53.0 that should be released at the latest towards the
-  beginning of February 2026. With this not only the transaction logic
+  beginning of February 2026. With this version, not only the transaction logic
   will be fixed, but related regressions regarding post-fetch
   operations (like updating `FETCH_HEAD`) will also have been
   identified and resolved.
@@ -190,11 +190,11 @@ This edition covers what happened during the months of November and December 202
 * **Who are you and what do you do?**
 
   My name is Lucas Oshiro, I'm one of the three
-  GSoC '25 participants working on Git. I'm from São Paulo, Brazil
-  and I'm a bachelor and master in Computer Science from the
+  GSoC '25 participants working on Git. I'm from São Paulo, Brazil,
+  and I hold bachelor and master degrees in Computer Science from the
   [University of São Paulo](https://www5.usp.br/#english). I don't
   have only one specific interest in programming topics, I enjoy
-  several different topics, like: lower-lever C code (like we do for Git),
+  several different topics, like lower-lever C code (like we do for Git),
   FP languages (especially Haskell), play with network simulators, data
   analysis, operating systems, databases and so on.
 
@@ -207,14 +207,14 @@ This edition covers what happened during the months of November and December 202
   who participated in [GSoC '19 on Git](https://summerofcode.withgoogle.com/archive/2019/projects/4787791739748352).
   At the time, we needed to study a vulnerability and how it was fixed.
   We chose [CVE-2017-1000117](https://nvd.nist.gov/vuln/detail/cve-2017-1000117),
-  which was vulnerability in Git. That was my first time reading Git
+  which was a vulnerability in Git. That was my first time reading Git
   source code.
 
-  Two years later, I was a member of [group focused on contributing to Free/Open-Source software](https://flusp.ime.usp.br)
+  Two years later, I was a member of a [group focused on contributing to Free/Open-Source software](https://flusp.ime.usp.br)
   at my University. I sent a patch to Git at the time, but I needed to
   focus on other stuff and I couldn't finish it.
 
-  After that, I started to work as a back-end software engineer and I
+  After that, I started to work as a back-end software engineer and
   witnessed several Git-related problems. My two previous experiences with
   Git's source code made me want to understand what was happening and
   delving into its internals, so I could help other developers from my
@@ -265,7 +265,7 @@ This edition covers what happened during the months of November and December 202
 * **What was the biggest challenge you faced during your contributions
   to Git, and how did you overcome it?**
 
-  I think that the biggest challenge was the complete redesigns of
+  I think that the biggest challenge was the complete redesign of
   `git repo info` during the GSoC period, which made me re-write it from
   scratch several times. I think this was a consequence of my previous
   answer and that this challenge was solved itself.
@@ -286,7 +286,7 @@ This edition covers what happened during the months of November and December 202
 
   Perhaps commands that accumulate responsibilities, like `git checkout`,
   `git reset` and `git rev-parse`. They make sense from the Git
-  perspective, but I think they are confusing from the users
+  perspective, but I think they are confusing from the users'
   perspective.
 
 * **What upcoming features or changes in Git are you particularly
@@ -299,7 +299,7 @@ This edition covers what happened during the months of November and December 202
     and useful as a data storage, if done correctly. Currently we do that
     through interactive rebase but I think it can be intimidating for less
     experienced users. Jujutsu proposes a more straightforward way to do
-    that and it's nice to see Patrick bringing it to Git.
+    that, and it's nice to see Patrick bringing it to Git.
 
   - Justin Tobler's [new `git repo structure` command](https://public-inbox.org/git/20251217175404.37963-1-jltobler@gmail.com/):
     of course I'm interested in this subcommand since it is the sibling of
@@ -328,7 +328,7 @@ This edition covers what happened during the months of November and December 202
   GMail filters for classifying the messages (patches, What's Cooking and
   Rev News announcements).
 
-  However, those mail clients don't have code syntax highlighting and it's
+  However, those mail clients don't have code syntax highlighting, and it's
   hard to read the patches inside them. For that purpose, I use
   [patch-hub](https://github.com/kworkflow/patch-hub), a TUI for reviewing
   patches from kernel mailing lists (including Git).
@@ -336,7 +336,7 @@ This edition covers what happened during the months of November and December 202
 * **How do you envision your own involvement with Git or other open
   source projects in the future?**
 
-  There are some things I want to finish in `git repo info` and I
+  There are some things I want to finish in `git repo info`, and I
   still send patches for it. I enjoyed contributing to Git and I
   don't want to stop here.
 
