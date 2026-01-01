@@ -370,7 +370,7 @@ __Light reading__
 + [Git Commit Count Percentile Stats, Annual Days Active from 878,592 Dev-year Data Points](https://www.gitclear.com/research_studies/git_commit_count_percentiles_annual_days_active_from_largest_data_set)
   by Bill Harding, a first-party research by GitClear.
 + [Fizzy Design Evolution: A Flipbook from Git](https://www.zolkos.com/2025/12/08/fizzy-design-evolution-a-flipbook-from-git)
-  by Rob Zolkos on his blog - which include the generated video.
+  by Rob Zolkos on his blog; includes the generated video.
 + [Comparing the homepage-claims of popular Git hosting providers](https://www.zufallsheld.de/2025/12/02/comparing-homepage-claims-of-git-providers/)
   by  Sebastian Gumprich on zufallsheld - a tech blog.
 + [Migrating from GitHub to Codeberg](https://robinmetral.com/notes/migrating-from-github-to-codeberg/)
@@ -387,13 +387,13 @@ __Git tools and sites__
 
 + [check-projects](https://github.com/uralys/check-projects)
   is a fast, cross-platform CLI tool (with TUI interface)
-  to check the git status of multiple projects organized by categories.
+  to check the Git status of multiple projects organized by categories.
   Written in Go, under MIT license.
 + [repos](https://github.com/epilande/repos)
-  is an interactive CLI tool for managing multiple git repositories.
-  Written in TypeScript (with pre-build binaries), under MIT license.
+  is an interactive CLI tool for managing multiple Git repositories.
+  Written in TypeScript (with pre-built binaries), under MIT license.
 + [Patchy 🩹](https://github.com/richardgill/patchy)
-  is a CLI for generating and applying patches to git repositories.
+  is a CLI for generating and applying patches to Git repositories.
     + Similar in a way to [Stacked Git](https://stacked-git.github.io/),
 	  StGit for short, first mentioned in [Git Rev News Edition #17](https://git.github.io/rev_news/2016/07/20/edition-17/), 
 	  to a lesser extent to [patchwork](http://jk.ozlabs.org/projects/patchwork/),
