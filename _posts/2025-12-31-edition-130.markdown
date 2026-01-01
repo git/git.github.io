@@ -406,8 +406,8 @@ __Light reading__
 + [Migrating from GitHub to Codeberg](https://ziglang.org/news/migrating-from-github-to-codeberg/)
   by Andrew on Zig Language News.
 + [How Do Git Remotes Work? And How Do I Self-host My Own?](https://fev.al/posts/git-remote/)
-  What it takes to create the simplest, barest self-hosted git remote,
-  and learn stuff about git in the process.
+  What it takes to create the simplest, barest self-hosted Git remote,
+  and learn stuff about Git in the process.
   Post by Charles Féval on his blog.
 + [Guarding My Git Forge Against AI Scrapers](https://vulpinecitrus.info/blog/guarding-git-forge-ai-scrapers/)
   by ~lymkwi (lux) on VulpineCitrus blog.
@@ -418,9 +418,9 @@ __Light reading__
   by Jynn Nelson (@jyn) on the website of jyn.
     + See also [Discussion of the Benefits and Drawbacks of the Git Pre-Commit Hook](https://yeldirium.de/2025/10/09/pre-commit-hooks/index.html)
 	  in [Git Rev News Edition #128](https://git.github.io/rev_news/2025/10/31/edition-128/).
-	+ [Git Hooks](https://githooks.com/) website gives an example of using pre-commit hook
+	+ The [Git Hooks](https://githooks.com/) website gives an example of using pre-commit hook
 	  to check the commit message for spelling errors;<br>
-	  [`pre-commit.sample`](https://github.com/git/git/blob/master/templates/hooks/pre-commit.sample)
+	  the [`pre-commit.sample`](https://github.com/git/git/blob/master/templates/hooks/pre-commit.sample)
 	  provided with Git checks for non-ASCII characters in filenames
 	  (and can be configured to be turned off with `hooks.allownoascii`).
 	+ There are various tools that help managing pre-commit hooks, like
@@ -443,7 +443,7 @@ __Light reading__
   and Branch Rulesets for short lived branches, defining rules before branches are created.
 + [`magit-insert-worktrees` improves status buffers](https://huonw.github.io/blog/2025/12/magit-insert-worktrees/)
   by Huon Wilson on his "Huon on the internet" blog.
-    + [Magit](https://magit.vc/) package for interfacing to Git within Emacs editor
+    + The [Magit](https://magit.vc/) package for interfacing to Git within the Emacs editor
 	  was first mentioned in passing in [Git Rev News Edition #6](https://git.github.io/rev_news/2015/08/05/edition-6/);
 	  among other mentions there was [Emacs and Magit](https://lwn.net/Articles/727550/)
 	  article on LWN\.net in [Git Rev News Edition #30](https://git.github.io/rev_news/2017/08/16/edition-30/).
@@ -464,10 +464,9 @@ __Light reading__
 	  (mentioned in [Git Rev News Edition #128](https://git.github.io/rev_news/2025/10/31/edition-128/)).
 + [From Zero to GitHub: Starting A New jj (Jujutsu) Repo](https://www.visualmode.dev/from-zero-to-github-starting-a-new-jj-jujutsu-repo)
   by Josh Branchaud on VisualMode.
-	  
-+ [30 Years of <br> Tags](https://www.artmann.co/articles/30-years-of-br-tags):
++ [30 Years of `<br>` Tags](https://www.artmann.co/articles/30-years-of-br-tags):
   Three decades of making things on the internet.
-  Includes introduction of Git, GitHub, and GitDevOps (push to publish) workflow.
+  Includes the introduction of Git, GitHub, and the GitDevOps (push to publish) workflow.
   Post by Christoffer Artmann on his blog.
 + [Free Software Needs Free Tools](https://mako.cc/writing/hill-free_tools.html)
   by Benjamin Mako Hill (2010).
@@ -477,11 +476,11 @@ __Easy watching__
 
 + [Magit, fzf, and ast-grep demo](https://www.saltycrane.com/blog/2025/12/magit-fzf-and-ast-grep-demo/)
   by Eliot (@saltycrane) on SaltyCrane Blog.
-  Video [on YouTube](https://www.youtube.com/watch?v=W4eOz3L6Ga8)
+  The video [on YouTube](https://www.youtube.com/watch?v=W4eOz3L6Ga8)
   is 12:40 minutes long.
 + [Git & GitHub Crash Course for Beginners](https://www.freecodecamp.org/news/git-and-github-crash-course-for-beginners/)
   by Beau Carnes on freeCodeCamp.
-  Video [on YouTube](https://www.youtube.com/watch?v=mAFoROnOfHs)
+  The video [on YouTube](https://www.youtube.com/watch?v=mAFoROnOfHs)
   by freeCodeCamp.org and logicBase Labs
   is 1:21:19 hours long.
 
@@ -515,7 +514,7 @@ __Git tools and sites__
   blog post by Anh Tuan Le.
 + [gtr - Git Worktree Runner](https://github.com/coderabbitai/git-worktree-runner)
   by the CodeRabbit team
-  is a  portable, cross-platform CLI for managing git worktrees with ease,
+  is a portable, cross-platform CLI for managing Git worktrees with ease,
   with editor and AI tool integration.
   It automates per-branch worktree creation, configuration copying,
   dependency installation, and workspace setup.
@@ -528,7 +527,7 @@ __Git tools and sites__
 	  [wtp (Worktree Plus)](https://github.com/satococoa/wtp)
 	  mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/).
 + [Git Pow](https://github.com/markrai/gitpow)
-  is an open-source, cross-platform git client.
+  is an open-source, cross-platform Git client.
   It implements conditional strategies to handle larger repositories,
   showing image previews to visualize what changed,
   and grouping commits by month/year, among other features.
@@ -538,7 +537,7 @@ __Git tools and sites__
   is a comprehensive Git repository analytics tool
   that provides detailed insights into developer contributions, subsystem ownership,
   and codebase evolution over time.
-  Written in Python (using Flask library) and JavaScript,
+  Written in Python (using the Flask library) and JavaScript,
   under [CC-BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/).
   [Demo](http://13.61.92.173:5555/) and Docker image available.
 + [Gitmal](https://github.com/antonmedv/gitmal)
@@ -559,7 +558,7 @@ __Git tools and sites__
 + [Buggy: Fast and simple bug tracker](https://git.dillo-browser.org/buggy/tree/README.md?h=main).
   The buggy program compiles a set of issues written in Markdown into HTML pages
   suitable to be read from a web browser. It is intended to be used
-  alongside a version control system (VCS) like git to track changes in the issues.
+  alongside a version control system (VCS) like Git to track changes in the issues.
   Written in C, under MIT license.
 + [Today I Learned: Git](https://github.com/jbranchaud/til?tab=readme-ov-file#git)
   by Josh Branchaud, under MIT license.
