@@ -431,6 +431,7 @@ __Git tools and sites__
 + Sourcetree [4.2.15](https://product-downloads.atlassian.com/software/sourcetree/ReleaseNotes/Sourcetree_4.2.15.html)
 + Garden [2.4.0](https://github.com/garden-rs/garden/releases/tag/v2.4.0),
 [2.5.0](https://github.com/garden-rs/garden/releases/tag/v2.5.0)
++ Git Cola [4.17.0](https://github.com/git-cola/git-cola/releases/tag/v4.17.0)
 + GitButler [0.18.3](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.18.3),
 [0.18.2](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.18.2)
 + Sublime Merge [Build 2121](https://www.sublimemerge.com/download)
