@@ -429,7 +429,9 @@ __Git tools and sites__
 [18.6.2, 18.5.4, 18.4.6](https://about.gitlab.com/releases/2025/12/10/patch-release-gitlab-18-6-2-released/)
 + GitKraken [11.7.0](https://help.gitkraken.com/gitkraken-desktop/current/)
 + Sourcetree [4.2.15](https://product-downloads.atlassian.com/software/sourcetree/ReleaseNotes/Sourcetree_4.2.15.html)
-+ Garden [2.4.0](https://github.com/garden-rs/garden/releases/tag/v2.4.0)
++ Garden [2.4.0](https://github.com/garden-rs/garden/releases/tag/v2.4.0),
+[2.5.0](https://github.com/garden-rs/garden/releases/tag/v2.5.0)
++ Git Cola [4.17.0](https://github.com/git-cola/git-cola/releases/tag/v4.17.0)
 + GitButler [0.18.3](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.18.3),
 [0.18.2](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.18.2)
 + Sublime Merge [Build 2121](https://www.sublimemerge.com/download)
