@@ -364,24 +364,127 @@ This edition covers what happened during the months of November and December 202
 
 __Various__
 
++ [Debian’s git transition](https://diziet.dreamwidth.org/20436.html)
+  by Ian Jackson on diziet's journal on Dreamwidth.
+  The main goal of the transition is to make it so that
+  everyone who interacts with Debian source code should be able to do so entirely in git.
++ [Git’s New Era: What Git 2.52 and the Road to Git 3.0 Mean for Developers in 2026](https://blog.stackademic.com/gits-new-era-what-git-2-52-and-the-road-to-git-3-0-mean-for-developers-in-2026-eb2c3b4e6e79)
+  by Faisal haque on Medium.
+  Free access provided via Faisal haque's Friend Link.
+    + See also [What’s new in Git 2.52.0?](https://about.gitlab.com/blog/whats-new-in-git-2-52-0/) on GitLab Blog and
+	  [Highlights from Git 2.52](https://github.blog/open-source/git/highlights-from-git-2-52/) on GitHub Blog,
+	  mentioned in the [previous edition of Git Rev News](https://git.github.io/rev_news/2025/11/30/edition-129/).
+	+ See also [Git Developers Talk About Potentially Releasing Git 3.0 By The End Of Next Year](https://www.phoronix.com/news/Git-3.0-Release-Talk-2026) on Phoronix,
+	  mentioned in [Git Rev News Edition #128](https://git.github.io/rev_news/2025/10/31/edition-128/).
+    + There is also [BreakingChanges: Git 3.0](https://git-scm.com/docs/BreakingChanges#_git_3_0)
+	  document in the Git documentation.
+
 
 __Light reading__
 
++ [Package managers keep using git as a database, it never works out](https://nesbitt.io/2025/12/24/package-managers-keep-using-git-as-a-database.html)
+  by Andrew Nesbitt on his blog.
 + [Git Commit Count Percentile Stats, Annual Days Active from 878,592 Dev-year Data Points](https://www.gitclear.com/research_studies/git_commit_count_percentiles_annual_days_active_from_largest_data_set)
   by Bill Harding, a first-party research by GitClear.
 + [Fizzy Design Evolution: A Flipbook from Git](https://www.zolkos.com/2025/12/08/fizzy-design-evolution-a-flipbook-from-git)
   by Rob Zolkos on his blog; includes the generated video.
 + [Comparing the homepage-claims of popular Git hosting providers](https://www.zufallsheld.de/2025/12/02/comparing-homepage-claims-of-git-providers/)
   by  Sebastian Gumprich on zufallsheld - a tech blog.
++ [Are people migrating away from GitHub?](https://www.roboleary.net/blog/github-migration/),
+  a short post (with examples) by Rob O'Leary on his blog.
++ [GitHub Actions Has a Package Manager, and It Might Be the Worst](https://nesbitt.io/2025/12/06/github-actions-package-manager.html)
+  by Andrew Nesbitt on his blog.
++ [The Pain That Is GitHub Actions](https://www.feldera.com/blog/the-pain-that-is-github-actions)
+  by Gerd Zellweger on feldera blog.
 + [Migrating from GitHub to Codeberg](https://robinmetral.com/notes/migrating-from-github-to-codeberg/)
   by Robin Métral on his blog.
++ [Migrating my code to Codeberg](https://eldred.fr/blog/codeberg/) and
+  [GitHub → Codeberg: my experience](https://eldred.fr/blog/forge-migration/)
+  by Eldred Habert on ISSOtm's warehouse blog.
++ [Migrating Dillo from GitHub](https://dillo-browser.org/news/migration-from-github/)
+  by Rodrigo Arias Mallo on Dillo project blog.
++ [Migrating from GitHub to Codeberg](https://ziglang.org/news/migrating-from-github-to-codeberg/)
+  by Andrew on Zig Language News.
++ [How Do Git Remotes Work? And How Do I Self-host My Own?](https://fev.al/posts/git-remote/)
+  What it takes to create the simplest, barest self-hosted git remote,
+  and learn stuff about git in the process.
+  Post by Charles Féval on his blog.
++ [Guarding My Git Forge Against AI Scrapers](https://vulpinecitrus.info/blog/guarding-git-forge-ai-scrapers/)
+  by ~lymkwi (lux) on VulpineCitrus blog.
+  The forge in question is a self-hosted [Forgejo instance](https://git.vulpinecitrus.info/).
++ [Rethinking Git Pre-Commit Hooks](https://mathieularose.com/rethinking-git-pre-commit-hooks)
+  by Mathieu Larose on his blog.
++ [pre-commit hooks are fundamentally broken](https://jyn.dev/pre-commit-hooks-are-fundamentally-broken/)
+  by Jynn Nelson (@jyn) on the website of jyn.
+    + See also [Discussion of the Benefits and Drawbacks of the Git Pre-Commit Hook](https://yeldirium.de/2025/10/09/pre-commit-hooks/index.html)
+	  in [Git Rev News Edition #128](https://git.github.io/rev_news/2025/10/31/edition-128/).
+	+ [Git Hooks](https://githooks.com/) website gives an example of using pre-commit hook
+	  to check the commit message for spelling errors;<br>
+	  [`pre-commit.sample`](https://github.com/git/git/blob/master/templates/hooks/pre-commit.sample)
+	  provided with Git checks for non-ASCII characters in filenames
+	  (and can be configured to be turned off with `hooks.allownoascii`).
+	+ There are various tools that help managing pre-commit hooks, like
+	  [pre-commit](https://pre-commit.com/)
+	  (first mentioned in [Git Rev News #45](https://git.github.io/rev_news/2018/11/21/edition-45/))
+	  and [_prek_](https://prek.j178.dev/)
+	  (first mentioned in [Git Rev News #127](https://git.github.io/rev_news/2025/09/30/edition-127/)).
 + [Fixing the "Ghost Folder" in GitHub: Converting a Broken Submodule to a Normal Folder](https://dev.to/raziq_din_bd0274cc2ac748b/fixing-the-ghost-folder-in-github-converting-a-broken-submodule-to-a-normal-folder-44c5)
   by Raziq Din on DEV\.to.
++ [Shooting myself in the foot with Git by accident](https://utcc.utoronto.ca/~cks/space/blog/programming/GitConcurrentUsageOops)
+  by Chris Siebenmann on CSpace blog.
+  The Git error in question was
+  _"error: fetching ref refs/remotes/origin/master failed: incorrect old value provided"_.
++ [Tracking renamed files in Git](https://oleb.net/2025/git-file-renaming/) and
+  [Use 'git mv' to record filename case changes in Git](https://oleb.net/2025/git-mv-case-change/)
+  by Ole Begemann on his blog.
++ [Branch Protection Rules vs Rulesets: The Right Way to Protect Your Git Repository](https://dev.to/piyushgaikwaad/branch-protection-rules-vs-rulesets-the-right-way-to-protect-your-git-repos-305m)
+  by Piyush Gaikwad on DEV\.to.
+  The main idea is to use Branch Protection Rules for long lived branches,
+  and Branch Rulesets for short lived branches, defining rules before branches are created.
++ [`magit-insert-worktrees` improves status buffers](https://huonw.github.io/blog/2025/12/magit-insert-worktrees/)
+  by Huon Wilson on his "Huon on the internet" blog.
+    + [Magit](https://magit.vc/) package for interfacing to Git within Emacs editor
+	  was first mentioned in passing in [Git Rev News Edition #6](https://git.github.io/rev_news/2015/08/05/edition-6/);
+	  among other mentions there was [Emacs and Magit](https://lwn.net/Articles/727550/)
+	  article on LWN\.net in [Git Rev News Edition #30](https://git.github.io/rev_news/2017/08/16/edition-30/).
++ [Archiving git branches as tags](https://etc.octavore.com/2025/12/archiving-git-branches-as-tags/)
+  with a git alias.  Blog post by octavore
+  (the author of [Delta](https://github.com/octavore/delta), a command-line diff tool)
+  on "et cetera".
++ [Building a Meta-Logger: Tracking My Work Across GitHub, Codeberg, and Bitbucket Using Go](https://dev.to/nimxch/building-a-meta-logger-tracking-my-work-across-github-codeberg-and-bitbucket-using-go-4kp6)
+  by Nimai Charan on DEV\.to.
++ [why i think jj-vcs is worth your time](https://schpet.com/note/why-i-think-jj-vcs-is-worth-your-time)
+  on Schpet’s Notebook.
+    + [Jujutsu (`jj`)](https://jj-vcs.github.io/) is a Git-compatible
+	  version control system written in Rust, which was first mentioned
+	  in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/).
+	+ See also [Should I Switch From Git to Jujutsu](https://etodd.io/2025/10/02/should-i-switch-from-git-to-jujutsu/)
+	  (mentioned in [Git Rev News Edition #129](https://git.github.io/rev_news/2025/11/30/edition-129/)) and
+	  [Switch to Jujutsu already: a tutorial](https://www.stavros.io/posts/switch-to-jujutsu-already-a-tutorial/)
+	  (mentioned in [Git Rev News Edition #128](https://git.github.io/rev_news/2025/10/31/edition-128/)).
++ [From Zero to GitHub: Starting A New jj (Jujutsu) Repo](https://www.visualmode.dev/from-zero-to-github-starting-a-new-jj-jujutsu-repo)
+  by Josh Branchaud on VisualMode.
+	  
++ [30 Years of <br> Tags](https://www.artmann.co/articles/30-years-of-br-tags):
+  Three decades of making things on the internet.
+  Includes introduction of Git, GitHub, and GitDevOps (push to publish) workflow.
+  Post by Christoffer Artmann on his blog.
++ [Free Software Needs Free Tools](https://mako.cc/writing/hill-free_tools.html)
+  by Benjamin Mako Hill (2010).
 
 
-<!---
 __Easy watching__
--->
+
++ [Magit, fzf, and ast-grep demo](https://www.saltycrane.com/blog/2025/12/magit-fzf-and-ast-grep-demo/)
+  by Eliot (@saltycrane) on SaltyCrane Blog.
+  Video [on YouTube](https://www.youtube.com/watch?v=W4eOz3L6Ga8)
+  is 12:40 minutes long.
++ [Git & GitHub Crash Course for Beginners](https://www.freecodecamp.org/news/git-and-github-crash-course-for-beginners/)
+  by Beau Carnes on freeCodeCamp.
+  Video [on YouTube](https://www.youtube.com/watch?v=mAFoROnOfHs)
+  by freeCodeCamp.org and logicBase Labs
+  is 1:21:19 hours long.
+
 
 __Git tools and sites__
 
@@ -404,11 +507,62 @@ __Git tools and sites__
 + [git-pw](https://patchwork.readthedocs.io/projects/git-pw/en/latest/usage.html)
   is a tool for integrating Git with Patchwork.
   Written in Python, under MIT license.
++ [git-forge](https://github.com/Leleat/git-forge)
+  is a simple CLI tool for basic interactions with issues and pull requests
+  across GitHub, GitLab, Gitea, and Forgejo.
+  (Re)Written in Rust, under MIT license.<br>
+  See also [git-forge: Faster Issues and PRs From Your Terminal](https://neverready.app/blog/2025/03-git-forge/)
+  blog post by Anh Tuan Le.
++ [gtr - Git Worktree Runner](https://github.com/coderabbitai/git-worktree-runner)
+  by the CodeRabbit team
+  is a  portable, cross-platform CLI for managing git worktrees with ease,
+  with editor and AI tool integration.
+  It automates per-branch worktree creation, configuration copying,
+  dependency installation, and workspace setup.
+  Written in Bash, under Apache 2.0 license.<br>
+  See also [A Better Way to Run Git Worktrees Finally!](https://dev.to/nemesiscodex/a-better-way-to-run-git-worktrees-finally-1lh9)
+  by Julio Daniel Reyes on DEV\.to,
+  with [video on YouTube](https://www.youtube.com/watch?v=r9uGLZ3AkWo) [5:52].
+    + There is also [Worktree Manager (wtm)](https://github.com/jarredkenny/worktree-manager)
+	  mentioned in [Git Rev News Edition #128](https://git.github.io/rev_news/2025/10/31/edition-128/), and
+	  [wtp (Worktree Plus)](https://github.com/satococoa/wtp)
+	  mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/).
++ [Git Pow](https://github.com/markrai/gitpow)
+  is an open-source, cross-platform git client.
+  It implements conditional strategies to handle larger repositories,
+  showing image previews to visualize what changed,
+  and grouping commits by month/year, among other features.
+  Written in Rust and JavaScript using the [Tauri](https://tauri.app/) framework.
+  Under GNU GPL v3.0 license.
++ [Git Repository Squirrel 🐿️ (reposquirrel)](https://github.com/reposquirrel/reposquirrel)
+  is a comprehensive Git repository analytics tool
+  that provides detailed insights into developer contributions, subsystem ownership,
+  and codebase evolution over time.
+  Written in Python (using Flask library) and JavaScript,
+  under [CC-BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+  [Demo](http://13.61.92.173:5555/) and Docker image available.
++ [Gitmal](https://github.com/antonmedv/gitmal)
+  is a static page generator for Git repositories.
+  Gitmal generates static HTML pages with files, commits, code highlighting, and Markdown rendering.
+  Written in Go, under MIT license.
 + [Git Rewind](https://github.com/mikelane/git-rewind)
   is a GitHub App that provides Your GitHub year in review — with privacy-first,
   read-only access (using fine-grained permissions).
   Written in TypeScript, under MIT license.
   Available at [git-rewind.vercel.app](https://git-rewind.vercel.app/).
++ [Critic](https://github.com/jensl/critic)
+  is a code review system.
+  It is a web application written in Python, tightly integrated with Git.
+  Under Apache 2.0 license.<br>
+  See also [Meet Critic: Code Inspection System in Opera Software](https://sudonull.com/post/135595)
+  on Sudo Null IT News.
++ [Buggy: Fast and simple bug tracker](https://git.dillo-browser.org/buggy/tree/README.md?h=main).
+  The buggy program compiles a set of issues written in Markdown into HTML pages
+  suitable to be read from a web browser. It is intended to be used
+  alongside a version control system (VCS) like git to track changes in the issues.
+  Written in C, under MIT license.
++ [Today I Learned: Git](https://github.com/jbranchaud/til?tab=readme-ov-file#git)
+  by Josh Branchaud, under MIT license.
 
 
 ## Releases
