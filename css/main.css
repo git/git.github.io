@@ -815,13 +815,15 @@ pre {
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
-  white-space: pre-wrap;
+  white-space: pre;
   border-radius: 3px;
   display: block;
   padding: 10px 15px 13px 15px;
   background-color: #fff;
   border: solid 1px #efeee6;
   line-height: 18px;
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 
@@ -1376,6 +1378,9 @@ pre.sh_sourceCode {
   font-size: 13px;
   font-family: Courier, monospace !important;
   line-height: 18px;
+  white-space: pre;
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 
