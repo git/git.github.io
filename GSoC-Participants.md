@@ -11,7 +11,7 @@ to Git via GSoC.
 ### 2025
 
 1. Ayush Chandekar [ [project](https://summerofcode.withgoogle.com/programs/2025/projects/no7dVMeG) ] [ [final report](https://ayu-ch.github.io/2025/08/29/gsoc-final-report.html) ] [ [blog](https://ayu-ch.github.io/) ] [ [retrsopective interview](https://git.github.io/rev_news/2025/11/30/edition-129/#developer-spotlight-ayush-chandekar) ]
-2. Lucas Seiki Oshiro [ [project](https://summerofcode.withgoogle.com/programs/2025/projects/fGgMYHwl) ] [ [final report](https://lucasoshiro.github.io/gsoc-en/#final-report) ] [ [blog](https://lucasoshiro.github.io/gsoc-en/#weeks) ]
+2. Lucas Seiki Oshiro [ [project](https://summerofcode.withgoogle.com/programs/2025/projects/fGgMYHwl) ] [ [final report](https://lucasoshiro.github.io/gsoc-en/#final-report) ] [ [blog](https://lucasoshiro.github.io/gsoc-en/#weeks) ] [ [retrospective interview](https://git.github.io/rev_news/2025/12/31/edition-130#developer-spotlight-lucas-seiki-oshiro) ]
 3. Meet Soni [ [project](https://summerofcode.withgoogle.com/programs/2025/projects/xVrT5e2q) ] [ [final report](https://inosmeet.github.io/posts/gsoc25/gsoc25_final/) ] [ [blog](https://inosmeet.github.io/posts/gsoc25/) ]
 
 #### References
