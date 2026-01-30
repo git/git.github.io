@@ -25,9 +25,86 @@ This edition covers what happened during the months of December 2025 and January
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
+* [Would it make sense to add a commit.signOff config?](https://lore.kernel.org/git/86c5d40d-5a06-4a69-90d8-a737685b0536%40haller-berlin.de)
+
+  Stefan Haller started the discussion by asking if it would be
+  appropriate to add a `commit.signoff` configuration variable. He
+  observed that while many Git commands, such as `merge`,
+  `cherry-pick`, and `revert`, accept the `--signoff` argument, only
+  `format-patch` has a corresponding configuration to enable it for
+  all invocations. Stefan found it reasonable for users to want a
+  "Signed-off-by" trailer added automatically to every commit they
+  make. This question was prompted by his work on the `lazygit`
+  project, which already includes such a configuration and had
+  received a feature request to extend its behavior to the `revert`
+  command.
+
+  The "Signed-off-by" trailer is a formal certification that the
+  contributor has the right to submit the work under the project's
+  license, often associated with a Developer Certificate of Origin
+  (DCO). While widely used in open-source projects to maintain a legal
+  paper trail, its use in closed-source environments is less common.
+
+  Carlo Marcelo Arenas Belón replied to Stefan, noting that a similar
+  topic was
+  [discussed recently](https://lore.kernel.org/git/xmqq4iwvfx8s.fsf@gitster.g/)
+  where it was argued that sign-offs should be given explicitly rather
+  than automated. Junio Hamano, the Git maintainer, agreed and
+  suggested resurrecting a
+  [proposal from 2020](https://lore.kernel.org/git/xmqqpnfw8gyn.fsf@gitster-ct.c.googlers.com/)
+  to explicitly document why Git intentionally lacks this
+  configuration. Junio expressed a desire to "save time from potential
+  contributors" who might otherwise put effort into a patch that the
+  community has already reached a consensus against.
+
+  Collin Funk supported the idea of documenting the consensus and
+  recommended using the full phrase "Signed-off-by" instead of the
+  abbreviation "SoB" to ensure clarity for all readers. brian
+  m. carlson suggested that the explanation could be placed in the Git
+  FAQ, the manual pages, or both. brian also provided a minor
+  grammatical correction to the initial text proposal.
+
+  Junio submitted
+  [version 1](https://lore.kernel.org/git/xmqqldj48pyl.fsf%40gitster.g)
+  of a patch to document the decision. The proposed text explained
+  that automation makes it harder to defend a sign-off's validity in
+  court, as a person could claim the trailer "was done by inertia
+  without person X really intending to certify what DCO says". The
+  patch also acknowledged that while `format.signoff` exists, it is
+  considered a "historical mistake" that should not be emulated by
+  other commands.
+
+  Elijah Newren found the initial draft somewhat difficult to parse
+  and suggested an alternative version with more sentence
+  breaks. Elijah’s draft emphasized that Git avoids automatic
+  sign-offs specifically to "protect the legal and intentional
+  significance of a sign-off". He also recommended a shorter version
+  for the manual pages that would point users toward a more detailed
+  entry in the FAQ. Johannes Sixt agreed that Elijah’s version was
+  much easier to read and suggested a minor shortening of the final
+  sentences to maintain impact. Johannes also emphasized the
+  importance of leaving a pointer in the manual pages, as users
+  looking for automation features are more likely to check
+  documentation for specific commands rather than the general FAQ.
+
+  Junio provided
+  [version 2](https://lore.kernel.org/git/xmqqv7i62r6w.fsf%40gitster.g)
+  of the patch, which incorporated Elijah's and Johannes's
+  refinements. During the final review, Johannes suggested changing
+  the phrase "pile on more mistakes" to "add more mistakes" to be
+  clearer for non-native English speakers. Junio adopted this change,
+  noting it would be clear for everyone. Kristoffer Haugsbakk also
+  contributed a final polish by suggesting the use of a proper
+  `linkgit:gitfaq[7]` reference in the manual page. Elijah and brian
+  both confirmed they were satisfied with the final result.
+
+  During the discussion there was a clear consensus that Git will not
+  add a global `commit.signoff` configuration. The creation of
+  permanent documentation in the Git FAQ and manual pages to explain
+  the legal reasoning behind this decision will prevent future
+  contributors from wasting time on a feature that would be rejected.
 
 <!---
 ## Developer Spotlight:
