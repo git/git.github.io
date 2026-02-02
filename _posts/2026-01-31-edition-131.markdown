@@ -27,7 +27,7 @@ This edition covers what happened during the months of December 2025 and January
 
 ### Support
 
-* [Would it make sense to add a commit.signOff config?](https://lore.kernel.org/git/86c5d40d-5a06-4a69-90d8-a737685b0536%40haller-berlin.de)
+* [Would it make sense to add a `commit.signOff` config?](https://lore.kernel.org/git/86c5d40d-5a06-4a69-90d8-a737685b0536%40haller-berlin.de)
 
   Stefan Haller started the discussion by asking if it would be
   appropriate to add a `commit.signoff` configuration variable. He
@@ -36,7 +36,7 @@ This edition covers what happened during the months of December 2025 and January
   `format-patch` has a corresponding configuration to enable it for
   all invocations. Stefan found it reasonable for users to want a
   "Signed-off-by" trailer added automatically to every commit they
-  make. This question was prompted by his work on the `lazygit`
+  make. This question was prompted by his work on the Lazygit
   project, which already includes such a configuration and had
   received a feature request to extend its behavior to the `revert`
   command.
@@ -48,7 +48,7 @@ This edition covers what happened during the months of December 2025 and January
   paper trail, its use in closed-source environments is less common.
 
   Carlo Marcelo Arenas Belón replied to Stefan, noting that a similar
-  topic was
+  topic had been
   [discussed recently](https://lore.kernel.org/git/xmqq4iwvfx8s.fsf@gitster.g/)
   where it was argued that sign-offs should be given explicitly rather
   than automated. Junio Hamano, the Git maintainer, agreed and
@@ -57,7 +57,7 @@ This edition covers what happened during the months of December 2025 and January
   to explicitly document why Git intentionally lacks this
   configuration. Junio expressed a desire to "save time from potential
   contributors" who might otherwise put effort into a patch that the
-  community has already reached a consensus against.
+  community had already reached a consensus against.
 
   Collin Funk supported the idea of documenting the consensus and
   recommended using the full phrase "Signed-off-by" instead of the
@@ -136,11 +136,11 @@ __Light reading__
   by Aaron Brethorst on Brethorsting Blog.
 + [I made my own git](https://tonystr.net/blog/git_immitation)
   by Tony Strømsnæs on his blog.
-  As it was created with the goal of improving the author understanding of Git,
-  it is intentionally made not compatibile with Git:
+  As it was created with the goal of improving the author's understanding of Git,
+  it is intentionally made not compatible with Git:
   it uses SHA-256 instead of (current) SHA-1, and zstd instead of zlib.
   The example code is written in Rust.
-    + [Build your own `Git`](https://github.com/codecrafters-io/build-your-own-x#build-your-own-git)
+    + The [Build your own `Git`](https://github.com/codecrafters-io/build-your-own-x#build-your-own-git)
 	  section of [build-your-own-x](https://github.com/codecrafters-io/build-your-own-x)
 	  lists a few articles about reimplementing parts of Git functionality.
 	  Mentioned in [Git Rev News Edition #40](https://git.github.io/rev_news/2018/06/20/edition-40/).
@@ -156,7 +156,7 @@ __Light reading__
   by Konstantin Ryabitsev on his blog.
   TLDR: use [korgalore](https://korgalore.docs.kernel.org/)
   to bypass mailing list delivery problems.
-  (See also [comments on LWN\.net](https://lwn.net/Articles/1055219/#Comments)).
+  (See also [comments on LWN\.net](https://lwn.net/Articles/1055219/#Comments).)
 + [My first 20,000 curl commits](https://daniel.haxx.se/blog/2026/01/17/my-first-20000-curl-commits/)
   by Daniel Stenberg on his blog.
 + [GitOps with ArgoCD feels like the right abstraction](https://nick.scialli.me/blog/gitops/)
@@ -191,9 +191,9 @@ __Light reading__
   to standard Git).
 + [How I use Jujutsu](https://abhinavsarkar.net/posts/jj-usage/)
   by Abhinav Sarkar on their blog.
-   + [Jujutsu (`jj`)](https://jj-vcs.github.io/jj/) is a Git-compatible version control system,
-     written in Rust, which was first mentioned in
-	 [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/).
+    + [Jujutsu (`jj`)](https://jj-vcs.github.io/jj/) is a Git-compatible version control system,
+      written in Rust, which was first mentioned in
+	  [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/).
 + [How GitHub monopoly is destroying the open source ecosystem](https://ploum.net/2026-01-05-unteaching_github.html)
   by Lionel Dricot (Ploum).
 + [Moving from GitHub pages to Codeberg pages](https://kotthoff.dev/posts/2026/github-to-codeberg-pages/)
@@ -202,7 +202,7 @@ __Light reading__
   (by creating a static site with GitGen, where everything is generated ahead of time)
   by cybrkyd.
     + Compare [Gitmal](https://github.com/antonmedv/gitmal), a static page generator for Git repositories,
-	  mentioned in [previous edition](https://git.github.io/rev_news/2025/12/31/edition-130/).
+	  mentioned in the [previous edition](https://git.github.io/rev_news/2025/12/31/edition-130/).
 + [This tool (pgit) turns any Git repo into a private, offline “GitHub” website](https://www.howtogeek.com/this-easy-tool-gives-me-the-best-of-github-on-my-local-machine/)
   by Bobby Jack on How-To Geek.
 + [Git Brag: Highlight and Share Your Open Source Contributions](https://blog.tedivm.com/open-source/2026/01/git-brag-highlight-and-share-your-open-source-contributions/)
@@ -221,7 +221,7 @@ __Git tools and sites__
 + [forgeperf.org](https://forgeperf.org/) - Software Forge Performance Index.
   Reports generated with [Lighthouse](https://github.com/GoogleChrome/lighthouse),
   originally updated weekly, last update February 7, 2024.
-  Created and maintained by [SourceHut](https://sourcehut.org/) forge.
+  Created and maintained by the [SourceHut](https://sourcehut.org/) forge.
 + [Mirror to Codeberg](https://codeberg.org/Recommendations/Mirror_to_Codeberg):
   a central place of information about mirroring repos to Codeberg.
   Includes some thoughts about why one would want to switch from GitHub or GitLab,
@@ -229,14 +229,14 @@ __Git tools and sites__
   with links to other articles.
 + [git-natural-api](https://jsr.io/@fiatjaf/git-natural-api)
   is a lightweight git HTTP client for fetching repository data without cloning.
-  It use /git-upload-pack custom calls to get access to file trees,
+  It uses /git-upload-pack custom calls to get access to file trees,
   commit history or individual objects.
-  Written in TypeScript, and provides JavaScript / TypeScript API.
+  Written in TypeScript, provides a JavaScript/TypeScript API.
   Can be used in browser, using Bun, Deno, or Node\.js.
   No license provided.
 + [Grasp](https://ngit.dev/grasp/)
   (Git Relays Authorized via Signed-Nostr Proofs)
-  is distributed, protocol-first approach to hosting Git repos.
+  is a distributed, protocol-first approach to hosting Git repos.
   You pre-authorize pushes via signed
   [Nostr](https://github.com/nostr-protocol/nostr/) events,
   then any compliant server can host your repo.
@@ -244,7 +244,7 @@ __Git tools and sites__
   that uses a Dockerized stack: nginx, git-http-backend and a Khatru relay.
     + Compare [Tangled](https://tangled.org/),
 	  a social-enabled Git collaboration platform built on top of the AT Protocol
-	  (which is behind [BlueSky](https://bsky.app/) microblogging federated social media service).
+	  (which is behind the [BlueSky](https://bsky.app/) microblogging federated social media service).
 	  First mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/),
 	  then in [#126](),
 	  and [#128]().
@@ -255,7 +255,7 @@ __Git tools and sites__
 	+ There is also [gitstr (`git str`)](https://github.com/fiatjaf/gitstr),
 	  a tool to send and receive Git patches over Nostr,
 	  using [NIP-34](https://github.com/nostr-protocol/nips/pull/997)
-	  (mentioned in [Git Rev News Edition #109](https://git.github.io/rev_news/2024/03/31/edition-109/)),
+	  (mentioned in [Git Rev News Edition #109](https://git.github.io/rev_news/2024/03/31/edition-109/)).
 	+ Compare [`git-ssb`](https://scuttlebot.io/apis/community/git-ssb.html)
 	  (see the [git-ssb-intro](https://github.com/hackergrrl/git-ssb-intro) guide),
 	  a decentralized Git repo hosting and issue tracking on [Secure-ScuttleButt (SSB)](https://www.scuttlebutt.nz/)
@@ -314,7 +314,7 @@ __Git tools and sites__
 + [CleanDiff](https://cleandiffapp.com/) is a graphical diffing tool
   that shows you what’s changed on a word level, instead of a line level.
   It uses the tokendiff library to find semantically relevant changes,
-  and wraps them in a nice UI and easy git integration.
+  and wraps them in a nice UI and easy Git integration.
   [Written](https://github.com/masukomi/cleandiff) in Go and JavaScript,
   under MIT license.
 + [patch-hub](https://github.com/kworkflow/patch-hub)
@@ -325,14 +325,14 @@ __Git tools and sites__
   specifically for the Linux kernel and adjacent projects.
   Written in Rust, under GPL-2.0 license.
 + [Korgalore](https://korgalore.docs.kernel.org/en/latest/index.html)
-  is a tool for feeding [public-inbox](https://public-inbox.org/README.html) git repositories,
+  is a tool for feeding [public-inbox](https://public-inbox.org/README.html) Git repositories,
   like [lore.kernel.org](https://lore.kernel.org/), directly into mail targets
   (Gmail, JMAP, IMAP, or local maildir) as an alternative to subscribing.
   It provides a workaround for Gmail’s notorious hostility
   to high-volume technical mailing list traffic.
   Written in Python, under GPL-2.0 license.
-+ [git-pkgs](https://github.com/git-pkgs/git-pkgs) provides a git subcommand
-  for tracking package dependencies across git history.
++ [git-pkgs](https://github.com/git-pkgs/git-pkgs) provides a `git` subcommand
+  for tracking package dependencies across Git history.
   It analyzes your repository to show when dependencies were added, modified, or removed,
   who made those changes, and why.
   Builds on [bibliothecary](https://github.com/ecosyste-ms/bibliothecary),
