@@ -114,14 +114,231 @@ This edition covers what happened during the months of December 2025 and January
 
 __Various__
 
++ [A data model for Git (and other docs updates)](https://jvns.ca/blog/2026/01/08/a-data-model-for-git/)
+  by Julia Evans on her blog
+  (see [comments on Mastodon](https://comments.jvns.ca/post/115861337435768520)
+  and on [LWN\.net announcement](https://lwn.net/Articles/1053595/)).
++ [SQL Server Management Studio 22 Git Integration](https://www.mssqltips.com/sqlservertip/11585/ssms-22-git-integration/)
+  by Daniel Calbimonte on MSSQLTips.
+
 
 __Light reading__
+
++ [Diff Algorithm Spelunking](https://dacharycarey.com/2025/12/29/diff-algorithm-spelunking/)
+  by Dachary Carey.
+    + See also [Difftastic](https://difftastic.wilfred.me.uk/),
+	  a structural diff tool that understands syntax,
+	  first mentioned in [Git Rev News Edition #86](https://git.github.io/rev_news/2022/04/30/edition-86/),
+	  and [Delta](https://dandavison.github.io/delta/),
+	  a syntax-highlighting pager for git, diff, and grep output,
+	  first mentioned in [Git Rev News Edition #86](https://git.github.io/rev_news/2022/04/30/edition-86/).
++ [Git Rebase for the Terrified](https://www.brethorsting.com/blog/2026/01/git-rebase-for-the-terrified/)
+  by Aaron Brethorst on Brethorsting Blog.
++ [I made my own git](https://tonystr.net/blog/git_immitation)
+  by Tony Strømsnæs on his blog.
+  As it was created with the goal of improving the author understanding of Git,
+  it is intentionally made not compatibile with Git:
+  it uses SHA-256 instead of (current) SHA-1, and zstd instead of zlib.
+  The example code is written in Rust.
+    + [Build your own `Git`](https://github.com/codecrafters-io/build-your-own-x#build-your-own-git)
+	  section of [build-your-own-x](https://github.com/codecrafters-io/build-your-own-x)
+	  lists a few articles about reimplementing parts of Git functionality.
+	  Mentioned in [Git Rev News Edition #40](https://git.github.io/rev_news/2018/06/20/edition-40/).
+	+ [Write yourself a Git!](https://wyag.thb.lt/)
+	  by Thibault Polge is an attempt at explaining the Git version control system
+	  from the bottom up by reimplementing it in Python.
+	  Mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/).
++ [git-pkgs: explore your dependency history](https://nesbitt.io/2026/01/01/git-pkgs-explore-your-dependency-history.html)
+  by Andrew Nesbitt on his blog.
++ [Git's HTTP server side design does not scale](https://xeiaso.net/notes/2025/distributed-git-ddos/):
+  a small rant about CGI.  Written by Xe Iaso on their blog.
++ [Tracking kernel development with korgalore](https://people.kernel.org/monsieuricon/tracking-kernel-development-with-korgalore)
+  by Konstantin Ryabitsev on his blog.
+  TLDR: use [korgalore](https://korgalore.docs.kernel.org/)
+  to bypass mailing list delivery problems.
+  (See also [comments on LWN\.net](https://lwn.net/Articles/1055219/#Comments)).
++ [My first 20,000 curl commits](https://daniel.haxx.se/blog/2026/01/17/my-first-20000-curl-commits/)
+  by Daniel Stenberg on his blog.
++ [GitOps with ArgoCD feels like the right abstraction](https://nick.scialli.me/blog/gitops/)
+  by Nick Scialli on his blog.
++ [Bob and Alice: a git patch love story](https://cybrkyd.com/post/a-git-patch-love-story/)
+  by cybrkyd (Just another Cyber Kid).
++ [Allowlist for .gitignore](https://blog.izissise.net/posts/gitignoreallowlist/)
+  by Hugues Morisset (izissise) on his blog.
+  Describes a dedicated script to generate the allow-list based `.gitignore` file effectively
+  to used with a monorepo.
++ [On git show](https://tonystr.net/blog/git)
+  by Tony Strømsnæs on his blog,
+  about the use of `git show <revision>:<path>`.
++ [How to sync files between two local machines using Git](https://www.howtogeek.com/i-turned-git-into-a-private-github-free-sync-system-between-my-own-machines-and-it-completely-changed-how-i-work/)
+  by Bobby Jack on How-To Git.
++ [Manage Diagrams in AsciiDoc (with PlantUML) on GitHub](https://lornajane.net/posts/2026/manage-diagrams-in-asciidoc-on-github)
+  (using a build script) by Lorna Jane Mitchell on LornaJane Blog.
+    + See also [Include diagrams in your Markdown files with Mermaid](https://github.blog/developer-skills/github/include-diagrams-markdown-files-mermaid/)
+	  (2022) by Martin Woodward & Adam Biagianti on GitHub Blog,
+	  mentioned in [Git Rev News Edition #84](https://git.github.io/rev_news/2022/02/28/edition-84/).
++ [Maintaining shadow branches for GitHub PRs](https://maskray.me/blog/2026-01-22-maintaining-shadow-branches-for-github-prs)
+  by Fangrui Song (MaskRay).
+  The goal is to be able to see clean diffs between base and feature branch,
+  even though the underlying commits were rewritten,
+  and the base moved ahead.
++ [Post-Agentic Code Forges](https://sluongng.substack.com/p/post-agentic-code-forges),
+  by Son Luong Ngoc (sluongng) on Son’s Substack.
+    + See also [Getting AI to Work in Complex Codebases](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md).
++ [Abandon Git LFS because AI Agents](https://justin.poehnelt.com/posts/abandon-git-lfs-because-agents/)
+  by Justin Poehnelt (jpoehnelt) on his blog
+  (includes description on how to use `git filter-repo` to migrate from Git LFS
+  to standard Git).
++ [How I use Jujutsu](https://abhinavsarkar.net/posts/jj-usage/)
+  by Abhinav Sarkar on their blog.
+   + [Jujutsu (`jj`)](https://jj-vcs.github.io/jj/) is a Git-compatible version control system,
+     written in Rust, which was first mentioned in
+	 [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/).
++ [How GitHub monopoly is destroying the open source ecosystem](https://ploum.net/2026-01-05-unteaching_github.html)
+  by Lionel Dricot (Ploum).
++ [Moving from GitHub pages to Codeberg pages](https://kotthoff.dev/posts/2026/github-to-codeberg-pages/)
+  by Florian Kotthoff on his Hugo & PaperMod powered blog.
++ [Showcasing my Git repositories on the web](https://cybrkyd.com/post/showcasing-my-git-repositories-on-the-web/)
+  (by creating a static site with GitGen, where everything is generated ahead of time)
+  by cybrkyd.
+    + Compare [Gitmal](https://github.com/antonmedv/gitmal), a static page generator for Git repositories,
+	  mentioned in [previous edition](https://git.github.io/rev_news/2025/12/31/edition-130/).
++ [This tool (pgit) turns any Git repo into a private, offline “GitHub” website](https://www.howtogeek.com/this-easy-tool-gives-me-the-best-of-github-on-my-local-machine/)
+  by Bobby Jack on How-To Geek.
++ [Git Brag: Highlight and Share Your Open Source Contributions](https://blog.tedivm.com/open-source/2026/01/git-brag-highlight-and-share-your-open-source-contributions/)
+  by Robert Hafner on his tedious ramblings blog.
++ [Your GitHub Contribution Graph Means Absolutely Nothing - And Here’s Why](https://dev.to/sylwia-lask/your-github-contribution-graph-means-absolutely-nothing-and-heres-why-2kjc)
+  by Sylwia Laskowska on DEV\.to.
++ [Git forge opinions: GitHub, GitLab, Gitea, Sourcehut](https://cadence.moe/blog/2022-07-03-git-forge-opinions-github-gitlab-gitea-sourcehut)
+  (2022) by Cadence on cadence’s website.
 
 <!---
 __Easy watching__
 -->
 
 __Git tools and sites__
+
++ [forgeperf.org](https://forgeperf.org/) - Software Forge Performance Index.
+  Reports generated with [Lighthouse](https://github.com/GoogleChrome/lighthouse),
+  originally updated weekly, last update February 7, 2024.
+  Created and maintained by [SourceHut](https://sourcehut.org/) forge.
++ [Mirror to Codeberg](https://codeberg.org/Recommendations/Mirror_to_Codeberg):
+  a central place of information about mirroring repos to Codeberg.
+  Includes some thoughts about why one would want to switch from GitHub or GitLab,
+  or at least have a second place for your code: a mirror that's contributable,
+  with links to other articles.
++ [git-natural-api](https://jsr.io/@fiatjaf/git-natural-api)
+  is a lightweight git HTTP client for fetching repository data without cloning.
+  It use /git-upload-pack custom calls to get access to file trees,
+  commit history or individual objects.
+  Written in TypeScript, and provides JavaScript / TypeScript API.
+  Can be used in browser, using Bun, Deno, or Node\.js.
+  No license provided.
++ [Grasp](https://ngit.dev/grasp/)
+  (Git Relays Authorized via Signed-Nostr Proofs)
+  is distributed, protocol-first approach to hosting Git repos.
+  You pre-authorize pushes via signed
+  [Nostr](https://github.com/nostr-protocol/nostr/) events,
+  then any compliant server can host your repo.
+  [ngit-relay](https://ngit.dev/relay) is a Grasp reference implementation
+  that uses a Dockerized stack: nginx, git-http-backend and a Khatru relay.
+    + Compare [Tangled](https://tangled.org/),
+	  a social-enabled Git collaboration platform built on top of the AT Protocol
+	  (which is behind [BlueSky](https://bsky.app/) microblogging federated social media service).
+	  First mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/),
+	  then in [#126](),
+	  and [#128]().
+	+ Compare [Radicle](https://radicle.xyz/),
+	  an open source, peer-to-peer code collaboration stack built on Git,
+	  first mentioned in [Git Rev News Edition #49](),
+	  and many times since; most recently in [#126]().
+	+ There is also [gitstr (`git str`)](https://github.com/fiatjaf/gitstr),
+	  a tool to send and receive Git patches over Nostr,
+	  using [NIP-34](https://github.com/nostr-protocol/nips/pull/997)
+	  (mentioned in [Git Rev News Edition #109](https://git.github.io/rev_news/2024/03/31/edition-109/)),
+	+ Compare [`git-ssb`](https://scuttlebot.io/apis/community/git-ssb.html)
+	  (see the [git-ssb-intro](https://github.com/hackergrrl/git-ssb-intro) guide),
+	  a decentralized Git repo hosting and issue tracking on [Secure-ScuttleButt (SSB)](https://www.scuttlebutt.nz/)
+	  (mentioned in [Git Rev News Edition #26](https://git.github.io/rev_news/2017/04/19/edition-26/)
+	  and [#40](https://git.github.io/rev_news/2018/06/20/edition-40/)).
+	+ Contrast with [ForgeFed](https://forgefed.org/) (formerly GitPub),
+	  a federation protocol for software forges (an [ActivityPub](https://www.w3.org/TR/activitypub/) extension),
+	  mentioned in [Git Rev News Edition #69](https://git.github.io/rev_news/2020/11/27/edition-69/).
++ The [Game of Trees Hub](https://gothub.org/) is a transparently funded
+  Git repository hosting service.  Its infrastructure is based on OpenBSD
+  and [Game of Trees](https://gameoftrees.org/).
+    + [Game of Trees (Got)](https://gameoftrees.org/index.html)
+	  is a version control system developed by and for OpenBSD developers,
+	  which wants to remain on-disk compatible with bare Git repositories.
+	  Mentioned in [Git Rev News Edition #54](https://git.github.io/rev_news/2019/08/21/edition-54/).
++ [keifu](https://github.com/trasta298/keifu) (系譜, /keːɸɯ/) is a terminal UI tool
+  that visualizes Git commit graphs. It shows a colored commit graph, commit details,
+  and a summary of changed files, and lets you perform basic branch operations.
+  Written in Rust, under MIT license.
++ [git-com](https://git-com.masukomi.org/) is a TUI tool
+  for creating structured commit messages that’s easy to configure for each project.
+  [Written](https://github.com/masukomi/git-com) in Go, under MIT license.
++ [Git Brag](https://gitbrag.tedivm.com/) is an open source web application (or CLI)
+  that creates a simple report of the contributions you've made to open source projects
+  on GitHub (it requires logging with GitHub to create the report).
+  [Written](https://github.com/tedivm/gitbrag) in Python, under MIT license.
++ [GitGen](https://git.cybrkyd.com/GitGen/index.html)
+  is a lightweight static website generator for local Git repositories written in Python.
+  It scans a directory of Git repositories and produces a navigable,
+  self-contained HTML website similar in spirit to cgit or GitWeb,
+  but without any server-side dependencies.
+  The generated site includes a repository index, per-repository README rendering,
+  file listings, commit history, and detailed commit views with diffs.
+  Under GPLv3 license.
+    + Compare [Gitmal](https://github.com/antonmedv/gitmal),
+	  a static page generator for Git repositories,
+	  written in Go, under MIT license.
+	  It was mentioned in [Git Rev News Edition #130](https://git.github.io/rev_news/2025/12/31/edition-130/).
++ [pgit](https://github.com/picosh/pgit) is static site generator for git repos.
+  Demo at <https://git.erock.io/>.
+  Written in Go, under MIT license.
++ [GAH!](https://git.sr.ht/~absolutely-vivid/gah)
+  is your friendly neighborhood <b>g</b>ood <b>h</b>elpful <b>a</b>rchiver.
+  It archives GitHub issues and pull requests,
+  and can create a static site from archives.
+  Written in Python, under BSD license (Simplified BSD License).
++ [tokendiff](https://github.com/dacharyc/tokendiff) is a Go library and CLI
+  for token-level diffing with delimiter support.
+  Tokendiff uses a histogram diff algorithm
+  that groups semantically related changes together,
+  producing more readable output than traditional Myers-based approaches
+  for complex structural changes.
+  It builds on [diffx](https://github.com/dacharyc/diffx),
+  a Go implementation of Myers diff.
+  Under MIT license.
++ [CleanDiff](https://cleandiffapp.com/) is a graphical diffing tool
+  that shows you what’s changed on a word level, instead of a line level.
+  It uses the tokendiff library to find semantically relevant changes,
+  and wraps them in a nice UI and easy git integration.
+  [Written](https://github.com/masukomi/cleandiff) in Go and JavaScript,
+  under MIT license.
++ [patch-hub](https://github.com/kworkflow/patch-hub)
+  is a terminal-based user interface (TUI) designed to
+  simplify working with software patches sent through mailing lists
+  in Linux-related development. It provides an efficient way
+  to navigate and interact with patches archived on [lore.kernel.org](https://lore.kernel.org/),
+  specifically for the Linux kernel and adjacent projects.
+  Written in Rust, under GPL-2.0 license.
++ [Korgalore](https://korgalore.docs.kernel.org/en/latest/index.html)
+  is a tool for feeding [public-inbox](https://public-inbox.org/README.html) git repositories,
+  like [lore.kernel.org](https://lore.kernel.org/), directly into mail targets
+  (Gmail, JMAP, IMAP, or local maildir) as an alternative to subscribing.
+  It provides a workaround for Gmail’s notorious hostility
+  to high-volume technical mailing list traffic.
+  Written in Python, under GPL-2.0 license.
++ [git-pkgs](https://github.com/git-pkgs/git-pkgs) provides a git subcommand
+  for tracking package dependencies across git history.
+  It analyzes your repository to show when dependencies were added, modified, or removed,
+  who made those changes, and why.
+  Builds on [bibliothecary](https://github.com/ecosyste-ms/bibliothecary),
+  the manifest parsing library behind [ecosyste.ms](https://ecosyste.ms/).
+  Written in Go (originally [in Ruby](https://github.com/git-pkgs/git-pkgs-ruby)),
+  under MIT license.
 
 
 ## Releases
