@@ -64,7 +64,6 @@ _Possible mentors_:
 * Ayush Chandekar < <ayu.chandekar@gmail.com> >
 * Siddharth Asthana < <siddharthasthana31@gmail.com> >
 * Lucas Seiki Oshiro < <lucasseikioshiro@gmail.com> >
-* Chandra Pratap < <chandrapratap3519@gmail.com> >
 
 ### Improve the new `git repo` command
 
@@ -117,7 +116,6 @@ _Possible mentors_:
 * Ayush Chandekar < <ayu.chandekar@gmail.com> >
 * Siddharth Asthana < <siddharthasthana31@gmail.com> >
 * Lucas Seiki Oshiro < <lucasseikioshiro@gmail.com> >
-* Chandra Pratap < <chandrapratap3519@gmail.com> >
 
 ### Complete and extend the `remote-object-info` command for `git cat-file`
 
