@@ -1,6 +1,7 @@
 ---
 layout: default
 title: SoC 2025 Ideas
+navbar: false
 ---
 
 ![git logo >](https://git-scm.com/images/logos/downloads/Git-Logo-2Color.svg)
