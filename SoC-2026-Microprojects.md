@@ -1,7 +1,6 @@
 ---
 layout: default
-title: SoC 2025 Applicant Microprojects
-navbar: false
+title: SoC 2026 Applicant Microprojects
 ---
 
 ## Introduction
