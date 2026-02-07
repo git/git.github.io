@@ -85,7 +85,7 @@ for current functionality.
 
 A number of improvements could be made to both sub-commands:
 
-For `git repo info`, potential improvements include:
+**For `git repo info`**, potential improvements include:
 
 - Remove the dependency on `the_repository` global variable
 - Use the category as key (e.g., `git repo info layout` would return all layout-related values)
@@ -104,12 +104,12 @@ For `git repo info`, potential improvements include:
 
 Some work to add path-related values
 [has already started](https://github.com/lucasoshiro/git/compare/master...repo-info-path/),
-so completing that work might be a good starting point. It would require a
-decision to be made on whether relative or absolute paths should be used.
+so completing that work might be a good starting point. A major design decision
+will need to be made on whether to use relative or absolute paths.
 
-For `git repo structure`, functionality from
+**For `git repo structure`**, functionality from
 [git-sizer](https://github.com/github/git-sizer) could be added to provide
-more detailed repository analysis.
+more detailed repository analysis and statistics.
 
 The goal of this project is to discuss possible improvements to
 `git repo` with the community, reach an agreement about the best
@@ -149,29 +149,36 @@ From around June 2024 to March 2025, work was undertaken by Eric Ju to add a
 `remote-object-info` sub-command to `git cat-file`. This client-side work
 builds upon previous server-side work by Calvin Wan that was merged in 2021.
 The feature allows clients to request information about objects from a remote
-repository without downloading the full object content.
+repository without downloading the full object content, which can be especially
+useful for partial clones and large repositories.
 
 See the [initial patch series](https://lore.kernel.org/git/20240628190503.67389-1-eric.peijian@gmail.com/)
 for the original proposal and discussion.
 
-The first goal of this project is to rebase and finalize Eric Ju's
-patch series by addressing the remaining feedback, so that the
-improved series can be merged.
+**The first goal** of this project is to rebase and finalize Eric Ju's
+patch series by addressing the remaining feedback from the community review,
+so that the improved series can be merged into Git.
 
-The second goal is to build on top of that work to add support for
+**The second goal** is to build on top of that work to add support for
 object type information (`%(objecttype)`). This support should be
 added both on the server side and on the client side, extending the
-protocol to include this metadata.
+protocol to include this metadata and making it available to users.
+
+This project involves both protocol design and implementation work, requiring
+careful attention to backward compatibility and performance considerations.
 
 **Getting started:** Build Git from source, study the existing `git cat-file`
-command and its batch modes, review Eric Ju's patch series and the community
-feedback, understand Calvin Wan's merged server-side work from 2021, and
-submit a micro-patch to demonstrate familiarity with the codebase.
+command and its batch modes (particularly `--batch` and `--batch-check`),
+review Eric Ju's patch series and the community feedback in detail, understand
+Calvin Wan's merged server-side work from 2021, study the object-info protocol
+extension in `Documentation/gitprotocol-v2.txt`, and submit a micro-patch to
+demonstrate familiarity with the codebase.
 
 **Resources:**
 - [Eric Ju's patch series (June 2024)](https://lore.kernel.org/git/20240628190503.67389-1-eric.peijian@gmail.com/)
 - [git-cat-file documentation](https://git-scm.com/docs/git-cat-file)
-- Calvin Wan's server-side work (2021) - search mailing list archives
+- [Git Protocol v2 documentation](https://git-scm.com/docs/gitprotocol-v2)
+- Calvin Wan's server-side work (2021) - search Git mailing list archives
 
 _Expected Project Size_: 90 or 175 hours or 350 hours
 
