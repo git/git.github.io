@@ -50,6 +50,12 @@ all affected code paths continue to work correctly. This includes
 updating tests, fixing any regressions, and documenting the
 architectural changes.
 
+**Getting started:** Build Git from source, study the `environment.c` file
+and its global variables, understand how `struct repository` and
+`struct repository_settings` work, and submit a micro-patch to demonstrate
+familiarity with the codebase. Review recent mailing list discussions about
+reducing global state.
+
 _Expected Project Size_: 90 or 175 hours or 350 hours
 
 _Difficulty_: Medium
@@ -67,41 +73,61 @@ _Possible mentors_:
 
 ### Improve the new `git repo` command
 
-The `git repo` command now has the `info` and `structure` sub-commands
-to retrieve and display information about a repository. A number of
-improvements could be made to both of these.
+The `git repo` command was introduced as part of GSoC 2025 (released in Git 2.52.0)
+to provide a cleaner interface for querying repository metadata and configuration.
+The command currently has two sub-commands: `git repo info` for retrieving repository
+information in machine-readable formats, and `git repo structure` for displaying
+repository statistics.
 
-For example `git repo info` could be improved in the following ways:
+See the [mailing list discussion](https://public-inbox.org/git/20250610152117.14826-1-lucasseikioshiro@gmail.com/t/#u)
+introducing the command and the [official documentation](https://git-scm.com/docs/git-repo)
+for current functionality.
 
-- remove the dependency on `the_repository` global variable
-- use the category as key
-- add the path-related values (copied from git-rev-parse "Options for
-  Files"):
+A number of improvements could be made to both sub-commands:
+
+For `git repo info`, potential improvements include:
+
+- Remove the dependency on `the_repository` global variable
+- Use the category as key (e.g., `git repo info layout` would return all layout-related values)
+- Add path-related values currently obtained through `git rev-parse` (see "Options for Files" in git-rev-parse documentation):
   - git-dir
   - common-dir
   - toplevel
   - superproject-working-tree
-- add more values currently obtained through `git rev-parse --git-path`:
+- Add more values currently obtained through `git rev-parse --git-path`:
   - grafts file
   - index file
   - objects directory
   - hooks directory
   - git-prefix
-  - other paths that are adjusted by `update_common_dir()`
+  - other paths adjusted by `update_common_dir()`
 
 Some work to add path-related values
 [has already started](https://github.com/lucasoshiro/git/compare/master...repo-info-path/),
-so completing that work might be a good start. It would require a
-decision to be made whether relative or absolute paths should be used
-though.
+so completing that work might be a good starting point. It would require a
+decision to be made on whether relative or absolute paths should be used.
 
-For `git repo structure` some functionality from
-[git-sizer](https://github.com/github/git-sizer) could be added.
+For `git repo structure`, functionality from
+[git-sizer](https://github.com/github/git-sizer) could be added to provide
+more detailed repository analysis.
 
-The goal of this project would be to discuss possible improvements to
+The goal of this project is to discuss possible improvements to
 `git repo` with the community, reach an agreement about the best
 potential improvements, and then implement them. It requires the
 desire to be involved in design discussions on the mailing list.
+
+**Getting started:** Build Git from source, experiment with `git repo info` and
+`git repo structure` commands, study the implementation in `builtin/repo.c`,
+review the initial GSoC proposal and discussions, compare functionality with
+`git rev-parse` and identify gaps, and submit a micro-patch to demonstrate
+familiarity with the codebase.
+
+**Resources:**
+- [Initial implementation discussion](https://public-inbox.org/git/20250610152117.14826-1-lucasseikioshiro@gmail.com/t/#u)
+- [Official git-repo documentation](https://git-scm.com/docs/git-repo)
+- [git-rev-parse documentation](https://git-scm.com/docs/git-rev-parse)
+- [git-sizer tool](https://github.com/github/git-sizer)
+- [Work-in-progress branch for path-related values](https://github.com/lucasoshiro/git/compare/master...repo-info-path/)
 
 _Expected Project Size_: 90 or 175 hours or 350 hours
 
@@ -119,19 +145,33 @@ _Possible mentors_:
 
 ### Complete and extend the `remote-object-info` command for `git cat-file`
 
-From around June 2024 to March 2025 some work to add a
-`remote-object-info` sub-command to `git cat-file` was undertaken by
-Eric Ju (see https://lore.kernel.org/git/20240628190503.67389-1-eric.peijian@gmail.com/).
-This client side work uses previous work by Calvin Wan on the server
-side that was merged in 2021.
+From around June 2024 to March 2025, work was undertaken by Eric Ju to add a
+`remote-object-info` sub-command to `git cat-file`. This client-side work
+builds upon previous server-side work by Calvin Wan that was merged in 2021.
+The feature allows clients to request information about objects from a remote
+repository without downloading the full object content.
+
+See the [initial patch series](https://lore.kernel.org/git/20240628190503.67389-1-eric.peijian@gmail.com/)
+for the original proposal and discussion.
 
 The first goal of this project is to rebase and finalize Eric Ju's
 patch series by addressing the remaining feedback, so that the
-improved series get merged.
+improved series can be merged.
 
 The second goal is to build on top of that work to add support for
-object type information (`%(objecttype)`). This supports should be
-added both on the server and on the client side.
+object type information (`%(objecttype)`). This support should be
+added both on the server side and on the client side, extending the
+protocol to include this metadata.
+
+**Getting started:** Build Git from source, study the existing `git cat-file`
+command and its batch modes, review Eric Ju's patch series and the community
+feedback, understand Calvin Wan's merged server-side work from 2021, and
+submit a micro-patch to demonstrate familiarity with the codebase.
+
+**Resources:**
+- [Eric Ju's patch series (June 2024)](https://lore.kernel.org/git/20240628190503.67389-1-eric.peijian@gmail.com/)
+- [git-cat-file documentation](https://git-scm.com/docs/git-cat-file)
+- Calvin Wan's server-side work (2021) - search mailing list archives
 
 _Expected Project Size_: 90 or 175 hours or 350 hours
 
@@ -148,5 +188,3 @@ _Possible mentors_:
 * Siddharth Asthana < <siddharthasthana31@gmail.com> >
 * Lucas Seiki Oshiro < <lucasseikioshiro@gmail.com> >
 * Chandra Pratap < <chandrapratap3519@gmail.com> >
-
-
