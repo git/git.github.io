@@ -1,4 +1,0 @@
-name: Git Developer Pages
-permalink: /rev_news/:year/:month/:day/:title/
-plugins:
-  - jekyll-redirect-from

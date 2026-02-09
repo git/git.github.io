@@ -1,0 +1,24 @@
+{
+  "name": "adongguo-blog",
+  "version": "1.0.0",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adongguo/adongguo.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adongguo/adongguo.github.io/issues"
+  },
+  "homepage": "https://github.com/adongguo/adongguo.github.io#readme",
+  "description": "",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
