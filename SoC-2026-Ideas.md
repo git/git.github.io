@@ -151,7 +151,7 @@ Objects are fetched on-demand from "promisor remotes" as needed. However, over t
 clients may accumulate large local blobs that are no longer needed but remain on disk,
 and currently there's no easy way to reclaim this space.
 
-This project aims to improve `git-backfill` (or create a new command) to allow
+This project aims to improve `git backfill` (or create a new command) to allow
 clients to remove large local blobs when they are available on a promisor remote.
 This would help users who want to get back disk space while maintaining the ability
 to re-fetch objects when needed.
@@ -161,6 +161,12 @@ The project involves:
 - Implementing the removal process while maintaining repository integrity
 - Ensuring removed objects can be transparently re-fetched when needed
 - Adding appropriate safeguards and user controls
+
+**Important note:** While the project mentions `git backfill`, it is not yet
+decided that it is right place to have this command. Other potential candidates
+for placement are `git gc` / `git repack` / `git maintenance`. A design discussion
+with the community is imminent as part of this project to finalize the most
+appropriate placement and for this command.
 
 **Getting started:** Build Git from source, set up a partial clone and experiment
 with promisor remotes, study the existing `git-backfill` command (if available)
@@ -200,12 +206,10 @@ This project aims to implement a fetch ordering mechanism for multiple promisor
 remotes. The order could be:
 - Configured locally by the client
 - Advertised by servers through the promisor-remote protocol
-- Determined dynamically based on network conditions or other heuristics
 
 The key challenge is designing a flexible system that allows servers to
 communicate their preferred fetch order to clients (to ensure optimal
-performance and cost management) while still allowing client-side overrides
-when appropriate.
+performance and cost management).
 
 **Getting started:** Build Git from source, set up a repository with multiple
 promisor remotes and experiment with object fetching, study how Git currently
@@ -330,53 +334,3 @@ _Possible mentors_:
 * Lucas Seiki Oshiro < lucasseikioshiro@gmail.com >
 * Chandra Pratap < chandrapratap3519@gmail.com >
 
-### Improve signature handling in fast-export/fast-import and git-filter-repo
-
-Git's `fast-export` and `fast-import` commands are powerful tools for
-repository manipulation and migration, and `git-filter-repo` builds on
-these to provide advanced repository filtering capabilities. However,
-handling of commit and tag signatures during these operations could
-be significantly improved.
-
-Currently, signatures may be lost or become invalid when objects are
-exported and imported, which can be problematic for repositories that
-rely on signed commits or tags for security and verification purposes.
-
-This project aims to improve how these tools handle signatures by:
-- Preserving signature information during export/import operations
-- Providing options for signature handling (preserve, strip, re-sign, etc.)
-- Ensuring signature validity is maintained or appropriately flagged
-- Extending `git-filter-repo` to handle signatures correctly
-- Adding tests and documentation for signature-related workflows
-
-**Note:** This project may potentially conflict with ongoing work by GitLab
-developers (including Christian Couder) on signature handling. Applicants
-should coordinate with mentors before proposing this project to ensure the
-work would not duplicate ongoing efforts.
-
-**Getting started:** Build Git from source, experiment with `git fast-export`
-and `git fast-import` on repositories with signed commits and tags, study
-the current signature handling code, review `git-filter-repo` functionality,
-understand GPG signature verification in Git, and submit a micro-patch to
-demonstrate familiarity with the codebase.
-
-**Resources:**
-- [git-fast-export documentation](https://git-scm.com/docs/git-fast-export)
-- [git-fast-import documentation](https://git-scm.com/docs/git-fast-import)
-- [git-filter-repo project](https://github.com/newren/git-filter-repo)
-- [Git signature verification documentation](https://git-scm.com/docs/git-verify-commit)
-
-_Expected Project Size_: 175 hours or 350 hours
-
-_Difficulty_: Medium to Hard
-
-_Languages_: C, Python (for git-filter-repo), shell(bash)
-
-_Possible mentors_:
-
-* Christian Couder < <christian.couder@gmail.com> >
-* Karthik Nayak < <karthik.188@gmail.com> >
-* Justin Tobler < <jltobler@gmail.com> >
-* Siddharth Asthana < <siddharthasthana31@gmail.com> >
-* Ayush Chandekar < <ayu.chandekar@gmail.com> >
-* Lucas Seiki Oshiro < <lucasseikioshiro@gmail.com> >
