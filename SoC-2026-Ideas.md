@@ -143,6 +143,144 @@ _Possible mentors_:
 * Siddharth Asthana < <siddharthasthana31@gmail.com> >
 * Lucas Seiki Oshiro < <lucasseikioshiro@gmail.com> >
 
+### Improve disk space recovery for partial clones
+
+Git's partial clone feature allows users to clone repositories without downloading
+all objects immediately, which is particularly useful for very large repositories.
+Objects are fetched on-demand from "promisor remotes" as needed. However, over time,
+clients may accumulate large local blobs that are no longer needed but remain on disk,
+and currently there's no easy way to reclaim this space.
+
+This project aims to improve `git backfill` (or create a new command) to allow
+clients to remove large local blobs when they are available on a promisor remote.
+This would help users who want to get back disk space while maintaining the ability
+to re-fetch objects when needed.
+
+The project involves:
+- Designing a safe mechanism to identify which blobs can be removed
+- Implementing the removal process while maintaining repository integrity
+- Ensuring removed objects can be transparently re-fetched when needed
+- Adding appropriate safeguards and user controls
+
+**Important note:** While the project mentions `git backfill`, it is not yet
+decided that it is right place to have this command. Other potential candidates
+for placement are `git gc` / `git repack` / `git maintenance`. A design discussion
+with the community is imminent as part of this project to finalize the most
+appropriate placement and for this command.
+
+**Getting started:** Build Git from source, set up a partial clone and experiment
+with promisor remotes, study the existing `git-backfill` command (if available)
+or related functionality, understand how Git tracks and fetches objects from
+promisor remotes, review documentation on partial clones in
+`Documentation/technical/partial-clone.txt`, and submit a micro-patch to
+demonstrate familiarity with the codebase.
+
+**Resources:**
+- [Partial clone documentation](https://git-scm.com/docs/partial-clone)
+- [Git Protocol v2 documentation](https://git-scm.com/docs/gitprotocol-v2)
+
+_Expected Project Size_: 175 hours or 350 hours
+
+_Difficulty_: Medium to Hard
+
+_Languages_: C, shell(bash)
+
+_Possible mentors_:
+
+* Christian Couder < <christian.couder@gmail.com> >
+* Karthik Nayak < <karthik.188@gmail.com> >
+* Justin Tobler < <jltobler@gmail.com> >
+* Siddharth Asthana < <siddharthasthana31@gmail.com> >
+* Ayush Chandekar < <ayu.chandekar@gmail.com> >
+* Lucas Seiki Oshiro < <lucasseikioshiro@gmail.com> >
+
+### Implement promisor remote fetch ordering
+
+When a Git repository is configured with multiple promisor remotes, there's
+currently no mechanism to specify or optimize the order in which these remotes
+should be queried when fetching missing objects. Different remotes may have
+different performance characteristics, costs, or reliability, making fetch
+order an important consideration.
+
+This project aims to implement a fetch ordering mechanism for multiple promisor
+remotes. The order could be:
+- Configured locally by the client
+- Advertised by servers through the promisor-remote protocol
+
+The key challenge is designing a flexible system that allows servers to
+communicate their preferred fetch order to clients (to ensure optimal
+performance and cost management).
+
+**Getting started:** Build Git from source, set up a repository with multiple
+promisor remotes and experiment with object fetching, study how Git currently
+handles multiple remotes, review the promisor-remote protocol in
+`Documentation/gitprotocol-v2.txt`, understand partial clone implementation,
+and submit a micro-patch to demonstrate familiarity with the codebase.
+
+**Resources:**
+- [Partial clone documentation](https://git-scm.com/docs/partial-clone)
+- [Git Protocol v2 documentation](https://git-scm.com/docs/gitprotocol-v2)
+
+_Expected Project Size_: 175 hours or 350 hours
+
+_Difficulty_: Medium to Hard
+
+_Languages_: C, shell(bash)
+
+_Possible mentors_:
+
+* Christian Couder < <christian.couder@gmail.com> >
+* Karthik Nayak < <karthik.188@gmail.com> >
+* Justin Tobler < <jltobler@gmail.com> >
+* Siddharth Asthana < <siddharthasthana31@gmail.com> >
+* Ayush Chandekar < <ayu.chandekar@gmail.com> >
+* Lucas Seiki Oshiro < <lucasseikioshiro@gmail.com> >
+
+### Enhance promisor-remote protocol for better-connected remotes
+
+Currently, the promisor-remote protocol allows servers to advertise remotes
+that the server itself uses as promisor remotes. However, as suggested by
+Junio Hamano, it would be more useful if servers could advertise
+"better-connected" remotes - remotes that might not be promisor remotes
+for the server but would be good choices for the client.
+
+This enhancement would allow servers to guide clients toward optimal remote
+configurations, potentially improving performance and reducing load on
+individual servers by distributing requests across a network of remotes.
+
+This project involves:
+- Extending the promisor-remote protocol to support advertising
+  better-connected remotes
+- Implementing server-side logic to determine and advertise appropriate remotes
+- Implementing client-side handling of these advertisements
+- Designing the protocol extension with backward compatibility in mind
+- Testing with various network topologies
+
+**Getting started:** Build Git from source, study the current promisor-remote
+protocol implementation, read Junio's suggestion in `Documentation/gitprotocol-v2.txt`,
+understand how Git currently advertises and uses promisor remotes, set up test
+scenarios with multiple interconnected remotes, and submit a micro-patch to
+demonstrate familiarity with the codebase.
+
+**Resources:**
+- [Partial clone documentation](https://git-scm.com/docs/partial-clone)
+- [Git Protocol v2 documentation - promisor remote section](https://git-scm.com/docs/gitprotocol-v2#_promisor_remotepr_info)
+
+_Expected Project Size_: 175 hours or 350 hours
+
+_Difficulty_: Hard
+
+_Languages_: C, shell(bash)
+
+_Possible mentors_:
+
+* Christian Couder < <christian.couder@gmail.com> >
+* Karthik Nayak < <karthik.188@gmail.com> >
+* Justin Tobler < <jltobler@gmail.com> >
+* Siddharth Asthana < <siddharthasthana31@gmail.com> >
+* Ayush Chandekar < <ayu.chandekar@gmail.com> >
+* Lucas Seiki Oshiro < <lucasseikioshiro@gmail.com> >
+
 ### Complete and extend the `remote-object-info` command for `git cat-file`
 
 From around June 2024 to March 2025, work was undertaken by Eric Ju to add a
@@ -188,10 +326,11 @@ _Languages_: C, shell(bash)
 
 _Possible mentors_:
 
-* Christian Couder < <christian.couder@gmail.com> >
-* Karthik Nayak < <karthik.188@gmail.com> >
-* Justin Tobler < <jltobler@gmail.com> >
-* Ayush Chandekar < <ayu.chandekar@gmail.com> >
-* Siddharth Asthana < <siddharthasthana31@gmail.com> >
-* Lucas Seiki Oshiro < <lucasseikioshiro@gmail.com> >
-* Chandra Pratap < <chandrapratap3519@gmail.com> >
+* Christian Couder < christian.couder@gmail.com >
+* Karthik Nayak < karthik.188@gmail.com >
+* Justin Tobler < jltobler@gmail.com >
+* Ayush Chandekar < ayu.chandekar@gmail.com >
+* Siddharth Asthana < siddharthasthana31@gmail.com >
+* Lucas Seiki Oshiro < lucasseikioshiro@gmail.com >
+* Chandra Pratap < chandrapratap3519@gmail.com >
+
