@@ -211,6 +211,9 @@ The key challenge is designing a flexible system that allows servers to
 communicate their preferred fetch order to clients (to ensure optimal
 performance and cost management).
 
+As this area is being worked on these days, coordination with others will likely
+be required.
+
 **Getting started:** Build Git from source, set up a repository with multiple
 promisor remotes and experiment with object fetching, study how Git currently
 handles multiple remotes, review the promisor-remote protocol in
@@ -240,7 +243,7 @@ _Possible mentors_:
 
 Currently, the promisor-remote protocol allows servers to advertise remotes
 that the server itself uses as promisor remotes. However, as suggested by
-Junio Hamano, it would be more useful if servers could advertise
+Junio Hamano, it would be useful in some cases if servers could advertise
 "better-connected" remotes - remotes that might not be promisor remotes
 for the server but would be good choices for the client.
 
@@ -255,6 +258,9 @@ This project involves:
 - Implementing client-side handling of these advertisements
 - Designing the protocol extension with backward compatibility in mind
 - Testing with various network topologies
+
+As this area is being worked on these days, coordination with others will likely
+be required.
 
 **Getting started:** Build Git from source, study the current promisor-remote
 protocol implementation, read Junio's suggestion in `Documentation/gitprotocol-v2.txt`,
