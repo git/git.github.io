@@ -69,7 +69,6 @@ _Possible mentors_:
 * Justin Tobler < <jltobler@gmail.com> >
 * Ayush Chandekar < <ayu.chandekar@gmail.com> >
 * Siddharth Asthana < <siddharthasthana31@gmail.com> >
-* Lucas Seiki Oshiro < <lucasseikioshiro@gmail.com> >
 
 ### Improve the new `git repo` command
 
@@ -141,7 +140,6 @@ _Possible mentors_:
 * Justin Tobler < <jltobler@gmail.com> >
 * Ayush Chandekar < <ayu.chandekar@gmail.com> >
 * Siddharth Asthana < <siddharthasthana31@gmail.com> >
-* Lucas Seiki Oshiro < <lucasseikioshiro@gmail.com> >
 
 ### Improve disk space recovery for partial clones
 
@@ -192,7 +190,6 @@ _Possible mentors_:
 * Justin Tobler < <jltobler@gmail.com> >
 * Siddharth Asthana < <siddharthasthana31@gmail.com> >
 * Ayush Chandekar < <ayu.chandekar@gmail.com> >
-* Lucas Seiki Oshiro < <lucasseikioshiro@gmail.com> >
 
 ### Implement promisor remote fetch ordering
 
@@ -237,7 +234,6 @@ _Possible mentors_:
 * Justin Tobler < <jltobler@gmail.com> >
 * Siddharth Asthana < <siddharthasthana31@gmail.com> >
 * Ayush Chandekar < <ayu.chandekar@gmail.com> >
-* Lucas Seiki Oshiro < <lucasseikioshiro@gmail.com> >
 
 ### Enhance promisor-remote protocol for better-connected remotes
 
@@ -285,7 +281,6 @@ _Possible mentors_:
 * Justin Tobler < <jltobler@gmail.com> >
 * Siddharth Asthana < <siddharthasthana31@gmail.com> >
 * Ayush Chandekar < <ayu.chandekar@gmail.com> >
-* Lucas Seiki Oshiro < <lucasseikioshiro@gmail.com> >
 
 ### Complete and extend the `remote-object-info` command for `git cat-file`
 
@@ -337,6 +332,5 @@ _Possible mentors_:
 * Justin Tobler < jltobler@gmail.com >
 * Ayush Chandekar < ayu.chandekar@gmail.com >
 * Siddharth Asthana < siddharthasthana31@gmail.com >
-* Lucas Seiki Oshiro < lucasseikioshiro@gmail.com >
 * Chandra Pratap < chandrapratap3519@gmail.com >
 
