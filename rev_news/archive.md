@@ -5,7 +5,7 @@ title: Git Rev News Archive
 
 # Archive
 
-Here you can see all the previous editions. See [About Git Rev News](https://git.github.io/about/) for ways you can subscribe.
+Here you can see all the previous editions. See [About Git Rev News](https://git.github.io/rev_news/rev_news/) for ways you can subscribe.
 
 <ul>
   {% for post in site.posts %}

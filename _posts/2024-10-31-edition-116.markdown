@@ -322,7 +322,7 @@ __Easy watching__
 __Scientific papers__
 + Tsukasa Yagi, Shinpei Hayashi: _"Toward Interactive Optimization of Source Code Differences:
   An Empirical Study of Its Performance"_,
-  [arXiv:2409.13590]((https://arxiv.org/abs/2409.13590)),
+  [arXiv:2409.13590](https://arxiv.org/abs/2409.13590),
   with dataset at <https://doi.org/10.5281/zenodo.13618978> (but no source code).
     + It is based on a prior study:
       Nugroho, et al.: _"How different are different diff algorithms in Git?:
