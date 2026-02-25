@@ -39,7 +39,9 @@ __Various__
 
 
 __Light reading__
-
+- [Exploring the .git Directory – How Git Stores Your Code](https://www.git-tower.com/blog/posts/exploring-the-git-directory)
+- [The Ultimate Guide to Git Config: Fine-Tuning Your Git Experience](https://www.git-tower.com/blog/the-ultimate-guide-to-git-config)
+  
 <!---
 __Easy watching__
 -->
@@ -48,7 +50,9 @@ __Git tools and sites__
 
 
 ## Releases
-
+- Tower for Mac [15.1](https://www.git-tower.com/release-notes/mac?show_tab=release-notes)
+- Tower for Windows [11](https://www.git-tower.com/blog/tower-windows-11)
+- git-flow-next [1.0](https://git-flow.sh/changelog/)
 
 ## Credits
 
