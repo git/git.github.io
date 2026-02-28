@@ -114,8 +114,10 @@ __Various__
 
 
 __Light reading__
-- [Exploring the .git Directory – How Git Stores Your Code](https://www.git-tower.com/blog/posts/exploring-the-git-directory)
-- [The Ultimate Guide to Git Config: Fine-Tuning Your Git Experience](https://www.git-tower.com/blog/the-ultimate-guide-to-git-config)
++ [Exploring the .git Directory – How Git Stores Your Code](https://www.git-tower.com/blog/posts/exploring-the-git-directory)
+  by Bruno Brito on Tower's Blog.
++ [The Ultimate Guide to Git Config: Fine-Tuning Your Git Experience](https://www.git-tower.com/blog/the-ultimate-guide-to-git-config)
+  by Bruno Brito on Tower's Blog.
   
 <!---
 __Easy watching__
