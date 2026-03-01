@@ -28,7 +28,7 @@ This edition covers what happened during the months of January and February 2026
 
 ### Support
 
-* [Slow git pack-refs --all](https://www.google.com/search?q=https://lore.kernel.org/git/CH3PR12MB9026B5872FD42F031970074BC2B3A%40CH3PR12MB9026.namprd12.prod.outlook.com)
+* [Slow git pack-refs --all](https://lore.kernel.org/git/CH3PR12MB9026B5872FD42F031970074BC2B3A%40CH3PR12MB9026.namprd12.prod.outlook.com)
 
   Martin Fick started the discussion by reporting a significant
   performance issue where `git pack-refs --all` was taking over five
@@ -50,7 +50,7 @@ This edition covers what happened during the months of January and February 2026
   brian m. carlson replied to Martin, suggesting that the slowdown
   might be occurring in `should_pack_ref()` because Git needs to
   verify that the object at the end of a reference actually
-  exists. Brian also pointed out that NFS was likely a major factor,
+  exists. brian also pointed out that NFS was likely a major factor,
   as the network latency involved in opening many pack files and
   checking loose objects can be substantial. He suggested setting
   `receive.unpackLimit` to 1 to reduce the number of loose objects
@@ -98,11 +98,16 @@ This edition covers what happened during the months of January and February 2026
   re-peel every reference by looking up the objects in the pack files
   over the slow NFS connection.
 
-  The discussion concluded with the identification of a specific
-  interoperability issue between JGit and Git. By identifying that the
-  missing `fully-peeled` header was causing redundant, expensive I/O
-  operations, Martin was able to plan a fix for JGit that would
-  resolve the performance bottleneck on his production servers.
+  Following that discovery, a fix was proposed for JGit in
+  [Change 1230152](https://eclipse.gerrithub.io/c/eclipse-jgit/jgit/+/1230152).
+  Adithya Chakilam submitted the patch, titled "pack-refs: Add
+  sorted/fully-peeled flags," to ensure JGit produces packed-refs
+  files that Git can process efficiently.
+
+  This resolution not only fixes the immediate performance issue for
+  Gerrit servers but also ensures that any environment using a mix of
+  JGit and Git will benefit from reduced lock contention and faster
+  reference updates.
 
 <!---
 ## Developer Spotlight:
