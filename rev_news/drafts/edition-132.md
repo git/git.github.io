@@ -111,6 +111,19 @@ This edition covers what happened during the months of January and February 2026
 ## Other News
 
 __Various__
++ [Git 2.53 Released with New Features and Performance Improvements](https://9to5linux.com/git-2-53-released-with-new-features-and-performance-improvements)
+  by Marcus Nestor on 9to5Linux.
++ [The Former CEO of GitHub [Thomas Dohmke] Just Agreed: Git Wasn't Built for This [AI-based coding]](https://opzero.sh/blog/github-ceo-agrees-git-dead)
+  by Jeff Cameron on OpZero blog,
+  following his "interview" with Claude Opus 4.5.
+  The idea is to version code, intent, constraints, and reasoning together,
+  and to add semantic reasoning layer through a "context graph".
+    + One one hand this assumes that AI generated code is a viable path to creating software,
+	  and there would be no technical problems like model collapse,
+	  or economical problem like cost of training and using LLMs.
+	+ On the other hand there exist specialized solutions to help
+	  version data (like [DVC](https://dvc.org) or [Pachyderm]((https://www.pachyderm.com/)),
+	  or to version database schema.
 
 
 __Light reading__
@@ -118,12 +131,111 @@ __Light reading__
   by Bruno Brito on Tower's Blog.
 + [The Ultimate Guide to Git Config: Fine-Tuning Your Git Experience](https://www.git-tower.com/blog/the-ultimate-guide-to-git-config)
   by Bruno Brito on Tower's Blog.
++ [TIL that pathnames in git configs can be optional](https://neverready.app/blog/2026/02-git-blame-ignore/)
+  by Anh Tuan Le on his blog.
+  It mentions the fact that as of git 2.52 (Nov 2025),
+  you can mark config file paths as optional using the `:(optional)` prefix;
+  see the ['pathname' entry in "Values" section of `git config` manpage](https://git-scm.com/docs/git-config#Documentation/git-config.txt-pathname).
++ [Git Reflog Explained: Recover Deleted Commits & Lost Work](https://dev.to/itxshakil/git-reflog-explained-recover-deleted-commits-lost-work-i4n)
+  by Shakil Alam on DEV\.to.  Has a video version.
++ [I Hate GitHub Actions with Passion](https://xlii.space/eng/i-hate-github-actions-with-passion/)
+  by Przemysław Alexander Kamiński on his xlii.space blog.
+    + The main problem is with trying to debug [GitHub Actions](https://github.com/features/actions) problems when the action fails;
+      [Act](https://github.com/nektos/act), a command line tool
+      to run your GitHub Actions locally using the Docker Engine API, could help there.
+      Act was first mentioned in [Git Rev News Edition #113](https://git.github.io/rev_news/2024/07/31/edition-113/).
+	+ There is also [WRKFLW](https://github.com/bahdotsh/wrkflw),
+	  a command-line tool for validating and executing GitHub Actions workflows locally,
+      without requiring a full GitHub environment.
+      WRKFLW was mentioned in [Git Rev News Edition #126](https://git.github.io/rev_news/2025/08/31/edition-126/).
++ [Git Worktrees with Claude Code, Laravel, and Herd](https://gause.cz/blog/git-worktrees-with-claude-code-laravel-and-herd/)
+  by Jakub Gause on his blog (also published [on DEV\.to](https://dev.to/gause/git-worktrees-with-claude-code-laravel-and-herd-49d1)).
+  Describes writing a shell script to help (a [laravel-worktrees Claude skill](https://github.com/gausejakub/claude-skills)).
++ [I Built workz: The Zoxide for Git Worktrees That Finally Fixes .env + node_modules Hell in 2026](https://dev.to/rohansx/i-built-workz-the-zoxide-for-git-worktrees-that-finally-fixes-env-nodemodules-hell-in-2026-2dpj)
+  by Rohan Sharma on DEV\.to.
+  Describes his [workz](https://github.com/rohansx/workz) tool
+  that creates a new worktree, and also automatically symlinks 22+ types of dependency dirs
+  (like `node_modules`, `target`, `.venv`), copies env/config patterns,
+  and can launch your AI coding agent directly in the new worktree.
++ [My self-hosted Git workflow with GitGen](https://cybrkyd.com/post/my-self-hosted-git-workflow-with-gitgen/)
+  by cybrkyd; it continues [Showcasing my Git repositories on the web](https://cybrkyd.com/post/showcasing-my-git-repositories-on-the-web/)
+  from the [previous edition](https://git.github.io/rev_news/2026/01/31/edition-131/).
+    + [GitGen](https://git.cybrkyd.com/GitGen/index.html) is a lightweight static website generator
+	  for local Git repositories written in Python;
+	  similar tools are [Gitmal](https://github.com/antonmedv/gitmal)
+	  and [pgit](https://github.com/picosh/pgit), both written in Go.
++ [I Built a Tool That Writes Obituaries for Your Deleted Code](https://dev.to/lakshmisravyavedantham/i-built-a-tool-that-writes-obituaries-for-your-deleted-code-235l) and
+  [commit-prophet: I Built a Tool That Predicts Buggy Files Using Git History](https://dev.to/lakshmisravyavedantham/commit-prophet-i-built-a-tool-that-predicts-buggy-files-using-git-history-35mk)
+  by Lakshmi Sravya Vedantham on DEV\.to.
++ [I Read 9,000 Lines of a Stranger's Mergetool](https://dev.to/ticktockbent/i-read-9000-lines-of-a-strangers-mergetool-5bf0)
+  by Wes on DEV\.to, about the [ec (easy-conflict)](https://github.com/chojs23/ec) tool.
+  This is first entry in the [Review Bomb series](https://dev.to/ticktockbent/series/36103),
+  where Wes finds under-the-radar projects on GitHub, read the code, contribute something,
+  and write it up.
++ [Simplifying Git by Using GitButler](https://blog.gitbutler.com/simplifying-git):
+  seeing git state, branching without fear, understanding and using stacked changes,
+  better interactive rebase, easier selective staging, recoverability.
+  Written by PJ Hagerty on GitButler Blog.
+  [Git Butler](https://www.gitbutler.com/) was first mentioned
+  in [Git Rev News Edition #46](https://git.github.io/rev_news/2018/12/19/edition-46/).
   
-<!---
+
 __Easy watching__
--->
++ [Lost Your Commits? Git Reflog Saves You](https://www.youtube.com/watch?v=NN-8kP7nClA)
+  by Shakil Alam on the Shakil Tech channel on YouTube [5:55].
+
 
 __Git tools and sites__
++ [mise-en-place](https://github.com/jdx/mise) or `mise`, a CLI tool that is
+  the front-end to your dev env
+  (managing dev tools like node, python, cmake, terraform, etc; and
+   managing tasks used to build and test projects),
+  [introduced monorepo tasks](https://github.com/jdx/mise/discussions/6564),
+  allowing you to manage tasks across multiple projects in a single repository,
+  with each project maintaining its own tools, environment variables, and tasks.
+    + A monorepo is a software-development strategy
+	  in which the code for a number of projects is stored in the same repository.
+	  See for example [monorepo.tools](https://monorepo.tools/) site,
+	  first mentioned in [Git Rev News Edition #84]().
++ [deff](https://github.com/flamestro/deff) is a TUI tool providing
+  interactive, side-by-side file review for git diffs
+  with per-file navigation, vertical and horizontal scrolling,
+  syntax highlighting, and added/deleted line tinting.
+  Written in Rust, under MIT license.
++ [ec (easy-conflict)](https://github.com/chojs23/ec) is a terminal Git mergetool
+  with a 3-way TUI and Neovim integration.
+  Written in Go, under MIT license.
++ [Maiao](https://github.com/adevinta/maiao): Gerrit-style code review workflow for GitHub.
+  Maiao brings the power of stacked pull requests to GitHub,
+  enabling you to break large features into small, reviewable commits
+  where each commit becomes its own PR.  Provides `git review` command.
+  Written in Go, under MIT license.
+   + Stacked Pull Requests, also under the name Stacked Diffs,
+     were mentioned in [Git Rev News Edition #44](https://git.github.io/rev_news/2018/10/24/edition-44/),
+	 [#105](https://git.github.io/rev_news/2023/11/30/edition-105/),
+	 [#111](https://git.github.io/rev_news/2024/05/31/edition-111/)
+	 (with links to other editions with other articles, and to related tools),
+	 [#115](https://git.github.io/rev_news/2024/09/30/edition-115/).
+	 [#118](https://git.github.io/rev_news/2024/12/31/edition-118/),
+     [#127](https://git.github.io/rev_news/2025/09/30/edition-127/),
+	 and [#128](https://git.github.io/rev_news/2025/10/31/edition-128/).
+   + Compare with [`av`](https://github.com/aviator-co/av),
+     a command-line tool that helps you manage your stacked PRs on GitHub.
+	 It was mentioned in [Git Rev News Edition #115](https://git.github.io/rev_news/2024/09/30/edition-115/).
+   + [GitButler](https://docs.gitbutler.com/), a Source Code Management system
+     designed to manage your branches,
+	 [also supports stacked branches](https://blog.gitbutler.com/stacked-branches-with-gitbutler),
+	 which was mentioned in [Git Rev News Edition #118](https://git.github.io/rev_news/2024/12/31/edition-118/).
++ [Fresh File Explorer](https://github.com/FreHu/vscode-fresh-file-explorer)
+  is a VS Code file explorer which shows only recently modified files
+  based on a combination of Git history and your pending changes.
+  Written in TypeScript, under MIT license.
+    + See also [Fresh File Explorer - vscode extension for navigating recent changes](https://dev.to/frehu/fresh-file-explorer-vscode-extension-for-navigating-recent-changes-13c1)
+	  by Frederik Hudák on DEV\.to.
++ [commit-prophet](https://github.com/LakshmiSravyaVedantham/commit-prophet)
+  is a command line tool that predict which files are more likely to be have bugs,
+  using git history patterns and co-change analysis.
+  Written in Python, under MIT license.
 
 
 ## Releases
