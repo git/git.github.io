@@ -11,7 +11,7 @@ navbar: false
 
 Welcome to the 116th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
-subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
+subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](https://git.github.io).
 
 This edition covers what happened during the months of September and October 2024.
 
@@ -322,7 +322,7 @@ __Easy watching__
 __Scientific papers__
 + Tsukasa Yagi, Shinpei Hayashi: _"Toward Interactive Optimization of Source Code Differences:
   An Empirical Study of Its Performance"_,
-  [arXiv:2409.13590]((https://arxiv.org/abs/2409.13590)),
+  [arXiv:2409.13590](https://arxiv.org/abs/2409.13590),
   with dataset at <https://doi.org/10.5281/zenodo.13618978> (but no source code).
     + It is based on a prior study:
       Nugroho, et al.: _"How different are different diff algorithms in Git?:

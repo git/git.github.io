@@ -35,7 +35,7 @@ GPLv2
 
 ## Ideas list
 
-<https://git.github.io/SoC-2014-Ideas.html>
+<https://git.github.io/SoC-2014-Ideas/>
 
 ## Mailing list
 

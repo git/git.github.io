@@ -11,7 +11,7 @@ navbar: false
 
 Welcome to the 28th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
-subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
+subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](https://git.github.io).
 
 This edition covers what happened during the month of May 2017.
 
@@ -294,7 +294,7 @@ the job done.
 
 * [Git v2.13.1](https://github.com/git/git/blob/v2.13.1/Documentation/RelNotes/2.13.1.txt)
 * [Git for Windows v2.13.1](https://github.com/git-for-windows/git/releases/tag/v2.13.1.windows.1)
-* [What's new in Deveo 3.19](blog.deveo.com/whats-new-in-deveo-3-19/) (git hosting site)
+* [What's new in Deveo 3.19](https://blog.deveo.com/whats-new-in-deveo-3-19/) (git hosting site)
 * [Git Tower 1.1.0 for Windows Release Notes](https://www.git-tower.com/windows/release-notes#1.1.0) (proprietary multiplatform Git GUI)
 * [Portable GitHub system "GitPrep 2.6" is released](http://blogs.perl.org/users/yuki_kimoto/2017/06/portable-github-system-gitprep-26-is-released---wiki-system-is-added-you-can-write-documentation.html) (opensource git hosting software, in Perl)
 * [JGit / EGit release 4.7.1.201706071930-r](http://dev.eclipse.org/mhonarc/lists/jgit-dev/msg03360.html)
