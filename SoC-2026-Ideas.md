@@ -39,7 +39,7 @@ potentially enable better multi-repository handling in the future.
 
 > Note: While `struct repository` / `struct repository_settings` may seem like a
 > natural target for this refactoring, contributors should be cautious about moving
-> settings there. `struct repository_setting`s` was originally designed to hold
+> settings there. `struct repository_settings` was originally designed to hold
 > config settings that are lazily parsed. Moving eagerly parsed config settings
 > into that struct can cause Git to die in unexpected places when lazy parsing
 > fails on an invalid config setting. Any such move requires careful analysis
