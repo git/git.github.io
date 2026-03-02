@@ -123,7 +123,7 @@ effect if it breaks is.
 Reading the students proposals and resume is rarely sufficient to
 really evaluate their skills, which makes the risk particularly hard
 to evaluate. Since 2014, we've been using
-[microprojects](https://git.github.io/SoC-2015-Microprojects.html) to
+[microprojects](https://git.github.io/SoC-2015-Microprojects/) to
 select students. This turned out to be very efficient, both at
 identifying good (or bad) applicants, but also at giving students a
 glimpse of what "contributing to Git" means. Student get an idea of

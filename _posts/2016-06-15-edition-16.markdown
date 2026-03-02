@@ -109,7 +109,7 @@ names "clean-from-fs" and "smudge-to-fs" have been suggested for them.
 
 ### Support
 
-* [https://public-inbox.org/git/nhlqd4%24ekr%241%40ger.gmane.org/](Odd Difference Between Windows Git and Standard Git)
+* [Odd Difference Between Windows Git and Standard Git](https://public-inbox.org/git/nhlqd4%24ekr%241%40ger.gmane.org/)
 
 Jon Forrest sent an email about a `git status` behavior he sees on
 Windows, which is different than on Linux on a repository that is

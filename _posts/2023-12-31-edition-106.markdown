@@ -11,7 +11,7 @@ navbar: false
 
 Welcome to the 106th edition of [Git Rev News](https://git.github.io/rev_news/rev_news/),
 a digest of all things Git. For our goals, the archives, the way we work, and how to contribute or to
-subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](http://git.github.io).
+subscribe, see [the Git Rev News page](https://git.github.io/rev_news/rev_news/) on [git.github.io](https://git.github.io).
 
 This edition covers what happened during the months of November and December 2023.
 
@@ -371,7 +371,7 @@ __Git tools and sites__
   so it can safely run unassisted, for example on PRs.  Written in Rust.
     + Mentioned in [Perl Advent Calendar 2023 - Elves Versus Typos](https://perladvent.org/2023/2023-12-21.html).
 + [dat](https://github.com/dat-ecosystem/dat) is a tool for peer-to-peer sharing
-  & live synchronization of files via command line.  Part of the [dat-ecosystem](dat-ecosystem.org).
+  & live synchronization of files via command line.  Part of the [dat-ecosystem](https://dat-ecosystem.org).
   You can use the `dat` command line tool to share files with version control,
   back up data to servers, browse remote files on demand, and automate long-term data preservation.
   Written in JavaScript for running with Node.js.

@@ -11,7 +11,7 @@ This is the idea page for Summer of Code 2014 for Git and libgit2.
 It is strongly recommended that students who want to apply to the Git
 project for the Summer of Code 2014 complete a tiny, code-related
 "microproject" as part of their application.  Please refer to our
-[guidelines and suggestions for microprojects](https://git.github.io/SoC-2014-Microprojects.html)
+[guidelines and suggestions for microprojects](https://git.github.io/SoC-2014-Microprojects/)
 for more information.  Completing a microproject is not a strict
 requirement, but we will definitely give more attention to applicants
 who do so.  Doing a microproject will also help get you started in

@@ -78,7 +78,7 @@ to Git via GSoC.
 ### 2019
 
 1. Rohit Ashiwal [ [project](https://summerofcode.withgoogle.com/archive/2019/projects/5390155215536128) ] [ [final report](https://web.archive.org/web/20210727190950/https://rashiwal.me/2019/final-report/) ] [ [blog](https://web.archive.org/web/20210515085551/https://rashiwal.me/) ]
-2. Matheus Tavares [ [project](https://summerofcode.withgoogle.com/archive/2019/projects/4787791739748352) ] [ [final report](https://matheustavares.gitlab.io/posts/gsoc-final-report) ] [ [blog](https://matheustavares.gitlab.io/tags/git/) ] [ [retrsopective interview](http://git.github.io/rev_news/2020/10/30/edition-68/#developer-spotlight-matheus-tavares-bernardino) ]
+2. Matheus Tavares [ [project](https://summerofcode.withgoogle.com/archive/2019/projects/4787791739748352) ] [ [final report](https://matheustavares.gitlab.io/posts/gsoc-final-report) ] [ [blog](https://matheustavares.gitlab.io/tags/git/) ] [ [retrsopective interview](https://git.github.io/rev_news/2020/10/30/edition-68/#developer-spotlight-matheus-tavares-bernardino) ]
 
 #### References
 
