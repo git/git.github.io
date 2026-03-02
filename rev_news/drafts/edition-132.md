@@ -447,7 +447,7 @@ __Git tools and sites__
     + See also [VS Code Git Remote Color](https://justin.poehnelt.com/posts/vscode-git-remote-color/)
 	  by Justin Poehnelt on his blog.
 + [commit-prophet](https://github.com/LakshmiSravyaVedantham/commit-prophet)
-  is a command line tool that predicts which files are more likely to be have bugs
+  is a command line tool that predicts which files are more likely to have bugs
   using git history patterns and co-change analysis.
   Written in Python, under MIT license.
 + [Majutsu](https://github.com/0WD0/majutsu) provides a [Magit](https://magit.vc/)-style
