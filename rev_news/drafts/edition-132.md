@@ -315,6 +315,17 @@ __Easy watching__
   given on Saturday, 31 January 2026, Brussels.
   See also [the summary of this talk](https://lwn.net/Articles/1057561/)
   by Joe Brockmeier on LWN\.net (mentioned in the "Light reading" section).
++ [An Efficient Git Workflow For High-Stakes Projects](https://fosdem.org/2026/schedule/event/3VNNBK-efficient-git-for-high-stakes/)
+  by Vladislav Shpilevoy [45:12],
+  a main track talk at FOSDEM, on Saturday, 21 January 2026, Brussels.
+  The example project this workflow was used in is [tarantool](https://github.com/tarantool/tarantool/).
++ [Pull requests maintainers will love to review](https://fosdem.org/2026/schedule/event/L7ERNP-prs-maintainers-will-love/)
+  by Alya Abbott,
+  a main track talk at FOSDEM, on Saturday, 21 January 2026, Brussels.
+  [Slides](https://docs.google.com/presentation/d/1rpq4OsOTpt8nQx_QzBuMzICCenUpeyCzsk4sc-gVpyA/edit?slide=id.g32d6911bc12_0_0#slide=id.g32d6911bc12_0_0) available as Google Slides.
++ [Mercurial, 20 years and counting: how are we still alive and kicking?](https://fosdem.org/2026/schedule/event/AGWUVH-mercurial-aint-you-dead-yet/)
+  by Raphaël Gomès and Pierre-Yves David [50:02],
+  a main track talk at FOSDEM, on Saturday, 21 January 2026, Brussels.
 + [Lost Your Commits? Git Reflog Saves You](https://www.youtube.com/watch?v=NN-8kP7nClA)
   by Shakil Alam on the Shakil Tech channel on YouTube [5:55].
 + [Configure your Git](https://www.youtube.com/watch?v=G3NJzFX6XhY)
