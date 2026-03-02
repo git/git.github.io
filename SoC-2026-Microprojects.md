@@ -73,15 +73,6 @@ It is easy though to find examples of how this can be done by
 searching the code base and the mailing list archive, as this has
 already been done for a number of languages.
 
-### Replace a run_command*() call by direct calls to C functions
-
-See for example what Junio did in
-[ffcb4e94d3](https://github.com/git/git/commit/ffcb4e94d3) (bisect: do
-not run show-branch just to show the current commit, 2021-07-27).
-
-If you can't find one please tell us, along with the command you used
-to search, so that we can remove this microproject idea.
-
 ### Avoid suppressing `git`'s exit code in test scripts
 
 The Git project uses a large collection of integration tests written in
@@ -140,17 +131,6 @@ to search, so that we can remove this microproject idea.
 
 [git-t]: https://github.com/git/git/tree/master/t
 [wikipedia-pipes]: https://en.wikipedia.org/wiki/Pipeline_(Unix)
-
-### Use unsigned integral type for collection of bits.
-
-Pick one field of a structure that (1) is of signed integral type and (2) is
-used as a collection of multiple bits. Discuss if there is a good reason
-why it has to be a signed integral field and change it to an unsigned
-type otherwise.  [[thread](https://public-inbox.org/git/xmqqsiebrlez.fsf@gitster.dls.corp.google.com)]
-
-Even though the amount of code to write is small, these projects
-involve a lot of prior work to understand the specification and deal
-with all potential corner-cases.
 
 ### Modernize a test script
 
