@@ -56,7 +56,7 @@ This edition covers what happened during the months of January and February 2026
   `receive.unpackLimit` to 1 to reduce the number of loose objects
   created in the first place.
 
-  Peff (alias Jeff King) explained that the `packed-refs` file stores
+  Jeff King (alias Peff) explained that the `packed-refs` file stores
   "tag-peeling" information, which requires Git to open each object
   for newly written refs via `peel_object()` to read its header and
   determine its type. Peff noted that this logic resides in
@@ -120,7 +120,7 @@ __Various__
   by Justin Tobler on GitLab Blog.
   The described changes include
   fixes for geometric repacking (adding support for promisor remotes),
-  updates to `git fast-import` commit signature handing options,
+  updates to `git fast-import` commit signature handling options,
   and more data being available in `git repo structure` output.
 + [Git 2.53 Released with New Features and Performance Improvements](https://9to5linux.com/git-2-53-released-with-new-features-and-performance-improvements)
   by Marcus Nestor on 9to5Linux.
@@ -130,7 +130,7 @@ __Various__
   to [Codeberg](https://codeberg.org/gentoo/gentoo), an open-source git-hosting service:
   see the [PC Gamer article](https://www.pcgamer.com/software/linux/after-microsoft-couldnt-keep-its-ai-hands-to-itself-a-notoriously-complex-linux-distro-has-started-its-long-march-away-from-github/)
   by Joshua Wolens, 
-  and [Gentoo on Codeberg](https://www.gentoo.org/news/2026/02/16/codeberg.html)
+  and the [Gentoo on Codeberg](https://www.gentoo.org/news/2026/02/16/codeberg.html)
   article in Gentoo Linux News.
 + [Vinyl Cache project (formerly Varnish Cache) has left GitHub](https://vinyl-cache.org/organization/moving.html)
   for the self hosted [Forgejo](https://forgejo.org/)
@@ -138,7 +138,7 @@ __Various__
 + [Game of Trees Hub's web interface is live](https://opencollective.com/gothub/updates/web-interface-is-now-enabled-and-we-need-more-subscribers).
     + The [Game of Trees Hub](https://gothub.org/)
 	  is a transparently funded Git repository hosting service,
-	  with infrastructure on OpenBSD and [Game of Trees (GoT)](https://gameoftrees.org/) VCS,
+	  with infrastructure on OpenBSD and the [Game of Trees (GoT)](https://gameoftrees.org/) VCS,
 	  mentioned in the [previous edition](https://git.github.io/rev_news/2026/01/31/edition-131/).
 + [Exploring Solutions to Tackle Low-Quality Contributions on GitHub](https://github.com/orgs/community/discussions/185387)
   by Camilla Moraes (@moraesc) on GitHub Community Discussions.
@@ -146,22 +146,22 @@ __Various__
   by Jeff Cameron on OpZero blog,
   following his "interview" with Claude Opus 4.5.
   The idea is to version code, intent, constraints, and reasoning together,
-  and to add semantic reasoning layer through a "context graph".
+  and to add a semantic reasoning layer through a "context graph".
   Thomas Dohmke [has launched](https://thenewstack.io/thomas-dohmke-interview-entire/)
   such an open-source developer platform
   for collaboration between developers and AI agents,
   [Entire](https://entire.io/).
-    + One one hand this assumes that AI generated code is a viable path to creating software,
+    + On one hand this assumes that AI generated code is a viable path to creating software,
 	  and there would be no technical problems like model collapse,
-	  or economical problem like cost of training and using LLMs.
+	  or economical problems like cost of training and using LLMs.
 	+ On the other hand there exist specialized solutions to help
-	  version data (like [DVC](https://dvc.org) or [Pachyderm](https://www.pachyderm.com/)),
-	  or to version database schema.
+	  version data (like [DVC](https://dvc.org) or [Pachyderm](https://www.pachyderm.com/))
+	  or database schema.
 
 
 __Light reading__
 + [Evolving Git for the next decade](https://lwn.net/Articles/1057561/)
-  by Joe Brockmeier on LWN\.net, reporting about Patrick Steinhardt (@pks-t) talk
+  by Joe Brockmeier on LWN\.net, reporting about Patrick Steinhardt's (@pks-t) talk
   at main-track session at FOSDEM 2026.
   Recording of this talk [is available on FOSDEM site](https://fosdem.org/2026/schedule/event/HTJK33-evolving_git_for_the_next_decade/).
 + [Exploring the .git Directory – How Git Stores Your Code](https://www.git-tower.com/blog/posts/exploring-the-git-directory)
@@ -184,7 +184,7 @@ __Light reading__
   by Andrew Nesbitt on his blog.
   The post talks about the actual git's semantics for “gitignore syntax”.
     + The author wrote [git-pkgs/gitignore](https://github.com/git-pkgs/gitignore),
-      a Go library that fully match how git's gitignore patterns work.
+      a Go library that fully matches how git's gitignore patterns work.
 + [git recent: what branch did I work on?](https://remysharp.com/2026/02/12/git-recent),
   about a simple git alias, by Remy Sharp on his blog.
 + [I Hate GitHub Actions with Passion](https://xlii.space/eng/i-hate-github-actions-with-passion/)
@@ -224,13 +224,13 @@ __Light reading__
   by Andrew Nesbitt on his blog (following
   [Package managers keep using git as a database, it never works out](https://nesbitt.io/2025/12/24/package-managers-keep-using-git-as-a-database.html),
   mentioned in [Git Rev News Edition #130](https://git.github.io/rev_news/2025/12/31/edition-130/) from December).
-  In this post he describes how he created Git backend using relational database:
+  In this post he describes how he created a Git backend using relational database:
   [gitgres](https://github.com/andrew/gitgres)
   (implementing the libgit2 `git_odb_backend` and `git_refdb_backend` interfaces
   against PostgreSQL through libpq).
   He acknowledges that right now gitgres is just a neat hack,
-  as it does not currently implements delta compression;
-  nevertheless it might be good solution for small instances of software forges
+  as it does not currently implement delta compression;
+  nevertheless it might be a good solution for small instances of software forges
   for small projects.
     + Compare with [git-remote-sqlite](https://github.com/chrislloyd/git-remote-sqlite),
 	  a Git [remote protocol helper](https://git-scm.com/docs/gitremote-helpers)
@@ -261,26 +261,26 @@ __Light reading__
 + [The bare minimum for syncing Git repos](https://alexwlchan.net/2026/bare-git/)
   by Alex Chan on her blog.
 + [The Disconnected Git Workflow](https://ploum.net/2026-01-31-offline-git-send-email.html)
-  by Lionel Dricot (Ploum);
-  (sidenote: there exist [git-credential-oauth](https://github.com/hickford/git-credential-oauth),
+  by Lionel Dricot (Ploum)
+  (sidenote: there is also [git-credential-oauth](https://github.com/hickford/git-credential-oauth),
   that can solve some of the problems with sending a small one-off patch to a GitHub project).
 + [git.usebox.net and bots](https://www.usebox.net/jjm/blog/git-usebox-net-and-bots/)
   by Juan J. Martínez on his Personal Log,
   about his modification of [gitweb](https://git-scm.com/docs/gitweb)
-  to block AI crawlers (that do not respect `robots.txt`)
+  to block AI crawlers (that do not respect `robots.txt`).
 + [I Built a Tool That Writes Obituaries for Your Deleted Code](https://dev.to/lakshmisravyavedantham/i-built-a-tool-that-writes-obituaries-for-your-deleted-code-235l) and
   [commit-prophet: I Built a Tool That Predicts Buggy Files Using Git History](https://dev.to/lakshmisravyavedantham/commit-prophet-i-built-a-tool-that-predicts-buggy-files-using-git-history-35mk)
   by Lakshmi Sravya Vedantham on DEV\.to.
 + [I Read 9,000 Lines of a Stranger's Mergetool](https://dev.to/ticktockbent/i-read-9000-lines-of-a-strangers-mergetool-5bf0)
   by Wes on DEV\.to, about the [ec (easy-conflict)](https://github.com/chojs23/ec) tool.
-  This is first entry in the [Review Bomb series](https://dev.to/ticktockbent/series/36103),
-  where Wes finds under-the-radar projects on GitHub, read the code, contribute something,
-  and write it up.
+  This is the first entry in the [Review Bomb series](https://dev.to/ticktockbent/series/36103),
+  where Wes finds under-the-radar projects on GitHub, reads the code, contributes something,
+  and writes it up.
 + [Return to GitHub](https://underlap.org/return-to-github/)
-  by Glyn Normington on underlap blog;
+  by Glyn Normington on the underlap blog;
   the move of [ipc-channel-mux](https://crates.io/crates/ipc-channel-mux)
   from [Codeberg](https://codeberg.org/glyn/ipc-channel-mux) to [GitHub](https://github.com/glyn/ipc-channel-mux)
-  was caused by the need for CI on Windows
+  was caused by the need for CI on macOS and Windows
   (without having to self-host CI runners).
 + [Simplifying Git by Using GitButler](https://blog.gitbutler.com/simplifying-git):
   seeing git state, branching without fear, understanding and using stacked changes,
@@ -304,7 +304,7 @@ __Light reading__
   **continvoucly** morged back into develop"), and arrows missing
   or pointing in the wrong direction, or missing the node.
   The image has been replaced since then;
-  you can see the original compared to Microsoft one
+  you can see the original compared to the Microsoft one
   in the [PC Gamer article about this issue](https://www.pcgamer.com/software/ai/microsoft-uses-plagiarized-ai-slop-flowchart-to-explain-how-github-works-removes-it-after-original-creator-calls-it-out-careless-blatantly-amateuristic-and-lacking-any-ambition-to-put-it-gently/).
 
 
@@ -345,11 +345,11 @@ __Git tools and sites__
   with each project maintaining its own tools, environment variables, and tasks.
     + A monorepo is a software-development strategy
 	  in which the code for a number of projects is stored in the same repository.
-	  See for example [monorepo.tools](https://monorepo.tools/) site,
-	  first mentioned in [Git Rev News Edition #84]().
+	  See for example the [monorepo.tools](https://monorepo.tools/) site,
+	  first mentioned in [Git Rev News Edition #84](https://git.github.io/rev_news/2022/02/28/edition-84/).
 + [difi](https://github.com/oug-t/difi) is a TUI tool that helps you
   review and refine Git diffs before you push.
-  Written in Go, using the [Bubble Tea](https://github.com/charmbracelet/bubbletea) library,
+  Written in Go using the [Bubble Tea](https://github.com/charmbracelet/bubbletea) library,
   under MIT license.
 + [deff](https://github.com/flamestro/deff) is a TUI tool providing
   interactive, side-by-side file review for git diffs
@@ -381,8 +381,8 @@ __Git tools and sites__
 	 [also supports stacked branches](https://blog.gitbutler.com/stacked-branches-with-gitbutler),
 	 which was mentioned in [Git Rev News Edition #118](https://git.github.io/rev_news/2024/12/31/edition-118/).
 + [Diffs](https://diffs.com/), aka [`@pierre/diffs`](https://github.com/pierrecomputer/pierre/tree/main/packages/diffs),
-  is an open source diff and file rendering library built on 
-  [Shiki](https://shiki.style/) syntax highlighter.
+  is an open source diff and file rendering library built on
+  the [Shiki](https://shiki.style/) syntax highlighter.
   It supports split (side-by-side) or stacked (unified diff) layout,
   different diff highlight styles, in-line highlighting, wrapping, line numbers.
   Includes annotation framework for injecting comments and annotations, and more.
@@ -394,7 +394,7 @@ __Git tools and sites__
 	  diff parser and pretty HTML generator.
 	  Written in TypeScript, under MIT license.
 	  Provides [diff2html-cli](https://github.com/rtfpessoa/diff2html-cli),
-	  [used by](https://diff2html.xyz/#users), among others
+	  [used by](https://diff2html.xyz/#users), among others,
 	  [Ungit](https://github.com/FredrikNoren/ungit),
 	  [Diffy](https://diffy.org/), [git-explorer](https://github.com/thescientist13/git-explorer),
 	  [Simple Git](https://github.com/mauricioszabo/simple-git),
@@ -406,12 +406,12 @@ __Git tools and sites__
   [Written](https://github.com/JetpackDuba/Gitnuro) in Kotlin, under GPL 3.0 license.
 + [RelaGit](https://rela.dev/) - the elegant solution to graphical version control,
   is a multiplatform Git GUI written in TypeScript.  Under LGPL 3.0 license.
-  RelaGit is in an early beta stage.
+  RelaGit is in early beta stage.
 + [SourceGit](https://github.com/sourcegit-scm/sourcegit) is an opensource Git GUI client
   that supports Windows, macOS, and Linux.
   Includes built-in [conventional commit](https://www.conventionalcommits.org/) message helper,
-  and support for using AI to generate commit message.
-  Written in C#, using [Avalonia](https://avaloniaui.net) cross-platform UI framework,
+  and support for using AI to generate commit messages.
+  Written in C#, using the [Avalonia](https://avaloniaui.net) cross-platform UI framework,
   under MIT license.
 + [git-toolbelt](https://github.com/nvie/git-toolbelt) is a suite of useful Git commands
   that aid with scripting or every day command line usage.
@@ -423,14 +423,15 @@ __Git tools and sites__
   Supported databases: MySQL, MariaDB, TiDB, PostgreSQL, SQL Server, and SQLite3.
   Written in Go, under MIT license
   (for everything except parser, which is under Apache 2.0 license).
-    + Compare with [sqldiff.exe](https://www.sqlite.org/sqldiff.html),
+  Compare with:
+	+ [sqldiff.exe](https://www.sqlite.org/sqldiff.html),
 	  a command-line utility program (Windows binary)
 	  that displays content differences between two SQLite databases,
 	  mentioned in [Git Rev News Edition #87](https://git.github.io/rev_news/2022/05/26/edition-87/).
-	+ Compare with [pg-diff](https://michaelsogos.github.io/pg-diff/),
+	+ [pg-diff](https://michaelsogos.github.io/pg-diff/),
 	  a PostgreSQL schema and data comparing tool written in JavaScript,
 	  mentioned in [Git Rev News Edition #108](https://git.github.io/rev_news/2024/02/29/edition-108/).
-	+ Compare with [git-sqlite](https://github.com/cannadayr/git-sqlite),
+	+ [git-sqlite](https://github.com/cannadayr/git-sqlite),
 	  a custom diff and merge driver for SQLite,
 	  mentioned in [Git Rev News Edition #127](https://git.github.io/rev_news/2025/09/30/edition-127/).
 + [Fresh File Explorer](https://github.com/FreHu/vscode-fresh-file-explorer)
@@ -442,11 +443,11 @@ __Git tools and sites__
 + [Git Remote Color](https://github.com/jpoehnelt/vscode-git-remote-color)
   is a VS Code extension that automatically colors your VS Code workspace
   based on the git remote URL: every repository gets its own unique, consistent color.
-  Inspired by [Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock) extension, but fully automatic using a deterministic hash of the git remote.
+  Inspired by the [Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock) extension, but fully automatic using a deterministic hash of the git remote.
     + See also [VS Code Git Remote Color](https://justin.poehnelt.com/posts/vscode-git-remote-color/)
 	  by Justin Poehnelt on his blog.
 + [commit-prophet](https://github.com/LakshmiSravyaVedantham/commit-prophet)
-  is a command line tool that predict which files are more likely to be have bugs,
+  is a command line tool that predicts which files are more likely to be have bugs
   using git history patterns and co-change analysis.
   Written in Python, under MIT license.
 + [Majutsu](https://github.com/0WD0/majutsu) provides a [Magit](https://magit.vc/)-style
