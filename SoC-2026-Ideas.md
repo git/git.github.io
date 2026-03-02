@@ -33,28 +33,35 @@ the same.
 
 This project focuses on modernizing Git's environment handling by refactoring
 the `environment.c` code to reduce global state. The goal is to move environment
-variables and configuration from global scope into more appropriate local
-contexts, primarily into the `struct repository` / `struct repository_settings`
-structure. This architectural improvement will make the codebase more
-maintainable and potentially enable better multi-repository handling in the
-future.
+variables and configuration from global scope into more appropriate local contexts.
+This architectural improvement will make the codebase more maintainable and
+potentially enable better multi-repository handling in the future.
 
-The project involves careful refactoring of Git's core environment
-handling code, requiring strong C programming skills and attention to
-detail. Design discussions on the mailing list to find the best way to
-refactor some variables will likely happen.
+> Note: While `struct repository` / `struct repository_settings` may seem like a
+> natural target for this refactoring, contributors should be cautious about moving
+> settings there. `struct repository_setting`s` was originally designed to hold
+> config settings that are lazily parsed. Moving eagerly parsed config settings
+> into that struct can cause Git to die in unexpected places when lazy parsing
+> fails on an invalid config setting. Any such move requires careful analysis
+> and should not be done as a blanket approach.
 
-The contributor will identify global variables that can be moved to
-local scope, implement the necessary structural changes, and ensure
-all affected code paths continue to work correctly. This includes
-updating tests, fixing any regressions, and documenting the
-architectural changes.
+The project involves careful refactoring of Git's core environment handling code,
+requiring strong C programming skills and attention to detail. Design discussions
+on the mailing list to find the best way to refactor individual variables will
+likely happen.
 
-**Getting started:** Build Git from source, study the `environment.c` file
-and its global variables, understand how `struct repository` and
-`struct repository_settings` work, and submit a micro-patch to demonstrate
-familiarity with the codebase. Review recent mailing list discussions about
-reducing global state.
+The contributor will identify global variables that can be moved to local scope,
+implement the necessary structural changes, and ensure all affected code paths
+continue to work correctly. This includes updating tests, fixing any regressions,
+and documenting the architectural changes.
+
+**Getting started**: Build Git from source, study the `environment.c` file and its
+global variables, and understand how `struct repository` and `struct repository_settings`
+work. For a concrete example of the kind of work this project involves, review
+[Bello Caleb Olamide's Outreachy project](https://lore.kernel.org/all/48821a3848bef25c13038be8377ad73e7c17a924.1771258573.git.belkid98@gmail.com/)
+to get a sense of the approach and subtleties involved. Submit a micro-patch
+to demonstrate familiarity with the codebase, and review recent mailing
+list discussions about reducing global state.
 
 _Expected Project Size_: 90 or 175 hours or 350 hours
 
