@@ -127,7 +127,7 @@ __Various__
 + [Git 2.53 Released With More Optimizations, One Step Closer To Making Rust Mandatory](https://www.phoronix.com/news/Git-2.53-Released)
   by Michael Larabel on Phoronix.
 + Gentoo Linux has kicked off its long transition away from Microsoft's GitHub
-  to [Codeberg](https://codeberg.org/gentoo/gentoo), an open-source git-hosting service:
+  to [Codeberg](https://codeberg.org/gentoo/gentoo), an open-source Git-hosting service:
   see the [PC Gamer article](https://www.pcgamer.com/software/linux/after-microsoft-couldnt-keep-its-ai-hands-to-itself-a-notoriously-complex-linux-distro-has-started-its-long-march-away-from-github/)
   by Joshua Wolens, 
   and the [Gentoo on Codeberg](https://www.gentoo.org/news/2026/02/16/codeberg.html)
@@ -156,23 +156,23 @@ __Various__
 	  or economical problems like cost of training and using LLMs.
 	+ On the other hand there exist specialized solutions to help
 	  version data (like [DVC](https://dvc.org) or [Pachyderm](https://www.pachyderm.com/))
-	  or database schema.
+	  or database schemas.
 
 
 __Light reading__
 + [Evolving Git for the next decade](https://lwn.net/Articles/1057561/)
-  by Joe Brockmeier on LWN\.net, reporting about Patrick Steinhardt's (@pks-t) talk
-  at main-track session at FOSDEM 2026.
-  Recording of this talk [is available on FOSDEM site](https://fosdem.org/2026/schedule/event/HTJK33-evolving_git_for_the_next_decade/).
+  by Joe Brockmeier on LWN\.net, reporting about Patrick Steinhardt's (@pks-t)
+  main track talk at FOSDEM 2026.
+  The recording of this talk [is available on the FOSDEM site](https://fosdem.org/2026/schedule/event/HTJK33-evolving_git_for_the_next_decade/).
 + [Exploring the .git Directory – How Git Stores Your Code](https://www.git-tower.com/blog/posts/exploring-the-git-directory)
   by Bruno Brito on Tower's Blog.
 + [The Ultimate Guide to Git Config: Fine-Tuning Your Git Experience](https://www.git-tower.com/blog/the-ultimate-guide-to-git-config)
   by Bruno Brito on Tower's Blog.
 + [TIL that pathnames in git configs can be optional](https://neverready.app/blog/2026/02-git-blame-ignore/)
   by Anh Tuan Le on his blog.
-  It mentions the fact that as of git 2.52 (Nov 2025),
+  It mentions the fact that as of Git 2.52 (Nov 2025),
   you can mark config file paths as optional using the `:(optional)` prefix;
-  see the ['pathname' entry in "Values" section of `git config` manpage](https://git-scm.com/docs/git-config#Documentation/git-config.txt-pathname).
+  see the ['pathname' entry in the "Values" section of the `git config` manpage](https://git-scm.com/docs/git-config#Documentation/git-config.txt-pathname).
 + [Git Reflog Explained: Recover Deleted Commits & Lost Work](https://dev.to/itxshakil/git-reflog-explained-recover-deleted-commits-lost-work-i4n)
   by Shakil Alam on DEV\.to.  Has a video version.
 + [How to Save Multiple Drafts in Git: A Guide to Using Git Stash](https://www.freecodecamp.org/news/how-to-save-multiple-drafts-in-git-a-guide-to-using-stash/)
@@ -182,11 +182,11 @@ __Light reading__
   by Lorna Jane Mitchell on LornaJane Blog.
 + [The Many Flavors of Ignore Files](https://nesbitt.io/2026/02/12/the-many-flavors-of-ignore-files.html)
   by Andrew Nesbitt on his blog.
-  The post talks about the actual git's semantics for “gitignore syntax”.
+  The post talks about Git's actual semantics for “gitignore syntax”.
     + The author wrote [git-pkgs/gitignore](https://github.com/git-pkgs/gitignore),
-      a Go library that fully matches how git's gitignore patterns work.
+      a Go library that fully matches how Git's gitignore patterns work.
 + [git recent: what branch did I work on?](https://remysharp.com/2026/02/12/git-recent),
-  about a simple git alias, by Remy Sharp on his blog.
+  about a simple Git alias, by Remy Sharp on his blog.
 + [I Hate GitHub Actions with Passion](https://xlii.space/eng/i-hate-github-actions-with-passion/)
   by Przemysław Alexander Kamiński on his xlii.space blog.
     + The main problem is with trying to debug [GitHub Actions](https://github.com/features/actions) problems when the action fails;
@@ -206,16 +206,16 @@ __Light reading__
 + [I Built workz: The Zoxide for Git Worktrees That Finally Fixes .env + node_modules Hell in 2026](https://dev.to/rohansx/i-built-workz-the-zoxide-for-git-worktrees-that-finally-fixes-env-nodemodules-hell-in-2026-2dpj)
   by Rohan Sharma on DEV\.to.
   Describes his [workz](https://github.com/rohansx/workz) tool
-  that creates a new worktree, and also automatically symlinks 22+ types of dependency dirs
+  that creates a new worktree, automatically symlinks 22+ types of dependency dirs
   (like `node_modules`, `target`, `.venv`), copies env/config patterns,
   and can launch your AI coding agent directly in the new worktree.
 + [Agent Identity for Git Commits](https://justin.poehnelt.com/posts/agent-identity-git-commits/)
   by Justin Poehnelt on his blog,
   about how to set up AI agents to have their commits come from a bot account
-  without modifying your local git config.
+  without modifying your local Git config.
 + [Your Secrets Aren’t Safe: How the .git Directory Can Leak Data via AI Tools](https://dev.to/yoheiseki/your-secrets-arent-safe-how-the-git-directory-can-leak-data-via-ai-tools-4ioo)
   by Yohei Seki on DEV\.to.
-  The problem is that malicious MCP server or Skill
+  The problem is that a malicious MCP server or Skill
   can access leaked secrets even if they were removed from the project
   (you should treat any committed secret as compromised, and invalidate it;
   using `git filter-repo` or BFG RepoCleaner to rewrite history might be a choice).
@@ -224,12 +224,12 @@ __Light reading__
   by Andrew Nesbitt on his blog (following
   [Package managers keep using git as a database, it never works out](https://nesbitt.io/2025/12/24/package-managers-keep-using-git-as-a-database.html),
   mentioned in [Git Rev News Edition #130](https://git.github.io/rev_news/2025/12/31/edition-130/) from December).
-  In this post he describes how he created a Git backend using relational database:
+  In this post he describes how he created a Git backend using a relational database:
   [gitgres](https://github.com/andrew/gitgres)
   (implementing the libgit2 `git_odb_backend` and `git_refdb_backend` interfaces
   against PostgreSQL through libpq).
   He acknowledges that right now gitgres is just a neat hack,
-  as it does not currently implement delta compression;
+  as it currently does not implement delta compression;
   nevertheless it might be a good solution for small instances of software forges
   for small projects.
     + Compare with [git-remote-sqlite](https://github.com/chrislloyd/git-remote-sqlite),
@@ -247,7 +247,7 @@ __Light reading__
 	  also talks about this antipattern.
 + [Why [pure] GitOps Doesn't Work at Scale (and What to Do Instead)](https://ctrlplane.dev/blog/why-gitops-doesnt-work-at-scale)
   by Justin Brooks (@jsbrooks) at ctrlplane (also [on DEV\.to](https://dev.to/jsbroks/why-gitops-doesnt-work-at-scale-and-what-to-do-instead-2p91)).
-  He writes why for enterprise scale workflows platform-level orchestration is needed.
+  He writes why enterprise scale workflows need platform-level orchestration.
 + [GitHub Actions Is Slowly Killing Your Engineering Team](https://www.iankduncan.com/engineering/2026-02-05-github-actions-killing-your-team/)
   and [No, Really, Bash Is Not Enough: Why Large-Scale CI Needs an Orchestrator](https://www.iankduncan.com/engineering/2026-02-06-bash-is-not-enough/)
   by Ian Duncan on his blog.
@@ -262,7 +262,7 @@ __Light reading__
   by Alex Chan on her blog.
 + [The Disconnected Git Workflow](https://ploum.net/2026-01-31-offline-git-send-email.html)
   by Lionel Dricot (Ploum)
-  (sidenote: there is also [git-credential-oauth](https://github.com/hickford/git-credential-oauth),
+  (sidenote: there is also [git-credential-oauth](https://github.com/hickford/git-credential-oauth)
   that can solve some of the problems with sending a small one-off patch to a GitHub project).
 + [git.usebox.net and bots](https://www.usebox.net/jjm/blog/git-usebox-net-and-bots/)
   by Juan J. Martínez on his Personal Log,
@@ -283,7 +283,7 @@ __Light reading__
   was caused by the need for CI on macOS and Windows
   (without having to self-host CI runners).
 + [Simplifying Git by Using GitButler](https://blog.gitbutler.com/simplifying-git):
-  seeing git state, branching without fear, understanding and using stacked changes,
+  seeing Git state, branching without fear, understanding and using stacked changes,
   better interactive rebase, easier selective staging, recoverability.
   Written by PJ Hagerty on GitButler Blog.
   [Git Butler](https://www.gitbutler.com/) was first mentioned
@@ -298,7 +298,7 @@ __Light reading__
 
 + [15+ years later, Microsoft morged my diagram](https://nvie.com/posts/15-years-later/)
   by Vincent Driessen, on how Microsoft's Learn portal included
-  AI generated diagram with the rough shape of the one in the
+  an AI generated diagram with the rough shape of the one in the
   [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/),
   but with some GenAI glitches (like the text "Bugfixes from rel, branch may be
   **continvoucly** morged back into develop"), and arrows missing
@@ -352,7 +352,7 @@ __Git tools and sites__
   Written in Go using the [Bubble Tea](https://github.com/charmbracelet/bubbletea) library,
   under MIT license.
 + [deff](https://github.com/flamestro/deff) is a TUI tool providing
-  interactive, side-by-side file review for git diffs
+  interactive, side-by-side file review for Git diffs
   with per-file navigation, vertical and horizontal scrolling,
   syntax highlighting, and added/deleted line tinting.
   Written in Rust, under MIT license.
@@ -362,7 +362,7 @@ __Git tools and sites__
 + [Maiao](https://github.com/adevinta/maiao): Gerrit-style code review workflow for GitHub.
   Maiao brings the power of stacked pull requests to GitHub,
   enabling you to break large features into small, reviewable commits
-  where each commit becomes its own PR.  Provides `git review` command.
+  where each commit becomes its own PR.  Provides a `git review` command.
   Written in Go, under MIT license.
    + Stacked Pull Requests, also under the name Stacked Diffs,
      were mentioned in [Git Rev News Edition #44](https://git.github.io/rev_news/2018/10/24/edition-44/),
@@ -384,8 +384,8 @@ __Git tools and sites__
   is an open source diff and file rendering library built on
   the [Shiki](https://shiki.style/) syntax highlighter.
   It supports split (side-by-side) or stacked (unified diff) layout,
-  different diff highlight styles, in-line highlighting, wrapping, line numbers.
-  Includes annotation framework for injecting comments and annotations, and more.
+  different diff highlight styles, in-line highlighting, wrapping, and line numbers.
+  Includes an annotation framework for injecting comments and annotations, and more.
   Written in TypeScript, under Apache 2.0 license.
   Intended for use in web applications.
   Diffs is in early active development—APIs are subject to change.
@@ -407,7 +407,7 @@ __Git tools and sites__
 + [RelaGit](https://rela.dev/) - the elegant solution to graphical version control,
   is a multiplatform Git GUI written in TypeScript.  Under LGPL 3.0 license.
   RelaGit is in early beta stage.
-+ [SourceGit](https://github.com/sourcegit-scm/sourcegit) is an opensource Git GUI client
++ [SourceGit](https://github.com/sourcegit-scm/sourcegit) is an open-source Git GUI client
   that supports Windows, macOS, and Linux.
   Includes built-in [conventional commit](https://www.conventionalcommits.org/) message helper,
   and support for using AI to generate commit messages.
@@ -448,7 +448,7 @@ __Git tools and sites__
 	  by Justin Poehnelt on his blog.
 + [commit-prophet](https://github.com/LakshmiSravyaVedantham/commit-prophet)
   is a command line tool that predicts which files are more likely to have bugs
-  using git history patterns and co-change analysis.
+  using Git history patterns and co-change analysis.
   Written in Python, under MIT license.
 + [Majutsu](https://github.com/0WD0/majutsu) provides a [Magit](https://magit.vc/)-style
   interface for [Jujutsu (`jj`)](https://www.jj-vcs.dev/),
@@ -499,4 +499,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Bruno Brito.
+with help from Bruno Brito and Michael Ryzhikov.
