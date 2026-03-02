@@ -176,7 +176,7 @@ __Light reading__
 + [Git Reflog Explained: Recover Deleted Commits & Lost Work](https://dev.to/itxshakil/git-reflog-explained-recover-deleted-commits-lost-work-i4n)
   by Shakil Alam on DEV\.to.  Has a video version.
 + [How to Save Multiple Drafts in Git: A Guide to Using Git Stash](https://www.freecodecamp.org/news/how-to-save-multiple-drafts-in-git-a-guide-to-using-stash/)
-  by Chidiadi Anyanwu on freeCodeCamo.
+  by Chidiadi Anyanwu on freeCodeCamp.
 + [Git renames are not renames](https://lornajane.net/posts/2026/git-renames-are-not-renames)
   (and where it can cause problems)
   by Lorna Jane Mitchell on LornaJane Blog.
@@ -238,7 +238,7 @@ __Light reading__
 	  mentioned in [Git Rev News Edition #127](https://git.github.io/rev_news/2025/09/30/edition-127/).
 + [The nightmare that is squash merge ft GitHub](https://www.narendravardi.com/the-nightmare-that-is-squash-merge-ft-github/)
   by Narendra Vardi on his blog,
-  about how to fix merge conflicts cause by squash merge using interactive rebase.
+  about how to fix merge conflicts caused by squash merge using interactive rebase.
 + [How Poor Git Branching Practices Quietly Damage Software Quality](https://akdevcraft.substack.com/p/how-poor-git-branching-practices)
   by AK DevCraft on Substack (and also [on DEV\.to](https://dev.to/akdevcraft/how-poor-git-branching-practices-quietly-damage-software-quality-nf7)),
   about the Environment-Based Branching antipattern.
