@@ -202,7 +202,7 @@ problems when working on your real GSoC or Outreachy project. So it's
 a very good thing to show that you have researched your microproject
 and taken into account what you have found.
 
-### After it's done, work on different things
+### After the microproject is done, work on different things
 
 If you've already done a microproject and are itching to do more, then
 get involved in other ways, like finding and fixing other problems in
@@ -211,6 +211,27 @@ to review other people's patches on the mailing list, or answering
 questions on the mailing list or in IRC, or writing new tests, etc.,
 etc. In short, start doing things that other Git developers do!
 Alternatively you can of course focus on your project proposal.
+
+### Don't work on a proposed project right away
+
+In general, you shoudn't work directly on any project we propose for a
+mentoring program before you have been accepted in the mentoring
+program to work on the project.
+
+We don't want candidates to start stepping on each other's work, or
+candidates who do the right thing and work on other things feel
+discouraged.
+
+Try to find small improvements you can make in the area of your
+project or in a nearby area instead. This way you can increase your
+knowledge related to your project and prepare for it. Ask on the
+mailing list in case of doubt.
+
+If you are interested in a project with a very wide scope, it might be
+possible to start working on very small parts of it. For example if
+the project is about a global refactoring of the code base that affect
+many parts of it, like removing global state, it might be OK to do
+that a little in a small corner of the code base.
 
 ## Be very careful when using AI tools
 
