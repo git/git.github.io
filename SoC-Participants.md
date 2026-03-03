@@ -1,6 +1,6 @@
 ---
 layout: default
-title: GSoC participants
+title: SoC participants
 ---
 
 This document collects the list of contributors who've contributed
