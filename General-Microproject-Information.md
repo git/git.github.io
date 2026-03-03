@@ -218,9 +218,11 @@ In general, you shoudn't work directly on any project we propose for a
 mentoring program before you have been accepted in the mentoring
 program to work on the project.
 
-We don't want candidates to start stepping on each other's work, or
-candidates who do the right thing and work on other things feel
-discouraged.
+We don't want applicants to start stepping on each other's work, or
+applicants who do the right thing and work on other things feel
+discouraged. Also the project scope often evolves during the
+application and discussion periods, as applicants and mentors discuss
+project proposals.
 
 Try to find small improvements you can make in the area of your
 project or in a nearby area instead. This way you can increase your
@@ -231,7 +233,8 @@ If you are interested in a project with a very wide scope, it might be
 possible to start working on very small parts of it. For example if
 the project is about a global refactoring of the code base that affect
 many parts of it, like removing global state, it might be OK to do
-that a little in a small corner of the code base.
+that a little in a small corner of the code base. Make sure no one
+already started working on the same thing though.
 
 ## Be very careful when using AI tools
 
