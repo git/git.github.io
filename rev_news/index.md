@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Git Rev News
+title: Git Rev News Latest edition
+order: 2
 ---
 
 # Latest edition

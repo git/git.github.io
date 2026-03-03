@@ -1,10 +1,20 @@
 <div id="navbar" class="navbar">
-  <ul>
-    <li><a href="/">Home</a>
-    {% for node in site.pages reversed %}
-      {% if node.navbar != false and node.title %}
-      <li><a href="{{node.url}}">{{node.title}}</a>
-      {% endif %}
-    {% endfor %}
-  </ul>
+  <a href="{{ '/' | relative_url }}">Home</a>
+
+  {% assign nb-groups = site.pages | group_by:"nb" %}
+  
+  {% comment %} We loop site.nb-order to sort categories in a defined order {% endcomment %}
+  {% for nb-value in site.nb-order %}
+    {% assign group    = nb-groups | where: "name", nb-value | first %}
+    {% assign nb-pages = group.items | sort: "order", "last" %}
+    
+    <h3>{{ nb-value }}</h3>
+    <ul>
+      {% for item in nb-pages %}
+        {% if item.navbar != false and item.title %}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endfor %}
 </div>
