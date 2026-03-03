@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Historical Summer of Code and Outreachy Materials
+title: Historical SoC and Outreachy Materials
 ---
 
 These pages are historical materials for Summer of Code and
