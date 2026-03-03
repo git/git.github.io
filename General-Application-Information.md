@@ -16,14 +16,19 @@ see in an application.
 
 ## Microproject (required)
 
-It is required that applicants who want to apply to the Git
-project for the GSoC or Outreachy complete a tiny, code-related
-"microproject" as part of their application. Please refer to our
+It is required that applicants who want to apply to the Git project
+for the GSoC or Outreachy complete a tiny, code-related "microproject"
+as part of their application.
+
+Please thoroughly read and refer to our
 [general guidelines and suggestions for microprojects](https://git.github.io/General-Microproject-Information)
-for more information. Completing a microproject is not only an important
-way for us to get experience with applicants, but it will also help
-applicants become familiar with Git's development and submission
-process.
+for more information. Especially make sure you have fully read the
+whole "Only ONE quality focused microproject per applicant" section
+in that document.
+
+Completing a microproject is not only an important way for us to get
+experience with applicants, but it will also help applicants become
+familiar with Git's development and submission process.
 
 ## Reviewing (not required but appreciated)
 
