@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Git Rev News Sources
+order: 4
 ---
 
 # Sources

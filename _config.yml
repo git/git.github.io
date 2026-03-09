@@ -2,3 +2,19 @@ name: Git Developer Pages
 permalink: /rev_news/:year/:month/:day/:title/
 plugins:
   - jekyll-redirect-from
+
+defaults:
+  - { scope: { path: "links/dev"                 } , values: { nb: "Git Development"    , permalink: "/:basename/"} }
+  - { scope: { path: "links/mentoring/common"    } , values: { nb: "Mentoring"          , permalink: "/:basename/"} }
+  - { scope: { path: "links/mentoring/soc"       } , values: { nb: "Mentoring-SoC"      , permalink: "/:basename/"} }
+  - { scope: { path: "links/mentoring/outreachy" } , values: { nb: "Mentoring-Outreachy", permalink: "/:basename/"} }
+  - { scope: { path: "rev_news"                  } , values: { nb: "Git Rev News"                                 } }
+
+# this is used to display links in the right categories order
+# be sure to match default category names defined in site.defaults
+nb-order:
+  - "Git Development"
+  - "Git Rev News"
+  - "Mentoring"
+  - "Mentoring-SoC"
+  - "Mentoring-Outreachy"
