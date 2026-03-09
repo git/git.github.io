@@ -1,6 +1,7 @@
 ---
 layout: default
 title: About Git Rev News
+order: 1
 ---
 
 # About Git Rev News

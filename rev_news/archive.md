@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Git Rev News Archive
+order: 3
 ---
 
 # Archive
