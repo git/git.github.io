@@ -6,6 +6,10 @@ title: Outreachy participants
 This document collects the list of contributors who've contributed
 to Git via Outreachy.
 
+### Winter 2025-2026
+
+1. Bello Caleb Olamide [ [blog](https://cloobtech.hashnode.dev/) ]
+
 ### Winter 2024-2025
 
 1. Seyi Kuforiji [ [blog](https://seyi-kuforiji-902b48.gitlab.io/) ] [ [retrsopective interview](https://git.github.io/rev_news/2025/08/31/edition-126/#developer-spotlight-seyi-kuforiji) ]
