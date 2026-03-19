@@ -57,6 +57,87 @@ with Git's dedicated test helpers like `test_path_is_file`.
 - If you can't find any instances to fix, let us know what search command you
   used
 
+### Fix Improper Pluralization to Use `ngettext()`
+
+Help improve Git's internationalization (i18n) support by finding
+translatable strings that include a numeric placeholder (`%d` or
+`%i`) but use `_()` instead of `Q_()`. This matters because
+some languages (like Polish) have more than two plural forms, and
+`Q_()` is the only correct way to handle them.
+
+For example, the Polish word for "file" changes form depending on count:
+
+- 1 → *plik*
+- 2 - 4 → *pliki*
+- 5 - 21 → *plików*
+- 22 - 24 → *pliki*
+- 25 - 31 → *plików*
+
+A call like `_("Split into %d hunks.")` cannot be correctly translated
+for all counts. It must be rewritten using `Q_()` which is an alias
+for `ngettext()`.
+
+#### Steps to Complete
+
+1. Find candidate strings using:
+
+```bash
+git grep '[^Q]_("[^"]*%[id]' -- '*.c'
+```
+
+2. Review the results and identify strings where the number genuinely
+   controls a **count of things** (hunks, branches, objects, etc.). Skip
+   messages where `%d` refers to something that is never pluralized,
+   such as an error code, a line number, or a timeout value:
+
+```c
+// NOT a pluralization candidate — error code is never "plural"
+die_errno(_("unable to get credential storage lock in %d ms"), timeout_ms);
+
+// IS a candidate — hunk count should be pluralized
+_("Split into %d hunks.")
+```
+
+3. Rewrite the candidate using `ngettext()`:
+
+```c
+// Before:
+printf(_("Split into %d hunks."), n);
+
+// After:
+printf(Q_("Split into %d hunk.",
+          "Split into %d hunks.", n), n);
+```
+
+4. Build and run the relevant tests to confirm nothing is broken.
+
+#### Notes
+
+- Pick **one source file** with a small number of instances to keep
+  the patch focused and reviewable.
+- There are known candidates in `add-patch.c`, `archive-zip.c`,
+  `builtin/checkout.c`, `builtin/describe.c`, `builtin/fsck.c` — so
+  there should be plenty to choose from.
+- Each logical change (e.g., one function or one file) should ideally
+  be its own commit.
+- Follow Git's commit message conventions.
+- Before starting, ask on the mailing list to confirm no one else is
+  working on the same file.
+
+#### Need Help?
+
+- See the [gettext manual on plural forms](https://www.gnu.org/software/gettext/manual/gettext.html#Plural-forms)
+  for background on why `ngettext()` is necessary.
+- Search the codebase for existing `Q_()` usages as examples
+  of the correct pattern:
+
+```bash
+git grep -3 'Q_(' -- '*.c'
+```
+
+- If you can't find any unfixed instances, let us know the search command
+  you used so we can retire this microproject idea.
+
 
 ### Add more builtin patterns for userdiff
 
