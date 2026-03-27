@@ -10,7 +10,7 @@ Outreachy. They are for reference only!
 {% for node in site.pages reversed %}
   {% if node.navbar == false %}
     {% if node.title contains "SoC" or node.title contains "Outreachy" %}
-      <li><a href="{{node.url}}">{{node.title}}</a>
+      <li><a href="{{node.url | relative_url}}">{{node.title}}</a>
     {% endif %}
   {% endif %}
 {% endfor %}

@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
-        <link rel="icon" type="image/x-icon" href="/images/logo.png"/>
-        <link rel="stylesheet" href="/css/main.css">
-        <script src="/script/script.js" defer></script>
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+        <link rel="icon" type="image/x-icon" href="{{ '/images/logo.png' | relative_url }}"/>
+        <link rel="stylesheet" href="{{ '/css/main.css'  | relative_url }}">
+        <script src="{{ '/script/script.js' | relative_url }}" defer></script>
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ '/feed.xml' | relative_url }}">
     </head>
 
     <body>
