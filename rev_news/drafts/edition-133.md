@@ -253,6 +253,35 @@ __Git tools and sites__
 
 ## Releases
 
++ Git for Windows [v2.52.0(2)](https://github.com/git-for-windows/git/releases/tag/v2.52.0.windows.2),
+[v2.51.2(2)](https://github.com/git-for-windows/git/releases/tag/v2.51.2.windows.2),
+[v2.53.0(2)](https://github.com/git-for-windows/git/releases/tag/v2.53.0.windows.2)
++ Bitbucket Data Center [10.2](https://confluence.atlassian.com/bitbucketserver/release-notes-872139866.html)
++ Gerrit Code Review [3.11.10](https://www.gerritcodereview.com/3.11.html#31110),
+[3.11.9](https://www.gerritcodereview.com/3.11.html#3119),
+[3.12.5](https://www.gerritcodereview.com/3.12.html#3125),
+[3.12.6](https://www.gerritcodereview.com/3.12.html#3126),
+[3.13.4](https://www.gerritcodereview.com/3.13.html#3134),
+[3.13.5](https://www.gerritcodereview.com/3.13.html#3135),
+[3.14.0-rc0](https://www.gerritcodereview.com/3.14.html#3140)
++ GitHub Enterprise [3.20.0](https://docs.github.com/enterprise-server@3.20/admin/release-notes#3.20.0),
+[3.19.4](https://docs.github.com/enterprise-server@3.19/admin/release-notes#3.19.4),
+[3.18.7](https://docs.github.com/enterprise-server@3.18/admin/release-notes#3.18.7),
+[3.17.13](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.13),
+[3.16.16](https://docs.github.com/enterprise-server@3.16/admin/release-notes#3.16.16),
+[3.15.20](https://docs.github.com/enterprise-server@3.15/admin/release-notes#3.15.20),
+[3.14.25](https://docs.github.com/enterprise-server@3.14/admin/release-notes#3.14.25)
++ GitLab [18.10.1, 18.9.3, 18.8.7](https://about.gitlab.com/releases/2026/03/25/patch-release-gitlab-18-10-1-released/),
+[18.10](https://about.gitlab.com/releases/2026/03/19/gitlab-18-10-released/),
+[18.9.2, 18.8.6, 18.7.6](https://about.gitlab.com/releases/2026/03/11/patch-release-gitlab-18-9-2-released/)
++ GitKraken [11.10.0](https://help.gitkraken.com/gitkraken-desktop/current/)
++ GitHub Desktop [3.5.6](https://desktop.github.com/release-notes/)
++ Garden [2.6.0](https://github.com/garden-rs/garden/releases/tag/v2.6.0)
++ Git Cola [4.18.2](https://github.com/git-cola/git-cola/releases/tag/v4.18.2),
+[4.18.1](https://github.com/git-cola/git-cola/releases/tag/v4.18.1),
+[4.18.0](https://github.com/git-cola/git-cola/releases/tag/v4.18.0)
++ GitButler [0.19.6](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.19.6),
+[0.19.5](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.19.5)
 
 ## Credits
 
