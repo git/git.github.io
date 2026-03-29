@@ -207,7 +207,6 @@ As always, we welcome your thoughts and feedback!_
   Gmail. This setup helps me follow discussions and iterate on my
   contributions smoothly.
 
-
 * **How do you envision your own involvement with Git or other open
   source projects in the future?**
 
@@ -290,4 +289,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from XXX.
+with help from Olamide Caleb Bello.
