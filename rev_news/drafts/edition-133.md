@@ -101,7 +101,7 @@ really ambiguous, given that the patch section is normally preceded by
 a diffstat block. Peff replied that the diffstat is optional and is not
 even parsed by the receiving side at all.
 
-Jakob Haufe added an important nuance: even if git-am(1) were fixed to
+Jakob Haufe added an important nuance: even if git-am(1) was fixed to
 require indented diffs, it would only partially mitigate the problem,
 because patch(1) (which many distributions use to apply upstream
 fixes to packages) is even more permissive. It will strip a consistent
