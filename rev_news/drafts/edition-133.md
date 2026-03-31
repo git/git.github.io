@@ -201,7 +201,7 @@ already present in `git-am`'s documentation. Junio reviewed it and
 queued it with the comment "Nicely written."
 
 A third version,
-[version 3](https://lore.kernel.org/git/pull.2220.v3.git.git.1772559813151.gitgitgadget@gmail.com),
+[version 3](https://lore.kernel.org/git/V3_format-patch_caveats.354@msgid.xyz),
 was submitted and received Junio's approval to go to `next`.
 
 Meanwhile, Phillip had observed that since the parsing cannot be fixed,
