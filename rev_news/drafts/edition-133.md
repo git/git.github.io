@@ -42,13 +42,13 @@ surprising warning that had just circulated on Mastodon:
 
 The incident had originated in the i3 window manager project, where a
 commit message contained an unindented diff for illustration purposes.
-When Debian packagers later applied the patch using `patch(1)`, the diff
+When Debian packagers later applied the patch using patch(1), the diff
 in the commit message was applied as actual code, sneaking a spurious
 `sleep(1)` call into the Debian unstable package. Matthias asked the
 list whether this was a known issue and whether it could be an attack
 vector.
 
-To understand why this happens, it helps to know how `git-am` parses
+To understand why this happens, it helps to know how git-am(1) parses
 its input. When processing a patch email, it must split the stream into
 two parts: the commit message and the actual patch to apply. It does
 this by treating the first occurrence of any of the following lines as
@@ -59,23 +59,23 @@ the boundary between the two:
 - a line beginning with `Index: `.
 
 Everything before that boundary becomes the commit message; everything
-after is fed to the patch application machinery. Crucially, `git-am`
+after is fed to the patch application machinery. Crucially, git-am(1)
 scans from the top of the email, so the very first such line it
 encounters terminates the commit message regardless of whether that
 line was meant to be part of the message text.
 
 This design dates back to the tool's origins. As Jeff King (also known
-as "Peff") quickly explained in reply to Matthias, `git-am` was
+as "Peff") quickly explained in reply to Matthias, git-am(1) was
 originally designed to handle patches sent by all kinds of people, not
 just Git users. A contributor might have generated a diff with plain
 GNU `diff` and typed the rest of the email by hand, without any `---`
 separator. The tool was therefore intentionally permissive: it would
 find a `diff -` line anywhere in the email and treat it as the start
-of the patch. Peff demonstrated this with a live example. He fed `git
-am` a hand-typed email containing a GNU diff, and it produced the
+of the patch. Peff demonstrated this with a live example. He fed
+git-am(1) a hand-typed email containing a GNU diff, and it produced the
 expected commit.
 
-This historical context also explained why `git-am` is notoriously
+This historical context also explained why git-am(1) is notoriously
 hard to fix: "I don't think there is a way to unambiguously parse the
 single-stream output that format-patch produces," Peff wrote, noting
 that he could find at least three earlier discussions of the same
@@ -96,19 +96,19 @@ behavior was there. He called it "sheer luck" that it was only a
 `sleep(1)` and not something more malicious crafted as a diff in the
 commit message.
 
-Florian Weimer wondered whether the `git-format-patch` output was
+Florian Weimer wondered whether the git-format-patch(1) output was
 really ambiguous, given that the patch section is normally preceded by
 a diffstat block. Peff replied that the diffstat is optional and is not
 even parsed by the receiving side at all.
 
-Jakob Haufe added an important nuance: even if `git-am` were fixed to
+Jakob Haufe added an important nuance: even if git-am(1) was fixed to
 require indented diffs, it would only partially mitigate the problem,
-because `patch(1)` (which many distributions use to apply upstream
+because patch(1) (which many distributions use to apply upstream
 fixes to packages) is even more permissive. It will strip a consistent
 level of indentation from diffs before applying them. He quoted the
-`patch(1)` manual page: "If the entire diff is indented by a
+patch(1) manual page: "If the entire diff is indented by a
 consistent amount, [...] this is taken into account." The i3 incident
-had in fact been triggered by `patch(1)`, not `git-am`.
+had in fact been triggered by patch(1), not git-am(1).
 
 Kristoffer Haugsbakk synthesized this into a clear summary of the
 situation and immediately proposed documenting it.
@@ -116,31 +116,31 @@ situation and immediately proposed documenting it.
 Matthias also highlighted the broader applicability beyond email
 workflows: Linux distributions like NixOS routinely fetch patches
 directly from upstream Git repositories and apply them to packages
-using `patch(1)`. He noted that even after 15 years of using Git and
+using patch(1). He noted that even after 15 years of using Git and
 being comfortable with email patch workflows, he himself had not known
 about this behavior.
 
 Several directions were then explored to look for solutions.
 
-Peff observed the irony that `git-format-patch` does have a `--attach`
+Peff observed the irony that git-format-patch(1) does have a `--attach`
 option which puts the message and the patch in separate MIME parts —
-making them unambiguous in principle. However, `git-mailinfo` (which
-powers `git-am` under the hood) decodes both parts into a single
+making them unambiguous in principle. However, git-mailinfo(1) (which
+powers git-am(1) under the hood) decodes both parts into a single
 stream and still treats a `diff` line in the message part as the start
 of a patch. Fixing this would require careful surgery to avoid
 breaking the existing forgiving handling of patches received as a
 single attachment.
 
 Patrick Steinhardt suggested that even if parsing cannot be made
-unambiguous, `git-am` could at least detect the ambiguity and bail by
+unambiguous, git-am(1) could at least detect the ambiguity and bail by
 default with an `--accept-ambiguous-patch` override. Jacob Keller
 proposed going further: a new "unambiguous mode" where
-`git-format-patch` would produce output that new versions of `git-am`
+git-format-patch(1) would produce output that new versions of git-am(1)
 could distinguish unambiguously, while old versions would still handle
 the common case the same way as before.
 
 Jacob had also sketched a concrete scheme: add a new unambiguous
-marker after the `---` separator, so that old versions of `git-am`
+marker after the `---` separator, so that old versions of git-am(1)
 would still cut at the `---` and ignore everything up to the diff, while
 new versions would wait for the new marker and correctly ignore any
 diff appearing before it. Since the new marker would come after `---`,
@@ -152,7 +152,7 @@ commit message, and both sides would need to complain if they saw
 multiple markers. He explored further options: reversible quoting of
 `---` and `diff` lines in the commit message (analogous to the `>From`
 quoting used in mbox files), applied only when the message would
-otherwise be ambiguous. This way, if an older `git-am` received the
+otherwise be ambiguous. This way, if an older git-am(1) received the
 mail, the worst case would be visible quoting in the commit message —
 ugly but readable. Junio Hamano, the Git maintainer, added another
 thought: refusing to accept unsigned patches at all.
@@ -172,7 +172,7 @@ On February 8, Kristoffer sent a documentation patch titled "doc: add
 caveat about roundtripping format-patch" which introduced a new
 `Documentation/format-patch-caveats.adoc` file explaining the
 behavior. The caveat was designed to be included in the documentation
-for `git-am`, `git-format-patch`, and `git-send-email`.
+for git-am(1), git-format-patch(1), and git-send-email(1).
 
 Junio reviewed
 [version 1](https://lore.kernel.org/git/format-patch_caveats.281@msgid.xyz)
@@ -186,18 +186,18 @@ flagged that the space after the `---` in the cover letter was
 inconsistent with the project's conventions.
 
 Phillip Wood reviewed the patch and found the mention of
-`git-send-email` a bit distracting, since that command merely runs
-`git-format-patch` and does not do any formatting itself. He also
+git-send-email(1) a bit distracting, since that command merely runs
+git-format-patch(1) and does not do any formatting itself. He also
 suggested wording improvements: replacing "One might want to use [...]
 patch(1)" with "Given these limitations, one might be tempted to [...]".
 
 Kristoffer incorporated all of this in
 [version 2](https://lore.kernel.org/git/V2_format-patch_caveats.34b@msgid.xyz),
-which dropped the `git-send-email` mention from the introductory
+which dropped the git-send-email(1) mention from the introductory
 paragraph (while keeping the CAVEATS section in its documentation, for
 users who encounter it there), removed example code blocks in favor of
 clearer prose, and used the list of message-terminating patterns
-already present in `git-am`'s documentation. Junio reviewed it and
+already present in git-am(1)'s documentation. Junio reviewed it and
 queued it with the comment "Nicely written."
 
 A third version,
@@ -216,7 +216,7 @@ series titled "commit-msg.sample: reject messages that would confuse
    message for unindented `diff -` and `Index: ` lines and reject the
    commit with a helpful error message.
 3. Added a further check to detect `---` separator lines in the message
-   body, which would cause `git-am` to silently truncate the commit
+   body, which would cause git-am(1) to silently truncate the commit
    message.
 
 Peff reacted with measured skepticism to patch 3 in
@@ -248,21 +248,21 @@ Kristoffer verified that version 2 worked with `git commit
 --cleanup=scissors --verbose` and was satisfied.
 
 The discussion did not lead to a fundamental fix to the ambiguous
-parsing in `git-am`, which remains an open problem with no obvious
+parsing in git-am(1), which remains an open problem with no obvious
 backward-compatible solution. But it produced two concrete
 improvements that were accepted and are now in `master`: a CAVEATS
-section in the documentation for `git-am`, `git-format-patch`, and
-`git-send-email` spelling out exactly how commit messages can
+section in the documentation for git-am(1), git-format-patch(1), and
+git-send-email(1) spelling out exactly how commit messages can
 inadvertently interfere with patch application, and an enhanced sample
 `commit-msg` hook that rejects messages containing unindented diffs.
 
 The thread also served as a useful reminder that this problem is not
 limited to email workflows: any project that generates patches from
-Git commits using `git-format-patch` and applies them with `patch(1)`
-or `git-am` is exposed to it. The practical advice for authors is
+Git commits using git-format-patch(1) and applies them with patch(1)
+or git-am(1) is exposed to it. The practical advice for authors is
 simple: if you include diffs in commit messages for illustrative
 purposes, make sure to indent them consistently, and be aware that
-even that does not protect you from `patch(1)`.
+even that does not protect you from patch(1).
 
 ## Developer Spotlight: Olamide Caleb Bello
 
