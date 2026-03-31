@@ -474,9 +474,187 @@ As always, we welcome your thoughts and feedback!_
 ## Other News
 
 __Various__
-
++ [The forge is our new home.](https://communityblog.fedoraproject.org/the-forge-is-our-new-home/)
+  by Tomáš Hrčka on Fedora Community Blog.<br>
+  After a full year of preparation, the Community Linux Engineering (CLE) team
+  announced that [Fedora Forge](https://forge.fedoraproject.org/explore/organizations),
+  powered by [Forgejo](https://forgejo.org/), is ready for use.
+  If you own a project at [pagure.io](https://pagure.io/),
+  you must migrate out of it before June 2026;
+  [How to Migrate Repository from Pagure](https://docs.fedoraproject.org/en-US/forge-documentation/migration/pagure_repository/)
+  guide is there to help with this task.
+  Note that Fedora Forge is narrower in scope than pagure\.io;
+  it is provisioned to host the code, documentation, and tooling
+  that directly build, manage, and govern the Fedora Project.
+  Personal projects and general upstream development does not belong on Fedora Forge.
++ [GNOME GitLab Redirecting Some Git Traffic To GitHub For Reducing Costs](https://www.phoronix.com/news/GNOME-GitHub-GitLab-Redirect)
+  by Michael Larabel in GNOME on Phoronix.
++ [Radicle: Disclosure of Replay Attack Vulnerability in Signed References](https://radicle.xyz/2026/03/30/disclosure-of-vulnerability-in-signed-references)
+    + [Radicle](https://radicle.xyz) is a peer-to-peer, local-first
+      code collaboration stack built on Git.
+      It was first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/)
+      and most recently in [edition #131](https://git.github.io/rev_news/2026/01/31/edition-131/).<br>
+      Compare [Tangled](https://tangled.org/) (built on top of AT Protocol),
+      [Grasp](https://ngit.dev/grasp/) and [`git str`](https://github.com/fiatjaf/gitstr) (built on top of Nostr), and
+      [`git-ssb`](https://scuttlebot.io/apis/community/git-ssb.html) (built on top of  Secure-ScuttleButt (SSB); though SSB ecosystem contracted, with latest news from 2024).
++ [b4's Review TUI With AI Integration Nearing Pre-Alpha Release](https://www.phoronix.com/news/b4-review-nears-pre-alpha)
+  by  Michael Larabel in Linux Kernel section on Phoronix.
 
 __Light reading__
++ [The Comforting Lie Of SHA Pinning](https://www.vaines.org/posts/2026-03-24-the-comforting-lie-of-sha-pinning/)
+  by Aiden Vaines on Vaines\.org.
+  The recommendation to _pin your dependencies_ in GitHub Actions
+  translates to using commit SHAs, not tags - which can be moved
+  (though GitHub already has optional ‘Make tags immutable’ feature).
+  However, GitHub Actions does not meaningfully validate that
+  the commit SHA you reference belongs to the repository you think it does:
+  it can belong to a hostile fork.
++ [Git Remote Helpers](https://nesbitt.io/2026/03/18/git-remote-helpers.html):
+  how to create `git-remote-swh` that would let you `git clone` from a [SWHID](https://www.swhid.org/),
+  pulling source code directly from [Software Heritage](https://www.softwareheritage.org/)’s archive
+  by content hash rather than by URL.
+  Written by Andrew Nesbitt on his blog.
+  Also lists built-in remote helpers, and lists third-party helpers:
+  for cloud and object storage, for content-addressed storage,
+  for encryption, for VCS bridges,
+  for P2P and decentralised (though this list was missing `git-remote-rad` for Radicle),
+  for a different transport layer, for blockchain, for other storage backends.
++ [Git Bayesect](https://hauntsaninja.github.io/git_bayesect.html)
+  by Shantanu Jain (@hauntsaninja) on his blog.
+  It describes the idea behind [git bayesect](https://github.com/hauntsaninja/git_bayesect),
+  which is a generalisation of `git bisect` that uses Bayesian inference to solve
+  the problem of flaky, non-deterministic tests.
++ [Git Tricks with Tri and Difft](https://nabeelvalley.co.za/blog/2026/26-03/tri-x-git-tricks/)
+  by Nabeel Valley on their blog.
+    + [Tri](https://github.com/sftsrv/tri) is TUI interactive directory tree browser,
+      and [difft, or Difftastic](https://difftastic.wilfred.me.uk/introduction.html)
+      is a structural diff tool that understands syntax.
+      Difftastic was first mentioned in [Git Rev News Edition #86](https://git.github.io/rev_news/2022/04/30/edition-86/),
+      and most recently in [Edition #131](https://git.github.io/rev_news/2026/01/31/edition-131/).
++ [Awesome Git Diffs with Delta, fzf and a Little Shell Scripting](https://nickjanetakis.com/blog/awesome-git-diffs-with-delta-fzf-and-a-little-shell-scripting)
+  by Nick Janetakis on his blog.
+    + [delta](https://dandavison.github.io/delta/) (from 'git-delta' package)
+      is a syntax-highlighting pager for git, diff, grep, and blame output,
+      first mentioned in [Git Rev News Edition #9](https://git.github.io/rev_news/2015/11/11/edition-9/),
+      and most recently in [Edition #131](https://git.github.io/rev_news/2026/01/31/edition-131/).<br>
+      [fzf](https://github.com/junegunn/fzf) is a command-line fuzzy finder,
+      first mentioned directly in [Git Rev News Edition #74](https://git.github.io/rev_news/2021/04/30/edition-74/)
+      (in passing first in [Edition #64](https://git.github.io/rev_news/2020/06/25/edition-64/)),
+      and most recently in [Edition #130](https://git.github.io/rev_news/2025/12/31/edition-130/).
++ [Build Git helpers from scratch with Bash and fzf](https://oliviac.dev/blog/build-git-helpers-bash-fzf/) and
+  [Improve your Git CLI experience with Git aliases, delta, and custom functions](https://oliviac.dev/blog/customize-git-cli-aliases-delta/)
+  by Olivia Coumans on her blog.
++ [Taming a 486MB Git Repo](https://hsps.in/post/taming-a-486mb-git-repo/)
+  (with source code taking 6MB) by Harisankar P S on his HsPS\.in blog.
++ [CodeCity: Turning a Codebase into a Skyline](https://verial.xyz/posts/codecity),
+  about a polyglot (multi-language) CodeCity visualizer built in Rust,
+  rendering codebases as interactive 3D cities.  In this tool, modules are shown
+  as buildings, grouped together in districts corresponding to top-level packages
+  (squarified treemap), with footprint corresponding to size in lines of code,
+  height corresponding to complexity, and color corresponding to "health".
+  Follows from [Legibility: A Scaling Bottleneck of the Agentic Era](https://verial.xyz/essays/legibility) essay.
++ [“Use git worktrees,” they said. “It’ll be fun!” they said.](https://daveschumaker.net/use-git-worktrees-they-said-itll-be-fun-they-said/)
+  by Dave Schumaker on his blog.
+  This posts describes problem with often used solutions like
+  symlinked `node_modules` or `.venv` directories, Yarn’s hardlinks-global mode,
+  APFS Copy-on-Write (`cp -c`) - which is also supported by other filesystems.
+  Proposes keeping a fixed pool of 6 worktree slots, and recycling them as needed.
++ [Direnv is All You Need to Parallelize Agentic Programming with Git Worktrees](https://waldencui.com/post/direnv_is_all_you_need_to_parallelize_claude_code_with_git_worktrees/)
+  by Walden Cui on The Search Blog.<br>
+  See also, for example:
+    + [I Built workz: The Zoxide for Git Worktrees That Finally Fixes .env + node\_modules Hell in 2026](https://dev.to/rohansx/i-built-workz-the-zoxide-for-git-worktrees-that-finally-fixes-env-nodemodules-hell-in-2026-2dpj),
+      mentioned in [Git Rev News Edition #132](https://git.github.io/rev_news/2026/02/28/edition-132/).
+    + [Git Worktrees with Claude Code, Laravel, and Herd](https://gause.cz/blog/git-worktrees-with-claude-code-laravel-and-herd/),
+      mentioned in [Git Rev News Edition #132](https://git.github.io/rev_news/2026/02/28/edition-132/).
+    + [Why You Should Be Using Git Worktrees](https://blog.randombits.host/why-you-should-be-using-git-worktrees/),
+      mentioned in [Git Rev News Edition #129](https://git.github.io/rev_news/2025/11/30/edition-129/).
+    + [tree-me: Because git worktrees shouldn't be a chore](https://haacked.com/archive/2025/11/21/tree-me/),
+      mentioned in [Git Rev News Edition #129](https://git.github.io/rev_news/2025/11/30/edition-129/).
+    + [Managing Multiple Claude Code Sessions Without Worktrees](https://blog.gitbutler.com/parallel-claude-code/),
+      mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/).
+    + [How to use git worktree effectively with Python projects](https://www.andreagrandi.it/posts/how-to-use-git-worktree-effectively-with-python-projects/),
+      mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/).
++ [Using Git with coding agents](https://simonwillison.net/guides/agentic-engineering-patterns/using-git-with-coding-agents/)
+  is a chapter from the guide [Agentic Engineering Patterns](https://simonwillison.net/guides/agentic-engineering-patterns/),
+  available on Simon Willison’s Weblog.
++ [How I organize git repos locally](https://blog.esc.sh/how-i-organize-git-repos-locally/)
+  by Mansoor Majeed on their Esc\.sh blog.
++ [SSH certificates and git signing](https://codon.org.uk/~mjg59/blog/p/ssh-certificates-and-git-signing/)
+  on Matthew Garrett's Blog.
+    + [Signing Git Commits with SSH Keys](https://blog.dbrgn.ch/2021/11/16/git-ssh-signatures/)
+      was first mentioned in [Git Rev News Edition #83](https://git.github.io/rev_news/2022/01/31/edition-83/).
+    + See also [Git signatures with SSH certificates](https://mjg59.dreamwidth.org/60916.html)
+      by Matthew Garret on his old mjg59's journal blog,
+      mentioned in [Git Rev News Edition #91](https://git.github.io/rev_news/2022/09/30/edition-91/).
++ [Choosing the best git branching strategy for continuous delivery in your team](https://geshan.com.np/blog/2026/03/git-branching-strategy-for-continuous-delivery/)
+  by Geshan Manandhar on his blog: compares Git-Flow, GitHub Flow, and Trunk-based development,
+  recommending GitHub Flow.
+    + See also [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html)
+      by Martin Fowler (author of the [Refactoring: Improving the Design of Existing Code](https://martinfowler.com/books/refactoring.html) book),
+      which was first mentioned in [Git Rev News Edition #63](https://git.github.io/rev_news/2020/05/28/edition-63/).
++ [Git: Remove Dead Branches](https://nathan-long.com/blog/git-remove-dead-branches/)
+  by Nathan Long on his blog.
+  The script described in detail should probably use `git for-each-ref`
+  rather than parse user-facing `git branch` command, though.
++ [Selectively ignore lines in git diff](https://lornajane.net/posts/2026/selectively-ignore-lines-in-git-diff)
+  by using `git diff --ignore-matching-lines=<regexp>` (or `-I` in short).
+  Article by Lorna Jane Mitchell on her LornaJane blog.
++ [Git: ignoring temporary changes](https://blog.narf.ssji.net/2026/03/18/git-ignoring-temporary-changes/)
+  by Olivier Mehani on Narf blog.
+  He proposes using `git update-index --assume-unchanged <PATH>`, which is not safe;
+  a safer solition is to use `--skip-worktree` instead (won't lose changes, may prevent safe operation).
+    + Compare [Use skip-worktree to ignore modified files](https://www.brandonpugh.com/til/git/skip-worktree-ignore-modified-files/)
+      by Brandon Pugh, mentioned in [Git Rev News Edition #129](https://git.github.io/rev_news/2025/11/30/edition-129/).
++ [SQLite on Git, Prologue: Why do we need random access in git](https://blog.lysk.tech/sqlite-on-git-prologue/) and
+  [SQLite on Git, Part I: The .git folder - Falling down the Rabbithole](https://blog.lysk.tech/sqlite-on-git-part-1)
+  are first two parts of upcoming series of blogposts, where the author shares a research
+  enabling one to have a version controlled filesystem
+  that allows to run versioned SQLite database on top of Git's internal storage.
+  Written by Martin R. Lysk on his blog.
+    + Contrast [Git in Postgres](https://nesbitt.io/2026/02/26/git-in-postgres.html)
+      by Andrew Nesbitt mentioned in [Git Rev News Edition #132](https://git.github.io/rev_news/2026/02/28/edition-132/).
++ [GotHub all the things](https://x61.sh/log/2026/03/14032026191148-gothub.html)
+  by 𝚐𝚘𝚗𝚣𝚊𝚕𝚘 on x61\.sh blog.
+    + The [Game of Trees Hub](https://gothub.org/) (GotHub)
+      is a transparently funded Git repository hosting service,
+      with infrastructure on OpenBSD and the [Game of Trees (GoT)](https://gameoftrees.org/) VCS,
+      mentioned in [Git Rev News Edition #131](https://git.github.io/rev_news/2026/01/31/edition-131/)
+      and [#132](https://git.github.io/rev_news/2026/02/28/edition-132/).
++ [An easy way to mirror git repositories](https://dyyni.org/posts/easy-way-to-mirror-git-repos/)
+  with the help of author's little shell script “[ferne](https://codeberg.org/2ug/shellscripts/src/branch/master/ferne)”.
++ [Rebasing in Magit](https://entropicthoughts.com/rebasing-in-magit)
+  by kqr (Chris) on Entropic Thoughts.
+    + [Magit](https://magit.vc/) is a popular [Emacs](https://www.gnu.org/software/emacs) editor interface to Git,
+      first mentioned in [Git Rev News Edition #6](https://git.github.io/rev_news/2015/08/05/edition-6/),
+      and most recently in [Edition #130](https://git.github.io/rev_news/2025/12/31/edition-130/)
+      and [#132](https://git.github.io/rev_news/2026/02/28/edition-132/).
++ [Reviewing large changes with Jujutsu](https://ben.gesoff.uk/posts/reviewing-large-changes-with-jj/)
+  by Ben Gesoff on his blog.
+    + [Jujutsu (`jj`)](https://jj-vcs.github.io/jj/) is a Git-compatible version control system,
+      written in Rust, which was first mentioned in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/).
++ [Magit and Majutsu: discoverable version-control](https://lwn.net/Articles/1060024/)
+  by Daroc Alden on LWN\.net.
+    + [Majutsu](https://github.com/0WD0/majutsu) provides a [Magit](https://magit.vc/)-style
+      interface for [Jujutsu (`jj`)](https://www.jj-vcs.dev/) in GNU Emacs,
+      was first mentioned in [Git Rev News Edition #132](https://git.github.io/rev_news/2026/02/28/edition-132/).
++ [Editing changes in patch format with Jujutsu VCS](https://www.knifepoint.net/~kat/kb-jj-patchedit.html)
+  by Katalin Rebhan (@dblsaiko) on her blog.
++ [Manyana: A Coherent Vision for the Future of Version Control](https://bramcohen.com/p/manyana)
+  and [More on Version Control: This may have some legs](https://bramcohen.com/p/more-on-version-control)
+  by Bram Cohen on Bram's Thoughts,
+  about his approach of using CRDTs (Conflict-free Replicated Data Types) for version control.<br>
+  The ideas behind [Manyana](https://github.com/bramcohen/manyana),
+  with a prototype written in Python, looks a bit similar to [Codeville](https://web.archive.org/web/20070202014158/http://codeville.org/),
+  distributed version control system created around 2005 by Ross and Bram Cohen,
+  with unique merging algorithm, no longer existing.
++ [Development tools: Sashiko, b4 review, and API specification](https://lwn.net/Articles/1063303/)
+  by Jonathan Corbet on LWN\.net ([free link](https://lwn.net/SubscriberLink/1063303/c076cd05ab3bef54/)).
+    + Konstantin Ryabitsev's [b4 tool](https://b4.docs.kernel.org/en/latest/)
+      was first mentioned in [Git Rev News Edition #61](https://git.github.io/rev_news/2020/03/25/edition-61/),
+      and most recently in [Edition #127](https://git.github.io/rev_news/2025/09/30/edition-127/).
+      It is also listed on [Hacking Git](https://git.github.io/Hacking-Git/) page.
++ [Mercurial at Google: Also known as Fig](https://mercurial.paris/download/Mercurial%20at%20Google.pdf),
+  slides by Martin von Zweigbergk, presented at 2023-04-06.
 
 + Automate Your Code with GitHub Actions ([Part 1](https://www.git-tower.com/blog/github-actions-fundamentals) and [Part 2](https://www.git-tower.com/blog/github-actions-events-and-triggers)) by Bas Steins on Tower's Blog.
 
@@ -484,7 +662,125 @@ __Light reading__
 __Easy watching__
 -->
 
+__Scientific papers__
++ Benedikt Schesch, Ryan Featherman, Kenneth J Yang, Ben Roberts, and Michael D. Ernst:
+  _"[Evaluation of Version Control Merge Tools.](https://homes.cs.washington.edu/~mernst/pubs/merge-evaluation-ase2024.pdf)"_
+  at 39th IEEE/ACM International Conference on Automated Software Engineering (ASE '24).
+  Association for Computing Machinery, New York, NY, USA, 831–83.
+  <https://doi.org/10.1145/3691620.3695075>
+    + Authors evaluated (using Java projects from
+      [GitHub’s Greatest Hits](https://archiveprogram.github.com/greatest-hits/)
+      and [RepoReapers / Reaper](https://reporeapers.github.io/) datasets)
+      the following CLI tools:
+      [different variants of `git merge`](https://git-scm.com/docs/git-merge#_merge_strategies) algorithm,
+      [git-hires-merge](https://github.com/paulaltin/git-hires-merge),
+      [IntelliMerge](https://github.com/Symbolk/IntelliMerge) (Java only),
+      [Spork](https://github.com/ASSERT-KTH/spork) (Java only),
+      and their [Plume-lib merging](https://github.com/plume-lib/merging).
+    + They considered, but did not evaluate
+      [JDime](https://github.com/se-sic/jdime) (Java only) because of its limitations;
+      and AutoMerge (also known as AutoMerge-PTM), DeepMerge, MergeBERT -
+      because those tools are not publicly available.
+      They could not evaluate tools that base on GUI interaction,
+      like [RefMerge](https://github.com/ualberta-smr/RefMerge) (IntelliJ IDEA plugin)
+      or [FSTMerge](http://www.fosd.de/SSMerge/) (part of FeatureHouse, depends on KDiff3).
+    + [Mergiraf](https://mergiraf.org/) did not exists at the time this paper was written.
+      Mergiraf was mentioned in [Git Rev News Edition #117](https://git.github.io/rev_news/2024/11/30/edition-117/),
+      [#119](https://git.github.io/rev_news/2025/01/31/edition-119/) (in passing),
+      and [#129](https://git.github.io/rev_news/2025/11/30/edition-129/).
+    + [SemanticMerge](https://www.semanticmerge.com/semanticmerge-intro-guide),
+      a proprietary tool with 15 or 30 day trial, might have been defunct then (since 2013);
+      nowadays its homepage page is taken by SEO spam.
+      It was mentioned in [Git Rev News Edition #38](https://git.github.io/rev_news/2018/04/18/edition-38/).
++ Joao Pedro Duarte, Paulo Borba, and Guilherme Cavalcanti:
+  _"LastMerge: A language-agnostic structured tool for code integration"_
+  preprint on [arXiv:2507.19687](https://arxiv.org/abs/2507.19687) (25 July 2025).
+  It compares four structured merge tools:
+  two Java specific tools, JDime and Spork, and their generic counterparts,
+  respectively Mergiraf and their LastMerge tool (currently not available).
+    + They also mention [s3m](https://github.com/guilhermejccavalcanti/s3m)
+      ([Semistructured 3-Way Merge](https://pauloborba.cin.ufpe.br/project/s3m/)) for Java.
++ Qingyu Zhang, Junzhe Li, Jiayi Lin, Jie Ding, Lanteng Lin, and Chenxiong Qian:
+  _"WizardMerge—Save Us from Merging without Any Clues."_
+  ACM Transactions on Software Engineering and Methodology, Volume 35, Issue 1;
+  Article No.: 22 (11 December 2025), 28 pages.
+  <https://doi.org/10.1145/3731751>
+    + An open-source code-merging auxiliary prototype named
+      [WizardMerge](https://github.com/HKU-System-Security-Lab/WizardMerge),
+      together with evaluation datasets, is available on GitHub.
+      Written in C++.
+
 __Git tools and sites__
++ [A Partial Extract of revctrl.org](https://tonyg.github.io/revctrl.org/index.html),
+  a Revision Control wiki, which has fallen victim to spam, and is now taken over.
+  Scraped, archived, and edited by Tony Garnock-Jones;
+  spam cleanup and improvements to formatting by Michael Haggerty.
+  Unfortunately, all the edit history of the wiki was lost,
+  and individual pages do not have clear authorship.
++ [Version Control with Git for Data Science](https://guides.nyu.edu/datascience/vcs),
+  a part of Research Guides for data science community at New York University.<br>
+  References [Software Carpentry "Version Control with Git"](https://swcarpentry.github.io/git-novice/),
+  mentioned in [Git Rev News Edition #86](https://git.github.io/rev_news/2022/04/30/edition-86/).
++ [git bayesect](https://github.com/hauntsaninja/git_bayesect): Bayesian git bisection.
+  You can use this tool to detect changes in likelihoods of events, for instance,
+  to isolate a commit where a slightly flaky test became very flaky.
+  You don't need to know the likelihoods (although you can provide priors),
+  just that something has changed at some point in some direction.
+  If your code has started gaslighting you, give it a try!
+  Written in Python, under MIT license.
++ [GitStats](https://github.com/em1208/GitStats) is a statistics generator for git repositories.
+  Currently it produces only HTML output with tables and graphs,
+  providing total files, lines, commits, authors, commits by hour of day, day of week, etc.
+  Fork of <http://gitstats.sourceforge.net/>.
+  Written in Python, under GPLv2 or older license.<br>
+  Original version demo available at <http://gitstats.sourceforge.net/examples/gitstats/>.
++ [GitTop](https://github.com/hjr265/gittop) is terminal UI tool
+  for visualizing Git repository statistics, inspired by htop/btop.
+  Written in Go, under BSD-3-Clause license.
+    + See also [My First Fully Agentic Coding Project: GitTop](https://hjr265.me/blog/building-gittop-with-agentic-coding/)
+      by Mahmud Ridwan on hjr265\.me.
++ [diffsoup](https://github.com/junglerobba/diffsoup) is a Gerrit-style
+  TUI patchset diff viewer for pull requests, using Jujutsu.
+  Written in Rust, under MIT license.
++ [fzf-git.sh](https://github.com/junegunn/fzf-git.sh):
+  bash, zsh, and fish key bindings for Git objects,
+  powered by [fzf](https://github.com/junegunn/fzf).
+  Each binding will allow you to browse through Git objects of a certain type,
+  and select from TUI the objects you want to paste to your command-line.
+  Under MIT license.
++ [Git X-Modules](https://gitmodules.com/) is a tool to manage modular Git projects.
+  Alternative to built-in [`git submodule`](https://git-scm.com/docs/git-submodule)
+  (see also [Git Tools - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+  chapter in "Pro Git" 2nd Ed.), [`git subtree`](https://github.com/apenwarr/git-subtree)
+  (which uses built-in [subtree](https://git-scm.com/docs/git-merge#Documentation/git-merge.txt-subtreepath) merge strategy),
+  [`git stree`](https://github.com/deliciousinsights/git-stree),
+  and [`git subrepo`](https://github.com/ingydotnet/git-subrepo).
++ [GitBucket](https://gitbucket.github.io/) is Open Source Git platform on JVM
+  (software forge), with easy installation, high extensibility & GitHub API compatibility.
+  Written in Scala, under Apache License Version 2.0.
++ [CodebaseHQ](https://www.codebasehq.com/) by Krystal is a software forge that
+  offers Git, Mercurial and Subversion hosting, with project management tools.
+  No free tier, 15 day free trial.
++ [`git-memento`](https://github.com/mandel-macaque/memento) is a Git extension
+  that records the AI coding session used to produce a commit.
+  It attaches AI conversation transcripts as [git notes](https://git-scm.com/docs/git-notes),
+  creating an audit trail for AI-assisted development.
+  Written in F# and TypeScript, under MIT license.
++ [ChunkHound](https://chunkhound.github.io/) is a local-first codebase intelligence,
+  which researches your codebase,
+  extracting architecture, patterns, and institutional knowledge,
+  to give your AI assistant the context it needs - deep understanding
+  of your code, files, and architectural decisions.
+  Integrates via [MCP}(https://spec.modelcontextprotocol.io/) (Model Context Protocol).
+  Written in Python, under MIT license.
++ [Sashiko](https://sashiko.dev/) is an agentic Linux kernel code review system,
+  using LLM (Large Language Model). It monitors public mailing lists
+  to thoroughly evaluate proposed Linux kernel changes.
+  The system acts like a team of specialized reviewers covering domains
+  from high-level architecture verification and security audits
+  to low-level resource management and concurrency analysis.
+  It is an open-source project that belongs to the Linux Foundation,
+  licensed under the Apache License, Version 2.0.
 
 
 ## Releases
