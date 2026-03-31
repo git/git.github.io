@@ -478,6 +478,8 @@ __Various__
 
 __Light reading__
 
++ Automate Your Code with GitHub Actions ([Part 1](https://www.git-tower.com/blog/github-actions-fundamentals) and [Part 2](https://www.git-tower.com/blog/github-actions-events-and-triggers)) by Bas Steins on Tower's Blog.
+
 <!---
 __Easy watching__
 -->
@@ -516,6 +518,8 @@ __Git tools and sites__
 [4.18.0](https://github.com/git-cola/git-cola/releases/tag/v4.18.0)
 + GitButler [0.19.6](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.19.6),
 [0.19.5](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.19.5)
++ Tower for Mac [16.0 (Beta)](https://www.git-tower.com/blog/tower-mac-16)
++ Tower for Windows [11.2](https://www.git-tower.com/release-notes?show_tab=release-notes)
 
 ## Credits
 
