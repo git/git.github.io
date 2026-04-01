@@ -169,7 +169,7 @@ This edition covers what happened during the months of February and March 2026.
   thought.
 
   On February 8, Kristoffer sent a documentation patch titled "doc: add
-  caveat about roundtripping format-patch" which introduced a new
+  caveat about round-tripping format-patch" which introduced a new
   `Documentation/format-patch-caveats.adoc` file explaining the
   behavior. The caveat was designed to be included in the documentation
   for git-am(1), git-format-patch(1), and git-send-email(1).
@@ -480,13 +480,13 @@ __Various__
   announced that [Fedora Forge](https://forge.fedoraproject.org/explore/organizations),
   powered by [Forgejo](https://forgejo.org/), is ready for use.
   If you own a project at [pagure.io](https://pagure.io/),
-  you must migrate out of it before June 2026;
+  you must migrate out of it before June 2026; the
   [How to Migrate Repository from Pagure](https://docs.fedoraproject.org/en-US/forge-documentation/migration/pagure_repository/)
   guide is there to help with this task.
   Note that Fedora Forge is narrower in scope than pagure\.io;
   it is provisioned to host the code, documentation, and tooling
   that directly build, manage, and govern the Fedora Project.
-  Personal projects and general upstream development does not belong on Fedora Forge.
+  Personal projects and general upstream development do not belong on Fedora Forge.
 + [GNOME GitLab Redirecting Some Git Traffic To GitHub For Reducing Costs](https://www.phoronix.com/news/GNOME-GitHub-GitLab-Redirect)
   by Michael Larabel in GNOME on Phoronix.
 + [Radicle: Disclosure of Replay Attack Vulnerability in Signed References](https://radicle.xyz/2026/03/30/disclosure-of-vulnerability-in-signed-references)
@@ -497,7 +497,7 @@ __Various__
       Compare with [Tangled](https://tangled.org/) (built on top of AT Protocol),
       [Grasp](https://ngit.dev/grasp/) and [`git str`](https://github.com/fiatjaf/gitstr) (built on top of Nostr).
 + [b4's Review TUI With AI Integration Nearing Pre-Alpha Release](https://www.phoronix.com/news/b4-review-nears-pre-alpha)
-  by  Michael Larabel in Linux Kernel section on Phoronix.
+  by  Michael Larabel in the Linux Kernel section on Phoronix.
 
 __Light reading__
 + [The Comforting Lie Of SHA Pinning](https://www.vaines.org/posts/2026-03-24-the-comforting-lie-of-sha-pinning/)
@@ -594,7 +594,7 @@ __Light reading__
 + [Git: Remove Dead Branches](https://nathan-long.com/blog/git-remove-dead-branches/)
   by Nathan Long on his blog.
   The script described in detail should probably use `git for-each-ref`
-  rather than parse user-facing `git branch` command, though.
+  rather than parse the user-facing `git branch` command, though.
 + [Selectively ignore lines in git diff](https://lornajane.net/posts/2026/selectively-ignore-lines-in-git-diff)
   by using `git diff --ignore-matching-lines=<regexp>` (or `-I` in short).
   Article by Lorna Jane Mitchell on her LornaJane blog.
@@ -671,14 +671,14 @@ __Scientific papers__
       [GitHub’s Greatest Hits](https://archiveprogram.github.com/greatest-hits/)
       and [RepoReapers / Reaper](https://reporeapers.github.io/) datasets)
       the following CLI tools:
-      [different variants of `git merge`](https://git-scm.com/docs/git-merge#_merge_strategies) algorithm,
+      [different variants of the `git merge`](https://git-scm.com/docs/git-merge#_merge_strategies) algorithm,
       [git-hires-merge](https://github.com/paulaltin/git-hires-merge),
       [IntelliMerge](https://github.com/Symbolk/IntelliMerge) (Java only),
       [Spork](https://github.com/ASSERT-KTH/spork) (Java only),
       and their own [Plume-lib merging](https://github.com/plume-lib/merging).
     + They considered, but did not evaluate
-      [JDime](https://github.com/se-sic/jdime) (Java only) because of its limitations;
-      and AutoMerge (also known as AutoMerge-PTM), DeepMerge, MergeBERT -
+      [JDime](https://github.com/se-sic/jdime) (Java only) because of its limitations,
+      as well as AutoMerge (also known as AutoMerge-PTM), DeepMerge, and MergeBERT
       because those tools are not publicly available.
       They could not evaluate tools based on GUI interaction,
       like [RefMerge](https://github.com/ualberta-smr/RefMerge) (IntelliJ IDEA plugin)
@@ -688,7 +688,7 @@ __Scientific papers__
       [#119](https://git.github.io/rev_news/2025/01/31/edition-119/) (in passing),
       and [#129](https://git.github.io/rev_news/2025/11/30/edition-129/).
     + [SemanticMerge](https://www.semanticmerge.com/semanticmerge-intro-guide),
-      a proprietary tool with 15 or 30 day trial, might have been defunct then (since 2013);
+      a proprietary tool with a 15 or 30 day trial, might have been defunct then (since 2013);
       nowadays its homepage page is taken by SEO spam.
       It was mentioned in [Git Rev News Edition #38](https://git.github.io/rev_news/2018/04/18/edition-38/).
 + Joao Pedro Duarte, Paulo Borba, and Guilherme Cavalcanti:
@@ -717,7 +717,7 @@ __Git tools and sites__
   Unfortunately, all the edit history of the wiki was lost,
   and individual pages do not have clear authorship.
 + [Version Control with Git for Data Science](https://guides.nyu.edu/datascience/vcs),
-  a part of Research Guides for data science community at New York University.<br>
+  a part of Research Guides for the data science community at New York University.<br>
   References [Software Carpentry "Version Control with Git"](https://swcarpentry.github.io/git-novice/),
   mentioned in [Git Rev News Edition #86](https://git.github.io/rev_news/2022/04/30/edition-86/).
 + [git bayesect](https://github.com/hauntsaninja/git_bayesect): Bayesian git bisection.
@@ -727,7 +727,7 @@ __Git tools and sites__
   just that something has changed at some point in some direction.
   If your code has started gaslighting you, give it a try!
   Written in Python, under MIT license.
-+ [GitStats](https://github.com/em1208/GitStats) is a statistics generator for git repositories.
++ [GitStats](https://github.com/em1208/GitStats) is a statistics generator for Git repositories.
   Currently it produces only HTML output with tables and graphs,
   providing total files, lines, commits, authors, commits by hour of day, day of week, etc.
   Fork of <http://gitstats.sourceforge.net/>.
@@ -748,10 +748,10 @@ __Git tools and sites__
   and select from TUI the objects you want to paste to your command-line.
   Under MIT license.
 + [Git X-Modules](https://gitmodules.com/) is a tool to manage modular Git projects.
-  Alternative to built-in [`git submodule`](https://git-scm.com/docs/git-submodule)
+  Alternative to the built-in [`git submodule`](https://git-scm.com/docs/git-submodule)
   (see also [Git Tools - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
   chapter in "Pro Git" 2nd Ed.), [`git subtree`](https://github.com/apenwarr/git-subtree)
-  (which uses built-in [subtree](https://git-scm.com/docs/git-merge#Documentation/git-merge.txt-subtreepath) merge strategy),
+  (which uses the built-in [subtree](https://git-scm.com/docs/git-merge#Documentation/git-merge.txt-subtreepath) merge strategy),
   [`git stree`](https://github.com/deliciousinsights/git-stree),
   and [`git subrepo`](https://github.com/ingydotnet/git-subrepo).
 + [GitBucket](https://gitbucket.github.io/) is an Open Source Git platform on JVM
@@ -773,7 +773,7 @@ __Git tools and sites__
   Integrates via [MCP](https://spec.modelcontextprotocol.io/) (Model Context Protocol).
   Written in Python, under MIT license.
 + [Sashiko](https://sashiko.dev/) is an agentic Linux kernel code review system,
-  using LLM (Large Language Model). It monitors public mailing lists
+  using a LLM (Large Language Model). It monitors public mailing lists
   to thoroughly evaluate proposed Linux kernel changes.
   The system acts like a team of specialized reviewers covering domains
   from high-level architecture verification and security audits
