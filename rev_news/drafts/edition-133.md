@@ -495,8 +495,7 @@ __Various__
       It was first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/)
       and most recently in [edition #131](https://git.github.io/rev_news/2026/01/31/edition-131/).<br>
       Compare with [Tangled](https://tangled.org/) (built on top of AT Protocol),
-      [Grasp](https://ngit.dev/grasp/) and [`git str`](https://github.com/fiatjaf/gitstr) (built on top of Nostr), and
-      [`git-ssb`](https://scuttlebot.io/apis/community/git-ssb.html) (built on top of  Secure-ScuttleButt (SSB); though SSB ecosystem contracted, with latest news from 2024).
+      [Grasp](https://ngit.dev/grasp/) and [`git str`](https://github.com/fiatjaf/gitstr) (built on top of Nostr).
 + [b4's Review TUI With AI Integration Nearing Pre-Alpha Release](https://www.phoronix.com/news/b4-review-nears-pre-alpha)
   by  Michael Larabel in Linux Kernel section on Phoronix.
 
