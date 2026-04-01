@@ -494,9 +494,8 @@ __Various__
       code collaboration stack built on Git.
       It was first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/)
       and most recently in [edition #131](https://git.github.io/rev_news/2026/01/31/edition-131/).<br>
-      Compare [Tangled](https://tangled.org/) (built on top of AT Protocol),
-      [Grasp](https://ngit.dev/grasp/) and [`git str`](https://github.com/fiatjaf/gitstr) (built on top of Nostr), and
-      [`git-ssb`](https://scuttlebot.io/apis/community/git-ssb.html) (built on top of  Secure-ScuttleButt (SSB); though SSB ecosystem contracted, with latest news from 2024).
+      Compare with [Tangled](https://tangled.org/) (built on top of AT Protocol),
+      [Grasp](https://ngit.dev/grasp/) and [`git str`](https://github.com/fiatjaf/gitstr) (built on top of Nostr).
 + [b4's Review TUI With AI Integration Nearing Pre-Alpha Release](https://www.phoronix.com/news/b4-review-nears-pre-alpha)
   by  Michael Larabel in Linux Kernel section on Phoronix.
 
@@ -526,7 +525,7 @@ __Light reading__
   the problem of flaky, non-deterministic tests.
 + [Git Tricks with Tri and Difft](https://nabeelvalley.co.za/blog/2026/26-03/tri-x-git-tricks/)
   by Nabeel Valley on their blog.
-    + [Tri](https://github.com/sftsrv/tri) is TUI interactive directory tree browser,
+    + [Tri](https://github.com/sftsrv/tri) is a TUI interactive directory tree browser,
       and [difft, or Difftastic](https://difftastic.wilfred.me.uk/introduction.html)
       is a structural diff tool that understands syntax.
       Difftastic was first mentioned in [Git Rev News Edition #86](https://git.github.io/rev_news/2022/04/30/edition-86/),
@@ -552,10 +551,10 @@ __Light reading__
   as buildings, grouped together in districts corresponding to top-level packages
   (squarified treemap), with footprint corresponding to size in lines of code,
   height corresponding to complexity, and color corresponding to "health".
-  Follows from [Legibility: A Scaling Bottleneck of the Agentic Era](https://verial.xyz/essays/legibility) essay.
+  Follows from the [Legibility: A Scaling Bottleneck of the Agentic Era](https://verial.xyz/essays/legibility) essay.
 + [“Use git worktrees,” they said. “It’ll be fun!” they said.](https://daveschumaker.net/use-git-worktrees-they-said-itll-be-fun-they-said/)
   by Dave Schumaker on his blog.
-  This posts describes problem with often used solutions like
+  This post describes a problem with often used solutions like
   symlinked `node_modules` or `.venv` directories, Yarn’s hardlinks-global mode,
   APFS Copy-on-Write (`cp -c`) - which is also supported by other filesystems.
   Proposes keeping a fixed pool of 6 worktree slots, and recycling them as needed.
@@ -602,14 +601,14 @@ __Light reading__
 + [Git: ignoring temporary changes](https://blog.narf.ssji.net/2026/03/18/git-ignoring-temporary-changes/)
   by Olivier Mehani on Narf blog.
   He proposes using `git update-index --assume-unchanged <PATH>`, which is not safe;
-  a safer solition is to use `--skip-worktree` instead (won't lose changes, may prevent safe operation).
+  a safer solution is to use `--skip-worktree` instead (won't lose changes, may prevent safe operation).
     + Compare [Use skip-worktree to ignore modified files](https://www.brandonpugh.com/til/git/skip-worktree-ignore-modified-files/)
       by Brandon Pugh, mentioned in [Git Rev News Edition #129](https://git.github.io/rev_news/2025/11/30/edition-129/).
 + [SQLite on Git, Prologue: Why do we need random access in git](https://blog.lysk.tech/sqlite-on-git-prologue/) and
   [SQLite on Git, Part I: The .git folder - Falling down the Rabbithole](https://blog.lysk.tech/sqlite-on-git-part-1)
-  are first two parts of upcoming series of blogposts, where the author shares a research
+  are the first two parts of an upcoming series of blogposts, where the author shares research
   enabling one to have a version controlled filesystem
-  that allows to run versioned SQLite database on top of Git's internal storage.
+  that allows running a versioned SQLite database on top of Git's internal storage.
   Written by Martin R. Lysk on his blog.
     + Contrast [Git in Postgres](https://nesbitt.io/2026/02/26/git-in-postgres.html)
       by Andrew Nesbitt mentioned in [Git Rev News Edition #132](https://git.github.io/rev_news/2026/02/28/edition-132/).
@@ -635,8 +634,8 @@ __Light reading__
 + [Magit and Majutsu: discoverable version-control](https://lwn.net/Articles/1060024/)
   by Daroc Alden on LWN\.net.
     + [Majutsu](https://github.com/0WD0/majutsu) provides a [Magit](https://magit.vc/)-style
-      interface for [Jujutsu (`jj`)](https://www.jj-vcs.dev/) in GNU Emacs,
-      was first mentioned in [Git Rev News Edition #132](https://git.github.io/rev_news/2026/02/28/edition-132/).
+      interface for [Jujutsu (`jj`)](https://www.jj-vcs.dev/) in GNU Emacs.
+      First mentioned in [Git Rev News Edition #132](https://git.github.io/rev_news/2026/02/28/edition-132/).
 + [Editing changes in patch format with Jujutsu VCS](https://www.knifepoint.net/~kat/kb-jj-patchedit.html)
   by Katalin Rebhan (@dblsaiko) on her blog.
 + [Manyana: A Coherent Vision for the Future of Version Control](https://bramcohen.com/p/manyana)
@@ -645,14 +644,14 @@ __Light reading__
   about his approach of using CRDTs (Conflict-free Replicated Data Types) for version control.<br>
   The ideas behind [Manyana](https://github.com/bramcohen/manyana),
   with a prototype written in Python, looks a bit similar to [Codeville](https://web.archive.org/web/20070202014158/http://codeville.org/),
-  distributed version control system created around 2005 by Ross and Bram Cohen,
-  with unique merging algorithm, no longer existing.
+  a distributed version control system created around 2005 by Ross and Bram Cohen,
+  with a unique merging algorithm, no longer existing.
 + [Development tools: Sashiko, b4 review, and API specification](https://lwn.net/Articles/1063303/)
   by Jonathan Corbet on LWN\.net ([free link](https://lwn.net/SubscriberLink/1063303/c076cd05ab3bef54/)).
     + Konstantin Ryabitsev's [b4 tool](https://b4.docs.kernel.org/en/latest/)
       was first mentioned in [Git Rev News Edition #61](https://git.github.io/rev_news/2020/03/25/edition-61/),
       and most recently in [Edition #127](https://git.github.io/rev_news/2025/09/30/edition-127/).
-      It is also listed on [Hacking Git](https://git.github.io/Hacking-Git/) page.
+      It is also listed on the [Hacking Git](https://git.github.io/Hacking-Git/) page.
 + [Mercurial at Google: Also known as Fig](https://mercurial.paris/download/Mercurial%20at%20Google.pdf),
   slides by Martin von Zweigbergk, presented at 2023-04-06.
 
@@ -676,15 +675,15 @@ __Scientific papers__
       [git-hires-merge](https://github.com/paulaltin/git-hires-merge),
       [IntelliMerge](https://github.com/Symbolk/IntelliMerge) (Java only),
       [Spork](https://github.com/ASSERT-KTH/spork) (Java only),
-      and their [Plume-lib merging](https://github.com/plume-lib/merging).
+      and their own [Plume-lib merging](https://github.com/plume-lib/merging).
     + They considered, but did not evaluate
       [JDime](https://github.com/se-sic/jdime) (Java only) because of its limitations;
       and AutoMerge (also known as AutoMerge-PTM), DeepMerge, MergeBERT -
       because those tools are not publicly available.
-      They could not evaluate tools that base on GUI interaction,
+      They could not evaluate tools based on GUI interaction,
       like [RefMerge](https://github.com/ualberta-smr/RefMerge) (IntelliJ IDEA plugin)
       or [FSTMerge](http://www.fosd.de/SSMerge/) (part of FeatureHouse, depends on KDiff3).
-    + [Mergiraf](https://mergiraf.org/) did not exists at the time this paper was written.
+    + [Mergiraf](https://mergiraf.org/) did not exist at the time this paper was written.
       Mergiraf was mentioned in [Git Rev News Edition #117](https://git.github.io/rev_news/2024/11/30/edition-117/),
       [#119](https://git.github.io/rev_news/2025/01/31/edition-119/) (in passing),
       and [#129](https://git.github.io/rev_news/2025/11/30/edition-129/).
@@ -697,7 +696,7 @@ __Scientific papers__
   preprint on [arXiv:2507.19687](https://arxiv.org/abs/2507.19687) (25 July 2025).
   It compares four structured merge tools:
   two Java specific tools, JDime and Spork, and their generic counterparts,
-  respectively Mergiraf and their LastMerge tool (currently not available).
+  Mergiraf and their own LastMerge tool (currently not available), respectively.
     + They also mention [s3m](https://github.com/guilhermejccavalcanti/s3m)
       ([Semistructured 3-Way Merge](https://pauloborba.cin.ufpe.br/project/s3m/)) for Java.
 + Qingyu Zhang, Junzhe Li, Jiayi Lin, Jie Ding, Lanteng Lin, and Chenxiong Qian:
@@ -755,8 +754,8 @@ __Git tools and sites__
   (which uses built-in [subtree](https://git-scm.com/docs/git-merge#Documentation/git-merge.txt-subtreepath) merge strategy),
   [`git stree`](https://github.com/deliciousinsights/git-stree),
   and [`git subrepo`](https://github.com/ingydotnet/git-subrepo).
-+ [GitBucket](https://gitbucket.github.io/) is Open Source Git platform on JVM
-  (software forge), with easy installation, high extensibility & GitHub API compatibility.
++ [GitBucket](https://gitbucket.github.io/) is an Open Source Git platform on JVM
+  (a software forge), with easy installation, high extensibility & GitHub API compatibility.
   Written in Scala, under Apache License Version 2.0.
 + [CodebaseHQ](https://www.codebasehq.com/) by Krystal is a software forge that
   offers Git, Mercurial and Subversion hosting, with project management tools.
@@ -771,7 +770,7 @@ __Git tools and sites__
   extracting architecture, patterns, and institutional knowledge,
   to give your AI assistant the context it needs - deep understanding
   of your code, files, and architectural decisions.
-  Integrates via [MCP}(https://spec.modelcontextprotocol.io/) (Model Context Protocol).
+  Integrates via [MCP](https://spec.modelcontextprotocol.io/) (Model Context Protocol).
   Written in Python, under MIT license.
 + [Sashiko](https://sashiko.dev/) is an agentic Linux kernel code review system,
   using LLM (Large Language Model). It monitors public mailing lists
