@@ -71,6 +71,8 @@ __Git tools and sites__
 [3.14.0-rc3](https://www.gerritcodereview.com/3.14.html#3140),
 [3.14.0-rc4](https://www.gerritcodereview.com/3.14.html#3140),
 [3.14.0-rc5](https://www.gerritcodereview.com/3.14.html#3140)
++ Gitea [1.26.1](https://github.com/go-gitea/gitea/releases/tag/v1.26.1),
+[1.26.0](https://github.com/go-gitea/gitea/releases/tag/v1.26.0)
 + GitHub Enterprise [3.20.1](https://docs.github.com/enterprise-server@3.20/admin/release-notes#3.20.1),
 [3.19.5](https://docs.github.com/enterprise-server@3.19/admin/release-notes#3.19.5),
 [3.18.8](https://docs.github.com/enterprise-server@3.18/admin/release-notes#3.18.8),
@@ -88,7 +90,10 @@ __Git tools and sites__
 [3.5.7](https://desktop.github.com/release-notes/)
 + GitButler [0.19.10](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.19.10),
 [0.19.9](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.19.9)
++ lazygit [0.61.1](https://github.com/jesseduffield/lazygit/releases/tag/v0.61.1),
+[0.61.0](https://github.com/jesseduffield/lazygit/releases/tag/v0.61.0)
 + Sublime Merge [Build 2125](https://www.sublimemerge.com/download)
++ b4 [0.15.2](https://github.com/mricon/b4/releases/tag/v0.15.2)
 
 ## Credits
 
