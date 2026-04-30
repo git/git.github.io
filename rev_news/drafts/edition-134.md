@@ -62,6 +62,8 @@ __Git tools and sites__
 [6.0.0-alpha.1](https://github.com/go-git/go-git/releases/tag/v6.0.0-alpha.1),
 [5.18.0](https://github.com/go-git/go-git/releases/tag/v5.18.0),
 [5.17.2](https://github.com/go-git/go-git/releases/tag/v5.17.2)
++ gitoxide [0.53.0](https://github.com/GitoxideLabs/gitoxide/releases/tag/v0.53.0),
+[0.52.1](https://github.com/GitoxideLabs/gitoxide/releases/tag/v0.52.1)
 + Gerrit Code Review [3.11.11](https://www.gerritcodereview.com/3.11.html#31111),
 [3.12.7](https://www.gerritcodereview.com/3.12.html#3127),
 [3.13.6](https://www.gerritcodereview.com/3.13.html#3136),
