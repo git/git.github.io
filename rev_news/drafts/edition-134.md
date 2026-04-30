@@ -58,6 +58,10 @@ __Git tools and sites__
 [v2.54.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.54.0-rc1.windows.1),
 [v2.54.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.54.0-rc0.windows.1),
 [v2.53.0(3)](https://github.com/git-for-windows/git/releases/tag/v2.53.0.windows.3)
++ go-git [6.0.0-alpha.2](https://github.com/go-git/go-git/releases/tag/v6.0.0-alpha.2),
+[6.0.0-alpha.1](https://github.com/go-git/go-git/releases/tag/v6.0.0-alpha.1),
+[5.18.0](https://github.com/go-git/go-git/releases/tag/v5.18.0),
+[5.17.2](https://github.com/go-git/go-git/releases/tag/v5.17.2)
 + Gerrit Code Review [3.11.11](https://www.gerritcodereview.com/3.11.html#31111),
 [3.12.7](https://www.gerritcodereview.com/3.12.html#3127),
 [3.13.6](https://www.gerritcodereview.com/3.13.html#3136),
