@@ -355,10 +355,8 @@ As always, we welcome your thoughts and feedback!_
   For writing code, I use [AstroNvim](https://astronvim.com/) as my editor. For
   sending patches, I use [`git send-email` configured](https://git-send-email.io/)
   with Gmail's SMTP. For reading and replying to mailing list threads, I just
-  use Gmail's web interface
-  - it works well enough for following discussions and replying inline. I
-  develop and test on Linux, which I've been using as my daily driver since
-  2020.
+  use Gmail's web interface - it works well enough for following discussions and replying inline.
+  I develop and test on Linux, which I've been using as my daily driver since 2020.
 
 * **What is your advice for people who want to start Git development? Where and
   how should they start?**
