@@ -210,9 +210,203 @@ This edition covers what happened during the months of March and April 2026.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Meet Soni
+
+_Editor’s note: This edition features a retrospective interview with a
+contributor who contributed to Git through a mentoring program.
+We hope the reflections shared by the GSoC contributor will
+provide an insightful perspective that benefits the community.
+As always, we welcome your thoughts and feedback!_
+
+* **Who are you and what do you do?**
+
+  I'm Meet, a final-year Computer Engineering student from Ahmedabad, India. I've
+  done GSoC twice - first with the Python Software Foundation [working on `cve-bin-tool`](https://summerofcode.withgoogle.com/archive/2024/projects/aEIXRpxg),
+  and then with Git [working on the git-refs command](https://summerofcode.withgoogle.com/archive/2025/projects/xVrT5e2q).
+  I also did an LFX Mentorship with Microcks under CNCF between the two GSoCs.
+  Currently I'm doing an internship at an early-stage stealth startup alongside
+  finishing up my degree.
+
+* **How did you initially become interested in contributing to Git, and what
+  motivated you to choose it as your GSoC project?**
+
+  Back in 2021, a friend showed me a video about GSoC and it seemed completely
+  out of reach at the time. Fast forward to late 2023, the same friend suggested
+  we finally give it a real shot. We both spent about 4 months contributing to
+  open-source projects to build up experience. Both of us got selected for GSoC
+  2024. I got into the Python Software Foundation. After finishing GSoC with PSF,
+  I loved the experience so much that I wanted to do it again. I decided to try
+  Git for GSoC 2025. I started by sending some small patches to get familiar with
+  the codebase and the mailing list workflow, reviewed patches from other
+  prospective GSoC students, and eventually proposed the git-refs consolidation
+  project.
+
+* **Is there any aspect of Git that you now see differently after having
+  contributed to it?**
+
+  Before contributing, I only really knew about Git's porcelain commands - `push`,
+  `pull`, `fetch`, `rebase`, `checkout`, the stuff you use every day. I had no
+  idea how much was happening underneath. Once I started reading the Git Internals
+  chapters from the [Pro Git book](https://git-scm.com/book/en/v2) and diving into
+  the source code, I discovered this whole world of plumbing commands -
+  `cat-file`, `hash-object`, `update-index`, `for-each-ref`, `update-ref`, `rev-parse`,
+  `ls-tree`, `write-tree` - there are way more of them than the porcelain
+  commands most people interact with.
+
+  I learned that Git is fundamentally a content-addressable filesystem with a
+  VCS interface built on top. Everything is an object - blobs hold file
+  contents, trees represent directories, commits are snapshots pointing to
+  trees, and refs are just pointers into this object graph. The objects are
+  addressed by their SHA-1 hashes, and everything you do through the familiar
+  commands is just a thin layer operating on this object database. Understanding
+  all of this completely changed how I think about version control. When
+  something goes wrong in Git, I no longer feel lost - I can reason about what's
+  actually happening at the object level.
+
+
+* **How do you balance your contributions with other responsibilities like work
+  or school?**
+
+  During GSoC, I was mostly focused on Git full-time. My university schedule was
+  flexible enough that I could dedicate most of my working hours to the project.
+  That said, there were stretches where college reviews and submissions piled up
+  at the same time as a patch series needed revisions, and that got a little
+  hectic. I ended up working on weekends sometimes to make up for lost time and
+  stay on track with the project timeline. The trickier part was the mailing list
+  workflow itself - reviews could come at any time given the global nature of the
+  community, so I had to stay responsive even during busy college weeks.
+
+* **Can you share how GSoC helped enhance your technical and non-technical skills
+  (like communication, project management, etc.)?**
+
+  On the technical side, working on Git taught me a lot about writing C code that
+  has to be clean enough for others to maintain long after you're gone. The Git
+  codebase has strict coding standards and the review process enforces them. I
+  got much better at designing modular code, writing meaningful commit messages,
+  and structuring patch series so that each patch tells a clear story.
+
+  On the non-technical side, the mailing list workflow was probably the biggest
+  growth area. All communication is public, asynchronous, and text-based. There's
+  no hiding behind a quick Slack message - you have to articulate your design
+  decisions clearly in writing. I also learned how to take feedback without
+  taking it personally. Early on, getting a review that asked me to rethink my
+  approach felt discouraging. Over time I realized that the reviewers were
+  investing their time in making my code better, and that changed my perspective
+  entirely.
+
+* **What was your biggest takeaway or learning from GSoC that you now apply
+  regularly in your work?**
+
+  Community consensus matters more than being technically correct. In Git, you
+  can write perfectly functional code, but if the community doesn't agree with
+  the design direction, it won't get merged. My project depended heavily on
+  consensus around how the git-refs command should behave and what it should
+  consolidate. I spent a fair amount of time not just writing code, but defending
+  design choices and sometimes accepting that a different approach was better [ [patch series](https://lore.kernel.org/git/20250627074934.1761897-1-meetsoni3017@gmail.com/) ].
+  That taught me to separate my ego from my code. I try to apply that everywhere
+  now - when someone pushes back on something I wrote, my first reaction is to
+  understand why, not to defend.
+
+* **What was the biggest challenge you faced during your contributions to Git,
+  and how did you overcome it?**
+
+  The mailing list workflow. Before Git, all of my open-source contributions were
+  made on GitHub through pull requests. Git uses email-based patches, which was a
+  completely different process - formatting patches with `git send-email`, making
+  sure the threading is correct, handling version updates to a patch series. The
+  first few times I felt like I was fighting the tooling more than the actual
+  code.
+
+  But it got easier. After a few rounds, it started to feel like second nature.
+  The bigger challenge was the review process itself. Git's mailing list reviews
+  are thorough. Reviewers will question your variable naming, your commit message
+  wording, your design rationale - everything. Having to defend code changes and
+  push features to near-perfection was time consuming, but it made me a much
+  better programmer. I overcame it by just sticking with it and treating every
+  review comment as a learning opportunity rather than criticism.
+
+* **Have you thought about mentoring new GSoC / Outreachy students?**
+
+  Yes, I'd love to. After my GSoC 2024 with PSF, a lot of students reached out to
+  me for guidance on open source and GSoC applications. I helped several of them
+  with finding the right organizations, reviewing proposals, and getting started
+  with contributions. Three of them got selected for GSoC 2025, which I'm really
+  proud of.
+
+  For Git specifically, I'd like to mentor in the future, but I want to be in a
+  position where I can give it the time it deserves. Right now I'm occupied with
+  finishing my degree, an internship at a startup, and job hunting, so it
+  wouldn't be fair to a mentee if I signed up and couldn't be fully present. But
+  it's definitely something I want to do - the mentorship I received from Patrick
+  Steinhardt and Jialuo She was really valuable, and I'd like to pay that
+  forward.
+
+* **What upcoming features or changes in Git are you particularly excited about?**
+
+  The introduction of Rust into the Git codebase. Git 2.52 was the first release
+  to optionally include Rust code, starting with variable-width integer encoding.
+  Rust will become mandatory for [Git 3.0](https://git-scm.com/docs/BreakingChanges).
+  As someone who's written C code for Git, I find this really interesting - Rust
+  brings memory safety guarantees that could prevent entire classes of bugs.
+
+* **What is your toolbox for interacting with the mailing list and for
+  development of Git?**
+
+  For writing code, I use [AstroNvim](https://astronvim.com/) as my editor. For
+  sending patches, I use [`git send-email` configured](https://git-send-email.io/)
+  with Gmail's SMTP. For reading and replying to mailing list threads, I just
+  use Gmail's web interface
+  - it works well enough for following discussions and replying inline. I
+  develop and test on Linux, which I've been using as my daily driver since
+  2020.
+
+* **What is your advice for people who want to start Git development? Where and
+  how should they start?**
+
+  Read the [Pro Git book](https://git-scm.com/book/en/v2) first, especially the
+  Git Internals chapters. It gives you a mental model of how Git actually works
+  underneath, which makes reading the source code much less intimidating.
+
+  Then, start small. Subscribe to [the mailing list](https://git-scm.com/community#git-mailing-list)
+  and just read for a week or two. Look at what kind of patches are being sent,
+  how reviews work, how people structure their patch series. The Git project has
+  a document called "[MyFirstContribution](https://git-scm.com/docs/MyFirstContribution)"
+  in the Documentation folder that walks you through the entire process of
+  submitting your first patch.
+
+  For your first contribution, look for something small - a documentation fix, a
+  test improvement, a minor bug fix. The goal isn't to make a big impact right
+  away. The goal is to get comfortable with the workflow: formatting patches,
+  sending them via email, responding to reviews. Once you've done that once or
+  twice, everything else gets easier.
+
+  And don't be afraid of the mailing list. It looks intimidating from the
+  outside, but the community is genuinely helpful. Reviewers invest real time
+  into helping newcomers improve their patches. Take that feedback seriously and
+  you'll grow fast.
+
+* **Would you recommend other students or contributors to participate in the
+  GSoC, Outreachy or other mentoring programs, working on Git? Why? Do you have
+  advice for them?**
+
+  Absolutely. GSoC with Git was one of the best experiences I've had. The
+  community is welcoming, the mentors are invested in your success, and the
+  codebase is one of the most widely used pieces of software in the world.
+  There's something special about knowing that the code you wrote is running on
+  millions of machines.
+
+  My advice: start contributing early, well before the application period. Don't
+  just pick Git because it looks good on a resume - pick it because you're
+  genuinely curious about how it works. The people reviewing your patches can
+  tell the difference. Also, get comfortable with the mailing list workflow
+  before GSoC starts. It's the single biggest adjustment for most newcomers, and
+  if you spend your GSoC period still figuring out `git send-email`, you'll lose
+  valuable time.
+
+  And finally, be patient with yourself. The Git codebase is large and the
+  standards are high. Your first patches will probably need multiple revisions.
+  That's normal. Every contributor who came before you went through the same
+  thing.
 
 ## Other News
 
