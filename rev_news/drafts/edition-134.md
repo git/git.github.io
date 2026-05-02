@@ -46,21 +46,21 @@ This edition covers what happened during the months of March and April 2026.
   `--src-prefix`/`--dst-prefix`, `--full-index`, `--abbrev`, `-R`,
   `--output-indicator-*`, the pickaxe options `-S`/`-G`, and so on) is
   silently ignored when combined with `-L`. The hand-rolled output
-  also omits the `index` lines, `new file mode` headers, and funcname
+  also omits the `index` lines, `new file mode` headers, and `funcname`
   context in `@@` hunk headers that the standard pipeline produces.
 
   Michael Montalbo opened the discussion by sending a four-patch
-  series that finally addresses this long-standing limitation. The
-  series explicitly replaced an earlier attempt of his,
+  series that finally addressed this long-standing limitation. The
+  series explicitly replaced an earlier attempt of him,
   ["line-log: fix `-L` with pickaxe options"](https://lore.kernel.org/git/pull.2061.git.1772651484.gitgitgadget@gmail.com/),
   which had taken the opposite approach of *rejecting* `-S`/`-G` when
   combined with `-L`; the new direction is to make those options
   *work* instead. Patch 1 carries over a crash fix from that previous
-  attempt unchanged. Patch 2 is the core change. Patch 3 adds an
-  extensive set of tests for the newly-working options. Patch 4
+  attempt unchanged, patch 2 contains the core change, patch 3 adds an
+  extensive set of tests for the newly-working options, and patch 4
   updates the documentation.
 
-  Patch 1 fixes a real assertion failure that could be triggered by
+  In detail, patch 1 fixes a real assertion failure that could be triggered by
   combining `-L` with pickaxe options across a merge that contains a
   rename, an issue originally reported by Matthew Hughes. Inside
   `queue_diffs()`, the caller's `diff_options` was being reused for
@@ -85,7 +85,7 @@ This edition covers what happened during the months of March and April 2026.
   travel with its filepair through the rest of the pipeline. As a side
   effect, `line_log_print()` shrinks down to little more than a
   `diffcore_std()` call followed by `diff_flush()`, the
-  `-L`-implies-`--patch` default is wired up in revision setup rather
+  "`-L` implies `--patch`" default is wired up in revision setup rather
   than forced at output time, and `diff_filepair_dup()` is switched
   from `xmalloc` to `xcalloc` so that newly added fields (including
   the `line_ranges`) are zero-initialized.
@@ -99,14 +99,14 @@ This edition covers what happened during the months of March and April 2026.
   measurable regression.
 
   There is, of course, a user-visible output change: `-L` output now
-  includes `index` lines, `new file mode` headers, and funcname
+  includes `index` lines, `new file mode` headers, and `funcname`
   context in `@@` hunk headers that were previously absent. Tools that
   parse `-L` output may need to handle these additional lines. The
   cover letter is upfront about this, and also lists two limitations
   that are deliberately left for follow-up work: `line_log_print()`
-  still calls `show_log()` and `diff_flush()` directly rather than
+  still calling `show_log()` and `diff_flush()` directly rather than
   going through `log_tree_diff_flush()`, and the non-patch diff
-  formats (`--raw`, `--numstat`, `--stat`, etc.) remain unimplemented
+  formats (`--raw`, `--numstat`, `--stat`, etc.) remaining unimplemented
   for `-L`.
 
   Junio Hamano, the Git maintainer, replied to the cover letter the
@@ -124,9 +124,9 @@ This edition covers what happened during the months of March and April 2026.
   the omission, as the cover letter already did, was the right thing
   to do.
 
-  Junio also pointed out that the "Michael Montalbo (4): ..." block in
+  Junio also pointed out that the "Michael Montalbo (4): ... block in
   the cover letter looked like a reflowed duplicate of the proper
-  commit list right below it. Michael acknowledged that as a mistake
+  commit list right below" it. Michael acknowledged that as a mistake
   in crafting the cover letter and offered to add a few names from
   `git shortlog --no-merges -s -n line-log.[ch]` to the Cc list to
   attract more reviewers.
@@ -136,7 +136,7 @@ This edition covers what happened during the months of March and April 2026.
   Michael had inadvertently turned the new prose into a code block.
   Kristoffer recommended dropping the indentation in favour of a plain
   list-continuation marker so the text would render as regular
-  paragraph text, "flush to the left." Michael thanked him and folded
+  paragraph text, that is, "flush to the left." Michael thanked him and folded
   the fix into his next iteration.
 
   For readers less familiar with the relevant pieces of the diff
@@ -166,7 +166,7 @@ This edition covers what happened during the months of March and April 2026.
 
   After the initial round of review, Michael sent
   [version 2](https://lore.kernel.org/git/pull.2065.v2.git.1773714095.gitgitgadget@gmail.com)
-  of the series. The only structural change from v1 was that patch 4
+  of the series. The only structural change from v1 is that patch 4
   now uses a list-continuation marker instead of indentation in
   `Documentation/line-range-options.adoc`, addressing Kristoffer's
   review feedback so the new paragraph renders correctly. The
@@ -230,7 +230,7 @@ As always, we welcome your thoughts and feedback!_
 * **How did you initially become interested in contributing to Git, and what
   motivated you to choose it as your GSoC project?**
 
-  Back in 2021, a friend showed me a video about GSoC and it seemed completely
+  Back in 2021, a friend showed me a video about GSoC, and it seemed completely
   out of reach at the time. Fast forward to late 2023, the same friend suggested
   we finally give it a real shot. We both spent about 4 months contributing to
   open-source projects to build up experience. Both of us got selected for GSoC
@@ -412,7 +412,7 @@ __Various__
 + [What’s new in Git 2.54.0?](https://about.gitlab.com/blog/whats-new-in-git-2-54-0/)
   by Patrick Steinhardt on GitLab Blog.  Describes
   pluggable object databases support,
-  easier editing of your commit history with `git history` command,
+  easier editing of your commit history with the `git history` command,
   a native replacement for [git-sizer(1)](https://github.com/github/git-sizer): `git repo structure`,
   and new infrastructure for repository maintenance.
 + [Highlights from Git 2.54](https://github.blog/open-source/git/highlights-from-git-2-54/)
@@ -446,8 +446,8 @@ __Various__
   by Alexis Wales on GitHub Blog.
 + [An update on GitHub availability](https://github.blog/news-insights/company-news/an-update-on-github-availability/)
   by Vlad Fedorov on GitHub Blog; mentions
-  April 23 merge queue incident (inadvertently reverted changes with the squash merge method) and
-  April 27 search-related incident (Elasticsearch subsystem stopped returning search results).
+  the April 23 merge queue incident (inadvertently reverted changes with the squash merge method) and
+  the April 27 search-related incident (Elasticsearch subsystem stopped returning search results).
     + [GitHub says sorry and vows to do better as uptime slips and devs complain](https://www.theregister.com/2026/04/29/github_says_sorry_and_says/)
       by Richard Speed in The Register.
     + [Ghostty Is Leaving GitHub](https://mitchellh.com/writing/ghostty-leaving-github)
@@ -620,7 +620,7 @@ __Easy watching__
 __Git tools and sites__
 + "[High Performance Git](https://gitperf.com/)", a book by Ted Nyman
   (online and [free PDF](https://gitperf.com/pdf.html)).
-  The book is about different layers, and the performance costs of each one.
+  The book is about different layers inside Git and the performance costs of each one.
 + [GitChop](https://bendansby.com/apps/gitchop.html) - a visual `rebase -i`
   (interactive rebase) for Mac.  Drag-reorder commits,
   split one commit into many by assigning hunks, reword in place.
@@ -654,7 +654,7 @@ __Git tools and sites__
   It groups authors and committers by email address and email local-part
   so duplicates are caught even across domain changes.
   Written in Python, under MIT license.
-+ [Git Shield](https://github.com/vekexasia/git-shield) is a set of git hooks
++ [Git Shield](https://github.com/vekexasia/git-shield) is a set of Git hooks
   that blocks API keys, secrets, and contextual PII before code leaves your machine.
   Scans secrets via [`gitleaks`](https://gitleaks.io/) (API keys, tokens, credentials, private keys)
   and PII via [OpenAI Privacy Filter](https://github.com/openai/privacy-filter) (emails, phone numbers, names, addresses).
@@ -805,7 +805,7 @@ __Git tools and sites__
   and adding some tags missing from [linux/kernel/git/history/history.git](https://git.kernel.org/pub/scm/linux/kernel/git/history/history.git)
   repository on kernel.org
 + [Rebass](https://adamf.github.io/rebass/) is a service
-  that turns a git history into music.<br>
+  that turns a Git history into music.<br>
   Each commit becomes one bar of a four-beat groove.
   A steady _bass_ and _pad_ ground the repo's key,
   while a _lead_ voice plays a melody derived from each commit's SHA.
