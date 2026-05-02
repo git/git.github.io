@@ -124,9 +124,9 @@ This edition covers what happened during the months of March and April 2026.
   the omission, as the cover letter already did, was the right thing
   to do.
 
-  Junio also pointed out that the "Michael Montalbo (4): ..." block in
+  Junio also pointed out that the "Michael Montalbo (4): ... block in
   the cover letter looked like a reflowed duplicate of the proper
-  commit list right below it. Michael acknowledged that as a mistake
+  commit list right below" it. Michael acknowledged that as a mistake
   in crafting the cover letter and offered to add a few names from
   `git shortlog --no-merges -s -n line-log.[ch]` to the Cc list to
   attract more reviewers.
