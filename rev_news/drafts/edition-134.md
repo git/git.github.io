@@ -409,15 +409,141 @@ As always, we welcome your thoughts and feedback!_
 ## Other News
 
 __Various__
++ [What’s new in Git 2.54.0?](https://about.gitlab.com/blog/whats-new-in-git-2-54-0/)
+  by Patrick Steinhardt on GitLab Blog.  Describes
+  pluggable object databases support,
+  easier editing of your commit history with `git history` command,
+  a native replacement for [git-sizer(1)](https://github.com/github/git-sizer): `git repo structure`,
+  and new infrastructure for repository maintenance.
++ [Highlights from Git 2.54](https://github.blog/open-source/git/highlights-from-git-2-54/)
+  by Taylor Blau on GitHub Blog.
+  This blog post covers the highlights from both the 2.53 and 2.54 releases.
+  Describes rewriting history with `git history`,
+  config-based hooks,
+  geometric repacking during maintenance by default,
+  and other changes.
++ [Git hooks, upgraded: What's new in Git 2.54 and coming in 2.55](https://www.collabora.com/news-and-blog/news-and-events/git-hooks-upgraded-whats-new-git-254-and-coming-255.html)
+  by Adrian Ratiu on Collabora News & Blog.  Describes
+  hooks specified via git configuration,
+  running hooks in parallel,
+  and fixing submodule path collisions
+  (via `extensions.submodulePathConfig` and `submodule.*.gitdir`).
++ [New features in Git 2.54: easier rebasing, hooks, and statistics](https://andrewlock.net/new-features-in-git-2-54-easier-rebasing-hooks-and-statistcs/)
+  by Andrew Lock on .NET Escapades.  Describes
+  easier simple rebases with [`git history`](https://git-scm.com/docs/git-history),
+  setting up Git hooks in repository configuration,
+  and getting some git repository stats with [`git repo structure`](https://git-scm.com/docs/git-repo#Documentation/git-repo.txt-structure--formattablelinesnul-z).
++ [git history: the best thing in Git 2.54](https://cekrem.github.io/posts/git-history-git-2-54/)
+  by Christian Ekrem on his GitHub Pages based blog.
+
++ [An update on GitHub availability](https://github.blog/news-insights/company-news/an-update-on-github-availability/)
+  by Vlad Fedorov on GitHub Blog; mentions
+  April 23 merge queue incident (inadvertently reverted changes with the squash merge method) and
+  April 27 search-related incident (Elasticsearch subsystem stopped returning search results).
+    + [GitHub says sorry and vows to do better as uptime slips and devs complain](https://www.theregister.com/2026/04/29/github_says_sorry_and_says/)
+      by Richard Speed in The Register.
++ [Securing the git push pipeline: Responding to a critical remote code execution vulnerability](https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/)
+  by Alexis Wales on GitHub Blog.
 
 
 __Light reading__
++ [From CVS to Git, thirty years of source control, lived from inside](https://evilgeniuslabs.ca/blog/from-cvs-to-git-thirty-years-of-source-control)
+  by EG on EvilGeniusLabs\.ca.
+    + [Before GitHub](https://lucumr.pocoo.org/2026/4/28/before-github/)
+      on Armin Ronacher's Thoughts and Writings is a good companion piece.
++ [Using the first and the last version of Torvalds’s Git](https://lucasoshiro.github.io/posts-en/2025-12-12-using-torvalds-git/)
+  by Lucas Seiki Oshiro on their blog.
++ [You probably don’t need git worktrees](https://avdi.codes/you-probably-dont-need-git-worktrees/)
+  by Avdi Grimm on avdi\.codes:
+  you can use _fast_ and _cheap_ local git clones instead (clones of a local repository).
++ [Multiple URLs in Git Remote](https://susam.net/multiple-urls-in-git-remote.html)
+  (and what then happens) by Susam Pal on their blog.
++ [Organisation-specific git authentication and commit signing](https://jamesmead.org/blog/2026-04-19-organisation-specific-git-authentication-and-commit-signing)
+  with `includeIf` directive (and `core.sshCommand` together with `gpg "ssh".allowedSignersFile`
+  configuration options) by James Mead on his blog.
++ [Difftastic — my new favourite diff viewer](https://pawelgrzybek.com/difftastic-my-new-favourite-diff-viewer/)
+  by Paweł Grzybek on his blog.
+    + [Difftastic](https://github.com/Wilfred/difftastic) was first mentioned
+      in [Git Rev News Edition #86](https://git.github.io/rev_news/2022/04/30/edition-86/),
+      and most recently in [Edition #133](https://git.github.io/rev_news/2026/03/31/edition-133/).
+    + The article also [talks about using Delta](https://pawelgrzybek.com/better-git-diff-with-delta/);
+      the [Delta](https://github.com/dandavison/delta) (from 'git-delta' package)
+      was first mentioned in [Git Rev News Edition #9](https://git.github.io/rev_news/2015/11/11/edition-9/),
+      and most recently in also in [Edition #133](https://git.github.io/rev_news/2026/03/31/edition-133/).
++ [Protecting .git from malicious agents](https://me.micahrl.com/blog/protecting-git-malicious-agents/)
+  by mounting the project’s `.git` directory read only on top
+  of the project’s directory inside the container.
+  By Micah R. Ledbetter on their blog.
+
++ [My New Secure Baseline for GitHub](https://cedwards.xyz/my-new-secure-baseline-for-github/)
+  by Connor Edwards on Connor's Blog; followup of sorts to his
+  [GitHub "Actions" Are An Impending Security Disaster](https://cedwards.xyz/github-actions-are-an-impending-security-disaster/) post.
++ [GitHub Actions is the weakest link](https://nesbitt.io/2026/04/28/github-actions-is-the-weakest-link.html)
+  (in the open source software supply chain)
+  by Andrew Nesbitt on his blog.
++ [GitHub banned me for no understandable reason: I got unbanned three hours after publishing this post](https://blog.hellbeast.eu.org/Github%20banned%20me%20for%20no%20understandable%20reason).
 
 <!---
 __Easy watching__
 -->
 
 __Git tools and sites__
++ "[High Performance Git](https://gitperf.com/)", a book by Ted Nyman
+  (online and [free PDF](https://gitperf.com/pdf.html)).
+  The book is about different layers, and the performance costs of each one.
++ [GitChop](https://bendansby.com/apps/gitchop.html) - a visual `rebase -i`
+  (interactive rebase) for Mac.  Drag-reorder commits,
+  split one commit into many by assigning hunks, reword in place.
+    + Compare  [rebase-editor: Simple terminal based sequence editor for git interactive rebase.](https://github.com/sjurba/rebase-editor)
+      (mentioned in [Git Rev News Edition #26](https://git.github.io/rev_news/2017/04/19/edition-26/)), and
+      [Git Interactive Rebase Tool](https://gitrebasetool.mitmaro.ca/)
+      (mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/)).
++ [Git Shield](https://github.com/vekexasia/git-shield) is a set of git hooks
+  that blocks API keys, secrets, and contextual PII before code leaves your machine.
+  Scans secrets via [`gitleaks`](https://gitleaks.io/) (API keys, tokens, credentials, private keys)
+  and PII via [OpenAI Privacy Filter](https://github.com/openai/privacy-filter) (emails, phone numbers, names, addresses).
+  Written in Python, under MIT license.
+    + GitLeaks is a tool to “check Git repos for secrets and keys”,
+      which was mentioned in [Git Rev News Edition #36](https://git.github.io/rev_news/2018/02/21/edition-36/#other-news).
+      This edition also mentions other tools to prevent from accidentally
+      storing secrets in repositories, namely:
+      [git-secrets](https://github.com/awslabs/git-secrets) by AWS Labs,
+      [git-all-secrets](https://github.com/anshumanbh/git-all-secrets), and
+      [repo-security-scanner](https://github.com/UKHomeOffice/repo-security-scanner) by UKHomeOffice.
++ [`git-sync`](https://github.com/entireio/git-sync) mirrors refs
+  from a source remote (you can fetch from) to a target remote (you can push to)
+  without creating a local checkout. It uses an in-memory
+  [go-git](https://pkg.go.dev/github.com/go-git/go-git) object store
+  and talks smart HTTP directly.  Written in Go, under MIT license.
+    + [_go-git_](https://github.com/go-git/go-git) is a highly extensible
+      Git implementation library written in pure Go.
+      First mentioned in [Git Rev News #13](https://git.github.io/rev_news/2016/03/16/edition-13/).
++ [freenet-git](https://github.com/freenet/freenet-git): Git repositories hosted directly
+   on [Freenet](https://freenet.org/). Push, fetch, and clone through the Freenet network
+   using normal Git commands, without GitHub, GitLab, federation, or a server you operate.
+   A repository is a Freenet contract; Git sees it through a standard remote helper.
+   Requires `cargo install freenet-git` and a running local Freenet node.
+   Written in Rust, under LGPL-3.0 license.
+     + See [Git Remote Helpers](https://nesbitt.io/2026/03/18/git-remote-helpers.html)
+       by Andrew Nesbitt, mentioned in [Git Rev News #133](https://git.github.io/rev_news/2026/03/31/edition-133/),
+       with a list of similar remote helpers:
+       [git-remote-gittorrent](https://github.com/cjb/GitTorrent) (distributed git over BitTorrent),
+       [git-remote-nostr](https://github.com/gugabfigueiredo/git-remote-nostr) (git objects as [Nostr](https://nostr.com/) events),
+       [git-remote-blossom](https://github.com/lez/git-remote-blossom) (on the Nostr-adjacent [Blossom protocol](https://github.com/hzrd149/blossom));
+       this edition also mentions [git-remote-rad](https://github.com/radicle-dev/heartwood/blob/master/git-remote-rad.1.adoc) (for [Radicle](https://radicle.dev/)).
++ [`zizmor`](https://docs.zizmor.sh/) is a static analysis tool for GitHub Actions.
+  It can find and fix many common security issues in typical GitHub Actions CI/CD setups.
+  Written in Rust, under MIT license.
++ [Rebass](https://adamf.github.io/rebass/) is a service
+  that turns a git history into music.<br>
+  Each commit becomes one bar of a four-beat groove.
+  A steady _bass_ and _pad_ ground the repo's key,
+  while a _lead_ voice plays a melody derived from each commit's SHA.
+  A _bell_ accents merges and long commit messages.
+    + Compare [re:bass](https://www.youtube.com/watch?v=S9Do2p4PwtE),
+      an original composition by Dylan Beattie
+      inspired by the Git version control system,
+      mentioned in [Git Rev News Edition #110](https://git.github.io/rev_news/2024/04/30/edition-110/).
 
 
 ## Releases
