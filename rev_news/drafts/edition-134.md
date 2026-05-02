@@ -621,6 +621,12 @@ __Git tools and sites__
 + "[High Performance Git](https://gitperf.com/)", a book by Ted Nyman
   (online and [free PDF](https://gitperf.com/pdf.html)).
   The book is about different layers inside Git and the performance costs of each one.
++ [`git-meta`](https://git-meta.com/) is an open specification and reference CLI tool
+  for attaching arbitrary, fine-grained metadata to Git objects — provenance,
+  ownership, reviews, attestations — stored locally for fast queries
+  and exchanged using normal Git transfer protocols and servers.<br>
+  You can think of `git met`a as a more performant, scalable, flexible and collaborative
+  [`git notes`](https://git-scm.com/docs/git-notes).
 + [GitChop](https://bendansby.com/apps/gitchop.html) - a visual `rebase -i`
   (interactive rebase) for Mac.  Drag-reorder commits,
   split one commit into many by assigning hunks, reword in place.
