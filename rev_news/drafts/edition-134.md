@@ -435,15 +435,37 @@ __Various__
   and getting some git repository stats with [`git repo structure`](https://git-scm.com/docs/git-repo#Documentation/git-repo.txt-structure--formattablelinesnul-z).
 + [git history: the best thing in Git 2.54](https://cekrem.github.io/posts/git-history-git-2-54/)
   by Christian Ekrem on his GitHub Pages based blog.
++ [HardenedBSD Officially on Radicle](https://hardenedbsd.org/article/shawn-webb/2026-04-26/hardenedbsd-officially-radicle)
+  by Shawn Webb on HardenedBSD.
+    + [Radicle](https://radicle.xyz) is a peer-to-peer, local-first
+      code collaboration stack built on Git,
+      first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/)
+      and most recently in [Edition #133](https://git.github.io/rev_news/2026/03/31/edition-133/).
 
++ [Securing the git push pipeline: Responding to a critical remote code execution vulnerability](https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/)
+  by Alexis Wales on GitHub Blog.
 + [An update on GitHub availability](https://github.blog/news-insights/company-news/an-update-on-github-availability/)
   by Vlad Fedorov on GitHub Blog; mentions
   April 23 merge queue incident (inadvertently reverted changes with the squash merge method) and
   April 27 search-related incident (Elasticsearch subsystem stopped returning search results).
     + [GitHub says sorry and vows to do better as uptime slips and devs complain](https://www.theregister.com/2026/04/29/github_says_sorry_and_says/)
       by Richard Speed in The Register.
-+ [Securing the git push pipeline: Responding to a critical remote code execution vulnerability](https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/)
-  by Alexis Wales on GitHub Blog.
+    + [Ghostty Is Leaving GitHub](https://mitchellh.com/writing/ghostty-leaving-github)
+      by Mitchell Hashimoto.
+    + See also [On GitHub's downfall](https://whynothugo.nl/journal/2026/04/29/on-githubs-downfall/) by Hugo Osvaldo Barrera,
+      [GitHub is sinking](https://dbushell.com/2026/04/29/github-is-sinking/) by David Bushell,
+      [From GitHub to Codeberg/Forgejo](https://www.jonashietala.se/blog/2026/04/28/from_github_to_codebergforgejo/) by Jonas Hietala.
+    + Contrast [In defense of GitHub's poor uptime](https://evanhahn.com/in-defense-of-githubs-poor-uptime/)
+      by Evan Hahn on his blog.
++ [The rise of malicious repositories on GitHub](https://rushter.com/blog/github-malware/)
+  by Artem Golubin (@rushter) on his blog.
++ [GitHub invokes spirit of Phabricator with preview of Stacked PRs](https://www.theregister.com/2026/04/14/github_stacked_prs/)
+  by Tim Anderson on The Register.
+  [GitHub's Stacked PRs](https://github.github.com/gh-stack/) are now in _private preview_.
+    + See also [Stacked Branches with GitButler](https://blog.gitbutler.com/stacked-branches-with-gitbutler/),
+      [Understanding the Stacked Pull Requests Workflow](https://www.git-tower.com/blog/stacked-prs/), and
+      [Rethinking code reviews with stacked PRs](https://www.aviator.co/blog/rethinking-code-reviews-with-stacked-prs/#),
+      all mentioned or reminded in [Git Rev News Edition #118](https://git.github.io/rev_news/2024/12/31/edition-118/).
 
 
 __Light reading__
@@ -453,11 +475,69 @@ __Light reading__
       on Armin Ronacher's Thoughts and Writings is a good companion piece.
 + [Using the first and the last version of Torvalds’s Git](https://lucasoshiro.github.io/posts-en/2025-12-12-using-torvalds-git/)
   by Lucas Seiki Oshiro on their blog.
++ [My PR has been waiting a year, or the exponential curve behind open source backlogs](https://armanckeser.com/writing/jellyfin-flow):
+  What a queuing theory book says about why open source contributions sit for over a year.
+  Written by Armanc Keser on his blog.
+    + Some of the ideas for the fast feedback can be also found in
+      [The Gentle Art Of Patch Review](https://sage.thesharps.us/2014/09/01/the-gentle-art-of-patch-review/)
+      by Sage Sharp, mentioned in passing in [Git Rev News Edition #70](https://git.github.io/rev_news/2020/12/26/edition-70/)
+      and then in [Git Rev News Edition #101](https://git.github.io/rev_news/2023/07/31/edition-101/).
+    + Contrast with [How to Make Your Code Reviewer Fall in Love with You](https://mtlynch.io/code-review-love/)
+      by Michael Lynch, mentioned in [Git Rev News Edition #70](https://git.github.io/rev_news/2020/12/26/edition-70/).
++ [The Git Commands I Run Before Reading Any Code](https://piechowski.io/post/git-commands-before-reading-code/):
+  five git log commands that diagnose a new codebase before you open a single file:
+  code churn hotspots, bus factor, bug clusters, and crisis patterns.
+  Written by Ally Piechowski on her blog.
++ [Analyzing KDE Project Health With git!](https://pointieststick.com/2026/04/10/analyzing-kde-project-health-with-git/)
+  by Nate (PointiestStick) on their blog.
++ [Building US Code Tracker: Federal Law as Git History](https://williamzujkowski.github.io/posts/2026-04-02-building-us-code-tracker-law-as-git-history/)
+  by William Zujkowski on his GitHub Pages based blog.
++ [Git fixup is magic (and Magit is too)](https://arialdomartini.github.io/git-fixup)
+  by Arialdo Martini on his GitHub Pages powered blog.
+    + [Magit](https://magit.vc/) is a popular [Emacs](https://www.gnu.org/software/emacs) editor interface to Git,
+      first mentioned in [Git Rev News Edition #6](https://git.github.io/rev_news/2015/08/05/edition-6/),
+      and most recently in [Edition #133](https://git.github.io/rev_news/2026/03/31/edition-133/).
++ [3 ways I use Git that have nothing to do with programming](https://www.makeuseof.com/ways-use-git-nothing-with-programming/)
+  by Yadullah Abidi on MakeUseOf.
+  Mentions using Git as a versioned, cross-device notebook (synchronizing notes),
+  tracking dotfiles in Git repository so configs are always recoverable,
+  and storing articles, drafts, and edits (in Markdown) in Git.
++ [Introducing Git Blog](https://mattdavey.co.uk/posts/2026/2026-03-25-gitblogging/)
+  (a free[iOS app](https://apps.apple.com/us/app/git-blog/id6759486108) that commits Markdown posts, images, and frontmatter
+  directly to your GitHub repo)
+  by Matt Davey on his blog.
++ [Nine Months of Multitasking with Git Worktrees and Autowt](https://blog.steveasleep.com/nine-months-of-multitasking-with-git-worktrees-and-autowt)
+  by Steve Landey (@irskep) on Steve's Real Blog.
 + [You probably don’t need git worktrees](https://avdi.codes/you-probably-dont-need-git-worktrees/)
   by Avdi Grimm on avdi\.codes:
   you can use _fast_ and _cheap_ local git clones instead (clones of a local repository).
++ [Making Useful Structured Commits That Become Changelogs](https://weblog.masukomi.org/posts/working_with_git_com_to_create_changelogs/)
+  by Kay Rhodes on their blog.
++ [Let the commits tell the story](https://chrismaiorana.com/git-commits-tell-the-story/)
+  by Chris Maiorana (@cryptstopher) in his blog.
++ [The Best Ways to Write Git Commit Messages: Just Like the Pros](https://hackernoon.com/the-best-ways-to-write-git-commit-messages-just-like-the-pros)
+  by Ritik Banger on HackerNoon.
+  Mentions [Glitter](https://github.com/Milo123459/glitter),
+  [Commitizen](http://commitizen.github.io/cz-cli/), and
+  [Commit lint](https://commitlint.js.org/?ref=hackernoon.com#/) tools,
+  and [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) convention.
+    + Commitizen was first mentioned in [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/),
+      `commitlint` in [Edition #81](https://git.github.io/rev_news/2021/11/29/edition-81/),
+      and Conventional Commits in [#52](https://git.github.io/rev_news/2019/06/28/edition-52/).
 + [Multiple URLs in Git Remote](https://susam.net/multiple-urls-in-git-remote.html)
   (and what then happens) by Susam Pal on their blog.
++ [How to build a `git diff` driver](https://www.jvt.me/posts/2026/04/11/how-git-diff-driver/) and
+  [Using `oasdiff` for rich Git diffs of OpenAPI spec changes](https://www.jvt.me/posts/2026/04/11/oasdiff-driver/)
+  by Jamie Tanna on their blog.
++ [Extending Git Functionality](https://nesbitt.io/2025/11/26/extending-git-functionality.html) and
+  [Git Diff Drivers](https://nesbitt.io/2026/03/30/git-diff-drivers.html)
+  by Andrew Nesbitt on his blog;
+  and also [Git Remote Helpers](https://nesbitt.io/2026/03/18/git-remote-helpers.html)
+  mentioned in [Git Rev News Edition #133](https://git.github.io/rev_news/2026/03/31/edition-133/).
++ [Git's Magic Files](https://nesbitt.io/2026/02/05/git-magic-files.html),
+  [Package Manager Magic Files](https://nesbitt.io/2026/03/05/package-manager-magic-files.html),
+  and [.gitlocal](https://nesbitt.io/2026/03/06/gitlocal.html) idea / proposal
+  by Andrew Nesbitt on his blog.
 + [Organisation-specific git authentication and commit signing](https://jamesmead.org/blog/2026-04-19-organisation-specific-git-authentication-and-commit-signing)
   with `includeIf` directive (and `core.sshCommand` together with `gpg "ssh".allowedSignersFile`
   configuration options) by James Mead on his blog.
@@ -470,11 +550,48 @@ __Light reading__
       the [Delta](https://github.com/dandavison/delta) (from 'git-delta' package)
       was first mentioned in [Git Rev News Edition #9](https://git.github.io/rev_news/2015/11/11/edition-9/),
       and most recently in also in [Edition #133](https://git.github.io/rev_news/2026/03/31/edition-133/).
++ [Git repo web crawler trouble (and defences)](https://tombrandis.uk/posts/Git-repo-web-crawler-trouble.html)
+  and [Ditching GitHub for bare git repos with cgit and lighttpd](https://tombrandis.uk/posts/Ditching-Github-for-bare-git-repos-with-cgit-and-lighttpd.html)
+  by Tom Brandis on his blog.
++ [Dynamic & resilient git remotes with doink](https://absolutely-vivid.srht.site/blog/doink/)
+  (where git host repository URL is stored in a DNS TXT record)
+  by Vivid on absolutely vivid.
++ [gpg, ssh & git](https://mmmeon.com/gpg-ssh-git/)
+  by mmmeon.  The post describes a solution to the problem of
+  using multiple accounts in Git while managing SSH and PGP keys with gpg-agent
+  and showing the name or email of the identity when prompting for SSH key passphrase.
++ [AI Attribution in Git](https://dafoster.net/articles/2026/04/17/ai-attribution-in-git/)
+  by David Foster on his blog.
+  Proposes using "Co-authored-by:" trailer (convention introduced by Claude Code),
+  or setting commit author to the AI tool if code was not reviewed.
+    + Contrast [Stop Pushing AI Generated Code to Git](https://blog.tombert.com/Posts/Technical/2026/04-April/Stop-Pushing-AI-Generated-Code-to-Git)
+      post on Tombert's Blog.
 + [Protecting .git from malicious agents](https://me.micahrl.com/blog/protecting-git-malicious-agents/)
   by mounting the project’s `.git` directory read only on top
   of the project’s directory inside the container.
   By Micah R. Ledbetter on their blog.
++ [Two Git Commands Fooled Claude Into Merging Malicious Code](https://www.manifold.security/blog/spoofed-git-identity-ai-code-reviewer)
+  by Ax Sharma and Oleksandr Yaremchuk of Manifold Security.<br>
+  Found via [Git identity spoof fools Claude into giving bad code the nod](https://www.theregister.com/2026/04/16/git_identity_spoof_claude/)
+  article by Carly Page in The Register.
++ [Meet GitNexus: An Open-Source MCP-Native Knowledge Graph Engine That Gives Claude Code and Cursor Full Codebase Structural Awareness](https://www.marktechpost.com/2026/04/24/meet-gitnexus-an-open-source-mcp-native-knowledge-graph-engine-that-gives-claude-code-and-cursor-full-codebase-structural-awareness/)
+  by Asif Razzaq on MarketTechPost.
++ [Quick binary diffs with XDelta](https://blog.jcoglan.com/2024/01/04/quick-binary-diffs-with-xdelta/)
+  (which Git uses to compress objects it stores in packfiles and sends over the network)
+  by James Coglan, author of _"[Building Git](https://shop.jcoglan.com/building-git/)"_ book,
+  on The If Works blog (2024).
++ [Jujutsu megamerges for fun and profit](https://isaaccorbrey.com/notes/jujutsu-megamerges-for-fun-and-profit)
+  by Isaac Corbrey on his blog.
+    + [Jujutsu (`jj`)](https://jj-vcs.github.io/jj/) is a Git-compatible version control system,
+      written in Rust, which was first mentioned in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/).
++ [Git Dibs](https://gieseanw.wordpress.com/2026/04/01/git-dibs/),
+  an April Fool's 2026 joke on Andy G's Blog
+  (which included actually creating the [gitdibs.com](https://gitdibs.com/) service).
 
++ [Improving developer velocity with GitHub merge queue](https://humanwhocodes.com/blog/2026/04/improving-developer-velocity-github-merge-queue/)
+  by Nicholas C. Zakas on Human Who Codes blog.
+    + See also [The Origin Story of Merge Queues](https://mergify.com/blog/the-origin-story-of-merge-queues),
+      mentioned in [Git Rev News Edition #127](https://git.github.io/rev_news/2025/09/30/edition-127/).
 + [My New Secure Baseline for GitHub](https://cedwards.xyz/my-new-secure-baseline-for-github/)
   by Connor Edwards on Connor's Blog; followup of sorts to his
   [GitHub "Actions" Are An Impending Security Disaster](https://cedwards.xyz/github-actions-are-an-impending-security-disaster/) post.
@@ -482,10 +599,23 @@ __Light reading__
   (in the open source software supply chain)
   by Andrew Nesbitt on his blog.
 + [GitHub banned me for no understandable reason: I got unbanned three hours after publishing this post](https://blog.hellbeast.eu.org/Github%20banned%20me%20for%20no%20understandable%20reason).
++ [Move GitHub Private Repos to Google Drive in Minutes](https://tonym.us/move-github-repos-to-google-drive.html)
+  by Tony Metzidis on his blog.
+  The described approach works with Google Drive, MS One Drive, iCloud, DropBox, Backblaze
+  or any cloud storage that has a desktop client.
 
-<!---
+
 __Easy watching__
--->
++ [Taming Git complexity with Rust and Gitoxide - FOSDEM 2026](https://www.youtube.com/watch?v=iSAMvE3yzfc) [17:05]
+  on GitButler on YouTube.  Talk by Kiril Videlov.
+    + [`gitoxide`](https://github.com/GitoxideLabs/gitoxide) is an implementation of git written in Rust,
+      first mentioned in [Git Rev News Edition #67](https://git.github.io/rev_news/2020/09/24/edition-67/).
++ [Turning Git commits into changelog with Git-Cliff - Orhun Parmaksız](https://www.youtube.com/watch?v=RWh8qbiLRts) [35:10]
+  on RustLab Conference channel on YouTube, from
+  The International Conference on Rust in Florence 2023.
+    + [git-cliff](https://git-cliff.org/) changelog generator was
+      mentioned in [Git Rev News Edition #108](https://git.github.io/rev_news/2024/02/29/edition-108/).
+
 
 __Git tools and sites__
 + "[High Performance Git](https://gitperf.com/)", a book by Ted Nyman
@@ -498,6 +628,32 @@ __Git tools and sites__
       (mentioned in [Git Rev News Edition #26](https://git.github.io/rev_news/2017/04/19/edition-26/)), and
       [Git Interactive Rebase Tool](https://gitrebasetool.mitmaro.ca/)
       (mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/)).
++ [Git Spotlight](https://marketplace.visualstudio.com/items?itemName=SyedNisarUlHaq.git-spotlight)
+  is a VS Code extension that visualizes Git blame information
+  with intelligent line highlighting - compare branches, highlight by age, author, commit,
+  heatmap and more.
+  Written in TypeScript, under MIT license.
++ [`git-ls`](https://github.com/llimllib/git-ls/) list the files in the current directory
+  along with a useful summary of their Git status and helpful hyperlinks
+  (in terminals that supports [OSC8 links](https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda) such as kitty, iterm or wezterm).
+  The output is nicely colored.
+  Written in Go and HTML, under Unlicense license.
++ [`git-kv`](https://github.com/sebastien/git-kv) is a Bash script
+  that adds a lightweight key-value store on top of your Git repository.
+  It uses [Git notes](https://git-scm.com/docs/git-notes)
+  to store and manage key-value pairs associated with commits.
+  Under BSD-3-Clause license.
+    + See [Git Notes: Git's Coolest, Most Unloved Feature](https://tylercipriani.com/blog/2022/11/19/git-notes-gits-coolest-most-unloved-feature/)
+      by Tyler Cipriani, mentioned in [Git Rev News Edition #94](https://git.github.io/rev_news/2022/12/31/edition-94/).
++ [diffnav](https://github.com/dlvhdr/diffnav) is a git diff pager
+  based on [delta](https://github.com/dandavison/delta) but with a file tree, à la GitHub.
+  Written in Go, under MIT license.
++ [mailmap-checker]()
+  is a pre-commit hook that detects unmapped Git identities
+  by comparing your [`.mailmap`](https://git-scm.com/docs/gitmailmap) against the full commit history.
+  It groups authors and committers by email address and email local-part
+  so duplicates are caught even across domain changes.
+  Written in Python, under MIT license.
 + [Git Shield](https://github.com/vekexasia/git-shield) is a set of git hooks
   that blocks API keys, secrets, and contextual PII before code leaves your machine.
   Scans secrets via [`gitleaks`](https://gitleaks.io/) (API keys, tokens, credentials, private keys)
@@ -510,6 +666,50 @@ __Git tools and sites__
       [git-secrets](https://github.com/awslabs/git-secrets) by AWS Labs,
       [git-all-secrets](https://github.com/anshumanbh/git-all-secrets), and
       [repo-security-scanner](https://github.com/UKHomeOffice/repo-security-scanner) by UKHomeOffice.
++ [`no-mistakes`](https://github.com/kunchenguid/no-mistakes) puts a local git proxy
+  in front of your real remote. Push to `no-mistakes` instead of `origin`,
+  and it spins up a disposable worktree, runs an AI-driven validation pipeline,
+  forwards upstream only after every check passes, and opens a clean PR automatically.
+  Documentation at <https://kunchenguid.github.io/no-mistakes/>.
+  Agent agnostic: `claude`, `codex`, `rovodev`, `opencode`, or `pi`.
+  Written in Go, under MIT license.
++ [autowt](https://steveasleep.com/autowt/) is a tool to provide
+  a better git worktree experience, with customizable automation,
+  smart cleanup, and friendly TUI.
+  Written in Python, under MIT license.
+    + There is also [gtr - Git Worktree Runner](https://github.com/coderabbitai/git-worktree-runner) by the CodeRabbit team
+      mentioned in [Git Rev News Edition #130](https://git.github.io/rev_news/2025/12/31/edition-130/),
+      [Worktree Manager (wtm)](https://github.com/jarredkenny/worktree-manager)
+      mentioned in [Git Rev News Edition #128](https://git.github.io/rev_news/2025/10/31/edition-128/),
+      [wtp (Worktree Plus)](https://github.com/satococoa/wtp)
+      mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/),
+      [workz](https://github.com/rohansx/workz)
+      mentioned in [Git Rev News Edition #132](https://git.github.io/rev_news/2026/02/28/edition-132/), and
+      [tree-me](https://github.com/haacked/dotfiles/blob/main/bin/tree-me) Bash script
+      mentioned in [Git Rev News Edition #129](https://git.github.io/rev_news/2025/11/30/edition-129/).
++ [GitNexus](https://github.com/abhigyanpatwari/GitNexus) is a client-side
+  knowledge graph creator that runs entirely in your browser.
+  Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph
+  with a built in Graph RAG Agent. Perfect for code exploration.
+  Can be used from the command line with AI agents connecting via
+  [MCP](https://modelcontextprotocol.io/ "Model Context Protocol"),
+  or via web UI at [gitnexus.vercel.app](https://gitnexus.vercel.app/).
+  Written in TypeScript, under [PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0).
+  <!-- TODO: mention similar tools, time permitting -->
++ [Gitingest](https://gitingest.com/) is a service
+  to turn any Git repository into a simple text digest of its codebase.
+  This is useful for feeding a codebase into any LLM.
+  Also available as [Chrome extension](https://chromewebstore.google.com/detail/adfjahbijlkjfoicpjkhjicpjpjfaood)
+  and [Python package](https://pypi.org/project/gitingest/) under MIT license.
+    + Mentioned in passing in [Git Rev News Edition #133](https://git.github.io/rev_news/2026/03/31/edition-133/)
+      in "Developer Spotlight: Olamide Caleb Bello" section.
++ [sem](https://github.com/Ataraxy-Labs/sem) is a semantic version control tool
+  that works on top of Git. It parses your code with [tree-sitter](https://tree-sitter.github.io/tree-sitter/),
+  extracts every function, class, and method as an entity, and diffs at the entity level
+  instead of lines. This means you see "function blahh was modified" instead of
+  "lines x-y changed."  It works in any Git repo with no setup.
+  Build for AI coding agents, part of the [Ataraxy Labs](https://ataraxy-labs.com/) stack.
+  Written mainly in Rust, under MIT/Apache-2.0 dual license.
 + [`git-sync`](https://github.com/entireio/git-sync) mirrors refs
   from a source remote (you can fetch from) to a target remote (you can push to)
   without creating a local checkout. It uses an in-memory
@@ -518,6 +718,37 @@ __Git tools and sites__
     + [_go-git_](https://github.com/go-git/go-git) is a highly extensible
       Git implementation library written in pure Go.
       First mentioned in [Git Rev News #13](https://git.github.io/rev_news/2016/03/16/edition-13/).
++ [Grasp Protocol](https://gitgrasp.com/) is a simple protocol
+  (build on top of [Nostr](https://nostr.org/ "Notes and Other Stuff Transmitted by Relays"))
+  for code collaboration that uses interoperable servers and clients.
+  In Grasp every user identity is a cryptographic keypair and doesn't depend on anyone;
+  every code state is signed; repositories can migrate seamlessly;
+  issues and patches can flow freely.<br>
+  You can use it with [nak](https://github.com/fiatjaf/nak) command line tool
+  that wraps the basic remote functionalities of git remotes for GRASP,
+  but also provides an interface to issues and patches, or with
+  [ngit](https://ngit.dev/) which is both a command line tool
+  and a git-remote-helper that automatically plugs into your git repositories
+  whenever they have GRASP remotes;
+  [ngit-grasp](https://ngit.dev/grasp/) was first mentioned in [Git Rev News Edition #131](https://git.github.io/rev_news/2026/01/31/edition-131/).<br>
+  Full protocol specs: [NIP-34](https://github.com/nostr-protocol/nips/blob/master/34.md) and [Grasp](https://viewsource.win/a008def15796fba9a0d6fab04e8fd57089285d9fd505da5a83fe8aad57a3564d/grasp/_/master).<br>
+  Compare with:
+    + [Radicle](https://radicle.xyz), which uses [custom gossip protocol](https://radicle.dev/guides/protocol),
+      and was first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/),
+    + [Tangled](https://tangled.org/), built on top of [AT Protocol](https://atproto.com/) (which powers [BlueSky](https://bsky.app/) microblogging federated social media service),
+      and was first mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/),
+    + [gitstr (`git str`)](https://github.com/fiatjaf/gitstr) (a tool to send and receive Git patches over Nostr,
+      using [NIP-34](https://github.com/nostr-protocol/nips/pull/997)),
+      which was first mentioned in [Git Rev News Edition #109](https://git.github.io/rev_news/2024/03/31/edition-109/),
+    + [ForgeFed](https://forgefed.org/) (formerly GitPub),
+      a federation protocol for software forges (an [ActivityPub](https://www.w3.org/TR/activitypub/) extension),
+      which was first mentioned in [Git Rev News Edition #69](https://git.github.io/rev_news/2020/11/27/edition-69/).
++ [gitworkshop.dev](https://gitworkshop.dev/) is a nostr web client for code collaboration,
+  that provides full-blown web-based GitHub-like experience.
+  Provides decentralized code collaboration over Nostr and GRASP.
+  No GitHub account needed, fully compatible with your existing Git workflow:
+  start in your browser, push code with the [ngit CLI](https://gitworkshop.dev/ngit).
+  Written in TypeScript, no license provided.
 + [freenet-git](https://github.com/freenet/freenet-git): Git repositories hosted directly
    on [Freenet](https://freenet.org/). Push, fetch, and clone through the Freenet network
    using normal Git commands, without GitHub, GitLab, federation, or a server you operate.
@@ -531,9 +762,48 @@ __Git tools and sites__
        [git-remote-nostr](https://github.com/gugabfigueiredo/git-remote-nostr) (git objects as [Nostr](https://nostr.com/) events),
        [git-remote-blossom](https://github.com/lez/git-remote-blossom) (on the Nostr-adjacent [Blossom protocol](https://github.com/hzrd149/blossom));
        this edition also mentions [git-remote-rad](https://github.com/radicle-dev/heartwood/blob/master/git-remote-rad.1.adoc) (for [Radicle](https://radicle.dev/)).
++ [Ark VCS](https://ark-vcs.com/) is a new version control system for games,
+  built from the ground up for performance and ease of use.
+  It comes as an alternative to Perforce and Git
+  focusing specifically on being able to support big complex projects with binary files,
+  such as the case in video games.  Closed source, proprietary.
++ [Renovate](https://github.com/renovatebot/renovate) (Mend Renovate CLI)
+  is an automated dependency update tool. It helps to update dependencies in your code
+  without needing to do it manually. When Renovate runs on your repo,
+  it looks for references to dependencies (both public and private) and,
+  if there are newer versions available, Renovate can create pull requests
+  to update your versions automatically.
+  Written in TypeScript, under AGPL-3.0 license.
 + [`zizmor`](https://docs.zizmor.sh/) is a static analysis tool for GitHub Actions.
   It can find and fix many common security issues in typical GitHub Actions CI/CD setups.
   Written in Rust, under MIT license.
++ [`forge`](https://github.com/git-pkgs/forge) is a Go library and CLI
+  for working with git forges. Supports GitHub, GitLab, Gitea/Forgejo,
+  and Bitbucket Cloud through a single interface.
+  Under MIT license.<br>
+  See also [Forge](https://nesbitt.io/2026/03/13/forge.html)
+  blog post by Andrew Nesbitt.
+    + Compare [git-forge](https://github.com/Leleat/git-forge),
+      a simple CLI tool for basic interactions with issues and pull requests
+      across GitHub, GitLab, Gitea, and Forgejo, which was mentioned
+      in [Git Rev News Edition #130](https://git.github.io/rev_news/2025/12/31/edition-130/).
++ [US Code Tracker](https://civic-source.github.io/us-code-tracker/):
+  Every change to federal law, tracked through Git .
+  US Code Tracker converts each release of the United States Code into a Git repository,
+  making it possible to view the precise text that changed
+  between any two releases of federal law.
+  Data syncs weekly from the Office of the Law Revision Counsel.
+  Independent civic tech project, not affiliated with any government agency.
+  Data: CC0 Public Domain, code: Apache 2.0 License.
++ [GitHub's Historic Uptime](https://damrnelson.github.io/github-historical-uptime/)
+  visualization with all data sourced from the [official status page](https://www.githubstatus.com/uptime).
+    + Compliments [The Missing GitHub Status Page](https://mrshu.github.io/github-statuses/)
+      created because GitHub stopped updating its [GitHub Status](https://www.githubstatus.com/) page,
+      which was mentioned in [Git Rev News Edition #132](https://git.github.io/rev_news/2026/02/28/edition-132/).
++ [Scripts and Dockerfile which creates truly full Linux history repo](https://rentry.co/sv4de7ty),
+  using [`git replace`](https://git-scm.com/docs/git-replace) instead of obsolete grafts,
+  and adding some tags missing from [linux/kernel/git/history/history.git](https://git.kernel.org/pub/scm/linux/kernel/git/history/history.git)
+  repository on kernel.org
 + [Rebass](https://adamf.github.io/rebass/) is a service
   that turns a git history into music.<br>
   Each commit becomes one bar of a four-beat groove.
