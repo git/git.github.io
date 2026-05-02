@@ -625,7 +625,7 @@ __Git tools and sites__
   for attaching arbitrary, fine-grained metadata to Git objects — provenance,
   ownership, reviews, attestations — stored locally for fast queries
   and exchanged using normal Git transfer protocols and servers.<br>
-  You can think of `git met`a as a more performant, scalable, flexible and collaborative
+  You can think of `git meta` as a more performant, scalable, flexible and collaborative
   [`git notes`](https://git-scm.com/docs/git-notes).
 + [GitChop](https://bendansby.com/apps/gitchop.html) - a visual `rebase -i`
   (interactive rebase) for Mac.  Drag-reorder commits,
