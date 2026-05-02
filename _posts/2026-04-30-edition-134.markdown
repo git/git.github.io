@@ -654,7 +654,7 @@ __Git tools and sites__
 + [diffnav](https://github.com/dlvhdr/diffnav) is a git diff pager
   based on [delta](https://github.com/dandavison/delta) but with a file tree, à la GitHub.
   Written in Go, under MIT license.
-+ [mailmap-checker]()
++ [mailmap-checker](https://github.com/cansarigol/mailmap-checker)
   is a pre-commit hook that detects unmapped Git identities
   by comparing your [`.mailmap`](https://git-scm.com/docs/gitmailmap) against the full commit history.
   It groups authors and committers by email address and email local-part
