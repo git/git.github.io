@@ -233,8 +233,8 @@ As always, we welcome your thoughts and feedback!_
   Back in 2021, a friend showed me a video about GSoC, and it seemed completely
   out of reach at the time. Fast forward to late 2023, the same friend suggested
   we finally give it a real shot. We both spent about 4 months contributing to
-  open-source projects to build up experience. Both of us got selected for GSoC
-  2024. I got into the Python Software Foundation. After finishing GSoC with PSF,
+  open-source projects to build up experience. Both of us got selected for GSoC 2024.
+  I got into the Python Software Foundation. After finishing GSoC with PSF,
   I loved the experience so much that I wanted to do it again. I decided to try
   Git for GSoC 2025. I started by sending some small patches to get familiar with
   the codebase and the mailing list workflow, reviewed patches from other
@@ -503,7 +503,7 @@ __Light reading__
   tracking dotfiles in Git repository so configs are always recoverable,
   and storing articles, drafts, and edits (in Markdown) in Git.
 + [Introducing Git Blog](https://mattdavey.co.uk/posts/2026/2026-03-25-gitblogging/)
-  (a free[iOS app](https://apps.apple.com/us/app/git-blog/id6759486108) that commits Markdown posts, images, and frontmatter
+  (a free [iOS app](https://apps.apple.com/us/app/git-blog/id6759486108) that commits Markdown posts, images, and frontmatter
   directly to your GitHub repo)
   by Matt Davey on his blog.
 + [Nine Months of Multitasking with Git Worktrees and Autowt](https://blog.steveasleep.com/nine-months-of-multitasking-with-git-worktrees-and-autowt)
@@ -767,7 +767,7 @@ __Git tools and sites__
        [git-remote-gittorrent](https://github.com/cjb/GitTorrent) (distributed git over BitTorrent),
        [git-remote-nostr](https://github.com/gugabfigueiredo/git-remote-nostr) (git objects as [Nostr](https://nostr.com/) events),
        [git-remote-blossom](https://github.com/lez/git-remote-blossom) (on the Nostr-adjacent [Blossom protocol](https://github.com/hzrd149/blossom));
-       this edition also mentions [git-remote-rad](https://github.com/radicle-dev/heartwood/blob/master/git-remote-rad.1.adoc) (for [Radicle](https://radicle.dev/)).
+       edition #133 also mentions [git-remote-rad](https://github.com/radicle-dev/heartwood/blob/master/git-remote-rad.1.adoc) (for [Radicle](https://radicle.dev/)).
 + [Ark VCS](https://ark-vcs.com/) is a new version control system for games,
   built from the ground up for performance and ease of use.
   It comes as an alternative to Perforce and Git
