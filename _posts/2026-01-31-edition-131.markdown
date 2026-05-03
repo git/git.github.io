@@ -246,12 +246,12 @@ __Git tools and sites__
 	  a social-enabled Git collaboration platform built on top of the AT Protocol
 	  (which is behind the [BlueSky](https://bsky.app/) microblogging federated social media service).
 	  First mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/),
-	  then in [#126](),
-	  and [#128]().
+	  then in [#126](https://git.github.io/rev_news/2025/08/31/edition-126/),
+	  and [#128](https://git.github.io/rev_news/2025/10/31/edition-128/).
 	+ Compare [Radicle](https://radicle.xyz/),
 	  an open source, peer-to-peer code collaboration stack built on Git,
-	  first mentioned in [Git Rev News Edition #49](),
-	  and many times since; most recently in [#126]().
+	  first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/),
+	  and many times since; most recently in [#126](https://git.github.io/rev_news/2025/08/31/edition-126/).
 	+ There is also [gitstr (`git str`)](https://github.com/fiatjaf/gitstr),
 	  a tool to send and receive Git patches over Nostr,
 	  using [NIP-34](https://github.com/nostr-protocol/nips/pull/997)
