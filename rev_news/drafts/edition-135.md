@@ -49,6 +49,45 @@ __Git tools and sites__
 
 ## Releases
 
+# Releases
+
++ libgit2 [1.9.4](https://github.com/libgit2/libgit2/releases/tag/v1.9.4),
+[1.9.3](https://github.com/libgit2/libgit2/releases/tag/v1.9.3)
++ go-git [6.0.0-alpha.4](https://github.com/go-git/go-git/releases/tag/v6.0.0-alpha.4),
+[6.0.0-alpha.3](https://github.com/go-git/go-git/releases/tag/v6.0.0-alpha.3)
++ gitoxide [0.54.0](https://github.com/GitoxideLabs/gitoxide/releases/tag/v0.54.0)
++ GitLab [19.1](https://docs.gitlab.com/releases/19/gitlab-19-1-released/),
+[19.0](https://docs.gitlab.com/releases/19/gitlab-19-0-released/),
+[19.0.1, 18.11.4, 18.10.7](https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-0-1-released/),
+[18.11.3, 18.10.6, 18.9.7](https://docs.gitlab.com/releases/patches/patch-release-gitlab-18-11-3-released/)
++ Gitea [1.26.2](https://github.com/go-gitea/gitea/releases/tag/v1.26.2)
++ Bitbucket Data Center [10.3](https://confluence.atlassian.com/bitbucketserver/release-notes-872139866.html)
++ Gerrit Code Review [3.14.0-rc6](https://www.gerritcodereview.com/3.14.html#3140),
+[3.14.0](https://www.gerritcodereview.com/3.14.html#3140)
++ GitHub Enterprise [3.20.3](https://docs.github.com/enterprise-server@3.20/admin/release-notes#3.20.3),
+[3.19.7](https://docs.github.com/enterprise-server@3.19/admin/release-notes#3.19.7),
+[3.18.10](https://docs.github.com/enterprise-server@3.18/admin/release-notes#3.18.10),
+[3.17.16](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.16),
+[3.16.19](https://docs.github.com/enterprise-server@3.16/admin/release-notes#3.16.19),
+[3.21.0](https://docs.github.com/enterprise-server@3.21/admin/release-notes#3.21.0),
+[3.20.2](https://docs.github.com/enterprise-server@3.20/admin/release-notes#3.20.2),
+[3.19.6](https://docs.github.com/enterprise-server@3.19/admin/release-notes#3.19.6),
+[3.18.9](https://docs.github.com/enterprise-server@3.18/admin/release-notes#3.18.9),
+[3.17.15](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.15),
+[3.16.18](https://docs.github.com/enterprise-server@3.16/admin/release-notes#3.16.18)
++ GitKraken [12.1.2](https://help.gitkraken.com/gitkraken-desktop/current/),
+[12.1.1](https://help.gitkraken.com/gitkraken-desktop/current/),
+[12.1.0](https://help.gitkraken.com/gitkraken-desktop/current/)
++ GitHub Desktop [3.5.11](https://desktop.github.com/release-notes/),
+[3.5.10](https://desktop.github.com/release-notes/),
+[3.5.9](https://desktop.github.com/release-notes/)
++ lazygit [0.62.1](https://github.com/jesseduffield/lazygit/releases/tag/v0.62.1),
+[0.62.0](https://github.com/jesseduffield/lazygit/releases/tag/v0.62.0)
++ GitButler [0.19.13](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.19.13),
+[0.19.12](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.19.12)
++ Kinetic Merge [1.15.0](https://github.com/sageserpent-open/kineticMerge/releases/tag/v1.15.0)
++ git-branchless [0.11.1](https://github.com/arxanas/git-branchless/releases/tag/v0.11.1),
+[0.11.0](https://github.com/arxanas/git-branchless/releases/tag/v0.11.0)
 
 ## Credits
 
