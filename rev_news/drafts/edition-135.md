@@ -151,6 +151,12 @@ This edition covers what happened during the months of April and May 2026.
   help out a beginner, but it might be easy to miss that a patch submitter
   on the mailing list is less familiar with the code base.
 
+* **If there's one tip you would like to share with other Git developers,
+  what would it be?**
+
+  Most of them are more experienced with git development than I am. They could
+  probably give me better advice than I could offer them.
+
 
 ## Other News
 
