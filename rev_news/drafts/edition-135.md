@@ -67,13 +67,13 @@ This edition covers what happened during the months of April and May 2026.
   I'd say early support of Jean-Noël Avila's translations of the man pages
   is what's probably most widely useful. Most of the things I do are helpful
   to niche uses or fix small bugs, but the man pages are widely used by
-  most git users and I love that [git-scm.com can](https://git-scm.com/docs/git)
+  most git users and I love that [git-scm.com](https://git-scm.com/docs/git) can
   offer a nice little language dropdown for them nowadays. I should try to
   find some time to continue that work.
 
 * **What are you doing on the Git project these days, and why?**
 
-  In my [last patch series](https://lore.kernel.org/git/pull.2081.v2.git.1775454330.gitgitgadget@gmail.com/)
+  In my [last patch series](https://lore.kernel.org/git/pull.2081.v2.git.1775454330.gitgitgadget@gmail.com/),
   I promised a follow up patch that improves CPU core detection on
   multi-socket-systems on Windows. I need to send that to the mailing list.
   I probably also have some other Windows improvements in Git for Windows
