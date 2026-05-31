@@ -49,9 +49,260 @@ This edition covers what happened during the months of April and May 2026.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
++ [MIDX woes, was Re: [ANNOUNCE] Git v2.54.0-rc2](https://lore.kernel.org/git/8c1def10-9039-aecd-4ce4-fb4676b47e9b@gmx.de)
+
+  Shortly after the `v2.54.0-rc2` release candidate was announced,
+  Johannes Schindelin, the Git for Windows maintainer who is usually
+  called Dscho, wrote a follow-up to the announcement, retitled "MIDX
+  woes", to report an unpleasant discovery: fetching with
+  `v2.54.0-rc2` into an existing repository made that repository
+  unusable for Git `v2.53.0`, which would now bail out with:
+
+  ```
+  fatal: multi-pack-index version 2 not recognized
+  ```
+
+  Dscho asked whether `v2.54.0-rc2` was forcefully writing a brand-new
+  MIDX version that the immediately preceding release could not even
+  read. He pointed out that, if so, this would cause "substantial
+  problems" in setups where libgit2 or JGit is used interchangeably
+  with Git, when users need to downgrade Git, or when several Git
+  versions live side by side on the same system, for instance through
+  GitHub Desktop, which bundles its own copy of Git.
+
+  The multi-pack-index (MIDX) is an on-disk file at
+  `.git/objects/pack/multi-pack-index` (and possibly chained files)
+  that indexes objects across several pack files at once. It is meant
+  to be a purely optional acceleration layer: when present and
+  readable, lookups can avoid scanning each pack's own `.idx` index
+  file; when absent or unreadable, Git is supposed to fall back to the
+  underlying `.idx` files. Several high-impact features (auto
+  maintenance, `git multi-pack-index`, reachability bitmaps, geometric
+  repack, etc.)  build on top of it, and modern Git distributions
+  write or update it as part of routine operations, including the
+  maintenance step that runs after a `git fetch`.
+
+  The "version 2 not recognized" error came from `b2ec8e90c2` (`midx:
+  do not require packs to be sorted in lexicographic order`,
+  2026-02-24).  That commit relaxed an internal ordering constraint
+  and, because the relaxation makes the on-disk file unreadable by
+  other tools that still expect the older invariant, guarded the new
+  behaviour behind a bump in the MIDX on-disk format version (from v1
+  to v2). The commit message explicitly justified the bump by claiming
+  that "older versions of Git know how to gracefully degrade and
+  ignore any MIDX(s) they consider corrupt". As the discussion would
+  reveal, this assumption turned out to be too optimistic.
+
+  Junio Hamano, the Git maintainer, picked up the thread and pointed
+  directly at `b2ec8e90c2` as the likely culprit. Reading the commit
+  message back to itself, he observed that the format-version bump
+  "seems to be doing more harm to 'older versions of Git' that 'know
+  how to gracefully degrade' by not allowing them to degrade", and he
+  asked Taylor Blau (the author of the MIDX v2 work and the area's
+  principal maintainer) whether the release notes should at least
+  carry recovery instructions, such as `rm -f .git/objects/pack/*.midx`.
+
+  Jeff King, alias Peff, replied within hours with a deeper
+  diagnosis. The MIDX *should* be optional, he wrote. If loading the
+  file returns an error, callers should silently fall back to the
+  regular `.idx` files, but that property is not actually held by the
+  load path, which contains a few `die()` calls instead. He
+  demonstrated by applying a small patch on top of v2.53.0 that
+  replaces the two relevant `die()` calls in
+  `load_multi_pack_index_one()` (one for the signature mismatch, one
+  for the unknown version) with `error()` plus a `goto cleanup_fail`,
+  producing the desired behaviour: the user sees `version 2 not
+  recognized` printed once and then everything works anyway. "But of
+  course we can't go back in time now to fix it (and earlier
+  versions)", he noted.
+
+  Peff also surveyed the third-party implementations Dscho had worried
+  about:
+
+    - JGit, on inspection of its source, throws an exception that is
+      apparently caught and handled correctly (he verified with the
+      `jgit` CLI on hand).
+    - libgit2 returns from a helper called `midx_error()` when the
+      signature or version do not match. Reading the code, Peff
+      believed it would quietly fall back to the underlying packs.
+
+  His conclusion: "it really is just our old versions that are the
+  problem".
+
+  He then asked the natural follow-up question: how hard would it be
+  to revert the default written MIDX version back to v1? In a second
+  message a few minutes later he answered himself with a
+  near-one-liner in `midx-write.c` changing the default initializer of
+  `write_midx_context.version` from `MIDX_VERSION_V2` to
+  `MIDX_VERSION_V1`, plus minor adjustments to the test suite: in
+  `t/t5319-multi-pack-index.sh`, the expected header would once again
+  say "header: ... 1 ..." rather than "header: ... 2 ..."; and in
+  `t/t5335-compact-multi-pack-index.sh`, since MIDX compaction
+  *requires* the v2 format, the test would now opt back into v2
+  explicitly via `git config --global midx.version 2`. Peff observed
+  that an existing `midx.version` config knob lets users opt into v2
+  manually, and he left the strategic decision to Taylor.
+
+  Derrick Stolee underlined the part of Dscho's report that he
+  considered most striking: the bad file is written automatically as
+  part of normal maintenance after a fetch, so removing the broken
+  MIDX by hand "will not keep the repo in a good state". The next
+  fetch will simply regenerate it. He agreed that a graceful fallback
+  (with a visible warning) belongs in Git too, and that the immediate
+  fix should be to stop writing v2 by default so that a 2.53/2.54
+  mixed deployment stops poisoning the repository at every fetch.
+
+  Junio, after asking Derrick to clarify the "good state" sentence (he
+  initially read it as "the MIDX is no longer optional"), eventually
+  agreed: defaulting back to v1 *and* leaving the more thorough
+  graceful-degradation work for later was the right split for the
+  remaining rc window. In a later round of the same sub-thread,
+  Derrick clarified that what he had meant was that the deletion was
+  not a *durable* fix on its own. The maintenance step would keep
+  regenerating the v2 file unless the default version was also lowered
+  (or `midx.version` set to `1`).
+
+  Taylor Blau then weighed in, apologetic about the "trouble here", and
+  laid out a clean three-step plan for the project:
+
+    1. **Immediate (before 2.54)**: revert the default MIDX format to
+       V1, so a 2.54.0 release does not regress the case where multiple
+       Git versions are used against the same repository.
+    2. **Medium term (after 2.54)**: implement the graceful-degradation
+       idea Peff sketched in `load_multi_pack_index_one()`, so that
+       unknown versions cause Git to ignore the MIDX instead of dying.
+       This won't help current 2.53 and earlier users, but it would
+       make a future flip from V1 to V2 by default truly painless from
+       2.55 onward.
+    3. **Long term (2.56 or later)**: make V2 the default once enough
+       versions in the field can already cope with it.
+
+  Peff acknowledged the plan, only adding a caveat: two releases may
+  be "not very long, especially for people who are using OS packages",
+  e.g. people moving across Debian stable releases. But that could be
+  sorted out later.
+
+  To make sure something concrete was in the rc, Junio took Peff's
+  near-one-liner, polished the commit message, and proposed
+  [a first version](https://lore.kernel.org/git/xmqq8qam217m.fsf_-_@gitster.g)
+  titled "MIDX: keep the default version to MIDX v1" (later renamed
+  "MIDX: revert the default version to v1"). The patch simply
+  initialised `write_midx_context.version` to `MIDX_VERSION_V1`, fixed
+  up the expected on-disk header in `t/t5319-multi-pack-index.sh`, and
+  opted `t/t5335-compact-multi-pack-index.sh` into V2 explicitly via
+  `git config --global midx.version 2` so the compaction tests
+  continued to exercise the new format.
+
+  In parallel, Junio also floated
+  [a second patch](https://lore.kernel.org/git/xmqqh5pa22h0.fsf@gitster.g)
+  that would have weakened the two `die()` calls in
+  `load_multi_pack_index_one()` to `error()` + `goto cleanup_fail`,
+  implementing Peff's earlier suggestion. He himself was unsure about
+  that one, though, observing that doing so during the rc period would
+  effectively promise that the MIDX is forever an optional component,
+  and that the error messages should at least be reworded to make
+  clear that they mean "we are ignoring this corrupt file" rather than
+  "this is a fatal corruption". After a follow-up exchange with Peff
+  about how dense the rest of `load_multi_pack_index_one()` is with
+  `die()` calls (Peff confessed he had not actually looked past the
+  two lines he had touched, and Junio confessed he had not either
+  until he had to reply), they agreed that the right fix is *at the
+  caller side*. The loader function genuinely is reporting "this MIDX
+  is broken", and it is the caller's responsibility to decide whether
+  to continue without it. The reword-and-soften idea was put aside as
+  "an issue for much later".
+
+  Peff replied to Junio's first patch with a small but elegant
+  counter-proposal: rather than defaulting to V1 *always* (which would
+  force users of the new `git multi-pack-index compact` feature to set
+  `midx.version=2` manually), make `write_midx_internal()` pick V1 by
+  default but switch to V2 automatically when the caller has set the
+  `MIDX_WRITE_COMPACT` flag. Concretely, in
+  [his refined version of the patch](https://lore.kernel.org/git/20260416200659.GB1887222@coredump.intra.peff.net),
+  he removed the V2 initialiser from the `write_midx_context`
+  declaration, and inserted the following just below, and just above
+  the existing
+  `repo_config_get_int(ctx.repo, "midx.version", &ctx.version)`
+  lookup that lets a user override the choice:
+
+  ```
+  ctx.version = opts->flags & MIDX_WRITE_COMPACT ?
+          MIDX_VERSION_V2 :
+          MIDX_VERSION_V1;
+  ```
+
+  The companion documentation update in
+  `Documentation/git-multi-pack-index.adoc` adds a single sentence to
+  the `compact::` description noting that compaction "requires writing
+  a version-2 midx that cannot be read by versions of Git prior to
+  v2.54", and the only test fallout is in
+  `t/t5319-multi-pack-index.sh`, where the expected header version
+  flips back from `2` to `1`. Notably,
+  `t/t5335-compact-multi-pack-index.sh` needs no change. Compaction
+  continues to "just work" because the new auto-select picks V2 for
+  it.
+
+  Peff also confessed there are probably some gaps in V2 testing in
+  `t5319` left behind by this flip (the bulk of those tests now
+  exercise V1 again), but argued that filling them in could be done
+  post-release.
+
+  Junio said he had already merged the original "revert" version into
+  his `jch` and `next` integration branches, but had not pushed `next`
+  out for external testing yet, so he chucked the original and applied
+  this version instead, agreeing that "compact is the only thing that
+  needs v2" was a better workaround.
+
+  The only remaining nit was stylistic: Junio preferred writing the
+  ternary as
+
+  ```
+  ctx.version = ((opts->flags & MIDX_WRITE_COMPACT)
+                 ? MIDX_VERSION_V2
+                 : MIDX_VERSION_V1);
+  ```
+
+  so that the extra parentheses make the precedence of `&` vs `?:`
+  obvious, and so that a multi-line ternary is easier to spot when `?`
+  and `:` are aligned at the start of the line. Peff replied that he
+  liked keeping the `?` at the end of the first line, because then it
+  is clear from the first line alone that it is a conditional rather
+  than a direct assignment, but said he did not strongly care and that
+  Junio could mark it up while applying. By the time Peff fetched
+  `next` to send that reply, Junio had already done exactly that.
+
+  Taylor reviewed Peff's refined patch in parallel: he acked the
+  short- and medium-term plan ("sorry again for the mess here"),
+  suggested a small wording tweak ("Git 2.53 and earlier" rather than
+  "Git 2.53" in the log message), and noted that he found the
+  "auto-select V2 only when the feature requires it" behaviour a
+  little "magical", though "less magical and more 'do the sensible
+  thing by default'" once you remember that anyone running compaction
+  already knows the trade-offs. Peff agreed about the wording but
+  noted that the patch had already been pushed to `next`. They also
+  exchanged a short note about extending the V2-specific coverage in
+  `t5319` going forward, which Peff suggested Taylor could pick up
+  post-2.54.
+
+  The next day, Junio
+  [announced an update to `master`](https://lore.kernel.org/git/xmqq5x5py5ql.fsf@gitster.g),
+  containing Peff's "MIDX: revert the default version to v1", along
+  with a batch of documentation typo and grammar fixes from Elijah
+  Newren and a CodeQL CI bump from Dscho. He also announced that 2.54
+  final would be tagged on Monday, April 20th, and that he would be
+  offline for a week or two afterwards. Elijah replied to flag a
+  separate pair of bugs (NULL pointer dereference and read past end of
+  string in the diffstat code path) that had just come up in
+  [a separate thread](https://lore.kernel.org/git/pull.2093.git.1776443163041.gitgitgadget@gmail.com/),
+  in case Junio wanted to consider squeezing the fix into the release
+  or holding it for 2.54.1.
+
+  The story of v2.54 thus closed with a near-miss compatibility break
+  caught before release, fixed in a way that keeps the new
+  infrastructure available to those who actually need it, and
+  documented for everyone who will read the release notes later.
 
 ## Developer Spotlight: Matthias Aßhauer
 
