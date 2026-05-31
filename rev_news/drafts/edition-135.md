@@ -53,9 +53,104 @@ This edition covers what happened during the months of April and May 2026.
 ### Support
 -->
 
-<!---
-## Developer Spotlight:
--->
+## Developer Spotlight: Matthias Aßhauer
+
+* **Who are you and what do you do?**
+
+  I'm Matthias, a software developer from Germany. I work on Git for Windows
+  and occasionally other adjacent projects in my spare time. On Git for Windows,
+  I mostly do small contributions in various auxillary repos, maintenance
+  related tasks, code review and issue triage.
+
+* **What would you name your most important contribution to Git?**
+
+  I'd say early support of Jean-Noël Avila's translations of the man pages
+  is what's probably most widely useful. Most of the things I do are helpful
+  to niche uses or fix small bugs, but the man pages are widely used by
+  most git users and I love that [git-scm.com can](https://git-scm.com/docs/git)
+  offer a nice little language dropdown for them nowadays. I should try to
+  find some time to continue that work.
+
+* **What are you doing on the Git project these days, and why?**
+
+  In my [last patch series](https://lore.kernel.org/git/pull.2081.v2.git.1775454330.gitgitgadget@gmail.com/)
+  I promised a follow up patch that improves CPU core detection on
+  multi-socket-systems on Windows. I need to send that to the mailing list.
+  I probably also have some other Windows improvements in Git for Windows
+  that I should upstream to git.git.
+
+* **If you could get a team of expert developers to work full time on
+  something in Git for a full year, what would it be?**
+
+  I don't have a big project idea for a decently sized team of the top of
+  my head. That said there are a lot of currently ongoing topics that could
+  use helping hands. I think `SHA256`<->`SHA1` interop could use some
+  helping hands. The new [`git history`](https://git-scm.com/docs/git-history)
+  command has a lot of potential and could use a team. We also have a few
+  cross-platform portability issues that could do with some very tedious
+  cleanup work throughout large parts of the code base.
+
+* **If you could remove something from Git without worrying about
+  backwards compatibility, what would it be?**
+
+  The file based refs backend and related filesystem based design choices
+  where constraints and quirks of various filesystems hold back things
+  that aren't inherently required to stick to those constraints.
+
+* **What is your favorite Git-related tool/library, outside of Git itself?**
+
+  My most used are probably [Sourcetree](https://www.atlassian.com/software/sourcetree)
+  and [public inbox](https://public-inbox.org/git/). I mostly use Sourcetree
+  for pretty basic stuff (committing, fetching, merging, pulling, pushing)
+  and drop into the command line for slightly more advanced things
+  (fixup commits, interactive rebase, bisect, `add -p`). One neat thing about
+  it is that it allows me to easily stage individual lines instead of just
+  hunks like `add -p`.
+
+  I find public inbox ([the software behind](https://github.com/nojb/public-inbox)
+  [lore.kernel.org](https://lore.kernel.org/git/)] just clicks a lot nicer
+  with me than most other mailing list archive software.
+
+  I also like [`git filter-repo`](https://github.com/newren/git-filter-repo),
+  but am quite happy that I rarely need to use it.
+
+* **Do you happen to have any memorable experience w.r.t. contributing to
+  the Git project? If yes, could you share it with us?**
+
+  In general, I have fond memories of the contributor summits I've attended
+  (both remotely and in person). Putting some faces to the names and talking
+  in real time with people you usually only interact with by email is a
+  genuine pleasure.
+
+* **What is your toolbox for interacting with the mailing list and for
+  development of Git?**
+
+  It's a mess. I used to mostly write and test most of my patches on Linux,
+  but currently write most of my patches on Windows, test build them in the
+  Git for Windows SDK and then submit them using [GitGitGadget](https://gitgitgadget.github.io/).
+  Since my mail provider recently stopped delivering the mailing list traffic
+  to my inbox, I tend to read the mailing list on lore.kernel.org, download
+  mails as mbox files and reply to them using [alpine](https://alpineapp.email/).
+  I have looked at [korgalore](https://korgalore.docs.kernel.org/en/latest/) as
+  a way to get the mailing list back into my inbox, but haven't gotten around
+  to testing it yet.
+
+* **What is your advice for people who want to start Git development?
+  Where and how should they start?**
+
+  Start with something small and try to scratch your own itch. Find something
+  about Git that you feel could be improved. (An example in my case could be
+  adding a single line mode to `add -p`)
+
+  Take a look at the mailing list archives and the history of the files in
+  question for some insights into why that thing you want to improve might
+  be the way it currently is.
+
+  Feel free to ask people for help on the mailing list, on [the discord](https://git-scm.com/community#discord)
+  or [in IRC](https://git-scm.com/community#irc). Most people are happy to
+  help out a beginner, but it might be easy to miss that a patch submitter
+  on the mailing list is less familiar with the code base.
+
 
 ## Other News
 
