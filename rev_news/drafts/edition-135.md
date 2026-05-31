@@ -17,9 +17,33 @@ This edition covers what happened during the months of April and May 2026.
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [[GSoC] Welcoming our 2026 contributors and thanking our applicants](https://lore.kernel.org/git/CA+ARAto8ZLSu3oFS1QaOqc++Dm+Wb35EqeBo6JUJ5jVG4MZNbg@mail.gmail.com/)
+
+  The Git project was accepted in the
+  [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/)
+  this year again, and 4 applicants were
+  [selected](https://summerofcode.withgoogle.com/programs/2026/organizations/git):
+
+  - K Jayatheerth will work on
+    [the "Improve the new git repo command" project](https://summerofcode.withgoogle.com/programs/2026/projects/O1nF3zMT)
+    mentored by Lucas Oshiro and Justin Tobler.
+
+  - Pablo Sabater will work on
+    [the "Complete and extend the remote-object-info command for git cat-file" project](https://summerofcode.withgoogle.com/programs/2026/projects/752yzmwm)
+    mentored by Chandra Pratap and Karthik Nayak.
+
+  - Siddharth Shrimali will work on
+    [the "Improve Disk Space Recovery for Partial Clones" project](https://summerofcode.withgoogle.com/programs/2026/projects/hs14IFAn)
+    mentored by Christian Couder and Siddharth Asthana.
+
+  - Tian Yuchen will work on
+    [the "Refactoring in order to reduce Git’s global state" project](https://summerofcode.withgoogle.com/programs/2026/projects/Lx1PmL4k)
+    mentored by Ayush Chandekar, Christian Couder and Olamide Caleb Bello
+
+  Congratulations to them, and thanks a lot to all the applicants who
+  worked on Git and submitted proposals!
 
 <!---
 ### Reviews
