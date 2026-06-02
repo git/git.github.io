@@ -27,11 +27,11 @@ This edition covers what happened during the months of April and May 2026.
   [selected](https://summerofcode.withgoogle.com/programs/2026/organizations/git):
 
   - K Jayatheerth will work on
-    [the "Improve the new git repo command" project](https://summerofcode.withgoogle.com/programs/2026/projects/O1nF3zMT)
+    [the "Improve the new `git repo` command" project](https://summerofcode.withgoogle.com/programs/2026/projects/O1nF3zMT)
     mentored by Lucas Oshiro and Justin Tobler.
 
   - Pablo Sabater will work on
-    [the "Complete and extend the remote-object-info command for git cat-file" project](https://summerofcode.withgoogle.com/programs/2026/projects/752yzmwm)
+    [the "Complete and extend the remote-object-info command for `git cat-file`" project](https://summerofcode.withgoogle.com/programs/2026/projects/752yzmwm)
     mentored by Chandra Pratap and Karthik Nayak.
 
   - Siddharth Shrimali will work on
@@ -58,7 +58,7 @@ This edition covers what happened during the months of April and May 2026.
   called Dscho, wrote a follow-up to the announcement, retitled "MIDX
   woes", to report an unpleasant discovery: fetching with
   `v2.54.0-rc2` into an existing repository made that repository
-  unusable for Git `v2.53.0`, which would now bail out with:
+  unusable for Git `v2.53.0`, which would then bail out with:
 
   ```
   fatal: multi-pack-index version 2 not recognized
@@ -128,7 +128,7 @@ This edition covers what happened during the months of April and May 2026.
       signature or version do not match. Reading the code, Peff
       believed it would quietly fall back to the underlying packs.
 
-  His conclusion: "it really is just our old versions that are the
+  His conclusion: "It really is just our old versions that are the
   problem".
 
   He then asked the natural follow-up question: how hard would it be
@@ -150,7 +150,7 @@ This edition covers what happened during the months of April and May 2026.
   part of normal maintenance after a fetch, so removing the broken
   MIDX by hand "will not keep the repo in a good state". The next
   fetch will simply regenerate it. He agreed that a graceful fallback
-  (with a visible warning) belongs in Git too, and that the immediate
+  (with a visible warning) belonged in Git, too, and that the immediate
   fix should be to stop writing v2 by default so that a 2.53/2.54
   mixed deployment stops poisoning the repository at every fetch.
 
@@ -334,7 +334,7 @@ This edition covers what happened during the months of April and May 2026.
   something in Git for a full year, what would it be?**
 
   I don't have a big project idea for a decently sized team of the top of
-  my head. That said there are a lot of currently ongoing topics that could
+  my head. That said, there are a lot of currently ongoing topics that could
   use helping hands. I think `SHA256`<->`SHA1` interop could use some
   helping hands. The new [`git history`](https://git-scm.com/docs/git-history)
   command has a lot of potential and could use a team. We also have a few
@@ -413,7 +413,7 @@ This edition covers what happened during the months of April and May 2026.
 
 __Various__
 + [Opening Up My Git Training Material](https://jauu.net/posts/2026-05-08-git-training-curriculum/)
-  by Hagen Paul Pfeifer on Just Another Unix User blog.
+  by Hagen Paul Pfeifer on his Just Another Unix User blog.
   A 300-page Git training curriculum, built over years of professional training,
   released under CC BY-NC-ND 4.0 as [slides in the PDF format](https://jauu.net/posts/2026-05-08-git-training-curriculum/git-course.pdf).
 + [No fix yet for critical RCE (Remote Code Execution) bug in open-source Git service Gogs - exploit module is out](https://www.theregister.com/security/2026/05/29/no-fix-yet-for-critical-gogs-rce-bug-exploit-module-is-out/5248691)
@@ -424,7 +424,7 @@ __Various__
     + There is [Gitea](https://about.gitea.com/), which is a fork of Gogs,
       and [Forgejo](https://forgejo.org/), a fork of Gitea.
 + [Gitea Runner 1.0.0 is released](https://blog.gitea.com/release-of-runner-1.0.0/)
-  by bircni, Gitea maintainer, on Gitea blog.
+  by bircni, the Gitea maintainer, on the Gitea blog.
 + [Protestware for coding agents](https://nesbitt.io/2026/05/28/protestware-for-coding-agents.html)
   by Andrew Nesbitt on his blog.  The post talks about the change in `jqwik` 1.10.0
   which modified its test executor to write
@@ -460,12 +460,12 @@ __Light reading__
   The article mentions [Ghostty leaving GitHub](https://mitchellh.com/writing/ghostty-leaving-github) (mentioned in [previous edition](https://git.github.io/rev_news/2026/04/30/edition-134/)),
   [research from GitClear about results of AI adoption](https://altersquare.medium.com/your-team-ships-2x-more-pull-requests-since-adopting-ai-your-bug-count-also-doubled-87e636494115),
   [Autoptic](https://www.autoptic.ai/solutions) DevOps platform,
-  [GitButler](https://gitbutler.com/) Git client (first mentioned in [Git Rev News Edition #102](https://git.github.io/rev_news/2023/08/31/edition-102/),
+  [GitButler](https://gitbutler.com/) Git client (first mentioned in [Git Rev News Edition #102](https://git.github.io/rev_news/2023/08/31/edition-102/)),
   [Diversion](https://www.diversion.dev/about) - a distributed version control system
   initially pitched for large-scale game design (mentioned in [Git Rev News Edition #99](https://www.diversion.dev/about)),
   and [Jujutsu](https://github.com/jj-vcs/jj).
 + [30 vs 300 commits per minute on the same branch: Benchmarking GitHub Against Diversion SCM](https://www.diversion.dev/blog/30-vs-300-benchmarking-github-against-diversion)
-  by Meital Gelbort pn Diversion Blog.
+  by Meital Gelbort on Diversion Blog.
 + [Weeknotes: Tangled, or federated enough git](https://digitalflapjack.com/weeknotes/tangled/)
   in Tech notes by Michael Winston Dales, on Digital Flapjack.
     + [Tangled](https://tangled.org/) is a decentralized code hosting and collaboration platform,
@@ -473,12 +473,12 @@ __Light reading__
       (which powers the [BlueSky](https://bsky.app/) microblogging federated social media service),
       which was first mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/).
     + There is also [Radicle](https://radicle.xyz/),
-      which uses the [custom gossip protocol](https://radicle.dev/guides/protocol) (inspired by ActivityPub),
+      which uses the [custom gossip protocol](https://radicle.dev/guides/protocol) (inspired by ActivityPub)
       and was first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/).
     + For [Nostr](https://nostr.org/) (Notes and Other Stuff Transmitted by Relays),
       an open protocol for decentralized message transmission,
       there is [NIP-34: `git` stuff](https://github.com/nostr-protocol/nips/blob/master/34.md) (Nostr Improvement Proposal),
-      which describes how git-based collaboration should happen on Nostr network,
+      which describes how Git-based collaboration should happen on Nostr network,
       and [Grasp](https://gitgrasp.com/) (Git Relays Authorized via Signed-Nostr Proofs),
       an accompanying protocol for distributed code collaboration.
       You can use it with the [nak](https://github.com/fiatjaf/nak) command line tool,
@@ -517,7 +517,7 @@ __Light reading__
 + [Migrating from GitHub Actions to SourceHut Builds](https://news.onbrn.com/migrating-from-github-actions-to-sourcehut-builds/)
   by Bruno Bernardino on his blog.
 + [Local git remotes](https://cblgh.org/posts/local-git-remotes/), or
-  how to backup with git using machines you have at home,
+  how to backup with Git using machines you have at home,
   by Alexander Cobleigh on his blog.
 + [Git push directly to another workstation](https://po-ru.com/2026/05/21/git-push-directly-to-another-workstation)
   by Paul Battley on his blog.
@@ -547,7 +547,7 @@ __Light reading__
   by Amadeus Demarzi (@amadeus) on Pierre\.Computer.
   The post talks about how they made it possible for
   the [Diffs](https://diffs.com/) library to render diff of almost any size.
-    + [Diffs](https://diffs.com/), AKA [@pierre/diffs](https://github.com/pierrecomputer/pierre/tree/main/packages/diffs),
+    + [Diffs](https://diffs.com/), aka [@pierre/diffs](https://github.com/pierrecomputer/pierre/tree/main/packages/diffs),
       is an open source diff and file rendering library in TypeScript
       built on the [Shiki](https://shiki.style/) syntax highlighter.
       It was first mentioned in [Git Rev News Edition #132](https://git.github.io/rev_news/2026/02/28/edition-132/).
@@ -584,7 +584,7 @@ __Light reading__
 + [Twenty Years of Stacking Commits](https://julien.danjou.info/blog/twenty-years-of-stacking-commits/)
   by Julien Danjou, CEO of [Mergify](https://mergify.com/), on his jd:/dev/blog.
   Mentions [Gerrit](https://www.gerritcodereview.com/),
-  small [`git-pull-request`](https://pypi.org/project/git-pull-request/) tool,
+  a small [`git-pull-request`](https://pypi.org/project/git-pull-request/) tool,
   [Mergify Stack](https://mergify.com/product/stacks/) (first mentioned in [Git Rev News Edition #87](https://git.github.io/rev_news/2022/05/26/edition-87/)),
   [Graphite IDE](https://graphite.dev/) built around stacked diffs (mentioned in [Git Rev News Edition #127](https://git.github.io/rev_news/2025/09/30/edition-127/)),
   [Sapling](https://sapling-scm.com/)'s `ghstack`,
@@ -618,7 +618,7 @@ __Light reading__
   by Tom Ashworth on his blog,
   on how to configure [Claude Code](https://www.anthropic.com/claude-code) and [Cowork](https://claude.com/product/cowork)
   to hold operational state of life - ongoing projects, to-do list, inbox view of email, etc.,
-  as plain markdown in a single git repo that Claude Code reads and writes.
+  as plain markdown in a single Git repo that Claude Code reads and writes.
 
 
 __Easy watching__
@@ -631,9 +631,9 @@ __Git tools and sites__
 + [DiffsHub](https://diffshub.com/) is a service that allows to view code changes
   from any public GitHub diff—PRs, comparisons, commits, diffs, and patches—with a
   super-freaking-fast, beautiful, and virtualized interface
-  by replacing `github.com` in an URL with `diffshub.com`.
+  by replacing `github.com` in a URL with `diffshub.com`.
   Built by [The Pierre Computer Company](https://pierre.computer/) with
-  [FileTree](https://trees.software/docs#react-api-filetree),
+  [FileTree](https://trees.software/docs#react-api-filetree)
   and the new [CodeView](https://diffs.com/docs#codeview) component
   in [Diffs](https://diffs.com/).
 + [git-async](https://github.com/cyberia-ng/git-async) is
@@ -675,7 +675,7 @@ __Git tools and sites__
   Written in Python, under MIT license.
 + [gah - Git Add Hunks](https://github.com/ThatXliner/gah)
   is a command line tool and a Claude Code plugin
-  for non-interactive hunk-based staging for git (like `git add -p`).
+  for non-interactive hunk-based staging for Git (like `git add -p`).
   Intended for AI coding agents (Claude, Copilot, Cursor),
   for scripts and automation, and for remote/headless environments without interactive TTY.
   Written in Rust, no license provided.
@@ -685,7 +685,7 @@ __Git tools and sites__
 + [`aperion-shield`](https://github.com/AperionAI/shield) is a tiny, local [MCP](https://modelcontextprotocol.io/) server
   that sits between your AI coding agent (Cursor, Claude Code, etc.)
   and the real MCP servers your agent talks to (postgres, github, shell, filesystem,...).
-  On every `tools/call` it evaluates 45+ adaptive safety rules across
+  On every `tools/call`, it evaluates 45+ adaptive safety rules across
   eight destructive surfaces — SQL, git (since [v0.7.0](https://github.com/AperionAI/shield/releases/tag/shield-v0.7.0)),
   filesystem, secrets exfiltration, supply-chain RCE, reverse shells,
   sudo / privilege escalation, cloud (AWS/GCP/Azure), Kubernetes, and Docker — and either
@@ -707,7 +707,7 @@ __Git tools and sites__
   (in a form similar to [April Fools' Day Request for Comments](https://en.wikipedia.org/wiki/April_Fools%27_Day_Request_for_Comments)).
   This document specifies disclosure, quality, and behavioural requirements
   for non-human contributors to open source software projects.
-+ [VibesHub](https://vibeshub.ai/) - git for your vibes.
++ [VibesHub](https://vibeshub.ai/) - Git for your vibes.
   It is a service that allows sharing the _vibe_, namely your Claude Code sessions,
   including every subagent they spawn.  It allows reviewers and teammates to see
   how you actually shipped / created it, not just the final diff.
@@ -790,4 +790,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Matthias Aßhauer.
+with help from Matthias Aßhauer and Štěpán Němec.
