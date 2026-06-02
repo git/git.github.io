@@ -122,8 +122,8 @@ This edition covers what happened during the months of April and May 2026.
   about:
 
     - JGit, on inspection of its source, throws an exception that is
-      apparently caught and handled correctly (he verified with the
-      `jgit` CLI on hand).
+      apparently caught and handled correctly (verified with the
+      `jgit` CLI).
     - libgit2 returns from a helper called `midx_error()` when the
       signature or version do not match. Reading the code, Peff
       believed it would quietly fall back to the underlying packs.
@@ -164,8 +164,8 @@ This edition covers what happened during the months of April and May 2026.
   regenerating the v2 file unless the default version was also lowered
   (or `midx.version` set to `1`).
 
-  Taylor Blau then weighed in, apologetic about the "trouble here", and
-  laid out a clean three-step plan for the project:
+  Taylor Blau then weighed in and laid out a clean three-step plan for
+  the project:
 
     1. **Immediate (before 2.54)**: revert the default MIDX format to
        V1, so a 2.54.0 release does not regress the case where multiple
@@ -326,7 +326,7 @@ This edition covers what happened during the months of April and May 2026.
 
   In my [last patch series](https://lore.kernel.org/git/pull.2081.v2.git.1775454330.gitgitgadget@gmail.com/),
   I promised a follow up patch that improves CPU core detection on
-  multi-socket-systems on Windows. I need to send that to the mailing list.
+  multi-socket systems on Windows. I need to send that to the mailing list.
   I probably also have some other Windows improvements in Git for Windows
   that I should upstream to git.git.
 
@@ -391,7 +391,7 @@ This edition covers what happened during the months of April and May 2026.
 
   Start with something small and try to scratch your own itch. Find something
   about Git that you feel could be improved. (An example in my case could be
-  adding a single line mode to `add -p`)
+  adding a single line mode to `add -p`.)
 
   Take a look at the mailing list archives and the history of the files in
   question for some insights into why that thing you want to improve might
@@ -454,7 +454,7 @@ __Light reading__
   by Serge Zaitsev on their blog (2022).
   It describes how to implement your own tiny Git in Go
   that would be able to create a local repository, commit a single file to it,
-  view commit logs, and checkout a certain revision of that file.
+  view commit logs, and check out a certain revision of that file.
 + [Git is unprepared for the AI coding tsunami: An influx of agents is pushing GitHub to the brink](https://www.theregister.com/devops/2026/05/15/git-is-unprepared-for-the-ai-coding-tsunami/5241480)
   by Joab Jackson in The Register.
   The article mentions [Ghostty leaving GitHub](https://mitchellh.com/writing/ghostty-leaving-github) (mentioned in [previous edition](https://git.github.io/rev_news/2026/04/30/edition-134/)),
@@ -493,8 +493,8 @@ __Light reading__
     + Contrast with [ForgeFed](https://forgefed.org/) (formerly GitPub),
       a federation protocol for software forges (an [ActivityPub](https://www.w3.org/TR/activitypub/) extension),
       which was first mentioned in [Git Rev News Edition #69](https://git.github.io/rev_news/2020/11/27/edition-69/).
-      Where implemented, it will allow, for example, [federated starring of repository](https://codeberg.org/forgejo-contrib/federation/src/branch/main/FederationRoadmap.md#federated-star-done),
-      which makes no longer important at which instance of a federated forge
+      Where implemented, it will allow, for example, [federated starring of a repository](https://codeberg.org/forgejo-contrib/federation/src/branch/main/FederationRoadmap.md#federated-star-done),
+      meaning that it no longer matters at which instance of a federated forge
       you express your liking for another developer's work.
 + [combat LLM spam by building a web of trust](https://blog.tangled.org/vouching/)
   by oppi\.li on Tangled blog, about
@@ -510,7 +510,7 @@ __Light reading__
   [A GitHub for maintainers](https://nesbitt.io/2026/05/02/a-github-for-maintainers.html)
   by Andrew Nesbitt.
 + [Backing Up All My GitHub Code](https://chriswiegman.com/2026/05/backing-up-all-my-github-code/)
-  by Chris Wiegman on his blog; the post describes [Backup GitHub](https://github.com/ChrisWiegman/backup-github) app
+  by Chris Wiegman on his blog; the post describes the [Backup GitHub](https://github.com/ChrisWiegman/backup-github) app
   created by the author.
 + [Golang and vanity domains; mitigating git forge lock-in](https://cblgh.org/posts/2025-10-18-git-forges-without-lock-in/)
   by Alexander Cobleigh on his blog (2025).
@@ -547,7 +547,7 @@ __Light reading__
   by Amadeus Demarzi (@amadeus) on Pierre\.Computer.
   The post talks about how they made it possible for
   the [Diffs](https://diffs.com/) library to render diff of almost any size.
-    + [Diffs](https://diffs.com/), aka [@pierre/diffs](https://github.com/pierrecomputer/pierre/tree/main/packages/diffs),
+    + [Diffs](https://diffs.com/), AKA [@pierre/diffs](https://github.com/pierrecomputer/pierre/tree/main/packages/diffs),
       is an open source diff and file rendering library in TypeScript
       built on the [Shiki](https://shiki.style/) syntax highlighter.
       It was first mentioned in [Git Rev News Edition #132](https://git.github.io/rev_news/2026/02/28/edition-132/).
@@ -561,7 +561,7 @@ __Light reading__
 + [Defeating git rigour fatigue with jujutsu](https://ikesau.co/blog/defeating-git-rigour-fatigue-with-jujutsu/),
   or how to ensure that a large feature is developed in a series of clean steps,
   by Ike Saunders on i  <esau.
-    + [Jujutsu (`jj`)](https://github.com/martinvonz/jj) is a version control system,
+    + [Jujutsu (`jj`)](https://github.com/martinvonz/jj) is a version control system
       written in Rust, which was first mentioned in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/).
 + [Git Is Not Fine](https://www.billjings.com/posts/title/git-is-not-fine/)
   on Bridget Phillips' personal blog.
@@ -708,16 +708,16 @@ __Git tools and sites__
   This document specifies disclosure, quality, and behavioural requirements
   for non-human contributors to open source software projects.
 + [VibesHub](https://vibeshub.ai/) - git for your vibes.
-  It is a service that allows share the _vibe_, namely your Claude Code sessions,
+  It is a service that allows sharing the _vibe_, namely your Claude Code sessions,
   including every subagent they spawn.  It allows reviewers and teammates to see
   how you actually shipped / created it, not just the final diff.
   Visibility mirrors GitHub - public stays public, private stays private.
-  Installed as the Claude Code plugin.
+  Installed as a Claude Code plugin.
   Written in pure Python, under MIT license.
 + [Re_gent](https://www.re-gent.dev/): Version Control for AI agent activity.
   Track what your agent did, which prompt wrote each line, and inspect any step.
-  Undo, blame, checkout, and replay AI coding sessions locally.
-  Regent captures every agent action, and provides log (what your agent actually did)
+  Undo, blame, check out, and replay AI coding sessions locally.
+  Regent captures every agent action, provides log (what your agent actually did)
   and blame of actions (which prompt wrote this line?),
   and shows change together with full context.
   Written in Go, under Apache 2.0 license.
