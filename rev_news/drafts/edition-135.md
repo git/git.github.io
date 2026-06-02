@@ -745,8 +745,6 @@ __Git tools and sites__
 
 ## Releases
 
-# Releases
-
 + libgit2 [1.9.4](https://github.com/libgit2/libgit2/releases/tag/v1.9.4),
 [1.9.3](https://github.com/libgit2/libgit2/releases/tag/v1.9.3)
 + go-git [6.0.0-alpha.4](https://github.com/go-git/go-git/releases/tag/v6.0.0-alpha.4),
