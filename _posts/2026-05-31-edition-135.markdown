@@ -572,7 +572,7 @@ __Light reading__
 + [Why Don't I Like Git More?](https://matduggan.com/why-dont-i-like-git-more/)
   by Matt Duggan on matduggan\.com.
   The author tried and described a few competitors:
-  [SVN (Subversion)](https://subversion.apache.org/)
+  [SVN (Subversion)](https://subversion.apache.org/),
   [Meta's Sapling](https://sapling-scm.com/);
   also mentions [Scalar](https://git-scm.com/docs/scalar).
 + [Git Absorb, the power tool for best Git hygiene](https://lambdao.dev/2024/09/15/GitAbsorbforgreatHygiene.html)
