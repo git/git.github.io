@@ -358,8 +358,8 @@ This edition covers what happened during the months of April and May 2026.
   it is that it allows me to easily stage individual lines instead of just
   hunks like `add -p`.
 
-  I find public inbox ([the software behind](https://github.com/nojb/public-inbox)
-  [lore.kernel.org](https://lore.kernel.org/git/)] just clicks a lot nicer
+  I find [public inbox](https://public-inbox.org/) (the software behind
+  [lore.kernel.org](https://lore.kernel.org/git/)) just clicks a lot nicer
   with me than most other mailing list archive software.
 
   I also like [`git filter-repo`](https://github.com/newren/git-filter-repo),
