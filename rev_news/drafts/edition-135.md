@@ -412,6 +412,10 @@ This edition covers what happened during the months of April and May 2026.
 ## Other News
 
 __Various__
++ [Opening Up My Git Training Material](https://jauu.net/posts/2026-05-08-git-training-curriculum/)
+  by Hagen Paul Pfeifer on Just Another Unix User blog.
+  A 300-page Git training curriculum, built over years of professional training,
+  released under CC BY-NC-ND 4.0 as [slides in the PDF format](https://jauu.net/posts/2026-05-08-git-training-curriculum/git-course.pdf).
 + [No fix yet for critical RCE (Remote Code Execution) bug in open-source Git service Gogs - exploit module is out](https://www.theregister.com/security/2026/05/29/no-fix-yet-for-critical-gogs-rce-bug-exploit-module-is-out/5248691)
   by Jessica Lyons on The Register (Fri, 29 May 2026).
     + [Gogs](https://gogs.io/) is a Git forge written in Go,
