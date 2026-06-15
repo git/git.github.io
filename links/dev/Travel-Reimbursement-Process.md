@@ -25,7 +25,7 @@ next steps.
 the guidelines listed on this page, please defer to the Conservancy's
 Policy and let the Git PLC know.
 
-# 2. Estimate Costs & Email the Git PLC
+## 2. Estimate Costs & Email the Git PLC
 
 Please send an email to
 [the Git PLC (Project Leadership Committee)](mailto:git@sfconservancy.org)
@@ -45,7 +45,7 @@ account in your estimate.
 Make sure to mention the total cost for a visa if you need one, and
 the total cost for everything (including visa costs).
 
-# 3. Apply for a visa
+## 3. Apply for a visa
 
 If we don't reject your estimate and if you need a visa,
 **please start to apply for a visa as soon as possible**.
@@ -61,7 +61,7 @@ The more we know about your visa process, the better we can help you
 and others. For example if you get an appointment, let us know the
 date and the documents that could help you get a visa then.
 
-# 4. Visa Fees Reimbursement
+## 4. Visa Fees Reimbursement
 
 Don't wait for your sponsorship request to be fully approved to apply
 for a visa if you need one. If you follow these requirements:
@@ -80,7 +80,7 @@ encourage you to apply for a visa soon because unfortunately not
 getting a visa is the most likely thing that might prevent you from
 attending.
 
-# 5. Request approval timeline
+## 5. Request approval timeline
 
 We cannot fully approve most requests right away, because there is a
 risk, even if that never happened in the past, that we get too many
@@ -102,7 +102,7 @@ When we approve your request, you will receive an email from us saying
 it's approved. Don't start booking anything that is not visa related,
 especially not flights, before you receive that email.
 
-# 6. Visa Documentation Support
+## 6. Visa Documentation Support
 
 When your request has been fully approved, the Conservancy will be
 able to provide official **Sponsorship Letter**. This is a letter
@@ -121,7 +121,7 @@ conference website and if you don't find the information there, find
 the organizers (they usually announce the conference on the mailing
 list) and email them directly (without us in Cc).
 
-# 7. Visa and Request Approvals
+## 7. Visa and Request Approvals
 
 When we approve your request and you need a visa, we will usually say
 that:
@@ -148,7 +148,7 @@ It's your responsibility to find and provide us with documents,
 estimates and good arguments to convince us that you have a good
 chance of getting a visa if you can book in advance.
 
-# 8. Booking Guidelines
+## 8. Booking Guidelines
 
 Please take another look at the Conservancy's Policy just before or
 while booking.
@@ -166,7 +166,7 @@ reasonnable travel options force you to stay later or arrive earlier.
 Also please take another look at the hotel rates policy, since some of
 the options near the conference venue might be on the expensive side.
 
-# 9. GSoC Mentor Summit
+## 9. GSoC Mentor Summit
 
 If you mentor someone working on Git for the Google Summer of Code,
 you might apply and be selected by the Git mentors and org admins to
@@ -206,7 +206,7 @@ Please consider the following though:
   Google provides us, please send us a regular request as soon as
   possible.
 
-# 10. Submitting for Actual Reimbursement
+## 10. Submitting for Actual Reimbursement
 
 When you want to get reimbursed, please take another look at the
 Conservancy's Policy for the exact submission steps. It usually
