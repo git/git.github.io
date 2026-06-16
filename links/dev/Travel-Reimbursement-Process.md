@@ -43,7 +43,9 @@ breakfast and sometimes dinner. It's nice if you can take this into
 account in your estimate.
 
 Make sure to mention the total cost for a visa if you need one, and
-the total cost for everything (including visa costs).
+the total cost for everything (including visa costs), all in **USD**.
+
+(See section "11. Currencies and rates" below.)
 
 ## 3. Apply for a visa
 
@@ -214,3 +216,19 @@ requires you to send an email
 **directly to a Conservancy email address**, not to
 the Git PLC, though it's fine if you put the Git PLC in Cc.
 
+## 11. Currencies and rates
+
+When we ask for an estimate, we ask for amounts in **USD** to make it
+easier for us to compare and have a meaningful idea of the amounts
+involved right away. We know your estimates won't be very accurate
+because prices and exchange rates can change between now and when you
+actually book flights and hotels, or buy meals or other things.
+
+At reimbursement time, the Conservancy asks you to
+**"not do your own currency conversions in your reimbursement requests"**
+and to **"report expenses in their original currency/ies"**, because the
+issue then is different. It's about making an accurate reimbursement
+when different currencies are involved.
+
+Please ensure you follow the correct currency guideline depending on
+which stage of the application you are in.
