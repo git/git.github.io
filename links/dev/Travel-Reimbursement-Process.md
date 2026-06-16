@@ -89,7 +89,7 @@ risk, even if that never happened in the past, that we get too many
 valid requests that we cannot all satisfy.
 
 When a Git related conference is announced, we prefer to leave some
-time for people to apply, and then, after that time passed, decide for
+time for people to apply, and then, after that time passes, decide for
 all those who applied during that time.
 
 This shouldn't prevent you from applying for a visa soon (see the
@@ -107,7 +107,7 @@ especially not flights, before you receive that email.
 ## 6. Visa Documentation Support
 
 When your request has been fully approved, the Conservancy will be
-able to provide official **Sponsorship Letter**. This is a letter
+able to provide an official **Sponsorship Letter**. This is a letter
 saying that we approved to reimburse your travel costs for up to a
 certain amount. It might help you with your visa process.
 
@@ -132,7 +132,7 @@ that:
   amount, and
 
 - if you can get a visa, we approve to reimburse you for the whole
-  travel up to a certain amount.
+  trip up to a certain amount.
 
 This is because we don't want as much as possible to waste flight and
 hotel booking money when people don't get a visa, which unfortunately
@@ -142,8 +142,8 @@ In some cases already having flight tickets and hotel bookings could
 help you with the visa process. In these cases, please email us and
 convince us that chances are high that you will get a visa if you can
 book the flight tickets in advance (before you get a visa). Also try
-to find flights tickets and hotel bookings that are at least partially
-reimbursible, so that everything is not lost in case you cannot get a
+to find flight tickets and hotel bookings that are at least partially
+reimbursable, so that everything is not lost in case you cannot get a
 visa.
 
 It's your responsibility to find and provide us with documents,
@@ -161,9 +161,9 @@ your flight search cost.
 Note that you're free to stay extra days at your own expense, as long
 as the flight cost is comparable.
 
-We reimburse only the expenses occuring during the time when the
+We reimburse only the expenses occurring during the time when the
 conference happens, or maybe a bit before and after it if all the
-reasonnable travel options force you to stay later or arrive earlier.
+reasonable travel options force you to stay later or arrive earlier.
 
 Also please take another look at the hotel rates policy, since some of
 the options near the conference venue might be on the expensive side.
@@ -192,7 +192,7 @@ Git PLC.
 
 Please consider the following though:
 
-- Google usually provide food and lodging free of charges during the
+- Google usually provides food and lodging free of charges during the
   whole Mentor Summit, so in most cases you shouldn't need to ask for
   such reimbursements. You should mostly ask for your flight (or maybe
   car, bus or train) costs to be reimbursed.
