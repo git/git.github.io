@@ -111,7 +111,10 @@ able to provide an official **Sponsorship Letter**. This is a letter
 saying that we approved to reimburse your travel costs for up to a
 certain amount. It might help you with your visa process.
 
-The Git PLC itself cannot provide an invitation letter to the
+Let us know soon if you'd like additional information, like your
+passport number and date of birth, to be mentioned in this letter.
+
+The Git PLC itself **cannot provide an Invitation Letter** to the
 conference though, as it is not organizing the conference even if
 individual PLC members may participate in these activities through
 their affiliations with other organizations.
