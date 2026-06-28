@@ -119,8 +119,12 @@ conference though, as it is not organizing the conference even if
 individual PLC members may participate in these activities through
 their affiliations with other organizations.
 
+Please make sure you understand the difference between a Sponsorship
+Letter and an Invitation Letter. See
+[this webpage for example](https://globalconference.ca/what-is-the-difference-between-an-invitation-letter-and-a-letter-of-sponsorship-for-a-visa-application/).
+
 Please don't ask the PLC for things related to the conference, like an
-invitation letter, how to submit a talk, how to get a free ticket to
+Invitation Letter, how to submit a talk, how to get a free ticket to
 the conference, etc. Instead, please first take a look at the
 conference website and if you don't find the information there, find
 the organizers (they usually announce the conference on the mailing
