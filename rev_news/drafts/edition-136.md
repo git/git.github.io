@@ -21,9 +21,227 @@ This edition covers what happened during the months of May and June 2026.
 ### General
 -->
 
-<!---
+
 ### Reviews
--->
+
++ [[PATCH 0/3] Batch prefetching](https://lore.kernel.org/git/pull.2089.git.1776379694.gitgitgadget@gmail.com)
+
+  Elijah Newren sent a 3 patch series to improve the performance of a
+  couple of commands in [partial clones](https://git-scm.com/docs/partial-clone).
+  The work was spurred by a real-world report where `git cherry` jobs were each
+  doing hundreds of single-blob fetches, at a cost of around 3 seconds
+  each, so that batching those downloads should dramatically speed up
+  such jobs. As Elijah put it, he "decided to fix up git grep
+  similarly while at it". The series also corrected a small
+  documentation typo he had noticed in `patch-ids.h` (a missing
+  trailing parenthesis in a comment), as a preparatory fixup.
+
+  For readers unfamiliar with the trade-off, partial clones let users
+  avoid downloading blobs upfront, at the expense of needing to
+  download them later as they run other commands. That trade-off can
+  sometimes be more painful than expected: when the needed blobs are
+  discovered one at a time as they are accessed, each one triggers a
+  separate network round-trip. Some commands like `checkout`, `diff`,
+  and `merge` already mitigate this by doing batch prefetches of the
+  blobs they will need, which dramatically reduces the cost of
+  on-demand loading. The aim of this series was to extend that ability
+  to two more commands, `git cherry` and `git grep`.
+
+  The interesting part for `git cherry` is how to figure out,
+  *without* fetching anything yet, which blobs will eventually be
+  needed. As Elijah explained, `git cherry` works in two phases: it
+  first computes header-only patch IDs (based on file paths and
+  modes), and only falls back to full content-based IDs when the
+  header-only IDs collide. Those full IDs are what require reading
+  blob content, and the comparison is driven by a hashmap whose
+  comparison function, `patch_id_neq()`, is exactly what triggers the
+  on-demand fetches. To enumerate the colliding blobs ahead of time,
+  the patch temporarily swaps the hashmap's comparison function for a
+  trivial `always_match()` function, walks the entries that would
+  collide to collect their blob OIDs into an `oidset`, restores the
+  original comparison function, and then fetches everything in a
+  single batch via `promisor_remote_get_direct()`. A helper,
+  `collect_diff_blob_oids()`, lists the blob OIDs touched by a
+  commit's diff. It leaves out files that are explicitly marked as
+  binary in the userdiff configuration, because for those files
+  patch-ID just hashes the OID with `oid_to_hex()` instead of
+  reading the blob, so there is no point downloading it.
+
+  While git cherry relies on hashmap comparisons, the `git grep` patch
+  takes an analogous but simpler approach: it adds a preliminary walk
+  over the tree (similar to `grep_tree()`) that collects the blobs of
+  interest and prefetches them in one go.
+
+  Junio Hamano, the Git maintainer, took a first look and immediately
+  spotted something that did not belong: the series added a 210-line
+  `investigations/cherry-prefetch-design-spec.md` file to the
+  project. He pointed out that, as a document describing how
+  `git cherry` works, "it is vastly lacking", that much of its content
+  is the sort of material that would normally go in a commit message,
+  and that he was "not sure how others would benefit from being able
+  to read it" once the series landed. Elijah's reply was short and to
+  the point: "Ugh, no, sorry." That stray file had been committed by
+  mistake.
+
+  Elijah quickly sent [version 2](https://lore.kernel.org/git/pull.2089.v2.git.1776472347.gitgitgadget@gmail.com),
+  whose only change compared to v1 was to remove that stray file,
+  noting it was "So embarrassing that I didn't catch that before
+  submitting."
+
+  Phillip Wood reviewed v2 and made an interesting connection:
+  `git rebase` without `--reapply-cherry-picks` suffers from the same
+  problem, since it does the equivalent of `git log --cherry-pick`. He
+  asked whether `prefetch_cherry_blobs()` could be shared with the
+  cherry-pick detection in `revision.c`. Elijah agreed the connection
+  was correct, explaining that `git rebase` (without
+  `--reapply-cherry-picks`) and `git log --cherry-pick` both go
+  through `cherry_pick_list()` in `revision.c`, which has the same
+  shape as the loop in `cmd_cherry()` and triggers fetches from the
+  same `patch_id_neq()` callback. He even sketched what sharing the
+  code would look like.
+
+  However, he preferred to leave that out of the current series,
+  expressing reservations about expanding partial-clone support
+  further into this area: `git cherry`, `git log --cherry-pick`, and
+  the default cherry-pick detection in `git rebase` all exist to
+  answer "has this patch already landed upstream?", a question that,
+  in repositories large enough to need partial clones, he felt "is
+  rarely worth the cost of computing patch-ids across arbitrary
+  amounts of history." His honest guidance for users on a large
+  repository would be to pass `--reapply-cherry-picks` (with rebase)
+  and skip the detection entirely, or to narrow the range under
+  consideration. He noted that the omission of a
+  `--no-reapply-cherry-picks` option in `git replay` had been a
+  deliberate choice rather than an oversight. He had only implemented
+  the `git cherry` fix because of a specific customer whose tooling
+  had already baked in the operation, and prefetching at least made
+  the worst case tolerable. He added that he would happily review a
+  patch from anyone wanting to carry the shared code forward.
+
+  Phillip continued the exchange with several good questions, asking
+  whether patch IDs are computed for every upstream commit or just the
+  ones modifying the same paths, and remarking that it "is a shame
+  that we don't have a config setting for `--reapply-cherry-picks` as
+  it is easy to forget to pass that option" (a setting made awkward
+  because the apply backend does not support that option). He was also
+  "a bit surprised customers aren't complaining about tools that use
+  `git rebase` being slow."
+
+  Elijah replied that determining which upstream commits modify the
+  same paths still requires walking the upstream commits and doing a
+  tree-diff for each, and that in the biggest repositories "even a
+  merge-base operation can start to feel expensive." On the surprise
+  about rebase, he answered "Are you sure they aren't complaining?",
+  explaining that the merging parts of a rebase already do batch
+  prefetching, but the cherry-pick-detection part does not. He also
+  noted that the customer in question was using `git replay` rather
+  than `git rebase`, probably because early versions of `git replay`
+  lacked the drop-commits-that-become-empty logic that Phillip later
+  added (he thanked Phillip again for that), and that the prefetch
+  patch lets things stay fast even if they keep their `git cherry`
+  calls.
+
+  Derrick Stolee then reviewed v2, reading both the `git cherry` and
+  `git grep` patches together. He worried that
+  `collect_diff_blob_oids()` being "hidden in builtin/log.c may not be
+  the right long-term home", anticipating more and more cases where
+  Git would want to prefetch blobs, and wondered whether the logic
+  could take advantage of, or live alongside, the existing
+  `diff_queued_diff_prefetch()` within `diffcore_std()` in
+  `diff.c`. He framed the `git cherry` patch as caring about a diff
+  and the `git grep` patch as caring about a "scan prep", suggesting
+  `git archive` as a closer analog for the latter than `checkout`. He
+  was careful to add that he did not mean to complicate the series and
+  was "most interested in having this logic be more reusable in the
+  future without needing to move code across files."
+
+  Junio, seeing that Stolee's two review messages had gone unanswered
+  for a while, asked whether he should keep the patches in his tree
+  "hoping that responses may come some day", and said he would mark
+  the topic as expecting review responses in the draft "What's
+  cooking" report for the time being. Elijah apologized for the delay,
+  explaining he had been pulled into firefighting and remediation
+  duties after a number of incidents at work, and suggested marking
+  the series as expecting a re-roll since Stolee had asked for an
+  additional test.
+
+  Elijah then answered Stolee's reusability question in detail. He
+  read the patch differently: `collect_diff_blob_oids()` already leans
+  on the diff library at the per-commit level (`diff_tree_oid()` plus
+  `diffcore_std()`), and the real value of the series lives *above*
+  the diff library, in the accumulation across many commits.
+
+  Concretely, the motivating case was a patch touching a few files
+  where upstream had tens of thousands of commits in the relevant
+  range, several hundred of which modified the same set of files: a
+  per-diff prefetch like `diff.c` uses would turn that into hundreds
+  of small fetches, "what this series gives you is one fetch." He
+  pointed out two further `git cherry`-specific filters that he felt
+  did not belong in the diff library: most commits are skipped before
+  patch-ID is even computed (so prefetching for them would be wasted),
+  and content for binary files is skipped because patch-ID uses
+  `oid_to_hex()` for them. To check Stolee's idea concretely, he
+  reviewed all of the existing `promisor_remote_get_direct()` call
+  sites and concluded that none of them shared the "diff two trees and
+  harvest OIDs" shape, so there was no natural shared layer above the
+  `promisor_remote_get_direct()` primitive itself. He agreed
+  `git archive` would be the closest analog if it ever grew prefetch
+  logic, and proposed factoring out a tree-walk helper only when a
+  second caller actually wanted one.
+
+  For the `git grep` patch, Stolee asked for a test that exercises a
+  pathspec filter, with files like `matches.txt`, `nomatch.txt`, and
+  `matches.md`, so that `git grep -c "needle" HEAD -- *.txt` would
+  download only the matching subset. This turned out to be more
+  valuable than a simple test improvement: Elijah replied "Yes,
+  absolutely", and discovered that while he was handling pathspecs
+  correctly, he was unconditionally requesting whatever objects
+  matched the pathspecs even when those blobs were already present
+  locally. He promised to send a fix along with the updated test.
+
+  That fix arrived in [version 3](https://lore.kernel.org/git/pull.2089.v3.git.1778775928.gitgitgadget@gmail.com),
+  which made three changes compared to v2:
+
+  - the final patch's test case was updated, as Stolee had suggested,
+    to exercise a pathspec,
+
+  - the last two patches were modified to avoid re-downloading blobs
+    already present locally (checking with
+    `odb_read_object_info_extended()` and `OBJECT_INFO_FOR_PREFETCH`
+    on the `git cherry` side, and `odb_has_object()` on the `git grep`
+    side), with the tests adjusted to verify it, and
+
+  - a new first patch was inserted documenting the filtering contract
+    of `promisor_remote_get_direct()`.
+
+  That documentation patch explains that the function does not filter
+  out OIDs already present locally on its happy path, so callers are
+  responsible for filtering and deduplicating themselves. Elijah
+  candidly noted in the commit message that he "missed this originally
+  and wrote two problematic callers". He also mentioned that he had
+  not pursued Stolee's code-sharing suggestion, since it appeared to
+  be based on a misunderstanding that the `git cherry` patch was about
+  a diff.
+
+  Stolee reviewed v3 and declared it "good to go", graciously adding
+  that Elijah's detailed responses in the v2 thread "helped me
+  understand that my thought was misguided" and gave him "extra
+  confidence" in the approach. Junio agreed the series was "in a good
+  shape" and marked the topic for the `next` branch. Elijah thanked
+  Stolee one more time, noting that the comments on the `git grep`
+  patch in particular "led me to what would have been a rather
+  annoying bug", so calling out the test improvement had been time
+  well spent.
+
+  In the end, the series was merged into the `master` branch and is part
+  of the recent v2.55.0 release. A concrete customer pain point led to
+  extending Git's existing batch-prefetching habit to two more
+  commands, `git cherry` and `git grep`, as well as a bug fix and
+  improved documentation. The thread also clarified the boundaries of
+  partial-clone friendliness for cherry-pick detection, leaving the
+  door open for sharing the new code with `git rebase` and
+  `git log --cherry-pick` should someone wish to carry that work
+  forward.
 
 <!---
 ### Support
