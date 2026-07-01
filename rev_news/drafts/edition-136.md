@@ -289,6 +289,25 @@ __Light reading__
   by Alex Russel on his Infrequently Noted blog (2011).
 
 
+__Scientific papers__
++ Santiago Torres-Arias, Anil Kumar Ammula, Reza Curtmola, Justin Cappos:
+  _"[On Omitting Commits and Committing Omissions: Preventing Git Metadata Tampering That (Re)introduces Software Vulnerabilities](https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/torres-arias)"_
+  presented at 25th USENIX Security Symposium,
+  August 10-12, 2016, in Austin, Texas, USA:<br>
+  [paper](https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_paper_torres-arias.pdf)
+  (with [errata](https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_errata2.pdf)),
+  [slides](https://www.usenix.org/sites/default/files/conference/protected-files/security16_slides_torres-arias.pdf),
+  [video](https://www.youtube.com/watch?v=FVvVoLcj_A0).
++ Aditya Sirish A Yelgundhalli, Patrick Zielinski, Reza Curtmola, Justin Cappos:
+  _"[Rethinking Trust in Forge-Based Git Security](https://www.ndss-symposium.org/ndss-paper/rethinking-trust-in-forge-based-git-security/)"_
+  presented at The Network and Distributed System Security (NDSS) Symposium,
+  February 23-27, 2026, in San Diego, California, USA.
+  [DOI:10.14722/ndss.2025.241008](https://dx.doi.org/10.14722/ndss.2025.241008)<br>
+  [paper](https://www.ndss-symposium.org/wp-content/uploads/2025-1008-paper.pdf),
+  [slides](https://www.ndss-symposium.org/wp-content/uploads/9D-f1008-yelgundhalli.pdf),
+  [video](https://youtu.be/FA1gEAKJAR0).
+
+
 __Easy watching__
 + [Worktrees missing piece](https://www.youtube.com/watch?v=99v51wRl7zE):
   Learn how to create bare repos, and why they're being used with worktrees.
