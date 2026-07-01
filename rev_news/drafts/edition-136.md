@@ -257,6 +257,30 @@ __Various__
 
 
 __Light reading__
++ [Signing is for the bad days](https://nesbitt.io/2026/05/24/signing-is-for-the-bad-days.html)
+  by Andrew Nesbitt on his blog, about tools for supply-chain security:
+  [TUF (The Update Framework)](https://theupdateframework.io/) - which protects
+  the last hop, from the repository to the machine doing the install
+  (mentioned in passing in [Git Rev News Edition #104](https://git.github.io/rev_news/2023/10/31/edition-104/));
+  [in-toto](https://in-toto.io/) - which protects the build pipeline; and
+  [Sigstore](https://www.sigstore.dev/) - which allows to remove long-lived keys
+  and for the developer to authenticate with <abbr title="OpenID Connect">OIDC</abbr>
+  identity you already have, GitHub Actions or Google, etc.,
+  where [Fulcio](https://github.com/sigstore/fulcio) issues
+  a short-lived code-signing certificate bound to that OIDC identity valid for ten minutes,
+  and the signature and cert go into [Sigstore Rekor](https://github.com/sigstore/rekor),
+  a public append-only transparency log
+  (Sigstore was first mentioned in [Git Rev News Edition #91](https://git.github.io/rev_news/2022/09/30/edition-91/)
+  and Sigstore Rector in [Edition #111](https://git.github.io/rev_news/2024/05/31/edition-111/)).
++ [gittuf - a signed log for git refs](https://nesbitt.io/2026/06/04/gittuf-a-signed-log-for-git-refs.html)
+  by Andrew Nesbitt on his blog
+  ([gittuf](https://gittuf.dev/) was mentioned in
+  [Git Rev News Edition #104](https://git.github.io/rev_news/2023/10/31/edition-104/) and
+  in [Edition #111](https://git.github.io/rev_news/2024/05/31/edition-111/)).
+    + See also [Securing Git repositories with gittuf](https://lwn.net/Articles/972467/)
+      article by by Joe Brockmeier on LWN\.net, a report of a talk at OSSNA; video of the talk:
+      [Securing Git Repositories with Gittuf - Aditya Sirish A Yelgundhalli & Billy Lynch](https://www.youtube.com/watch?v=eCSeIEdMbCw).
+      Mentioned in [Git Rev News Edition #111](https://git.github.io/rev_news/2024/05/31/edition-111/)
 + [Git Worktree - Practical workflow with a central bare repo](https://nakatechlabs.com/blog/2025/git-worktree/)
   by Aito Nakajima on NakaTechLabs.
 + [Git Worktrees with Bare Repos: A Clean Setup for Modern Development](https://medium.com/@miladpw/git-worktrees-with-bare-repos-a-clean-setup-for-modern-development-c5b251ee7b73)
