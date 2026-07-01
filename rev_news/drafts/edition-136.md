@@ -257,12 +257,28 @@ __Various__
 
 
 __Light reading__
++ [Git Worktree - Practical workflow with a central bare repo](https://nakatechlabs.com/blog/2025/git-worktree/)
+  by Aito Nakajima on NakaTechLabs.
++ [Git Worktrees with Bare Repos: A Clean Setup for Modern Development](https://medium.com/@miladpw/git-worktrees-with-bare-repos-a-clean-setup-for-modern-development-c5b251ee7b73)
+  by Milad on his Medium-hosted blog.
++ [Git Worktrees Step-By-Step](https://infrequently.org/2021/07/worktrees-step-by-step/)
+  by Alex Russel on his Infrequently Noted blog (2011).
 
-<!---
+
 __Easy watching__
--->
++ [Worktrees missing piece](https://www.youtube.com/watch?v=99v51wRl7zE):
+  Learn how to create bare repos, and why they're being used with worktrees.
+  YouTube video on The Modern Coder channel [5:14].
+    + The video author had created [LearnGit.io](https://learngit.io/),
+      focusing on how Git actually works, free for students.
+      This site was first mentioned in [Git Rev News Edition #127](https://git.github.io/rev_news/2025/09/30/edition-127/).
+
 
 __Git tools and sites__
++ [Worktrunk](https://worktrunk.dev/) is a CLI for git worktree management,
+  designed for running AI agents in parallel.
+  [Written](https://github.com/max-sixty/worktrunk) in Rust,
+  dual-licensed under MIT and Apache-2.0 license.
 
 
 ## Releases
