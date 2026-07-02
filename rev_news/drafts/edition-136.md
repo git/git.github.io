@@ -616,10 +616,12 @@ __Git tools and sites__
 
 ## Releases
 
-+ Git [2.55.0-rc2](https://lore.kernel.org/git/xmqqv7b9mcfx.fsf@gitster.g/),
++ Git [2.55.0](https://lore.kernel.org/git/xmqqv7b1w9vr.fsf@gitster.g/),
+[2.55.0-rc2](https://lore.kernel.org/git/xmqqv7b9mcfx.fsf@gitster.g/),
 [2.55.0-rc1](https://lore.kernel.org/git/xmqqik7hw0ie.fsf@gitster.g/),
 [2.55.0-rc0](https://lore.kernel.org/git/xmqqik7pqeiq.fsf@gitster.g/)
-+ Git for Windows [v2.55.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.55.0-rc2.windows.1),
++ Git for Windows [v2.55.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.55.0.windows.1),
+[v2.55.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.55.0-rc2.windows.1),
 [v2.55.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.55.0-rc1.windows.1),
 [v2.55.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.55.0-rc0.windows.1)
 + gitoxide [0.55.0](https://github.com/GitoxideLabs/gitoxide/releases/tag/v0.55.0)
@@ -629,15 +631,22 @@ __Git tools and sites__
 + Gerrit Code Review [3.12.8](https://www.gerritcodereview.com/3.12.html#3128),
 [3.13.7](https://www.gerritcodereview.com/3.13.html#3137),
 [3.14.1](https://www.gerritcodereview.com/3.14.html#3141)
-+ GitHub Enterprise [3.21.1](https://docs.github.com/enterprise-server@3.21/admin/release-notes#3.21.1),
-[3.21.0](https://docs.github.com/enterprise-server@3.21/admin/release-notes#3.21.0)
++ GitHub Enterprise [3.21.2](https://docs.github.com/enterprise-server@3.21/admin/release-notes#3.21.2),
+[3.21.1](https://docs.github.com/enterprise-server@3.21/admin/release-notes#3.21.1),
+[3.21.0](https://docs.github.com/enterprise-server@3.21/admin/release-notes#3.21.0),
+[3.20.4](https://docs.github.com/enterprise-server@3.20/admin/release-notes#3.20.4),
+[3.19.8](https://docs.github.com/enterprise-server@3.19/admin/release-notes#3.19.8),
+[3.18.11](https://docs.github.com/enterprise-server@3.18/admin/release-notes#3.18.11),
+[3.17.17](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.17),
+[3.16.20](https://docs.github.com/enterprise-server@3.16/admin/release-notes#3.16.20)
 + GitLab [19.2](https://docs.gitlab.com/releases/19/gitlab-19-2-released/),
 [19.1](https://docs.gitlab.com/releases/19/gitlab-19-1-released/),
 [19.1.1, 19.0.3, 18.11.6](https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-1-1-released/),
 [19.0.2, 18.11.5, 18.10.8](https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-0-2-released/)
 + GitKraken [12.2.1](https://help.gitkraken.com/gitkraken-desktop/current/),
 [12.2.0](https://help.gitkraken.com/gitkraken-desktop/current/)
-+ GitHub Desktop [3.6.1](https://desktop.github.com/release-notes/),
++ GitHub Desktop [3.6.2](https://desktop.github.com/release-notes/),
+[3.6.1](https://desktop.github.com/release-notes/),
 [3.6.0](https://desktop.github.com/release-notes/),
 [3.5.12](https://desktop.github.com/release-notes/)
 + tig [2.6.1](https://github.com/jonas/tig/releases/tag/tig-2.6.1)
