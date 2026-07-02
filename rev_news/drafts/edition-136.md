@@ -52,7 +52,7 @@ This edition covers what happened during the months of May and June 2026.
   needed. As Elijah explained, `git cherry` works in two phases: it
   first computes header-only patch IDs (based on file paths and
   modes), and only falls back to full content-based IDs when the
-  header-only IDs collide. Those full IDs are what require reading
+  header-only IDs collide. Those full IDs are what requires reading
   blob content, and the comparison is driven by a hashmap whose
   comparison function, `patch_id_neq()`, is exactly what triggers the
   on-demand fetches. To enumerate the colliding blobs ahead of time,
@@ -270,7 +270,7 @@ __Various__
   by Orchid (@orchidfiles).
 + [Git good with Epic Games' new open source VCS, Lore](https://www.theregister.com/devops/2026/06/17/git-good-with-epic-games-new-open-source-vcs-lore/5257978)
   by Brandon Vigliarolo on The Register.
-  [Lore](https://lore.org/) began it's life as Unreal Revision Control.
+  [Lore](https://lore.org/) began its life as Unreal Revision Control.
     + Compare [Unity Version Control](https://unity.com/features/version-control), formerly Plastic SCM,
       mentioned in passing in [Git Rev News Edition #99](https://git.github.io/rev_news/2023/05/31/edition-99/),
       then in [Edition #101](https://git.github.io/rev_news/2023/07/31/edition-101/).
@@ -278,7 +278,7 @@ __Various__
       mentioned in [Git Rev News Edition #134](https://git.github.io/rev_news/2026/04/30/edition-134/).
     + See also [Git for games: current problems and solutions video](https://www.youtube.com/watch?v=K3zOhU3NdWA&list=PL0lo9MOBetEFqBue4vNcTEnkBjgIQU1Q3&index=7) from Git Merge 2019,
       mentioned in [Git Rev News Edition #48](https://git.github.io/rev_news/2019/02/27/edition-48/),
-      with link to the video posted in [Edition #101](https://git.github.io/rev_news/2023/07/31/edition-101/).
+      with a link to the video posted in [Edition #101](https://git.github.io/rev_news/2023/07/31/edition-101/).
 + [Git is forever. I'm building Oak anyways.](https://oak.space/blog#git-is-forever)
   by Zach Geier on the Oak tool blog.<br>
   [Oak](https://oak.space/) intends to be a new type of version control
@@ -288,16 +288,16 @@ __Various__
   [II](https://replicated.wiki/blog/partII.html),
   [III](https://replicated.wiki/blog/partIII.html))
   and [Beagle: git, URIs and all the dirty words](https://replicated.wiki/blog/uris.html).<br>
-  [Beagle SCM](https://replicated.wiki/) intends to be git-compatible LLM-age source code management system.
+  [Beagle SCM](https://replicated.wiki/) intends to be a git-compatible LLM-age source code management system.
 + [Software Is Made Between Commits](https://zed.dev/blog/introducing-deltadb)
   by Nathan Sobo on Zed editor blog,
   about [DeltaDB](https://zed.dev/deltadb), a version control system (in beta)
   built for work with AI agents, that records the work as it unfolds
   and keeps every change connected to the conversation that shaped it.
-    + Contrast [Gram](https://gram.liten.app/) editor,
+    + Contrast the [Gram](https://gram.liten.app/) editor,
       which started as a [fork](https://gram.liten.app/why/) of the Zed editor
       without all the AI.<br>
-      See [You Can Now Disable All AI Features in Zed](https://zed.dev/blog/disable-ai-features)
+      See the [You Can Now Disable All AI Features in Zed](https://zed.dev/blog/disable-ai-features)
       blog post by Franciska Dethlefsen.
 + [Cursor, GitLab and Zed agree GitHub is breaking. They disagree on how to rebuild it.](https://thenewstack.io/cursor-origin-github-disruption/)
   by Paul Sawers on TheNewStack.
@@ -332,14 +332,14 @@ __Light reading__
   and the signature and cert go into [Sigstore Rekor](https://github.com/sigstore/rekor),
   a public append-only transparency log
   (Sigstore was first mentioned in [Git Rev News Edition #91](https://git.github.io/rev_news/2022/09/30/edition-91/)
-  and Sigstore Rector in [Edition #111](https://git.github.io/rev_news/2024/05/31/edition-111/)).
+  and Sigstore Rekor in [Edition #111](https://git.github.io/rev_news/2024/05/31/edition-111/)).
 + [gittuf - a signed log for git refs](https://nesbitt.io/2026/06/04/gittuf-a-signed-log-for-git-refs.html)
   by Andrew Nesbitt on his blog
   ([gittuf](https://gittuf.dev/) was mentioned in
   [Git Rev News Edition #104](https://git.github.io/rev_news/2023/10/31/edition-104/) and
   in [Edition #111](https://git.github.io/rev_news/2024/05/31/edition-111/)).
-    + See also [Securing Git repositories with gittuf](https://lwn.net/Articles/972467/)
-      article by by Joe Brockmeier on LWN\.net, a report of a talk at OSSNA; video of the talk:
+    + See also the [Securing Git repositories with gittuf](https://lwn.net/Articles/972467/)
+      article by Joe Brockmeier on LWN\.net, a report of a talk at OSSNA; video of the talk:
       [Securing Git Repositories with Gittuf - Aditya Sirish A Yelgundhalli & Billy Lynch](https://www.youtube.com/watch?v=eCSeIEdMbCw).
       Mentioned in [Git Rev News Edition #111](https://git.github.io/rev_news/2024/05/31/edition-111/).
 + [Open source security at Astral](https://astral.sh/blog/open-source-security-at-astral)
@@ -359,7 +359,7 @@ __Light reading__
   by Olaf Alders on his blog (2024).
 + [Jujutsu: The Git Upgrade You Didn't Know You Needed](https://www.git-tower.com/blog/jujutsu)
   by Bruno Brito on Git Tower blog.
-    + [Jujutsu](https://jj-vcs.dev/) (`jj`) is a Git-compatibile version control system
+    + [Jujutsu](https://jj-vcs.dev/) (`jj`) is a Git-compatible version control system
       written in Rust, which was first mentioned in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/),
       and most recently in [Edition #135](https://git.github.io/rev_news/2026/05/31/edition-135/).
 + [Tangled CI runs on microVMs](https://blog.tangled.org/spindle-microvm/):
@@ -393,7 +393,7 @@ __Light reading__
 + [Git merges can be better](https://brandondong.github.io/blog/git_merges_can_be_better/),
   on the trick one can use to ensure that the order of branches in the conflict
   is the same in the (tricked-out) merge as it is in rebase.
-  Done with the help of bash function.
+  Done with the help of a bash function.
   Written by Brandon Dong on their blog.
 + [Git imerge (interactive merge)](https://wilsonmar.github.io/git-imerge/)
   by Wilson Mar on his blog (2017).
@@ -401,7 +401,7 @@ __Light reading__
       in [Git Rev News Edition #17](https://git.github.io/rev_news/2016/07/20/edition-17/),
       while Edition #34 includes [Developer Spotlight: Michael Haggerty](https://git.github.io/rev_news/2017/12/20/edition-34/#developer-spotlight-michael-haggerty),
       an interview with the author of this tool.
-    + See also [git-imerge: A Practical Introduction](https://softwareswirl.blogspot.com/2013/05/git-imerge-practical-introduction.html) article,
+    + See also the [git-imerge: A Practical Introduction](https://softwareswirl.blogspot.com/2013/05/git-imerge-practical-introduction.html) article,
       mentioned in [Git Rev News Edition #118](https://git.github.io/rev_news/2024/12/31/edition-118/).
 + [Best Git Client - for Mac and Windows in 2026](https://www.git-tower.com/blog/best-git-client)
   by Bruno Brito on Git Tower GUI tool blog; with Tower listed first ;-).
@@ -424,7 +424,7 @@ __Light reading__
 + [Git Submodules vs. Subtrees vs. Monorepos](https://slicker.me/git/submodules-vs-subtrees-vs-monorepos.html).
 + [Costs exposed: Monorepo vs. multirepo](https://jmmv.dev/2023/08/costs-exposed-monorepo-multirepo.html)
   by Julio Manuel Merino Vidal (@jmmv), aka Julio Merino, on jmmv\.dev (2023);
-  part number 1 of 3 of the [Costs exposed](https://jmmv.dev/series.html#Costs%20exposed) series.
+  part 1 of the 3-part [Costs exposed](https://jmmv.dev/series.html#Costs%20exposed) series.
 + [Never use git submodules](https://diziet.dreamwidth.org/14666.html)
 	by Ian Jackson on diziet's journal (2023).
 + [How Josh helps Rust manage code across multiple repositories](https://blog.rust-lang.org/inside-rust/2026/06/04/how-josh-helps-rust-manage-code-across-multiple-repositories/)
@@ -438,7 +438,7 @@ __Light reading__
       (first mentioned in [Git Rev News Edition #69](https://git.github.io/rev_news/2020/11/27/edition-69/));
       [nbdime](http://nbdime.readthedocs.io/) tool for diffing Jupyter notebooks
       (first mentioned in [Edition #37](https://git.github.io/rev_news/2018/03/21/edition-37/));
-      [jupytext](https://github.com/mwouts/jupytext) tool for bi-directionally converting Jupyter notebooks
+      [jupytext](https://github.com/mwouts/jupytext) tool for bidirectionally converting Jupyter notebooks
       to plain text files as either Markdown files or Python scripts
       (also mentioned in [Edition #69](https://git.github.io/rev_news/2020/11/27/edition-69/));
       [databooks](https://databooks.dev/) - a package and a CLI tool
@@ -457,7 +457,7 @@ __Light reading__
 + [vcswatch and `git --filter`](https://www.df7cb.de/blog/2024/vcswatch-git-filter.html)
   by Christoph Berg on Myon's Blog (2024).
 + [GitHub and the crime against software](https://eblog.fly.dev/githubbad.html):
-  a software article by Efron Licht
+  a software article by Efron Licht.
 + [Evaluating new software forges (other than GitHub)](https://notgull.net/finding-a-forge/)  by John Nunley on notgull (2023).
 + [Communicating in Pull Requests](https://stolee.dev/2025/12/31/pr-communication)
   by Derric Stolee on Stolee's Dev Blog (2025).
@@ -509,9 +509,9 @@ __Git tools and sites__
   dual-licensed under MIT and Apache-2.0 license.
 + [`nt`](https://github.com/allisonmahmood/NT) (short for **navigate tree**)
   is a tiny zsh command for hopping around worktrees:
-  it spins one up — or jumps to it if it already exists — cds you in,
+  it spins one up — or jumps to it if it already exists — `cd`s you in,
   and gets out of your way.
-  Written as Zsh script, under MIT license.
+  Written as a Zsh script, under MIT license.
 + [`treehouse`](https://github.com/stemps/treehouse) is a CLI tool that
   helps you isolate your development environments when using Git worktrees.
   It assigns a stable number for each worktree, so you can use this number
@@ -548,7 +548,7 @@ __Git tools and sites__
   which was mentioned in [Git Rev News #135](https://git.github.io/rev_news/2026/05/31/edition-135/).
 + [`git-pile`](https://github.com/keith/git-pile) is a set of scripts
   for using a [stacked-diff workflow](https://jg.gg/2018/09/29/stacked-diffs-versus-pull-requests) with git & GitHub.
-  There are a lot of different trade-offs for how this can work,
+  There are a lot of different trade-offs for how this can work;
   `git-pile` chooses to be mostly not-magical at the cost of being best
   at handling multiple commits that don't conflict with each other
   instead of chains of pull requests affecting the same code.
@@ -573,7 +573,7 @@ __Git tools and sites__
 + [sem](https://ataraxy-labs.github.io/sem/) (Semantic version control)
   is a command line tool that adds semantic understanding of git changes.
   Instead of lines changed, sem tells you what entities changed:
-  functions, methods, classes.  Useful for use in AI agents.
+  functions, methods, classes.
   Provides six subcommands: diff, blame, impact, log, entities, context.
   Also works outside Git for arbitrary file comparison.
   It parses code with tree-sitter.  Helpful for working with AI agents.
@@ -584,12 +584,12 @@ __Git tools and sites__
       · [inspect](https://github.com/Ataraxy-Labs/inspect) (semantic code review)
       · [opensessions](https://github.com/Ataraxy-Labs/inspect) (tmux sidebar for coding agents).
 + [git-courer](https://github.com/blak0p/git-courer)
-  is a [MCP](https://modelcontextprotocol.io/) (Model Context Protocol) server
+  is an [MCP](https://modelcontextprotocol.io/) (Model Context Protocol) server
   that gives AI agents a full, safe interface to Git — not just commits,
   but the whole surface: status, diff, branch, stash, history, sync.
   Includes 13 MCP tools, with structured JSON in, and structured JSON out.
   Every mutation backs itself up automatically.
-  With local Ollama — zero tokens for git operations
+  With local Ollama — zero tokens for git operations.
   Written in Go, under MIT license.
 + [repo-slopscore](https://codeberg.org/polyphony/repo-slopscore)
   is a CLI + web app which gives a "slop score" for any public git repository
@@ -600,7 +600,7 @@ __Git tools and sites__
   Written in Rust, under Mozilla Public License 2.0.
   Used by <https://slopscan.ava.pet/>.
 + [Grit](https://grit-scm.com/) is a "from-scratch", library-based, memory-safe,
-  idiomatic Rust reimplentation of Git (created with help of AI agents)
+  idiomatic Rust reimplementation of Git (created with help of AI agents)
   that passes over 99% of the entire Git test suite.
   The `grit-lib` library is licensed under the MIT License, while
   the `grit-git` binary crate is licensed under GPLv2 (like Git).
