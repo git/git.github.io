@@ -266,6 +266,9 @@ __Various__
   an inotify-based fsmonitor daemon for Linux, faster generation of reachability bitmaps
   and pseudo-merge bitmaps improvements, new experimental `git format-rev` command,
   push groups, and more.
++ [Git 2.55 Released With Rust Support Enabled By Default, `git history fixup`](https://www.phoronix.com/news/Git-2.55-Released)
+  by Michael Larabel on Phoronix.  Mentions Rust code enabled by default (i.e., now opt-out),
+  incremental multi-pack indexes, and `git history fixup`.
 + [I discovered a large-scale malware distribution campaign on GitHub](https://orchidfiles.com/github-repositories-distributing-malware/)
   by Orchid (@orchidfiles).
 + [Git good with Epic Games' new open source VCS, Lore](https://www.theregister.com/devops/2026/06/17/git-good-with-epic-games-new-open-source-vcs-lore/5257978)
