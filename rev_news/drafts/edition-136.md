@@ -257,6 +257,15 @@ __Events__
 + [Recapping the Mercurial's London sprint](https://mercurial-scm.org/news/2026/0005-london-sprint-recap).
 
 __Various__
++ [What's new in Git 2.55.0?](https://about.gitlab.com/blog/whats-new-in-git-2-55-0/)
+  by Toon Claes on GitLab Blog.  Mentions a new git-history(1) fixup command,
+  an fsmonitor daemon for Linux, pushing to remote groups, and more.
++ [Highlights from Git 2.55](https://github.blog/open-source/git/highlights-from-git-2-55/)
+  by Taylor Blau on GitHub Blog.  Mentions repacking with incremental multi-pack indexes,
+  fixing up earlier commits with `git history`, running config based hooks in parallel,
+  an inotify-based fsmonitor daemon for Linux, faster generation of reachability bitmaps
+  and pseudo-merge bitmaps improvements, new experimental `git format-rev` command,
+  push groups, and more.
 + [I discovered a large-scale malware distribution campaign on GitHub](https://orchidfiles.com/github-repositories-distributing-malware/)
   by Orchid (@orchidfiles).
 + [Git good with Epic Games' new open source VCS, Lore](https://www.theregister.com/devops/2026/06/17/git-good-with-epic-games-new-open-source-vcs-lore/5257978)
