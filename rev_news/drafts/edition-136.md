@@ -31,7 +31,7 @@ This edition covers what happened during the months of May and June 2026.
   The work was spurred by a real-world report where `git cherry` jobs were each
   doing hundreds of single-blob fetches, at a cost of around 3 seconds
   each, so that batching those downloads should dramatically speed up
-  such jobs. As Elijah put it, he "decided to fix up git grep
+  such jobs. As Elijah put it, he "decided to fix up `git grep`
   similarly while at it". The series also corrected a small
   documentation typo he had noticed in `patch-ids.h` (a missing
   trailing parenthesis in a comment), as a preparatory fixup.
@@ -64,10 +64,10 @@ This edition covers what happened during the months of May and June 2026.
   `collect_diff_blob_oids()`, lists the blob OIDs touched by a
   commit's diff. It leaves out files that are explicitly marked as
   binary in the userdiff configuration, because for those files
-  patch-ID just hashes the OID with `oid_to_hex()` instead of
-  reading the blob, so there is no point downloading it.
+  the `patch_id` just hashes the OID with `oid_to_hex()` instead of
+  reading the blob, so there is no point downloading them.
 
-  While git cherry relies on hashmap comparisons, the `git grep` patch
+  While `git cherry` relies on hashmap comparisons, the `git grep` patch
   takes an analogous but simpler approach: it adds a preliminary walk
   over the tree (similar to `grep_tree()`) that collects the blobs of
   interest and prefetches them in one go.
@@ -76,8 +76,8 @@ This edition covers what happened during the months of May and June 2026.
   spotted something that did not belong: the series added a 210-line
   `investigations/cherry-prefetch-design-spec.md` file to the
   project. He pointed out that, as a document describing how
-  `git cherry` works, "it is vastly lacking", that much of its content
-  is the sort of material that would normally go in a commit message,
+  `git cherry` works, it was "vastly lacking", that much of its content
+  was the sort of material that would normally go into a commit message,
   and that he was "not sure how others would benefit from being able
   to read it" once the series landed. Elijah's reply was short and to
   the point: "Ugh, no, sorry." That stray file had been committed by
@@ -240,7 +240,7 @@ This edition covers what happened during the months of May and June 2026.
   improved documentation. The thread also clarified the boundaries of
   partial-clone friendliness for cherry-pick detection, leaving the
   door open for sharing the new code with `git rebase` and
-  `git log --cherry-pick` should someone wish to carry that work
+  `git log --cherry-pick`, should someone wish to carry that work
   forward.
 
 <!---
@@ -288,7 +288,7 @@ __Various__
   [II](https://replicated.wiki/blog/partII.html),
   [III](https://replicated.wiki/blog/partIII.html))
   and [Beagle: git, URIs and all the dirty words](https://replicated.wiki/blog/uris.html).<br>
-  [Beagle SCM](https://replicated.wiki/) intends to be a git-compatible LLM-age source code management system.
+  [Beagle SCM](https://replicated.wiki/) intends to be a Git-compatible LLM-age source code management system.
 + [Software Is Made Between Commits](https://zed.dev/blog/introducing-deltadb)
   by Nathan Sobo on Zed editor blog,
   about [DeltaDB](https://zed.dev/deltadb), a version control system (in beta)
@@ -307,7 +307,7 @@ __Various__
 + [How to make best use of git and GitHub for AI-assisted software development](https://blog.jonudell.net/2026/06/02/how-to-make-best-use-of-git-and-github-for-ai-assisted-software-development/)
   by Jon Udell on his blog,
   about [Bram](https://github.com/judell/bram) (Bram runs agents mindfully),
-  a desktop app that helps you make best use of git and GitHub
+  a desktop app that helps you make best use of Git and GitHub
   for AI-assisted software development.
 
 
@@ -326,7 +326,7 @@ __Light reading__
   [in-toto](https://in-toto.io/) - which protects the build pipeline; and
   [Sigstore](https://www.sigstore.dev/) - which allows to remove long-lived keys
   and for the developer to authenticate with <abbr title="OpenID Connect">OIDC</abbr>
-  identity you already have, GitHub Actions or Google, etc.,
+  identities you already have, like GitHub Actions, Google, etc.,
   where [Fulcio](https://github.com/sigstore/fulcio) issues
   a short-lived code-signing certificate bound to that OIDC identity valid for ten minutes,
   and the signature and cert go into [Sigstore Rekor](https://github.com/sigstore/rekor),
@@ -393,7 +393,7 @@ __Light reading__
 + [Git merges can be better](https://brandondong.github.io/blog/git_merges_can_be_better/),
   on the trick one can use to ensure that the order of branches in the conflict
   is the same in the (tricked-out) merge as it is in rebase.
-  Done with the help of a bash function.
+  Done with the help of a Bash function.
   Written by Brandon Dong on their blog.
 + [Git imerge (interactive merge)](https://wilsonmar.github.io/git-imerge/)
   by Wilson Mar on his blog (2017).
@@ -412,14 +412,14 @@ __Light reading__
 + [Fixing Alembic's Multiple Heads Problem with Git](https://julien.danjou.info/blog/fixing-alembics-multiple-heads-problem-with-git/)
   by Julien Danjou on jd:/dev/blog, about the [alembic-git-revisions](https://github.com/mergifyio/alembic-git-revisions)
   tool for automatic [Alembic](https://alembic.sqlalchemy.org/)
-  migration chaining based on git commit history.
+  migration chaining based on Git commit history.
     + [Alembic](https://alembic.sqlalchemy.org/) is a lightweight database migration tool
       for usage with the [SQLAlchemy](https://www.sqlalchemy.org/) Database Toolkit for Python.
 + [Introducing django-linear-migrations](https://adamj.eu/tech/2020/12/10/introducing-django-linear-migrations/)
   by Adam Johnson on his blog (2020).
 + [Goofy Program Files: git-slog](https://www.mcclimon.org/blog/goofy-program-files-git-slog/)
   by Michael McClimon on his blog (2023), about the Perl program he wrote
-  to display oneline-like `git log` which include a single-character indicator
+  to display oneline-like `git log` messages which include a single-character indicator
   to denote whether a commit has a 'Signed-off-by' trailer or not.
 + [Git Submodules vs. Subtrees vs. Monorepos](https://slicker.me/git/submodules-vs-subtrees-vs-monorepos.html).
 + [Costs exposed: Monorepo vs. multirepo](https://jmmv.dev/2023/08/costs-exposed-monorepo-multirepo.html)
@@ -434,17 +434,17 @@ __Light reading__
 + [Marimo: A Modern Notebook for Reproducible Data Science](https://codecut.ai/marimo-a-modern-notebook-for-reproducible-data-science/)
   by Khuyen Tran on CodeCut\.AI blog.
     + Alternatives include:
-      [nbdev](https://nbdev.fast.ai/) tool that creates programming environment out of Jupyter notebooks
+      [nbdev](https://nbdev.fast.ai/) - a tool that creates programming environment out of Jupyter notebooks
       (first mentioned in [Git Rev News Edition #69](https://git.github.io/rev_news/2020/11/27/edition-69/));
-      [nbdime](http://nbdime.readthedocs.io/) tool for diffing Jupyter notebooks
+      [nbdime](http://nbdime.readthedocs.io/) - a tool for diffing Jupyter notebooks
       (first mentioned in [Edition #37](https://git.github.io/rev_news/2018/03/21/edition-37/));
-      [jupytext](https://github.com/mwouts/jupytext) tool for bidirectionally converting Jupyter notebooks
+      [jupytext](https://github.com/mwouts/jupytext) - a tool for bidirectionally converting Jupyter notebooks
       to plain text files as either Markdown files or Python scripts
       (also mentioned in [Edition #69](https://git.github.io/rev_news/2020/11/27/edition-69/));
       [databooks](https://databooks.dev/) - a package and a CLI tool
       to ease the collaboration between data scientists using Jupyter notebooks,
-      by reducing the number of git conflicts between different notebooks
-      and resolution of git conflicts when encountered
+      by reducing the number of Git conflicts between different notebooks
+      and resolution of Git conflicts when encountered
       (first mentioned in [Git Rev News Edition #100](https://git.github.io/rev_news/2023/06/30/edition-100/)).
     + See also [Git and Jupyter Notebooks: The Ultimate Guide](https://git.github.io/rev_news/2023/07/31/edition-101/) by ReviewNB,
       mentioned in [Git Rev News Edition #101](https://git.github.io/rev_news/2023/07/31/edition-101/).
@@ -452,13 +452,13 @@ __Light reading__
   on Emacs Dwelling.
 + [Using git-annex for Data Archiving](https://changelog.complete.org/archives/10516-using-git-annex-for-data-archiving)
   by John Goerzen on his blog - The ChangeLog (2023).
-   + [git-annex](https://git-annex.branchable.com/), which allows managing large files with git, without storing the file contents in git,
+   + [git-annex](https://git-annex.branchable.com/), which allows managing large files with Git, without storing the file contents in Git,
      was first mentioned in [Git Rev News Edition #3](https://git.github.io/rev_news/2015/05/13/edition-3/).
 + [vcswatch and `git --filter`](https://www.df7cb.de/blog/2024/vcswatch-git-filter.html)
   by Christoph Berg on Myon's Blog (2024).
 + [GitHub and the crime against software](https://eblog.fly.dev/githubbad.html):
   a software article by Efron Licht.
-+ [Evaluating new software forges (other than GitHub)](https://notgull.net/finding-a-forge/)  by John Nunley on notgull (2023).
++ [Evaluating new software forges (other than GitHub)](https://notgull.net/finding-a-forge/) by John Nunley on notgull (2023).
 + [Communicating in Pull Requests](https://stolee.dev/2025/12/31/pr-communication)
   by Derric Stolee on Stolee's Dev Blog (2025).
 
@@ -469,7 +469,7 @@ __Light reading__
   (and honest!) way to learn the most popular Git commands.
   Written by Bruno Brito on Git Tower blog.
     + Compare [gitglossary(7)](https://git-scm.com/docs/gitglossary)
-      from the git documentation.
+      from the Git documentation.
 
 
 __Scientific papers__
@@ -503,12 +503,12 @@ __Easy watching__
 
 
 __Git tools and sites__
-+ [Worktrunk](https://worktrunk.dev/) is a CLI for git worktree management,
++ [Worktrunk](https://worktrunk.dev/) is a CLI for Git worktree management,
   designed for running AI agents in parallel.
   [Written](https://github.com/max-sixty/worktrunk) in Rust,
   dual-licensed under MIT and Apache-2.0 license.
 + [`nt`](https://github.com/allisonmahmood/NT) (short for **navigate tree**)
-  is a tiny zsh command for hopping around worktrees:
+  is a tiny `zsh` command for hopping around worktrees:
   it spins one up — or jumps to it if it already exists — `cd`s you in,
   and gets out of your way.
   Written as a Zsh script, under MIT license.
@@ -519,14 +519,14 @@ __Git tools and sites__
   or anything you want isolated per worktree.
   Written in Go, under MIT license.
 + [rift](https://github.com/anomalyco/rift) is an _**experimental**_
-  alternative to git worktrees using copy on write via reflinks or snapshots.
+  alternative to Git worktrees using copy on write via reflinks or snapshots.
   Written in Rust, no license provided (yet).
 + [gitprofile](https://github.com/meanii/gitprofile) is a tool to help
-  manage multiple git identities — work, personal, open-source — so
+  manage multiple Git identities — work, personal, open-source — so
   the right name, email, and SSH key are always used without thinking about it.
-  It uses git's built-in [`includeIf` directive](https://git-scm.com/docs/git-config#_conditional_includes).
+  It uses Git's built-in [`includeIf` directive](https://git-scm.com/docs/git-config#_conditional_includes).
   Written in Go, under MIT license.
-+ [hk](https://hk.jdx.dev/) is a git hook manager and project linting tool
++ [hk](https://hk.jdx.dev/) is a Git hook manager and project linting tool
   with an emphasis on performance.  Provides fast, powerful, and flexible hook management
   for modern development workflows.
   Written in Rust, under MIT license.
@@ -547,7 +547,7 @@ __Git tools and sites__
   Inspired by [DiffsHub](https://diffshub.com/),
   which was mentioned in [Git Rev News #135](https://git.github.io/rev_news/2026/05/31/edition-135/).
 + [`git-pile`](https://github.com/keith/git-pile) is a set of scripts
-  for using a [stacked-diff workflow](https://jg.gg/2018/09/29/stacked-diffs-versus-pull-requests) with git & GitHub.
+  for using a [stacked-diff workflow](https://jg.gg/2018/09/29/stacked-diffs-versus-pull-requests) with Git & GitHub.
   There are a lot of different trade-offs for how this can work;
   `git-pile` chooses to be mostly not-magical at the cost of being best
   at handling multiple commits that don't conflict with each other
@@ -571,28 +571,28 @@ __Git tools and sites__
       [#135](https://git.github.io/rev_news/2026/05/31/edition-135/)
       (with links to many articles and tools).
 + [sem](https://ataraxy-labs.github.io/sem/) (Semantic version control)
-  is a command line tool that adds semantic understanding of git changes.
+  is a command line tool that adds semantic understanding of Git changes.
   Instead of lines changed, sem tells you what entities changed:
   functions, methods, classes.
-  Provides six subcommands: diff, blame, impact, log, entities, context.
+  Provides six subcommands: diff, blame, impact, log, entities, and context.
   Also works outside Git for arbitrary file comparison.
   It parses code with tree-sitter.  Helpful for working with AI agents.
   Written in Rust, under MIT and Apache 2.0 licenses.
     + Part of the [Ataraxy Labs](https://ataraxy-labs.com/) stack — agent-native infrastructure
       for software development. See also:
-      [weave](https://ataraxy-labs.com/weave) (entity-level git merge driver)
+      [weave](https://ataraxy-labs.com/weave) (entity-level Git merge driver)
       · [inspect](https://github.com/Ataraxy-Labs/inspect) (semantic code review)
       · [opensessions](https://github.com/Ataraxy-Labs/inspect) (tmux sidebar for coding agents).
 + [git-courer](https://github.com/blak0p/git-courer)
   is an [MCP](https://modelcontextprotocol.io/) (Model Context Protocol) server
   that gives AI agents a full, safe interface to Git — not just commits,
-  but the whole surface: status, diff, branch, stash, history, sync.
+  but the whole surface: status, diff, branch, stash, history, and sync.
   Includes 13 MCP tools, with structured JSON in, and structured JSON out.
   Every mutation backs itself up automatically.
-  With local Ollama — zero tokens for git operations.
+  With local Ollama — zero tokens for Git operations.
   Written in Go, under MIT license.
 + [repo-slopscore](https://codeberg.org/polyphony/repo-slopscore)
-  is a CLI + web app which gives a "slop score" for any public git repository
+  is a CLI + web app which gives a "slop score" for any public Git repository
   resolvable via `https://`.  It goes through the entire commit history of a repository
   (upper limit is 5000 commits currently) and detects visible signs of AI/LLM tool usage
   in the commit history and the source tree.  Aggressive caching is used to ensure
@@ -606,12 +606,12 @@ __Git tools and sites__
   the `grit-git` binary crate is licensed under GPLv2 (like Git).
 + [Flow Simulator](https://mainline.dev/flow-simulator) by Mainline is a web app
   where you can watch the simulation on how the code flows from idea to production
-  under three branching strategies: GitHub flow, Git flow, trunk-based.
+  under three branching strategies: GitHub flow, Git flow, and trunk-based.
   You can switch modes to compare.
 + [Commit Crimes](https://commitcrimes.dev/) is a joke web app,
   where you can paste any GitHub handle; the app will then pull their permanent record,
   book the user for crimes against version control
-  (e.g. uprotected pushes straight to 'main'), and hand down the sentence.
+  (e.g. unprotected pushes straight to 'main'), and hand down the sentence.
 
 + [jj\_tui](https://tangled.org/elidowling.com/jj_tui) is a TUI for
   the [Jujutsu](https://jj-vcs.dev/) version control system,
