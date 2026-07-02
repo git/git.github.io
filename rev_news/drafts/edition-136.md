@@ -573,7 +573,7 @@ __Git tools and sites__
 + [sem](https://ataraxy-labs.github.io/sem/) (Semantic version control)
   is a command line tool that adds semantic understanding of git changes.
   Instead of lines changed, sem tells you what entities changed:
-  functions, methods, classes.  Useful for use in AI agents.
+  functions, methods, classes.
   Provides six subcommands: diff, blame, impact, log, entities, context.
   Also works outside Git for arbitrary file comparison.
   It parses code with tree-sitter.  Helpful for working with AI agents.
