@@ -176,6 +176,11 @@ __Light reading__
   by Othman Shareef on Pyor Blog.
   [Pyor.Review](https://pyor.review/) is a service to help with code review,
   available as downloadable Electron app, and a [GitHub App (in browser)](https://app.pyor.review/welcome).
++ [Version-controlled databases using Prolly trees](https://lwn.net/Articles/1068864/)
+  about [Dolt](https://github.com/dolthub/dolt) (Git for Data).
+  Written by Daroc Alden on LWN\.net.
+  Dolt was first mentioned in [Git Rev News Edition #62](https://git.github.io/rev_news/2020/04/23/edition-62/),
+  and most recently in [Edition #105](https://git.github.io/rev_news/2023/11/30/edition-105/).
 + [The (Petty) Reason We Didn't End Up Using `jj`](https://blog.gradle.org/the-petty-reason-we-didnt-end-up-using-jj-at-gradle)
   by Laura Kassovic on Gradle Blog.
   [Jujutsu (`jj`)](https://jj-vcs.github.io/) is a Git-compatible
