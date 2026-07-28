@@ -284,7 +284,8 @@ __Git tools and sites__
   Bash scripts and LLM prompts, under MIT license.
 
 ## Releases
-
++ Tower for Mac [17.0](https://www.git-tower.com/blog/tower-mac-17)
++ Tower for Windows [13](https://www.git-tower.com/blog/tower-windows-13)
 
 ## Credits
 
