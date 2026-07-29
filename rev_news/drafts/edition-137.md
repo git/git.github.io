@@ -277,11 +277,18 @@ __Git tools and sites__
   version control system written in Rust, which was first mentioned
   in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/),
   and most recently in [Edition #136](https://git.github.io/rev_news/2026/06/30/edition-136/).
-  
 + [git-llmfs](https://codeberg.org/TheMikina/git-llmfs) is a **joke** tool:
   a git filter that uses local LLM summaries as a compression mechanism
   for code files to save space in a git repository.
   Bash scripts and LLM prompts, under MIT license.
++ [LearnGit.io](https://learngit.io/) teaches Git with animated visualizations of Git internals,
+  and has been improved: adding quizzes, step-by-step interactive scenarios, and type-it-yourself exercises
+  with a terminal emulator showing real commands and a visualization of the full Git tree,
+  including branch pointers and commits.
+  The first two modules are [open to anyone](https://app.learngit.io/home/) without an account.
+  LearnGit.io is free for students & educators.
+  + Created by Jack Lot of [The Modern Coder](https://www.youtube.com/@themoderncoder) YouTube channel.
+    First mentioned in [Git Rev News Edition #108](https://git.github.io/rev_news/2024/02/29/edition-108/), and most recently [Edition #127](https://git.github.io/rev_news/2025/09/30/edition-127/).
 
 ## Releases
 
