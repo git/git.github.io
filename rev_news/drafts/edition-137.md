@@ -287,8 +287,8 @@ __Git tools and sites__
   including branch pointers and commits.
   The first two modules are [open to anyone](https://app.learngit.io/home/) without an account.
   LearnGit.io is free for students & educators.
-  + Created by Jack Lot of [The Modern Coder](https://www.youtube.com/@themoderncoder) YouTube channel.
-    First mentioned in [Git Rev News Edition #108](https://git.github.io/rev_news/2024/02/29/edition-108/), and most recently [Edition #127](https://git.github.io/rev_news/2025/09/30/edition-127/).
+    + Created by Jack Lot of [The Modern Coder](https://www.youtube.com/@themoderncoder) YouTube channel.
+      First mentioned in [Git Rev News Edition #108](https://git.github.io/rev_news/2024/02/29/edition-108/), and most recently [Edition #127](https://git.github.io/rev_news/2025/09/30/edition-127/).
 
 ## Releases
 
