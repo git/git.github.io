@@ -284,6 +284,40 @@ __Git tools and sites__
   Bash scripts and LLM prompts, under MIT license.
 
 ## Releases
+
++ Git for Windows [v2.55.0(3)](https://github.com/git-for-windows/git/releases/tag/v2.55.0.windows.3),
+[v2.55.0(2)](https://github.com/git-for-windows/git/releases/tag/v2.55.0.windows.2),
+[v2.54.0(2)](https://github.com/git-for-windows/git/releases/tag/v2.54.0.windows.2)
++ libgit2 [1.9.6](https://github.com/libgit2/libgit2/releases/tag/v1.9.6),
+[1.9.5](https://github.com/libgit2/libgit2/releases/tag/v1.9.5)
++ go-git [6.0.0-alpha.5](https://github.com/go-git/go-git/releases/tag/v6.0.0-alpha.5)
++ gitoxide [0.56.0](https://github.com/GitoxideLabs/gitoxide/releases/tag/v0.56.0)
++ JGit [7.7.1](https://github.com/eclipse-jgit/jgit/releases/tag/v7.7.1.202607240634-r)
++ Bitbucket Data Center [10.4](https://confluence.atlassian.com/bitbucketserver/release-notes-872139866.html)
++ Gerrit Code Review [3.12.9](https://www.gerritcodereview.com/3.12.html#3129),
+[3.13.8](https://www.gerritcodereview.com/3.13.html#3138),
+[3.14.2](https://www.gerritcodereview.com/3.14.html#3142)
++ GitHub Enterprise [3.21.3](https://docs.github.com/enterprise-server@3.21/admin/release-notes#3.21.3),
+[3.20.5](https://docs.github.com/enterprise-server@3.20/admin/release-notes#3.20.5),
+[3.19.9](https://docs.github.com/enterprise-server@3.19/admin/release-notes#3.19.9),
+[3.18.12](https://docs.github.com/enterprise-server@3.18/admin/release-notes#3.18.12),
+[3.17.18](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.18)
++ GitLab [19.3](https://docs.gitlab.com/releases/19/gitlab-19-3-released/),
+[19.2](https://docs.gitlab.com/releases/19/gitlab-19-2-released/)
++ Gitea [1.27.1](https://github.com/go-gitea/gitea/releases/tag/v1.27.1),
+[1.27.0](https://github.com/go-gitea/gitea/releases/tag/v1.27.0)
++ GitKraken [12.3.1](https://help.gitkraken.com/gitkraken-desktop/current/),
+[12.3.0](https://help.gitkraken.com/gitkraken-desktop/current/)
++ GitHub Desktop [3.6.3](https://desktop.github.com/release-notes/),
+[3.6.2](https://desktop.github.com/release-notes/)
++ lazygit [0.63.1](https://github.com/jesseduffield/lazygit/releases/tag/v0.63.1),
+[0.63.0](https://github.com/jesseduffield/lazygit/releases/tag/v0.63.0)
++ Garden [2.6.1](https://github.com/garden-rs/garden/releases/tag/v2.6.1)
++ Git Cola [4.19.0](https://github.com/git-cola/git-cola/releases/tag/v4.19.0)
++ GitButler [0.22.0](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.22.0),
+[0.21.2](https://github.com/gitbutlerapp/gitbutler/releases/tag/release/0.21.2)
++ Kinetic Merge [1.17.0](https://github.com/sageserpent-open/kineticMerge/releases/tag/v1.17.0),
+[1.16.0](https://github.com/sageserpent-open/kineticMerge/releases/tag/v1.16.0)
 + Tower for Mac [17.0](https://www.git-tower.com/blog/tower-mac-17)
 + Tower for Windows [13](https://www.git-tower.com/blog/tower-windows-13)
 
