@@ -25,9 +25,391 @@ This edition covers what happened during the months of June and July 2026.
 ### Reviews
 -->
 
-<!---
 ### Support
--->
+
++ [git-diff in a worktree is an order of magnitude slower?](https://lore.kernel.org/git/CALnO6CADMJSixqYvL1Yo8qKX5rWhKQ+2OoSEuPUh-yoeK9TseQ@mail.gmail.com)
+
+D. Ben Knoble reported what he described as "a serious performance
+bug": `git diff --no-ext-diff --quiet` ran about 10 times slower in a
+secondary worktree than in the main worktree. He came prepared, with a
+reproduction recipe using `git worktree add --detach` on Git's own
+repository and `hyperfine` timings showing 3.4ms in the main worktree
+against 223.3ms in the linked one. He noted that `--no-ext-diff` and
+`--quiet` were probably red herrings, since plain `git diff` was
+affected too, while `--cached` was not. He had seen the same thing at
+work, where a large repository took about 6ms in one case and about
+650ms in the other, and he had noticed it because his Bash prompt runs
+`git diff --no-ext-diff --quiet`, making the prompt sluggish in
+worktrees.
+
+Ben had also gathered profiling data. `perf report` showed the fast
+case spending most of its time in `preload_thread()`,
+`threaded_has_symlink_leading_path()` and `lstat_cache()`, while the
+slow case spent much more time in `ie_match_stat()`,
+`ce_modified_check_fs()`, `ce_compare_data()` and `index_fd()`. `perf
+stat` showed the slow case executing roughly 150 times as many
+instructions, 3.8 billion against 23 million. He asked whether the
+problem was already known and how he could help narrow it down, and
+mentioned he had reproduced it as far back as v2.50.0.
+
+### Racy Git, in brief
+
+To understand where this went, it helps to know how Git decides
+whether a working tree file has been modified. Rather than reading and
+hashing every file, Git stores the result of `lstat(2)` for each path
+in the index (size, mtime, inode and so on) and compares that cached
+stat information against a fresh `lstat(2)`. If they match, the file
+is assumed unchanged and its contents are never read. This is what
+makes `git diff` and `git status` fast.
+
+The problem, described in `Documentation/technical/racy-git.adoc`, is
+that a file can be modified so quickly after being recorded that its
+mtime does not change, leaving the cached stat information matching a
+file whose contents differ. Git guards against this by treating any
+index entry whose mtime is not strictly older than the index file's
+own mtime as "racily clean", and falling back to reading and hashing
+the contents of those entries. That fallback is exactly the expensive
+path Ben's profile was showing.
+
+### One second of bad luck
+
+Jeff King replied to Ben the same evening with a surprise: on his
+machine the effect was *reversed*, with the worktree being 9.43 times
+**faster** than the original clone of linux.git. Comparing profiles
+with `perf diff` showed the slow side spending its time computing
+SHA-1s, which implied stat-dirty entries, and running
+`git -C linux update-index --refresh` made both cases take about
+20ms. Peff's diagnosis was that this was a racy Git problem: many
+files are written in the same second as the index, so they share its
+mtime and Git must err on the side of checking their contents. "So it
+is not really about worktrees at all, but just 'bad luck' in
+generating that initial index (that goes away next time you actually
+make an index update that rewrites the whole thing)." He suggested Ben
+try building with `USE_NSEC`, betting it would make the problem
+disappear entirely. He also gently pointed out that `git shortlog -ns`
+is nicer than the pipeline Ben had used to find likely reviewers.
+
+Ben confirmed that `update-index --refresh` fixed his timings too, and
+wondered whether `git diff` should refresh the index itself, or
+whether creating a worktree should do the equivalent. He also noticed
+that the Meson build automatically sets `USE_ST_TIMESPEC` or `NO_NSEC`
+but offers no way to turn on `USE_NSEC`, and offered to write that
+patch.
+
+Peff replied that `git diff` *does* refresh the index internally,
+"that's what takes so long!", and that he had expected the result to
+be written back out. He also explained why refreshing right after `git
+worktree add` would not help: the trouble is that the index has just
+been written, so it *should* be entirely up to date, but some entries
+share its timestamp.  What makes an explicit `update-index --refresh`
+work is simply that a second has elapsed in between. Run automatically
+from the worktree command, it might all still happen within the same
+second. And, he noted, this is not specific to worktrees at all: any
+checkout can hit it, though initial clones and worktree creation write
+the most files. On the build knob, he clarified that `NO_NSEC` is
+about whether the nanosecond fields of `struct stat` exist at all,
+whereas Git only uses them for stat comparison when `USE_NSEC` is
+set. He traced that distinction to c06ff4908b (Record ns-timestamps if
+possible, but do not use it without USE_NSEC, 2009-03-04) and mused
+that it "ought to be a run-time config, though, and maybe even
+something that gets auto-probed by `git init`".
+
+Junio Hamano, the Git maintainer, replied that he had thought about
+auto-probing and could not find a clean way to detect whether a
+filesystem loses the nanosecond part of `st_mtime` when "metadata is
+flushed and later read back in" without unreasonable cost: "I do not
+think we want to trigger system-wide sync and/or dropping of buffer
+cache ;-)". brian m. carlson suggested a middle ground: let `git
+update-index` take options for this the way it already does for
+`--untracked-cache`, so that users who know their platform is safe (he
+gave Linux with btrfs as his own example) can opt in at runtime,
+possibly with a `--test-use-nsec` mode that inspects `uname` and
+`statfs` for known-good configurations.
+
+### A conditional that looked dead
+
+Ben came back to the thread a while later having followed Peff's
+pointer to `git status`. He found that `cmd_status()` calls
+`refresh_index()` and `repo_updated_index_if_able()`, and that the
+same pair is wrapped in `refresh_index_quietly()` in `builtin/diff.c`,
+but that the call there is guarded by a condition that, on his system,
+never fired. The guard dates to aecbf914c4 (git-diff: resurrect the
+traditional empty "diff --git" behaviour, 2007-08-31), and Ben's
+reading of it was that the double negation of a boolean could never
+exceed 1, so he asked: "So… has that conditional been quietly dead all
+this time? I can't imagine that's right, but…". He also confirmed that
+adding `USE_NSEC` to his build did make the problem go away, and said
+he would send the Meson patch anyway "for folks to have the knob",
+although it now felt like a band-aid to him.
+
+Junio explained what the guard actually means. The `skip_stat_unmatch`
+member of the diff options is not a boolean but a 1-based counter: it is
+initialised to 1 when auto-refresh-index is enabled, which is what causes
+`diffcore_std()` to call `diffcore_skip_stat_unmatch()` at all, and that
+function then increments it once for every path that appeared in the diff
+only because it was stat-dirty without an actual content change. So
+comparing it against 1 asks "did we find any such ghost changes?", and on
+Ben's system the answer was simply no. Junio added that he had initially
+suspected "an embarrassing thinko" himself, and that whether such a
+dual-purpose counter is a good idea is another matter: "Apparently it
+confused both of us in this case ;-)". He followed up with a pointer to
+[the 2007 discussion](https://lore.kernel.org/git/20070830063810.GD16312@mellanox.co.il/)
+in which that patch was written.
+
+Peff replied that this was the core of the issue, and added the missing
+piece: the racily-clean entries *are* dirty in the sense that their mtimes
+match the index mtime, so Git double-checks their contents. But
+`diffcore_skip_stat_unmatch()` does not count them, so the counter stays
+at 1, `git diff` never writes out a refreshed index, "and thus every
+subsequent diff repeats the same expensive double-check." He was unsure
+where the blame lay: either `diffcore_skip_stat_unmatch()` should count
+them, or the index should mark them differently by truncating their cached
+size to zero, as the racy-git document describes. Though he noted the
+latter would be user-visible, since plumbing like `git diff-files`, which
+does not update the index, would then report a spurious diff. To Junio's
+remark about the confusing counter he added: "Make that three of us. ;)"
+
+In a follow-up to himself, Peff observed that `diffcore` does not even have
+the information it would need, because the racy handling is hidden inside
+`ie_match_stat()`, which returns only "changed" flags and so cannot
+distinguish "stat matched and the timestamp was not racy" from "the
+timestamp was racy, we compared contents, and found nothing". He posted an
+experimental patch passing a `DIFF_RACY_IS_MODIFIED` flag down from
+`builtin_diff_files()` so those entries are counted as stat-dirty while
+still being suppressed from the output. It worked, in that `git diff` then
+refreshed the index, but the timings were odd: in a linux.git working tree
+with many racy entries the first diff went from about 500ms (repeated
+forever) to 1800ms, and about 30ms thereafter. He could account for a
+doubling from the from-scratch index refresh, but not the remaining 800ms,
+guessing that `diff_filespec_check_stat_unmatch()` is somehow slower than
+`ce_modified_check_fs()`. His overall verdict: "This feels like a case we
+could do a bit better at, but I wonder how much it matters in practice. As
+soon as you do any index-refresh (including `git status`), the racy entries
+are cleared and everything is faster. It just seems kind of lame that we
+write out the initial working tree with so many racy entries."
+
+### Could nanoseconds just make the problem go away?
+
+Junio picked up that last point with a suggestion: the reason Git does
+not simply wait before writing the index is that stalling for a full
+second was unacceptable back when sub-second resolution was not used
+anywhere, but "with nanosecond resolution timestamps in place, we
+could delay writing the index file by 50 milliseconds, nobody notices
+the delay, and raciness would go away, perhaps?"
+
+Peff agreed that would require comparing index and file mtimes at
+nanosecond precision, and then made a sharper observation: once you
+are comparing nanoseconds, no delay is needed at all. Writing out all
+of linux.git takes roughly five seconds, so about 20% of the files
+share the index's one-second timestamp. With nanosecond resolution,
+that collision rate should drop by around a billion, and even an
+unlucky single file would not matter. Better still, the comparison
+code already exists in `is_racy_stat()`. It is just gated on
+`USE_NSEC`. He showed a small patch removing the `#ifdef` (with a
+debugging `warning()` thrown in) that made the problem disappear,
+while wondering aloud whether he was overlooking whatever concern made
+`USE_NSEC` conditional in the first place. Junio's reply to that was
+simply "That's cute."
+
+Junio then articulated the concern. Because the nanosecond part can be
+lost when an inode is evicted from the kernel's cache and re-read, a
+file and the index could be written within the same millisecond and be
+distinguishable at nanosecond resolution. But if only one of the two
+loses its sub-second component, the comparison can come out the wrong
+way. Peff worked through this carefully and conceded the point: the
+index does not store its own mtime, so it is `fstat()`ed fresh at read
+time and may show a truncated value, which happens to fail in the safe
+direction (the index looks older, so a file looks possibly racy and
+gets checked). But he could not rule out truncation in the other
+direction, which would require the tracked file to be written, evicted
+and re-read all within the same second that the index is written,
+while the index inode itself is never evicted.  It's "unlikely but not
+impossible". His conclusion: "it's all sufficiently scary that I think
+it should stay conditional on `USE_NSEC`", while suspecting `USE_NSEC`
+is in fact safe on Linux these days.
+
+Separately, Junio proposed a cleaner alternative to Peff's
+flag-passing patch: since `ie_match_stat()` already has access to the
+index state, it could set a bit in `struct index_state`, next to
+`updated_workdir` and friends, whenever a racy timestamp sends it down
+the compare-data path, and the auto-refresh decision could then
+consult that bit. Peff thought that "sounds fairly clean", though he
+preferred the nanosecond route if it pans out. Junio also wondered, as
+a tangent, why `refresh_index_quietly()` is called from the central
+code path in `cmd_diff()` at all, since it should not matter when
+comparing two tree objects. Peff suggested it could probably move into
+`builtin_diff_files()`, and noted that `git diff` does not honour
+`--no-optional-locks`, which is currently respected only by `git
+status`. When that latter option was added, the idea was that people
+would extend it to other commands as they hit the need, and apparently
+nobody has for `git diff`.
+
+### Where it stands
+
+Ben closed out the thread saying he would like to dig further but was not
+sure when he would find the time, being "deep in the guts of 2 systems
+whose implementation are quite foreign to me — the index and the diff
+machinery". He restated his own priority as a user: he is happy to pay for
+a slow first prompt if subsequent ones are fast, rather than having to
+remember and explain to colleagues that "oh, this is racy git, just run
+`git status` to fix it". He identified the two remaining avenues as (1) the
+cost of that refreshing diff and (2) limiting racy entries on the initial
+index write, understanding the latter to have been settled in favour of
+keeping the `USE_NSEC` gate, and pointing readers to the separate Meson
+thread discussed below for that part of the story. On the former he noted
+that the discussion of how to communicate the necessary bits to the diff
+code had not come with updated measurements, and that turning Junio's
+suggestions into code would take him some time.
+
+### The build knob that turned into a design question
+
+The one patch that came directly out of this thread was Ben's
+[Meson build knob](https://lore.kernel.org/git/c4c5ade901ff95b0f95939ea818870e4f3d59da1.1781971201.git.ben.knoble+github@gmail.com),
+sent under the title "meson: wire up USE_NSEC build knob", which observed
+that "autotools-style builds permit enabling `USE_NSEC` for cases where
+that's desired; the equivalent knob is missing from meson-based builds". It
+added a `nanosec` option to `meson_options.txt` and passed `-DUSE_NSEC`
+accordingly, so six lines in total, and deliberately no change of defaults.
+
+Junio welcomed it as "a welcome addition to the other side of the world",
+while wondering whether `meson setup -Dnanosec=true` was easy to discover,
+and said he would queue it. Ben agreed the name was up for debate, and
+Patrick Steinhardt reassured them both that Meson options are easy enough
+to discover by running `meson setup` in the source directory.
+
+Peff called the patch reasonable, since it only brings Meson to parity with
+the Makefile, but reiterated that he was "not still not sure if turning on
+`USE_NSEC` is a good idea", quoting the passage of
+`Documentation/technical/racy-git.adoc` that explains why: in-core
+timestamps can have finer granularity than on-disk ones, so an evicted
+inode can come back with a different mtime. That was fixed in Linux 2.6.11,
+but only for filesystems with exactly 1ns or 1s resolution, leaving CEPH,
+CIFS, NTFS and UDF broken. He called it "the most succinct description of
+the problem I've seen", while having "no idea how widely it still applies".
+
+Patrick took that further, and this is where the topic began to shift:
+if the mechanism is still subtly broken, "it might even make sense to
+remove the build option completely. It doesn't really make sense in my
+opinion to have a build option that nobody uses and that is subtly
+broken when enabled." Rather than speculate, Peff went and
+measured. He proposed a test: `touch` a file, record `ls --full-time`,
+drop the kernel caches via `/proc/sys/vm/drop_caches`, and look
+again. He then reported that ext4, a loopback ext2 mount and even vfat
+all survived it, the last because Linux limits the cached VFS response
+to what the underlying filesystem can represent. "So...maybe this is
+just a non-issue these days, at least on Linux?" He followed up having
+found an [old thread](https://public-inbox.org/git/5605D88A.20104%40gmail.com/)
+indicating CEPH, CIFS, NTFS, UFS and FUSE were fixed in kernel 4.3,
+tested CIFS himself successfully, and noted with amusement that "FAT
+systems were fixed since 2015. ;)". He raised one further subtlety:
+implementations with different resolutions, such as JGit using
+millisecond APIs, interoperate correctly only as long as each compares
+consistently in its own resolution. And a millisecond-resolution
+index read by a `USE_NSEC` Git would look entirely stat-dirty, a
+performance rather than correctness problem that "nobody may have
+noticed, because probably hardly anybody bothers to build with
+`USE_NSEC` now." Ben later contributed his own data point, reporting
+nanosecond precision surviving a dropped cache on XFS.
+
+brian m. carlson argued for going further still: provide a config knob
+and build with `USE_NSEC` by default, since most people are on Linux
+with filesystems now known to be fine, with an easy escape hatch and a
+possible `statfs`-based check later. Patrick reached a similar place
+from the opposite direction. He thought that if correctness depends on
+the filesystem, a *build* option is too coarse-grained, because "a
+distro wouldn't really be able to ever enable the option, unless it
+knew that repositories will only ever exist on a filesystem that
+works", and suggested treating it like `core.ignoreCase`: compile
+nanosecond support in unconditionally where the platform supports it,
+and let users opt in at runtime, ideally with `git init` setting it
+automatically.
+
+Junio pushed back partially, noting that build options are not only
+for distro packagers aiming at the widest audience, and drawing a
+careful distinction: `core.ignoreCase` *must* be set for correct
+operation on a case-insensitive filesystem and is "not something you
+set by choice", whereas nanosecond timestamps need not be enabled even
+where they work perfectly, and must be disabled where precision is
+randomly lost. Peff agreed with the general direction anyway saying
+"it should be a config flag and not a build option. Run-time flags are
+more friendly to users when there is no good reason to avoid them"
+while pointing out that auto-detection founders on the need to flush
+the kernel's inode cache, which is neither portable nor something to
+inflict on every repository creation, and that he had been unable to
+make the failure reproduce at all on modern Linux.
+
+Ben, apologising for a delay caused by not watching "What's cooking",
+offered to "noodle in that direction" toward a runtime flag, while noting
+it means considerably more surgery than exposing the Meson option and that
+he was unsure how to write a test for it. He also observed, half-joking,
+that the logical conclusion of the discussion would otherwise be to remove
+the option from the Makefile too. Patrick replied that no detection
+mechanism was strictly needed to start with: keep the current default,
+compile nanosecond support in where available, and add a config opt-in.
+Peff agreed that "even if we eventually auto-detect, the first step is
+adding the config at all", and said he was agnostic about adding
+`USE_NSEC` to Meson in the meantime, leaning towards removing it from the
+Makefile entirely once a runtime config exists.
+
+At that point Junio drew the conclusion for the topic as a whole:
+"the discussion tells me that if we were to pursue this topic further, it
+would not primarily be about adding the build knob to meson.build file, but
+rather a bit more involved to affect the product for everybody regardless
+of the build framework used. So I think it is safe for me
+[discard this topic from my tree](https://lore.kernel.org/git/xmqqa4rx9mb5.fsf@gitster.g)
+for now, with an invitation to resurrect it as a topic with shifted focus."
+Ben [confirmed](https://lore.kernel.org/git/45F2C180-1DE1-4371-869B-BF605B64E01A@gmail.com)
+he had been meaning to send a "please discard" message himself "per the new
+guidelines ;) been on vacation."
+
+The `dk/meson-enable-use-nsec-build` topic accordingly travelled through
+"Waiting for response(s) to review comment(s)" and "Expecting a reroll" to
+"Will discard" in the July "What's cooking" reports, and was listed as
+"Discarded" in
+[What's cooking in git.git (Jul 2026, #08)](https://lore.kernel.org/git/xmqqa4rnpgfk.fsf@gitster.g).
+It never reached `next` or `master`, and no successor topic implementing
+the runtime configuration has appeared on the list so far.
+
+### Conclusion
+
+No code has landed from either thread, and the one patch that was sent
+ended up discarded. Yet both discussions were productive. A report
+framed as a worktree performance bug turned out to have nothing to do
+with worktrees: it is racy Git, triggered by any operation that writes
+many files and then an index within the same second, which is why
+fresh clones and new worktrees are the usual victims. Along the way
+the participants established that `git diff` refreshes the index but
+then throws the work away, because the racily-clean entries it
+double-checked are never counted as stat-dirty and so the refreshed
+index is never written back, which is why the cost repeats on every
+invocation until something else, such as `git status` or
+`git update-index --refresh`, rewrites the index. Two concrete designs
+were sketched for fixing that: counting racy entries via a diff flag,
+or smudging a bit in `struct index_state`.
+
+The more attractive possibility, making racy entries vanishingly rare
+by comparing nanosecond timestamps, is where the two threads
+converge. What began as a six-line build-system patch became an
+investigation into whether the twenty-year-old reason for keeping
+`USE_NSEC` off by default still holds. Evidence was gathered from
+Peff's cache-dropping experiments on ext4, ext2, vfat and CIFS, Ben's
+on XFS, and the kernel history showing the remaining filesystems fixed
+by 4.3. It suggests the reason largely does not hold anymore, at least
+on Linux. That in turn convinced the participants that a compile-time
+switch is the wrong shape for the problem, since correctness depends
+on the filesystem a repository happens to live on rather than on how
+Git was built, and that a runtime configuration variable is what is
+really wanted. Junio discarded the Meson patch not because it was
+wrong but because it had been overtaken by that conclusion, explicitly
+inviting a resurrection "as a topic with shifted focus". Ben has
+offered to attempt it.
+
+So the lasting value here is a clarified problem and a mandate for a better
+solution, plus a nice illustration of how a small patch can usefully expose
+a design question that outgrows it. For users hitting the slowness today,
+the practical advice is unchanged and worth repeating: after a large
+checkout, one `git status` or `git update-index --refresh` makes it go
+away.
 
 <!---
 ## Developer Spotlight:
