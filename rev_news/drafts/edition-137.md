@@ -73,9 +73,9 @@ path Ben's profile was showing.
 
 ### One second of bad luck
 
-Jeff King replied to Ben the same evening with a surprise: on his
+Jeff King, alias Peff, replied to Ben the same evening with a surprise: on his
 machine the effect was *reversed*, with the worktree being 9.43 times
-**faster** than the original clone of linux.git. Comparing profiles
+**faster** than the original clone of `linux.git`. Comparing profiles
 with `perf diff` showed the slow side spending its time computing
 SHA-1s, which implied stat-dirty entries, and running
 `git -C linux update-index --refresh` made both cases take about
@@ -438,9 +438,9 @@ __Light reading__
   comparing Git, Jujutsu and GitButler.
 + [On Lazy Secrets Management](https://radekmie.dev/blog/on-lazy-secrets-management/)
   by Radosław Miernik on his @radekmie blog.
-  Mentions [sops](https://getsops.io/) tool (SOPS: Secrets OPerationS)
-  to keep `.env` file in repository but encrypted,
-  [age](https://github.com/filosottile/age) secure file encryption tool and Go library,
+  Mentions the [sops](https://getsops.io/) tool (SOPS: Secrets OPerationS)
+  to keep e.g. the `.env` file in a repository but encrypted,
+  the [age](https://github.com/filosottile/age) secure file encryption tool and Go library,
   and password managers with their API.
 + [`git rebase -i` is not that scary](https://cachebag.sh/journal/interactive-rebasing/)
   by Akrm Al-Hakimi on his blog.
@@ -482,7 +482,7 @@ __Light reading__
   on Emacs Dwelling.
 + [How to add previous commit messages and authors to you Git commit template?](https://talfus-laddus.de/blog/git-commit-wrapper/)
   by Matthias Schaub (~talfus-laddus) on his blog.
-  His solution was to change `core.editor` to custom script.
+  His solution was to change `core.editor` to a custom script.
 + [Field Notes: Trunk-Based Development Makes Problems Painfully Visible](https://www.v01.io/posts/2026-trunk-based-development/)
   by Klaus Breyer on his blog.
     + Compare [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html)
@@ -524,7 +524,7 @@ __Light reading__
 + [Using `uvx` in GitHub Actions in a cache-friendly way](https://til.simonwillison.net/github-actions/uvx-github-actions-cache)
   in Simon Willison's TILs (Today I've Learned).
   [uv](https://docs.astral.sh/uv/) is an extremely fast Python package and project manager,
-  written in Rust; the `uvx` (`uv tool run`) is a command allows to install and run
+  written in Rust; the `uvx` (`uv tool run`) is a command that allows to install and run
   a Python tool (like e.g., `pycowsay`) in an ephemeral virtual environment.
 + [Counting Builds with Git Tags](https://onyxmueller.net/2026/07/05/counting-builds-with-git-tags/)
   (and a GitHub action), by Onyx Mueller on his blog.
@@ -575,7 +575,7 @@ __Light reading__
   Published by yorgos on Radicle blog.
   [Radicle](https://radicle.xyz) is a peer-to-peer, local-first code collaboration stack
   built on Git, first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/),
-  and most recently in [Edition #135](https://git.github.io/rev_news/2026/05/31/edition-135/)
+  and most recently in [Edition #135](https://git.github.io/rev_news/2026/05/31/edition-135/).
 + [Too many words about DIDs](https://steveklabnik.com/writing/too-many-words-about-dids/)
   by Steve Klabnik on his blog.
   DID (“Decentralized Identity” standard) is used by ATproto,
@@ -590,7 +590,7 @@ __Light reading__
   by Lewis (oyster\.cafe) on Tangled Blog.
 + [grok-build-exfil-repro](https://github.com/cereblab/grok-build-exfil-repro)
   is a harness that shows you that xAI's Grok Build CLI uploads your entire
-  repository — every tracked file plus full git history — to xAI's cloud,
+  repository — every tracked file plus full Git history — to xAI's cloud,
   independent of what the agent reads, and that turning off "Improve the model"
   does not stop it.
 
@@ -628,13 +628,13 @@ __Git tools and sites__
   No demo yet.  Written in Go, under GPL-3.0 license.
     + See also [One Year Of Gitus; Random Thoughts](https://sebastian.graphics/blog/one-year-of-gitus.html)
 	  by Zetian Lin (Sebastian Zack Tin Lahm-Lee).
-+ [GitRoot](https://gitroot.dev/) is a small yet powerfull git forge.
-  Download one binary, launch it and you have a forge that can create git repositories,
++ [GitRoot](https://gitroot.dev/) is a small yet powerfull Git forge.
+  Download one binary, launch it and you have a forge that can create Git repositories,
   and manage who can access to what repositories.  Issues, branch review, etc.,
   are provided with plugins.  Written in Go,
   under EUPL 1.2, and also MIT, CC-BY-SA 4.0, CC0 1.0 licenses. 
 + [Thunderbird Patch Review](https://mccd.space/git/thunderbird-patch-review/file/README.html.html)
-  is a Thunderbird Add-on to review git patches from email inside Thunderbird.
+  is a Thunderbird Add-on to review Git patches from email inside Thunderbird.
   The workflow is to open a patch email, press "Review", comment on hunks,
   send the review as a mailing-list reply, and apply the series to a local repository
   with `git am`.  Under EUPL v. 1.2 license.
@@ -661,8 +661,8 @@ __Git tools and sites__
   and most recently in [Edition #136](https://git.github.io/rev_news/2026/06/30/edition-136/).
   
 + [git-llmfs](https://codeberg.org/TheMikina/git-llmfs) is a **joke** tool:
-  a git filter that uses local LLM summaries as a compression mechanism
-  for code files to save space in a git repository.
+  a Git filter that uses local LLM summaries as a compression mechanism
+  for code files to save space in a Git repository.
   Bash scripts and LLM prompts, under MIT license.
 
 ## Releases
