@@ -7,10 +7,10 @@ by mistake, you may want:
 
 These pages are intended to collect information useful to Git developers. This
 is also the web home of:
-  - the [Hacking Git](https://git.github.io/Hacking-Git/) page,
-  - the [Git Rev News newsletter](https://git.github.io/rev_news/),
+  - the [Hacking Git]({{ '/Hacking-Git/' | relative_url }}) page,
+  - the [Git Rev News newsletter]({{ '/rev_news/'| relative_url }}),
   - the [involvement of the Git project in mentoring
-    programs](https://git.github.io/General-Application-Information/) like
+    programs]({{ '/General-Application-Information/' | relative_url }}) like
     [Outreachy](https://www.outreachy.org/) and the [GSoC (Google Summer of
     Code)](https://summerofcode.withgoogle.com/)
 
