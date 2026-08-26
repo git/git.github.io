@@ -46,6 +46,8 @@ __Easy watching__
 
 __Git tools and sites__
 
+* [crux](https://github.com/Emran-goat/crux) by Emran is a CLI that finds the exact commit which changed a program's behavior, then minimizes that commit down to the lines that caused the change. It handles cases git bisect can't: behaviors that aren't pass/fail tests, failures that need two commits together, and regressions caused by dependency updates. ([crates.io](https://crates.io/crates/crux-finder))
+
 
 ## Releases
 
