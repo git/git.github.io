@@ -52,7 +52,7 @@ reported, this turned a 4.293 second `git merge-base --all` across the
 import into 8 milliseconds, a 537x improvement, and a 5.345 second
 `git merge-tree` into 13 milliseconds.
 
-## Some background on the paint walk and generation numbers
+#### Some background on the paint walk and generation numbers
 
 `paint_down_to_common()` is a single traversal driven by one priority
 queue, which holds the frontier of commits waiting to be visited. It
@@ -79,7 +79,7 @@ that when one side has no exclusive commits left in the queue, none
 can ever reappear, so no new merge-base candidate can turn up and the
 walk can stop there.
 
-## The first round of review
+#### The first round of review
 
 Derrick Stolee reviewed the RFC thoroughly and set the tone for
 everything that followed: "Overall, I believe that this implementation
@@ -118,7 +118,7 @@ commit parsing, Stolee pointed him at
 [hyperfine](https://github.com/sharkdp/hyperfine) and showed the exact
 invocation for comparing two builds.
 
-## Measuring the walk instead of the clock
+#### Measuring the walk instead of the clock
 
 [Version 2](https://lore.kernel.org/git/pull.2149.v2.git.1782303254.gitgitgadget@gmail.com)
 reordered the series so that the documentation came first, describing
@@ -145,7 +145,7 @@ called it a "Great write-up that very clearly and concisely explains
 what goes on inside the merge-base computation. Thanks for a pleasant
 read."
 
-## A self-reported breakage, and a rename
+#### A self-reported breakage, and a rename
 
 [Version 3](https://lore.kernel.org/git/pull.2149.v3.git.1782479286.gitgitgadget@gmail.com)
 consolidated the `min_generation` check and the generation-monotonicity
@@ -174,7 +174,7 @@ flag? [Version 4](https://lore.kernel.org/git/pull.2149.v4.git.1782649547.gitgit
 adopted both suggestions, renaming the counters to `parent1_count`,
 `parent2_count` and `mb_candidate_count` and switching them to `size_t`.
 
-## Growing scope: a test helper and an eight-year-old workaround
+#### Growing scope: a test helper and an eight-year-old workaround
 
 SZEDER Gábor made a brief but useful appearance on version 4, pointing
 out that the patch removing the now-unused `nonstale_queue_put_dedup()`
@@ -210,7 +210,7 @@ every termination condition can rely on a single invariant. He noted
 that if this patch were kept, his separate
 `kk/commit-reach-find-all-fix` topic would become unnecessary.
 
-## Waiting for reviewers
+#### Waiting for reviewers
 
 [Version 6](https://lore.kernel.org/git/pull.2149.v6.git.1783776466.gitgitgadget@gmail.com)
 prompted a process aside. Kristofer had written that the series was
@@ -234,7 +234,7 @@ thus spending less time on code reviews". Elijah answered the call: "I
 started looking at the series and left a couple comments. I'll
 continue looking at it on Monday."
 
-## Naming the region
+#### Naming the region
 
 Elijah's review of
 [version 7](https://lore.kernel.org/git/pull.2149.v7.git.1786013982.gitgitgadget@gmail.com)
@@ -272,7 +272,7 @@ fixed it. Junio, apologising for "nitpicking", added "Maybe others can
 give more serious reviews on the topic. This gives us an important
 optimization."
 
-## Conclusion
+#### Conclusion
 
 [Version 8](https://lore.kernel.org/git/pull.2149.v8.git.1786440533.gitgitgadget@gmail.com)
 moved `topo_ceiling` into the patch where the side-exhaustion gate
