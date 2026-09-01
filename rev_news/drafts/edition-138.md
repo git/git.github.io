@@ -41,7 +41,7 @@ cover letter included an ASCII diagram of the shape that triggers the
 pathology: a repository import that grafts a separate history with its
 own root commit. When the walk from one side reaches a commit with a
 very low generation number that the other side never paints, the walk
-is forced to drain nearly the whole graph before it can convince itself
+is forced to drain almost the whole graph before it can convince itself
 that it is done. Any merge that introduces a low-generation commit
 never painted by the other side has the same effect.
 
@@ -101,7 +101,7 @@ to be reformatted per the coding guidelines, questioned whether the
 `pq` field name was wise when it could stand for either `prio_queue` or
 `paint_queue`, and made a suggestion that shaped the rest of the
 series: rather than testing the termination condition in the loop body,
-`paint_queue_get()` should return NULL when it detects that no further
+`paint_queue_get()` should return `NULL` when it detects that no further
 merge base can be found, so that the loop has a single exit. He
 preferred `!count` over summing counters and comparing to zero, too.
 
@@ -126,7 +126,7 @@ the algorithm as it already existed, and the tests came before the code
 changes so they could be shown passing with the old logic. The
 `ahead_behind()` patch was dropped, the new struct was renamed from
 `paint_queue` to `paint_state`, and all termination conditions moved
-into `paint_queue_get()` as Stolee had asked.
+into `paint_queue_get()` as Stolee had suggested.
 
 The most useful addition was one Stolee had implicitly asked for by
 requesting better "data gathering": a `trace2_data_intmax()` call
@@ -200,7 +200,7 @@ date ordering would break the optimization.
 The second addition was much bolder: removing the commit-date ordering
 fallback introduced by 091f4cf3 (commit: don't use generation numbers
 if not needed, 2018-08-30). That fallback existed because v1
-commit-graphs, which store topological levels rather than corrected
+commit-graphs, which stored topological levels rather than corrected
 commit dates, could make `git merge-base v4.8 v4.9` on the Linux
 kernel walk 636k commits instead of 167k. Side exhaustion solves the
 same problem far better. Kristofer measured the step count for that
@@ -302,7 +302,7 @@ Beyond the speedups themselves, which will be most visible to anyone
 working in a large monorepo or a repository with a grafted import, the
 discussion left Git with three lasting artefacts: a new
 `Documentation/technical/paint-down-to-common.adoc` explaining an
-algorithm that had never been written down, trace2 step-count
+algorithm that had never been written down, `trace2` step-count
 instrumentation that makes future work on the paint walk measurable
 without benchmarking wall-clock time, and one fewer special case, now
 that the 2018 commit-date ordering fallback has been removed and the
