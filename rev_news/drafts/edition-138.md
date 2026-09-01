@@ -238,7 +238,6 @@ continue looking at it on Monday."
 
 Elijah's review of
 [version 7](https://lore.kernel.org/git/pull.2149.v7.git.1786013982.gitgitgadget@gmail.com)
-
 was detailed and warm, and it repeatedly praised the series structure
 rather than just the code. Of the `paint_state` patch, he wrote "Ooh,
 I like this setup for what comes later; it sets the stage perfectly
@@ -288,7 +287,7 @@ unreserved:
 > tests everything logically and thoroughly, and was a pleasant read.
 
 He added a `Reviewed-by:` trailer, and then a mock complaint that
-Kristofer had normalised some double spaces after periods in the
+Kristofer had normalized some double spaces after periods in the
 documentation: "Don't think for a second that I didn't notice you
 murdering these double spaces. You villain! ;-)" That prompted
 Kristofer to wonder whether the project should codify a preference.
@@ -368,4 +367,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from Simone Arpe.
+with help from Simone Arpe and Tuomas Ahola.
