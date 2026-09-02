@@ -346,7 +346,7 @@ __Light reading__
   This article provides systematic survey of tools
   that keep issue and review data inside the repository
   so it clones and pushes with the code.
-  Inspired by recent GitHub outage, with issues and pull request threads going dark.
+  Inspired by the recent GitHub outage, with issues and pull request threads going dark.
 + [Git at any scale](https://cursor.com/blog/git-at-any-scale)
   by Vicent Martí on Cursor blog.<br>
   See also [How Cursor beat Git's scalability shortcomings](https://www.theregister.com/devops/2026/08/23/how-cursor-beat-gits-scalability-shortcomings/5291421)
@@ -361,22 +361,22 @@ __Light reading__
   doing it in a way that's time-based instead of identity-based (new name after some date),
   and doing it in such a way that the previous name isn't detectable.
     + The article mentions [Tangled.sh](https://tangled.org), which is
-	  a new social-enabled Git collaboration platform built on top of AT Protocol / ATProto,
-	  only in passing.
-	  It does not address [Radicle](https://radicle.xyz/) or [Grasp](https://gitgrasp.com/)
-	  (other decentralized code hosting and collaboration platforms).
-	  <br>
-	  Tangled was first mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/),
-	  and most recently in [Edition #137](https://git.github.io/rev_news/2026/07/31/edition-137/).
-	+ See also [Too many words about DIDs](https://steveklabnik.com/writing/too-many-words-about-dids/)
-	  (“Decentralized Identity” standard) by Steve Klabnik,
-	  mentioned in [Git Rev News Edition #137](https://git.github.io/rev_news/2026/07/31/edition-137/).
+      a new social-enabled Git collaboration platform built on top of AT Protocol / ATProto,
+      only in passing.
+      It does not address other decentralized code hosting and collaboration platforms like
+      [Radicle](https://radicle.xyz/) or [Grasp](https://gitgrasp.com/).
+      <br>
+      Tangled was first mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/),
+      and most recently in [Edition #137](https://git.github.io/rev_news/2026/07/31/edition-137/).
+    + See also [Too many words about DIDs](https://steveklabnik.com/writing/too-many-words-about-dids/)
+      (“Decentralized Identity” standard) by Steve Klabnik,
+      mentioned in [Git Rev News Edition #137](https://git.github.io/rev_news/2026/07/31/edition-137/).
 + [Run your own CI](https://blog.tangled.org/selfhost-ci/)
-  by oppi.li on Tangled Blog.  Possibly inspired by August 17th GitHub outage.
+  by oppi.li on Tangled Blog.  Possibly inspired by the August 17th GitHub outage.
   Advertises Tangled (and provides links to articles about CI and Tangled).
 + [Git worktrees are not an isolation boundary for coding agents](https://fletch.sh/blog/git-worktrees-vs-clones-for-ai-agents/)
   by Alex Chaplinsky on Fletch Blog.
-  It is a good addition to all the articles about git worktrees for AI agents,
+  It is a good addition to all the articles about Git worktrees for AI agents,
   and all specialized tools for managing worktrees, mentioned in recent editions.
 + [Git Submodules as a Package Manager](https://nesbitt.io/2026/09/01/git-submodules-as-a-package-manager.html)
   by Andrew Nesbitt on his blog.
@@ -425,17 +425,17 @@ __Git tools and sites__
   The browser UI is server-rendered HTML/CSS with no JavaScript.
   Written in TypeScript, under MIT license.
 + [durable-git](https://github.com/littledivy/durable-git) (formerly dgit)
-  is a git server for Cloudflare Workers and for your own machines with celld.
+  is a Git server for Cloudflare Workers and for your own machines with celld.
   Each repository is a Durable Object: a small server with a name
   and a private SQLite database that holds the repository's objects and refs,
-  speaks the git smart HTTP protocol to a stock git client,
+  speaks the Git smart HTTP protocol to a stock Git client,
   and renders a cgit-style web interface.
   Written in TypeScript, under MIT license.
 + [Gitignore Debugger](https://ignoredebugger.com/) is an on-line service
   that helps you find out exactly why Git isn't ignoring your file.
   Free, no signup, and everything runs in the browser.
   An alternative to `git check-ignore -v`.
-+ [drift](https://github.com/aymanbagabas/drift) is a git diff pager with terminal UI:
++ [drift](https://github.com/aymanbagabas/drift) is a Git diff pager with terminal UI:
   syntax highlighting, word-level change emphasis, split or unified views,
   a file-list modal and a live sidebar you can click and drag
   to resize, jump-to-hunk, in-file search, open-in-$EDITOR,
@@ -444,14 +444,14 @@ __Git tools and sites__
   or just pipe a diff into it like any other pager.
   Written in Rust, under MIT license.
 + [git-knife](https://github.com/TheRealYT/git-knife) is a desktop GUI
-  for editing git commit metadata directly — message, author date, committer date, author name/email.
+  for editing Git commit metadata directly — message, author date, committer date, author name/email.
   It fills the gap between existing GUIs with some commit editing capabilities
-  (like GitKraken, Sublime Merge, Fork, lazygit), and tools for editing Git repository
-  (`git-filter-repo`, `git rebase` env tricks, `git commit-tree`) without GUI.
+  (like GitKraken, Sublime Merge, Fork, lazygit), and tools for editing a Git repository
+  (`git-filter-repo`, `git rebase` env tricks, `git commit-tree`) without a GUI.
   It never reimplements Git — it shells out to the system `git` CLI
   and rebuilds commits with `git commit-tree`, reusing each commit's original tree
   so file contents are provably never changed.
-  Written in Rust (and TypeScript) using Tauri application framework,
+  Written in Rust (and TypeScript) using the Tauri application framework,
   no license provided.
 + [GitComet](https://github.com/Auto-Explore/GitComet) is a Git GUI
   built for teams that want fast Git operations
@@ -461,9 +461,9 @@ __Git tools and sites__
   Available for Linux, Windows, and macOS.
   Written in Rust, under GNU Affero General Public License Version 3 (AGPL-3.0-only).
 + [Maiao](https://github.com/runetes/maiao) brings the power of **stacked pull requests** (or merge requests)
-  to your git hosting provider, enabling you to break large features
+  to your Git hosting provider, enabling you to break large features
   into small, reviewable commits where each commit becomes its own PR/MR.
-  It provides Gerrit-style code review workflow
+  It provides a Gerrit-style code review workflow
   for GitHub, GitLab, Gitea, Forgejo, Bitbucket Cloud, and Cursor Origin.
   Written in Go, under MIT license.
 + [`tuicr`](https://github.com/agavra/tuicr) is a code review TUI with vim keybindings.
@@ -472,7 +472,7 @@ __Git tools and sites__
 + [Marvelous](https://github.com/stevenjjobson/marvelous) is a fast, standalone
   desktop Markdown reader/editor featuring a clean interface
   with improved object rendering for lists, tables and mermaid graphs,
-  and with git awareness and diff review support.  Tuned for reading an AI-written wiki.
+  and with Git awareness and diff review support.  Tuned for reading an AI-written wiki.
   Written in TypeScript and Rust, under MIT license.
 
 
