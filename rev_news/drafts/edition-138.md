@@ -498,6 +498,12 @@ __Git tools and sites__
   invoked by `git difftool` and `git mergetool`.
   Available for Linux, Windows, and macOS.
   Written in Rust, under GNU Affero General Public License Version 3 (AGPL-3.0-only).
++ [Ziggity](https://ziggity.dev/) an ultra fast, keyboard driven terminal UI for Git,
+  written in Zig.  It allows to stage individual lines, commit, branch,
+  rebase interactively, inspect history, and review changes with live diff previews.
+  Every action is a keystroke. Any text can be selected and copied with the mouse.
+  Long running Git operations never block the interface.
+  Under MIT license.
 + [Maiao](https://github.com/runetes/maiao) brings the power of **stacked pull requests** (or merge requests)
   to your Git hosting provider, enabling you to break large features
   into small, reviewable commits where each commit becomes its own PR/MR.
