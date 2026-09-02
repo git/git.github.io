@@ -353,21 +353,56 @@ __Light reading__
   by Joab Jackson for The Register.
 + [20× the CI traffic without getting slower: How we rebuilt Git serving at Datadog](https://www.datadoghq.com/blog/engineering/gitretriever/)
   by Mike Thompson and Daniel Esponda on Datadog HQ Blog.
++ [distributed identity](https://jyn.dev/distributed-identity/)
+  by Jynn Nelson on the website of jyn.
+  This article talks about the problem of changing e-mail or changing identity
+  in Git, Mercurial and ATproto (the protocol powering Bluesky),
+  trying to solve one of three problems: changing names and emails after the fact,
+  doing it in a way that's time-based instead of identity-based (new name after some date),
+  and doing it in such a way that the previous name isn't detectable.
+    + The article mentions [Tangled.sh](https://tangled.org), which is
+	  a new social-enabled Git collaboration platform built on top of AT Protocol / ATProto,
+	  only in passing.
+	  It does not address [Radicle](https://radicle.xyz/) or [Grasp](https://gitgrasp.com/)
+	  (other decentralized code hosting and collaboration platforms).
+	  <br>
+	  Tangled was first mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/),
+	  and most recently in [Edition #137](https://git.github.io/rev_news/2026/07/31/edition-137/).
+	+ See also [Too many words about DIDs](https://steveklabnik.com/writing/too-many-words-about-dids/)
+	  (“Decentralized Identity” standard) by Steve Klabnik,
+	  mentioned in [Git Rev News Edition #137](https://git.github.io/rev_news/2026/07/31/edition-137/).
++ [Run your own CI](https://blog.tangled.org/selfhost-ci/)
+  by oppi.li on Tangled Blog.  Possibly inspired by August 17th GitHub outage.
+  Advertises Tangled (and provides links to articles about CI and Tangled).
++ [Git worktrees are not an isolation boundary for coding agents](https://fletch.sh/blog/git-worktrees-vs-clones-for-ai-agents/)
+  by Alex Chaplinsky on Fletch Blog.
+  It is a good addition to all the articles about git worktrees for AI agents,
+  and all specialized tools for managing worktrees, mentioned in recent editions.
 + [Git Submodules as a Package Manager](https://nesbitt.io/2026/09/01/git-submodules-as-a-package-manager.html)
   by Andrew Nesbitt on his blog.
 + [How I Learned to Stop Worrying and Love the Monorepo](https://www.eamoncaddigan.net/posts/git-monorepos/)
   by Eamon Caddigan on his Potentially Useful blog.<br>
   A reminder: a _monorepo_ or _monorepository_ is a software-development strategy
   in which the code for a number of projects is stored in the same repository.
-+ [My new workflow for local code review with `tuicr`](https://www.jvt.me/posts/2026/08/25/tuicr/),
++ [Sign Git Commits With SSH Keys: Git & GitHub Setup for Signed Commits & Verification](https://scratchbuffer.net/topics/developer-tools/git-commit-sign-ssh/)
+  by Franco Posa on ScratchBuffer.
++ [git: cd from linked worktree to main checkout](https://perrotta.dev/2026/08/git-cd-from-worktree-to-main-checkout/)
+  (using a shell function)
+  by Thiago Perrotta on just serendipity blog.
++ [Why I still hand write my commit messages](https://www.jvt.me/posts/2026/08/17/hand-write-commits/),
+  [My new workflow for local code review with `tuicr`](https://www.jvt.me/posts/2026/08/25/tuicr/),
   [Updating dependent branches when rebasing, automagically](https://www.jvt.me/posts/2026/08/25/git-rebase-update-refs/) with `git rebase -i --update-refs`, and
-  [What commit did I branch off from?](https://www.jvt.me/posts/2026/08/23/determine-branch/) with `git merge-base`
+  [What commit did I branch off from?](https://www.jvt.me/posts/2026/08/23/determine-branch/) with `git merge-base`,
   by Jamie Tanna on his blog.
 + [The comments that go into code versus those that go into the pull request description](https://devblogs.microsoft.com/oldnewthing/20260812-00/?p=112607)
   by Raymond Chen on Microsoft Dev Blogs.
 + [Commit message test plans](https://blog.waleedkhan.name/commit-message-test-plans/)
   with [`scrut`](https://facebookincubator.github.io/scrut/)
   by Waleed Khan on Steno & PL personal blog.
++ [GitHub suspended my account 2h after my project went viral — what I've learned about the appeal process so far](https://www.reddit.com/r/git/comments/1vukp5b/github_suspended_my_account_2h_after_my_project/)
+  by 0\_KermitTheFrog\_0 on r/git sub-Reddit.
++ [GitHub Actions needs OpenID Connect (OIDC) audience constraints](https://blog.yossarian.net/2026/08/10/github-actions-needs-oidc-audience-constraints),
+  by William Woodruff (yossarian) on his personal site.
 + [Feature comparison of ack, ag, git-grep, GNU grep and ripgrep](https://beyondgrep.com/feature-comparison/)
   by ack, a grep-like source code search tool.
 
@@ -383,6 +418,48 @@ __Git tools and sites__
 + [Gitoro](https://gitoro.com/): Git and CI/CD, hosted in Europe.
   Repositories, pipelines, and code review, run on OVHcloud infrastructure in the EU.
   Needs log in to browse repositories.
++ [git.vodka](https://git.vodka/~c/git-vodka)
+  is a small Git hosting service built as one Cloudflare Worker.
+  Repository metadata, refs, users, and token relationships live in D1.
+  Incoming packs, canonical Git objects, and archived packfiles live in R2.
+  The browser UI is server-rendered HTML/CSS with no JavaScript.
+  Written in TypeScript, under MIT license.
++ [durable-git](https://github.com/littledivy/durable-git) (formerly dgit)
+  is a git server for Cloudflare Workers and for your own machines with celld.
+  Each repository is a Durable Object: a small server with a name
+  and a private SQLite database that holds the repository's objects and refs,
+  speaks the git smart HTTP protocol to a stock git client,
+  and renders a cgit-style web interface.
+  Written in TypeScript, under MIT license.
++ [Gitignore Debugger](https://ignoredebugger.com/) is an on-line service
+  that helps you find out exactly why Git isn't ignoring your file.
+  Free, no signup, and everything runs in the browser.
+  An alternative to `git check-ignore -v`.
++ [drift](https://github.com/aymanbagabas/drift) is a git diff pager with terminal UI:
+  syntax highlighting, word-level change emphasis, split or unified views,
+  a file-list modal and a live sidebar you can click and drag
+  to resize, jump-to-hunk, in-file search, open-in-$EDITOR,
+  and a live mode that repaints the moment your index or branch moves.
+  You can point it at a commit, your staging area, or your working tree,
+  or just pipe a diff into it like any other pager.
+  Written in Rust, under MIT license.
++ [git-knife](https://github.com/TheRealYT/git-knife) is a desktop GUI
+  for editing git commit metadata directly — message, author date, committer date, author name/email.
+  It fills the gap between existing GUIs with some commit editing capabilities
+  (like GitKraken, Sublime Merge, Fork, lazygit), and tools for editing Git repository
+  (`git-filter-repo`, `git rebase` env tricks, `git commit-tree`) without GUI.
+  It never reimplements Git — it shells out to the system `git` CLI
+  and rebuilds commits with `git commit-tree`, reusing each commit's original tree
+  so file contents are provably never changed.
+  Written in Rust (and TypeScript) using Tauri application framework,
+  no license provided.
++ [GitComet](https://github.com/Auto-Explore/GitComet) is a Git GUI
+  built for teams that want fast Git operations
+  with local-first privacy, familiar workflows, and open source freedom.
+  It can be used as a standalone diff and merge tool
+  invoked by `git difftool` and `git mergetool`.
+  Available for Linux, Windows, and macOS.
+  Written in Rust, under GNU Affero General Public License Version 3 (AGPL-3.0-only).
 + [Maiao](https://github.com/runetes/maiao) brings the power of **stacked pull requests** (or merge requests)
   to your git hosting provider, enabling you to break large features
   into small, reviewable commits where each commit becomes its own PR/MR.
@@ -392,6 +469,11 @@ __Git tools and sites__
 + [`tuicr`](https://github.com/agavra/tuicr) is a code review TUI with vim keybindings.
   Export to GitHub, GitLab, Bitbucket, or clipboard.
   Written in Rust, under MIT license.
++ [Marvelous](https://github.com/stevenjjobson/marvelous) is a fast, standalone
+  desktop Markdown reader/editor featuring a clean interface
+  with improved object rendering for lists, tables and mermaid graphs,
+  and with git awareness and diff review support.  Tuned for reading an AI-written wiki.
+  Written in TypeScript and Rust, under MIT license.
 
 
 ## Releases
