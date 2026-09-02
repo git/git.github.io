@@ -351,7 +351,7 @@ __Light reading__
   by Alcides Fonseca on his blog, which reminds that you can have local master repository,
   and that you can do peer-to-peer pushes and fetches.
 + [Git at any scale](https://cursor.com/blog/git-at-any-scale)
-  by Vicent MartĂ­ on Cursor blog.<br>
+  by Vicent Martí on Cursor blog.<br>
   See also [How Cursor beat Git's scalability shortcomings](https://www.theregister.com/devops/2026/08/23/how-cursor-beat-gits-scalability-shortcomings/5291421)
   by Joab Jackson for The Register.
 + [20× the CI traffic without getting slower: How we rebuilt Git serving at Datadog](https://www.datadoghq.com/blog/engineering/gitretriever/)
@@ -482,11 +482,11 @@ __Git tools and sites__
   or just pipe a diff into it like any other pager.
   Written in Rust, under MIT license.
 + [git-knife](https://github.com/TheRealYT/git-knife) is a desktop GUI
-  for editing Git commit metadata directly â message, author date, committer date, author name/email.
+  for editing Git commit metadata directly — message, author date, committer date, author name/email.
   It fills the gap between existing GUIs with some commit editing capabilities
   (like GitKraken, Sublime Merge, Fork, lazygit), and tools for editing a Git repository
   (`git-filter-repo`, `git rebase` env tricks, `git commit-tree`) without a GUI.
-  It never reimplements Git â it shells out to the system `git` CLI
+  It never reimplements Git — it shells out to the system `git` CLI
   and rebuilds commits with `git commit-tree`, reusing each commit's original tree
   so file contents are provably never changed.
   Written in Rust (and TypeScript) using the Tauri application framework,
