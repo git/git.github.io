@@ -319,15 +319,79 @@ merge-base queue is always generation-ordered.
 ## Other News
 
 __Various__
++ [The August 17 outage, and the work ahead](https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/)
+  by Vlad Fedorov on GitHub Blog.
++ [Incident with GitHub.com: Incident Report for GitHub](https://www.githubstatus.com/incidents/zkxwbgr0cnmx)
+  for August 17, 2026.  On githubstatus\.com.
++ [GitHub blames 8-hour outage on autoscaling fail and VS Code retry storm](https://www.theregister.com/saas/2026/08/19/github-blames-8-hour-outage-on-autoscaling-fail-and-vs-code-retry-storm/5289547)
+  by Richard Speed for The Register.
++ [GitHub's Latest Outage Sparks Exodus: Cursor's Origin Emerges as the New Alternative](https://www.alphamatch.ai/blog/cursor-origin-github-outage-2026)
+  on AlphaMatch\.AI
++ [GitHub, autoscaling, and the component substitution fallacy](https://surfingcomplexity.blog/2026/08/19/github-autoscaling-and-the-component-substitution-fallacy/)
+  by Lorin Hochstein on his Surfing Complexity blog.
++ [GitHub Outages 2025 - 2026: Reliability Analysis and Outage History](https://blog.incidenthub.cloud/github-reliability-outage-history-2025-2026)
+  by Hrishikesh Barua on The IncidentHub Blog.
+  This article analyzes in depth GitHub's outage history between May 2025 and April 2026.
++ [Stacked pull requests are now in public preview](https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/)
+  on GitHub Changelog.
 
 
 __Light reading__
++ [How and Why to Ditch GitHub](https://taggart-tech.com/migrate-to-codeberg/)
+  (and migrate to Codeberg) by Michael Taggart on his Taggart Tech blog.
++ [GitHub has alternatives, but no replacement](https://lalitm.com/post/github-alternatives/)
+  by Lalit Maganti on their blog.
++ [Issues in the Repo](https://nesbitt.io/2026/08/20/issues-in-the-repo.html)
+  by Andrew Nesbitt on his blog.
+  This article provides systematic survey of tools
+  that keep issue and review data inside the repository
+  so it clones and pushes with the code.
+  Inspired by recent GitHub outage, with issues and pull request threads going dark.
++ [Git at any scale](https://cursor.com/blog/git-at-any-scale)
+  by Vicent Martí on Cursor blog.<br>
+  See also [How Cursor beat Git's scalability shortcomings](https://www.theregister.com/devops/2026/08/23/how-cursor-beat-gits-scalability-shortcomings/5291421)
+  by Joab Jackson for The Register.
++ [20× the CI traffic without getting slower: How we rebuilt Git serving at Datadog](https://www.datadoghq.com/blog/engineering/gitretriever/)
+  by Mike Thompson and Daniel Esponda on Datadog HQ Blog.
++ [Git Submodules as a Package Manager](https://nesbitt.io/2026/09/01/git-submodules-as-a-package-manager.html)
+  by Andrew Nesbitt on his blog.
++ [How I Learned to Stop Worrying and Love the Monorepo](https://www.eamoncaddigan.net/posts/git-monorepos/)
+  by Eamon Caddigan on his Potentially Useful blog.<br>
+  A reminder: a _monorepo_ or _monorepository_ is a software-development strategy
+  in which the code for a number of projects is stored in the same repository.
++ [My new workflow for local code review with `tuicr`](https://www.jvt.me/posts/2026/08/25/tuicr/),
+  [Updating dependent branches when rebasing, automagically](https://www.jvt.me/posts/2026/08/25/git-rebase-update-refs/) with `git rebase -i --update-refs`, and
+  [What commit did I branch off from?](https://www.jvt.me/posts/2026/08/23/determine-branch/) with `git merge-base`
+  by Jamie Tanna on his blog.
++ [The comments that go into code versus those that go into the pull request description](https://devblogs.microsoft.com/oldnewthing/20260812-00/?p=112607)
+  by Raymond Chen on Microsoft Dev Blogs.
++ [Commit message test plans](https://blog.waleedkhan.name/commit-message-test-plans/)
+  with [`scrut`](https://facebookincubator.github.io/scrut/)
+  by Waleed Khan on Steno & PL personal blog.
++ [Feature comparison of ack, ag, git-grep, GNU grep and ripgrep](https://beyondgrep.com/feature-comparison/)
+  by ack, a grep-like source code search tool.
 
 <!---
 __Easy watching__
 -->
 
 __Git tools and sites__
++ [upd.dev](https://www.upd.dev/): Code hosting for people who still love code.
+  Free as in freedom, free as in beer.
+  The engine is [Forgejo](https://forgejo.org/),
+  the diffs come from [Pierre](https://diffs.com/).
++ [Gitoro](https://gitoro.com/): Git and CI/CD, hosted in Europe.
+  Repositories, pipelines, and code review, run on OVHcloud infrastructure in the EU.
+  Needs log in to browse repositories.
++ [Maiao](https://github.com/runetes/maiao) brings the power of **stacked pull requests** (or merge requests)
+  to your git hosting provider, enabling you to break large features
+  into small, reviewable commits where each commit becomes its own PR/MR.
+  It provides Gerrit-style code review workflow
+  for GitHub, GitLab, Gitea, Forgejo, Bitbucket Cloud, and Cursor Origin.
+  Written in Go, under MIT license.
++ [`tuicr`](https://github.com/agavra/tuicr) is a code review TUI with vim keybindings.
+  Export to GitHub, GitLab, Bitbucket, or clipboard.
+  Written in Rust, under MIT license.
 
 
 ## Releases
