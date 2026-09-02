@@ -347,12 +347,26 @@ __Light reading__
   that keep issue and review data inside the repository
   so it clones and pushes with the code.
   Inspired by the recent GitHub outage, with issues and pull request threads going dark.
++ [A "new" model for source control](https://wiki.alcidesfonseca.com/blog/a-new-model-for-source-control/)
+  by Alcides Fonseca on his blog, which reminds that you can have local master repository,
+  and that you can do peer-to-peer pushes and fetches.
 + [Git at any scale](https://cursor.com/blog/git-at-any-scale)
-  by Vicent Martí on Cursor blog.<br>
+  by Vicent MartĂ­ on Cursor blog.<br>
   See also [How Cursor beat Git's scalability shortcomings](https://www.theregister.com/devops/2026/08/23/how-cursor-beat-gits-scalability-shortcomings/5291421)
   by Joab Jackson for The Register.
 + [20× the CI traffic without getting slower: How we rebuilt Git serving at Datadog](https://www.datadoghq.com/blog/engineering/gitretriever/)
   by Mike Thompson and Daniel Esponda on Datadog HQ Blog.
++ [Make Reviews Possible Again With This One Simple Trick: Stacked Branches](https://silky.github.io/posts/reviews-one-simple-trick.html)
+  by Noon van der Silk on their blog.
++ [Stacks in Jujutsu](https://alan.norbauer.com/articles/stacks-in-jujutsu/) and
+  [GitHub Stacks in Jujutsu](https://alan.norbauer.com/articles/github-stacks-with-jujutsu/)
+  by Alan Norbauer on his blog.
+    + [Jujutsu (`jj`)](https://jj-vcs.github.io/) is a Git-compatible
+      version control system written in Rust, which was first mentioned
+      in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/),
+      and most recently in [Edition #137](https://git.github.io/rev_news/2026/07/31/edition-137/).
++ [Accepting a messy git history](https://beza1e1.tuxen.de/git_two_users.html)
+  by Andreas Zwinkau.
 + [distributed identity](https://jyn.dev/distributed-identity/)
   by Jynn Nelson on the website of jyn.
   This article talks about the problem of changing e-mail or changing identity
@@ -369,17 +383,27 @@ __Light reading__
       Tangled was first mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/),
       and most recently in [Edition #137](https://git.github.io/rev_news/2026/07/31/edition-137/).
     + See also [Too many words about DIDs](https://steveklabnik.com/writing/too-many-words-about-dids/)
-      (“Decentralized Identity” standard) by Steve Klabnik,
+      ("Decentralized Identity" standard) by Steve Klabnik,
       mentioned in [Git Rev News Edition #137](https://git.github.io/rev_news/2026/07/31/edition-137/).
 + [Run your own CI](https://blog.tangled.org/selfhost-ci/)
   by oppi.li on Tangled Blog.  Possibly inspired by the August 17th GitHub outage.
   Advertises Tangled (and provides links to articles about CI and Tangled).
++ [Who Should Pay For Source Code Availability?](https://kristoff.it/blog/source-code-availability/)
+  by Loris Cro on his personal site.
+  This article considers the problem of hosting dependencies, and the fact that
+  whenever GitHub or Codeberg is down, fresh builds of a project will fail
+  (if dependencies are downloaded from Git, and not from a package repository).
+  The article mentions forking/vendoring dependencies (and languages that have
+  a centralized package index, which most often does forking/vendoring internally),
+  the Radicle and Tangled networks and Codeberg git hosting site, with focus on Radicle.
++ [Git Submodules as a Package Manager](https://nesbitt.io/2026/09/01/git-submodules-as-a-package-manager.html)
+  by Andrew Nesbitt on his blog.
 + [Git worktrees are not an isolation boundary for coding agents](https://fletch.sh/blog/git-worktrees-vs-clones-for-ai-agents/)
   by Alex Chaplinsky on Fletch Blog.
   It is a good addition to all the articles about Git worktrees for AI agents,
   and all specialized tools for managing worktrees, mentioned in recent editions.
-+ [Git Submodules as a Package Manager](https://nesbitt.io/2026/09/01/git-submodules-as-a-package-manager.html)
-  by Andrew Nesbitt on his blog.
++ [The Week of Sandbox Escapes Day 4: Git directories do not have to be called `.git`](https://www.pillar.security/blog/git-directories-do-not-have-to-be-called-git)
+  by Eilon Cohen on Pillar Blog.
 + [How I Learned to Stop Worrying and Love the Monorepo](https://www.eamoncaddigan.net/posts/git-monorepos/)
   by Eamon Caddigan on his Potentially Useful blog.<br>
   A reminder: a _monorepo_ or _monorepository_ is a software-development strategy
@@ -389,6 +413,9 @@ __Light reading__
 + [git: cd from linked worktree to main checkout](https://perrotta.dev/2026/08/git-cd-from-worktree-to-main-checkout/)
   (using a shell function)
   by Thiago Perrotta on just serendipity blog.
++ [Git: exclude commits by an author in `git log` with `--perl-regexp`](https://adamj.eu/tech/2026/08/05/git-log-exclude-author/)
+  (and a regular expression with a _negative lookahead_)
+  by Adam Johnson (author of "[Boost Your Git DX](https://adamchainz.gumroad.com/l/bygdx)" book).
 + [Why I still hand write my commit messages](https://www.jvt.me/posts/2026/08/17/hand-write-commits/),
   [My new workflow for local code review with `tuicr`](https://www.jvt.me/posts/2026/08/25/tuicr/),
   [Updating dependent branches when rebasing, automagically](https://www.jvt.me/posts/2026/08/25/git-rebase-update-refs/) with `git rebase -i --update-refs`, and
@@ -399,7 +426,10 @@ __Light reading__
 + [Commit message test plans](https://blog.waleedkhan.name/commit-message-test-plans/)
   with [`scrut`](https://facebookincubator.github.io/scrut/)
   by Waleed Khan on Steno & PL personal blog.
-+ [GitHub suspended my account 2h after my project went viral — what I've learned about the appeal process so far](https://www.reddit.com/r/git/comments/1vukp5b/github_suspended_my_account_2h_after_my_project/)
+
++ [What does GitHub's security team even do?](https://orchidfiles.com/github-security-team/)
+  by Orchid Files, about thousands of repositories on GitHub distributing malware they found.
++ [GitHub suspended my account 2h after my project went viral: what I've learned about the appeal process so far](https://www.reddit.com/r/git/comments/1vukp5b/github_suspended_my_account_2h_after_my_project/)
   by 0\_KermitTheFrog\_0 on r/git sub-Reddit.
 + [GitHub Actions needs OpenID Connect (OIDC) audience constraints](https://blog.yossarian.net/2026/08/10/github-actions-needs-oidc-audience-constraints),
   by William Woodruff (yossarian) on his personal site.
@@ -431,6 +461,14 @@ __Git tools and sites__
   speaks the Git smart HTTP protocol to a stock Git client,
   and renders a cgit-style web interface.
   Written in TypeScript, under MIT license.
++ [Manganin](https://codeberg.org/Loweg/manganin) is a code forge with
+  vouch trees, local-first issue tracking (issues are stored in git), and
+  termbox-based TUI for vouching, issue and PR management, and server configuration.
+  Demo instance at https://manganin.dev/ (where Manganin's own development happens).
+  Written in Zig, under MIT license.<br>
+  See also [Manganin: tools matter](https://blog.manganin.dev/blog/tools-matter/)
+  article on Manganin Blog.
+    + Vouching
 + [Gitignore Debugger](https://ignoredebugger.com/) is an on-line service
   that helps you find out exactly why Git isn't ignoring your file.
   Free, no signup, and everything runs in the browser.
@@ -444,11 +482,11 @@ __Git tools and sites__
   or just pipe a diff into it like any other pager.
   Written in Rust, under MIT license.
 + [git-knife](https://github.com/TheRealYT/git-knife) is a desktop GUI
-  for editing Git commit metadata directly — message, author date, committer date, author name/email.
+  for editing Git commit metadata directly â message, author date, committer date, author name/email.
   It fills the gap between existing GUIs with some commit editing capabilities
   (like GitKraken, Sublime Merge, Fork, lazygit), and tools for editing a Git repository
   (`git-filter-repo`, `git rebase` env tricks, `git commit-tree`) without a GUI.
-  It never reimplements Git — it shells out to the system `git` CLI
+  It never reimplements Git â it shells out to the system `git` CLI
   and rebuilds commits with `git commit-tree`, reusing each commit's original tree
   so file contents are provably never changed.
   Written in Rust (and TypeScript) using the Tauri application framework,
@@ -466,6 +504,11 @@ __Git tools and sites__
   It provides a Gerrit-style code review workflow
   for GitHub, GitLab, Gitea, Forgejo, Bitbucket Cloud, and Cursor Origin.
   Written in Go, under MIT license.
++ [wiff](https://wezfurlong.org/wiff/) is a terminal-centric diff and code-review utility:
+  it captures a diff, lets you browse and annotate it with syntax highlighting,
+  and persists the review as a local session that both a human (through the TUI)
+  and an agent (through the CLI and a skill) can read and write concurrently.
+  Written in Rust, under Apache-2.0 license.
 + [`tuicr`](https://github.com/agavra/tuicr) is a code review TUI with vim keybindings.
   Export to GitHub, GitLab, Bitbucket, or clipboard.
   Written in Rust, under MIT license.
@@ -510,7 +553,7 @@ __Git tools and sites__
 
 This edition of Git Rev News was curated by
 Christian Couder &lt;<christian.couder@gmail.com>&gt;,
-Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
+Jakub NarÄbski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
 with help from Simone Arpe and Tuomas Ahola.
