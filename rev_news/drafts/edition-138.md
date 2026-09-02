@@ -468,7 +468,6 @@ __Git tools and sites__
   Written in Zig, under MIT license.<br>
   See also [Manganin: tools matter](https://blog.manganin.dev/blog/tools-matter/)
   article on Manganin Blog.
-    + Vouching
 + [Gitignore Debugger](https://ignoredebugger.com/) is an on-line service
   that helps you find out exactly why Git isn't ignoring your file.
   Free, no signup, and everything runs in the browser.
