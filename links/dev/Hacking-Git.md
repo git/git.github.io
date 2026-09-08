@@ -9,7 +9,7 @@ to interesting material that has already been written.
 The goal is also not to list all the articles, tools or resources
 about Git or its internals. There are a lot of good resources,
 including [free books](http://git-scm.com/book/en/v2/), and the
-[archive of our newsletter](https://git.github.io/rev_news/archive/),
+[archive of our newsletter]({{ '/rev_news/archive/' | relative_url}}),
 about that elsewhere. So on this page we focus on what is the most
 interesting for developers starting to work on Git.
 
@@ -53,7 +53,7 @@ suggest improvements. Thanks!
 
 * ["`Documentation/technical`"](https://github.com/git/git/tree/master/Documentation/technical), technical documentation (also viewable at `https://git-scm.com/docs/<file-name-without-.txt>`)
 
-* [Our General Microproject Information](https://git.github.io/General-Microproject-Information/) can help understand the process of contributing and find issues to work on.
+* [Our General Microproject Information]({{ '/General-Microproject-Information/' | relative_url}}) can help understand the process of contributing and find issues to work on.
 
 ## Conventions and processes
 
@@ -89,7 +89,7 @@ suggest improvements. Thanks!
 
 * [Git's release calendar](https://tinyurl.com/gitCal) shows the planned release cycles, the maintainer's planned offline time, and possibly other events.
 
-* [Git Rev News](https://git.github.io/rev_news/archive/) newsletter.
+* [Git Rev News]({{ '/rev_news/archive/' | relative_url}}) newsletter.
 
 * [Git Merge conference](https://git-merge.com/).
 
@@ -143,4 +143,4 @@ suggest improvements. Thanks!
 
 * [Outreachy](https://www.outreachy.org/)
 
-* [General Application Information](https://git.github.io/General-Application-Information/)
+* [General Application Information]({{ '/General-Application-Information/'  | relative_url}})
