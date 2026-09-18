@@ -45,7 +45,7 @@ __Easy watching__
 -->
 
 __Git tools and sites__
-
+* [git-hooks-ext](https://github.com/ciembor/git-hooks-ext) provides 19 missing semantic events such as `branch-created`, `branch-deleted`, `tag-created`, and `tag-updated`. It supports classic Git hooks as well as config-based hooks, and is available for macOS and several Linux distributions. Written in C, under GNU General Public License Version 2 (GPL-2.0-only).
 
 ## Releases
 
