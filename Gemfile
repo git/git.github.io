@@ -1,10 +1,6 @@
 source 'https://rubygems.org'
+# Because https://help.github.com/articles/using-jekyll-with-pages/
+gem 'github-pages', group: :jekyll_plugins
 
-gem 'jekyll', '~> 4.3'
-gem 'jekyll-redirect-from'
-gem 'webrick'
-gem 'kramdown-parser-gfm'
-gem 'csv'
-gem 'base64'
-gem 'bigdecimal'
-gem 'logger'
+
+# gem "webrick", "~> 1.7" # N.B. we may not want to fix this Gemfile
