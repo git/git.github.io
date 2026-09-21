@@ -80,7 +80,7 @@ This edition covers what happened during the months of August and September 2026
 * **Do you happen to have any memorable experience w.r.t. contributing
   to the Git project? If yes, could you share it with us?**
 
-  My first [merged commit in 2018](https://github.com/git/git/commit/1fb20dfd8ed70b4459312918a71444bc79ea6f0b) ([commit](https://lore.kernel.org/git/20180402005248.52418-1-haraldnordgren@gmail.com/))
+  My first [merged commit in 2018](https://github.com/git/git/commit/1fb20dfd8ed70b4459312918a71444bc79ea6f0b) ([patch](https://lore.kernel.org/git/20180402005248.52418-1-haraldnordgren@gmail.com/))
   was an unreal experience, I couldn’t believe I got to be part of
   this project.
 
