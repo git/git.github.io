@@ -29,16 +29,20 @@ guidelines:
 
 - Fix typos, broken links, or outdated information across the site
   (except for already published editions of Git Rev News, which are
-  kept as historical archives).
+  kept as historical archives). If possible, open a Pull Request (PR)
+  to submit your changes.
 - Improve or add content to sections of the website such as the
-  Links page, Mentoring pages, or general documentation.
+  Links page, Mentoring pages, or general documentation (opening a PR
+  is preferred for these as well).
 - Add entries or articles to the upcoming edition of the Git Rev News
   newsletter (see [below](#git-rev-news-newsletter)).
 - Improve site infrastructure (CSS, JavaScript, Jekyll layouts, or
   plugins). Before starting work on major improvements, please check
-  existing issues and open a new issue for discussion first.
-- Participate in community discussions by sharing opinions on open
-  issues or reviewing open Pull Requests.
+  [existing issues](https://github.com/git/git.github.io/issues) and
+  open a new issue for discussion first.
+- Participate in community discussions by sharing opinions on
+  [open issues](https://github.com/git/git.github.io/issues) or
+  reviewing [open Pull Requests](https://github.com/git/git.github.io/pulls).
 - Report bugs, broken links, or suggestions via
   [GitHub Issues](https://github.com/git/git.github.io/issues).
 
@@ -60,7 +64,7 @@ guidelines:
    below.
 5. **Test locally** if needed by [running the site](#running-the-site-locally)
    and verifying your changes look correct. (Note: this is not required
-   for newsletter contributions.)
+   for newsletter contributions or small changes like typofixes.)
 6. **Commit** with a clear, descriptive message:
    ```sh
    git add .
@@ -96,7 +100,8 @@ GitHub Pages.
 
 Note: Running the site locally is helpful when working on layouts,
 styles, or general pages, but it is **not required** when submitting
-content for Git Rev News editions.
+content for Git Rev News editions or sending typofixes and similar
+small changes.
 
 ### Prerequisites
 
@@ -168,16 +173,22 @@ published monthly.
 
 ### How to Contribute Content
 
-Each upcoming edition is prepared in advance as a Markdown file under
-`_posts/` (e.g. `_posts/YYYY-MM-DD-edition-XXX.markdown`).
+Before being published, an upcoming edition is prepared in advance
+as a draft Markdown file under `rev_news/drafts/` (e.g.
+`rev_news/drafts/edition-XXX.md`). When an edition is published, its
+file is moved under `_posts/` and renamed (e.g.
+`_posts/YYYY-MM-DD-edition-XXX.markdown`).
 
 You can contribute in several ways:
 - **Share entries in the edition issue:** A dedicated GitHub Issue is
-  opened for every upcoming edition (titled e.g. "Git Rev News Edition
-  XXX"). You can comment directly on that issue with links, articles,
+  opened for every upcoming edition, titled `"Any comment about
+  upcoming Git Rev News edition XXX"` (where `XXX` is the edition
+  number; for example, see [Issue #860](https://github.com/git/git.github.io/issues/860)).
+  You can comment directly on that issue with links, articles,
   tools, or news you would like included.
 - **Submit a Pull Request:** Add your entry directly to the draft file
-  under `_posts/` for the upcoming edition. Common entries include:
+  under `rev_news/drafts/` for the upcoming edition. Common entries
+  include:
   - Links and short descriptions for tutorials, articles, or blog posts.
   - Recent Git-related releases, tools, or projects.
   - Discussions from the Git mailing list.
