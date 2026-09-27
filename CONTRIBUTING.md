@@ -1,6 +1,10 @@
 # Contributing to Git Developer Pages
 
-Thank you for your interest in contributing to [git.github.io](https://git.github.io) — the community website for Git development, home to the [Git Rev News newsletter](https://git.github.io/rev_news/), [Hacking Git](https://git.github.io/Hacking-Git/), and mentoring program information.
+Thank you for your interest in contributing to [git.github.io](https://git.github.io),
+the community website for Git development, home to the
+[Git Rev News newsletter](https://git.github.io/rev_news/),
+[Hacking Git](https://git.github.io/Hacking-Git/), and mentoring program
+information.
 
 ---
 
@@ -19,11 +23,24 @@ Thank you for your interest in contributing to [git.github.io](https://git.githu
 
 ## Ways to Contribute
 
-- Fix typos, broken links, or outdated information
-- Improve or add pages under `links/`, `rev_news/`, or other sections
-- Add entries to the Git Rev News newsletter
-- Improve site infrastructure (CSS, JavaScript, Jekyll layouts/plugins)
-- Report issues via [GitHub Issues](https://github.com/git/git.github.io/issues)
+In general we accept all kind of contributions to all the pages on
+this website, but here are some suggestions along with a few
+guidelines:
+
+- Fix typos, broken links, or outdated information across the site
+  (except for already published editions of Git Rev News, which are
+  kept as historical archives).
+- Improve or add content to sections of the website such as the
+  Links page, Mentoring pages, or general documentation.
+- Add entries or articles to the upcoming edition of the Git Rev News
+  newsletter (see [below](#git-rev-news-newsletter)).
+- Improve site infrastructure (CSS, JavaScript, Jekyll layouts, or
+  plugins). Before starting work on major improvements, please check
+  existing issues and open a new issue for discussion first.
+- Participate in community discussions by sharing opinions on open
+  issues or reviewing open Pull Requests.
+- Report bugs, broken links, or suggestions via
+  [GitHub Issues](https://github.com/git/git.github.io/issues).
 
 ---
 
@@ -39,33 +56,47 @@ Thank you for your interest in contributing to [git.github.io](https://git.githu
    ```sh
    git checkout -b my-fix
    ```
-4. **Make your changes**, following the [Writing Guidelines](#writing-guidelines) below.
-5. **Test locally** by [running the site](#running-the-site-locally) and verifying your changes look correct.
+4. **Make your changes**, following the [Writing Guidelines](#writing-guidelines)
+   below.
+5. **Test locally** if needed by [running the site](#running-the-site-locally)
+   and verifying your changes look correct. (Note: this is not required
+   for newsletter contributions.)
 6. **Commit** with a clear, descriptive message:
    ```sh
    git add .
    git commit -m "Brief description of the change"
    ```
-7. **Push** to your fork and open a Pull Request against the `master` branch of this repository.
+   For Git Rev News contributions, use the `rn-XXX: ` prefix for your
+   commit subject (e.g. `rn-114: Add link to new Git tutorial`).
+7. **Push** to your fork and open a Pull Request against the `master`
+   branch of this repository.
 
-> **Note:** Keep PRs focused on a single topic. Avoid mixing unrelated changes (e.g., infrastructure changes with content updates).
+> **Note:** Keep PRs focused on a single topic. Avoid mixing unrelated
+> changes (such as infrastructure changes with content updates).
 
 ---
 
 ## Submitting Changes via Email
 
-If you prefer not to use GitHub, you can send patches by email to the maintainers:
+If you prefer not to use GitHub, you can send patches by email to the
+maintainers:
 
-- **Christian Couder** — <christian.couder@gmail.com>
-- **Kaartic Sivaraam** — <kaartic.sivaraam+git@gmail.com>
+- **Christian Couder**: <christian.couder@gmail.com>
+- **Kaartic Sivaraam**: <kaartic.sivaraam+git@gmail.com>
 
-You may also CC the Git mailing list at <git@vger.kernel.org> if appropriate.
+You may also CC the Git mailing list at <git@vger.kernel.org> if
+appropriate.
 
 ---
 
 ## Running the Site Locally
 
-This site is built with [Jekyll](https://jekyllrb.com/) and hosted via GitHub Pages.
+This site is built with [Jekyll](https://jekyllrb.com/) and hosted via
+GitHub Pages.
+
+Note: Running the site locally is helpful when working on layouts,
+styles, or general pages, but it is **not required** when submitting
+content for Git Rev News editions.
 
 ### Prerequisites
 
@@ -92,7 +123,8 @@ bundle exec jekyll serve
 
 Then open your browser at <http://localhost:4000>.
 
-See [GitHub Pages documentation](https://help.github.com/articles/using-jekyll-with-pages/) for more details.
+See [GitHub Pages documentation](https://help.github.com/articles/using-jekyll-with-pages/)
+for more details.
 
 ---
 
@@ -100,45 +132,86 @@ See [GitHub Pages documentation](https://help.github.com/articles/using-jekyll-w
 
 - Use clear, concise language suitable for a developer audience.
 - Write content in **Markdown** (`.md` or `.markdown` files).
+- Keep lines wrapped at around 72 characters when possible.
 - Use relative links within the site where possible.
-- When adding code examples, use fenced code blocks with a language tag:
+- When adding code examples, use fenced code blocks with a language
+  tag:
   ````
   ```sh
   git log --oneline
   ```
   ````
-  Supported languages for syntax highlighting include: `sh`/`bash`, `c`, `diff`, `go`, `ini`, `python`, `ruby`, `yaml`, and others.
+  Supported languages for syntax highlighting include: `sh`/`bash`,
+  `c`, `diff`, `go`, `ini`, `python`, `ruby`, `yaml`, and others.
 - Avoid adding unnecessary dependencies or large binary assets.
 
 ---
 
 ## Code Style
 
-- **JavaScript / CSS:** Keep changes minimal and consistent with the existing style in `script/` and `css/`.
-- **Jekyll Layouts & Plugins:** Changes to `_layouts/`, `_includes/`, or `_plugins/` should be well-tested locally before submitting.
-- **Gemfile:** Do **not** modify the `Gemfile` unless there is a clear, necessary reason — it is shared and affects all contributors' environments.
-- **Whitespace:** Prefer Unix line endings (LF). Avoid trailing whitespace.
+- **JavaScript / CSS:** Keep changes minimal and consistent with the
+  existing style in `script/` and `css/`.
+- **Jekyll Layouts & Plugins:** Changes to `_layouts/`, `_includes/`, or
+  `_plugins/` should be well-tested locally before submitting.
+- **Gemfile:** Do **not** modify the `Gemfile` unless there is a
+  clear, necessary reason, as it is shared and affects all
+  contributors' environments.
+- **Whitespace:** Prefer Unix line endings (LF). Avoid trailing
+  whitespace.
 
 ---
 
 ## Git Rev News Newsletter
 
-The [Git Rev News](https://git.github.io/rev_news/) newsletter is published monthly. Each edition is a Markdown file under `_posts/`.
+The [Git Rev News](https://git.github.io/rev_news/) newsletter is
+published monthly.
 
-If you want to contribute to a newsletter edition:
-- Check the [news sources](https://git.github.io/rev_news/news_sources/) page for submission guidelines.
-- Contact the maintainers via email (see [above](#submitting-changes-via-email)).
+### How to Contribute Content
+
+Each upcoming edition is prepared in advance as a Markdown file under
+`_posts/` (e.g. `_posts/YYYY-MM-DD-edition-XXX.markdown`).
+
+You can contribute in several ways:
+- **Share entries in the edition issue:** A dedicated GitHub Issue is
+  opened for every upcoming edition (titled e.g. "Git Rev News Edition
+  XXX"). You can comment directly on that issue with links, articles,
+  tools, or news you would like included.
+- **Submit a Pull Request:** Add your entry directly to the draft file
+  under `_posts/` for the upcoming edition. Common entries include:
+  - Links and short descriptions for tutorials, articles, or blog posts.
+  - Recent Git-related releases, tools, or projects.
+  - Discussions from the Git mailing list.
+  - Lighthearted Git-related content.
+- **Submission guidelines:** Check the
+  [news sources](https://git.github.io/rev_news/news_sources/) page for
+  more suggestions on finding news items.
+- **Email:** Contact the maintainers via email (see
+  [above](#submitting-changes-via-email)).
+
+### Newsletter Guidelines
+
+- **Do not edit past editions:** Already published editions are
+  archived historical records and should not be modified.
+- **No local testing required:** You do not need to install Ruby or
+  build the site locally when submitting newsletter entries.
+- **Commit prefix:** Format your commit message subject starting with
+  `rn-XXX: ` where `XXX` is the edition number (e.g.
+  `rn-114: Add link to Git tutorial`).
 
 ---
 
 ## Reporting Issues
 
-Found a bug, broken link, or outdated content? Please [open an issue](https://github.com/git/git.github.io/issues/new) on GitHub with:
+Found a bug, broken link, or outdated content? Please
+[open an issue](https://github.com/git/git.github.io/issues/new) on
+GitHub with:
 
 - A clear title describing the problem.
 - The URL of the affected page (if applicable).
-- Steps to reproduce or a description of what you expected vs. what you saw.
+- Steps to reproduce or a description of what you expected vs. what
+  you saw.
 
 ---
 
-We appreciate every contribution, big or small. Thank you for helping improve the Git community website!
+We appreciate every contribution, big or small. Thank you for helping
+improve the Git community website!
