@@ -132,6 +132,49 @@ __Git tools and sites__
 
 ## Releases
 
++ Git [2.56.0](https://lore.kernel.org/git/xmqqpkxxmgxh.fsf@gitster.g/),
+[2.56.0-rc2](https://lore.kernel.org/git/xmqqld8tfea9.fsf@gitster.g/),
+[2.56.0-rc1](https://lore.kernel.org/git/xmqqh5jpvzxo.fsf@gitster.g/),
+[2.56.0-rc0](https://lore.kernel.org/git/xmqqecf1f2ga.fsf@gitster.g/)
++ Git for Windows [v2.56.0(1)](https://github.com/git-for-windows/git/releases/tag/v2.56.0.windows.1),
+[v2.56.0-rc2(1)](https://github.com/git-for-windows/git/releases/tag/v2.56.0-rc2.windows.1),
+[v2.56.0-rc1(1)](https://github.com/git-for-windows/git/releases/tag/v2.56.0-rc1.windows.1),
+[v2.56.0-rc0(1)](https://github.com/git-for-windows/git/releases/tag/v2.56.0-rc0.windows.1)
++ gitoxide [0.59.0](https://github.com/GitoxideLabs/gitoxide/releases/tag/v0.59.0)
++ JGit [7.8.0](https://github.com/eclipse-jgit/jgit/releases/tag/v7.8.0.202609011348-r)
++ GitLab [19.5](https://docs.gitlab.com/releases/19/gitlab-19-5-released/),
+[19.4](https://docs.gitlab.com/releases/19/gitlab-19-4-released/)
++ Bitbucket Data Center [10.5](https://confluence.atlassian.com/bitbucketserver/release-notes-872139866.html)
++ Gerrit Code Review [3.12.10](https://www.gerritcodereview.com/3.12.html#31210),
+[3.12.11](https://www.gerritcodereview.com/3.12.html#31211),
+[3.13.10](https://www.gerritcodereview.com/3.13.html#31310),
+[3.13.9](https://www.gerritcodereview.com/3.13.html#3139),
+[3.14.3](https://www.gerritcodereview.com/3.14.html#3143),
+[3.14.4](https://www.gerritcodereview.com/3.14.html#3144)
++ GitHub Enterprise [3.22.1](https://docs.github.com/enterprise-server@3.22/admin/release-notes#3.22.1),
+[3.21.6](https://docs.github.com/enterprise-server@3.21/admin/release-notes#3.21.6),
+[3.20.8](https://docs.github.com/enterprise-server@3.20/admin/release-notes#3.20.8),
+[3.19.12](https://docs.github.com/enterprise-server@3.19/admin/release-notes#3.19.12),
+[3.18.15](https://docs.github.com/enterprise-server@3.18/admin/release-notes#3.18.15),
+[3.17.21](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.21),
+[3.22.0](https://docs.github.com/enterprise-server@3.22/admin/release-notes#3.22.0),
+[3.21.5](https://docs.github.com/enterprise-server@3.21/admin/release-notes#3.21.5),
+[3.20.7](https://docs.github.com/enterprise-server@3.20/admin/release-notes#3.20.7),
+[3.19.11](https://docs.github.com/enterprise-server@3.19/admin/release-notes#3.19.11),
+[3.18.14](https://docs.github.com/enterprise-server@3.18/admin/release-notes#3.18.14),
+[3.17.20](https://docs.github.com/enterprise-server@3.17/admin/release-notes#3.17.20)
++ GitKraken [12.4.1](https://help.gitkraken.com/gitkraken-desktop/current/)
++ GitHub Desktop [3.6.6](https://desktop.github.com/release-notes/),
+[3.6.5](https://desktop.github.com/release-notes/)
++ lazygit [0.65.1](https://github.com/jesseduffield/lazygit/releases/tag/v0.65.1),
+[0.65.0](https://github.com/jesseduffield/lazygit/releases/tag/v0.65.0)
++ Garden [2.7.0](https://github.com/garden-rs/garden/releases/tag/v2.7.0)
++ Sublime Merge [Build 2132](https://www.sublimemerge.com/download),
+[Build 2130](https://www.sublimemerge.com/download)
++ difftastic [0.71.0](https://github.com/Wilfred/difftastic/releases/tag/0.71.0)
++ Kinetic Merge [1.19.0](https://github.com/sageserpent-open/kineticMerge/releases/tag/v1.19.0),
+[1.18.0](https://github.com/sageserpent-open/kineticMerge/releases/tag/v1.18.0)
++ git-bug [0.11.0](https://github.com/git-bug/git-bug/releases/tag/v0.11.0)
 
 ## Credits
 
