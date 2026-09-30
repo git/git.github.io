@@ -21,9 +21,230 @@ This edition covers what happened during the months of August and September 2026
 ### General
 -->
 
-<!---
 ### Reviews
--->
+
++ [[PATCH] packfile: fix perf regression with many packs](https://lore.kernel.org/git/pull.2202.git.1786561870638.gitgitgadget@gmail.com)
+
+Johannes Schindelin, alias Dscho, sent a patch to the mailing list to
+fix a performance regression that appeared in Git 2.53 and that affects
+repositories containing a very large number of packfiles.
+
+In the commit message, Dscho explained that since 589127caa7 (packfile:
+move list of packs into the packfile store, 2025-10-30), the
+`packfile_store_add_pack()` function calls
+`packfile_list_remove_internal()` to check whether a packfile is
+_already_ in the list of packs, and, if so, to move it to the end of
+that list. As this check scans the whole list linearly before every
+insertion, loading N new packs has an O(N²) complexity.
+
+In a case reported by a Microsoft Git user in
+[a GitHub issue](https://github.com/microsoft/git/issues/970), N was
+37,815, and a simple `git rev-parse --short HEAD`, which is regularly
+run by `GIT_PS1` to display the current commit in the shell prompt,
+went from 0.4 seconds to 4.5 seconds. Dscho also reported that, in a
+heavily exercised CI scenario, clone times went from under two minutes
+to over half an hour.
+
+The fix consisted of adding a fast path for packfiles known to be new.
+Dscho anticipated that readers might wonder why the check was not
+simply removed, since `packfile_list_append()` had only one caller
+left, which always passes new packs. He explained that there used to be
+a second caller in `prepare_midx()` that needed the check, but that it
+was removed by 6aff1f25a0 (packfile: always add packfiles to MRU when
+adding a pack, 2025-10-30). As the function is declared in a header
+file, he preferred to extend its signature with an `is_new` parameter,
+to avoid problems with in-flight topics or downstream callers.
+
+The patch also added an "abbreviate with 10,000 packs" test, running
+`git rev-parse --short HEAD`, to the `t/perf/p5303-many-packs.sh`
+performance test script.
+
+#### Some background
+
+Git stores objects either as individual "loose" files or in packfiles.
+Each fetch or push usually creates a new packfile, and maintenance
+tasks like `git gc` or `git maintenance` regularly consolidate them
+into fewer packs. When maintenance doesn't run, or doesn't complete,
+packfiles can accumulate.
+
+To look up objects, Git keeps an in-memory list of the packfiles it
+knows about. It also reorders that list to implement a "most recently
+used" (MRU) optimization: the pack where an object was last found is
+moved to the front, as the next object being looked up is likely to be
+in the same pack.
+
+Commit 589127caa7 was part of Patrick Steinhardt's work on refactoring
+the object database, so that different storage backends can
+eventually be plugged in. It moved the list of packs into a new
+"packfile store" structure.
+
+#### Review of the first version
+
+Junio Hamano, the Git maintainer, replied to the patch with a rolling
+eyes emoji, noting that "As we grow older, more and more extreme use
+cases that we initially thought were simply crazy become reality." He
+agreed that, as long as the caller knows that a pack is new, there is
+no reason to walk through all the packs trying to remove it, and he
+found the fix "Clever and clean."
+
+Jeff King, alias Peff, pointed out that this was a regression of a
+problem that had already been dealt with by ec48540fe8 (packfile.c:
+speed up loading lots of packfiles, 2019-11-27). He showed that the
+regression could even be seen in Git's existing performance test
+suite, as the "load 10,000 packs" test went from 0.13 to 0.45 seconds
+at commit 589127caa7, a 246% increase. Unfortunately, he noted,
+nobody pays close attention to the perf suite, partly because "it's
+clunky and expensive to run", and partly because deciding whether a
+change is real or just noise often requires human judgment.
+
+Peff found the fix reasonable, but wondered what value the new perf
+test added, as it showed the same slowdown as the existing "load
+10,000 packs" test.
+
+Patrick replied that GitLab had set up continuous benchmarking with
+[Bencher](https://bencher.dev/perf/git/plots). But recent changes to
+their CI setup made the results flaky, as jobs seemed to alternate
+between two kinds of runners with different specs. He also admitted
+that their benchmarks lacked a test with lots of packfiles, which is
+why they didn't catch this regression.
+
+Dscho replied to Peff that the new test directly reflects what
+`GIT_PS1` runs, and that it exercises a subtly different code path, as
+`--short` has to look for a unique abbreviation, while `--verify` can
+stop as soon as it has found the object. Peff answered that the
+regression was about creating the initial pack list, so it happened
+whether each pack was opened or not. He noted, though, that the
+existing tests that look at each object only did so with 1, 50 and
+1,000 packs, not with 10,000, and in the end he was OK with the
+redundancy since the new test isn't expensive.
+
+Dscho also told Junio that he had to take back his claim about the
+slower clones in CI, as the patch didn't fix that issue, which was
+still being investigated.
+
+#### Why so many packs?
+
+D. Ben Knoble asked whether enabling maintenance on the user's
+repository could be an intermediate solution.
+
+Dscho replied that the issue was actually about a _Scalar_ clone, and
+more specifically a _Microsoft Git_ Scalar clone. He explained that "a
+substantial part of Microsoft Git failed to get upstreamed to core
+Git", including the "shared cache repository" feature. With it, a bare
+repository is set up as an alternate of the actual clone, and
+scheduled fetches go into that shared cache (see the
+[commit introducing it](https://github.com/microsoft/git/commit/55226d12ed36)).
+Maintenance usually runs on the shared cache, but Dscho suspected that
+it often takes too long to finish before machines are shut down for
+the day. As a result, "it is still not exactly rare to find setups
+with five-digit packfile counts. And since we _can_ handle this more
+gracefully, we should ;-)"
+
+Ben clarified that he had meant maintenance would likely help the
+local case, like the shell prompt, more than the clones.
+
+#### Naming and design discussions
+
+Patrick reviewed the patch. Besides pointing out a typo in the commit
+message, he suggested renaming the `is_new` parameter to
+`accept_duplicates`, since the function would then just append the
+entry without ensuring that the packfile is unique in the list. He
+also sketched an alternative: tracking added packs in a hashmap. This
+would also cover `packfile_list_prepend()` and wouldn't require
+callers to know about the mechanism. With a doubly-linked list, moving
+existing entries to the back or the front, which happens often to
+re-sort the list during object lookups, would also become cheap. He
+sent a patch implementing this idea, while wondering whether the added
+complexity was worth it.
+
+Dscho agreed to fix the typo and drop the claim about CI clones. He
+disagreed with the new name though, as the function is _not_
+accepting duplicates: the callers know the packfiles cannot be
+duplicates. Interestingly, he said that his first reaction had also
+been to write a hashmap-based fix, until "the AI assistant pointed out
+that no duplicates could possibly exist yet." He agreed that the added
+complexity wasn't needed, at least not yet.
+
+Patrick replied that, seen outside the context of its current caller,
+the parameter just tells whether packs should be deduplicated. He
+considered pursuing his patch anyway, as he thought it would speed up
+reordering significantly with 38k packfiles, in which case it would
+supersede Dscho's patch. Dscho proposed the `skip_dup_check` name
+instead, and pointed out that even a hashset lookup is slower than
+skipping the search altogether. Patrick agreed to move forward with
+Dscho's patch.
+
+Junio also replied to Patrick's naming suggestion. He had "the same
+thought", as the current callers might have been vetted thoroughly,
+but future callers or code paths might break the promise that only new
+packs are added. He also asked whether it was well understood what bad
+things duplicate entries in a pack list could lead to.
+
+Peff replied to Patrick that such a hashmap already exists: since
+ec48540fe8, `packfile_store_add_pack()` and `packfile_store_load_pack()`
+use one, and that is precisely why the new parameter can be set to
+true for the remaining caller. Otherwise, "reprepare" operations would
+create duplicates.
+
+Patrick suggested moving that map from the packfile store into the
+packfile list, to make it more generally useful. Peff answered that
+the map protects more than adding packs to the list, as it avoids
+calling `add_packed_git()`, which allocates memory and performs a
+number of `stat()` calls. So the existence check would have to happen
+much earlier than in `packfile_list_append()`. He added that it would
+be easier to see which generalized pattern would be useful if there
+were more than one caller of `packfile_list_append()`.
+
+Patrick pointed out that there were other callers of
+`packfile_list_prepend()`, which has the same problem. Peff agreed
+that `prepend()` calls appear in some hot code paths, including the
+MRU adjustment in `find_pack_entry()`, and that this could be a
+candidate for the clone slowdown Dscho was still investigating. But he
+wouldn't want to pay the cost of hash-based deduplication there, as no
+new pack is added. Moving an entry should instead be an O(1) operation
+using a doubly-linked list.
+
+Peff also explained that it is harder to build a synthetic test for
+prepending, because of pack locality. If two consecutive lookups move
+the same pack to the front, the second one finds it there almost
+immediately. He showed, though, how to spread a history across many
+packs using `git fast-import` with `fastimport.unpackLimit=0` and a
+`checkpoint` after each commit. Timing `git rev-list --count` then
+showed quadratic growth taking over around 2,000 packs, from 18ms with
+500 packs to 6.3 seconds with 16,000 packs. He noted that this didn't
+prove much about list management, as looking up objects across packs
+is linear anyway, so this situation is inherently quadratic. Still, he
+found it "prudent for these MRU updates to use a constant-time
+movement within the list, rather than an explicit duplicate check and
+removal."
+
+#### Version 2
+
+Meanwhile, Dscho sent a
+[version 2](https://lore.kernel.org/git/pull.2202.v2.git.1786633010179.gitgitgadget@gmail.com)
+of the patch. It fixed the typo found by Patrick, dropped the claim
+that the patch fixed the CI clone regression, and renamed the `is_new`
+parameter to `skip_dup_check`.
+
+Patrick said he was happy with this version, and that the other parts
+of the discussion could be iterated on after the patch landed. Junio
+agreed and marked it for 'next'.
+
+#### Conclusion
+
+A small patch was enough to fix a quadratic slowdown that made shell
+prompts noticeably slower in repositories with tens of thousands of
+packfiles. The discussion around it showed that this was the
+regression of a problem already fixed in 2019, and that the perf test
+suite had detected it, but that nobody noticed. Contributors discussed
+how to better catch such regressions with continuous benchmarking, and
+why some real-world setups, like Microsoft Git's Scalar shared cache,
+can accumulate so many packs. Ideas for further improvements, like
+constant-time MRU moves in the packfile list, were also put forward
+for later.
+
+The patch was merged into the 'master' branch and is part of the Git
+2.56.0 release.
 
 <!---
 ### Support
