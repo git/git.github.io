@@ -19,6 +19,18 @@ This edition covers what happened during the months of August and September 2026
 
 ### General
 
+* [Git will participate in the next Outreachy round](https://lore.kernel.org/git/CAP8UFD367UD=AomNVHEBnhY-2DQmqTNRcBX6NW7YZywWgOmxTQ@mail.gmail.com/)
+
+  Git will participate in the December 2026 to March 2027
+  [Outreachy](https://www.outreachy.org/) round. Three projects are
+  planned. Their details will be available on the
+  [Outreachy project selection page](https://www.outreachy.org/apply/project-selection/)
+  once the contribution period begins.
+
+  We are still looking for people willing to mentor projects. If you
+  are interested, please reply to
+  [the thread on the mailing list](https://lore.kernel.org/git/CAP8UFD367UD=AomNVHEBnhY-2DQmqTNRcBX6NW7YZywWgOmxTQ@mail.gmail.com/).
+
 * [Git participated in GSoC (Google Summer of Code) 2026](https://summerofcode.withgoogle.com/programs/2026/organizations/git)
 
   All the contributors have successfully passed their final evaluation
