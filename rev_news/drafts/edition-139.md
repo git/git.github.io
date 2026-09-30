@@ -27,8 +27,9 @@ This edition covers what happened during the months of August and September 2026
   [Outreachy project selection page](https://www.outreachy.org/apply/project-selection/)
   once the contribution period begins.
 
-  We are still looking for people willing to mentor projects. If you
-  are interested, please reply to
+  We are still looking for people willing to mentor projects, and
+  for companies willing to sponsor the Outreachy internships in the
+  Git project. If you are interested, please reply to
   [the thread on the mailing list](https://lore.kernel.org/git/CAP8UFD367UD=AomNVHEBnhY-2DQmqTNRcBX6NW7YZywWgOmxTQ@mail.gmail.com/).
 
 * [Git participated in GSoC (Google Summer of Code) 2026](https://summerofcode.withgoogle.com/programs/2026/organizations/git)
