@@ -19,6 +19,54 @@ This edition covers what happened during the months of August and September 2026
 
 ### General
 
+* [Git will participate in the next Outreachy round](https://lore.kernel.org/git/CAP8UFD367UD=AomNVHEBnhY-2DQmqTNRcBX6NW7YZywWgOmxTQ@mail.gmail.com/)
+
+  Git will participate in the December 2026 to March 2027
+  [Outreachy](https://www.outreachy.org/) round. Three projects are
+  planned. Their details will be available on the
+  [Outreachy project selection page](https://www.outreachy.org/apply/project-selection/)
+  once the contribution period begins.
+
+  We are still looking for people willing to mentor projects. If you
+  are interested, please reply to
+  [the thread on the mailing list](https://lore.kernel.org/git/CAP8UFD367UD=AomNVHEBnhY-2DQmqTNRcBX6NW7YZywWgOmxTQ@mail.gmail.com/).
+
+* [Git participated in GSoC (Google Summer of Code) 2026](https://summerofcode.withgoogle.com/programs/2026/organizations/git)
+
+  All the contributors have successfully passed their final evaluation
+  and published a final report:
+
+  - Pablo Sabater [worked](https://pablosabater.dev/) on the
+    [Add remote-object-info command to git-cat-file(1)](https://summerofcode.withgoogle.com/programs/2026/projects/752yzmwm)
+    project, continuing previous work started by Eric Ju and Calvin Wan.
+    The project was mentored by [Karthik Nayak](https://gitlab.com/knayakgl)
+    and [Chandra Pratap](https://chand-ra.github.io/). The final report can be
+    found in [a GitHub gist](https://gist.github.com/pabloosabaterr/6be5932a778854cf0afde995e02e8371).
+
+  - Siddharth Shrimali [worked](https://siddharth.shrimali.info/) on the
+    [Improve disk space recovery for partial clones](https://summerofcode.withgoogle.com/programs/2026/projects/hs14IFAn)
+    project. The project was mentored by [Christian Couder](https://gitlab.com/chriscool)
+    and [Siddharth Asthana](https://gitlab.com/edith007). The final report
+    can be found on [the contributor's website](https://siddharth.shrimali.info/#report).
+
+  - K Jayatheerth [worked](https://jayatheerth.com/) on the
+    [Improve the new git repo command](https://summerofcode.withgoogle.com/programs/2026/projects/O1nF3zMT)
+    project. The project was mentored by [Justin Tobler](https://gitlab.com/justintobler)
+    and [Lucas Seiki Oshiro](https://lucasoshiro.github.io/en/). The final
+    report can be found on [the contributor's website](https://jayatheerth.com/#/blogs/gsoc/conclusion).
+
+  - Tian Yuchen [worked](https://malon7782.github.io/gsoc-blog-2026/) on the
+    [Reduce Git's global state](https://summerofcode.withgoogle.com/programs/2026/projects/Lx1PmL4k)
+    project. The project was mentored by [Christian Couder](https://gitlab.com/chriscool),
+    [Ayush Chandekar](https://ayu-ch.github.io/) and
+    [Bello Caleb Olamide](https://cloobtech.hashnode.dev/). The final report
+    can be found on [the contributor's website](https://malon7782.github.io/gsoc-blog-2026/#15).
+
+  Kaartic Sivaraam and Christian Couder were
+  ["org admins"](https://developers.google.com/open-source/gsoc/help/oa-tips).
+
+  Congratulations to the contributors, their mentors and the org admins!
+
 * [Git Merge 2026 conference](https://git-merge.com/) and [Contributor's Summit 2026](https://lore.kernel.org/git/5cc325c6-579e-4fed-7071-a3ff98d51ccb@gmx.de/)
 
   The Git Merge conference happened on September 17th and 18th in
