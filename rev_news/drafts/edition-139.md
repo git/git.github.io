@@ -23,7 +23,7 @@ This edition covers what happened during the months of August and September 2026
 
   The Git Merge conference happened on September 17th and 18th in
   Lisbon. The first day was the conference day with
-  [talks](https://git-merge.com/schedule), and on the second day there
+  [talks](https://git-merge.com/#schedule-section), and on the second day there
   was [the Contributor's Summit](https://lore.kernel.org/git/5cc325c6-579e-4fed-7071-a3ff98d51ccb@gmx.de/).
 
   The edited videos of the talks are not yet available on YouTube, but
