@@ -8,6 +8,18 @@ to Git via GSoC.
 
 <!-- [ [project]() ] [ [final report]() ] [ [blog]() ] -->
 
+### 2026
+
+1. K Jayatheerth [ [project](https://summerofcode.withgoogle.com/programs/2026/projects/O1nF3zMT) ] [ [final report](https://jayatheerth.com/#/blogs/gsoc/conclusion) ] [ [blog](https://jayatheerth.com/) ]
+2. Pablo Sabater [ [project](https://summerofcode.withgoogle.com/programs/2026/projects/752yzmwm) ] [ [final report](https://gist.github.com/pabloosabaterr/6be5932a778854cf0afde995e02e8371) ] [ [blog](https://pablosabater.dev/) ]
+3. Siddharth Shrimali [ [project](https://summerofcode.withgoogle.com/programs/2026/projects/hs14IFAn) ] [ [final report](https://siddharth.shrimali.info/#report) ] [ [blog](https://siddharth.shrimali.info/) ]
+4. Tian Yuchen [ [project](https://summerofcode.withgoogle.com/programs/2026/projects/Lx1PmL4k) ] [ [final report](https://malon7782.github.io/gsoc-blog-2026/#15) ] [ [blog](https://malon7782.github.io/gsoc-blog-2026/) ]
+
+#### References
+
+- [GSoC archive](https://summerofcode.withgoogle.com/programs/2026/organizations/git)
+- [Rev News article](https://git.github.io/rev_news/2026/05/31/edition-135/)
+
 ### 2025
 
 1. Ayush Chandekar [ [project](https://summerofcode.withgoogle.com/programs/2025/projects/no7dVMeG) ] [ [final report](https://ayu-ch.github.io/2025/08/29/gsoc-final-report.html) ] [ [blog](https://ayu-ch.github.io/) ] [ [retrsopective interview](https://git.github.io/rev_news/2025/11/30/edition-129/#developer-spotlight-ayush-chandekar) ]
