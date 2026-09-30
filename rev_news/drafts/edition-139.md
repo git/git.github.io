@@ -17,9 +17,26 @@ This edition covers what happened during the months of August and September 2026
 
 ## Discussions
 
-<!---
 ### General
--->
+
+* [Git Merge 2026 conference](https://git-merge.com/) and [Contributor's Summit 2026](https://lore.kernel.org/git/5cc325c6-579e-4fed-7071-a3ff98d51ccb@gmx.de/)
+
+  The Git Merge conference happened on September 17th and 18th in
+  Lisbon. The first day was the conference day with
+  [talks](https://git-merge.com/schedule), and on the second day there
+  was [the Contributor's Summit](https://lore.kernel.org/git/5cc325c6-579e-4fed-7071-a3ff98d51ccb@gmx.de/).
+
+  The edited videos of the talks are not yet available on YouTube, but
+  [the unedited livestream of the conference day](https://www.youtube.com/watch?v=caA0UBcSBuE)
+  can be watched.
+
+  Johannes Schindelin, alias Dscho, posted a
+  [summary of the Contributor's Summit notes](https://lore.kernel.org/git/5cc325c6-579e-4fed-7071-a3ff98d51ccb@gmx.de/)
+  to the mailing list.
+
+  Dscho also wrote [notes about the talks](https://gist.github.com/dscho/9c70e07ee54616bbf401b4e5f40969bf),
+  distilled from the recording and its subtitles. Thanks to Dscho for
+  putting them together!
 
 ### Reviews
 
