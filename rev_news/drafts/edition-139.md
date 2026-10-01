@@ -40,12 +40,15 @@ __Various__
 
 __Light reading__
 
++ [Git Hooks Ext: The Missing Git Callbacks for Reference Transactions](https://dev.to/ciembor/git-hooks-ext-the-missing-git-callbacks-for-reference-transactions-2l3l)
+  by Maciej Ciemborowicz on DEV Community.
+
 <!---
 __Easy watching__
 -->
 
 __Git tools and sites__
-* [git-hooks-ext](https://github.com/ciembor/git-hooks-ext) provides 19 missing semantic events such as `branch-created`, `branch-deleted`, `tag-created`, and `tag-updated`. It supports classic Git hooks as well as config-based hooks, and is available for macOS and several Linux distributions. Written in C, under GNU General Public License Version 2 (GPL-2.0-only).
+* [git-hooks-ext](https://github.com/ciembor/git-hooks-ext) adds semantic events to Git reference transactions, such as `branch-created`, `tag-deleted`, `remote-head-updated`, and `ref-created`, plus worktree lifecycle events unavailable in Git. It supports classic Git hooks as well as config-based hooks, and is available for macOS and several Linux distributions. Written in C, under GNU General Public License Version 2 (GPL-2.0-only).
 
 ## Releases
 
