@@ -72,8 +72,8 @@ This edition covers what happened during the months of August and September 2026
 
   The Git Merge conference happened on September 17th and 18th in
   Lisbon. The first day was the conference day with
-  [talks](https://git-merge.com/#schedule-section), and on the second day there
-  was [the Contributor's Summit](https://lore.kernel.org/git/5cc325c6-579e-4fed-7071-a3ff98d51ccb@gmx.de/).
+  [talks](https://git-merge.com/#schedule-section), and on the second day the
+  [the Contributor's Summit](https://lore.kernel.org/git/5cc325c6-579e-4fed-7071-a3ff98d51ccb@gmx.de/) took place.
 
   The edited videos of the talks are not yet available on YouTube, but
   [the unedited livestream of the conference day](https://www.youtube.com/watch?v=caA0UBcSBuE)
@@ -204,7 +204,7 @@ Maintenance usually runs on the shared cache, but Dscho suspected that
 it often takes too long to finish before machines are shut down for
 the day. As a result, "it is still not exactly rare to find setups
 with five-digit packfile counts. And since we _can_ handle this more
-gracefully, we should ;-)"
+gracefully, we should ;-)".
 
 Ben clarified that he had meant maintenance would likely help the
 local case, like the shell prompt, more than the clones.
@@ -411,8 +411,8 @@ __Various__
   Git Merge 2026 and schedule for Git 3.0, `git history drop <commit>`,
   `git branch --delete-merged` and `git branch --forked`,
   the new `create`, `delete`, `update` and `rename` subcommands of `git ref`,
-  `git replay` now working with commit ranges containing merge via `--linearize`
-  and results of four Google Summer of Code 2026 projects, and more.
+  `git replay` now working with commit ranges containing merge via `--linearize`,
+  results of four Google Summer of Code 2026 projects, and more.
 + [Highlights from Git 2.56](https://github.blog/open-source/git/highlights-from-git-2-56/)
   by Elijah Newren on GitHub Blog.  Mentions
   `git add --resolved` for marking conflicts as resolved without accidentally staging too much,
@@ -430,27 +430,27 @@ __Light reading__
   Notes from CodeCommons: SWHIDs, the SWH archive, and connecting both to package metadata.
   By Andrew Nesbitt on his blog.
   Among others, it describes creating [swh-git](https://github.com/andrew/swh-git),
-  a git remote helper that adds an `swh::` transport
+  a Git remote helper that adds an `swh::` transport
   for downloading from Software Heritage universal archive of source code.
 + [Lesser computer sins: Git proxy cache](https://boricj.net/lesser-computer-sins/2026/09/27/git-proxy-cache.html)
   by Jean-Baptiste Boric on boricj's entropy-increasing blog.
   The solution works on anything with an SSH server, Git, and Bash,
-  and utilizes `insteadOf` and custom shell.
-  As author describes, what was to be a temporary solution
+  and utilizes `insteadOf` and a custom shell.
+  As the author describes, what was to be a temporary solution
   to make CI/CD jobs that use shallow clones faster, became load-bearing.
-  Thus confirming the adage ``there is nothing more permanent than a temporary solution.''
+  Thus confirming the adage "there is nothing more permanent than a temporary solution."
 + [Git hash prefix or cellphone number?](https://tonisagrista.com/blog/2026/git-hash-prefix-numbers/)
   What is the probability of getting an all-numbers Git hash prefix?
   By Toni Sagrista Selles on Langur Monkey blog.
 + [Creepy crawlies](https://people.kernel.org/monsieuricon/creepy-crawlies)
   by Konstantin Ryabitsev on his blog.
   This post talks about the fact that "AI crawlers" burn more CPU cycles
-  on git.kernel.org than serving legitimate cgit traffic and git clones,
+  on git.kernel.org than serving legitimate cgit traffic and Git clones,
   with numbers.
 + [what if my git host were a static site generator?](https://char.lt/blog/2026/09/sorcery-repo-viewer/)
   by Charlotte Som.
   The idea is to avoid having to deal with ambient scraper load and running out of disk space.
-  Introduces [sorcery](https://git.t4t.associates/char/sorcery) git repo viewer.
+  Introduces the [sorcery](https://git.t4t.associates/char/sorcery) Git repo viewer.
 + [Tracing a mysterious GitHub webhook](https://gaganpreet.in/posts/tracing-mysterious-github-webhook/)
   by Gaganpreet Arora on his blog... which turned out to be caused by
   linking Google Chat to the repo to send alerts to Google Chat on repo events
@@ -468,12 +468,12 @@ __Light reading__
 + [Gitte As Git Client For GNOME Continues Maturing Quite Nicely](https://www.phoronix.com/news/Gitte-0.10-Released)
   by Michael Larabel on Phoronix.
 + [Reinventing issue tracking: Local-first and Git-native](https://blog.manganin.dev/blog/reinventing-issue-tracking/)
-  continues from [Manganin: tools matter](https://blog.manganin.dev/blog/tools-matter/)
+  continues from the [Manganin: tools matter](https://blog.manganin.dev/blog/tools-matter/)
   article in the [previous edition of Git Rev News](https://git.github.io/rev_news/2026/08/31/edition-138/).
     + [Manganin](https://codeberg.org/Loweg/manganin) is a code forge with
 	  community trust management based on [vouch trees](https://github.com/mitchellh/vouch/),
-	  local-first issue tracking (issues are stored in git), and
-	  termbox-based TUI.  Demo instance at <https://manganin.dev/>
+	  local-first issue tracking (issues are stored in Git), and
+	  termbox-based TUI.  Demo instance at <https://manganin.dev/>.
 + [git reset --hard](https://isaacpatternproject.com/blog/posts/2026-09-24_git-reset-hard.html)
   by Isaac — an AI built on Claude (running as part of the Pattern Project),
   about restarts and learning from failure:
@@ -493,15 +493,15 @@ __Light reading__
   which extends Git's content-based versioning with incremental versions based on _deltas_
   (recording edits between commits alongside messages from humans and agents).
   DeltaDB was first mentioned in [Git Rev News Edition #136](https://git.github.io/rev_news/2026/06/30/edition-136/).
-    + **Note** that there exist [delta](https://dandavison.github.io/delta/)
-	  syntax-highlighting pager for git, diff, and grep output
-	  (first mentioned in [Git Rev News Edition #86](https://git.github.io/rev_news/2022/04/30/edition-86/))
-	  and that there other Git tools with the same name.
+    + **Note** that there are also other Git-related tools with the same name,
+	  such as the [delta](https://dandavison.github.io/delta/)
+	  syntax-highlighting pager for `git`, `diff`, and `grep` output
+	  (first mentioned in [Git Rev News Edition #86](https://git.github.io/rev_news/2022/04/30/edition-86/)).
 
 
 __Easy watching__
 + [jj Tool & Config Ecosystem - André Arko](https://www.youtube.com/watch?v=buLvWZS1P20)
-  on GitButler channel on YouTube [38:37].  Also available as
+  on the GitButler channel on YouTube [38:37].  Also available as
   [Beyond jj: config & tools ecosystem](https://andre.arko.net/2026/09/16/beyond-jj-config-and-tools-ecosystem/) post.
   This presentation was originally given as a talk at JJ Con 2026 (co-located with Git Merge 2026).
   The [slides](https://speakerdeck.com/indirect/beyond-jj-config-and-tools-ecosystem)
@@ -515,9 +515,9 @@ __Easy watching__
 
 
 __Git tools and sites__
-+ [gat](https://getgat.dev/): simple, fast, versioned large-file storage for git.
++ [gat](https://getgat.dev/): simple, fast, versioned large-file storage for Git.
   gat is what [git-lfs](https://git-lfs.com/) would be if it didn't need a special server,
-  and what [dvc](https://dvc.org/) would be if it did one thing. 
+  and what [dvc](https://dvc.org/) would be if it did one thing.
   You commit small metadata files with Git, and upload large-file content with Gat.
   Written in Rust, under Apache 2.0 license.
 + [BlackGit](https://github.com/zhuzhonghua/blackgit)
@@ -532,7 +532,7 @@ __Git tools and sites__
   [hook](https://githooks.com/) reports raw old and new values together with ref names.
   It does not tell a hook that a branch was created, a tag was deleted or a ref was renamed.
   `git-hooks-ext` turns those low-level updates into semantic events
-  such as `branch-created`, `tag-deleted`, `remote-head-updated` and `ref-created`.
+  such as `branch-created`, `tag-deleted`, `remote-head-updated`, and `ref-created`.
   It also adds the worktree lifecycle events that Git does not provide.
   Provided as a Git hook and helper CLI tool.
   Written in C and shell, under GPL-2.0 license.
@@ -547,7 +547,7 @@ __Git tools and sites__
 + [Aldine](https://aldine.dev/) is a slim, self-hosted, open-source
   LaTeX collaboration platform, an Overleaf alternative built for speed and simplicity.
   Real-time multi-cursor editing (CRDT-based, using Yjs),
-  every project a real Git repository with branches, native Zotero support.
+  every project being a real Git repository with branches, native Zotero support.
   Provided as two containers (set up using Docker Compose) and flat files.
   There is a [live demo](https://demo.aldine.dev/) that resets nightly.
   Written in TypeScript, under AGPL-3.0 license.  Pre 1.0.0 version.
@@ -569,15 +569,15 @@ __Git tools and sites__
   Crux uses partial hunks on the parent and executes the command
   until there are only those lines left in the diff that cause behavioral changes,
   resulting in the causal diff.
-  It handles cases git bisect can't: behaviors that aren't pass/fail tests,
+  It handles cases `git bisect` can't: behaviors that aren't pass/fail tests,
   failures that need two commits together, and regressions caused by dependency updates.
   On crates.io as [crux-finder](https://crates.io/crates/crux-finder).
   Written in Rust, under MIT license.
     + Compare and contrast [Git Bayesect](https://hauntsaninja.github.io/git_bayesect.html),
-	  which is  a generalisation of `git bisect` that uses Bayesian inference to solve
+	  which is a generalisation of `git bisect` that uses Bayesian inference to solve
 	  the problem of flaky tests, mentioned in [Git Rev News Edition #133](https://git.github.io/rev_news/2026/03/31/edition-133/).
 + [Foremerge](https://github.com/naw103/foremerge) is the open-source
-  coordination protocol for coding agents, built above Git;
+  coordination protocol for coding agents, built on top of Git;
   Agents keep isolated worktrees while sharing intent,
   semantic claims, dependencies, provisional ChangeSets,
   decisions, validation, and provenance.
@@ -607,9 +607,9 @@ __Git tools and sites__
   [Machtiani](https://github.com/tursomari/machtiani) is the experimental harness underneath it,
   using iteration to manage long-running agentic AI sessions without compaction.
   The idea is to use email to work with multiple agents at the same time,
-  with each email thread a session, as described in 
+  with each email thread a session, as described in
   [The Shell & Email](https://www.machtiani.chat/blogs/the-shell) post.
-  Written in Python, Go.  Under MIT license.
+  Written in Python and Go. Under MIT license.
 + [nimblegate](https://nimblegate.com/) is a server
   that sits between your AI agent and your real Git host.
   It provides Git push guardrails for AI agents:
@@ -621,8 +621,8 @@ __Git tools and sites__
   which was first mentioned in [Git Rev News Edition #131](https://git.github.io/rev_news/2026/01/31/edition-131/),
   got support for [Mailing Lists](https://gothub.org/lists.html).
 + [Pushin.eu](https://pushin.eu/) (in invite-only beta) and
-  [CodeFloe](https://codefloe.com/) (public Git service running on Forgejo with free tier)
-  are Git hosting sites advocating that theu are hosted in Europe, under EU law.<br>
+  [CodeFloe](https://codefloe.com/) (public Git service running on Forgejo with a free tier)
+  are Git hosting sites advocating that they are hosted in Europe, under EU law.<br>
   The [previous edition](https://git.github.io/rev_news/2026/08/31/edition-138/)
   mentioned another forge hosted in Europe: [Gitoro](https://gitoro.com/).
 + [WebTerm Learn](https://learn.webterm.app/en/courses/git-introduction): free Git courses
