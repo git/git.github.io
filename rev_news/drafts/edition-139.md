@@ -406,9 +406,21 @@ The patch was merged into the 'master' branch and is part of the Git
 ## Other News
 
 __Various__
-
++ [What's new in Git 2.56.0?](https://about.gitlab.com/blog/whats-new-in-git-2-56-0/)
+  by Karthik Nayak on GitLab Blog.  Mentions
+  Git Merge 2026 and schedule for Git 3.0, `git history drop <commit>`,
+  `git branch --delete-merged` and `git branch --forked`,
+  the new `create`, `delete`, `update` and `rename` subcommands of `git ref`,
+  `git replay` now working with commit ranges containing merge via `--linearize`
+  and results of four Google Summer of Code 2026 projects, and more.
++ [Highlights from Git 2.56](https://github.blog/open-source/git/highlights-from-git-2-56/)
+  by Elijah Newren on GitHub Blog.  Mentions
+  `git add --resolved` for marking conflicts as resolved without accidentally staging too much,
+  faster finding of common ancestor(s), improving repacking, and more.
 
 __Light reading__
++ [Looking forward to Git 2.56 — and 3.0](https://lwn.net/Articles/1094575/)
+  by Jonathan Corbet on LWN.net.
 
 <!---
 __Easy watching__
