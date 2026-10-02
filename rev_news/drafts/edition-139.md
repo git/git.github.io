@@ -561,6 +561,19 @@ __Git tools and sites__
   It uses similarity detection algorithms to compare code files
   and highlight matching sections.
   Written in Python, under AGPL-3.0 license.
++ [crux](https://crux.rweb.site/) is a standalone tool
+  that finds the exact commit behind a behavior change, like `git bisect run`.
+  After the search is performed, the found commit is minimized.
+  Crux uses partial hunks on the parent and executes the command
+  until there are only those lines left in the diff that cause behavioral changes,
+  resulting in the causal diff.
+  It handles cases git bisect can't: behaviors that aren't pass/fail tests,
+  failures that need two commits together, and regressions caused by dependency updates.
+  On crates.io as [crux-finder](https://crates.io/crates/crux-finder).
+  Written in Rust, under MIT license.
+    + Compare and contrast [Git Bayesect](https://hauntsaninja.github.io/git_bayesect.html),
+	  which is  a generalisation of `git bisect` that uses Bayesian inference to solve
+	  the problem of flaky tests, mentioned in [Git Rev News Edition #133](https://git.github.io/rev_news/2026/03/31/edition-133/).
 + [Foremerge](https://github.com/naw103/foremerge) is the open-source
   coordination protocol for coding agents, built above Git;
   Agents keep isolated worktrees while sharing intent,
