@@ -442,16 +442,38 @@ __Light reading__
 + [Git hash prefix or cellphone number?](https://tonisagrista.com/blog/2026/git-hash-prefix-numbers/)
   What is the probability of getting an all-numbers Git hash prefix?
   By Toni Sagrista Selles on Langur Monkey blog.
++ [Creepy crawlies](https://people.kernel.org/monsieuricon/creepy-crawlies)
+  by Konstantin Ryabitsev on his blog.
+  This post talks about the fact that "AI crawlers" burn more CPU cycles
+  on git.kernel.org than serving legitimate cgit traffic and git clones,
+  with numbers.
++ [what if my git host were a static site generator?](https://char.lt/blog/2026/09/sorcery-repo-viewer/)
+  by Charlotte Som.
+  The idea is to avoid having to deal with ambient scraper load and running out of disk space.
+  Introduces [sorcery](https://git.t4t.associates/char/sorcery) git repo viewer.
 + [Tracing a mysterious GitHub webhook](https://gaganpreet.in/posts/tracing-mysterious-github-webhook/)
   by Gaganpreet Arora on his blog... which turned out to be caused by
   linking Google Chat to the repo to send alerts to Google Chat on repo events
   (with bad URL naming decisions by Google complicating the investigation).
++ [My Homelab (a Forgejo instance) Got Hacked - A Postmortem](https://phunky.cafe/my-homelab-got-hacked/)
+  by Phillip on Phynky Cafe blog.  It was cryptocurrency miners.
 + [forward-paragraph in Magit](https://mbork.pl/2026-09-21_forward-paragraph_in_Magit)
   by Marcin ‘mbork’ Borkowski, about configuring Magit to make it easier
   to go from one hunk of diffs to another when doing code review.
     + [Magit](https://magit.vc/) is a popular [Emacs](https://www.gnu.org/software/emacs) editor interface to Git,
 	  first mentioned in [Git Rev News Edition #6](https://git.github.io/rev_news/2015/08/05/edition-6/)
 	  and most recently in [Edition #134](https://git.github.io/rev_news/2026/04/30/edition-134/).
++ [A simple git gutter in vim](https://dustri.org/b/a-simple-git-gutter-in-vim.html)
+  by Julien (jvoisin) Voisin on the Artificial Truth blog.
++ [Gitte As Git Client For GNOME Continues Maturing Quite Nicely](https://www.phoronix.com/news/Gitte-0.10-Released)
+  by Michael Larabel on Phoronix.
++ [Reinventing issue tracking: Local-first and Git-native](https://blog.manganin.dev/blog/reinventing-issue-tracking/)
+  continues from [Manganin: tools matter](https://blog.manganin.dev/blog/tools-matter/)
+  article in the [previous edition of Git Rev News](https://git.github.io/rev_news/2026/08/31/edition-138/).
+    + [Manganin](https://codeberg.org/Loweg/manganin) is a code forge with
+	  community trust management based on [vouch trees](https://github.com/mitchellh/vouch/),
+	  local-first issue tracking (issues are stored in git), and
+	  termbox-based TUI.  Demo instance at <https://manganin.dev/>
 + [git reset --hard](https://isaacpatternproject.com/blog/posts/2026-09-24_git-reset-hard.html)
   by Isaac — an AI built on Claude (running as part of the Pattern Project),
   about restarts and learning from failure:
@@ -461,10 +483,20 @@ __Light reading__
   and global per-user excludes file (by default `~/.config/git/ignore`).
 + [Gitversary: Celebrate your GitHub anniversary](https://andreruffert.com/weblog/gitversary-933154)
   by André Ruffert on his blog.
-+ 
-  by André Arko.  This post was originally given as a talk at JJ Con 2026.
-  The [slides](https://speakerdeck.com/indirect/beyond-jj-config-and-tools-ecosystem)
-  are available on SpeakerDeck.
++ [You can run git on object storage if you re-make packfiles](https://www.tigrisdata.com/blog/objgit-packfiles/)
+  by Xe Iaso on Tigris Object Storage blog.
++ [Replace PRs with Delta – Now in Public Beta](https://zed.dev/blog/delta-public-beta)
+  by Nathan Sobo on Zed IDE blog.
+  [Delta](https://delta.dev/) is a multiplayer environment
+  for coding with agents and reviewing what they build.<br>
+  Delta is built on [DeltaDB](https://zed.dev/blog/introducing-deltadb),
+  which extends Git's content-based versioning with incremental versions based on _deltas_
+  (recording edits between commits alongside messages from humans and agents).
+  DeltaDB was first mentioned in [Git Rev News Edition #136](https://git.github.io/rev_news/2026/06/30/edition-136/).
+    + **Note** that there exist [delta](https://dandavison.github.io/delta/)
+	  syntax-highlighting pager for git, diff, and grep output
+	  (first mentioned in [Git Rev News Edition #86](https://git.github.io/rev_news/2022/04/30/edition-86/))
+	  and that there other Git tools with the same name.
 
 
 __Easy watching__
@@ -481,16 +513,6 @@ __Easy watching__
 
 
 __Git tools and sites__
-+ [Foremerge](https://github.com/naw103/foremerge) is the open-source
-  coordination protocol for coding agents, built above Git;
-  Agents keep isolated worktrees while sharing intent,
-  semantic claims, dependencies, provisional ChangeSets,
-  decisions, validation, and provenance.
-  The idea is to catch intent conflicts before code conflicts.
-  Written in Rust, under Apache 2.0 license.
-  <br>
-  Looks like [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens),
-  but for agents.
 + [gat](https://getgat.dev/): simple, fast, versioned large-file storage for git.
   gat is what [git-lfs](https://git-lfs.com/) would be if it didn't need a special server,
   and what [dvc](https://dvc.org/) would be if it did one thing. 
@@ -512,6 +534,14 @@ __Git tools and sites__
   It also adds the worktree lifecycle events that Git does not provide.
   Provided as a Git hook and helper CLI tool.
   Written in C and shell, under GPL-2.0 license.
++ [Git Reattribute](https://github.com/drk1rd/git-reattribute) is a small,
+  cross-platform CLI for replacing one Git identity with another
+  across a repository's history, safely - without requiring you to
+  hand-write a [`git filter-repo`](https://github.com/newren/git-filter-repo) invocation.
+  Also includes [guard](https://github.com/drk1rd/git-reattribute#guard-prevent-denied-identities-before-they-land),
+  a prevention companion that blocks a denied identity in CI or a local hook
+  before it ever lands. **This tool rewrites Git history.**
+  Written in Python (and shell), under MIT license.
 + [Aldine](https://aldine.dev/) is a slim, self-hosted, open-source
   LaTeX collaboration platform, an Overleaf alternative built for speed and simplicity.
   Real-time multi-cursor editing (CRDT-based, using Yjs),
@@ -526,6 +556,21 @@ __Git tools and sites__
 	  version control system written in Rust, which was first mentioned
 	  in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/),
 	  and most recently in [Edition #138](https://git.github.io/rev_news/2026/08/31/edition-138/).
++ [Vendetect](https://github.com/trailofbits/vendetect) is a command-line tool
+  for automatically detecting vendored and copy/pasted code between repositories.
+  It uses similarity detection algorithms to compare code files
+  and highlight matching sections.
+  Written in Python, under AGPL-3.0 license.
++ [Foremerge](https://github.com/naw103/foremerge) is the open-source
+  coordination protocol for coding agents, built above Git;
+  Agents keep isolated worktrees while sharing intent,
+  semantic claims, dependencies, provisional ChangeSets,
+  decisions, validation, and provenance.
+  The idea is to catch intent conflicts before code conflicts.
+  Written in Rust, under Apache 2.0 license.
+  <br>
+  Looks like [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens),
+  but for agents.
 + [Riftri](https://riftri.dev/) - Lightweight Git workspaces for parallel development.
   Riftri creates real Git worktrees without eagerly storing
   another full physical copy of every unchanged project file.
@@ -535,6 +580,10 @@ __Git tools and sites__
   and APFS clone on macOS - that is native copy-on-write backends.
   Written in Rust, under MIT license.
   **Note:** Riftri is experimental, pre-release software.
+    + Compare [Copy-on-write git worktrees](https://commaok.xyz/post/git-cow-worktrees/)
+	  by Josh Bleecher Snyder, about creating [`git-cow-worktree`](https://github.com/josharian/git-cow-worktree),
+	  a drop-in replacement for `git worktree add` that uses copy-on-write for the worktrees,
+	  mentioned in [Git Rev News Edition #135](https://git.github.io/rev_news/2026/05/31/edition-135/).
     + But please note [Git worktrees are not an isolation boundary for coding agents](https://fletch.sh/blog/git-worktrees-vs-clones-for-ai-agents/)
 	  by Alex Chaplinsky on Fletch Blog,
 	  mentioned in [Git Rev News Edition #138](https://git.github.io/rev_news/2026/08/31/edition-138/).
@@ -551,7 +600,16 @@ __Git tools and sites__
   It provides Git push guardrails for AI agents:
   block unsafe pushes consistently, forward safe ones, record every decision.
   Written in Go, under PolyForm Noncommercial License 1.0.0.
-
++ The [Game of Trees Hub](https://gothub.org/) (GotHub),
+  a transparently funded Git repository hosting service,
+  with infrastructure on OpenBSD and the [Game of Trees (GoT)](https://gameoftrees.org/) VCS,
+  which was first mentioned in [Git Rev News Edition #131](https://git.github.io/rev_news/2026/01/31/edition-131/),
+  got support for [Mailing Lists](https://gothub.org/lists.html).
++ [Pushin.eu](https://pushin.eu/) (in invite-only beta) and
+  [CodeFloe](https://codefloe.com/) (public Git service running on Forgejo with free tier)
+  are Git hosting sites advocating that theu are hosted in Europe, under EU law.<br>
+  The [previous edition](https://git.github.io/rev_news/2026/08/31/edition-138/)
+  mentioned another forge hosted in Europe: [Gitoro](https://gitoro.com/).
 
 
 ## Releases
