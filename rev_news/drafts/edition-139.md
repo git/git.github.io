@@ -510,6 +510,8 @@ __Easy watching__
 	  version control system written in Rust, which was first mentioned
 	  in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/),
 	  and most recently in [Edition #138](https://git.github.io/rev_news/2026/08/31/edition-138/).
++ [Your .gitconfig Is Missing These](https://www.youtube.com/watch?v=KY4RDCpPHI0)
+  by Sam Natale on YouTube [7:18].
 
 
 __Git tools and sites__
