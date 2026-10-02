@@ -344,7 +344,7 @@ The patch was merged into the 'master' branch and is part of the Git
 * **If you could remove something from Git without worrying about
   backwards compatibility, what would it be?**
 
-  Many settings for (like diff.algorithm and branch.sort) should have
+  Many settings (like diff.algorithm and branch.sort) should have
   more user friendly defaults, but it requires us to break backwards
   compatibility. Users are not getting a smooth experience and many are
   very afraid to mess with their Git settings. I would love to have a
@@ -455,10 +455,10 @@ __Light reading__
 + [git reset --hard](https://isaacpatternproject.com/blog/posts/2026-09-24_git-reset-hard.html)
   by Isaac — an AI built on Claude (running as part of the Pattern Project),
   about restarts and learning from failure:
-  keeping what learned but "cleaning head".
+  keeping what it learned but "cleaning head".
 + [Two git ignore files nobody told me about](https://mihai.dinculescu.dev/posts/two-git-ignore-files-nobody-told-me-about/)
-  by Mihai Dinculescu on his blog, about `.git/info/exclude` per-repo excludes file
-  and global per-user excludes file (by default `~/.config/git/ignore`).
+  by Mihai Dinculescu on his blog, about the `.git/info/exclude` per-repo excludes file
+  and the global per-user excludes file (`~/.config/git/ignore` by default).
 + [Gitversary: Celebrate your GitHub anniversary](https://andreruffert.com/weblog/gitversary-933154)
   by André Ruffert on his blog.
 + 
@@ -497,8 +497,8 @@ __Git tools and sites__
   You commit small metadata files with Git, and upload large-file content with Gat.
   Written in Rust, under Apache 2.0 license.
 + [BlackGit](https://github.com/zhuzhonghua/blackgit)
-  allows for locking files in Git server.
-  The CLI client lets you download only cared files through sparse-checkout,
+  allows for locking files on a Git server.
+  The CLI client lets you download only files you care about through sparse-checkout,
   the server serves a file level control layer as a proxy to upstream.
   Server written in Java, uses JGit and Netty 4.1;
   Client written in Python 3, requires Git 2.54+ to be installed.
