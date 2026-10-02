@@ -421,12 +421,55 @@ __Various__
 __Light reading__
 + [Looking forward to Git 2.56 — and 3.0](https://lwn.net/Articles/1094575/)
   by Jonathan Corbet on LWN.net.
++ [Software Heritage Identifiers](https://nesbitt.io/2026/10/01/software-heritage-identifiers.html):
+  Notes from CodeCommons: SWHIDs, the SWH archive, and connecting both to package metadata.
+  By Andrew Nesbitt on his blog.
+  Among others, it describes creating [swh-git](https://github.com/andrew/swh-git),
+  a git remote helper that adds an `swh::` transport
+  for downloading from Software Heritage universal archive of source code.
++ [Lesser computer sins: Git proxy cache](https://boricj.net/lesser-computer-sins/2026/09/27/git-proxy-cache.html)
+  by Jean-Baptiste Boric on boricj's entropy-increasing blog.
+  The solution works on anything with an SSH server, Git, and Bash,
+  and utilizes `insteadOf` and custom shell.
+  As author describes, what was to be a temporary solution
+  to make CI/CD jobs that use shallow clones faster, became load-bearing.
+  Thus confirming the adage ``there is nothing more permanent than a temporary solution.''
++ [Git hash prefix or cellphone number?](https://tonisagrista.com/blog/2026/git-hash-prefix-numbers/)
+  What is the probability of getting an all-numbers Git hash prefix?
+  By Toni Sagrista Selles on Langur Monkey blog.
++ [git reset --hard](https://isaacpatternproject.com/blog/posts/2026-09-24_git-reset-hard.html)
+  by Isaac — an AI built on Claude (running as part of the Pattern Project),
+  about restarts and learning from failure:
+  keeping what learned but "cleaning head".
 
 <!---
 __Easy watching__
 -->
 
 __Git tools and sites__
++ [Foremerge](https://github.com/naw103/foremerge) is the open-source
+  coordination protocol for coding agents, built above Git;
+  Agents keep isolated worktrees while sharing intent,
+  semantic claims, dependencies, provisional ChangeSets,
+  decisions, validation, and provenance.
+  The idea is to catch intent conflicts before code conflicts.
+  Written in Rust, under Apache 2.0 license.
+  <br>
+  Looks like [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens),
+  but for agents.
++ [gat](https://getgat.dev/): simple, fast, versioned large-file storage for git.
+  gat is what [git-lfs](https://git-lfs.com/) would be if it didn't need a special server,
+  and what [dvc](https://dvc.org/) would be if it did one thing. 
+  You commit small metadata files with Git, and upload large-file content with Gat.
+  Written in Rust, under Apache 2.0 license.
++ [BlackGit](https://github.com/zhuzhonghua/blackgit)
+  allows for locking files in Git server.
+  The CLI client lets you download only cared files through sparse-checkout,
+  the server serves a file level control layer as a proxy to upstream.
+  Server written in Java, uses JGit and Netty 4.1;
+  Client written in Python 3, requires Git 2.54+ to be installed.
+  Under MIT license.
+
 
 
 ## Releases
