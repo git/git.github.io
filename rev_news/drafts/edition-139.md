@@ -610,6 +610,15 @@ __Git tools and sites__
   are Git hosting sites advocating that theu are hosted in Europe, under EU law.<br>
   The [previous edition](https://git.github.io/rev_news/2026/08/31/edition-138/)
   mentioned another forge hosted in Europe: [Gitoro](https://gitoro.com/).
++ [WebTerm Learn](https://learn.webterm.app/en/courses/git-introduction): free Git courses
+  that run in a simulated terminal in the browser.
+  The exercises check the resulting repository state (index, branches, commits)
+  rather than the exact command typed, so equivalent commands are accepted.
+  Covers first commit through rebase, stash, cherry-pick, conflicts
+  and pull requests against a simulated remote.
+  The first lesson of each course needs no account; the rest need a free account.
+  Its sibling [WebTerm](https://webterm.app/) is a no-signup browser terminal
+  with short tutorials, including a set on Git troubleshooting.
 
 
 ## Releases
