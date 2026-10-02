@@ -417,6 +417,11 @@ __Various__
   by Elijah Newren on GitHub Blog.  Mentions
   `git add --resolved` for marking conflicts as resolved without accidentally staging too much,
   faster finding of common ancestor(s), improving repacking, and more.
++ [Disclosure of Vulnerability in the Radicle's Network Protocol](https://radicle.dev/2026/09/23/disclosure-of-vulnerability-in-network-protocol).
+    + [Radicle](https://radicle.xyz) is a peer-to-peer, local-first code collaboration stack
+	  built on Git, first mentioned in [Git Rev News Edition #49](https://git.github.io/rev_news/2019/03/20/edition-49/),
+	  and most recently in [Edition #138](https://git.github.io/rev_news/2026/08/31/edition-138/).
+
 
 __Light reading__
 + [Looking forward to Git 2.56 — and 3.0](https://lwn.net/Articles/1094575/)
@@ -437,14 +442,43 @@ __Light reading__
 + [Git hash prefix or cellphone number?](https://tonisagrista.com/blog/2026/git-hash-prefix-numbers/)
   What is the probability of getting an all-numbers Git hash prefix?
   By Toni Sagrista Selles on Langur Monkey blog.
++ [Tracing a mysterious GitHub webhook](https://gaganpreet.in/posts/tracing-mysterious-github-webhook/)
+  by Gaganpreet Arora on his blog... which turned out to be caused by
+  linking Google Chat to the repo to send alerts to Google Chat on repo events
+  (with bad URL naming decisions by Google complicating the investigation).
++ [forward-paragraph in Magit](https://mbork.pl/2026-09-21_forward-paragraph_in_Magit)
+  by Marcin ‘mbork’ Borkowski, about configuring Magit to make it easier
+  to go from one hunk of diffs to another when doing code review.
+    + [Magit](https://magit.vc/) is a popular [Emacs](https://www.gnu.org/software/emacs) editor interface to Git,
+	  first mentioned in [Git Rev News Edition #6](https://git.github.io/rev_news/2015/08/05/edition-6/)
+	  and most recently in [Edition #134](https://git.github.io/rev_news/2026/04/30/edition-134/).
 + [git reset --hard](https://isaacpatternproject.com/blog/posts/2026-09-24_git-reset-hard.html)
   by Isaac — an AI built on Claude (running as part of the Pattern Project),
   about restarts and learning from failure:
   keeping what learned but "cleaning head".
++ [Two git ignore files nobody told me about](https://mihai.dinculescu.dev/posts/two-git-ignore-files-nobody-told-me-about/)
+  by Mihai Dinculescu on his blog, about `.git/info/exclude` per-repo excludes file
+  and global per-user excludes file (by default `~/.config/git/ignore`).
++ [Gitversary: Celebrate your GitHub anniversary](https://andreruffert.com/weblog/gitversary-933154)
+  by André Ruffert on his blog.
++ 
+  by André Arko.  This post was originally given as a talk at JJ Con 2026.
+  The [slides](https://speakerdeck.com/indirect/beyond-jj-config-and-tools-ecosystem)
+  are available on SpeakerDeck.
 
-<!---
+
 __Easy watching__
--->
++ [jj Tool & Config Ecosystem - André Arko](https://www.youtube.com/watch?v=buLvWZS1P20)
+  on GitButler channel on YouTube [38:37].  Also available as
+  [Beyond jj: config & tools ecosystem](https://andre.arko.net/2026/09/16/beyond-jj-config-and-tools-ecosystem/) post.
+  This presentation was originally given as a talk at JJ Con 2026 (co-located with Git Merge 2026).
+  The [slides](https://speakerdeck.com/indirect/beyond-jj-config-and-tools-ecosystem)
+  are available on SpeakerDeck.
+    + [Jujutsu (`jj`)](https://jj-vcs.github.io/) is a Git-compatible
+	  version control system written in Rust, which was first mentioned
+	  in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/),
+	  and most recently in [Edition #138](https://git.github.io/rev_news/2026/08/31/edition-138/).
+
 
 __Git tools and sites__
 + [Foremerge](https://github.com/naw103/foremerge) is the open-source
@@ -469,6 +503,54 @@ __Git tools and sites__
   Server written in Java, uses JGit and Netty 4.1;
   Client written in Python 3, requires Git 2.54+ to be installed.
   Under MIT license.
++ [git-hooks-ext](https://ciembor.github.io/git-hooks-ext/) — semantic events for Git reference transactions.
+  Git's [`reference-transaction`](https://git-scm.com/docs/githooks#_reference_transaction)
+  [hook](https://githooks.com/) reports raw old and new values together with ref names.
+  It does not tell a hook that a branch was created, a tag was deleted or a ref was renamed.
+  `git-hooks-ext` turns those low-level updates into semantic events
+  such as `branch-created`, `tag-deleted`, `remote-head-updated` and `ref-created`.
+  It also adds the worktree lifecycle events that Git does not provide.
+  Provided as a Git hook and helper CLI tool.
+  Written in C and shell, under GPL-2.0 license.
++ [Aldine](https://aldine.dev/) is a slim, self-hosted, open-source
+  LaTeX collaboration platform, an Overleaf alternative built for speed and simplicity.
+  Real-time multi-cursor editing (CRDT-based, using Yjs),
+  every project a real Git repository with branches, native Zotero support.
+  Provided as two containers (set up using Docker Compose) and flat files.
+  There is a [live demo](https://demo.aldine.dev/) that resets nightly.
+  Written in TypeScript, under AGPL-3.0 license.  Pre 1.0.0 version.
++ [Ju! Ju! Tsu!](https://arialdo.codeberg.page/ju-ju-tsu/)
+  is a book about Jujutsu, written by Arialdo Martini, under CC BY-SA 4.0 license.
+  It is available in HTML and PDF.
+    + [Jujutsu (`jj`)](https://jj-vcs.github.io/) is a Git-compatible
+	  version control system written in Rust, which was first mentioned
+	  in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/),
+	  and most recently in [Edition #138](https://git.github.io/rev_news/2026/08/31/edition-138/).
++ [Riftri](https://riftri.dev/) - Lightweight Git workspaces for parallel development.
+  Riftri creates real Git worktrees without eagerly storing
+  another full physical copy of every unchanged project file.
+  It is designed for developers and coding agents working on several tasks at once.
+  With it, you can keep using normal files, normal Git, and the tools you already have.
+  Uses ReFS block clone on MS Windows, Btrfs or reflink or OverlayFS on Linux,
+  and APFS clone on macOS - that is native copy-on-write backends.
+  Written in Rust, under MIT license.
+  **Note:** Riftri is experimental, pre-release software.
+    + But please note [Git worktrees are not an isolation boundary for coding agents](https://fletch.sh/blog/git-worktrees-vs-clones-for-ai-agents/)
+	  by Alex Chaplinsky on Fletch Blog,
+	  mentioned in [Git Rev News Edition #138](https://git.github.io/rev_news/2026/08/31/edition-138/).
++ [Dear Machine](https://github.com/tursomari/dearmachine) is the local client
+  that lets you email back and forth with your computer.
+  [Machtiani](https://github.com/tursomari/machtiani) is the experimental harness underneath it,
+  using iteration to manage long-running agentic AI sessions without compaction.
+  The idea is to use email to work with multiple agents at the same time,
+  with each email thread a session, as described in 
+  [The Shell & Email](https://www.machtiani.chat/blogs/the-shell) post.
+  Written in Python, Go.  Under MIT license.
++ [nimblegate](https://nimblegate.com/) is a server
+  that sits between your AI agent and your real Git host.
+  It provides Git push guardrails for AI agents:
+  block unsafe pushes consistently, forward safe ones, record every decision.
+  Written in Go, under PolyForm Noncommercial License 1.0.0.
 
 
 
