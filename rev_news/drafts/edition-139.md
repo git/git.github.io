@@ -461,10 +461,6 @@ __Light reading__
   and the global per-user excludes file (`~/.config/git/ignore` by default).
 + [Gitversary: Celebrate your GitHub anniversary](https://andreruffert.com/weblog/gitversary-933154)
   by André Ruffert on his blog.
-+ 
-  by André Arko.  This post was originally given as a talk at JJ Con 2026.
-  The [slides](https://speakerdeck.com/indirect/beyond-jj-config-and-tools-ecosystem)
-  are available on SpeakerDeck.
 
 
 __Easy watching__
