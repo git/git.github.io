@@ -49,7 +49,8 @@ with Git's dedicated test helpers like `test_path_is_file`.
 - Start small: Pick a test file with just a few instances to convert
 - Run the test suite after your changes to ensure nothing breaks
 - Follow Git's commit message style
-- Include which command you used to find the instances in your commit message
+- You _do not need to_ include the command you used to find the instances
+  in your commit message
 
 #### Need Help?
 - Reference [this discussion](https://public-inbox.org/git/CAPig+cRfO8t1tdCL6MB4b9XopF3HkZ==hU83AFZ38b-2zsXDjQ@mail.gmail.com/)
