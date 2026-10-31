@@ -21,9 +21,203 @@ This edition covers what happened during the months of September and October 202
 ### General
 -->
 
-<!---
+
 ### Reviews
--->
+
++ [[PATCH] push: fix --force-if-includes when remote-tracking ref has no reflog](https://lore.kernel.org/git/20260903010547.85469-1-f@lex.la)
+
+Aleksei Sviridkin sent a small patch to the mailing list. It fixed a bug
+that made `git push --force-if-includes` reject valid forced pushes.
+
+#### Some background about `--force-if-includes`
+
+A plain `git push --force` overwrites the remote branch whatever it
+points to, so it can throw away commits that someone else pushed in
+the meantime. `--force-with-lease` is the safer alternative: the push
+is refused if the remote branch no longer points to the commit that
+the local remote-tracking ref (like `origin/main`) records.
+
+That protection is defeated though when something, for example an
+IDE, runs `git fetch` in the background. The remote-tracking ref then
+gets updated without the user ever looking at the new commits, and
+the lease check passes. To solve this, Srinidhi Kaushik added
+`--force-if-includes` in Git 2.30 with commit 99a1f9ae10 (push: add
+reflog check for "--force-if-includes", 2020-10-03), after a
+[long patch series](https://lore.kernel.org/git/20201003121046.60604-1-shrinidhi.kaushik@gmail.com/).
+The `push.useForceIfIncludes` config option enables it by default.
+
+With this option, Git checks that the commit at the tip of the remote
+ref has been integrated locally at some point. To do this,
+`is_reachable_in_reflog()` walks the reflog of the local branch. It
+looks for that commit in the reflog entries, or failing that, for
+entries that can reach it. As an optimization, the walk stops at
+entries older than the newest entry in the reflog of the
+remote-tracking ref, because the local branch could not have been
+built on a remote commit before it was fetched.
+
+#### The initial patch
+
+Aleksei explained that the timestamp used for this cut-off is read by
+a callback passed to `refs_for_each_reflog_ent_reverse()`. When the
+remote-tracking ref has no reflog, the callback never runs, and the
+variable holding the timestamp is never initialized.
+
+With the "files" ref backend, a remote-tracking ref created by
+`git clone` has no reflog until it moves. On Aleksei's machine
+(macOS, arm64) the value left on the stack was bigger than any real
+timestamp. So the walk stopped at the very first entry, never reached
+the "Created from" entry written when the branch was created, and the
+push was rejected with "remote ref updated since checkout", even
+though nothing had changed on the remote.
+
+The fix was a one-line change initializing the variable to 0. The
+patch also added a test to "t5533-push-cas.sh", which Aleksei warned
+could pass "by luck" on other platforms. The patch had an
+`Assisted-by: LLM` trailer before the `Signed-off-by:` trailer.
+
+#### An `Assisted-by:` trailer side discussion
+
+Junio Hamano, the Git maintainer, replied that the code change looked
+good. He said the sign-off must be the last trailer, because the
+author is "fully responsible for whatever LLM emitted", and that
+"LLM" on its own gave no useful information. He also suggested
+moving `test_when_finished` up, so that cleanup also happens if the
+setup commands fail. Junio was surprised that a bug from a six-year-old
+change was only being noticed now. Aleksei answered that whether the
+bug triggers depends on the build and the stack layout, not really on
+the platform.
+
+Aleksei said he had followed the Linux kernel rules for the trailer,
+as Git's guidelines didn't cover it. Junio pointed to the AI section
+in "Documentation/SubmittingPatches". It says that the project "will
+reject anything that looks AI generated" or that senders "don't
+understand or cannot explain". Aleksei then cited Christian Brauner's
+kernel commit 816d9992d9ed (coding-assistants: simplify attribution).
+It replaced model names in the kernel's `Assisted-by:` trailers with
+a bare "LLM", because naming models "provides free advertising to
+proprietary software companies". He added that his patch had gone
+through a router mixing models from three vendors.
+
+Kristoffer Haugsbakk wondered why, when Git's guidelines say nothing,
+the "fallback guideline becomes the one for an operating system
+kernel". Junio added "We are not the kernel ;-)". He also said he
+would rather not have patches with "walls of text" whose origin can't
+be known, and that he preferred "human-readable explanations and
+known origin". Aleksei dropped the trailer.
+
+Kristoffer later commented on the "uncanny valley" feeling he got from
+the LLM-like phrasing in replies to reviewers, and joked that he would
+have expected LLM-assisted commit messages "to read more like Jeff
+King log messages". After a ";-)" from Junio, Thomas Bachem offered to
+ask for that in his next reroll, and Weijie Yuan said he already fed
+"a few representative patch series from Peff" to an LLM in his toy
+projects.
+
+#### Is zero the right fallback?
+
+Meanwhile, Aleksei sent
+[version 2](https://lore.kernel.org/git/20260904124433.12840-1-f@lex.la/)
+of the patch, which moved the sign-off last and fixed the test
+cleanup.
+
+Junio asked why 0 was a reasonable fallback value, rather than "now"
+or "2 weeks ago", and what it means to pretend that the latest
+remote-tracking reflog entry dates from 1970. He also suggested a
+small rewording of the commit message.
+
+Aleksei then sent
+[version 3](https://lore.kernel.org/git/20260905171330.34646-1-f@lex.la/).
+Its commit message used Junio's wording, and it argued that without a
+reflog there is nothing to base a cut-off on. It said "now" would
+bring the bug back, and a fixed age would cut the walk off too early
+in some cases. It also dropped the `Assisted-by:` trailer.
+
+A few hours later, Junio suggested that `gc.reflogExpire`, or 90 days
+ago, would be "a lot more reasonable than year 1970". Even an old,
+enabled reflog normally has no entries older than that, as they get
+expired.
+
+Aleksei objected that reflog entries are only expired when `git gc`
+or `git reflog expire` runs. He built a scenario where a 90-day
+cut-off rejects a push that 0 lets through. Junio thought such
+repositories would only exist for those who "consciously disable the
+gc", and that 0 would impose a slower full walk on everyone.
+
+Aleksei disagreed again. A plain `git clone` with the "files" backend
+creates no remote-tracking reflog, and `git gc --auto` only runs once
+there are more than 6700 loose objects (the default `gc.auto` value),
+so a quiet repository expires nothing. He also posted timings with
+20000 reflog entries. The full walk only took longer, about 0.3s
+instead of 0.07s, in a repository still holding entries older than 90
+days. Junio found that this showed the gc expiration cut-off never
+wasted more time. Aleksei agreed, but pointed out: "The cutoff is
+faster than zero only where it gives the wrong answer."
+
+Two weeks later, Tyler Cipriani, who was working on his own
+[`--force-if-includes` fixes](https://lore.kernel.org/git/20260904210122.431757-1-tyler@tylercipriani.com/),
+said he liked `date=0`. Both values give the right answer in most
+cases, but the cut-off can give a wrong one, and "the wrong answer is
+worse". He described a simple scenario with default gc settings where
+the cut-off fails: clone, start rewriting history, do nothing for 90
+days, then finish and force-push. He noted that 0 also avoids having
+to choose between `gc.reflogExpire`, per-ref settings or
+`gc.reflogExpire=never`. Junio agreed that when a reflog has never
+been expired, using all the available information always works better
+than using a cut-off.
+
+#### Polishing the commit message and the test
+
+Tyler then reviewed version 3. He said the code looked right, and
+that a wrong rejection with advice to pull would push him "(pun
+intended)" to drop the config option and the feature altogether.
+
+He measured the cost on linux.git with 2000 reflog entries: 15ms with
+a commit-graph, but two minutes without one. That is because each
+batched call to `repo_in_merge_bases_many()` walks the history from
+scratch. He noted that doubling the batch size after each call
+brought this down to 10s, a possible optimization for a separate
+patch.
+
+Tyler also found the last paragraph of the commit message hard to
+read, and even technically wrong: it suggested that a walk stopped by
+the cut-off skips the merge-base check. He found that without the
+fix, the test still passed on his Linux x86_64 machine, where the
+uninitialized value happened to be 2. It failed reliably only when
+built with `make CFLAGS_APPEND=-ftrivial-auto-var-init=pattern`, so CI
+would probably not catch a similar regression. He suggested using the
+`setup_src_dup_dst` helper in the test, like the surrounding tests.
+Junio noted that the patch had trivial textual conflicts in t5533 with
+Tyler's topic.
+
+Aleksei sent
+[version 4](https://lore.kernel.org/git/20260929091319.86392-1-f@lex.la/)
+with a rewritten commit message that fixed the two inaccuracies
+Tyler had found. It explained that the record of the last move of the
+remote-tracking ref can be "never written, deleted, or expired by
+gc". The test now used `setup_src_dup_dst` and expired only the
+remote-tracking reflog. Aleksei confirmed that it passed with both
+the "files" and "reftable" backends.
+
+Junio found both changes sensible, thanked Aleksei and Tyler, and
+said he would mark the patch for 'next'.
+
+#### Conclusion
+
+The fix itself was a single line, but the discussion went well beyond
+it. Reviewers asked why zero was the right value, and the patch was
+then backed by concrete scenarios and measurements, ending with the
+principle that a wrong answer is worse than a slow one. The thread
+also showed that bugs caused by uninitialized variables can hide for
+years, and that compiler options like `-ftrivial-auto-var-init=pattern`
+help to reveal them. It also provided an opportunity to clarify the
+project's stance on `Assisted-by:` trailers and AI-assisted
+contributions.
+
+The patch was merged into the 'master' branch on October 6, 2026. It
+will be part of the upcoming Git 2.98.0 release, and the release notes
+say it will later be merged to 'maint' too. Tyler's related
+`--force-if-includes` fixes were still in 'seen' at the time of
+writing.
 
 <!---
 ### Support
