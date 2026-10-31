@@ -236,7 +236,7 @@ welcome your thoughts and feedback!_
   I'm Pablo Sabater, a Computer Science and Engineering undergraduate
   from Spain. I study at the University of Murcia but I'm currently living
   in Lisbon studying at NOVA FCT. I'm into low-level systems programming,
-  mostly C. Apart from Git.
+  mostly C.
 
   Apart from coding I really enjoy cooking.
 
@@ -247,7 +247,7 @@ welcome your thoughts and feedback!_
   what motivated you to choose it as your GSoC project?**
 
   Paco told me about GSoC, and Git was one of the organizations that
-  caught the most my attention, it's a tool I use every day and I
+  caught my attention the most, it's a tool I use every day and I
   wanted to know how it really works. I started contributing around
   March 2026 with small patches (little time for the proposal deadline
   haha).
@@ -278,20 +278,20 @@ welcome your thoughts and feedback!_
   huge impact but at least some?
 
   Maybe the best contribution is that when I've seen someone on the
-  `#my-first-contribution` channel [on Discord](https://git-scm.com/community#discord)
-  and I tried to review their patches quickly and help them out.
+  `#my-first-contribution` channel [on Discord](https://git-scm.com/community#discord),
+  I tried to review their patches quickly and help them out.
 
 * **Is there any aspect of Git that you now see differently after having
   contributed to it?**
 
   There is a lot of backward compatibility. Some parts are not very
-  pretty to look at and now I get more interested about the commands
+  pretty to look at and now I get more interested in the commands
   I use.
 
 * **How do you balance your contributions with other responsibilities
   like work or school?**
 
-  Not as good as I'd liked. Luckily I was in summer and I had no classes
+  Not as well as I'd have liked. Luckily I was in summer and I had no classes
   but I tend to let things that I like absorb me. However I still enjoyed
   the summer with my friends, sometimes I worked in advance to not work
   in some days and some other day I brought the laptop to camping.
@@ -302,19 +302,19 @@ welcome your thoughts and feedback!_
   Technically, I learned how Git works internally and Git has some very
   good parts that I have also learned from and helped improve my C coding.
 
-  Non-technically, I improve how to review other people's work.
+  Non-technically, I improved how I review other people's work.
 
 * **What was your biggest takeaway or learning from GSoC that you now
   apply regularly in your work?**
 
   I was a frequent user of `git commit -m ""` and after Git I enjoy
   making small commits with their full body and having linear histories
-  on my own project (I even try to make my friends to do the same).
+  on my own project (I even try to make my friends do the same).
 
 * **What was the biggest challenge you faced during your contributions
   to Git, and how did you overcome it?**
 
-  May be fear or repercussion? I know it sounds ridiculous (more after
+  Maybe fear of repercussions? I know it sounds ridiculous (more after
   meeting a lot of Git contributors). Everyone is so nice. In the beginning,
   though, the mailing list acts like an "evil filter".
 
@@ -347,8 +347,8 @@ welcome your thoughts and feedback!_
 * **What upcoming features or changes in Git are you particularly
   excited about?**
 
-  I think that the one I'm most excited for is the [pluggable backends](https://youtu.be/8dFBpblOsZY?si=7WnIUPvA47omFQ5S).
-  Even though I don't work on any big corp that would use it, I'm
+  I think that the one I'm most excited for is the [pluggable backends](https://youtu.be/8dFBpblOsZY).
+  Even though I don't work at any big corp that would use it, I'm
   sure that I'm going to have fun trying it.
 
 * **What is your favorite Git-related tool/library, outside of Git
@@ -373,8 +373,8 @@ welcome your thoughts and feedback!_
 * **How do you envision your own involvement with Git or other open
   source projects in the future?**
 
-  I want to keep contributing to Git, become better at it and treating
-  it as if it is my own project. I want to also involve in other open
+  I want to keep contributing to Git, become better at it and treat
+  it as if it is my own project. I also want to get involved in other open
   source projects, for example I'm trying with a friend to build a proper
   e-ink simulator on top of open source hardware.
 
@@ -399,8 +399,8 @@ welcome your thoughts and feedback!_
 
   Totally, it's one of the best experiences that I've had.
 
-  I want to mention Tian, Jayatheerth and Siddharth the other 3 GSoC
-  contributors at Git this summer and of course to Karthik and Chandra
+  I want to mention Tian, Jayatheerth and Siddharth, the other 3 GSoC
+  contributors at Git this summer, and of course Karthik and Chandra,
   my mentors.
 
 ## Other News
