@@ -24,7 +24,7 @@ This edition covers what happened during the months of September and October 202
 
 ### Reviews
 
-+ [[PATCH] push: fix --force-if-includes when remote-tracking ref has no reflog](https://lore.kernel.org/git/20260903010547.85469-1-f@lex.la)
++ [[PATCH] push: fix `--force-if-includes` when remote-tracking ref has no reflog](https://lore.kernel.org/git/20260903010547.85469-1-f@lex.la)
 
 Aleksei Sviridkin sent a small patch to the mailing list. It fixed a bug
 that made `git push --force-if-includes` reject valid forced pushes.
@@ -33,7 +33,7 @@ that made `git push --force-if-includes` reject valid forced pushes.
 
 A plain `git push --force` overwrites the remote branch whatever it
 points to, so it can throw away commits that someone else pushed in
-the meantime. `--force-with-lease` is the safer alternative: the push
+the meantime. Option `--force-with-lease` is the safer alternative: the push
 is refused if the remote branch no longer points to the commit that
 the local remote-tracking ref (like `origin/main`) records.
 
@@ -103,7 +103,7 @@ the "fallback guideline becomes the one for an operating system
 kernel". Junio added "We are not the kernel ;-)". He also said he
 would rather not have patches with "walls of text" whose origin can't
 be known, and that he preferred "human-readable explanations and
-known origin". Aleksei dropped the trailer.
+known origin".  As a consequence, Aleksei dropped the trailer.
 
 Kristoffer later commented on the "uncanny valley" feeling he got from
 the LLM-like phrasing in replies to reviewers, and joked that he would
@@ -120,7 +120,7 @@ Meanwhile, Aleksei sent
 of the patch, which moved the sign-off last and fixed the test
 cleanup.
 
-Junio asked why 0 was a reasonable fallback value, rather than "now"
+Junio asked why `0` was a reasonable fallback value, rather than "now"
 or "2 weeks ago", and what it means to pretend that the latest
 remote-tracking reflog entry dates from 1970. He also suggested a
 small rewording of the commit message.
@@ -139,9 +139,9 @@ expired.
 
 Aleksei objected that reflog entries are only expired when `git gc`
 or `git reflog expire` runs. He built a scenario where a 90-day
-cut-off rejects a push that 0 lets through. Junio thought such
+cut-off rejects a push that `0` lets through. Junio thought such
 repositories would only exist for those who "consciously disable the
-gc", and that 0 would impose a slower full walk on everyone.
+gc", and that `0` would impose a slower full walk on everyone.
 
 Aleksei disagreed again. A plain `git clone` with the "files" backend
 creates no remote-tracking reflog, and `git gc --auto` only runs once
@@ -159,7 +159,7 @@ said he liked `date=0`. Both values give the right answer in most
 cases, but the cut-off can give a wrong one, and "the wrong answer is
 worse". He described a simple scenario with default gc settings where
 the cut-off fails: clone, start rewriting history, do nothing for 90
-days, then finish and force-push. He noted that 0 also avoids having
+days, then finish and force-push. He noted that `0` also avoids having
 to choose between `gc.reflogExpire`, per-ref settings or
 `gc.reflogExpire=never`. Junio agreed that when a reflog has never
 been expired, using all the available information always works better
@@ -253,10 +253,10 @@ welcome your thoughts and feedback!_
   haha).
 
   [The project](https://summerofcode.withgoogle.com/programs/2026/projects/752yzmwm)
-  was completing remote-object-info for `git cat-file --batch-command`.
+  was completing remote-object-info for the `git cat-file --batch-command`.
   It had already gone through Calvin Wan and Eric Ju, same as some
-  series that I had merged at the beginning I tried finding the most
-  visual output as testing it would be "easier" and I just like
+  series that I had merged at the beginning when I tried finding the best
+  visual output as testing it would be "easier", and I just like
   to see what I have worked on. That's why I've also worked on the
   graph machinery. So, completing a command seemed very interesting
   and visual for me.
@@ -270,7 +270,7 @@ welcome your thoughts and feedback!_
   That's useful for partial clones, large repos, and tools that only
   need metadata.
 
-  However it is not an option that many forges have activated sadly.
+  However, sadly it is not an option that many forges have activated.
 
   Outside of GSoC, I also [added `--graph-lane-limit`](https://lore.kernel.org/git/20260328001113.1275291-1-pabloosabaterr@gmail.com/)
   and [visual root indentation](https://lore.kernel.org/git/20260714-ps-pre-commit-indent-v12-0-d50938e006df@gmail.com/)
@@ -291,15 +291,15 @@ welcome your thoughts and feedback!_
 * **How do you balance your contributions with other responsibilities
   like work or school?**
 
-  Not as well as I'd have liked. Luckily I was in summer and I had no classes
+  Not as well as I'd have liked. Luckily I was in summer and I had no classes,
   but I tend to let things that I like absorb me. However I still enjoyed
   the summer with my friends, sometimes I worked in advance to not work
-  in some days and some other day I brought the laptop to camping.
+  in some days, and some other day I brought the laptop to camping.
 
 * **Can you share how GSoC helped enhance your technical and
   non-technical skills (like communication, project management, etc.)?**
 
-  Technically, I learned how Git works internally and Git has some very
+  Technically, I learned how Git works internally, and Git has some very
   good parts that I have also learned from and helped improve my C coding.
 
   Non-technically, I improved how I review other people's work.
@@ -307,7 +307,7 @@ welcome your thoughts and feedback!_
 * **What was your biggest takeaway or learning from GSoC that you now
   apply regularly in your work?**
 
-  I was a frequent user of `git commit -m ""` and after Git I enjoy
+  I was a frequent user of `git commit -m ""`, and after GSoC I enjoy
   making small commits with their full body and having linear histories
   on my own project (I even try to make my friends do the same).
 
@@ -332,11 +332,11 @@ welcome your thoughts and feedback!_
 * **If you could get a team of expert developers to work full time on
   something in Git for a full year, what would it be?**
 
-  I mean, everyone is already doing a lot of things and I still don't
+  I mean, everyone is already doing a lot of things, and I still don't
   know a LOT of Git. I like to say that one doesn't know what it lacks
   until they know what it has.
 
-  But I see interesting work on VFS, LFS and I'd love good documentation
+  But I see interesting work on VFS and LFS, and I'd love good documentation
   throughout the codebase.
 
 * **If you could remove something from Git without worrying about
@@ -347,39 +347,39 @@ welcome your thoughts and feedback!_
 * **What upcoming features or changes in Git are you particularly
   excited about?**
 
-  I think that the one I'm most excited for is the [pluggable backends](https://youtu.be/8dFBpblOsZY).
+  I think that the one I'm most excited of is the [pluggable backends](https://youtu.be/8dFBpblOsZY).
   Even though I don't work at any big corp that would use it, I'm
   sure that I'm going to have fun trying it.
 
 * **What is your favorite Git-related tool/library, outside of Git
   itself?**
 
-  [b4](https://b4.docs.kernel.org/en/latest/), made the work of
+  [b4](https://b4.docs.kernel.org/en/latest/), as it made the work of
   sending things to a mailing list so easy.
 
 * **What is your toolbox for interacting with the mailing list and for
   development of Git?**
 
-  I code on [neovim](https://neovim.io/) and I like to keep most of
-  my stuff on the terminal, to review others I download the thread
-  as mbox; and then I use [aerc](https://aerc-mail.org/) to answer;
-  and to send my work I now use b4.
+  I code on [neovim](https://neovim.io/) as I like to keep most of
+  my stuff on the terminal; to review others, I download the thread
+  as `mbox` and then use [aerc](https://aerc-mail.org/) to answer;
+  to send my work I now use b4.
 
-  One command that I didn't know until recently that Git has on the
+  One command that I didn't know until recently that Git has on its
   codebase is [`git clang-format --diff`](https://github.com/llvm/llvm-project/blob/main/clang/tools/clang-format/git-clang-format),
-  which I don't remember who told me about it sadly. Before knowing
+  for which I sadly don't remember who told me about it. Before knowing
   about it, I always had style complaints on my series.
 
 * **How do you envision your own involvement with Git or other open
   source projects in the future?**
 
   I want to keep contributing to Git, become better at it and treat
-  it as if it is my own project. I also want to get involved in other open
+  it as if it was my own project. I also want to get involved in other open
   source projects, for example I'm trying with a friend to build a proper
   e-ink simulator on top of open source hardware.
 
-  I see that Git, even though it is a huge project the actual people
-  that you see on the mailing list daily is in fact, small. At Git
+  I see that Git, even though it is a huge project, the actual number of people
+  that you see daily on the mailing list is in fact small. At Git
   Merge everyone knows each other. I want something like that.
 
   And of course I would love to have an idea that leads into a big
@@ -400,7 +400,7 @@ welcome your thoughts and feedback!_
   Totally, it's one of the best experiences that I've had.
 
   I want to mention Tian, Jayatheerth and Siddharth, the other 3 GSoC
-  contributors at Git this summer, and of course Karthik and Chandra,
+  contributors to Git this summer, and of course Karthik and Chandra,
   my mentors.
 
 ## Other News
@@ -527,4 +527,4 @@ Christian Couder &lt;<christian.couder@gmail.com>&gt;,
 Jakub Narębski &lt;<jnareb@gmail.com>&gt;,
 Markus Jansen &lt;<mja@jansen-preisler.de>&gt; and
 Kaartic Sivaraam &lt;<kaartic.sivaraam@gmail.com>&gt;
-with help from XXX.
+with help from Pablo Sabater, Okhuomon Ajayi, and XXX.
