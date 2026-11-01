@@ -406,13 +406,37 @@ welcome your thoughts and feedback!_
 ## Other News
 
 __Various__
++ [JJ Con 2026 Talks are Up](https://blog.gitbutler.com/jj-con-2026-talks)
+  by Scott Chacon on Butler's Log (GitButler blog).
+  The post includes a quick overview of each of them.
+    + GitButler helped host [Git Merge 2026](https://git-merge.com/) in Lisbon,
+	  with which JJ Con 2026 was organized alongside (co-located).
+	  Other sponsors and hosts included [Google Open Source](https://opensource.google/)
+	  and [ERSC](https://ersc.io/) (East River Source Control).
+	+ [Jujutsu (`jj`)](https://jj-vcs.github.io/) is a Git-compatible version control system written in Rust,
+	  which was first mentioned in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/),
+	  and most recently in [Edition #139](https://git.github.io/rev_news/2026/09/30/edition-139/).
+
+
+__Easy watching__
++ [Git Merge '26](https://www.youtube.com/playlist?list=PLRfSktKnsgUs)
+  talks, starting with ["SHA-256 at a Hyperscaler" by Emily Shaffer](https://www.youtube.com/watch?v=eJJp0RE7cd4&list=PLRfSktKnsgUs),
+  are available on YouTube, on the [GitButler App channel](https://www.youtube.com/@gitbutlerapp).
+    + You can also read [notes about the talks](https://gist.github.com/dscho/9c70e07ee54616bbf401b4e5f40969bf),
+	  distilled by Johannes Schindelin, alias Dscho, from the recording and its subtitles,
+	  mentioned in [the previous edition of Git Rev News](https://git.github.io/rev_news/2026/09/30/edition-139/).
++ [JJ Con '26](https://www.youtube.com/playlist?list=PLD4pL2IO36cM)
+  talks (which was co-located with Git Merge '26),
+  starting with ["jj Tool & Config Ecosystem" by André Arko](https://www.youtube.com/watch?v=buLvWZS1P20&list=PLD4pL2IO36cM),
+  are available on YouTube, on the [GitButler App channel](https://www.youtube.com/@gitbutlerapp).
+    + The above-mentioned [jj Tool & Config Ecosystem - André Arko](https://www.youtube.com/watch?v=buLvWZS1P20) talk [38:37],
+	  also available as [Beyond jj: config & tools ecosystem](https://andre.arko.net/2026/09/16/beyond-jj-config-and-tools-ecosystem/) post by the author,
+	  and as [slides on SpeakerDeck](https://speakerdeck.com/indirect/beyond-jj-config-and-tools-ecosystem),
+	  was also mentioned in [the previous edition of Git Rev News](https://git.github.io/rev_news/2026/09/30/edition-139/).
 
 
 __Light reading__
 
-<!---
-__Easy watching__
--->
 
 __Git tools and sites__
 
