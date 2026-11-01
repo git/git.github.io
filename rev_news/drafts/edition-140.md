@@ -236,7 +236,7 @@ welcome your thoughts and feedback!_
   I'm Pablo Sabater, a Computer Science and Engineering undergraduate
   from Spain. I study at the University of Murcia but I'm currently living
   in Lisbon studying at NOVA FCT. I'm into low-level systems programming,
-  mostly C.
+  mostly C, apart from Git.
 
   Apart from coding I really enjoy cooking.
 
