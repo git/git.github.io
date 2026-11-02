@@ -438,7 +438,7 @@ __Various__
   by Georg Friedrich on Entire's Blog,
   about launching Entire, which is a Git forge for agent-human collaboration.
 + [Everyone is doing Git on S3 wrong](https://enroute.sh/blog/everyone-is-doing-git-on-s3-wrong)
-  by Enroute (where they build highly performant Git server,
+  by Enroute (where they build a highly performant Git server,
   written in Rust and backed by object storage).
 + [We want you to build the next Git platform on Cloudflare](https://blog.cloudflare.com/next-git-platform-on-cloudflare/)
   by Dina Kozlov, Dillon Mulroy, and Zebulon Piasecki:
@@ -473,7 +473,7 @@ __Easy watching__
   starting with ["jj Tool & Config Ecosystem" by André Arko](https://www.youtube.com/watch?v=buLvWZS1P20&list=PLD4pL2IO36cM),
   are available on YouTube, on the [GitButler App channel](https://www.youtube.com/@gitbutlerapp).
     + The above-mentioned [jj Tool & Config Ecosystem - André Arko](https://www.youtube.com/watch?v=buLvWZS1P20) talk [38:37],
-	  also available as [Beyond jj: config & tools ecosystem](https://andre.arko.net/2026/09/16/beyond-jj-config-and-tools-ecosystem/) post by the author,
+	  also available as the [Beyond jj: config & tools ecosystem](https://andre.arko.net/2026/09/16/beyond-jj-config-and-tools-ecosystem/) post by the author,
 	  and as [slides on SpeakerDeck](https://speakerdeck.com/indirect/beyond-jj-config-and-tools-ecosystem),
 	  was also mentioned in [the previous edition of Git Rev News](https://git.github.io/rev_news/2026/09/30/edition-139/).
 
@@ -505,7 +505,7 @@ __Light reading__
 + [I got targeted](https://frankwiles.com/posts/i-got-targeted/)
   (in a project inquiry, with Markdown files provided via Dropbox folder...
   with `.git` directory and active [`post-checkout`](https://git-scm.com/docs/githooks#_post_checkout) [hook](https://githooks.com/),
-  to trigger when switching branch as suggested),
+  to trigger when switching branches as suggested),
   by Frank Wiles on FrankWiles\.com.
 + [Making git hooks visible: A terminal prompt technique for zsh to see the status of git hooks.](https://nedbatchelder.com/blog/202610/making_git_hooks_visible)
   by Ned Batchelder on his blog.  Inspired by Frank Wiles' post linked above.
@@ -529,12 +529,12 @@ __Light reading__
   a small Git extension in Rust that creates worktrees using copy-on-write (CoW).
     + Compare [Riftri](https://riftri.dev/) - Lightweight Git workspaces for parallel development,
 	  using native copy-on-write backends, also written in Rust.
-	  It was mentioned in [Git Rev News Edition #139]().
+	  It was mentioned in [Git Rev News Edition #139](https://git.github.io/rev_news/2026/09/30/edition-139/).
 	+ Compare [Copy-on-write git worktrees](https://commaok.xyz/post/git-cow-worktrees/) by Josh Bleecher Snyder,
 	  about creating `git-cow-worktree`, a drop-in replacement for `git worktree add`
 	  that uses copy-on-write for the worktrees.  Written in Go.
 	  It was mentioned in [Git Rev News Edition #135](https://git.github.io/rev_news/2026/05/31/edition-135/).
-	+ See also [Zit](https://getzit.org/), a git extension
+	+ See also [Zit](https://getzit.org/), a Git extension
 	  for many developers and coding agents changing one repository at the same time,
 	  with copy-on-write workspaces instead of worktrees,
 	  changes checked against what landed meanwhile, and each change's reason kept.
@@ -560,7 +560,7 @@ __Light reading__
 + [The federated code forge](https://tangled.org/blog/forge/)
   by Anirudh on Tangled Blog.<br>
   [Tangled.sh](https://tangled.org) is a new social-enabled Git collaboration platform
-  built on top of AT Protocol / ATProto (which powers BlueSky),
+  built on top of the AT Protocol / ATProto (which powers BlueSky),
   first mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/),
   and most recently in [Edition #138](https://git.github.io/rev_news/2026/08/31/edition-138/).
 + [Reading git status without running git](https://getgitmon.com/guides/read-git-status-without-running-git)
@@ -569,11 +569,11 @@ __Light reading__
   and uses the index's cache-tree extension to avoid reading HEAD's tree at all
   in the common case where nothing is staged.
 + [Manage Your Dotfiles with Nothing but Git](https://terminal.ninja/guides/manage-dotfiles/),
-  a guide from [terminal ninja](https://terminal.ninja/) website.
+  a guide from the [terminal ninja](https://terminal.ninja/) website.
 + [Using multiple git remotes for true distributed version control](https://optimizedbyotto.com/post/multiple-git-remotes/)
   by Otto Kekäläinen on Optimized by Otto blog.
 + [On Git Refs](https://matklad.github.io/2026/10/07/git-ref.html)
-  by  Alex Kladov (matklad), on improving his mental model of Git.
+  by Alex Kladov (matklad), on improving his mental model of Git.
 + [Maybe a better way to track the release history of a Git repo](https://blog.plover.com/prog/git/history-proposal.html)
   by Mark Dominus (陶敏修) on The Universe of Discourse blog.
 + [55,181 Commits in 7 Days: Why We Moved Health Checks Out of Git](https://www.syntasso.io/post/55-181-commits-in-7-days-why-we-moved-health-checks-out-of-git)
@@ -586,13 +586,13 @@ __Light reading__
   by Daniele Paletti.  Mentions Jujutsu (`jj`), Google's Piper,
   Meta's [Sapling](https://sapling-scm.com/), and Antropic's Scion.
 + [You Can Hide Languages From GitHub's Languages Bar](https://nelson.cloud/you-can-hide-languages-from-githubs-languages-bar/)
-  with `linguist-detectable` gitattribute.
+  using the `linguist-detectable` gitattribute.
   by Nelson Figueroa on his blog.
 + [Using Codeberg's git-pages deployment with git lfs](https://tzovar.as/codeberg-git-pages-with-lfs/)
   by Bastian Greshake Tzovaras on his blog.
   Mentions [Codeberg shutting down its old Codeberg Pages server](https://blog.codeberg.org/migrate-your-site-to-the-new-git-pages-backed-codeberg-pages-now-were-sunsetting-codeberg-pages-v2.html)
   and [migrating](https://docs.codeberg.org/codeberg-pages/migrating-from-pages-v2/)
-  to [`git pages`](https://codeberg.org/git-pages/git-pages)-based alternative.
+  to a [`git pages`](https://codeberg.org/git-pages/git-pages)-based alternative.
 + [The GitHub wiki is an anti-pattern](https://michaelheap.com/github-wiki-is-an-antipattern/)
   (2022) by Michael Heap (@mheap) on his blog.
 
@@ -608,8 +608,8 @@ __Light reading__
   about a version control system where the storage medium is a neural network
   (replacing the storage layer with an MLP (Multi-Layer Perceptron)).
   By Nico Brenner (with [code](https://github.com/nicobrenner/lossy-git)).
-  Parttly an experiment, partly a joke.
-    + Compare and contrast to a joke tool: 
+  Partly an experiment, partly a joke.
+    + Compare and contrast to a joke tool:
 	  [git-llmfs](https://codeberg.org/TheMikina/git-llmfs) - a Git filter
 	  that uses local LLM summaries as a compression mechanism for code files
 	  to save space in a Git repository
@@ -619,7 +619,7 @@ __Light reading__
   The article talks about a small command-line tool,
   created for [Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine](https://dev.to/challenges/hacktoberfest-week4-2026-10-26)
   that digs every deleted file out of a repository's history,
-  writes some statistics about its history and epitaph and last words for the file,
+  writes some statistics about its history and an epitaph and last words for the file,
   the latter written by an open-weight model (Gemma 3).
 
 
@@ -631,7 +631,7 @@ __Scientific preprints__
 
 __Git tools and sites__
 + [LearnGit.io v2 is here](https://learngit.io/posts/learngit-v2-is-here).
-  A rethink of LearnGit from the ground that makes progression easier & more intuitive.
+  A rethink of LearnGit from the ground up that makes progression easier & more intuitive.
   [LearnGit.io](https://learngit.io/) teaches Git
   with animated visualizations of Git internals, added quizzes,
   step-by-step interactive scenarios, and type-it-yourself exercises
@@ -654,10 +654,10 @@ __Git tools and sites__
   existing video tutorials are linked alongside them.
 + [Git-ing Over It](https://git-ing-over-it.vercel.app/) is a browser-based
   game that hands you a real broken repo and makes you figure out what to run,
-  the way you actually learn git at work.  Built by Ketuman Vishwakarma.
+  the way you actually learn Git at work.  Built by Ketuman Vishwakarma.
   Progress lives only in the browser; it never syncs or leaves your device.
     + Compare, for example, [git-game](https://github.com/git-game/git-game) and [git-game-v2](https://github.com/git-game/git-game-v2):
-	  a terminal game designed to test your knowledge of git commands
+	  a terminal game designed to test your knowledge of Git commands
 	  (mentioned in [Git Rev News Edition #5](https://git.github.io/rev_news/2015/07/08/edition-5/)),
 	  [Learn Git Branching](https://learngitbranching.js.org/):
 	  also a browser-based visual and interactive way to learn Git on the web
@@ -669,7 +669,7 @@ __Git tools and sites__
   Ship commits to a shared `main`. Pull before you push, blame the bugs you can't see,
   and survive `git push --force`. Free, in your browser, with nothing to sign up for.
   You can play against the bot, or in a room with your friends.
-+ [Gitualize](https://gitualize.com/) is a web app to help you learn git visually.
++ [Gitualize](https://gitualize.com/) is a web app to help you learn Git visually.
   Every Git command is animated step by step on the same small project — so you see
   what it really does to your files, your history and your remote.
 + [The Animated Git Cheat Sheet](https://initialcommit.com/learn/git/animated-cheat-sheet)
@@ -685,7 +685,7 @@ __Git tools and sites__
 	  [Pushin.eu](https://pushin.eu/) in invite-only beta and
 	  [CodeFloe](https://codefloe.com/) with free functionality gated by quotas
 	  (both mentioned in [Edition #139](https://git.github.io/rev_news/2026/09/30/edition-139/)).
-+ [Haxy](https://try.haxy.net/haxy:haxy) is a self-hosted git forge
++ [Haxy](https://try.haxy.net/haxy:haxy) is a self-hosted Git forge
   that is local-first and text-based. Haxy has a text user interface (TUI)
   that you can view in your terminal or on the web.
   It stores project metadata (issues, pull requests, and discussions) in the repo,
@@ -693,13 +693,13 @@ __Git tools and sites__
   Written in Zig, under MIT license (Expat).<br>
   See also [Haxy.net is live! — HAXY (git forge) devlog](https://www.youtube.com/watch?v=89yAiqYEwKg)
   [7:31] video on YouTube.
-+ [Mochi Forge](https://github.com/magland/mochiforge) is a self-hosted git forge,
++ [Mochi Forge](https://github.com/magland/mochiforge) is a self-hosted Git forge,
   GitHub-shaped: repository browsing, in-browser editing, issues, pull requests,
   releases, Actions-style workflows, static sites, and Git LFS.
-  One Node process, no database, nothing installed beside it but git.
+  One Node process, no database, nothing installed beside it but Git.
   Written in TypeScript, under Apache 2.0 license.
 + [walgitgub](https://github.com/rgodha24/walgithub)
-  is walgit with a GitHub Enterprise Server facade — a git server
+  is walgit with a GitHub Enterprise Server facade — a Git server
   that is one binary in front of an object store (e.g., S3 or GCS bucket).
   Written in Rust, under MIT license.
 + [grubby](https://git.btxx.org/grubby/) is a static site generator for Git repos
@@ -732,13 +732,13 @@ __Git tools and sites__
   for your AI coding agent's files, starting with Claude Code:
   what it remembers, how you configure it, and anything else you choose.
   Written in Rust, under MIT license.
-+ [ADRs4AI](https://adrs.systems/) (Architectural Deliberation Records for Artificial Inteligence)
++ [ADRs4AI](https://adrs.systems/) (Architectural Deliberation Records for Artificial Intelligence)
   is [the template (repository starter)](https://github.com/ADRs4AI/human-ai-collaboration-template-A),
   [a VS Code extension](https://marketplace.visualstudio.com/items?itemName=jlumbroso.adrs4ai),
   and [Awesome ADRs4AI](https://github.com/ADRs4AI/awesome-adrs4ai) list.
   The idea is to keep the thinking, the most valuable byproduct
   of the collaboration between a human and an AI.
-    + But see [git reset –\-hard](https://isaacpatternproject.com/blog/posts/2026-09-24_git-reset-hard.html),
+    + But see [git reset \-\-hard](https://isaacpatternproject.com/blog/posts/2026-09-24_git-reset-hard.html),
 	  about restarts and learning from failure: keeping what it learned but “cleaning head”,
 	  mentioned in [Git Rev News Edition #139](https://git.github.io/rev_news/2026/09/30/edition-139/).
 + [Mnemosyne](https://nabzx.github.io/mnemosyne/)
@@ -747,12 +747,12 @@ __Git tools and sites__
   commits, branches, merge, blame and bisect.
   Written in Rust and Python, under Apache 2.0 license.
 + [Git for Global Law](https://github.com/lexifina/global-law) by Lexifina:
-  the law of every country as one git history, each country's record a submodule,
+  the law of every country as one Git history, each country's record a submodule,
   every commit one law taking effect.
-  An expansion of the same [for the the US Code](https://lexifina.com/blog/git-for-the-us-code).
+  An expansion of the same [for the US Code](https://lexifina.com/blog/git-for-the-us-code).
   Semantic, searchable law on a global scale.
 + [Words To Data](https://www.wordstodata.com/) is a tool
-  that let's you and your agents manage the The U.S. Code, the laws that change it,
+  that lets you and your agents manage the The U.S. Code, the laws that change it,
   and the court opinions that cite it, as one dataset.
   `words_to_data` is a Rust command and library.
   It builds a SQLite dataset from public sources,
@@ -776,9 +776,9 @@ __Git tools and sites__
   A file someone else holds is read-only in every editor, so nobody changes it by accident.
   Gitby runs in your terminal (as TUI tool) and on the website.  Supports GitHub.
   Paid service, with 3 teammates per team in a free tier.
-    + Compare with [GitLive](https://git.live/) extension
+    + Compare with the [GitLive](https://git.live/) extension
 	  for Visual Studio Code, JetBrain IDEs, Cursor, Windsurf, Trae, Antigravity, etc.
-	  It provides preemptive merge conflict detection, 
+	  It provides preemptive merge conflict detection,
 	  with gutter indicators in the editor
 	  showing the lines that have been changed on other branches,
 	  while the repository view compares your branch against all others
@@ -786,13 +786,13 @@ __Git tools and sites__
 	  GitLive is free for open-source projects; there is also a free plan
 	  with merge conflict detection limited to the 5 most recent branches, and
 	  no real-time sharing (you can share snapshots of your working tree changes),
-	  as compared to premium plan.<br>
+	  as compared to the premium plan.<br>
 	  GitLive was first mentioned in [Git Rev News Edition #77](https://git.github.io/rev_news/2021/07/31/edition-77/) (as then a Visual Studio Code extension),
 	  and then in [Edition #82](https://git.github.io/rev_news/2021/12/30/edition-82/).
 + [AngKorGit](https://angkorgit.app/) is a native Git client
   for everyday work, with support for macOS, Windows and Linux.
   The engine is libgit2 through Rust, the window is the webview (not full web browser).
-  Written in TypeScript and Rust, using the [Tauri](https://v2.tauri.app/) framework, 
+  Written in TypeScript and Rust, using the [Tauri](https://v2.tauri.app/) framework,
   under MIT license.
 + [Diffy](https://diffy.run/) is a native Git diff viewer built in Rust with GPUI Kit.
   Review live changes, keep worktrees together,
@@ -800,8 +800,8 @@ __Git tools and sites__
   macOS is in beta; Windows and Linux are early alphas with limited hardware testing.
   Under MIT license.<br>
   Mentioned in passing in [Git Rev News Edition #132](https://git.github.io/rev_news/2026/02/28/edition-132/).
-+ [gitst](https://snoigt.com/gitst): a real-time, glanceable git status monitor for the terminal.
-  Gitst shows in real-time what is happening to a git repository (local as well as remote)
++ [gitst](https://snoigt.com/gitst): a real-time, glanceable Git status monitor for the terminal.
+  Gitst shows in real-time what is happening to a Git repository (local as well as remote)
   as it happens: changed files, commits, pushes, fetches, merges, and rebases.
   It typically sits in one pane of a multi-pane terminal setup
   (using tools like Dantty, tmux, screen, herdr, WezTerm, iTerm2, etc.).
@@ -813,7 +813,7 @@ __Git tools and sites__
 + [git-found](https://github.com/advaith334/git-found) is a Git [credential helper](https://git-scm.com/docs/gitcredentials)
   for people with more than one GitHub account.
   It checks which of your accounts can reach a repo and gives Git that account's token.
-  Written as Bash shell script, under MIT license.
+  Written as a Bash shell script, under MIT license.
 + [`git-cl`](https://github.com/BHFock/git-cl) (Git Changelists)
   is a command-line tool that brings changelist support to Git, inspired by Subversion.
   It adds a pre-staging review layer that lets you organise modified files
@@ -835,7 +835,7 @@ __Git tools and sites__
   The files stay where their tools expect them in the working tree.
   Their history lives in a repository of their own.
   Written in Rust, under MIT license.
-+ [grip](https://guilyx.github.io/grip/) is a `per-push` git hook
++ [grip](https://guilyx.github.io/grip/) is a `per-push` Git hook
   that won't let you push code you can't explain.
   It quizzes you on your own diff before allowing the push.
   Works with Claude Code, Codex, Cursor.
@@ -843,23 +843,23 @@ __Git tools and sites__
 + pretty-git-tree is [a tool](https://github.com/hmillerbakewell/pretty-git-tree)
   and [a service](https://hmillerbakewell.github.io/pretty-git-tree/)
   (with [examples](https://hmillerbakewell.github.io/pretty-git-tree/#view=gallery))
-  that turns a slice of git history into different types of diagrams:
+  that turns a slice of Git history into different types of diagrams:
   arches, delta, Feynman diagram (particles), qubits, etc.
   Written in TypeScript, under MIT license.
 + [Phloem](https://phloem.thales.sh/) is an on-line service
   where you can watch a repository grow like a slime mold.
   Paste a public GitHub repository (optionally providing a GitHub token),
-  or upload a git log instead (with specified invocation):
+  or upload a Git log instead (with specified invocation):
   folders become junctions, files become food, and every commit feeds the network.
   [Written](https://github.com/thcp/phloem) in TypeScript, under MIT license.
 + [StateTrack](https://github.com/premtonx/statetrack) provides
-  Infrastructure Change Intelligence — git history for live servers.
+  Infrastructure Change Intelligence — Git history for live servers.
   A config edit, a package upgrade, a stopped IIS app pool,
   or a row flipped in `settings_db` is captured as a reviewable diff
   with an actor attached, seconds after it happens.
   Dashboard for GitDevOps.  Written in Go, under Apache 2.0 license.
 + [monolog](https://github.com/maksmas/monolog) is a keyboard-driven personal backlog
-  that lives in a git repo you own — no cloud, no account, plain-text data.
+  that lives in a Git repo you own — no cloud, no account, plain-text data.
   Written in Go, under MIT license.
 + [Hold My Docs (HMD)](https://hmd.sool.dev/) is a browser-based place
   to write, find and share documentation: a personal knowledge base,
