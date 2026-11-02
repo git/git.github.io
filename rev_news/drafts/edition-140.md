@@ -403,9 +403,12 @@ welcome your thoughts and feedback!_
   contributors to Git this summer, and of course Karthik and Chandra,
   my mentors.
 
+
 ## Other News
 
 __Various__
++ [Apple's git still trusts the compromised eMudhra certificates](https://emudhra.we-have-a-problem.com/apple.html)
+  (as of 28th October) by Dennis Jackson.  The article provides workarounds for the problem.
 + [JJ Con 2026 Talks are Up](https://blog.gitbutler.com/jj-con-2026-talks)
   by Scott Chacon on Butler's Log (GitButler blog).
   The post includes a quick overview of each of them.
@@ -416,6 +419,44 @@ __Various__
 	+ [Jujutsu (`jj`)](https://jj-vcs.github.io/) is a Git-compatible version control system written in Rust,
 	  which was first mentioned in [Git Rev News Edition #85](https://git.github.io/rev_news/2022/03/31/edition-85/),
 	  and most recently in [Edition #139](https://git.github.io/rev_news/2026/09/30/edition-139/).
++ [Redesigning source control at Anthropic](https://www.anthropic.com/research/redesigning-source-control)
+  about Scion, their in-house version control system.
++ [Anthropic’s Scion is heavily inspired by Mononoke](https://sunshowers.io/posts/anthropic-mononoke/)
+  and [More on Anthropic’s Scion ripping off Mononoke](https://sunshowers.io/posts/anthropic-mononoke-2/)
+  by Rain on their Sunshowers blog.
+  Since then, [sufficient attribution](https://www.anthropic.com/engineering/redesigning-source-control#footnote-2)
+  has been added to Anthropic’s blog post.
+    + [Mononoke](https://github.com/meta/sapling/tree/main/eden/mononoke) is the server
+	  built for Meta's [Sapling Source Control System](https://sapling-scm.com/),
+	  meant to scale up to accepting thousands of commits every hour across millions of files.
+	  Sapling was first mentioned in [Git Rev News Edition #93](https://git.github.io/rev_news/2022/11/30/edition-93/).
++ [Anthropic Threw Away Git. What Broke First Is the Part I Can’t Stop Thinking About.](https://jackiechen.blog/2026/10/22/anthropic-threw-away-git-what-broke-first-is-the-part-i-cant-stop-thinking-about/)
+  by Jackie Chen on their blog (Jackie Chen's IT Workshop).
++ [A Git Forge Without a Center](https://entire.com/blog/a-git-forge-without-a-center)
+  by Georg Friedrich on Entire's Blog,
+  about launching Entire, which is a Git forge for agent-human collaboration.
++ [Everyone is doing Git on S3 wrong](https://enroute.sh/blog/everyone-is-doing-git-on-s3-wrong)
+  by Enroute (where they build highly performant Git server,
+  written in Rust and backed by object storage).
++ [We want you to build the next Git platform on Cloudflare](https://blog.cloudflare.com/next-git-platform-on-cloudflare/)
+  by Dina Kozlov, Dillon Mulroy, and Zebulon Piasecki:
+  a followup to [Artifacts: versioned storage that speaks Git](https://blog.cloudflare.com/artifacts-git-for-agents-beta/).
++ [So long, Spokes: GitHub rewrites storage to restore reliability, just in time for agentic hordes](https://www.theregister.com/devops/2026/10/09/so-long-spokes-github-rewrites-storage-to-restore-reliability-just-in-time-for-agentic-hordes/5302148)
+  by Joab Jackson in The Register.
++ [Migrate your site to the new git-pages backed Codeberg Pages now. We're sunsetting Codeberg Pages v2](https://blog.codeberg.org/migrate-your-site-to-the-new-git-pages-backed-codeberg-pages-now-were-sunsetting-codeberg-pages-v2.html),
+  announcement by Andreas Shimokawa (Codeberg e. V.).
+  Codeberg Pages v2 will be shut off completely on 2026-12-31.
++ [GhostAction Compromises About 1,900 GitHub Accounts, Targets Over 30,000 Repositories](https://thehackernews.com/2026/10/ghostaction-compromises-about-1900.html)
+  by Ravie Lakshmanan on The Hacker News.
++ [GitHub Actions workflow lockfiles in public preview](https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview/).
++ [GitLab warns of max severity code execution vulnerability](https://www.bleepingcomputer.com/news/security/gitlab-warns-of-max-severity-rce-flaw-in-regex-compiler-engine/)
+  by Sergiu Gatlan on Bleeping Computer.
+
+
+__Newsletters__
++ [This Week in Source Control: 28 October 2026](https://nesbitt.io/2026/10/28/this-week-in-source-control.html)
+  by Andrew Nesbitt.<br>
+  This first issue covers the fortnight since 11 October.
 
 
 __Easy watching__
@@ -436,9 +477,358 @@ __Easy watching__
 
 
 __Light reading__
++ [Git 3.0's upcoming SHA-256 default will be a costly mistake](https://blog.gitbutler.com/git-3-sha-256)
+  by Scott Chacon on Butler's Log (GitButler blog).
+  The article cites [Linus Torvalds, who said in 2005](https://lore.kernel.org/git/Pine.LNX.4.58.0504291221250.18901@ppc970.osdl.org/):
+  _"I really think people should not consider the sha1 the "security". The real security is in distribution."_
+  It mentions problems with submodules, with existing links, and with external libraries
+  (go-git, libgit2, JGit, Dulwich, gitoxide / gix) not being SHA256-ready,
+  and instead proposes independent tree hash headers in tag objects
+  (like Colin Waters' [git-evtag](https://github.com/cgwalters/git-evtag),
+  which was mentioned in [Git Rev News Edition #60](https://git.github.io/rev_news/2020/02/19/edition-60/)).<br>
+  See also:
+    + [Looking forward to Git 2.56 — and 3.0](https://lwn.net/Articles/1094575/)
+	  by Jonathan Corbet on LWN\.net, where switch to SHA-256 in Git 3.0 is mentioned
+	  (that article was mentioned in [Git Rev News Edition #139](https://git.github.io/rev_news/2026/09/30/edition-139/)).
+	+ [SHA-256 at a Hyperscaler - Emily Shaffer](https://www.youtube.com/watch?v=eJJp0RE7cd4)
+	  talk from Git Merge '26.
+	+ Johannes Schindelin's (Dscho's) [summary of the Git Contributors' Summit 2026](https://lore.kernel.org/git/5cc325c6-579e-4fed-7071-a3ff98d51ccb@gmx.de/)
+	  (also mentioned in [previous edition](https://git.github.io/rev_news/2026/09/30/edition-139/))
+	  talks about SHA-256 support across the ecosystem being a blocker
+	  for v3.0 release, and SHA-1/SHA-256 interoperability work not being on the list.
+	+ [Breaking Changes: Git 3.0](https://git-scm.com/docs/BreakingChanges#_git_3_0)
+	  documentation.
++ [Migrating Git repos to SHA-256](https://exa.y2k.diy/garden/git-sha256/)
+  by Exa Skye on their personal website: Exa's Corner.
++ [I got targeted](https://frankwiles.com/posts/i-got-targeted/)
+  (in a project inquiry, with Markdown files provided via Dropbox folder...
+  with `.git` directory and active [`post-checkout`](https://git-scm.com/docs/githooks#_post_checkout) [hook](https://githooks.com/),
+  to trigger when switching branch as suggested),
+  by Frank Wiles on FrankWiles\.com.
++ [Making git hooks visible: A terminal prompt technique for zsh to see the status of git hooks.](https://nedbatchelder.com/blog/202610/making_git_hooks_visible)
+  by Ned Batchelder on his blog.  Inspired by Frank Wiles' post linked above.
++ [Making git hooks visible in fish shell](https://offby1.website/posts/making-git-hooks-visible-in-fish-shell.html)
+  by Chris Rose on his Off By 1 blog.  Inspired by Ned Batchelder's post.
++ [Git is still awful](https://lukeplant.me.uk/blog/posts/git-is-still-awful/),
+  a rant (mainly) about Git error messages by Luke Plant.
++ [Scanning 7.25 Million Public Repositories on China's Largest Git Platform (Gitee) for Secrets](https://www.mongodb.com/company/blog/technical/scanning-7-point-25-million-public-repositories-chinas-largest-git-platform-for-secrets)
+  using both [TruffleHog](https://trufflesecurity.com/trufflehog) by TruffleSecurity
+  and [Kingfisher](https://github.com/mongodb/kingfisher) by MongoDB.
+  By Ben Zimmermann, Independent Security Researcher, on MongoDB Builder Blog.
++ [Editing changelogs so people can actually use them](https://dev.to/nataliakovac/editing-changelogs-so-people-can-actually-use-them-3aio)
+  by Natália Kováč on DEV\.to, talks about what needs to be extracted from `git log`,
+  and recommends a way of of structuring it, following the
+  [Keep a Changelog](https://keepachangelog.com/) convention
+  (which was mentioned in [Git Rev News Edition #42](https://git.github.io/rev_news/2018/08/22/edition-42/)).
++ [Make git worktrees cheap for agents](https://stanislav.blog/make-git-worktrees-cheap-for-agents/)
+  by Stanislav Panferov on his blog.
++ [Git worktrees using too much disk space? Copy-on-write can help.](https://dev.to/kale_myrk/git-worktrees-using-too-much-disk-space-copy-on-write-can-help-m34)
+  by Kale Myrk on DEV\.to, about [Parhel](https://github.com/myrk-kale/parhel),
+  a small Git extension in Rust that creates worktrees using copy-on-write (CoW).
+    + Compare [Riftri](https://riftri.dev/) - Lightweight Git workspaces for parallel development,
+	  using native copy-on-write backends, also written in Rust.
+	  It was mentioned in [Git Rev News Edition #139]().
+	+ Compare [Copy-on-write git worktrees](https://commaok.xyz/post/git-cow-worktrees/) by Josh Bleecher Snyder,
+	  about creating `git-cow-worktree`, a drop-in replacement for `git worktree add`
+	  that uses copy-on-write for the worktrees.  Written in Go.
+	  It was mentioned in [Git Rev News Edition #135](https://git.github.io/rev_news/2026/05/31/edition-135/).
+	+ See also [Zit](https://getzit.org/), a git extension
+	  for many developers and coding agents changing one repository at the same time,
+	  with copy-on-write workspaces instead of worktrees,
+	  changes checked against what landed meanwhile, and each change's reason kept.
+	+ But please note that [Git worktrees are not an isolation boundary for coding agents](https://fletch.sh/blog/git-worktrees-vs-clones-for-ai-agents/),
+	  as written by by Alex Chaplinsky on Fletch Blog, mentioned in [Git Rev News Edition #138](https://git.github.io/rev_news/2026/08/31/edition-138/),
+	  and the article below.
++ [Worktrees do not remove the collision. They move it to merge time.](https://foremerge.com/blog/worktrees-move-the-collision-to-merge-time/)
+  by Nick Woodhead on Foremerge Blog.
++ [Ship Now, Finish Later: `gh stack` Kills Branch Gymnastics](https://dev.to/gioboa/ship-now-finish-later-gh-stack-kills-branch-gymnastics-4pk7)
+  by Giorgio Boa on DEV\.to.<br>
+  The [`gh stack` extension](https://github.github.com/gh-stack/) was first mentioned
+  in [Git Rev News Edition #134](https://git.github.io/rev_news/2026/04/30/edition-134/),
+  then as private preview.
++ [A Missing Git{Lab,Hub} Feature](https://zacps.nz/blog/grouped-prs/):
+  'grouped PRs', a cousin to the recent 'stacked PRs' feature.
+  By Zac Pullar-Strecker on their blog.
++ [What's Wrong with GitHub](https://www.gnu.org/philosophy/whats-wrong-with-github.html)
+  by Jacob Bachmeyer and Richard Stallman.
++ [Spin up your own git forge with Mochi](https://jeremy.magland.org/posts/2026-09-26-spin-up-your-own-git-forge-with-mochi/)
+  by Jeremy Magland on his blog.
++ [Pros and Cons of Self-hosting a Public Git Forge](https://joshtronic.com/2026/10/11/pros-cons-self-hosted-git/)
+  by Josh Sherman on Joshtronic, his personal website.
++ [The federated code forge](https://tangled.org/blog/forge/)
+  by Anirudh on Tangled Blog.<br>
+  [Tangled.sh](https://tangled.org) is a new social-enabled Git collaboration platform
+  built on top of AT Protocol / ATProto (which powers BlueSky),
+  first mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/),
+  and most recently in [Edition #138](https://git.github.io/rev_news/2026/08/31/edition-138/).
++ [Manage Your Dotfiles with Nothing but Git](https://terminal.ninja/guides/manage-dotfiles/),
+  a guide from [terminal ninja](https://terminal.ninja/) website.
++ [Using multiple git remotes for true distributed version control](https://optimizedbyotto.com/post/multiple-git-remotes/)
+  by Otto Kekäläinen on Optimized by Otto blog.
++ [On Git Refs](https://matklad.github.io/2026/10/07/git-ref.html)
+  by  Alex Kladov (matklad), on improving his mental model of Git.
++ [Maybe a better way to track the release history of a Git repo](https://blog.plover.com/prog/git/history-proposal.html)
+  by Mark Dominus (陶敏修) on The Universe of Discourse blog.
++ [55,181 Commits in 7 Days: Why We Moved Health Checks Out of Git](https://www.syntasso.io/post/55-181-commits-in-7-days-why-we-moved-health-checks-out-of-git)
+  by Derik Evangelista on Syntasso Blog.
+  Sometimes there’s such a thing as too much of GitOps.
++ [How big is a Git commit?](https://ratfactor.com/cards/git-commit-size)
+  by Dave Gauer, a card in Dave's Virtual Box of Cards.
+  Short answer: It depends (checked with some little experiments).
++ [Is There Life Outside of Git?](https://dpaletti.com/posts/life_outside_git/)
+  by Daniele Paletti.  Mentions Jujutsu (`jj`), Google's Piper,
+  Meta's [Sapling](https://sapling-scm.com/), and Antropic's Scion.
++ [You Can Hide Languages From GitHub's Languages Bar](https://nelson.cloud/you-can-hide-languages-from-githubs-languages-bar/)
+  with `linguist-detectable` gitattribute.
+  by Nelson Figueroa on his blog.
++ [Using Codeberg's git-pages deployment with git lfs](https://tzovar.as/codeberg-git-pages-with-lfs/)
+  by Bastian Greshake Tzovaras on his blog.
+  Mentions [Codeberg shutting down its old Codeberg Pages server](https://blog.codeberg.org/migrate-your-site-to-the-new-git-pages-backed-codeberg-pages-now-were-sunsetting-codeberg-pages-v2.html)
+  and [migrating](https://docs.codeberg.org/codeberg-pages/migrating-from-pages-v2/)
+  to [`git pages`](https://codeberg.org/git-pages/git-pages)-based alternative.
++ [The GitHub wiki is an anti-pattern](https://michaelheap.com/github-wiki-is-an-antipattern/)
+  (2022) by Michael Heap (@mheap) on his blog.
+
++ [Rare Git Hashes: Seeking alpha in the git log](https://engineering.finchlegal.com/blog/rare-git-hashes)
+  by Dean Keinan on Finch Engineering blog.
+  Examines the question of how rare are (in Git repositories) SHA-1 hashes that embed
+  English words, repeated characters, repeated sequences of characters,
+  palindromes, and ascending and descending sequences.<br>
+  **Warning:** includes live service, takes large amount of memory.
+    + See also [Git hash prefix or cellphone number?  What is the probability of getting an all-numbers Git hash prefix?](https://tonisagrista.com/blog/2026/git-hash-prefix-numbers/),
+	  mentioned in [Git Rev News #139](https://git.github.io/rev_news/2026/09/30/edition-139/).
++ [lgit: source control for the AI era](https://nicobrenner.github.io/lossy-git/),
+  about a version control system where the storage medium is a neural network
+  (replacing the storage layer with an MLP (Multi-Layer Perceptron)).
+  By Nico Brenner (with [code](https://github.com/nicobrenner/lossy-git)).
+  Parttly an experiment, partly a joke.
+    + Compare and contrast to a joke tool: 
+	  [git-llmfs](https://codeberg.org/TheMikina/git-llmfs) - a Git filter
+	  that uses local LLM summaries as a compression mechanism for code files
+	  to save space in a Git repository
+	  (mentioned in [Git Rev News Edition #137](https://git.github.io/rev_news/2026/07/31/edition-137/)).
++ [git-afterlife: I Held a Séance for the Original flask.py](https://dev.to/paulopnun/git-afterlife-i-held-a-seance-for-the-original-flaskpy-36o5)
+  by Pau López Núñez on DEV\.to.
+  The article talks about a small command-line tool,
+  created for [Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine](https://dev.to/challenges/hacktoberfest-week4-2026-10-26)
+  that digs every deleted file out of a repository's history,
+  writes some statistics about its history and epitaph and last words for the file,
+  the latter written by an open-weight model (Gemma 3).
+
+
+__Scientific preprints__
++ Vedant Shah et al.: ["GitSwarm: Decentralized Compounding Inference"](https://veds12.github.io/git-swarm/).
+  Many agents, one shared repository, and work that keeps building on itself.
+  [arXiv:2610.04862](https://arxiv.org/abs/2610.04862).
 
 
 __Git tools and sites__
++ [Git-ing Over It](https://git-ing-over-it.vercel.app/) is a browser-based
+  game that hands you a real broken repo and makes you figure out what to run,
+  the way you actually learn git at work.  Built by Ketuman Vishwakarma.
+  Progress lives only in the browser; it never syncs or leaves your device.
+    + Compare, for example, [git-game](https://github.com/git-game/git-game) and [git-game-v2](https://github.com/git-game/git-game-v2):
+	  a terminal game designed to test your knowledge of git commands
+	  (mentioned in [Git Rev News Edition #5](https://git.github.io/rev_news/2015/07/08/edition-5/)),
+	  [Learn Git Branching](https://learngitbranching.js.org/):
+	  also a browser-based visual and interactive way to learn Git on the web
+	  (first mentioned in [Git Rev News Edition #30](https://git.github.io/rev_news/2017/08/16/edition-30/)), and
+	  [Oh My Git!](https://ohmygit.org/): an open source game about learning Git,
+	  written using the Godot game engine
+      (first mentioned in [Git Rev News Edition #72](https://git.github.io/rev_news/2021/02/27/edition-72/)).
++ [Git Game](https://gitgame.online/): a multiplayer card game whose rules are Git.
+  Ship commits to a shared `main`. Pull before you push, blame the bugs you can't see,
+  and survive `git push --force`. Free, in your browser, with nothing to sign up for.
+  You can play against the bot, or in a room with your friends.
++ [Gitualize](https://gitualize.com/) is a web app to help you learn git visually.
+  Every Git command is animated step by step on the same small project — so you see
+  what it really does to your files, your history and your remote.
++ [The Animated Git Cheat Sheet](https://initialcommit.com/learn/git/animated-cheat-sheet)
+  is a website that uses [git-sim](https://initialcommit.com/tools/git-sim)
+  to build an animated Git cheat sheet you can customize,
+  with just the commands you need.<br>
+  Git Sim was first mentioned in [Git Rev News Edition #95](https://git.github.io/rev_news/2023/01/31/edition-95/).
++ [fremforge](https://www.frem.sh/) is an European alternative to GitHub and GitLab:
+  Git hosting and CI/CD on one platform. One flat price, per seat, in EUR.
+  Hosted in Germany, uses [Forgejo](https://forgejo.org/).
+    + See also other software forges hosted in Europe (and advertising it):
+	  [Gitoro](https://gitoro.com/) (mentioned in [Git Rev News Edition #138](https://git.github.io/rev_news/2026/08/31/edition-138/)),
+	  [Pushin.eu](https://pushin.eu/) in invite-only beta and
+	  [CodeFloe](https://codefloe.com/) with free functionality gated by quotas
+	  (both mentioned in [Edition #139](https://git.github.io/rev_news/2026/09/30/edition-139/)).
++ [Haxy](https://try.haxy.net/haxy:haxy) is a self-hosted git forge
+  that is local-first and text-based. Haxy has a text user interface (TUI)
+  that you can view in your terminal or on the web.
+  It stores project metadata (issues, pull requests, and discussions) in the repo,
+  and provide a TUI that is served over SSH, in addition to a web UI.
+  Written in Zig, under MIT license (Expat).<br>
+  See also [Haxy.net is live! — HAXY (git forge) devlog](https://www.youtube.com/watch?v=89yAiqYEwKg)
+  [7:31] video on YouTube.
++ [Mochi Forge](https://github.com/magland/mochiforge) is a self-hosted git forge,
+  GitHub-shaped: repository browsing, in-browser editing, issues, pull requests,
+  releases, Actions-style workflows, static sites, and Git LFS.
+  One Node process, no database, nothing installed beside it but git.
+  Written in TypeScript, under Apache 2.0 license.
++ [walgitgub](https://github.com/rgodha24/walgithub)
+  is walgit with a GitHub Enterprise Server facade — a git server
+  that is one binary in front of an object store (e.g., S3 or GCS bucket).
+  Written in Rust, under MIT license.
++ [grubby](https://git.btxx.org/grubby/) is a static site generator for Git repos
+  written in Ruby.  Under GPL 3.0 license.  This project is in an alpha state.
++ [NeoLeaf](https://neoleaf.science/) is the online collaborative LaTeX editor
+  that charges you absolutely nothing.
+  Unlimited real-time collaboration, native version control (Git) on GitHub or Codeberg,
+  and compilation on your own machine (with WASM / _WebAssembly_),
+  with no waiting queues, no artificial timeout limits, and no monthly fees.
+    + Compare with [Aldine](https://aldine.dev/), a _self-hosted_,
+	  open-source LaTeX collaboration platform,
+	  an [Overleaf](http://overleaf.com/) alternative built for speed and simplicity
+	  (mentioned in [Git Rev News #139](https://git.github.io/rev_news/2026/09/30/edition-139/)).
++ [Promptuaria](https://promptuaria.com/about) is a place
+  to write, publish and reuse software specifications as Markdown.
+  Each published version is immutable and has a permanent address;
+  Drafts stay private to their author until published.<br>
+  Promptuaria is an early public service. Expect rough edges.<br>
+    + Somewhat related: [Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html) (2025)
+	  by Birgitta Böckeler on martinFowler\.com, a part of the
+	  [Exploring Gen AI](https://martinfowler.com/articles/exploring-gen-ai.html) series.<br>
+	  Beside [Kiro](https://kiro.dev/) by Amazon,
+	  [Spec Kit](https://github.github.com/spec-kit/) by GitHub, and
+	  [Tessl](https://tessl.io/) by Tessl AI Ltd, mentioned in this article,
+	  there are now also [spec-coding](https://spec-coding.dev/) website,
+	  [OpenSpec](https://openspec.dev/) framework by Fission AI,
+	  [specs.md](https://specs.md/) framework by fabriqua\.ai,
+	  [SpecDeck](https://specdeck.ai/) service, and probably more...
++ [memsaga](https://memsaga.grimmer.io/): version control and two-way sync
+  for your AI coding agent's files, starting with Claude Code:
+  what it remembers, how you configure it, and anything else you choose.
+  Written in Rust, under MIT license.
++ [ADRs4AI](https://adrs.systems/) (Architectural Deliberation Records for Artificial Inteligence)
+  is [the template (repository starter)](https://github.com/ADRs4AI/human-ai-collaboration-template-A),
+  [a VS Code extension](https://marketplace.visualstudio.com/items?itemName=jlumbroso.adrs4ai),
+  and [Awesome ADRs4AI](https://github.com/ADRs4AI/awesome-adrs4ai) list.
+  The idea is to keep the thinking, the most valuable byproduct
+  of the collaboration between a human and an AI.
+    + But see [git reset –\-hard](https://isaacpatternproject.com/blog/posts/2026-09-24_git-reset-hard.html),
+	  about restarts and learning from failure: keeping what it learned but “cleaning head”,
+	  mentioned in [Git Rev News Edition #139](https://git.github.io/rev_news/2026/09/30/edition-139/).
++ [Mnemosyne](https://nabzx.github.io/mnemosyne/)
+  is a version control for AI agent memory.
+  Mnemosyne gives agent memory what Git gives code:
+  commits, branches, merge, blame and bisect.
+  Written in Rust and Python, under Apache 2.0 license.
++ [Git for Global Law](https://github.com/lexifina/global-law) by Lexifina:
+  the law of every country as one git history, each country's record a submodule,
+  every commit one law taking effect.
+  An expansion of the same [for the the US Code](https://lexifina.com/blog/git-for-the-us-code).
+  Semantic, searchable law on a global scale.
++ [Words To Data](https://www.wordstodata.com/) is a tool
+  that let's you and your agents manage the The U.S. Code, the laws that change it,
+  and the court opinions that cite it, as one dataset.
+  `words_to_data` is a Rust command and library.
+  It builds a SQLite dataset from public sources,
+  and it answers questions about that dataset.
+  [SLEUTH-pi](https://github.com/wordstodata/sleuth-pi) is the official agent.
+  It runs in the [pi](https://github.com/earendil-works/pi) coding agent.
+  Under MIT or Apache-2.0 license, at your option (dual-licensed).
++ [Crenox](https://crenoxhq.github.io/crenox/) is a statically compiled, zero-dependency
+  Git pre-commit secret scanner and credentials detector written in Go, under AGPL 3.0 license.
+  It automatically blocks commits of API keys, SSH private keys, cloud credentials,
+  database connection strings, and other sensitive material
+  before they are recorded in version control history.
+  An alternative to [Gitleaks](https://gitleaks.io/) (first mentioned in [Git Rev News Edition #36](https://git.github.io/rev_news/2018/02/21/edition-36/)),
+  [truffleHog](https://trufflesecurity.com/trufflehog) (first mentioned in [Edition #23](https://git.github.io/rev_news/2017/01/25/edition-23/)),
+  [betterleaks](https://betterleaks.com/),
+  and [git-secrets](https://github.com/awslabs/git-secrets) (first mentioned in [Edition #25](https://git.github.io/rev_news/2017/03/15/edition-25/)),
+  focusing on lower resource utilization and local workflow integration.
++ [Gitby](https://gitby.dev/) is a real-time coordination layer around Git.
+  It shows who is working on which file (after claiming it),
+  so your team can hand files over before two people edit the same one.
+  A file someone else holds is read-only in every editor, so nobody changes it by accident.
+  Gitby runs in your terminal (as TUI tool) and on the website.  Supports GitHub.
+  Paid service, with 3 teammates per team in a free tier.
+    + Compare with [GitLive](https://git.live/) extension
+	  for Visual Studio Code, JetBrain IDEs, Cursor, Windsurf, Trae, Antigravity, etc.
+	  It provides preemptive merge conflict detection, 
+	  with gutter indicators in the editor
+	  showing the lines that have been changed on other branches,
+	  while the repository view compares your branch against all others
+	  without needing to fetch.<br>
+	  GitLive is free for open-source projects; there is also a free plan
+	  with merge conflict detection limited to the 5 most recent branches, and
+	  no real-time sharing (you can share snapshots of your working tree changes),
+	  as compared to premium plan.<br>
+	  GitLive was first mentioned in [Git Rev News Edition #77](https://git.github.io/rev_news/2021/07/31/edition-77/) (as then a Visual Studio Code extension),
+	  and then in [Edition #82](https://git.github.io/rev_news/2021/12/30/edition-82/).
++ [AngKorGit](https://angkorgit.app/) is a native Git client
+  for everyday work, with support for macOS, Windows and Linux.
+  The engine is libgit2 through Rust, the window is the webview (not full web browser).
+  Written in TypeScript and Rust, using the [Tauri](https://v2.tauri.app/) framework, 
+  under MIT license.
++ [Diffy](https://diffy.run/) is a native Git diff viewer built in Rust with GPUI Kit.
+  Review live changes, keep worktrees together,
+  and read GitHub pull requests without checking out a branch.
+  macOS is in beta; Windows and Linux are early alphas with limited hardware testing.
+  Under MIT license.<br>
+  Mentioned in passing in [Git Rev News Edition #132](https://git.github.io/rev_news/2026/02/28/edition-132/).
++ [gitst](https://snoigt.com/gitst): a real-time, glanceable git status monitor for the terminal.
+  Gitst shows in real-time what is happening to a git repository (local as well as remote)
+  as it happens: changed files, commits, pushes, fetches, merges, and rebases.
+  It typically sits in one pane of a multi-pane terminal setup
+  (using tools like Dantty, tmux, screen, herdr, WezTerm, iTerm2, etc.).
+  Written in Rust, under MIT license.
++ [uhegit](https://github.com/tabrejansary/uhegit) provides Git status
+  for your entire workspace — see what's uncommitted, what's unpushed,
+  and what task to do next across all your projects.
+  Written in Rust, under MIT license.
++ [git-found](https://github.com/advaith334/git-found) is a Git [credential helper](https://git-scm.com/docs/gitcredentials)
+  for people with more than one GitHub account.
+  It checks which of your accounts can reach a repo and gives Git that account's token.
+  Written as Bash shell script, under MIT license.
++ [gsw — Git Smart Switch](https://github.com/donghyuklee1/gsw)
+  is an [fzf](https://junegunn.github.io/fzf/)-powered branch picker
+  sorted by recent commits, with live log preview, remote toggle, and safe delete.
+  A single Bash script, under MIT license.
++ [git-dupe](https://github.com/BrianWeiHaoMa/git-dupe) is a CLI tool
+  to manage second Git repository for the files in a checkout
+  that are yours and not the project's:
+  notes, plans, scratch scripts, editor settings,
+  the instructions and skills you keep for a coding agent.
+  The files stay where their tools expect them in the working tree.
+  Their history lives in a repository of their own.
+  Written in Rust, under MIT license.
++ [grip](https://guilyx.github.io/grip/) is a `per-push` git hook
+  that won't let you push code you can't explain.
+  It quizzes you on your own diff before allowing the push.
+  Works with Claude Code, Codex, Cursor.
+  Written in Python, under BSD-3-Clause license.
++ pretty-git-tree is [a tool](https://github.com/hmillerbakewell/pretty-git-tree)
+  and [a service](https://hmillerbakewell.github.io/pretty-git-tree/)
+  (with [examples](https://hmillerbakewell.github.io/pretty-git-tree/#view=gallery))
+  that turns a slice of git history into different types of diagrams:
+  arches, delta, Feynman diagram (particles), qubits, etc.
+  Written in TypeScript, under MIT license.
++ [Phloem](https://phloem.thales.sh/) is an on-line service
+  where you can watch a repository grow like a slime mold.
+  Paste a public GitHub repository (optionally providing a GitHub token),
+  or upload a git log instead (with specified invocation):
+  folders become junctions, files become food, and every commit feeds the network.
+  [Written](https://github.com/thcp/phloem) in TypeScript, under MIT license.
++ [StateTrack](https://github.com/premtonx/statetrack) provides
+  Infrastructure Change Intelligence — git history for live servers.
+  A config edit, a package upgrade, a stopped IIS app pool,
+  or a row flipped in `settings_db` is captured as a reviewable diff
+  with an actor attached, seconds after it happens.
+  Dashboard for GitDevOps.  Written in Go, under Apache 2.0 license.
++ [monolog](https://github.com/maksmas/monolog) is a keyboard-driven personal backlog
+  that lives in a git repo you own — no cloud, no account, plain-text data.
+  Written in Go, under MIT license.
++ [Hold My Docs (HMD)](https://hmd.sool.dev/) is a browser-based place
+  to write, find and share documentation: a personal knowledge base,
+  a team's internal guides or a public docs site.
+  Pages are Markdown files in a Git repository,
+  so you can back them up or edit them with other tools.
+  Written in Go, under MIT license.
 
 
 ## Releases
