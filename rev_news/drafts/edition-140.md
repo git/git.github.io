@@ -623,6 +623,19 @@ __Scientific preprints__
 
 
 __Git tools and sites__
++ [LearnGit.io v2 is here](https://learngit.io/posts/learngit-v2-is-here).
+  A rethink of LearnGit from the ground that makes progression easier & more intuitive.
+  [LearnGit.io](https://learngit.io/) teaches Git
+  with animated visualizations of Git internals, added quizzes,
+  step-by-step interactive scenarios, and type-it-yourself exercises
+  with a terminal emulator showing real commands and a visualization of the full Git tree,
+  including branch pointers and commits.
+  The first two modules are [open to anyone](https://app.learngit.io/home/) without an account.
+  LearnGit.io is free for students & educators.<br>
+  [LearnGit.io](https://learngit.io/) was mentioned in [Git Rev News Edition #108](https://git.github.io/rev_news/2024/02/29/edition-108/),
+  [#127](https://git.github.io/rev_news/2025/09/30/edition-127/),
+  and [#136](https://git.github.io/rev_news/2026/06/30/edition-136/) (in passing).
+    + Created by Jack Lot of [The Modern Coder](https://www.youtube.com/@themoderncoder) YouTube channel.
 + [Git-ing Over It](https://git-ing-over-it.vercel.app/) is a browser-based
   game that hands you a real broken repo and makes you figure out what to run,
   the way you actually learn git at work.  Built by Ketuman Vishwakarma.
