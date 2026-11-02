@@ -807,6 +807,15 @@ __Git tools and sites__
   for people with more than one GitHub account.
   It checks which of your accounts can reach a repo and gives Git that account's token.
   Written as Bash shell script, under MIT license.
++ [`git-cl`](https://github.com/BHFock/git-cl) (Git Changelists)
+  is a command-line tool that brings changelist support to Git, inspired by Subversion.
+  It adds a pre-staging review layer that lets you organise modified files
+  into named groups before staging or committing.
+  Changelists can be stashed selectively and promoted to
+  dedicated branches — enabling a late-binding branching workflow,
+  where the branch decision follows the code, not the other way around.
+  Written in Python, under BSD-3-Clause license.
+  Available as [git-changelists](https://pypi.org/project/git-changelists/) on PyPI.
 + [gsw — Git Smart Switch](https://github.com/donghyuklee1/gsw)
   is an [fzf](https://junegunn.github.io/fzf/)-powered branch picker
   sorted by recent commits, with live log preview, remote toggle, and safe delete.
