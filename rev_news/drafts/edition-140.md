@@ -636,6 +636,15 @@ __Git tools and sites__
   [#127](https://git.github.io/rev_news/2025/09/30/edition-127/),
   and [#136](https://git.github.io/rev_news/2026/06/30/edition-136/) (in passing).
     + Created by Jack Lot of [The Modern Coder](https://www.youtube.com/@themoderncoder) YouTube channel.
++ [FluxGit Git School](https://fluxgit.com/learn/) is a free set
+  of nine guided Git exercises and a playground, available in eleven languages.
+  It uses an in-memory simulated repository, without accessing local files
+  or connecting to real Git remotes. Exercises cover misplaced commits,
+  reset recovery, deleted branches, detached HEAD, conflicts and divergent
+  branches. The simulator supports a subset of Git commands.
+  No account or installation is needed to practise.
+  Each exercise connects to the relevant written guide where one exists;
+  existing video tutorials are linked alongside them.
 + [Git-ing Over It](https://git-ing-over-it.vercel.app/) is a browser-based
   game that hands you a real broken repo and makes you figure out what to run,
   the way you actually learn git at work.  Built by Ketuman Vishwakarma.
