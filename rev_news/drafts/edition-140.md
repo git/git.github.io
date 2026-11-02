@@ -430,6 +430,8 @@ __Various__
 	  built for Meta's [Sapling Source Control System](https://sapling-scm.com/),
 	  meant to scale up to accepting thousands of commits every hour across millions of files.
 	  Sapling was first mentioned in [Git Rev News Edition #93](https://git.github.io/rev_news/2022/11/30/edition-93/).
++ [An outsider’s perspective on Scion and Mononoke](https://typesanitizer.com/blog/scion.html)
+  by Varun Gandhi.
 + [Anthropic Threw Away Git. What Broke First Is the Part I Can’t Stop Thinking About.](https://jackiechen.blog/2026/10/22/anthropic-threw-away-git-what-broke-first-is-the-part-i-cant-stop-thinking-about/)
   by Jackie Chen on their blog (Jackie Chen's IT Workshop).
 + [A Git Forge Without a Center](https://entire.com/blog/a-git-forge-without-a-center)
