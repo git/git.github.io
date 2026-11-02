@@ -561,6 +561,11 @@ __Light reading__
   built on top of AT Protocol / ATProto (which powers BlueSky),
   first mentioned in [Git Rev News Edition #125](https://git.github.io/rev_news/2025/07/31/edition-125/),
   and most recently in [Edition #138](https://git.github.io/rev_news/2026/08/31/edition-138/).
++ [Reading git status without running git](https://getgitmon.com/guides/read-git-status-without-running-git)
+  by Spencer Uresk on the GitMon website.
+  How a macOS menu bar app reads the index, refs and pack files directly,
+  and uses the index's cache-tree extension to avoid reading HEAD's tree at all
+  in the common case where nothing is staged.
 + [Manage Your Dotfiles with Nothing but Git](https://terminal.ninja/guides/manage-dotfiles/),
   a guide from [terminal ninja](https://terminal.ninja/) website.
 + [Using multiple git remotes for true distributed version control](https://optimizedbyotto.com/post/multiple-git-remotes/)
