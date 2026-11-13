@@ -39,6 +39,13 @@ __Various__
 
 
 __Light reading__
++ [Git Recover Lost Commits: 12 Fixes for Common Mistakes](https://devtoolhub.com/git-recover-lost-commits/)
+  by Amaresh Pelleti on DevToolHub.
+  Twelve common Git mistakes, each fixed and verified on Git 2.56.0 in
+  throwaway repositories: `reflog` after `reset --hard`, deleted
+  branches, detached-HEAD commits, `ORIG_HEAD` after a merge or rebase,
+  dropped stashes, and `git fsck --lost-found` for staged work.
+  It lists what was not tested.
 
 <!---
 __Easy watching__
