@@ -49,6 +49,11 @@ __Git tools and sites__
 
 ## Releases
 
++ git-cl [1.4.2](https://github.com/BHFock/git-cl/releases/tag/1.4.2),
+[1.4.1](https://github.com/BHFock/git-cl/releases/tag/1.4.1),
+[1.4.0](https://github.com/BHFock/git-cl/releases/tag/1.4.0),
+[1.3.0](https://github.com/BHFock/git-cl/releases/tag/1.3.0),
+[1.2.0](https://github.com/BHFock/git-cl/releases/tag/1.2.0)
 
 ## Credits
 
