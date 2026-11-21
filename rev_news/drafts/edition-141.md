@@ -45,6 +45,13 @@ __Easy watching__
 -->
 
 __Git tools and sites__
++ [Pull Request Inbox for Bitbucket](https://plugins.jetbrains.com/plugin/34993-pull-request-inbox-for-bitbucket)
+  and [Azure DevOps Pull Requests](https://plugins.jetbrains.com/plugin/34843-azure-devops-pull-requests)
+  are two JetBrains IDE plugins that list the pull requests waiting for your review
+  and show their diffs and discussions inside the IDE.
+  They support Bitbucket Cloud and Data Center (beta), and Azure DevOps Services and Server 2019 or later.
+  Closed source; reading is free, while approving, commenting and merging need a paid license.
+  Submitted by their authors at Lesstep.
 
 
 ## Releases
