@@ -55,6 +55,13 @@ exhaustive, and more importantly each idea only includes a summary of
 what is to be done. An application must include detailed plans on the
 design, timeline ...  A typical application takes several pages.
 
+Please don't start implementing the main problem of any of the
+project ideas we propose before selection. See the
+["Don't work on the main problem of a proposed project"](https://git.github.io/General-Microproject-Information#dont-work-on-the-main-problem-of-a-proposed-project)
+section on our General Microproject Information page. We want to
+discuss your ideas for the project through your application, not
+through patches.
+
 If you are applying for the GSoC, you should already have read
 [the GSoC Contributor Guide](https://google.github.io/gsocguides/student/writing-a-proposal)
 by now, but re-read it if needed.

@@ -212,29 +212,42 @@ questions on the mailing list or in IRC, or writing new tests, etc.,
 etc. In short, start doing things that other Git developers do!
 Alternatively you can of course focus on your project proposal.
 
-### Don't work on a proposed project right away
+### Don't work on the main problem of a proposed project
 
-In general, you shoudn't work directly on any project we propose for a
-mentoring program before you have been accepted in the mentoring
-program to work on the project.
+Until you have been selected for a mentoring program, please don't
+send patches that address the main problem or feature described in
+any project we propose, even if nobody else seems to be working on it.
 
-We don't want applicants to start stepping on each other's work, or
-applicants who do the right thing and work on other things feel
-discouraged. Also the project scope often evolves during the
-application and discussion periods, as applicants and mentors discuss
-project proposals.
+This applies to all applicants, even if you are confident about the
+solution, or plan to keep working on it after the program. The reasons
+are:
 
-Try to find small improvements you can make in the area of your
-project or in a nearby area instead. This way you can increase your
-knowledge related to your project and prepare for it. Ask on the
-mailing list in case of doubt.
+- The main problem of a project often needs design work and
+  discussion before any code is written. It might be more complex
+  than the project description suggests, and an early patch tends to
+  lock in one approach before the alternatives have been considered.
+  Working out that design with mentors is part of the project itself.
+- The project scope often evolves during the application period, as
+  applicants and mentors discuss proposals.
+- We select interns based on their microproject, their proposal and
+  how they interact with the community, not on who sends an
+  implementation first. Applicants who follow this rule should not be
+  put at a disadvantage.
+- Applicants should not duplicate, or step on, each other's work.
 
-If you are interested in a project with a very wide scope, it might be
-possible to start working on very small parts of it. For example if
-the project is about a global refactoring of the code base that affect
-many parts of it, like removing global state, it might be OK to do
-that a little in a small corner of the code base. Make sure no one
-already started working on the same thing though.
+If you want to show that you are able to work on a project, describe
+in your proposal how you would approach it, and what questions or
+difficulties you see. That is much more useful to us than a patch.
+
+Small improvements in the area of your project, or in a nearby area,
+are welcome though. They help you learn the code you would work on.
+If you are not sure whether something counts as the main problem of
+a project, ask on the mailing list before working on it.
+
+For projects with a very wide scope, like removing global state from
+the whole code base, doing a small part in a small corner of the code
+base can be OK, because it doesn't decide anything about the overall
+design. Please check that nobody is already working on the same part.
 
 ## Be very careful when using AI tools
 
