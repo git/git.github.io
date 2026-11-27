@@ -188,6 +188,10 @@ __Easy watching__
 
 __Git tools and sites__
 
++ [GitVantage](https://github.com/rocketraman/gitvantage/): Desktop dashboard that
+  keeps every git repository you care about on one screen — so nothing you're working
+  on quietly drifts out of sync, goes stale, or sits with uncommitted work you forgot
+  about. Think about it like a continous "git status" over everything.
 
 ## Releases
 
